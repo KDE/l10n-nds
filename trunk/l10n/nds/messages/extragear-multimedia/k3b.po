@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: k3b\n"
-"POT-Creation-Date: 2007-04-17 07:36+0200\n"
+"POT-Creation-Date: 2007-04-18 08:03+0200\n"
 "PO-Revision-Date: 2007-03-25 22:01+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -48,7 +48,8 @@ msgstr "Dateigrött"
 #: misc/k3bcdcopydialog.cpp:121 misc/k3bcdimagewritingdialog.cpp:262
 #: misc/k3bcdimagewritingdialog.cpp:275 misc/k3bdvdcopydialog.cpp:104
 #: misc/k3bdvdformattingdialog.cpp:68 misc/k3bisoimagewritingdialog.cpp:205
-#: misc/k3bisoimagewritingdialog.cpp:218 option/k3boptiondialog.cpp:44
+#: misc/k3bisoimagewritingdialog.cpp:218 misc/k3bmediacopydialog.cpp:119
+#: misc/k3bmediaformattingdialog.cpp:74 option/k3boptiondialog.cpp:44
 #: projects/k3baudioburndialog.cpp:82 projects/k3bdatapropertiesdialog.cpp:177
 #: projects/k3bprojectburndialog.cpp:274 projects/k3bvcdburndialog.cpp:446
 #: projects/k3bvcdburndialog.cpp:476 projects/k3bvcdtrackdialog.cpp:452
@@ -81,9 +82,10 @@ msgstr "Wullt Du disse Dateien överschrieven?"
 msgid "Files Exist"
 msgstr "Gifft Datei al"
 
-#: k3b.cpp:944 k3bdebuggingoutputdialog.cpp:142 k3bemptydiscwaiter.cpp:346
-#: k3bemptydiscwaiter.cpp:416 misc/k3bcdcopydialog.cpp:299
-#: misc/k3bcdcopydialog.cpp:307 option/k3bthemeoptiontab.cpp:191
+#: k3b.cpp:952 k3bdebuggingoutputdialog.cpp:142 k3bemptydiscwaiter.cpp:346
+#: k3bemptydiscwaiter.cpp:416 misc/k3bcdcopydialog.cpp:295
+#: misc/k3bcdcopydialog.cpp:303 misc/k3bmediacopydialog.cpp:298
+#: misc/k3bmediacopydialog.cpp:306 option/k3bthemeoptiontab.cpp:191
 #: projects/k3bdataburndialog.cpp:183 projects/k3bdvdburndialog.cpp:286
 #: projects/k3bmovixburndialog.cpp:228 projects/k3bmovixdvdburndialog.cpp:195
 #: projects/k3bvcdburndialog.cpp:583 projects/k3bvideodvdburndialog.cpp:185
@@ -839,13 +841,14 @@ msgstr "Leesfehlers övergahn"
 msgid "Don't read pregaps"
 msgstr "Vörpausen (\"pregaps\") nich lesen"
 
-#: misc/k3bcdcopydialog.cpp:182 projects/k3baudioburndialog.cpp:91
-#: rip/k3baudiorippingdialog.cpp:161
+#: misc/k3bcdcopydialog.cpp:182 misc/k3bmediacopydialog.cpp:181
+#: projects/k3baudioburndialog.cpp:91 rip/k3baudiorippingdialog.cpp:161
 msgid "Paranoia mode:"
 msgstr "Paranoia-Bedrief:"
 
 #: misc/k3bcdcopydialog.cpp:167 misc/k3bcdcopydialog.cpp:177
-#: misc/k3bdvdcopydialog.cpp:161 projects/k3baudioburndialog.cpp:95
+#: misc/k3bdvdcopydialog.cpp:161 misc/k3bmediacopydialog.cpp:166
+#: misc/k3bmediacopydialog.cpp:176 projects/k3baudioburndialog.cpp:95
 #: rip/k3baudiorippingdialog.cpp:163
 msgid "Read retries:"
 msgstr "Leesversöök:"
@@ -893,8 +896,8 @@ msgid "Album"
 msgstr "Album"
 
 #: k3bdiskinfoview.cpp:258 misc/k3bcdcopydialog.cpp:172
-#: projects/k3bvcdtrackdialog.cpp:638 rip/k3baudiorippingdialog.cpp:338
-#: rip/k3baudiorippingdialog.cpp:396
+#: misc/k3bmediacopydialog.cpp:171 projects/k3bvcdtrackdialog.cpp:638
+#: rip/k3baudiorippingdialog.cpp:338 rip/k3baudiorippingdialog.cpp:396
 #: rip/videodvd/k3bvideodvdrippingtitlelistview.cpp:345
 msgid "Audio"
 msgstr "Klang"
@@ -905,7 +908,7 @@ msgid "Track%1"
 msgstr "Titel%1"
 
 #: k3bdiskinfoview.cpp:270 misc/k3bcdcopydialog.cpp:162
-#: rip/k3baudiorippingdialog.cpp:396
+#: misc/k3bmediacopydialog.cpp:161 rip/k3baudiorippingdialog.cpp:396
 msgid "Data"
 msgstr "Daten"
 
@@ -1115,7 +1118,7 @@ msgstr ""
 "Bildproportschoon nich richt."
 
 #: k3bdatamodewidget.cpp:34 k3bwriterselectionwidget.cpp:262
-#: k3bwriterselectionwidget.cpp:507 k3bwritingmodewidget.cpp:153
+#: k3bwriterselectionwidget.cpp:526 k3bwritingmodewidget.cpp:153
 #: projects/k3bdatamultisessioncombobox.cpp:75
 #: projects/k3bfillstatusdisplay.cpp:389
 #: rip/videodvd/k3bvideodvdrippingwidget.cpp:350
@@ -1457,78 +1460,76 @@ msgstr "Den lesten Törn wegdoon"
 msgid "CD Copy"
 msgstr "CD-Kopie"
 
-#: misc/k3bcdcopydialog.cpp:67
+#: misc/k3bcdcopydialog.cpp:67 misc/k3bmediacopydialog.cpp:67
 msgid "and CD Cloning"
 msgstr "un CD-Klonen"
 
 #: misc/k3bcdcopydialog.cpp:79 misc/k3bdvdcopydialog.cpp:72
+#: misc/k3bmediacopydialog.cpp:79
 msgid "Source Medium"
 msgstr "Bornschiev"
 
-#: misc/k3bcdcopydialog.cpp:102
+#: misc/k3bcdcopydialog.cpp:102 misc/k3bmediacopydialog.cpp:100
 msgid "Copy Mode"
 msgstr "Kopeermetood"
 
-#: misc/k3bcdcopydialog.cpp:106 misc/k3bcdcopydialog.cpp:230
+#: misc/k3bcdcopydialog.cpp:106 misc/k3bcdcopydialog.cpp:226
+#: misc/k3bmediacopydialog.cpp:104 misc/k3bmediacopydialog.cpp:225
 msgid "Normal Copy"
 msgstr "Normaalkopie"
 
-#: misc/k3bcdcopydialog.cpp:107 misc/k3bcdcopydialog.cpp:235
+#: misc/k3bcdcopydialog.cpp:107 misc/k3bcdcopydialog.cpp:231
+#: misc/k3bmediacopydialog.cpp:105 misc/k3bmediacopydialog.cpp:230
 msgid "Clone Copy"
 msgstr "Kloonkopie"
 
 #: misc/k3bcdcopydialog.cpp:109 misc/k3bcdimagewritingdialog.cpp:245
 #: misc/k3bdvdcopydialog.cpp:100 misc/k3bdvdformattingdialog.cpp:61
-#: misc/k3bisoimagewritingdialog.cpp:188 projects/k3bprojectburndialog.cpp:270
+#: misc/k3bisoimagewritingdialog.cpp:188 misc/k3bmediacopydialog.cpp:107
+#: misc/k3bmediaformattingdialog.cpp:67 projects/k3bprojectburndialog.cpp:270
 msgid "Writing Mode"
 msgstr "Brennmetood"
 
 #: misc/k3bcdcopydialog.cpp:113 misc/k3bcdimagewritingdialog.cpp:251
 #: misc/k3bdvdcopydialog.cpp:113 misc/k3bisoimagewritingdialog.cpp:194
-#: projects/k3bprojectburndialog.cpp:291
+#: misc/k3bmediacopydialog.cpp:111 projects/k3bprojectburndialog.cpp:291
 msgid "Copies"
 msgstr "Kopien"
 
 #: misc/k3bcdcopydialog.cpp:151 misc/k3bcdimagewritingdialog.cpp:288
 #: misc/k3bcdimagewritingdialog.cpp:789 misc/k3bdvdcopydialog.cpp:145
+#: misc/k3bmediacopydialog.cpp:150
 msgid "&Image"
 msgstr "&Afbild"
 
-#: misc/k3bcdcopydialog.cpp:170
+#: misc/k3bcdcopydialog.cpp:170 misc/k3bmediacopydialog.cpp:169
 msgid "No error correction"
 msgstr "Keen Fehlerkorrektuur"
 
-#: misc/k3bcdcopydialog.cpp:184
+#: misc/k3bcdcopydialog.cpp:184 misc/k3bmediacopydialog.cpp:183
 msgid "Copy CD-Text"
 msgstr "CD-Text koperen"
 
-#: misc/k3bcdcopydialog.cpp:185
-msgid "Prefer CD-Text"
-msgstr "CD-Text vörtrecken"
-
 #. i18n: file ./rip/videodvd/base_k3bvideodvdrippingwidget.ui line 577
-#: misc/k3bcdcopydialog.cpp:190 misc/k3bdvdcopydialog.cpp:167 rc.cpp:183
+#: misc/k3bcdcopydialog.cpp:189 misc/k3bdvdcopydialog.cpp:167
+#: misc/k3bmediacopydialog.cpp:188 rc.cpp:183
 #, no-c-format
 msgid "&Advanced"
 msgstr "&Verwiedert"
 
-#: misc/k3bcdcopydialog.cpp:211
+#: misc/k3bcdcopydialog.cpp:210 misc/k3bmediacopydialog.cpp:209
 msgid "Skip unreadable data sectors"
 msgstr "Nich leesbor Datensektoren övergahn"
 
-#: misc/k3bcdcopydialog.cpp:212
+#: misc/k3bcdcopydialog.cpp:211 misc/k3bmediacopydialog.cpp:210
 msgid "Disable the source drive's error correction"
 msgstr "Fehlerkorrektuur vun dat Bornloopwark utmaken"
 
-#: misc/k3bcdcopydialog.cpp:213
-msgid "Use CD-Text instead of cddb if available."
-msgstr "CD-Text staats CDDB bruken, wenn mööglich."
-
-#: misc/k3bcdcopydialog.cpp:214
+#: misc/k3bcdcopydialog.cpp:212 misc/k3bmediacopydialog.cpp:211
 msgid "Copy CD-Text from the source CD if available."
 msgstr "CD-Text wenn verföögbor vun Born-CD koperen"
 
-#: misc/k3bcdcopydialog.cpp:216
+#: misc/k3bcdcopydialog.cpp:214 misc/k3bmediacopydialog.cpp:213
 msgid ""
 "<p>If this option is checked K3b will disable the source drive's ECC/EDC error "
 "correction. This way sectors that are unreadable by intention can be read."
@@ -1541,7 +1542,7 @@ msgstr ""
 "<p>Dat is för dat Klonen vun CDs bruukbor, de en Kopeerschuul hebbt, wat op "
 "lege Sektoren baseert."
 
-#: misc/k3bcdcopydialog.cpp:221
+#: misc/k3bcdcopydialog.cpp:219 misc/k3bmediacopydialog.cpp:218
 msgid ""
 "<p>If this option is checked K3b will search for CD-Text on the source CD. "
 "Disable it if your CD drive has problems with reading CD-Text or you want to "
@@ -1551,15 +1552,7 @@ msgstr ""
 "Dien CD-Loopwark Problemen mit dat Lesen vun CD-Text hett, oder wenn Du lever "
 "de CDDB-Informatschonen bruken wullt."
 
-#: misc/k3bcdcopydialog.cpp:224
-msgid ""
-"<p>If this option is checked and K3b finds CD-Text on the source media it will "
-"be copied to the resulting CD ignoring any potentially existing Cddb entries."
-msgstr ""
-"<p>Wenn dit aktiveert is un K3b CD-Text op de Bornschiev findt, warrt he na de "
-"Teel-CD kopeert un vörhannen CDDB-Indrääg övergahn."
-
-#: misc/k3bcdcopydialog.cpp:226
+#: misc/k3bcdcopydialog.cpp:222
 msgid ""
 "<p>If this option is checked and K3b is not able to read a data sector from the "
 "source CD/DVD it will be replaced with zeros on the resulting copy."
@@ -1567,7 +1560,7 @@ msgstr ""
 "<p>Wenn disse Optschoon anmaakt is un K3b en Datensektor nich vun de "
 "Born-CD/DVD lesen kann, warrt he op de Kopie mit Nullen utwesselt."
 
-#: misc/k3bcdcopydialog.cpp:231
+#: misc/k3bcdcopydialog.cpp:227
 msgid ""
 "<p>This is the normal copy mode recommended for most CD types. It allows "
 "copying Audio CDs, multi and single session Data CDs, and Enhanced Audio CDs "
@@ -1579,7 +1572,7 @@ msgstr ""
 "(Audio-CDs mit en Datentörn binnen) mit koperen."
 "<p>För Video-CDs bruuk bitte de Kloonkopie-Metood."
 
-#: misc/k3bcdcopydialog.cpp:236
+#: misc/k3bcdcopydialog.cpp:232 misc/k3bmediacopydialog.cpp:231
 msgid ""
 "<p>In CD Cloning mode K3b performs a raw copy of the CD. That means it does not "
 "care about the content but simply copies the CD bit by bit. It may be used to "
@@ -1590,39 +1583,70 @@ msgstr ""
 "scheert sik nich üm den Inholt, man kopeert de CD eenfach Bit för Bit. Dat lett "
 "sik för't Koperen vun Video-CDs oder ok för CDs mit leeg Sektoren bruken."
 
-#: misc/k3bcdcopydialog.cpp:273 misc/k3bdvdcopydialog.cpp:238
-#: projects/k3bprojectburndialog.cpp:220
+#: misc/k3bcdcopydialog.cpp:269 misc/k3bdvdcopydialog.cpp:238
+#: misc/k3bmediacopydialog.cpp:268 projects/k3bprojectburndialog.cpp:220
 msgid ""
 "There seems to be not enough free space in temporary directory. Write anyway?"
 msgstr ""
 "As dat lett gifft dat nich noog free Spiekerplatz in den Temporeerorner. "
 "Liekers brennen?"
 
-#: k3b.cpp:943 k3bdebuggingoutputdialog.cpp:141 misc/k3bcdcopydialog.cpp:298
-#: misc/k3bcdcopydialog.cpp:306 projects/k3bdataburndialog.cpp:182
+#: k3b.cpp:951 k3bdebuggingoutputdialog.cpp:141 misc/k3bcdcopydialog.cpp:294
+#: misc/k3bcdcopydialog.cpp:302 misc/k3bmediacopydialog.cpp:297
+#: misc/k3bmediacopydialog.cpp:305 projects/k3bdataburndialog.cpp:182
 #: projects/k3bdvdburndialog.cpp:285 projects/k3bmovixburndialog.cpp:227
 #: projects/k3bmovixdvdburndialog.cpp:194
 #: projects/k3bvideodvdburndialog.cpp:184
 msgid "Do you want to overwrite %1?"
 msgstr "Wullt Du \"%1\" överschrieven?"
 
-#: k3b.cpp:944 k3bdebuggingoutputdialog.cpp:142 misc/k3bcdcopydialog.cpp:299
-#: misc/k3bcdcopydialog.cpp:307 projects/k3bdataburndialog.cpp:183
+#: k3b.cpp:952 k3bdebuggingoutputdialog.cpp:142 misc/k3bcdcopydialog.cpp:295
+#: misc/k3bcdcopydialog.cpp:303 misc/k3bmediacopydialog.cpp:298
+#: misc/k3bmediacopydialog.cpp:306 projects/k3bdataburndialog.cpp:183
 #: projects/k3bdvdburndialog.cpp:286 projects/k3bmovixburndialog.cpp:228
 #: projects/k3bmovixdvdburndialog.cpp:195 projects/k3bvcdburndialog.cpp:583
 #: projects/k3bvideodvdburndialog.cpp:185
 msgid "File Exists"
 msgstr "Gifft Datei al"
 
-#: misc/k3bcdcopydialog.cpp:451 misc/k3bdvdcopydialog.cpp:436
+#: misc/k3bcdcopydialog.cpp:446 misc/k3bdvdcopydialog.cpp:436
+#: misc/k3bmediacopydialog.cpp:533
 msgid "Use the same device for burning"
 msgstr "De sülve Reedschap för't Brennen bruken"
 
-#: misc/k3bcdcopydialog.cpp:452 misc/k3bdvdcopydialog.cpp:437
+#: misc/k3bcdcopydialog.cpp:447 misc/k3bdvdcopydialog.cpp:437
+#: misc/k3bmediacopydialog.cpp:534
 msgid "<qt>Use the same device for burning <i>(Or insert another medium)</i>"
 msgstr ""
 "<qt>De sülve Reedschap för't Brennen bruken <i>(Oder en anner Schiev "
 "inleggen)</i>"
+
+#: misc/k3bmediacopydialog.cpp:67
+#, fuzzy
+msgid "Disk Copy"
+msgstr "CD-Kopie"
+
+#: misc/k3bmediacopydialog.cpp:221
+#, fuzzy
+msgid ""
+"<p>If this option is checked and K3b is not able to read a data sector from the "
+"source medium it will be replaced with zeros on the resulting copy."
+msgstr ""
+"<p>Wenn disse Optschoon anmaakt is un K3b en Datensektor nich vun de "
+"Born-CD/DVD lesen kann, warrt he op de Kopie mit Nullen utwesselt."
+
+#: misc/k3bmediacopydialog.cpp:226
+#, fuzzy
+msgid ""
+"<p>This is the normal copy mode for DVD, Blu-ray, and most CD media types. It "
+"allows copying Audio CDs, multi and single session Data Media, and Enhanced "
+"Audio CDs (an Audio CD containing an additional data session)."
+"<p>For VideoCDs please use the CD Cloning mode."
+msgstr ""
+"<p>Dat is de normaal un anraadt Kopeermetood för de mehrsten CD-Typen. Dor laat "
+"sik Audio-CDs, Daten-CDs mit Mehr- un Enkeltörns un verwiedert Audio-CDs "
+"(Audio-CDs mit en Datentörn binnen) mit koperen."
+"<p>För Video-CDs bruuk bitte de Kloonkopie-Metood."
 
 #: misc/k3bdvdcopydialog.cpp:60
 msgid "DVD Copy"
@@ -1678,7 +1702,7 @@ msgstr "*.cue *.CUE|CUE-Dateien"
 msgid "*.toc *.TOC|Cdrdao TOC Files and Cdrecord Clone Images"
 msgstr "*.toc *.TOC|Cdrdao-TOC-Dateien un Cdrecord-Kloonafbiller"
 
-#: k3b.cpp:1271 k3bfileview.cpp:104 misc/k3bcdimagewritingdialog.cpp:193
+#: k3b.cpp:1279 k3bfileview.cpp:104 misc/k3bcdimagewritingdialog.cpp:193
 #: misc/k3bisoimagewritingdialog.cpp:157
 msgid "*|All Files"
 msgstr "*|All Dateien"
@@ -1751,32 +1775,32 @@ msgstr "ISO9660-Afbild"
 msgid "Filesize:"
 msgstr "Dateigrött:"
 
-#: k3bdiskinfoview.cpp:447 misc/k3bcdimagewritingdialog.cpp:602
+#: k3bdiskinfoview.cpp:449 misc/k3bcdimagewritingdialog.cpp:602
 #: misc/k3bisoimagewritingdialog.cpp:331
 msgid "System Id:"
 msgstr "Systeem-ID:"
 
-#: k3bdiskinfoview.cpp:452 misc/k3bcdimagewritingdialog.cpp:610
+#: k3bdiskinfoview.cpp:454 misc/k3bcdimagewritingdialog.cpp:610
 #: misc/k3bisoimagewritingdialog.cpp:339
 msgid "Volume Id:"
 msgstr "Schiev-ID:"
 
-#: k3bdiskinfoview.cpp:457 misc/k3bcdimagewritingdialog.cpp:618
+#: k3bdiskinfoview.cpp:459 misc/k3bcdimagewritingdialog.cpp:618
 #: misc/k3bisoimagewritingdialog.cpp:347
 msgid "Volume Set Id:"
 msgstr "Schievsett-ID:"
 
-#: k3bdiskinfoview.cpp:462 misc/k3bcdimagewritingdialog.cpp:626
+#: k3bdiskinfoview.cpp:464 misc/k3bcdimagewritingdialog.cpp:626
 #: misc/k3bisoimagewritingdialog.cpp:355
 msgid "Publisher Id:"
 msgstr "Rutgever-ID:"
 
-#: k3bdiskinfoview.cpp:467 misc/k3bcdimagewritingdialog.cpp:634
+#: k3bdiskinfoview.cpp:469 misc/k3bcdimagewritingdialog.cpp:634
 #: misc/k3bisoimagewritingdialog.cpp:363
 msgid "Preparer Id:"
 msgstr "Torechtmaker-ID:"
 
-#: k3bdiskinfoview.cpp:472 misc/k3bcdimagewritingdialog.cpp:641
+#: k3bdiskinfoview.cpp:474 misc/k3bcdimagewritingdialog.cpp:641
 #: misc/k3bisoimagewritingdialog.cpp:370
 msgid "Application Id:"
 msgstr "Programm-ID:"
@@ -1866,23 +1890,24 @@ msgstr "MD5-Pröövsummen mit Verscheel"
 msgid "DVD Formatting"
 msgstr "DVD-Formateren"
 
-#: misc/k3bdvdformattingdialog.cpp:44
+#: misc/k3bdvdformattingdialog.cpp:44 misc/k3bmediaformattingdialog.cpp:50
 msgid "DVD%1RW"
 msgstr "DVD%1RW"
 
 #: k3bemptydiscwaiter.cpp:90 misc/k3bdvdformattingdialog.cpp:71
+#: misc/k3bmediaformattingdialog.cpp:77
 msgid "Force"
 msgstr "Verdwingen"
 
-#: misc/k3bdvdformattingdialog.cpp:72
+#: misc/k3bdvdformattingdialog.cpp:72 misc/k3bmediaformattingdialog.cpp:78
 msgid "Quick format"
 msgstr "Fixformateren"
 
-#: misc/k3bdvdformattingdialog.cpp:84
+#: misc/k3bdvdformattingdialog.cpp:84 misc/k3bmediaformattingdialog.cpp:90
 msgid "Force formatting of empty DVDs"
 msgstr "Formateren vun leddig DVDs verdwingen"
 
-#: misc/k3bdvdformattingdialog.cpp:85
+#: misc/k3bdvdformattingdialog.cpp:85 misc/k3bmediaformattingdialog.cpp:91
 msgid ""
 "<p>If this option is checked K3b will format a DVD-RW even if it is empty. It "
 "may also be used to force K3b to format a DVD+RW or a DVD-RW in restricted "
@@ -1900,7 +1925,7 @@ msgstr ""
 "eenfach överschrieven. Dat gellt ok för DVD-RWs in ingrenzt "
 "Överschriev-Bedrief."
 
-#: misc/k3bdvdformattingdialog.cpp:95
+#: misc/k3bdvdformattingdialog.cpp:95 misc/k3bmediaformattingdialog.cpp:101
 msgid "Try to perform quick formatting"
 msgstr "Fixformateren versöken"
 
@@ -1909,6 +1934,32 @@ msgid ""
 "<p>If this option is checked K3b will tell the writer to perform a quick "
 "format."
 "<p>Formatting a DVD-RW completely can take a very long time and some DVD "
+"writers perform a full format even if quick format is enabled."
+msgstr ""
+"<p>Wenn aktiveert, lett K3b den Brenner en Fixformateren utföhren."
+"<p>Dat Formateren vun en hele DVD-RW mag bannig lang duern, un en poor "
+"DVD-Brenners föhrt ok mit anmaakt Fixformateren en Kumplettformateren ut."
+
+#: misc/k3bmediaformattingdialog.cpp:49
+msgid "Format and Erase"
+msgstr ""
+
+#: misc/k3bmediaformattingdialog.cpp:50
+#, fuzzy
+msgid "CD-RW"
+msgstr "CD-R"
+
+#: misc/k3bmediaformattingdialog.cpp:50
+#, fuzzy
+msgid "BD-RW"
+msgstr "CD-R"
+
+#: misc/k3bmediaformattingdialog.cpp:102
+#, fuzzy
+msgid ""
+"<p>If this option is checked K3b will tell the writer to perform a quick "
+"format."
+"<p>Erasing a rewritable medium completely can take a very long time and some "
 "writers perform a full format even if quick format is enabled."
 msgstr ""
 "<p>Wenn aktiveert, lett K3b den Brenner en Fixformateren utföhren."
@@ -2331,7 +2382,7 @@ msgstr "Törns:"
 msgid "Supported writing speeds:"
 msgstr "Ünnerstütt Brenngauheiten:"
 
-#: k3bdiskinfoview.cpp:443
+#: k3bdiskinfoview.cpp:445
 msgid "ISO9660 Filesystem Info"
 msgstr "ISO9660-Dateisysteem-Info"
 
@@ -2539,7 +2590,7 @@ msgstr "Brenndialoog för aktuell Projekt opmaken"
 msgid "Open the CD copy dialog, optionally specify the source device"
 msgstr "CD-Kopeerdialoog opmaken, wahlwies de Bornreedschap angeven"
 
-#: k3b.cpp:337 main.cpp:60
+#: k3b.cpp:344 main.cpp:60
 msgid "Open the DVD copy dialog"
 msgstr "DVD-Kopeerdialoog wiesen"
 
@@ -2678,351 +2729,371 @@ msgstr "För dat basige K3b-1.0-Muster."
 msgid "Keep Open"
 msgstr "Apen hollen"
 
-#: k3b.cpp:155
+#: k3b.cpp:156
 msgid "K3b - The CD and DVD Kreator"
 msgstr "K3b - De CD- un DVD-Maker"
 
-#: k3b.cpp:218
+#: k3b.cpp:219
 msgid "Save All"
 msgstr "All sekern"
 
-#: k3b.cpp:221
+#: k3b.cpp:222
 msgid "Close All"
 msgstr "All tomaken"
 
-#: k3b.cpp:235
+#: k3b.cpp:236
 msgid "&New Project"
 msgstr "&Nieg Projekt"
 
-#: k3b.cpp:236
+#: k3b.cpp:237
 msgid "New &Audio CD Project"
 msgstr "Nieg &Audio-CD opstellen"
 
-#: k3b.cpp:238
+#: k3b.cpp:239
 msgid "New Data &CD Project"
 msgstr "Nieg Daten-&CD opstellen"
 
-#: k3b.cpp:240
+#: k3b.cpp:241
 msgid "New &Mixed Mode CD Project"
 msgstr "Nieg &Mischbedrief-CD opstellen"
 
-#: k3b.cpp:242
+#: k3b.cpp:243
 msgid "New &Video CD Project"
 msgstr "Nieg &Video-CD opstellen"
 
-#: k3b.cpp:244
+#: k3b.cpp:245
 msgid "New &eMovix CD Project"
 msgstr "Nieg &eMovix-CD opstellen"
 
-#: k3b.cpp:246
+#: k3b.cpp:247
 msgid "New &eMovix DVD Project"
 msgstr "Nieg &eMovix-DVD opstellen"
 
-#: k3b.cpp:248
+#: k3b.cpp:249
 msgid "New Data &DVD Project"
 msgstr "Nieg Daten-&DVD opstellen"
 
-#: k3b.cpp:250
+#: k3b.cpp:251
 msgid "New V&ideo DVD Project"
 msgstr "Nieg V&ideo-DVD opstellen"
 
-#: k3b.cpp:252
+#: k3b.cpp:253
 msgid "Continue Multisession Project"
 msgstr "Veelfachtörn wiedermaken"
 
-#: k3b.cpp:274
+#: k3b.cpp:275
 msgid "&Add Files..."
 msgstr "Dateien &tofögen..."
 
-#: k3b.cpp:277
+#: k3b.cpp:278
 msgid "&Clear Project"
 msgstr "Projekt leddig ma&ken"
 
-#: k3b.cpp:280
+#: k3b.cpp:281
 msgid "Show Directories"
 msgstr "Ornern wiesen"
 
-#: k3b.cpp:283
+#: k3b.cpp:284
 msgid "Show Contents"
 msgstr "Inholt wiesen"
 
-#: k3b.cpp:286
+#: k3b.cpp:287
 msgid "Show Document Header"
 msgstr "Dokmentkopp wiesen"
 
-#: k3b.cpp:289
+#: k3b.cpp:290
 msgid "&Erase CD-RW..."
 msgstr "CD-RW l&eddig maken..."
 
-#: k3b.cpp:291
+#: k3b.cpp:292
 msgid "&Format DVD%1RW..."
 msgstr "DVD%1RW &formateren..."
 
-#: k3b.cpp:293
+#: k3b.cpp:294
+#, fuzzy
+msgid "&Format/Erase rewritable disk..."
+msgstr "Wedderschriefbor Schiev funnen"
+
+#: k3b.cpp:296
 msgid "&Burn CD Image..."
 msgstr "CD-Afbild &brennen..."
 
-#: k3b.cpp:295
+#: k3b.cpp:298
 msgid "&Burn DVD ISO Image..."
 msgstr "DVD-ISO-Afbild &brennen..."
 
-#: k3b.cpp:298
+#: k3b.cpp:301
 msgid "&Copy CD..."
 msgstr "&CD koperen..."
 
-#: k3b.cpp:301
+#: k3b.cpp:304
 msgid "Copy &DVD..."
 msgstr "&DVD koperen..."
 
-#: k3b.cpp:304
+#: k3b.cpp:307
+#, fuzzy
+msgid "Copy &Medium..."
+msgstr "Vun de Schiev..."
+
+#: k3b.cpp:310
 msgid "Rip Audio CD..."
 msgstr "Audio-CD utlesen..."
 
-#: k3b.cpp:306
+#: k3b.cpp:312
 msgid "Rip Video DVD..."
 msgstr "Video-DVD utlesen..."
 
-#: k3b.cpp:308
+#: k3b.cpp:314
 msgid "Rip Video CD..."
 msgstr "Video-CD utlesen..."
 
-#: k3b.cpp:311
+#: k3b.cpp:317
 msgid "System Check"
 msgstr "Systeem-Prööv"
 
-#: k3b.cpp:315
+#: k3b.cpp:321
 msgid "&Setup System Permissions..."
 msgstr "&Systeemverlöven instellen..."
 
-#: k3b.cpp:325
+#: k3b.cpp:331
 msgid "Creates a new project"
 msgstr "Nieg Projekt opstellen"
 
-#: k3b.cpp:326
+#: k3b.cpp:332
 msgid "Creates a new data CD project"
 msgstr "Nieg Daten-CD-Projekt opstellen"
 
-#: k3b.cpp:327
+#: k3b.cpp:333
 msgid "Creates a new audio CD project"
 msgstr "Nieg Audio-CD-Projekt opstellen"
 
-#: k3b.cpp:328
+#: k3b.cpp:334
 msgid "Creates a new eMovix DVD project"
 msgstr "Nieg eMovix-DVD-Projekt opstellen"
 
-#: k3b.cpp:329
+#: k3b.cpp:335
 msgid "Creates a new data DVD project"
 msgstr "Nieg Daten-DVD-Projekt opstellen"
 
-#: k3b.cpp:330
+#: k3b.cpp:336
 msgid "Creates a new eMovix CD project"
 msgstr "Nieg eMovix-CD-Projekt opstellen"
 
-#: k3b.cpp:331
+#: k3b.cpp:337
 msgid "Creates a new Video CD project"
 msgstr "Nieg Video-CD-Projekt opstellen"
 
-#: k3b.cpp:332
+#: k3b.cpp:338
 msgid "Open the CD-RW erasing dialog"
 msgstr "Leddigmaak-Dialoog för CD-RW opmaken"
 
-#: k3b.cpp:333
+#: k3b.cpp:339
 msgid "Open the DVD%1RW formatting dialog"
 msgstr "Formateerdialoog för DVD%1RW opmaken"
 
-#: k3b.cpp:334
+#: k3b.cpp:340
+#, fuzzy
+msgid "Open the rewritable disk formatting/erasing dialog"
+msgstr "Formateerdialoog för DVD%1RW opmaken"
+
+#: k3b.cpp:341
 msgid "Open the CD copy dialog"
 msgstr "CD-Kopeerdialoog wiesen"
 
-#: k3b.cpp:335
+#: k3b.cpp:342
 msgid "Write an Iso9660, cue/bin, or cdrecord clone image to CD"
 msgstr "ISO9660-, CUE/BIN- oder \"cdrecord\"-Kloonafbild op CD brennen"
 
-#: k3b.cpp:336
+#: k3b.cpp:343
 msgid "Write an Iso9660 image to DVD"
 msgstr "En ISO9660-Afbild op DVD brennen"
 
-#: k3b.cpp:338
+#: k3b.cpp:345
+#, fuzzy
+msgid "Open the media copy dialog"
+msgstr "CD-Kopeerdialoog wiesen"
+
+#: k3b.cpp:346
 msgid "Opens an existing project"
 msgstr "Vörhannen Projekt opmaken"
 
-#: k3b.cpp:339
+#: k3b.cpp:347
 msgid "Opens a recently used file"
 msgstr "Tolest bruukte Datei opmaken"
 
-#: k3b.cpp:340
+#: k3b.cpp:348
 msgid "Saves the current project"
 msgstr "Dat aktuelle Projekt sekern"
 
-#: k3b.cpp:341
+#: k3b.cpp:349
 msgid "Saves the current project to a new url"
 msgstr "Dat aktuelle Projekt na en nieg Oort sekern"
 
-#: k3b.cpp:342
+#: k3b.cpp:350
 msgid "Saves all open projects"
 msgstr "All apen Projekten sekern"
 
-#: k3b.cpp:343
+#: k3b.cpp:351
 msgid "Closes the current project"
 msgstr "Dat aktuelle Projekt tomaken"
 
-#: k3b.cpp:344
+#: k3b.cpp:352
 msgid "Closes all open projects"
 msgstr "All apen Projekten tomaken"
 
-#: k3b.cpp:345
+#: k3b.cpp:353
 msgid "Quits the application"
 msgstr "Beendt dat Programm"
 
-#: k3b.cpp:346
+#: k3b.cpp:354
 msgid "Configure K3b settings"
 msgstr "K3b instellen"
 
-#: k3b.cpp:348
+#: k3b.cpp:356
 msgid "Setup the system permissions (requires root privileges)"
 msgstr "De Systeemverlöven instellen (Systeemplegerrechten nödig)"
 
-#: k3b.cpp:350
+#: k3b.cpp:358
 msgid "Digitally extract tracks from an audio CD"
 msgstr "Titeln vun en Audio-CD digitaal utlesen"
 
-#: k3b.cpp:351
+#: k3b.cpp:359
 msgid "Transcode Video DVD titles"
 msgstr "Titeln vun en Video-DVD ümkoderen"
 
-#: k3b.cpp:352
+#: k3b.cpp:360
 msgid "Extract tracks from a Video CD"
 msgstr "Titeln vun en Video-CD ruttrecken"
 
-#: k3b.cpp:353
+#: k3b.cpp:361
 msgid "Add files to the current project"
 msgstr "Dateien na't aktuelle Audio-Projekt tofögen"
 
-#: k3b.cpp:354
+#: k3b.cpp:362
 msgid "Clear the current project"
 msgstr "Dat aktuelle Projekt leddig maken"
 
-#: k3b.cpp:383
+#: k3b.cpp:391
 msgid "Project View"
 msgstr "Projektansicht"
 
-#: k3b.cpp:400
+#: k3b.cpp:408
 msgid "Current Projects"
 msgstr "Aktuell Projekten"
 
-#: k3b.cpp:414
+#: k3b.cpp:422
 msgid "Quickstart"
 msgstr "Fixstart"
 
-#: k3b.cpp:422
+#: k3b.cpp:430
 msgid "Sidepanel"
 msgstr "Navigatschoonpaneel"
 
-#: k3b.cpp:436
+#: k3b.cpp:444
 msgid "Contents View"
 msgstr "Inholtansicht"
 
-#: k3b.cpp:455
+#: k3b.cpp:463
 msgid "&Quick Dir Selector"
 msgstr "Orner-&Fixutwahl"
 
-#: k3b.cpp:459
+#: k3b.cpp:467
 msgid "Go"
 msgstr "Un af!"
 
-#: k3b.cpp:531 k3b.cpp:860 k3b.cpp:874
+#: k3b.cpp:539 k3b.cpp:868 k3b.cpp:882
 msgid "Opening file..."
 msgstr "Datei warrt opmaakt..."
 
-#: k3b.cpp:556
+#: k3b.cpp:564
 msgid "Could not open document!"
 msgstr "Dokment lett sik nich opmaken!"
 
-#: k3b.cpp:556
+#: k3b.cpp:564
 msgid "Error!"
 msgstr "Fehler!"
 
-#: k3b.cpp:829
+#: k3b.cpp:837
 msgid "%1 has unsaved data."
 msgstr "%1 bargt unsekert Daten"
 
-#: k3b.cpp:830
+#: k3b.cpp:838
 msgid "Closing Project"
 msgstr "Projekt warrt tomaakt"
 
-#: k3b.cpp:863 k3b.cpp:930
+#: k3b.cpp:871 k3b.cpp:938
 msgid "*.k3b|K3b Projects"
 msgstr "*.k3b|K3b-Projekten"
 
-#: k3b.cpp:865
+#: k3b.cpp:873
 msgid "Open Files"
 msgstr "Dateien opmaken"
 
-#: k3b.cpp:898
+#: k3b.cpp:906
 msgid "Saving file..."
 msgstr "Datei warrt sekert..."
 
-#: k3b.cpp:907 k3b.cpp:948
+#: k3b.cpp:915 k3b.cpp:956
 msgid "Could not save the current document!"
 msgstr "Dat aktuelle Dokment lett sich nich sekern!"
 
-#: k3b.cpp:907 k3b.cpp:948
+#: k3b.cpp:915 k3b.cpp:956
 msgid "I/O Error"
 msgstr "In-/Utgaav-Fehler"
 
-#: k3b.cpp:922
+#: k3b.cpp:930
 msgid "Saving file with a new filename..."
 msgstr "Datei warrt mit en nieg Dateinaam sekert..."
 
-#: k3b.cpp:961
+#: k3b.cpp:969
 msgid "Closing file..."
 msgstr "Datei warrt tomaakt..."
 
-#: k3b.cpp:1072
+#: k3b.cpp:1080
 msgid "Creating new Audio CD Project."
 msgstr "Nieg Audio-CD-Projekt warrt opstellt"
 
-#: k3b.cpp:1081
+#: k3b.cpp:1089
 msgid "Creating new Data CD Project."
 msgstr "Nieg Daten-CD-Projekt warrt opstellt"
 
-#: k3b.cpp:1091
+#: k3b.cpp:1099
 msgid "Creating new Data DVD Project."
 msgstr "Nieg Daten-DVD-Projekt warrt opstellt"
 
-#: k3b.cpp:1107
+#: k3b.cpp:1115
 msgid "Creating new VideoDVD Project."
 msgstr "Nieg Video-DVD-Projekt warrt opstellt"
 
-#: k3b.cpp:1117
+#: k3b.cpp:1125
 msgid "Creating new Mixed Mode CD Project."
 msgstr "Nieg Mischbedrief-CD-Projekt warrt opstellt"
 
-#: k3b.cpp:1126
+#: k3b.cpp:1134
 msgid "Creating new Video CD Project."
 msgstr "Nieg Video-CD-Projekt warrt opstellt"
 
-#: k3b.cpp:1136
+#: k3b.cpp:1144
 msgid "Creating new eMovix CD Project."
 msgstr "Nieg eMovix-CD-Projekt warrt opstellt"
 
-#: k3b.cpp:1146
+#: k3b.cpp:1154
 msgid "Creating new eMovix DVD Project."
 msgstr "Nieg eMovix-DVD-Projekt warrt opstellt"
 
-#: k3b.cpp:1273
+#: k3b.cpp:1281
 msgid "Select Files to Add to Project"
 msgstr "Dateien för't Tofögen na dat Projekt utsöken"
 
-#: k3b.cpp:1287
+#: k3b.cpp:1295
 msgid "Please create a project before adding files"
 msgstr "Bitte toeerst en Projekt opstellen, un denn de Dateien tofögen."
 
-#: k3b.cpp:1287
+#: k3b.cpp:1295
 msgid "No Active Project"
 msgstr "Keen Projekt in de Maak"
 
-#: k3b.cpp:1296
+#: k3b.cpp:1304
 msgid ""
 "Could not find kdesu to run K3bSetup with root privileges. Please run it "
 "manually as root."
@@ -3030,27 +3101,27 @@ msgstr ""
 "\"kdesu\" för't Utföhren vun den K3b-Inrichthölper in Systeemplegerbedrief lett "
 "sik nich finnen. Laat em vun Hand mit Systeempleegrechten lopen."
 
-#: k3b.cpp:1532
+#: k3b.cpp:1568
 msgid "Do you really want to clear the current project?"
 msgstr "Wullt Du dat aktuelle Projekt redig leddig maken?"
 
-#: k3b.cpp:1533
+#: k3b.cpp:1569
 msgid "Clear Project"
 msgstr "Projekt leddig maken"
 
-#: k3b.cpp:1575
+#: k3b.cpp:1611
 msgid "Audio CD Rip"
 msgstr "Audio-CD utlesen"
 
-#: k3b.cpp:1590
+#: k3b.cpp:1626
 msgid "Video DVD Rip"
 msgstr "Video-DVD utlesen"
 
-#: k3b.cpp:1611
+#: k3b.cpp:1647
 msgid "Video CD Rip"
 msgstr "Video-CD utlesen"
 
-#: k3b.cpp:1626
+#: k3b.cpp:1662
 msgid "Audio Output Problem"
 msgstr "Audioutgaav-Problem"
 
@@ -3097,8 +3168,8 @@ msgstr ""
 "DVDs brennen; man Du kannst liekers de annern K3b-Funkschonen as dat Ruttrecken "
 "oder Ümkoderen vun Audiotiteln un dat Opstellen vun ISO9660-Afbiller bruken."
 
-#: k3bsystemproblemdialog.cpp:189 k3bsystemproblemdialog.cpp:242
-#: k3bsystemproblemdialog.cpp:265 k3bsystemproblemdialog.cpp:314
+#: k3bsystemproblemdialog.cpp:189 k3bsystemproblemdialog.cpp:244
+#: k3bsystemproblemdialog.cpp:269 k3bsystemproblemdialog.cpp:318
 msgid "Unable to find %1 executable"
 msgstr "Programm \"%1\" lett sik nich finnen"
 
@@ -3110,9 +3181,9 @@ msgstr "K3b bruukt \"cdrecord\" för't CD-Brennen"
 msgid "Install the cdrtools package which contains cdrecord."
 msgstr "Bitte installeer dat Paket \"cdrtools\", wat \"cdrecord\" bargt."
 
-#: k3bsystemproblemdialog.cpp:198 k3bsystemproblemdialog.cpp:275
-#: k3bsystemproblemdialog.cpp:283 k3bsystemproblemdialog.cpp:292
-#: k3bsystemproblemdialog.cpp:326 k3bsystemproblemdialog.cpp:434
+#: k3bsystemproblemdialog.cpp:198 k3bsystemproblemdialog.cpp:279
+#: k3bsystemproblemdialog.cpp:287 k3bsystemproblemdialog.cpp:296
+#: k3bsystemproblemdialog.cpp:330 k3bsystemproblemdialog.cpp:438
 msgid "Used %1 version %2 is outdated"
 msgstr "De bruukte Verschoon %2 vun %1 is överhaalt"
 
@@ -3141,11 +3212,11 @@ msgstr ""
 "Vun Linuxkernel 2.6.8 af löppt <em>%1</em> ut Sekerheitgrünn nich mehr as <em>"
 "root</em> mit sett SetUID-Mark."
 
-#: k3bsystemproblemdialog.cpp:227 k3bsystemproblemdialog.cpp:251
+#: k3bsystemproblemdialog.cpp:228 k3bsystemproblemdialog.cpp:254
 msgid "%1 will be run without root privileges"
 msgstr "\"%1\" warrt ahn Systeemplegerverlöven lopen"
 
-#: k3bsystemproblemdialog.cpp:228
+#: k3bsystemproblemdialog.cpp:229
 msgid ""
 "It is highly recommended to configure cdrecord to run with root privileges. "
 "Only then cdrecord runs with high priority which increases the overall "
@@ -3158,15 +3229,15 @@ msgstr ""
 "stabiler maakt. Denn laat sik ok de Brennpuffergrött ännern. Vele "
 "Brukerproblemen laat sik so lösen. Dat gellt ok för \"resmgr\" vun SuSE."
 
-#: k3bsystemproblemdialog.cpp:243
+#: k3bsystemproblemdialog.cpp:245
 msgid "K3b uses cdrdao to actually write CDs."
 msgstr "K3b bruukt \"cdrdao\" för't CD-Brennen."
 
-#: k3bsystemproblemdialog.cpp:244
+#: k3bsystemproblemdialog.cpp:246
 msgid "Install the cdrdao package."
 msgstr "Bitte dat Paket \"cdrdao\" installeren"
 
-#: k3bsystemproblemdialog.cpp:252
+#: k3bsystemproblemdialog.cpp:255
 msgid ""
 "It is highly recommended to configure cdrdao to run with root privileges to "
 "increase the overall stability of the burning process."
@@ -3174,7 +3245,7 @@ msgstr ""
 "Dat is vun wegen de högere Brennstabiliteet redig anraadt, \"cdrdao\" mit "
 "Systeemplegerverlöven lopen to laten."
 
-#: k3bsystemproblemdialog.cpp:266
+#: k3bsystemproblemdialog.cpp:270
 msgid ""
 "K3b uses growisofs to actually write dvds. Without growisofs you will not be "
 "able to write dvds. Make sure to install at least version 5.10."
@@ -3182,11 +3253,11 @@ msgstr ""
 "K3b bruukt \"growisofs\" för't Brennen vun DVDs, ahn dat sik keen DVDs brennen "
 "laat. Tominnst Verschoon 5.10 deit noot."
 
-#: k3bsystemproblemdialog.cpp:269 k3bsystemproblemdialog.cpp:316
+#: k3bsystemproblemdialog.cpp:273 k3bsystemproblemdialog.cpp:320
 msgid "Install the dvd+rw-tools package."
 msgstr "Bitte installeer dat Paket \"dvd+rw-tools\"."
 
-#: k3bsystemproblemdialog.cpp:276
+#: k3bsystemproblemdialog.cpp:280
 msgid ""
 "K3b needs at least growisofs version 5.10 to write dvds. All older versions "
 "will not work and K3b will refuse to use them."
@@ -3194,13 +3265,13 @@ msgstr ""
 "För't DVD-Brennen bruukt K3b tominnst growisofs Verschoon 5.10. All öller "
 "Verschonen warrt nich lopen, un K3b warrt ehr Bruuk aflehnen."
 
-#: k3bsystemproblemdialog.cpp:278 k3bsystemproblemdialog.cpp:287
-#: k3bsystemproblemdialog.cpp:296 k3bsystemproblemdialog.cpp:331
+#: k3bsystemproblemdialog.cpp:282 k3bsystemproblemdialog.cpp:291
+#: k3bsystemproblemdialog.cpp:300 k3bsystemproblemdialog.cpp:335
 #, c-format
 msgid "Install a more recent version of %1."
 msgstr "Bitte en nieger Verschoon vun \"%1\" installeren."
 
-#: k3bsystemproblemdialog.cpp:284
+#: k3bsystemproblemdialog.cpp:288
 msgid ""
 "K3b will not be able to copy DVDs on-the-fly or write a DVD+RW in multiple "
 "sessions using a growisofs version older than 5.12."
@@ -3208,7 +3279,7 @@ msgstr ""
 "K3b kann keen DVDs direktemang koperen oder op en DVD+RW en Veelfachtörn "
 "brennen, wenn Dien \"growisofs\" öller is as Verschoon 5.12."
 
-#: k3bsystemproblemdialog.cpp:293
+#: k3bsystemproblemdialog.cpp:297
 msgid ""
 "It is highly recommended to use growisofs 7.0 or higher. K3b won't be able to "
 "write a DVD+RW in multiple sessions using a growisofs version older than 7.0."
@@ -3216,11 +3287,11 @@ msgstr ""
 "Bruuk bitte Verschoon 7.0 oder nieger vun \"growisofs\". Mit en Verschoon, de "
 "öller is as 7.0, kann K3b keen Veelfachtörn op en DVD+RW brennen."
 
-#: k3bsystemproblemdialog.cpp:315
+#: k3bsystemproblemdialog.cpp:319
 msgid "K3b uses dvd+rw-format to format DVD-RWs and DVD+RWs."
 msgstr "K3b bruukt \"dvd+rw-format\" för't Formateren vun DVD-RWs un DVD+RWs"
 
-#: k3bsystemproblemdialog.cpp:329
+#: k3bsystemproblemdialog.cpp:333
 msgid ""
 "K3b needs at least mkisofs version 1.14. Older versions may introduce problems "
 "when creating data projects."
@@ -3228,11 +3299,11 @@ msgstr ""
 "K3b bruukt tominnst \"mkisofs\" Verschoon 1.14. Öller Verschonen köönt to "
 "Fehlers bi't Opstellen vun Datenprojekten föhren."
 
-#: k3bsystemproblemdialog.cpp:353
+#: k3bsystemproblemdialog.cpp:357
 msgid "Device %1 - %2 is automounted."
 msgstr "Reedschap %1 - %2 is automaatsch inhangt"
 
-#: k3bsystemproblemdialog.cpp:355
+#: k3bsystemproblemdialog.cpp:359
 msgid ""
 "K3b is not able to unmount automounted devices. Thus, especially DVD+RW "
 "rewriting might fail. There is no need to report this as a bug or feature wish; "
@@ -3243,7 +3314,7 @@ msgstr ""
 "Fehler oder Wunsch bi K3b anmellen, dat is eenfach nich mööglich, dat Problem "
 "vun K3b ut to lösen."
 
-#: k3bsystemproblemdialog.cpp:359
+#: k3bsystemproblemdialog.cpp:363
 msgid ""
 "Replace the automounting entries in /etc/fstab with old-fashioned ones or use a "
 "user-space mounting solution like pmount or ivman."
@@ -3252,11 +3323,11 @@ msgstr ""
 "in oder bruuk en Inhangpleger, den Du as Bruker stüern kannst, as t.B. "
 "\"pmount\" oder \"ivman\"."
 
-#: k3bsystemproblemdialog.cpp:369
+#: k3bsystemproblemdialog.cpp:373
 msgid "No ATAPI writing support in kernel"
 msgstr "De Kernel hett keen ATAPI-Brennünnerstütten"
 
-#: k3bsystemproblemdialog.cpp:370
+#: k3bsystemproblemdialog.cpp:374
 msgid ""
 "Your kernel does not support writing without SCSI emulation but there is at "
 "least one writer in your system not configured to use SCSI emulation."
@@ -3264,7 +3335,7 @@ msgstr ""
 "De Karn ünnerstütt Brennen ahn SCSI-Emuleren nich, man dat gifft tominnst een "
 "Brenner ahn instellt SCSI-Emuleren binnen Dien Systeem."
 
-#: k3bsystemproblemdialog.cpp:374
+#: k3bsystemproblemdialog.cpp:378
 msgid ""
 "The best and recommended solution is to enable ide-scsi (SCSI emulation) for "
 "all devices. This way you won't have any problems.Be aware that you may still "
@@ -3274,11 +3345,11 @@ msgstr ""
 "(SCSI-Emuleren) för all Reedschappen. Denn gifft dat keen Problemen. Beacht "
 "bitte, dat Du för Loopwarken mit ide-scsi-Emuleren ok DMA aktiveren kannst."
 
-#: k3bsystemproblemdialog.cpp:391 k3bsystemproblemdialog.cpp:411
+#: k3bsystemproblemdialog.cpp:395 k3bsystemproblemdialog.cpp:415
 msgid "%1 %2 does not support ATAPI"
 msgstr "%1 %2 ünnerstütt keen ATAPI"
 
-#: k3bsystemproblemdialog.cpp:392 k3bsystemproblemdialog.cpp:413
+#: k3bsystemproblemdialog.cpp:396 k3bsystemproblemdialog.cpp:417
 msgid ""
 "The configured version of %1 does not support writing to ATAPI devices without "
 "SCSI emulation and there is at least one writer in your system not configured "
@@ -3288,7 +3359,7 @@ msgstr ""
 "ahn SCSI-Emuleren nich, un dat gifft tominnst een Brenner binnen Dien Systeem, "
 "för den SCSI-Emuleren nich instellt is."
 
-#: k3bsystemproblemdialog.cpp:397
+#: k3bsystemproblemdialog.cpp:401
 #, c-format
 msgid ""
 "The best and recommended solution is to enable ide-scsi (SCSI emulation) for "
@@ -3299,14 +3370,14 @@ msgstr ""
 "Brenners an. Denn gifft dat keen Problem mehr. Oder installeer en nieger "
 "Verschoon vun \"%1\" (oder wähl ehr as Standard ut)."
 
-#: k3bsystemproblemdialog.cpp:419
+#: k3bsystemproblemdialog.cpp:423
 msgid ""
 "Install cdrdao >= 1.1.8 which supports writing to ATAPI devices directly."
 msgstr ""
 "Bitte \"cdrdao\" Verschoon >= 1.1.8 installeren, wat dat direkte Brennen mit "
 "ATAPI-Reedschappen ünnerstütt."
 
-#: k3bsystemproblemdialog.cpp:421
+#: k3bsystemproblemdialog.cpp:425
 #, c-format
 msgid ""
 "The best, and recommended, solution is to use ide-scsi (SCSI emulation) for all "
@@ -3317,7 +3388,7 @@ msgstr ""
 "Brenners an: Denn gifft dat keen Problem mehr. Oder installeer en nieger "
 "Verschoon vun \"%1\" (oder wähl ehr as Standard ut)."
 
-#: k3bsystemproblemdialog.cpp:435
+#: k3bsystemproblemdialog.cpp:439
 msgid ""
 "K3b won't be able to write DVD-R Dual Layer media using a growisofs version "
 "older than 6.0."
@@ -3325,16 +3396,16 @@ msgstr ""
 "K3b kann keen Tweelagen-DVD-R brennen, wenn Dien \"growisofs\" öller is as "
 "Verschoon 6.0."
 
-#: k3bsystemproblemdialog.cpp:437
+#: k3bsystemproblemdialog.cpp:441
 msgid "Install a more recent version of growisofs."
 msgstr "Bitte en nieger Verschoon vun \"growisofs\" installeren."
 
-#: k3bsystemproblemdialog.cpp:447
+#: k3bsystemproblemdialog.cpp:451
 #, c-format
 msgid "No write access to device %1"
 msgstr "Keen Schrieftogriep op Reedschap \"%1\""
 
-#: k3bsystemproblemdialog.cpp:448
+#: k3bsystemproblemdialog.cpp:452
 msgid ""
 "K3b needs write access to all the devices to perform certain tasks. Without it "
 "you might encounter problems with %1 - %2"
@@ -3342,7 +3413,7 @@ msgstr ""
 "För en Reeg Opgaven bruukt K3b Schrieftogriep op all Reedschappen. Ahn em kann "
 "dat Problemen mit \"%1\" - \"%2\" geven."
 
-#: k3bsystemproblemdialog.cpp:450 k3bsystemproblemdialog.cpp:461
+#: k3bsystemproblemdialog.cpp:454 k3bsystemproblemdialog.cpp:465
 msgid ""
 "Make sure you have write access to %1. In case you are not using devfs or udev "
 "K3bSetup is able to do this for you."
@@ -3350,12 +3421,12 @@ msgstr ""
 "Bitte prööv, wat Du Togriep op %1 hest. Wenn Du nich \"devfs\" oder \"udev\" "
 "bruukst, kann dat de K3b-Inrichthülper för Di maken."
 
-#: k3bsystemproblemdialog.cpp:458
+#: k3bsystemproblemdialog.cpp:462
 #, c-format
 msgid "No write access to generic SCSI device %1"
 msgstr "Keen Schrieftogriep op de SCSI-Reedschap \"%1\""
 
-#: k3bsystemproblemdialog.cpp:459
+#: k3bsystemproblemdialog.cpp:463
 msgid ""
 "Without write access to the generic device you might encounter problems with "
 "Audio CD ripping from %1 - %2"
@@ -3363,11 +3434,11 @@ msgstr ""
 "Ahn Schriefverlöven för de normale Reedschap kann dat Problemen bi't Utlesen "
 "vun Audio-CDs vun %1 - %2 geven."
 
-#: k3bsystemproblemdialog.cpp:467
+#: k3bsystemproblemdialog.cpp:471
 msgid "DMA disabled on device %1 - %2"
 msgstr "DMA op Reedschap %1 - %2 utmaakt"
 
-#: k3bsystemproblemdialog.cpp:468
+#: k3bsystemproblemdialog.cpp:472
 msgid ""
 "With most modern CD/DVD devices enabling DMA highly increases read/write "
 "performance. If you experience very low writing speeds this is probably the "
@@ -3377,17 +3448,17 @@ msgstr ""
 "Brennen bannig wat grötter, wenn DMA anmaakt is. Wenn Du bloots böös langsam "
 "brennen kannst, mag dat dor an liggen."
 
-#: k3bsystemproblemdialog.cpp:471
+#: k3bsystemproblemdialog.cpp:475
 msgid "Enable DMA temporarily as root with 'hdparm -d 1 %1'."
 msgstr ""
 "Du kannst as Systeempleger DMA tietwies mit \"hdparm -d 1 %1\" anmaken."
 
-#: k3bsystemproblemdialog.cpp:484
+#: k3bsystemproblemdialog.cpp:488
 #, c-format
 msgid "User parameters specified for external program %1"
 msgstr "Egen Parameters för extern Programm \"%1\""
 
-#: k3bsystemproblemdialog.cpp:485
+#: k3bsystemproblemdialog.cpp:489
 msgid ""
 "Sometimes it may be nessessary to specify user parameters in addition to the "
 "parameters generated by K3b. This is simply a warning to make sure that these "
@@ -3397,7 +3468,7 @@ msgstr ""
 "Parameters angiffst. Disse Wohrschoen schall eenfach besekern, dat Du disse "
 "Parameters redig bruken wullt un nich binnen en Fehlerbericht opdukt."
 
-#: k3bsystemproblemdialog.cpp:488
+#: k3bsystemproblemdialog.cpp:492
 msgid ""
 "To remove the user parameters for the external program %1 open the K3b settings "
 "page 'Programs' and choose the tab 'User Parameters'."
@@ -3406,11 +3477,11 @@ msgstr ""
 "binnen de K3b-Instellen de Siet \"Programmen\" op un kiek op de Koort "
 "\"Bruker-Parameters\"."
 
-#: k3bsystemproblemdialog.cpp:509
+#: k3bsystemproblemdialog.cpp:513
 msgid "Mp3 Audio Decoder plugin not found."
 msgstr "Keen Audio-Dekodeermoduul för MP3 funnen."
 
-#: k3bsystemproblemdialog.cpp:510
+#: k3bsystemproblemdialog.cpp:514
 msgid ""
 "K3b could not load or find the Mp3 decoder plugin. This means that you will not "
 "be able to create Audio CDs from Mp3 files. Many Linux distributions do not "
@@ -3421,7 +3492,7 @@ msgstr ""
 "ünnerstütt dat MP3-Formaat nich, wiel dat to Problemen mit dat Gesett föhren "
 "kunn."
 
-#: k3bsystemproblemdialog.cpp:513
+#: k3bsystemproblemdialog.cpp:517
 msgid ""
 "To enable Mp3 support, please install the MAD Mp3 decoding library as well as "
 "the K3b MAD Mp3 decoder plugin (the latter may already be installed but not "
@@ -3434,11 +3505,11 @@ msgstr ""
 "Bi en Reeg Distributschonen lett sik de MP3-Ünnerstütten mit en "
 "Internet-Opfrischwarktüüch (t.B. \"YOU\" vun SuSE) nainstalleren."
 
-#: k3bsystemproblemdialog.cpp:529
+#: k3bsystemproblemdialog.cpp:533
 msgid "System locale charset is ANSI_X3.4-1968"
 msgstr "De Tekensett ut de Systeem-Regiooninstellen is ANSI_X3.4-1968"
 
-#: k3bsystemproblemdialog.cpp:530
+#: k3bsystemproblemdialog.cpp:534
 msgid ""
 "Your system's locale charset (i.e. the charset used to encode filenames) is set "
 "to ANSI_X3.4-1968. It is highly unlikely that this has been done intentionally. "
@@ -3450,7 +3521,7 @@ msgstr ""
 "Willen maakt hest; wohrschienlich sünd de Regiooninstellen gor nich fastleggt. "
 "En leeg Weert föhrt to Problemen bi't Opstellen vun Datenprojekten."
 
-#: k3bsystemproblemdialog.cpp:534
+#: k3bsystemproblemdialog.cpp:538
 msgid ""
 "To properly set the locale charset make sure the LC_* environment variables are "
 "set. Normally the distribution setup tools take care of this."
@@ -3459,11 +3530,11 @@ msgstr ""
 "fastleggen. Normalerwies quäält sik dor de Inrichtwarktüüch vun de "
 "Distributschoon üm."
 
-#: k3bsystemproblemdialog.cpp:547
+#: k3bsystemproblemdialog.cpp:551
 msgid "Running K3b as root user"
 msgstr "K3b as Systeempleger utföhren"
 
-#: k3bsystemproblemdialog.cpp:548
+#: k3bsystemproblemdialog.cpp:552
 msgid ""
 "It is not recommended to run K3b under the root user account. This introduces "
 "unnecessary security risks."
@@ -3471,7 +3542,7 @@ msgstr ""
 "Föhr K3b man lever nich as Systeempleger ut, dat bargt Riskanzen för de "
 "Sekerheit, de nich noot doot."
 
-#: k3bsystemproblemdialog.cpp:550
+#: k3bsystemproblemdialog.cpp:554
 msgid ""
 "Run K3b from a proper user account and setup the device and external tool "
 "permissions appropriately."
@@ -3479,20 +3550,20 @@ msgstr ""
 "Bruuk en passen Brukerkonto, wenn Du K3b utföhrst, un richt de Verlöven för "
 "Reedschappen un extern Programmen denn propper in."
 
-#: k3bsystemproblemdialog.cpp:553
+#: k3bsystemproblemdialog.cpp:557
 msgid "The latter can be done via K3bSetup."
 msgstr "Dit laat sik eenfach mit den K3b-Inrichthölper maken."
 
-#: k3bsystemproblemdialog.cpp:583
+#: k3bsystemproblemdialog.cpp:587
 msgid "No problems found in system configuration."
 msgstr "Keen Problem mit de Systeeminstellen funnen."
 
-#: k3bsystemproblemdialog.cpp:583
+#: k3bsystemproblemdialog.cpp:587
 #, fuzzy
 msgid "System configured properly"
 msgstr "Problemen mit de Systeem-Instellen"
 
-#: k3bsystemproblemdialog.cpp:605
+#: k3bsystemproblemdialog.cpp:609
 msgid "Unable to start K3bSetup2."
 msgstr "De K3b-Inrichthölper2 lett sik nich starten."
 
@@ -3676,7 +3747,7 @@ msgstr "Verwiederbor %1"
 msgid "Complete %1 medium"
 msgstr "Vull %1"
 
-#: k3bmedium.cpp:366
+#: k3bmedium.cpp:367
 msgid ""
 "_n: %1 in %n track\n"
 "%1 in %n tracks"
@@ -3684,7 +3755,7 @@ msgstr ""
 "%1 in %n Titel\n"
 "%1 in %n Titeln"
 
-#: k3bmedium.cpp:369
+#: k3bmedium.cpp:370
 #, c-format
 msgid ""
 "_n:  and %n session\n"
@@ -3693,12 +3764,12 @@ msgstr ""
 " un %n Törn\n"
 " un %n Törns"
 
-#: k3bmedium.cpp:374
+#: k3bmedium.cpp:375
 #, c-format
 msgid "Free space: %1"
 msgstr "Free Platz: %1"
 
-#: k3bmedium.cpp:378
+#: k3bmedium.cpp:379
 #, c-format
 msgid "Capacity: %1"
 msgstr "Grött: %1"
@@ -3806,6 +3877,7 @@ msgstr ""
 ";)"
 
 #: k3bwriterselectionwidget.cpp:183
+#, fuzzy
 msgid ""
 "<p>Select the speed with which you want to burn."
 "<p><b>Auto</b>"
@@ -3814,7 +3886,8 @@ msgid ""
 "<p><b>Ignore</b> (DVD only)"
 "<br>This will leave the speed selection to the writer device. Use this if K3b "
 "is unable to set the writing speed."
-"<p>1x refers to 1385 KB/s for DVD and 175 KB/s for CD.</p>"
+"<p>1x refers to 175 KB/s for CD, 1385 KB/s for DVD, and 4496 KB/s for "
+"Blu-ray.</p>"
 "<p><b>Caution:</b> Make sure your system is able to send the data fast enough "
 "to prevent buffer underruns."
 msgstr ""
@@ -3849,15 +3922,15 @@ msgstr ""
 msgid "Ignore"
 msgstr "Övergahn"
 
-#: k3bwriterselectionwidget.cpp:302 k3bwriterselectionwidget.cpp:631
+#: k3bwriterselectionwidget.cpp:309 k3bwriterselectionwidget.cpp:656
 msgid "More..."
 msgstr "Mehr..."
 
-#: k3bwriterselectionwidget.cpp:596
+#: k3bwriterselectionwidget.cpp:615
 msgid "Please enter the speed that K3b should use for burning (Example: 16x)."
 msgstr "Bitte giff de Gauheit in, mit de K3b brennen schall (Bispeel: 16x)."
 
-#: k3bwriterselectionwidget.cpp:599
+#: k3bwriterselectionwidget.cpp:618
 msgid ""
 "<p>K3b is not able to perfectly determine the maximum writing speed of an "
 "optical writer. Writing speed is always reported subject to the inserted "
@@ -3870,7 +3943,7 @@ msgstr ""
 "<p>Giffst Du hier en Brenngauheit in, wohrt K3b ehr för tokamen Törns (Bispeel: "
 "16x)."
 
-#: k3bwriterselectionwidget.cpp:613
+#: k3bwriterselectionwidget.cpp:638
 msgid "Set writing speed manually"
 msgstr "Brenngauheit vun Hand fastleggen"
 
@@ -4968,19 +5041,19 @@ msgstr "Siet &Prioriteet för't Ümkoderen vun't Video"
 msgid "&Project"
 msgstr "&Projekt"
 
-#. i18n: file ./k3bui.rc line 24
+#. i18n: file ./k3bui.rc line 26
 #: rc.cpp:233
 #, no-c-format
 msgid "&Device"
 msgstr "&Reedschap"
 
-#. i18n: file ./k3bui.rc line 56
+#. i18n: file ./k3bui.rc line 58
 #: rc.cpp:242
 #, no-c-format
 msgid "Tools"
 msgstr "Warktüüch"
 
-#. i18n: file ./k3bui.rc line 63
+#. i18n: file ./k3bui.rc line 65
 #: rc.cpp:245
 #, no-c-format
 msgid "Quick Dir Selector"
@@ -10502,6 +10575,15 @@ msgstr ""
 #: ../plugins/project/audioprojectcddb/k3baudioprojectcddbplugin.cpp:140
 msgid "Cddb error"
 msgstr "CDDB-Fehler"
+
+#~ msgid "Prefer CD-Text"
+#~ msgstr "CD-Text vörtrecken"
+
+#~ msgid "Use CD-Text instead of cddb if available."
+#~ msgstr "CD-Text staats CDDB bruken, wenn mööglich."
+
+#~ msgid "<p>If this option is checked and K3b finds CD-Text on the source media it will be copied to the resulting CD ignoring any potentially existing Cddb entries."
+#~ msgstr "<p>Wenn dit aktiveert is un K3b CD-Text op de Bornschiev findt, warrt he na de Teel-CD kopeert un vörhannen CDDB-Indrääg övergahn."
 
 #~ msgid "System Problems"
 #~ msgstr "Problemen mit dat Systeem"
