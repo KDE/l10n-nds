@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kphotoalbum\n"
-"POT-Creation-Date: 2007-07-23 08:02+0200\n"
+"POT-Creation-Date: 2007-08-10 09:04+0200\n"
 "PO-Revision-Date: 2007-06-23 02:01+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -80,9 +80,8 @@ msgstr ""
 "finnen, wenn Du se op de Fastplaat verschaven hest.</p>"
 
 #: DB/NewImageFinder.cpp:265
-#, c-format
-msgid "Could not open %1"
-msgstr "\"%1\" lett sik nich opmaken"
+msgid "Following files could not be read:"
+msgstr ""
 
 #: DB/ImageDB.cpp:75
 msgid "**NONE**"
@@ -140,15 +139,15 @@ msgstr "Nov"
 msgid "dec"
 msgstr "Dez"
 
-#: DB/Category.cpp:122 DB/Category.cpp:130 XMLDB/FileReader.cpp:331
+#: DB/Category.cpp:122 DB/Category.cpp:130 XMLDB/FileReader.cpp:340
 msgid "People"
 msgstr "Lüüd"
 
-#: DB/Category.cpp:123 DB/Category.cpp:131 XMLDB/FileReader.cpp:332
+#: DB/Category.cpp:123 DB/Category.cpp:131 XMLDB/FileReader.cpp:341
 msgid "Places"
 msgstr "Öörd"
 
-#: DB/Category.cpp:124 XMLDB/FileReader.cpp:333
+#: DB/Category.cpp:124 XMLDB/FileReader.cpp:342
 msgid "Keywords"
 msgstr "Slötelwöör"
 
@@ -517,7 +516,8 @@ msgid "Unable to find 'Images' tag in configuration file %1."
 msgstr ""
 "Beteker \"Images\" lett sik nich binnen de Instellendatei \"%1\" finnen."
 
-#: XMLDB/FileReader.cpp:257
+#: XMLDB/FileReader.cpp:258
+#, fuzzy
 msgid ""
 "<p>Your images/videos are not sorted, which means that navigating using the "
 "date bar will only work suboptimally.</p>"
@@ -525,7 +525,7 @@ msgid ""
 "Incomplete Dates</b> which you can use to find the images that are missing date "
 "information.</p>You can then select the images that you have reason to believe "
 "have a correct date in either their EXIF data or on the file, and execute <b>"
-"Maintainance->Read EXIF Info</b> to reread the information.</p>"
+"Maintenance->Read EXIF Info</b> to reread the information.</p>"
 "<p>Finally, once all images have their dates set, you can execute <b>Images->"
 "Sort Selected by Date & Time</b> to sort them in the database.</p>"
 msgstr ""
@@ -541,11 +541,21 @@ msgstr ""
 "Biller -> Utsöchte na Datum un Tiet sorteren</b> binnen de Datenbank "
 "sorteren.</p>"
 
-#: XMLDB/FileReader.cpp:266
+#: XMLDB/FileReader.cpp:268
+msgid ""
+"<p>Your images/videos are not sorted, which means that navigating using the "
+"date bar will only work suboptimally.</p>"
+"<p>You also don't have EXIF support available, which means that you can't read "
+"image dates from JPEG metadata. It's strongly recommended to recompile "
+"KPhotoAlbum with the <code>exiv2</code> library. After you have done so, you'll "
+"be asked what to do to correct all missing information.</p>"
+msgstr ""
+
+#: XMLDB/FileReader.cpp:275
 msgid "Images/Videos Are Not Sorted"
 msgstr "Biller/Videos sünd nich sorteert"
 
-#: XMLDB/FileReader.cpp:281
+#: XMLDB/FileReader.cpp:290
 msgid ""
 "<p>Not all the images in the database have information about image sizes; this "
 "is needed to get the best result in the thumbnail view. To fix this, simply go "
@@ -561,11 +571,11 @@ msgstr ""
 "<p>Deist Du dat nich, hebbt de Vöransichtbiller en beten mehr mehr free Platz "
 "ümto - dat is allens. Dat is also nich so hild, dat to doon."
 
-#: XMLDB/FileReader.cpp:286
+#: XMLDB/FileReader.cpp:295
 msgid "Not All Images Have Size Information"
 msgstr "Nich all Biller hebbt Grött-Informatschonen"
 
-#: XMLDB/FileReader.cpp:295
+#: XMLDB/FileReader.cpp:304
 msgid ""
 "<p>The index.xml file read was from an older version of KPhotoAlbum. "
 "KPhotoAlbum read the old format without problems, but to be able to convert "
@@ -578,11 +588,11 @@ msgstr ""
 "KPhotoAlbum mit de Optschoon <b>export-in-2.1-format</b> "
 "utföhren un denn sekern.</p>"
 
-#: XMLDB/FileReader.cpp:299
+#: XMLDB/FileReader.cpp:308
 msgid "Old File Format read"
 msgstr "Oolt Dateiformaat funnen"
 
-#: XMLDB/FileReader.cpp:318
+#: XMLDB/FileReader.cpp:327
 msgid ""
 "<p>KPhotoAlbum was unable to load a default setup, which indicates an "
 "installation error</p>"
@@ -608,28 +618,28 @@ msgstr ""
 "<p>Wenn Du för de Variabel KDEDIRS al wat fastleggt hest, hang ehr eenfach den "
 "Padd an, as wenn Du de <b>PATH</b>-Variabel en nieg Padd tofögen deest.</p>"
 
-#: XMLDB/FileReader.cpp:325
+#: XMLDB/FileReader.cpp:334
 msgid "No default setup file found"
 msgstr "Standard-Instellendatei nich funnen"
 
-#: XMLDB/FileReader.cpp:342
+#: XMLDB/FileReader.cpp:351
 msgid "Unable to open '%1' for reading"
 msgstr "\"%1\" lett sik nich lesen"
 
 #: Utilities/Util.cpp:198 Utilities/Util.cpp:212 Utilities/Util.cpp:230
-#: Utilities/Util.cpp:253 XMLDB/FileReader.cpp:342
+#: Utilities/Util.cpp:253 XMLDB/FileReader.cpp:351
 msgid "Error Running Demo"
 msgstr "Fehler bi't Utföhren vun de Dorstellen"
 
-#: XMLDB/FileReader.cpp:351
+#: XMLDB/FileReader.cpp:360
 msgid "Error on line %1 column %2 in file %3: %4"
 msgstr "Fehler bi Reeg %1, Striep %2 binnen Datei \"%3\": %4"
 
-#: XMLDB/FileReader.cpp:359
+#: XMLDB/FileReader.cpp:368
 msgid "Error in file %1: No elements found"
 msgstr "Fehler binnen Datei \"%1\": Keen Elementen funnen"
 
-#: XMLDB/FileReader.cpp:365
+#: XMLDB/FileReader.cpp:374
 msgid "Error in file %1: expected 'KPhotoAlbum' as top element but found '%2'"
 msgstr ""
 "Fehler binnen Datei \"%1\": \"KPhotoAlbum\" wöör as böverst Element verwacht, "
@@ -1504,7 +1514,8 @@ msgid "No image existed in export file for %1"
 msgstr "För \"%1\" gifft dat binnen de Exportdatei keen Bild."
 
 #: ImportExport/Export.cpp:71
-msgid "Export Configuration"
+#, fuzzy
+msgid "Export Configuration/Copy Images"
 msgstr "Exporteren instellen"
 
 #: ImportExport/Export.cpp:78
@@ -3349,8 +3360,9 @@ msgid "Import..."
 msgstr "Importeren..."
 
 #: MainWindow/Window.cpp:536
-msgid "Export..."
-msgstr "Exporteren..."
+#, fuzzy
+msgid "Export/Copy Images..."
+msgstr "Biller koperen"
 
 #: MainWindow/Window.cpp:557
 msgid "Delete Selected"
@@ -3839,6 +3851,12 @@ msgstr "Vöransichten nieg anornen"
 #: ThumbnailView/ThumbnailBuilder.cpp:31
 msgid "Generating thumbnails"
 msgstr "Vöransichten warrt opstellt"
+
+#~ msgid "Could not open %1"
+#~ msgstr "\"%1\" lett sik nich opmaken"
+
+#~ msgid "Export..."
+#~ msgstr "Exporteren..."
 
 #~ msgid "No Images or Videos to Display"
 #~ msgstr "Keen Biller oder Videos vörhannen"
