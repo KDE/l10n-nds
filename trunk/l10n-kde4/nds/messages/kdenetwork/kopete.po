@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kopete\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2007-09-07 05:34+0200\n"
+"POT-Creation-Date: 2007-09-10 05:33+0200\n"
 "PO-Revision-Date: 2007-03-01 23:34+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -230,7 +230,7 @@ msgid "Invisible"
 msgstr "Nich sichtbor"
 
 #: libkopete/kopeteonlinestatus.cpp:122 libkopete/kopetemetacontact.cpp:473
-#: libkopete/kopeteidentity.cpp:128
+#: libkopete/kopeteidentity.cpp:128 kopete/kopetewindow.cpp:310
 #: kopete/identity/identitystatuswidget.cpp:151
 #: plugins/statistics/statisticscontact.cpp:262
 #: plugins/statistics/statisticsdialog.cpp:354 protocols/qq/qqprotocol.cpp:39
@@ -568,11 +568,11 @@ msgstr "Du dörvst den Befehl \"%1\" nich utföhren."
 msgid "Command Error"
 msgstr "Fehler"
 
-#: libkopete/kopeteawayaction.cpp:75 kopete/kopetewindow.cpp:1029
+#: libkopete/kopeteawayaction.cpp:75 kopete/kopetewindow.cpp:1013
 msgid "No Message"
 msgstr "Keen Naricht"
 
-#: libkopete/kopeteawayaction.cpp:76 kopete/kopetewindow.cpp:1023
+#: libkopete/kopeteawayaction.cpp:76 kopete/kopetewindow.cpp:1007
 msgid "New Message..."
 msgstr "Nieg Naricht..."
 
@@ -995,18 +995,23 @@ msgstr "Kontakt wegmaken"
 msgid "Remove"
 msgstr "&Wegmaken"
 
-#: libkopete/kopetecontact.cpp:555
-#, qt-format
-msgctxt "@label:textbox display name"
-msgid "<b>DISPLAY NAME</b><br /><img src=\"%2\">&nbsp;CONTACT STATUS"
-msgstr ""
+#: libkopete/kopetecontact.cpp:556
+#, fuzzy, qt-format
+#| msgctxt "<b>DISPLAY NAME</b><br><img src=\"%2\">&nbsp;CONTACT STATUS"
+#| msgid "<b><nobr>%3</nobr></b><br><img src=\"%2\">&nbsp;%1"
+msgctxt "@label:textbox %3 is contact-display-name, %1 is its status"
+msgid "<b><nobr>%3</nobr></b><br /><img src=\"%2\">&nbsp;%1"
+msgstr "<b><nobr>%3</nobr></b><br><img src=\"%2\">&nbsp;%1"
 
-#: libkopete/kopetecontact.cpp:562
-#, qt-format
-msgctxt "@label:textbox display name"
-msgid ""
-"<b>DISPLAY NAME</b> (CONTACT ID)<br /><img src=\"%2\">&nbsp;CONTACT STATUS"
-msgstr ""
+#: libkopete/kopetecontact.cpp:563
+#, fuzzy, qt-format
+#| msgctxt ""
+#| "<b>DISPLAY NAME</b> (CONTACT ID)<br><img src=\"%2\">&nbsp;CONTACT STATUS"
+#| msgid "<nobr><b>%4</b> (%3)</nobr><br><img src=\"%2\">&nbsp;%1"
+msgctxt ""
+"@label:textbox %4 is contact-display-name, %3 is contact-id, %1 is its status"
+msgid "<nobr><b>%4</b> (%3)</nobr><br /><img src=\"%2\">&nbsp;%1"
+msgstr "<nobr><b>%4</b> (%3)</nobr><br><img src=\"%2\">&nbsp;%1"
 
 #: libkopete/kopetecontact.cpp:581
 #, fuzzy, qt-format
@@ -1038,10 +1043,13 @@ msgctxt "@label:textbox formatted status message"
 msgid "<br /><b>Status&nbsp;Message:</b>&nbsp;%1"
 msgstr "<br><b>Wegwesen-Naricht:</b>&nbsp;%1"
 
-#: libkopete/kopetecontact.cpp:645
-msgctxt "@label:textbox property label"
-msgid "<br /><b>PROPERTY LABEL:</b>&nbsp;PROPERTY VALUE"
-msgstr ""
+#: libkopete/kopetecontact.cpp:646
+#, fuzzy, qt-format
+#| msgctxt "<br><b>PROPERTY LABEL:</b>&nbsp;PROPERTY VALUE"
+#| msgid "<br><nobr><b>%2:</b></nobr>&nbsp;%1"
+msgctxt "@label:textbox property label %2 is name, %1 is value"
+msgid "<br /><nobr><b>%2:</b></nobr>&nbsp;%1"
+msgstr "<br><nobr><b>%2:</b></nobr>&nbsp;%1"
 
 #: libkopete/kopetecontact.cpp:669
 #, qt-format
@@ -1124,7 +1132,7 @@ msgstr "Tokoppelt siet"
 msgid "Last Seen"
 msgstr "Tolest sehn"
 
-#: libkopete/kopeteglobal.cpp:153 kopete/kopetewindow.cpp:1006
+#: libkopete/kopeteglobal.cpp:153 kopete/kopetewindow.cpp:990
 #: protocols/meanwhile/meanwhileprotocol.cpp:62
 msgid "Status Message"
 msgstr "Statusmellen"
@@ -1226,16 +1234,6 @@ msgstr "Globaal Statusmellen"
 msgid "&Add Contact"
 msgstr "Kontakt &tofögen"
 
-#. i18n: tag string
-#. i18n: file ./protocols/gadu/ui/gaduawayui.ui line 112
-#: kopete/kopetewindow.cpp:310 rc.cpp:3192 protocols/qq/qqprotocol.cpp:39
-#: protocols/gadu/gaduprotocol.cpp:60
-#: protocols/oscar/aim/aimstatusmanager.cpp:67
-#: protocols/oscar/icq/icqstatusmanager.cpp:74
-#: protocols/groupwise/gwprotocol.cpp:52
-msgid "O&ffline"
-msgstr "A&fkoppelt"
-
 #: kopete/kopetewindow.cpp:315
 msgid "&Export Contacts..."
 msgstr "Kontakten &exporteren..."
@@ -1336,7 +1334,7 @@ msgstr "De Kontaktenlist wiesen oder versteken"
 msgid "Set Away/Back"
 msgstr "Status op Weg/Torüch setten"
 
-#: kopete/kopetewindow.cpp:677
+#: kopete/kopetewindow.cpp:661
 msgid ""
 "<qt>Closing the main window will keep Kopete running in the system tray. Use "
 "'Quit' from the 'File' menu to quit the application.</qt>"
@@ -1345,11 +1343,11 @@ msgstr ""
 "Systeemafsnitt wieder. Mit \"Beennen\" ut dat Menü \"Datei\" kannst Du "
 "Kopete redig utmaken.</qt>"
 
-#: kopete/kopetewindow.cpp:679
+#: kopete/kopetewindow.cpp:663
 msgid "Docking in System Tray"
 msgstr "In Systeemafsnitt lopen"
 
-#: kopete/kopetewindow.cpp:841
+#: kopete/kopetewindow.cpp:825
 #, fuzzy, qt-format
 #| msgctxt ""
 #| "Account tooltip information: <nobr>ICON <b>PROTOCOL:</b> NAME (<i>STATUS</"
@@ -1366,12 +1364,12 @@ msgid ""
 msgstr ""
 "<nobr><img src=\"kopete-account-icon:%3:%4\"> <b>%1:</b> %2 (<i>%5</i>)<br/>"
 
-#: kopete/kopetewindow.cpp:1012
+#: kopete/kopetewindow.cpp:996
 #, fuzzy
 msgid "Add "
 msgstr "Tofögen >>"
 
-#: kopete/kopetewindow.cpp:1087
+#: kopete/kopetewindow.cpp:1071
 #: kopete/contactlist/kopetecontactlistview.cpp:1772
 msgid "Add Contact"
 msgstr "Kontakt tofögen"
@@ -2571,135 +2569,142 @@ msgstr "Klönen"
 msgid "<qt><i>%1</i> is now %2.</qt>"
 msgstr "<qt><i>%1</i> is nu %2.</qt>"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:223
-#: kopete/chatwindow/kopeteemailwindow.cpp:501
-#: kopete/chatwindow/kopeteemailwindow.cpp:519
+#: kopete/chatwindow/kopetechatwindow.cpp:225
+#, fuzzy
+#| msgid "Send"
+msgctxt "@action:button"
 msgid "Send"
 msgstr "Sennen"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:234
+#: kopete/chatwindow/kopetechatwindow.cpp:236
+#, fuzzy
+#| msgid "Ready."
+msgctxt "@info:status"
 msgid "Ready."
 msgstr "Praat."
 
-#: kopete/chatwindow/kopetechatwindow.cpp:340
+#: kopete/chatwindow/kopetechatwindow.cpp:339
 #: kopete/chatwindow/kopeteemailwindow.cpp:225
 msgid "&Send Message"
 msgstr "Naricht &sennen"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:350
+#: kopete/chatwindow/kopetechatwindow.cpp:349
 msgid "Close All Chats"
 msgstr "All Klöönrüüm tomaken"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:355
+#: kopete/chatwindow/kopetechatwindow.cpp:354
 msgid "&Activate Next Tab"
 msgstr "Na n&akamen Koort wesseln"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:361
+#: kopete/chatwindow/kopetechatwindow.cpp:360
 msgid "&Activate Previous Tab"
 msgstr "Na &verleden Koort wesseln"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:367
+#: kopete/chatwindow/kopetechatwindow.cpp:366
 msgid "Nic&k Completion"
 msgstr "Ökelnaam-&Kompletteren"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:372
+#: kopete/chatwindow/kopetechatwindow.cpp:371
 msgid "&Detach Chat"
 msgstr "Klöönruum a&flösen"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:377
+#: kopete/chatwindow/kopetechatwindow.cpp:376
 msgid "&Move Tab to Window"
 msgstr "Na &Finster verschuven"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:384
+#: kopete/chatwindow/kopetechatwindow.cpp:383
 msgid "&Tab Placement"
 msgstr "Koor&tbalken"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:396
+#: kopete/chatwindow/kopetechatwindow.cpp:395
 msgid "Set Default &Font..."
 msgstr "Standard-Schri&ftoort fastleggen..."
 
-#: kopete/chatwindow/kopetechatwindow.cpp:400
+#: kopete/chatwindow/kopetechatwindow.cpp:399
 msgid "Set Default Text &Color..."
 msgstr "Standard-Te&xtklöör fastleggen..."
 
-#: kopete/chatwindow/kopetechatwindow.cpp:404
+#: kopete/chatwindow/kopetechatwindow.cpp:403
 #: kopete/chatwindow/kopeteemailwindow.cpp:246
 msgid "Set &Background Color..."
 msgstr "&Achtergrundklöör fastleggen..."
 
-#: kopete/chatwindow/kopetechatwindow.cpp:408
+#: kopete/chatwindow/kopetechatwindow.cpp:407
 msgid "Previous History"
 msgstr "Verleden Vörgeschicht"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:413
+#: kopete/chatwindow/kopetechatwindow.cpp:412
 msgid "Next History"
 msgstr "Nakamen Vörgeschicht"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:425
+#: kopete/chatwindow/kopetechatwindow.cpp:424
 msgid "Place to Left of Chat Area"
 msgstr "Linkerhand vun't Klöönrebeet"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:429
+#: kopete/chatwindow/kopetechatwindow.cpp:428
 msgid "Place to Right of Chat Area"
 msgstr "Rechterhand vun't Klöönrebeet"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:433
+#: kopete/chatwindow/kopetechatwindow.cpp:432
 msgid "Show"
 msgstr "Wiesen"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:435
+#: kopete/chatwindow/kopetechatwindow.cpp:434
 msgid "Hide"
 msgstr "Versteken"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:438
+#: kopete/chatwindow/kopetechatwindow.cpp:437
 msgid "Automatic Spell Checking"
 msgstr "Schriefwies automaatsch pröven"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:448
+#: kopete/chatwindow/kopetechatwindow.cpp:447
 msgid "Co&ntacts"
 msgstr "Ko&ntakten"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:472
+#: kopete/chatwindow/kopetechatwindow.cpp:471
 #: kopete/chatwindow/kopeteemailwindow.cpp:274
 msgid "Toolbar Animation"
 msgstr "Warktüüchbalken animeren"
 
 #: kopete/chatwindow/kopetechatwindow.cpp:626
+#, fuzzy
+#| msgid "Close the current tab"
+msgctxt "@info:tooltip"
 msgid "Close the current tab"
 msgstr "Aktuelle Koort tomaken"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:1036
+#: kopete/chatwindow/kopetechatwindow.cpp:1033
 msgid "More..."
 msgstr "Mehr..."
 
-#: kopete/chatwindow/kopetechatwindow.cpp:1052
+#: kopete/chatwindow/kopetechatwindow.cpp:1049
 #, fuzzy
 msgid "Top"
 msgstr "Thema"
 
-#: kopete/chatwindow/kopetechatwindow.cpp:1055
+#: kopete/chatwindow/kopetechatwindow.cpp:1052
 msgid "Bottom"
 msgstr ""
 
-#: kopete/chatwindow/chatmessagepart.cpp:244
+#: kopete/chatwindow/chatmessagepart.cpp:243
 #: plugins/history/historydialog.cpp:186
 msgid "Copy Link Address"
 msgstr "Linkadress koperen"
 
-#: kopete/chatwindow/chatmessagepart.cpp:271
+#: kopete/chatwindow/chatmessagepart.cpp:267
 msgid "Save Conversation"
 msgstr "Klöönsnack sekern"
 
-#: kopete/chatwindow/chatmessagepart.cpp:313
+#: kopete/chatwindow/chatmessagepart.cpp:309
 #, qt-format
 msgid "<qt>Could not open <b>%1</b> for writing.</qt>"
 msgstr "<qt><b>%1</b> lett sik nich schrieven.</qt>"
 
-#: kopete/chatwindow/chatmessagepart.cpp:314
+#: kopete/chatwindow/chatmessagepart.cpp:310
 msgid "Error While Saving"
 msgstr "Fehler bi't Sekern"
 
-#: kopete/chatwindow/chatmessagepart.cpp:652
+#: kopete/chatwindow/chatmessagepart.cpp:648
 msgid "User Has Left"
 msgstr "Bruker hett den Klöönruum verlaten"
 
@@ -2745,8 +2750,6 @@ msgstr "Koppel-Klöönruum tomaken"
 #: kopete/chatwindow/kopeteemailwindow.cpp:462
 #: kopete/chatwindow/kopeteemailwindow.cpp:469
 #: kopete/chatwindow/kopeteemailwindow.cpp:476
-#: kopete/chatwindow/chatview.cpp:347 kopete/chatwindow/chatview.cpp:354
-#: kopete/chatwindow/chatview.cpp:361
 msgid "Cl&ose Chat"
 msgstr "Klöönruum t&omaken"
 
@@ -2778,6 +2781,11 @@ msgstr ""
 #: kopete/chatwindow/chatview.cpp:360
 msgid "Message in Transit"
 msgstr "Naricht ünnerwegens"
+
+#: kopete/chatwindow/kopeteemailwindow.cpp:501
+#: kopete/chatwindow/kopeteemailwindow.cpp:519
+msgid "Send"
+msgstr "Sennen"
 
 #: kopete/chatwindow/kopeteemailwindow.cpp:508
 msgid "Reply"
@@ -2857,6 +2865,14 @@ msgstr "&Utglieken"
 #, fuzzy
 msgid "Chat members list"
 msgstr "List vun Mit&klöners"
+
+#: kopete/chatwindow/chatview.cpp:347 kopete/chatwindow/chatview.cpp:354
+#: kopete/chatwindow/chatview.cpp:361
+#, fuzzy
+#| msgid "Cl&ose Chat"
+msgctxt "@action:button"
+msgid "Close Chat"
+msgstr "Klöönruum t&omaken"
 
 #: kopete/chatwindow/chatview.cpp:396
 #, fuzzy, qt-format
@@ -10232,6 +10248,16 @@ msgstr ""
 "Dissen Status utsöken, wenn Du Di mit de nerrn ingeven Mellen afkoppeln wullt"
 
 #. i18n: tag string
+#. i18n: file ./protocols/gadu/ui/gaduawayui.ui line 112
+#: rc.cpp:3192 protocols/qq/qqprotocol.cpp:39
+#: protocols/gadu/gaduprotocol.cpp:60
+#: protocols/oscar/aim/aimstatusmanager.cpp:67
+#: protocols/oscar/icq/icqstatusmanager.cpp:74
+#: protocols/groupwise/gwprotocol.cpp:52
+msgid "O&ffline"
+msgstr "A&fkoppelt"
+
+#. i18n: tag string
 #. i18n: file ./protocols/gadu/ui/gaduawayui.ui line 132
 #. i18n: tag string
 #. i18n: file ./protocols/gadu/ui/gaduawayui.ui line 151
@@ -14769,11 +14795,6 @@ msgstr ""
 msgid "Select public key for %1"
 msgstr "Apen Slötel för \"%1\" utsöken"
 
-#: plugins/cryptography/cryptographyselectuserkey.cpp:84
-#: plugins/cryptography/cryptographyguiclient.cpp:143
-msgid "Public Keys Found"
-msgstr ""
-
 #: plugins/cryptography/cryptographypreferences.cpp:48
 #: plugins/cryptography/cryptographypreferences.cpp:49
 #, fuzzy
@@ -14838,60 +14859,53 @@ msgstr "Apen Slötel utsöken"
 msgid "Export checked keys to address book"
 msgstr "Na Adressbook exporteren"
 
-#: plugins/cryptography/exportkeys.cpp:71
+#: plugins/cryptography/exportkeys.cpp:69
 #, fuzzy
 #| msgid "No Contacts with Photo Support"
 msgid "<No meta-contacts with keys to export>"
 msgstr "Keen Kontakten mit Foto-Ünnerstütten"
 
-#: plugins/cryptography/cryptographyplugin.cpp:70
+#: plugins/cryptography/kabckeyselector.cpp:29
+#, fuzzy
+#| msgid "Select Public Key"
+msgid "Public Key Found"
+msgstr "Apen Slötel utsöken"
+
+#: plugins/cryptography/kabckeyselector.cpp:40
+msgid "Public Keys Found"
+msgstr ""
+
+#: plugins/cryptography/cryptographyplugin.cpp:69
 #, fuzzy
 #| msgid "Select Public Key"
 msgid "&Select Public Key..."
 msgstr "Apen Slötel utsöken"
 
-#: plugins/cryptography/cryptographyplugin.cpp:76
+#: plugins/cryptography/cryptographyplugin.cpp:75
 #, fuzzy
 #| msgid "Export to Address Book"
-msgid "&Export Public Key To Address Book..."
+msgid "&Export Public Keys To Address Book..."
 msgstr "Na Adressbook exporteren"
 
-#: plugins/cryptography/cryptographyplugin.cpp:153
-#: plugins/cryptography/cryptographyplugin.cpp:166
+#: plugins/cryptography/cryptographyplugin.cpp:154
+#: plugins/cryptography/cryptographyplugin.cpp:167
 msgid ""
 "Cryptography plugin refuses to show the most recent message because it "
 "contains an attempt to forge an encrypted or signed message"
 msgstr ""
 
-#: plugins/cryptography/cryptographyplugin.cpp:212
+#: plugins/cryptography/cryptographyplugin.cpp:211
 msgid "You have not chosen an encryption key for one or more recipients"
 msgstr ""
 
-#: plugins/cryptography/cryptographyplugin.cpp:267
-#, fuzzy
-#| msgid "Play a sound when this event occurs for this contact"
-msgid "No key has been set for this meta-contact"
-msgstr "En Klang afspelen, wenn dit Begeefnis bi dissen Kontakt vörkummt"
-
-#: plugins/cryptography/cryptographyplugin.cpp:267
-#, fuzzy
-msgid "No Key"
-msgstr "Keen"
-
-#: plugins/cryptography/cryptographyplugin.cpp:278
-#, fuzzy
-#| msgid "Select Public Key"
-msgid "Export Public Key"
-msgstr "Apen Slötel utsöken"
-
-#: plugins/cryptography/cryptographyplugin.cpp:295
+#: plugins/cryptography/cryptographyplugin.cpp:272
 #, fuzzy
 #| msgid "Enter passphrase for <b>%1</b>:"
 msgid "Enter password for GPG encryption and signing key"
 msgstr "Giff bitte den Slötelsatz för <b>%1</b> in:"
 
-#: plugins/cryptography/cryptographyplugin.cpp:309
-#: plugins/cryptography/cryptographyguiclient.cpp:164
+#: plugins/cryptography/cryptographyplugin.cpp:288
+#: plugins/cryptography/cryptographyguiclient.cpp:153
 msgid ""
 "This protocol may not work with messages that are encrypted. This is because "
 "encrypted messages are very long, and the server or peer may reject them due "
@@ -14899,8 +14913,8 @@ msgid ""
 "temporarily suspended, turn off encryption."
 msgstr ""
 
-#: plugins/cryptography/cryptographyplugin.cpp:309
-#: plugins/cryptography/cryptographyguiclient.cpp:164
+#: plugins/cryptography/cryptographyplugin.cpp:288
+#: plugins/cryptography/cryptographyguiclient.cpp:153
 #, fuzzy
 #| msgid "Unsupported protocol version."
 msgid "Cryptography Unsupported Protocol"
@@ -14914,29 +14928,27 @@ msgid ""
 "You have %2 tries left."
 msgstr "Giff bitte den Slötelsatz för <b>%1</b> in:"
 
-#: plugins/cryptography/cryptographyguiclient.cpp:78
+#: plugins/cryptography/cryptographyguiclient.cpp:56
+msgid "Cryptography"
+msgstr "Verslöteln"
+
+#: plugins/cryptography/cryptographyguiclient.cpp:80
 msgid "Encrypt Messages"
 msgstr "Narichten verslöteln"
 
-#: plugins/cryptography/cryptographyguiclient.cpp:80
+#: plugins/cryptography/cryptographyguiclient.cpp:82
 #, fuzzy
 #| msgid "&Send Message"
 msgid "Sign Messages"
 msgstr "Naricht &sennen"
 
-#: plugins/cryptography/cryptographyguiclient.cpp:82
+#: plugins/cryptography/cryptographyguiclient.cpp:84
 #, fuzzy
 #| msgid "Export Contacts to Address Book"
-msgid "Export Contact's Key to Address Book"
+msgid "Export Contacts' Keys to Address Book"
 msgstr "Kontakten na't Adressbook exporteren"
 
-#: plugins/cryptography/cryptographyguiclient.cpp:132
-#, fuzzy
-#| msgid "Select Public Key"
-msgid "Public Key Found"
-msgstr "Apen Slötel utsöken"
-
-#: plugins/cryptography/cryptographyguiclient.cpp:174
+#: plugins/cryptography/cryptographyguiclient.cpp:164
 #, qt-format
 msgid ""
 "To send encrypted messages to %2, you still need to select a public key for "
@@ -14948,7 +14960,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: plugins/cryptography/cryptographyguiclient.cpp:174
+#: plugins/cryptography/cryptographyguiclient.cpp:164
 msgid "Missing public key"
 msgid_plural "Missing public keys"
 msgstr[0] ""
@@ -20952,33 +20964,19 @@ msgstr ""
 "Giff bitte de Antwoort in, de automaatsch na den Senner sendt warrt, wenn Du "
 "ünner Status \"Weg\" oder \"Bunnen\" en Naricht kriggst."
 
-#~ msgid "Cryptography"
-#~ msgstr "Verslöteln"
+#, fuzzy
+#~| msgid "Play a sound when this event occurs for this contact"
+#~ msgid "No key has been set for this meta-contact"
+#~ msgstr "En Klang afspelen, wenn dit Begeefnis bi dissen Kontakt vörkummt"
 
 #, fuzzy
-#~| msgctxt "<b>DISPLAY NAME</b><br><img src=\"%2\">&nbsp;CONTACT STATUS"
-#~| msgid "<b><nobr>%3</nobr></b><br><img src=\"%2\">&nbsp;%1"
-#~ msgctxt ""
-#~ "@label:textbox <b>DISPLAY NAME</b><br><img src=\"%2\">&nbsp;CONTACT STATUS"
-#~ msgid "<b><nobr>%3</nobr></b><br><img src=\"%2\">&nbsp;%1"
-#~ msgstr "<b><nobr>%3</nobr></b><br><img src=\"%2\">&nbsp;%1"
+#~ msgid "No Key"
+#~ msgstr "Keen"
 
 #, fuzzy
-#~| msgctxt ""
-#~| "<b>DISPLAY NAME</b> (CONTACT ID)<br><img src=\"%2\">&nbsp;CONTACT STATUS"
-#~| msgid "<nobr><b>%4</b> (%3)</nobr><br><img src=\"%2\">&nbsp;%1"
-#~ msgctxt ""
-#~ "@label:textbox <b>DISPLAY NAME</b> (CONTACT ID)<br><img src=\"%2\">&nbsp;"
-#~ "CONTACT STATUS"
-#~ msgid "<nobr><b>%4</b> (%3)</nobr><br><img src=\"%2\">&nbsp;%1"
-#~ msgstr "<nobr><b>%4</b> (%3)</nobr><br><img src=\"%2\">&nbsp;%1"
-
-#, fuzzy
-#~| msgctxt "<br><b>PROPERTY LABEL:</b>&nbsp;PROPERTY VALUE"
-#~| msgid "<br><nobr><b>%2:</b></nobr>&nbsp;%1"
-#~ msgctxt "@label:textbox <br><b>PROPERTY LABEL:</b>&nbsp;PROPERTY VALUE"
-#~ msgid "<br><nobr><b>%2:</b></nobr>&nbsp;%1"
-#~ msgstr "<br><nobr><b>%2:</b></nobr>&nbsp;%1"
+#~| msgid "Select Public Key"
+#~ msgid "Export Public Key"
+#~ msgstr "Apen Slötel utsöken"
 
 #, fuzzy
 #~ msgid "The list of accounts"
