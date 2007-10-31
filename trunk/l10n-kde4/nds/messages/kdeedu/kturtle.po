@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kturtle\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2007-10-15 05:38+0200\n"
+"POT-Creation-Date: 2007-10-31 05:53+0100\n"
 "PO-Revision-Date: 2007-02-18 23:14+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -842,8 +842,8 @@ msgid ""
 "# This example draws an arrow...\n"
 "@(reset)\n"
 "\n"
-"@(canvassize) 200@(,) 200\n"
 "@(canvascolor) 0@(,) 0@(,) 0\n"
+"@(penup)\n"
 "@(pencolor) 255@(,) 0@(,) 0\n"
 "@(penwidth) 5\n"
 "@(clear)\n"
@@ -851,6 +851,7 @@ msgid ""
 "@(go) 20@(,)20\n"
 "@(direction) 135\n"
 "\n"
+"@(pendown)\n"
 "@(forward) 200\n"
 "@(turnleft) 135\n"
 "@(forward) 100\n"
@@ -860,10 +861,11 @@ msgid ""
 "@(forward) 100\n"
 "@(turnleft) 45\n"
 "\n"
+"@(penup)\n"
 "@(go) 40@(,) 100"
 msgstr ""
 
-#: interpreter/translator.cpp:723
+#: interpreter/translator.cpp:725
 #, fuzzy
 msgctxt ""
 "This is an EXAMPLE NAME in KTurtle.Please see http://edu.kde.org/kturtle/"
@@ -871,7 +873,7 @@ msgctxt ""
 msgid "flower"
 msgstr "Langsamer"
 
-#: interpreter/translator.cpp:727
+#: interpreter/translator.cpp:729
 #, kde-format
 msgctxt ""
 "You are about to translate the 'flower' EXAMPLE PROGRAM, examples have to be "
@@ -882,12 +884,13 @@ msgid ""
 "# This example draws a flower...\n"
 "\n"
 "@(reset)\n"
-"@(canvassize) 170@(,) 170\n"
+"@(penup)\n"
 "@(canvascolor) 255@(,) 55@(,) 140\n"
 "@(go) 45@(,) 120\n"
 "@(pencolor) 160@(,) 0@(,) 255\n"
 "@(penwidth) 3\n"
 "\n"
+"@(pendown)\n"
 "@(repeat) 8 {\n"
 "  @(repeat) 4 {\n"
 "    @(forward) 20\n"
@@ -903,6 +906,7 @@ msgid ""
 "  }\n"
 "}\n"
 "\n"
+"@(penup)\n"
 "@(go) 145@(,) 145\n"
 "@(direction) 0"
 msgstr ""
@@ -1074,7 +1078,7 @@ msgstr ""
 msgid "Nothing to show here"
 msgstr "Nix ünner den Blinker"
 
-#: inspector.cpp:142 mainwindow.cpp:634
+#: inspector.cpp:142 mainwindow.cpp:642
 msgid "boolean"
 msgstr ""
 
@@ -1164,396 +1168,376 @@ msgstr ""
 msgid "About KTurtle"
 msgstr "KTurtle"
 
-#: mainwindow.cpp:164
+#: mainwindow.cpp:169
 msgid "Create a new file"
 msgstr ""
 
-#: mainwindow.cpp:167
+#: mainwindow.cpp:172
 msgid "Open an existing file"
 msgstr ""
 
-#: mainwindow.cpp:171
+#: mainwindow.cpp:176
 msgid "Open a recently used file"
 msgstr ""
 
-#: mainwindow.cpp:174
+#: mainwindow.cpp:179
 msgid "Save the current file to disk"
 msgstr ""
 
-#: mainwindow.cpp:178
+#: mainwindow.cpp:183
 msgid "Save the current file under a different name"
 msgstr ""
 
-#: mainwindow.cpp:180
+#: mainwindow.cpp:185
 msgid "&Run"
 msgstr ""
 
-#: mainwindow.cpp:183
+#: mainwindow.cpp:188
 msgid "Execute the code in the Code Editor"
 msgstr ""
 
-#: mainwindow.cpp:186
+#: mainwindow.cpp:191
 msgid "&Pause"
 msgstr ""
 
-#: mainwindow.cpp:190
+#: mainwindow.cpp:195
 #, fuzzy
 msgid "Pause execution"
 msgstr "&Utföhren anhollen"
 
-#: mainwindow.cpp:193
+#: mainwindow.cpp:198
 msgid "&Abort"
 msgstr ""
 
-#: mainwindow.cpp:196
+#: mainwindow.cpp:201
 #, fuzzy
 msgid "Abort execution"
 msgstr "&Utföhren beennen"
 
-#: mainwindow.cpp:200
+#: mainwindow.cpp:205
 #, fuzzy
 msgid "Print the code"
 msgstr "&Logo-Kode drucken"
 
-#: mainwindow.cpp:203
+#: mainwindow.cpp:208
 #, fuzzy
 msgid "Quit KTurtle"
 msgstr "KTurtle beennen..."
 
-#: mainwindow.cpp:208
+#: mainwindow.cpp:213
 msgid "Undo a change in the Code Editor"
 msgstr ""
 
-#: mainwindow.cpp:213
+#: mainwindow.cpp:218
 msgid "Redo a previously undone change in the Code Editor"
 msgstr ""
 
-#: mainwindow.cpp:218
+#: mainwindow.cpp:223
 msgid "Cut the selected text to the clipboard"
 msgstr ""
 
-#: mainwindow.cpp:223
+#: mainwindow.cpp:228
 msgid "Copy the selected text to the clipboard"
 msgstr ""
 
-#: mainwindow.cpp:228
+#: mainwindow.cpp:233
 msgid "Paste the clipboard's content into the current selection"
 msgstr ""
 
-#: mainwindow.cpp:231
+#: mainwindow.cpp:236
 msgid "Select all the code in the editor"
 msgstr ""
 
-#: mainwindow.cpp:234
+#: mainwindow.cpp:239
 #, fuzzy
 msgid "Toggle &Insert"
 msgstr "Infögen an/ut"
 
-#: mainwindow.cpp:236
+#: mainwindow.cpp:241
 msgid "Toggle between the 'insert' and 'overwrite' mode"
 msgstr ""
 
-#: mainwindow.cpp:243
-msgid "Search through the code in the editor"
-msgstr ""
-
-#: mainwindow.cpp:246
-msgid "Find the next occurrence"
-msgstr ""
-
-#: mainwindow.cpp:249
-msgid "Find the previous occurrence"
-msgstr ""
-
-#: mainwindow.cpp:252
-msgid "Search and replace"
-msgstr ""
-
-#: mainwindow.cpp:256
+#: mainwindow.cpp:262
 msgid "Show &Code Editor"
 msgstr ""
 
-#: mainwindow.cpp:258
+#: mainwindow.cpp:264
 msgid "Show or hide the Code Editor"
 msgstr ""
 
-#: mainwindow.cpp:264
+#: mainwindow.cpp:270
 msgid "Show &Inspector"
 msgstr ""
 
-#: mainwindow.cpp:266
+#: mainwindow.cpp:272
 msgid "Show or hide the Inspector"
 msgstr ""
 
-#: mainwindow.cpp:272
+#: mainwindow.cpp:278
 msgid "Show &Statusbar"
 msgstr ""
 
-#: mainwindow.cpp:274
+#: mainwindow.cpp:280
 msgid "Show or hide the Statusbar"
 msgstr ""
 
-#: mainwindow.cpp:279
+#: mainwindow.cpp:285
 msgid "Show &Toolbar"
 msgstr ""
 
-#: mainwindow.cpp:281
+#: mainwindow.cpp:287
 msgid "Show or hide the Toolbar"
 msgstr ""
 
-#: mainwindow.cpp:289
+#: mainwindow.cpp:295
 msgid "&Direction chooser"
 msgstr ""
 
-#: mainwindow.cpp:291
+#: mainwindow.cpp:297
 msgid "Shows the direction chooser dialog"
 msgstr ""
 
-#: mainwindow.cpp:294
+#: mainwindow.cpp:300
 msgid "Show &Line Numbers"
 msgstr "&Reegnummern wiesen"
 
-#: mainwindow.cpp:296
+#: mainwindow.cpp:302
 msgid "Turn the editors line numbers on/off"
 msgstr ""
 
-#: mainwindow.cpp:311
-msgid "Configure the application's keyboard shortcut assignments."
-msgstr ""
-
-#: mainwindow.cpp:320
+#: mainwindow.cpp:328
 msgid "Get help on the command under the cursor"
 msgstr ""
 
-#: mainwindow.cpp:325
+#: mainwindow.cpp:333
 msgid "Information about KTurtle"
 msgstr ""
 
-#: mainwindow.cpp:328
+#: mainwindow.cpp:336
 msgid "Information about KDE"
 msgstr ""
 
-#: mainwindow.cpp:331 mainwindow.cpp:334
+#: mainwindow.cpp:339 mainwindow.cpp:342
 msgid "Help"
 msgstr ""
 
-#: mainwindow.cpp:337
+#: mainwindow.cpp:345
 msgid "Point and click information about the interface of KTurtle"
 msgstr ""
 
-#: mainwindow.cpp:343
+#: mainwindow.cpp:350
 #, fuzzy
 msgctxt "@option:radio"
 msgid "&Full Speed"
 msgstr "Gau"
 
-#: mainwindow.cpp:350
+#: mainwindow.cpp:357
 #, fuzzy
 msgctxt "@option:radio choose the slow speed"
 msgid "&Slow"
 msgstr "Langsam"
 
-#: mainwindow.cpp:356
+#: mainwindow.cpp:363
 #, fuzzy
 msgctxt "@option:radio"
 msgid "S&lower"
 msgstr "Langsamer"
 
-#: mainwindow.cpp:362
+#: mainwindow.cpp:369
 #, fuzzy
 msgctxt "@option:radio"
 msgid "Sl&owest"
 msgstr "Bannig langsam"
 
-#: mainwindow.cpp:368
+#: mainwindow.cpp:375
 msgctxt "@option:radio"
 msgid "S&tep-by-Step"
 msgstr ""
 
-#: mainwindow.cpp:391
+#: mainwindow.cpp:398
 #, fuzzy
 msgid "&Code Editor"
 msgstr "&Editor instellen..."
 
-#: mainwindow.cpp:407
+#: mainwindow.cpp:414
 msgid "&Inspector"
 msgstr ""
 
-#: mainwindow.cpp:449
+#: mainwindow.cpp:456
 msgid "&File"
 msgstr ""
 
-#: mainwindow.cpp:456
+#: mainwindow.cpp:463
 msgid "&Edit"
 msgstr ""
 
-#: mainwindow.cpp:461
+#: mainwindow.cpp:468
 msgid "&View"
 msgstr ""
 
-#: mainwindow.cpp:464
+#: mainwindow.cpp:471
 msgid "&Tools"
 msgstr ""
 
-#: mainwindow.cpp:469
+#: mainwindow.cpp:476
 #, fuzzy
 msgid "&Settings"
 msgstr "&Verwiedert Instellen"
 
-#: mainwindow.cpp:472
+#: mainwindow.cpp:479
 msgid "&Help"
 msgstr ""
 
-#: mainwindow.cpp:484
+#: mainwindow.cpp:492
 #, fuzzy
 msgid "R&un Speed"
 msgstr "Gau"
 
-#: mainwindow.cpp:491
+#: mainwindow.cpp:499
 #, fuzzy
 msgid "&Language"
 msgstr "Spraak"
 
-#: mainwindow.cpp:503
+#: mainwindow.cpp:511
 #, kde-format
 msgid "Switch to the %1 dictionary"
 msgstr ""
 
-#: mainwindow.cpp:509
+#: mainwindow.cpp:517
 #, fuzzy
 msgid "&Open Example"
 msgstr "&Bispelen opmaken..."
 
-#: mainwindow.cpp:534
+#: mainwindow.cpp:542
 #, fuzzy
 #| msgid "Full Speed"
 msgctxt "@option:radio"
 msgid "Full Speed"
 msgstr "Gau"
 
-#: mainwindow.cpp:535
+#: mainwindow.cpp:543
 #, fuzzy
 #| msgid "Slow"
 msgctxt "@option:radio choose slow speed"
 msgid "Slow"
 msgstr "Langsam"
 
-#: mainwindow.cpp:536
+#: mainwindow.cpp:544
 #, fuzzy
 #| msgid "Slower"
 msgctxt "@option:radio"
 msgid "Slower"
 msgstr "Langsamer"
 
-#: mainwindow.cpp:537
+#: mainwindow.cpp:545
 #, fuzzy
 #| msgid "Slowest"
 msgctxt "@option:radio"
 msgid "Slowest"
 msgstr "Bannig langsam"
 
-#: mainwindow.cpp:538
+#: mainwindow.cpp:546
 msgctxt "@option:radio"
 msgid "Step by Step"
 msgstr ""
 
-#: mainwindow.cpp:582
+#: mainwindow.cpp:590
 msgctxt "@info:status there are no examples"
 msgid "(empty)"
 msgstr ""
 
-#: mainwindow.cpp:601
+#: mainwindow.cpp:609
 msgid " INS "
 msgstr " Inf "
 
-#: mainwindow.cpp:601
+#: mainwindow.cpp:609
 msgid " OVR "
 msgstr " Övr "
 
-#: mainwindow.cpp:607 mainwindow.cpp:650
+#: mainwindow.cpp:615 mainwindow.cpp:658
 msgid "<placeholder>no keyword</placeholder>"
 msgstr ""
 
-#: mainwindow.cpp:608
+#: mainwindow.cpp:616
 #, kde-format
 msgid "Help on: %1"
 msgstr "Hülp för: %1"
 
-#: mainwindow.cpp:613
+#: mainwindow.cpp:621
 #, kde-format
 msgid " Line: %1 Column: %2 "
 msgstr " Reeg: %1 Striep: %2 "
 
-#: mainwindow.cpp:623
+#: mainwindow.cpp:631
 msgid "<placeholder>variable</placeholder>"
 msgstr ""
 
-#: mainwindow.cpp:624
+#: mainwindow.cpp:632
 msgid "<placeholder>number</placeholder>"
 msgstr ""
 
-#: mainwindow.cpp:625
+#: mainwindow.cpp:633
 msgid "<placeholder>comment</placeholder>"
 msgstr ""
 
-#: mainwindow.cpp:626
+#: mainwindow.cpp:634
 msgid "<placeholder>string</placeholder>"
 msgstr ""
 
-#: mainwindow.cpp:627
+#: mainwindow.cpp:635
 msgid "<placeholder>scope</placeholder>"
 msgstr ""
 
-#: mainwindow.cpp:628
+#: mainwindow.cpp:636
 msgid "<placeholder>assignment</placeholder>"
 msgstr ""
 
-#: mainwindow.cpp:629
+#: mainwindow.cpp:637
 msgid "<placeholder>parenthesis</placeholder>"
 msgstr ""
 
-#: mainwindow.cpp:631
+#: mainwindow.cpp:639
 msgid "mathematical operator"
 msgstr ""
 
-#: mainwindow.cpp:632
+#: mainwindow.cpp:640
 #, fuzzy
 msgid "expression"
 msgstr "En Utdruck wöör verwacht"
 
-#: mainwindow.cpp:633
+#: mainwindow.cpp:641
 msgid "boolean operator"
 msgstr ""
 
-#: mainwindow.cpp:635 mainwindow.cpp:636 mainwindow.cpp:637
+#: mainwindow.cpp:643 mainwindow.cpp:644 mainwindow.cpp:645
 #, fuzzy
 msgid "command"
 msgstr "<Kommentar>"
 
-#: mainwindow.cpp:670
+#: mainwindow.cpp:678
 #, kde-format
 msgid "Could not change the language to %1."
 msgstr ""
 
-#: mainwindow.cpp:678
+#: mainwindow.cpp:686
 #, kde-format
 msgid "%1 [built in]"
 msgstr ""
 
-#: mainwindow.cpp:679
+#: mainwindow.cpp:687
 #, fuzzy, kde-format
 msgid "%1 (%2)"
 msgstr "\"%1\" (%2)"
 
-#: mainwindow.cpp:762
+#: mainwindow.cpp:770
 msgid "untitled"
 msgstr ""
 
-#: mainwindow.cpp:808
+#: mainwindow.cpp:816
 msgid "Input"
 msgstr "Ingaav"
 
-#: mainwindow.cpp:815
+#: mainwindow.cpp:823
 msgid "Message"
 msgstr "Naricht"
 
