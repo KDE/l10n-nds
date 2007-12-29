@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2007-12-25 06:14+0100\n"
+"POT-Creation-Date: 2007-12-29 06:19+0100\n"
 "PO-Revision-Date: 2007-12-29 04:00+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -18,8 +18,14 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: meta/PlaylistFileSupport.cpp:45 PlaylistHandler.cpp:358
-#: PlaylistHandler.cpp:470 PlaylistHandler.cpp:791
+#: meta/PLSPlaylist.cpp:57
+#, fuzzy
+#| msgid "&Playlist"
+msgid "PLS Playlist"
+msgstr "&Afspeellist"
+
+#: meta/PlaylistFileSupport.cpp:45 PlaylistHandler.cpp:214
+#: PlaylistHandler.cpp:288 PlaylistHandler.cpp:531
 #, kde-format
 msgid "Cannot write playlist (%1)."
 msgstr "Afspeellist lett sik nich schrieven (%1)."
@@ -113,21 +119,21 @@ msgstr ""
 #: context/engines/lastfm/LastFmEngine.cpp:50
 #: context/engines/lastfm/LastFmEngine.cpp:68
 #: context/engines/lastfm/LastFmEngine.cpp:151
-#: context/applets/lastfmevents/LastFmEvents.cpp:81
+#: context/applets/lastfmevents/LastFmEvents.cpp:82
 msgid "userevents"
 msgstr "Brukerbegeefnissen"
 
 #: context/engines/lastfm/LastFmEngine.cpp:50
 #: context/engines/lastfm/LastFmEngine.cpp:71
 #: context/engines/lastfm/LastFmEngine.cpp:149
-#: context/applets/lastfmevents/LastFmEvents.cpp:80
+#: context/applets/lastfmevents/LastFmEvents.cpp:81
 msgid "sysevents"
 msgstr "Systeembegeefnissen"
 
 #: context/engines/lastfm/LastFmEngine.cpp:50
 #: context/engines/lastfm/LastFmEngine.cpp:74
 #: context/engines/lastfm/LastFmEngine.cpp:150
-#: context/applets/lastfmevents/LastFmEvents.cpp:82
+#: context/applets/lastfmevents/LastFmEvents.cpp:83
 msgid "friendevents"
 msgstr "Fründbegeefnissen"
 
@@ -212,7 +218,6 @@ msgid "Back- and foregrounds for clickable icons"
 msgstr "Achter- un Vörgrund för anklickbor Lüttbiller"
 
 #: context/plasma/packages.cpp:74
-#| msgid "Background image for plasmoids"
 msgid "Default background image for panels"
 msgstr "Standard-Achtergrundbild för Paneels"
 
@@ -235,7 +240,8 @@ msgstr "Keen Karn"
 #: context/plasma/applet.cpp:134
 #, kde-format
 msgid "Could not locate the %1 package required for the %2 widget."
-msgstr "Dat Paket \"%1\", dat för Stüerelement %2 bruukt warrt, lett sik nich finnen."
+msgstr ""
+"Dat Paket \"%1\", dat för Stüerelement %2 bruukt warrt, lett sik nich finnen."
 
 #: context/plasma/applet.cpp:149
 #, kde-format
@@ -264,7 +270,8 @@ msgstr "Dit Objekt lett sik nich opstellen."
 
 #: context/plasma/applet.cpp:657
 #, kde-format
-msgid "This object could not be created for the following reason:<p><b>%1</b></p>"
+msgid ""
+"This object could not be created for the following reason:<p><b>%1</b></p>"
 msgstr "Dit Objekt lett sik nich opstellen. Grund is:<p><b>%1</b></p>"
 
 #: context/plasma/applet.cpp:720
@@ -298,7 +305,6 @@ msgid "Widgets I Have Used Before"
 msgstr "Ehrdem bruukt Stüerelementen"
 
 #: context/plasma/appletbrowser.cpp:103
-#| msgid "Currently unused"
 msgid "Currently Running Widgets"
 msgstr "Opstunns lopen Stüerelementen"
 
@@ -357,28 +363,68 @@ msgstr "%1-Instellen..."
 msgid "Remove this %1"
 msgstr "Dit %1 wegdoon"
 
-#: context/applets/currenttrack/CurrentTrack.cpp:202
+#: context/applets/currenttrack/CurrentTrack.cpp:59
+#, fuzzy
+#| msgid "Trac&k:"
+msgid "Track:"
+msgstr "Stüc&k:"
+
+#. i18n: tag string
+#. i18n: file ./servicebrowser/magnatunestore/magnatunepurchasedialogbase.ui line 110
+#: context/applets/currenttrack/CurrentTrack.cpp:60 rc.cpp:1802
+msgid "Artist:"
+msgstr "Künstler:"
+
+#. i18n: tag string
+#. i18n: file ./servicebrowser/magnatunestore/magnatunepurchasedialogbase.ui line 90
+#: context/applets/currenttrack/CurrentTrack.cpp:61 rc.cpp:1799
+msgid "Album:"
+msgstr "Album:"
+
+#. i18n: tag string
+#. i18n: file tagdialogbase.ui line 684
+#. i18n: tag string
+#. i18n: file ./tagdialogbase.ui line 684
+#: context/applets/currenttrack/CurrentTrack.cpp:62 tagdialog.cpp:745
+#: rc.cpp:386 rc.cpp:1738
+msgid "Score:"
+msgstr "Pünkt:"
+
+#: context/applets/currenttrack/CurrentTrack.cpp:63
+#, fuzzy
+#| msgctxt "a single item (singular)"
+#| msgid "Last Played:"
+msgid "Played:"
+msgstr "Tolest speelt:"
+
+#: context/applets/currenttrack/CurrentTrack.cpp:64
+#, fuzzy
+#| msgid "Played tracks to show:"
+msgid "Played Last:"
+msgstr "Wiest Tall vun afspeelt Stücken:"
+
+#: context/applets/currenttrack/CurrentTrack.cpp:231
 msgid "Configure Current Track Applet"
 msgstr "Aktuell Stück-Lüttprogramm instellen"
 
-#: context/applets/currenttrack/CurrentTrack.cpp:214
+#: context/applets/currenttrack/CurrentTrack.cpp:243
 #: context/applets/playlistinfo/PlaylistInfo.cpp:161
 msgid "Width"
 msgstr "Breed"
 
-#: context/applets/lastfmevents/LastFmEvents.cpp:259
+#: context/applets/lastfmevents/LastFmEvents.cpp:260
 msgid "Configure Last.Fm Events"
 msgstr "\"Last.Fm\"-Begeefnissen instellen"
 
-#: context/applets/lastfmevents/LastFmEvents.cpp:268
+#: context/applets/lastfmevents/LastFmEvents.cpp:269
 msgid "Show Friend Events"
 msgstr "Fründbegeefnissen wiesen"
 
-#: context/applets/lastfmevents/LastFmEvents.cpp:270
+#: context/applets/lastfmevents/LastFmEvents.cpp:271
 msgid "Show Recommended Events"
 msgstr "Anraadt Begeefnissen wiesen"
 
-#: context/applets/lastfmevents/LastFmEvents.cpp:272
+#: context/applets/lastfmevents/LastFmEvents.cpp:273
 msgid "Show Your Future Events"
 msgstr "Dien tokamen Begeefnissen wiesen"
 
@@ -423,8 +469,10 @@ msgid "Lyrics are being fetched."
 msgstr "Leedtexten warrt haalt."
 
 #: context/applets/lyrics/LyricsApplet.cpp:149
-msgid "Lyrics were not able to be downloaded. Please check your internet connection."
-msgstr "Leedtexten leten sik nich daalladen. Bitte prööv Dien Internetverbinnen."
+msgid ""
+"Lyrics were not able to be downloaded. Please check your internet connection."
+msgstr ""
+"Leedtexten leten sik nich daalladen. Bitte prööv Dien Internetverbinnen."
 
 #: context/applets/lyrics/LyricsApplet.cpp:151
 msgid "Todo.... show suggestions here!"
@@ -788,7 +836,10 @@ msgstr "Tolest anhangt Filter wegmaken"
 msgid ""
 "<p>Edit the filter for finding tracks with specific attributes, e.g. you can "
 "look for a track that has a length of three minutes.</p>"
-msgstr "<p>Wenn Du na Stücken mit bestimmt Egenschappen söchst, kannst Du den Filter topassen - a.B. kannst Du na en Stück söken, dat en Längde vun dree Minuten hett.</p>"
+msgstr ""
+"<p>Wenn Du na Stücken mit bestimmt Egenschappen söchst, kannst Du den Filter "
+"topassen - a.B. kannst Du na en Stück söken, dat en Längde vun dree Minuten "
+"hett.</p>"
 
 #: editfilterdialog.cpp:89
 msgid "Attribute:"
@@ -813,7 +864,20 @@ msgid ""
 "kbytes, and megabytes as specified in the unit for the filesize keyword), "
 "<b>track</b> (i.e. the track number), and <b>year</b>.</p>"
 msgstr ""
-"<p>Hier lett sik direktemang twischen de <i>Eenfachsöök</i> oder den Bruuk vun Slötelwöör för en Reeg vun Attributen utsöken, a.B. Künstlernaam usw. De Slötelwöör sünd na ehr Weerten ünnerdeelt. En poor sünd nummeersch un anner sünd alfanummeersch. Een bruuk dat man nich nau to weten. Nummeersch Slötelwöör warrt för de Söök vun nummeersch Daten vun elk Stück bruukt..</p><p>Dit sünd de alfanummeersch Slötelwöör: <b>Album</b>, <b>Künstler</b>, <b>Dateinaam</b> (mit Padd), <b>Inhangoort</b> (a.B. /home/bruker1), <b>Dateityp</b>  (mp3, ogg, flac, ... un de tohören Dateiennen laat sik angeven), <b>Musikoort</b>, <b>Kommentar</b>, <b>Komponist</b>, <b>Orner</b>, <b>Leedtexten</b>, <b>Titel</b>, un <b>Firma</b>.</p><p>Nummeersch Slötelwöör sünd: <b>Bitrate</b>, <b>Schiev/Schievnummer</b>, <b>Längde</b> (Angaav in Sekunnen), <b>Afspeelnummer</b>, <b>Beweerten</b>, <b>Aftastrate</b>, <b>Weert</b>, <b>Grött/Dateigrött</b> (Angaav in Bytes, kBytes, un Megabytes, as in de Eenheit för't Slötelwoort för de Dateigrött fastleggt), "
+"<p>Hier lett sik direktemang twischen de <i>Eenfachsöök</i> oder den Bruuk "
+"vun Slötelwöör för en Reeg vun Attributen utsöken, a.B. Künstlernaam usw. De "
+"Slötelwöör sünd na ehr Weerten ünnerdeelt. En poor sünd nummeersch un anner "
+"sünd alfanummeersch. Een bruuk dat man nich nau to weten. Nummeersch "
+"Slötelwöör warrt för de Söök vun nummeersch Daten vun elk Stück bruukt..</"
+"p><p>Dit sünd de alfanummeersch Slötelwöör: <b>Album</b>, <b>Künstler</b>, "
+"<b>Dateinaam</b> (mit Padd), <b>Inhangoort</b> (a.B. /home/bruker1), "
+"<b>Dateityp</b>  (mp3, ogg, flac, ... un de tohören Dateiennen laat sik "
+"angeven), <b>Musikoort</b>, <b>Kommentar</b>, <b>Komponist</b>, <b>Orner</"
+"b>, <b>Leedtexten</b>, <b>Titel</b>, un <b>Firma</b>.</p><p>Nummeersch "
+"Slötelwöör sünd: <b>Bitrate</b>, <b>Schiev/Schievnummer</b>, <b>Längde</b> "
+"(Angaav in Sekunnen), <b>Afspeelnummer</b>, <b>Beweerten</b>, <b>Aftastrate</"
+"b>, <b>Weert</b>, <b>Grött/Dateigrött</b> (Angaav in Bytes, kBytes, un "
+"Megabytes, as in de Eenheit för't Slötelwoort för de Dateigrött fastleggt), "
 "<b>Stück</b> (d.h. de Stücknummer), un <b>Johr</b>.</p>"
 
 #: editfilterdialog.cpp:113
@@ -999,7 +1063,9 @@ msgstr "All Wöör passt"
 msgid ""
 "<p>Check this box to look for the tracks that contain all the words you "
 "typed in the related Simple Search edit box</p>"
-msgstr "<p>Maak dit an, wenn Du na all Stücken söken wullt, de all Dien in de Eenfachsöök ingeven Wöör bargt.</p>"
+msgstr ""
+"<p>Maak dit an, wenn Du na all Stücken söken wullt, de all Dien in de "
+"Eenfachsöök ingeven Wöör bargt.</p>"
 
 #: editfilterdialog.cpp:296
 msgid "Match any word"
@@ -1009,7 +1075,9 @@ msgstr "Jichtenseen Woort passt"
 msgid ""
 "<p>Check this box to look for the tracks that contain at least one of the "
 "words you typed in the related Simple Search edit box</p>"
-msgstr "<p>Maak dit an, wenn Du na all Stücken söken wullt, de tominnst een vun Dien in de tohören Eenfachsöök ingeven Wöör bargt.</p>"
+msgstr ""
+"<p>Maak dit an, wenn Du na all Stücken söken wullt, de tominnst een vun Dien "
+"in de tohören Eenfachsöök ingeven Wöör bargt.</p>"
 
 #: editfilterdialog.cpp:303
 msgid "Exact match"
@@ -1019,7 +1087,9 @@ msgstr "Naue Övereenstimmen"
 msgid ""
 "<p>Check this box to look for all the tracks that contain exactly the words "
 "you typed in the related Simple Search edit box</p>"
-msgstr "<p>Maak dit an, wenn Du na all Stücken söken wullt, de Dien in de tohören Eenfachsöök ingeven Wöör nau bargt.</p>"
+msgstr ""
+"<p>Maak dit an, wenn Du na all Stücken söken wullt, de Dien in de tohören "
+"Eenfachsöök ingeven Wöör nau bargt.</p>"
 
 #: editfilterdialog.cpp:310
 msgid "Exclude"
@@ -1046,7 +1116,9 @@ msgstr "UN"
 msgid ""
 "<p>Check this box if you want to add another condition and you want that the "
 "filter to match both the previous conditions and this new one</p>"
-msgstr "<p>Maak dit an, wenn Du en anner Filterbedingen tofögen wullt, so dat de ool Filter un ok Dien niege Bedingen op en Stück passen mööt.</p>"
+msgstr ""
+"<p>Maak dit an, wenn Du en anner Filterbedingen tofögen wullt, so dat de ool "
+"Filter un ok Dien niege Bedingen op en Stück passen mööt.</p>"
 
 #: editfilterdialog.cpp:354
 msgctxt "OR logic condition"
@@ -1057,7 +1129,9 @@ msgstr "ODER"
 msgid ""
 "<p>Check this box if you want to add another condition and you want that the "
 "filter to match either the previous conditions or this new one</p>"
-msgstr "<p>Maak dit an, wenn Du en anner Filterbedingen tofögen wullt, so dat de ool Filter oder ok Dien niege Bedingen op en Stück passen mööt.</p>"
+msgstr ""
+"<p>Maak dit an, wenn Du en anner Filterbedingen tofögen wullt, so dat de ool "
+"Filter oder ok Dien niege Bedingen op en Stück passen mööt.</p>"
 
 #: editfilterdialog.cpp:363
 msgid "Invert condition"
@@ -1072,7 +1146,10 @@ msgid ""
 "<p>If this option is checked the defined filter condition will be negated. "
 "This means that, for example, you can define a filter that looks for all "
 "tracks that are not of a specific album, artist, and so on.</p>"
-msgstr "<p>Is dit anmaakt, warrt de angeven Filterbedingen ümdreiht. Du kannst so a.B. en Bedingen angeven, de op keen Stücken vun en bestimmt Album, Künstler usw. passt.</p>"
+msgstr ""
+"<p>Is dit anmaakt, warrt de angeven Filterbedingen ümdreiht. Du kannst so a."
+"B. en Bedingen angeven, de op keen Stücken vun en bestimmt Album, Künstler "
+"usw. passt.</p>"
 
 #: editfilterdialog.cpp:516 editfilterdialog.cpp:519
 #: SmartPlaylistEditor.cpp:1010
@@ -1144,7 +1221,7 @@ msgstr "Amarok kann opstunns keen MP3-Dateien afspelen."
 msgid "No MP3 Support"
 msgstr "Keen MP3-Ünnerstütten"
 
-#: scriptmanager.cpp:139 MainWindow.cpp:858
+#: scriptmanager.cpp:139 MainWindow.cpp:863
 msgid "Script Manager"
 msgstr "Skripten-Pleger"
 
@@ -1178,7 +1255,8 @@ msgstr "Dit Paket lett sik nich lesen."
 
 #: scriptmanager.cpp:427
 #, kde-format
-msgid "A script with the name '%1' is already installed. Please uninstall it first."
+msgid ""
+"A script with the name '%1' is already installed. Please uninstall it first."
 msgstr ""
 "En Skript mit den Naam \"%1\" is al installeert. Deinstalleer dat man "
 "toeerst."
@@ -1296,15 +1374,40 @@ msgstr ""
 "Wenn aktiveert, warrt de Ornern automaatsch wedder dörkeken, wenn sik de "
 "Inholt ännert, a.B. wenn dor en nieg Datei tokummt."
 
-#: playlistmanager/UserPlaylistProvider.cpp:38
+#: playlistmanager/PlaylistFileProvider.cpp:49
+#, fuzzy
 #| msgid "Playlists"
+msgid "Playlist Files"
+msgstr "Afspeellisten"
+
+#: playlistmanager/PlaylistManager.cpp:141 PlaylistHandler.cpp:171
+msgid "Downloading Playlist"
+msgstr "Afspeellist warrt daallaadt"
+
+#: playlistmanager/PlaylistManager.cpp:169 actionclasses.cpp:403
+msgid "Current Playlist"
+msgstr "Aktuelle Afspeellist"
+
+#: playlistmanager/PlaylistManager.cpp:170
 msgid "My Playlists"
 msgstr "Mien Afspeellisten"
 
-#: playlistmanager/UserPlaylistProvider.cpp:43
-#| msgid "Current Playlist"
-msgid "User-defined Playlists"
-msgstr "Egen Afspeellisten"
+#: playlistmanager/PlaylistManager.cpp:171 podcasts/PodcastCollection.h:96
+#: mediadevice/ipod/ipodmediadevice.cpp:1418
+msgid "Podcasts"
+msgstr "Podcasts"
+
+#: playlistmanager/PlaylistManager.cpp:172
+#, fuzzy
+#| msgid "Dynamic playlist name:"
+msgid "Dynamic Playlists"
+msgstr "Naam vun de dünaamsche Afspeellist:"
+
+#: playlistmanager/PlaylistManager.cpp:173
+#, fuzzy
+#| msgid "Edit Smart Playlist"
+msgid "Smart Playlist"
+msgstr "Plietsche Afspeellist bewerken"
 
 #: deletedialog.cpp:71
 #, kde-format
@@ -1314,8 +1417,11 @@ msgstr[0] "<b>1</b> Datei utsöcht."
 msgstr[1] "<b>%1</b> Dateien utsöcht."
 
 #: deletedialog.cpp:77
-msgid "<qt>These items will be <b>permanently deleted</b> from your hard disk.</qt>"
-msgstr "<qt>Disse Indrääg warrt <b>duerhaftig</b> vun Dien Fastplaat <b>wegdaan</b>.</qt>"
+msgid ""
+"<qt>These items will be <b>permanently deleted</b> from your hard disk.</qt>"
+msgstr ""
+"<qt>Disse Indrääg warrt <b>duerhaftig</b> vun Dien Fastplaat <b>wegdaan</b>."
+"</qt>"
 
 #: deletedialog.cpp:83
 msgid "<qt>These items will be moved to the Trash Bin.</qt>"
@@ -1361,11 +1467,6 @@ msgstr ""
 msgid "Local Podcasts"
 msgstr "Lokaal Podcasts"
 
-#: podcasts/PodcastCollection.h:96 mediadevice/ipod/ipodmediadevice.cpp:1418
-#: playlistbrowser/PlaylistBrowser.cpp:46
-msgid "Podcasts"
-msgstr "Podcasts"
-
 #: actionclasses.cpp:86
 msgid "Amarok Menu"
 msgstr "Amarok-Menü"
@@ -1374,11 +1475,11 @@ msgstr "Amarok-Menü"
 msgid "Play/Pause"
 msgstr "Afspelen/Paus"
 
-#: actionclasses.cpp:214 actionclasses.cpp:219 MainWindow.cpp:942 app.cpp:442
+#: actionclasses.cpp:214 actionclasses.cpp:219 MainWindow.cpp:947 app.cpp:442
 msgid "Pause"
 msgstr "Paus"
 
-#: actionclasses.cpp:224 MainWindow.cpp:936 app.cpp:437
+#: actionclasses.cpp:224 MainWindow.cpp:941 app.cpp:437
 msgid "Play"
 msgstr "Afspelen"
 
@@ -1434,17 +1535,13 @@ msgstr "&Stück"
 msgid "&Album"
 msgstr "&Album"
 
-#: actionclasses.cpp:359 MainWindow.cpp:992
+#: actionclasses.cpp:359 MainWindow.cpp:997
 msgid "&Playlist"
 msgstr "&Afspeellist"
 
 #: actionclasses.cpp:370
 msgid "Burn"
 msgstr "Brennen"
-
-#: actionclasses.cpp:403
-msgid "Current Playlist"
-msgstr "Aktuelle Afspeellist"
 
 #: actionclasses.cpp:404
 msgid "Selected Tracks"
@@ -1503,7 +1600,7 @@ msgstr "Rahmenwark-Verschoon"
 msgid "Plugin Information"
 msgstr "Moduul-Informatschoon"
 
-#: queuemanager/QueueManager.cpp:51 MainWindow.cpp:862
+#: queuemanager/QueueManager.cpp:51 MainWindow.cpp:867
 msgid "Queue Manager"
 msgstr "Reegpleger"
 
@@ -1736,7 +1833,11 @@ msgid ""
 "because the moodbar package is not installed correctly.  The moodbar "
 "package, installation instructions, and troubleshooting help can be found on "
 "the wiki page at <a href='"
-msgstr "As dat lett is dat Luunbalkenprogramm vun Amarok twei. Villicht is dat Luunbalkenpaket nich propper installeert. Dat Luunbalkenpaket, Installatschoon-Anwiesen un Fehlersöökhülp laat sik op de Wiki-Siet finnen op <a href='"
+msgstr ""
+"As dat lett is dat Luunbalkenprogramm vun Amarok twei. Villicht is dat "
+"Luunbalkenpaket nich propper installeert. Dat Luunbalkenpaket, "
+"Installatschoon-Anwiesen un Fehlersöökhülp laat sik op de Wiki-Siet finnen "
+"op <a href='"
 
 #: mediabrowser.cpp:121 history/mediabrowser.cpp:183
 msgid "No Device Available"
@@ -1868,7 +1969,8 @@ msgstr "Stück al in de Överdregenreeg opnahmen: %1"
 
 #: mediabrowser.cpp:1671 history/mediabrowser.cpp:2018
 msgid "Transfer in progress. Finish or stop after current track?"
-msgstr "Överdregen löppt. Fardig maken oder achter dat aktuelle Stück anhollen?"
+msgstr ""
+"Överdregen löppt. Fardig maken oder achter dat aktuelle Stück anhollen?"
 
 #: mediabrowser.cpp:1672 history/mediabrowser.cpp:2019
 msgid "Stop Transfer?"
@@ -1890,7 +1992,9 @@ msgstr "&Anhollen"
 msgid ""
 "The XML in the transferlist was invalid. Please report this as a bug to the "
 "Amarok developers. Thank you."
-msgstr "Dat XML binnen de Överdregenlist weer leeg. Bitte stüer de Amarok-Schrievers dor en Fehlerbericht över to. Dank Di dorför!"
+msgstr ""
+"Dat XML binnen de Överdregenlist weer leeg. Bitte stüer de Amarok-Schrievers "
+"dor en Fehlerbericht över to. Dank Di dorför!"
 
 #: mediabrowser.cpp:1936 history/mediabrowser.cpp:3018
 msgid "Transfer Queue"
@@ -1940,12 +2044,10 @@ msgid "Enter new preset name:"
 msgstr "Nieg Profilnaam:"
 
 #: equalizerpresetmanager.cpp:131
-msgid "All presets will be deleted and defaults will be restored. Are you sure?"
-msgstr "All Profilen warrt wegdaan un de Vörinstellen wedderherstellt. Büst Du seker?"
-
-#: PlaylistHandler.cpp:188
-msgid "Downloading Playlist"
-msgstr "Afspeellist warrt daallaadt"
+msgid ""
+"All presets will be deleted and defaults will be restored. Are you sure?"
+msgstr ""
+"All Profilen warrt wegdaan un de Vörinstellen wedderherstellt. Büst Du seker?"
 
 #: main.cpp:35
 msgid "Alexandre 'Ain't afraid of no bugs' Oliveira"
@@ -2163,7 +2265,7 @@ msgstr "Whitehawk Stormchaser"
 msgid "Manage Devices and Plugins"
 msgstr "Reedschappen un Modulen plegen"
 
-#: MediaDevicePluginManager.cpp:73 MainWindow.cpp:265
+#: MediaDevicePluginManager.cpp:73 MainWindow.cpp:270
 msgid "Devices"
 msgstr "Reedschappen"
 
@@ -2193,14 +2295,13 @@ msgid "Example: My_Ipod"
 msgstr "Bispeel: Mien_iPott"
 
 #: MediaDevicePluginManager.cpp:329
-#| msgid ""
-#| "Enter a name for the device.  The name must be unique across all devices, "
-#| "including autodetected devices.  It must not contain the pipe ( | ) "
-#| "character."
 msgid ""
 "Enter a name for the device.  The name must be unique across all manually "
 "added devices.  It must not contain the pipe ( | ) character."
-msgstr "Giff en Naam för de Reedschap in. De Naam mutt twischen all vun Hand toföögt Reedschappen eenkennig wesen. Dat Balken-Teken (\"|\") mutt dor nich binnen vörkamen."
+msgstr ""
+"Giff en Naam för de Reedschap in. De Naam mutt twischen all vun Hand toföögt "
+"Reedschappen eenkennig wesen. Dat Balken-Teken (\"|\") mutt dor nich binnen "
+"vörkamen."
 
 #: MediaDevicePluginManager.cpp:333
 msgid "Enter the &mount point of the device, if applicable:"
@@ -2211,15 +2312,15 @@ msgid "Example: /mnt/ipod"
 msgstr "Bispeel: /mnt/ipott"
 
 #: MediaDevicePluginManager.cpp:337
-#| msgid ""
-#| "Enter the device's mount point.  Some devices (such as iRiver iFP "
-#| "devices) may not have a mount point and this can be ignored.  All other "
-#| "devices (iPods, UMS/VFAT devices) should enter the mount point here."
 msgid ""
 "Enter the device's mount point.  Some devices (such as MTP devices) may not "
 "have a mount point and this can be ignored.  All other devices (iPods, UMS/"
 "VFAT devices) should enter the mount point here."
-msgstr "Giff de Reedschap ehr Inhangoort in. En Reeg Reedschappen (a.B. MTP-Reedschappen) hebbt keen Inhangoort, denn kannst Du dit övergahn. För all anner Reedschappen (iPott, UMS-/VFAT-Reedschappen), giff hier man den Inhangoort in."
+msgstr ""
+"Giff de Reedschap ehr Inhangoort in. En Reeg Reedschappen (a.B. MTP-"
+"Reedschappen) hebbt keen Inhangoort, denn kannst Du dit övergahn. För all "
+"anner Reedschappen (iPott, UMS-/VFAT-Reedschappen), giff hier man den "
+"Inhangoort in."
 
 #: MediaDevicePluginManager.cpp:368
 msgid ""
@@ -2297,7 +2398,6 @@ msgid "Remove entries corresponding to this device from configuration file"
 msgstr "Disse Reedschap ehr Indrääg ut Instellendatei wegmaken"
 
 #: MediaDevicePluginManager.cpp:600
-#| msgid "Make Media Device Playlist"
 msgid "Mark Volumes as Media Devices"
 msgstr "Schieven as Medienreedschappen markeren"
 
@@ -2341,7 +2441,8 @@ msgstr "Audio-Fingerafdruck warrt opstellt..."
 
 #: tagdialog.cpp:361
 #, kde-format
-msgid "Tunepimp (MusicBrainz tagging library) returned the following error: \"%1\"."
+msgid ""
+"Tunepimp (MusicBrainz tagging library) returned the following error: \"%1\"."
 msgstr ""
 "Tunepimp (de MusicBrainz Beteker-Bibliotheek) hett dissen Fehler "
 "torüchgeven: \"%1\"."
@@ -2358,7 +2459,7 @@ msgstr "Tosamenfaten"
 msgid "Tags"
 msgstr "Betekers"
 
-#: tagdialog.cpp:438 MainWindow.cpp:876
+#: tagdialog.cpp:438 MainWindow.cpp:881
 msgid "Statistics"
 msgstr "Statistik"
 
@@ -2424,14 +2525,6 @@ msgstr "Grött:"
 #: tagdialog.cpp:741
 msgid "Format:"
 msgstr "Formaat:"
-
-#. i18n: tag string
-#. i18n: file tagdialogbase.ui line 684
-#. i18n: tag string
-#. i18n: file ./tagdialogbase.ui line 684
-#: tagdialog.cpp:745 rc.cpp:386 rc.cpp:1738
-msgid "Score:"
-msgstr "Pünkt:"
 
 #. i18n: tag string
 #. i18n: file tagdialogbase.ui line 692
@@ -2722,7 +2815,6 @@ msgstr "Nich begäng Musikoort"
 
 #: mediadevice/mtp/mtpmediadevice.cpp:690
 #: mediadevice/mtp/mtpmediadevice.cpp:717
-#| msgid "Could not connect to Nomad device"
 msgid "Could not copy track from device."
 msgstr "Stück lett sik nich vun de Reedschap koperen."
 
@@ -2755,7 +2847,7 @@ msgid "MTP device could not be opened"
 msgstr "MTP-Reedschap lett sik nich opmaken"
 
 #: mediadevice/mtp/mtpmediadevice.cpp:1184
-#: mediadevice/ipod/ipodmediadevice.cpp:1413 MainWindow.cpp:243
+#: mediadevice/ipod/ipodmediadevice.cpp:1413 MainWindow.cpp:251
 msgid "Playlists"
 msgstr "Afspeellisten"
 
@@ -2785,9 +2877,12 @@ msgstr "Titelbiller opofrischen"
 #: mediadevice/mtp/mtpmediadevice.cpp:1370
 #, kde-format
 msgid "<p>You are updating cover art for 1 track. This may take some time."
-msgid_plural "<p>You are updating cover art for %1 tracks. This may take some time."
-msgstr[0] "<p>Du frischst dat Titelbild vun een Stück op. Dat mag en lütt Stoot duern."
-msgstr[1] "<p>Du frischst de Titelbiller vun %1 Stücken op. Dat mag en Stoot duern."
+msgid_plural ""
+"<p>You are updating cover art for %1 tracks. This may take some time."
+msgstr[0] ""
+"<p>Du frischst dat Titelbild vun een Stück op. Dat mag en lütt Stoot duern."
+msgstr[1] ""
+"<p>Du frischst de Titelbiller vun %1 Stücken op. Dat mag en Stoot duern."
 
 #: mediadevice/mtp/mtpmediadevice.cpp:1395
 msgid "Folder structure:"
@@ -2819,7 +2914,9 @@ msgstr "för \"%g\" de Musikoort."
 msgid ""
 "An empty path means the files will be placed unsorted in the default music "
 "folder."
-msgstr "Is de Padd leddig, warrt de Dateien eenfach ahn Sorteren binnen den Standard-Musikorner sekert."
+msgstr ""
+"Is de Padd leddig, warrt de Dateien eenfach ahn Sorteren binnen den Standard-"
+"Musikorner sekert."
 
 #: mediadevice/mtp/mtpmediadevice.cpp:1500
 msgid "Could not get music from MTP Device"
@@ -2847,7 +2944,8 @@ msgid "List music from a remote host"
 msgstr "Musik vun en feern Reekner oplisten"
 
 #: mediadevice/daap/daapclient.cpp:90
-msgid "If this button is checked, then your music will be exported to the network"
+msgid ""
+"If this button is checked, then your music will be exported to the network"
 msgstr "Is dit anmaakt, warrt Dien Musik in't Nettwark freegeven."
 
 #: mediadevice/daap/daapclient.cpp:233
@@ -2965,7 +3063,9 @@ msgstr "%1 (x%2)"
 msgid ""
 "Could not write SysInfo file to iPod (check the permissions of the file \"%1"
 "\" on your iPod)"
-msgstr "De Sysinfo-Datei lett sik nich na den iPott schrieven. (Prööv bitte de Verlöven vun de Datei \"%1\" op Dien iPott.)"
+msgstr ""
+"De Sysinfo-Datei lett sik nich na den iPott schrieven. (Prööv bitte de "
+"Verlöven vun de Datei \"%1\" op Dien iPott.)"
 
 #: mediadevice/ipod/ipodmediadevice.cpp:392
 #, kde-format
@@ -2984,7 +3084,8 @@ msgstr "Medienreedschap: Opstellen vun Orner för Datei \"%1\" fehlslaan"
 
 #: mediadevice/ipod/ipodmediadevice.cpp:727
 msgid "Flushing iPod filesystem transfer cache"
-msgstr "De Överdregen-Twischenspieker vun dat iPott-Dateisysteem warrt leddig maakt"
+msgstr ""
+"De Överdregen-Twischenspieker vun dat iPott-Dateisysteem warrt leddig maakt"
 
 #: mediadevice/ipod/ipodmediadevice.cpp:990
 #, kde-format
@@ -2993,7 +3094,8 @@ msgstr "Medienreedschap: De op \"%1\" inhangte iPott is al afslaten. "
 
 #: mediadevice/ipod/ipodmediadevice.cpp:991
 #, kde-format
-msgid "If you are sure that this is an error, then remove the file %1 and try again."
+msgid ""
+"If you are sure that this is an error, then remove the file %1 and try again."
 msgstr ""
 "Wenn Du seker büst, wat dit en Fehler is, denn maak de Datei \"%1\" weg un "
 "versöök dat nochmaal."
@@ -3058,7 +3160,8 @@ msgstr "&Torechtmaken"
 #: mediadevice/ipod/ipodmediadevice.cpp:1196
 #, kde-format
 msgid "Media Device: Failed to initialize iPod mounted at %1"
-msgstr "Medienreedschap: Torechtmaken vun den op \"%1\" inhangten iPott fehlslaan"
+msgstr ""
+"Medienreedschap: Torechtmaken vun den op \"%1\" inhangten iPott fehlslaan"
 
 #: mediadevice/ipod/ipodmediadevice.cpp:1232
 #, kde-format
@@ -3070,10 +3173,13 @@ msgstr "Medienreedschap: Orner \"%1\" lett sik nich opstellen"
 msgid ""
 "Your iPod's Firewire GUID is required for correctly updating its music "
 "database, but it is not known. See %1 for more information."
-msgstr "Dien IPott sien Nettdiek-GUID warrt för't Opfrischen vun em sien Musikdatenbank bruukt, man is nich begäng. %1 bargt mehr Informatschonen."
+msgstr ""
+"Dien IPott sien Nettdiek-GUID warrt för't Opfrischen vun em sien "
+"Musikdatenbank bruukt, man is nich begäng. %1 bargt mehr Informatschonen."
 
 #: mediadevice/ipod/ipodmediadevice.cpp:1376
-msgid "iPod type detection failed: no support for iPod Shuffle, for artwork or video"
+msgid ""
+"iPod type detection failed: no support for iPod Shuffle, for artwork or video"
 msgstr ""
 "iPott-Typ lett sik nich fastmaken: Keen Ünnerstütten för iPott-Mischen, "
 "Billerwark oder Video"
@@ -3183,8 +3289,10 @@ msgid "&Automatically delete podcasts"
 msgstr "Podcasts &automaatsch wegdoon"
 
 #: mediadevice/ipod/ipodmediadevice.cpp:2563
-msgid "Automatically delete podcast shows already played when connecting device"
-msgstr "Deit bi't Tokoppeln vun de Reedschap al speelte Podcasts automaatsch weg."
+msgid ""
+"Automatically delete podcast shows already played when connecting device"
+msgstr ""
+"Deit bi't Tokoppeln vun de Reedschap al speelte Podcasts automaatsch weg."
 
 #: mediadevice/ipod/ipodmediadevice.cpp:2567
 msgid "&Synchronize with Amarok statistics"
@@ -3192,7 +3300,8 @@ msgstr "Mit Amarok-Statistik s&ynkroniseren"
 
 #: mediadevice/ipod/ipodmediadevice.cpp:2568
 msgid "Synchronize with Amarok statistics and submit tracks played to last.fm"
-msgstr "Mit Amarok-Statistik synkroniseren un speelte Stücken Last.fm tostüern."
+msgstr ""
+"Mit Amarok-Statistik synkroniseren un speelte Stücken Last.fm tostüern."
 
 #: mediadevice/generic/genericmediadeviceconfigdialog.ui.h:261
 #: mediadevice/generic/genericmediadeviceconfigdialog.ui.h:264
@@ -3295,15 +3404,15 @@ msgstr "Kopeert all Stücken vun dissen Künstler na en mobil Medienreedschap"
 msgid "Copy To Media Device"
 msgstr "Na Medienreedschap koperen"
 
-#: MainWindow.cpp:248
+#: MainWindow.cpp:253
 msgid "Files"
 msgstr "Dateien"
 
-#: MainWindow.cpp:252
+#: MainWindow.cpp:257
 msgid "Internet"
 msgstr "Internet"
 
-#: MainWindow.cpp:464
+#: MainWindow.cpp:469
 msgid ""
 "<qt>Closing the main-window will keep Amarok running in the System Tray. Use "
 "<B>Quit</B> from the menu, or the Amarok tray-icon to exit the application.</"
@@ -3314,140 +3423,140 @@ msgstr ""
 "<b>Verlaten</b> binnen dat Menü \"Akschonen\" oder dat Rechtsklickmenü vun "
 "dat Systeemafsnitt-Lüttbild.</qt>"
 
-#: MainWindow.cpp:466
+#: MainWindow.cpp:471
 msgid "Docking in System Tray"
 msgstr "In Systeemafsnitt lopen"
 
-#: MainWindow.cpp:519
+#: MainWindow.cpp:524
 msgid "Play Media (Files or URLs)"
 msgstr "Medien afspelen (Dateien oder URLs)"
 
-#: MainWindow.cpp:519
+#: MainWindow.cpp:524
 msgid "Add Media (Files or URLs)"
 msgstr "Medien tofögen (Dateien oder URLs)"
 
-#: MainWindow.cpp:539
+#: MainWindow.cpp:544
 msgid "Add Stream"
 msgstr "Stroom tofögen"
 
-#: MainWindow.cpp:539
+#: MainWindow.cpp:544
 msgid "URL"
 msgstr "URL"
 
-#: MainWindow.cpp:712 MainWindow.cpp:835
+#: MainWindow.cpp:717 MainWindow.cpp:840
 msgid "Hide Toolbar"
 msgstr "Warktüüchbalken versteken"
 
-#: MainWindow.cpp:712
+#: MainWindow.cpp:717
 msgid "Show Toolbar"
 msgstr "Warktüüchbalken wiesen"
 
-#: MainWindow.cpp:801
+#: MainWindow.cpp:806
 msgid "&Add Media..."
 msgstr "Medien &tofögen..."
 
-#: MainWindow.cpp:805
+#: MainWindow.cpp:810
 msgctxt "clear playlist"
 msgid "&Clear"
 msgstr "&Leddig maken"
 
-#: MainWindow.cpp:809
+#: MainWindow.cpp:814
 msgid "&Add Stream..."
 msgstr "Stroom &tofögen..."
 
-#: MainWindow.cpp:813
+#: MainWindow.cpp:818
 msgid "&Save Playlist As..."
 msgstr "Afspeellist &sekern as..."
 
-#: MainWindow.cpp:817
+#: MainWindow.cpp:822
 msgid "Burn Current Playlist"
 msgstr "Aktuelle Afspeellist brennen"
 
-#: MainWindow.cpp:822 CoverManager.cpp:109
+#: MainWindow.cpp:827 CoverManager.cpp:109
 msgid "Cover Manager"
 msgstr "Titelbild-Pleger"
 
-#: MainWindow.cpp:826 widgets/analyzerwidget.cpp:64
+#: MainWindow.cpp:831 widgets/analyzerwidget.cpp:64
 msgid "&Visualizations"
 msgstr "&Filmmakers"
 
-#: MainWindow.cpp:830
+#: MainWindow.cpp:835
 msgid "E&qualizer"
 msgstr "&Liekmaker"
 
-#: MainWindow.cpp:850
+#: MainWindow.cpp:855
 msgid "Play Media..."
 msgstr "Medien afspelen..."
 
-#: MainWindow.cpp:854
+#: MainWindow.cpp:859
 msgid "Play Audio CD"
 msgstr "Audio-CD afspelen"
 
-#: MainWindow.cpp:866
+#: MainWindow.cpp:871
 msgid "&Seek Forward"
 msgstr "&Vörut söken"
 
-#: MainWindow.cpp:871
+#: MainWindow.cpp:876
 msgid "&Seek Backward"
 msgstr "A&chterut söken"
 
-#: MainWindow.cpp:880
+#: MainWindow.cpp:885
 msgid "Update Collection"
 msgstr "Sammeln opfrischen"
 
-#: MainWindow.cpp:884
+#: MainWindow.cpp:889
 msgid "Rescan Collection"
 msgstr "Sammeln nochmaal inlesen"
 
-#: MainWindow.cpp:895 MainWindow.cpp:904
+#: MainWindow.cpp:900 MainWindow.cpp:909
 msgid "Global Tag Radio"
 msgstr "Globaal Betekerradio"
 
-#: MainWindow.cpp:912
+#: MainWindow.cpp:917
 msgid "Play las&t.fm Stream"
 msgstr "Las&t.fm-Stroom afspelen"
 
-#: MainWindow.cpp:914 MainWindow.cpp:922
+#: MainWindow.cpp:919 MainWindow.cpp:927
 msgid "Personal Radio"
 msgstr "Persöönlich Radio"
 
-#: MainWindow.cpp:915 MainWindow.cpp:923
+#: MainWindow.cpp:920 MainWindow.cpp:928
 msgid "Neighbor Radio"
 msgstr "Naverradio"
 
-#: MainWindow.cpp:916 MainWindow.cpp:924
+#: MainWindow.cpp:921 MainWindow.cpp:929
 msgid "Custom Station"
 msgstr "Egen Statschoon"
 
-#: MainWindow.cpp:920
+#: MainWindow.cpp:925
 msgid "Add las&t.fm Stream"
 msgstr "Las&t.fm-Stroom tofögen"
 
-#: MainWindow.cpp:930 app.cpp:463
+#: MainWindow.cpp:935 app.cpp:463
 msgid "Previous Track"
 msgstr "Verleden Stück"
 
-#: MainWindow.cpp:948 app.cpp:459
+#: MainWindow.cpp:953 app.cpp:459
 msgid "Next Track"
 msgstr "Nakamen Stück"
 
-#: MainWindow.cpp:952
+#: MainWindow.cpp:957
 msgid "Toggle Focus"
 msgstr "Fokus wesseln"
 
-#: MainWindow.cpp:977
+#: MainWindow.cpp:982
 msgid "&Amarok"
 msgstr "&Amarok"
 
-#: MainWindow.cpp:1015
+#: MainWindow.cpp:1020
 msgid "&Mode"
 msgstr "&Bedrief"
 
-#: MainWindow.cpp:1027
+#: MainWindow.cpp:1032
 msgid "&Tools"
 msgstr "&Warktüüch"
 
-#: MainWindow.cpp:1048
+#: MainWindow.cpp:1053
 msgid "&Settings"
 msgstr "&Instellen"
 
@@ -5162,14 +5271,19 @@ msgstr "An't Puffern %1%"
 msgid ""
 "The helix library you have configured does not support ALSA, the helix-"
 "engine has fallen back to OSS"
-msgstr "De vun Di angeven Helix-Bibliotheek ünnerstütt ALSA nich, de Helix-Klangmaschien bruukt nu OSS ansteed."
+msgstr ""
+"De vun Di angeven Helix-Bibliotheek ünnerstütt ALSA nich, de Helix-"
+"Klangmaschien bruukt nu OSS ansteed."
 
 #: engine/helix/helix-engine.cpp:258
 msgid ""
 "The Helix Engine requires the RealPlayer(tm) or HelixPlayer libraries to be "
 "installed. Please make sure one is installed, and adjust the paths in "
 "\"Amarok Settings\" -> \"Engine\""
-msgstr "För de Klangmaschien \"Helix\" mööt de RealPlayer(tm)- oder Helix-Bibliotheken installeert wesen. Prööv bitte, wat dat so is, un pass de Padden ünner \"Amarok instellen\" -> \"Klangmaschien\" to."
+msgstr ""
+"För de Klangmaschien \"Helix\" mööt de RealPlayer(tm)- oder Helix-"
+"Bibliotheken installeert wesen. Prööv bitte, wat dat so is, un pass de "
+"Padden ünner \"Amarok instellen\" -> \"Klangmaschien\" to."
 
 #: engine/helix/helix-engine.cpp:303
 #, kde-format
@@ -5484,12 +5598,10 @@ msgid "Group By"
 msgstr "Ornen na"
 
 #: collectionbrowser/CollectionWidget.cpp:61
-#| msgid "Artist - Album"
 msgid "Artist / Album"
 msgstr "Künstler / Album"
 
 #: collectionbrowser/CollectionWidget.cpp:65
-#| msgid "Artist - Album"
 msgid "Artist / Year - Album"
 msgstr "Künstler / Johr - Album"
 
@@ -5498,7 +5610,6 @@ msgid "Genre / Artist"
 msgstr "Musikoort / Künstler"
 
 #: collectionbrowser/CollectionWidget.cpp:77
-#| msgid "Artist - Album"
 msgid "Genre / Artist / Album"
 msgstr "Musikoort / Künstler / Album"
 
@@ -5622,7 +5733,6 @@ msgid "No cover found"
 msgstr "Keen Titelbild funnen"
 
 #: CoverFetcher.cpp:287 CoverFetcher.cpp:413
-#| msgid "&Next Cover"
 msgid "Fetching Cover"
 msgstr "Titelbild warrt haalt"
 
@@ -5675,7 +5785,6 @@ msgstr "Titelbild funnen"
 #. i18n: tag string
 #. i18n: file ./EditCoverSearchDialog.ui line 25
 #: rc.cpp:3 rc.cpp:965
-#| msgid "Disable"
 msgid "Dialog"
 msgstr "Dialoog"
 
@@ -5740,7 +5849,6 @@ msgstr "Grootbritannien"
 #. i18n: tag string
 #. i18n: file ./EditCoverSearchDialog.ui line 115
 #: rc.cpp:27 rc.cpp:989
-#| msgid "Label"
 msgid "TextLabel"
 msgstr "TextLabel"
 
@@ -6074,7 +6182,8 @@ msgstr "Leggt fast, woveel Stücken wiest warrt"
 #: rc.cpp:173 rc.cpp:176 rc.cpp:182 rc.cpp:185 rc.cpp:1360 rc.cpp:1363
 #: rc.cpp:1369 rc.cpp:1372
 msgid "Minimum number of upcoming tracks to keep in the playlist"
-msgstr "Leggt de sietste Tall vun nich speelte Stücken binnen de Afspeellist fast."
+msgstr ""
+"Leggt de sietste Tall vun nich speelte Stücken binnen de Afspeellist fast."
 
 #. i18n: tag string
 #. i18n: file newdynamic.ui line 106
@@ -6548,7 +6657,9 @@ msgstr "Dien leefst Steekwöör:"
 msgid ""
 "Edit the assigned labels below (multiple labels are separated by commas), or "
 "select a label from above."
-msgstr "Du kannst de towiesten Steekwöör nerrn bewerken (se warrt mit Kommas trennt) oder baven en utsöken."
+msgstr ""
+"Du kannst de towiesten Steekwöör nerrn bewerken (se warrt mit Kommas trennt) "
+"oder baven en utsöken."
 
 #. i18n: tag string
 #. i18n: file tagguesserconfigdialog.ui line 32
@@ -6576,8 +6687,9 @@ msgid ""
 "since the tag guesser will go through the list from the top to the bottom, "
 "and use the first matching scheme."
 msgstr ""
-"Dit sünd de opstunns fastleggt Dateinaam-Mustern för't Rutrecken vun Betekerinformatschonen ut en Dateinaam mit den Knoop \"Raden ut Dateinaam\". Elk Tekenkeed kann een oder mehr vun de nakamen Platzhollers bargen:"
-"<ul>\n"
+"Dit sünd de opstunns fastleggt Dateinaam-Mustern för't Rutrecken vun "
+"Betekerinformatschonen ut en Dateinaam mit den Knoop \"Raden ut Dateinaam\". "
+"Elk Tekenkeed kann een oder mehr vun de nakamen Platzhollers bargen:<ul>\n"
 "<li>%title: Stücktitel</li>\n"
 "<li>%artist: Künstler</li>\n"
 "<li>%album: Album</li>\n"
@@ -6585,8 +6697,11 @@ msgstr ""
 "<li>%year: Johr</li>\n"
 "<li>%comment: Kommentar</li>\n"
 "</ul>\n"
-"Dat Dateinaam-Muster \"[%track] %artist - %title\" passt a.B. op \"[01] Deep Purple - Smoke on the water\", man nich op \"(Deep Purple) Smoke on the water\".Dat mutt dat Muster \"(%artist) %title\" wesen.<p/>\n"
-"Beacht, dat dat op de Mustern ehr Reeg ankummt, wiel de List vun baven na nerrn afarbeidt warrt, un dat eerste passen Muster bruukt warrt."
+"Dat Dateinaam-Muster \"[%track] %artist - %title\" passt a.B. op \"[01] Deep "
+"Purple - Smoke on the water\", man nich op \"(Deep Purple) Smoke on the water"
+"\".Dat mutt dat Muster \"(%artist) %title\" wesen.<p/>\n"
+"Beacht, dat dat op de Mustern ehr Reeg ankummt, wiel de List vun baven na "
+"nerrn afarbeidt warrt, un dat eerste passen Muster bruukt warrt."
 
 #. i18n: tag string
 #. i18n: file tagguesserconfigdialog.ui line 44
@@ -6614,8 +6729,9 @@ msgid ""
 "since the tag guesser will go through the list from the top to the bottom, "
 "and use the first matching scheme."
 msgstr ""
-"Dit sünd de opstunns fastleggt Dateinaam-Mustern för't Rutrecken vun Betekerinformatschonen ut en Dateinaam mit den Knoop \"Raden ut Dateinaam\". Elk Tekenkeed kann een oder mehr vun de nakamen Platzhollers bargen:"
-"<ul>\n"
+"Dit sünd de opstunns fastleggt Dateinaam-Mustern för't Rutrecken vun "
+"Betekerinformatschonen ut en Dateinaam mit den Knoop \"Raden ut Dateinaam\". "
+"Elk Tekenkeed kann een oder mehr vun de nakamen Platzhollers bargen:<ul>\n"
 "<li>%title: Stücktitel</li>\n"
 "<li>%artist: Künstler</li>\n"
 "<li>%album: Album</li>\n"
@@ -6623,8 +6739,11 @@ msgstr ""
 "<li>%year: Johr</li>\n"
 "<li>%comment: Kommentar</li>\n"
 "</ul>\n"
-"Dat Dateinaam-Muster \"[%track] %artist - %title\" passt a.B. op \"[01] Deep Purple - Smoke on the water\", man nich op \"(Deep Purple) Smoke on the water\".Dat mutt dat Muster \"(%artist) %title\" wesen.<p/>\n"
-"Beacht, dat dat op de Mustern ehr Reeg ankummt, wiel de List vun baven na nerrn afarbeidt warrt, un dat eerste passen Muster bruukt warrt."
+"Dat Dateinaam-Muster \"[%track] %artist - %title\" passt a.B. op \"[01] Deep "
+"Purple - Smoke on the water\", man nich op \"(Deep Purple) Smoke on the water"
+"\".Dat mutt dat Muster \"(%artist) %title\" wesen.<p/>\n"
+"Beacht, dat dat op de Mustern ehr Reeg ankummt, wiel de List vun baven na "
+"nerrn afarbeidt warrt, un dat eerste passen Muster bruukt warrt."
 
 #. i18n: tag string
 #. i18n: file tagguesserconfigdialog.ui line 57
@@ -6639,8 +6758,11 @@ msgstr "Muster na baven"
 #. i18n: tag string
 #. i18n: file ./tagguesserconfigdialog.ui line 60
 #: rc.cpp:431 rc.cpp:1051
-msgid "Press this button to move the currently selected scheme one step upwards."
-msgstr "Klick op dissen Knoop, wenn Du dat utsöchte Muster en Reeg na baven schuven wullt."
+msgid ""
+"Press this button to move the currently selected scheme one step upwards."
+msgstr ""
+"Klick op dissen Knoop, wenn Du dat utsöchte Muster en Reeg na baven schuven "
+"wullt."
 
 #. i18n: tag string
 #. i18n: file tagguesserconfigdialog.ui line 70
@@ -6655,8 +6777,11 @@ msgstr "Muster na nerrn"
 #. i18n: tag string
 #. i18n: file ./tagguesserconfigdialog.ui line 73
 #: rc.cpp:437 rc.cpp:1057
-msgid "Press this button to move the currently selected scheme one step downwards."
-msgstr "Klick op dissen Knoop, wenn Du dat utsöchte Muster en Reeg na nerrn schuven wullt."
+msgid ""
+"Press this button to move the currently selected scheme one step downwards."
+msgstr ""
+"Klick op dissen Knoop, wenn Du dat utsöchte Muster en Reeg na nerrn schuven "
+"wullt."
 
 #. i18n: tag string
 #. i18n: file tagguesserconfigdialog.ui line 83
@@ -6687,8 +6812,10 @@ msgstr "Muster wegdoon"
 #. i18n: tag string
 #. i18n: file ./tagguesserconfigdialog.ui line 96
 #: rc.cpp:449 rc.cpp:1069
-msgid "Press this button to remove the currently selected scheme from the list."
-msgstr "Klick op dissen Knoop, wenn Du dat utsöchte Muster ut de List wegmaken wullt."
+msgid ""
+"Press this button to remove the currently selected scheme from the list."
+msgstr ""
+"Klick op dissen Knoop, wenn Du dat utsöchte Muster ut de List wegmaken wullt."
 
 #. i18n: tag string
 #. i18n: file tagguesserconfigdialog.ui line 103
@@ -6720,7 +6847,9 @@ msgstr "Nieg Muster tofögen"
 #. i18n: file ./tagguesserconfigdialog.ui line 142
 #: rc.cpp:455 rc.cpp:461 rc.cpp:467 rc.cpp:1075 rc.cpp:1081 rc.cpp:1087
 msgid "Press this button to add a new file name scheme to the end of the list."
-msgstr "Klick op dissen Knoop, wenn Du de List en nieg Dateinaam-Muster anhangen wullt."
+msgstr ""
+"Klick op dissen Knoop, wenn Du de List en nieg Dateinaam-Muster anhangen "
+"wullt."
 
 #. i18n: tag string
 #. i18n: file trackpickerdialogbase.ui line 16
@@ -6752,7 +6881,6 @@ msgid "Your names"
 msgstr "Manfred Wiese, Sönke Dibbern"
 
 #: rc.cpp:493
-#| msgid "Show details"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "m.j.wiese@web.de, s_dibbern@web.de"
@@ -6987,7 +7115,8 @@ msgstr "&Lüttbild in Systeemafsnitt wiesen"
 #. i18n: file ./configdialog/dialogs/GeneralConfig.ui line 114
 #: rc.cpp:641 rc.cpp:644
 msgid "Check to animate the Amarok system tray icon."
-msgstr "Aktiveer dit, wenn dat Systeemafsnitt-Lüttbild för Amarok ok wat doon schall"
+msgstr ""
+"Aktiveer dit, wenn dat Systeemafsnitt-Lüttbild för Amarok ok wat doon schall"
 
 #. i18n: tag string
 #. i18n: file ./configdialog/dialogs/GeneralConfig.ui line 117
@@ -7033,7 +7162,8 @@ msgstr "E&xtern Nettkieker:"
 #. i18n: file ./configdialog/dialogs/GeneralConfig.ui line 250
 #: rc.cpp:671
 msgid "Choose the external web browser to be used by Amarok."
-msgstr "Hier kannst Du den extern Nettkieker utsöken, den Amarok bruken schall."
+msgstr ""
+"Hier kannst Du den extern Nettkieker utsöken, den Amarok bruken schall."
 
 #. i18n: tag string
 #. i18n: file ./configdialog/dialogs/GeneralConfig.ui line 301
@@ -7059,7 +7189,8 @@ msgstr "Komponenten"
 msgid ""
 "Scores for tracks are calculated automatically, based on your listening "
 "habits."
-msgstr "De Pünkt för de Stücken warrt automaatsch na Dien Höörwennsten utreekt."
+msgstr ""
+"De Pünkt för de Stücken warrt automaatsch na Dien Höörwennsten utreekt."
 
 #. i18n: tag string
 #. i18n: file ./configdialog/dialogs/GeneralConfig.ui line 365
@@ -7083,7 +7214,9 @@ msgstr "Beweerten bruken"
 #. i18n: file ./configdialog/dialogs/GeneralConfig.ui line 415
 #: rc.cpp:695
 msgid "You need the moodbar package installed to enable the moodbar feature."
-msgstr "Du bruukst dat Paket \"<a href='http://amarok.kde.org/wiki/Moodbar'>moodbar</a>\", wenn Du de Luunbalken-Funkschoon bruken wullt."
+msgstr ""
+"Du bruukst dat Paket \"<a href='http://amarok.kde.org/wiki/Moodbar'>moodbar</"
+"a>\", wenn Du de Luunbalken-Funkschoon bruken wullt."
 
 #. i18n: tag string
 #. i18n: file ./configdialog/dialogs/GeneralConfig.ui line 425
@@ -7093,7 +7226,9 @@ msgstr "Du bruukst dat Paket \"<a href='http://amarok.kde.org/wiki/Moodbar'>mood
 msgid ""
 "Displays a visual representation of the current track in the column of the "
 "playlist window."
-msgstr "Gifft dat opstunns speelte Stück mit Klören binnen en Striep vun de Afspeellist wedder."
+msgstr ""
+"Gifft dat opstunns speelte Stück mit Klören binnen en Striep vun de "
+"Afspeellist wedder."
 
 #. i18n: tag string
 #. i18n: file ./configdialog/dialogs/GeneralConfig.ui line 431
@@ -7160,7 +7295,8 @@ msgid ""
 "stores them in your home folder."
 msgstr ""
 "Is dit anmaakt, warrt de Luundaten bi de Musikdateien wohrt: De Luundaten "
-"för a.B. \"/musik/datei.mp3\" warrt as \"musik/datei.mood\" sekert. Is dit utmaakt, warrt se binnen Dien Tohuusorner sekert."
+"för a.B. \"/musik/datei.mp3\" warrt as \"musik/datei.mood\" sekert. Is dit "
+"utmaakt, warrt se binnen Dien Tohuusorner sekert."
 
 #. i18n: tag string
 #. i18n: file ./configdialog/dialogs/GeneralConfig.ui line 572
@@ -7208,7 +7344,9 @@ msgstr "De aktuelle Afspeellist bi't Utmaken woh&ren"
 msgid ""
 "If checked, Amarok uses a relative path for the tracks of manually saved "
 "playlists"
-msgstr "Wenn aktiveert, bruukt Amarok relative Padden för de Stücken binnen vun Hand sekerte Afspeellisten."
+msgstr ""
+"Wenn aktiveert, bruukt Amarok relative Padden för de Stücken binnen vun Hand "
+"sekerte Afspeellisten."
 
 #. i18n: tag string
 #. i18n: file ./configdialog/dialogs/GeneralConfig.ui line 630
@@ -7266,7 +7404,8 @@ msgstr "&Klören"
 #. i18n: file ./configdialog/dialogs/OsdConfig.ui line 125
 #: rc.cpp:773 rc.cpp:776
 msgid "Check to enable custom colors for the On-Screen-Display."
-msgstr "Aktiveer dit, wenn Du egen Klören för de Op-Schirm-Dorstellen bruken wullt."
+msgstr ""
+"Aktiveer dit, wenn Du egen Klören för de Op-Schirm-Dorstellen bruken wullt."
 
 #. i18n: tag string
 #. i18n: file ./configdialog/dialogs/OsdConfig.ui line 128
@@ -7587,7 +7726,8 @@ msgstr "Klöörschema"
 #. i18n: tag string
 #. i18n: file ./configdialog/dialogs/AppearanceConfig.ui line 167
 #: rc.cpp:926 rc.cpp:932
-msgid "The color that is used when fresh items are being loaded in the playlist."
+msgid ""
+"The color that is used when fresh items are being loaded in the playlist."
 msgstr "De Klöör för niege Stücken binnen de Afspeellist"
 
 #. i18n: tag string
@@ -7746,7 +7886,8 @@ msgstr "Musik sekern binnen:"
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 310
 #: rc.cpp:1334
-msgid "The location of the transfered songs relative to the device mount point."
+msgid ""
+"The location of the transfered songs relative to the device mount point."
 msgstr ""
 "De Oort, na den Musikstücken överdragen warrt, relativ to den Inhangoort vun "
 "de Reedschap."
@@ -7772,7 +7913,8 @@ msgstr "Podcasts sekern binnen:"
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 380
 #: rc.cpp:1348
-msgid "The location of the transfered podcasts relative to the device mount point."
+msgid ""
+"The location of the transfered podcasts relative to the device mount point."
 msgstr ""
 "De Oort, na den Podcasts överdragen warrt, relativ to den Inhangoort vun de "
 "Reedschap."
@@ -8034,7 +8176,8 @@ msgstr "Reedschap för de Klangutgaav"
 #. i18n: tag whatsthis
 #. i18n: file ./engine/gst10/gstconfig.kcfg line 22
 #: rc.cpp:1550
-msgid "Select the sound output device; this is useful for gstreamer engine sinks."
+msgid ""
+"Select the sound output device; this is useful for gstreamer engine sinks."
 msgstr ""
 "Hier kannst Du de Klang-Utgaavreedschap angeven, dat is goot för GStreamer-"
 "Utgaavmodulen."
@@ -8091,7 +8234,9 @@ msgstr "\"The\" binnen Künstlernaams ö&vergahn"
 #. i18n: file ./collectionbrowser/OrganizeCollectionDialog.ui line 106
 #: rc.cpp:1578
 msgid "If checked, postfix artists' names starting with 'The' with ', The'."
-msgstr "Wenn anmaakt, warrt Künstlernaams, de mit \"The\" anfangt, ansteed en \", The\" an't Enn anföögt."
+msgstr ""
+"Wenn anmaakt, warrt Künstlernaams, de mit \"The\" anfangt, ansteed en \", The"
+"\" an't Enn anföögt."
 
 #. i18n: tag string
 #. i18n: file ./collectionbrowser/OrganizeCollectionDialog.ui line 136
@@ -8108,7 +8253,8 @@ msgstr "&Egen Formaat"
 #. i18n: tag string
 #. i18n: file ./collectionbrowser/OrganizeCollectionDialog.ui line 153
 #: rc.cpp:1587
-msgid "If checked, use a custom format string for naming the files in the collection"
+msgid ""
+"If checked, use a custom format string for naming the files in the collection"
 msgstr "Wenn anmaakt, bruukt Amarok Dien egen Schema för de Naams vun Dateien."
 
 #. i18n: tag string
@@ -8134,7 +8280,8 @@ msgstr "Na Künstler-&Initschalen tohoopstellen"
 #. i18n: tag string
 #. i18n: file ./collectionbrowser/OrganizeCollectionDialog.ui line 175
 #: rc.cpp:1599
-msgid "If checked, introduce another directory hierarchy for the artists' initials."
+msgid ""
+"If checked, introduce another directory hierarchy for the artists' initials."
 msgstr ""
 "Wenn anmaakt, stellt Amarok noch en Struktuur mit de Initschalen vun de "
 "Künstlers op."
@@ -8172,7 +8319,8 @@ msgstr "Bloots &ASCII-Tekens"
 #. i18n: tag string
 #. i18n: file ./collectionbrowser/OrganizeCollectionDialog.ui line 292
 #: rc.cpp:1621
-msgid "If checked, replace characters that are unavailable in the 7-bit ASCII code."
+msgid ""
+"If checked, replace characters that are unavailable in the 7-bit ASCII code."
 msgstr ""
 "Wenn anmaakt, wesselt Amarok all Tekens ut, de dat nich binnen den ASCII-"
 "Kode (7 Bit) gifft."
@@ -8239,7 +8387,8 @@ msgstr "Teel ö&verschrieven"
 #. i18n: file ./collectionbrowser/OrganizeCollectionDialog.ui line 438
 #: rc.cpp:1652
 msgid "If checked, overwrite files of the same name without asking."
-msgstr "Wenn anmaakt, warrt Dateien mit den sülven Naam ahn Nafraag överschreven."
+msgstr ""
+"Wenn anmaakt, warrt Dateien mit den sülven Naam ahn Nafraag överschreven."
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/magnatuneredownloaddialogbase.ui line 16
@@ -8310,7 +8459,9 @@ msgstr "Daalladen na"
 msgid ""
 "If you download to a location that is already being monitored by Amarok, the "
 "album will automatically be added to your collection."
-msgstr "Wenn Du na en Oort daallaadst, den Amarok al beluert, warrt dat Album automaatsch na Dien Sammeln toföögt."
+msgstr ""
+"Wenn Du na en Oort daallaadst, den Amarok al beluert, warrt dat Album "
+"automaatsch na Dien Sammeln toföögt."
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/magnatunepurchasedialogbase.ui line 22
@@ -8329,18 +8480,6 @@ msgstr "Info"
 #: rc.cpp:1796
 msgid "You have chosen to purchase the following album from Magnatune.com"
 msgstr "Du wullt dit Album op Magnatune.com köpen"
-
-#. i18n: tag string
-#. i18n: file ./servicebrowser/magnatunestore/magnatunepurchasedialogbase.ui line 90
-#: rc.cpp:1799
-msgid "Album:"
-msgstr "Album:"
-
-#. i18n: tag string
-#. i18n: file ./servicebrowser/magnatunestore/magnatunepurchasedialogbase.ui line 110
-#: rc.cpp:1802
-msgid "Artist:"
-msgstr "Künstler:"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/magnatunepurchasedialogbase.ui line 130
@@ -8526,7 +8665,11 @@ msgid ""
 "Magnatune.com. Your personal and credit card information is sent securely to "
 "Magnatune.com using SSL encryption and is not stored by Amarok or readable "
 "by the Amarok developers."
-msgstr "Vun den vun Di utsöchten Bedrag geiht een Halfde an den Künstler, de anner an Magnatune.com. Dien Kreditkoort-Daten warrt mit SSL-Verslöteln direktemang Mangnatune.com tostüert un nich vun Amarok wohrt. Se laat sikok nich vun de Amarok-Schrievers utlesen."
+msgstr ""
+"Vun den vun Di utsöchten Bedrag geiht een Halfde an den Künstler, de anner "
+"an Magnatune.com. Dien Kreditkoort-Daten warrt mit SSL-Verslöteln "
+"direktemang Mangnatune.com tostüert un nich vun Amarok wohrt. Se laat sikok "
+"nich vun de Amarok-Schrievers utlesen."
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/magnatunepurchasedialogbase.ui line 972
@@ -8555,7 +8698,6 @@ msgstr "Kiekwark"
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneConfigWidget.ui line 19
 #: rc.cpp:1904
-#| msgid "General Options"
 msgid "Membership options"
 msgstr "Lidmaatoptschonen"
 
@@ -8577,14 +8719,15 @@ msgstr "Liddmaat-Typ:"
 msgid ""
 "For more information about the Magnatune.com memberships, and to sign up, go "
 "to http://magnatune.com/<To be anounced>"
-msgstr "Mehr Informatschonen över de Magnatune-Liddmaatschap un över't Anmellen lett sik op http://magnatune.com/ finnen"
+msgstr ""
+"Mehr Informatschonen över de Magnatune-Liddmaatschap un över't Anmellen lett "
+"sik op http://magnatune.com/ finnen"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/ampache/AmpacheConfigWidget.ui line 28
 #. i18n: tag string
 #. i18n: file ./servicebrowser/ampache/AmpacheConfigWidget.ui line 44
 #: rc.cpp:1961 rc.cpp:1967
-#| msgid "Bad Server"
 msgid "Server"
 msgstr "Server"
 
@@ -8645,28 +8788,24 @@ msgstr "Mp3tunes-Anmellen"
 #. i18n: tag string
 #. i18n: file ./servicebrowser/mp3tunes/Mp3tunesConfigWidget.ui line 25
 #: rc.cpp:1997
-#| msgid "Email:"
 msgid "email:"
 msgstr "Nettpost:"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/mp3tunes/Mp3tunesConfigWidget.ui line 35
 #: rc.cpp:2000
-#| msgid "Password:"
 msgid "password:"
 msgstr "Passwoort:"
 
 #. i18n: tag string
 #. i18n: file ./playlistbrowser/PodcastCategoryBase.ui line 27
 #: rc.cpp:2006
-#| msgid "&Add format..."
 msgid "Add Podcast..."
 msgstr "Podcast tofögen..."
 
 #. i18n: tag string
 #. i18n: file ./playlistbrowser/PodcastCategoryBase.ui line 30
 #: rc.cpp:2009
-#| msgid "&Add format..."
 msgid "add podcast..."
 msgstr "Podcast tofögen..."
 
@@ -8850,12 +8989,13 @@ msgstr "Leggt de Stück(en), de wedderhaalt warrt"
 msgid ""
 "Whether to repeat the current track, the current album, or the current "
 "playlist indefinitely, or neither."
-msgstr "Dat aktuelle Stück, Album, de aktuelle Afspeellist oder gor nix ahn Enn wedderhalen"
+msgstr ""
+"Dat aktuelle Stück, Album, de aktuelle Afspeellist oder gor nix ahn Enn "
+"wedderhalen"
 
 #. i18n: tag label
 #. i18n: file ./amarokcore/amarok.kcfg line 64
 #: rc.cpp:2090
-#| msgid "Don't Repeat"
 msgid "Do not Repeat"
 msgstr "Nich wedderhalen"
 
@@ -8881,7 +9021,8 @@ msgstr "Afspeellist wedderhalen"
 #. i18n: file ./amarokcore/amarok.kcfg line 79
 #: rc.cpp:2102
 msgid "Which tracks or albums to favor in Random Mode"
-msgstr "Leggt de Stücken un Alben fast, de in den Tofallbedrief vörtrocken warrt"
+msgstr ""
+"Leggt de Stücken un Alben fast, de in den Tofallbedrief vörtrocken warrt"
 
 #. i18n: tag whatsthis
 #. i18n: file ./amarokcore/amarok.kcfg line 80
@@ -8902,7 +9043,8 @@ msgstr "Stücken un Alben na Tofall spelen"
 #. i18n: tag whatsthis
 #. i18n: file ./amarokcore/amarok.kcfg line 91
 #: rc.cpp:2111
-msgid "If set, Amarok plays the tracks or albums in the playlist in a random order."
+msgid ""
+"If set, Amarok plays the tracks or albums in the playlist in a random order."
 msgstr ""
 "Wenn anmaakt, speelt Amarok de Stücken un Alben op de Afspeellist in en "
 "tofällig Reeg."
@@ -8916,7 +9058,8 @@ msgstr "De tolest bruukt dünaamsch Bedrief"
 #. i18n: tag whatsthis
 #. i18n: file ./amarokcore/amarok.kcfg line 101
 #: rc.cpp:2117
-msgid "The title of the Dynamic Mode that was most recently loaded in the playlist"
+msgid ""
+"The title of the Dynamic Mode that was most recently loaded in the playlist"
 msgstr "De Titel vun den dünaamschen Bedrief, de tolest in de Afspeellist weer"
 
 #. i18n: tag label
@@ -8941,7 +9084,8 @@ msgstr "Lüttbild binnen Systeemafsnitt wiesen"
 #. i18n: file ./amarokcore/amarok.kcfg line 111
 #: rc.cpp:2129
 msgid "Enable/Disable tray icon for Amarok."
-msgstr "Dat Amarok-Lüttbild binnen den Systeemafsnitt vun't Paneel an- oder utmaken"
+msgstr ""
+"Dat Amarok-Lüttbild binnen den Systeemafsnitt vun't Paneel an- oder utmaken"
 
 #. i18n: tag label
 #. i18n: file ./amarokcore/amarok.kcfg line 115
@@ -9000,7 +9144,8 @@ msgstr "Luundaten na't Muster topassen"
 msgid ""
 "The hues are distributed according to a colour theme, giving a customisable "
 "look."
-msgstr "De Töön warrt na en Klöörmuster verdeelt, dat Utsehn lett sik also topassen."
+msgstr ""
+"De Töön warrt na en Klöörmuster verdeelt, dat Utsehn lett sik also topassen."
 
 #. i18n: tag label
 #. i18n: file ./amarokcore/amarok.kcfg line 140
@@ -9066,7 +9211,8 @@ msgstr "Torüchnehm-Schreed binnen Afspeellist"
 #. i18n: file ./amarokcore/amarok.kcfg line 166
 #: rc.cpp:2192
 msgid "The number of undo levels in the playlist."
-msgstr "Tall vun Schreed, de binnen dat Afspeellist-Finster torüchnahmen warrn köönt"
+msgstr ""
+"Tall vun Schreed, de binnen dat Afspeellist-Finster torüchnahmen warrn köönt"
 
 #. i18n: tag label
 #. i18n: file ./amarokcore/amarok.kcfg line 170
@@ -9084,13 +9230,16 @@ msgstr "De ID vun den Frequenzkieker, de wiest warrn schall"
 #. i18n: file ./amarokcore/amarok.kcfg line 175
 #: rc.cpp:2201
 msgid "Index of analyzer displayed in playlist window"
-msgstr "Index vun den Frequenzkieker, de binnen dat Afspeellist-Finster wiest warrt"
+msgstr ""
+"Index vun den Frequenzkieker, de binnen dat Afspeellist-Finster wiest warrt"
 
 #. i18n: tag whatsthis
 #. i18n: file ./amarokcore/amarok.kcfg line 176
 #: rc.cpp:2204
 msgid "The ID of the visual analyzer to display in playlist window."
-msgstr "De ID vun den Frequenzkieker, de binnen dat Afspeellist-Finster wiest warrn schall"
+msgstr ""
+"De ID vun den Frequenzkieker, de binnen dat Afspeellist-Finster wiest warrn "
+"schall"
 
 #. i18n: tag label
 #. i18n: file ./amarokcore/amarok.kcfg line 180
@@ -9159,13 +9308,15 @@ msgstr "Wenn anmaakt, warrt bi't Bestüern al vörhannen Dateien överschreven."
 #. i18n: tag label
 #. i18n: file ./amarokcore/amarok.kcfg line 205
 #: rc.cpp:2237
-msgid "Whether organize files will group directories according to their filetype."
+msgid ""
+"Whether organize files will group directories according to their filetype."
 msgstr "Bi't Bestüern Ornern na Dateityp tohoop stellen"
 
 #. i18n: tag whatsthis
 #. i18n: file ./amarokcore/amarok.kcfg line 206
 #: rc.cpp:2240
-msgid "If set, Organize files will group directories containing the same filetype."
+msgid ""
+"If set, Organize files will group directories containing the same filetype."
 msgstr ""
 "Wenn anmaakt, warrt bi't Bestüern Ornern mit den sülven Dateityp tohoop "
 "stellt."
@@ -9173,14 +9324,17 @@ msgstr ""
 #. i18n: tag label
 #. i18n: file ./amarokcore/amarok.kcfg line 210
 #: rc.cpp:2243
-msgid "Whether organize files will group artist starting in the same character."
+msgid ""
+"Whether organize files will group artist starting in the same character."
 msgstr "Bi't Bestüern Künstlers mit den sülven Anfangbookstaav tohoop stellen"
 
 #. i18n: tag whatsthis
 #. i18n: file ./amarokcore/amarok.kcfg line 211
 #: rc.cpp:2246
-msgid "If set, Organize files will group artist starting in the same character."
-msgstr "Wenn anmaakt, warrt Künstlers mit den sülven Anfangbookstaav tohoop stellt."
+msgid ""
+"If set, Organize files will group artist starting in the same character."
+msgstr ""
+"Wenn anmaakt, warrt Künstlers mit den sülven Anfangbookstaav tohoop stellt."
 
 #. i18n: tag label
 #. i18n: file ./amarokcore/amarok.kcfg line 215
@@ -9199,13 +9353,15 @@ msgstr ""
 #. i18n: tag label
 #. i18n: file ./amarokcore/amarok.kcfg line 220
 #: rc.cpp:2255
-msgid "Whether organize files will replace spaces in filenames by an underscore."
+msgid ""
+"Whether organize files will replace spaces in filenames by an underscore."
 msgstr "Bi't Bestüern Freetekens binnen Dateinaams mit Ünnerstreek utwesseln"
 
 #. i18n: tag whatsthis
 #. i18n: file ./amarokcore/amarok.kcfg line 221
 #: rc.cpp:2258
-msgid "If set, Organize files will replace spaces in filenames by an underscore."
+msgid ""
+"If set, Organize files will replace spaces in filenames by an underscore."
 msgstr ""
 "Wenn anmaakt, warrt bi't Bestüern Freetekens binnen Dateinaams mit "
 "Ünnerstreek utwesselt."
@@ -9281,7 +9437,8 @@ msgstr "Bi't Bestüern en egen Dateinaam-Schema bruken"
 #. i18n: tag whatsthis
 #. i18n: file ./amarokcore/amarok.kcfg line 246
 #: rc.cpp:2288
-msgid "If set, Organize files will rename files according to a custom format string."
+msgid ""
+"If set, Organize files will rename files according to a custom format string."
 msgstr ""
 "Wenn anmaakt, warrt Dateien bi't Bestüern langs en egen Formaattekenkeed "
 "ümnöömt."
@@ -9298,7 +9455,9 @@ msgstr "Formaattekenkeed för't Bestüern, wenn en egen Naamschema bruukt warrt.
 msgid ""
 "If the custom filename scheme is enabled, then Organize files will rename "
 "files according to this format string."
-msgstr "Wenn en egen Dateinaam-Muster anmaakt is, warrt Dateien bi't Bestüern langs disse Formaattekenkeed ümnöömt."
+msgstr ""
+"Wenn en egen Dateinaam-Muster anmaakt is, warrt Dateien bi't Bestüern langs "
+"disse Formaattekenkeed ümnöömt."
 
 #. i18n: tag label
 #. i18n: file ./amarokcore/amarok.kcfg line 255
@@ -9309,7 +9468,8 @@ msgstr "Reguleer Utdruck, de utwesselt warrt"
 #. i18n: tag whatsthis
 #. i18n: file ./amarokcore/amarok.kcfg line 256
 #: rc.cpp:2300
-msgid "Organize files will replace substrings matching this regular expression."
+msgid ""
+"Organize files will replace substrings matching this regular expression."
 msgstr ""
 "Bi't Bestüern warrt Ünnertekenkeden utwesselt, op de disse regulere Utdruck "
 "passt."
@@ -9324,7 +9484,8 @@ msgstr "De Tekenkeed, mit de utwesselt warrt"
 #. i18n: file ./amarokcore/amarok.kcfg line 261
 #: rc.cpp:2306
 msgid "Organize files will replace matching substrings with this string."
-msgstr "Bi't Bestüern warrt passen Ünnertekenkeden mit disse Tekenkeed utwesselt."
+msgstr ""
+"Bi't Bestüern warrt passen Ünnertekenkeden mit disse Tekenkeed utwesselt."
 
 #. i18n: tag label
 #. i18n: file ./amarokcore/amarok.kcfg line 265
@@ -9474,7 +9635,8 @@ msgstr "Liekmaker-Vörverstärken, vun -100 bet 100, 0 is normaal."
 #. i18n: file ./amarokcore/amarok.kcfg line 337
 #: rc.cpp:2375
 msgid "Band gains for equalizer, 10 values, range -100..100, 0 is normal."
-msgstr "Verstärken för Liekmaker-Bänner, 10 Weerten, vun -100 bet 100, 0 is normaal."
+msgstr ""
+"Verstärken för Liekmaker-Bänner, 10 Weerten, vun -100 bet 100, 0 is normaal."
 
 #. i18n: tag label
 #. i18n: file ./amarokcore/amarok.kcfg line 341
@@ -9503,7 +9665,8 @@ msgstr "Wikipedia-Rebeet för't Halen vun Informatschonen"
 #. i18n: tag whatsthis
 #. i18n: file ./amarokcore/amarok.kcfg line 357
 #: rc.cpp:2390
-msgid "Determines in which language the information is retrieved from Wikipedia."
+msgid ""
+"Determines in which language the information is retrieved from Wikipedia."
 msgstr "Leggt de Spraak för de Wikipedia-Informatschonen fast"
 
 #. i18n: tag label
@@ -9530,7 +9693,9 @@ msgstr "Binnen de OSD de sülven Informatschonen as in de Afspeellist wiesen"
 msgid ""
 "If enabled, the OSD will display the same information and in the same order "
 "as the columns in the playlist."
-msgstr "Wenn aktiveert, warrt de OSD de sülven Informatschonen as de Afspeellist wiesen, in de sülve Reeg as ehr Striepen"
+msgstr ""
+"Wenn aktiveert, warrt de OSD de sülven Informatschonen as de Afspeellist "
+"wiesen, in de sülve Reeg as ehr Striepen"
 
 #. i18n: tag label
 #. i18n: file ./amarokcore/amarok.kcfg line 374
@@ -9745,7 +9910,8 @@ msgstr "Dat leste speelte Stück bi't Starten wiederspelen"
 #. i18n: file ./amarokcore/amarok.kcfg line 468
 #: rc.cpp:2501
 msgid "If set, Amarok resumes playback of the last played track on startup."
-msgstr "Wenn anmaakt, speelt Amarok dat tolest speelte Stück bi't Starten wieder."
+msgstr ""
+"Wenn anmaakt, speelt Amarok dat tolest speelte Stück bi't Starten wieder."
 
 #. i18n: tag label
 #. i18n: file ./amarokcore/amarok.kcfg line 472
@@ -9769,7 +9935,9 @@ msgstr "De Tiet, an de wiederspeelt warrt, in Millisekunnen"
 #. i18n: file ./amarokcore/amarok.kcfg line 477
 #: rc.cpp:2513
 msgid "Internal: Playback position in the track to resume on startup."
-msgstr "Intern: Afspeelpositschoon binnen dat Stück, dat bi't Starten wiederspeelt warrt"
+msgstr ""
+"Intern: Afspeelpositschoon binnen dat Stück, dat bi't Starten wiederspeelt "
+"warrt"
 
 #. i18n: tag label
 #. i18n: file ./amarokcore/amarok.kcfg line 483
@@ -9985,7 +10153,9 @@ msgstr "Podcasts automaatsch wegdoon"
 msgid ""
 "Whether podcasts shows already played are automatically deleted when media "
 "device is connected."
-msgstr "Al afspeelte Podcasts automaatsch wegdoon, wenn de Medienreedschap tokoppelt is"
+msgstr ""
+"Al afspeelte Podcasts automaatsch wegdoon, wenn de Medienreedschap tokoppelt "
+"is"
 
 #. i18n: tag label
 #. i18n: file ./amarokcore/amarok.kcfg line 606
@@ -9999,7 +10169,9 @@ msgstr "Statistik synkroniseren"
 msgid ""
 "Whether Amarok statistics should be synchronized with play count/ratings on "
 "device and whether tracks played should be submitted to last.fm."
-msgstr "De Amarok-Statistik mit Afspeelklock un Beweerten op de Reedschap synkroniseren un speelt Stücken na Last.fm överdregen"
+msgstr ""
+"De Amarok-Statistik mit Afspeelklock un Beweerten op de Reedschap "
+"synkroniseren un speelt Stücken na Last.fm överdregen"
 
 #. i18n: tag label
 #. i18n: file ./amarokcore/amarok.kcfg line 613
@@ -10078,7 +10250,6 @@ msgstr "Freetekens mit Ünnerstreek utwesseln"
 
 #: MediaDevice.cpp:188
 #, kde-format
-#| msgid "Cannot write playlist (%1)."
 msgid "Cannot read playlist (%1)."
 msgstr "Afspeellist lett sik nich lesen (%1)."
 
@@ -10193,7 +10364,8 @@ msgstr "Disse Stücken wöörn nich överdragen: "
 #: MediaDevice.cpp:1028 history/mediabrowser.cpp:2655
 #, kde-format
 msgid "<p>You have selected 1 track to be <b>irreversibly</b> deleted."
-msgid_plural "<p>You have selected %1 tracks to be <b>irreversibly</b> deleted."
+msgid_plural ""
+"<p>You have selected %1 tracks to be <b>irreversibly</b> deleted."
 msgstr[0] "<p>Dien utsöcht Stück warrt <b>duerhaftig</b> wegdaan."
 msgstr[1] "<p>Dien %1 utsöcht Stücken warrt <b>duerhaftig</b> wegdaan."
 
@@ -10281,7 +10453,10 @@ msgstr "Frequenzkieker wesseln"
 msgid ""
 "Could not get a connected device list from libmtp. Possibly you are trying "
 "to run two copies of this kioslave at once, which is not supported."
-msgstr "Vun \"libmtp\" lett sik keen List mit tokoppelt Reedschappen halen. Villicht löppt op Dien Kist twee Utgaven vun't In-/Utgaavmoduul op eenmaal, man dat warrt nich ünnerstütt."
+msgstr ""
+"Vun \"libmtp\" lett sik keen List mit tokoppelt Reedschappen halen. Villicht "
+"löppt op Dien Kist twee Utgaven vun't In-/Utgaavmoduul op eenmaal, man dat "
+"warrt nich ünnerstütt."
 
 #: portabledevices/kioslaves/mtp_backend/pmpkioslave_mtpbackend.cpp:59
 msgid "libmtp found no devices."
@@ -10289,7 +10464,8 @@ msgstr "\"libmtp\" kunn keen Reedschappen finnen."
 
 #: portabledevices/kioslaves/mtp_backend/pmpkioslave_mtpbackend.cpp:78
 msgid "Error getting a GenericInterface to the device from Solid."
-msgstr "Fehler bi't Halen vun en allgemeen Koppelsteed na de \"Solid\"-Reedschap."
+msgstr ""
+"Fehler bi't Halen vun en allgemeen Koppelsteed na de \"Solid\"-Reedschap."
 
 #: portabledevices/kioslaves/mtp_backend/pmpkioslave_mtpbackend.cpp:83
 msgid ""
@@ -10297,8 +10473,8 @@ msgid ""
 "HAL.                                                   When filing a bug "
 "please include the full output of \"lshal -lt\"."
 msgstr ""
-"Keen Seriennummer vun de MTP-Reedschap in"
-"HAL funnen.                                         Bitte legg Dien "
+"Keen Seriennummer vun de MTP-Reedschap inHAL "
+"funnen.                                         Bitte legg Dien "
 "Fehlerbericht de hele Utgaav vun \"lshal -lt\" bi."
 
 #: portabledevices/kioslaves/mtp_backend/pmpkioslave_mtpbackend.cpp:90
@@ -10347,8 +10523,9 @@ msgid ""
 "supported.                       Use a URL of the form pmp:/<udi> or pmp:///"
 "<udi>"
 msgstr ""
-"Mobil Medienafspeler: Keen Ünnerstütten för't Setten "
-"vun Reeknernaams.         Bruuk en Adress liek \"pmp:/<udi>\" oder \"pmp:///<udi>\""
+"Mobil Medienafspeler: Keen Ünnerstütten för't Setten vun "
+"Reeknernaams.         Bruuk en Adress liek \"pmp:/<udi>\" oder \"pmp:///<udi>"
+"\""
 
 #: portabledevices/kioslaves/pmpkioslave.cpp:94
 msgid "Direct copying not supported."
@@ -10360,7 +10537,9 @@ msgstr "Teelnaam mutt nich de sülve wesen as en Solid-Koppelsteed!"
 
 #: portabledevices/kioslaves/pmpkioslave.cpp:208
 msgid "Could not rename file, files cannot be renamed across devices!"
-msgstr "Datei lett sik nich ümnömen. Dateien laat sik nich twischen Reedschappen ümnömen!"
+msgstr ""
+"Datei lett sik nich ümnömen. Dateien laat sik nich twischen Reedschappen "
+"ümnömen!"
 
 #: portabledevices/kioslaves/pmpkioslave.cpp:278
 msgid "portable media player : Empty UDI passed in"
@@ -10384,7 +10563,6 @@ msgid "Tracks Removed"
 msgstr "Stücken wegdaan"
 
 #: playlist/UndoCommands.cpp:65
-#| msgid "Playlists"
 msgid "Playlists Added"
 msgstr "Afspeellisten toföögt"
 
@@ -10401,7 +10579,8 @@ msgstr "Wedderhalen"
 msgid "One track was already in the playlist, so it was not added."
 msgid_plural "%1 tracks were already in the playlist, so they were not added."
 msgstr[0] "Een Stück geev dat al binnen de Afspeellist. Dat wöör nich toföögt."
-msgstr[1] "%1 Stücken geev dat al binnen de Afspeellist. Se wöörn nich toföögt."
+msgstr[1] ""
+"%1 Stücken geev dat al binnen de Afspeellist. Se wöörn nich toföögt."
 
 #: playlist/PlaylistGraphicsView.cpp:91
 msgid "&Play"
@@ -10412,7 +10591,6 @@ msgid "Queue Track"
 msgstr "Stück inregen"
 
 #: playlist/PlaylistGraphicsView.cpp:99
-#| msgid "Stop Playing After Current Track"
 msgid "Stop Playing After Track"
 msgstr "Anhollen na dit Stück"
 
@@ -10425,12 +10603,10 @@ msgid "Edit Track Information"
 msgstr "Stück-Informatschonen bewerken"
 
 #: playlist/PlaylistGraphicsView.cpp:111
-#| msgid "&Show Fullsize"
 msgid "Show Fullsize"
 msgstr "Heel wiesen"
 
 #: playlist/PlaylistGraphicsView.cpp:112
-#| msgid "&Next Cover"
 msgid "Fetch Cover"
 msgstr "Titelbild halen"
 
@@ -10620,7 +10796,6 @@ msgid "Bookmarks"
 msgstr "Leestekens"
 
 #: filebrowser/FileBrowser.cpp:174
-#| msgid "Go To Current Track Folder"
 msgid "Current Document Folder"
 msgstr "Aktuell Dokmentorner"
 
@@ -10630,20 +10805,30 @@ msgid ""
 "folder previously entered, press the arrow on the right and choose one.</"
 "p><p>The entry has folder completion. Right-click to choose how completion "
 "should behave.</p>"
-msgstr "<p>Hier lett sik en Padd na en Orner angeven, de wiest warrn schall.</p><p>Vördem ingeven Ornen laat sik mit den Piel rechterhand utsöken.</p><p>De Ingaav ünnerstütt Orner-Kompletteren. Mit en Rechtsklick lett sik ehr Bedregen instellen.</p>"
+msgstr ""
+"<p>Hier lett sik en Padd na en Orner angeven, de wiest warrn schall.</"
+"p><p>Vördem ingeven Ornen laat sik mit den Piel rechterhand utsöken.</"
+"p><p>De Ingaav ünnerstütt Orner-Kompletteren. Mit en Rechtsklick lett sik "
+"ehr Bedregen instellen.</p>"
 
 #: filebrowser/FileBrowser.cpp:207
 msgid ""
 "<p>Here you can enter a name filter to limit which files are displayed.</"
 "p><p>To clear the filter, toggle off the filter button to the left.</p><p>To "
 "reapply the last filter used, toggle on the filter button.</p>"
-msgstr "<p>Hier lett sik en Naamfilter för't Ingrenzen vun de wiest Dateien ingeven.</p><p>Mit den Filterknoop linkerhand lett sik de Filter leddig maken.</p><p>De tolest bruukte Filter lett sik mit den Filterknoop nochmaal anwennen.</p>"
+msgstr ""
+"<p>Hier lett sik en Naamfilter för't Ingrenzen vun de wiest Dateien ingeven."
+"</p><p>Mit den Filterknoop linkerhand lett sik de Filter leddig maken.</"
+"p><p>De tolest bruukte Filter lett sik mit den Filterknoop nochmaal anwennen."
+"</p>"
 
 #: filebrowser/FileBrowser.cpp:210
 msgid ""
 "<p>This button clears the name filter when toggled off, or reapplies the "
 "last filter used when toggled on.</p>"
-msgstr "<p>Disse Knoop maakt den Filter leddig, wenn he utmaakt is, oder aktiveert den tolest bruukten Filter, wenn he anmaakt is.</p>"
+msgstr ""
+"<p>Disse Knoop maakt den Filter leddig, wenn he utmaakt is, oder aktiveert "
+"den tolest bruukten Filter, wenn he anmaakt is.</p>"
 
 #: filebrowser/FileBrowser.cpp:351
 #, kde-format
@@ -10651,7 +10836,6 @@ msgid "Apply last filter (\"%1\")"
 msgstr "Verleden Filter anwennen (\"%1\")"
 
 #: filebrowser/FileBrowser.cpp:357
-#| msgid "Clear the filter"
 msgid "Clear filter"
 msgstr "Den Filter leddig maken"
 
@@ -10673,7 +10857,9 @@ msgstr "&Köpen"
 msgid ""
 "Magnatune.com database update complete. Added %1 tracks on %2 albums from %3 "
 "artists"
-msgstr "Dat Opfrischen vun de Magnatune.com-Datenbank is afslaten: %1 Stücken op %2 Alben vun %3 Künstlers toföögt."
+msgstr ""
+"Dat Opfrischen vun de Magnatune.com-Datenbank is afslaten: %1 Stücken op %2 "
+"Alben vun %3 Künstlers toföögt."
 
 #: servicebrowser/magnatunestore/magnatunepurchasehandler.cpp:107
 #: servicebrowser/magnatunestore/magnatunepurchasehandler.cpp:129
@@ -10776,13 +10962,11 @@ msgstr "Identiteetprööv"
 
 #: servicebrowser/ampache/AmpacheService.cpp:188
 #: servicebrowser/mp3tunes/mp3tunesservice.cpp:176
-#| msgid "Authentication Failure"
 msgid "Authentication Error!"
 msgstr "Indentiteetprööv fehlslaan!"
 
 #: servicebrowser/ampache/AmpacheServiceCollection.cpp:50
 #, kde-format
-#| msgid "Advanced Server"
 msgid "Ampache Server %1"
 msgstr "Ampache-Server %1"
 
@@ -10795,13 +10979,11 @@ msgid "Enter a login and a password"
 msgstr "Brukernaam un Passwoort ingeven"
 
 #: servicebrowser/jamendo/JamendoMeta.cpp:285
-#| msgid "Re&download"
 msgid "&download"
 msgstr "&Daalladen"
 
 #: servicebrowser/jamendo/JamendoInfoParser.cpp:48
 #: servicebrowser/jamendo/JamendoInfoParser.cpp:78
-#| msgid "No Device Available"
 msgid "No description available..."
 msgstr "Keen Beschrieven verföögbor..."
 
@@ -10814,7 +10996,6 @@ msgid "Downloading Jamendo.com Database"
 msgstr "\"Jamendo.com\"-Datenbank warrt daallaadt"
 
 #: playlistbrowser/PodcastModel.cpp:251
-#| msgid "Enter host:"
 msgid "Enter Podcast URL:"
 msgstr "Podcast-Adress (URL) ingeven:"
 
@@ -10939,7 +11120,8 @@ msgstr "Afspelen vun dissen Last.fm-Stroom fehlslaan"
 
 #: lastfm.cpp:1062
 msgid "To use last.fm with Amarok, you need a last.fm profile."
-msgstr "Wenn du last.fm mit Amarok bruken wullt, muttst Du en Last.fm-Profil hebben."
+msgstr ""
+"Wenn du last.fm mit Amarok bruken wullt, muttst Du en Last.fm-Profil hebben."
 
 #: lastfm.cpp:1096
 msgid "Create Custom Station"
@@ -10947,10 +11129,10 @@ msgstr "Egen Statschoon opstellen"
 
 #: lastfm.cpp:1105
 msgid "Enter the name of a band or artist you like:"
-msgstr "Giff den Naam vun en Kombo oder Künstler in, de oder den Du lieden magst:"
+msgstr ""
+"Giff den Naam vun en Kombo oder Künstler in, de oder den Du lieden magst:"
 
 #: statusbar/StatusBarMessageLabel.cpp:56
-#| msgid "Closed"
 msgctxt "@action:button"
 msgid "Close"
 msgstr "Tomaken"
@@ -11229,7 +11411,9 @@ msgstr ""
 "\n"
 "Amarok is afstört! Dat deit uns redig böös leed :(\n"
 "\n"
-"Man, is noch nich allens to laat! Villicht gifft dat al en niege Verschoon, de dat Problem richt. Kiek man maal binnen de Software-Archiven vun Dien Distributschoon.\n"
+"Man, is noch nich allens to laat! Villicht gifft dat al en niege Verschoon, "
+"de dat Problem richt. Kiek man maal binnen de Software-Archiven vun Dien "
+"Distributschoon.\n"
 
 #: amarokcore/crashhandler.cpp:303
 msgid "Send Email"
@@ -11474,13 +11658,13 @@ msgid "Albums By"
 msgstr "Alben vun"
 
 #: CoverManager.cpp:125 CoverManager.cpp:375
-#| msgid "Album Artist"
 msgid "All Artists"
 msgstr "All Künstlers"
 
 #: CoverManager.cpp:175
 msgid "Enter space-separated terms to search in the albums"
-msgstr "Vun Freetekens trennte Wöör ingeven, wenn Du binnen de Alben söken wullt"
+msgstr ""
+"Vun Freetekens trennte Wöör ingeven, wenn Du binnen de Alben söken wullt"
 
 #: CoverManager.cpp:182
 msgid "All Albums"
@@ -11521,7 +11705,6 @@ msgid "&Fetch From amazon.%1"
 msgstr "Vun Amazon.%1 &halen"
 
 #: CoverManager.cpp:552
-#| msgid "Fetch Missing Covers"
 msgid "&Fetch Selected Covers"
 msgstr "Markeert Titelbiller &halen"
 
@@ -11548,7 +11731,8 @@ msgstr "Datei för't Titelbild utsöken"
 #: CoverManager.cpp:788
 #, kde-format
 msgid "Are you sure you want to remove this cover from the Collection?"
-msgid_plural "Are you sure you want to delete these %1 covers from the Collection?"
+msgid_plural ""
+"Are you sure you want to delete these %1 covers from the Collection?"
 msgstr[0] "Wullt Du dit Titelbild redig ut de Sammeln wegdoon?"
 msgstr[1] "Wullt Du disse %1 Titelbiller redig ut de Sammeln wegdoon?"
 
@@ -11651,3 +11835,6 @@ msgstr ""
 msgid "Build Collection..."
 msgstr "Sammeln inrichten..."
 
+#~| msgid "Current Playlist"
+#~ msgid "User-defined Playlists"
+#~ msgstr "Egen Afspeellisten"
