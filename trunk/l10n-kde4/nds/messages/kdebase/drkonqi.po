@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-01-22 07:57+0100\n"
+"POT-Creation-Date: 2008-01-23 08:58+0100\n"
 "PO-Revision-Date: 2008-01-16 01:17+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -32,51 +32,61 @@ msgstr ""
 msgid "C&opy"
 msgstr "K&operen"
 
-#: debugger.cpp:92
-#, fuzzy
-#| msgid "Done."
-msgctxt "debugging finished"
-msgid "Done."
-msgstr "Fardig."
+#: debugger.cpp:83
+#, c-format
+msgid "Application: %progname (%execname), signal %signame"
+msgstr ""
 
-#: debugger.cpp:117
-#, kde-format
-msgid "Backtrace saved to %1"
-msgstr "Fehlerspoor na \"%1\" sekert"
+#: debugger.cpp:96
+#, fuzzy
+#| msgid "Backtrace"
+msgctxt "debugging finished"
+msgid "Backtrace loaded."
+msgstr "Fehlerspoor"
 
 #: debugger.cpp:121
+#, fuzzy, kde-format
+#| msgid "Backtrace saved to %1"
+msgid "Backtrace saved to <filename>%1</filename>."
+msgstr "Fehlerspoor na \"%1\" sekert"
+
+#: debugger.cpp:125
 msgid "Cannot create a file to save the backtrace in"
 msgstr "De Datei för de Fehlerspoor lett sik nich opstellen"
 
-#: debugger.cpp:126
+#: debugger.cpp:133
 msgid "Select Filename"
 msgstr "Dateinaam utsöken"
 
-#: debugger.cpp:134
-#, kde-format
+#: debugger.cpp:141
+#, fuzzy, kde-format
+#| msgid ""
+#| "A file named \"%1\" already exists. Are you sure you want to overwrite it?"
 msgid ""
-"A file named \"%1\" already exists. Are you sure you want to overwrite it?"
+"A file named <filename>%1</filename> already exists. Are you sure you want "
+"to overwrite it?"
 msgstr ""
 "Dat gifft al en Datei mit den Naam \"%1\". Wullt Du ehr redig överschrieven?"
 
-#: debugger.cpp:136
+#: debugger.cpp:143
 msgid "Overwrite File?"
 msgstr "Datei överschrieven?"
 
-#: debugger.cpp:137
+#: debugger.cpp:144
 msgid "&Overwrite"
 msgstr "Ö&verschrieven"
 
-#: debugger.cpp:149
-#, kde-format
-msgid "Cannot open file %1 for writing"
+#: debugger.cpp:156
+#, fuzzy, kde-format
+#| msgid "Cannot open file %1 for writing"
+msgid "Cannot open file <filename>%1</filename> for writing."
 msgstr "De Datei \"%1\" lett sik nich för't Schrieven opmaken"
 
-#: debugger.cpp:157
+#: debugger.cpp:164
 msgid "Unable to create a valid backtrace."
 msgstr "Gellen Fehlerspoor lett sik nich opstellen."
 
-#: debugger.cpp:158
+#: debugger.cpp:165
 msgid ""
 "This backtrace appears to be of no use.\n"
 "This is probably because your packages are built in a way which prevents "
@@ -90,11 +100,11 @@ msgstr ""
 "schaadhaftig worrn.\n"
 "\n"
 
-#: debugger.cpp:167
+#: debugger.cpp:174
 msgid "Loading backtrace..."
 msgstr "Fehlerspoor warrt opstellt..."
 
-#: debugger.cpp:190
+#: debugger.cpp:197
 msgid ""
 "The following options are enabled:\n"
 "\n"
@@ -102,7 +112,7 @@ msgstr ""
 "Disse Optschonen sünd anmaakt:\n"
 "\n"
 
-#: debugger.cpp:192
+#: debugger.cpp:199
 msgid ""
 "\n"
 "As the usage of these options is not recommended - because they can, in rare "
@@ -116,15 +126,15 @@ msgstr ""
 "Wenn Du en Fehlerspoor bruukst, muttst Du de Optschonen utmaken un den "
 "Afstört nochmaal utlösen.\n"
 
-#: debugger.cpp:197
+#: debugger.cpp:204
 msgid "Backtrace will not be created."
 msgstr "En Fehlerspoor warrt nich opstellt."
 
-#: debugger.cpp:205
+#: debugger.cpp:212
 msgid "Loading symbols..."
 msgstr "An't Laden vun de Symbolen..."
 
-#: debugger.cpp:226
+#: debugger.cpp:233
 msgid "System configuration startup check disabled.\n"
 msgstr "Pröven vun't Systeem bi't Starten is utmaakt.\n"
 
@@ -138,6 +148,21 @@ msgstr "Ehr de Bericht sendt warrt, muttst Du en Beschrieven ingeven."
 msgctxt "unknown application"
 msgid "unknown"
 msgstr "nich begäng"
+
+#: krashconf.cpp:159
+#, kde-format
+msgid "<application>%1</application>"
+msgstr ""
+
+#: krashconf.cpp:164 krashconf.cpp:171
+#, kde-format
+msgid "<command>%1</command>"
+msgstr ""
+
+#: krashconf.cpp:177
+#, kde-format
+msgid "<filename>%1</filename>"
+msgstr ""
 
 #: main.cpp:43
 msgid "KDE crash handler gives the user feedback if a program crashed"
@@ -213,27 +238,29 @@ msgstr "&Fehlerbericht"
 msgid "&Debugger"
 msgstr "&Debugger"
 
-#: toplevel.cpp:88
-msgid "Please attach the following backtrace to your bugreport."
+#: toplevel.cpp:96
+msgid "Please attach the following backtrace to your bug report:"
 msgstr ""
 
-#: toplevel.cpp:130
+#: toplevel.cpp:138
 msgid "A Fatal Error Occurred"
 msgstr ""
 
-#: toplevel.cpp:134
+#: toplevel.cpp:142
 msgid "What can I do?"
 msgstr ""
 
-#: toplevel.cpp:139
+#: toplevel.cpp:147
 #, fuzzy, c-format
 #| msgid ""
 #| "<p><b>Application crashed</b></p><p>The program %appname crashed.</p>"
-msgid "<p>Application crashed</p><p>The program %appname crashed.</p>"
+msgid ""
+"<p style=\"margin-bottom: 6px;\"><b>Application crashed</b></p><p>The "
+"program %appname crashed.</p>"
 msgstr ""
 "<p><b>Programm is afstört</b></p><p>Dat Programm %appname is afstört.</p>"
 
-#: toplevel.cpp:158
+#: toplevel.cpp:166
 msgid ""
 "<p>Do you want to generate a backtrace? This will help the developers to "
 "figure out what went wrong.</p>\n"
@@ -249,31 +276,34 @@ msgstr ""
 "woans Een den wedderhalen kann. Ahn en gode Beschrieven is dat nich "
 "mööglich, em to richten.</b></p> "
 
-#: toplevel.cpp:170
+#: toplevel.cpp:178
 msgid "Include Backtrace"
 msgstr "Fehlerspoor infögen"
 
-#: toplevel.cpp:170
+#: toplevel.cpp:178
 msgid "Generate"
 msgstr "Opstellen"
 
-#: toplevel.cpp:170
+#: toplevel.cpp:178
 msgid "Do Not Generate"
 msgstr "Nich opstellen"
 
-#: toplevel.cpp:237
+#: toplevel.cpp:245
 msgid "It was not possible to generate a backtrace."
 msgstr "De Fehlerspoor lett sik nich opstellen."
 
-#: toplevel.cpp:238
+#: toplevel.cpp:246
 msgid "Backtrace Not Possible"
 msgstr "Keen Fehlerspoor"
 
+#, fuzzy
+#~| msgid "Done."
+#~ msgctxt "debugging finished"
+#~ msgid "Done."
+#~ msgstr "Fardig."
+
 #~ msgid "General"
 #~ msgstr "Allgemeen"
-
-#~ msgid "Backtrace"
-#~ msgstr "Fehlerspoor"
 
 #~ msgid "<p><b>Short description</b></p><p>%1</p>"
 #~ msgstr "<p><b>Korte Beschrieven</b></p><p>%1</p>"
