@@ -1,13 +1,13 @@
 # Translation of kig.po to Low Saxon
 #
 # Manfred Wiese <m.j.wiese@web.de>, 2006.
-# Sönke Dibbern <s_dibbern@web.de>, 2006, 2007.
+# Sönke Dibbern <s_dibbern@web.de>, 2006, 2007, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: kig\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2007-12-30 06:22+0100\n"
-"PO-Revision-Date: 2007-12-09 02:23+0100\n"
+"PO-Revision-Date: 2008-01-24 00:27+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -40,6 +40,27 @@ msgid ""
 "hexagons (Point(0,0), Point(1,0), 5)\n"
 "</pre></code>\n"
 msgstr ""
+"<p>Du kannst en Kig-Konstrukschoon mit en \"pykig\"-Pythonskript\n"
+" stüern. Dat lett sik mit den Befehl <code>pykig.py</code> opropen.\n"
+"Hier en smuck Bispill (<code>hexagons.kpy</code>), dat Du\n"
+"utproberen kannst:\n"
+"<code><pre>\n"
+"kigdocument.hideobjects()\n"
+"def hexagons (c, v, n):\n"
+"  hexagon = PolygonBCV (c, v, 6)\n"
+"  if n &lt;= 0:\n"
+"    hexagon.show()\n"
+"    for i in range(6): \n"
+"      PolygonSide (hexagon, i, True)\n"
+"    return\n"
+"  cnew = MidPoints (c, v)\n"
+"  hexagons (cnew, v, n-1)\n"
+"  for k in [2,4]:\n"
+"    v1 = PolygonVertex (hexagon, k)\n"
+"    cnew = MidPoints (c, v1)\n"
+"    hexagons (cnew, v1, n-1)\n"
+"hexagons (Point(0,0), Point(1,0), 5)\n"
+"</pre></code>\n"
 
 #: tips.cpp:28
 msgid ""
@@ -48,6 +69,9 @@ msgid ""
 "of objects with the same construction, especially if there is\n"
 "no shortcut for that construction.</p>\n"
 msgstr ""
+"<p>Du kannst de Verleden Konstrukschoon eenfach mit de \"Z\"-Tast\n"
+"wedderhalen. Dat is denn goot, wenn Du en Reeg lieke Objekten\n"
+"opstellen muttst, för de dat keen Tastkombinatschoon gifft.</p>\n"
 
 #: tips.cpp:36
 msgid ""
@@ -84,15 +108,14 @@ msgstr ""
 "un deelwies <em>Dr. Geo</em>- un <em>Cabri&#8482;</em>-Dateien.</p>\n"
 
 #: tips.cpp:58
-#, fuzzy
 msgid ""
 "<p>Kig has more than 20 objects and 10 transformations with more than 80 \n"
 "constructions you can use in your documents: open the <em>Objects</em> \n"
 "menu to see them all.</p>\n"
 msgstr ""
-"<p>Mit Kig kannst Du mehr as veertig Objekten un teihn Ümformen binnen Dien\n"
-"Dokmenten opstellen un bruken: Maak dat Menü <em>Objekten</em> op,\n"
-"wenn Du se all ankieken wullt.</p>\n"
+"<p>Kig bargt mehr as 20 Objekten un 10 Ümformen mit mehr as 80\n"
+"Konstrukschonen, de Du opstellen un binnen Dien Dokmenten bruken kannst:\n"
+" Maak dat Menü <em>Objekten</em> op, wenn Du se all ankieken wullt.</p>\n"
 
 #: tips.cpp:65
 msgid ""
@@ -150,23 +173,20 @@ msgstr "m.j.wiese@web.de, s_dibbern@web.de"
 #. i18n: tag text
 #. i18n: file kig/kigui.rc line 4
 #: rc.cpp:5 rc.cpp:95
-#, fuzzy
 msgid "&File"
-msgstr "&Versteken"
+msgstr "&Datei"
 
 #. i18n: tag text
 #. i18n: file kig/kigpartui.rc line 16
 #: rc.cpp:8
-#, fuzzy
 msgid "&Edit"
-msgstr "&Bewerken..."
+msgstr "&Bewerken"
 
 #. i18n: tag text
 #. i18n: file kig/kigpartui.rc line 27
 #: rc.cpp:11
-#, fuzzy
 msgid "&View"
-msgstr "&Versteken"
+msgstr "&Ansicht"
 
 #. i18n: tag text
 #. i18n: file kig/kigpartui.rc line 35
@@ -262,7 +282,7 @@ msgstr "&Typen"
 #. i18n: file kig/kigpartui.rc line 180
 #: rc.cpp:59
 msgid "&Tools"
-msgstr ""
+msgstr "&Warktüüch"
 
 #. i18n: tag text
 #. i18n: file kig/kigpartui.rc line 192
@@ -270,7 +290,7 @@ msgstr ""
 #. i18n: file kig/kigui.rc line 34
 #: rc.cpp:62 rc.cpp:104
 msgid "Main Toolbar"
-msgstr ""
+msgstr "Hööft-Warktüüchbalken"
 
 #. i18n: tag text
 #. i18n: file kig/kigpartui.rc line 206
@@ -330,20 +350,19 @@ msgstr "Anner Objekten"
 #. i18n: file kig/kigpartui.rc line 291
 #: rc.cpp:92
 msgid "View"
-msgstr ""
+msgstr "Ansicht"
 
 #. i18n: tag text
 #. i18n: file kig/kigui.rc line 13
 #: rc.cpp:98
 msgid "&Settings"
-msgstr ""
+msgstr "&Instellen"
 
 #. i18n: tag text
 #. i18n: file kig/kigui.rc line 22
 #: rc.cpp:101
-#, fuzzy
 msgid "&Help"
-msgstr "&Versteken"
+msgstr "&Hülp"
 
 #. i18n: tag string
 #. i18n: file filters/imageexporteroptionswidget.ui line 25
@@ -354,7 +373,6 @@ msgstr "Oplösen"
 #. i18n: tag string
 #. i18n: file filters/imageexporteroptionswidget.ui line 40
 #: rc.cpp:110
-#, fuzzy
 msgid "&Keep Aspect Ratio"
 msgstr "Proportschonen &wohren"
 
@@ -377,9 +395,8 @@ msgstr "Breed:"
 #. i18n: tag string
 #. i18n: file filters/svgexporteroptionswidget.ui line 25
 #: rc.cpp:119 rc.cpp:128 rc.cpp:140 misc/kigfiledialog.cc:34
-#, fuzzy
 msgid "Options"
-msgstr "SVG-Optschonen"
+msgstr "Optschonen"
 
 #. i18n: tag string
 #. i18n: file filters/imageexporteroptionswidget.ui line 143
@@ -388,9 +405,8 @@ msgstr "SVG-Optschonen"
 #. i18n: tag string
 #. i18n: file filters/svgexporteroptionswidget.ui line 45
 #: rc.cpp:122 rc.cpp:134 rc.cpp:143
-#, fuzzy
 msgid "Show Axes"
-msgstr "&Assen wiesen"
+msgstr "Assen wiesen"
 
 #. i18n: tag string
 #. i18n: file filters/imageexporteroptionswidget.ui line 150
@@ -399,14 +415,12 @@ msgstr "&Assen wiesen"
 #. i18n: tag string
 #. i18n: file filters/svgexporteroptionswidget.ui line 52
 #: rc.cpp:125 rc.cpp:137 rc.cpp:146
-#, fuzzy
 msgid "Show Grid"
-msgstr "&Gadder wiesen"
+msgstr "Gadder wiesen"
 
 #. i18n: tag string
 #. i18n: file filters/latexexporteroptionswidget.ui line 45
 #: rc.cpp:131
-#, fuzzy
 msgid "Show Extra Frame"
 msgstr "Extra-Rahmen wiesen"
 
@@ -436,38 +450,37 @@ msgstr "Beschrieven:"
 #. i18n: file modes/historywidget.ui line 25
 #: rc.cpp:158
 msgid "Description of the current step:"
-msgstr ""
+msgstr "Beschrieven för den aktuellen Schritt:"
 
 #. i18n: tag string
 #. i18n: file modes/historywidget.ui line 56
 #: rc.cpp:161
-#, fuzzy
 msgid "First step"
-msgstr "Eerst Brennpunkt"
+msgstr "Eerst Schritt"
 
 #. i18n: tag string
 #. i18n: file modes/historywidget.ui line 69
 #: rc.cpp:164
 msgid "One step back"
-msgstr ""
+msgstr "Een Schritt torüch"
 
 #. i18n: tag string
 #. i18n: file modes/historywidget.ui line 85
 #: rc.cpp:167
 msgid "/"
-msgstr ""
+msgstr "/"
 
 #. i18n: tag string
 #. i18n: file modes/historywidget.ui line 99
 #: rc.cpp:170
 msgid "One step forward"
-msgstr ""
+msgstr "Een Schritt vörut"
 
 #. i18n: tag string
 #. i18n: file modes/historywidget.ui line 112
 #: rc.cpp:173
 msgid "Last step"
-msgstr ""
+msgstr "Lest Schritt"
 
 #. i18n: tag string
 #. i18n: file modes/typeswidget.ui line 37
@@ -506,9 +519,8 @@ msgstr "All utsöcht Typen in de List wegdoon"
 #. i18n: tag string
 #. i18n: file modes/typeswidget.ui line 112
 #: rc.cpp:191 modes/popup.cc:374 modes/typesdialog.cpp:368
-#, fuzzy
 msgid "&Delete"
-msgstr "Objekten &wegdoon"
+msgstr "&Wegdoon"
 
 #. i18n: tag string
 #. i18n: file modes/typeswidget.ui line 151
@@ -531,9 +543,8 @@ msgstr "Makros importeren, de in een oder mehr Dateien vörhannen sünd"
 #. i18n: tag string
 #. i18n: file modes/typeswidget.ui line 164
 #: rc.cpp:203
-#, fuzzy
 msgid "&Import..."
-msgstr "Importeren..."
+msgstr "&Importeren..."
 
 #: rc.cpp:204
 msgid "Circle by Center && Line"
@@ -564,19 +575,16 @@ msgid "Circle by Point && Segment (as the Diameter)"
 msgstr "Krink ut Punkt un Streek (as Dörmaat)"
 
 #: rc.cpp:211
-msgid ""
-"A circle defined by its center and the length of a segment as the diameter"
+msgid "A circle defined by its center and the length of a segment as the diameter"
 msgstr "En Krink, fastleggt vun sien Merrn un en Streeklängde as Dörmaat"
 
 #: rc.cpp:213
-msgid ""
-"Construct a circle with the diameter given by the length of this segment"
+msgid "Construct a circle with the diameter given by the length of this segment"
 msgstr "En Krink mit en Dörmaat vun disse Streek ehr Längde opstellen"
 
 #: rc.cpp:215
 msgid "Select the segment whose length gives the diameter of the new circle..."
-msgstr ""
-"Söök de Streek ut, de ehr Längde dat Dörmaat vun den niegen Krink angifft..."
+msgstr "Söök de Streek ut, de ehr Längde dat Dörmaat vun den niegen Krink angifft..."
 
 #: rc.cpp:216
 msgid "Equilateral Triangle"
@@ -689,11 +697,9 @@ msgstr "Söök den Anfangpunkt för den Verscheel-Vektor ut..."
 
 #: filters/filter.h:55 filters/cabri-utils.cc:33 misc/object_hierarchy.cc:486
 #: objects/object_imp_factory.cc:294
-#, fuzzy, kde-format
+#, kde-format
 msgid "An error was encountered at line %1 in file %2."
-msgstr ""
-"Bi't Inlesen vun de Datei \"%1\" geev dat en Fehler. Se lett sik nich "
-"opmaken."
+msgstr "Bi't Inlesen vun de Datei \"%2\" geev dat en Fehler binnen Reeg %1."
 
 #: kig/aboutdata.h:26
 msgid "KDE Interactive Geometry"
@@ -705,16 +711,15 @@ msgstr "(C) 2002-2005, de Schrieverslüüd vun Kig"
 
 #: kig/aboutdata.h:32
 msgid "Dominique Devriese"
-msgstr ""
+msgstr "Dominique Devriese"
 
 #: kig/aboutdata.h:33
 msgid "Original author, long time maintainer, design and lots of code."
-msgstr ""
-"Orginaalschriever, lange Tiet de Pleger, Utsehn un en helen Barg vun Kode"
+msgstr "Orginaalschriever, lange Tiet de Pleger, Utsehn un en helen Barg vun Kode"
 
 #: kig/aboutdata.h:36
 msgid "Maurizio Paolini"
-msgstr ""
+msgstr "Maurizio Paolini"
 
 #: kig/aboutdata.h:37
 msgid ""
@@ -727,7 +732,7 @@ msgstr ""
 
 #: kig/aboutdata.h:42
 msgid "Pino Toscano"
-msgstr ""
+msgstr "Pino Toscano"
 
 #: kig/aboutdata.h:43
 msgid ""
@@ -739,7 +744,7 @@ msgstr ""
 
 #: kig/aboutdata.h:48
 msgid "Franco Pasquarelli"
-msgstr ""
+msgstr "Franco Pasquarelli"
 
 #: kig/aboutdata.h:49
 msgid ""
@@ -751,7 +756,7 @@ msgstr ""
 
 #: kig/aboutdata.h:54
 msgid "Eric Depagne"
-msgstr ""
+msgstr "Eric Depagne"
 
 #: kig/aboutdata.h:55
 msgid ""
@@ -763,7 +768,7 @@ msgstr ""
 
 #: kig/aboutdata.h:59
 msgid "Marc Bartsch"
-msgstr ""
+msgstr "Marc Bartsch"
 
 #: kig/aboutdata.h:60
 msgid ""
@@ -775,7 +780,7 @@ msgstr ""
 
 #: kig/aboutdata.h:64
 msgid "Christophe Devriese"
-msgstr ""
+msgstr "Christophe Devriese"
 
 #: kig/aboutdata.h:65
 msgid ""
@@ -787,7 +792,7 @@ msgstr ""
 
 #: kig/aboutdata.h:70
 msgid "Christophe Prud'homme"
-msgstr ""
+msgstr "Christophe Prud'homme"
 
 #: kig/aboutdata.h:71
 msgid "Sent me a patch for some bugs."
@@ -795,7 +800,7 @@ msgstr "Hett mi en Kodeplaster gegen en poor Fehlers tostüert."
 
 #: kig/aboutdata.h:74
 msgid "Robert Gogolok"
-msgstr ""
+msgstr "Robert Gogolok"
 
 #: kig/aboutdata.h:75
 msgid ""
@@ -807,7 +812,7 @@ msgstr ""
 
 #: kig/aboutdata.h:80
 msgid "David Vignoni"
-msgstr ""
+msgstr "David Vignoni"
 
 #: kig/aboutdata.h:81
 msgid "Responsible for the nice application SVG Icon."
@@ -815,7 +820,7 @@ msgstr "Dreegt de Verantwoorden för dat moie SVG-Lüttbild."
 
 #: kig/aboutdata.h:84
 msgid "Danny Allen"
-msgstr ""
+msgstr "Danny Allen"
 
 #: kig/aboutdata.h:85
 msgid "Responsible for the new object action icons."
@@ -831,14 +836,15 @@ msgid ""
 "This Cabri version (%1) is not supported yet.\n"
 "Please contact the Kig authors to help supporting this Cabri version."
 msgstr ""
+"Disse Verschoon vun Cabri (%1) warrt noch nich ünnerstütt.\n"
+"Snack bitte de Kig-Schrievers an, wenn Du ehr bi de Ünnerstütten för disse Cabri-Verschoon hölpen wullt."
 
 #: filters/cabri-filter.cc:657
 #, kde-format
 msgid ""
 "This Cabri file contains a \"%1\" object, which Kig does not currently "
 "support."
-msgstr ""
-"Disse Cabri-Datei bargt en \"%1\"-Objekt, wat Kig opstunns nich ünnerstütt."
+msgstr "Disse Cabri-Datei bargt en \"%1\"-Objekt, wat Kig opstunns nich ünnerstütt."
 
 #: filters/drgeo-filter.cc:108
 #, kde-format
@@ -934,8 +940,7 @@ msgstr ""
 
 #: filters/filter.cc:82
 #, kde-format
-msgid ""
-"An error was encountered while parsing the file \"%1\".  It cannot be opened."
+msgid "An error was encountered while parsing the file \"%1\".  It cannot be opened."
 msgstr ""
 "Bi't Inlesen vun de Datei \"%1\" geev dat en Fehler. Se lett sik nich "
 "opmaken."
@@ -965,20 +970,15 @@ msgstr ""
 msgid ""
 "This KSeg file contains a filled circle, which Kig does not currently "
 "support."
-msgstr ""
-"Disse KSeg-Datei bargt en vullmaakt Krink, wat Kig opstunns nich ünnerstütt."
+msgstr "Disse KSeg-Datei bargt en vullmaakt Krink, wat Kig opstunns nich ünnerstütt."
 
 #: filters/kseg-filter.cc:567
-msgid ""
-"This KSeg file contains an arc sector, which Kig does not currently support."
-msgstr ""
-"Disse KSeg-Datei bargt en Bagenafsnitt, wat Kig opstunns nich ünnerstütt."
+msgid "This KSeg file contains an arc sector, which Kig does not currently support."
+msgstr "Disse KSeg-Datei bargt en Bagenafsnitt, wat Kig opstunns nich ünnerstütt."
 
 #: filters/kseg-filter.cc:573
-msgid ""
-"This KSeg file contains an arc segment, which Kig does not currently support."
-msgstr ""
-"Disse KSeg-Datei bargt en Bagensegment, wat Kig opstunns nich ünnerstütt."
+msgid "This KSeg file contains an arc segment, which Kig does not currently support."
+msgstr "Disse KSeg-Datei bargt en Bagensegment, wat Kig opstunns nich ünnerstütt."
 
 #: filters/latexexporter.cc:72
 msgid "Export to &Latex..."
@@ -1002,8 +1002,7 @@ msgstr "Latex-Optschonen"
 
 #: filters/native-filter.cc:194
 #, kde-format
-msgid ""
-"This file was created by Kig version \"%1\", which this version cannot open."
+msgid "This file was created by Kig version \"%1\", which this version cannot open."
 msgstr ""
 "Disse Datei wöör vun Kig (Verschoon %1) opstellt un lett sik mit disse "
 "Verschoon nich opmaken."
@@ -1049,7 +1048,7 @@ msgid ""
 "This Kig file uses an object of type \"%1\", which is obsolete, you should "
 "save the construction with a different name and check that it works as "
 "expected."
-msgstr ""
+msgstr "Disse Kig-Datei bruukt en Objekt mit den Typ \"%1\". De is överhaalt. Seker Dien Konstrukschoon bitte mit en anner Naam un kiek, wat dat funkscheneert as verwacht."
 
 #: filters/svgexporter.cc:45
 msgid "&Export to SVG..."
@@ -1093,13 +1092,12 @@ msgid "Export as XFig File"
 msgstr "As XFig-Datei exporteren"
 
 #: misc/builtin_stuff.cc:59
-#, fuzzy
 msgid "Point by Numeric Labels"
-msgstr "Punkt ut Koordinaten"
+msgstr "Punkt ut numeersch Betekers"
 
 #: misc/builtin_stuff.cc:60
 msgid "A point whose coordinates are given by two numeric labels"
-msgstr ""
+msgstr "En Punkt, fastleggt vun twee numeersch Betekers"
 
 #: misc/builtin_stuff.cc:67
 msgid "Segment"
@@ -1123,26 +1121,22 @@ msgstr "Strahl"
 
 #: misc/builtin_stuff.cc:83
 msgid "A half-line by its start point, and another point somewhere on it."
-msgstr ""
-"En Strahl, fastleggt vun sien Anfangpunkt un en anner Punkt jichtenswo dor op"
+msgstr "En Strahl, fastleggt vun sien Anfangpunkt un en anner Punkt jichtenswo dor op"
 
 #: misc/builtin_stuff.cc:90
 msgid "Perpendicular"
 msgstr "Pielrecht Lien"
 
 #: misc/builtin_stuff.cc:91
-msgid ""
-"A line constructed through a point, perpendicular to another line or segment."
-msgstr ""
-"En Lien dör en Punkt, de pielrecht to en anner Lien oder Streek steiht."
+msgid "A line constructed through a point, perpendicular to another line or segment."
+msgstr "En Lien dör en Punkt, de pielrecht to en anner Lien oder Streek steiht."
 
 #: misc/builtin_stuff.cc:98
 msgid "Parallel"
 msgstr "Parallele"
 
 #: misc/builtin_stuff.cc:99
-msgid ""
-"A line constructed through a point, and parallel to another line or segment"
+msgid "A line constructed through a point, and parallel to another line or segment"
 msgstr "En Lien dör en Punkt, de parallel to en anner Lien oder Streek löppt"
 
 #: misc/builtin_stuff.cc:106
@@ -1162,14 +1156,12 @@ msgid "A circle constructed through three points"
 msgstr "En Krink dör dree Pünkt"
 
 #: misc/builtin_stuff.cc:120
-#, fuzzy
 msgid "Circle by Point && Radius"
-msgstr "Krink ut Punkt un Streek (as Halfmaat)"
+msgstr "Krink ut Punkt un Halfmaat"
 
 #: misc/builtin_stuff.cc:121
-#, fuzzy
 msgid "A circle defined by its center and the length of the radius"
-msgstr "En Krink, fastleggt vun sien Merrn un en Streeklängde as Halfmaat"
+msgstr "En Krink, fastleggt vun sien Merrn un dat Halfmaat sien Längde"
 
 #: misc/builtin_stuff.cc:136
 msgid "Construct Bisector of This Angle"
@@ -1209,8 +1201,7 @@ msgstr "Ellips ut Brennpünkt un Punkt"
 
 #: misc/builtin_stuff.cc:163
 msgid "An ellipse constructed by its focuses and a point that pertains to it"
-msgstr ""
-"En Ellips, fastleggt vun ehr Brennpünkt un en Punkt, de de Ellips tohöört"
+msgstr "En Ellips, fastleggt vun ehr Brennpünkt un en Punkt, de de Ellips tohöört"
 
 #: misc/builtin_stuff.cc:170
 msgid "Hyperbola by Focuses && Point"
@@ -1218,8 +1209,7 @@ msgstr "Hyperbel ut Brennpünkt un Punkt"
 
 #: misc/builtin_stuff.cc:171
 msgid "A hyperbola constructed by its focuses and a point that pertains to it"
-msgstr ""
-"En Hyperbel, fastleggt vun ehr Brennpünkt un en Punkt, de de Hyperbel tohöört"
+msgstr "En Hyperbel, fastleggt vun ehr Brennpünkt un en Punkt, de de Hyperbel tohöört"
 
 #: misc/builtin_stuff.cc:178
 msgid "Conic by Directrix, Focus && Point"
@@ -1267,8 +1257,7 @@ msgstr "Kubsch Bagen mit Knütt ut söss Pünkt"
 
 #: misc/builtin_stuff.cc:219
 msgid "A cubic curve with a nodal point at the origin through six points"
-msgstr ""
-"En kubsch Bagen mit en Knüttpunkt an den Koordinatenborn dör söss Pünkt"
+msgstr "En kubsch Bagen mit en Knüttpunkt an den Koordinatenborn dör söss Pünkt"
 
 #: misc/builtin_stuff.cc:226
 msgid "Cubic Curve with Cusp by Four Points"
@@ -1281,14 +1270,12 @@ msgstr ""
 "Pünkt"
 
 #: misc/builtin_stuff.cc:234
-#, fuzzy
 msgid "Cubic Function by Four Points"
-msgstr "Kubsch Bagen mit Scheedpunkt ut veer Pünkt"
+msgstr "Kubsch Bagen ut veer Pünkt"
 
 #: misc/builtin_stuff.cc:235
-#, fuzzy
 msgid "A cubic function through four points"
-msgstr "En Kegelsnitt dör fief Pünkt"
+msgstr "En kubsch Bagen dör veer Pünkt"
 
 #: misc/builtin_stuff.cc:242
 msgid "Directrix of a Conic"
@@ -1367,32 +1354,27 @@ msgid "Construct an arc through three points."
 msgstr "En Krinkbagen dör dree Pünkt"
 
 #: misc/builtin_stuff.cc:332
-#, fuzzy
 msgid "Conic Arc by Center and Three Points"
-msgstr "Krinkbagen ut dree Pünkt"
+msgstr "Kegelsnittbagen ut dree Pünkt un sien Merrn"
 
 #: misc/builtin_stuff.cc:333
-#, fuzzy
 msgid "Construct a conic arc with given center through three points."
-msgstr "En Krinkbagen dör dree Pünkt"
+msgstr "En Kegelsnittbagen ut sien Merrn un dree Pünkt opstellen"
 
 #: misc/builtin_stuff.cc:340
-#, fuzzy
 msgid "Conic Arc by Five Points"
-msgstr "Kegelsnitt ut fief Pünkt"
+msgstr "Kegelsnittbagen ut fief Pünkt"
 
 #: misc/builtin_stuff.cc:341
-#, fuzzy
 msgid "Construct a conic arc through five points."
-msgstr "En Krinkbagen dör dree Pünkt"
+msgstr "En Kegelsnittbagen ut fief Pünkt opstellen"
 
 #: misc/builtin_stuff.cc:348
 msgid "Arc by Center, Angle && Point"
 msgstr "Krinkbagen ut Merrn, Winkel un Punkt"
 
 #: misc/builtin_stuff.cc:349
-msgid ""
-"Construct an arc by its center and a given angle, starting at a given point"
+msgid "Construct an arc by its center and a given angle, starting at a given point"
 msgstr ""
 "En Krinkbagen mit en angeven Anfangpunkt ut den Middelpunkt un en angeven "
 "Winkel opstellen"
@@ -1442,8 +1424,7 @@ msgid "Scale"
 msgstr "Skaleren"
 
 #: misc/builtin_stuff.cc:411
-msgid ""
-"Scale an object over a point, by the ratio given by the length of a segment"
+msgid "Scale an object over a point, by the ratio given by the length of a segment"
 msgstr ""
 "En Objekt an en Punkt skaleren, de Proportschoon warrt dör de Längde vun en "
 "Streek angeven"
@@ -1453,8 +1434,7 @@ msgid "Scale over Line"
 msgstr "An en Lien skaleren"
 
 #: misc/builtin_stuff.cc:419
-msgid ""
-"An object scaled over a line, by the ratio given by the length of a segment"
+msgid "An object scaled over a line, by the ratio given by the length of a segment"
 msgstr ""
 "En Objekt an en Lien skaleren, de Proportschoon warrt dör de Längde vun en "
 "Streek angeven"
@@ -1488,7 +1468,6 @@ msgid "Apply Similitude"
 msgstr "Liekto-Afbillen anwennen"
 
 #: misc/builtin_stuff.cc:443
-#, fuzzy
 msgid ""
 "Apply a similitude to an object (the sequence of a scaling and rotation "
 "around a center)"
@@ -1593,16 +1572,14 @@ msgid "Test whether a given polygon is convex"
 msgstr "Pröven, wat en angeven Veeleck konvex is"
 
 #: misc/builtin_stuff.cc:582
-#, fuzzy
 #| msgid "Distance Test"
 msgid "Existence Test"
-msgstr "Afstand-Proov"
+msgstr "Dorwesen-Proov"
 
 #: misc/builtin_stuff.cc:583
-#, fuzzy
 #| msgid "Test whether a given polygon is convex"
 msgid "Test whether a given object is constructible"
-msgstr "Pröven, wat en angeven Veeleck konvex is"
+msgstr "Pröven, wat sik en angeven Objekt opstellen lett"
 
 #: misc/builtin_stuff.cc:590
 msgid "Distance Test"
@@ -1684,13 +1661,12 @@ msgid "Enter the coordinates for the new point."
 msgstr "Bitte de Koordinaten för den niegen Punkt ingeven."
 
 #: misc/guiaction.cc:250
-#, fuzzy
 msgid "Construct a Numeric Value"
-msgstr "En Textfeld opstellen"
+msgstr "En numeersch Weert opstellen"
 
 #: misc/guiaction.cc:260
 msgid "Numeric Value"
-msgstr ""
+msgstr "Numeersch Weert"
 
 #: misc/kigfiledialog.cc:54 kig/kig_part.cpp:656 modes/typesdialog.cpp:455
 #, kde-format
@@ -1714,7 +1690,6 @@ msgid "Use this edit field to modify the size of this angle."
 msgstr "Bruuk dit Ingaavfeld, wenn Du de Winkelgrött ännern wullt."
 
 #: misc/kiginputdialog.cc:160
-#, fuzzy
 #| msgid ""
 #| "Choose from this list the goniometric unit you want to use to modify the "
 #| "size of this angle.<br>\n"
@@ -1726,8 +1701,8 @@ msgid ""
 "If you switch to another unit, the value in the edit field on the left will "
 "be converted to the new selected unit."
 msgstr ""
-"Söök ut de List de Winkeleenheit ut, de Du för't Ännern vun de Grött vun "
-"dissen Winkel bruken wullt.<br>\n"
+"Söök ut de List de Winkeleenheit ut, de Du för't Ännern vun dissen Winkel sien "
+"Grött bruken wullt.<br />\n"
 "Wenn Du na en anner Eenheit wesselst, warrt de Weert binnen dat Ingaavfeld "
 "automaatsch na de nieg utsöchte Eenheit ümreekt."
 
@@ -1759,14 +1734,14 @@ msgid "Unnamed Macro #%1"
 msgstr "Nich nöömt Makro Nr.%1"
 
 #: misc/object_hierarchy.cc:551
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "This Kig file uses an object of type \"%1\", which this Kig version does not "
 "support. Perhaps you have compiled Kig without support for this object type, "
 "or perhaps you are using an older Kig version."
 msgstr ""
-"Disse Kig-Datei bruukt en Objekt vun den Typ\"%1\", dat disse Kig-Verschoon "
-"nich ünnerstütt. Villicht hest Du Kig ahn Ünnerstütten för dissen Objekttyp "
+"Disse Kig-Datei bruukt en Objekt vun den Typ\"%1\", disse Kig-Verschoon "
+"ünnerstütt dat nich. Villicht hest Du Kig ahn Ünnerstütten för dissen Objekttyp "
 "kompileert, oder Du bruukst mööglicherwies en öller Verschoon vun Kig."
 
 #: misc/special_constructors.cc:220
@@ -1826,8 +1801,7 @@ msgid "Construct a polygon by giving its vertices"
 msgstr "En Veeleck ut sien Höörnpünkt opstellen"
 
 #: misc/special_constructors.cc:489
-msgid ""
-"... with this vertex (click on the first vertex to terminate construction)"
+msgid "... with this vertex (click on the first vertex to terminate construction)"
 msgstr ""
 "... mit dissen Höörnpunkt (klick op de eerst Höörn, wenn Du dat Opstellen "
 "afbreken wullt)"
@@ -1952,8 +1926,7 @@ msgstr "Maatöverdregen"
 
 #: misc/special_constructors.cc:1235
 msgid "Transport the measure of a segment or arc over a line or circle."
-msgstr ""
-"De Längde vun en Afsnitt oder en Krinkbagen na en Lien oder Krink överdregen"
+msgstr "De Längde vun en Afsnitt oder en Krinkbagen na en Lien oder Krink överdregen"
 
 #: misc/special_constructors.cc:1348 objects/special_calcers.cc:24
 msgid "Segment to transport"
@@ -1961,12 +1934,11 @@ msgstr "Streek, de överdragen warrn schall"
 
 #: misc/special_constructors.cc:1350
 msgid "Arc to transport"
-msgstr "Bagen, de överdragen warrn schall"
+msgstr "Bagen, den Du överdregen wullt"
 
 #: misc/special_constructors.cc:1352
-#, fuzzy
 msgid "Value to transport"
-msgstr "Bagen, de överdragen warrn schall"
+msgstr "Weert, den Du överdregen wullt"
 
 #: misc/special_constructors.cc:1354
 msgid "Transport a measure on this line"
@@ -2062,8 +2034,7 @@ msgid "Construct Midpoint of This Point and Another One"
 msgstr "Middelpunkt twischen twee Pünkt opstellen"
 
 #: misc/special_constructors.cc:1550
-msgid ""
-"Select the first of the points of which you want to construct the midpoint..."
+msgid "Select the first of the points of which you want to construct the midpoint..."
 msgstr "Söök den eersten vun de Pünkt ut, vun de Du den Merrn finnen wullt..."
 
 #: misc/special_constructors.cc:1551
@@ -2139,21 +2110,19 @@ msgid "Center of Curvature at This Point"
 msgstr "Merrn vun de Böögde in dissen Punkt"
 
 #: misc/unit.cc:121
-#, fuzzy
 msgctxt "Translators: Pixel"
 msgid "pixel"
-msgstr " Pixels"
+msgstr "Pixels"
 
 #: misc/unit.cc:122
 msgctxt "Translators: Centimeter"
 msgid "cm"
-msgstr ""
+msgstr "cm"
 
 #: misc/unit.cc:123
-#, fuzzy
 msgctxt "Translators: Inch"
 msgid "in"
-msgstr "Lien"
+msgstr "Toll"
 
 #: modes/construct_mode.cc:264 modes/normal.cc:279
 msgid "Which object?"
@@ -2201,12 +2170,11 @@ msgstr "De Naam vun dat Makro mutt nich leddig wesen."
 
 #: modes/historydialog.cc:41
 msgid "History Browser"
-msgstr ""
+msgstr "Vörgeschicht-Kieker"
 
 #: modes/historydialog.cc:125
-#, fuzzy
 msgid "Start of the construction"
-msgstr "Konstrukschoon afbreken"
+msgstr "Konstrukschoon anfangen"
 
 #: modes/label.cc:167 modes/macrowizard.cc:130 modes/typesdialog.cpp:313
 msgid "Name"
@@ -2240,19 +2208,16 @@ msgid "Change Label"
 msgstr "Textfeld ännern"
 
 #: modes/label.cc:649 objects/text_type.cc:324
-#, fuzzy
 msgid "Set Value"
-msgstr "&Stil fastleggen"
+msgstr "Weert fastleggen"
 
 #: modes/label.cc:649
-#, fuzzy
 msgid "Enter value:"
-msgstr "Text ingeven"
+msgstr "Weert ingeven:"
 
 #: modes/label.cc:680
-#, fuzzy
 msgid "Select the position for the new numeric value..."
-msgstr "Söök den Ennpunkt vun den niegen Krinkbagen ut..."
+msgstr "De Steed för den niegen numeerschen Weert utsöken..."
 
 #: modes/macro.cc:91
 msgid ""
@@ -2296,22 +2261,19 @@ msgid "Enter a name and description for your new type."
 msgstr "Giff en Naam un en Beschrieven för Dien niegen Typ in."
 
 #: modes/macrowizard.cc:139
-#, fuzzy
 #| msgid "Name:"
 msgid "&Name:"
-msgstr "Naam:"
+msgstr "&Naam:"
 
 #: modes/macrowizard.cc:146
-#, fuzzy
 #| msgid "Description:"
 msgid "&Description:"
-msgstr "Beschrieven:"
+msgstr "&Beschrieven:"
 
 #: modes/macrowizard.cc:152
-#, fuzzy
 #| msgid "Icon"
 msgid "&Icon:"
-msgstr "Lüttbild"
+msgstr "&Lüttbild:"
 
 #: modes/macrowizard.cc:174
 msgid "Define New Macro"
@@ -2349,7 +2311,7 @@ msgstr "&Opstellen"
 
 #: modes/popup.cc:248
 msgid "&Start"
-msgstr ""
+msgstr "&Anfangen"
 
 #: modes/popup.cc:249
 msgid "Add Te&xt Label"
@@ -2373,33 +2335,31 @@ msgstr "&Koordinatensysteem fastleggen"
 
 #: modes/popup.cc:336
 msgid "Black"
-msgstr ""
+msgstr "Swatt"
 
 #: modes/popup.cc:337
-#, fuzzy
 msgid "Gray"
-msgstr "gon"
+msgstr "Gries"
 
 #: modes/popup.cc:338
-#, fuzzy
 msgid "Red"
-msgstr "rad"
+msgstr "Root"
 
 #: modes/popup.cc:339
 msgid "Green"
-msgstr ""
+msgstr "Gröön"
 
 #: modes/popup.cc:340
 msgid "Cyan"
-msgstr ""
+msgstr "Zyan"
 
 #: modes/popup.cc:341
 msgid "Yellow"
-msgstr ""
+msgstr "Geel"
 
 #: modes/popup.cc:342
 msgid "Dark Red"
-msgstr ""
+msgstr "Düüsterroot"
 
 #: modes/popup.cc:366
 msgid "&Hide"
@@ -2454,10 +2414,10 @@ msgid "U&nhide All"
 msgstr "All &wiesen"
 
 #: modes/popup.cc:1134
-#, fuzzy, kde-format
+#, kde-format
 msgid "%1 Object"
 msgid_plural "%1 Objects"
-msgstr[0] "%1 Objekten"
+msgstr[0] "%1 Objekt"
 msgstr[1] "%1 Objekten"
 
 #: modes/textlabelwizard.cc:50
@@ -2502,8 +2462,7 @@ msgid "Construct an angle through this point"
 msgstr "Den Punkt för de eerste Winkelsiet setten"
 
 #: objects/angle_type.cc:44
-msgid ""
-"Select a point that the first half-line of the angle should go through..."
+msgid "Select a point that the first half-line of the angle should go through..."
 msgstr "Söök en Punkt ut, dör den de eerste Winkelsiet lopen schall..."
 
 #: objects/angle_type.cc:45
@@ -2515,8 +2474,7 @@ msgid "Select the point to construct the angle in..."
 msgstr "Söök den Höörnpunkt för den Winkel ut..."
 
 #: objects/angle_type.cc:48
-msgid ""
-"Select a point that the second half-line of the angle should go through..."
+msgid "Select a point that the second half-line of the angle should go through..."
 msgstr "Söök en Punkt ut, dör den de twete Winkelsiet lopen schall..."
 
 #: objects/angle_type.cc:103
@@ -2568,44 +2526,36 @@ msgid "Select the angle of the new arc..."
 msgstr "Söök den Winkel vun den niegen Krinkbagen ut..."
 
 #: objects/arc_type.cc:224
-#, fuzzy
 msgid "Construct a conic arc starting at this point"
-msgstr "En Krinkbagen mit dissen Anfangpunkt opstellen"
+msgstr "En Kegelsnittbagen mit dissen Anfangpunkt opstellen"
 
 #: objects/arc_type.cc:225
-#, fuzzy
 msgid "Select the start point of the new conic arc..."
-msgstr "Söök den Anfangpunkt vun den niegen Krinkbagen ut..."
+msgstr "Den Anfangpunkt vun den niegen Kegelsnittbagen utsöken..."
 
 #: objects/arc_type.cc:226
-#, fuzzy
 msgid "Construct a conic arc through this point"
-msgstr "En Kegelsnitt dör dissen Punkt opstellen"
+msgstr "En Kegelsnittbagen dör dissen Punkt opstellen"
 
 #: objects/arc_type.cc:227
-#, fuzzy
 msgid "Select a point for the new conic arc to go through..."
-msgstr "Söök en Punkt ut, dör den de niege Kegelsnitt lopen schall..."
+msgstr "En Punkt utsöken, dör den de niege Kegelsnittbagen lopen schall..."
 
 #: objects/arc_type.cc:228
-#, fuzzy
 msgid "Construct a conic arc ending at this point"
-msgstr "En Krinkbagen mit dissen Ennpunkt opstellen"
+msgstr "En Kegelsnittbagen mit dissen Ennpunkt opstellen"
 
 #: objects/arc_type.cc:229
-#, fuzzy
 msgid "Select the end point of the new conic arc..."
-msgstr "Söök den Ennpunkt vun den niegen Krinkbagen ut..."
+msgstr "Den Ennpunkt vun den niegen Kegelsnittbagen utsöken..."
 
 #: objects/arc_type.cc:233
-#, fuzzy
 msgid "Construct an conic arc with this center"
-msgstr "En Krinkbagen mit dissen Middelpunkt opstellen"
+msgstr "En Kegelsnittbagen mit dissen Middelpunkt opstellen"
 
 #: objects/arc_type.cc:234
-#, fuzzy
 msgid "Select the center of the new conic arc..."
-msgstr "Söök de Merrn vun den niegen Krinkbagen ut..."
+msgstr "De Merrn vun den niegen Kegelsnittbagen utsöken..."
 
 #: objects/bogus_imp.cc:338
 msgid "Test Result"
@@ -2629,7 +2579,7 @@ msgstr "Halfmaat"
 
 #: objects/circle_imp.cc:149 objects/conic_imp.cc:83 objects/other_imp.cc:375
 msgid "Center"
-msgstr ""
+msgstr "Merrn"
 
 #: objects/circle_imp.cc:150
 msgid "Expanded Cartesian Equation"
@@ -2695,14 +2645,12 @@ msgid "Select a point for the new circle to go through..."
 msgstr "Söök en Punkt ut, dör den de niege Krink lopen schall..."
 
 #: objects/circle_type.cc:193
-#, fuzzy
 msgid "With this radius"
-msgstr "...mit dissen Krinkbagen"
+msgstr "mit dit Halfmaat"
 
 #: objects/circle_type.cc:194
-#, fuzzy
 msgid "Select the length of the radius..."
-msgstr "Söök den Dreihwinkel ut..."
+msgstr "Dat Halfmaat sien Längde fastleggen..."
 
 #: objects/conic_imp.cc:82
 msgid "Conic Type"
@@ -2730,20 +2678,20 @@ msgstr "Parabel"
 
 #: objects/conic_imp.cc:262
 msgid "rho"
-msgstr ""
+msgstr "rho"
 
 #: objects/conic_imp.cc:269
 msgid "cos theta"
-msgstr ""
+msgstr "cos theta"
 
 #: objects/conic_imp.cc:270
 msgid "sin theta"
-msgstr ""
+msgstr "sin theta"
 
 #: objects/conic_imp.cc:272
-#, fuzzy, kde-format
+#, kde-format
 msgid "[centered at %1]"
-msgstr "Rho = %1   [zentreert bi %2]"
+msgstr "[zentreert bi %1]"
 
 #: objects/conic_imp.cc:382
 msgid "conic"
@@ -2784,7 +2732,7 @@ msgstr "En Kegelsnitt versteken"
 
 #: objects/conic_imp.cc:532
 msgid "Supporting Conic"
-msgstr ""
+msgstr "Stütt-Kegelsnitt"
 
 #: objects/conic_imp.cc:533 objects/line_imp.cc:126 objects/other_imp.cc:383
 msgid "First End Point"
@@ -2795,49 +2743,41 @@ msgid "Second End Point"
 msgstr "Tweet Ennpunkt"
 
 #: objects/conic_imp.cc:608
-#, fuzzy
 msgid "conic arc"
-msgstr "Kegelsnitt"
+msgstr "Kegelsnittbagen"
 
 #: objects/conic_imp.cc:609
-#, fuzzy
 msgid "Select this conic arc"
-msgstr "Dissen Kegelsnitt utsöken"
+msgstr "Dissen Kegelsnittbagen utsöken"
 
 #: objects/conic_imp.cc:610
-#, fuzzy, kde-format
+#, kde-format
 msgid "Select conic arc %1"
-msgstr "Kegelsnitt %1 utsöken"
+msgstr "Kegelsnittbagen %1 utsöken"
 
 #: objects/conic_imp.cc:611
-#, fuzzy
 msgid "Remove a Conic Arc"
-msgstr "En Kegelsnitt wegdoon"
+msgstr "En Kegelsnittbagen wegdoon"
 
 #: objects/conic_imp.cc:612
-#, fuzzy
 msgid "Add a Conic Arc"
-msgstr "En Kegelsnitt tofögen"
+msgstr "En Kegelsnittbagen tofögen"
 
 #: objects/conic_imp.cc:613
-#, fuzzy
 msgid "Move a Conic Arc"
-msgstr "En Kegelsnitt verschuven"
+msgstr "En Kegelsnittbagen verschuven"
 
 #: objects/conic_imp.cc:614
-#, fuzzy
 msgid "Attach to this conic arc"
-msgstr "Na dissen Kegelsnitt tofögen"
+msgstr "Na dissen Kegelsnittbagen tofögen"
 
 #: objects/conic_imp.cc:615
-#, fuzzy
 msgid "Show a Conic Arc"
-msgstr "En Kegelsnitt wiesen"
+msgstr "En Kegelsnittbagen wiesen"
 
 #: objects/conic_imp.cc:616
-#, fuzzy
 msgid "Hide a Conic Arc"
-msgstr "En Kegelsnitt versteken"
+msgstr "En Kegelsnittbagen versteken"
 
 #: objects/conic_types.cc:33 objects/conic_types.cc:87
 #: objects/conic_types.cc:221
@@ -3109,14 +3049,12 @@ msgid "Select the circle we want to invert against..."
 msgstr "Söök den Krink ut, an den Du spegeln wullt..."
 
 #: objects/inversion_type.cc:38
-#, fuzzy
 msgid "Compute the inversion of this object"
-msgstr "Krinkspegeln vun dissen Punkt utreken"
+msgstr "De Ümdreihen vun dit Objekt utreken"
 
 #: objects/inversion_type.cc:39
-#, fuzzy
 msgid "Select the object to invert..."
-msgstr "Söök den Punkt ut, den Du an den Krink spegeln wullt..."
+msgstr "Dat Objekt utsöken, dat Du ümdreihen wullt..."
 
 #: objects/inversion_type.cc:290
 msgid "Compute the inversion of this point"
@@ -3171,14 +3109,12 @@ msgid "Length"
 msgstr "Längde"
 
 #: objects/line_imp.cc:125 objects/line_imp.cc:195
-#, fuzzy
 msgid "Support Line"
-msgstr "Nich ünnerstütt"
+msgstr "Stüttlien"
 
 #: objects/line_imp.cc:196
-#, fuzzy
 msgid "End Point"
-msgstr "Middelpunkt"
+msgstr "Ennpunkt"
 
 #: objects/line_imp.cc:523 objects/line_imp.cc:532
 msgid "line"
@@ -3514,9 +3450,8 @@ msgid "Arc Length"
 msgstr "Krinkbagenlängde"
 
 #: objects/other_imp.cc:382
-#, fuzzy
 msgid "Support Circle"
-msgstr "En Krink wiesen"
+msgstr "Stüttkrink"
 
 #: objects/other_imp.cc:571
 msgid "angle"
@@ -3686,15 +3621,13 @@ msgstr "Den Middelpunkt vun dissen Punkt un en anner Punkt opstellen"
 msgid ""
 "Select the first of the two points of which you want to construct the "
 "midpoint..."
-msgstr ""
-"Söök den eersten vun den twee Pünkt ut, vun de Du de Merrn finnen wullt..."
+msgstr "Söök den eersten vun den twee Pünkt ut, vun de Du de Merrn finnen wullt..."
 
 #: objects/point_type.cc:265
 msgid ""
 "Select the other of the two points of which you want to construct the "
 "midpoint..."
-msgstr ""
-"Söök den annern vun de twee Pünkt ut, vun de Du de Merrn finnen wullt..."
+msgstr "Söök den annern vun de twee Pünkt ut, vun de Du de Merrn finnen wullt..."
 
 #: objects/point_type.cc:367
 msgid "Set &Coordinate..."
@@ -3741,14 +3674,12 @@ msgid "Select the segment to transport on the circle..."
 msgstr "Söök de Streek ut, de op den Krink överdragen warrn schall..."
 
 #: objects/point_type.cc:684
-#, fuzzy
 msgid "Select a number/length as x coordinate of the point..."
-msgstr "Söök en Streek ut, de ehr Längde de Faktor för't Skaleren is..."
+msgstr "En Tall/Längde as X-Koordinaat vun den Punkt fastleggen..."
 
 #: objects/point_type.cc:686
-#, fuzzy
 msgid "Select a number/length as y coordinate of the point..."
-msgstr "Söök en Streek ut, de ehr Längde de Faktor för't Skaleren is..."
+msgstr "En Tall/Längde as Y-Koordinaat vun den Punkt fastleggen..."
 
 #: objects/polygon_imp.cc:225
 msgid "Number of sides"
@@ -3894,35 +3825,28 @@ msgid "Select the polygon of which you want the intersection with a line..."
 msgstr "Söök dat Veeleck ut, dat Du mit en Lien snieden wullt..."
 
 #: objects/polygon_type.cc:393
-#, fuzzy
 msgid "Intersect this line with a polygon"
-msgstr "Dit Veeleck mit en Lien snieden"
+msgstr "Disse Lien mit en Veeleck snieden"
 
 #: objects/polygon_type.cc:394
-#, fuzzy
 msgid "Select the line of which you want the intersection with a polygon..."
-msgstr "Söök dat Veeleck ut, dat Du mit en Lien snieden wullt..."
+msgstr "De Lien utsöken, vun de Du de Översnieden mit en Veeleck Du hebben wullt..."
 
 #: objects/polygon_type.cc:603
-#, fuzzy
 msgid "Intersect this polygon with another polygon"
-msgstr "Dit Veeleck mit en Lien snieden"
+msgstr "Dit Veeleck mit en anner Veeleck Lien snieden"
 
 #: objects/polygon_type.cc:604
-#, fuzzy
-msgid ""
-"Select the polygon of which you want the intersection with another polygon..."
-msgstr "Söök dat Veeleck ut, dat Du mit en Lien snieden wullt..."
+msgid "Select the polygon of which you want the intersection with another polygon..."
+msgstr "Dat Veeleck utsöken, vun dat Du de Översnieden mit en anner Veeleck hebben wullt..."
 
 #: objects/polygon_type.cc:605
-#, fuzzy
 msgid "Intersect with this polygon"
-msgstr "Mit disse Lien snieden"
+msgstr "Mit dit Veeleck snieden"
 
 #: objects/polygon_type.cc:606
-#, fuzzy
 msgid "Select the second polygon for the intersection..."
-msgstr "Söök dat twete Objekt för den Snittpunkt ut..."
+msgstr "Dat twete Veeleck för de Översnieden utsöken..."
 
 #: objects/polygon_type.cc:752
 msgid "Construct the vertices of this polygon"
@@ -3996,8 +3920,7 @@ msgstr "Pielrecht op disse Lien?"
 
 #: objects/tests_type.cc:77
 msgid "Select the other of the two possibly orthogonal lines..."
-msgstr ""
-"Söök de anner vun de twee Lienen ut, de villicht pielrecht openanner staht..."
+msgstr "Söök de anner vun de twee Lienen ut, de villicht pielrecht openanner staht..."
 
 #: objects/tests_type.cc:105
 msgid "These lines are orthogonal."
@@ -4104,8 +4027,7 @@ msgid "Check if this point has the same distance"
 msgstr "Pröven, wat disse Punkt den sülven Afstand hett..."
 
 #: objects/tests_type.cc:300
-msgid ""
-"Select the point which might have the same distance from two other points..."
+msgid "Select the point which might have the same distance from two other points..."
 msgstr ""
 "Söök den Punkt ut, de villicht den sülven Afstand vun twee anner Pünkt "
 "hett..."
@@ -4159,28 +4081,24 @@ msgid "The two vectors are not the same."
 msgstr "De twee Vektoren sünd nich liek."
 
 #: objects/tests_type.cc:386
-#, fuzzy
 #| msgid "Check whether this point is on a curve"
 msgid "Check whether this object exists"
-msgstr "Pröven, wat disse Punkt op en Bagen liggt"
+msgstr "Pröven, wat dat dit Objekt gifft"
 
 #: objects/tests_type.cc:387
-#, fuzzy
 #| msgid "Select the object to scale..."
 msgid "Select the object for the existence check..."
-msgstr "Söök dat Objekt ut, dat Du skaleren wullt..."
+msgstr "Söök dat Objekt ut, dat sien Dorwesen Du pröven wullt..."
 
 #: objects/tests_type.cc:411
-#, fuzzy
 #| msgid "Object Type"
 msgid "The object exists."
-msgstr "Objekttyp"
+msgstr "Dat gifft dat Objekt."
 
 #: objects/tests_type.cc:413
-#, fuzzy
 #| msgid "The two vectors are not the same."
 msgid "The object does not exist."
-msgstr "De twee Vektoren sünd nich liek."
+msgstr "Dat gifft dat Objekt nich."
 
 #: objects/text_imp.cc:84
 msgid "Text"
@@ -4225,96 +4143,81 @@ msgstr "En Textfeld versteken"
 
 #: objects/text_imp.cc:193
 msgid "numeric label"
-msgstr ""
+msgstr "Numeersch Beteker"
 
 #: objects/text_imp.cc:194
-#, fuzzy
 msgid "Select this numeric label"
-msgstr "Dit Textfeld utsöken"
+msgstr "Dissen numeerschen Beteker utsöken"
 
 #: objects/text_imp.cc:195
-#, fuzzy, kde-format
+#, kde-format
 msgid "Select numeric label %1"
-msgstr "Textfeld %1 utsöken"
+msgstr "Numeersch Beteker %1 utsöken"
 
 #: objects/text_imp.cc:196
-#, fuzzy
 msgid "Remove a Numeric Label"
-msgstr "En Textfeld wegdoon"
+msgstr "En numeersch Beteker wegmaken"
 
 #: objects/text_imp.cc:197
-#, fuzzy
 msgid "Add a Numeric Label"
-msgstr "En Textfeld tofögen"
+msgstr "En numeersch Beteker tofögen"
 
 #: objects/text_imp.cc:198
-#, fuzzy
 msgid "Move a Numeric Label"
-msgstr "En Textfeld verschuven"
+msgstr "En numeersch Beteker verschuven"
 
 #: objects/text_imp.cc:199
-#, fuzzy
 msgid "Attach to this numeric label"
-msgstr "Na dit Textfeld tofögen"
+msgstr "Na dissen numeerschen Beteker tofögen"
 
 #: objects/text_imp.cc:200
-#, fuzzy
 msgid "Show a Numeric Label"
-msgstr "En Textfeld wiesen"
+msgstr "En numeersch Beteker wiesen"
 
 #: objects/text_imp.cc:201
-#, fuzzy
 msgid "Hide a Numeric Label"
-msgstr "En Textfeld versteken"
+msgstr "En numeersch Beteker versteken"
 
 #: objects/text_imp.cc:231 objects/text_imp.cc:323
 msgid "Numeric value"
-msgstr ""
+msgstr "Numeersch Weert"
 
 #: objects/text_imp.cc:285
-#, fuzzy
 msgid "boolean label"
-msgstr "En Textfeld verschuven"
+msgstr "Boolsch Beteker"
 
 #: objects/text_imp.cc:286
-#, fuzzy
 msgid "Select this boolean label"
-msgstr "Dit Textfeld utsöken"
+msgstr "Dissen boolschen Beteker utsöken"
 
 #: objects/text_imp.cc:287
-#, fuzzy, kde-format
+#, kde-format
 msgid "Select boolean label %1"
-msgstr "Textfeld %1 utsöken"
+msgstr "Boolsch Beteker %1 utsöken"
 
 #: objects/text_imp.cc:288
-#, fuzzy
 msgid "Remove a Boolean Label"
-msgstr "En Textfeld wegdoon"
+msgstr "En boolsch Beteker wegmaken"
 
 #: objects/text_imp.cc:289
-#, fuzzy
 msgid "Add a Boolean Label"
-msgstr "En Textfeld tofögen"
+msgstr "En boolsch Beteker tofögen"
 
 #: objects/text_imp.cc:290
-#, fuzzy
 msgid "Move a Boolean Label"
-msgstr "En Textfeld verschuven"
+msgstr "En boolsch Beteker verschuven"
 
 #: objects/text_imp.cc:291
-#, fuzzy
 msgid "Attach to this boolean label"
-msgstr "Na dit Textfeld tofögen"
+msgstr "Na dissen boolschen Beteker tofögen"
 
 #: objects/text_imp.cc:292
-#, fuzzy
 msgid "Show a Boolean Label"
-msgstr "En Textfeld wiesen"
+msgstr "En boolsch Beteker wiesen"
 
 #: objects/text_imp.cc:293
-#, fuzzy
 msgid "Hide a Boolean Label"
-msgstr "En Textfeld versteken"
+msgstr "En boolsch Beteker versteken"
 
 #: objects/text_type.cc:175
 msgid "&Copy Text"
@@ -4325,36 +4228,32 @@ msgid "&Toggle Frame"
 msgstr "Rahmen &an-/utmaken"
 
 #: objects/text_type.cc:177
-#, fuzzy
 msgid "Set &Font..."
-msgstr "&Längde fastleggen..."
+msgstr "&Schriftoort fastleggen..."
 
 #: objects/text_type.cc:206
 msgid "Toggle Label Frame"
 msgstr "Textfeldrahmen an-/utmaken"
 
 #: objects/text_type.cc:218
-#, fuzzy
 msgid "Change Label Font"
-msgstr "Textfeld ännern"
+msgstr "Beteker-Schriftoort wesseln"
 
 #: objects/text_type.cc:245
 msgid "&Redefine..."
 msgstr "&Nieg fastleggen..."
 
 #: objects/text_type.cc:296
-#, fuzzy
 msgid "Change &Value..."
-msgstr "Textfeld ännern"
+msgstr "W&eert ännern..."
 
 #: objects/text_type.cc:324
-#, fuzzy
 msgid "Enter the new value:"
-msgstr "Giff de niegen Koordinaten in."
+msgstr "Den niegen Weert ingeven:"
 
 #: objects/text_type.cc:329
 msgid "Change Displayed Value"
-msgstr ""
+msgstr "Wiest Weert ännern"
 
 #: objects/transform_types.cc:33
 msgid "Translate this object"
@@ -4438,40 +4337,29 @@ msgid "Select the center point of the scaling..."
 msgstr "Söök den Middelpunkt för't Skaleren ut..."
 
 #: objects/transform_types.cc:186 objects/transform_types.cc:273
-#, fuzzy
 msgid "Scale by this length"
-msgstr "Mit dissen Middelpunkt skaleren"
+msgstr "Mit disse Längde skaleren"
 
 #: objects/transform_types.cc:187 objects/transform_types.cc:274
-#, fuzzy
-msgid ""
-"Select a length or a segment whose length is the factor of the scaling..."
-msgstr "Söök en Streek ut, de ehr Längde de Faktor för't Skaleren is..."
+msgid "Select a length or a segment whose length is the factor of the scaling..."
+msgstr "En Längde utsöken oder en Streek, de ehr Längde de Fakter för't Skaleren is..."
 
 #: objects/transform_types.cc:229 objects/transform_types.cc:312
-#, fuzzy
 msgid "Scale this length..."
-msgstr "&Längde fastleggen..."
+msgstr "Disse Längde skaleren..."
 
 #: objects/transform_types.cc:230 objects/transform_types.cc:313
-#, fuzzy
-msgid ""
-"Select the first of two lengths whose ratio is the factor of the scaling..."
-msgstr ""
-"Söök de eerste vun twee Streken ut, de ehr Proportschoon de Faktor för't "
-"Skaleren is..."
+msgid "Select the first of two lengths whose ratio is the factor of the scaling..."
+msgstr "De eerste vun twee Streken utsöken, de ehr Proportschoon de Fakter för't Skaleren is..."
 
 #: objects/transform_types.cc:231 objects/transform_types.cc:314
-#, fuzzy
 msgid "...to this other length"
-msgstr "... na dit anner Dre'eck"
+msgstr "... op disse annere Längde"
 
 #: objects/transform_types.cc:232 objects/transform_types.cc:315
-#, fuzzy
-msgid ""
-"Select the second of two lengths whose ratio is the factor of the scaling..."
+msgid "Select the second of two lengths whose ratio is the factor of the scaling..."
 msgstr ""
-"Söök de twete vun twee Streken ut, de ehr Proportschoon de Faktor för't "
+"De twete vun twee Streken utsöken, de ehr Proportschoon de Fakter för't "
 "Skaleren is..."
 
 #: objects/transform_types.cc:270 objects/transform_types.cc:308
@@ -4573,18 +4461,15 @@ msgid "First of 3 starting points"
 msgstr "De eerste vun dree Orginaalpünkt"
 
 #: objects/transform_types.cc:472
-msgid ""
-"Select the first of the three starting points of the generic affinity..."
-msgstr ""
-"Söök den eersten vun de dree Orginaalpünkt för de affine Afbillen ut..."
+msgid "Select the first of the three starting points of the generic affinity..."
+msgstr "Söök den eersten vun de dree Orginaalpünkt för de affine Afbillen ut..."
 
 #: objects/transform_types.cc:473
 msgid "Second of 3 starting points"
 msgstr "De twete vun dree Orginaalpünkt"
 
 #: objects/transform_types.cc:474
-msgid ""
-"Select the second of the three starting points of the generic affinity..."
+msgid "Select the second of the three starting points of the generic affinity..."
 msgstr "Söök den tweten vun dree Orgiaalpünkt för de affine Afbillen ut..."
 
 #: objects/transform_types.cc:475
@@ -4592,10 +4477,8 @@ msgid "Third of 3 starting points"
 msgstr "De drüdde vun dree Orginaalpünkt"
 
 #: objects/transform_types.cc:476
-msgid ""
-"Select the third of the three starting points of the generic affinity..."
-msgstr ""
-"Söök den drüdden vun de dree Orginaalpünkt för de affine Afbillen ut..."
+msgid "Select the third of the three starting points of the generic affinity..."
+msgstr "Söök den drüdden vun de dree Orginaalpünkt för de affine Afbillen ut..."
 
 #: objects/transform_types.cc:477 objects/transform_types.cc:578
 msgid "Transformed position of first point"
@@ -4643,48 +4526,39 @@ msgstr "... na dit anner Veereck"
 msgid ""
 "Select the quadrilateral that is the image by the projective transformation "
 "of the first quadrilateral..."
-msgstr ""
-"Söök dat Veereck ut, wat de projektive Ümformen vun dat eerste Veereck is..."
+msgstr "Söök dat Veereck ut, wat de projektive Ümformen vun dat eerste Veereck is..."
 
 #: objects/transform_types.cc:570
 msgid "First of 4 starting points"
 msgstr "De eerste vun veer Orginaalpünkt"
 
 #: objects/transform_types.cc:571
-msgid ""
-"Select the first of the four starting points of the generic projectivity..."
-msgstr ""
-"Söök den eersten vun de veer Orginaalpünkt för de projektive Ümformen ut..."
+msgid "Select the first of the four starting points of the generic projectivity..."
+msgstr "Söök den eersten vun de veer Orginaalpünkt för de projektive Ümformen ut..."
 
 #: objects/transform_types.cc:572
 msgid "Second of 4 starting points"
 msgstr "De twete vun veer Orginaalpünkt"
 
 #: objects/transform_types.cc:573
-msgid ""
-"Select the second of the four starting points of the generic projectivity..."
-msgstr ""
-"Söök den tweten vun veer Orginaalpünkt för de projektive Ümformen ut..."
+msgid "Select the second of the four starting points of the generic projectivity..."
+msgstr "Söök den tweten vun veer Orginaalpünkt för de projektive Ümformen ut..."
 
 #: objects/transform_types.cc:574
 msgid "Third of 4 starting points"
 msgstr "De drüdde vun veer Orginaalpünkt"
 
 #: objects/transform_types.cc:575
-msgid ""
-"Select the third of the four starting points of the generic projectivity..."
-msgstr ""
-"Söök den drüdden vun veer Orginaalpünkt för de projektive Ümformen ut..."
+msgid "Select the third of the four starting points of the generic projectivity..."
+msgstr "Söök den drüdden vun veer Orginaalpünkt för de projektive Ümformen ut..."
 
 #: objects/transform_types.cc:576
 msgid "Fourth of 4 starting points"
 msgstr "De veerte vun veer Orginaalpünkt"
 
 #: objects/transform_types.cc:577
-msgid ""
-"Select the fourth of the four starting points of the generic projectivity..."
-msgstr ""
-"Söök den veerten vun de veer Orginaalpünkt för de projektive Ümformen ut..."
+msgid "Select the fourth of the four starting points of the generic projectivity..."
+msgstr "Söök den veerten vun de veer Orginaalpünkt för de projektive Ümformen ut..."
 
 #: objects/transform_types.cc:579
 msgid "Select the first of the four end points of the generic projectivity..."
@@ -4704,8 +4578,7 @@ msgstr "Bild-Positschoon vun den veerten Punkt"
 
 #: objects/transform_types.cc:585
 msgid "Select the fourth of the four end points of the generic projectivity..."
-msgstr ""
-"Söök den veerten vun de veer Bildpünkt för de projektive Ümformen ut..."
+msgstr "Söök den veerten vun de veer Bildpünkt för de projektive Ümformen ut..."
 
 #: objects/transform_types.cc:629
 msgid "Cast the shadow of this object"
@@ -4766,8 +4639,7 @@ msgid "Apply a similitude mapping a point onto this point"
 msgstr "En Liekto-Afbillen anwennen, de en Punkt op dissen Punkt afbildt"
 
 #: objects/transform_types.cc:898
-msgid ""
-"Select the point onto which the similitude should map the first point..."
+msgid "Select the point onto which the similitude should map the first point..."
 msgstr ""
 "Söök den Punkt ut, op den de Liekto-Afbillen den eersten Punkt afbillen "
 "schall..."
@@ -4793,8 +4665,7 @@ msgid "Construct the vector sum of this vector and another one."
 msgstr "De Vektorsumm vun dissen Vektor un en annern opstellen"
 
 #: objects/vector_type.cc:62
-msgid ""
-"Select the first of the two vectors of which you want to construct the sum..."
+msgid "Select the first of the two vectors of which you want to construct the sum..."
 msgstr ""
 "Söök den eersten vun de twee Vektoren ut, vun de Du de Summ opstellen "
 "wullt..."
@@ -4804,10 +4675,8 @@ msgid "Construct the vector sum of this vector and the other one."
 msgstr "De Vektorsumm vun dissen un den annern Vektor opstellen"
 
 #: objects/vector_type.cc:64
-msgid ""
-"Select the other of the two vectors of which you want to construct the sum..."
-msgstr ""
-"Söök den annern vun de twee Vektoren ut, vun de Du de Summ opstellen wullt..."
+msgid "Select the other of the two vectors of which you want to construct the sum..."
+msgstr "Söök den annern vun de twee Vektoren ut, vun de Du de Summ opstellen wullt..."
 
 #: objects/vector_type.cc:65
 msgid "Construct the vector sum starting at this point."
@@ -4822,7 +4691,6 @@ msgid "New Script"
 msgstr "Nieg Skript"
 
 #: scripting/newscriptwizard.cc:73
-#, fuzzy
 #| msgid ""
 #| "Select the argument objects ( if any )\n"
 #| "in the Kig window and press \"Next\"."
@@ -4830,8 +4698,8 @@ msgid ""
 "Select the argument objects (if any)\n"
 "in the Kig window and press \"Next\"."
 msgstr ""
-"Söök de Argument-Objekten (wenn nödig)\n"
-"in't Kig-Finster ut un klick op \"Nakamen\"."
+"De Argument-Objekten in't Kig-Finster utsöken (wenn nödig)\n"
+"un op \"Nakamen\" klicken."
 
 #: scripting/newscriptwizard.cc:79
 msgid "Enter Code"
@@ -4924,7 +4792,6 @@ msgid "Save Changes?"
 msgstr "Ännern sekern?"
 
 #: kig/kig.cpp:239
-#, fuzzy
 #| msgid ""
 #| "*.kig *.kigz *.kgeo *.seg|All Supported Files (*.kig *.kigz *.kgeo *."
 #| "seg)\n"
@@ -4944,8 +4811,7 @@ msgid ""
 "*.fgeo|Dr. Geo Documents (*.fgeo)\n"
 "*.fig *.FIG|Cabri Documents (*.fig *.FIG)"
 msgstr ""
-"*.kig *.kigz *.kgeo *.seg|All ünnerstütt Dateien (*.kig *.kigz *.kgeo *."
-"seg)\n"
+"*.kig *.kigz *.seg *.fgeo *.fig *.FIG|All ünnerstütt Dateien (*.kig *.kigz *.seg *. *.fgeo *.fig)\n"
 "*.kig|Kig-Dokmenten (*.kig)\n"
 "*.kigz|Komprimeert Kig-Dokmenten (*.kigz)\n"
 "*.kgeo|KGeo-Dokmenten (*.kgeo)\n"
@@ -5004,13 +4870,12 @@ msgid "Cancel the construction of the object being constructed"
 msgstr "Brickt de Konstrukschoon vun dat jüst opstellte Objekt af"
 
 #: kig/kig_part.cpp:246
-#, fuzzy
 msgid "Repeat Construction"
-msgstr "Konstrukschoon afbreken"
+msgstr "Konstrukschoon wedderhalen"
 
 #: kig/kig_part.cpp:251
 msgid "Repeat the last construction (with new data)"
-msgstr ""
+msgstr "De verleden Konstrukschoon (mit anner Daten) wedderhalen"
 
 #: kig/kig_part.cpp:257
 msgid "Show all hidden objects"
@@ -5034,12 +4899,11 @@ msgstr "Makrotypen plegen"
 
 #: kig/kig_part.cpp:270
 msgid "&Browse History..."
-msgstr ""
+msgstr "Vörgeschicht &dörkieken..."
 
 #: kig/kig_part.cpp:273
-#, fuzzy
 msgid "Browse the history of the current construction."
-msgstr "Konstrukschoon afbreken"
+msgstr "De Vörgeschicht vun de aktuelle Konstrukschoon dörkieken"
 
 #: kig/kig_part.cpp:280 kig/kig_part.cpp:281
 msgid "Zoom in on the document"
@@ -5090,20 +4954,19 @@ msgid "Wear Infrared Glasses"
 msgstr "Infraroot-Brill bruken"
 
 #: kig/kig_part.cpp:326
-#, fuzzy
 #| msgid "Enable/Disable hidden objects visibility."
 msgid "Enable/disable hidden objects visibility."
 msgstr "Wiesen vun versteken Objekten an-/utmaken"
 
 #: kig/kig_part.cpp:358
-#, fuzzy, kde-format
+#, kde-format
 msgid "Repeat Construction (%1)"
-msgstr "Konstrukschoon afbreken"
+msgstr "Konstrukschoon wedderhalen (%1)"
 
 #: kig/kig_part.cpp:360
 #, kde-format
 msgid "Repeat %1 (with new data)"
-msgstr ""
+msgstr "%1 wedderhalen (mit niege Daten)"
 
 #: kig/kig_part.cpp:389
 #, kde-format
@@ -5119,7 +4982,7 @@ msgid "File Not Found"
 msgstr "Datei lett sik nich finnen"
 
 #: kig/kig_part.cpp:409
-#, fuzzy, kde-format
+#, kde-format
 #| msgid ""
 #| "You tried to open a document of type \"%1\"; unfortunately, Kig does not "
 #| "support this format. If you think the format in question would be worth "
@@ -5130,11 +4993,7 @@ msgid ""
 "support this format. If you think the format in question would be worth "
 "implementing support for, you can always ask us nicely on mailto:pino@kde."
 "org or do the work yourself and send me a patch."
-msgstr ""
-"Du wullst jüst en Dokment vun den Typ \"%1\" opmaken, man Kig ünnerstütt dit "
-"Formaat nich. Wenn Du meenst, dat en Ünnerstütten för dat Formaat inbuut "
-"warrn schull, kannst Du jümmers fründlich op mailto:toscano.pino@tiscali.it "
-"nafragen, oder Du maakst dat sülven, un sennst mi en Kodeplaster."
+msgstr "Du wullst jüst en Dokment vun den Typ \"%1\" opmaken, man Kig ünnerstütt dit Formaat nich. Wenn Du meenst, dat Formaat is so goot, dor schull Een en Ünnerstütten för inbuen, denn kannst Du jümmers fründlich över mailto:toscano.pino@kde.org nafragen - oder Du maakst dat sülven un stüerst denn en Kodeplaster loos."
 
 #: kig/kig_part.cpp:415 kig/kig_part.cpp:458
 msgid "Format Not Supported"
@@ -5203,16 +5062,13 @@ msgid "Select Zoom Area"
 msgstr "Ansicht-Rebeet utsöken"
 
 #: kig/kig_view.cpp:587
-#, fuzzy
 #| msgid ""
 #| "Select the zoom area by entering the coordinates of the upper left corner "
 #| "and the lower right corner."
 msgid ""
 "Select the zoom area by entering the coordinates<br />of the upper left "
 "corner and the lower right corner."
-msgstr ""
-"Giff de Koordinaten vun de Ecken baven links un nerrn rechts för dat Ansicht-"
-"Rebeet in."
+msgstr "Giff de Koordinaten vun de Ecken baven links<br />un nerrn rechts för dat Ansicht-Rebeet in."
 
 #: kig/main.cpp:98
 msgid "Kig"
@@ -5237,40 +5093,38 @@ msgstr ""
 
 #: kig/main.cpp:107
 msgid "Document to open"
-msgstr "Dokment, dat opmaakt warrn schall"
+msgstr "Dokment, dat Du opmaken wullt"
 
 #: misc/coordinate_system.cpp:327
 msgid ""
 "Enter coordinates in the following format: \"x;y\",\n"
 "where x is the x coordinate, and y is the y coordinate."
 msgstr ""
-"Giff de Koordinaten in dit Formaat in: \"x;y\", \n"
-"\"x\" steiht för de x-Koordinaat un \"y\" för de y-Koordinaat."
+"De Koordinaten in dit Formaat ingeven: \"x;y\",\n"
+"\"x\" steiht för de X-Koordinaat un \"y\" för de Y-Koordinaat."
 
 #: misc/coordinate_system.cpp:333
-#, fuzzy
 msgid ""
 "Enter coordinates in the following format: <b>\"x;y\"</b>,<br />where x is "
 "the x coordinate, and y is the y coordinate."
 msgstr ""
-"Giff de Koordinaten in dit Formaat in: <b>\"x;y\"</b>, \"x\" steiht för de x-"
-"Koordinaat un \"y\" för de y-Koordinaat."
+"Koordinaten in dit Formaat ingeven: <b>\"x;y\"</b>,<br />\"x\" steiht för de X-"
+"Koordinaat un \"y\" för de Y-Koordinaat."
 
 #: misc/coordinate_system.cpp:375
 msgid ""
 "Enter coordinates in the following format: \"r; θ°\",\n"
 "where r and θ are the polar coordinates."
 msgstr ""
-"Giff de Koordinaten in dit Formaat in: \"r;θ°\",\n"
+"Koordinaten in dit Formaat ingeven: \"r;θ°\",\n"
 "\"r\" un \"θ\" sünd de Poolkoordinaten."
 
 #: misc/coordinate_system.cpp:382
-#, fuzzy
 msgid ""
 "Enter coordinates in the following format: <b>\"r; θ°\"</b>,<br />where r "
 "and θ are the polar coordinates."
 msgstr ""
-"Giff de Koordinaten in dissen Formaat in: <b>\"r; θ°\"</b>, \"r\" un \"θ\" "
+"Koordinaten in dit Formaat ingeven: <b>\"r; θ°\"</b>,<br />\"r\" un \"θ\" "
 "sünd de Poolkoordinaten."
 
 #: misc/coordinate_system.cpp:534
@@ -5291,12 +5145,11 @@ msgstr "Poolkoordinaten bruken"
 
 #: modes/typesdialog.cpp:129
 msgid "Macro"
-msgstr ""
+msgstr "Makro"
 
 #: modes/typesdialog.cpp:312
-#, fuzzy
 msgid "Type"
-msgstr "&Typen"
+msgstr "Typ"
 
 #: modes/typesdialog.cpp:314
 msgid "Description"
@@ -5307,7 +5160,7 @@ msgid "Manage Types"
 msgstr "Typen plegen"
 
 #: modes/typesdialog.cpp:425
-#, fuzzy, kde-format
+#, kde-format
 msgid "Are you sure you want to delete this type?"
 msgid_plural "Are you sure you want to delete these %1 types?"
 msgstr[0] "Wullt Du dissen Typ redig wegdoon?"
@@ -5438,3 +5291,4 @@ msgstr "Mehr as een Typ utsöcht"
 
 #~ msgid "Full Screen"
 #~ msgstr "Heel Schirm"
+
