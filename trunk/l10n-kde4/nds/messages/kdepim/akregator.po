@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akregator\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-01-26 09:52+0100\n"
+"POT-Creation-Date: 2008-01-27 10:35+0100\n"
 "PO-Revision-Date: 2008-01-26 21:13+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -20,7 +20,6 @@ msgid "Akregator"
 msgstr "Akregator"
 
 #: aboutdata.cpp:35
-#| msgid "A KDE Feed Aggregator"
 msgid "A KDE Feed Reader"
 msgstr "Mellenströöm-Kieker för KDE"
 
@@ -577,12 +576,13 @@ msgid "<b>Homepage:</b> <a href=\"%1\">%2</a>"
 msgstr "<b>Tohuussiet:</b> <a href=\"%1\">%2</a>"
 
 #: articleformatter.cpp:175 articleformatter.cpp:176 articleformatter.cpp:371
-#: articleformatter.cpp:372 articlelistview.cpp:106 articlelistview.cpp:646
+#: articleformatter.cpp:372 articlelistview.cpp:107 articlelistview.cpp:707
+#: articlemodel.cpp:95
 msgid "Date"
 msgstr "Datum"
 
 #: articleformatter.cpp:183 articleformatter.cpp:184 articleformatter.cpp:380
-#: articleformatter.cpp:381
+#: articleformatter.cpp:381 articlemodel.cpp:97
 msgid "Author"
 msgstr "Autor"
 
@@ -594,15 +594,19 @@ msgstr "Kommentaren"
 msgid "Complete Story"
 msgstr "Heel Naricht"
 
-#: articlelistview.cpp:102 articlelistview.cpp:644
+#: articlelistview.cpp:103 articlelistview.cpp:705
 msgid "Article"
 msgstr "Naricht"
 
-#: articlelistview.cpp:104 articlelistview.cpp:645
+#: articlelistview.cpp:105 articlelistview.cpp:706
 msgid "Feed"
 msgstr "Stroom"
 
-#: articlelistview.cpp:240 articlelistview.cpp:687
+#: articlelistview.cpp:183 subscriptionlistview.cpp:79
+msgid "Columns"
+msgstr "Striepen"
+
+#: articlelistview.cpp:300 articlelistview.cpp:748
 msgid ""
 "<h2>Article list</h2>Here you can browse articles from the currently "
 "selected feed. You can also manage articles, as marking them as persistent "
@@ -616,7 +620,7 @@ msgstr ""
 "tohören Nettsiet ankieken wullt, kannst Du ehr intern in en Tab oder mit en "
 "extern Nettkieker ankieken."
 
-#: articlelistview.cpp:337 articlelistview.cpp:970
+#: articlelistview.cpp:398 articlelistview.cpp:1031
 msgid ""
 "<div align=center><h3>No matches</h3>Filter does not match any articles, "
 "please change your criteria and try again.</div>"
@@ -624,7 +628,7 @@ msgstr ""
 "<div align=center><h3>Keen Övereenstimmen</h3>Dien Filter passt op keen "
 "Naricht. Änner den Filter und versöök dat nochmaal.</div>"
 
-#: articlelistview.cpp:348 articlelistview.cpp:982
+#: articlelistview.cpp:409 articlelistview.cpp:1043
 msgid ""
 "<div align=center><h3>No feed selected</h3>This area is article list. Select "
 "a feed from the feed list and you will see its articles here.</div>"
@@ -632,6 +636,28 @@ msgstr ""
 "<div align=center><h3>Keen Stroom utsöcht</h3>Dit is de Narichtenlist. Söök "
 "en Stroom op de Stroomlist ut, wenn Du sien Narichten hier ankieken wullt.</"
 "div>"
+
+#: articlemodel.cpp:91
+#, fuzzy
+#| msgid "Article List"
+msgid "Article title"
+msgstr "Narichtenlist"
+
+#: articlemodel.cpp:93
+#, fuzzy
+#| msgid "Feed Properties"
+msgid "Feed title"
+msgstr "Stroom-Egenschappen"
+
+#: articlemodel.cpp:99
+msgid "Description"
+msgstr ""
+
+#: articlemodel.cpp:101
+#, fuzzy
+#| msgid "Comments"
+msgid "Content"
+msgstr "Kommentaren"
 
 #: articleviewer.cpp:120
 msgid "&Increase Font Sizes"
@@ -667,19 +693,6 @@ msgstr "Link mit extern &Nettkieker opmaken"
 
 #: articleviewer.cpp:629
 #, kde-format
-#| msgctxt "%1: Akregator version; %2: homepage URL; --- end of comment ---"
-#| msgid ""
-#| "<h2 style='margin-top: 0px;'>Welcome to Akregator %1</h2><p>Akregator is "
-#| "an RSS feed aggregator for the K Desktop Environment. Feed aggregators "
-#| "provide a convenient way to browse different kinds of content, including "
-#| "news, blogs, and other content from online sites. Instead of checking all "
-#| "your favorite web sites manually for updates, Akregator collects the "
-#| "content for you.</p><p>For more information about using Akregator, check "
-#| "the <a href=\"%2\">Akregator website</a>. If you do not want to see this "
-#| "page anymore, <a href=\"config:/disable_introduction\">click here</a>.</"
-#| "p><p>We hope that you will enjoy Akregator.</p>\n"
-#| "<p>Thank you,</p>\n"
-#| "<p style='margin-bottom: 0px'>&nbsp; &nbsp; The Akregator Team</p>\n"
 msgctxt "%1: Akregator version; %2: homepage URL; --- end of comment ---"
 msgid ""
 "<h2 style='margin-top: 0px;'>Welcome to Akregator %1</h2><p>Akregator is a "
@@ -695,7 +708,14 @@ msgid ""
 "<p style='margin-bottom: 0px'>&nbsp; &nbsp; The Akregator Team</p>\n"
 msgstr ""
 "<h2 style='margin-top: 0px;'>Willkamen bi Akregator %1</h2><p>Akregator is "
-"en Mellenstroom-Kieker för KDE. Mit en Stroomkieker kannst Du kommodig Inholden vun verscheden Oorden ankieken, as Narichten, Blogs un anner Nettsiet-Inholden. Du bruukst Dien leevst Nettsieden nu nich mehr all vun Hand op nieg Inholt pröven, dat maakt Akregator för Di.</p><p>Wenn Du mehr över Akregator weten wullt, kiek op de <a href=\"%2\">Akregator-Nettsiet</a>. Wenn Du disse Siet nich wedder sehn wullt, <a href=\"config:/disable_introduction\">klick hier</a>.</p><p>Wi haapt, dat Du Spaaß mit Akregator hest.</p>\n"
+"en Mellenstroom-Kieker för KDE. Mit en Stroomkieker kannst Du kommodig "
+"Inholden vun verscheden Oorden ankieken, as Narichten, Blogs un anner "
+"Nettsiet-Inholden. Du bruukst Dien leevst Nettsieden nu nich mehr all vun "
+"Hand op nieg Inholt pröven, dat maakt Akregator för Di.</p><p>Wenn Du mehr "
+"över Akregator weten wullt, kiek op de <a href=\"%2\">Akregator-Nettsiet</"
+"a>. Wenn Du disse Siet nich wedder sehn wullt, <a href=\"config:/"
+"disable_introduction\">klick hier</a>.</p><p>Wi haapt, dat Du Spaaß mit "
+"Akregator hest.</p>\n"
 "<p>Velen Dank,</p>\n"
 "<p style='margin-bottom: 0px'>&nbsp; &nbsp; De Akregator-Koppel</p>\n"
 
@@ -759,7 +779,7 @@ msgstr "Laden afbraken"
 msgid "Loading completed"
 msgstr "Laadt."
 
-#: main.cpp:67 mainwidget.cpp:471
+#: main.cpp:67 mainwidget.cpp:475
 msgid "Imported Folder"
 msgstr "Importeert Orner"
 
@@ -809,7 +829,7 @@ msgstr "De Narichtenlist"
 msgid "Browsing area."
 msgstr "Dat Kiekrebeet"
 
-#: mainwidget.cpp:302 mainwidget.cpp:686
+#: mainwidget.cpp:302 mainwidget.cpp:690
 msgid "Articles"
 msgstr "Narichten"
 
@@ -817,37 +837,38 @@ msgstr "Narichten"
 msgid "About"
 msgstr "Över"
 
-#: mainwidget.cpp:474
+#: mainwidget.cpp:478
 msgid "Add Imported Folder"
 msgstr "Importeert Orner tofögen"
 
-#: mainwidget.cpp:474
+#: mainwidget.cpp:478
 msgid "Imported folder name:"
 msgstr "Naam för importeerten Orner:"
 
-#: mainwidget.cpp:793
+#: mainwidget.cpp:797
 msgid "Add Folder"
 msgstr "Orner tofögen"
 
-#: mainwidget.cpp:793
+#: mainwidget.cpp:797
 msgid "Folder name:"
 msgstr "Ornernaam:"
 
-#: mainwidget.cpp:890
+#: mainwidget.cpp:894
 msgid "Fetching Feeds..."
 msgstr "Strööm warrt afropen..."
 
-#: mainwidget.cpp:1096
+#: mainwidget.cpp:1100
 #, kde-format
 msgid "<qt>Are you sure you want to delete article <b>%1</b>?</qt>"
 msgstr "<qt>Büst Du seker, wat Du de Naricht <b>%1</b> wegdoon wullt?</qt>"
 
-#: mainwidget.cpp:1099
+#: mainwidget.cpp:1103
 #, kde-format
 msgid "<qt>Are you sure you want to delete the %1 selected articles?</qt>"
-msgstr "<qt>Büst Du seker, wat Du de %1 utsöchten Narichten wegdoon wullt?</qt>"
+msgstr ""
+"<qt>Büst Du seker, wat Du de %1 utsöchten Narichten wegdoon wullt?</qt>"
 
-#: mainwidget.cpp:1102
+#: mainwidget.cpp:1106
 msgid "Delete Article"
 msgstr "Naricht wegdoon"
 
@@ -1359,7 +1380,8 @@ msgstr "Angeven Befehl för't Opmaken mit extern Nettkieker bruken"
 #: rc.cpp:149 rc.cpp:911
 #, no-c-format
 msgid "Command to launch external browser.  URL will substitute for %u."
-msgstr "Befehl för't Starten vun den extern Nettkieker. För %u warrt de URL inföögt."
+msgstr ""
+"Befehl för't Starten vun den extern Nettkieker. För %u warrt de URL inföögt."
 
 #. i18n: tag whatsthis
 #. i18n: file akregator.kcfg line 160
@@ -1378,17 +1400,17 @@ msgid "What the click with middle mouse button should do."
 msgstr "Resultaat vun en Klick mit den Middelmuusknoop"
 
 #. i18n: tag label
-#. i18n: file akregator.kcfg line 197
+#. i18n: file akregator.kcfg line 211
 #. i18n: tag label
-#. i18n: file ./akregator.kcfg line 197
+#. i18n: file ./akregator.kcfg line 211
 #: rc.cpp:158 rc.cpp:920
 msgid "Archive Backend"
 msgstr "Archiv-Hölper"
 
 #. i18n: tag whatsthis
-#. i18n: file akregator.kcfg line 201
+#. i18n: file akregator.kcfg line 215
 #. i18n: tag whatsthis
-#. i18n: file ./akregator.kcfg line 201
+#. i18n: file ./akregator.kcfg line 215
 #: rc.cpp:161 rc.cpp:923
 msgid "Whether to delay before marking an article as read upon selecting it."
 msgstr ""
@@ -1396,12 +1418,14 @@ msgstr ""
 "warrt."
 
 #. i18n: tag whatsthis
-#. i18n: file akregator.kcfg line 205
+#. i18n: file akregator.kcfg line 219
 #. i18n: tag whatsthis
-#. i18n: file ./akregator.kcfg line 205
+#. i18n: file ./akregator.kcfg line 219
 #: rc.cpp:164 rc.cpp:926
-msgid "Configurable delay between selecting an article and it being marked as read."
-msgstr "Instellbor Tiet na't Utsöken vun en Naricht, ehr se as leest markeert warrt."
+msgid ""
+"Configurable delay between selecting an article and it being marked as read."
+msgstr ""
+"Instellbor Tiet na't Utsöken vun en Naricht, ehr se as leest markeert warrt."
 
 #. i18n: tag text
 #. i18n: file akregator_part.rc line 16
@@ -2120,17 +2144,11 @@ msgstr "Nakamen Naricht: "
 msgid "Total"
 msgstr "Tosamen"
 
-#: subscriptionlistview.cpp:74
-#| msgid "Comments"
-msgid "Columns"
-msgstr "Striepen"
-
 #: tabwidget.cpp:111
 msgid "Close the current tab"
 msgstr "Aktuell Tab tomaken"
 
 #: trayicon.cpp:68
-#| msgid "Akregator - RSS Feed Reader"
 msgid "Akregator - Feed Reader"
 msgstr "Akregator - Mellenströöm-Kieker"
 
@@ -2162,4 +2180,3 @@ msgstr[1] "Akregator - %1 nich leest Narichten"
 #~ "style:normal; text-decoration:none;\"><p style=\" margin-top:0px; margin-"
 #~ "bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 #~ "indent:0px;\">Status</p></body></html>"
-
