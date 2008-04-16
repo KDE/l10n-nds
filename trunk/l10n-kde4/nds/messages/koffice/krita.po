@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-04-10 23:27+0200\n"
+"POT-Creation-Date: 2008-04-16 16:11+0200\n"
 "PO-Revision-Date: 2008-01-04 01:53+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1392,7 +1392,7 @@ msgstr "&Grött ännern"
 
 #. i18n: tag string
 #. i18n: file ./ui/forms/wdgnewimage.ui line 246
-#: rc.cpp:245 ui/kis_dlg_preferences.cc:409
+#: rc.cpp:245 ui/dialogs/kis_dlg_preferences.cc:409
 msgid "Color"
 msgstr "Klöör"
 
@@ -1586,7 +1586,8 @@ msgstr "&Kanaal:"
 
 #. i18n: tag string
 #. i18n: file ./ui/forms/wdgautogradient.ui line 25
-#: rc.cpp:335 ui/kis_gradient_chooser.cc:41 ui/kis_gradient_chooser.cc:46
+#: rc.cpp:335 ui/widgets/kis_gradient_chooser.cc:41
+#: ui/widgets/kis_gradient_chooser.cc:46
 msgid "Custom Gradient"
 msgstr "Egen Övergang"
 
@@ -1694,8 +1695,8 @@ msgstr "Standard-Klöörmodell för nieg Biller:"
 #. i18n: file ./ui/forms/wdgcolorsettings.ui line 60
 #. i18n: tag string
 #. i18n: file ./ui/forms/wdgdisplaysettings.ui line 13
-#: rc.cpp:398 rc.cpp:473 ui/kis_dlg_preferences.cc:400
-#: ui/kis_dlg_preferences.cc:401
+#: rc.cpp:398 rc.cpp:473 ui/dialogs/kis_dlg_preferences.cc:400
+#: ui/dialogs/kis_dlg_preferences.cc:401
 msgid "Display"
 msgstr "Dorstellen"
 
@@ -2093,7 +2094,7 @@ msgstr "Animeert"
 #. i18n: file ./ui/forms/wdgcustombrush.ui line 98
 #. i18n: tag string
 #. i18n: file ./plugins/brushes/imagepipe/wdgcustombrush.ui line 98
-#: rc.cpp:578 rc.cpp:2731 ui/kis_brush_chooser.cc:44
+#: rc.cpp:578 rc.cpp:2731 ui/widgets/kis_brush_chooser.cc:44
 msgid "Use color as mask"
 msgstr "Klöör as Mask bruken"
 
@@ -3665,7 +3666,7 @@ msgstr "Laag-Egenschappen"
 
 #. i18n: tag string
 #. i18n: file ./plugins/viewplugins/compose/wdg_compose.ui line 22
-#: rc.cpp:1393 ui/kis_dlg_adj_layer_props.cc:75
+#: rc.cpp:1393 ui/dialogs/kis_dlg_adj_layer_props.cc:75
 msgid "Layer name:"
 msgstr "Laagnaam:"
 
@@ -5134,7 +5135,7 @@ msgstr "Laag verschuven"
 
 #. i18n: tag string
 #. i18n: file ./plugins/viewplugins/scripting/scripts/pilimport.ui line 134
-#: rc.cpp:2227 ui/kis_dlg_new_layer.cc:51
+#: rc.cpp:2227 ui/dialogs/kis_dlg_new_layer.cc:51
 msgid "New Layer"
 msgstr "Nieg Laag"
 
@@ -5994,20 +5995,6 @@ msgstr "Utsöken"
 msgid "&Rotate"
 msgstr "&Dreihen"
 
-#: ui/kis_dlg_image_properties.cc:52
-msgid "Image Properties"
-msgstr "Bildegenschappen"
-
-#: ui/kis_gradient_chooser.cc:55
-msgid "Custom Gradient..."
-msgstr "Egen Övergang..."
-
-#: ui/kis_gradient_chooser.cc:90
-#, fuzzy
-#| msgid "Choose Palette"
-msgid "Choose Gradient to Add"
-msgstr "Klörensett utsöken"
-
 #: ui/kis_image_manager.cc:57
 msgid "I&nsert Image as Layer..."
 msgstr "Bild as Laag i&nfögen..."
@@ -6021,35 +6008,62 @@ msgstr "&Egenschappen"
 msgid "Import Image"
 msgstr "Bild importeren"
 
-#: ui/kis_dlg_preferences.cc:148
+#: ui/dialogs/kis_dlg_image_properties.cc:52
+msgid "Image Properties"
+msgstr "Bildegenschappen"
+
+#: ui/dialogs/kis_dlg_preferences.cc:148
 #, fuzzy
 msgid "Monitor profile: "
 msgstr "&Monitorprofil:"
 
-#: ui/kis_dlg_preferences.cc:152
+#: ui/dialogs/kis_dlg_preferences.cc:152
 #, fuzzy
 msgid "&Monitor profile: "
 msgstr "&Monitorprofil:"
 
-#: ui/kis_dlg_preferences.cc:387
+#: ui/dialogs/kis_dlg_preferences.cc:387
 msgid "Preferences"
 msgstr "Instellen"
 
-#: ui/kis_dlg_preferences.cc:393 ui/kis_dlg_preferences.cc:394
+#: ui/dialogs/kis_dlg_preferences.cc:393 ui/dialogs/kis_dlg_preferences.cc:394
 msgid "General"
 msgstr "Allgemeen"
 
-#: ui/kis_dlg_preferences.cc:408
+#: ui/dialogs/kis_dlg_preferences.cc:408
 msgid "Color Management"
 msgstr "Klöörpleeg"
 
-#: ui/kis_dlg_preferences.cc:415 ui/kis_dlg_preferences.cc:416
+#: ui/dialogs/kis_dlg_preferences.cc:415 ui/dialogs/kis_dlg_preferences.cc:416
 msgid "Performance"
 msgstr "Leisten"
 
-#: ui/kis_dlg_preferences.cc:421 ui/kis_dlg_preferences.cc:422
+#: ui/dialogs/kis_dlg_preferences.cc:421 ui/dialogs/kis_dlg_preferences.cc:422
 msgid "Grid"
 msgstr "Gadder"
+
+#: ui/dialogs/kis_dlg_layer_properties.cc:58
+msgid "Layer Properties"
+msgstr "Laag-Egenschappen"
+
+#: ui/dialogs/kis_dlg_apply_profile.cc:45
+msgid "Apply Image Profile to Clipboard Data"
+msgstr "Bildprofil för Twischenaflaag-Daten anwennen"
+
+#: ui/dialogs/kis_dlg_adjustment_layer.cc:62
+#, fuzzy
+msgid "Name:"
+msgstr "&Naam:"
+
+#: ui/dialogs/kis_dlg_adjustment_layer.cc:77
+#, fuzzy
+msgid "Configuration"
+msgstr "CImg-Instellen"
+
+#: ui/dialogs/kis_dlg_adjustment_layer.cc:83
+#: ui/dialogs/kis_dlg_adj_layer_props.cc:93
+msgid "No configuration options are available for this filter"
+msgstr "För dissen Filter sünd keen Instell-Optschonen verföögbor"
 
 #: ui/kis_paintop_box.cc:68
 msgid "Painter's Toolchest"
@@ -6064,28 +6078,10 @@ msgstr ""
 msgid "Edit brush settings"
 msgstr "Bewerken"
 
-#: ui/kis_previewwidget.cc:113 ui/kis_previewwidget.cc:165
-msgid "Preview: "
-msgstr "Vöransicht: "
-
-#: ui/kis_previewwidget.cc:168
-msgid "Original: "
-msgstr "Orginaal: "
-
-#: ui/kis_previewwidget.cc:176
-msgid "Preview (needs update)"
-msgstr "Vöransicht (Opfrischen nödig)"
-
 #: ui/kis_bookmarked_configurations_editor.cc:63
 #, fuzzy, kde-format
 msgid "New configuration %1"
 msgstr "CImg-Instellen"
-
-#: ui/kis_pattern_chooser.cc:71
-#, fuzzy
-#| msgid "Choose Palette"
-msgid "Choose Pattern to Add"
-msgstr "Klörensett utsöken"
 
 #: ui/kis_mask_manager.cc:84 ui/kis_mask_manager.cc:197
 #, fuzzy
@@ -6199,35 +6195,9 @@ msgstr "Filter nochmaal anwennen"
 msgid "Apply Filter Again: %1"
 msgstr "Filter nochmaal anwennen"
 
-#: ui/kis_dlg_layer_properties.cc:58
-msgid "Layer Properties"
-msgstr "Laag-Egenschappen"
-
-#: ui/kis_gradient_slider_widget.cc:48
-msgid "Split Segment"
-msgstr "Afsnitt opdelen"
-
-#: ui/kis_gradient_slider_widget.cc:49
-msgid "Duplicate Segment"
-msgstr "Afsnitt verdubbeln"
-
-#: ui/kis_gradient_slider_widget.cc:50
-msgid "Mirror Segment"
-msgstr "Afsnitt spegeln"
-
-#: ui/kis_gradient_slider_widget.cc:52
-msgid "Remove Segment"
-msgstr "Afsnitt wegdoon"
-
 #: ui/kis_birdeye_box.cc:214
 msgid "Exposure:"
 msgstr "Belichten:"
-
-#: ui/kis_filter_dialog.cc:144
-#: plugins/viewplugins/tonemapping/kis_tonemapping_dialog.cc:121
-#, fuzzy
-msgid "No configuration option."
-msgstr "CImg-Instellen"
 
 #: ui/kis_layer_manager.cc:138
 #, fuzzy
@@ -6381,34 +6351,6 @@ msgstr "Bild &glattmaken"
 msgid "Export Layer"
 msgstr "Laag exporteren"
 
-#: ui/kis_dlg_apply_profile.cc:45
-msgid "Apply Image Profile to Clipboard Data"
-msgstr "Bildprofil för Twischenaflaag-Daten anwennen"
-
-#: ui/kis_brush_chooser.cc:38
-#, fuzzy
-msgid "Spacing: "
-msgstr "Afstand:"
-
-#: ui/kis_brush_chooser.cc:114
-#, fuzzy
-msgid "Choose Brush to Add"
-msgstr "Pixelpinsel"
-
-#: ui/kis_dlg_adjustment_layer.cc:62
-#, fuzzy
-msgid "Name:"
-msgstr "&Naam:"
-
-#: ui/kis_dlg_adjustment_layer.cc:77
-#, fuzzy
-msgid "Configuration"
-msgstr "CImg-Instellen"
-
-#: ui/kis_dlg_adjustment_layer.cc:83 ui/kis_dlg_adj_layer_props.cc:93
-msgid "No configuration options are available for this filter"
-msgstr "För dissen Filter sünd keen Instell-Optschonen verföögbor"
-
 #: ui/kis_custom_palette.cc:104 ui/kis_custom_palette.cc:142
 #: plugins/tools/defaulttools/kis_tool_colorpicker.cc:181
 #, kde-format
@@ -6506,6 +6448,64 @@ msgstr ""
 "ehr richtig Platzeren op de Lienwand bruken.<p>Maak dit ut, wenn de Linealen "
 "nich wiest warrn schöölt."
 
+#: ui/widgets/kis_gradient_chooser.cc:55
+msgid "Custom Gradient..."
+msgstr "Egen Övergang..."
+
+#: ui/widgets/kis_gradient_chooser.cc:90
+#, fuzzy
+#| msgid "Choose Palette"
+msgid "Choose Gradient to Add"
+msgstr "Klörensett utsöken"
+
+#: ui/widgets/kis_previewwidget.cc:113 ui/widgets/kis_previewwidget.cc:165
+msgid "Preview: "
+msgstr "Vöransicht: "
+
+#: ui/widgets/kis_previewwidget.cc:168
+msgid "Original: "
+msgstr "Orginaal: "
+
+#: ui/widgets/kis_previewwidget.cc:176
+msgid "Preview (needs update)"
+msgstr "Vöransicht (Opfrischen nödig)"
+
+#: ui/widgets/kis_pattern_chooser.cc:71
+#, fuzzy
+#| msgid "Choose Palette"
+msgid "Choose Pattern to Add"
+msgstr "Klörensett utsöken"
+
+#: ui/widgets/kis_gradient_slider_widget.cc:48
+msgid "Split Segment"
+msgstr "Afsnitt opdelen"
+
+#: ui/widgets/kis_gradient_slider_widget.cc:49
+msgid "Duplicate Segment"
+msgstr "Afsnitt verdubbeln"
+
+#: ui/widgets/kis_gradient_slider_widget.cc:50
+msgid "Mirror Segment"
+msgstr "Afsnitt spegeln"
+
+#: ui/widgets/kis_gradient_slider_widget.cc:52
+msgid "Remove Segment"
+msgstr "Afsnitt wegdoon"
+
+#: ui/widgets/kis_brush_chooser.cc:38
+#, fuzzy
+msgid "Spacing: "
+msgstr "Afstand:"
+
+#: ui/widgets/kis_brush_chooser.cc:114
+#, fuzzy
+msgid "Choose Brush to Add"
+msgstr "Pixelpinsel"
+
+#: ui/widgets/kis_meta_data_merge_strategy_chooser_widget.cc:61
+msgid "Choose meta data merge strategy"
+msgstr ""
+
 #: ui/kis_selection_manager.cc:144
 msgid "Paste into &New Image"
 msgstr "Na &nieg Bild infögen"
@@ -6595,10 +6595,6 @@ msgstr "Scharpen"
 msgid "Border"
 msgstr "Ränners"
 
-#: ui/kis_meta_data_merge_strategy_chooser_widget.cc:61
-msgid "Choose meta data merge strategy"
-msgstr ""
-
 #: ui/kis_tool_paint.cc:131
 #, fuzzy
 msgid "Mode: "
@@ -6622,7 +6618,6 @@ msgid "Opacity"
 msgstr "Deckstärk"
 
 #: image/kis_layer.cc:99
-#: plugins/tools/defaulttools/kis_tool_colorpicker.cc:209
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
@@ -7758,6 +7753,11 @@ msgstr "Bild aftrennen"
 #: plugins/viewplugins/tonemapping/tonemapping.cc:53
 msgid "Tonemapping"
 msgstr ""
+
+#: plugins/viewplugins/tonemapping/kis_tonemapping_dialog.cc:121
+#, fuzzy
+msgid "No configuration option."
+msgstr "CImg-Instellen"
 
 #: plugins/viewplugins/tonemapping/operators/icam/kis_icam_operator.cc:67
 msgid "Icam"
