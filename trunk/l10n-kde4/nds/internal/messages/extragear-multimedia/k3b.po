@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: k3b\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-07-01 01:31+0200\n"
+"POT-Creation-Date: 2008-07-08 14:32+0200\n"
 "PO-Revision-Date: 2008-04-30 00:13+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -39,7 +39,8 @@ msgstr "Dateinaam (relativ to den Basisorner)"
 #. +> trunk
 #: rip/k3baudioprojectconvertingdialog.cpp:130 rip/k3bvideocdview.cpp:172
 #: rip/k3baudiorippingdialog.cpp:295 rip/k3baudiotrackmodel.cpp:158
-#: rip/k3baudiocdlistview.cpp:37 k3baudioplayer.cpp:120
+#: rip/k3baudiocdlistview.cpp:37 k3bdiskinfoview.cpp:251
+#: k3baudioplayer.cpp:120
 msgid "Length"
 msgstr "Duer"
 
@@ -110,7 +111,7 @@ msgstr "Överschrieven"
 #: rip/k3baudioconvertingoptionwidget.cpp:154 rip/k3bpatternparser.cpp:120
 #: rip/k3bpatternparser.cpp:156 rip/k3bpatternparser.cpp:164
 #: rip/k3baudiorippingdialog.cpp:337 rip/k3baudiorippingdialog.cpp:389
-#: rip/videodvd/k3bvideodvdrippingwidget.cpp:277
+#: rip/videodvd/k3bvideodvdrippingwidget.cpp:277 k3bdiskinfoview.cpp:294
 msgid "unknown"
 msgstr "nich begäng"
 
@@ -343,12 +344,6 @@ msgid "No Tracks Selected"
 msgstr "Keen Titel utsöcht"
 
 #. +> trunk
-#: rip/k3bpatternparser.cpp:129
-#, kde-format
-msgid "Track %1"
-msgstr "Titel %1"
-
-#. +> trunk
 #: rip/k3baudiocdview.cpp:126
 msgid "Searching for Artist information..."
 msgstr "Informtaschonen över den Künstler warrt söcht..."
@@ -380,6 +375,11 @@ msgstr "CD-Text"
 #| msgid "CDDB"
 msgid "Use CDDB"
 msgstr "CDDB"
+
+#. +> trunk
+#: rip/k3baudiocdview.cpp:202 k3bdirview.cpp:262 k3bdirview.cpp:263
+msgid "Audio CD"
+msgstr "Audio-CD"
 
 #. +> trunk
 #: rip/k3baudiocdview.cpp:211 rip/videodvd/k3bvideodvdrippingview.cpp:228
@@ -480,6 +480,18 @@ msgstr ""
 #, kde-format
 msgid "Saved entry in category %1."
 msgstr ""
+
+#. +> trunk
+#: rip/k3baudiocdview.cpp:428 option/k3boptiondialog.cpp:190
+#: ../plugins/project/audioprojectcddb/k3baudioprojectcddbplugin.cpp:136
+msgid "CDDB"
+msgstr "CDDB"
+
+#. +> trunk
+#: rip/k3bpatternparser.cpp:129
+#, kde-format
+msgid "Track %1"
+msgstr "Titel %1"
 
 #. +> trunk
 #: rip/k3bvideocdrip.cpp:61
@@ -699,22 +711,6 @@ msgstr ""
 msgid "CD Ripping"
 msgstr "CD utlesen"
 
-#. +> trunk
-#: rip/k3baudiorippingdialog.cpp:295
-#: rip/videodvd/k3bvideodvdrippingwidget.cpp:83 k3baudioplayer.cpp:119
-#: projects/k3bvcdlistview.cpp:93 projects/k3baudioprojectmodel.cpp:239
-#: projects/k3bvcdtrackdialog.cpp:374
-msgid "Filename"
-msgstr "Dateinaam"
-
-#. i18n: tag string
-#. i18n: file ./option/base_k3bcddboptiontab.ui line 262
-#. +> trunk
-#: rip/k3baudiorippingdialog.cpp:295 rc.cpp:426 projects/k3bvcdlistview.cpp:86
-#: projects/k3bvcdburndialog.cpp:402 projects/k3bmovixlistview.cpp:175
-msgid "Type"
-msgstr "Typ"
-
 #. i18n: tag string
 #. i18n: file ./option/base_k3bcddboptiontab.ui line 421
 #. i18n: tag string
@@ -793,9 +789,27 @@ msgstr ""
 "Opstellen vun en Audioprojekt al so automaatsch nieg in.</p>"
 
 #. +> trunk
+#: rip/k3baudiorippingdialog.cpp:295
+#: rip/videodvd/k3bvideodvdrippingwidget.cpp:83 k3baudioplayer.cpp:119
+#: projects/k3bvcdlistview.cpp:93 projects/k3baudioprojectmodel.cpp:239
+#: projects/k3bvcdtrackdialog.cpp:374
+msgid "Filename"
+msgstr "Dateinaam"
+
+#. i18n: tag string
+#. i18n: file ./option/base_k3bcddboptiontab.ui line 262
+#. +> trunk
+#: rip/k3baudiorippingdialog.cpp:295 k3bdiskinfoview.cpp:245 rc.cpp:426
+#: projects/k3bvcdlistview.cpp:86 projects/k3bvcdburndialog.cpp:402
+#: projects/k3bmovixlistview.cpp:175
+msgid "Type"
+msgstr "Typ"
+
+#. +> trunk
 #: rip/k3baudiorippingdialog.cpp:338 rip/k3baudiorippingdialog.cpp:390
 #: rip/videodvd/k3bvideodvdrippingtitlelistview.cpp:344
-#: misc/k3bmediacopydialog.cpp:194 projects/k3bvcdtrackdialog.cpp:627
+#: misc/k3bmediacopydialog.cpp:194 k3bdiskinfoview.cpp:173
+#: projects/k3bvcdtrackdialog.cpp:627
 msgid "Audio"
 msgstr "Klang"
 
@@ -807,7 +821,7 @@ msgstr "Titel%1"
 
 #. +> trunk
 #: rip/k3baudiorippingdialog.cpp:390 rip/categories.cpp:23
-#: misc/k3bmediacopydialog.cpp:180
+#: misc/k3bmediacopydialog.cpp:180 k3bdiskinfoview.cpp:185
 msgid "Data"
 msgstr "Daten"
 
@@ -1202,17 +1216,17 @@ msgid "Title %1 (%2)"
 msgstr "Titel %1 (%2)"
 
 #. +> trunk
-#: rip/videodvd/k3bvideodvdrippingdialog.cpp:228
-#, kde-format
-msgid "%1 %2Ch (%3%4)"
-msgstr "%1 %2 Kan. (%3%4)"
-
-#. +> trunk
 #: rip/videodvd/k3bvideodvdrippingdialog.cpp:232
 #: rip/videodvd/k3bvideodvdrippingtitlelistview.cpp:52
 #: rip/videodvd/k3bvideodvdrippingtitlelistview.cpp:77
 msgid "unknown language"
 msgstr "nich begäng Spraak"
+
+#. +> trunk
+#: rip/videodvd/k3bvideodvdrippingdialog.cpp:228
+#, kde-format
+msgid "%1 %2Ch (%3%4)"
+msgstr "%1 %2 Kan. (%3%4)"
 
 #. +> trunk
 #: rip/videodvd/k3bvideodvdrippingdialog.cpp:243
@@ -1342,18 +1356,18 @@ msgid "Extended"
 msgstr "Verwiedert"
 
 #. +> trunk
-#: rip/videodvd/k3bvideodvdrippingtitlelistview.cpp:245
-#, kde-format
-msgid "<p><b>Title %1 (%2)</b><br>%3"
-msgstr "<p><b>Titel %1 (%2)</b><br>%3"
-
-#. +> trunk
 #: rip/videodvd/k3bvideodvdrippingtitlelistview.cpp:248
 #, kde-format
 msgid "%1 chapter"
 msgid_plural "%1 chapters"
 msgstr[0] "%1 Kapitel"
 msgstr[1] "%1 Kapitels"
+
+#. +> trunk
+#: rip/videodvd/k3bvideodvdrippingtitlelistview.cpp:245
+#, kde-format
+msgid "<p><b>Title %1 (%2)</b><br>%3"
+msgstr "<p><b>Titel %1 (%2)</b><br>%3"
 
 #. +> trunk
 #: rip/videodvd/k3bvideodvdrippingtitlelistview.cpp:253
@@ -1433,6 +1447,67 @@ msgstr "Künstler"
 msgctxt "audio track title"
 msgid "Title"
 msgstr "Titel"
+
+#. +> trunk
+#: rip/categories.cpp:22
+#, fuzzy
+#| msgid "Files"
+msgid "Blues"
+msgstr "Dateien"
+
+#. +> trunk
+#: rip/categories.cpp:22
+msgid "Classical"
+msgstr ""
+
+#. +> trunk
+#: rip/categories.cpp:22
+#, fuzzy
+#| msgid "&Mount"
+msgctxt "music genre"
+msgid "Country"
+msgstr "&Inhangen"
+
+#. +> trunk
+#: rip/categories.cpp:23
+msgid "Folk"
+msgstr ""
+
+#. +> trunk
+#: rip/categories.cpp:23
+msgid "Jazz"
+msgstr ""
+
+#. +> trunk
+#: rip/categories.cpp:23 option/k3badvancedoptiontab.cpp:80
+msgid "Miscellaneous"
+msgstr "Annerswat"
+
+#. +> trunk
+#: rip/categories.cpp:24
+#, fuzzy
+#| msgid "New Name"
+msgid "New Age"
+msgstr "Nieg Naam"
+
+#. +> trunk
+#: rip/categories.cpp:24
+#, fuzzy
+#| msgid "Rename"
+msgid "Reggae"
+msgstr "Ümnömen"
+
+#. +> trunk
+#: rip/categories.cpp:24
+msgid "Rock"
+msgstr ""
+
+#. +> trunk
+#: rip/categories.cpp:24
+#, fuzzy
+#| msgid "Source to Track"
+msgid "Soundtrack"
+msgstr "Titelborn"
 
 #. +> trunk
 #: rip/k3baudiocdlistview.cpp:49
@@ -1725,16 +1800,6 @@ msgstr ""
 "nipp un nau weetst, wat Du deist."
 
 #. +> trunk
-#: misc/k3bisoimagewritingdialog.cpp:262
-msgid ""
-"<p>This image has an invalid file size.If it has been downloaded make sure "
-"the download is complete.<p>Only continue if you know what you are doing."
-msgstr ""
-"<p>Dit Bild hett en leeg Dateigrött. Wöör dat daallaadt, prööv bitte, wat "
-"dat redig heel daallaadt wöör.<p>Du schullst bloots wiedermaken, wenn Du "
-"nipp un nau weetst, wat Du deist."
-
-#. +> trunk
 #: misc/k3bcdimagewritingdialog.cpp:440 misc/k3bisoimagewritingdialog.cpp:265
 #: option/k3bmiscoptiontab.cpp:134
 msgid "Warning"
@@ -1781,31 +1846,37 @@ msgstr "Dateigrött:"
 
 #. +> trunk
 #: misc/k3bcdimagewritingdialog.cpp:640 misc/k3bisoimagewritingdialog.cpp:345
+#: k3bdiskinfoview.cpp:361
 msgid "System Id:"
 msgstr "Systeem-ID:"
 
 #. +> trunk
 #: misc/k3bcdimagewritingdialog.cpp:648 misc/k3bisoimagewritingdialog.cpp:353
+#: k3bdiskinfoview.cpp:362
 msgid "Volume Id:"
 msgstr "Schiev-ID:"
 
 #. +> trunk
 #: misc/k3bcdimagewritingdialog.cpp:656 misc/k3bisoimagewritingdialog.cpp:361
+#: k3bdiskinfoview.cpp:363
 msgid "Volume Set Id:"
 msgstr "Schievsett-ID:"
 
 #. +> trunk
 #: misc/k3bcdimagewritingdialog.cpp:664 misc/k3bisoimagewritingdialog.cpp:369
+#: k3bdiskinfoview.cpp:364
 msgid "Publisher Id:"
 msgstr "Rutgever-ID:"
 
 #. +> trunk
 #: misc/k3bcdimagewritingdialog.cpp:672 misc/k3bisoimagewritingdialog.cpp:377
+#: k3bdiskinfoview.cpp:365
 msgid "Preparer Id:"
 msgstr "Torechtmaker-ID:"
 
 #. +> trunk
 #: misc/k3bcdimagewritingdialog.cpp:679 misc/k3bisoimagewritingdialog.cpp:384
+#: k3bdiskinfoview.cpp:366
 msgid "Application Id:"
 msgstr "Programm-ID:"
 
@@ -2004,6 +2075,16 @@ msgstr ""
 #: misc/k3bisoimagewritingdialog.cpp:254 projects/k3bprojectburndialog.cpp:162
 msgid "Burn"
 msgstr "Brennen"
+
+#. +> trunk
+#: misc/k3bisoimagewritingdialog.cpp:262
+msgid ""
+"<p>This image has an invalid file size.If it has been downloaded make sure "
+"the download is complete.<p>Only continue if you know what you are doing."
+msgstr ""
+"<p>Dit Bild hett en leeg Dateigrött. Wöör dat daallaadt, prööv bitte, wat "
+"dat redig heel daallaadt wöör.<p>Du schullst bloots wiedermaken, wenn Du "
+"nipp un nau weetst, wat Du deist."
 
 #. +> trunk
 #: misc/k3bisoimagewritingdialog.cpp:396
@@ -2247,23 +2328,136 @@ msgid "DVD Tasks"
 msgstr "DVD-Opgaven"
 
 #. +> trunk
-#: k3bdiskinfoview.cpp:65
+#: k3bdiskinfoview.cpp:80
 msgid "No medium present"
 msgstr "Keen Schiev vörhannen"
 
 #. +> trunk
-#: projects/k3bdatamultisessionimportdialog.cpp:212
+#: k3bdiskinfoview.cpp:100
+#, fuzzy
+#| msgid "Burn Medium"
+msgid "Medium"
+msgstr "Brennschiev"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:104
+#, fuzzy
+#| msgid "ISO9660 Filesystem"
+msgid "ISO9660 Filesystem Info"
+msgstr "ISO9660-Dateisysteem"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:109
+#, fuzzy
+#| msgid "Track"
+msgid "Tracks"
+msgstr "Titel"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:177
+#, fuzzy
+#| msgid "Data mode:"
+msgid "Data/Mode1"
+msgstr "Datenbedrief:"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:179
+#, fuzzy
+#| msgid "Data mode:"
+msgid "Data/Mode2"
+msgstr "Datenbedrief:"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:181
+msgid "Data/Mode2 XA Form1"
+msgstr ""
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:183
+msgid "Data/Mode2 XA Form2"
+msgstr ""
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:192
+#, fuzzy
+#| msgid "Copy"
+msgid "copy"
+msgstr "Koperen"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:192
+msgid "no copy"
+msgstr ""
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:194
+msgid "preemp"
+msgstr ""
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:194
+msgid "no preemp"
+msgstr ""
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:195
+#, fuzzy
+#| msgid "Incremental"
+msgid "incremental"
+msgstr "Towass"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:195
+msgid "uninterrupted"
+msgstr ""
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:222 projects/k3baudiocdtextwidget.cpp:40
+#: projects/k3bmixedburndialog.cpp:77 projects/k3baudioburndialog.cpp:73
+msgid "CD-Text"
+msgstr "CD-Text"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:235 projects/k3bdatamultisessionimportdialog.cpp:212
 #, kde-format
 msgid "Session %1"
 msgstr "Törn %1"
 
 #. +> trunk
-#: projects/k3bvcdtrackdialog.cpp:586 projects/k3bvcdtrackdialog.cpp:643
-#: projects/k3bdatapropertiesdialog.cpp:90
+#: k3bdiskinfoview.cpp:247
+msgid "Attributes"
+msgstr ""
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:249
+msgid "First-Last Sector"
+msgstr ""
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:291
+msgid "Unknown (probably CD-ROM)"
+msgstr ""
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:292 projects/k3bvcdtrackdialog.cpp:586
+#: projects/k3bvcdtrackdialog.cpp:643 projects/k3bdatapropertiesdialog.cpp:90
 msgid "Type:"
 msgstr "Typ:"
 
 #. +> trunk
+#: k3bdiskinfoview.cpp:294
+#, fuzzy
+#| msgid "Media &Info"
+msgid "Media ID:"
+msgstr "Schiev-&Info"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:295
+msgid "Capacity:"
+msgstr ""
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:295 k3bdiskinfoview.cpp:297 k3bdiskinfoview.cpp:299
 #: projects/k3bfillstatusdisplay.cpp:207 projects/k3bfillstatusdisplay.cpp:210
 #: projects/k3bfillstatusdisplay.cpp:215
 #, kde-format
@@ -2271,14 +2465,138 @@ msgid "%1 min"
 msgstr "%1 Min."
 
 #. +> trunk
-#: option/k3bdevicewidget.cpp:209
+#: k3bdiskinfoview.cpp:297
+#, fuzzy
+#| msgid "Read Capabilities:"
+msgid "Used Capacity:"
+msgstr "Leeskönen:"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:299
+#, fuzzy
+#| msgid "Remaining"
+msgid "Remaining:"
+msgstr "Nablieven"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:300
+#, fuzzy
+#| msgid "writable"
+msgid "Rewritable:"
+msgstr "schriefbor"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:300 k3bdiskinfoview.cpp:301 k3bdiskinfoview.cpp:302
+#, fuzzy
+#| msgid "yes"
+msgctxt "Availability"
 msgid "yes"
 msgstr "Jo"
 
 #. +> trunk
-#: option/k3bdevicewidget.cpp:209
+#: k3bdiskinfoview.cpp:300 k3bdiskinfoview.cpp:301 k3bdiskinfoview.cpp:302
+#, fuzzy
+#| msgid "no"
+msgctxt "Availability"
 msgid "no"
 msgstr "Nee"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:301
+msgid "Appendable:"
+msgstr ""
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:302
+msgid "Empty:"
+msgstr ""
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:304
+#, fuzzy
+#| msgid "Layer"
+msgctxt "Number of layers on an optical medium"
+msgid "Layers:"
+msgstr "Laag"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:310
+#, fuzzy
+#| msgid "not supported"
+msgid "not formatted"
+msgstr "nich ünnerstütt"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:313
+msgid "incomplete"
+msgstr ""
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:316
+#, fuzzy
+#| msgid "Overall progress:"
+msgid "in progress"
+msgstr "Vörankamen:"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:319
+#, fuzzy
+#| msgid "Sample rate:"
+msgid "complete"
+msgstr "Aftast-Wedderhalen:"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:323
+msgid "Background Format:"
+msgstr ""
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:326
+#, fuzzy
+#| msgid "Session %1"
+msgid "Sessions:"
+msgstr "Törn %1"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:348
+#, fuzzy
+#| msgid "Estimated writing speed:"
+msgid "Supported writing speeds:"
+msgstr "Estemeert Schriefgauheit:"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:367
+#, fuzzy
+#| msgid "Volume Set Id:"
+msgid "Volume Size:"
+msgstr "Schievsett-ID:"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:370
+#, fuzzy, kde-format
+#| msgid "%1 MB"
+msgctxt "Size of one block, always 2048"
+msgid "%1 B"
+msgstr "%1 MB"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:371
+#, fuzzy, kde-format
+#| msgid "Used blocks:"
+msgctxt "Number of blocks (one block has 2048 bytes)"
+msgid "1 block"
+msgid_plural "%1 blocks"
+msgstr[0] "Bruukt Blöck:"
+msgstr[1] "Bruukt Blöck:"
+
+#. +> trunk
+#: k3bdiskinfoview.cpp:372
+#, fuzzy, kde-format
+#| msgid "%1 MB"
+msgid "1 B"
+msgid_plural "%1 B"
+msgstr[0] "%1 MB"
+msgstr[1] "%1 MB"
 
 #. +> trunk
 #: k3bdirview.cpp:202
@@ -2340,11 +2658,6 @@ msgid "Show Video Tracks"
 msgstr "Videotiteln wiesen"
 
 #. +> trunk
-#: rip/k3baudiocdview.cpp:202 k3bdirview.cpp:262 k3bdirview.cpp:263
-msgid "Audio CD"
-msgstr "Audio-CD"
-
-#. +> trunk
 #: k3bdirview.cpp:265
 msgid "Show Audio Tracks"
 msgstr "Audiotiteln weisen"
@@ -2400,6 +2713,46 @@ msgstr "Schiev utsöken"
 #: k3bmediaselectiondialog.cpp:42
 msgid "Please select a medium:"
 msgstr "Bitte en Schiev utsöken:"
+
+#. +> trunk
+#: k3bdevicemenu.cpp:79 k3b.cpp:248
+msgid "Continue Multisession Project"
+msgstr "Veelfachtörn wiedermaken"
+
+#. +> trunk
+#: k3bdevicemenu.cpp:86 k3b.cpp:308
+msgid "Copy &Medium..."
+msgstr "&Schiev koperen..."
+
+#. +> trunk
+#: k3bdevicemenu.cpp:87 k3b.cpp:376
+msgid "Open the media copy dialog"
+msgstr "Schiev-Kopeerdialoog wiesen"
+
+#. +> trunk
+#: k3bdevicemenu.cpp:96 k3b.cpp:280
+msgid "&Format/Erase rewritable disk..."
+msgstr "Wedderschriefbor Schiev formateren/leddig maken..."
+
+#. +> trunk
+#: k3bdevicemenu.cpp:97 k3b.cpp:373
+msgid "Open the rewritable disk formatting/erasing dialog"
+msgstr "Formateer-/Leddigmaak-Dialoog för wedderschriefbor Schieven opmaken"
+
+#. +> trunk
+#: k3bdevicemenu.cpp:104 k3b.cpp:318
+msgid "Rip Audio CD..."
+msgstr "Audio-CD utlesen..."
+
+#. +> trunk
+#: k3bdevicemenu.cpp:111 k3b.cpp:326
+msgid "Rip Video DVD..."
+msgstr "Video-DVD utlesen..."
+
+#. +> trunk
+#: k3bdevicemenu.cpp:118 k3b.cpp:334
+msgid "Rip Video CD..."
+msgstr "Video-CD utlesen..."
 
 #. +> trunk
 #: k3bjobprogressdialog.cpp:131
@@ -2487,15 +2840,15 @@ msgstr "K3b"
 
 #. +> trunk
 #: main.cpp:48
-msgid "http://www.k3b.org"
-msgstr "http://www.k3b.org"
-
-#. +> trunk
-#: main.cpp:48
 #, fuzzy
 #| msgid "(c) 1999 - 2007, Sebastian Trüg"
 msgid "(c) 1998 - 2008, Sebastian Trüg"
 msgstr "(c) 1999 - 2007, Sebastian Trüg"
+
+#. +> trunk
+#: main.cpp:48
+msgid "http://www.k3b.org"
+msgstr "http://www.k3b.org"
 
 #. +> trunk
 #: main.cpp:50
@@ -2934,11 +3287,6 @@ msgid "New V&ideo DVD Project"
 msgstr "Nieg V&ideo-DVD opstellen"
 
 #. +> trunk
-#: k3bdevicemenu.cpp:79 k3b.cpp:248
-msgid "Continue Multisession Project"
-msgstr "Veelfachtörn wiedermaken"
-
-#. +> trunk
 #: k3b.cpp:267
 msgid "&Add Files..."
 msgstr "Dateien &tofögen..."
@@ -2952,11 +3300,6 @@ msgstr "Projekt leddig ma&ken"
 #: k3b.cpp:274
 msgid "Show Document Header"
 msgstr "Dokmentkopp wiesen"
-
-#. +> trunk
-#: k3bdevicemenu.cpp:96 k3b.cpp:280
-msgid "&Format/Erase rewritable disk..."
-msgstr "Wedderschriefbor Schiev formateren/leddig maken..."
 
 #. +> trunk
 #: k3b.cpp:287 k3bemptydiscwaiter.cpp:533
@@ -2979,29 +3322,9 @@ msgid "Burn Image"
 msgstr "Afbild brennen"
 
 #. +> trunk
-#: k3bdevicemenu.cpp:86 k3b.cpp:308
-msgid "Copy &Medium..."
-msgstr "&Schiev koperen..."
-
-#. +> trunk
 #: k3b.cpp:315 k3bdebuggingoutputdialog.cpp:46
 msgid "Copy"
 msgstr "Koperen"
-
-#. +> trunk
-#: k3bdevicemenu.cpp:104 k3b.cpp:318
-msgid "Rip Audio CD..."
-msgstr "Audio-CD utlesen..."
-
-#. +> trunk
-#: k3bdevicemenu.cpp:111 k3b.cpp:326
-msgid "Rip Video DVD..."
-msgstr "Video-DVD utlesen..."
-
-#. +> trunk
-#: k3bdevicemenu.cpp:118 k3b.cpp:334
-msgid "Rip Video CD..."
-msgstr "Video-CD utlesen..."
 
 #. +> trunk
 #: k3b.cpp:343
@@ -3039,11 +3362,6 @@ msgid "Creates a new Video CD project"
 msgstr "Nieg Video-CD-Projekt opstellen"
 
 #. +> trunk
-#: k3bdevicemenu.cpp:97 k3b.cpp:373
-msgid "Open the rewritable disk formatting/erasing dialog"
-msgstr "Formateer-/Leddigmaak-Dialoog för wedderschriefbor Schieven opmaken"
-
-#. +> trunk
 #: k3b.cpp:374
 msgid "Write an Iso9660, cue/bin, or cdrecord clone image to CD"
 msgstr "ISO9660-, CUE/BIN- oder \"cdrecord\"-Kloonafbild op CD brennen"
@@ -3052,11 +3370,6 @@ msgstr "ISO9660-, CUE/BIN- oder \"cdrecord\"-Kloonafbild op CD brennen"
 #: k3b.cpp:375
 msgid "Write an Iso9660 image to DVD"
 msgstr "En ISO9660-Afbild op DVD brennen"
-
-#. +> trunk
-#: k3bdevicemenu.cpp:87 k3b.cpp:376
-msgid "Open the media copy dialog"
-msgstr "Schiev-Kopeerdialoog wiesen"
 
 #. +> trunk
 #: k3b.cpp:377
@@ -4639,12 +4952,6 @@ msgid "K3b GUI Themes"
 msgstr "K3b-Böversietmustern"
 
 #. +> trunk
-#: rip/k3baudiocdview.cpp:428 option/k3boptiondialog.cpp:190
-#: ../plugins/project/audioprojectcddb/k3baudioprojectcddbplugin.cpp:136
-msgid "CDDB"
-msgstr "CDDB"
-
-#. +> trunk
 #: option/k3boptiondialog.cpp:191
 msgid "CDDB Audio CD Info Retrieval"
 msgstr "CDDB - Informatschonen över Klang-CDs"
@@ -4678,11 +4985,6 @@ msgstr "MB"
 #: option/k3badvancedoptiontab.cpp:71
 msgid "Manual writing application &selection"
 msgstr "Brennprogramm vun Hand ut&söken"
-
-#. +> trunk
-#: rip/categories.cpp:23 option/k3badvancedoptiontab.cpp:80
-msgid "Miscellaneous"
-msgstr "Annerswat"
 
 #. +> trunk
 #: option/k3badvancedoptiontab.cpp:84
@@ -4879,6 +5181,16 @@ msgid "Supports Burnfree:"
 msgstr "Ünnerstütt \"Burnfree\":"
 
 #. +> trunk
+#: option/k3bdevicewidget.cpp:209
+msgid "yes"
+msgstr "Jo"
+
+#. +> trunk
+#: option/k3bdevicewidget.cpp:209
+msgid "no"
+msgstr "Nee"
+
+#. +> trunk
 #: option/k3bdevicewidget.cpp:216
 msgid "Write modes:"
 msgstr "Brennmetoden:"
@@ -4887,11 +5199,6 @@ msgstr "Brennmetoden:"
 #: option/k3bdevicewidget.cpp:225 option/k3bdevicewidget.cpp:229
 msgid "none"
 msgstr "keen"
-
-#. +> trunk
-#: ../plugins/encoder/sox/k3bsoxencoder.cpp:339
-msgid "Error"
-msgstr "Fehler"
 
 #. +> trunk
 #: option/k3bexternalbinwidget.cpp:108
@@ -8387,12 +8694,6 @@ msgid "Incremental"
 msgstr "Towass"
 
 #. +> trunk
-#: projects/k3baudiocdtextwidget.cpp:40 projects/k3bmixedburndialog.cpp:77
-#: projects/k3baudioburndialog.cpp:73
-msgid "CD-Text"
-msgstr "CD-Text"
-
-#. +> trunk
 #: projects/k3bmusicbrainzjob.cpp:122
 #: projects/k3baudiotracktrmlookupdialog.cpp:49
 msgid "MusicBrainz Query"
@@ -8720,37 +9021,6 @@ msgstr "Video-DVD-Projekt"
 #, kde-format
 msgid "Size: %1"
 msgstr "Grött: %1"
-
-#. +> trunk
-#: projects/k3bdataview.cpp:219
-msgid "New Directory..."
-msgstr "Nieg Orner..."
-
-#. +> trunk
-#: projects/k3bdataview.cpp:227 projects/k3bdataurladdingdialog.cpp:445
-#: projects/k3bdataurladdingdialog.cpp:672
-msgid "Rename"
-msgstr "Ümnömen"
-
-#. +> trunk
-#: projects/k3bdataview.cpp:286 projects/k3bdataview.cpp:288
-#: projects/k3bdataview.cpp:291 projects/k3bdataview.cpp:294
-msgid "New Directory"
-msgstr "Nieg Orner"
-
-#. +> trunk
-#: projects/k3bdataview.cpp:287
-msgid "Please insert the name for the new directory:"
-msgstr "Bitte den Naam för de niegen Orner infögen:"
-
-#. +> trunk
-#: projects/k3bdataview.cpp:292
-msgid ""
-"A file with that name already exists. Please insert the name for the new "
-"directory:"
-msgstr ""
-"Dat gifft al en Datei mit dissen Naam. Bitte giff den Naam för en niegen "
-"Orner in:"
 
 #. +> trunk
 #: projects/k3bdataburndialog.cpp:71
@@ -9482,6 +9752,47 @@ msgid "Edit Boot Images"
 msgstr "Systeemstart-Afbiller bewerken"
 
 #. +> trunk
+#: projects/k3bdataview.cpp:219
+msgid "New Directory..."
+msgstr "Nieg Orner..."
+
+#. +> trunk
+#: projects/k3bdataview.cpp:227 projects/k3bdataurladdingdialog.cpp:445
+#: projects/k3bdataurladdingdialog.cpp:672
+msgid "Rename"
+msgstr "Ümnömen"
+
+#. +> trunk
+#: projects/k3bdataview.cpp:229
+msgid "Parent Directory"
+msgstr "Överornt Orner"
+
+#. +> trunk
+#: projects/k3bdataview.cpp:231
+msgid "Open"
+msgstr "Opmaken"
+
+#. +> trunk
+#: projects/k3bdataview.cpp:286 projects/k3bdataview.cpp:288
+#: projects/k3bdataview.cpp:291 projects/k3bdataview.cpp:294
+msgid "New Directory"
+msgstr "Nieg Orner"
+
+#. +> trunk
+#: projects/k3bdataview.cpp:287
+msgid "Please insert the name for the new directory:"
+msgstr "Bitte den Naam för de niegen Orner infögen:"
+
+#. +> trunk
+#: projects/k3bdataview.cpp:292
+msgid ""
+"A file with that name already exists. Please insert the name for the new "
+"directory:"
+msgstr ""
+"Dat gifft al en Datei mit dissen Naam. Bitte giff den Naam för en niegen "
+"Orner in:"
+
+#. +> trunk
 #: projects/k3baudiodatasourceeditwidget.cpp:38
 msgid "Start Offset"
 msgstr "Start-Afstand"
@@ -9756,6 +10067,43 @@ msgstr "Törn importeren"
 #: projects/k3bdatamultisessionimportdialog.cpp:271
 msgid "Please select a session to import."
 msgstr "Bitte den Törn utsöken, den Du importeren wullt."
+
+#. +> trunk
+#: projects/k3bdataprojectmodel.cpp:262 projects/k3bdataviewitem.cpp:257
+msgid "outside of project"
+msgstr "buten vun't Projekt"
+
+#. +> trunk
+#: projects/k3bdataprojectmodel.cpp:282
+#, fuzzy
+#| msgid "Name"
+msgctxt "file name"
+msgid "Name"
+msgstr "Naam"
+
+#. +> trunk
+#: projects/k3bdataprojectmodel.cpp:284
+#, fuzzy
+#| msgid "Type"
+msgctxt "file type"
+msgid "Type"
+msgstr "Typ"
+
+#. +> trunk
+#: projects/k3bdataprojectmodel.cpp:286
+#, fuzzy
+#| msgid "Size"
+msgctxt "file size"
+msgid "Size"
+msgstr "Grött"
+
+#. +> trunk
+#: projects/k3bdataprojectmodel.cpp:290
+#, fuzzy
+#| msgid "Link"
+msgctxt "symbolic link target"
+msgid "Link"
+msgstr "Link"
 
 #. +> trunk
 #: projects/k3bbootimagedialog.cpp:27
@@ -10148,11 +10496,6 @@ msgid "Link to %1"
 msgstr "Link na %1"
 
 #. +> trunk
-#: projects/k3bdataprojectmodel.cpp:262 projects/k3bdataviewitem.cpp:257
-msgid "outside of project"
-msgstr "buten vun't Projekt"
-
-#. +> trunk
 #: projects/k3bdataviewitem.cpp:288
 msgid "root"
 msgstr "Wörtelorner"
@@ -10161,6 +10504,32 @@ msgstr "Wörtelorner"
 #: projects/k3bdataviewitem.cpp:338
 msgid "From previous session"
 msgstr "Vun verleden Törn"
+
+#. +> trunk
+#: projects/k3baudioprojectmodel.cpp:231
+msgid "Artist (CD-Text)"
+msgstr "Künstler (CD-Text)"
+
+#. +> trunk
+#: projects/k3baudioprojectmodel.cpp:233
+msgid "Title (CD-Text)"
+msgstr "Titel (CD-Text)"
+
+#. +> trunk
+#: projects/k3baudioprojectmodel.cpp:235
+#, fuzzy
+#| msgid "Type"
+msgctxt "audio type like mp3 or whatever"
+msgid "Type"
+msgstr "Typ"
+
+#. +> trunk
+#: projects/k3baudioprojectmodel.cpp:237
+#, fuzzy
+#| msgid "Length"
+msgctxt "audio track length"
+msgid "Length"
+msgstr "Duer"
 
 #. +> trunk
 #: projects/k3bvcdtrackdialog.cpp:54
@@ -10671,32 +11040,6 @@ msgid "K3b Video DVD Restrictions"
 msgstr "K3b-Grenzen för Video-DVDs"
 
 #. +> trunk
-#: projects/k3baudioprojectmodel.cpp:231
-msgid "Artist (CD-Text)"
-msgstr "Künstler (CD-Text)"
-
-#. +> trunk
-#: projects/k3baudioprojectmodel.cpp:233
-msgid "Title (CD-Text)"
-msgstr "Titel (CD-Text)"
-
-#. +> trunk
-#: projects/k3baudioprojectmodel.cpp:235
-#, fuzzy
-#| msgid "Type"
-msgctxt "audio type like mp3 or whatever"
-msgid "Type"
-msgstr "Typ"
-
-#. +> trunk
-#: projects/k3baudioprojectmodel.cpp:237
-#, fuzzy
-#| msgid "Length"
-msgctxt "audio track length"
-msgid "Length"
-msgstr "Duer"
-
-#. +> trunk
 #: projects/k3baudiotrackview.cpp:195
 msgid "Add Silence..."
 msgstr "Still tofögen..."
@@ -11166,16 +11509,6 @@ msgstr ""
 "Bruuk dat Paneel \"Afbild\", wenn Du den Padd na't Afbild topassen wullt."
 
 #. +> trunk
-#: projects/k3bdataview.cpp:229
-msgid "Parent Directory"
-msgstr "Överornt Orner"
-
-#. +> trunk
-#: projects/k3bdataview.cpp:231
-msgid "Open"
-msgstr "Opmaken"
-
-#. +> trunk
 #: k3bfiletreeview.cpp:294
 msgid "Home"
 msgstr "Tohuus"
@@ -11325,14 +11658,14 @@ msgid "Further actions..."
 msgstr "Mehr Akschonen..."
 
 #. +> trunk
-#: k3bwelcomewidget.cpp:460
-msgid "Remove Button"
-msgstr "Knoop wegdoon"
-
-#. +> trunk
 #: k3bwelcomewidget.cpp:437
 msgid "Add Button"
 msgstr "Knoop tofögen"
+
+#. +> trunk
+#: k3bwelcomewidget.cpp:460
+msgid "Remove Button"
+msgstr "Knoop wegdoon"
 
 #. +> trunk
 #: ../plugins/decoder/mp3/k3bmaddecoder.cpp:383
@@ -11509,22 +11842,22 @@ msgid "Musepack"
 msgstr "Musepack"
 
 #. +> trunk
-#: ../plugins/decoder/ffmpeg/k3bffmpegwrapper.cpp:194
+#: ../plugins/decoder/ffmpeg/k3bffmpegwrapper.cpp:196
 msgid "Windows Media v1"
 msgstr "Windows Media Verschoon 1"
 
 #. +> trunk
-#: ../plugins/decoder/ffmpeg/k3bffmpegwrapper.cpp:196
+#: ../plugins/decoder/ffmpeg/k3bffmpegwrapper.cpp:198
 msgid "Windows Media v2"
 msgstr "Windows Media Verschoon 2"
 
 #. +> trunk
-#: ../plugins/decoder/ffmpeg/k3bffmpegwrapper.cpp:198
+#: ../plugins/decoder/ffmpeg/k3bffmpegwrapper.cpp:200
 msgid "MPEG 1 Layer III"
 msgstr "MPEG 1 Layer III"
 
 #. +> trunk
-#: ../plugins/decoder/ffmpeg/k3bffmpegwrapper.cpp:200
+#: ../plugins/decoder/ffmpeg/k3bffmpegwrapper.cpp:202
 msgid "Advanced Audio Coding (AAC)"
 msgstr "Verwiedert Audiokoderen (\"AAC\")"
 
@@ -11653,6 +11986,11 @@ msgstr "Psion 8-Bit A-law"
 #: ../plugins/encoder/sox/k3bsoxencoder.cpp:337
 msgid "Raw"
 msgstr "Roh"
+
+#. +> trunk
+#: ../plugins/encoder/sox/k3bsoxencoder.cpp:339
+msgid "Error"
+msgstr "Fehler"
 
 #. +> trunk
 #: ../plugins/encoder/lame/k3blameencoderconfigwidget.cpp:114
@@ -11888,91 +12226,3 @@ msgstr "Keen CDDB-Indrag funnen."
 #: ../plugins/project/audioprojectcddb/k3baudioprojectcddbplugin.cpp:139
 msgid "Cddb error"
 msgstr "CDDB-Fehler"
-
-#. +> trunk
-#: rip/categories.cpp:22
-#, fuzzy
-#| msgid "Files"
-msgid "Blues"
-msgstr "Dateien"
-
-#. +> trunk
-#: rip/categories.cpp:22
-msgid "Classical"
-msgstr ""
-
-#. +> trunk
-#: rip/categories.cpp:22
-#, fuzzy
-#| msgid "&Mount"
-msgctxt "music genre"
-msgid "Country"
-msgstr "&Inhangen"
-
-#. +> trunk
-#: rip/categories.cpp:23
-msgid "Folk"
-msgstr ""
-
-#. +> trunk
-#: rip/categories.cpp:23
-msgid "Jazz"
-msgstr ""
-
-#. +> trunk
-#: rip/categories.cpp:24
-#, fuzzy
-#| msgid "New Name"
-msgid "New Age"
-msgstr "Nieg Naam"
-
-#. +> trunk
-#: rip/categories.cpp:24
-#, fuzzy
-#| msgid "Rename"
-msgid "Reggae"
-msgstr "Ümnömen"
-
-#. +> trunk
-#: rip/categories.cpp:24
-msgid "Rock"
-msgstr ""
-
-#. +> trunk
-#: rip/categories.cpp:24
-#, fuzzy
-#| msgid "Source to Track"
-msgid "Soundtrack"
-msgstr "Titelborn"
-
-#. +> trunk
-#: projects/k3bdataprojectmodel.cpp:282
-#, fuzzy
-#| msgid "Name"
-msgctxt "file name"
-msgid "Name"
-msgstr "Naam"
-
-#. +> trunk
-#: projects/k3bdataprojectmodel.cpp:284
-#, fuzzy
-#| msgid "Type"
-msgctxt "file type"
-msgid "Type"
-msgstr "Typ"
-
-#. +> trunk
-#: projects/k3bdataprojectmodel.cpp:286
-#, fuzzy
-#| msgid "Size"
-msgctxt "file size"
-msgid "Size"
-msgstr "Grött"
-
-#. +> trunk
-#: projects/k3bdataprojectmodel.cpp:290
-#, fuzzy
-#| msgid "Link"
-msgctxt "symbolic link target"
-msgid "Link"
-msgstr "Link"

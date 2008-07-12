@@ -113,6 +113,18 @@ msgstr "Keen Enkelheiten praatstellt oder leeg Reegnummer oder ID angeven."
 msgid "No details provided."
 msgstr "Keen Enkelheiten praatstellt."
 
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 58
+#. +> trunk
+#: kxsldbgpart/xsldbgbreakpointsimpl.cpp:267 rc.cpp:233
+msgid "Enabled"
+msgstr "Anmaakt"
+
+#. +> trunk
+#: kxsldbgpart/xsldbgbreakpointsimpl.cpp:269
+msgid "Disabled"
+msgstr "Utmaakt"
+
 #. +> trunk
 #: kxsldbgpart/xsldbginspector.cpp:65
 msgid "Xsldbg Inspector"
@@ -266,14 +278,6 @@ msgid "Failed to delete parameter"
 msgstr "Parameter lett sik nich wegdoon"
 
 #. +> trunk
-#: kxsldbgpart/libxsldbg/breakpoint_cmds.cpp:322
-#: kxsldbgpart/libxsldbg/breakpoint_cmds.cpp:624
-#: kxsldbgpart/libxsldbg/breakpoint_cmds.cpp:718
-#, kde-format
-msgid "Error: Unable to parse %1 as a line number.\n"
-msgstr "Fehler: \"%1\" lett sik nich as Reegnummer inlesen.\n"
-
-#. +> trunk
 #: kxsldbgpart/libxsldbg/param_cmds.cpp:81
 #, kde-format
 msgid "Error: Unable to find parameter %1.\n"
@@ -283,6 +287,21 @@ msgstr "Fehler: Parameter \"%1\" lett sik nich finnen.\n"
 #: kxsldbgpart/libxsldbg/param_cmds.cpp:106
 msgid "Unable to print parameters"
 msgstr "Parameters laat sik nich utgeven"
+
+#. +> trunk
+#: kxsldbgpart/libxsldbg/param_cmds.cpp:120
+#, kde-format
+msgid " Parameter %1 %2=\"%3\"\n"
+msgstr " Parameter %1 %2=\"%3\"\n"
+
+#. +> trunk
+#: kxsldbgpart/libxsldbg/param_cmds.cpp:125
+msgid ""
+"\n"
+"No parameters present.\n"
+msgstr ""
+"\n"
+"Keen Parameter vörhannen.\n"
 
 #. +> trunk
 #: kxsldbgpart/libxsldbg/option_cmds.cpp:83
@@ -380,21 +399,6 @@ msgstr "Fehler: Optschoon %1 is keen gellen boolsch oder Heeltall-Optschoon.\n"
 #, kde-format
 msgid "Error: Option %1 is not a valid string xsldbg option.\n"
 msgstr "Fehler: Optschoon %1 is keen gellen xsldbg-Optschoon.\n"
-
-#. +> trunk
-#: kxsldbgpart/libxsldbg/param_cmds.cpp:120
-#, kde-format
-msgid " Parameter %1 %2=\"%3\"\n"
-msgstr " Parameter %1 %2=\"%3\"\n"
-
-#. +> trunk
-#: kxsldbgpart/libxsldbg/param_cmds.cpp:125
-msgid ""
-"\n"
-"No parameters present.\n"
-msgstr ""
-"\n"
-"Keen Parameter vörhannen.\n"
 
 #. +> trunk
 #: kxsldbgpart/libxsldbg/variable_cmds.cpp:40
@@ -1251,6 +1255,14 @@ msgstr ""
 "Fehler: En Datendatei, de ehr Naam \"%1\" bargt, lett sik nich finnen.\n"
 
 #. +> trunk
+#: kxsldbgpart/libxsldbg/breakpoint_cmds.cpp:322
+#: kxsldbgpart/libxsldbg/breakpoint_cmds.cpp:624
+#: kxsldbgpart/libxsldbg/breakpoint_cmds.cpp:718
+#, kde-format
+msgid "Error: Unable to parse %1 as a line number.\n"
+msgstr "Fehler: \"%1\" lett sik nich as Reegnummer inlesen.\n"
+
+#. +> trunk
 #: kxsldbgpart/libxsldbg/breakpoint_cmds.cpp:358
 msgid "Error: Unable to find the added breakpoint."
 msgstr "Fehler: Toföögt Hollpunkt lett sik nich finnen."
@@ -1398,18 +1410,6 @@ msgstr ""
 #: kxsldbgpart/libxsldbg/search_cmds.cpp:55
 msgid "Error: Stylesheet not valid, files not loaded yet?\n"
 msgstr "Fehler: Leeg Stilvörlaag. - Dateien noch nich laadt?\n"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 58
-#. +> trunk
-#: kxsldbgpart/xsldbgbreakpointsimpl.cpp:267 rc.cpp:233
-msgid "Enabled"
-msgstr "Anmaakt"
-
-#. +> trunk
-#: kxsldbgpart/xsldbgbreakpointsimpl.cpp:269
-msgid "Disabled"
-msgstr "Utmaakt"
 
 #. +> trunk
 #: kxsldbgpart/xsldbgconfigimpl.cpp:191
@@ -1773,22 +1773,53 @@ msgid "Your emails"
 msgstr "m.j.wiese@web.de, s_dibbern@web.de"
 
 #. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgcallstack.ui line 14
+#. +> trunk
+#: rc.cpp:17
+msgid "Xsldbg Callstack"
+msgstr "Xsldbg-Oproopstapel"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgcallstack.ui line 27
+#. +> trunk
+#: rc.cpp:20
+msgid "Frame# Template Name"
+msgstr "Rahmennr. Vörlaag-Naam"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgcallstack.ui line 32
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgvariables.ui line 148
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgtemplates.ui line 37
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgsources.ui line 30
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 48
+#. +> trunk
+#: rc.cpp:23 rc.cpp:56 rc.cpp:86 rc.cpp:95 rc.cpp:227
+msgid "File Name"
+msgstr "Dateinaam"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgcallstack.ui line 37
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgvariables.ui line 153
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgtemplates.ui line 42
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 53
+#. +> trunk
+#: rc.cpp:26 rc.cpp:59 rc.cpp:89 rc.cpp:230
+msgid "Line Number"
+msgstr "Reegnummer"
+
+#. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgvariables.ui line 20
 #. +> trunk
 #: rc.cpp:29
 msgid "Xsldbg Variables"
 msgstr "Xsldbg-Variabeln"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgvariables.ui line 128
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgtemplates.ui line 27
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 38
-#. +> trunk
-#: rc.cpp:44 rc.cpp:80 rc.cpp:221
-msgid "Name"
-msgstr "Naam"
 
 #. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgvariables.ui line 58
@@ -1812,38 +1843,36 @@ msgid "Result of evaluation will appear in message window"
 msgstr "Dat Resultaat vun de Utweerten warrt in en Mellenfinster wiest"
 
 #. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgvariables.ui line 128
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgtemplates.ui line 27
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 38
+#. +> trunk
+#: rc.cpp:44 rc.cpp:80 rc.cpp:221
+msgid "Name"
+msgstr "Naam"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgvariables.ui line 133
+#. +> trunk
+#: rc.cpp:47
+msgid "Template Context"
+msgstr "Vörlaagkontext"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgvariables.ui line 138
+#. +> trunk
+#: rc.cpp:50
+msgid "Type"
+msgstr "Typ"
+
+#. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgvariables.ui line 143
 #. +> trunk
 #: rc.cpp:53
 msgid "XPath"
 msgstr "XPath"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgcallstack.ui line 14
-#. +> trunk
-#: rc.cpp:17
-msgid "Xsldbg Callstack"
-msgstr "Xsldbg-Oproopstapel"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgcallstack.ui line 27
-#. +> trunk
-#: rc.cpp:20
-msgid "Frame# Template Name"
-msgstr "Rahmennr. Vörlaag-Naam"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgcallstack.ui line 37
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgvariables.ui line 153
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgtemplates.ui line 42
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 53
-#. +> trunk
-#: rc.cpp:26 rc.cpp:59 rc.cpp:89 rc.cpp:230
-msgid "Line Number"
-msgstr "Reegnummer"
 
 #. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgvariables.ui line 163
@@ -1858,6 +1887,20 @@ msgstr "Variabelutdruck:"
 #: rc.cpp:65
 msgid "Variable Type:"
 msgstr "Variabeltyp:"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgvariables.ui line 201
+#. +> trunk
+#: rc.cpp:68
+msgid "Set the selection for variable "
+msgstr "De Köör fastleggen för de Variabel "
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgvariables.ui line 204
+#. +> trunk
+#: rc.cpp:71
+msgid "Set Expression"
+msgstr "Utdruck fastleggen"
 
 #. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgvariables.ui line 213
@@ -1911,11 +1954,11 @@ msgid "KXsldbg Configuration"
 msgstr "KXsldbg-Instellen"
 
 #. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 113
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 34
 #. +> trunk
-#: rc.cpp:128
-msgid "URI can have a prefix of ~, file:/"
-msgstr "De URI dörv \"~\" oder \"file:/\" as Prefix hebben"
+#: rc.cpp:107
+msgid "XSL source:"
+msgstr "XSL-Born:"
 
 #. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 47
@@ -1926,6 +1969,40 @@ msgstr "De URI dörv \"~\" oder \"file:/\" as Prefix hebben"
 msgid "URI can have a prefix of ~, file:/, http:// or ftp://"
 msgstr ""
 "De URI dörv \"~\", \"file:/\", \"http://\" oder \"ftp://\" as Prefix hebben"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 60
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 93
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 126
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 159
+#. +> trunk
+#: rc.cpp:113 rc.cpp:122 rc.cpp:131 rc.cpp:140
+msgid "..."
+msgstr "..."
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 67
+#. +> trunk
+#: rc.cpp:116
+msgid "XML data:"
+msgstr "XML-Daten:"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 100
+#. +> trunk
+#: rc.cpp:125
+msgid "Output file:"
+msgstr "Utgaavdatei:"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 113
+#. +> trunk
+#: rc.cpp:128
+msgid "URI can have a prefix of ~, file:/"
+msgstr "De URI dörv \"~\" oder \"file:/\" as Prefix hebben"
 
 #. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 133
@@ -1942,6 +2019,55 @@ msgid "The directory to change into prior to loading files"
 msgstr "De Orner, na den ehr't Laden vun Dateien wesselt warrt"
 
 #. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 174
+#. +> trunk
+#: rc.cpp:143
+msgid "Options"
+msgstr "Optschonen"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 182
+#. +> trunk
+#: rc.cpp:146
+msgid "use catalogs from $SGML_CATALOGS_FILES"
+msgstr "Katalogen ut $SGML_CATALOGS_FILES bruken"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 185
+#. +> trunk
+#: rc.cpp:149
+msgid "catalogs"
+msgstr "Katalogen"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 192
+#. +> trunk
+#: rc.cpp:152
+msgid "the input document is(are) an HTML file(s)"
+msgstr "Ingaavdokmenten sünd HTML-Dateien"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 195
+#. +> trunk
+#: rc.cpp:155
+msgid "html"
+msgstr "HTML"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 202
+#. +> trunk
+#: rc.cpp:158
+msgid "the input document is SGML docbook"
+msgstr "Dat Ingaavdokment is en SGML-Docbook"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 205
+#. +> trunk
+#: rc.cpp:161
+msgid "docbook"
+msgstr "Docbook"
+
+#. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 212
 #. +> trunk
 #: rc.cpp:164
@@ -1951,6 +2077,13 @@ msgid ""
 msgstr ""
 "Sünd de Optschonen \"out\" un \"dump\" utsöcht, den XML-Boom na xsldbg sien "
 "Utgaav-Infangfinster utgeven"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 215
+#. +> trunk
+#: rc.cpp:167
+msgid "debug"
+msgstr "Fehlersöök"
 
 #. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 222
@@ -1995,6 +2128,34 @@ msgid "out"
 msgstr "Utgaav"
 
 #. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 252
+#. +> trunk
+#: rc.cpp:188
+msgid "print profiling information"
+msgstr "Leisten-Informatschoon utgeven"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 255
+#. +> trunk
+#: rc.cpp:191
+msgid "profile"
+msgstr "Profil"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 262
+#. +> trunk
+#: rc.cpp:194
+msgid "display the time used"
+msgstr "Tietbruuk wiesen"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 265
+#. +> trunk
+#: rc.cpp:197
+msgid "timing"
+msgstr "Tietbruuk"
+
+#. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 277
 #. +> trunk
 #: rc.cpp:200
@@ -2025,138 +2186,6 @@ msgid "Delete the selected parameter"
 msgstr "Den utsöchten Parameter wegdoon"
 
 #. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 174
-#. +> trunk
-#: rc.cpp:251
-msgid "File Name:"
-msgstr "Dateinaam:"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgwalkspeed.ui line 179
-#. +> trunk
-#: rc.cpp:314
-msgid "&Cancel"
-msgstr "&Afbreken"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 100
-#. +> trunk
-#: rc.cpp:125
-msgid "Output file:"
-msgstr "Utgaavdatei:"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 60
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 93
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 126
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 159
-#. +> trunk
-#: rc.cpp:113 rc.cpp:122 rc.cpp:131 rc.cpp:140
-msgid "..."
-msgstr "..."
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 67
-#. +> trunk
-#: rc.cpp:116
-msgid "XML data:"
-msgstr "XML-Daten:"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 34
-#. +> trunk
-#: rc.cpp:107
-msgid "XSL source:"
-msgstr "XSL-Born:"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 174
-#. +> trunk
-#: rc.cpp:143
-msgid "Options"
-msgstr "Optschonen"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 185
-#. +> trunk
-#: rc.cpp:149
-msgid "catalogs"
-msgstr "Katalogen"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 182
-#. +> trunk
-#: rc.cpp:146
-msgid "use catalogs from $SGML_CATALOGS_FILES"
-msgstr "Katalogen ut $SGML_CATALOGS_FILES bruken"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 195
-#. +> trunk
-#: rc.cpp:155
-msgid "html"
-msgstr "HTML"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 192
-#. +> trunk
-#: rc.cpp:152
-msgid "the input document is(are) an HTML file(s)"
-msgstr "Ingaavdokmenten sünd HTML-Dateien"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 205
-#. +> trunk
-#: rc.cpp:161
-msgid "docbook"
-msgstr "Docbook"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 202
-#. +> trunk
-#: rc.cpp:158
-msgid "the input document is SGML docbook"
-msgstr "Dat Ingaavdokment is en SGML-Docbook"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 215
-#. +> trunk
-#: rc.cpp:167
-msgid "debug"
-msgstr "Fehlersöök"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 255
-#. +> trunk
-#: rc.cpp:191
-msgid "profile"
-msgstr "Profil"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 252
-#. +> trunk
-#: rc.cpp:188
-msgid "print profiling information"
-msgstr "Leisten-Informatschoon utgeven"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 265
-#. +> trunk
-#: rc.cpp:197
-msgid "timing"
-msgstr "Tietbruuk"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgconfig.ui line 262
-#. +> trunk
-#: rc.cpp:194
-msgid "display the time used"
-msgstr "Tietbruuk wiesen"
-
-#. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 20
 #. +> trunk
 #: rc.cpp:215
@@ -2171,47 +2200,11 @@ msgid "ID"
 msgstr "ID"
 
 #. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgcallstack.ui line 32
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgvariables.ui line 148
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgtemplates.ui line 37
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgsources.ui line 30
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 48
-#. +> trunk
-#: rc.cpp:23 rc.cpp:56 rc.cpp:86 rc.cpp:95 rc.cpp:227
-msgid "File Name"
-msgstr "Dateinaam"
-
-#. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 66
 #. +> trunk
 #: rc.cpp:236
 msgid "ID:"
 msgstr "ID:"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 191
-#. +> trunk
-#: rc.cpp:257
-msgid "Line number:"
-msgstr "Reegnummer:"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 184
-#. +> trunk
-#: rc.cpp:254
-msgid "You don't need to specify directory for file name"
-msgstr "Du bruukst keen Orner för den Dateinaam angeven"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 138
-#. +> trunk
-#: rc.cpp:245
-msgid "Template name or match name to look for"
-msgstr "Söcht Vörlaagnaam oder Övereenstimmen"
 
 #. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 90
@@ -2223,6 +2216,20 @@ msgid "Must be positive"
 msgstr "Mutt positiv wesen"
 
 #. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 128
+#. +> trunk
+#: rc.cpp:242
+msgid "Name:"
+msgstr "Naam:"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 138
+#. +> trunk
+#: rc.cpp:245
+msgid "Template name or match name to look for"
+msgstr "Söcht Vörlaagnaam oder Övereenstimmen"
+
+#. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 145
 #. +> trunk
 #: rc.cpp:248
@@ -2230,11 +2237,25 @@ msgid "Mode:"
 msgstr "Bedriefoort:"
 
 #. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 128
+#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 174
 #. +> trunk
-#: rc.cpp:242
-msgid "Name:"
-msgstr "Naam:"
+#: rc.cpp:251
+msgid "File Name:"
+msgstr "Dateinaam:"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 184
+#. +> trunk
+#: rc.cpp:254
+msgid "You don't need to specify directory for file name"
+msgstr "Du bruukst keen Orner för den Dateinaam angeven"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 191
+#. +> trunk
+#: rc.cpp:257
+msgid "Line number:"
+msgstr "Reegnummer:"
 
 #. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 255
@@ -2244,13 +2265,6 @@ msgid "Delete breakpoint using ID"
 msgstr "Hollpunkt över ID wegdoon"
 
 #. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 268
-#. +> trunk
-#: rc.cpp:272
-msgid "Clear"
-msgstr "Wegdoon"
-
-#. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 265
 #. +> trunk
 #: rc.cpp:269
@@ -2258,11 +2272,11 @@ msgid "Clear entered text"
 msgstr "Ingeven Text wegdoon"
 
 #. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 278
+#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 268
 #. +> trunk
-#: rc.cpp:278
-msgid "Add All"
-msgstr "All tofögen"
+#: rc.cpp:272
+msgid "Clear"
+msgstr "Wegdoon"
 
 #. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 275
@@ -2272,11 +2286,11 @@ msgid "Add breakpoint on all templates found"
 msgstr "Hollpunkt na all funnen Vörlagen tofögen"
 
 #. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 288
+#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 278
 #. +> trunk
-#: rc.cpp:284
-msgid "Delete All"
-msgstr "All wegdoon"
+#: rc.cpp:278
+msgid "Add All"
+msgstr "All tofögen"
 
 #. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 285
@@ -2286,11 +2300,11 @@ msgid "Delete all breakpoints"
 msgstr "All Hollpünkt wegdoon"
 
 #. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 298
+#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 288
 #. +> trunk
-#: rc.cpp:290
-msgid "Enable"
-msgstr "Anmaken"
+#: rc.cpp:284
+msgid "Delete All"
+msgstr "All wegdoon"
 
 #. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 295
@@ -2298,6 +2312,13 @@ msgstr "Anmaken"
 #: rc.cpp:287
 msgid "Enable breakpoint using ID"
 msgstr "Hollpunkt över ID anmaken"
+
+#. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 298
+#. +> trunk
+#: rc.cpp:290
+msgid "Enable"
+msgstr "Anmaken"
 
 #. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgbreakpoints.ui line 305
@@ -2346,6 +2367,13 @@ msgid "&OK"
 msgstr "&OK"
 
 #. i18n: tag string
+#. i18n: file ./kxsldbgpart/xsldbgwalkspeed.ui line 179
+#. +> trunk
+#: rc.cpp:314
+msgid "&Cancel"
+msgstr "&Afbreken"
+
+#. i18n: tag string
 #. i18n: file ./kxsldbgpart/xsldbgmsgdialog.ui line 21
 #. +> trunk
 #: rc.cpp:317
@@ -2379,34 +2407,6 @@ msgstr "Apen ID"
 #: rc.cpp:338
 msgid "SystemID"
 msgstr "Systeem-ID"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgvariables.ui line 133
-#. +> trunk
-#: rc.cpp:47
-msgid "Template Context"
-msgstr "Vörlaagkontext"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgvariables.ui line 138
-#. +> trunk
-#: rc.cpp:50
-msgid "Type"
-msgstr "Typ"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgvariables.ui line 204
-#. +> trunk
-#: rc.cpp:71
-msgid "Set Expression"
-msgstr "Utdruck fastleggen"
-
-#. i18n: tag string
-#. i18n: file ./kxsldbgpart/xsldbgvariables.ui line 201
-#. +> trunk
-#: rc.cpp:68
-msgid "Set the selection for variable "
-msgstr "De Köör fastleggen för de Variabel "
 
 #. +> trunk
 #: xsldbgmain.cpp:54

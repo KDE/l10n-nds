@@ -18,36 +18,6 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 
 #. +> trunk
-#: about.cpp:40
-msgid "Okteta"
-msgstr "Okteta"
-
-#. +> trunk
-#: about.cpp:41
-msgid "KDE bytes editor"
-msgstr "Byte-Editor för KDE"
-
-#. +> trunk
-#: about.cpp:43
-msgid "Copyright 2006-2008 Friedrich W. H. Kossebau"
-msgstr "Copyright 2006-2008 Friedrich W. H. Kossebau"
-
-#. +> trunk
-#: about.cpp:44
-msgid "Edit files as an array of bytes"
-msgstr "Dateien as Byte-Rebeet bewergen"
-
-#. +> trunk
-#: about.cpp:50
-msgid "Friedrich W. H. Kossebau"
-msgstr "Friedrich W. H. Kossebau"
-
-#. +> trunk
-#: about.cpp:51
-msgid "Author"
-msgstr "Autor"
-
-#. +> trunk
 #: program.cpp:74
 msgid "File(s) to load"
 msgstr "Datei(en) för't Laden"
@@ -140,11 +110,34 @@ msgid "Your emails"
 msgstr "m.j.wiese@web.de"
 
 #. +> trunk
-#: libkakao/core/io/abstractfilesystemsyncfromremotejob.cpp:116
-#: libkakao/core/io/abstractfilesystemloadjob.cpp:140
-msgctxt "@info"
-msgid "Problem when loading from local filesystem."
-msgstr "Problem bi't Laden vun lokaal Dateisysteem."
+#: about.cpp:40
+msgid "Okteta"
+msgstr "Okteta"
+
+#. +> trunk
+#: about.cpp:41
+msgid "KDE bytes editor"
+msgstr "Byte-Editor för KDE"
+
+#. +> trunk
+#: about.cpp:43
+msgid "Copyright 2006-2008 Friedrich W. H. Kossebau"
+msgstr "Copyright 2006-2008 Friedrich W. H. Kossebau"
+
+#. +> trunk
+#: about.cpp:44
+msgid "Edit files as an array of bytes"
+msgstr "Dateien as Byte-Rebeet bewergen"
+
+#. +> trunk
+#: about.cpp:50
+msgid "Friedrich W. H. Kossebau"
+msgstr "Friedrich W. H. Kossebau"
+
+#. +> trunk
+#: about.cpp:51
+msgid "Author"
+msgstr "Autor"
 
 #. +> trunk
 #: libkakao/core/io/abstractfilesystemexportjob.cpp:123
@@ -161,11 +154,18 @@ msgid "Problem when synching with local filesystem."
 msgstr "Problem bi't Synkroniseren mit lokaal Dateisysteem."
 
 #. +> trunk
-#: libkakao/core/system/kdocumentsyncmanager.cpp:108
+#: libkakao/core/io/abstractfilesystemsyncfromremotejob.cpp:116
+#: libkakao/core/io/abstractfilesystemloadjob.cpp:140
+msgctxt "@info"
+msgid "Problem when loading from local filesystem."
+msgstr "Problem bi't Laden vun lokaal Dateisysteem."
+
+#. +> trunk
+#: libkakao/core/system/modelcodecmanager.cpp:97
 #, kde-format
-msgctxt "@title:window Save %typename As..."
-msgid "Save %1 As..."
-msgstr "%1 sekern as..."
+msgctxt "@title:window Export %typename As %exportedtypename..."
+msgid "Export %1 As %2..."
+msgstr "%1 as %2 exporteren"
 
 #. +> trunk
 #: libkakao/core/system/modelcodecmanager.cpp:115
@@ -174,6 +174,13 @@ msgstr "%1 sekern as..."
 msgctxt "@info"
 msgid "There is already a file at <nl/><filename>%1</filename>.<nl/>Overwrite?"
 msgstr "Dat gifft al en Datei <nl/><filename>%1</filename>.<nl/>Överschrieven?"
+
+#. +> trunk
+#: libkakao/core/system/kdocumentsyncmanager.cpp:108
+#, kde-format
+msgctxt "@title:window Save %typename As..."
+msgid "Save %1 As..."
+msgstr "%1 sekern as..."
 
 #. +> trunk
 #: libkakao/core/system/kdocumentsyncmanager.cpp:198
@@ -202,6 +209,18 @@ msgid ""
 "your changes?"
 msgstr ""
 "%1 <emphasis>%2</emphasis> wöör ännert.<nl/>Wullt Du Dien Ännern wegsmieten?"
+
+#. +> trunk
+#: libkakao/controllers/io/copyas/copyascontroller.cpp:105
+msgctxt "@item There are no encoders."
+msgid "Not available."
+msgstr "Nich verföögbor"
+
+#. +> trunk
+#: libkakao/controllers/io/export/exportcontroller.cpp:98
+msgctxt "@item There are no exporters."
+msgid "Not available."
+msgstr "Nich verföögbor"
 
 #. +> trunk
 #: libkakao/controllers/view/zoom/zoomcontroller.cpp:45
@@ -294,12 +313,6 @@ msgid "Read only"
 msgstr "Bloots lesen"
 
 #. +> trunk
-#: oktetakakao/io/bytearrayrawfileloadthread.cpp:62
-msgctxt "destination of the byte array"
-msgid "Loaded from file."
-msgstr "Ut Datei laadt."
-
-#. +> trunk
 #: oktetakakao/io/kbytearrayvaluestreamencoder.cpp:41
 msgctxt "name of the encoding target"
 msgid "Values"
@@ -312,10 +325,22 @@ msgid "C array"
 msgstr "C-Rebeet"
 
 #. +> trunk
+#: oktetakakao/io/bytearrayrawfileloadthread.cpp:62
+msgctxt "destination of the byte array"
+msgid "Loaded from file."
+msgstr "Ut Datei laadt."
+
+#. +> trunk
 #: oktetakakao/io/kbytearraytextstreamencoder.cpp:42
 msgctxt "name of the encoding target"
 msgid "Plain Text"
 msgstr "Eenfach Text"
+
+#. +> trunk
+#: oktetakakao/io/bytearrayviewtextstreamencoder.cpp:50
+msgctxt "name of the encoding target"
+msgid "View in Plain Text"
+msgstr "As eenfach Text ankieken"
 
 #. +> trunk
 #: oktetakakao/controllers/view/info/infoview.cpp:58
@@ -793,11 +818,107 @@ msgid "Decoding Table"
 msgstr "Dekodeertabell"
 
 #. +> trunk
+#: oktetakakao/controllers/view/stringsextract/containedstringtablemodel.cpp:95
+msgctxt "@title:column offset of the extracted string"
+msgid "Offset"
+msgstr "Versatz:"
+
+#. +> trunk
+#: oktetakakao/controllers/view/stringsextract/containedstringtablemodel.cpp:96
+msgctxt "@title:column string extracted from the byte array"
+msgid "String"
+msgstr "Tekenkeed"
+
+#. +> trunk
 #: oktetakakao/controllers/view/stringsextract/stringsextractcontroller.cpp:44
 #: oktetakakao/controllers/view/stringsextract/stringsextractcontroller.cpp:50
 msgctxt "@title:window of the tool to extract strings"
 msgid "Strings"
 msgstr "Tekenkeden"
+
+#. +> trunk
+#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:60
+msgctxt ""
+"@label:spinbox minimum length for consecutive chars to be seen as a string"
+msgid "Minimum length:"
+msgstr "Lüttst Längde:"
+
+#. +> trunk
+#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:70
+msgctxt "@action:button update the list of strings extracted"
+msgid "&Update"
+msgstr "&Opfrischen"
+
+#. +> trunk
+#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:71
+msgctxt "@info:tooltip"
+msgid "Update the list of strings contained in the selected range."
+msgstr "List vun Tekenkeden binnen dat köört Rebeet opfrischen."
+
+#. +> trunk
+#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:73
+msgctxt "@info:whatsthis"
+msgid ""
+"If you press the <interface>Update</interface> button, the list will be "
+"updated to all strings which are contained in the selected range and have "
+"the set minimum length."
+msgstr ""
+"Wenn Du den Knoop \"<interface>Opfrischen</interface>\" anklickst, warrt de "
+"List op all Tekenkeden opfrischt, de dat köörte Rebeet bargt un de tominnst "
+"de fastleggt Längde hebbt.."
+
+#. +> trunk
+#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:85
+msgctxt "@label:lineedit filter term for displayed strings"
+msgid "Filter:"
+msgstr "&Filter:"
+
+#. +> trunk
+#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:90
+msgid "Enter a filter term here."
+msgstr "Giff hier en Filterutdruck in."
+
+#. +> trunk
+#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:130
+msgid "C&opy"
+msgstr "K&operen"
+
+#. +> trunk
+#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:131
+msgctxt "@info:tooltip"
+msgid "Copies the selected strings to the clipboard."
+msgstr "Kopeert markeert Tekenkeden na de Twischenaflaag."
+
+#. +> trunk
+#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:133
+msgctxt "@info:whatsthis"
+msgid ""
+"If you press the <interface>Copy</interface> button, all strings you "
+"selected in the list are copied to the clipboard."
+msgstr ""
+"Wenn Du den Knoop \"<interface>Koperen</interface>\" anklickst, warrt all "
+"köört Tekenkeden vun de List na de Twischenaflaag kopeert."
+
+#. +> trunk
+#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:141
+msgid "&Go to"
+msgstr "&Gah na"
+
+#. +> trunk
+#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:142
+msgctxt "@info:tooltip"
+msgid "Shows the selected string in the view."
+msgstr "Wiest de köört Tekenkeed in de Ansicht."
+
+#. +> trunk
+#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:144
+msgctxt "@info:whatsthis"
+msgid ""
+"If you press the <interface>Go to</interface> button, the string which was "
+"last selected is marked and shown in the view."
+msgstr ""
+"Wenn Du den Knoop \"<interface>Gah na</interface>\" anklickst, warrt de "
+"tolest köört Tekenkeed markeert un in de Ansicht wiest."
 
 #. +> trunk
 #: oktetakakao/controllers/view/gotooffset/kgotooffsetdialog.cpp:45
@@ -1370,124 +1491,3 @@ msgstr[1] "[Nieg Byte-Rebeet %1]"
 msgctxt "name of the data type"
 msgid "Byte Array"
 msgstr "Byte-Rebeet"
-
-#. +> trunk
-#: oktetakakao/controllers/view/stringsextract/containedstringtablemodel.cpp:95
-msgctxt "@title:column offset of the extracted string"
-msgid "Offset"
-msgstr "Versatz:"
-
-#. +> trunk
-#: oktetakakao/controllers/view/stringsextract/containedstringtablemodel.cpp:96
-msgctxt "@title:column string extracted from the byte array"
-msgid "String"
-msgstr "Tekenkeed"
-
-#. +> trunk
-#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:60
-msgctxt ""
-"@label:spinbox minimum length for consecutive chars to be seen as a string"
-msgid "Minimum length:"
-msgstr "Lüttst Längde:"
-
-#. +> trunk
-#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:70
-msgctxt "@action:button update the list of strings extracted"
-msgid "&Update"
-msgstr "&Opfrischen"
-
-#. +> trunk
-#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:71
-msgctxt "@info:tooltip"
-msgid "Update the list of strings contained in the selected range."
-msgstr "List vun Tekenkeden binnen dat köört Rebeet opfrischen."
-
-#. +> trunk
-#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:73
-msgctxt "@info:whatsthis"
-msgid ""
-"If you press the <interface>Update</interface> button, the list will be "
-"updated to all strings which are contained in the selected range and have "
-"the set minimum length."
-msgstr ""
-"Wenn Du den Knoop \"<interface>Opfrischen</interface>\" anklickst, warrt de "
-"List op all Tekenkeden opfrischt, de dat köörte Rebeet bargt un de tominnst "
-"de fastleggt Längde hebbt.."
-
-#. +> trunk
-#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:85
-msgctxt "@label:lineedit filter term for displayed strings"
-msgid "Filter:"
-msgstr "&Filter:"
-
-#. +> trunk
-#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:90
-msgid "Enter a filter term here."
-msgstr "Giff hier en Filterutdruck in."
-
-#. +> trunk
-#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:130
-msgid "C&opy"
-msgstr "K&operen"
-
-#. +> trunk
-#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:131
-msgctxt "@info:tooltip"
-msgid "Copies the selected strings to the clipboard."
-msgstr "Kopeert markeert Tekenkeden na de Twischenaflaag."
-
-#. +> trunk
-#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:133
-msgctxt "@info:whatsthis"
-msgid ""
-"If you press the <interface>Copy</interface> button, all strings you "
-"selected in the list are copied to the clipboard."
-msgstr ""
-"Wenn Du den Knoop \"<interface>Koperen</interface>\" anklickst, warrt all "
-"köört Tekenkeden vun de List na de Twischenaflaag kopeert."
-
-#. +> trunk
-#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:141
-msgid "&Go to"
-msgstr "&Gah na"
-
-#. +> trunk
-#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:142
-msgctxt "@info:tooltip"
-msgid "Shows the selected string in the view."
-msgstr "Wiest de köört Tekenkeed in de Ansicht."
-
-#. +> trunk
-#: oktetakakao/controllers/view/stringsextract/stringsextractview.cpp:144
-msgctxt "@info:whatsthis"
-msgid ""
-"If you press the <interface>Go to</interface> button, the string which was "
-"last selected is marked and shown in the view."
-msgstr ""
-"Wenn Du den Knoop \"<interface>Gah na</interface>\" anklickst, warrt de "
-"tolest köört Tekenkeed markeert un in de Ansicht wiest."
-
-#. +> trunk
-#: libkakao/core/system/modelcodecmanager.cpp:97
-#, kde-format
-msgctxt "@title:window Export %typename As %exportedtypename..."
-msgid "Export %1 As %2..."
-msgstr "%1 as %2 exporteren"
-
-#. +> trunk
-#: libkakao/controllers/io/copyas/copyascontroller.cpp:105
-msgctxt "@item There are no encoders."
-msgid "Not available."
-msgstr "Nich verföögbor"
-
-#. +> trunk
-#: libkakao/controllers/io/export/exportcontroller.cpp:98
-msgctxt "@item There are no exporters."
-msgid "Not available."
-msgstr "Nich verföögbor"
-
-#. +> trunk
-#: oktetakakao/io/bytearrayviewtextstreamencoder.cpp:50
-msgctxt "name of the encoding target"
-msgid "View in Plain Text"
-msgstr "As eenfach Text ankieken"
