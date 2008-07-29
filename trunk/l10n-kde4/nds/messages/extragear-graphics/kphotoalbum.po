@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kphotoalbum\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-07-22 05:32+0200\n"
+"POT-Creation-Date: 2008-07-29 08:35+0200\n"
 "PO-Revision-Date: 2008-04-24 01:46+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -173,6 +173,26 @@ msgstr "Medientyp"
 #: DB/Category.cpp:144
 msgid "Keywords"
 msgstr "Slötelwöör"
+
+#: Exif/Database.cpp:79
+#, kde-format
+msgid ""
+"<p>There was an error while executing the SQL backend command. The error is "
+"likely due to a broken database file.</p><p>To fix this problem run "
+"Maintainance->Rebuild EXIF database.</p><hr/><p>For debugging, this is the "
+"command I tried to execute:<br/>%1</p><p>This was the error message I got:"
+"<br/>%2</p>"
+msgstr ""
+
+#: Exif/Database.cpp:87
+msgid "Error Executing Exif Command"
+msgstr ""
+
+#: Exif/Database.cpp:301
+#, fuzzy
+#| msgid "Loading information from images"
+msgid "Rereading EXIF information from all images"
+msgstr "Bildinformatschonen warrt laadt"
 
 #: Exif/SearchDialog.cpp:42
 msgid "EXIF Search"
@@ -681,11 +701,11 @@ msgstr ""
 msgid "Other: "
 msgstr "Anner: "
 
-#: Survey/MySurvey.cpp:34 MainWindow/FeatureDialog.cpp:190
+#: Survey/MySurvey.cpp:34 MainWindow/FeatureDialog.cpp:191
 msgid "Yes"
 msgstr "Jo"
 
-#: Survey/MySurvey.cpp:34 MainWindow/FeatureDialog.cpp:191
+#: Survey/MySurvey.cpp:34 MainWindow/FeatureDialog.cpp:192
 msgid "No"
 msgstr "Nee"
 
@@ -910,7 +930,7 @@ msgid "What"
 msgstr "Wat"
 
 #. i18n: tag text
-#. i18n: file kphotoalbumui.rc line 71
+#. i18n: file kphotoalbumui.rc line 72
 #: Browser/BrowserWidget.cpp:63 rc.cpp:21
 msgid "Images"
 msgstr "Biller"
@@ -2105,7 +2125,7 @@ msgstr ""
 "</p>\n"
 
 #: Settings/SettingsDialog.cpp:98 Settings/SettingsDialog.cpp:99
-#: MainWindow/Window.cpp:1064
+#: MainWindow/Window.cpp:1067
 msgid "General"
 msgstr "Allgemeen"
 
@@ -2452,7 +2472,7 @@ msgstr "Vöransichtbild-Grött: "
 msgid "Preferred view:"
 msgstr "Vörtrocken Ansicht:"
 
-#: Settings/SettingsDialog.cpp:419 MainWindow/Window.cpp:718
+#: Settings/SettingsDialog.cpp:419 MainWindow/Window.cpp:721
 msgid "List View"
 msgstr "Listansicht"
 
@@ -2460,7 +2480,7 @@ msgstr "Listansicht"
 msgid "List View with Custom Thumbnails"
 msgstr "Listansicht mit egen Vöransichten"
 
-#: Settings/SettingsDialog.cpp:419 MainWindow/Window.cpp:728
+#: Settings/SettingsDialog.cpp:419 MainWindow/Window.cpp:731
 msgid "Icon View"
 msgstr "Lüttbildansicht"
 
@@ -2541,7 +2561,7 @@ msgid "&Delete"
 msgstr "&Wegdoon"
 
 #: Settings/SettingsDialog.cpp:937 Settings/SettingsDialog.cpp:938
-#: MainWindow/Window.cpp:1065
+#: MainWindow/Window.cpp:1068
 msgid "Viewer"
 msgstr "Kieker"
 
@@ -2624,7 +2644,7 @@ msgstr ""
 "anmaakt, bruukt dat en gauer, man nich so week Metood bi't Topassen.</p>"
 
 #. i18n: tag text
-#. i18n: file kphotoalbumui.rc line 61
+#. i18n: file kphotoalbumui.rc line 62
 #: Settings/SettingsDialog.cpp:1007 Settings/SettingsDialog.cpp:1008 rc.cpp:12
 msgid "Plugins"
 msgstr "Modulen"
@@ -3118,31 +3138,31 @@ msgid "&Maintenance"
 msgstr "&Pleeg"
 
 #. i18n: tag text
-#. i18n: file kphotoalbumui.rc line 63
+#. i18n: file kphotoalbumui.rc line 64
 #: rc.cpp:15
 msgid "Export"
 msgstr "Exporteren"
 
 #. i18n: tag text
-#. i18n: file kphotoalbumui.rc line 67
+#. i18n: file kphotoalbumui.rc line 68
 #: rc.cpp:18
 msgid "Import"
 msgstr "Importeren"
 
 #. i18n: tag text
-#. i18n: file kphotoalbumui.rc line 75
+#. i18n: file kphotoalbumui.rc line 76
 #: rc.cpp:24
 msgid "Batch Plugins"
 msgstr "Stapel-Modulen"
 
 #. i18n: tag text
-#. i18n: file kphotoalbumui.rc line 79
+#. i18n: file kphotoalbumui.rc line 80
 #: rc.cpp:27
 msgid "Tools"
 msgstr "Warktüüch"
 
 #. i18n: tag text
-#. i18n: file kphotoalbumui.rc line 96
+#. i18n: file kphotoalbumui.rc line 97
 #: rc.cpp:30
 msgid "Main Toolbar"
 msgstr "Hööft-Warktüüchbalken"
@@ -3184,15 +3204,19 @@ msgid "Feature Status"
 msgstr "Funkschonen-Status"
 
 #: MainWindow/FeatureDialog.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Overview</h1><p>Below you may see the list of compile- and runtime "
+#| "features KPhotoAlbum has, and their status:</p>%1"
 msgid ""
 "<h1>Overview</h1><p>Below you may see the list of compile- and runtime "
-"features KPhotoAlbum has, and their status:</p>%1"
+"features KPhotoAlbum has, and their status:</p><p><font color=\"red\">NOTICE "
+"THIS DIALOG DOES CURRENTLY NOT WORK</font></p>%1"
 msgstr ""
 "<h1>Översicht</h1><p>Nerrn steiht en List vun Kompileer- un "
 "Looptietfunkschonen vun KPhotoAlbum un ehr Status:</p>%1"
 
-#: MainWindow/FeatureDialog.cpp:47
+#: MainWindow/FeatureDialog.cpp:48
 msgid ""
 "<h1>What can I do if I miss a feature?</h1><p>If you compiled KPhotoAlbum "
 "yourself, then please review the sections below to learn what to install to "
@@ -3224,7 +3248,7 @@ msgstr ""
 "de Utwickel-Paketen installeert hest; bi de mehrsten Distributschonen heet "
 "se kdelibs-<i>devel</i> oder liek.</p>"
 
-#: MainWindow/FeatureDialog.cpp:63
+#: MainWindow/FeatureDialog.cpp:64
 msgid ""
 "<h1><a name=\"kipi\">Plug-ins Support</a></h1><p>KPhotoAlbum has a plug-in "
 "system with lots of extensions. You may among other things find plug-ins for:"
@@ -3242,7 +3266,7 @@ msgstr ""
 "Modulenbibliotheek heet KIPI un lett sik vun de <a href=\"http://extragear."
 "kde.org/apps/kipi/\">KIPI-Tohuussiet</a> daalladen.</p>"
 
-#: MainWindow/FeatureDialog.cpp:75
+#: MainWindow/FeatureDialog.cpp:76
 msgid ""
 "<h1><a name=\"exiv2\">EXIF support</a></h1><p>Images store information like "
 "the date the image was shot, the shooting angle, focal length, and shutter-"
@@ -3256,7 +3280,7 @@ msgstr ""
 "Bibliotheek <a href=\"http://freshmeat.net/projects/exiv2/\">EXIFV2</a> "
 "för't Lesen vun disse Informatschonen.</p>"
 
-#: MainWindow/FeatureDialog.cpp:83
+#: MainWindow/FeatureDialog.cpp:84
 msgid ""
 "<h1><a name=\"database\">SQL Database Support</a></h1><p>KPhotoAlbum allows "
 "you to search using a certain number of EXIF tags. For this KPhotoAlbum "
@@ -3271,7 +3295,7 @@ msgstr ""
 "2.8.16 un dat Qt-SQL-Paket (t.B. \"qt-sql-sqlite\") installeert hest, wenn "
 "dat funkscheneren schall.</p>"
 
-#: MainWindow/FeatureDialog.cpp:89
+#: MainWindow/FeatureDialog.cpp:90
 msgid ""
 "<h1><a name=\"video\">Video Support</a></h1><p>KPhotoAlbum relies on the KDE "
 "plug-in subsystem for support for displaying videos. If this feature is not "
@@ -3285,7 +3309,7 @@ msgstr ""
 "\"http://wiki.kde.org/tiki-index.php?page=KPhotoAlbum+Video+Support\">Video-"
 "Ünnerstütten</a> in't Wiki vun KPhotoAlbum an.</p>"
 
-#: MainWindow/FeatureDialog.cpp:94
+#: MainWindow/FeatureDialog.cpp:95
 msgid ""
 "<h1><a name=\"thumbnails\">Video Thumbnails Support</a></h1><p>KPhotoAlbum "
 "asks the KDE plug-in system for help when it needs to generate a thumbnail "
@@ -3305,44 +3329,64 @@ msgstr ""
 "\">MPlayerThumbs</a> utproberen, wenn Du en noch beter Ünnerstütten för "
 "Vöransichten hebben wullt.</p>"
 
-#: MainWindow/FeatureDialog.cpp:174
-msgid "Plug-ins available"
+#: MainWindow/FeatureDialog.cpp:175
+#, fuzzy
+#| msgid "Plug-ins available"
+msgid "Plug-ins available *TODO*"
 msgstr "Verföögbor Modulen"
 
-#: MainWindow/FeatureDialog.cpp:175
-msgid "EXIF info supported"
+#: MainWindow/FeatureDialog.cpp:176
+#, fuzzy
+#| msgid "EXIF info supported"
+msgid "EXIF info supported *TODO*"
 msgstr "Ünnerstütt EXIF-Informatschonen"
 
-#: MainWindow/FeatureDialog.cpp:176
-msgid "SQL Database Support"
+#: MainWindow/FeatureDialog.cpp:177
+#, fuzzy
+#| msgid "SQL Database Support"
+msgid "SQL Database Support *TODO*"
 msgstr "Ünnerstütten för SQL-Datenbank"
 
-#: MainWindow/FeatureDialog.cpp:177
-msgid "Sqlite Database Support (used for EXIF searches)"
+#: MainWindow/FeatureDialog.cpp:178
+#, fuzzy
+#| msgid "Sqlite Database Support (used for EXIF searches)"
+msgid "Sqlite Database Support (used for EXIF searches) *TODO*"
 msgstr "Ünnerstütten för SQLite-Datenbank (bruukt för EXIF-Söök)"
 
-#: MainWindow/FeatureDialog.cpp:179
-msgid "MPEG video support"
+#: MainWindow/FeatureDialog.cpp:180
+#, fuzzy
+#| msgid "MPEG video support"
+msgid "MPEG video support *TODO*"
 msgstr "Ünnerstütten för MPEG-Videos"
 
-#: MainWindow/FeatureDialog.cpp:180
-msgid "Quicktime video support (aka mov)"
+#: MainWindow/FeatureDialog.cpp:181
+#, fuzzy
+#| msgid "Quicktime video support (aka mov)"
+msgid "Quicktime video support (aka mov) *TODO*"
 msgstr "Ünnerstütten för Quicktime-Videos (MOV-Dateien)"
 
-#: MainWindow/FeatureDialog.cpp:181
-msgid "AVI video support"
+#: MainWindow/FeatureDialog.cpp:182
+#, fuzzy
+#| msgid "AVI video support"
+msgid "AVI video support *TODO*"
 msgstr "Ünnerstütten för AVI-Videos"
 
-#: MainWindow/FeatureDialog.cpp:182
-msgid "ASF video support (aka wmv)"
+#: MainWindow/FeatureDialog.cpp:183
+#, fuzzy
+#| msgid "ASF video support (aka wmv)"
+msgid "ASF video support (aka wmv) *TODO*"
 msgstr "Ünnerstütten för ASF-Videos (WMV-Dateien)"
 
-#: MainWindow/FeatureDialog.cpp:183
-msgid "Real Media"
+#: MainWindow/FeatureDialog.cpp:184
+#, fuzzy
+#| msgid "Real Media"
+msgid "Real Media *TODO*"
 msgstr "Real Media"
 
-#: MainWindow/FeatureDialog.cpp:186
-msgid "Video Thumbnails support"
+#: MainWindow/FeatureDialog.cpp:187
+#, fuzzy
+#| msgid "Video Thumbnails support"
+msgid "Video Thumbnails support *TODO*"
 msgstr "Ünnerstütten för Video-Vöransichten"
 
 #: MainWindow/DeleteDialog.cpp:37
@@ -3652,11 +3696,11 @@ msgstr "Wullt Du de Ännern sekern?"
 msgid "Save Changes?"
 msgstr "Ännern sekern?"
 
-#: MainWindow/Window.cpp:332 MainWindow/Window.cpp:1107
+#: MainWindow/Window.cpp:332 MainWindow/Window.cpp:1110
 msgid "No item is selected."
 msgstr "Keen Indrag is utsöcht,"
 
-#: MainWindow/Window.cpp:332 MainWindow/Window.cpp:1107
+#: MainWindow/Window.cpp:332 MainWindow/Window.cpp:1110
 msgid "No Selection"
 msgstr "Keen Köör"
 
@@ -3777,76 +3821,82 @@ msgid "Rescan for Images and Videos"
 msgstr "Op niege Biller/Videos dörkieken"
 
 #: MainWindow/Window.cpp:683
+#, fuzzy
+#| msgid "Update EXIF search database"
+msgid "Recreate Exif Search Database"
+msgstr "EXIF-Söökdatenbank opfrischen"
+
+#: MainWindow/Window.cpp:686
 msgid "Read EXIF Info From Files..."
 msgstr "EXIF-Infos ut Dateien lesen..."
 
-#: MainWindow/Window.cpp:688
+#: MainWindow/Window.cpp:691
 msgid "Convert Backend...(Experimental!)"
 msgstr "Datenbank ümwanneln... (warrt utprobeert!)"
 
-#: MainWindow/Window.cpp:693
+#: MainWindow/Window.cpp:696
 msgid "Build Thumbnails"
 msgstr "Vöransichten opstellen"
 
-#: MainWindow/Window.cpp:696
+#: MainWindow/Window.cpp:699
 msgid "Statistics"
 msgstr ""
 
-#: MainWindow/Window.cpp:705
+#: MainWindow/Window.cpp:708
 msgid "Enable All Messages"
 msgstr "All Mellen anmaken"
 
-#: MainWindow/Window.cpp:708
+#: MainWindow/Window.cpp:711
 msgid "Configure View"
 msgstr "Ansicht instellen"
 
-#: MainWindow/Window.cpp:723
+#: MainWindow/Window.cpp:726
 msgid "List View with Custom Icons"
 msgstr "Listansicht mit egen Lüttbiller"
 
-#: MainWindow/Window.cpp:733
+#: MainWindow/Window.cpp:736
 msgid "Icon View with Custom Icons"
 msgstr "Lüttbildansicht mit egen Lüttbiller"
 
-#: MainWindow/Window.cpp:743
+#: MainWindow/Window.cpp:746
 msgid "Show Tooltips in Thumbnails Window"
 msgstr "Kortinformatschonen binnen Vöransichtfinster wiesen"
 
-#: MainWindow/Window.cpp:749
+#: MainWindow/Window.cpp:752
 msgid "Run KPhotoAlbum Demo"
 msgstr "KPhotoAlbum-Proov laden"
 
-#: MainWindow/Window.cpp:752
+#: MainWindow/Window.cpp:755
 msgid "Answer KPhotoAlbum Survey..."
 msgstr "Bi KPhotoAlbum-Ünnersöken mitmaken..."
 
-#: MainWindow/Window.cpp:755
+#: MainWindow/Window.cpp:758
 msgid "KPhotoAlbum Feature Status"
 msgstr "KPhotoAlbum-Funkschoonstatus"
 
-#: MainWindow/Window.cpp:758
+#: MainWindow/Window.cpp:761
 #, fuzzy
 #| msgid "Show Videos"
 msgid "Show Demo Videos"
 msgstr "Videos wiesen"
 
-#: MainWindow/Window.cpp:763
+#: MainWindow/Window.cpp:766
 msgid "Show Exif Info"
 msgstr "EXIF-Info wiesen"
 
-#: MainWindow/Window.cpp:766
+#: MainWindow/Window.cpp:769
 msgid "Recreate Selected Thumbnails"
 msgstr "Utsöchte Vöransichten nieg opstellen"
 
-#: MainWindow/Window.cpp:794
+#: MainWindow/Window.cpp:797
 msgid "Auto saving...."
 msgstr "Automaatsch sekern..."
 
-#: MainWindow/Window.cpp:796
+#: MainWindow/Window.cpp:799
 msgid "Auto saving.... Done"
 msgstr "Automaatsch sekern... afslaten."
 
-#: MainWindow/Window.cpp:907
+#: MainWindow/Window.cpp:910
 #, kde-format
 msgid ""
 "SQL backend initialization failed, because following error occurred:\n"
@@ -3855,20 +3905,20 @@ msgstr ""
 "Bi't Torechtmaken vun de SQL-Datenbank geev dat dissen Fehler:\n"
 "%1"
 
-#: MainWindow/Window.cpp:911
+#: MainWindow/Window.cpp:914
 msgid "SQL database support is not compiled in."
 msgstr "Ünnerstütten för SQL-Datenbank is nich inkompileert."
 
-#: MainWindow/Window.cpp:916
+#: MainWindow/Window.cpp:919
 #, kde-format
 msgid "Invalid database backend: %1"
 msgstr "Leeg Datenbank: %1"
 
-#: MainWindow/Window.cpp:921
+#: MainWindow/Window.cpp:924
 msgid "Do you want to use XML backend instead?"
 msgstr "Wullt Du ansteed de XML-Datenbank bruken?"
 
-#: MainWindow/Window.cpp:983
+#: MainWindow/Window.cpp:986
 msgid ""
 "<p>The password protection is only a means of allowing your little sister to "
 "look in your images, without getting to those embarrassing images from your "
@@ -3880,31 +3930,31 @@ msgstr ""
 "vun de verleden Höög vördag kaamt.</p><p>Anners seggt: Elkeen, de op de "
 "Datei \"index.xml\" togriepen kann, kann disse Schuul eenfach ümgahn.</b></p>"
 
-#: MainWindow/Window.cpp:988
+#: MainWindow/Window.cpp:991
 msgid "Password Protection"
 msgstr "Passwoortschuul"
 
-#: MainWindow/Window.cpp:1002
+#: MainWindow/Window.cpp:1005
 msgid "Type in Password to Unlock"
 msgstr "Bitte dat Passwoort för't Opsluten ingeven"
 
-#: MainWindow/Window.cpp:1011 MainWindow/Window.cpp:1051
+#: MainWindow/Window.cpp:1014 MainWindow/Window.cpp:1054
 msgid "Invalid password."
 msgstr "Leeg Passwoort."
 
-#: MainWindow/Window.cpp:1042
+#: MainWindow/Window.cpp:1045
 msgid "Type in Old Password"
 msgstr "Oolt Passwoort ingeven"
 
-#: MainWindow/Window.cpp:1054
+#: MainWindow/Window.cpp:1057
 msgid "Type in New Password"
 msgstr "Nieg Passwoort ingeven"
 
-#: MainWindow/Window.cpp:1078
+#: MainWindow/Window.cpp:1081
 msgid "Annotation Dialog"
 msgstr "Dialoog för't Towiesen vun Kategorien"
 
-#: MainWindow/Window.cpp:1230
+#: MainWindow/Window.cpp:1233
 msgid ""
 "<p>Really enable all messageboxes where you previously checked the do-not-"
 "show-again check box?</p>"
@@ -3912,27 +3962,27 @@ msgstr ""
 "<p>Wullt Du redig all Mellen wedder anmaken, binnen de Du vördem dat "
 "Ankrüüzfeld \"Nienich wedder wiesen\" bruukt hest?</p>"
 
-#: MainWindow/Window.cpp:1392
+#: MainWindow/Window.cpp:1395
 msgid "Open List of Files"
 msgstr "Dateilist opmaken"
 
-#: MainWindow/Window.cpp:1392
+#: MainWindow/Window.cpp:1395
 msgid "Enter file names"
 msgstr "Dateinaams ingeven"
 
-#: MainWindow/Window.cpp:1405
+#: MainWindow/Window.cpp:1408
 msgid "No images matching your input were found."
 msgstr "Keen Biller funnen, op de Dien Ingaav passt"
 
-#: MainWindow/Window.cpp:1405
+#: MainWindow/Window.cpp:1408
 msgid "No Matches"
 msgstr "Keen Drepers"
 
-#: MainWindow/Window.cpp:1486
+#: MainWindow/Window.cpp:1489
 msgid "Database conversion from SQL database is not yet supported."
 msgstr "Dat Ümwanneln vun en SQL-Datenbank warrt noch nich ünnerstütt."
 
-#: MainWindow/Window.cpp:1493
+#: MainWindow/Window.cpp:1496
 msgid ""
 "You should set SQL database settings before the conversion. Do you want to "
 "do this now?"
@@ -3940,23 +3990,23 @@ msgstr ""
 "Du schullst beter de SQL-Datenbank ehr't Ümwanneln instellen. Wullt Du dat "
 "nu doon?"
 
-#: MainWindow/Window.cpp:1513
+#: MainWindow/Window.cpp:1516
 msgid "Converting database"
 msgstr "Datenbank warrt ümwanneln"
 
-#: MainWindow/Window.cpp:1516
+#: MainWindow/Window.cpp:1519
 msgid "Converting database to SQL."
 msgstr "Datenbank warrt na SQL ümwannelt."
 
-#: MainWindow/Window.cpp:1517
+#: MainWindow/Window.cpp:1520
 msgid "Please wait."
 msgstr "Tööv bitte."
 
-#: MainWindow/Window.cpp:1526
+#: MainWindow/Window.cpp:1529
 msgid "Database conversion is ready."
 msgstr "Ümwanneln vun de Datenbank is afslaten."
 
-#: MainWindow/Window.cpp:1529
+#: MainWindow/Window.cpp:1532
 #, kde-format
 msgid ""
 "Database conversion failed, because following error occurred:\n"
