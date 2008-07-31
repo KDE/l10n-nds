@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kres_groupwise\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-05-20 07:38+0200\n"
+"POT-Creation-Date: 2008-07-31 08:24+0200\n"
 "PO-Revision-Date: 2008-05-29 23:46+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -17,11 +17,26 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: kabc_resourcegroupwise.cpp:310
-msgid "Downloading addressbook"
-msgstr "Adressbook warrt daallaadt"
+#: kabc_resourcegroupwise.cpp:261
+#, fuzzy, kde-format
+#| msgid "Unable to read GroupWise address book: %1"
+msgctxt "label for addressbook load progress"
+msgid "Loading GroupWise resource %1"
+msgstr "GroupWise-Adressbook lett sik nich lesen: %1"
 
-#: kabc_resourcegroupwise.cpp:469
+#: kabc_resourcegroupwise.cpp:336
+#, fuzzy
+#| msgid "Updating System Address Book"
+msgid "Fetching System Address Book"
+msgstr "Systeem-Adressbook warrt opfrischt"
+
+#: kabc_resourcegroupwise.cpp:346
+#, fuzzy
+#| msgid "Updating System Address Book"
+msgid "Fetching User Address Books"
+msgstr "Systeem-Adressbook warrt opfrischt"
+
+#: kabc_resourcegroupwise.cpp:456 kabc_resourcegroupwise.cpp:471
 msgid "Updating System Address Book"
 msgstr "Systeem-Adressbook warrt opfrischt"
 
@@ -74,11 +89,8 @@ msgid "Error parsing calendar data."
 msgstr "Fehler bi't Inlesen vun de Kalennerdaten"
 
 #: kcal_resourcegroupwise.cpp:248
-msgid ""
-"Unable to login to server: TODO: return whole error list; see console output"
-msgstr ""
-"Anmellen op Server fehlslaan: TODOON: Heel Fehlerlist torüchgeven, "
-"Konsoolutgaav ankieken"
+msgid "Unable to login to server: "
+msgstr "Fehler bi't Tokoppeln na Server: "
 
 #: kcal_resourcegroupwise.cpp:282
 msgid "Added"
@@ -96,13 +108,13 @@ msgstr "Wegdaan"
 msgid "View User Settings"
 msgstr "Brukerinstellen ankieken"
 
-#: kcal_resourcegroupwiseconfig.cpp:128
+#: kcal_resourcegroupwiseconfig.cpp:129
 msgid "GroupWise Settings"
 msgstr "GroupWise-Instellen"
 
 #. i18n: tag string
 #. i18n: file groupwisesettingswidgetbase.ui line 23
-#: rc.cpp:3 soap/contactconverter.cpp:259
+#: rc.cpp:3 soap/contactconverter.cpp:261
 msgid "Group"
 msgstr "Koppel"
 
@@ -128,7 +140,7 @@ msgstr "Afslaten"
 #. i18n: file kresources_kabc_groupwise.kcfg line 9
 #. i18n: tag label
 #. i18n: file kresources_kcal_groupwise.kcfg line 9
-#: rc.cpp:15 rc.cpp:57
+#: rc.cpp:15 rc.cpp:60
 msgid "Server URL"
 msgstr "Server-Adress"
 
@@ -136,7 +148,7 @@ msgstr "Server-Adress"
 #. i18n: file kresources_kabc_groupwise.kcfg line 10
 #. i18n: tag whatsthis
 #. i18n: file kresources_kcal_groupwise.kcfg line 10
-#: rc.cpp:18 rc.cpp:60
+#: rc.cpp:18 rc.cpp:63
 msgid "URL of SOAP interface of GroupWise server"
 msgstr "URL vun de SOAP-Koppelsteed vun den GroupWise-Server"
 
@@ -144,7 +156,7 @@ msgstr "URL vun de SOAP-Koppelsteed vun den GroupWise-Server"
 #. i18n: file kresources_kabc_groupwise.kcfg line 13
 #. i18n: tag label
 #. i18n: file kresources_kcal_groupwise.kcfg line 13
-#: rc.cpp:21 rc.cpp:63
+#: rc.cpp:21 rc.cpp:66
 msgid "User Name"
 msgstr "Brukernaam"
 
@@ -152,7 +164,7 @@ msgstr "Brukernaam"
 #. i18n: file kresources_kabc_groupwise.kcfg line 16
 #. i18n: tag label
 #. i18n: file kresources_kcal_groupwise.kcfg line 16
-#: rc.cpp:24 rc.cpp:66 soap/soapdebug.cpp:46
+#: rc.cpp:24 rc.cpp:69 soap/soapdebug.cpp:46
 msgid "Password"
 msgstr "Passwoort"
 
@@ -217,51 +229,55 @@ msgid "The last sequence number of the GW System Address Book held locally"
 msgstr "Lest Reegnummer vun dat lokaal hollen GroupWise-Systeemadressbook"
 
 #. i18n: tag label
+#. i18n: file kresources_kabc_groupwise.kcfg line 51
+#: rc.cpp:57
+#, fuzzy
+#| msgid "Updating System Address Book"
+msgid "Applications which should load the System Address Book"
+msgstr "Systeem-Adressbook warrt opfrischt"
+
+#. i18n: tag label
 #. i18n: file kresources_kcal_groupwise.kcfg line 19
-#: rc.cpp:69
+#: rc.cpp:72
 msgid "TCP Port"
 msgstr "TCP-Port"
 
-#: rc.cpp:70
+#: rc.cpp:73
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Sönke Dibbern"
 
-#: rc.cpp:71
+#: rc.cpp:74
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s_dibbern@web.de"
 
-#: soap/contactconverter.cpp:246
+#: soap/contactconverter.cpp:249
 msgid "Resource"
 msgstr "Ressource"
 
-#: soap/groupwiseserver.cpp:132
+#: soap/groupwiseserver.cpp:345
+msgid "Login failed, but the GroupWise server did not report an error"
+msgstr "Anmellen fehlslaan, man de GroupWise-Server hett keen Fehler meldt"
+
+#: soap/groupwiseserver.cpp:1660
 #, kde-format
 msgid "Connect failed: %1."
 msgstr "Tokoppeln fehlslaan: %1."
 
-#: soap/groupwiseserver.cpp:320
-msgid "Login failed, but the GroupWise server did not report an error"
-msgstr "Anmellen fehlslaan, man de GroupWise-Server hett keen Fehler meldt"
-
-#: soap/groupwiseserver.cpp:1360
-msgid "SSL Error"
-msgstr "SSL-Fehler"
-
-#: soap/gwjobs.cpp:110
+#: soap/gwjobs.cpp:123
 #, kde-format
 msgid "Unable to read GroupWise address book: %1"
 msgstr "GroupWise-Adressbook lett sik nich lesen: %1"
 
-#: soap/gwjobs.cpp:577
+#: soap/gwjobs.cpp:624
 #, kde-format
 msgid "Unable to read GroupWise address book: reading %1 returned no items."
 msgstr ""
 "GroupWise-Adressbook lett sik nich lesen: Utlesen vun %1 geev keen Indrääg "
 "torüch."
 
-#: soap/incidenceconverter.cpp:217
+#: soap/incidenceconverter.cpp:233
 msgid "Novell GroupWise does not support locations for to-dos."
 msgstr "Novell GroupWise ünnerstütt keen Öörd för Opgaven."
 
@@ -324,5 +340,15 @@ msgstr "Free/Bunnen Brukernaam"
 msgid "Addressbook identifier"
 msgstr "Adressbook-ID"
 
-#~ msgid "Unable to login to server: "
-#~ msgstr "Fehler bi't Tokoppeln na Server: "
+#~ msgid "Downloading addressbook"
+#~ msgstr "Adressbook warrt daallaadt"
+
+#~ msgid ""
+#~ "Unable to login to server: TODO: return whole error list; see console "
+#~ "output"
+#~ msgstr ""
+#~ "Anmellen op Server fehlslaan: TODOON: Heel Fehlerlist torüchgeven, "
+#~ "Konsoolutgaav ankieken"
+
+#~ msgid "SSL Error"
+#~ msgstr "SSL-Fehler"
