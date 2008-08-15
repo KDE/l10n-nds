@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#set -x
+. repgrep_getopts
+#set +x
+
+echo "grep $pogrep_opts \"$grep_arg\""
+for pofile in $(find . -regex ".*\.pot?")
+do
+	sed -ne '/^msgid/,/^msgstr/p' $pofile | grep -v "^msgstr" | grep $pogrep_opts "$grep_arg" | sed -e "s@^@$pofile:@"
+done

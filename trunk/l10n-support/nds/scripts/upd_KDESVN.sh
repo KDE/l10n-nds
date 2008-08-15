@@ -1,0 +1,17 @@
+#!/bin/bash
+
+test -z "$KDESVN" && {
+	echo "Environment variable KDESVN not set or empty. Exiting."
+	exit 1
+}
+
+cd $KDESVN/branches/stable
+svn update l10n{,-kde4}/{nds,scripts,templates/messages} || exit 1
+revstable=$(svn stat -vN l10n-kde4/nds | sed -ne 's/ *\([0-9]\+\).*nds$/\1/p')
+cd $KDESVN/trunk
+svn update l10n-kde{3,4}/{nds,scripts,templates/messages} || exit 2
+revtrunk=$(svn stat -vN l10n-kde4/nds | sed -ne 's/ *\([0-9]\+\).*nds$/\1/p')
+cd l10n-support
+svn update nds scripts pology templates/summit/messages || exit 3
+nice -n 15 posummit.py $KDESVN/trunk/l10n-support/scripts/messages.summit nds merge || exit 4
+svn commit -m "Scripted merge of stable rev. $revstable and trunk rev. $revtrunk" nds

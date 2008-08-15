@@ -1,0 +1,63 @@
+#!/bin/bash
+#test -z "$ä" && ä="\\\(ä\\\|Ä\\\)"
+#test -z "$ö" && ö="\\\(ö\\\|Ö\\\)"
+#test -z "$ü" && ü="\\\(ü\\\|Ü\\\)"
+#set -x
+#echo $0
+
+while test $# -gt 0
+do	if test "${1:0:1}" = "-"
+	then	pogrep_opts="$pogrep_opts $1"
+	else	pogrep_args="$pogrep_args $1"
+	fi
+	shift
+done
+
+pogrep_args=${pogrep_args# }
+pogrep_args_l=${#pogrep_args}
+
+for ((i=0; $i<$pogrep_args_l; i++))
+do	char=${pogrep_args:i:1}
+	test "$char" = "\\" && {
+		c=${pogrep_args:i+1:1}
+		case $c in
+		[bwBW])
+			((i++))
+			grep_arg="${grep_arg}\\$c"
+			continue;;
+		\?|+|\{)
+			test "${pogrep_args:i-1:1}" = "]" && {
+				grep_arg="${grep_arg}\\"
+				continue
+			}
+			grep_arg_l=${#grep_arg}
+			grep_arg_s=${grep_arg:0:$grep_arg_l-4}
+			grep_arg_e=${grep_arg:$grep_arg_l-4:4}
+			grep_arg="${grep_arg_s}\\(${grep_arg_e}\\)"
+			test "$c" = "{" && {
+				while test "$char" != "}"
+				do	grep_arg="${grep_arg}${char}"
+					((i++))
+					char=${pogrep_args:i:1}
+				done
+			};;
+		esac
+	}
+	test "$char" = "[" && {
+		test "${pogrep_args:i-1:1}" = '\' || {
+			grep_arg="${grep_arg}&\\?"
+			while test "$char" != "]"
+			do	grep_arg="${grep_arg}${char}"
+				((i++))
+				char=${pogrep_args:i:1}
+			done
+		}
+	}
+	expr "\\$char" : '\\[A-ZÄÖÜa-zäöü0-9]' >/dev/null && grep_arg="${grep_arg}&\\?"
+	grep_arg="${grep_arg}$char"
+done
+#expr index "$pogrep_opts" i > /dev/null && grep_arg=$(echo $grep_arg|sed "s/\(ä\|Ä\)/$ä/g; s/\(ö\|Ö\)/$ö/g; s/\(ü\|Ü\)/$ü/g")
+#grep_arg=$(echo $grep_arg|iconv -f iso8859-15 -t utf8)
+#echo "$grep_arg"
+
+test "$(basename $0)" = "repgrep_getopts" && echo $grep_arg
