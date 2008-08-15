@@ -1,0 +1,432 @@
+comment_char %
+escape_char /
+
+% Locale for Low Saxon locale in Germany
+% Contributed by Sönke Dibbern <s_dibbern@web.de>, 2008
+
+
+LC_IDENTIFICATION
+
+title     "Low Saxon locale for Germany"
+source    "Free Software Foundation, Inc."
+address   "59 Temple Place - Suite 330, Boston, MA 02111-1307, USA"
+contact   ""
+email     "bug-glibc-locales@gnu.org"
+tel       ""
+fax       ""
+language  "Low Saxon"
+territory "Germany"
+revision  "0.9"
+date      "2008-08-03"
+%
+category "i18n:2002";LC_IDENTIFICATION
+category "i18n:2002";LC_COLLATE
+category "i18n:2002";LC_CTYPE
+category "i18n:2002";LC_MESSAGES
+category "i18n:2002";LC_MONETARY
+category "i18n:2002";LC_NUMERIC
+category "i18n:2002";LC_TIME
+category "i18n:2002";LC_PAPER
+category "i18n:2002";LC_MEASUREMENT
+category "i18n:2002";LC_TELEPHONE
+category "i18n:2002";LC_ADDRESS
+category "i18n:2002";LC_NAME
+
+END LC_IDENTIFICATION
+
+
+LC_COLLATE
+
+copy "iso14651_t1"
+
+collating-element <A-A> from "AA"
+collating-element <A-a> from "Aa"
+collating-element <a-a> from "aa"
+collating-element <E-E> from "EE"
+collating-element <E-e> from "Ee"
+collating-element <e-e> from "ee"
+collating-element <I-I> from "IE"
+collating-element <I-i> from "Ie"
+collating-element <i-i> from "ie"
+collating-element <O-O> from "OO"
+collating-element <O-o> from "Oo"
+collating-element <o-o> from "oo"
+collating-element <U-U> from "UU"
+collating-element <U-u> from "Uu"
+collating-element <u-u> from "uu"
+
+collating-symbol <CAP-MIN> % AA, Ee, ie, etc
+collating-symbol <DCH> % double char
+
+reorder-after <RES-1>
+<CAP>
+<CAP-MIN>
+<ICA> % index capital
+<ECA> % exponent capital
+<MIN> % lower case
+<AMI> % alternate lower case
+<ANO> % normal
+<AIS> % isolated
+<AFI> % final
+<AII> % initial
+<AME> % medial
+<AMA> % accent madda
+<AHA> % accent hamza
+<AHW> % accent hamza/waw
+<AHS> % accent hamza under / hamza souscrit
+<AYE> % accent under yeh / accent souscrit du ya'
+<YBA> % accent hamza/yeh barree
+<BAS> % basic
+<DCH> % double char
+
+% ß
+reorder-after <U0073>
+<U00DF> "<s>";"<DCH>";"<MIN>";IGNORE	% sz-Lig
+
+% Umlauts
+<U00C5> "<a><a>";"<BAS><BAS>";"<CAP><CAP>";IGNORE	% A-Ring
+<U00E5> "<a><a>";"<BAS><BAS>";"<MIN><MIN>";IGNORE	% a-Ring
+<U00C4> "<a><e>";"<BAS><BAS>";"<CAP><CAP>";<0>		% A-Uml
+<U00C6> "<a><e>";"<BAS><BAS>";"<CAP><CAP>";<1>		% AE-Lig
+<U00E4> "<a><e>";"<BAS><BAS>";"<MIN><MIN>";<0>		% a-Uml
+<U00E6> "<a><e>";"<BAS><BAS>";"<MIN><MIN>";<1>		% ae-Lig
+<U00D6> "<o><e>";"<BAS><BAS>";"<CAP><CAP>";<0>		% O-Uml
+<U00D8> "<o><e>";"<BAS><BAS>";"<CAP><CAP>";<1>		% O-Slash
+<U00F6> "<o><e>";"<BAS><BAS>";"<MIN><MIN>";<0>		% o-Uml
+<U00F8> "<o><e>";"<BAS><BAS>";"<MIN><MIN>";<1>		% o-Slash
+<U00DC> "<u><e>";"<BAS><BAS>";"<CAP><CAP>";IGNORE	% U-Uml
+<U00FC> "<u><e>";"<BAS><BAS>";"<MIN><MIN>";IGNORE	% u-Uml
+<U01FC> "<a><e>";"<BAS><ACA>";"<CAP><CAP>";IGNORE	% AE-Lig with Acute
+<U01FD> "<a><e>";"<BAS><ACA>";"<MIN><MIN>";IGNORE	% ae-Lig with Acute
+<U01FE> "<o><e>";"<BAS><ACA>";"<CAP><CAP>";IGNORE	% O-Slash with Acute
+<U01FF> "<o><e>";"<BAS><ACA>";"<MIN><MIN>";IGNORE	% o-Slash with Acute
+
+% Drawltones
+<A-A> <a>;<DCH>;<CAP>;IGNORE		% AA
+<A-a> <a>;<DCH>;<CAP-MIN>;IGNORE	% Aa
+<a-a> <a>;<DCH>;<MIN>;IGNORE		% aa
+<E-E> <e>;<DCH>;<CAP>;IGNORE		% EE
+<E-e> <e>;<DCH>;<CAP-MIN>;IGNORE	% Ee
+<e-e> <e>;<DCH>;<MIN>;IGNORE		% ee
+<I-I> <i>;<DCH>;<CAP>;IGNORE		% IE
+<I-i> <i>;<DCH>;<CAP-MIN>;IGNORE	% Ie
+<i-i> <i>;<DCH>;<MIN>;IGNORE		% ie
+<O-O> <o>;<DCH>;<CAP>;IGNORE		% OO
+<O-o> <o>;<DCH>;<CAP-MIN>;IGNORE	% Oo
+<o-o> <o>;<DCH>;<MIN>;IGNORE		% oo
+<U-U> <u>;<DCH>;<CAP>;IGNORE		% UU
+<U-u> <u>;<DCH>;<CAP-MIN>;IGNORE	% Uu
+<u-u> <u>;<DCH>;<MIN>;IGNORE		% uu
+
+% Specials
+reorder-after <U0020>
+<U005F> IGNORE;IGNORE;IGNORE;<U005F> % 33 _
+<U0332> IGNORE;IGNORE;IGNORE;<U0332> % 34 <"_>
+<U00AF> IGNORE;IGNORE;IGNORE;<U00AF> % 35 - (MACRON)
+<U00AD> IGNORE;IGNORE;IGNORE;<U00AD> % 36 <SHY>
+<U002D> IGNORE;IGNORE;IGNORE;<U002D> % 37 - (Minus)
+<U207B> IGNORE;IGNORE;IGNORE;<U207D> % 93 <-S>
+<U002B> IGNORE;IGNORE;IGNORE;<U002B> % 94 +
+<U207A> IGNORE;IGNORE;IGNORE;<U207E> % 95 <+S>
+<U00B1> IGNORE;IGNORE;IGNORE;<U00B1> % 96 ±
+<U0023> IGNORE;IGNORE;IGNORE;<U0023> % 91 #
+<U00D7> IGNORE;IGNORE;IGNORE;<U00D7> % 134 ×
+<U00B7> IGNORE;IGNORE;IGNORE;<U00B7> % 58 · (Middot)
+<U002A> IGNORE;IGNORE;IGNORE;<U002A> % 88 *
+<U00F7> IGNORE;IGNORE;IGNORE;<U00F7> % 133 <./.>
+<U002F> IGNORE;IGNORE;IGNORE;<U002F> % 45 / 
+<U0338> IGNORE;IGNORE;IGNORE;<U0338> % 46 <"/>
+<U0025> IGNORE;IGNORE;IGNORE;<U0025> % 92 %
+<U005E> IGNORE;IGNORE;IGNORE;<U005E> % 126 ^
+<U003C> IGNORE;IGNORE;IGNORE;<U003C> % 136 <
+<U2260> IGNORE;IGNORE;IGNORE;<U2260> % 135 <!=>
+<U2264> IGNORE;IGNORE;IGNORE;<U2264> % 137 <=<>
+<U003D> IGNORE;IGNORE;IGNORE;<U003D> % 138 =
+<U2265> IGNORE;IGNORE;IGNORE;<U2265> % 139 </>=>
+<U003E> IGNORE;IGNORE;IGNORE;<U003E> % 140 >
+<U00AC> IGNORE;IGNORE;IGNORE;<U00AC> % 141 ¬
+<U00B5> IGNORE;IGNORE;IGNORE;<U00B5> % 145 m
+<U00B0> IGNORE;IGNORE;IGNORE;<U00B0> % 144 °
+<U0028> IGNORE;IGNORE;IGNORE;<U0028> % 69 (
+<U207D> IGNORE;IGNORE;IGNORE;<U207d> % 70 <(S>
+<U0029> IGNORE;IGNORE;IGNORE;<U0029> % 71 )
+<U207E> IGNORE;IGNORE;IGNORE;<U207E> % 72 <)S>
+<U005B> IGNORE;IGNORE;IGNORE;<U005B> % 73 [
+<U005D> IGNORE;IGNORE;IGNORE;<U005D> % 74 ]
+<U007B> IGNORE;IGNORE;IGNORE;<U007B> % 75 {
+<U007D> IGNORE;IGNORE;IGNORE;<U007D> % 76 }
+<U002E> IGNORE;IGNORE;IGNORE;<U002E> % 47 .
+<U003A> IGNORE;IGNORE;IGNORE;<U003A> % 40 :
+<U002C> IGNORE;IGNORE;IGNORE;<U002C> % 38 ,
+<U003B> IGNORE;IGNORE;IGNORE;<U003B> % 39 ;
+<U0021> IGNORE;IGNORE;IGNORE;<U0021> % 41 !
+<U00A1> IGNORE;IGNORE;IGNORE;<U00A1> % 42 ¡
+<U003F> IGNORE;IGNORE;IGNORE;<U003F> % 43 ?
+<U00BF> IGNORE;IGNORE;IGNORE;<U00BF> % 44 ¿
+<U005C> IGNORE;IGNORE;IGNORE;<U005C> % 89 \ 
+<U00B8> IGNORE;IGNORE;IGNORE;<U00B8> % 59 ¸ (Cedille)
+<U0027> IGNORE;IGNORE;IGNORE;<U0027> % 61 '
+<U201A> IGNORE;IGNORE;IGNORE;<U201A> % <'_9>
+<U2018> IGNORE;IGNORE;IGNORE;<U2018> % 62 <'6>
+<U2019> IGNORE;IGNORE;IGNORE;<U2019> % 63 <'9>
+<U201B> IGNORE;IGNORE;IGNORE;<U201B> % <'P>
+<U00B4> IGNORE;IGNORE;IGNORE;<U00B4> % 123 ´
+<U0060> IGNORE;IGNORE;IGNORE;<U0060> % 124 `
+<U0022> IGNORE;IGNORE;IGNORE;<U0022> % 64 "
+<U201E> IGNORE;IGNORE;IGNORE;<U201E> % <"_9>
+<U201C> IGNORE;IGNORE;IGNORE;<U201C> % <"6>
+<U201D> IGNORE;IGNORE;IGNORE;<U201D> % 66 <"9>
+<U201F> IGNORE;IGNORE;IGNORE;<U201F> % <"P>
+<U00BB> IGNORE;IGNORE;IGNORE;<U00BB> % 68 »
+<U00AB> IGNORE;IGNORE;IGNORE;<U00AB> % 67 «
+<U007E> IGNORE;IGNORE;IGNORE;<U007E> % 131 ~
+<U0040> IGNORE;IGNORE;IGNORE;<U0040> % 82 @
+<U00A9> IGNORE;IGNORE;IGNORE;<U00A9> % 79 ©
+<U0026> IGNORE;IGNORE;IGNORE;<U0026> % 90 &
+<U2126> IGNORE;IGNORE;IGNORE;<U2126> % 146 <Ohm>
+<U00A7> IGNORE;IGNORE;IGNORE;<U00A7> % 77 §
+<U00B6> IGNORE;IGNORE;IGNORE;<U00B6> % 78 ¶
+<U00AE> IGNORE;IGNORE;IGNORE;<U00AE> % 80 ®
+<U2122> IGNORE;IGNORE;IGNORE;<U2122> % 81 <TM>
+<U00A4> IGNORE;IGNORE;IGNORE;<U00A4> % 83 ¤
+<U00A2> IGNORE;IGNORE;IGNORE;<U00A2> % 84 ¢
+<U20A1> IGNORE;IGNORE;IGNORE;<U20A1> % colon
+<U20A2> IGNORE;IGNORE;IGNORE;<U20A2> % cruzeiro
+<U20AB> IGNORE;IGNORE;IGNORE;<U20AB> % dong
+<U20AF> IGNORE;IGNORE;IGNORE;<U20AF> % drachma
+<U20A0> IGNORE;IGNORE;IGNORE;<U20A0> % ecu
+<U20AC> IGNORE;IGNORE;IGNORE;<U20AC> % euro
+<U20A3> IGNORE;IGNORE;IGNORE;<U20A3> % french franc
+<U20AD> IGNORE;IGNORE;IGNORE;<U20AD> % kip
+<U00A3> IGNORE;IGNORE;IGNORE;<U00A3> % 86 £
+<U20A4> IGNORE;IGNORE;IGNORE;<U20A4> % lira
+<U20A5> IGNORE;IGNORE;IGNORE;<U20A5> % mill
+<U20A6> IGNORE;IGNORE;IGNORE;<U20A6> % naira
+<U20A7> IGNORE;IGNORE;IGNORE;<U20A7> % peseta
+<U20A8> IGNORE;IGNORE;IGNORE;<U20A8> % rupee
+<U20AA> IGNORE;IGNORE;IGNORE;<U20AA> % new sheqel
+<U0024> IGNORE;IGNORE;IGNORE;<U0024> % 85 $
+<U20AE> IGNORE;IGNORE;IGNORE;<U20AE> % tugrik
+<U20A9> IGNORE;IGNORE;IGNORE;<U20A9> % won
+<U00A5> IGNORE;IGNORE;IGNORE;<U00A5> % 87 ¥
+<U0328> IGNORE;IGNORE;IGNORE;<U0328> % 60 <";>
+<U0306> IGNORE;IGNORE;IGNORE;<U0306> % 125 <"(>
+<U030C> IGNORE;IGNORE;IGNORE;<U030C> % 127 <"<>
+<U030A> IGNORE;IGNORE;IGNORE;<U030A> % 128 <"0>
+<U00A8> IGNORE;IGNORE;IGNORE;<U00A8> % 129 ¨
+<U030B> IGNORE;IGNORE;IGNORE;<U030B> % 130 <"">
+<U0307> IGNORE;IGNORE;IGNORE;<U0307> % 132 <".>
+<U007C> IGNORE;IGNORE;IGNORE;<U007C> % 142 |
+<U00A6> IGNORE;IGNORE;IGNORE;<U00A6> % 143 |
+<U220E> IGNORE;IGNORE;IGNORE;<U220E> % 147 <FP>
+<U250C> IGNORE;IGNORE;IGNORE;<U250C> % 148 <_V/>>
+<U252C> IGNORE;IGNORE;IGNORE;<U252C> % 149 <_V->
+<U2510> IGNORE;IGNORE;IGNORE;<U2510> % 150 <_V<w>
+<U251C> IGNORE;IGNORE;IGNORE;<U251C> % 151 <_!/>>
+<U253C> IGNORE;IGNORE;IGNORE;<U253C> % 152 <_!->
+<U2524> IGNORE;IGNORE;IGNORE;<U2524> % 153 <_!<>
+<U2514> IGNORE;IGNORE;IGNORE;<U2514> % 154 <_A/>>
+<U2534> IGNORE;IGNORE;IGNORE;<U2534> % 155 <_-A>
+<U2518> IGNORE;IGNORE;IGNORE;<U2518> % 156 <_A<>
+<U2502> IGNORE;IGNORE;IGNORE;<U2502> % 157 <_!>
+<U2500> IGNORE;IGNORE;IGNORE;<U2500> % 158 <_-> %
+<U2501> IGNORE;IGNORE;IGNORE;<U2501> % 159 <_=>
+<U2190> IGNORE;IGNORE;IGNORE;<U2190> % 160 <<->
+<U2192> IGNORE;IGNORE;IGNORE;<U2192> % 161 <-/>>
+<U20D1> IGNORE;IGNORE;IGNORE;<U20D1> % 162 <"7>
+<U2191> IGNORE;IGNORE;IGNORE;<U2191> % 163 <-!>
+<U2193> IGNORE;IGNORE;IGNORE;<U2193> % 164 <-v>
+<U266A> IGNORE;IGNORE;IGNORE;<U266A> % 165 <_d!>
+<U2571> IGNORE;IGNORE;IGNORE;<U2571> % 166 <_/>//>
+<U2572> IGNORE;IGNORE;IGNORE;<U2572> % 167 <_<\>
+<U25E2> IGNORE;IGNORE;IGNORE;<U25E2> % 168 <_./>//>
+reorder-end
+END LC_COLLATE
+
+
+LC_CTYPE
+copy "i18n"
+
+% ß -> SS
+% ### FIXME toupper (<U00DF>,"<U0053><U0053>")
+
+translit_start
+include "translit_combining";""
+
+% Umlauts, Sharp s
+% A-Umlaut
+<U00C4> "<U0041><U0308>";"<U0041><U0045>"
+% O-Umlaut
+<U00D6> "<U004F><U0308>";"<U004F><U0065>"
+% U-Umlaut
+<U00DC> "<U0055><U0308>";"<U0055><U0065>"
+% a-Umlaut
+<U00E4> "<U0061><U0308>";"<U0061><U0065>"
+% o-Umlaut
+<U00F6> "<U006F><U0308>";"<U006F><U0065>"
+% sz
+<U00DF> "<U017F><U01B7>";"<U0073><U0073>"
+% u-Umlaut
+
+% Danish chars
+% A Ring
+<U00C5> "<U0041><U030A>";"<U0041><U0061>"
+% a Ring
+<U00E5> "<U0061><U030A>";"<U0061><U0061>"
+% AE
+<U00C6> "<U00C4>";"<U00C4><U0308>";"<U0041><U0065>"
+% ae
+<U00E6> "<U00E4>";"<U0061><U0308>";"<U0061><U0065>"
+% O slash
+<U00D8> "<U00D6>";"<U004F><U0308>";"<U004F><U0065>"
+% o slash
+<U00F8> "<U00F6>";"<U006F><U0308>";"<U006F><U0065>"
+
+% Quotation marks
+% <^66>
+<U201C> <U00AB>;<U0022>
+% <^99>
+<U201D> <U00AB>;<U0022>
+% <_99>
+<U201E> <U00BB>;<U0022>
+% <^PP>
+<U201F> <U00AB>;<U0022>
+% <^6>
+<U2018> <U0027>
+% <^9>
+<U2019> <U0027>
+% <_9>
+<U201A> <U0027>
+% <^P>
+<U201B> <U0027>
+% >
+<U203A> <U003E>;<U0027>
+% <
+<U2039> <U003C>;<U0027>
+
+translit_end
+END LC_CTYPE
+
+
+LC_ADDRESS
+
+postal_fmt "%f%N/
+%a%N/
+%d%N/
+%b%N/
+%s %h %e%t%r%N/
+%z %T%N/
+%c%N"
+country_post "D"
+country_ab2 "DE"
+country_ab3 "DEU"
+country_car "D"
+country_num 276
+country_isbn "3"
+country_name "Düütschland"
+lang_name "Neddersass'sch"
+% lang_ab "nds"
+lang_term "nds"
+lang_lib "nds"
+
+END LC_ADDRESS
+
+
+LC_MEASUREMENT
+
+measurement 1
+
+END LC_MEASUREMENT
+
+
+LC_MESSAGES
+
+yesexpr "^[jJyY].*"
+noexpr "^[nN].*"
+yesstr "Jo"
+nostr "Nee"
+
+END LC_MESSAGES
+
+
+LC_MONETARY
+
+int_curr_symbol "<U0045><U0055><U0052><U0020>"
+currency_symbol "<U20AC>"
+mon_decimal_point ","
+mon_thousands_sep "."
+mon_grouping 3;3
+positive_sign ""
+negative_sign "-"
+int_frac_digits 2
+frac_digits 2
+p_cs_precedes 0
+p_sep_by_space 1
+n_cs_precedes 0
+n_sep_by_space 1
+p_sign_posn 1
+n_sign_posn 1
+
+END LC_MONETARY
+
+
+LC_NAME
+
+name_fmt "%d%t%g%t%m%t%f"
+name_miss "Fru"
+name_mr "Herr"
+name_mrs "Fru"
+name_ms "Fru"
+
+END LC_NAME
+
+
+LC_NUMERIC
+
+decimal_point ","
+thousands_sep "."
+grouping 3;3
+
+END LC_NUMERIC
+
+
+LC_PAPER
+
+height 297
+width 210
+
+END LC_PAPER
+
+
+LC_TELEPHONE
+
+tel_int_fmt "+%c %a %l"
+tel_dom_fmt "%A %l"
+int_select "00"
+int_prefix "49"
+
+END LC_TELEPHONE
+
+
+LC_TIME
+
+abday "Sü";"Ma";"Di";"Mi";"Du";"Fr";"Sa"
+day "Sünndag";"Maandag";"Dingsdag";"Middeweken";"Dunnersdag";"Freedag";"Sünnavend"
+abmon "Jan";"Feb";"Mär";"Apr";"Mai";"Jun";"Jul";"Aug";"Sep";"Okt";"Nov";"Dez"
+mon "Januaar";"Februaar";"März";"April";"Mai";"Juni";"Juli";"August";"September";"Oktover";"November";"Dezember"
+d_t_fmt "%a., %d. %b. %Y, Kl. %H.%M:%S %Z"
+d_fmt "%d.%m.%Y"
+t_fmt "%H:%M.%S"
+am_pm "vm";"nm"
+t_fmt_ampm "%-I:%M.%S %p"
+date_fmt "%A de %-d. %B %Y Klock %H.%M:%S (%Z)"
+first_weekday 2
+first_workday 2
+week 7;19971201;4
+% week-ndays 7
+% week-1stday 19971201
+% week-1stweek 4
+cal_direction 1
+timezone "+0100"
+
+END LC_TIME

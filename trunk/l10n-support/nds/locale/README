@@ -1,0 +1,34 @@
+Locale source for nds_DE
+by Sönke Dibbern <s_dibbern@web.de>, Ver. 0.9
+
+This is the source for a new (better) nds_DE locale than the one provided by Kenneth Christiansen (and Pablo Saratxage) that only recently (as of August 2008) was included into the glibc-sources.
+
+
+* Features:
+- Spelling in accordance with the one used in KDE
+- More reasonable date and time format defaults
+- Sorting order like in older German dictionaries (ä=ae, ö=oe, ü=ue, s->ß->t), which is very useful for languages like Low Saxon that don't have a clearly defined orthography
+- Long and superlong vocals (usually bearing drawltones or 'Sleeptöön') like in »Muur« or »Hüür« are often marked by double vocals (»aa«, »ee« etc.) These are sorted as simple vocals, in order to ease the operation with different spellings (as in »Hus« opposed to »Huus«), cf. the result of "~> echo -e 'Hus\nHut\nHuus'|sort"
+
+
+* Installation
+1. Copy nds_DE, nds_DE@euro, mk_locales.sh and nds/ into some directory on your disk.
+2. Run mk_locales.sh
+3. nds_DE and nds_DE@euro go into whatever your default place for locale definitions is (Ask "localedef --help" if you don't know, often "/usr/share/i18n")
+4. The subdirectories in nds/ go into whatever your default place for locale code is (Ask "localedef --help" if you don't know, often "/usr/lib/locale")
+
+The new locale should be available now, so you may say eg. "export LANG=nds_DE.utf8".
+
+
+* Compose features
+Unfortunately the compose features don't work anymore in the new locale without further ado. Char composing is an X feature, and locale dependent, with no standard or fall-back if the current locale has no compose table. So you'll have to patch the files
+
+ /usr/lib/X11/locale/locale.dir
+ /usr/lib/X11/locale/locale.alias and
+ /usr/lib/X11/locale/compose.dir,
+
+eg. by saying 'patch /usr/lib/X11/locale/locale.dir locale.dir.diff'.
+If this fails, you may nevertheless be able to modify the file by hand accordingly by looking into them. The necessary changes shouldn't be too hard to determine (I managed it also, so - can't be that hard).
+
+
+Have a lot of fun!
