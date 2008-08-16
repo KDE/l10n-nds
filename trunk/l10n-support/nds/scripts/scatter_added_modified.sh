@@ -5,17 +5,17 @@ test -z "$KDESVN" && {
 	exit 1
 }
 
-cd $KDESVN/trunk/l10n-support/nds
+cd $KDESVN/trunk/l10n-support/nds/summit
 
 svnstat=$(svn stat)
 echo "$svnstat"
 
 changed=$(echo "$svnstat" | grep '^?')
 for f in ${changed//\?      }
-do	test -d "$f" && test -d "../templates/$f" && svn add "$f" && svnstat=$(svn stat) && continue
-	if [ -f ../templates/${f}t ]
+do	test -d "$f" && test -d "../../templates/summit/$f" && svn add "$f" && svnstat=$(svn stat) && continue
+	if [ -f ../../templates/summit/${f}t ]
 	then	svn add $f
-	else	echo "l10n-support/templates/${f}t not found - skipped."
+	else	echo "l10n-support/templates/summit/${f}t not found - skipped."
 	fi
 done
 
