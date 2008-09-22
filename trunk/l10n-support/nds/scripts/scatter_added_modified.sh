@@ -11,7 +11,7 @@ svnstat=$(svn stat)
 echo "$svnstat"
 
 changed=$(echo "$svnstat" | grep '^?')
-for f in ${changed//\?      }
+for f in $(echo "$changed"|sed -e 's/\? \+//')
 do	test -d "$f" && test -d "../../templates/summit/$f" && svn add "$f" && svnstat=$(svn stat) && continue
 	if [ -f ../../templates/summit/${f}t ]
 	then	svn add $f
@@ -20,12 +20,12 @@ do	test -d "$f" && test -d "../../templates/summit/$f" && svn add "$f" && svnsta
 done
 
 changed=$(echo "$svnstat" | grep '^A')
-for f in ${changed//A      }
+for f in $(echo "$changed"|sed -e 's/^A \+//')
 do	test "${f%.po}" = "$f" || to_scatter="$to_scatter $(basename ${f%.po})"
 done
 
 changed=$(echo "$svnstat" | grep '^M')
-for f in ${changed//M      }
+for f in $(echo "$changed"|sed -e 's/^M \+//')
 do	to_scatter="$to_scatter $(basename ${f%.po})"
 done
 
