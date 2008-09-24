@@ -14,7 +14,7 @@ changed=$(echo "$svnstat" | grep '^?')
 for f in $(echo "$changed"|sed -e 's/\? \+//')
 do	test -d "$f" && test -d "../../templates/summit/$f" && svn add "$f" && svnstat=$(svn stat) && continue
 	if [ -f ../../templates/summit/${f}t ]
-	then	svn add $f
+	then	svn add $f && svnstat=$(svn stat)
 	else	echo "l10n-support/templates/summit/${f}t not found - skipped."
 	fi
 done
