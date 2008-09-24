@@ -29,6 +29,8 @@ for f in $(echo "$changed"|sed -e 's/^M \+//')
 do	to_scatter="$to_scatter $(basename ${f%.po})"
 done
 
+echo "posummit.py $KDESVN/trunk/l10n-support/scripts/messages.summit nds scatter $to_scatter"
+
 posummit.py $KDESVN/trunk/l10n-support/scripts/messages.summit nds scatter $to_scatter && {
 	cd $KDESVN/branches/stable/l10n-kde4
 	confl_stable="$(svn update templates/messages nds)"
