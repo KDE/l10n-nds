@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kipiplugin_slideshow\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-09-15 09:46+0200\n"
+"POT-Creation-Date: 2008-10-02 09:52+0200\n"
 "PO-Revision-Date: 2008-09-23 06:06+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -24,7 +24,20 @@ msgstr ""
 msgid "Slideshow is part of KIPI-Plugins (http://www.kipi-plugins.org)"
 msgstr "De Diaschau is Deel vun KIPI-Modulen (http://www.kipi-plugins.org)"
 
-#: maindialog.cpp:124
+#: listsounditems.cpp:97
+#, kde-format
+msgid "%1 is damaged and may not be playable."
+msgstr ""
+
+#: listsounditems.cpp:99
+msgid "Phonon error"
+msgstr ""
+
+#: listsounditems.cpp:102
+msgid "This file is damaged and may not be playable."
+msgstr ""
+
+#: maindialog.cpp:123
 msgid ""
 "In this version of kipi-plugins, normal SlideShow's effects still under "
 "porting.<br><b>They will be available again in the future.</b>"
@@ -32,43 +45,43 @@ msgstr ""
 "In disse Verschoon vun KIPI-Modulen warrt de Diaschau-Effekten noch porteert."
 "<br> <b>Se warrt later aver wedder verföögbor wesen.</b>"
 
-#: maindialog.cpp:187
+#: maindialog.cpp:233
 #, kde-format
 msgid "%1 image [%2]"
 msgstr "%1 Bild [%2]"
 
-#: maindialog.cpp:189
+#: maindialog.cpp:235
 #, kde-format
 msgid "%1 images [%2]"
 msgstr "%1 Biller [%2]"
 
-#: maindialog.cpp:253
+#: maindialog.cpp:299 soundtrackdialog.cpp:361
 #, kde-format
 msgid "Cannot access to file %1, please check the path is right."
 msgstr "Keen Togriep na Datei %1, bitte prööv de Paddangaav."
 
-#: maindialog.cpp:292
+#: maindialog.cpp:338
 #, kde-format
 msgid "Image no. %1"
 msgstr "Bild Nr. %1"
 
-#: maindialog.cpp:370
+#: maindialog.cpp:415 soundtrackdialog.cpp:309
 msgid "You can only move up one image file at once."
 msgstr "Du kannst bloots een Bild op eenmaal na baven verschuven."
 
-#: maindialog.cpp:397
+#: maindialog.cpp:442
 msgid "You can only move down one image file at once."
 msgstr "Du kannst bloots een Bild op eenmaal na nerrn verschuven."
 
-#: maindialog.cpp:427 slideshowkb.cpp:546
+#: maindialog.cpp:472 slideshowkb.cpp:559
 msgid "Ken Burns"
 msgstr "Ken Burns"
 
-#: maindialog.cpp:449
+#: maindialog.cpp:494
 msgid "Delay between images (ms):"
 msgstr "Paus twischen Biller (ms):"
 
-#: maindialog.cpp:457
+#: maindialog.cpp:502
 msgid "Delay between images  (s):"
 msgstr "Paus twischen Biller (s):"
 
@@ -76,11 +89,11 @@ msgstr "Paus twischen Biller (s):"
 msgid "Advanced SlideShow..."
 msgstr "Verwiedert Diaschau..."
 
-#: plugin_slideshow.cpp:189
+#: plugin_slideshow.cpp:200
 msgid "There are no images to show."
 msgstr "Dat gifft keen Biller, de sik wiesen laat."
 
-#: plugin_slideshow.cpp:244
+#: plugin_slideshow.cpp:255
 msgid "Sorry. OpenGL support not available on your system"
 msgstr "Op Dien Systeem is leider keen OpenGL-Ünnerstütten verföögbor."
 
@@ -258,122 +271,252 @@ msgstr ""
 "Wenn Du en poor Biller tofögen wullt, klick op \"Tofögen\" oder bruuk "
 "\"Dregen-un-Droppen\"."
 
-#. i18n: file: maindialog.ui:114
+#. i18n: file: maindialog.ui:112
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_ImagesFilesButtonUp)
-#: rc.cpp:87
+#. i18n: file: soundtrackdialog.ui:78
+#. i18n: ectx: property (whatsThis), widget (QPushButton, m_SoundFilesButtonUp)
+#: rc.cpp:87 rc.cpp:183
 msgid "Moving the current image up on the portfolio list."
 msgstr "Dat aktuelle Bild binnen de Bildsammeln-List na baven schuven"
 
-#. i18n: file: maindialog.ui:136
+#. i18n: file: maindialog.ui:140
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_ImagesFilesButtonAdd)
-#: rc.cpp:90
+#. i18n: file: soundtrackdialog.ui:106
+#. i18n: ectx: property (whatsThis), widget (QPushButton, m_SoundFilesButtonAdd)
+#: rc.cpp:90 rc.cpp:186
 msgid "Add some image files to the portfolio list."
 msgstr "En poor Bilddateien na de Bildsammeln-List tofögen"
 
-#. i18n: file: maindialog.ui:158
+#. i18n: file: maindialog.ui:168
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_ImagesFilesButtonDelete)
-#: rc.cpp:93
+#. i18n: file: soundtrackdialog.ui:134
+#. i18n: ectx: property (whatsThis), widget (QPushButton, m_SoundFilesButtonDelete)
+#: rc.cpp:93 rc.cpp:189
 msgid "Remove some image files from the portfolio list."
 msgstr "En poor Bilddateien ut de Bildsammeln-List wegmaken"
 
-#. i18n: file: maindialog.ui:180
+#. i18n: file: maindialog.ui:196
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_ImagesFilesButtonDown)
-#: rc.cpp:96
+#. i18n: file: soundtrackdialog.ui:162
+#. i18n: ectx: property (whatsThis), widget (QPushButton, m_SoundFilesButtonDown)
+#: rc.cpp:96 rc.cpp:192
 msgid "Moving the current image down on the portfolio list."
 msgstr "Dat aktuelle Bild binnen de Bildsammeln-List na nerrn schuven"
 
-#. i18n: file: maindialog.ui:212
+#. i18n: file: maindialog.ui:240
 #. i18n: ectx: property (whatsThis), widget (QLabel, m_label6)
 #: rc.cpp:99
 msgid "Total number of images in the portfolio and sequence duration."
 msgstr "Tall vun Biller binnen de Bildsammeln tosamen un Afspeelduer"
 
-#. i18n: file: maindialog.ui:215
+#. i18n: file: maindialog.ui:243
 #. i18n: ectx: property (text), widget (QLabel, m_label6)
-#. i18n: file: maindialog.ui:234
+#. i18n: file: maindialog.ui:262
 #. i18n: ectx: property (text), widget (QLabel, m_label7)
-#: rc.cpp:102 rc.cpp:108 slideshow.cpp:267 slideshowgl.cpp:409
+#: rc.cpp:102 rc.cpp:108 slideshow.cpp:267 slideshowgl.cpp:361
 msgid "None"
 msgstr "Keen"
 
-#. i18n: file: maindialog.ui:231
+#. i18n: file: maindialog.ui:259
 #. i18n: ectx: property (whatsThis), widget (QLabel, m_label7)
 #: rc.cpp:105
 msgid "Currently selected image in the portfolio list."
 msgstr "Aktuell köört Bild binnen de Bildsammeln-List"
 
-#. i18n: file: maindialog.ui:249
+#. i18n: file: maindialog.ui:277
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: rc.cpp:111
 msgid "Content"
 msgstr "Inholt"
 
-#. i18n: file: maindialog.ui:257
+#. i18n: file: maindialog.ui:285
 #. i18n: ectx: property (text), widget (QCheckBox, m_printNameCheckBox)
 #: rc.cpp:114
 msgid "P&rint filename"
 msgstr "Dateinaam &drucken"
 
-#. i18n: file: maindialog.ui:264
+#. i18n: file: maindialog.ui:292
 #. i18n: ectx: property (text), widget (QCheckBox, m_printProgressCheckBox)
 #: rc.cpp:117
 msgid "Progress indicator"
 msgstr "Vörankamenwieser"
 
-#. i18n: file: maindialog.ui:273
+#. i18n: file: maindialog.ui:301
 #. i18n: ectx: property (text), widget (QCheckBox, m_printCommentsCheckBox)
 #: rc.cpp:120
 msgid "Pr&int captions "
 msgstr "Titeln &drucken "
 
-#. i18n: file: maindialog.ui:296
+#. i18n: file: maindialog.ui:324
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: rc.cpp:123
 msgid "Video"
 msgstr "Video"
 
-#. i18n: file: maindialog.ui:302
+#. i18n: file: maindialog.ui:330
 #. i18n: ectx: property (text), widget (QCheckBox, m_openglCheckBox)
 #: rc.cpp:126
 msgid "Use Open&GL slideshow transitions"
 msgstr "Open&GL-Övergäng för de Diaschau bruken"
 
-#. i18n: file: maindialog.ui:325
+#. i18n: file: maindialog.ui:353
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: rc.cpp:129
 msgid "Playback"
 msgstr "Afspelen"
 
-#. i18n: file: maindialog.ui:331
+#. i18n: file: maindialog.ui:359
 #. i18n: ectx: property (text), widget (QCheckBox, m_loopCheckBox)
-#: rc.cpp:132
+#. i18n: file: soundtrackdialog.ui:246
+#. i18n: ectx: property (text), widget (QCheckBox, m_loopCheckBox)
+#: rc.cpp:132 rc.cpp:204
 msgid "&Loop"
 msgstr "&Wedderhalen"
 
-#. i18n: file: maindialog.ui:338
+#. i18n: file: maindialog.ui:366
 #. i18n: ectx: property (text), widget (QCheckBox, m_shuffleCheckBox)
 #: rc.cpp:135
 msgid "&Shuffle images"
 msgstr "Biller &Mischen"
 
-#. i18n: file: maindialog.ui:347
+#. i18n: file: maindialog.ui:375
 #. i18n: ectx: property (text), widget (QLabel, m_delayLabel)
 #: rc.cpp:138
 msgid "Delay between images (s):"
 msgstr "Paus twischen Biller (s):"
 
-#. i18n: file: maindialog.ui:373
+#. i18n: file: maindialog.ui:401
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: rc.cpp:141
 msgid "Transition effect:"
 msgstr "Övergangeffekt:"
 
-#: rc.cpp:142
+#. i18n: file: playbackwidget.ui:19
+#. i18n: ectx: property (windowTitle), widget (QWidget, PlaybackWidget)
+#. i18n: file: soundtrackdialog.ui:13
+#. i18n: ectx: property (windowTitle), widget (QWidget, SoundtrackDialog)
+#: rc.cpp:144 rc.cpp:177
+msgid "Form"
+msgstr ""
+
+#. i18n: file: playbackwidget.ui:31
+#. i18n: ectx: property (text), widget (QPushButton, m_playButton)
+#: rc.cpp:147
+#, fuzzy
+#| msgid "Playback"
+msgid "Play"
+msgstr "Afspelen"
+
+#. i18n: file: playbackwidget.ui:38
+#. i18n: ectx: property (text), widget (QPushButton, m_stopButton)
+#: rc.cpp:150
+msgid "Stop"
+msgstr ""
+
+#. i18n: file: playbackwidget.ui:45
+#. i18n: ectx: property (text), widget (QPushButton, m_prevButton)
+#: rc.cpp:153
+msgid "Prev"
+msgstr ""
+
+#. i18n: file: playbackwidget.ui:52
+#. i18n: ectx: property (text), widget (QPushButton, m_nextButton)
+#: rc.cpp:156
+msgid "Next"
+msgstr ""
+
+#. i18n: file: playbackwidget.ui:72
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:159
+#, fuzzy
+#| msgid "images"
+msgid "Time"
+msgstr "Biller"
+
+#. i18n: file: playbackwidget.ui:81
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:162
+msgid "elapsed:"
+msgstr ""
+
+#. i18n: file: playbackwidget.ui:88
+#. i18n: ectx: property (text), widget (QLabel, m_elapsedTimeLabel)
+#. i18n: file: playbackwidget.ui:102
+#. i18n: ectx: property (text), widget (QLabel, m_totalTimeLabel)
+#: rc.cpp:165 rc.cpp:171
+msgid "0:00:00"
+msgstr ""
+
+#. i18n: file: playbackwidget.ui:95
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:168
+msgid "total:"
+msgstr ""
+
+#. i18n: file: playbackwidget.ui:130
+#. i18n: ectx: property (text), widget (QLabel, m_soundLabel)
+#: rc.cpp:174
+msgid "SoundPixmap"
+msgstr ""
+
+#. i18n: file: soundtrackdialog.ui:25
+#. i18n: ectx: property (title), widget (QGroupBox, m_selectionGroupBox)
+#: rc.cpp:180
+msgid "Select audio files"
+msgstr ""
+
+#. i18n: file: soundtrackdialog.ui:200
+#. i18n: ectx: property (text), widget (QLabel, m_timeLabel)
+#. i18n: file: soundtrackdialog.ui:284
+#. i18n: ectx: property (text), widget (QLabel, m_slideTimeLabel)
+#. i18n: file: soundtrackdialog.ui:298
+#. i18n: ectx: property (text), widget (QLabel, m_soundtrackTimeLabel)
+#. i18n: file: soundtrackdialog.ui:338
+#. i18n: ectx: property (text), widget (QLabel, m_statusBarLabel)
+#: rc.cpp:195 rc.cpp:213 rc.cpp:219 rc.cpp:222
+msgid "TextLabel"
+msgstr ""
+
+#. i18n: file: soundtrackdialog.ui:220
+#. i18n: ectx: property (text), widget (QPushButton, m_previewButton)
+#: rc.cpp:198
+msgid "Preview..."
+msgstr ""
+
+#. i18n: file: soundtrackdialog.ui:240
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:201
+#, fuzzy
+#| msgid "Caption"
+msgid "Options"
+msgstr "Titeltext"
+
+#. i18n: file: soundtrackdialog.ui:269
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: rc.cpp:207
+msgid "Time comparison"
+msgstr ""
+
+#. i18n: file: soundtrackdialog.ui:277
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:210
+#, fuzzy
+#| msgid "Slide"
+msgid "Slide :"
+msgstr "Dia"
+
+#. i18n: file: soundtrackdialog.ui:291
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:216
+msgid "Soundtrack :"
+msgstr ""
+
+#: rc.cpp:223
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Sönke Dibbern, Manfred Wiese"
 
-#: rc.cpp:143
+#: rc.cpp:224
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s_dibbern@web.de, m.j.wiese@web.de"
@@ -426,47 +569,51 @@ msgstr "Spiraal rin"
 msgid "Blobs"
 msgstr "Amöben"
 
-#: slideshow.cpp:280 slideshowgl.cpp:418
+#: slideshow.cpp:280 slideshowgl.cpp:370
 msgid "Random"
 msgstr "Tofällig"
 
-#: slideshow.cpp:1261 slideshowgl.cpp:734 slideshowkb.cpp:488
+#: slideshow.cpp:1261 slideshowgl.cpp:686 slideshowkb.cpp:501
 msgid "SlideShow Completed."
 msgstr "Diaschau beendt."
 
-#: slideshow.cpp:1262 slideshowgl.cpp:735 slideshowkb.cpp:489
+#: slideshow.cpp:1262 slideshowgl.cpp:687 slideshowkb.cpp:502
 msgid "Click To Exit..."
 msgstr "För't Beennen hier klicken..."
 
-#: slideshowconfig.cpp:66 slideshowconfig.cpp:104
+#: slideshowconfig.cpp:67 slideshowconfig.cpp:105
 msgid "SlideShow"
 msgstr "Diaschau"
 
-#: slideshowconfig.cpp:81
+#: slideshowconfig.cpp:77
 msgid "Start SlideShow"
 msgstr "Diaschau starten"
 
-#: slideshowconfig.cpp:88
+#: slideshowconfig.cpp:84
 msgid "Main"
 msgstr "Allgemeen"
 
-#: slideshowconfig.cpp:89
+#: slideshowconfig.cpp:85
 msgid "Main Settings"
 msgstr "Hööftinstellen"
 
-#: slideshowconfig.cpp:93 slideshowconfig.cpp:94
+#: slideshowconfig.cpp:89 slideshowconfig.cpp:90
 msgid "Caption"
 msgstr "Titeltext"
 
-#: slideshowconfig.cpp:98 slideshowconfig.cpp:99
+#: slideshowconfig.cpp:94 slideshowconfig.cpp:95
+msgid "Soundtrack"
+msgstr ""
+
+#: slideshowconfig.cpp:99 slideshowconfig.cpp:100
 msgid "Advanced"
 msgstr "Verwiedert"
 
-#: slideshowconfig.cpp:107
+#: slideshowconfig.cpp:108
 msgid "A Kipi plugin for image slideshow"
 msgstr "En KIPI-Moduul  för Diaschauen"
 
-#: slideshowconfig.cpp:108
+#: slideshowconfig.cpp:109
 msgid ""
 "(c) 2003-2004, Renchi Raju\n"
 "(c) 2006-2008, Valerio Fuoglio"
@@ -474,57 +621,91 @@ msgstr ""
 "(c) 2003-2004, Renchi Raju\n"
 "(c) 2006-2008, Valerio Fuoglio"
 
-#: slideshowconfig.cpp:110
+#: slideshowconfig.cpp:111
 msgid "Renchi Raju"
 msgstr "Renchi Raju"
 
-#: slideshowconfig.cpp:110
+#: slideshowconfig.cpp:111
 msgid "Author"
 msgstr "Autor"
 
-#: slideshowconfig.cpp:112
+#: slideshowconfig.cpp:113
 msgid "Valerio Fuoglio"
 msgstr "Valerio Fuoglio"
 
-#: slideshowconfig.cpp:112
+#: slideshowconfig.cpp:113
 msgid "Author and maintainer"
 msgstr "Autor un Pleger"
 
-#: slideshowconfig.cpp:121
+#: slideshowconfig.cpp:122
 msgid "SlideShow Handbook"
 msgstr "Diaschau-Handbook"
 
-#: slideshowgl.cpp:410
+#: slideshowgl.cpp:362
 msgid "Bend"
 msgstr "Breken"
 
-#: slideshowgl.cpp:411
+#: slideshowgl.cpp:363
 msgid "Blend"
 msgstr "Mischen"
 
-#: slideshowgl.cpp:412
+#: slideshowgl.cpp:364
 msgid "Cube"
 msgstr "Wörpel"
 
-#: slideshowgl.cpp:413
+#: slideshowgl.cpp:365
 msgid "Fade"
 msgstr "Naglöhen"
 
-#: slideshowgl.cpp:414
+#: slideshowgl.cpp:366
 msgid "Flutter"
 msgstr "Fladdern"
 
-#: slideshowgl.cpp:415
+#: slideshowgl.cpp:367
 msgid "In Out"
 msgstr "Rin-Rut"
 
-#: slideshowgl.cpp:416
+#: slideshowgl.cpp:368
 msgid "Rotate"
 msgstr "Dreihen"
 
-#: slideshowgl.cpp:417
+#: slideshowgl.cpp:369
 msgid "Slide"
 msgstr "Dia"
+
+#: soundtrackdialog.cpp:50
+msgid "Soundtrack preview"
+msgstr ""
+
+#: soundtrackdialog.cpp:185
+#, fuzzy, kde-format
+#| msgid "%1 image [%2]"
+msgid "%1 track [%2]"
+msgstr "%1 Bild [%2]"
+
+#: soundtrackdialog.cpp:187
+#, fuzzy, kde-format
+#| msgid "%1 images [%2]"
+msgid "%1 tracks [%2]"
+msgstr "%1 Biller [%2]"
+
+#: soundtrackdialog.cpp:201
+msgid "Slide time is more than soundtrack time. Suggest: add more sound files."
+msgstr ""
+
+#: soundtrackdialog.cpp:269
+msgid "Select sound files"
+msgstr ""
+
+#: soundtrackdialog.cpp:336
+#, fuzzy
+#| msgid "You can only move down one image file at once."
+msgid "You can only move down one file at once."
+msgstr "Du kannst bloots een Bild op eenmaal na nerrn verschuven."
+
+#: soundtrackdialog.cpp:370
+msgid "Cannot create a preview of an empty file list."
+msgstr ""
 
 #, fuzzy
 #~ msgid "&Add..."
