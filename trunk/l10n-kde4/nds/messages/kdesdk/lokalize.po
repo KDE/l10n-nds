@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lokalize\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-10-02 09:46+0200\n"
+"POT-Creation-Date: 2008-10-03 09:42+0200\n"
 "PO-Revision-Date: 2008-09-25 00:52+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -43,7 +43,7 @@ msgctxt "@info:status message entries"
 msgid "Untranslated: %1"
 msgstr "Nich översett: %1"
 
-#: kaider.cpp:227 lokalizemainwindow.cpp:450
+#: kaider.cpp:227 lokalizemainwindow.cpp:386
 msgctxt "@title actions category"
 msgid "File"
 msgstr "Datei"
@@ -70,7 +70,7 @@ msgstr "Synkroniseren 2"
 msgid "Translation Memory"
 msgstr "Översettenspieker"
 
-#: kaider.cpp:233 lokalizemainwindow.cpp:452
+#: kaider.cpp:233 lokalizemainwindow.cpp:388
 msgctxt "@title actions category"
 msgid "Glossary"
 msgstr "Begreeplist"
@@ -406,55 +406,55 @@ msgctxt "@item Undo action item"
 msgid "Unwrap"
 msgstr "Ahn Reegümbröök"
 
-#: lokalizemainwindow.cpp:453
+#: lokalizemainwindow.cpp:389
 msgctxt "@title actions category"
 msgid "Translation Memory"
 msgstr "Översettenspieker"
 
-#: lokalizemainwindow.cpp:454
+#: lokalizemainwindow.cpp:390
 msgctxt "@title actions category"
 msgid "Project"
 msgstr "Projekt"
 
-#: lokalizemainwindow.cpp:493
+#: lokalizemainwindow.cpp:429
 msgid "Next tab"
 msgstr "Nakamen Paneel"
 
-#: lokalizemainwindow.cpp:496
+#: lokalizemainwindow.cpp:432
 msgid "Previous tab"
 msgstr "Verleden Paneel"
 
-#: lokalizemainwindow.cpp:502
+#: lokalizemainwindow.cpp:438
 msgctxt "@action:inmenu"
 msgid "Glossary"
 msgstr "Begreeplist"
 
-#: lokalizemainwindow.cpp:510
+#: lokalizemainwindow.cpp:446
 msgctxt "@action:inmenu"
 msgid "Translation memory"
 msgstr "Översettenspieker"
 
-#: lokalizemainwindow.cpp:514
+#: lokalizemainwindow.cpp:450
 msgctxt "@action:inmenu"
 msgid "Manage translation memories"
 msgstr "Översettenspiekers plegen"
 
-#: lokalizemainwindow.cpp:518
+#: lokalizemainwindow.cpp:454
 msgctxt "@action:inmenu"
 msgid "Project overview"
 msgstr "Projekt-Översicht"
 
-#: lokalizemainwindow.cpp:522 lokalizemainwindow.cpp:525
+#: lokalizemainwindow.cpp:458 lokalizemainwindow.cpp:461
 msgctxt "@action:inmenu"
 msgid "Configure project"
 msgstr "Projekt instellen"
 
-#: lokalizemainwindow.cpp:528
+#: lokalizemainwindow.cpp:464
 msgctxt "@action:inmenu"
 msgid "Open project"
 msgstr "Projekt opmaken"
 
-#: lokalizemainwindow.cpp:534
+#: lokalizemainwindow.cpp:470
 msgctxt "@action:inmenu"
 msgid "Create new project"
 msgstr "Nieg Projekt opstellen"
@@ -674,8 +674,11 @@ msgstr "&Projekt"
 #. i18n: file: lokalizemainwindowui.rc:13
 #. i18n: ectx: Menu (project_actions)
 #: rc.cpp:51 rc.cpp:384
-msgid "&Actions"
-msgstr "&Akschonen"
+#, fuzzy
+#| msgctxt "@title:tab"
+#| msgid "Scripts"
+msgid "&Scripts"
+msgstr "Skripten"
 
 #: rc.cpp:52
 msgctxt "NAME OF TRANSLATORS"
@@ -1342,77 +1345,160 @@ msgctxt "@label:textbox"
 msgid "Markup:"
 msgstr "Markeren:"
 
+#. i18n: file: project/prefs_regexps.ui:46
+#. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_Accel)
+#: rc.cpp:417
+msgid "Usually '&', but may also be '_' for GTK apps."
+msgstr ""
+
+#. i18n: file: project/prefs_regexps.ui:58
+#. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_Markup)
+#: rc.cpp:420
+msgid ""
+"Regular expression of markup. It is used for translation memory matching and "
+"for 'Insert tag' feature.\n"
+"\n"
+"A default value (suitable for XML-based texts) is:\n"
+"(<[^>]+>)+|(&[A-Za-z_:][A-Za-z0-9_\\.:-]*;)+\n"
+"\n"
+"It is only used for gettext PO files, as XLIFF format has it's own way of "
+"specifying where markup is."
+msgstr ""
+
 #. i18n: file: project/projectbase.kcfg:15
 #. i18n: ectx: label, entry (LangCode), group (General)
 #. i18n: file: project/projectbase.kcfg:21
 #. i18n: ectx: label, entry (MailingList), group (General)
-#: rc.cpp:417 rc.cpp:420
+#: rc.cpp:428 rc.cpp:431
 msgid "Language"
 msgstr "Spraak"
 
 #. i18n: file: project/projectbase.kcfg:27
 #. i18n: ectx: label, entry (PoBaseDir), group (General)
-#: rc.cpp:423
+#: rc.cpp:434
 msgid "The base directory for PO files (translations)"
 msgstr "Basisorner för PO-Dateien (Översetten)"
 
 #. i18n: file: project/projectbase.kcfg:33
 #. i18n: ectx: label, entry (PotBaseDir), group (General)
-#: rc.cpp:426
+#: rc.cpp:437
 msgid "The base directory for POT files (templates to be translated)"
 msgstr "Basisorner för POT-Dateien (Översettenvörlagen)"
 
 #. i18n: file: project/projectbase.kcfg:41
 #. i18n: ectx: label, entry (GlossaryTbx), group (General)
-#: rc.cpp:429
+#: rc.cpp:440
 msgid "Project's glossary"
 msgstr "Projektbegreeplist"
 
 #. i18n: file: project/prefs_projectmain.ui:16
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:432
+#: rc.cpp:443
 msgctxt "@label:textbox"
 msgid "Language:"
 msgstr "Spraak:"
 
-#. i18n: file: project/prefs_projectmain.ui:97
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
-#: rc.cpp:435
-msgctxt "@label:textbox"
-msgid "PO directory:"
-msgstr "PO-Orner:"
+#. i18n: file: project/prefs_projectmain.ui:29
+#. i18n: ectx: property (toolTip), widget (QComboBox, LangCode)
+#: rc.cpp:446
+#, fuzzy
+#| msgid "Default language code for new projects"
+msgid "Target language of the project."
+msgstr "Standard-Spraakkode för nieg Projekten"
 
-#. i18n: file: project/prefs_projectmain.ui:107
+#. i18n: file: project/prefs_projectmain.ui:49
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, poBaseDir)
+#: rc.cpp:449
+msgid ""
+"This is main setting. Set it to path of directory with translation files\n"
+"for your project + target language."
+msgstr ""
+
+#. i18n: file: project/prefs_projectmain.ui:73
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, potBaseDir)
+#: rc.cpp:453
+msgid ""
+"Usually your translaton project will be a subproject of project\n"
+"for translating same texts into multiple languages,\n"
+"\n"
+"Set this to path of directory containing empty translation files\n"
+"(i.e. files without translation into any language)\n"
+"shared among all subprojects."
+msgstr ""
+
+#. i18n: file: project/prefs_projectmain.ui:104
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, branchDir)
+#: rc.cpp:461
+msgctxt ""
+"this message contains text from documentation, so use its translation when "
+"you're translating docs"
+msgid ""
+"This setting is for Sync Mode.\n"
+"\n"
+"Sync Mode may be used to make changes to translation\n"
+"for two branches simultaneously.\n"
+"\n"
+"Set this to path that corresponds to base dir of the branch\n"
+"(i.e. 'Translation directory' of project for secondary branch),\n"
+"and Secondary Sync view will automatically open files from branch.\n"
+"Then, each time you make changes in files of your main branch,\n"
+"they will automatically be replicated to the branch\n"
+"(of course, if it contains the same english string).\n"
+"\n"
+"See documentation for more details."
+msgstr ""
+
+#. i18n: file: project/prefs_projectmain.ui:127
+#. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
+#: rc.cpp:476
+#, fuzzy
+#| msgid "Translation Memory"
+msgctxt "@label:textbox"
+msgid "Translation directory:"
+msgstr "Översettenspieker"
+
+#. i18n: file: project/prefs_projectmain.ui:137
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:438
+#: rc.cpp:479
 msgctxt "@label:textbox"
 msgid "Template directory:"
 msgstr "Vörlagenorner:"
 
-#. i18n: file: project/prefs_projectmain.ui:117
+#. i18n: file: project/prefs_projectmain.ui:147
 #. i18n: ectx: property (text), widget (QLabel, textLabel500)
-#: rc.cpp:441
+#: rc.cpp:482
 msgctxt "@label:textbox"
 msgid "Branch directory:"
 msgstr "Telgorner:"
 
-#. i18n: file: project/prefs_projectmain.ui:127
+#. i18n: file: project/prefs_projectmain.ui:157
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:444
+#: rc.cpp:485
 msgctxt "@label:textbox"
 msgid "Glossary:"
 msgstr "Begreeplist:"
 
-#. i18n: file: project/prefs_projectmain.ui:150
+#. i18n: file: project/prefs_projectmain.ui:180
+#. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_ProjectID)
+#: rc.cpp:488
+msgid ""
+"Project ID is used to differentiate translation memories of absolutely "
+"different projects and languages.\n"
+"\n"
+"For example, if you have several projects for translating KDE applications\n"
+"(e.g. they are in different repositories), use same ID for all of them."
+msgstr ""
+
+#. i18n: file: project/prefs_projectmain.ui:187
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:447
+#: rc.cpp:494
 msgctxt "@label:textbox"
 msgid "ID:"
 msgstr "ID:"
 
-#. i18n: file: project/prefs_projectmain.ui:160
+#. i18n: file: project/prefs_projectmain.ui:197
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:450
+#: rc.cpp:497
 msgctxt "@label:textbox"
 msgid "Mailing list:"
 msgstr "Nettpostlist:"
@@ -1753,6 +1839,13 @@ msgstr "Datei opmaken"
 #: webquery/webqueryview.cpp:65
 msgid "Web Queries"
 msgstr "Webanfragen"
+
+#~ msgid "&Actions"
+#~ msgstr "&Akschonen"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "PO directory:"
+#~ msgstr "PO-Orner:"
 
 #~ msgctxt "@label"
 #~ msgid "Web Query Scripts"
