@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-10-28 09:54+0100\n"
+"POT-Creation-Date: 2008-10-29 10:38+0100\n"
 "PO-Revision-Date: 2008-10-28 23:14+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -759,7 +759,7 @@ msgstr "Dateien utsöken, de Du daalladen wullt"
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #. i18n: ectx: property (text), widget (QCheckBox, m_use_custom_download_location)
 #. +> trunk stable
-#: ktorrent/fileselectdlg.ui:24 plugins/syndication/filtereditor.ui:160
+#: ktorrent/fileselectdlg.ui:24 plugins/syndication/filtereditor.ui:201
 msgid "Download to:"
 msgstr "Daalladen na:"
 
@@ -3344,7 +3344,7 @@ msgstr "De Datei oder Orner, ut de(n) Du den Torrent opstellen wullt:"
 #. +> trunk stable
 #: ktorrent/torrentcreatordlg.ui:54 plugins/logviewer/logprefwidget.ui:39
 #: plugins/scanfolder/scanfolderprefpage.ui:61
-#: plugins/syndication/filtereditor.ui:124
+#: plugins/syndication/filtereditor.ui:165
 msgid "Options"
 msgstr "Optschonen"
 
@@ -4985,6 +4985,7 @@ msgstr "Filter na nerrn verschuven"
 
 #. +> trunk stable
 #: plugins/bitfinder/filter/filtersview.cpp:84
+#: plugins/syndication/syndicationplugin.cpp:299
 msgid "Add New Filter"
 msgstr "Nieg Filter tofögen"
 
@@ -6535,9 +6536,9 @@ msgid "Toggle Fullscreen"
 msgstr "Heelschirm an- oder utmaken"
 
 #. +> trunk stable
-#: plugins/scanfolder/scanfolder.cpp:69 plugins/scanfolder/scanfolder.cpp:70
-#: plugins/scanfolder/scanfolder.cpp:88 plugins/scanfolder/scanfolder.cpp:177
-#: plugins/scanfolder/scanfolder.cpp:215 plugins/scanfolder/scanfolder.cpp:216
+#: plugins/scanfolder/scanfolder.cpp:72 plugins/scanfolder/scanfolder.cpp:73
+#: plugins/scanfolder/scanfolder.cpp:92 plugins/scanfolder/scanfolder.cpp:181
+#: plugins/scanfolder/scanfolder.cpp:219 plugins/scanfolder/scanfolder.cpp:220
 msgid "loaded"
 msgstr "laadt"
 
@@ -7287,7 +7288,7 @@ msgid "Edit Filter"
 msgstr "Filter bewerken"
 
 #. +> trunk
-#: plugins/syndication/filtereditor.cpp:193
+#: plugins/syndication/filtereditor.cpp:195
 #, kde-format
 msgid "There already is a filter named %1, filter names must be unique !"
 msgstr "Dat gifft al en Filter mit den Naam \"%1\", Filternaams mööt eenkennig wesen!"
@@ -7304,45 +7305,117 @@ msgstr "Form"
 msgid "Name:"
 msgstr "Naam:"
 
+#. i18n: ectx: property (toolTip), widget (KEditListBox, m_word_matches)
+#. +> trunk
+#: plugins/syndication/filtereditor.ui:68
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">The string to find in the title of an item. Simple wildcard syntax is supported :</p>"
+"\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p>"
+"\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p>"
+"\n"
+"<table border=\"0\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;\" align=\"center\" cellspacing=\"1\" cellpadding=\"2\">\n"
+"<tr>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span style=\" font-weight:600;\">c</span></p>"
+"</td>"
+"\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Any character represents itself apart from those mentioned below. Thus <span style=\" font-weight:600;\">c</span> matches the character <span style=\" font-style:italic;\">c</span>.</p>"
+"</td>"
+"</tr>"
+"\n"
+"<tr>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span style=\" font-weight:600;\">?</span></p>"
+"</td>"
+"\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Matches any single character. </p>"
+"</td>"
+"</tr>"
+"\n"
+"<tr>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span style=\" font-weight:600;\">*</span></p>"
+"</td>"
+"\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Matches zero or more of any characters.</p>"
+"</td>"
+"</tr>"
+"\n"
+"<tr>\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><span style=\" font-weight:600;\">[...]</span></p>"
+"</td>"
+"\n"
+"<td style=\" vertical-align:top;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">Sets of characters can be represented in square brackets. Within the character class, like outside, backslash has no special meaning.</p>"
+"</td>"
+"</tr>"
+"</table>"
+"\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\">For example the *.torrent will match any item which ends in .torrent. </p>"
+"</body></html>"
+msgstr ""
+
 #. i18n: ectx: property (title), widget (KEditListBox, m_word_matches)
 #. +> trunk
-#: plugins/syndication/filtereditor.ui:40
+#: plugins/syndication/filtereditor.ui:71
 msgid "String Matching"
 msgstr "Tekenkeed verglieken"
 
+#. i18n: ectx: property (toolTip), widget (QCheckBox, m_reg_exp_syntax)
+#. +> trunk
+#: plugins/syndication/filtereditor.ui:81
+msgid "By default strings will use wildcard matching. If you want to use regular expressions, this needs to be enabled."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_reg_exp_syntax)
+#. +> trunk
+#: plugins/syndication/filtereditor.ui:84
+msgid "Strings are regular expressions"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QCheckBox, m_all_words_must_match)
 #. +> trunk
-#: plugins/syndication/filtereditor.ui:50
+#: plugins/syndication/filtereditor.ui:91
 msgid "Item must match all strings"
 msgstr "All Tekenkeden mööt op't Element passen"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_match_case_sensitive)
 #. +> trunk
-#: plugins/syndication/filtereditor.ui:57
+#: plugins/syndication/filtereditor.ui:98
 msgid "Case sensitive matching"
 msgstr "Op Groot- un Lüttschrieven kieken"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. +> trunk
-#: plugins/syndication/filtereditor.ui:68
+#: plugins/syndication/filtereditor.ui:109
 msgid "Seasons && Episodes"
 msgstr "Regen un Kapiteln"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_use_se_matching)
 #. +> trunk
-#: plugins/syndication/filtereditor.ui:74
+#: plugins/syndication/filtereditor.ui:115
 msgid "Use season and episode matching"
 msgstr "Op Reeg un Kapitel kieken"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. +> trunk
-#: plugins/syndication/filtereditor.ui:83
+#: plugins/syndication/filtereditor.ui:124
 msgid "Seasons: "
 msgstr "Regen: "
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, m_seasons)
 #. +> trunk
-#: plugins/syndication/filtereditor.ui:94
+#: plugins/syndication/filtereditor.ui:135
 msgid ""
 "Specify the seasons to download, multiple seasons can be separated by a , and you can also use ranges by using a -\n"
 "\n"
@@ -7358,13 +7431,13 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. +> trunk
-#: plugins/syndication/filtereditor.ui:101
+#: plugins/syndication/filtereditor.ui:142
 msgid "Episodes:"
 msgstr "Kapiteln"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, m_episodes)
 #. +> trunk
-#: plugins/syndication/filtereditor.ui:112
+#: plugins/syndication/filtereditor.ui:153
 msgid ""
 "Specify the episodes to download, multiple episodes can be separated by a , and you can also use ranges by using a -\n"
 "\n"
@@ -7380,37 +7453,37 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_download_matches)
 #. +> trunk
-#: plugins/syndication/filtereditor.ui:130
+#: plugins/syndication/filtereditor.ui:171
 msgid "Download torrents of matching items"
 msgstr "Torrents vun passen Indrääg daalladen"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_download_non_matches)
 #. +> trunk
-#: plugins/syndication/filtereditor.ui:137
+#: plugins/syndication/filtereditor.ui:178
 msgid "Download torrents of non matching items"
 msgstr "Torrents vun nich passen Indrääg daalladen"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_add_to_group)
 #. +> trunk
-#: plugins/syndication/filtereditor.ui:146
+#: plugins/syndication/filtereditor.ui:187
 msgid "Add to group:"
 msgstr "Tofögen na Koppel:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_silently)
 #. +> trunk
-#: plugins/syndication/filtereditor.ui:172
+#: plugins/syndication/filtereditor.ui:213
 msgid "Open torrents silently"
 msgstr "Torrents still opmaken"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_test)
 #. +> trunk
-#: plugins/syndication/filtereditor.ui:201
+#: plugins/syndication/filtereditor.ui:242
 msgid "Test"
 msgstr "Test"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. +> trunk
-#: plugins/syndication/filtereditor.ui:208
+#: plugins/syndication/filtereditor.ui:249
 msgid "filter on feed:"
 msgstr "Op Stroom filtern:"
 
