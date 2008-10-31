@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-10-22 07:10+0200\n"
+"POT-Creation-Date: 2008-10-31 06:06+0100\n"
 "PO-Revision-Date: 2008-10-14 00:50+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -293,7 +293,9 @@ msgid "Please select export options for %1:"
 msgstr "Legg bitte de Exportoptschonen för %1 fast:"
 
 #: dialogs/exportsecretkeydialog.cpp:138
-msgid "Secret Key Files (*.pem *.der *.gpg *.asc)"
+#, fuzzy
+#| msgid "Secret Key Files (*.pem *.der *.gpg *.asc)"
+msgid "Secret Key Files (*.pem *.p12 *.gpg *.asc)"
 msgstr "Privaatslötel-Dateien (*.pem *.der *.gpg *.asc)"
 
 #: dialogs/exportsecretkeydialog.cpp:206
@@ -880,17 +882,17 @@ msgstr "Ünnerschrift vun en nich begäng Slötel gellt."
 msgid "Good signature by %1."
 msgstr "Ünnerschrift vun %1 gellt."
 
-#: utils/formatting.cpp:536 crypto/decryptverifytask.cpp:437
+#: utils/formatting.cpp:536
 #, kde-format
 msgid "Invalid signature by unknown key %1: %2"
 msgstr "Ünnerschrift vun nich begäng Slötel %1 gellt nich: %2"
 
-#: utils/formatting.cpp:538 crypto/decryptverifytask.cpp:439
+#: utils/formatting.cpp:538
 #, kde-format
 msgid "Invalid signature by an unknown key: %1"
 msgstr "Ünnerschrift vun en nich begäng Slötel gellt nich: %1"
 
-#: utils/formatting.cpp:540 crypto/decryptverifytask.cpp:441
+#: utils/formatting.cpp:540
 #, kde-format
 msgid "Invalid signature by %1: %2"
 msgstr "Ünnerschrift vun %1 gellt nich: %2"
@@ -1144,32 +1146,32 @@ msgstr "Leeg Hexadezimaalteken \"%1\" binnen Ingaavstroom."
 msgid "Premature end of hex-encoded char in input stream"
 msgstr "Unverwacht Enn vun hexadezimaal kodeert Teken binnen Ingaavstroom"
 
-#: main.cpp:91
+#: main.cpp:115
 msgid "Performing Self-Check..."
 msgstr "Sülvsttest warrt utföhrt..."
 
-#: main.cpp:102
+#: main.cpp:126
 msgctxt "didn't pass"
 msgid "Self-Check Failed"
 msgstr "Sülvsttest fehlslaan"
 
-#: main.cpp:105
+#: main.cpp:129
 msgid "Self-Check Passed"
 msgstr "Sülvsttest OK"
 
-#: main.cpp:120
+#: main.cpp:144
 msgid "Loading certificate cache..."
 msgstr "Zertifikaat-Twischenspieker warrt laadt..."
 
-#: main.cpp:123
+#: main.cpp:147
 msgid "Certificate cache loaded."
 msgstr "Zertifikaat-Twischenspieker laadt."
 
-#: main.cpp:207
+#: main.cpp:231
 msgid "GPG UI Server Error"
 msgstr "GPG-Böversietserver-Fehler"
 
-#: main.cpp:208
+#: main.cpp:232
 #, kde-format
 msgid ""
 "<qt>The Kleopatra GPG UI Server Module couldn't be initialized.<br/>The "
@@ -1303,7 +1305,7 @@ msgstr "Ünnerschriever:"
 msgid "Change Signing Certificates..."
 msgstr "Ünnerschriftzertifikaten ännern..."
 
-#: crypto/gui/signerresolvepage.cpp:488
+#: crypto/gui/signerresolvepage.cpp:490
 msgid "<b>Choose Operation to be Performed</b>"
 msgstr "<b>De Akschoon utsöken, de Du utföhren wullt</b>"
 
@@ -1739,27 +1741,27 @@ msgstr "Ünnerschreven op den %1 mit Slötel %2."
 msgid "Signed with key %1."
 msgstr "Ünnerschreven mit Slötel %1."
 
-#: crypto/decryptverifytask.cpp:366
+#: crypto/decryptverifytask.cpp:367
 msgid "<b>Verification canceled.</b>"
 msgstr "<b>Pröven afbraken.</b>"
 
-#: crypto/decryptverifytask.cpp:368
+#: crypto/decryptverifytask.cpp:369
 #, kde-format
 msgid "<b>Verification failed: %1.</b>"
 msgstr "<b>Pröven fehlslaan: %1</b>"
 
-#: crypto/decryptverifytask.cpp:374
+#: crypto/decryptverifytask.cpp:375
 msgid "<b>No signatures found.</b>"
 msgstr "<b>Keen Ünnerschriften funnen.</b>"
 
-#: crypto/decryptverifytask.cpp:378
+#: crypto/decryptverifytask.cpp:379
 #, kde-format
 msgid "<b>Invalid signature.</b>"
 msgid_plural "<b>%1 invalid signatures.</b>"
 msgstr[0] "<b>Leeg Ünnerschrift.</b>"
 msgstr[1] "<b>%1 leeg Ünnerschriften.</b>"
 
-#: crypto/decryptverifytask.cpp:382
+#: crypto/decryptverifytask.cpp:383
 #, kde-format
 msgid "<b>Not enough information to check signature validity.</b>"
 msgid_plural "<b>%1 signatures could not be verified.</b>"
@@ -1768,7 +1770,7 @@ msgstr[0] ""
 "gellt.</b>"
 msgstr[1] "<b>%1 Ünnerschriften laat sik nich pröven.</b>"
 
-#: crypto/decryptverifytask.cpp:389
+#: crypto/decryptverifytask.cpp:390
 msgid "<b>Signature is valid.</b>"
 msgstr "<b>Ünnerschrift gellt.</b>"
 
@@ -1818,26 +1820,24 @@ msgstr "<b>Opslöteln fehlslaan: %1</b>"
 msgid "<b>Decryption succeeded.</b>"
 msgstr "<b>Mit Spood oplsötelt.</b>"
 
-#: crypto/decryptverifytask.cpp:430
-#, kde-format
-msgid "Bad signature by unknown key %1."
-msgstr "Leeg Ünnerschrift mit nich begäng Slötel %1."
+#: crypto/decryptverifytask.cpp:428
+#, fuzzy
+#| msgid "New signatures:"
+msgid "The signature is bad."
+msgstr "Nieg Ünnerschriften:"
 
-#: crypto/decryptverifytask.cpp:432
-msgid "Bad signature by an unknown key."
-msgstr "Leeg Ünnerschrift mit en nich begäng Slötel."
+#: crypto/decryptverifytask.cpp:429
+#, fuzzy, kde-format
+#| msgid "<b>Signature is valid.</b>"
+msgid "The signature is invalid: %1"
+msgstr "<b>Ünnerschrift gellt.</b>"
 
-#: crypto/decryptverifytask.cpp:434
-#, kde-format
-msgid "Bad signature by %1."
-msgstr "Leeg Ünnerschrift vun \"%1\"."
-
-#: crypto/decryptverifytask.cpp:460
+#: crypto/decryptverifytask.cpp:448
 msgctxt "separator for a list of e-mail addresses"
 msgid ", "
 msgstr ", "
 
-#: crypto/decryptverifytask.cpp:460
+#: crypto/decryptverifytask.cpp:448
 #, kde-format
 msgid ""
 "<p>The sender's address %1 is not stored in the certificate. Stored: %2</p>"
@@ -1845,43 +1845,43 @@ msgstr ""
 "<p>Den Senner sien Adress (%1) steiht nich binnen dat Zertifikaat. Stahn "
 "deit dor: %2</p>"
 
-#: crypto/decryptverifytask.cpp:470
+#: crypto/decryptverifytask.cpp:458
 #, kde-format
 msgid "One unknown recipient."
 msgid_plural "%1 unknown recipients."
 msgstr[0] "Een nich begäng Adressaat."
 msgstr[1] "%1 nich begäng Adressaten."
 
-#: crypto/decryptverifytask.cpp:474
+#: crypto/decryptverifytask.cpp:462
 msgid "Recipients:"
 msgid_plural "Recipients:"
 msgstr[0] "Adressaten:"
 msgstr[1] "Adressaten:"
 
-#: crypto/decryptverifytask.cpp:482
+#: crypto/decryptverifytask.cpp:470
 #, kde-format
 msgid "One unknown recipient"
 msgid_plural "%1 unknown recipients"
 msgstr[0] "Een nich begäng Adressaat"
 msgstr[1] "%1 nich begäng Adressaten"
 
-#: crypto/decryptverifytask.cpp:697
+#: crypto/decryptverifytask.cpp:685
 #, kde-format
 msgctxt "label: result example: foo.sig: Verification failed. "
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: crypto/decryptverifytask.cpp:854 crypto/decryptverifytask.cpp:978
+#: crypto/decryptverifytask.cpp:842 crypto/decryptverifytask.cpp:966
 #, kde-format
 msgid "Decrypting: %1..."
 msgstr "Bi optoslöteln: %1..."
 
-#: crypto/decryptverifytask.cpp:1104
+#: crypto/decryptverifytask.cpp:1092
 #, kde-format
 msgid "Verifying: %1..."
 msgstr "Bi to pröven: %1..."
 
-#: crypto/decryptverifytask.cpp:1226
+#: crypto/decryptverifytask.cpp:1214
 #, kde-format
 msgid "Verifying signature: %1..."
 msgstr "Ünnerschrift warrt pröövt: %1..."
@@ -1989,36 +1989,42 @@ msgid "Importing certificate..."
 msgstr "Zertifikaat warrt importeert..."
 
 #: commands/importcertificatefromfilecommand.cpp:162
-msgid ""
-"Certificates (*.asc *.cer *.cert *.crt *.der *.pem *.der *.p7c *.p12 *.pfx)"
-msgstr ""
-"Zertifikaten (*.asc *.cer *.cert *.crt *.der *.pem *.der *.p7c *.p12 *.pfx)"
+#, fuzzy
+#| msgid "&Certificates"
+msgid "Certificates"
+msgstr "&Zertifikaten"
 
 #: commands/importcertificatefromfilecommand.cpp:163
-msgid "Any files (*)"
+#, fuzzy
+#| msgid "Any files (*)"
+msgid "Any files"
 msgstr "All Dateien (*)"
 
 #: commands/importcertificatefromfilecommand.cpp:169
 msgid "Select Certificate File"
 msgstr "Zertifikaatdatei utsöken"
 
-#: commands/exportcertificatecommand.cpp:201
+#: commands/exportcertificatecommand.cpp:199
 msgid "Export Certificates"
 msgstr "Zertifikaten exporteren"
 
-#: commands/exportcertificatecommand.cpp:203
-msgid "OpenPGP Certificates (.asc)"
+#: commands/exportcertificatecommand.cpp:202
+#, fuzzy
+#| msgid "OpenPGP Certificates (.asc)"
+msgid "OpenPGP Certificates"
 msgstr "OpenPGP-Zertifikaten (.asc)"
 
 #: commands/exportcertificatecommand.cpp:203
-msgid "S/MIME Certificates (.pem)"
+#, fuzzy
+#| msgid "S/MIME Certificates (.pem)"
+msgid "S/MIME Certificates"
 msgstr "S/MIME-Zertifikaten (*.pem)"
 
-#: commands/exportcertificatecommand.cpp:233
+#: commands/exportcertificatecommand.cpp:237
 msgid "Exporting certificates..."
 msgstr "Zertifikaten warrt exporteert..."
 
-#: commands/exportcertificatecommand.cpp:244
+#: commands/exportcertificatecommand.cpp:248
 #, kde-format
 msgid ""
 "<qt><p>An error occurred while trying to export the certificate:</p><p><b>%"
@@ -2027,12 +2033,12 @@ msgstr ""
 "<qt><p>Bi't Exporteren vun dat Zertifikaat geev dat en Fehler:</p><p><b>%1</"
 "b></p></qt>"
 
-#: commands/exportcertificatecommand.cpp:248
-#: commands/exportcertificatecommand.cpp:278
+#: commands/exportcertificatecommand.cpp:252
+#: commands/exportcertificatecommand.cpp:295
 msgid "Certificate Export Failed"
 msgstr "Zertifikaatexport fehlslaan"
 
-#: commands/exportcertificatecommand.cpp:277
+#: commands/exportcertificatecommand.cpp:294
 #, kde-format
 msgid "Could not write to file %1."
 msgstr "Datei \"%1\" lett sik nich schrieven."
@@ -2255,24 +2261,24 @@ msgstr "Bruker-ID mit Spood toföögt."
 msgid "Add User-ID Succeeded"
 msgstr "Bruker-ID mit Spood toföögt"
 
-#: commands/lookupcertificatescommand.cpp:356
+#: commands/lookupcertificatescommand.cpp:368
 #, kde-format
 msgid "Download of certificate %1 failed. Error message: %2"
 msgstr "Daalladen vun't Zertifikaat %1 fehlslaan. Fehlermellen: %2"
 
-#: commands/lookupcertificatescommand.cpp:359
+#: commands/lookupcertificatescommand.cpp:371
 #, kde-format
 msgid "All certificate downloads failed. Sample error message: %1"
 msgstr ""
 "Dat Daalladen vun all de Zertifikaten is fehlslaan. Een vun de Fehlermellen: "
 "%1"
 
-#: commands/lookupcertificatescommand.cpp:361
-#: commands/lookupcertificatescommand.cpp:369
+#: commands/lookupcertificatescommand.cpp:373
+#: commands/lookupcertificatescommand.cpp:381
 msgid "Certificate Downloads Failed"
 msgstr "Daallaaden vun Zertifikaten fehlslaan"
 
-#: commands/lookupcertificatescommand.cpp:366
+#: commands/lookupcertificatescommand.cpp:378
 msgid ""
 "Some certificates failed to download. Do you want to proceed importing the "
 "following, succeded, downloads?"
@@ -2280,7 +2286,7 @@ msgstr ""
 "Bi en Reeg Zertifikaten is dat Daalladen fehlslaan. Wullt Du de nakamen "
 "Zertifikaten, de mit Spood daallaadt wöörn, liekers importeren?"
 
-#: commands/lookupcertificatescommand.cpp:406
+#: commands/lookupcertificatescommand.cpp:418
 #, kde-format
 msgid ""
 "Failed to search on keyserver. The error returned was:\n"
@@ -2289,7 +2295,7 @@ msgstr ""
 "Dat Söken op den Slötelserver is fehlslaan. De torüchgeven Fehler weer:\n"
 "%1"
 
-#: commands/lookupcertificatescommand.cpp:414
+#: commands/lookupcertificatescommand.cpp:426
 msgctxt "@info"
 msgid ""
 "<para>The query result has been truncated.</para><para>Either the local or a "
@@ -2304,12 +2310,12 @@ msgstr ""
 "een vun de instellten Servers dat Resultaat afsneden hett, muttst Du Dien "
 "Söök topassen. </para>"
 
-#: commands/lookupcertificatescommand.cpp:422
+#: commands/lookupcertificatescommand.cpp:434
 msgctxt "@title"
 msgid "Result Truncated"
 msgstr "Reslutaat afsneden"
 
-#: commands/lookupcertificatescommand.cpp:451
+#: commands/lookupcertificatescommand.cpp:463
 msgctxt "@info"
 msgid ""
 "<para>You do not have any directory servers configured.</para><para>You need "
@@ -2322,7 +2328,7 @@ msgstr ""
 "para><para>Du kannst Vertekenservers binnen <interface>Instellen -> "
 "Kleopatra instellen</interface> inrichten.</para>"
 
-#: commands/lookupcertificatescommand.cpp:456
+#: commands/lookupcertificatescommand.cpp:468
 msgctxt "@title"
 msgid "No Directory Servers Configured"
 msgstr "Keen Vertekenservers inricht"
@@ -3029,7 +3035,7 @@ msgid "At least one OUTPUT must be present"
 msgstr "Du muttst \"OUTPUT\" tominnst eenmaal angeven"
 
 #: uiserver/encryptcommand.cpp:105
-#: uiserver/decryptverifycommandemailbase.cpp:187 uiserver/signcommand.cpp:98
+#: uiserver/decryptverifycommandemailbase.cpp:185 uiserver/signcommand.cpp:98
 msgid "INPUT/OUTPUT count mismatch"
 msgstr "Tall vun \"INPUT\" un \"OUTPUT\" passt nich"
 
@@ -3051,7 +3057,7 @@ msgstr "Nieg Adressaten na \"PREP_ENCRYPT\" toföögt"
 msgid "New senders added after PREP_ENCRYPT command"
 msgstr "Nieg Senners na \"PREP_ENCRYPT\" toföögt"
 
-#: uiserver/encryptcommand.cpp:188
+#: uiserver/encryptcommand.cpp:185
 #, kde-format
 msgid ""
 "Caught unexpected exception in EncryptCommand::Private::"
@@ -3060,7 +3066,7 @@ msgstr ""
 "Nich verwacht Utnahm binnen \"EncryptCommand::Private::slotRecipientsResolved"
 "\" affungen: %1"
 
-#: uiserver/encryptcommand.cpp:192
+#: uiserver/encryptcommand.cpp:189
 msgid ""
 "Caught unknown exception in EncryptCommand::Private::slotRecipientsResolved"
 msgstr ""
@@ -3092,44 +3098,44 @@ msgstr "\"OUTPUT\" angeven"
 msgid "At least one FILE must be present"
 msgstr "Du muttst tominnst een \"FILE\" bruken"
 
-#: uiserver/decryptverifycommandemailbase.cpp:146
+#: uiserver/decryptverifycommandemailbase.cpp:144
 msgid "Can't use non-info SENDER"
 msgstr "Nich-Info-\"SENDER\" lett sik nich bruken"
 
-#: uiserver/decryptverifycommandemailbase.cpp:150
+#: uiserver/decryptverifycommandemailbase.cpp:148
 msgid "Can't use non-info RECIPIENT"
 msgstr "Nich-Info-\"RECIPIENT\" lett sik nich bruken"
 
-#: uiserver/decryptverifycommandemailbase.cpp:165
+#: uiserver/decryptverifycommandemailbase.cpp:163
 msgid "FILES present"
 msgstr "\"FILES\" angeven"
 
-#: uiserver/decryptverifycommandemailbase.cpp:169
+#: uiserver/decryptverifycommandemailbase.cpp:167
 msgid "At least one INPUT needs to be provided"
 msgstr "Du muttst tominnst eenmaal \"INPUT\" praatstellen"
 
-#: uiserver/decryptverifycommandemailbase.cpp:174
+#: uiserver/decryptverifycommandemailbase.cpp:172
 msgid "INPUT/SENDER --info count mismatch"
 msgstr "\"INPUT\"/\"SENDER\"-Infotall passt nich"
 
-#: uiserver/decryptverifycommandemailbase.cpp:179
+#: uiserver/decryptverifycommandemailbase.cpp:177
 msgid "INPUT/MESSAGE count mismatch"
 msgstr "Tall vun \"INPUT\" un \"MESSAGE\" passt nich"
 
-#: uiserver/decryptverifycommandemailbase.cpp:182
+#: uiserver/decryptverifycommandemailbase.cpp:180
 msgid "MESSAGE can only be given for detached signature verification"
 msgstr ""
 "\"MESSAGE\" lett sik bloots bi't Pröven vun aflööst Ünnerschriften bruken"
 
-#: uiserver/decryptverifycommandemailbase.cpp:190
+#: uiserver/decryptverifycommandemailbase.cpp:188
 msgid "Can't use OUTPUT and MESSAGE simultaneously"
 msgstr "\"OUTPUT\" un \"MESSAGE\" laat sik nich tosamen bruken"
 
-#: uiserver/decryptverifycommandemailbase.cpp:197
+#: uiserver/decryptverifycommandemailbase.cpp:195
 msgid "No backend support for OpenPGP"
 msgstr "Dat Hülpprogramm ünnerstütt OpenPGP nich"
 
-#: uiserver/decryptverifycommandemailbase.cpp:198
+#: uiserver/decryptverifycommandemailbase.cpp:196
 msgid "No backend support for S/MIME"
 msgstr "Dat Hülpprogramm ünnerstütt S/MIME nich"
 
@@ -3155,68 +3161,69 @@ msgstr "En anner \"gnupg\"-Böversietserver opdeckt, de op %1 luustert."
 msgid "No option name given"
 msgstr "Keen Optschoon angeven"
 
-#: uiserver/assuanserverconnection.cpp:312
+#: uiserver/assuanserverconnection.cpp:338
 msgid "Parse error"
 msgstr "Inleesfehler"
 
-#: uiserver/assuanserverconnection.cpp:322
+#: uiserver/assuanserverconnection.cpp:348
 msgid "CAPABILITIES doesn't take arguments"
 msgstr "\"CAPABILITIES\" bruukt keen Argumenten"
 
-#: uiserver/assuanserverconnection.cpp:356
+#: uiserver/assuanserverconnection.cpp:382
 msgid "Unknown value for WHAT"
 msgstr "Nich begäng Weert för \"WHAT\""
 
-#: uiserver/assuanserverconnection.cpp:367
+#: uiserver/assuanserverconnection.cpp:393
 msgid "START_KEYMANAGER does not take arguments"
 msgstr "\"START_KEYMANAGER\" bruukt keen Argumenten"
 
-#: uiserver/assuanserverconnection.cpp:381
+#: uiserver/assuanserverconnection.cpp:407
 msgid "START_CONFDIALOG does not take arguments"
 msgstr "\"START_CONFDIALOG\" bruukt keen Argumenten"
 
-#: uiserver/assuanserverconnection.cpp:426
+#: uiserver/assuanserverconnection.cpp:452
 #, kde-format
 msgid "Message #%1"
 msgstr "Naricht Nr.%1"
 
-#: uiserver/assuanserverconnection.cpp:437
+#: uiserver/assuanserverconnection.cpp:463
 msgid "Empty file path"
 msgstr "Leddig Dateipadd"
 
-#: uiserver/assuanserverconnection.cpp:440
-#: uiserver/assuanserverconnection.cpp:493
+#: uiserver/assuanserverconnection.cpp:466
+#: uiserver/assuanserverconnection.cpp:519
 msgid "Only absolute file paths are allowed"
 msgstr "Bloots afsoluut Dateipadden tolaten"
 
-#: uiserver/assuanserverconnection.cpp:498
+#: uiserver/assuanserverconnection.cpp:524
 #, kde-format
 msgid "Could not access directory \"%1\" for reading"
 msgstr "Orner \"%1\" lett sik nich lesen"
 
-#: uiserver/assuanserverconnection.cpp:505
+#: uiserver/assuanserverconnection.cpp:531
 #, kde-format
 msgid "Could not open file \"%1\" for reading"
 msgstr "Datei \"%1\" lett sik nich lesen"
 
-#: uiserver/assuanserverconnection.cpp:515
+#: uiserver/assuanserverconnection.cpp:541
 msgid "unknown exception caught"
 msgstr "nich begäng Utnahm affungen"
 
-#: uiserver/assuanserverconnection.cpp:556
+#: uiserver/assuanserverconnection.cpp:594
 msgid "Cannot mix --info with non-info SENDER or RECIPIENT"
 msgstr ""
 "\"--info\" lett sik nich mit Nich-Info-\"SENDER\" oder -\"RECIPIENT\" mischen"
 
-#: uiserver/assuanserverconnection.cpp:560
+#: uiserver/assuanserverconnection.cpp:598
 msgid "Argument is not a valid RFC-2822 mailbox"
 msgstr "Dat Argument gellt nich as RFC-2822-Postfach"
 
-#: uiserver/assuanserverconnection.cpp:563
+#: uiserver/assuanserverconnection.cpp:601
 msgid "Garbage after valid RFC-2822 mailbox detected"
 msgstr "Dat RFC-2822-Postfach gellt, man dor achter kummt Tüdelkraams."
 
-#: uiserver/assuanserverconnection.cpp:591
+#: uiserver/assuanserverconnection.cpp:630
+#: uiserver/assuanserverconnection.cpp:641
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -3226,71 +3233,74 @@ msgstr ""
 "<para>De Senner-Adress <email>%1</email> passt to mehr as een "
 "Verslötelformaat.</para><para>Wat is dat Formaat, dat Du bruken wullt?</para>"
 
-#: uiserver/assuanserverconnection.cpp:593
+#: uiserver/assuanserverconnection.cpp:632
+#: uiserver/assuanserverconnection.cpp:643
 msgctxt "@title"
 msgid "Format Choice"
 msgstr "Formaat utsöken"
 
-#: uiserver/assuanserverconnection.cpp:594
+#: uiserver/assuanserverconnection.cpp:633
+#: uiserver/assuanserverconnection.cpp:644
 msgctxt "@action:button"
 msgid "Send OpenPGP-Signed"
 msgstr "OpenPGP-Ünnerschrift"
 
-#: uiserver/assuanserverconnection.cpp:595
+#: uiserver/assuanserverconnection.cpp:634
+#: uiserver/assuanserverconnection.cpp:645
 msgctxt "@action:button"
 msgid "Send S/MIME-Signed"
 msgstr "S/MIME-Ünnerschrift"
 
-#: uiserver/assuanserverconnection.cpp:965
+#: uiserver/assuanserverconnection.cpp:1016
 #, kde-format
 msgid "Caught unexpected exception: %1"
 msgstr "Nich verwacht Utnahm affungen: %1"
 
-#: uiserver/assuanserverconnection.cpp:969
+#: uiserver/assuanserverconnection.cpp:1020
 msgid "Caught unknown exception - fix the program!"
 msgstr "Nich verwacht Utnahm affungen - richt dat Programm!"
 
-#: uiserver/assuanserverconnection.cpp:1134
+#: uiserver/assuanserverconnection.cpp:1185
 #, kde-format
 msgid "Can't send \"%1\" status"
 msgstr "Status \"%1\" lett sik nich loosstüern"
 
-#: uiserver/assuanserverconnection.cpp:1141
+#: uiserver/assuanserverconnection.cpp:1192
 msgid "Can't send data"
 msgstr "Daten laat sik nich loosstüern"
 
-#: uiserver/assuanserverconnection.cpp:1144
+#: uiserver/assuanserverconnection.cpp:1195
 msgid "Can't flush data"
 msgstr "Daten laat sik nich bültschrieven."
 
-#: uiserver/assuanserverconnection.cpp:1309
-#: uiserver/assuanserverconnection.cpp:1354
+#: uiserver/assuanserverconnection.cpp:1360
+#: uiserver/assuanserverconnection.cpp:1405
 msgid "Caught unknown exception"
 msgstr "Nich verwacht Utnahm affungen"
 
-#: uiserver/assuanserverconnection.cpp:1375
+#: uiserver/assuanserverconnection.cpp:1426
 msgid "Required --mode option missing"
 msgstr "Optschoon \"--mode\" fehlt"
 
-#: uiserver/assuanserverconnection.cpp:1382
+#: uiserver/assuanserverconnection.cpp:1433
 #, kde-format
 msgid "invalid mode: \"%1\""
 msgstr "Leeg Bedriefoort: \"%1\""
 
-#: uiserver/assuanserverconnection.cpp:1403
+#: uiserver/assuanserverconnection.cpp:1454
 msgid "Required --protocol option missing"
 msgstr "Optschoon \"--protocol\" fehlt"
 
-#: uiserver/assuanserverconnection.cpp:1408
+#: uiserver/assuanserverconnection.cpp:1459
 msgid "--protocol is not allowed here"
 msgstr "\"--protocol\" is hier nich verlöövt"
 
-#: uiserver/assuanserverconnection.cpp:1415
+#: uiserver/assuanserverconnection.cpp:1466
 #, kde-format
 msgid "invalid protocol \"%1\""
 msgstr "Protokoll \"%1\" is leeg"
 
-#: uiserver/echocommand.cpp:152 uiserver/signcommand.cpp:168
+#: uiserver/echocommand.cpp:152 uiserver/signcommand.cpp:165
 #, kde-format
 msgid ""
 "Caught unexpected exception in SignCommand::Private::slotMicAlgDetermined: %1"
@@ -3298,7 +3308,7 @@ msgstr ""
 "Nich verwacht Utnahm binnen \"SignCommand::Private::slotMicAlgDetermined\" "
 "affungen: %1"
 
-#: uiserver/echocommand.cpp:156 uiserver/signcommand.cpp:172
+#: uiserver/echocommand.cpp:156 uiserver/signcommand.cpp:169
 msgid "Caught unknown exception in SignCommand::Private::slotMicAlgDetermined"
 msgstr ""
 "Nich verwacht Utnahm binnen \"SignCommand::Private::slotMicAlgDetermined\" "
@@ -3336,7 +3346,7 @@ msgstr "\"RECIPIENT\" mutt nich vör \"SIGN\" stahn, utbenahmen mit \"--info\""
 msgid "MESSAGE command is not allowed before SIGN"
 msgstr "De \"MESSAGE\"-Befehl mutt nich vör \"SIGN\" stahn"
 
-#: uiserver/signcommand.cpp:146
+#: uiserver/signcommand.cpp:143
 #, kde-format
 msgid ""
 "Caught unexpected exception in SignCommand::Private::slotRecipientsResolved: "
@@ -3345,7 +3355,7 @@ msgstr ""
 "Nich verwacht Utnahm binnen \"SignCommand::Private::slotRecipientsResolved\" "
 "affungen: %1"
 
-#: uiserver/signcommand.cpp:150
+#: uiserver/signcommand.cpp:147
 msgid ""
 "Caught unknown exception in SignCommand::Private::slotRecipientsResolved"
 msgstr ""
@@ -4547,13 +4557,13 @@ msgid "Impose setting on all users"
 msgstr "Instellen för all Brukers fastleggen"
 
 #. i18n: file: crypto/gui/signingcertificateselectionwidget.ui:16
-#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, pgpLabel)
 #: rc.cpp:536
 msgid "OpenPGP Signing Certificate"
 msgstr "OpenPGP-Ünnerschriftzertifikaat"
 
 #. i18n: file: crypto/gui/signingcertificateselectionwidget.ui:26
-#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (text), widget (QLabel, cmsLabel)
 #: rc.cpp:539
 msgid "S/MIME Signing Certificate"
 msgstr "S/MIME-Ünnerschriftzertifikaat"
@@ -6023,6 +6033,22 @@ msgid "The GpgSM process ended prematurely because of an unexpected error."
 msgstr ""
 "De Perzess \"GpgSM\" hett sik vör Tiet utmaakt, dat geev en nich verwacht "
 "Fehler."
+
+#~ msgid "Bad signature by unknown key %1."
+#~ msgstr "Leeg Ünnerschrift mit nich begäng Slötel %1."
+
+#~ msgid "Bad signature by an unknown key."
+#~ msgstr "Leeg Ünnerschrift mit en nich begäng Slötel."
+
+#~ msgid "Bad signature by %1."
+#~ msgstr "Leeg Ünnerschrift vun \"%1\"."
+
+#~ msgid ""
+#~ "Certificates (*.asc *.cer *.cert *.crt *.der *.pem *.der *.p7c *.p12 *."
+#~ "pfx)"
+#~ msgstr ""
+#~ "Zertifikaten (*.asc *.cer *.cert *.crt *.der *.pem *.der *.p7c *.p12 *."
+#~ "pfx)"
 
 #~ msgid " One for OpenPGP recipients, one for S/MIME recipients."
 #~ msgstr " Een för OpenPGP-Adressaten, een för S/MIME-Adressaten."
