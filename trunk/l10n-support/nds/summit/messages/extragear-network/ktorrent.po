@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-10-29 10:38+0100\n"
+"POT-Creation-Date: 2008-11-01 10:45+0100\n"
 "PO-Revision-Date: 2008-10-30 01:08+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -85,6 +85,7 @@ msgstr "127.0.0.1"
 #: ktorrent/addpeersdlg.ui:59 ktorrent/networkpref.ui:22
 #: ktorrent/proxypref.ui:54 ktorrent/proxypref.ui:151
 #: ktorrent/torrentcreatordlg.ui:244 ktupnptest/upnptestwidget.ui:64
+#: plugins/scripting/scripts/email_notifications/emailconfig.ui:61
 #: plugins/webinterface/webinterfaceprefwidget.ui:33
 msgid "Port:"
 msgstr "Port:"
@@ -716,6 +717,20 @@ msgstr "KTorrent hett %1 Torrents ut de KDE3-Verschoon vun KTorrent funnen, wull
 #: ktorrent/core.cpp:1188
 msgid "No torrents from the KDE3 version were found !"
 msgstr "Keen Torrents ut de KDE3-Verschoon funnen!"
+
+#. +> trunk
+#: ktorrent/dbus/dbustorrent.cpp:333
+#, fuzzy
+#| msgid "Maximum share ratio limit reached."
+msgid "Maximum share ratio reached !"
+msgstr "Bi de hööchst Verdeelrelatschoon anlangt."
+
+#. +> trunk
+#: ktorrent/dbus/dbustorrent.cpp:336
+#, fuzzy
+#| msgid "Maximum seed time:"
+msgid "Maximum seed time reached !"
+msgstr "Hööchst Verdeeltiet:"
 
 #. +> trunk
 #: ktorrent/fileselectdlg.cpp:148
@@ -1439,7 +1454,7 @@ msgstr "Torrent-Dateien"
 
 #. +> trunk stable
 #: ktorrent/importdialog.cpp:52 plugins/bwscheduler/scheduleeditor.cpp:115
-#: plugins/scripting/scriptingplugin.cpp:175
+#: plugins/scripting/scriptingplugin.cpp:181
 msgid "All files"
 msgstr "All Dateien"
 
@@ -2648,7 +2663,9 @@ msgstr "Brukernaam un Passwoort nödig"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, textLabel5)
 #. +> trunk stable
-#: ktorrent/proxypref.ui:197 plugins/webinterface/webinterfaceprefwidget.ui:193
+#: ktorrent/proxypref.ui:197
+#: plugins/scripting/scripts/email_notifications/emailconfig.ui:25
+#: plugins/webinterface/webinterfaceprefwidget.ui:193
 msgid "Username:"
 msgstr "Brukernaam:"
 
@@ -2670,8 +2687,11 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_14)
 #. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, label_2)
 #. +> trunk stable
-#: ktorrent/proxypref.ui:214 plugins/webinterface/webinterfaceprefwidget.ui:210
+#: ktorrent/proxypref.ui:214
+#: plugins/scripting/scripts/email_notifications/emailconfig.ui:35
+#: plugins/webinterface/webinterfaceprefwidget.ui:210
 msgid "Password:"
 msgstr "Passwoort:"
 
@@ -4723,31 +4743,31 @@ msgid "Cannot find port forwarding service in the device's description!"
 msgstr "In de Reedschap-Beschrieven lett sik keen Deenst för't Port-Wiederledden finnen!"
 
 #. +> trunk
-#: plasma/applet/applet.cpp:131 plasma/applet/applet.cpp:310
-#: plasma/applet/applet.cpp:395
+#: plasma/applet/applet.cpp:139 plasma/applet/applet.cpp:318
+#: plasma/applet/applet.cpp:403
 #, kde-format
 msgid "Up: %1 KB/s"
 msgstr "Hooch: %1 kB/s"
 
 #. +> trunk
-#: plasma/applet/applet.cpp:132 plasma/applet/applet.cpp:311
-#: plasma/applet/applet.cpp:397
+#: plasma/applet/applet.cpp:140 plasma/applet/applet.cpp:319
+#: plasma/applet/applet.cpp:405
 #, kde-format
 msgid "Down: %1 KB/s"
 msgstr "Daal: %1 kB/s"
 
 #. +> trunk
-#: plasma/applet/applet.cpp:167 plasma/applet/applet.cpp:290
+#: plasma/applet/applet.cpp:175 plasma/applet/applet.cpp:298
 msgid "KTorrent is not running !"
 msgstr "KTorrent löppt nich!"
 
 #. +> trunk
-#: plasma/applet/applet.cpp:169 plasma/applet/applet.cpp:282
+#: plasma/applet/applet.cpp:177 plasma/applet/applet.cpp:290
 msgid "No torrents loaded !"
 msgstr "Keen Torrents laadt!"
 
 #. +> trunk
-#: plasma/applet/applet.cpp:339
+#: plasma/applet/applet.cpp:347
 #, kde-format
 msgid "Downloaded: %1 / %2 Uploaded: %3"
 msgstr "Daallaadt: %1 / %2  Hoochlaadt: %3"
@@ -6684,50 +6704,57 @@ msgstr ""
 "</body></html>"
 
 #. +> trunk
-#: plugins/scripting/scriptingplugin.cpp:69
+#: plugins/scripting/scriptingplugin.cpp:70
 msgid "Add Script"
 msgstr "Skript tofögen"
 
 #. +> trunk
-#: plugins/scripting/scriptingplugin.cpp:73
+#: plugins/scripting/scriptingplugin.cpp:74
 msgid "Remove Script"
 msgstr "Skript wegmaken"
 
 #. +> trunk
-#: plugins/scripting/scriptingplugin.cpp:77
+#: plugins/scripting/scriptingplugin.cpp:78
 msgid "Run Script"
 msgstr "Skript utföhren"
 
 #. +> trunk
-#: plugins/scripting/scriptingplugin.cpp:81
+#: plugins/scripting/scriptingplugin.cpp:82
 msgid "Stop Script"
 msgstr "Skript anhollen"
 
 #. +> trunk
-#: plugins/scripting/scriptingplugin.cpp:85
+#: plugins/scripting/scriptingplugin.cpp:86
 msgid "Edit Script"
 msgstr "Skript bewerken"
 
 #. +> trunk
-#: plugins/scripting/scriptingplugin.cpp:89
+#: plugins/scripting/scriptingplugin.cpp:90
 msgid "Properties"
 msgstr "Egenschappen"
 
 #. +> trunk
-#: plugins/scripting/scriptingplugin.cpp:96
-#: plugins/scripting/scriptingplugin.cpp:114
+#: plugins/scripting/scriptingplugin.cpp:94
+#, fuzzy
+#| msgid "Configure Columns"
+msgid "Configure"
+msgstr "Striepen instellen"
+
+#. +> trunk
+#: plugins/scripting/scriptingplugin.cpp:101
+#: plugins/scripting/scriptingplugin.cpp:120
 msgid "Scripting"
 msgstr "Skripten"
 
 #. +> trunk
-#: plugins/scripting/scriptingplugin.cpp:109
-#: plugins/scripting/scriptingplugin.cpp:175
+#: plugins/scripting/scriptingplugin.cpp:115
+#: plugins/scripting/scriptingplugin.cpp:181
 msgid "Scripts"
 msgstr "Skripten"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ScriptProperties)
 #. +> trunk
-#: plugins/scripting/scriptingplugin.cpp:271
+#: plugins/scripting/scriptingplugin.cpp:277
 #: plugins/scripting/scriptproperties.ui:13
 msgid "Script Properties"
 msgstr "Skript-Egenschappen"
@@ -6761,6 +6788,66 @@ msgstr "Nettpost:"
 #: plugins/scripting/scriptproperties.ui:107
 msgid "Website:"
 msgstr "Nettsiet:"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, EMailConfigWidget)
+#. +> trunk
+#: plugins/scripting/scripts/email_notifications/emailconfig.ui:13
+#, fuzzy
+#| msgid "Settings"
+msgid "EMail Settings"
+msgstr "Instellen"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. +> trunk
+#: plugins/scripting/scripts/email_notifications/emailconfig.ui:19
+#, fuzzy
+#| msgid "Server:"
+msgid "SMTP Server"
+msgstr "Server:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. +> trunk
+#: plugins/scripting/scripts/email_notifications/emailconfig.ui:49
+#, fuzzy
+#| msgid "Server:"
+msgid "SMTP server:"
+msgstr "Server:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, tls)
+#. +> trunk
+#: plugins/scripting/scripts/email_notifications/emailconfig.ui:80
+#, fuzzy
+#| msgid "Use protocol encryption"
+msgid "Use SSL/TLS encryption"
+msgstr "Protokollverslöteln bruken"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#. +> trunk
+#: plugins/scripting/scripts/email_notifications/emailconfig.ui:90
+#, fuzzy
+#| msgid "Description:"
+msgid "Destination"
+msgstr "Beschrieven:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#. +> trunk
+#: plugins/scripting/scripts/email_notifications/emailconfig.ui:96
+msgid "Send mails to:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, add_cc)
+#. +> trunk
+#: plugins/scripting/scripts/email_notifications/emailconfig.ui:106
+#, fuzzy
+#| msgid "Add peer:"
+msgid "Add CC:"
+msgstr "Partner tofögen:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, add_bcc)
+#. +> trunk
+#: plugins/scripting/scripts/email_notifications/emailconfig.ui:116
+msgid "Add BCC:"
+msgstr ""
 
 #. +> trunk stable
 #: plugins/search/htmlpart.cpp:164
