@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: marble\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-11-05 10:46+0100\n"
+"POT-Creation-Date: 2008-11-08 10:51+0100\n"
 "PO-Revision-Date: 2008-11-05 23:30+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1688,8 +1688,9 @@ msgid "Flat Map"
 msgstr "Flache Koort"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, projectionComboBox)
+#. i18n: ectx: property (text), item, widget (QComboBox, projection)
 #. +> trunk stable
-#: src/lib/MarbleControlBox.ui:506 src/plasmoid/worldclockConfig.ui:92
+#: src/lib/MarbleControlBox.ui:506 src/plasmoid/worldclockConfig.ui:73
 msgid "Mercator"
 msgstr "Mercator"
 
@@ -2959,129 +2960,178 @@ msgid "Worldclock Applet Configuration"
 msgstr "Weltklock-Lüttprogramm instellen"
 
 #. i18n: ectx: property (text), widget (QLabel, timeDisplayLabel)
-#. +> trunk stable
-#: src/plasmoid/worldclockConfig.ui:45
+#. +> stable
+#: src/plasmoid/worldclockConfig.ui:47
 msgid "Time Display"
 msgstr "Tiet-Formaat"
 
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#. +> trunk
+#: src/plasmoid/worldclockConfig.ui:50
+#, fuzzy
+#| msgid "Time Display"
+msgid "Map Display"
+msgstr "Tiet-Formaat"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. +> trunk
+#: src/plasmoid/worldclockConfig.ui:56
+msgid "Projection"
+msgstr "Projekschoon"
+
 #. i18n: ectx: property (toolTip), widget (QComboBox, timeDisplayComboBox)
-#. +> trunk stable
-#: src/plasmoid/worldclockConfig.ui:55
+#. +> stable
+#: src/plasmoid/worldclockConfig.ui:57
 msgid "The format to display the time in"
 msgstr "Dat Tietformaat"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, timeDisplayComboBox)
-#. +> trunk stable
-#: src/plasmoid/worldclockConfig.ui:58
+#. +> stable
+#: src/plasmoid/worldclockConfig.ui:60
 msgid "This box allows you to choose the way the time is displayed"
 msgstr "Mit dit Feld lett sik dat Tietformaat fastleggen"
 
+#. i18n: ectx: property (text), item, widget (QComboBox, projection)
+#. +> trunk
+#: src/plasmoid/worldclockConfig.ui:64
+msgid "Equirectangular"
+msgstr "Längdenliek Zylinnerprojizeren"
+
 #. i18n: ectx: property (text), item, widget (QComboBox, timeDisplayComboBox)
-#. +> trunk stable
-#: src/plasmoid/worldclockConfig.ui:62
+#. +> stable
+#: src/plasmoid/worldclockConfig.ui:64
 msgid "24-hour clock"
 msgstr "24-Stünnen-Tiet"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, timeDisplayComboBox)
-#. +> trunk stable
-#: src/plasmoid/worldclockConfig.ui:67
+#. +> stable
+#: src/plasmoid/worldclockConfig.ui:69
 msgid "12-hour clock"
 msgstr "12-Stünnen-Tiet"
 
-#. i18n: ectx: property (text), widget (QLabel, projectionLabel)
-#. +> trunk
-#: src/plasmoid/worldclockConfig.ui:79
-msgid "Projection"
-msgstr "Projekschoon"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, projectionComboBox)
-#. +> trunk
-#: src/plasmoid/worldclockConfig.ui:87
-msgid "Equirectangular"
-msgstr "Längdenliek Zylinnerprojizeren"
-
 #. i18n: ectx: property (toolTip), widget (QCheckBox, showDateCheckBox)
-#. +> trunk stable
-#: src/plasmoid/worldclockConfig.ui:104
+#. +> stable
+#: src/plasmoid/worldclockConfig.ui:79
 msgid "Check to show the date as well as the time"
 msgstr "Maak dit an, wenn dat Datum ok wiest warrn schall."
 
+#. i18n: ectx: property (text), widget (QRadioButton, longitudeButton)
+#. +> trunk
+#: src/plasmoid/worldclockConfig.ui:85
+#, fuzzy
+#| msgid "Centre Longitude"
+msgid "Center map on longitude"
+msgstr "Geograafsch Längde inmiddeln"
+
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, showDateCheckBox)
-#. +> trunk stable
-#: src/plasmoid/worldclockConfig.ui:110
+#. +> stable
+#: src/plasmoid/worldclockConfig.ui:85
 msgid "This checkbox allows you to choose to show the date as well as the time"
 msgstr "Mit dit Ankrüüzfeld lett sik fastleggen, wat ok dat Datum wiest warrt."
 
 #. i18n: ectx: property (text), widget (QCheckBox, showDateCheckBox)
-#. +> trunk stable
-#: src/plasmoid/worldclockConfig.ui:113
+#. +> stable
+#: src/plasmoid/worldclockConfig.ui:88
 msgid "Show date"
 msgstr "Datum wiesen"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, showFullCheckBox)
-#. +> trunk stable
-#: src/plasmoid/worldclockConfig.ui:120
+#. +> stable
+#: src/plasmoid/worldclockConfig.ui:95
 msgid "Chooses whether to show the full name of the timezone"
 msgstr "Fastleggen, wat de hele Naam vun't Tietrebeet wiest warrt"
 
+#. i18n: ectx: property (text), widget (QRadioButton, daylightButton)
+#. +> trunk
+#: src/plasmoid/worldclockConfig.ui:98
+#, fuzzy
+#| msgid "Centre Map on Sun"
+msgid "Center map on daylight"
+msgstr "Koort na de Sünn inmiddeln"
+
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, showFullCheckBox)
-#. +> trunk stable
-#: src/plasmoid/worldclockConfig.ui:123
+#. +> stable
+#: src/plasmoid/worldclockConfig.ui:98
 msgid "This checkbox chooses whether to show the full name of the timezone; eg \"Europe/London\" or simply \"London\""
 msgstr "Mit dit Ankrüüzfeld lett sik fastleggen, wat de hele Naam vun't Tietrebeet wiest warrt, a.B. \"Europa/London\" oder bloots \"London\"."
 
 #. i18n: ectx: property (text), widget (QCheckBox, showFullCheckBox)
-#. +> trunk stable
-#: src/plasmoid/worldclockConfig.ui:126
+#. +> stable
+#: src/plasmoid/worldclockConfig.ui:101
 msgid "Show full timezone name"
 msgstr "Heel Naam vun dat Tietrebeet wiesen"
 
-#. i18n: ectx: property (text), widget (QCheckBox, showMapOnlyCheckBox)
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #. +> trunk
-#: src/plasmoid/worldclockConfig.ui:133
-msgid "Show map only"
-msgstr "Bloots Koort wiesen"
+#: src/plasmoid/worldclockConfig.ui:106
+msgid "Time Zones"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, centerSunCheckBox)
-#. +> trunk stable
-#: src/plasmoid/worldclockConfig.ui:140
+#. +> stable
+#: src/plasmoid/worldclockConfig.ui:108
 msgid "Check to centre the map on the area currently illuminated by the sun"
 msgstr "Maak dit an, wenn Du de Koort na dat opstunns vun de Sünn belicht Rebeet inmiddeln wullt."
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, centerSunCheckBox)
-#. +> trunk stable
-#: src/plasmoid/worldclockConfig.ui:143
+#. +> stable
+#: src/plasmoid/worldclockConfig.ui:111
 msgid "This checkbox allows you to choose to centre the map over the area that is currently illuminated by the sun."
 msgstr "Mit dit Ankrüüzfeld lett sik de Koort na dat opstunns vun de Sünn belicht Rebeet inmiddeln."
 
 #. i18n: ectx: property (text), widget (QCheckBox, centerSunCheckBox)
-#. +> trunk stable
-#: src/plasmoid/worldclockConfig.ui:146
+#. +> stable
+#: src/plasmoid/worldclockConfig.ui:114
 msgid "Centre Map on Sun"
 msgstr "Koort na de Sünn inmiddeln"
 
+#. i18n: ectx: property (text), widget (QCheckBox, customTz)
+#. +> trunk
+#: src/plasmoid/worldclockConfig.ui:115
+msgid "Use custom timezone selection"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KTimeZoneWidget, tzWidget)
+#. +> trunk
+#: src/plasmoid/worldclockConfig.ui:126
+#, fuzzy
+#| msgid "Areas"
+msgid "Area"
+msgstr "Rebeden"
+
 #. i18n: ectx: property (toolTip), widget (QLabel, rotationLabel)
-#. +> trunk stable
-#: src/plasmoid/worldclockConfig.ui:160
+#. +> stable
+#: src/plasmoid/worldclockConfig.ui:126
 msgid "This longitude will be the centre of the map"
 msgstr "Disse geograafsch Längde warrt de Middelpunkt vun de Koort"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, rotationLabel)
-#. +> trunk stable
-#: src/plasmoid/worldclockConfig.ui:163
+#. +> stable
+#: src/plasmoid/worldclockConfig.ui:129
 msgid "Here you can select the longitude which will be the centre of the map"
 msgstr "Hier kannst Du de geograafsch Längde för den Middelpunkt vun de Koort kören."
 
+#. i18n: ectx: property (text), widget (KTimeZoneWidget, tzWidget)
+#. +> trunk
+#: src/plasmoid/worldclockConfig.ui:131
+#, fuzzy
+#| msgid "Vegetation"
+msgid "Region"
+msgstr "Planten"
+
 #. i18n: ectx: property (text), widget (QLabel, rotationLabel)
-#. +> trunk stable
-#: src/plasmoid/worldclockConfig.ui:166
+#. +> stable
+#: src/plasmoid/worldclockConfig.ui:132
 msgid "Centre Longitude"
 msgstr "Geograafsch Längde inmiddeln"
 
-#. +> trunk stable
-#: src/plugins/designer/latloneditwidget/LatLonEditPlugin.cpp:50
-msgid "Input Widgets"
-msgstr "Ingaavelementen"
+#. i18n: ectx: property (text), widget (KTimeZoneWidget, tzWidget)
+#. +> trunk
+#: src/plasmoid/worldclockConfig.ui:136
+#, fuzzy
+#| msgid "Continent"
+msgid "Comment"
+msgstr "Eerdeel"
 
 #. +> trunk stable
 #: src/plugins/marble/compass/CompassFloatItem.cpp:48
@@ -3443,6 +3493,14 @@ msgstr "Alle Dateitypen, de ünnerstütt warrt (*.gpx *.kml);;GPS-Daten (*.gpx);
 #. +> stable
 msgid "A Real Time.Cloud Map that gets updated every 3 hours. It uses GOES, METEOSAT, and GMS satellite imagery downloaded from the Geostationary Satellite Imagery page at Dundee University.  Credits: Hari Nair, Xplanet Project"
 msgstr "En Echttiet-Wulkenkoort, de all dree Stünnen opfrischt warrt. Bruukt warrt GOES-, METEOSAT- un GMS-Satellitenbiller, daallaadt vun de Dundee-Universiteet ehr Siet mit eersynkroon Satellitenbiller. Dank an Hari Nair, Schriever vun't Xplanet-Projekt."
+
+#. +> stable
+#: src/plasmoid/latloneditplugin.cpp:56
+msgid "Input Widgets"
+msgstr "Ingaavelementen"
+
+#~ msgid "Show map only"
+#~ msgstr "Bloots Koort wiesen"
 
 #~ msgid "Healthland"
 #~ msgstr "Heid"
