@@ -10,7 +10,7 @@ expr "$1$2" : ".*@" > /dev/null && {
 }
 
 #pushd /home/soe/l10n/nds/messages
-expr "$(pwd)" : ".*/nds/messages" > /dev/null || {
+expr "$(pwd)" : ".*/nds.*/messages" > /dev/null || {
 	echo "Föhr dissen Befehl bitte bloots binnen en KDE-SVN-Orner för nds ut!"
 	exit 1
 }
