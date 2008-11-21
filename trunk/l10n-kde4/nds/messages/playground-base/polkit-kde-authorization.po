@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: polkit-kde-authorization\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-11-20 10:26+0100\n"
+"POT-Creation-Date: 2008-11-21 10:13+0100\n"
 "PO-Revision-Date: 2008-11-16 02:12+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -17,9 +17,9 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#. i18n: file: Authorizations.ui:13
-#. i18n: ectx: property (windowTitle), widget (QWidget, Authorizations)
-#: Authorizations.cpp:65 rc.cpp:3 rc.cpp:156
+#. i18n: file: PkKAuthorization.ui:13
+#. i18n: ectx: property (windowTitle), widget (QWidget, PkKAuthorization)
+#: PkKAuthorizationDialog.cpp:39 rc.cpp:63 rc.cpp:156
 msgid "Authorizations"
 msgstr "Verlööfnissen"
 
@@ -53,7 +53,11 @@ msgstr "Dario Freddi"
 msgid "Developer"
 msgstr "Schriever"
 
-#: PkKBlockGrantAuth.cpp:38
+#: main.cpp:42
+msgid "Action to be displayed"
+msgstr ""
+
+#: PkKBlockGrantAuth.cpp:40
 #, fuzzy
 #| msgid "Grant Authorization"
 msgid "Grant Negative Authorization"
@@ -61,18 +65,25 @@ msgstr "Verlööf geven"
 
 #. i18n: file: PkKBlockGrantAuth.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, PkKBlockGrantAuth)
-#: PkKBlockGrantAuth.cpp:38 rc.cpp:72 rc.cpp:115
+#: PkKBlockGrantAuth.cpp:40 rc.cpp:72 rc.cpp:115
 msgid "Grant Authorization"
 msgstr "Verlööf geven"
 
-#: PkKBlockGrantAuth.cpp:43
+#: PkKBlockGrantAuth.cpp:45
 #, kde-format
 msgid ""
 "<b><big>Granting a negative authorization for the <i>%1</i> action requires "
 "more information</big></b"
 msgstr ""
 
-#: PkKBlockGrantAuth.cpp:47
+#: PkKBlockGrantAuth.cpp:46
+#, kde-format
+msgid ""
+"<b><big>Granting an authorization for the <i>%1</i> action requires more "
+"information</big></b"
+msgstr ""
+
+#: PkKBlockGrantAuth.cpp:49
 #, fuzzy
 #| msgid ""
 #| "Select the beneficiary and, optionally, how to constrain the "
@@ -84,81 +95,95 @@ msgstr ""
 "Söök den Nüttnehmer ut, den Du de Verlööfnis geven wullt, un köörwies ok, "
 "wodennig Du ehr ingrenzen wullt."
 
-#: PkKBlockGrantAuth.cpp:51
+#. i18n: file: PkKBlockGrantAuth.ui:19
+#. i18n: ectx: property (text), widget (QLabel, instructionsL)
+#: PkKBlockGrantAuth.cpp:50 rc.cpp:75 rc.cpp:118
+msgid ""
+"Select the beneficiary and, optionally, how to constrain the authorization "
+"that you are about to grant."
+msgstr ""
+"Söök den Nüttnehmer ut, den Du de Verlööfnis geven wullt, un köörwies ok, "
+"wodennig Du ehr ingrenzen wullt."
+
+#: PkKBlockGrantAuth.cpp:53
 #, fuzzy
 #| msgid "Select the user that will receive the authorization."
 msgid "Select the user that will receive the negative authorization."
 msgstr "Den Bruker utsöken, den Du de Verlööfnis geven wullt"
 
-#: PkKBlockGrantAuth.cpp:54
+#. i18n: file: PkKBlockGrantAuth.ui:35
+#. i18n: ectx: property (text), widget (QLabel, beneficiaryL)
+#: PkKBlockGrantAuth.cpp:54 rc.cpp:81 rc.cpp:124
+msgid "Select the user that will receive the authorization."
+msgstr "Den Bruker utsöken, den Du de Verlööfnis geven wullt"
+
+#: PkKBlockGrantAuth.cpp:56
 #, fuzzy
 #| msgid "&Block"
 msgid "Block"
 msgstr "&Blockeren"
 
-#. i18n: file: Authorizations.ui:21
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, searchLine)
-#: rc.cpp:6 rc.cpp:159
-msgid "Search"
-msgstr "Söken"
+#: PkKBlockGrantAuth.cpp:56
+#, fuzzy
+#| msgid "&Grant"
+msgid "Grant"
+msgstr "&Geven"
 
-#. i18n: file: Authorizations.ui:70
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:9 rc.cpp:162
-msgid "Select an Action"
+#: PkKBlockGrantAuth.cpp:80
+msgid "Select user"
 msgstr ""
 
 #. i18n: file: PkKAction.ui:31
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:12 rc.cpp:165
+#: rc.cpp:3 rc.cpp:165
 msgid "Action"
 msgstr "Akschoon"
 
 #. i18n: file: PkKAction.ui:37
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:15 rc.cpp:168
+#: rc.cpp:6 rc.cpp:168
 msgid "Identifier:"
 msgstr "Beteker:"
 
 #. i18n: file: PkKAction.ui:50
 #. i18n: ectx: property (text), widget (QLabel, identifierL)
-#: rc.cpp:18 rc.cpp:171
+#: rc.cpp:9 rc.cpp:171
 msgid "identifier"
 msgstr "Beteker"
 
 #. i18n: file: PkKAction.ui:57
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:21 rc.cpp:174
+#: rc.cpp:12 rc.cpp:174
 msgid "Description:"
 msgstr "Beschrieven:"
 
 #. i18n: file: PkKAction.ui:70
 #. i18n: ectx: property (text), widget (QLabel, descriptionL)
-#: rc.cpp:24 rc.cpp:177
+#: rc.cpp:15 rc.cpp:177
 msgid "description"
 msgstr "Beschrieven"
 
 #. i18n: file: PkKAction.ui:83
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:27 rc.cpp:180
+#: rc.cpp:18 rc.cpp:180
 msgid "Vendor:"
 msgstr "Leverant:"
 
 #. i18n: file: PkKAction.ui:90
 #. i18n: ectx: property (text), widget (KUrlLabel, vendorUrlKUL)
-#: rc.cpp:30 rc.cpp:183
+#: rc.cpp:21 rc.cpp:183
 msgid "vendor url"
 msgstr "Leverant-URL"
 
 #. i18n: file: PkKAction.ui:106
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:33 rc.cpp:186
+#: rc.cpp:24 rc.cpp:186
 msgid "Implicit Authorizations"
 msgstr "Inslaten Verlööfnissen"
 
 #. i18n: file: PkKAction.ui:112
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:36 rc.cpp:189
+#: rc.cpp:27 rc.cpp:189
 msgid ""
 "Implicit authorizations are authorizations automatically given to users "
 "based on certain criteria such as if they are on the local console."
@@ -168,43 +193,43 @@ msgstr ""
 
 #. i18n: file: PkKAction.ui:125
 #. i18n: ectx: property (text), widget (KPushButton, modifyPB)
-#: rc.cpp:39 rc.cpp:192
+#: rc.cpp:30 rc.cpp:192
 msgid "&Modify"
 msgstr "Ä&nnern"
 
 #. i18n: file: PkKAction.ui:135
 #. i18n: ectx: property (text), widget (KPushButton, revertPB)
-#: rc.cpp:42 rc.cpp:195
+#: rc.cpp:33 rc.cpp:195
 msgid "Revert to &defaults"
 msgstr "Op &Standards torüchsetten"
 
 #. i18n: file: PkKAction.ui:144
 #. i18n: ectx: property (text), widget (QLabel, allowAnyL)
-#: rc.cpp:45 rc.cpp:198
+#: rc.cpp:36 rc.cpp:198
 msgid "Anyone:"
 msgstr "All:"
 
 #. i18n: file: PkKAction.ui:151
 #. i18n: ectx: property (text), widget (QLabel, allowInactiveL)
-#: rc.cpp:48 rc.cpp:201
+#: rc.cpp:39 rc.cpp:201
 msgid "Console:"
 msgstr "Konsool:"
 
 #. i18n: file: PkKAction.ui:158
 #. i18n: ectx: property (text), widget (QLabel, allowActiveL)
-#: rc.cpp:51 rc.cpp:204
+#: rc.cpp:42 rc.cpp:204
 msgid "Active Console:"
 msgstr "Aktiev Konsool:"
 
 #. i18n: file: PkKAction.ui:200
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:54 rc.cpp:207
+#: rc.cpp:45 rc.cpp:207
 msgid "Explicit Authorizations"
 msgstr "Utspraken Verlööfnissen"
 
 #. i18n: file: PkKAction.ui:206
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:57 rc.cpp:210
+#: rc.cpp:48 rc.cpp:210
 msgid ""
 "This list displays authorizations that are either obtained through "
 "authentication or specifically given to the entity in question. Blocked "
@@ -216,49 +241,45 @@ msgstr ""
 
 #. i18n: file: PkKAction.ui:221
 #. i18n: ectx: property (text), widget (KPushButton, grantPB)
-#: rc.cpp:60 rc.cpp:213
+#: rc.cpp:51 rc.cpp:213
 msgid "&Grant"
 msgstr "&Geven"
 
 #. i18n: file: PkKAction.ui:231
 #. i18n: ectx: property (text), widget (KPushButton, blockPB)
-#: rc.cpp:63 rc.cpp:216
+#: rc.cpp:54 rc.cpp:216
 msgid "&Block"
 msgstr "&Blockeren"
 
 #. i18n: file: PkKAction.ui:241
 #. i18n: ectx: property (text), widget (KPushButton, revokePB)
-#: rc.cpp:66 rc.cpp:219
+#: rc.cpp:57 rc.cpp:219
 msgid "&Revoke"
 msgstr "To&rüchropen"
 
 #. i18n: file: PkKAction.ui:297
 #. i18n: ectx: property (text), widget (QCheckBox, showChB)
-#: rc.cpp:69 rc.cpp:222
+#: rc.cpp:60 rc.cpp:222
 msgid "&Show authorizations from all users"
 msgstr "Verlööfnissen vun all Brukers &wiesen"
 
-#. i18n: file: PkKBlockGrantAuth.ui:19
-#. i18n: ectx: property (text), widget (QLabel, instructionsL)
-#: rc.cpp:75 rc.cpp:118
-msgid ""
-"Select the beneficiary and, optionally, how to constrain the authorization "
-"that you are about to grant."
+#. i18n: file: PkKAuthorization.ui:38
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, searchLine)
+#: rc.cpp:66 rc.cpp:159
+msgid "Search"
+msgstr "Söken"
+
+#. i18n: file: PkKAuthorization.ui:98
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:69 rc.cpp:162
+msgid "Select an Action"
 msgstr ""
-"Söök den Nüttnehmer ut, den Du de Verlööfnis geven wullt, un köörwies ok, "
-"wodennig Du ehr ingrenzen wullt."
 
 #. i18n: file: PkKBlockGrantAuth.ui:29
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: rc.cpp:78 rc.cpp:121
 msgid "Beneficiary"
 msgstr "Nüttnehmer"
-
-#. i18n: file: PkKBlockGrantAuth.ui:35
-#. i18n: ectx: property (text), widget (QLabel, beneficiaryL)
-#: rc.cpp:81 rc.cpp:124
-msgid "Select the user that will receive the authorization."
-msgstr "Den Bruker utsöken, den Du de Verlööfnis geven wullt"
 
 #. i18n: file: PkKBlockGrantAuth.ui:48
 #. i18n: ectx: property (text), widget (QCheckBox, showSysUsersChB)
@@ -283,25 +304,25 @@ msgstr ""
 "gellen deit."
 
 #. i18n: file: PkKBlockGrantAuth.ui:74
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton)
+#. i18n: ectx: property (text), widget (QRadioButton, noneRB)
 #: rc.cpp:93 rc.cpp:136
 msgid "&None"
 msgstr "&Keen"
 
 #. i18n: file: PkKBlockGrantAuth.ui:84
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, activeRB)
 #: rc.cpp:96 rc.cpp:139
 msgid "Must be &in active session"
 msgstr "Mutt &binnen aktiev Törn wesen"
 
 #. i18n: file: PkKBlockGrantAuth.ui:91
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_3)
+#. i18n: ectx: property (text), widget (QRadioButton, consoleRB)
 #: rc.cpp:99 rc.cpp:142
 msgid "Must be on &local console"
 msgstr "Mutt op &lokaal Konsool wesen"
 
 #. i18n: file: PkKBlockGrantAuth.ui:98
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_4)
+#. i18n: ectx: property (text), widget (QRadioButton, activeConsoleRB)
 #: rc.cpp:102 rc.cpp:145
 msgid "Must be in &active session on local console"
 msgstr "Mutt op lokaal Konsool un binnen &aktiev Törn wesen"
@@ -389,97 +410,88 @@ msgstr "Identiteetprööv (jümmers)"
 msgid "Yes"
 msgstr "Jo"
 
-#: ExplicitAuthorizationsModel.cpp:90
-#, kde-format
-msgid "%1 (%2)"
-msgstr ""
+#: KcmPkKAuthorization.cpp:32
+#, fuzzy
+#| msgid "PolicyKit Kde Authorization"
+msgid "Polkit KDE Authorizations"
+msgstr "PolicyKit-KDE-Verlööfnis"
 
-#: ExplicitAuthorizationsModel.cpp:92
-#, kde-format
-msgid "%1"
-msgstr ""
-
-#: ExplicitAuthorizationsModel.cpp:94
-#, kde-format
-msgid "uid %1"
-msgstr ""
-
-#: ExplicitAuthorizationsModel.cpp:110
+#: ExplicitAuthorizationsModel.cpp:109
 #, kde-format
 msgctxt "Authorization scope; PID is Process ID"
 msgid "Single shot PID: %1 (%2)"
 msgstr ""
 
-#: ExplicitAuthorizationsModel.cpp:116
+#: ExplicitAuthorizationsModel.cpp:115
 #, kde-format
 msgctxt "Authorization scope; PID is Process ID"
 msgid "PID: %1 (%2)"
 msgstr ""
 
-#: ExplicitAuthorizationsModel.cpp:119
+#: ExplicitAuthorizationsModel.cpp:118
 msgctxt "Authorization scope"
 msgid "This Session"
 msgstr ""
 
-#: ExplicitAuthorizationsModel.cpp:122
+#: ExplicitAuthorizationsModel.cpp:121
 msgctxt "Authorization scope"
 msgid "Always"
 msgstr ""
 
-#: ExplicitAuthorizationsModel.cpp:135
+#: ExplicitAuthorizationsModel.cpp:134
 #, kde-format
 msgid "Auth as %1 (uid %2)"
 msgstr ""
 
-#: ExplicitAuthorizationsModel.cpp:137
+#: ExplicitAuthorizationsModel.cpp:136
 #, kde-format
 msgid "Auth as uid %1"
 msgstr ""
 
-#: ExplicitAuthorizationsModel.cpp:142
+#: ExplicitAuthorizationsModel.cpp:141
 #, kde-format
 msgid "Blocked by %1 (uid %2)"
 msgstr ""
 
-#: ExplicitAuthorizationsModel.cpp:144
+#: ExplicitAuthorizationsModel.cpp:143
 #, kde-format
 msgid "Blocked by uid %1"
 msgstr ""
 
-#: ExplicitAuthorizationsModel.cpp:148
+#: ExplicitAuthorizationsModel.cpp:147
 #, kde-format
 msgid "Granted by %1 (uid %2)"
 msgstr ""
 
-#: ExplicitAuthorizationsModel.cpp:150
+#: ExplicitAuthorizationsModel.cpp:149
 #, kde-format
 msgid "Granted by uid %1"
 msgstr ""
 
-#: ExplicitAuthorizationsModel.cpp:161
+#: ExplicitAuthorizationsModel.cpp:160
 #, fuzzy
 #| msgid "&None"
 msgid "None"
 msgstr "&Keen"
 
-#: ExplicitAuthorizationsModel.cpp:173
+#: ExplicitAuthorizationsModel.cpp:172
 #, fuzzy
 #| msgid "Must be on &local console"
 msgid "Must be on console"
 msgstr "Mutt op &lokaal Konsool wesen"
 
-#: ExplicitAuthorizationsModel.cpp:176
+#: ExplicitAuthorizationsModel.cpp:175
 #, fuzzy
 #| msgid "Must be &in active session"
 msgid "Must be in active session"
 msgstr "Mutt &binnen aktiev Törn wesen"
 
-#: ExplicitAuthorizationsModel.cpp:179
+#: ExplicitAuthorizationsModel.cpp:178
 #, kde-format
 msgid "Must be program %1"
 msgstr ""
 
-#: ExplicitAuthorizationsModel.cpp:182
+#: ExplicitAuthorizationsModel.cpp:181
 msgid "Must be SELinux Context"
 msgstr ""
 
