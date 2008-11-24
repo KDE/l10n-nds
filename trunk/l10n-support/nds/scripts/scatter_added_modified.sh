@@ -31,12 +31,12 @@ do	test -d "$f" && test -d "../../templates/summit/$f" && svn add "$f" && svnsta
 	fi
 done
 
-test "$1" = "--all" || {
+test "$1" = "--all" && shift || {
 	changed=$(echo "$svnstat" | grep '^A')
 	for f in $(echo "$changed"|sed -e 's/^A \+//')
 	do	test "${f%.po}" = "$f" || to_scatter="$to_scatter $(basename ${f%.po})"
 	done
-	
+
 	changed=$(echo "$svnstat" | grep '^M')
 	for f in $(echo "$changed"|sed -e 's/^M \+//')
 	do	to_scatter="$to_scatter $(basename ${f%.po})"
