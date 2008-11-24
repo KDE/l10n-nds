@@ -5,8 +5,11 @@ test -z "$1" -o -z "$2" -o -z "$3" && {
 	exit 1
 }
 expr "$1$2" : ".*@" > /dev/null && {
-	echo "De Argumenten mööt keen Klammerapen ('@') bargen."
-	exit 1
+#	echo "De Argumenten mööt keen Klammerapen ('@') bargen."
+#	exit 1
+	een="${1//@/\\@}"
+	twee="${2//@/\\@}"
+	set $een $twee $3
 }
 
 #pushd /home/soe/l10n/nds/messages

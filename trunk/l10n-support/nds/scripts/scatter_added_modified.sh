@@ -5,6 +5,18 @@ test -z "$KDESVN" && {
 	exit 1
 }
 
+test -n "$1" && test "$1" != "--all" -a "$1" != "--help" -a "$1" != "-h" && {
+	echo -e "\aUnknown option: $1"
+	set 'help'
+}
+
+test "$1" = "--help" -o "$1" = "-h" -o "$1" = "help" && {
+	echo "Usage: $(basename $0) [--help|-h|--all]"
+	echo "--help | -h	Show this help message"
+	echo "--add		Scatter all PO-files, not only those svn identifies as 'Added' or 'Modified'"
+	exit 0
+}
+
 cd $KDESVN/trunk/l10n-support/nds/summit
 
 svnstat=$(svn stat)
@@ -19,15 +31,17 @@ do	test -d "$f" && test -d "../../templates/summit/$f" && svn add "$f" && svnsta
 	fi
 done
 
-changed=$(echo "$svnstat" | grep '^A')
-for f in $(echo "$changed"|sed -e 's/^A \+//')
-do	test "${f%.po}" = "$f" || to_scatter="$to_scatter $(basename ${f%.po})"
-done
-
-changed=$(echo "$svnstat" | grep '^M')
-for f in $(echo "$changed"|sed -e 's/^M \+//')
-do	to_scatter="$to_scatter $(basename ${f%.po})"
-done
+test "$1" = "--all" || {
+	changed=$(echo "$svnstat" | grep '^A')
+	for f in $(echo "$changed"|sed -e 's/^A \+//')
+	do	test "${f%.po}" = "$f" || to_scatter="$to_scatter $(basename ${f%.po})"
+	done
+	
+	changed=$(echo "$svnstat" | grep '^M')
+	for f in $(echo "$changed"|sed -e 's/^M \+//')
+	do	to_scatter="$to_scatter $(basename ${f%.po})"
+	done
+}
 
 echo "posummit.py $KDESVN/trunk/l10n-support/scripts/messages.summit nds scatter $to_scatter"
 

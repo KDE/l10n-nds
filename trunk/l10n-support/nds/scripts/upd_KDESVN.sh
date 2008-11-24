@@ -7,10 +7,10 @@ test -z "$KDESVN" && {
 
 test -n "$1" && test "$1" != "--no-commit" -a "$1" != "--help" -a "$1" != "-h" && {
 	echo -e "\aUnknown option: $1"
-	set "--help"
+	set "help"
 }
 
-test "$1" = "--help" -o "$1" = "-h" && {
+test "$1" = "--help" -o "$1" = "-h" -o "$1" = "help" && {
 	echo "Usage: $0 [--help|-h|--no-commit]"
 	echo "--help | -h	Show this help message"
 	echo "--no-commit	Only update svn trees and merge changes into l10n-support, but do not commit"
