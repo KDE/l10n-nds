@@ -9,12 +9,12 @@ expr "$1$2" : ".*@" > /dev/null && {
 #	exit 1
 	een="${1//@/\\@}"
 	twee="${2//@/\\@}"
-	set $een $twee $3
+	set "$een" "$twee" "$3"
 }
 
 #pushd /home/soe/l10n/nds/messages
 expr "$(pwd)" : ".*/nds.*/messages" > /dev/null || {
-	echo "Föhr dissen Befehl bitte bloots binnen en KDE-SVN-Orner för nds ut!"
+	echo "Dissen Befehl bitte bloots binnen en KDE-SVN-Orner för nds utföhren!"
 	exit 1
 }
 
