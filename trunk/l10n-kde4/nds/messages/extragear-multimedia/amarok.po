@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-11-24 09:57+0100\n"
+"POT-Creation-Date: 2008-11-25 10:27+0100\n"
 "PO-Revision-Date: 2008-11-24 23:07+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -220,7 +220,7 @@ msgstr "Lokaal Sammeln"
 #: browsers/collectionbrowser/CollectionTreeItem.cpp:154
 #: playlist/view/graphic/PlaylistGraphicsItem.cpp:352
 #: collectionscanner/CollectionScanner.cpp:645
-#: covermanager/CoverManager.cpp:358 covermanager/CoverManager.cpp:935
+#: covermanager/CoverViewDialog.h:45 covermanager/CoverManager.cpp:914
 msgid "Various Artists"
 msgstr "Verscheden Künstlers"
 
@@ -268,7 +268,7 @@ msgstr "(Hülp)"
 msgid "Transferring Tracks"
 msgstr "Stücken warrt överdragen"
 
-#: collection/sqlcollection/ScanManager.cpp:438
+#: collection/sqlcollection/ScanManager.cpp:452
 msgid "Scanning music"
 msgstr "Musik warrt dörkeken"
 
@@ -279,8 +279,8 @@ msgid "Stream"
 msgstr "Stroom"
 
 #: collection/sqlcollection/SqlMeta.cpp:287
-#: services/lastfm/meta/LastFmMeta.cpp:147 covermanager/CoverManager.cpp:357
-#: covermanager/CoverManager.cpp:935
+#: services/lastfm/meta/LastFmMeta.cpp:147 covermanager/CoverViewDialog.h:44
+#: covermanager/CoverManager.cpp:914
 #, kde-format
 msgid "%1 - %2"
 msgstr "%1 - %2"
@@ -1862,7 +1862,7 @@ msgstr ""
 "En Skript mit den Naam \"%1\" is al installeert. Deinstalleer dat man "
 "toeerst."
 
-#: dialogs/ScriptManager.cpp:337
+#: dialogs/ScriptManager.cpp:337 dialogs/ScriptManager.cpp:391
 msgid ""
 "<p>Script successfully installed.</p><p>Please restart Amarok to start the "
 "script!</p>"
@@ -1878,28 +1878,7 @@ msgstr ""
 "<p>Skript-Installatschoon fehlslaan.</p><p>Snack bitte den Paketpleger op "
 "dissen Fehler an.</p>"
 
-#: dialogs/ScriptManager.cpp:403
-#, kde-format
-msgid "Are you sure you want to uninstall the script '%1'?"
-msgstr "Büst Du seker, wat Du dat Skript \"%1\" deinstalleren wullt?"
-
-#: dialogs/ScriptManager.cpp:403
-msgid "Uninstall Script"
-msgstr "Skript deinstalleren"
-
-#: dialogs/ScriptManager.cpp:403
-msgid "Uninstall"
-msgstr "Deinstalleren"
-
-#: dialogs/ScriptManager.cpp:412
-msgid ""
-"<p>Could not uninstall this script.</p><p>The ScriptManager can only "
-"uninstall scripts which have been installed as packages.</p>"
-msgstr ""
-"<p>Dat Skript lett sik nich deinstalleren.</p><p>De Skriptenpleger kann "
-"bloots Skripten deinstalleren, de as Paketen installeert sünd.</p>"
-
-#: dialogs/ScriptManager.cpp:421
+#: dialogs/ScriptManager.cpp:394 dialogs/ScriptManager.cpp:425
 msgid ""
 "<p>Script successfully uninstalled.</p><p>Please restart Amarok to totally "
 "remove the script!</p>"
@@ -1907,7 +1886,28 @@ msgstr ""
 "<p>Skript mit Spood deinstalleert.</p><p>Roop Amarok bitte nieg op, denn "
 "warrt dat Skript heel deinstalleert.</p>"
 
-#: dialogs/ScriptManager.cpp:456
+#: dialogs/ScriptManager.cpp:407
+#, kde-format
+msgid "Are you sure you want to uninstall the script '%1'?"
+msgstr "Büst Du seker, wat Du dat Skript \"%1\" deinstalleren wullt?"
+
+#: dialogs/ScriptManager.cpp:407
+msgid "Uninstall Script"
+msgstr "Skript deinstalleren"
+
+#: dialogs/ScriptManager.cpp:407
+msgid "Uninstall"
+msgstr "Deinstalleren"
+
+#: dialogs/ScriptManager.cpp:416
+msgid ""
+"<p>Could not uninstall this script.</p><p>The ScriptManager can only "
+"uninstall scripts which have been installed as packages.</p>"
+msgstr ""
+"<p>Dat Skript lett sik nich deinstalleren.</p><p>De Skriptenpleger kann "
+"bloots Skripten deinstalleren, de as Paketen installeert sünd.</p>"
+
+#: dialogs/ScriptManager.cpp:460
 msgid "There are exceptions caught in the script. Please refer to the log!"
 msgstr "Dat Skript hett Utnahmen affungen. Kiek Di bitte dat Logbook an!"
 
@@ -7368,41 +7368,41 @@ msgstr ""
 "<div align=center><i>Treck Platzholler hierhen, wenn Du en Dateinaammuster "
 "opstellen wullt</i></div>"
 
-#: covermanager/CoverFetchingActions.cpp:40
+#: covermanager/CoverFetchingActions.cpp:41
 msgid "Fetch Cover"
 msgid_plural "Fetch Covers"
 msgstr[0] "Titelbild halen"
 msgstr[1] "Titelbiller halen"
 
-#: covermanager/CoverFetchingActions.cpp:42
+#: covermanager/CoverFetchingActions.cpp:43
 #, kde-format
 msgid "Fetch the artwork for this album"
 msgid_plural "Fetch artwork for %1 albums"
 msgstr[0] "De Biller för dit Album halen"
 msgstr[1] "De Biller för %1 Alben halen"
 
-#: covermanager/CoverFetchingActions.cpp:62
+#: covermanager/CoverFetchingActions.cpp:63
 msgid "Display Cover"
 msgstr "Titelbild wiesen"
 
-#: covermanager/CoverFetchingActions.cpp:64
+#: covermanager/CoverFetchingActions.cpp:65
 msgid "Display artwork for this album"
 msgstr "Biller för dit Album wiesen"
 
-#: covermanager/CoverFetchingActions.cpp:82
+#: covermanager/CoverFetchingActions.cpp:83
 msgid "Unset Cover"
 msgid_plural "Unset Covers"
 msgstr[0] "Titelbild wegmaken"
 msgstr[1] "Titelbiller wegmaken"
 
-#: covermanager/CoverFetchingActions.cpp:84
+#: covermanager/CoverFetchingActions.cpp:85
 #, kde-format
 msgid "Remove artwork for this album"
 msgid_plural "Remove artwork for %1 albums"
 msgstr[0] "Biller för dit Album wegmaken"
 msgstr[1] "Biller för %1 Alben wegmaken"
 
-#: covermanager/CoverFetchingActions.cpp:97
+#: covermanager/CoverFetchingActions.cpp:98
 #, kde-format
 msgid "Are you sure you want to remove this cover from the Collection?"
 msgid_plural ""
@@ -7410,18 +7410,18 @@ msgid_plural ""
 msgstr[0] "Wullt Du dit Titelbild redig ut de Sammeln wegdoon?"
 msgstr[1] "Wullt Du disse %1 Titelbiller redig ut de Sammeln wegdoon?"
 
-#: covermanager/CoverFetchingActions.cpp:120
+#: covermanager/CoverFetchingActions.cpp:121
 msgid "Set Custom Cover"
 msgstr "Egen Titelbild tofögen"
 
-#: covermanager/CoverFetchingActions.cpp:122
+#: covermanager/CoverFetchingActions.cpp:123
 #, kde-format
 msgid "Set custom artwork for this album"
 msgid_plural "Set custom artwork for these %1 albums"
 msgstr[0] "Egen Biller för dit Album tofögen"
 msgstr[1] "Egen Biller för disse %1 Alben tofögen"
 
-#: covermanager/CoverFetchingActions.cpp:135
+#: covermanager/CoverFetchingActions.cpp:136
 msgid "Select Cover Image File"
 msgstr "Datei för't Titelbild utsöken"
 
@@ -7513,7 +7513,7 @@ msgstr "Titelbild mit Spood haalt"
 msgid "Albums By"
 msgstr "Alben vun"
 
-#: covermanager/CoverManager.cpp:132 covermanager/CoverManager.cpp:396
+#: covermanager/CoverManager.cpp:132 covermanager/CoverManager.cpp:375
 msgid "All Artists"
 msgstr "All Künstlers"
 
@@ -7552,89 +7552,89 @@ msgstr "Amazon-Spraak"
 msgid "Fetch Missing Covers"
 msgstr "Fehlen Titelbiller halen"
 
-#: covermanager/CoverManager.cpp:476
+#: covermanager/CoverManager.cpp:455
 msgid "Loading Thumbnails..."
 msgstr "Vöransichten warrt laadt..."
 
-#: covermanager/CoverManager.cpp:759
+#: covermanager/CoverManager.cpp:738
 msgctxt "The fetching is done."
 msgid "Finished."
 msgstr "Afslaten."
 
-#: covermanager/CoverManager.cpp:761
+#: covermanager/CoverManager.cpp:740
 #, kde-format
 msgid " Cover not found"
 msgid_plural " <b>%1</b> covers not found"
 msgstr[0] " Titelbild nich funnen"
 msgstr[1] " <b>%1</b> Titelbiller nich funnen"
 
-#: covermanager/CoverManager.cpp:773
+#: covermanager/CoverManager.cpp:752
 #, kde-format
 msgid "Fetching cover for %1..."
 msgstr "Titelbild för %1 warrt haalt..."
 
-#: covermanager/CoverManager.cpp:775
+#: covermanager/CoverManager.cpp:754
 #, kde-format
 msgid "Fetching cover for %1 - %2..."
 msgstr "Titelbild för %1 - %2 warrt haalt..."
 
-#: covermanager/CoverManager.cpp:781
+#: covermanager/CoverManager.cpp:760
 #, kde-format
 msgid "Fetching 1 cover: "
 msgid_plural "Fetching <b>%1</b> covers... : "
 msgstr[0] "Een Titelbild warrt haalt: "
 msgstr[1] "<b>%1</b> Titelbiller warrt haalt... : "
 
-#: covermanager/CoverManager.cpp:783
+#: covermanager/CoverManager.cpp:762
 #, kde-format
 msgid "1 fetched"
 msgid_plural "%1 fetched"
 msgstr[0] "1 haalt"
 msgstr[1] "%1 haalt"
 
-#: covermanager/CoverManager.cpp:785
+#: covermanager/CoverManager.cpp:764
 msgid " - "
 msgstr " - "
 
-#: covermanager/CoverManager.cpp:786
+#: covermanager/CoverManager.cpp:765
 #, kde-format
 msgid "1 not found"
 msgid_plural "%1 not found"
 msgstr[0] "1 nich funnen"
 msgstr[1] "%1 nich funnen"
 
-#: covermanager/CoverManager.cpp:789
+#: covermanager/CoverManager.cpp:768
 msgid "Connecting..."
 msgstr "An't Tokoppeln..."
 
-#: covermanager/CoverManager.cpp:815
+#: covermanager/CoverManager.cpp:794
 #, kde-format
 msgid "1 result for \"%2\""
 msgid_plural "%1 results for \"%2\""
 msgstr[0] "Een Resultaat för \"%2\""
 msgstr[1] "%1 Resultaten för \"%2\""
 
-#: covermanager/CoverManager.cpp:817
+#: covermanager/CoverManager.cpp:796
 #, kde-format
 msgid "1 album"
 msgid_plural "%1 albums"
 msgstr[0] "Een Album"
 msgstr[1] "%1 Alben"
 
-#: covermanager/CoverManager.cpp:823
+#: covermanager/CoverManager.cpp:802
 msgid " by "
 msgstr " vun "
 
-#: covermanager/CoverManager.cpp:828
+#: covermanager/CoverManager.cpp:807
 #, kde-format
 msgid " - ( <b>%1</b> without cover )"
 msgstr " - ( <b>%1</b> ahn Titelbild )"
 
-#: covermanager/CoverManager.cpp:874
+#: covermanager/CoverManager.cpp:853
 msgid "Cover Image"
 msgstr "Titelbild"
 
-#: covermanager/CoverManager.cpp:956
+#: covermanager/CoverManager.cpp:935
 msgid "No Artist"
 msgstr "Keen Künstler"
 
