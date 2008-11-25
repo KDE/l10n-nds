@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kgpg\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-11-17 09:41+0100\n"
+"POT-Creation-Date: 2008-11-25 10:22+0100\n"
 "PO-Revision-Date: 2008-10-31 10:16+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -2265,14 +2265,14 @@ msgstr ""
 "Du schullst den Fingerafdruck vun den Slötel pröven. Dor kannst Du den Slötel-Eegner a.B. för anropen oder persöönlich drepen, so dat keeneen Jümehr Kommunikatschoon affangen kann.</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:1840 keysmanager.cpp:1910
+#: keysmanager.cpp:1840 keysmanager.cpp:1910 kgpgfirstassistant.cpp:279
 #, kde-format
 msgctxt "Name: ID"
 msgid "%1: %2"
 msgstr "%1: %2"
 
 #. +> trunk stable
-#: keysmanager.cpp:1842 keysmanager.cpp:1913
+#: keysmanager.cpp:1842 keysmanager.cpp:1913 kgpgfirstassistant.cpp:281
 #, kde-format
 msgctxt "Name (Email): ID"
 msgid "%1 (%2): %3"
@@ -2396,7 +2396,7 @@ msgid "<qt>Cannot open file <b>%1</b> for printing...</qt>"
 msgstr "<qt>Datei <b>%1</b> lett sik nich för't Drucken opmaken...</qt>"
 
 #. +> stable
-#: keysmanager.cpp:2208
+#: keysmanager.cpp:2216
 msgid "Another key is currently deleted. Please wait until the operation is finished."
 msgstr "Opstunns warrt en anner Slötel wegdaan. Tööv bitte, bet dat afslaten is."
 
@@ -2425,9 +2425,13 @@ msgstr ""
 "Wenn Du dit Slötelpoor wegdeist, kannst Du Dateien, de mit dissen Slötel verslötet wöörn, nienich wedder opslöteln."
 
 #. +> trunk
-#: keysmanager.cpp:2290
-msgid "Another key is currently deleted. Please wait until the operation is complete."
-msgstr "Opstunns warrt en anner Slötel wegdaan. Tööv bitte, bet dat afslaten is."
+#: keysmanager.cpp:2290 keysmanager.cpp:2318
+msgid ""
+"Another key delete operation is still in progress.\n"
+"Please wait a moment until this operation is complete."
+msgstr ""
+"Opstunns warrt noch en anner Slötel wegdaan.\n"
+"Tööv bitte en Momang, bet dat afslaten is."
 
 #. +> trunk stable
 #: keysmanager.cpp:2305
@@ -2440,15 +2444,6 @@ msgstr "Slötel <b>%1</b> wegdaan."
 #, kde-format
 msgid "Deleting key <b>%1</b> failed."
 msgstr "Slötel <b>%1</b> lett sik nich wegdoon."
-
-#. +> trunk
-#: keysmanager.cpp:2318
-msgid ""
-"Another key delete operation is still in progress.\n"
-"Please wait a moment until this operation is complete."
-msgstr ""
-"Opstunns warrt noch en anner Slötel wegdaan.\n"
-"Tööv bitte en Momang, bet dat afslaten is."
 
 #. +> trunk stable
 #: keysmanager.cpp:2330
@@ -3017,7 +3012,9 @@ msgstr "Schriftoort"
 #. i18n: ectx: label, entry (KeyServers), group (Servers)
 #. +> trunk
 #: kgpg.kcfg:230
-msgid "Key servers used by kgpg. The first server in the list is the default server."
+#, fuzzy
+#| msgid "Key servers used by kgpg. The first server in the list is the default server."
+msgid "Key servers used by KGpg. The first server in the list is the default server."
 msgstr "Vun Kgpg bruukt Slötelservers. De eerst Server op de List is de Standardserver."
 
 #. i18n: ectx: label, entry (UseProxy), group (Key Servers)
@@ -3073,6 +3070,13 @@ msgid "This assistant will first setup some basic configuration options required
 msgstr "Disse Inrichthölper leggt toeerst en Reeg Grundinstellen fast, so dat KGpg richtig funkscheneert. Achteran kannst Du Dien egen Slötelpoor opstellen, mit dat Du denn Dateien un Nettbreven verslöteln kannst."
 
 #. +> trunk
+#: kgpgfirstassistant.cpp:74
+#, fuzzy
+#| msgid "KGpg assistant"
+msgid "Welcome to the KGpg assistant"
+msgstr "KGpg-Hölper"
+
+#. +> trunk
 #: kgpgfirstassistant.cpp:86
 msgid "KGpg needs to know which GnuPG binary to use."
 msgstr "Du muttst KGpg dat GnuPG-Programm vertellen, wat dat bruken schall."
@@ -3087,6 +3091,16 @@ msgstr "Du bruukst de GnuPG-Verschoon:"
 #: kgpgfirstassistant.cpp:93 kgpgfirstassistant.cpp:126
 msgid "Unless you want to try some unusual settings, just click on the \"next\" button."
 msgstr "Wenn Du nich heel besünnere Instellen fastleggen wullt, kannst Du eenfach op \"Nakamen\" klicken."
+
+#. +> trunk
+#: kgpgfirstassistant.cpp:107
+#, fuzzy
+#| msgid "GnuPG binary"
+msgctxt "search filter for gpg binary"
+msgid ""
+"gpg|GnuPG binary\n"
+"*|All files"
+msgstr "GnuPG-Programm"
 
 #. +> trunk
 #: kgpgfirstassistant.cpp:115
@@ -3165,25 +3179,25 @@ msgid "KGpg will now launch the key generation dialog to create your own key pai
 msgstr "KGpg röppt nu den Dialoog för't Opstellen vun Slötels op, mit den Du Dien egen Slötelpoor för't Ver- un Opslöteln opstellen kannst."
 
 #. +> trunk
-#: kgpgfirstassistant.cpp:289
+#: kgpgfirstassistant.cpp:293
 #, kde-format
 msgid "Your GnuPG binary is: %1"
 msgstr "Dien GnuPG-Programm: %1"
 
 #. +> trunk
-#: kgpgfirstassistant.cpp:305 kgpgfirstassistant.cpp:361
+#: kgpgfirstassistant.cpp:309 kgpgfirstassistant.cpp:365
 #, kde-format
 msgid "You have GnuPG version: %1"
 msgstr "Dien GnuPG-Verschoon: %1"
 
 #. +> trunk
-#: kgpgfirstassistant.cpp:308
+#: kgpgfirstassistant.cpp:312
 #, kde-format
 msgid "Your default key is: %1"
 msgstr "Dien Standardslötel: %1"
 
 #. +> trunk
-#: kgpgfirstassistant.cpp:359
+#: kgpgfirstassistant.cpp:363
 #, kde-format
 msgid "Your GnuPG version seems to be older than 1.2.0 (%1). Photo Id's and Key Groups will not work properly. Please consider upgrading GnuPG (http://gnupg.org)."
 msgstr "As't lett is de Verschoon vun Dien GnuPG lütter as 1.2.0 (%1). Foto-IDs un Slötelkoppeln funkscheneert nich. Överlegg Di bitte, wat Du GnuPG nich opgraderen wullt (http://gnupg.org)."
@@ -4321,3 +4335,6 @@ msgid ""
 msgstr ""
 "<p>De Tall vun Ünnerschriften warrt bi't Anrögen vun den Striep \"Grött\" binnen den Slötelpleger mit de Muus as Kortinfo wiest. Dormit dat klappt, mutt en Slötel vördem eenmaal utfooldt worrn ween.</p>"
 "\n"
+
+#~ msgid "Another key is currently deleted. Please wait until the operation is complete."
+#~ msgstr "Opstunns warrt en anner Slötel wegdaan. Tööv bitte, bet dat afslaten is."
