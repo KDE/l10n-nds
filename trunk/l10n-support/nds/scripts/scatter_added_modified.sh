@@ -13,7 +13,7 @@ test -n "$1" && test "$1" != "--all" -a "$1" != "--help" -a "$1" != "-h" && {
 test "$1" = "--help" -o "$1" = "-h" -o "$1" = "help" && {
 	echo "Usage: $(basename $0) [--help|-h|--all]"
 	echo "--help | -h	Show this help message"
-	echo "--add		Scatter all PO-files, not only those svn identifies as 'Added' or 'Modified'"
+	echo "--all		Scatter all PO-files, not only those svn identifies as 'Added' or 'Modified'"
 	exit 0
 }
 
