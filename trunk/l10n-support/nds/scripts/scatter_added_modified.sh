@@ -66,8 +66,8 @@ posummit.py $msgroot/scripts/messages.summit nds scatter $to_scatter && {
 	test -n "$confl_stable$confl_trunk" && echo -e "Conflicts:\n$confl_stable\n$confl_trunk" || {
 		echo "No conflicts. Committing."
 		cd $msgroot/nds/summit/messages
-		echo "svn commit -m '${1:-Translation and maintainance}':"
-		crev=$(svn commit -m "${1:-Translation and maintainance}")
+		echo "svn commit -m '${commitmsg:-Translation and maintainance}':"
+		crev=$(svn commit -m "${commitmsg:-Translation and maintainance}")
 		echo "$crev"
 		crev="$(echo "$crev" | grep -o '[0-9]\{6,7\}')"
 		cd $KDESVN/trunk/l10n-kde4

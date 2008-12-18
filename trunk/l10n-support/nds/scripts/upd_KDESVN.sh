@@ -18,7 +18,7 @@ test -n "$dohelp" && {
   echo "Usage: $(basename $0) [--help|-h|--commit]"
   echo "Updates SVN trees and merges changes into l10n-support."
   echo "--help | -h	Show this help message"
-  echo "--commit	Commit changes after updating and merging into l10n-support"
+  echo "--commit	Commit the changes to l10n-support after updating and merging"
   exit 0
 }
 
