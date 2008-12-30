@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: validatorsplugin\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-12-29 10:24+0100\n"
+"POT-Creation-Date: 2008-12-30 10:03+0100\n"
 "PO-Revision-Date: 2007-03-07 02:14+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -17,56 +17,91 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: plugin_validators.cpp:45
+#: plugin_validators.cpp:57
 msgid "Validate Web Page"
 msgstr "Nettsiet pröven"
 
-#: plugin_validators.cpp:54
+#: plugin_validators.cpp:68
 msgid "&Validate Web Page"
 msgstr "Nettsiet &pröven"
 
-#: plugin_validators.cpp:59
-msgid "Validate &HTML"
+#: plugin_validators.cpp:74
+#, fuzzy
+#| msgid "Validate &HTML"
+msgid "Validate HTML (by URI)"
 msgstr "&HTML pröven"
 
-#: plugin_validators.cpp:62
-msgid "Validate &CSS"
+#: plugin_validators.cpp:78
+#, fuzzy
+#| msgid "Validate &HTML"
+msgid "Validate HTML (by Upload)"
+msgstr "&HTML pröven"
+
+#: plugin_validators.cpp:82
+#, fuzzy
+#| msgid "Validate &CSS"
+msgid "Validate CSS (by URI)"
 msgstr "&CSS pröven"
 
-#: plugin_validators.cpp:65
+#: plugin_validators.cpp:86
+#, fuzzy
+#| msgid "Validate &CSS"
+msgid "Validate CSS (by Upload)"
+msgstr "&CSS pröven"
+
+#: plugin_validators.cpp:89
 msgid "Validate &Links"
 msgstr "&Links pröven"
 
-#: plugin_validators.cpp:71
+#: plugin_validators.cpp:95
+#, fuzzy
+#| msgid "Validate Web Page"
+msgid "Validate Page"
+msgstr "Nettsiet pröven"
+
+#: plugin_validators.cpp:99
+#, fuzzy
+#| msgid "Link Validator"
+msgid "View Validator Report"
+msgstr "Linkprööv"
+
+#: plugin_validators.cpp:107
 msgid "C&onfigure Validator..."
 msgstr "Prööv &instellen..."
 
-#: plugin_validators.cpp:139
-msgid "Cannot Validate Source"
-msgstr "Born lett sik nich pröven"
+#: plugin_validators.cpp:238
+#, fuzzy
+#| msgid "CSS Validator"
+msgid "Remote Validation"
+msgstr "CSS-Prööv"
 
-#: plugin_validators.cpp:140
-msgid "You cannot validate anything except web pages with this plugin."
-msgstr "Mit dit Moduul laat sik bloots Nettsieden pröven."
+#: plugin_validators.cpp:245
+#, fuzzy
+#| msgid "Link Validator"
+msgid "Local Validation"
+msgstr "Linkprööv"
 
-#: plugin_validators.cpp:153
-msgid "Malformed URL"
-msgstr "Leeg URL"
+#: plugin_validators.cpp:263
+#, kde-format
+msgid "1 error"
+msgid_plural "%1 errors"
+msgstr[0] ""
+msgstr[1] ""
 
-#: plugin_validators.cpp:154
-msgid "The URL you entered is not valid, please correct it and try again."
+#: plugin_validators.cpp:264
+#, kde-format
+msgid "1 warning"
+msgid_plural "%1 warning"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugin_validators.cpp:266
+#, kde-format
+msgctxt "%1 is the error count string, %2 the warning count one"
+msgid "%1, %2"
 msgstr ""
-"De angeven URL is leeg. Bitte överprööv ehr, un versöök dat denn nochmaal."
 
-#: plugin_validators.cpp:163
-msgid "Upload Not Possible"
-msgstr "Hoochladen nich mööglich"
-
-#: plugin_validators.cpp:164
-msgid "Validating links is not possible for local files."
-msgstr "Linköverpröven för lokaal Dateien nich mööglich."
-
-#: plugin_validators.cpp:177
+#: plugin_validators.cpp:301
 #, kde-format
 msgid ""
 "<qt>The selected URL cannot be verified because it contains a password. "
@@ -76,6 +111,29 @@ msgstr ""
 "<qt>De utsöchte URL lett sik nich överpröven, wiel se en Passwoort bargt. "
 "Wenn Du de Adress na <b>%1</b> schickst, is dat en Riskanz för de Sekerheit "
 "vun <b>%2</b>.</qt>"
+
+#: plugin_validators.cpp:361
+msgid "Cannot Validate Source"
+msgstr "Born lett sik nich pröven"
+
+#: plugin_validators.cpp:362
+msgid "You cannot validate anything except web pages with this plugin."
+msgstr "Mit dit Moduul laat sik bloots Nettsieden pröven."
+
+#: plugin_validators.cpp:373
+msgid "Malformed URL"
+msgstr "Leeg URL"
+
+#: plugin_validators.cpp:374
+msgid "The URL you entered is not valid, please correct it and try again."
+msgstr ""
+"De angeven URL is leeg. Bitte överprööv ehr, un versöök dat denn nochmaal."
+
+#: plugin_validators.cpp:401
+#, fuzzy
+#| msgid "Validate &Links"
+msgid "Validation"
+msgstr "&Links pröven"
 
 #. i18n: file: plugin_validators.rc:4
 #. i18n: ectx: Menu (tools)
@@ -89,40 +147,85 @@ msgstr "&Warktüüch"
 msgid "Extra Toolbar"
 msgstr "Extra-Warktüüchbalken"
 
-#: rc.cpp:7
+#. i18n: file: remotevalidators.ui:19
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:9
+msgid "HTML/XML Validator"
+msgstr "HTML- un XML-Prööv"
+
+#. i18n: file: remotevalidators.ui:25
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: file: remotevalidators.ui:74
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: file: remotevalidators.ui:123
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:12 rc.cpp:21 rc.cpp:30
+msgid "URL:"
+msgstr "URL:"
+
+#. i18n: file: remotevalidators.ui:45
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: file: remotevalidators.ui:94
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:15 rc.cpp:24
+msgid "Upload:"
+msgstr "Hoochladen:"
+
+#. i18n: file: remotevalidators.ui:68
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: rc.cpp:18
+msgid "CSS Validator"
+msgstr "CSS-Prööv"
+
+#. i18n: file: remotevalidators.ui:117
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: rc.cpp:27
+msgid "Link Validator"
+msgstr "Linkprööv"
+
+#. i18n: file: reportwidget.ui:37
+#. i18n: ectx: property (text), widget (QTreeWidget, reportsView)
+#: rc.cpp:33
+msgid "Row"
+msgstr ""
+
+#. i18n: file: reportwidget.ui:42
+#. i18n: ectx: property (text), widget (QTreeWidget, reportsView)
+#: rc.cpp:36
+msgid "Column"
+msgstr ""
+
+#. i18n: file: reportwidget.ui:47
+#. i18n: ectx: property (text), widget (QTreeWidget, reportsView)
+#: rc.cpp:39
+msgid "Message"
+msgstr ""
+
+#: rc.cpp:40
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Manfred Wiese, Sönke Dibbern"
 
-#: rc.cpp:8
+#: rc.cpp:41
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "m.j.wiese@web.de, s_dibbern@web.de"
 
-#: validatorsdialog.cpp:37
-msgid "Configure"
-msgstr "Instellen"
+#: reportdialog.cpp:43
+#, fuzzy
+#| msgid "CSS Validator"
+msgid "Validation Report"
+msgstr "CSS-Prööv"
 
-#: validatorsdialog.cpp:42
+#: validatorsdialog.cpp:34
 msgid "Configure Validating Servers"
 msgstr "Servers för't Överpröven instellen"
 
-#: validatorsdialog.cpp:48
-msgid "HTML/XML Validator"
-msgstr "HTML- un XML-Prööv"
+#~ msgid "Upload Not Possible"
+#~ msgstr "Hoochladen nich mööglich"
 
-#: validatorsdialog.cpp:52 validatorsdialog.cpp:72 validatorsdialog.cpp:92
-msgid "URL:"
-msgstr "URL:"
+#~ msgid "Validating links is not possible for local files."
+#~ msgstr "Linköverpröven för lokaal Dateien nich mööglich."
 
-#: validatorsdialog.cpp:59 validatorsdialog.cpp:79
-msgid "Upload:"
-msgstr "Hoochladen:"
-
-#: validatorsdialog.cpp:68
-msgid "CSS Validator"
-msgstr "CSS-Prööv"
-
-#: validatorsdialog.cpp:88
-msgid "Link Validator"
-msgstr "Linkprööv"
+#~ msgid "Configure"
+#~ msgstr "Instellen"
