@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevcoverage\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-01-01 09:44+0100\n"
+"POT-Creation-Date: 2009-01-03 11:00+0100\n"
 "PO-Revision-Date: 2008-12-16 00:07+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -65,42 +65,141 @@ msgstr "Afdecken"
 msgid "Coverage Report"
 msgstr "Afdeckbericht"
 
-#. i18n: file: coverage/reportwidget.ui:16
+#. i18n: file: coverage/reportwidget.ui:20
 #. i18n: ectx: property (whatsThis), widget (QWidget, ReportWidget)
 #: rc.cpp:6
-msgid "GCOV code coverage statistics."
-msgstr "Kodeafdecken-Bericht vun Gcov"
+msgid ""
+"GCOV code coverage statistics.\n"
+"\n"
+"Set the directory to generate the report for and start the scan. \n"
+"\n"
+"Once finished, you can select the directories in the coverage report to see "
+"their statistics. A more detailed report can be seen for each directory, "
+"showing all the covered files in it. Each file can also be shown in the "
+"editor, annotated with line by line coverage information."
+msgstr ""
 
-#. i18n: file: coverage/reportwidget.ui:31
+#. i18n: file: coverage/reportwidget.ui:35
+#. i18n: ectx: property (whatsThis), widget (QLabel, buildPathTextLabel)
+#: rc.cpp:13
+msgid "The directory to scan for .gcda files."
+msgstr ""
+
+#. i18n: file: coverage/reportwidget.ui:38
 #. i18n: ectx: property (text), widget (QLabel, buildPathTextLabel)
-#: rc.cpp:9
+#: rc.cpp:16
 msgid "Build Path: "
 msgstr "Buupadd: "
 
+#. i18n: file: coverage/reportwidget.ui:45
+#. i18n: ectx: property (toolTip), widget (QPushButton, startButton)
+#: rc.cpp:19
+msgid "Start coverage analysis"
+msgstr ""
+
+#. i18n: file: coverage/reportwidget.ui:50
+#. i18n: ectx: property (whatsThis), widget (QPushButton, startButton)
+#: rc.cpp:22
+msgid ""
+"Start coverage analysis in the specified path.\n"
+"\n"
+"The directory and, recursively, its subdirectories are scanned for .gcda "
+"files."
+msgstr ""
+
+#. i18n: file: coverage/reportwidget.ui:87
+#. i18n: ectx: property (toolTip), widget (KLineEdit, filterBox)
+#: rc.cpp:27
+msgid "Filter directories by name"
+msgstr ""
+
 #. i18n: file: coverage/reportwidget.ui:92
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, filterBox)
+#: rc.cpp:30
+msgid ""
+"When the report is in directory mode, only those containing the specified "
+"text in their path are shown.\n"
+"\n"
+"In file mode, the filter has no effect."
+msgstr ""
+
+#. i18n: file: coverage/reportwidget.ui:116
+#. i18n: ectx: property (whatsThis), widget (QLabel, coverageRatioTextLabel)
+#. i18n: file: coverage/reportwidget.ui:126
+#. i18n: ectx: property (whatsThis), widget (QLabel, coverageRatio)
+#: rc.cpp:35 rc.cpp:41
+msgid "Percentage of covered lines in the selected directories."
+msgstr ""
+
+#. i18n: file: coverage/reportwidget.ui:119
 #. i18n: ectx: property (text), widget (QLabel, coverageRatioTextLabel)
-#: rc.cpp:12
+#: rc.cpp:38
 msgid "Line Coverage:"
 msgstr "Reegafdecken:"
 
-#. i18n: file: coverage/reportwidget.ui:99
+#. i18n: file: coverage/reportwidget.ui:129
 #. i18n: ectx: property (text), widget (QLabel, coverageRatio)
-#. i18n: file: coverage/reportwidget.ui:113
+#. i18n: file: coverage/reportwidget.ui:153
 #. i18n: ectx: property (text), widget (QLabel, nrofCoveredLines)
-#. i18n: file: coverage/reportwidget.ui:127
+#. i18n: file: coverage/reportwidget.ui:177
 #. i18n: ectx: property (text), widget (QLabel, sloc)
-#: rc.cpp:15 rc.cpp:21 rc.cpp:27
+#: rc.cpp:44 rc.cpp:60 rc.cpp:76
 msgid "-"
 msgstr ""
 
-#. i18n: file: coverage/reportwidget.ui:106
+#. i18n: file: coverage/reportwidget.ui:138
+#. i18n: ectx: property (whatsThis), widget (QLabel, nrofCoveredLinesTextLabel)
+#. i18n: file: coverage/reportwidget.ui:150
+#. i18n: ectx: property (whatsThis), widget (QLabel, nrofCoveredLines)
+#: rc.cpp:47 rc.cpp:55
+msgid ""
+"Number of covered lines in the selected directories.\n"
+"\n"
+"Covered lines are those that were executed at least once."
+msgstr ""
+
+#. i18n: file: coverage/reportwidget.ui:141
 #. i18n: ectx: property (text), widget (QLabel, nrofCoveredLinesTextLabel)
-#: rc.cpp:18
+#: rc.cpp:52
 msgid "Covered Lines:"
 msgstr "Afdeckt Regen:"
 
-#. i18n: file: coverage/reportwidget.ui:120
+#. i18n: file: coverage/reportwidget.ui:162
+#. i18n: ectx: property (whatsThis), widget (QLabel, slocTextLabel)
+#. i18n: file: coverage/reportwidget.ui:174
+#. i18n: ectx: property (whatsThis), widget (QLabel, sloc)
+#: rc.cpp:63 rc.cpp:71
+msgid ""
+"Total number of lines of code in the selected directories.\n"
+"\n"
+"Note that it only includes executable lines. That is, things like comments, "
+"macros, forward declarations... aren't taken into account."
+msgstr ""
+
+#. i18n: file: coverage/reportwidget.ui:165
 #. i18n: ectx: property (text), widget (QLabel, slocTextLabel)
-#: rc.cpp:24
+#: rc.cpp:68
 msgid "Total SLOC:"
 msgstr "Bornkoderegen tosamen:"
+
+#. i18n: file: coverage/reportwidget.ui:225
+#. i18n: ectx: property (whatsThis), widget (Veritas::DrillDownView, table)
+#: rc.cpp:79
+msgid ""
+"Coverage report.\n"
+"\n"
+"In directory mode, the report summarizes the coverage with a list of all the "
+"directories that contain at least one covered file. It could include "
+"directories out of the specified path, depending on the files included in "
+"the source code.\n"
+"\n"
+"In file mode, all the files of the selected directory are shown. If several "
+"directories are selected, only the files of the last selected directory are "
+"shown. Double clicking on any of the items shows the associated file in the "
+"editor, annotated with the coverage information.\n"
+"\n"
+"You can change between directory and file mode using left and right keys."
+msgstr ""
+
+#~ msgid "GCOV code coverage statistics."
+#~ msgstr "Kodeafdecken-Bericht vun Gcov"
