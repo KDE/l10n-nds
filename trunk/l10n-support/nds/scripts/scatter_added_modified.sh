@@ -9,7 +9,7 @@ while test -n "$1"
 do	case "$1" in
 		--help|-h) dohelp=yes ;;
 		--all) scatterall=yes ;;
-		--*) echo -e "\aUnknown option: $1"; dohelp=yes ;;
+		-*) echo -e "\aUnknown option: $1"; dohelp=yes ;;
 		*) commitmsg="$@"; break ;;
 	esac
 	shift
