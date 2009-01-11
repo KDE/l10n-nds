@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-01-07 11:24+0100\n"
-"PO-Revision-Date: 2009-01-06 21:29+0100\n"
+"POT-Creation-Date: 2009-01-10 11:31+0100\n"
+"PO-Revision-Date: 2009-01-11 00:18+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -4022,7 +4022,6 @@ msgstr "Besekert Hoochlaad-Gauigkeit"
 #. +> trunk stable
 #: ktorrent/speedlimitsmodel.cpp:137 ktorrent/speedlimitsmodel.cpp:142
 #: ktorrent/speedlimitsmodel.cpp:147 ktorrent/speedlimitsmodel.cpp:152
-#: libbtcore/util/functions.cpp:270
 #, kde-format
 msgid "%1 KB/s"
 msgstr "%1 kB/s"
@@ -4774,11 +4773,14 @@ msgstr "De Steed vun den Torrent sien Daten op de Fastplaat"
 #. +> trunk
 #: ktorrent/viewmodel.cpp:498
 #, kde-format
+#| msgid ""
+#| "There is a problem with the tracker: <br >"
+#| "<b>%1</b>"
 msgid ""
-"There is a problem with the tracker: <br >"
+"There is a problem with the tracker: <br>"
 "<b>%1</b>"
 msgstr ""
-"Dat gifft en Problem mit dissen Tracker: <br >"
+"Dat gifft en Problem mit dissen Tracker: <br>"
 "<b>%1</b>"
 
 #. +> trunk
@@ -4937,7 +4939,7 @@ msgid "Failed to write to file %1 : %2"
 msgstr "\"%1\" lett sik nich schrieven: %2"
 
 #. +> trunk stable
-#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:836
+#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:833
 #, kde-format
 msgid "Cannot preallocate diskspace : %1"
 msgstr "Plattenspieker lett sik nich vörweg towiesen: %1"
@@ -4974,8 +4976,8 @@ msgid "Failed to open %1 : %2"
 msgstr "\"%1\" lett sik nich opmaken: %2"
 
 #. +> trunk stable
-#: libbtcore/diskio/multifilecache.cpp:772
-#: libbtcore/diskio/multifilecache.cpp:852
+#: libbtcore/diskio/multifilecache.cpp:769
+#: libbtcore/diskio/multifilecache.cpp:849
 #, kde-format
 msgid "Cannot open file %1 : %2"
 msgstr "Datei \"%1\" lett sik nich opmaken: %2"
@@ -5357,32 +5359,39 @@ msgstr "Datei \"%1\" lett sik nich ruttrecken"
 msgid "Cannot seek in file : %1"
 msgstr "Binnen Datei \"%1\" lett sik nich söken"
 
-#. +> trunk stable
+#. +> stable
 #: libbtcore/util/functions.cpp:258
 #, kde-format
 msgid "%1 GB"
 msgstr "%1 GB"
 
-#. +> trunk stable
+#. +> stable
 #: libbtcore/util/functions.cpp:260
 #, kde-format
 msgid "%1 MB"
 msgstr "%1 MB"
 
-#. +> trunk stable
+#. +> stable
 #: libbtcore/util/functions.cpp:262
 #, kde-format
 msgid "%1 KB"
 msgstr "%1 kB"
 
-#. +> trunk stable
+#. +> stable
 #: libbtcore/util/functions.cpp:264
 #, kde-format
 msgid "%1 B"
 msgstr "%1 B"
 
+#. +> trunk
+#: libbtcore/util/functions.cpp:273
+#, kde-format
+#| msgid "%1 KB/s"
+msgid "%1/s"
+msgstr "%1/s"
+
 #. +> trunk stable
-#: libbtcore/util/functions.cpp:281
+#: libbtcore/util/functions.cpp:284
 #, kde-format
 msgid "1 day "
 msgid_plural "%1 days "
@@ -5649,30 +5658,53 @@ msgid "Cannot find port forwarding service in the device's description!"
 msgstr "In de Reedschap-Beschrieven lett sik keen Deenst för't Port-Wiederledden finnen!"
 
 #. +> trunk
-#: plasma/applet/applet.cpp:153 plasma/applet/applet.cpp:280
+#: plasma/applet/applet.cpp:153 plasma/applet/applet.cpp:281
 msgid "KTorrent is not running !"
 msgstr "KTorrent löppt nich!"
 
 #. +> trunk
-#: plasma/applet/applet.cpp:155 plasma/applet/applet.cpp:272
+#: plasma/applet/applet.cpp:155 plasma/applet/applet.cpp:273
 msgid "No torrents loaded !"
 msgstr "Keen Torrents laadt!"
 
 #. +> trunk
-#: plasma/applet/applet.cpp:305 plasma/applet/applet.cpp:376
+#: plasma/applet/applet.cpp:306 plasma/applet/applet.cpp:376
 #, kde-format
+#| msgid ""
+#| "<table>\t\t\t\t"
+#| "<tr>"
+#| "<td>Download Speed:</td>"
+#| "<td>%5 KB/s </td>"
+#| "<td>Seeders: </td>"
+#| "<td>%1 (%2)</td>"
+#| "</tr>"
+#| "\t\t\t\t"
+#| "<tr>"
+#| "<td>Upload Speed:</td>"
+#| "<td>%6 KB/s </td>"
+#| "<td>Leechers: </td>"
+#| "<td>%3 (%4)</td>"
+#| "</tr>"
+#| "\t\t\t\t"
+#| "<tr>"
+#| "<td>Downloaded:</td>"
+#| "<td>%7 / %8 </td>"
+#| "<td>Uploaded: </td>"
+#| "<td>%9</td>"
+#| "</tr>"
+#| "\t\t\t\t</table>"
 msgid ""
 "<table>\t\t\t\t"
 "<tr>"
 "<td>Download Speed:</td>"
-"<td>%5 KB/s </td>"
+"<td>%5 </td>"
 "<td>Seeders: </td>"
 "<td>%1 (%2)</td>"
 "</tr>"
 "\t\t\t\t"
 "<tr>"
 "<td>Upload Speed:</td>"
-"<td>%6 KB/s </td>"
+"<td>%6 </td>"
 "<td>Leechers: </td>"
 "<td>%3 (%4)</td>"
 "</tr>"
@@ -5688,14 +5720,14 @@ msgstr ""
 "<table>\t\t\t\t"
 "<tr>"
 "<td>Daallaad-Gauigkeit:</td>"
-"<td>%5 kB/s </td>"
+"<td>%5 </td>"
 "<td>Verdelers: </td>"
 "<td>%1 (%2)</td>"
 "</tr>"
 "\t\t\t\t"
 "<tr>"
 "<td>Hoochlaad-Gauigkeit:</td>"
-"<td>%6 kB/s </td>"
+"<td>%6 </td>"
 "<td>Sugers: </td>"
 "<td>%3 (%4)</td>"
 "</tr>"
@@ -5709,7 +5741,7 @@ msgstr ""
 "\t\t\t\t</table>"
 
 #. +> trunk
-#: plasma/applet/applet.cpp:315
+#: plasma/applet/applet.cpp:316
 #, kde-format
 msgid ""
 "<b>%1</b><br/>"
@@ -9445,3 +9477,4 @@ msgstr "\"%1\" is nich de Padd na't PHP-Programm"
 #~ "\n"
 #~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Beacht:</span>Dit warrt bloots binnen den Dateiköördialoog bruukt; wesselst Du den Koppel, warrt de Dialoog bi disse Steed opmaakt. Du kannst ehr liekers topassen, wenn Du dat wullt. </p>"
 #~ "</body></html>"
+
