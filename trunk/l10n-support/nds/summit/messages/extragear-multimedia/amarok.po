@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-01-17 10:35+0100\n"
+"POT-Creation-Date: 2009-01-18 10:48+0100\n"
 "PO-Revision-Date: 2009-01-18 01:16+0100\n"
 "Last-Translator: Sönke Dibbern <soenke.dibbern@clearingstelle-eeg.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1384,7 +1384,7 @@ msgid "Peak acceleration: "
 msgstr "Timp-Beslünigen: "
 
 #. +> trunk stable
-#: App.cpp:81 browsers/playlistbrowser/PodcastModel.cpp:369
+#: App.cpp:81 browsers/playlistbrowser/PodcastModel.cpp:372
 msgid "Amarok"
 msgstr "Amarok"
 
@@ -1610,7 +1610,7 @@ msgstr "Nich begäng"
 #. +> trunk stable
 #: browsers/collectionbrowser/CollectionTreeItem.cpp:153
 #: collection/sqlcollection/OrganizeCollectionDialog.cpp:160
-#: collectionscanner/CollectionScanner.cpp:748
+#: collectionscanner/CollectionScanner.cpp:841
 #: covermanager/CoverManager.cpp:869 covermanager/CoverViewDialog.h:45
 #: playlist/view/graphic/PlaylistGraphicsItem.cpp:343
 msgid "Various Artists"
@@ -1767,6 +1767,7 @@ msgstr "Na Sammeln verschuven"
 
 #. +> trunk stable
 #: browsers/collectionbrowser/CollectionTreeView.cpp:381
+#: services/lastfm/LastFmTreeView.cpp:201
 msgid "More..."
 msgstr "Mehr..."
 
@@ -1776,7 +1777,7 @@ msgstr "Mehr..."
 #: browsers/playlistbrowser/PodcastCategory.cpp:465
 #: browsers/playlistbrowser/UserPlaylistTreeView.cpp:166
 #: context/applets/albums/AlbumsView.cpp:105
-#: services/lastfm/LastFmTreeView.cpp:95 Systray.cpp:215
+#: services/lastfm/LastFmTreeView.cpp:113 Systray.cpp:215
 msgid "&Append to Playlist"
 msgstr "Na Afspeellist &anhangen"
 
@@ -1786,7 +1787,7 @@ msgstr "Na Afspeellist &anhangen"
 #: browsers/playlistbrowser/PodcastCategory.cpp:478
 #: browsers/playlistbrowser/UserPlaylistTreeView.cpp:172
 #: context/applets/albums/AlbumsView.cpp:106
-#: services/lastfm/LastFmTreeView.cpp:103
+#: services/lastfm/LastFmTreeView.cpp:121
 msgctxt "Replace the currently loaded tracks with these"
 msgid "&Load"
 msgstr "&Laden"
@@ -1967,7 +1968,7 @@ msgstr "Passt:"
 #. i18n: ectx: property (text), item, widget (KComboBox, keywordCombo)
 #. +> trunk stable
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:248
-#: browsers/playlistbrowser/PodcastModel.cpp:243
+#: browsers/playlistbrowser/PodcastModel.cpp:246
 #: dialogs/EditFilterDialog.ui:99 playlist/PlaylistDefines.h:87
 #: playlist/PlaylistModel.cpp:664 widgets/SmartPlaylistEditor.cpp:184
 #: widgets/Token.cpp:119
@@ -2028,7 +2029,7 @@ msgstr "Toeerst speelt"
 #. +> trunk stable
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:258
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:702
-#: context/applets/currenttrack/CurrentTrack.cpp:238 Systray.cpp:173
+#: context/applets/currenttrack/CurrentTrack.cpp:254 Systray.cpp:173
 msgid "Last Played"
 msgstr "Tolest speelt"
 
@@ -2220,32 +2221,27 @@ msgid "Scan Interval..."
 msgstr "Nakiek-Tiet..."
 
 #. +> trunk stable
-#: browsers/playlistbrowser/PodcastModel.cpp:242 playlist/PlaylistDefines.h:90
+#: browsers/playlistbrowser/PodcastModel.cpp:245 playlist/PlaylistDefines.h:90
 #: playlist/PlaylistModel.cpp:676
 msgid "Type"
 msgstr "Typ"
 
 #. +> trunk stable
-#: browsers/playlistbrowser/PodcastModel.cpp:244 dialogs/TagDialog.cpp:551
+#: browsers/playlistbrowser/PodcastModel.cpp:247 dialogs/TagDialog.cpp:551
 msgid "Summary"
 msgstr "Tosamenfaten"
 
 #. +> trunk stable
-#: browsers/playlistbrowser/PodcastModel.cpp:364
-#: browsers/playlistbrowser/PodcastModel.cpp:449
-#: browsers/playlistbrowser/PodcastModel.cpp:476
-#: browsers/playlistbrowser/PodcastModel.cpp:533
-#: browsers/playlistbrowser/PodcastModel.cpp:552
-#: browsers/playlistbrowser/PodcastModel.cpp:587
+#: browsers/playlistbrowser/PodcastModel.cpp:372
+msgid "Enter Podcast URL:"
+msgstr "Podcast-Adress (URL) ingeven:"
+
+#. +> trunk stable
+#: browsers/playlistbrowser/PodcastModel.cpp:557
 #: podcasts/sql/SqlPodcastProvider.h:46
 #: services/opmldirectory/OpmlDirectoryService.cpp:240
 msgid "Local Podcasts"
 msgstr "Lokaal Podcasts"
-
-#. +> trunk stable
-#: browsers/playlistbrowser/PodcastModel.cpp:369
-msgid "Enter Podcast URL:"
-msgstr "Podcast-Adress (URL) ingeven:"
 
 #. +> trunk stable
 #: collection/CollectionManager.cpp:115
@@ -3074,33 +3070,39 @@ msgstr "Schiev %1"
 
 #. i18n: ectx: property (text), widget (QLabel, scoreLabel)
 #. +> trunk stable
-#: context/applets/currenttrack/CurrentTrack.cpp:78
-#: context/applets/currenttrack/CurrentTrack.cpp:333 dialogs/TagDialog.cpp:874
+#: context/applets/currenttrack/CurrentTrack.cpp:82
+#: context/applets/currenttrack/CurrentTrack.cpp:86
+#: context/applets/currenttrack/CurrentTrack.cpp:349
+#: context/applets/currenttrack/CurrentTrack.cpp:353 dialogs/TagDialog.cpp:874
 #: dialogs/TagDialogBase.ui:502
 msgid "Score:"
 msgstr "Pünkt:"
 
 #. +> trunk stable
-#: context/applets/currenttrack/CurrentTrack.cpp:79 dialogs/TagDialog.cpp:878
+#: context/applets/currenttrack/CurrentTrack.cpp:83
+#: context/applets/currenttrack/CurrentTrack.cpp:87 dialogs/TagDialog.cpp:878
 msgid "Play Count:"
 msgstr "Afspeelklock:"
 
 #. +> trunk stable
-#: context/applets/currenttrack/CurrentTrack.cpp:80
-#: context/applets/currenttrack/CurrentTrack.cpp:335 dialogs/TagDialog.cpp:883
+#: context/applets/currenttrack/CurrentTrack.cpp:84
+#: context/applets/currenttrack/CurrentTrack.cpp:88
+#: context/applets/currenttrack/CurrentTrack.cpp:351
+#: context/applets/currenttrack/CurrentTrack.cpp:355 dialogs/TagDialog.cpp:883
 msgctxt "a single item (singular)"
 msgid "Last Played:"
 msgstr "Tolest speelt:"
 
 #. +> trunk stable
-#: context/applets/currenttrack/CurrentTrack.cpp:113
+#: context/applets/currenttrack/CurrentTrack.cpp:125
 #: context/engines/current/CurrentEngine.cpp:100 mac/GrowlInterface.cpp:44
 #: widgets/Osd.cpp:556
 msgid "No track playing"
 msgstr "Keen Stück warrt speelt"
 
 #. +> trunk stable
-#: context/applets/currenttrack/CurrentTrack.cpp:334
+#: context/applets/currenttrack/CurrentTrack.cpp:350
+#: context/applets/currenttrack/CurrentTrack.cpp:354
 msgid "Playcount:"
 msgstr "Afspeelteller:"
 
@@ -3127,7 +3129,6 @@ msgstr "Leedtexten warrt haalt."
 #. +> trunk
 #: context/applets/lyrics/LyricsApplet.cpp:185
 #, kde-format
-#| msgid "Lyrics were not able to be downloaded. Please check your internet connection."
 msgid "Lyrics were not able to be downloaded. Please check your internet connection: %1"
 msgstr "Leedtexten leten sik nich daalladen. Bitte prööv Dien Internetverbinnen: %1"
 
@@ -3251,7 +3252,6 @@ msgstr "Wikipedia in anner Spraken: <br/>"
 
 #. +> trunk
 #: context/LyricsManager.cpp:108
-#| msgid "This object could not be created."
 msgid "Lyrics data could not be parsed"
 msgstr "Leedtext-Daten laat sik nich inlesen"
 
@@ -4796,91 +4796,103 @@ msgstr "Freetekens för Ü&nnerstreek infögen"
 msgid "Podcast Configuration"
 msgstr "Podcast instellen"
 
+#. i18n: ectx: property (url), widget (KUrlLabel, m_feedLabel)
+#. +> trunk
+#: dialogs/PodcastSettingsBase.ui:36
+msgid "Feed URL"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_leftClickLabel)
+#. +> trunk
+#: dialogs/PodcastSettingsBase.ui:51
+msgid "(left click to copy to clipboard)"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #. +> trunk stable
-#: dialogs/PodcastSettingsBase.ui:31
+#: dialogs/PodcastSettingsBase.ui:65
 msgid "Save location:"
 msgstr "Oort för't Sekern:"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_autoFetchCheck)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_autoFetchCheck)
 #. +> trunk stable
-#: dialogs/PodcastSettingsBase.ui:46 dialogs/PodcastSettingsBase.ui:49
+#: dialogs/PodcastSettingsBase.ui:80 dialogs/PodcastSettingsBase.ui:83
 msgid "When checked, Amarok will automatically scan the podcast for updates"
 msgstr "Wenn anmaakt, kiekt Amarok de Podcasts automaatsch na Opfrischen dör"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_autoFetchCheck)
 #. +> trunk stable
-#: dialogs/PodcastSettingsBase.ui:52
+#: dialogs/PodcastSettingsBase.ui:86
 msgid "Automatically scan for updates"
 msgstr "Automaatsch na Opfrischen kieken"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, kbuttongroup)
 #. +> trunk stable
-#: dialogs/PodcastSettingsBase.ui:59
+#: dialogs/PodcastSettingsBase.ui:93
 msgid "Media Download"
 msgstr "Medien daalladen"
 
 #. i18n: ectx: property (toolTip), widget (QRadioButton, m_downloadRadio)
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, m_downloadRadio)
 #. +> trunk stable
-#: dialogs/PodcastSettingsBase.ui:68 dialogs/PodcastSettingsBase.ui:71
+#: dialogs/PodcastSettingsBase.ui:102 dialogs/PodcastSettingsBase.ui:105
 msgid "Download media as soon as it becomes available"
 msgstr "Medium daalladen, as draad as dat verföögbor is"
 
 #. i18n: ectx: property (text), widget (QRadioButton, m_downloadRadio)
 #. +> trunk stable
-#: dialogs/PodcastSettingsBase.ui:74
+#: dialogs/PodcastSettingsBase.ui:108
 msgid "Download when a&vailable"
 msgstr "&Daalladen (wenn verföögbor)"
 
 #. i18n: ectx: property (toolTip), widget (QRadioButton, m_streamRadio)
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, m_streamRadio)
 #. +> trunk stable
-#: dialogs/PodcastSettingsBase.ui:81 dialogs/PodcastSettingsBase.ui:84
+#: dialogs/PodcastSettingsBase.ui:115 dialogs/PodcastSettingsBase.ui:118
 msgid "Media must be explicitly downloaded, otherwise the podcast will be played from the remote server."
 msgstr "Du muttst Medien daalladen, anners warrt de Podcast vun den feern Server ut afspeelt."
 
 #. i18n: ectx: property (text), widget (QRadioButton, m_streamRadio)
 #. +> trunk stable
-#: dialogs/PodcastSettingsBase.ui:87
+#: dialogs/PodcastSettingsBase.ui:121
 msgid "Stream or download on re&quest"
 msgstr "Stroom oder Daalladen op An&fraag"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_purgeCheck)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_purgeCheck)
 #. +> trunk stable
-#: dialogs/PodcastSettingsBase.ui:99 dialogs/PodcastSettingsBase.ui:102
+#: dialogs/PodcastSettingsBase.ui:133 dialogs/PodcastSettingsBase.ui:136
 msgid "If checked, Amarok will throw away old podcast episodes"
 msgstr "Wenn anmaakt, smitt Amarok ole Podcasts weg"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_purgeCheck)
 #. +> trunk stable
-#: dialogs/PodcastSettingsBase.ui:105
+#: dialogs/PodcastSettingsBase.ui:139
 msgid "Limit &number of episodes"
 msgstr "Tall vun Kapitels &ingrenzen"
 
 #. i18n: ectx: property (text), widget (QLabel, m_purgeCountLabel)
 #. +> trunk stable
-#: dialogs/PodcastSettingsBase.ui:128
+#: dialogs/PodcastSettingsBase.ui:162
 msgid "Keep maximum of:"
 msgstr "Nich mehr wohren as:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, m_purgeCountSpinBox)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, m_purgeCountSpinBox)
 #. +> trunk stable
-#: dialogs/PodcastSettingsBase.ui:138 dialogs/PodcastSettingsBase.ui:141
+#: dialogs/PodcastSettingsBase.ui:172 dialogs/PodcastSettingsBase.ui:175
 msgid "The maximum number of podcast items to store"
 msgstr "De hööchste Tall vun Podcasts, de wohrt warrt"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, m_purgeCountSpinBox)
 #. +> trunk stable
-#: dialogs/PodcastSettingsBase.ui:144
+#: dialogs/PodcastSettingsBase.ui:178
 msgid " Items"
 msgstr " Indrääg"
 
 #. +> trunk stable
-#: dialogs/PodcastSettingsDialog.cpp:33
+#: dialogs/PodcastSettingsDialog.cpp:37
 #, kde-format
 msgctxt "change options"
 msgid "Configure %1"
@@ -5568,7 +5580,12 @@ msgstr "Seb \"Surfin' down under\" Ruiz"
 msgid "Alejandro Wainzinger"
 msgstr "Alejandro Wainzinger"
 
-#. +> trunk stable
+#. +> trunk
+#: main.cpp:56
+msgid "Alex Merry"
+msgstr ""
+
+#. +> stable
 #: main.cpp:56
 msgid "Alexandre 'Ain't afraid of no bugs' Oliveira"
 msgstr "Alexandre \"Ain't afraid of no bugs\" Oliveira"
@@ -5630,216 +5647,216 @@ msgstr "Ljubomir Simin"
 
 #. +> trunk stable
 #: main.cpp:68
+msgid "Max Howell"
+msgstr "Max Howell"
+
+#. +> stable
+#: main.cpp:68
 msgid "Lydia Pintscher"
 msgstr "Lydia Pintscher"
 
 #. +> trunk stable
 #: main.cpp:69
-msgid "Max Howell"
-msgstr "Max Howell"
-
-#. +> trunk stable
-#: main.cpp:70
 msgid "Myriam Schweingruber"
 msgstr "Myriam Schweingruber"
 
 #. +> trunk stable
-#: main.cpp:71
+#: main.cpp:70
 msgid "Nuno Pinheiro"
 msgstr "Nuno Pinheiro"
 
 #. +> trunk stable
-#: main.cpp:72
+#: main.cpp:71
 msgid "Olivier Bédard"
 msgstr "Olivier Bédard"
 
 #. +> trunk stable
-#: main.cpp:73
+#: main.cpp:72
 msgid "Pasi Lalinaho"
 msgstr "Pasi Lalinaho"
 
 #. +> trunk stable
-#: main.cpp:74
+#: main.cpp:73
 msgid "Peter Zhou Lei"
 msgstr "Peter Zhou Lei"
 
 #. +> trunk stable
-#: main.cpp:75
+#: main.cpp:74
 msgid "Scott Wheeler"
 msgstr "Scott Wheeler"
 
 #. +> trunk stable
-#: main.cpp:76
+#: main.cpp:75
 msgid "Shane King"
 msgstr "Shane King"
 
 #. +> trunk stable
-#: main.cpp:77
+#: main.cpp:76
 msgid "Soren Harward"
 msgstr "Soren Harward"
 
 #. +> trunk stable
-#: main.cpp:78
+#: main.cpp:77
 msgid "Sven Krohlas"
 msgstr "Sven Krohlas"
 
 #. +> trunk stable
-#: main.cpp:79
+#: main.cpp:78
 msgid "Teo Mrnjavac"
 msgstr "Teo Mrnjavac"
 
 #. +> trunk stable
-#: main.cpp:80
+#: main.cpp:79
 msgid "William Viana Soares"
 msgstr "William Viana Soares"
 
 #. +> trunk stable
-#: main.cpp:81
+#: main.cpp:80
 msgid "Former contributors"
 msgstr "Verleden Bidregers"
 
 #. +> trunk stable
-#: main.cpp:82
+#: main.cpp:81
 msgid "Adam Pigg"
 msgstr "Adam Pigg"
 
 #. +> trunk stable
-#: main.cpp:83
+#: main.cpp:82
 msgid "Adeodato Simó"
 msgstr "Adeodato Simó"
 
 #. +> trunk stable
-#: main.cpp:84
+#: main.cpp:83
 msgid "Alexandre Oliveira"
 msgstr "Alexandre Oliveira"
 
 #. +> trunk stable
-#: main.cpp:85
+#: main.cpp:84
 msgid "Andreas Mair"
 msgstr "Andreas Mair"
 
 #. +> trunk stable
-#: main.cpp:86
+#: main.cpp:85
 msgid "Andrew de Quincey"
 msgstr "Andrew de Quincey"
 
 #. +> trunk stable
-#: main.cpp:87
+#: main.cpp:86
 msgid "Andrew Turner"
 msgstr "Andrew Turner"
 
 #. +> trunk stable
-#: main.cpp:88
+#: main.cpp:87
 msgid "Andy Kelk"
 msgstr "Andy Kelk"
 
 #. +> trunk stable
-#: main.cpp:89
+#: main.cpp:88
 msgid "Christian Muehlhaeuser"
 msgstr "Christian Muehlhaeuser"
 
 #. +> trunk stable
-#: main.cpp:90
+#: main.cpp:89
 msgid "Derek Nelson"
 msgstr "Derek Nelson"
 
 #. +> trunk stable
-#: main.cpp:91
+#: main.cpp:90
 msgid "Enrico Ros"
 msgstr "Enrico Ros"
 
 #. +> trunk stable
-#: main.cpp:92
+#: main.cpp:91
 msgid "Frederik Holljen"
 msgstr "Frederik Holljen"
 
 #. +> trunk stable
-#: main.cpp:93
+#: main.cpp:92
 msgid "Gábor Lehel"
 msgstr "Gábor Lehel"
 
 #. +> trunk stable
-#: main.cpp:94
+#: main.cpp:93
 msgid "Gérard Dürrmeyer"
 msgstr "Gérard Dürrmeyer"
 
 #. +> trunk stable
-#: main.cpp:95
+#: main.cpp:94
 msgid "Giovanni Venturi"
 msgstr "Giovanni Venturi"
 
 #. +> trunk stable
-#: main.cpp:96
+#: main.cpp:95
 msgid "Jarkko Lehti"
 msgstr "Jarkko Lehti"
 
 #. +> trunk stable
-#: main.cpp:97
+#: main.cpp:96
 msgid "Jocke Andersson"
 msgstr "Jocke Andersson"
 
 #. +> trunk stable
-#: main.cpp:98
+#: main.cpp:97
 msgid "Marco Gulino"
 msgstr "Marco Gulino"
 
 #. +> trunk stable
-#: main.cpp:99
+#: main.cpp:98
 msgid "Martin Aumueller"
 msgstr "Martin Aumueller"
 
 #. +> trunk stable
-#: main.cpp:100
+#: main.cpp:99
 msgid "Melchior Franz"
 msgstr "Melchior Franz"
 
 #. +> trunk stable
-#: main.cpp:101
+#: main.cpp:100
 msgid "Michael Pyne"
 msgstr "Michael Pyne"
 
 #. +> trunk stable
-#: main.cpp:102
+#: main.cpp:101
 msgid "Mike Diehl"
 msgstr "Mike Diehl"
 
 #. +> trunk stable
-#: main.cpp:103
+#: main.cpp:102
 msgid "Paul Cifarelli"
 msgstr "Paul Cifarelli"
 
 #. +> trunk stable
-#: main.cpp:104
+#: main.cpp:103
 msgid "Peter C. Ndikuwera"
 msgstr "Peter C. Ndikuwera"
 
 #. +> trunk stable
-#: main.cpp:105
+#: main.cpp:104
 msgid "Pierpaolo Panfilo"
 msgstr "Pierpaolo Panfilo"
 
 #. +> trunk stable
-#: main.cpp:106
+#: main.cpp:105
 msgid "Reigo Reinmets"
 msgstr "Reigo Reinmets"
 
 #. +> trunk stable
-#: main.cpp:107
+#: main.cpp:106
 msgid "Roman Becker"
 msgstr "Roman Becker"
 
 #. +> trunk stable
-#: main.cpp:108
+#: main.cpp:107
 msgid "Sami Nieminen"
 msgstr "Sami Nieminen"
 
 #. +> trunk stable
-#: main.cpp:109
+#: main.cpp:108
 msgid "Stanislav Karchebny"
 msgstr "Stanislav Karchebny"
 
 #. +> trunk stable
-#: main.cpp:110
+#: main.cpp:109
 msgid "Stefan Bogner"
 msgstr "Stefan Bogner"
 
@@ -6804,24 +6821,24 @@ msgid "SQL Podcast"
 msgstr "SQL-Podcast"
 
 #. +> trunk stable
-#: podcasts/sql/SqlPodcastProvider.cpp:159
+#: podcasts/sql/SqlPodcastProvider.cpp:161
 #, kde-format
 msgid "Already subscribed to %1."
 msgstr "Du hest \"%1\" al bestellt."
 
 #. +> trunk stable
-#: podcasts/sql/SqlPodcastProvider.cpp:358
+#: podcasts/sql/SqlPodcastProvider.cpp:362
 msgid "Downloading Podcast Media"
 msgstr "Podcast-Medien warrt daallaadt"
 
 #. +> trunk stable
-#: podcasts/sql/SqlPodcastProvider.cpp:358
+#: podcasts/sql/SqlPodcastProvider.cpp:362
 #, kde-format
 msgid "Downloading Podcast \"%1\""
 msgstr "Podcast \"%1\" warrt daallaadt"
 
 #. +> trunk stable
-#: podcasts/sql/SqlPodcastProvider.cpp:446
+#: podcasts/sql/SqlPodcastProvider.cpp:456
 #, kde-format
 msgid "Unable to save podcast episode file to %1"
 msgstr "Podcast-Kapitel lett sik nich as \"%1\" sekern"
@@ -9142,4 +9159,3 @@ msgstr "Amarok - keen Stück warrt speelt"
 
 #~ msgid "Group moved"
 #~ msgstr "Koppel verschaven"
-
