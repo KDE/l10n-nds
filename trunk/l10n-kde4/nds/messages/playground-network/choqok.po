@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: choqok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-01-22 10:30+0100\n"
+"POT-Creation-Date: 2009-01-23 10:21+0100\n"
 "PO-Revision-Date: 2009-01-17 00:57+0100\n"
 "Last-Translator: Sönke Dibbern <soenke.dibbern@clearingstelle-eeg.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -22,13 +22,17 @@ msgstr ""
 msgid "Cannot remove the account, please try removing it manually."
 msgstr "Dat Konto lett sik nich wegmaken, maak dat bitte vun Hand."
 
-#: accountswizard.cpp:34
+#: accountswizard.cpp:37
 msgid "Add a new account"
 msgstr "Nieg Konto tofögen"
 
-#: accountswizard.cpp:37
+#: accountswizard.cpp:40
 msgid "Modify existing account"
 msgstr "Vörhannen Konto ännern"
+
+#: accountswizard.cpp:124
+msgid "authentication failed, please check your credentials."
+msgstr ""
 
 #: backend.cpp:67 backend.cpp:281 backend.cpp:302
 msgid ""
@@ -37,16 +41,26 @@ msgstr ""
 "HTTP-POST-Anfraag lett sik nich utföhren, prööv bitte Dien Verbinnen na't "
 "Internet"
 
-#: backend.cpp:104
+#: backend.cpp:104 backend.cpp:493 backend.cpp:606
 msgid ""
 "Cannot create a http GET request, please check your internet connection."
 msgstr ""
 "HTTP-GET-Anfraag lett sik nich utföhren, prööv bitte Dien Verbinnen na't "
 "Internet"
 
-#: backend.cpp:135
+#: backend.cpp:135 backend.cpp:560 backend.cpp:569
 msgid "Data returned from server corrupted!"
 msgstr "Daten vun Server schaadhaftig torüchkamen!"
+
+#: backend.cpp:507 backend.cpp:536
+#, kde-format
+msgid "Authorization Failed, more info: %1"
+msgstr ""
+
+#: backend.cpp:551
+#, kde-format
+msgid "Requesting user informations failed. more info: %1"
+msgstr ""
 
 #: main.cpp:30
 msgid "A KDE 4 Twitter Client"
@@ -54,7 +68,7 @@ msgstr "En KDE4-Clientprogramm för Twitter"
 
 #. i18n: file: timelinewidget_base.ui:19
 #. i18n: ectx: property (windowTitle), widget (QWidget, timelinewidget_base)
-#: main.cpp:34 rc.cpp:176
+#: main.cpp:34 rc.cpp:177
 msgid "choqoK"
 msgstr "choqoK"
 
@@ -86,25 +100,41 @@ msgstr "choqoK warrt torechtmaakt, tööv bitte..."
 msgid "Update timelines"
 msgstr "Tietlienen opfrischen"
 
-#: mainwindow.cpp:92 quicktwit.cpp:49
+#: mainwindow.cpp:90 quicktwit.cpp:49
 msgid "Quick Tweet"
 msgstr "Fixjiepel"
 
+#: mainwindow.cpp:105
+msgid "Minimize"
+msgstr "Minimeren"
+
+#: mainwindow.cpp:107
+msgid "Restore"
+msgstr "Wedderherstellen"
+
+#: mainwindow.cpp:115
+msgid "&Restore"
+msgstr "&Wedderherstellen"
+
+#: mainwindow.cpp:118
+msgid "&Minimize"
+msgstr "&Minimeren"
+
 #. i18n: file: prefs_base.ui:20
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: mainwindow.cpp:113 rc.cpp:98
+#: mainwindow.cpp:134 rc.cpp:99
 msgid "General"
 msgstr "Allmeen"
 
-#: mainwindow.cpp:116
+#: mainwindow.cpp:137
 msgid "Accounts"
 msgstr "Kontos"
 
-#: mainwindow.cpp:120
+#: mainwindow.cpp:141
 msgid "Appearances"
 msgstr "Utsehn"
 
-#: mainwindow.cpp:267
+#: mainwindow.cpp:288
 #, kde-format
 msgid "(%1)"
 msgstr "(%1)"
@@ -122,25 +152,25 @@ msgstr ""
 msgid "Cannot download user image from %1. The returned result is: %2"
 msgstr "Brukerbild lett sik nich vun \"%1\" daalladen. Dat Resultaat weer: %2"
 
-#: quicktwit.cpp:81 timelinewidget.cpp:111
+#: quicktwit.cpp:83 timelinewidget.cpp:111
 #, kde-format
 msgid "%1"
 msgstr "%1"
 
-#: quicktwit.cpp:90
+#: quicktwit.cpp:92
 msgid "Failed!"
 msgstr "Fehlslaan!"
 
-#: quicktwit.cpp:90
+#: quicktwit.cpp:92
 #, kde-format
 msgid "Posting new status failed. %1"
 msgstr "Nieg Status lett sik nich loosstüern. %1"
 
-#: quicktwit.cpp:94 timelinewidget.cpp:292
+#: quicktwit.cpp:96 timelinewidget.cpp:292
 msgid "Success!"
 msgstr "Spood!"
 
-#: quicktwit.cpp:94 timelinewidget.cpp:291
+#: quicktwit.cpp:96 timelinewidget.cpp:291
 msgid "New status posted successfully"
 msgstr "Nieg Status mit Spood loosstüert"
 
@@ -152,7 +182,7 @@ msgstr "Nieg Status mit Spood loosstüert"
 #. i18n: ectx: property (windowTitle), widget (QWidget, appears_base)
 #. i18n: file: quicktwit_base.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, quicktwit_base)
-#: rc.cpp:3 rc.cpp:21 rc.cpp:58 rc.cpp:158
+#: rc.cpp:3 rc.cpp:21 rc.cpp:59 rc.cpp:159
 msgid "Form"
 msgstr "Formulor"
 
@@ -216,9 +246,22 @@ msgstr "Links na Rechts"
 msgid "Right to Left"
 msgstr "Rechts na links"
 
-#. i18n: file: accounts_wizard_base.ui:111
+#. i18n: file: accounts_wizard_base.ui:102
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: rc.cpp:39
+#, fuzzy
+#| msgid ""
+#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#| "REC-html40/strict.dtd\">\n"
+#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#| "css\">\n"
+#| "p, li { white-space: pre-wrap; }\n"
+#| "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:9pt; "
+#| "font-weight:400; font-style:normal;\">\n"
+#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#| "weight:600;\">Note:</span> In order to changes on \"Direction\" takes "
+#| "effect, you have to restart the app.</p></body></html>"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -229,8 +272,11 @@ msgid ""
 "weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">Note:</span> In order to changes on \"Direction\" takes "
-"effect, you have to restart the app.</p></body></html>"
+"weight:600;\">Note 1:</span> In order to changes on \"Direction\" takes "
+"effect, you have to restart the app.</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Note 2:</span> The Alias must be Unique.</p></body></html>"
 msgstr ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -244,69 +290,69 @@ msgstr ""
 "weight:600;\">Beacht bitte:</span> Ännerst Du de Richt, muttst Du dat "
 "Programm nieg starten, ehr de Ännern övernahmen warrt.</p></body></html>"
 
-#. i18n: file: accounts_wizard_base.ui:124
+#. i18n: file: accounts_wizard_base.ui:115
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:46
+#: rc.cpp:47
 msgid "&Service :"
 msgstr "&Deenst:"
 
-#. i18n: file: accounts_wizard_base.ui:135
+#. i18n: file: accounts_wizard_base.ui:126
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_service)
-#: rc.cpp:49
+#: rc.cpp:50
 msgid "Twitter.com"
 msgstr "Twitter.com"
 
-#. i18n: file: accounts_wizard_base.ui:140
+#. i18n: file: accounts_wizard_base.ui:131
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_service)
-#: rc.cpp:52
+#: rc.cpp:53
 msgid "Identi.ca"
 msgstr "Identi.ca"
 
-#. i18n: file: accounts_wizard_base.ui:151
+#. i18n: file: accounts_wizard_base.ui:142
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:55
+#: rc.cpp:56
 msgid "&Alias :"
 msgstr "&Alias:"
 
 #. i18n: file: appears_base.ui:19
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_isCustomUi)
-#: rc.cpp:61
+#: rc.cpp:62
 msgid "Use custom Colors"
 msgstr "Topasst Klören bruken"
 
 #. i18n: file: appears_base.ui:29
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:64
+#: rc.cpp:65
 msgid "Statuses color preferences"
 msgstr "Klöörinstellen för Statussen"
 
 #. i18n: file: appears_base.ui:35
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:67
+#: rc.cpp:68
 msgid "Default color :"
 msgstr "Standardklöör:"
 
 #. i18n: file: appears_base.ui:45
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:70
+#: rc.cpp:71
 msgid "New status color :"
 msgstr "Nieg Standardklöör:"
 
 #. i18n: file: appears_base.ui:63
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:73
+#: rc.cpp:74
 msgid "Background"
 msgstr "Achtergrund"
 
 #. i18n: file: appears_base.ui:95
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:76
+#: rc.cpp:77
 msgid "Foreground"
 msgstr "Vörgrund"
 
 #. i18n: file: appears_base.ui:125
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:79
+#: rc.cpp:80
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -334,7 +380,7 @@ msgstr ""
 
 #. i18n: file: choqok.kcfg:22
 #. i18n: ectx: label, entry (showAllNotifiesInOne), group (Preferences)
-#: rc.cpp:86
+#: rc.cpp:87
 msgid "Show all new statuses in one Notify"
 msgstr "All nieg Statussen binnen een Bescheed wiesen"
 
@@ -342,13 +388,13 @@ msgstr "All nieg Statussen binnen een Bescheed wiesen"
 #. i18n: ectx: label, entry (updateInterval), group (Preferences)
 #. i18n: file: choqok.kcfg:33
 #. i18n: ectx: label, entry (notifyInterval), group (Preferences)
-#: rc.cpp:89 rc.cpp:92
+#: rc.cpp:90 rc.cpp:93
 msgid "Update interval"
 msgstr "Opfrischtiet"
 
 #. i18n: file: choqokui.rc:4
 #. i18n: ectx: Menu (file)
-#: rc.cpp:95 rc.cpp:187
+#: rc.cpp:96 rc.cpp:188
 msgid "File"
 msgstr "Datei"
 
@@ -356,127 +402,127 @@ msgstr "Datei"
 #. i18n: ectx: property (toolTip), widget (QLabel, label_2)
 #. i18n: file: prefs_base.ui:39
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_systrayTriggerType)
-#: rc.cpp:101 rc.cpp:107
+#: rc.cpp:102 rc.cpp:108
 msgid "Set behavior of system tray icon clicking option"
 msgstr "Dat Bedregen vun't Systeemafsnitt-Lüttbild bi't Klicken fastleggen"
 
 #. i18n: file: prefs_base.ui:29
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:104
+#: rc.cpp:105
 msgid "System &tray Icon behavior :"
 msgstr "Bedregen vun't Systeemafsnitt-Lüttbild:"
 
 #. i18n: file: prefs_base.ui:43
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_systrayTriggerType)
-#: rc.cpp:110
+#: rc.cpp:111
 msgid "Toggle Mainwindow"
 msgstr "Hööftfinster an- oder utmaken"
 
 #. i18n: file: prefs_base.ui:48
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_systrayTriggerType)
-#: rc.cpp:113
+#: rc.cpp:114
 msgid "Quick Twitting"
 msgstr "Fixjiepeln"
 
 #. i18n: file: prefs_base.ui:56
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:116
+#: rc.cpp:117
 msgid "&Update timeline interval :"
 msgstr "Tietlien-&Opfrischtiet:"
 
 #. i18n: file: prefs_base.ui:66
 #. i18n: ectx: property (suffix), widget (KIntSpinBox, kcfg_updateInterval)
-#: rc.cpp:119
+#: rc.cpp:120
 msgid " Minutes"
 msgstr " Minuten"
 
 #. i18n: file: prefs_base.ui:85
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:122
+#: rc.cpp:123
 msgid "&Number of statuses shown on main window : "
 msgstr "&Tall vun Statussen, de in't Hööftfinster wiest warrt:"
 
 #. i18n: file: prefs_base.ui:111
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showMainWinOnStart)
-#: rc.cpp:125
+#: rc.cpp:126
 msgid "Show Main &Window on application start"
 msgstr "Hööft&finster bi Programmstart wiesen"
 
 #. i18n: file: prefs_base.ui:137
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useSecureConnection)
-#: rc.cpp:128
+#: rc.cpp:129
 msgid "Temporarily don't work."
 msgstr "Funkscheneert opstunns nich."
 
 #. i18n: file: prefs_base.ui:140
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useSecureConnection)
-#: rc.cpp:131
+#: rc.cpp:132
 msgid "Use &secure connection (https instead of http)"
 msgstr "&Seker Verbinnen bruken (https ansteed http)"
 
 #. i18n: file: prefs_base.ui:148
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: rc.cpp:134
+#: rc.cpp:135
 msgid "Notifications"
 msgstr "Bescheden"
 
 #. i18n: file: prefs_base.ui:154
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:137
+#: rc.cpp:138
 msgid "Notify &mode :"
 msgstr "&Metood för Bescheden:"
 
 #. i18n: file: prefs_base.ui:165
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_notifyType)
-#: rc.cpp:140
+#: rc.cpp:141
 msgid "None"
 msgstr "Keen"
 
 #. i18n: file: prefs_base.ui:170
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_notifyType)
-#: rc.cpp:143
+#: rc.cpp:144
 msgid "KNotify"
 msgstr "KNotify"
 
 #. i18n: file: prefs_base.ui:175
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_notifyType)
-#: rc.cpp:146
+#: rc.cpp:147
 msgid "LibNotify"
 msgstr "LibNotify"
 
 #. i18n: file: prefs_base.ui:183
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:149
+#: rc.cpp:150
 msgid "&Notify duration :"
 msgstr "Bescheedduer:"
 
 #. i18n: file: prefs_base.ui:193
 #. i18n: ectx: property (suffix), widget (KIntSpinBox, kcfg_notifyInterval)
-#: rc.cpp:152
+#: rc.cpp:153
 msgid " Seconds"
 msgstr " Sekunnen"
 
 #. i18n: file: prefs_base.ui:222
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showAllNotifiesInOne)
-#: rc.cpp:155
+#: rc.cpp:156
 msgid "&Show all new statuses in one Notify"
 msgstr "All nieg Statussen binnen een Bescheed &wiesen"
 
 #. i18n: file: quicktwit_base.ui:23
 #. i18n: ectx: property (text), widget (QCheckBox, checkAll)
-#: rc.cpp:161
+#: rc.cpp:162
 msgid "&All"
 msgstr "&All"
 
 #. i18n: file: quicktwit_base.ui:63
 #. i18n: ectx: property (text), widget (QLabel, lblCounter)
-#: rc.cpp:164
+#: rc.cpp:165
 msgid "140"
 msgstr "140"
 
 #. i18n: file: status_base.ui:123
 #. i18n: ectx: property (toolTip), widget (KPushButton, btnFavorite)
-#: rc.cpp:167
+#: rc.cpp:168
 msgid "Favorite"
 msgstr "Leevst"
 
@@ -484,28 +530,28 @@ msgstr "Leevst"
 #. i18n: ectx: property (toolTip), widget (KPushButton, btnReply)
 #. i18n: file: timelinewidget_base.ui:147
 #. i18n: ectx: attribute (title), widget (QWidget, tabReply)
-#: rc.cpp:170 rc.cpp:182 statuswidget.cpp:231 timelinewidget.cpp:480
+#: rc.cpp:171 rc.cpp:183 statuswidget.cpp:231 timelinewidget.cpp:480
 msgid "Reply"
 msgstr "Antern"
 
 #. i18n: file: status_base.ui:182
 #. i18n: ectx: property (toolTip), widget (KPushButton, btnRemove)
-#: rc.cpp:173
+#: rc.cpp:174
 msgid "Remove"
 msgstr "Wegmaken"
 
 #. i18n: file: timelinewidget_base.ui:68
 #. i18n: ectx: attribute (title), widget (QWidget, tabHome)
-#: rc.cpp:179 timelinewidget.cpp:479
+#: rc.cpp:180 timelinewidget.cpp:479
 msgid "Home"
 msgstr "Tohuus"
 
-#: rc.cpp:183
+#: rc.cpp:184
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Sönke Dibbern"
 
-#: rc.cpp:184
+#: rc.cpp:185
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s_dibbern@web.de"
@@ -554,23 +600,7 @@ msgstr[1] "Vör üm un bi %1 Daag"
 msgid "choqoK Twitter - Hit me to update your status"
 msgstr "choqoK Twitter - Bruuk mi, wenn Du Dien Status opfrischen wullt"
 
-#: systrayicon.cpp:85
-msgid "Minimize"
-msgstr "Minimeren"
-
-#: systrayicon.cpp:87
-msgid "Restore"
-msgstr "Wedderherstellen"
-
-#: systrayicon.cpp:113
-msgid "&Restore"
-msgstr "&Wedderherstellen"
-
-#: systrayicon.cpp:116
-msgid "&Minimize"
-msgstr "&Minimeren"
-
-#: systrayicon.cpp:143
+#: systrayicon.cpp:147
 #, kde-format
 msgid "choqoK - 1 unread status"
 msgid_plural "choqoK - %1 unread statuses"
