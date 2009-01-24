@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: choqok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-01-23 10:21+0100\n"
+"POT-Creation-Date: 2009-01-24 10:26+0100\n"
 "PO-Revision-Date: 2009-01-23 23:08+0100\n"
 "Last-Translator: Sönke Dibbern <soenke.dibbern@clearingstelle-eeg.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -34,30 +34,33 @@ msgstr "Vörhannen Konto ännern"
 msgid "authentication failed, please check your credentials."
 msgstr "Identiteetprööv fehlslaan, prööv bitte Dien Ingaven"
 
-#: backend.cpp:67 backend.cpp:281 backend.cpp:302
+#: backend.cpp:67 backend.cpp:92 backend.cpp:308 backend.cpp:329
+#: backend.cpp:350
 msgid ""
 "Cannot create a http POST request, please check your internet connection."
 msgstr ""
 "HTTP-POST-Anfraag lett sik nich utföhren, prööv bitte Dien Verbinnen na't "
 "Internet"
 
-#: backend.cpp:104 backend.cpp:493 backend.cpp:606
+#: backend.cpp:130 backend.cpp:540 backend.cpp:653 backend.cpp:679
+#: backend.cpp:949 backend.cpp:990
 msgid ""
 "Cannot create a http GET request, please check your internet connection."
 msgstr ""
 "HTTP-GET-Anfraag lett sik nich utföhren, prööv bitte Dien Verbinnen na't "
 "Internet"
 
-#: backend.cpp:135 backend.cpp:560 backend.cpp:569
+#: backend.cpp:161 backend.cpp:607 backend.cpp:616 backend.cpp:735
+#: backend.cpp:1020
 msgid "Data returned from server corrupted!"
 msgstr "Daten vun Server schaadhaftig torüchkamen!"
 
-#: backend.cpp:507 backend.cpp:536
+#: backend.cpp:554 backend.cpp:583
 #, kde-format
 msgid "Authorization Failed, more info: %1"
 msgstr "Verlööf fehlt. Mehr Informatschonen: %1"
 
-#: backend.cpp:551
+#: backend.cpp:598
 #, kde-format
 msgid "Requesting user informations failed. more info: %1"
 msgstr "Anfraag na Bruker-Informatschonen fehlslaan. Mehr Informatschonen: %1"
@@ -152,7 +155,7 @@ msgstr ""
 msgid "Cannot download user image from %1. The returned result is: %2"
 msgstr "Brukerbild lett sik nich vun \"%1\" daalladen. Dat Resultaat weer: %2"
 
-#: quicktwit.cpp:83 timelinewidget.cpp:111
+#: quicktwit.cpp:83 timelinewidget.cpp:121
 #, kde-format
 msgid "%1"
 msgstr "%1"
@@ -166,11 +169,11 @@ msgstr "Fehlslaan!"
 msgid "Posting new status failed. %1"
 msgstr "Nieg Status lett sik nich loosstüern. %1"
 
-#: quicktwit.cpp:96 timelinewidget.cpp:292
+#: quicktwit.cpp:96 timelinewidget.cpp:365
 msgid "Success!"
 msgstr "Spood!"
 
-#: quicktwit.cpp:96 timelinewidget.cpp:291
+#: quicktwit.cpp:96 timelinewidget.cpp:364
 msgid "New status posted successfully"
 msgstr "Nieg Status mit Spood loosstüert"
 
@@ -267,8 +270,8 @@ msgid ""
 msgstr ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-"css\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -385,7 +388,7 @@ msgstr "Opfrischtiet"
 
 #. i18n: file: choqokui.rc:4
 #. i18n: ectx: Menu (file)
-#: rc.cpp:96 rc.cpp:188
+#: rc.cpp:96 rc.cpp:203
 msgid "File"
 msgstr "Datei"
 
@@ -519,9 +522,9 @@ msgstr "Leevst"
 
 #. i18n: file: status_base.ui:154
 #. i18n: ectx: property (toolTip), widget (KPushButton, btnReply)
-#. i18n: file: timelinewidget_base.ui:147
+#. i18n: file: timelinewidget_base.ui:183
 #. i18n: ectx: attribute (title), widget (QWidget, tabReply)
-#: rc.cpp:171 rc.cpp:183 statuswidget.cpp:231 timelinewidget.cpp:480
+#: rc.cpp:171 rc.cpp:189 statuswidget.cpp:236 timelinewidget.cpp:562
 msgid "Reply"
 msgstr "Antern"
 
@@ -531,18 +534,50 @@ msgstr "Antern"
 msgid "Remove"
 msgstr "Wegmaken"
 
-#. i18n: file: timelinewidget_base.ui:68
+#. i18n: file: timelinewidget_base.ui:34
+#. i18n: ectx: property (text), widget (QCheckBox, chkDMessage)
+#: rc.cpp:180
+msgid "Direct Message to"
+msgstr ""
+
+#. i18n: file: timelinewidget_base.ui:72
+#. i18n: ectx: property (toolTip), widget (KPushButton, btnReloadFriends)
+#: rc.cpp:183
+msgid "Reload friends list"
+msgstr ""
+
+#. i18n: file: timelinewidget_base.ui:113
 #. i18n: ectx: attribute (title), widget (QWidget, tabHome)
-#: rc.cpp:180 timelinewidget.cpp:479
+#: rc.cpp:186 timelinewidget.cpp:561
 msgid "Home"
 msgstr "Tohuus"
 
-#: rc.cpp:184
+#. i18n: file: timelinewidget_base.ui:250
+#. i18n: ectx: attribute (title), widget (QWidget, tabInbox)
+#: rc.cpp:192
+msgid "Recieved"
+msgstr ""
+
+#. i18n: file: timelinewidget_base.ui:320
+#. i18n: ectx: attribute (title), widget (QWidget, tabSent)
+#: rc.cpp:195
+msgid "Sent"
+msgstr ""
+
+#. i18n: file: timelinewidget_base.ui:390
+#. i18n: ectx: attribute (title), widget (QWidget, tabUser)
+#: rc.cpp:198
+#, fuzzy
+#| msgid "Username"
+msgid "User"
+msgstr "Brukernaam"
+
+#: rc.cpp:199
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Sönke Dibbern"
 
-#: rc.cpp:185
+#: rc.cpp:200
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s_dibbern@web.de"
@@ -555,32 +590,32 @@ msgstr ""
 "Drück Strg+P, wenn Du den verleden Text loosstüern wullt.\n"
 "Drück Strg+S, wenn Du de Schriefwiesprööv an- oder utmaken wullt."
 
-#: statuswidget.cpp:85
+#: statuswidget.cpp:86
 msgid "Just now"
 msgstr "Jüst nu"
 
-#: statuswidget.cpp:86
+#: statuswidget.cpp:87
 #, kde-format
 msgid "about 1 second ago"
 msgid_plural "about %1 seconds ago"
 msgstr[0] "Vör üm un bi 1 Sekunn"
 msgstr[1] "Vör üm un bi %1 Sekunnen"
 
-#: statuswidget.cpp:88
+#: statuswidget.cpp:89
 #, kde-format
 msgid "about 1 minute ago"
 msgid_plural "about %1 minutes ago"
 msgstr[0] "Vör üm un bi 1 Minuut"
 msgstr[1] "Vör üm un bi %1 Minuten"
 
-#: statuswidget.cpp:90
+#: statuswidget.cpp:91
 #, kde-format
 msgid "about 1 hour ago"
 msgid_plural "about %1 hours ago"
 msgstr[0] "Vör üm un bi 1 Stünn"
 msgstr[1] "Vör üm un bi %1 Stünnen"
 
-#: statuswidget.cpp:92
+#: statuswidget.cpp:93
 #, kde-format
 msgid "about 1 day ago"
 msgid_plural "about %1 days ago"
@@ -598,50 +633,80 @@ msgid_plural "choqoK - %1 unread statuses"
 msgstr[0] "choqoK - 1 nich leest Status"
 msgstr[1] "choqoK - %1 nich leest Statussen"
 
-#: timelinewidget.cpp:132
+#: timelinewidget.cpp:144
 msgid "Loading timelines..."
 msgstr "Tietlienen warrt laadt..."
 
-#: timelinewidget.cpp:138
+#: timelinewidget.cpp:150
+#, fuzzy
+#| msgid "Latest friends timeline received!"
+msgid "Latest direct messages received!"
+msgstr "Niegst Macker-Tietlien kregen!"
+
+#: timelinewidget.cpp:155 timelinewidget.cpp:177
+#, fuzzy
+#| msgid "No new statuses received. The list is up to date."
+msgid "No new messages received. The list is up to date."
+msgstr "Keen nieg Statussen kregen. De List is op Stand."
+
+#: timelinewidget.cpp:164
+#, fuzzy, kde-format
+#| msgid "(%1)"
+msgid "Inbox(%1)"
+msgstr "(%1)"
+
+#: timelinewidget.cpp:172
+#, fuzzy
+#| msgid "Latest friends timeline received!"
+msgid "Latest sent messages received!"
+msgstr "Niegst Macker-Tietlien kregen!"
+
+#: timelinewidget.cpp:196
 msgid "Latest friends timeline received!"
 msgstr "Niegst Macker-Tietlien kregen!"
 
-#: timelinewidget.cpp:143 timelinewidget.cpp:167
+#: timelinewidget.cpp:201 timelinewidget.cpp:225
 msgid "No new statuses received. The list is up to date."
 msgstr "Keen nieg Statussen kregen. De List is op Stand."
 
-#: timelinewidget.cpp:155
+#: timelinewidget.cpp:213
 #, kde-format
 msgid "Home(%1)"
 msgstr "Tohuus(%1)"
 
-#: timelinewidget.cpp:163
+#: timelinewidget.cpp:221
 msgid "Latest replies timeline received!"
 msgstr "Niegst Anter-Tietlien kregen!"
 
-#: timelinewidget.cpp:179
+#: timelinewidget.cpp:237
 #, kde-format
 msgid "Reply(%1)"
 msgstr "Antern(%1)"
 
-#: timelinewidget.cpp:244
+#: timelinewidget.cpp:313
 msgid "New statuses"
 msgstr "Nieg Statussen"
 
-#: timelinewidget.cpp:268
+#: timelinewidget.cpp:338
 #, kde-format
 msgid "Failed, %1"
 msgstr "Fehlslaan, %1"
 
-#: timelinewidget.cpp:276
+#: timelinewidget.cpp:346
 msgid "Status text size is more than server limit size."
 msgstr "Statustext is grötter as wat de Server tolett"
 
-#: timelinewidget.cpp:281
-msgid "Posting New status..."
+#: timelinewidget.cpp:352
+msgid "Sending direct message..."
+msgstr ""
+
+#: timelinewidget.cpp:355
+#, fuzzy
+#| msgid "Posting New status..."
+msgid "Posting new status..."
 msgstr "Nieg Status warrt loosstüert..."
 
-#: timelinewidget.cpp:509
+#: timelinewidget.cpp:591
 msgid "Are you sure of destroying this status?"
 msgstr "Wullt Du dissen Status redig wegmaken?"
 
@@ -688,9 +753,6 @@ msgstr "Wullt Du dissen Status redig wegmaken?"
 
 #~ msgid "What are you doing?"
 #~ msgstr "Wat deist Du dor?"
-
-#~ msgid "Username"
-#~ msgstr "Brukernaam"
 
 #~ msgid "Password"
 #~ msgstr "Passwoort"
