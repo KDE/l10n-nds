@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-12-27 11:10+0100\n"
+"POT-Creation-Date: 2009-01-27 08:23+0100\n"
 "PO-Revision-Date: 2008-12-29 00:18+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "X-Generator: Lokalize 0.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: WorkSheet.cc:93
+#: WorkSheet.cc:93 KSysGuardApplet.cc:306
 #, kde-format
 msgid "Cannot open the file %1."
 msgstr "De Datei \"%1\" lett sik nich opmaken."
 
-#: WorkSheet.cc:101
+#: WorkSheet.cc:101 KSysGuardApplet.cc:315
 #, kde-format
 msgid "The file %1 does not contain valid XML."
 msgstr "Dat XML binnen de Datei \"%1\" gellt nich."
@@ -41,7 +41,7 @@ msgstr ""
 msgid "The file %1 has an invalid worksheet size."
 msgstr "De Arbeitblatt-Grött vun de Datei \"%1\" gellt nich."
 
-#: WorkSheet.cc:234
+#: WorkSheet.cc:234 KSysGuardApplet.cc:459
 #, kde-format
 msgid "Cannot save file %1"
 msgstr "De Datei \"%1\" lett sik nich sekern"
@@ -50,7 +50,7 @@ msgstr "De Datei \"%1\" lett sik nich sekern"
 msgid "The clipboard does not contain a valid display description."
 msgstr "De Twischenaflaag bargt keen gellen Diagrammbeschrieven."
 
-#: WorkSheet.cc:331
+#: WorkSheet.cc:331 KSysGuardApplet.cc:200
 msgid "Select Display Type"
 msgstr "Diagrammtyp utsöken"
 
@@ -70,22 +70,26 @@ msgstr "&Balkengrafik"
 msgid "Log to a &file"
 msgstr "&Logbook bruken"
 
-#: WorkSheet.cc:505
+#: WorkSheet.cc:477 KSysGuardApplet.cc:241
 msgid "Do you really want to delete the display?"
 msgstr "Wullt Du dat Diagramm redig wegdoon?"
 
-#: WorkSheet.cc:506
+#: WorkSheet.cc:478 KSysGuardApplet.cc:241
 msgid "Delete Display"
 msgstr "Diagramm wegdoon"
 
-#: WorkSheet.cc:525 WorkSheet.cc:528 WorkSheet.cc:530 WorkSheet.cc:532
-#: WorkSheet.cc:534 WorkSheet.cc:536 WorkSheet.cc:540
+#: WorkSheet.cc:497 WorkSheet.cc:499 WorkSheet.cc:501 WorkSheet.cc:503
+#: WorkSheet.cc:505 WorkSheet.cc:507 WorkSheet.cc:511 KSysGuardApplet.cc:377
+#: KSysGuardApplet.cc:379 KSysGuardApplet.cc:381
 msgid "Dummy"
 msgstr "Platzholler"
 
 #: ksgrd/SensorAgent.cc:105
-#, kde-format
-msgctxt "%1 is a host name"
+#, fuzzy, kde-format
+#| msgctxt "%1 is a host name"
+#| msgid ""
+#| "Message from %1:\n"
+#| "%2"
 msgid ""
 "Message from %1:\n"
 "%2"
@@ -111,7 +115,9 @@ msgstr "Ännern"
 msgid "Rate"
 msgstr "Rate"
 
-#: ksgrd/SensorManager.cc:59
+#. i18n: tag display attribute title
+#. i18n: file: ./SystemLoad.sgrd:5
+#: ksgrd/SensorManager.cc:59 rc.cpp:152
 msgid "CPU Load"
 msgstr "Perzesserlast"
 
@@ -127,8 +133,9 @@ msgstr "Prioriseert Last"
 msgid "User Load"
 msgstr "Brukerlast"
 
-#: ksgrd/SensorManager.cc:63
-msgctxt "@item sensor description"
+#. i18n: tag WorkSheet attribute title
+#. i18n: file: ./SystemLoad.sgrd:3
+#: ksgrd/SensorManager.cc:63 rc.cpp:149
 msgid "System Load"
 msgstr "Systeemlast"
 
@@ -144,11 +151,15 @@ msgstr "Heel Last"
 msgid "Memory"
 msgstr "Spieker"
 
-#: ksgrd/SensorManager.cc:67
+#. i18n: tag display attribute title
+#. i18n: file: ./SystemLoad.sgrd:14
+#: ksgrd/SensorManager.cc:67 rc.cpp:158
 msgid "Physical Memory"
 msgstr "Physisch Spieker"
 
-#: ksgrd/SensorManager.cc:68
+#. i18n: tag display attribute title
+#. i18n: file: ./SystemLoad.sgrd:19
+#: ksgrd/SensorManager.cc:68 rc.cpp:161
 msgid "Swap Memory"
 msgstr "Utlager-Spieker"
 
@@ -302,7 +313,9 @@ msgid "Packets"
 msgstr "Paketen"
 
 #: ksgrd/SensorManager.cc:106
-msgctxt "@item sensor description ('carrier' is a type of network signal)"
+#, fuzzy
+#| msgctxt "@item sensor description ('carrier' is a type of network signal)"
+#| msgid "Carrier"
 msgid "Carrier"
 msgstr "Dreger"
 
@@ -366,7 +379,9 @@ msgstr "Resttiet"
 msgid "Interrupts"
 msgstr "Interrupts"
 
-#: ksgrd/SensorManager.cc:122
+#. i18n: tag display attribute title
+#. i18n: file: ./SystemLoad.sgrd:11
+#: ksgrd/SensorManager.cc:122 rc.cpp:155
 msgid "Load Average (1 min)"
 msgstr "Lastdörsnitt (1 Min.)"
 
@@ -527,11 +542,11 @@ msgstr "Opfrischtiet:"
 #. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:52
 #. i18n: ectx: property (suffix), widget (KIntNumInput, m_timerInterval)
 #: TimerSettings.cc:59 KSGAppletSettings.cc:74 rc.cpp:23
-#: WorkSheetSettings.cc:95
+#: WorkSheetSettings.cc:97
 msgid " sec"
 msgstr " s"
 
-#: TimerSettings.cc:62 WorkSheetSettings.cc:101
+#: TimerSettings.cc:62 WorkSheetSettings.cc:103
 msgid "All displays of the sheet are updated at the rate specified here."
 msgstr "All Arbeitblatt-Diagrammen warrt jümmers na disse Tiet opfrischt."
 
@@ -624,47 +639,62 @@ msgstr ""
 msgid "e.g. ssh -l root remote.host.org ksysguardd"
 msgstr "t.B. ssh -l root anner.reekner.org ksysguardd"
 
-#: Workspace.cc:47
+#: Workspace.cc:43
+#, fuzzy
+#| msgid ""
+#| "This is your work space. It holds your tabs. You need to create a new tab "
+#| "(Menu File->New) before you can drag sensors here."
 msgid ""
-"This is your work space. It holds your tabs. You need to create a new tab "
-"(Menu File->New) before you can drag sensors here."
+"This is your work space. It holds your worksheets. You need to create a new "
+"worksheet (Menu File->New) before you can drag sensors here."
 msgstr ""
 "Dit is dat Arbeitrebeet, dat schall Dien Paneels bargen. Du muttst en nieg "
 "Paneel opstellen (Menü Datei -> Nieg), ehr Du hier Diagrammen hentrecken "
 "kannst."
 
-#: Workspace.cc:107
+#: Workspace.cc:102
 #, kde-format
 msgid "Sheet %1"
 msgstr "Blatt %1"
 
-#: Workspace.cc:162
-#, kde-format
+#: Workspace.cc:149
+#, fuzzy, kde-format
+#| msgid ""
+#| "The tab '%1' contains unsaved data.\n"
+#| "Do you want to save the tab?"
 msgid ""
-"The tab '%1' contains unsaved data.\n"
-"Do you want to save the tab?"
+"The worksheet '%1' contains unsaved data.\n"
+"Do you want to save the worksheet?"
 msgstr ""
 "Dat Paneel \"%1\" bargt nich sekert Daten.\n"
 "Wullt Du dat Paneel sekern?"
 
-#: Workspace.cc:177
-msgid "*.sgrd|Sensor Files (*.sgrd)"
+#: Workspace.cc:164
+#, fuzzy
+#| msgid "*.sgrd|Sensor Files (*.sgrd)"
+msgid "*.sgrd|Sensor Files"
 msgstr "*.sgrd|Sensor-Dateien (*.sgrd)"
 
-#: Workspace.cc:177
-msgid "Select Tab File to Import"
-msgstr "Paneeldatei utsöken, de Du importeren wullt"
+#: Workspace.cc:164
+#, fuzzy
+#| msgid "Select Worksheet to Open"
+msgid "Select Worksheet to Import"
+msgstr "Dat Arbeitblatt utsöken, dat Du opmaken wullt"
 
-#: Workspace.cc:205 Workspace.cc:226
-msgid "You do not have a tab that could be saved."
+#: Workspace.cc:192 Workspace.cc:213
+#, fuzzy
+#| msgid "You do not have a tab that could be saved."
+msgid "You do not have a worksheet that could be saved."
 msgstr "Dat gifft keen Paneel, dat sik sekern lett."
 
-#: Workspace.cc:233
-msgid "Export Tab"
-msgstr "Paneel exporteren"
+#: Workspace.cc:220
+msgid "Export Work Sheet"
+msgstr "Arbeitblatt exporteren"
 
-#: Workspace.cc:251
-msgid "There are no tabs that could be deleted."
+#: Workspace.cc:238
+#, fuzzy
+#| msgid "There are no tabs that could be deleted."
+msgid "There are no worksheets that could be deleted."
 msgstr "Dat gifft keen Paneels, de Du wegdoon kannst."
 
 #: KSGAppletSettings.cc:34
@@ -680,7 +710,9 @@ msgid "Size ratio:"
 msgstr "Proportschoon:"
 
 #: KSGAppletSettings.cc:63
-msgctxt "Number suffix in spinbox"
+#, fuzzy
+#| msgctxt "a percentage"
+#| msgid "%"
 msgid "%"
 msgstr "%"
 
@@ -692,9 +724,9 @@ msgstr "Balkengrafiken instellen"
 msgid "Range"
 msgstr "Rebeet"
 
-#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:16
+#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:19
 #. i18n: ectx: property (title), widget (QGroupBox, titleFrame)
-#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:16
+#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:19
 #. i18n: ectx: property (title), widget (QGroupBox, titleFrame)
 #: SensorDisplayLib/DancingBarsSettings.cc:58 rc.cpp:89 rc.cpp:104
 #: WorkSheetSettings.cc:51
@@ -713,12 +745,12 @@ msgid "Display Range"
 msgstr "Wiesrebeet"
 
 #: SensorDisplayLib/DancingBarsSettings.cc:73
-#: SensorDisplayLib/FancyPlotterSettings.cc:99
+#: SensorDisplayLib/FancyPlotterSettings.cc:98
 msgid "Minimum value:"
 msgstr "Minimaalweert:"
 
 #: SensorDisplayLib/DancingBarsSettings.cc:81
-#: SensorDisplayLib/FancyPlotterSettings.cc:106
+#: SensorDisplayLib/FancyPlotterSettings.cc:105
 msgid ""
 "Enter the minimum value for the display here. If both values are 0, "
 "automatic range detection is enabled."
@@ -727,12 +759,12 @@ msgstr ""
 "warrt dat Wiesrebeet automaatsch faststellt."
 
 #: SensorDisplayLib/DancingBarsSettings.cc:85
-#: SensorDisplayLib/FancyPlotterSettings.cc:110
+#: SensorDisplayLib/FancyPlotterSettings.cc:109
 msgid "Maximum value:"
 msgstr "Maximaalweert:"
 
 #: SensorDisplayLib/DancingBarsSettings.cc:93
-#: SensorDisplayLib/FancyPlotterSettings.cc:117
+#: SensorDisplayLib/FancyPlotterSettings.cc:116
 msgid ""
 "Enter the maximum value for the display here. If both values are 0, "
 "automatic range detection is enabled."
@@ -790,7 +822,9 @@ msgid "Upper limit:"
 msgstr "Grenz baven:"
 
 #: SensorDisplayLib/DancingBarsSettings.cc:157
-msgctxt "@title:tab Appearance of the bar graph"
+#, fuzzy
+#| msgctxt "@title:tab Appearance of the bar graph"
+#| msgid "Look"
 msgid "Look"
 msgstr "Utsehn"
 
@@ -802,13 +836,13 @@ msgstr "Klöör för normale Balkens:"
 msgid "Out-of-range color:"
 msgstr "Klöör güntsiets vun de Grenz:"
 
-#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:228
+#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:222
 #. i18n: ectx: property (text), widget (QLabel, textLabel3_2)
-#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:77
+#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:76
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:64
+#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:66
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:74
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:81
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: SensorDisplayLib/DancingBarsSettings.cc:176 SensorDisplayLib/LogFile.cc:100
 #: rc.cpp:86 rc.cpp:101 rc.cpp:113 rc.cpp:128
@@ -816,7 +850,7 @@ msgid "Background color:"
 msgstr "Achtergrund-Klöör:"
 
 #: SensorDisplayLib/DancingBarsSettings.cc:183
-#: SensorDisplayLib/FancyPlotterSettings.cc:185
+#: SensorDisplayLib/FancyPlotterSettings.cc:196
 msgid "Font size:"
 msgstr "Schriftgrött:"
 
@@ -831,7 +865,7 @@ msgstr ""
 "en lütte Schrift anraadt."
 
 #: SensorDisplayLib/DancingBarsSettings.cc:195
-#: SensorDisplayLib/FancyPlotterSettings.cc:235
+#: SensorDisplayLib/FancyPlotterSettings.cc:253
 msgid "Sensors"
 msgstr "Sensoren"
 
@@ -844,12 +878,12 @@ msgid "Push this button to configure the label."
 msgstr "Klick op dissen Knoop, wenn Du de Beschriften ännern wullt."
 
 #: SensorDisplayLib/DancingBarsSettings.cc:212
-#: SensorDisplayLib/FancyPlotterSettings.cc:258
+#: SensorDisplayLib/FancyPlotterSettings.cc:276
 msgid "Delete"
 msgstr "Wegdoon"
 
 #: SensorDisplayLib/DancingBarsSettings.cc:213
-#: SensorDisplayLib/FancyPlotterSettings.cc:259
+#: SensorDisplayLib/FancyPlotterSettings.cc:277
 msgid "Push this button to delete the sensor."
 msgstr "Klick op dissen Knoop, wenn Du den Sensor wegdoon wullt."
 
@@ -873,19 +907,33 @@ msgstr "Allgemeen"
 msgid "Title:"
 msgstr "Titel:"
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:84
+#: SensorDisplayLib/FancyPlotterSettings.cc:76
+msgid "Stack the beams on top of each other"
+msgstr "De Balkens opschichten"
+
+#: SensorDisplayLib/FancyPlotterSettings.cc:77
+msgid ""
+"The beams are stacked on top of each other, and the area is drawn filled in. "
+"So if one beam has a value of 2 and another beam has a value of 3, the first "
+"beam will be drawn at value 2 and the other beam drawn at 2+3=5."
+msgstr ""
+"De Balkens warrt een op den annern stapelt. Hett de een den Weert \"2\" un "
+"de anner den Weert \"3\", warrt de eerste bi 2, man de twete bi 5 (=2+3) "
+"wiest."
+
+#: SensorDisplayLib/FancyPlotterSettings.cc:83
 msgid "Scales"
 msgstr "Skalas"
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:89
+#: SensorDisplayLib/FancyPlotterSettings.cc:88
 msgid "Vertical Scale"
 msgstr "Pielrecht Skala"
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:95
+#: SensorDisplayLib/FancyPlotterSettings.cc:94
 msgid "Automatic range detection"
 msgstr "Rebeet autom. faststellen"
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:96
+#: SensorDisplayLib/FancyPlotterSettings.cc:95
 msgid ""
 "Check this box if you want the display range to adapt dynamically to the "
 "currently displayed values; if you do not check this, you have to specify "
@@ -895,104 +943,131 @@ msgstr ""
 "schall. Wenn Du dat nich aktiveerst, muttst Du dat Rebeet dör de Feller "
 "nerrn angeven."
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:123
+#: SensorDisplayLib/FancyPlotterSettings.cc:122
 msgid "Horizontal Scale"
 msgstr "Kimmrecht Skala"
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:134
+#: SensorDisplayLib/FancyPlotterSettings.cc:133
 msgid "pixels per time period"
 msgstr "Pixels per Tieteenheit"
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:141
+#: SensorDisplayLib/FancyPlotterSettings.cc:140
 msgid "Grid"
 msgstr "Gadder"
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:146
+#: SensorDisplayLib/FancyPlotterSettings.cc:145
 msgid "Lines"
 msgstr "Lienen"
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:152
+#: SensorDisplayLib/FancyPlotterSettings.cc:151
 msgid "Vertical lines"
 msgstr "Pielrechte Lienen"
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:153
+#: SensorDisplayLib/FancyPlotterSettings.cc:152
 msgid "Check this to activate the vertical lines if display is large enough."
 msgstr ""
 "Aktiveer dit, wenn Du pielrechte Lienen hebben wullt un dat Diagramm groot "
 "noog is."
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:156
+#: SensorDisplayLib/FancyPlotterSettings.cc:155
 msgid "Distance:"
 msgstr "Afstand:"
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:162
+#: SensorDisplayLib/FancyPlotterSettings.cc:161
 msgid "Enter the distance between two vertical lines here."
 msgstr "Giff hier den Afstand twischen twee pielrechte Lienen an."
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:166
+#: SensorDisplayLib/FancyPlotterSettings.cc:165
 msgid "Vertical lines scroll"
 msgstr "Pielrechte Lienen verschuven"
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:169
+#: SensorDisplayLib/FancyPlotterSettings.cc:168
 msgid "Horizontal lines"
 msgstr "Kimmrechte Lienen"
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:170
+#: SensorDisplayLib/FancyPlotterSettings.cc:169
 msgid "Check this to enable horizontal lines if display is large enough."
 msgstr ""
 "Aktiveer dit, wenn Du kimmrechte Lienen hebben wullt un dat Diagramm groot "
 "noog is."
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:175
+#: SensorDisplayLib/FancyPlotterSettings.cc:172
+msgid "Count:"
+msgstr "Tall:"
+
+#: SensorDisplayLib/FancyPlotterSettings.cc:178
+msgid "Enter the number of horizontal lines here."
+msgstr "Giff hier de Tall vun kimmrechte Lienen an."
+
+#: SensorDisplayLib/FancyPlotterSettings.cc:186
 msgid "Text"
 msgstr "Text"
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:181
-msgid "Show axis labels"
-msgstr "Ass-Betekers wiesen"
+#: SensorDisplayLib/FancyPlotterSettings.cc:192
+msgid "Labels"
+msgstr "Beschriften"
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:182
+#: SensorDisplayLib/FancyPlotterSettings.cc:193
 msgid ""
 "Check this box if horizontal lines should be decorated with the values they "
 "mark."
 msgstr ""
 "Aktiveer dit, ween blang de kimmrechten Lienen ehr Weert wiest warrn schall."
 
-#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:37
+#: SensorDisplayLib/FancyPlotterSettings.cc:205
+msgid "Top bar"
+msgstr "Böverbalken"
+
+#: SensorDisplayLib/FancyPlotterSettings.cc:206
+msgid ""
+"Check this to active the display title bar. This is probably only useful for "
+"applet displays. The bar is only visible if the display is large enough."
+msgstr ""
+"Aktiveer dit, wenn de Titel- un Wiesbalken vun't Diagramm wiest warrn "
+"schall. Dat is wohrschienlich bloots goot för Lüttprogramm-Diagrammen. De "
+"Balken warrt bloots wiest, wenn dat Diagramm groot noog is."
+
+#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:42
 #. i18n: ectx: property (title), widget (QGroupBox, colorFrame)
-#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:37
+#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:42
 #. i18n: ectx: property (title), widget (QGroupBox, colorFrame)
-#: SensorDisplayLib/FancyPlotterSettings.cc:202 rc.cpp:92 rc.cpp:107
+#: SensorDisplayLib/FancyPlotterSettings.cc:213 rc.cpp:92 rc.cpp:107
 msgid "Colors"
 msgstr "Klören"
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:207
+#: SensorDisplayLib/FancyPlotterSettings.cc:218
 msgid "Font:"
 msgstr "Schriftoort:"
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:214
-msgid "Grid lines:"
-msgstr "Gadderlienen:"
+#: SensorDisplayLib/FancyPlotterSettings.cc:225
+#, fuzzy
+#| msgid "Vertical lines"
+msgid "Vertical lines:"
+msgstr "Pielrechte Lienen"
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:220
+#: SensorDisplayLib/FancyPlotterSettings.cc:231
+msgid "Horizontal lines:"
+msgstr "Kimmrechte Lienen:"
+
+#: SensorDisplayLib/FancyPlotterSettings.cc:238
 msgid "Background:"
 msgstr "Achtergrund:"
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:250
+#: SensorDisplayLib/FancyPlotterSettings.cc:268
 msgid "Set Color..."
 msgstr "Klöör fastleggen..."
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:251
+#: SensorDisplayLib/FancyPlotterSettings.cc:269
 msgid "Push this button to configure the color of the sensor in the diagram."
 msgstr ""
 "Klick op dissen Knoop, wenn Du de Klöör för den Sensor in't Diagramm "
 "fastleggen wullt."
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:263
+#: SensorDisplayLib/FancyPlotterSettings.cc:281
 msgid "Move Up"
 msgstr "Na baven"
 
-#: SensorDisplayLib/FancyPlotterSettings.cc:268
+#: SensorDisplayLib/FancyPlotterSettings.cc:286
 msgid "Move Down"
 msgstr "Na nerrn"
 
@@ -1000,28 +1075,28 @@ msgstr "Na nerrn"
 msgid "Sensor Logger"
 msgstr "Sensor-Logbook"
 
-#: SensorDisplayLib/DancingBars.cc:96 SensorDisplayLib/FancyPlotter.cc:182
+#: SensorDisplayLib/DancingBars.cc:96 SensorDisplayLib/FancyPlotter.cc:131
 msgid "OK"
 msgstr "OK"
 
-#: SensorDisplayLib/DancingBars.cc:96 SensorDisplayLib/FancyPlotter.cc:182
-#: SensorDisplayLib/FancyPlotter.cc:341 SensorDisplayLib/FancyPlotter.cc:388
+#: SensorDisplayLib/DancingBars.cc:96 SensorDisplayLib/FancyPlotter.cc:131
+#: SensorDisplayLib/FancyPlotter.cc:280
 msgid "Error"
 msgstr "Fehler"
 
-#: SensorDisplayLib/SensorDisplay.cc:115
+#: SensorDisplayLib/SensorDisplay.cc:117
 msgid "Launch &System Guard"
 msgstr "&Systeemwachter starten"
 
-#: SensorDisplayLib/SensorDisplay.cc:122 SensorDisplayLib/SensorLogger.cc:598
+#: SensorDisplayLib/SensorDisplay.cc:124 SensorDisplayLib/SensorLogger.cc:598
 msgid "&Properties"
 msgstr "&Egenschappen"
 
-#: SensorDisplayLib/SensorDisplay.cc:127 SensorDisplayLib/SensorLogger.cc:603
+#: SensorDisplayLib/SensorDisplay.cc:129 SensorDisplayLib/SensorLogger.cc:603
 msgid "&Remove Display"
 msgstr "&Diagramm wegdoon"
 
-#: SensorDisplayLib/SensorDisplay.cc:196
+#: SensorDisplayLib/SensorDisplay.cc:198
 #, kde-format
 msgid ""
 "<qt><p>This is a sensor display. To customize a sensor display click the "
@@ -1033,23 +1108,6 @@ msgstr ""
 "klick dor mit den rechten Muusknoop op un söök in't Opdukmenü "
 "<i>Egenschappen</i> ut. Wenn Du dat Diagramm vun dat Arbeitblatt wegdoon "
 "wullt, söök <i>Wegmaken</i> ut.</p>%1</qt>"
-
-#: SensorDisplayLib/FancyPlotter.cc:93
-msgctxt "Largest axis title"
-msgid "99999 XXXX"
-msgstr "99999 XXXX"
-
-#: SensorDisplayLib/FancyPlotter.cc:344
-#, kde-format
-msgctxt "%1 is what is being shown statistics for, like 'Memory', 'Swap', etc."
-msgid "<p><b>%1:</b><br>"
-msgstr "<p><b>%1:</b><br>"
-
-#: SensorDisplayLib/FancyPlotter.cc:391
-#, kde-format
-msgctxt "%1 and %2 are sensor's last and maximum value"
-msgid "%1 of %2"
-msgstr "%1 vun %2"
 
 #: SensorDisplayLib/SensorLogger.cc:138
 msgid "Logging"
@@ -1113,15 +1171,17 @@ msgstr "Beschriften"
 msgid "File logging settings"
 msgstr "Logbook instellen"
 
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:61
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:71
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: SensorDisplayLib/LogFile.cc:98 rc.cpp:125
 msgid "Foreground color:"
 msgstr "Vörgrundklöör:"
 
 #: SensorDisplayLib/MultiMeterSettings.cc:31
-msgctxt ""
-"Multimeter is a sensor display that mimics 'digital multimeter' aparatus"
+#, fuzzy
+#| msgctxt ""
+#| "Multimeter is a sensor display that mimics 'digital multimeter' aparatus"
+#| msgid "Multimeter Settings"
 msgid "Multimeter Settings"
 msgstr "Multimeter instellen"
 
@@ -1152,19 +1212,19 @@ msgstr ""
 msgid "&File"
 msgstr "&Datei"
 
-#. i18n: file: ksysguardui.rc:13
+#. i18n: file: ksysguardui.rc:12
 #. i18n: ectx: Menu (edit)
 #: rc.cpp:6
 msgid "&Edit"
 msgstr "&Bewerken"
 
-#. i18n: file: ksysguardui.rc:17
+#. i18n: file: ksysguardui.rc:16
 #. i18n: ectx: Menu (settings)
 #: rc.cpp:9
 msgid "&Settings"
 msgstr "&Instellen"
 
-#. i18n: file: ksysguardui.rc:20
+#. i18n: file: ksysguardui.rc:19
 #. i18n: ectx: ToolBar (mainToolBar)
 #: rc.cpp:12
 msgid "Main Toolbar"
@@ -1238,63 +1298,63 @@ msgstr "&Bövergrenz:"
 msgid "Normal digit color:"
 msgstr "Normaal Tallenklöör:"
 
-#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:201
+#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:198
 #. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
 #: rc.cpp:83
 msgid "Alarm digit color:"
 msgstr "Tallenklöör bi Alarm:"
 
-#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:51
+#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:56
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:51
+#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:56
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: rc.cpp:95 rc.cpp:110
 msgid "Text color:"
 msgstr "Textklöör:"
 
-#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:64
+#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:66
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: rc.cpp:98
 msgid "Grid color:"
 msgstr "Gadderklöör:"
 
-#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:77
+#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:76
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
 #: rc.cpp:116
 msgid "Alarm color:"
 msgstr "Klöör för Alarms:"
 
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:28
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:20
 #. i18n: ectx: attribute (title), widget (QWidget, textTab)
 #: rc.cpp:119
 msgid "&Text"
 msgstr "&Text"
 
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:36
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:28
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: rc.cpp:122
 msgid "T&itle"
 msgstr "T&itel"
 
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:154
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:146
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: rc.cpp:131
 msgid "Fi&lter"
 msgstr "Fi&lter"
 
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:175
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:176
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: rc.cpp:134
 msgid "&Add"
 msgstr "&Tofögen"
 
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:182
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:183
 #. i18n: ectx: property (text), widget (QPushButton, deleteButton)
 #: rc.cpp:137
 msgid "&Delete"
 msgstr "&Wegdoon"
 
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:189
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:190
 #. i18n: ectx: property (text), widget (QPushButton, changeButton)
 #: rc.cpp:140
 msgid "&Change"
@@ -1308,33 +1368,9 @@ msgstr "Ä&nnern"
 msgid "Process Table"
 msgstr "Perzesstabell"
 
-#. i18n: tag WorkSheet attribute title
-#. i18n: file: ./SystemLoad.sgrd:3
-#: rc.cpp:149
-msgid "System Load"
-msgstr "Systeemlast"
-
-#. i18n: tag display attribute title
-#. i18n: file: ./SystemLoad.sgrd:5
-#: rc.cpp:152
-msgid "CPU History"
-msgstr "CPU-Vörgeschicht"
-
-#. i18n: tag display attribute title
-#. i18n: file: ./SystemLoad.sgrd:8
-#: rc.cpp:155
-msgid "Memory and Swap History"
-msgstr "(Utlager-)Spieker-Vörgeschicht"
-
-#. i18n: tag display attribute title
-#. i18n: file: ./SystemLoad.sgrd:12
-#: rc.cpp:158
-msgid "Network History"
-msgstr "Nettwark-Vörgeschicht"
-
 #: WorkSheetSettings.cc:40
-msgid "Tab Properties"
-msgstr "Paneel-Egenschappen"
+msgid "Worksheet Properties"
+msgstr "Arbeitblatt-Egenschappen"
 
 #: WorkSheetSettings.cc:62
 msgid "Properties"
@@ -1356,9 +1392,42 @@ msgstr "Giff de Tall vun Regen in, de dat Arbeitblatt hebben schall."
 msgid "Enter the number of columns the sheet should have."
 msgstr "Giff de Tall vun Striepen in, de dat Arbeitblatt hebben schall."
 
-#: WorkSheetSettings.cc:102
+#: WorkSheetSettings.cc:104
 msgid "Enter the title of the worksheet here."
 msgstr "Giff hier den Titel vun dat Arbeitblatt an"
+
+#: KSysGuardApplet.cc:201
+msgid "&Signal Plotter"
+msgstr "&Signaal-Tiet-Diagramm"
+
+#: KSysGuardApplet.cc:202
+msgid "&Multimeter"
+msgstr "&Multimeter"
+
+#: KSysGuardApplet.cc:203
+msgid "&Dancing Bars"
+msgstr "&Danzbalkens"
+
+#: KSysGuardApplet.cc:223 KSysGuardApplet.cc:383
+msgid ""
+"The KSysGuard applet does not support displaying of this type of sensor. "
+"Please choose another sensor."
+msgstr ""
+"Dat KSysGuard-Lüttprogramm ünnerstütt dat Wiesen vun dissen Sensortyp nich. "
+"Bitte söök en annern ut."
+
+#: KSysGuardApplet.cc:322
+#, kde-format
+msgid ""
+"The file %1 does not contain a valid applet definition, which must have a "
+"document type 'KSysGuardApplet'."
+msgstr ""
+"De Datei \"%1\" bargt keen gellen Lüttprogramm-Definitschoon. Se mutt den "
+"Dokmenttyp \"KSysGuardApplet\" hebben."
+
+#: KSysGuardApplet.cc:478
+msgid "Drag sensors from the KDE System Guard into this cell."
+msgstr "Treck Sensoren ut KSysGuard in dit Feld."
 
 #: SensorBrowser.cc:116
 msgid "Sensor Browser"
@@ -1388,119 +1457,119 @@ msgstr ""
 msgid "KDE System Monitor"
 msgstr "KDE-Systeemwachter"
 
-#: ksysguard.cc:150 ksysguard.cc:541
+#: ksysguard.cc:150 ksysguard.cc:537
 msgid "System Monitor"
 msgstr "Systeemwachter"
 
 #: ksysguard.cc:151
-msgid "&New Tab..."
-msgstr "&Nieg Paneel..."
+msgid "&New Worksheet..."
+msgstr "&Nieg Arbeitblatt..."
 
 #: ksysguard.cc:152
-msgid "Import Tab Fr&om File..."
-msgstr "&Paneel ut Datei importeren..."
+msgid "Import Worksheet..."
+msgstr "Arbeitblatt importeren..."
 
 #: ksysguard.cc:153
-msgid "Save Tab &As..."
-msgstr "Paneel sekern &as..."
+msgid "&Export Worksheet..."
+msgstr "Arbeitblatt &exporteren..."
 
 #: ksysguard.cc:154
-msgid "&Close Tab"
-msgstr "Paneel &tomaken"
+msgid "&Remove Worksheet"
+msgstr "Arbeitblatt &wegdoon"
 
 #: ksysguard.cc:155
-msgid "Monitor &Remote Machine..."
+#, fuzzy
+#| msgid "Monitor &Remote Machine..."
+msgid "Monitor remote machine..."
 msgstr "&Feern Reekner beluern..."
 
 #: ksysguard.cc:156
-msgid "&Download New Tabs..."
-msgstr "Nieg Paneels &daalladen..."
+msgid "&Worksheet Properties"
+msgstr "Arbeitblatt-E&genschappen"
 
-#: ksysguard.cc:157
-msgid "Tab &Properties"
-msgstr "Paneel-&Egenschappen"
+#: ksysguard.cc:443
+#, fuzzy, kde-format
+#| msgid " 1 process "
+#| msgid_plural " %1 processes "
+msgid " %1 processes "
+msgstr " 1 Perzess"
 
 #: ksysguard.cc:449
-#, kde-format
-msgid " 1 process "
-msgid_plural " %1 processes "
-msgstr[0] " 1 Perzess"
-msgstr[1] " %1 Perzessen "
-
-#: ksysguard.cc:455
 #, kde-format
 msgid " CPU: %1% "
 msgstr " CPU: %1% "
 
-#: ksysguard.cc:469
-#, kde-format
-msgctxt "Arguments are formatted byte sizes (used/total)"
+#: ksysguard.cc:463
+#, fuzzy, kde-format
+#| msgctxt "Arguments are formatted byte sizes (used/total)"
+#| msgid " Memory: %1 / %2 "
 msgid " Memory: %1 / %2 "
 msgstr " Spieker: %1 / %2 "
 
-#: ksysguard.cc:496
+#: ksysguard.cc:490
 msgid " No swap space available "
 msgstr " Keen Utlagerspieker verföögbor "
 
-#: ksysguard.cc:498
-#, kde-format
-msgctxt "Arguments are formatted byte sizes (used/total)"
+#: ksysguard.cc:492
+#, fuzzy, kde-format
+#| msgctxt "Arguments are formatted byte sizes (used/total)"
+#| msgid " Swap: %1 / %2 "
 msgid " Swap: %1 / %2 "
 msgstr " Utlagerspieker: %1 / %2 "
 
-#: ksysguard.cc:543
+#: ksysguard.cc:539
 msgid "(c) 1996-2008 The KDE System Monitor Developers"
 msgstr "(c) 1996-2008 De Schrievers vun den KDE-Systeemwachter"
 
-#: ksysguard.cc:544
+#: ksysguard.cc:540
 msgid "John Tapsell"
 msgstr "John Tapsell"
 
-#: ksysguard.cc:544
+#: ksysguard.cc:540
 msgid "Current Maintainer"
 msgstr "Aktuell Pleger"
 
-#: ksysguard.cc:545
+#: ksysguard.cc:541
 msgid "Chris Schlaeger"
 msgstr "Chris Schlaeger"
 
-#: ksysguard.cc:545
+#: ksysguard.cc:541
 msgid "Previous Maintainer"
 msgstr "Verleden Pleger"
 
-#: ksysguard.cc:546
+#: ksysguard.cc:542
 msgid "Greg Martyn"
 msgstr "Greg Martyn"
 
-#: ksysguard.cc:547
+#: ksysguard.cc:543
 msgid "Tobias Koenig"
 msgstr "Tobias Koenig"
 
-#: ksysguard.cc:548
+#: ksysguard.cc:544
 msgid "Nicolas Leclercq"
 msgstr "Nicolas Leclercq"
 
-#: ksysguard.cc:549
+#: ksysguard.cc:545
 msgid "Alex Sanda"
 msgstr "Alex Sanda"
 
-#: ksysguard.cc:550
+#: ksysguard.cc:546
 msgid "Bernd Johannes Wuebben"
 msgstr "Bernd Johannes Wuebben"
 
-#: ksysguard.cc:551
+#: ksysguard.cc:547
 msgid "Ralf Mueller"
 msgstr "Ralf Mueller"
 
-#: ksysguard.cc:552
+#: ksysguard.cc:548
 msgid "Hamish Rodda"
 msgstr "Hamish Rodda"
 
-#: ksysguard.cc:553
+#: ksysguard.cc:549
 msgid "Torsten Kasch"
 msgstr "Torsten Kasch"
 
-#: ksysguard.cc:553
+#: ksysguard.cc:549
 msgid ""
 "Solaris Support\n"
 "Parts derived (by permission) from the sunos5\n"
@@ -1510,95 +1579,72 @@ msgstr ""
 "Delen (mit Verlööf) afleddt vun dat sunos5-\n"
 "Moduul vun William LeFebvres \"top\"-Programm."
 
-#: ksysguard.cc:562
+#: ksysguard.cc:557
 msgid "Optional worksheet files to load"
 msgstr "Optschonale Arbeitblääd laden"
 
-#~ msgid "Select Worksheet to Open"
-#~ msgstr "Dat Arbeitblatt utsöken, dat Du opmaken wullt"
+#~ msgctxt "@item sensor description"
+#~ msgid "System Load"
+#~ msgstr "Systeemlast"
 
-#~ msgid "Export Work Sheet"
-#~ msgstr "Arbeitblatt exporteren"
+#~ msgid "Select Tab File to Import"
+#~ msgstr "Paneeldatei utsöken, de Du importeren wullt"
 
-#~ msgid "Worksheet Properties"
-#~ msgstr "Arbeitblatt-Egenschappen"
+#~ msgid "Export Tab"
+#~ msgstr "Paneel exporteren"
 
-#~ msgid "&Signal Plotter"
-#~ msgstr "&Signaal-Tiet-Diagramm"
+#~ msgctxt "Number suffix in spinbox"
+#~ msgid "%"
+#~ msgstr "%"
 
-#~ msgid "&Multimeter"
-#~ msgstr "&Multimeter"
+#~ msgid "Show axis labels"
+#~ msgstr "Ass-Betekers wiesen"
 
-#~ msgid "&Dancing Bars"
-#~ msgstr "&Danzbalkens"
+#~ msgid "Grid lines:"
+#~ msgstr "Gadderlienen:"
 
-#~ msgid ""
-#~ "The KSysGuard applet does not support displaying of this type of sensor. "
-#~ "Please choose another sensor."
-#~ msgstr ""
-#~ "Dat KSysGuard-Lüttprogramm ünnerstütt dat Wiesen vun dissen Sensortyp "
-#~ "nich. Bitte söök en annern ut."
+#~ msgctxt "Largest axis title"
+#~ msgid "99999 XXXX"
+#~ msgstr "99999 XXXX"
 
-#~ msgid ""
-#~ "The file %1 does not contain a valid applet definition, which must have a "
-#~ "document type 'KSysGuardApplet'."
-#~ msgstr ""
-#~ "De Datei \"%1\" bargt keen gellen Lüttprogramm-Definitschoon. Se mutt den "
-#~ "Dokmenttyp \"KSysGuardApplet\" hebben."
+#~ msgctxt ""
+#~ "%1 is what is being shown statistics for, like 'Memory', 'Swap', etc."
+#~ msgid "<p><b>%1:</b><br>"
+#~ msgstr "<p><b>%1:</b><br>"
 
-#~ msgid "Drag sensors from the KDE System Guard into this cell."
-#~ msgstr "Treck Sensoren ut KSysGuard in dit Feld."
+#~ msgctxt "%1 and %2 are sensor's last and maximum value"
+#~ msgid "%1 of %2"
+#~ msgstr "%1 vun %2"
 
-#~ msgid "&New Worksheet..."
-#~ msgstr "&Nieg Arbeitblatt..."
+#~ msgid "CPU History"
+#~ msgstr "CPU-Vörgeschicht"
+
+#~ msgid "Memory and Swap History"
+#~ msgstr "(Utlager-)Spieker-Vörgeschicht"
+
+#~ msgid "Network History"
+#~ msgstr "Nettwark-Vörgeschicht"
+
+#~ msgid "Tab Properties"
+#~ msgstr "Paneel-Egenschappen"
+
+#~ msgid "&New Tab..."
+#~ msgstr "&Nieg Paneel..."
+
+#~ msgid "Import Tab Fr&om File..."
+#~ msgstr "&Paneel ut Datei importeren..."
+
+#~ msgid "Save Tab &As..."
+#~ msgstr "Paneel sekern &as..."
+
+#~ msgid "&Close Tab"
+#~ msgstr "Paneel &tomaken"
+
+#~ msgid "&Download New Tabs..."
+#~ msgstr "Nieg Paneels &daalladen..."
+
+#~ msgid "Tab &Properties"
+#~ msgstr "Paneel-&Egenschappen"
 
 #~ msgid "Open Worksheet..."
 #~ msgstr "Arbeitblatt opmaken..."
-
-#~ msgid "&Export Worksheet..."
-#~ msgstr "Arbeitblatt &exporteren..."
-
-#~ msgid "&Remove Worksheet"
-#~ msgstr "Arbeitblatt &wegdoon"
-
-#~ msgid "&Worksheet Properties"
-#~ msgstr "Arbeitblatt-E&genschappen"
-
-#~ msgid "Import Worksheet..."
-#~ msgstr "Arbeitblatt importeren..."
-
-#~ msgid "Stack the beams on top of each other"
-#~ msgstr "De Balkens opschichten"
-
-#~ msgid ""
-#~ "The beams are stacked on top of each other, and the area is drawn filled "
-#~ "in. So if one beam has a value of 2 and another beam has a value of 3, "
-#~ "the first beam will be drawn at value 2 and the other beam drawn at 2+3=5."
-#~ msgstr ""
-#~ "De Balkens warrt een op den annern stapelt. Hett de een den Weert \"2\" "
-#~ "un de anner den Weert \"3\", warrt de eerste bi 2, man de twete bi 5 (=2"
-#~ "+3) wiest."
-
-#~ msgid "Count:"
-#~ msgstr "Tall:"
-
-#~ msgid "Enter the number of horizontal lines here."
-#~ msgstr "Giff hier de Tall vun kimmrechte Lienen an."
-
-#~ msgid "Labels"
-#~ msgstr "Beschriften"
-
-#~ msgid "Top bar"
-#~ msgstr "Böverbalken"
-
-#~ msgid ""
-#~ "Check this to active the display title bar. This is probably only useful "
-#~ "for applet displays. The bar is only visible if the display is large "
-#~ "enough."
-#~ msgstr ""
-#~ "Aktiveer dit, wenn de Titel- un Wiesbalken vun't Diagramm wiest warrn "
-#~ "schall. Dat is wohrschienlich bloots goot för Lüttprogramm-Diagrammen. De "
-#~ "Balken warrt bloots wiest, wenn dat Diagramm groot noog is."
-
-#~ msgid "Horizontal lines:"
-#~ msgstr "Kimmrechte Lienen:"
