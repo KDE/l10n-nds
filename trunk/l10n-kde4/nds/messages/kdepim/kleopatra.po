@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-11-14 10:06+0100\n"
+"POT-Creation-Date: 2009-01-28 09:16+0100\n"
 "PO-Revision-Date: 2008-11-24 00:37+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -138,7 +138,7 @@ msgstr "Hierarch'sche Zertifikatenlist"
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:244
 #. i18n: ectx: property (text), widget (QPushButton, expandAllCertificationsPB)
-#: view/tabwidget.cpp:559 rc.cpp:461
+#: view/tabwidget.cpp:559 rc.cpp:458
 msgid "Expand All"
 msgstr "All Utfoolden"
 
@@ -148,7 +148,7 @@ msgstr "Strg+."
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:254
 #. i18n: ectx: property (text), widget (QPushButton, collapseAllCertificationsPB)
-#: view/tabwidget.cpp:561 rc.cpp:464
+#: view/tabwidget.cpp:561 rc.cpp:461
 msgid "Collapse All"
 msgstr "All Tosamenfoolden"
 
@@ -239,17 +239,41 @@ msgctxt "arg is name, email of certificate holder"
 msgid "Certify Certificate: %1"
 msgstr "Zertifikaat beglöven: %1"
 
-#: dialogs/adduseriddialog.cpp:122
+#: dialogs/adduseriddialog.cpp:129
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "<interface>Real name</interface> must be at least 5 characters long."
+msgctxt "@info"
+msgid "<interface>Real name</interface> is required, but missing."
+msgstr "De <interface>Rejell Naam</interface> mutt tominnst 5 Tekens hebben."
+
+#: dialogs/adduseriddialog.cpp:131
 msgctxt "@info"
 msgid "<interface>Real name</interface> must be at least 5 characters long."
 msgstr "De <interface>Rejell Naam</interface> mutt tominnst 5 Tekens hebben."
 
-#: dialogs/adduseriddialog.cpp:124
+#: dialogs/adduseriddialog.cpp:133
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "<interface>EMail address</interface> is invalid."
+msgctxt "@info"
+msgid "<interface>EMail address</interface> is required, but missing."
+msgstr "De <interface>Nettpost-Adress</interface> is leeg."
+
+#: dialogs/adduseriddialog.cpp:135
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "<interface>EMail address</interface> is invalid."
+msgctxt "@info"
+msgid "<interface>EMail address</interface> is incomplete."
+msgstr "De <interface>Nettpost-Adress</interface> is leeg."
+
+#: dialogs/adduseriddialog.cpp:137
 msgctxt "@info"
 msgid "<interface>EMail address</interface> is invalid."
 msgstr "De <interface>Nettpost-Adress</interface> is leeg."
 
-#: dialogs/adduseriddialog.cpp:126
+#: dialogs/adduseriddialog.cpp:139
 msgctxt "@info"
 msgid "<interface>Comment</interface> contains invalid characters."
 msgstr "De <interface>Kommentar</interface> bargt leeg Tekens."
@@ -268,7 +292,7 @@ msgstr "Pröövnaam"
 
 #. i18n: file: newcertificatewizard/resultpage.ui:16
 #. i18n: ectx: property (title), widget (QGroupBox, resultGB)
-#: dialogs/selftestdialog.cpp:118 rc.cpp:707
+#: dialogs/selftestdialog.cpp:118 rc.cpp:704
 msgid "Result"
 msgstr "Resultaat"
 
@@ -473,8 +497,11 @@ msgid "Unknown error while executing gpgconf"
 msgstr "Nich begäng Fehler bi't Utföhren vun \"gpgconf\""
 
 #: kgpgconf/configuration.cpp:345
-msgid "Multiple Settable"
-msgstr "Lett sik mehrmalig fastleggen"
+#, fuzzy
+#| msgid "Never"
+msgctxt "as in \"verbosity level\""
+msgid "Level"
+msgstr "Nienich"
 
 #: kgpgconf/configuration.cpp:345
 msgid "Set/Unset"
@@ -540,7 +567,7 @@ msgstr "Vertekenpadd"
 #. i18n: ectx: Menu (file)
 #. i18n: file: kwatchgnupg/kwatchgnupgui.rc:4
 #. i18n: ectx: Menu (file)
-#: kgpgconf/mainwindow.cpp:67 rc.cpp:3 rc.cpp:509 rc.cpp:743
+#: kgpgconf/mainwindow.cpp:67 rc.cpp:3 rc.cpp:506 rc.cpp:740
 msgid "&File"
 msgstr "&Datei"
 
@@ -964,7 +991,7 @@ msgstr "Mit Nafragen na Lüttbildnaams söken (a.B. Orner)."
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:34
 #. i18n: ectx: property (title), widget (QGroupBox, overviewActionsGB)
-#: utils/kleo_kicondialog.cpp:355 rc.cpp:415
+#: utils/kleo_kicondialog.cpp:355 rc.cpp:412
 msgid "Actions"
 msgstr "Akschonen"
 
@@ -1825,17 +1852,23 @@ msgstr "<b>Mit Spood opslötelt.</b>"
 msgid "The signature is bad."
 msgstr "De Ünnerschrift is leeg."
 
-#: crypto/decryptverifytask.cpp:431
+#: crypto/decryptverifytask.cpp:432
+#, fuzzy
+#| msgid "The validity of this certificate cannot be checked at the moment."
+msgid "The validity of the signature cannot be verified."
+msgstr "Dat lett sik opstunns nich pröven, wat dit Zertifikaat gellt."
+
+#: crypto/decryptverifytask.cpp:433
 #, kde-format
 msgid "The signature is invalid: %1"
 msgstr "De Ünnerschrift is leeg: %1"
 
-#: crypto/decryptverifytask.cpp:450
+#: crypto/decryptverifytask.cpp:452
 msgctxt "separator for a list of e-mail addresses"
 msgid ", "
 msgstr ", "
 
-#: crypto/decryptverifytask.cpp:450
+#: crypto/decryptverifytask.cpp:452
 #, kde-format
 msgid ""
 "<p>The sender's address %1 is not stored in the certificate. Stored: %2</p>"
@@ -1843,43 +1876,43 @@ msgstr ""
 "<p>Den Senner sien Adress (%1) steiht nich binnen dat Zertifikaat. Stahn "
 "deit dor: %2</p>"
 
-#: crypto/decryptverifytask.cpp:460
+#: crypto/decryptverifytask.cpp:462
 #, kde-format
 msgid "One unknown recipient."
 msgid_plural "%1 unknown recipients."
 msgstr[0] "Een nich begäng Adressaat."
 msgstr[1] "%1 nich begäng Adressaten."
 
-#: crypto/decryptverifytask.cpp:464
+#: crypto/decryptverifytask.cpp:466
 msgid "Recipients:"
 msgid_plural "Recipients:"
 msgstr[0] "Adressaten:"
 msgstr[1] "Adressaten:"
 
-#: crypto/decryptverifytask.cpp:472
+#: crypto/decryptverifytask.cpp:474
 #, kde-format
 msgid "One unknown recipient"
 msgid_plural "%1 unknown recipients"
 msgstr[0] "Een nich begäng Adressaat"
 msgstr[1] "%1 nich begäng Adressaten"
 
-#: crypto/decryptverifytask.cpp:687
+#: crypto/decryptverifytask.cpp:689
 #, kde-format
 msgctxt "label: result example: foo.sig: Verification failed. "
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: crypto/decryptverifytask.cpp:844 crypto/decryptverifytask.cpp:968
+#: crypto/decryptverifytask.cpp:846 crypto/decryptverifytask.cpp:970
 #, kde-format
 msgid "Decrypting: %1..."
 msgstr "Bi't Opslöteln: %1..."
 
-#: crypto/decryptverifytask.cpp:1094
+#: crypto/decryptverifytask.cpp:1096
 #, kde-format
 msgid "Verifying: %1..."
 msgstr "Bi to pröven: %1..."
 
-#: crypto/decryptverifytask.cpp:1216
+#: crypto/decryptverifytask.cpp:1218
 #, kde-format
 msgid "Verifying signature: %1..."
 msgstr "Ünnerschrift warrt pröövt: %1..."
@@ -2971,32 +3004,27 @@ msgstr ""
 "Nich verwacht Utnahm binnen \"PrepEncryptCommand::Private::"
 "slotRecipientsResolved\" affungen"
 
-#: uiserver/uiserver_unix.cpp:66 uiserver/uiserver_win.cpp:68
-#, kde-format
-msgid "Could not create directory %1: %2"
-msgstr "Orner \"%1\" lett sik nich opstellen: %2"
-
-#: uiserver/uiserver_unix.cpp:83 uiserver/uiserver_win.cpp:81
+#: uiserver/uiserver_unix.cpp:70 uiserver/uiserver_win.cpp:68
 #, kde-format
 msgid "Could not create socket: %1"
 msgstr "Socket lett sik nich opstellen: %1"
 
-#: uiserver/uiserver_unix.cpp:96 uiserver/uiserver_win.cpp:90
+#: uiserver/uiserver_unix.cpp:83 uiserver/uiserver_win.cpp:77
 #, kde-format
 msgid "Could not bind to socket: %1"
 msgstr "Tokoppeln na Socket nich mööglich: %1"
 
-#: uiserver/uiserver_unix.cpp:102 uiserver/uiserver_win.cpp:93
+#: uiserver/uiserver_unix.cpp:89 uiserver/uiserver_win.cpp:80
 #, kde-format
 msgid "Could not get socket nonce: %1"
 msgstr "Eenmaal-Socket lett sik nich halen: %1"
 
-#: uiserver/uiserver_unix.cpp:107 uiserver/uiserver_win.cpp:97
+#: uiserver/uiserver_unix.cpp:94 uiserver/uiserver_win.cpp:84
 #, kde-format
 msgid "Could not listen to socket: %1"
 msgstr "Luustern op Socket nich mööglich: %1"
 
-#: uiserver/uiserver_unix.cpp:110 uiserver/uiserver_win.cpp:100
+#: uiserver/uiserver_unix.cpp:97 uiserver/uiserver_win.cpp:87
 #, kde-format
 msgid ""
 "Could not pass socket to Qt: %1. This should not happen, please report this "
@@ -3129,7 +3157,18 @@ msgstr "Dat Hülpprogramm ünnerstütt OpenPGP nich"
 msgid "No backend support for S/MIME"
 msgstr "Dat Hülpprogramm ünnerstütt S/MIME nich"
 
-#: uiserver/uiserver.cpp:208
+#: uiserver/uiserver.cpp:209
+#, fuzzy
+#| msgid ""
+#| "Cannot determine the GnuPG home directory: %1 exists but is no directory."
+msgid ""
+"Could not determine the GnuPG home directory. Consider setting the GNUPGHOME "
+"environment variable."
+msgstr ""
+"De GnuPG-Tohuusorner lett sik nich fastmaken: Dat gifft \"%1\", man dat is "
+"keen Orner."
+
+#: uiserver/uiserver.cpp:219
 #, kde-format
 msgid ""
 "Cannot determine the GnuPG home directory: %1 exists but is no directory."
@@ -3137,12 +3176,12 @@ msgstr ""
 "De GnuPG-Tohuusorner lett sik nich fastmaken: Dat gifft \"%1\", man dat is "
 "keen Orner."
 
-#: uiserver/uiserver.cpp:214
+#: uiserver/uiserver.cpp:225
 #, kde-format
 msgid "Could not create GnuPG home directory %1: %2"
 msgstr "GnuPG-Tohuusorner \"%1\" lett sik nich opstellen: %2"
 
-#: uiserver/uiserver.cpp:226
+#: uiserver/uiserver.cpp:237
 #, kde-format
 msgid "Detected another running gnupg UI server listening at %1."
 msgstr "En anner \"gnupg\"-Böversietserver opdeckt, de op %1 luustert."
@@ -3406,7 +3445,7 @@ msgstr "Stärk"
 
 #. i18n: file: kleopatra.rc:22
 #. i18n: ectx: Menu (view)
-#: rc.cpp:6 rc.cpp:512
+#: rc.cpp:6 rc.cpp:509
 msgid "&View"
 msgstr "&Ansicht"
 
@@ -3418,25 +3457,25 @@ msgstr "&Ansicht"
 #. i18n: ectx: Menu (certMenu)
 #. i18n: file: kleopatra.rc:95
 #. i18n: ectx: Menu (listview_popup)
-#: rc.cpp:9 rc.cpp:27 rc.cpp:515 rc.cpp:533
+#: rc.cpp:9 rc.cpp:27 rc.cpp:512 rc.cpp:530
 msgid "&Certificates"
 msgstr "&Zertifikaten"
 
 #. i18n: file: kleopatra.rc:46
 #. i18n: ectx: Menu (tools)
-#: rc.cpp:12 rc.cpp:518
+#: rc.cpp:12 rc.cpp:515
 msgid "&Tools"
 msgstr "&Warktüüch"
 
 #. i18n: file: kleopatra.rc:60
 #. i18n: ectx: Menu (settings)
-#: rc.cpp:15 rc.cpp:521
+#: rc.cpp:15 rc.cpp:518
 msgid "&Settings"
 msgstr "&Instellen"
 
 #. i18n: file: kleopatra.rc:64
 #. i18n: ectx: Menu (window)
-#: rc.cpp:18 rc.cpp:524
+#: rc.cpp:18 rc.cpp:521
 msgid "&Window"
 msgstr "&Finster"
 
@@ -3444,13 +3483,13 @@ msgstr "&Finster"
 #. i18n: ectx: ToolBar (mainToolBar)
 #. i18n: file: kwatchgnupg/kwatchgnupgui.rc:13
 #. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:21 rc.cpp:527 rc.cpp:746
+#: rc.cpp:21 rc.cpp:524 rc.cpp:743
 msgid "Main Toolbar"
 msgstr "Hööft-Warktüüchbalken"
 
 #. i18n: file: kleopatra.rc:90
 #. i18n: ectx: ToolBar (searchToolBar)
-#: rc.cpp:24 rc.cpp:530
+#: rc.cpp:24 rc.cpp:527
 msgid "Search Toolbar"
 msgstr "Söök-Warktüüchbalken"
 
@@ -4308,24 +4347,18 @@ msgstr "Ko&mmentar (köörwies):"
 #. i18n: file: dialogs/adduseriddialog.ui:65
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: rc.cpp:388
-msgid "This is how it will look like:"
-msgstr "Sodennig warrt dat utsehn:"
-
-#. i18n: file: dialogs/adduseriddialog.ui:145
-#. i18n: ectx: property (text), widget (QLabel, errorLB)
-#: rc.cpp:391
-msgid "Foo"
-msgstr "Bispill"
+msgid "This is how the new User-ID will be stored in the certificate:"
+msgstr ""
 
 #. i18n: file: dialogs/selftestdialog.ui:13
 #. i18n: ectx: property (windowTitle), widget (QDialog, SelfTestDialog)
-#: rc.cpp:394
+#: rc.cpp:391
 msgid "Kleopatra Self-Test Results"
 msgstr "Resultaten vun den Kleopatra-Sülvsttest"
 
 #. i18n: file: dialogs/selftestdialog.ui:22
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:397
+#: rc.cpp:394
 msgctxt "@info"
 msgid ""
 "<para>These are the results of the Kleopatra self-test suite. Details are "
@@ -4338,67 +4371,67 @@ msgstr ""
 
 #. i18n: file: dialogs/selftestdialog.ui:62
 #. i18n: ectx: property (title), widget (QGroupBox, proposedCorrectiveActionGB)
-#: rc.cpp:400
+#: rc.cpp:397
 msgid "Proposed Corrective Action"
 msgstr "Richtvörslag"
 
 #. i18n: file: dialogs/selftestdialog.ui:124
 #. i18n: ectx: property (text), widget (QPushButton, doItPB)
-#: rc.cpp:403
+#: rc.cpp:400
 msgid "Do It!"
 msgstr "Do dat!"
 
 #. i18n: file: dialogs/selftestdialog.ui:137
 #. i18n: ectx: property (text), widget (QCheckBox, runAtStartUpCB)
-#: rc.cpp:406
+#: rc.cpp:403
 msgid "Run these tests at startup"
 msgstr "Disse Tests bi't Starten utföhren"
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:13
 #. i18n: ectx: property (windowTitle), widget (QDialog, CertificateDetailsDialog)
-#: rc.cpp:409 mainwindow.cpp:409
+#: rc.cpp:406 mainwindow.cpp:409
 msgid "Certificate Details"
 msgstr "Zertifikaatdetails"
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:28
 #. i18n: ectx: attribute (title), widget (QWidget, overviewTab)
-#: rc.cpp:412
+#: rc.cpp:409
 msgid "Overview"
 msgstr "Översicht"
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:40
 #. i18n: ectx: property (text), widget (QPushButton, changePassphrasePB)
-#: rc.cpp:418 mainwindow.cpp:420
+#: rc.cpp:415 mainwindow.cpp:420
 msgid "Change Passphrase..."
 msgstr "Slötelsatz ännern..."
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:50
 #. i18n: ectx: property (text), widget (QPushButton, changeTrustLevelPB)
-#: rc.cpp:421
+#: rc.cpp:418
 msgid "Trust Certifications made by this Certificate..."
 msgstr "Beglöven mit dit Zertifikaat vertroen..."
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:60
 #. i18n: ectx: property (text), widget (QPushButton, changeExpiryDatePB)
-#: rc.cpp:424 mainwindow.cpp:416
+#: rc.cpp:421 mainwindow.cpp:416
 msgid "Change Expiry Date..."
 msgstr "Afloopdatum ännern..."
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:70
 #. i18n: ectx: property (text), widget (QPushButton, revokeCertificatePB)
-#: rc.cpp:427
+#: rc.cpp:424
 msgid "Revoke this Certificate..."
 msgstr "Dit Zertifikaat torüchropen..."
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:118
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:430
+#: rc.cpp:427
 msgid "Photo"
 msgstr "Foto"
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:128
 #. i18n: ectx: property (text), widget (QLabel, photoLB)
-#: rc.cpp:433
+#: rc.cpp:430
 msgid ""
 "<p>At the moment, Kleopatra does not support photos in certificates. It has "
 "no support for adding, nor for displaying them. This is for the following "
@@ -4417,19 +4450,19 @@ msgstr ""
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:153
 #. i18n: ectx: attribute (title), widget (QWidget, certificationsTab)
-#: rc.cpp:440
+#: rc.cpp:437
 msgid "User-IDs and Certifications"
 msgstr "Bruker-IDs un Beglöven"
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:173
 #. i18n: ectx: property (title), widget (QGroupBox, userIDsActionsGB)
-#: rc.cpp:443
+#: rc.cpp:440
 msgid "User-IDs"
 msgstr "Bruker-IDs"
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:179
 #. i18n: ectx: property (text), widget (QPushButton, addUserIDPB)
-#: rc.cpp:446
+#: rc.cpp:443
 msgid "Add..."
 msgstr "Tofögen..."
 
@@ -4437,19 +4470,19 @@ msgstr "Tofögen..."
 #. i18n: ectx: property (text), widget (QPushButton, revokeUserIDPB)
 #. i18n: file: dialogs/certificatedetailsdialog.ui:218
 #. i18n: ectx: property (text), widget (QPushButton, revokeCertificationPB)
-#: rc.cpp:449 rc.cpp:458
+#: rc.cpp:446 rc.cpp:455
 msgid "Revoke..."
 msgstr "Torüchropen..."
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:199
 #. i18n: ectx: property (text), widget (QPushButton, certifyUserIDPB)
-#: rc.cpp:452
+#: rc.cpp:449
 msgid "Certify..."
 msgstr "Beglöven..."
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:212
 #. i18n: ectx: property (title), widget (QGroupBox, certificationsActionGB)
-#: rc.cpp:455
+#: rc.cpp:452
 msgid "Certifications"
 msgstr "Beglöven"
 
@@ -4457,31 +4490,31 @@ msgstr "Beglöven"
 #. i18n: ectx: attribute (title), widget (QWidget, detailsTab)
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:91
 #. i18n: ectx: attribute (title), widget (QWidget, technicalTab)
-#: rc.cpp:467 rc.cpp:629
+#: rc.cpp:464 rc.cpp:626
 msgid "Technical Details"
 msgstr "Technische Enkelheiten"
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:328
 #. i18n: ectx: attribute (title), widget (QWidget, chainTab)
-#: rc.cpp:470
+#: rc.cpp:467
 msgid "Chain"
 msgstr "Keed"
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:341
 #. i18n: ectx: property (text), widget (QTreeWidget, chainTW)
-#: rc.cpp:473
+#: rc.cpp:470
 msgid "1"
 msgstr "1"
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:358
 #. i18n: ectx: attribute (title), widget (QWidget, dumpTab)
-#: rc.cpp:476
+#: rc.cpp:473
 msgid "Dump"
 msgstr "Utgaav"
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:364
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:479
+#: rc.cpp:476
 msgid ""
 "This is a dump of all information the backend has about this certificate:"
 msgstr ""
@@ -4489,86 +4522,86 @@ msgstr ""
 
 #. i18n: file: kgpgconf/mainwidget.ui:17
 #. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
-#: rc.cpp:482
+#: rc.cpp:479
 msgid "Option"
 msgstr "Optschoon"
 
 #. i18n: file: kgpgconf/mainwidget.ui:22
 #. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
-#: rc.cpp:485
+#: rc.cpp:482
 msgid "Impose"
 msgstr "Verdwingen"
 
 #. i18n: file: kgpgconf/mainwidget.ui:38
 #. i18n: ectx: property (text), widget (QLabel, componentLabelLabel)
-#: rc.cpp:488
+#: rc.cpp:485
 msgid "Component:"
 msgstr "Komponent:"
 
 #. i18n: file: kgpgconf/mainwidget.ui:62
 #. i18n: ectx: property (text), widget (QLabel, optionLabelLabel)
-#: rc.cpp:491
+#: rc.cpp:488
 msgid "Option:"
 msgstr "Optschoon:"
 
 #. i18n: file: kgpgconf/mainwidget.ui:89
 #. i18n: ectx: property (text), widget (QLabel, descriptionLabelLabel)
-#: rc.cpp:494
+#: rc.cpp:491
 msgid "Description:"
 msgstr "Beschrieven:"
 
 #. i18n: file: kgpgconf/mainwidget.ui:122
 #. i18n: ectx: property (text), widget (QLabel, typeLabelLabel)
-#: rc.cpp:497
+#: rc.cpp:494
 msgid "Type:"
 msgstr "Typ:"
 
 #. i18n: file: kgpgconf/mainwidget.ui:147
 #. i18n: ectx: property (text), widget (QRadioButton, useDefaultRB)
-#: rc.cpp:500
+#: rc.cpp:497
 msgid "Reset user settings to built-in default"
 msgstr "Brukerinstellen op Vörinstellen torüchsetten"
 
 #. i18n: file: kgpgconf/mainwidget.ui:157
 #. i18n: ectx: property (text), widget (QRadioButton, useCustomRB)
-#: rc.cpp:503
+#: rc.cpp:500
 msgid "Custom value:"
 msgstr "Egen Weert:"
 
 #. i18n: file: kgpgconf/mainwidget.ui:177
 #. i18n: ectx: property (text), widget (QCheckBox, readOnlyBox)
-#: rc.cpp:506
+#: rc.cpp:503
 msgid "Impose setting on all users"
 msgstr "Instellen för all Brukers fastleggen"
 
 #. i18n: file: crypto/gui/signingcertificateselectionwidget.ui:16
 #. i18n: ectx: property (text), widget (QLabel, pgpLabel)
-#: rc.cpp:536
+#: rc.cpp:533
 msgid "OpenPGP Signing Certificate"
 msgstr "OpenPGP-Ünnerschriftzertifikaat"
 
 #. i18n: file: crypto/gui/signingcertificateselectionwidget.ui:26
 #. i18n: ectx: property (text), widget (QLabel, cmsLabel)
-#: rc.cpp:539
+#: rc.cpp:536
 msgid "S/MIME Signing Certificate"
 msgstr "S/MIME-Ünnerschriftzertifikaat"
 
 #. i18n: file: crypto/gui/signingcertificateselectionwidget.ui:36
 #. i18n: ectx: property (text), widget (QCheckBox, rememberCO)
-#: rc.cpp:542
+#: rc.cpp:539
 msgid "Remember these as default for future operations"
 msgstr "As Standard för tokamen Akschonen wohren"
 
 #. i18n: file: newcertificatewizard/overviewpage.ui:5
 #. i18n: ectx: property (title), widget (QWizardPage, Kleo::NewCertificateUi::OverviewPage)
-#: rc.cpp:545
+#: rc.cpp:542
 msgctxt "@title"
 msgid "Review Certificate Parameters"
 msgstr "Zertifikaat-Parameters pröven"
 
 #. i18n: file: newcertificatewizard/overviewpage.ui:8
 #. i18n: ectx: property (subTitle), widget (QWizardPage, Kleo::NewCertificateUi::OverviewPage)
-#: rc.cpp:548
+#: rc.cpp:545
 msgid ""
 "Please review the certificate parameters before proceeding to create the "
 "certificate."
@@ -4577,26 +4610,26 @@ msgstr ""
 
 #. i18n: file: newcertificatewizard/overviewpage.ui:21
 #. i18n: ectx: property (text), widget (QCheckBox, showAllDetailsCB)
-#: rc.cpp:551
+#: rc.cpp:548
 msgid "Show all details"
 msgstr "All Enkelheiten wiesen"
 
 #. i18n: file: newcertificatewizard/keycreationpage.ui:5
 #. i18n: ectx: property (title), widget (QWizardPage, Kleo::NewCertificateUi::KeyCreationPage)
-#: rc.cpp:554
+#: rc.cpp:551
 msgctxt "@title"
 msgid "Creating Key..."
 msgstr "Slötel warrt opstellt..."
 
 #. i18n: file: newcertificatewizard/keycreationpage.ui:8
 #. i18n: ectx: property (subTitle), widget (QWizardPage, Kleo::NewCertificateUi::KeyCreationPage)
-#: rc.cpp:557
+#: rc.cpp:554
 msgid "Your key is being created."
 msgstr "Dien Slötel warrt opstunns opstellt."
 
 #. i18n: file: newcertificatewizard/keycreationpage.ui:17
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:560
+#: rc.cpp:557
 msgid ""
 "The process of creating a key requires large amounts of random numbers. To "
 "foster this process, you can use the entry field below to enter some "
@@ -4612,26 +4645,26 @@ msgstr ""
 
 #. i18n: file: newcertificatewizard/chooseprotocolpage.ui:13
 #. i18n: ectx: property (title), widget (QWizardPage, Kleo::NewCertificateUi::ChooseProtocolPage)
-#: rc.cpp:563
+#: rc.cpp:560
 msgctxt "@title"
 msgid "Choose Certificate Format"
 msgstr "Zertifikaat-Formaat utsöken"
 
 #. i18n: file: newcertificatewizard/chooseprotocolpage.ui:16
 #. i18n: ectx: property (subTitle), widget (QWizardPage, Kleo::NewCertificateUi::ChooseProtocolPage)
-#: rc.cpp:566
+#: rc.cpp:563
 msgid "Please choose which type of certificate you want to create. "
 msgstr "Söök bitte den Typ ut, den Dien Zertifikaat hebben schall. "
 
 #. i18n: file: newcertificatewizard/chooseprotocolpage.ui:25
 #. i18n: ectx: property (text), widget (QCommandLinkButton, pgpCLB)
-#: rc.cpp:569
+#: rc.cpp:566
 msgid "Create a personal OpenPGP key pair"
 msgstr "En persöönlich OpenPGP-Slötelpoor opstellen"
 
 #. i18n: file: newcertificatewizard/chooseprotocolpage.ui:34
 #. i18n: ectx: property (description), widget (QCommandLinkButton, pgpCLB)
-#: rc.cpp:572
+#: rc.cpp:569
 msgid ""
 "OpenPGP key pairs are created locally, and certified by your friends and "
 "acquaintances. There is no central certification authority; instead, every "
@@ -4645,13 +4678,13 @@ msgstr ""
 
 #. i18n: file: newcertificatewizard/chooseprotocolpage.ui:41
 #. i18n: ectx: property (text), widget (QCommandLinkButton, x509CLB)
-#: rc.cpp:575
+#: rc.cpp:572
 msgid "Create a personal X.509 key pair and certification request "
 msgstr "En persöönlich X.509-Slötelpoor un Beglöövanfraag opstellen"
 
 #. i18n: file: newcertificatewizard/chooseprotocolpage.ui:50
 #. i18n: ectx: property (description), widget (QCommandLinkButton, x509CLB)
-#: rc.cpp:578
+#: rc.cpp:575
 msgid ""
 "X.509 key pairs are created locally, but certified centrally by a "
 "certification authority (CA). CAs can certify other CAs, creating a central, "
@@ -4663,14 +4696,14 @@ msgstr ""
 
 #. i18n: file: newcertificatewizard/enterdetailspage.ui:5
 #. i18n: ectx: property (title), widget (QWizardPage, Kleo::NewCertificateUi::EnterDetailsPage)
-#: rc.cpp:581
+#: rc.cpp:578
 msgctxt "@title"
 msgid "Enter Details"
 msgstr "Enkelheiten ingeven"
 
 #. i18n: file: newcertificatewizard/enterdetailspage.ui:8
 #. i18n: ectx: property (subTitle), widget (QWizardPage, Kleo::NewCertificateUi::EnterDetailsPage)
-#: rc.cpp:584
+#: rc.cpp:581
 msgid ""
 "Please enter your personal details below. If you want more control over the "
 "certificate parameters, click on the Advanced Settings button."
@@ -4681,7 +4714,7 @@ msgstr ""
 
 #. i18n: file: newcertificatewizard/enterdetailspage.ui:16
 #. i18n: ectx: property (text), widget (QLabel, nameLB)
-#: rc.cpp:587
+#: rc.cpp:584
 msgid "Real name:"
 msgstr "Rejell Naam:"
 
@@ -4689,97 +4722,97 @@ msgstr "Rejell Naam:"
 #. i18n: ectx: property (text), widget (QLabel, nameRequiredLB)
 #. i18n: file: newcertificatewizard/enterdetailspage.ui:43
 #. i18n: ectx: property (text), widget (QLabel, emailRequiredLB)
-#: rc.cpp:590 rc.cpp:596 newcertificatewizard/newcertificatewizard.cpp:1019
+#: rc.cpp:587 rc.cpp:593 newcertificatewizard/newcertificatewizard.cpp:1019
 msgid "(required)"
 msgstr "(nödig)"
 
 #. i18n: file: newcertificatewizard/enterdetailspage.ui:33
 #. i18n: ectx: property (text), widget (QLabel, emailLB)
-#: rc.cpp:593
+#: rc.cpp:590
 msgid "EMail address:"
 msgstr "Nettpost-Adress:"
 
 #. i18n: file: newcertificatewizard/enterdetailspage.ui:50
 #. i18n: ectx: property (text), widget (QLabel, commentLB)
-#: rc.cpp:599 newcertificatewizard/newcertificatewizard.cpp:1275
+#: rc.cpp:596 newcertificatewizard/newcertificatewizard.cpp:1275
 msgid "Comment:"
 msgstr "Kommentar:"
 
 #. i18n: file: newcertificatewizard/enterdetailspage.ui:60
 #. i18n: ectx: property (text), widget (QLabel, commentRequiredLB)
-#: rc.cpp:602 newcertificatewizard/newcertificatewizard.cpp:1019
+#: rc.cpp:599 newcertificatewizard/newcertificatewizard.cpp:1019
 msgid "(optional)"
 msgstr "(köörwies)"
 
 #. i18n: file: newcertificatewizard/enterdetailspage.ui:95
 #. i18n: ectx: property (text), widget (QCheckBox, addEmailToDnCB)
-#: rc.cpp:605
+#: rc.cpp:602
 msgid "Add email address to DN (only needed for broken CAs)"
 msgstr "Nettpostadress na DN tofögen (bloots bi problemaatsch ZAen)"
 
 #. i18n: file: newcertificatewizard/enterdetailspage.ui:117
 #. i18n: ectx: property (text), widget (QPushButton, advancedPB)
-#: rc.cpp:608
+#: rc.cpp:605
 msgid "Advanced Settings..."
 msgstr "Verwiedert Instellen..."
 
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:13
 #. i18n: ectx: property (windowTitle), widget (QDialog, Kleo::NewCertificateUi::AdvancedSettingsDialog)
-#: rc.cpp:611
+#: rc.cpp:608
 msgid "Advanced Settings"
 msgstr "Verwiedert Instellen"
 
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:28
 #. i18n: ectx: attribute (title), widget (QWidget, personalTab)
-#: rc.cpp:614
+#: rc.cpp:611
 msgid "Personal Details"
 msgstr "Persöönlich Daten"
 
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:34
 #. i18n: ectx: property (title), widget (QGroupBox, uidGB)
-#: rc.cpp:617
+#: rc.cpp:614
 msgid "Additional User-IDs"
 msgstr "Anner Bruker-IDs"
 
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:46
 #. i18n: ectx: property (title), widget (QGroupBox, emailGB)
-#: rc.cpp:620
+#: rc.cpp:617
 msgid "EMail Addresses"
 msgstr "Nettpost-Adressen"
 
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:58
 #. i18n: ectx: property (title), widget (QGroupBox, dnsGB)
-#: rc.cpp:623
+#: rc.cpp:620
 msgid "DNS Names"
 msgstr "DNS-Naams"
 
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:70
 #. i18n: ectx: property (title), widget (QGroupBox, uriGB)
-#: rc.cpp:626
+#: rc.cpp:623
 msgid "URIs"
 msgstr "URIs"
 
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:97
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:632
+#: rc.cpp:629
 msgid "Key Material"
 msgstr "Slöteldaten"
 
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:103
 #. i18n: ectx: property (text), widget (QRadioButton, rsaRB)
-#: rc.cpp:635
+#: rc.cpp:632
 msgid "RSA"
 msgstr "RSA"
 
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:126
 #. i18n: ectx: property (text), widget (QRadioButton, dsaRB)
-#: rc.cpp:638
+#: rc.cpp:635
 msgid "DSA"
 msgstr "DSA"
 
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:136
 #. i18n: ectx: property (text), widget (QCheckBox, elgCB)
-#: rc.cpp:641
+#: rc.cpp:638
 msgid "+ ElGamal"
 msgstr "+ ElGamal"
 
@@ -4789,7 +4822,7 @@ msgstr "+ ElGamal"
 #. i18n: ectx: property (text), item, widget (QComboBox, rsaKeyStrengthCB)
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:218
 #. i18n: ectx: property (text), item, widget (QComboBox, dsaVersionCB)
-#: rc.cpp:644 rc.cpp:662 rc.cpp:680
+#: rc.cpp:641 rc.cpp:659 rc.cpp:677
 msgid "backend default"
 msgstr "Hülpprogramm sien Standard"
 
@@ -4797,7 +4830,7 @@ msgstr "Hülpprogramm sien Standard"
 #. i18n: ectx: property (text), item, widget (QComboBox, elgKeyStrengthCB)
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:186
 #. i18n: ectx: property (text), item, widget (QComboBox, rsaKeyStrengthCB)
-#: rc.cpp:647 rc.cpp:665
+#: rc.cpp:644 rc.cpp:662
 msgid "1024 bits"
 msgstr "1024 Bits"
 
@@ -4805,7 +4838,7 @@ msgstr "1024 Bits"
 #. i18n: ectx: property (text), item, widget (QComboBox, elgKeyStrengthCB)
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:191
 #. i18n: ectx: property (text), item, widget (QComboBox, rsaKeyStrengthCB)
-#: rc.cpp:650 rc.cpp:668
+#: rc.cpp:647 rc.cpp:665
 msgid "1536 bits"
 msgstr "1536 Bits"
 
@@ -4813,7 +4846,7 @@ msgstr "1536 Bits"
 #. i18n: ectx: property (text), item, widget (QComboBox, elgKeyStrengthCB)
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:196
 #. i18n: ectx: property (text), item, widget (QComboBox, rsaKeyStrengthCB)
-#: rc.cpp:653 rc.cpp:671
+#: rc.cpp:650 rc.cpp:668
 msgid "2048 bits"
 msgstr "2048 Bits"
 
@@ -4821,7 +4854,7 @@ msgstr "2048 Bits"
 #. i18n: ectx: property (text), item, widget (QComboBox, elgKeyStrengthCB)
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:201
 #. i18n: ectx: property (text), item, widget (QComboBox, rsaKeyStrengthCB)
-#: rc.cpp:656 rc.cpp:674
+#: rc.cpp:653 rc.cpp:671
 msgid "3072 bits"
 msgstr "3072 Bits"
 
@@ -4829,61 +4862,61 @@ msgstr "3072 Bits"
 #. i18n: ectx: property (text), item, widget (QComboBox, elgKeyStrengthCB)
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:206
 #. i18n: ectx: property (text), item, widget (QComboBox, rsaKeyStrengthCB)
-#: rc.cpp:659 rc.cpp:677
+#: rc.cpp:656 rc.cpp:674
 msgid "4096 bits"
 msgstr "4096 Bits"
 
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:223
 #. i18n: ectx: property (text), item, widget (QComboBox, dsaVersionCB)
-#: rc.cpp:683
+#: rc.cpp:680
 msgid "v1 (1024 bits)"
 msgstr "v1 (1024 Bits)"
 
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:228
 #. i18n: ectx: property (text), item, widget (QComboBox, dsaVersionCB)
-#: rc.cpp:686
+#: rc.cpp:683
 msgid "v2 (2048 bits)"
 msgstr "v2 (2048 Bits)"
 
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:255
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:689
+#: rc.cpp:686
 msgid "Certificate Usage"
 msgstr "Zertifikaatbruuk"
 
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:263
 #. i18n: ectx: property (text), widget (QCheckBox, expiryCB)
-#: rc.cpp:692
+#: rc.cpp:689
 msgid "Valid until:"
 msgstr "Gellt bet:"
 
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:288
 #. i18n: ectx: property (text), widget (QCheckBox, certificationCB)
-#: rc.cpp:695
+#: rc.cpp:692
 msgid "Certification"
 msgstr "Beglöven"
 
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:295
 #. i18n: ectx: property (text), widget (QCheckBox, signingCB)
-#: rc.cpp:698
+#: rc.cpp:695
 msgid "Signing"
 msgstr "Ünnerschrieven"
 
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:305
 #. i18n: ectx: property (text), widget (QCheckBox, encryptionCB)
-#: rc.cpp:701
+#: rc.cpp:698
 msgid "Encryption"
 msgstr "Verslöteln"
 
 #. i18n: file: newcertificatewizard/advancedsettingsdialog.ui:315
 #. i18n: ectx: property (text), widget (QCheckBox, authenticationCB)
-#: rc.cpp:704
+#: rc.cpp:701
 msgid "Authentication"
 msgstr "Identiteetprööv"
 
 #. i18n: file: newcertificatewizard/resultpage.ui:28
 #. i18n: ectx: property (toolTip), widget (Kleo::DragQueen, dragQueen)
-#: rc.cpp:710
+#: rc.cpp:707
 msgid ""
 "Drag this icon to your mail application's composer to attach the request to "
 "a mail."
@@ -4893,61 +4926,65 @@ msgstr ""
 
 #. i18n: file: newcertificatewizard/resultpage.ui:41
 #. i18n: ectx: property (text), widget (QPushButton, restartWizardPB)
-#: rc.cpp:713
+#: rc.cpp:710
 msgid "Restart This Wizard (Keeps Your Parameters)"
 msgstr "Dissen Hölper nieg starten (wohrt de Parameters)"
 
 #. i18n: file: newcertificatewizard/resultpage.ui:48
 #. i18n: ectx: property (title), widget (QGroupBox, nextStepsGB)
-#: rc.cpp:716
+#: rc.cpp:713
 msgid "Next Steps"
 msgstr "Nakamen Schreed"
 
 #. i18n: file: newcertificatewizard/resultpage.ui:54
 #. i18n: ectx: property (text), widget (QPushButton, saveRequestToFilePB)
-#: rc.cpp:719
+#: rc.cpp:716
 msgid "Save Request To File..."
 msgstr "Anfraag as Datei sekern..."
 
 #. i18n: file: newcertificatewizard/resultpage.ui:61
 #. i18n: ectx: property (text), widget (QPushButton, sendRequestByEMailPB)
-#: rc.cpp:722
-msgid "Send Request By EMail"
+#: rc.cpp:719
+#, fuzzy
+#| msgid "Send Request By EMail"
+msgid "Send Request By EMail..."
 msgstr "Anfraag mit Nettpost loosstüern"
 
 #. i18n: file: newcertificatewizard/resultpage.ui:68
 #. i18n: ectx: property (text), widget (QPushButton, makeBackupPB)
-#: rc.cpp:725
+#: rc.cpp:722
 msgid "Make a Backup Of Your Certificate..."
 msgstr "En Sekerheitkopie vun Dien Zertifikaat maken..."
 
 #. i18n: file: newcertificatewizard/resultpage.ui:75
 #. i18n: ectx: property (text), widget (QPushButton, sendCertificateByEMailPB)
-#: rc.cpp:728
-msgid "Send Certificate By EMail"
+#: rc.cpp:725
+#, fuzzy
+#| msgid "Send Certificate By EMail"
+msgid "Send Certificate By EMail..."
 msgstr "Zertifikaat mit Nettpost loosstüern"
 
 #. i18n: file: newcertificatewizard/resultpage.ui:82
 #. i18n: ectx: property (text), widget (QPushButton, uploadToKeyserverPB)
-#: rc.cpp:731
+#: rc.cpp:728
 msgid "Upload Certificate To Directory Service..."
 msgstr "Zertifikaat na Vertekenserver hoochladen..."
 
 #. i18n: file: newcertificatewizard/resultpage.ui:89
 #. i18n: ectx: property (text), widget (QPushButton, createRevocationRequestPB)
-#: rc.cpp:734
+#: rc.cpp:731
 msgid "Create a Revocation Request..."
 msgstr "Torüchroop-Anfraag opstellen..."
 
 #. i18n: file: newcertificatewizard/resultpage.ui:96
 #. i18n: ectx: property (text), widget (QPushButton, createSigningCertificatePB)
-#: rc.cpp:737
+#: rc.cpp:734
 msgid "Create a Signing Certificate With the Same Parameters"
 msgstr "En Ünnerschriev-Zertifikaat mit de sülven Parameters opstellen"
 
 #. i18n: file: newcertificatewizard/resultpage.ui:103
 #. i18n: ectx: property (text), widget (QPushButton, createEncryptionCertificatePB)
-#: rc.cpp:740
+#: rc.cpp:737
 msgid "Create an Encryption Certificate With the Same Parameters"
 msgstr "En Verslötel-Zertifikaat mit de sülven Parameters opstellen"
 
@@ -5455,6 +5492,13 @@ msgstr "Standard"
 msgid "Key Usage:"
 msgstr "Slötelbruuk:"
 
+#: newcertificatewizard/newcertificatewizard.cpp:1257
+#: newcertificatewizard/newcertificatewizard.cpp:1259
+#: newcertificatewizard/newcertificatewizard.cpp:1267
+msgctxt "separator for key usages"
+msgid ",&nbsp;"
+msgstr ""
+
 #: newcertificatewizard/newcertificatewizard.cpp:1259
 msgid "Certificate Usage:"
 msgstr "Zertifikaatbruuk:"
@@ -5602,7 +5646,7 @@ msgstr "S/MIME-Ünnerschrift..."
 msgid "OpenPGP-Sign..."
 msgstr "OpenPGP-Ünnerschrift..."
 
-#: systemtrayicon.cpp:194
+#: systemtrayicon.cpp:194 mainwindow.cpp:621
 msgid "Decrypt/Verify..."
 msgstr "Opslöteln/pröven..."
 
@@ -5987,19 +6031,19 @@ msgstr ""
 msgid "Ongoing Background Tasks"
 msgstr "Lopen Achtergrund-Akschonen"
 
-#: mainwindow.cpp:619
+#: mainwindow.cpp:620
 msgid "Sign/Encrypt..."
 msgstr "Ünnerschrieven/verslöteln..."
 
-#: mainwindow.cpp:621
+#: mainwindow.cpp:625
 msgid "Import Certificates"
 msgstr "Zertifikaten importeren"
 
-#: mainwindow.cpp:622
+#: mainwindow.cpp:626
 msgid "Import CRLs"
 msgstr "ZTLs importeren..."
 
-#: mainwindow.cpp:624
+#: mainwindow.cpp:633
 msgid "Cancel"
 msgstr "Afbreken"
 
@@ -6021,6 +6065,18 @@ msgid "The GpgSM process ended prematurely because of an unexpected error."
 msgstr ""
 "De Perzess \"GpgSM\" hett sik vör Tiet utmaakt, dat geev en nich verwacht "
 "Fehler."
+
+#~ msgid "Multiple Settable"
+#~ msgstr "Lett sik mehrmalig fastleggen"
+
+#~ msgid "Could not create directory %1: %2"
+#~ msgstr "Orner \"%1\" lett sik nich opstellen: %2"
+
+#~ msgid "This is how it will look like:"
+#~ msgstr "Sodennig warrt dat utsehn:"
+
+#~ msgid "Foo"
+#~ msgstr "Bispill"
 
 #~ msgid "Bad signature by unknown key %1."
 #~ msgstr "Leeg Ünnerschrift mit nich begäng Slötel %1."
