@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: katefindinfilesplugin\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-01-27 08:24+0100\n"
+"POT-Creation-Date: 2009-01-29 07:20+0100\n"
 "PO-Revision-Date: 2008-10-13 07:38+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -20,11 +20,11 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: katefindinfiles.cpp:60 kategrepdialog.cpp:54
+#: katefinddialog.cpp:50 kateresultview.cpp:51
 msgid "Find in Files"
 msgstr "Binnen Dateien söken"
 
-#: kategrepdialog.cpp:82
+#: katefinddialog.cpp:80
 msgid ""
 "<p>Enter the expression you want to search for here.</p><p>If 'regular "
 "expression' is unchecked, any non-space letters in your expression will be "
@@ -62,7 +62,7 @@ msgstr ""
 "Dokmentatschoon för den Befehl \"grep\" gifft dat mehr Informatschonen över "
 "reguleer Utdrück.</p>"
 
-#: kategrepdialog.cpp:104
+#: katefinddialog.cpp:102
 msgid ""
 "Enter the file name pattern of the files to search here.\n"
 "You may give several patterns separated by commas."
@@ -70,21 +70,52 @@ msgstr ""
 "Hier dat Dateinaam-Muster för de Dateien ingeven, binnen de Du söken wullt.\n"
 "Mehr Mustern bitte mit Kommas trennen."
 
-#: kategrepdialog.cpp:106
+#: katefinddialog.cpp:104
 msgid "Enter the folder which contains the files in which you want to search."
 msgstr "Bitte den Orner mit de Dateien ingeven, binnen de du söken wullt."
 
-#: kategrepdialog.cpp:107
+#: katefinddialog.cpp:105
 msgid "Check this box to search in all subfolders."
 msgstr "Maak dit an, wenn Du binnen all Ünnerornern söken wullt."
 
-#: kategrepdialog.cpp:108
+#: katefinddialog.cpp:106
 msgid ""
 "If this option is enabled (the default), the search will be case sensitive."
 msgstr ""
 "Wenn anmaakt (Standard), passt de Söök op grote un lütte Bookstaven op."
 
-#: kategrepdialog.cpp:109
+#: katefinddialog.cpp:143
+msgid "You must enter an existing local folder in the 'Folder' entry."
+msgstr "Du muttst bi \"Orner\" en vörhannen lokaal Orner ingeven."
+
+#: katefinddialog.cpp:144
+msgid "Invalid Folder"
+msgstr "Leeg Orner"
+
+#: katefindinfiles.cpp:43
+msgid "Find In Files"
+msgstr "Binnen Dateien söken"
+
+#: katefindinfiles.cpp:43
+msgid "search through files in the filesystem"
+msgstr "Binnen Dateien in't Dateisysteem söken"
+
+#: katefindinfiles.cpp:120
+msgid "&Find in Files..."
+msgstr "&Binnen Dateien söken..."
+
+#: kateresultview.cpp:53
+#, kde-format
+msgid "Find in Files %1"
+msgstr "\"%1\" binnen Dateien söken"
+
+#. i18n: file: resultwidget.ui:110
+#. i18n: ectx: property (text), widget (KPushButton, btnRefine)
+#: kateresultview.cpp:66 rc.cpp:42
+msgid "Refine Search..."
+msgstr "Söök topassen..."
+
+#: kateresultview.cpp:72
 msgid ""
 "The results of the grep run are listed here. Select a\n"
 "filename/line number combination and press Enter or doubleclick\n"
@@ -95,113 +126,115 @@ msgstr ""
 "dubbelklick op den Indrag, wenn Du de Reeg binnen den Editor wiest\n"
 "hebben wullt."
 
-#: kategrepdialog.cpp:122
-msgid "Click to close the current search results."
-msgstr "Klick hier, wenn Du de aktuellen Söökresultaten tomaken wullt."
-
-#: kategrepdialog.cpp:252
-msgid "You must enter an existing local folder in the 'Folder' entry."
-msgstr "Du muttst bi \"Orner\" en vörhannen lokaal Orner ingeven."
-
-#: kategrepdialog.cpp:253
-msgid "Invalid Folder"
-msgstr "Leeg Orner"
-
-#: kategrepdialog.cpp:273
-msgid "File"
-msgstr "Datei"
-
-#: kategrepdialog.cpp:273
-msgid "Line"
-msgstr "Reeg"
-
-#: kategrepdialog.cpp:273
-msgid "Text"
-msgstr "Text"
-
-#. i18n: file: findwidget.ui:30
-#. i18n: ectx: property (text), widget (QLabel, lblFolder)
+#. i18n: file: findwidget.ui:16
+#. i18n: ectx: property (title), widget (QGroupBox, gbFind)
 #: rc.cpp:3
-msgid "Folder:"
-msgstr "Orner:"
+msgid "Find"
+msgstr "Söken"
 
-#. i18n: file: findwidget.ui:43
-#. i18n: ectx: property (text), widget (QCheckBox, cbCasesensitive)
-#: rc.cpp:6
-msgid "Case sensitive"
-msgstr "Op Groot-/Lüttschrieven oppassen"
-
-#. i18n: file: findwidget.ui:50
-#. i18n: ectx: property (text), widget (QCheckBox, cbRecursive)
-#: rc.cpp:9
-#, fuzzy
-#| msgid "Recursive search"
-msgid "Recursive"
-msgstr "Rekursiev söken"
-
-#. i18n: file: findwidget.ui:57
-#. i18n: ectx: property (text), widget (QLabel, lblFiles)
-#: rc.cpp:12
-#, fuzzy
-#| msgid "File"
-msgid "Files:"
-msgstr "Datei"
-
-#. i18n: file: findwidget.ui:124
-#. i18n: ectx: property (toolTip), widget (QToolButton, btnSync)
-#: rc.cpp:15
-msgid "Use the current document's path."
-msgstr "Dat aktuelle Dokment sien Padd bruken"
-
-#. i18n: file: findwidget.ui:162
+#. i18n: file: findwidget.ui:22
 #. i18n: ectx: property (text), widget (QLabel, lblPattern)
-#: rc.cpp:18
+#: rc.cpp:6
 msgid "Pattern:"
 msgstr "Muster:"
 
-#~ msgid "Find In Files"
-#~ msgstr "Binnen Dateien söken"
+#. i18n: file: findwidget.ui:48
+#. i18n: ectx: property (text), widget (QLabel, lblFolder)
+#: rc.cpp:9
+msgid "Folder:"
+msgstr "Orner:"
 
-#~ msgid "search through files in the filesystem"
-#~ msgstr "Binnen Dateien in't Dateisysteem söken"
+#. i18n: file: findwidget.ui:79
+#. i18n: ectx: property (toolTip), widget (QToolButton, btnSync)
+#: rc.cpp:12
+msgid "Use the current document's path."
+msgstr "Dat aktuelle Dokment sien Padd bruken"
 
-#~ msgid "&Find in Files..."
-#~ msgstr "&Binnen Dateien söken..."
+#. i18n: file: findwidget.ui:91
+#. i18n: ectx: property (text), widget (QLabel, lblFiles)
+#: rc.cpp:15
+msgid "Filter:"
+msgstr "Filter:"
 
-#~ msgid "Find in Files %1"
-#~ msgstr "\"%1\" binnen Dateien söken"
+#. i18n: file: findwidget.ui:120
+#. i18n: ectx: property (title), widget (QGroupBox, gbOptions)
+#: rc.cpp:18
+msgid "Options"
+msgstr "Optschonen"
 
-#~ msgid "Refine Search..."
-#~ msgstr "Söök topassen..."
+#. i18n: file: findwidget.ui:126
+#. i18n: ectx: property (text), widget (QCheckBox, chkCaseSensitive)
+#: rc.cpp:21
+msgid "Case sensitive"
+msgstr "Op Groot-/Lüttschrieven oppassen"
 
-#~ msgid "Find"
-#~ msgstr "Söken"
+#. i18n: file: findwidget.ui:133
+#. i18n: ectx: property (text), widget (QCheckBox, chkRegExp)
+#: rc.cpp:24
+msgid "Regular expression"
+msgstr "Reguleer Utdruck"
 
-#~ msgid "Filter:"
-#~ msgstr "Filter:"
+#. i18n: file: findwidget.ui:140
+#. i18n: ectx: property (text), widget (QCheckBox, chkRecursive)
+#: rc.cpp:27
+#, fuzzy
+#| msgid "Recursive search"
+msgid "Recursive search"
+msgstr "Rekursiev söken"
 
-#~ msgid "Options"
-#~ msgstr "Optschonen"
+#. i18n: file: resultwidget.ui:41
+#. i18n: ectx: property (text), widget (QTreeWidget, twResults)
+#: rc.cpp:30
+msgid "File"
+msgstr "Datei"
 
-#~ msgid "Regular expression"
-#~ msgstr "Reguleer Utdruck"
+#. i18n: file: resultwidget.ui:46
+#. i18n: ectx: property (text), widget (QTreeWidget, twResults)
+#: rc.cpp:33
+msgid "Line"
+msgstr "Reeg"
 
-#~ msgid "Searching for files..."
-#~ msgstr "Dateien warrt söcht..."
+#. i18n: file: resultwidget.ui:51
+#. i18n: ectx: property (text), widget (QTreeWidget, twResults)
+#: rc.cpp:36
+msgid "Text"
+msgstr "Text"
 
-#~ msgid "Remove"
-#~ msgstr "Wegmaken"
+#. i18n: file: resultwidget.ui:87
+#. i18n: ectx: property (text), widget (QLabel, lblStatus)
+#: rc.cpp:39
+msgid "Searching for files..."
+msgstr "Dateien warrt söcht..."
 
-#~ msgid "&Edit"
-#~ msgstr "&Bewerken"
+#. i18n: file: resultwidget.ui:117
+#. i18n: ectx: property (text), widget (KPushButton, btnRemove)
+#: rc.cpp:45
+msgid "Remove"
+msgstr "Wegmaken"
 
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Manfred Wiese, Sönke Dibbern"
+#. i18n: file: ui.rc:4
+#. i18n: ectx: Menu (edit)
+#: rc.cpp:48
+msgid "&Edit"
+msgstr "&Bewerken"
 
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "m.j.wiese@web.de, s_dibbern@web.de"
+#: rc.cpp:49
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Manfred Wiese, Sönke Dibbern"
+
+#: rc.cpp:50
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "m.j.wiese@web.de, s_dibbern@web.de"
+
+#~ msgid "Click to close the current search results."
+#~ msgstr "Klick hier, wenn Du de aktuellen Söökresultaten tomaken wullt."
+
+#, fuzzy
+#~| msgid "File"
+#~ msgid "Files:"
+#~ msgstr "Datei"
 
 #~ msgid "Form"
 #~ msgstr "Kiekwark"
