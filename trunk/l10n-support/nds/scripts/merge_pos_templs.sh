@@ -39,19 +39,17 @@ do	test -n "$pofile" && {
 			curwd=$(pwd)
 			test "${pofile:0:1}" != "/" && pofile="$curwd/$pofile"
 			cd $tmpdir
+			echo "Unpacking $pofile..."
 			tar -xzf $pofile
 			for pof in $(find . -name '*.po');
 			do	cp $pof $KDESVN/trunk/l10n-support/nds/$(basename $pof)
 			done
 			cd $curwd
 			rm -r $tmpdir
-		else	echo -e "\aDon't know how to handle »$pofile«. Exit."
-			exit 0
+		else	echo -e "\aDon't know how to handle »$pofile«."
 		fi
 	}
 done
-
-exit
 
 cd $KDESVN/trunk/l10n-support
 if polist=$(ls nds/*.po 2>/dev/null)
