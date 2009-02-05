@@ -18,36 +18,40 @@ while test -n "$1"
 do	case "$1" in
 		--help|-h) dohelp=yes ;;
 		-*) echo -e "\aUnknown option: $1"; dohelp=yes ;;
-		*) test -f "$1" && pofile="$1" || { echo -e "\aNot a file: $1"; dohelp=yes; } ;;
+		*) test -f "$1" && pofiles[${#pofiles[@]}]="$1" || { echo -e "\aNot a file: $1"; dohelp=yes; } ;;
 	esac
 	shift
 done
 
 test -n "$dohelp" && {
-	echo "Usage: $(basename $0) [--help|-h|<file>]"
+	echo "Usage: $(basename $0) [--help|-h|<file> [<file2> ...]]"
 	echo "--help | -h	Show this help message"
 	echo "<file>		File containing new translations. Tar.gz files get untarred."
 	exit 0
 }
 
-test -n "$pofile" && {
-	if [ "${pofile%.po}" != "$pofile" ]
-	then	cp $pofile $KDESVN/trunk/l10n-support/nds
-	elif [ "${pofile%.tar.gz}" != "$pofile" ]
-	then	tmpdir=$(mktemp -d -p /tmp merge_pos_tmpls.XXXXXXXX)
-		curwd=$(pwd)
-		test "${pofile:0:1}" != "/" && pofile="$curwd/$pofile"
-		cd $tmpdir
-		tar -xzf $pofile
-		for pof in $(find . -name '*.po');
-		do	cp $pof $KDESVN/trunk/l10n-support/nds/$(basename $pof)
-		done
-		cd $curwd
-		rm -r $tmpdir
-	else	echo -e "\aDon't know how to handle $pofile. Exit."
-		exit 0
-	fi
-}
+for pofile in ${pofiles[@]}
+do	test -n "$pofile" && {
+		if [ "${pofile%.po}" != "$pofile" ]
+		then	cp $pofile $KDESVN/trunk/l10n-support/nds
+		elif [ "${pofile%.tar.gz}" != "$pofile" ]
+		then	tmpdir=$(mktemp -d -p /tmp merge_pos_tmpls.XXXXXXXX)
+			curwd=$(pwd)
+			test "${pofile:0:1}" != "/" && pofile="$curwd/$pofile"
+			cd $tmpdir
+			tar -xzf $pofile
+			for pof in $(find . -name '*.po');
+			do	cp $pof $KDESVN/trunk/l10n-support/nds/$(basename $pof)
+			done
+			cd $curwd
+			rm -r $tmpdir
+		else	echo -e "\aDon't know how to handle »$pofile«. Exit."
+			exit 0
+		fi
+	}
+done
+
+exit
 
 cd $KDESVN/trunk/l10n-support
 if polist=$(ls nds/*.po 2>/dev/null)
