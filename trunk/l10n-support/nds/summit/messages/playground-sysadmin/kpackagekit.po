@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kpackagekit\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-02-12 10:33+0100\n"
+"POT-Creation-Date: 2009-02-14 11:52+0100\n"
 "PO-Revision-Date: 2009-01-27 01:11+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -248,7 +248,7 @@ msgstr "Koppel"
 #. i18n: ectx: property (title), widget (QGroupBox, detailGroup)
 #. +> trunk
 #: AddRm/KpkPackageDetails.cpp:128 libkpackagekit/KpkTransaction.ui:87
-#: Updater/KpkUpdateDetails.cpp:69 Updater/KpkUpdateDetails.ui:22
+#: Updater/KpkUpdateDetails.ui:22
 msgid "Details"
 msgstr "Enkelheiten"
 
@@ -276,7 +276,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QToolButton, descriptionTB)
 #. +> trunk
-#: AddRm/KpkPackageDetails.ui:43
+#: AddRm/KpkPackageDetails.ui:43 Updater/KpkUpdateDetails.cpp:111
 msgid "Description"
 msgstr "Beschrieven"
 
@@ -341,7 +341,7 @@ msgid "Sorry, your backend does not support installing packages"
 msgstr "Dien Hülpprogramm ünnerstütt leider dat Installeren vun Paketen nich."
 
 #. +> trunk
-#: AddRm/KpkReviewChanges.cpp:122 KPackageKit/KpkInstallFiles.cpp:129
+#: AddRm/KpkReviewChanges.cpp:122 KPackageKit/KpkInstallFiles.cpp:147
 #: KPackageKit/main.cpp:33 SmartIcon/main.cpp:33
 msgid "KPackageKit"
 msgstr "KPackageKit"
@@ -353,9 +353,9 @@ msgstr "Disse Paketen warrt wegen Afhangigkeiten ok noch wegdaan:"
 
 #. +> trunk
 #: AddRm/KpkReviewChanges.cpp:162 AddRm/KpkReviewChanges.cpp:199
-#: KPackageKit/KpkInstallFiles.cpp:108 Settings/KpkSettings.cpp:163
-#: SmartIcon/KpkTransactionTrayIcon.cpp:80 Updater/KpkUpdate.cpp:196
-#: Updater/KpkUpdate.cpp:208 Updater/KpkUpdate.cpp:224
+#: KPackageKit/KpkInstallFiles.cpp:114 Settings/KpkSettings.cpp:163
+#: SmartIcon/KpkTransactionTrayIcon.cpp:80 Updater/KpkUpdate.cpp:116
+#: Updater/KpkUpdate.cpp:128 Updater/KpkUpdate.cpp:143
 msgid "You don't have the necessary privileges to perform this action."
 msgstr ""
 
@@ -386,36 +386,36 @@ msgid "You selected the following packages to be INSTALLED/REMOVED, press ok to 
 msgstr "Du wullt de nakamen Paketen installeren/wegdoon. Klick op \"OK\", wenn Du wiedermaken wullt."
 
 #. +> trunk
-#: KPackageKit/KpkInstallFiles.cpp:76
+#: KPackageKit/KpkInstallFiles.cpp:77
 msgid "This item is not supported by your backend or it is not a file"
 msgid_plural "These items are not supported by your backend or they are not files"
 msgstr[0] "Disse Indrag warrt vun Dien Hülpprogramm nich ünnerstütt, oder dat is keen Datei."
 msgstr[1] "Disse Indrääg warrt vun Dien Hülpprogramm nich ünnerstütt, oder dat sünd keen Dateien."
 
 #. +> trunk
-#: KPackageKit/KpkInstallFiles.cpp:78
+#: KPackageKit/KpkInstallFiles.cpp:81
 msgid "Impossible to install"
 msgstr "Installeren nich mööglich"
 
 #. +> trunk
-#: KPackageKit/KpkInstallFiles.cpp:90
+#: KPackageKit/KpkInstallFiles.cpp:94
 msgid "Install"
 msgstr "Installeren"
 
 #. +> trunk
-#: KPackageKit/KpkInstallFiles.cpp:93
+#: KPackageKit/KpkInstallFiles.cpp:98
 msgid "Do you want to install this file?"
 msgid_plural "Do you want to install these files?"
 msgstr[0] "Wullt Du disse Datei installeren?"
 msgstr[1] "Wullt Du disse Dateien installeren?"
 
 #. +> trunk
-#: KPackageKit/KpkInstallFiles.cpp:95
+#: KPackageKit/KpkInstallFiles.cpp:101
 msgid "Install?"
 msgstr "Installeren?"
 
 #. +> trunk
-#: KPackageKit/KpkInstallFiles.cpp:109
+#: KPackageKit/KpkInstallFiles.cpp:115
 #, fuzzy
 #| msgid "Failed to initialize"
 msgid "Failed to install file"
@@ -424,7 +424,25 @@ msgstr[0] "Torechtmaken fehlslaan"
 msgstr[1] "Torechtmaken fehlslaan"
 
 #. +> trunk
-#: KPackageKit/KpkInstallFiles.cpp:129
+#: KPackageKit/KpkInstallFiles.cpp:119 KPackageKit/KpkInstallFiles.cpp:121
+#, fuzzy
+#| msgid "The package is not installed"
+msgid "The file was not installed"
+msgid_plural "The files were not installed"
+msgstr[0] "Dat Paket is nich installeert."
+msgstr[1] "Dat Paket is nich installeert."
+
+#. +> trunk
+#: KPackageKit/KpkInstallFiles.cpp:136 KPackageKit/KpkInstallFiles.cpp:139
+#, fuzzy
+#| msgid "Failed to initialize"
+msgid "File was installed successfully"
+msgid_plural "Files were installed successfully"
+msgstr[0] "Torechtmaken fehlslaan"
+msgstr[1] "Torechtmaken fehlslaan"
+
+#. +> trunk
+#: KPackageKit/KpkInstallFiles.cpp:147
 msgid "Sorry, an error occurred"
 msgstr "Dat geev leider en Fehler."
 
@@ -1533,8 +1551,10 @@ msgstr "Eenfach Opfrischen"
 
 #. +> trunk
 #: libkpackagekit/KpkStrings.cpp:481
-msgid "Update"
-msgstr "Opfrischen"
+#, fuzzy
+#| msgid "Trivial update"
+msgid "Normal update"
+msgstr "Eenfach Opfrischen"
 
 #. +> trunk
 #: libkpackagekit/KpkStrings.cpp:483
@@ -1653,36 +1673,66 @@ msgstr[1] "%1 nich begäng Opfrischen"
 
 #. +> trunk
 #: libkpackagekit/KpkStrings.cpp:535
-msgid "No restart is necessary for this update"
-msgstr "För disse Opfrischen deit keen Niegstart noot"
+#, fuzzy
+#| msgid "Software signature is required"
+msgid "No restart is required"
+msgstr "Programmsignatuur deit noot"
 
 #. +> trunk
 #: libkpackagekit/KpkStrings.cpp:537
-msgid "An application restart is required after this update"
-msgstr "Na disse Opfrischen muttst Du dat Programm nieg starten"
+#, fuzzy
+#| msgid ""
+#| "<br />"
+#| "A system reboot is required"
+msgid "A system restart is required"
+msgstr ""
+"<br />"
+"En Systeem-Niegstart deit noot"
 
 #. +> trunk
 #: libkpackagekit/KpkStrings.cpp:539
-msgid "You will be required to log off and back on after this update"
+#, fuzzy
+#| msgid "You will be required to log off and back on after this update"
+msgid "You will need to log off and log back on"
 msgstr "Na disse Opfrischen muttst Du Di af- un wedder anmellen"
 
 #. +> trunk
 #: libkpackagekit/KpkStrings.cpp:541
+msgid "You need to restart the application"
+msgstr ""
+
+#. +> trunk
+#: libkpackagekit/KpkStrings.cpp:554
+msgid "No restart is necessary for this update"
+msgstr "För disse Opfrischen deit keen Niegstart noot"
+
+#. +> trunk
+#: libkpackagekit/KpkStrings.cpp:556
+msgid "An application restart is required after this update"
+msgstr "Na disse Opfrischen muttst Du dat Programm nieg starten"
+
+#. +> trunk
+#: libkpackagekit/KpkStrings.cpp:558
+msgid "You will be required to log off and back on after this update"
+msgstr "Na disse Opfrischen muttst Du Di af- un wedder anmellen"
+
+#. +> trunk
+#: libkpackagekit/KpkStrings.cpp:560
 msgid "A system restart is required after this update"
 msgstr "Na disse Opfrischen muttst Du dat Systeem nieg starten"
 
 #. +> trunk
-#: libkpackagekit/KpkStrings.cpp:554
+#: libkpackagekit/KpkStrings.cpp:573
 msgid "Stable"
 msgstr "Stevig"
 
 #. +> trunk
-#: libkpackagekit/KpkStrings.cpp:556
+#: libkpackagekit/KpkStrings.cpp:575
 msgid "Unstable"
 msgstr "Jackelig"
 
 #. +> trunk
-#: libkpackagekit/KpkStrings.cpp:558
+#: libkpackagekit/KpkStrings.cpp:577
 msgid "Testing"
 msgstr "Utproberen"
 
@@ -1855,7 +1905,7 @@ msgid "Transactions"
 msgstr "Vörgäng"
 
 #. +> trunk
-#: SmartIcon/KpkTransactionTrayIcon.cpp:81 Updater/KpkUpdate.cpp:225
+#: SmartIcon/KpkTransactionTrayIcon.cpp:81 Updater/KpkUpdate.cpp:144
 #, fuzzy
 #| msgid "Refresh Packages List"
 msgid "Failed to refresh package lists"
@@ -1968,71 +2018,78 @@ msgid "KPackageKit Update"
 msgstr "KPackageKit-Opfrischen"
 
 #. +> trunk
-#: Updater/KpkUpdate.cpp:88
+#: Updater/KpkDistroUpgrade.cpp:45
+#, fuzzy
+#| msgid "Getting distribution upgrade information"
+msgid "Distribution upgrade available"
+msgstr "Distributschoon-Opfrischeninformatschonen warrt haalt"
+
+#. +> trunk
+#: Updater/KpkDistroUpgrade.cpp:55 Updater/KpkDistroUpgrade.cpp:56
+#, kde-format
+msgid "Upgrade to %1"
+msgstr ""
+
+#. +> trunk
+#: Updater/KpkDistroUpgrade.cpp:57
+#, kde-format
+msgid "Click to upgrage to %1"
+msgstr ""
+
+#. +> trunk
+#: Updater/KpkDistroUpgrade.cpp:71
 msgid "You are about to upgrade your distribution to the latest version. This is usually a very lengthy process and takes a lot longer than simply upgrading your packages."
 msgstr ""
 
 #. +> trunk
-#: Updater/KpkUpdate.cpp:93
+#: Updater/KpkDistroUpgrade.cpp:76
 msgid "It is recommended to plug in your computer before proceeding."
 msgstr ""
 
 #. +> trunk
-#: Updater/KpkUpdate.cpp:95
+#: Updater/KpkDistroUpgrade.cpp:78
 msgid "It is recommended that you keep your computer plugged in while the upgrade is being performed."
 msgstr ""
 
 #. +> trunk
-#: Updater/KpkUpdate.cpp:121
-#, fuzzy
-#| msgid "Getting distribution upgrade information"
-msgid "The distribution upgrade process failed to start."
-msgstr "Distributschoon-Opfrischeninformatschonen warrt haalt"
-
-#. +> trunk
-#: Updater/KpkUpdate.cpp:124
-msgid "The distribution upgrade process crashed some time after starting successfully."
-msgstr ""
-
-#. +> trunk
-#: Updater/KpkUpdate.cpp:127
-msgid "The distribution upgrade process failed with an unknown error."
-msgstr ""
-
-#. +> trunk
-#: Updater/KpkUpdate.cpp:135
+#: Updater/KpkDistroUpgrade.cpp:102
 #, fuzzy
 #| msgid "Getting distribution upgrade information"
 msgid "Distribution upgrade complete."
 msgstr "Distributschoon-Opfrischeninformatschonen warrt haalt"
 
 #. +> trunk
-#: Updater/KpkUpdate.cpp:137
+#: Updater/KpkDistroUpgrade.cpp:104
 #, kde-format
 msgid "Distribution upgrade process exited with code %1."
 msgstr ""
 
 #. +> trunk
-#: Updater/KpkUpdate.cpp:152 Updater/KpkUpdate.cpp:153
-#, kde-format
-msgid "Upgrade to %1"
+#: Updater/KpkDistroUpgrade.cpp:119
+#, fuzzy
+#| msgid "Getting distribution upgrade information"
+msgid "The distribution upgrade process failed to start."
+msgstr "Distributschoon-Opfrischeninformatschonen warrt haalt"
+
+#. +> trunk
+#: Updater/KpkDistroUpgrade.cpp:123
+msgid "The distribution upgrade process crashed some time after starting successfully."
 msgstr ""
 
 #. +> trunk
-#: Updater/KpkUpdate.cpp:154
-#, kde-format
-msgid "Click to upgrage %1 to"
+#: Updater/KpkDistroUpgrade.cpp:127
+msgid "The distribution upgrade process failed with an unknown error."
 msgstr ""
 
 #. +> trunk
-#: Updater/KpkUpdate.cpp:197
+#: Updater/KpkUpdate.cpp:117
 #, fuzzy
 #| msgid "Failed to create a thread"
 msgid "Failed to update system"
 msgstr "Strang lett sik nich opstellen"
 
 #. +> trunk
-#: Updater/KpkUpdate.cpp:209
+#: Updater/KpkUpdate.cpp:129
 #, fuzzy
 #| msgid "Getting package lists"
 msgid "Failed to update package lists"
@@ -2040,7 +2097,7 @@ msgstr "Paketlist warrt haalt"
 
 #. i18n: ectx: property (text), widget (KPushButton, historyPB)
 #. +> trunk
-#: Updater/KpkUpdate.cpp:279 Updater/KpkUpdate.ui:84
+#: Updater/KpkUpdate.cpp:206 Updater/KpkUpdate.ui:84
 msgid "History"
 msgstr "Vörgeschicht"
 
@@ -2056,68 +2113,95 @@ msgstr "All verföögbor Opfrischen bruken"
 msgid "Refresh"
 msgstr "Opfrischen"
 
-#. i18n: ectx: property (text), widget (KTitleWidget, distroTitle)
 #. +> trunk
-#: Updater/KpkUpdate.ui:93
-#, fuzzy
-#| msgid "Getting distribution upgrade information"
-msgid "Distribution upgrade available"
-msgstr "Distributschoon-Opfrischeninformatschonen warrt haalt"
+#: Updater/KpkUpdateDetails.cpp:56
+msgid "Type"
+msgstr ""
 
 #. +> trunk
-#: Updater/KpkUpdateDetails.cpp:50
-msgid "New version"
-msgstr "Nieg Verschoon"
-
-#. +> trunk
-#: Updater/KpkUpdateDetails.cpp:57
-msgid "Updates"
-msgstr "Opfrischen"
-
-#. +> trunk
-#: Updater/KpkUpdateDetails.cpp:64
-msgid "Obsoletes"
-msgstr "Överhaalte"
-
-#. +> trunk
-#: Updater/KpkUpdateDetails.cpp:74
-msgid "Vendor Home Page"
-msgstr "Maker-Tohuussiet"
-
-#. +> trunk
-#: Updater/KpkUpdateDetails.cpp:80
-msgid "Bugzilla Home Page"
-msgstr "Bugzilla-Tohuussiet"
-
-#. +> trunk
-#: Updater/KpkUpdateDetails.cpp:86
-msgid "CVE Home Page"
-msgstr "CVE-Tohuussiet"
-
-#. +> trunk
-#: Updater/KpkUpdateDetails.cpp:92
-msgid "Change Log"
-msgstr "Logbook"
-
-#. +> trunk
-#: Updater/KpkUpdateDetails.cpp:97
+#: Updater/KpkUpdateDetails.cpp:62
 msgid "State"
 msgstr "Status"
 
 #. +> trunk
-#: Updater/KpkUpdateDetails.cpp:102
-msgid "Restart"
-msgstr "Nieg starten"
-
-#. +> trunk
-#: Updater/KpkUpdateDetails.cpp:107
+#: Updater/KpkUpdateDetails.cpp:69
 msgid "Issued"
 msgstr "Utgeven"
 
 #. +> trunk
-#: Updater/KpkUpdateDetails.cpp:112
+#: Updater/KpkUpdateDetails.cpp:76
 msgid "Updated"
 msgstr "Opfrischt"
+
+#. +> trunk
+#: Updater/KpkUpdateDetails.cpp:82
+msgid "New version"
+msgstr "Nieg Verschoon"
+
+#. +> trunk
+#: Updater/KpkUpdateDetails.cpp:90
+msgid "Updates"
+msgstr "Opfrischen"
+
+#. +> trunk
+#: Updater/KpkUpdateDetails.cpp:99
+msgid "Obsoletes"
+msgstr "Överhaalte"
+
+#. +> trunk
+#: Updater/KpkUpdateDetails.cpp:105
+#, fuzzy
+#| msgid "Repository name:"
+msgid "Repository"
+msgstr "Archivnaam:"
+
+#. +> trunk
+#: Updater/KpkUpdateDetails.cpp:118
+#, fuzzy
+#| msgid "Change Log"
+msgid "Changes"
+msgstr "Logbook"
+
+#. +> trunk
+#: Updater/KpkUpdateDetails.cpp:126
+msgid "Vendor"
+msgstr ""
+
+#. +> trunk
+#: Updater/KpkUpdateDetails.cpp:132
+#, fuzzy
+#| msgid "Bugzilla Home Page"
+msgid "Bugzilla"
+msgstr "Bugzilla-Tohuussiet"
+
+#. +> trunk
+#: Updater/KpkUpdateDetails.cpp:138
+msgid "CVE"
+msgstr ""
+
+#. +> trunk
+#: Updater/KpkUpdateDetails.cpp:144
+#, fuzzy
+#| msgid "Notify"
+msgid "Notice"
+msgstr "Bescheed"
+
+#. +> trunk
+#: Updater/KpkUpdateDetails.cpp:180
+msgid "Sorry, no update description was found."
+msgstr ""
+
+#~ msgid "Update"
+#~ msgstr "Opfrischen"
+
+#~ msgid "Vendor Home Page"
+#~ msgstr "Maker-Tohuussiet"
+
+#~ msgid "CVE Home Page"
+#~ msgstr "CVE-Tohuussiet"
+
+#~ msgid "Restart"
+#~ msgstr "Nieg starten"
 
 #~ msgid "Information"
 #~ msgstr "Informatschonen"
@@ -2157,9 +2241,6 @@ msgstr "Opfrischt"
 #~ msgid "Search finished with unknown status"
 #~ msgstr "Söök mit nich begäng Status afslaten"
 
-#~ msgid "Notify"
-#~ msgstr "Bescheed"
-
 #~ msgid "Update System"
 #~ msgstr "Systeem opfrischen"
 
@@ -2168,13 +2249,6 @@ msgstr "Opfrischt"
 
 #~ msgid "<b>The update has completed</b>"
 #~ msgstr "<b>Opfrischen afslaten</b>"
-
-#~ msgid ""
-#~ "<br />"
-#~ "A system reboot is required"
-#~ msgstr ""
-#~ "<br />"
-#~ "En Systeem-Niegstart deit noot"
 
 #~ msgid "Restart Computer Now"
 #~ msgstr "Reekner nu nieg starten"
