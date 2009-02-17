@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-02-16 09:08+0100\n"
+"POT-Creation-Date: 2009-02-17 09:10+0100\n"
 "PO-Revision-Date: 2009-02-17 01:06+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -181,7 +181,7 @@ msgstr "Wegdoon beglöven"
 
 #. i18n: file: template_management_dialog_base.ui:41
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonDelete)
-#: filtereditdialog.cpp:252 kojournaleditor.cpp:209 rc.cpp:1126 rc.cpp:1962
+#: filtereditdialog.cpp:252 rc.cpp:1126 rc.cpp:1962
 msgid "Delete"
 msgstr "Wegdoon"
 
@@ -1341,8 +1341,8 @@ msgid "Do you really want to cancel?"
 msgstr "Wullt Du redig afbreken?"
 
 # unreviewed-context
-#: koincidenceeditor.cpp:109 koeditorattachments.cpp:697 koeventeditor.cpp:410
-#: kotodoeditor.cpp:344
+#: koincidenceeditor.cpp:109 kojournaleditor.cpp:230
+#: koeditorattachments.cpp:697 koeventeditor.cpp:410 kotodoeditor.cpp:344
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "Beglöven - KOrganizer"
@@ -1695,7 +1695,7 @@ msgstr ""
 #. i18n: file: filteredit_base.ui:35
 #. i18n: ectx: property (text), widget (QPushButton, mDeleteButton)
 #: views/todoview/kotodoview.cpp:167 views/journalview/journalview.cpp:185
-#: calendarview.cpp:843 actionmanager.cpp:330 actionmanager.cpp:527
+#: calendarview.cpp:848 actionmanager.cpp:330 actionmanager.cpp:527
 #: actionmanager.cpp:1601 actionmanager.cpp:1630 rc.cpp:6 rc.cpp:2784
 msgid "&Delete"
 msgstr "&Wegdoon"
@@ -3071,12 +3071,12 @@ msgstr ""
 "Hier kannst Du de Enkelheiten vun Begeefnissen, Daagbookindrääg oder Opgaven "
 "ankieken, de in de Hööftansicht vun KOrganizer utsöcht sünd."
 
-#: calendarview.cpp:427
+#: calendarview.cpp:432
 #, kde-format
 msgid "Could not load calendar '%1'."
 msgstr "Kalenner \"%1\" lett sik nich laden."
 
-#: calendarview.cpp:634
+#: calendarview.cpp:639
 msgid ""
 "The time zone setting was changed. Do you want to keep the absolute time of "
 "the items in your calendar, which will show them to be at a different time "
@@ -3086,29 +3086,29 @@ msgstr ""
 "afsoluut wohren, so dat sik ehr wieste Tieden ännert, oder lever de wiesten "
 "Tieden för dat niege Tietrebeet övernehmen, so dat se sik afsoluut ännert?"
 
-#: calendarview.cpp:641
+#: calendarview.cpp:646
 msgid "Keep Absolute Times?"
 msgstr "Tieden afsoluut wohren?"
 
-#: calendarview.cpp:642
+#: calendarview.cpp:647
 msgid "Keep Times"
 msgstr "Afsolute Tieden wohren"
 
-#: calendarview.cpp:643
+#: calendarview.cpp:648
 msgid "Move Times"
 msgstr "Tieden afsoluut verschuven"
 
-#: calendarview.cpp:712
+#: calendarview.cpp:717
 #, kde-format
 msgid "Todo completed: %1 (%2)"
 msgstr "Opgaav afslaten: %1 (%2)"
 
-#: calendarview.cpp:722
+#: calendarview.cpp:727
 #, kde-format
 msgid "Journal of %1"
 msgstr "Daagbook vun %1"
 
-#: calendarview.cpp:777
+#: calendarview.cpp:782
 #, kde-format
 msgid ""
 "The item \"%1\" is filtered by your current filter rules, so it will be "
@@ -3117,25 +3117,19 @@ msgstr ""
 "Dien Filterregeln filtert den Indrag \"%1\" rut, he dukt also nich in de "
 "Ansicht op."
 
-#: calendarview.cpp:780
+#: calendarview.cpp:785
 msgid "Filter Applied"
 msgstr "Filter anwendt"
 
-#: calendarview.cpp:841
+#: calendarview.cpp:846
 #, kde-format
 msgid "The item \"%1\" will be permanently deleted."
 msgstr "De Indrag \"%1\" warrt duerhaftig wegdaan."
 
-#: calendarview.cpp:842 calendarview.cpp:2094 calendarview.cpp:2157
-#: calendarview.cpp:2168 kojournaleditor.cpp:208
+#: calendarview.cpp:847 calendarview.cpp:2094 calendarview.cpp:2157
+#: calendarview.cpp:2168
 msgid "KOrganizer Confirmation"
 msgstr "Beglöven - KOrganizer"
-
-#: calendarview.cpp:1088
-#, kde-format
-msgctxt "Journal for DATE"
-msgid "Journal for %1"
-msgstr "Daagbook för den %1"
 
 #: calendarview.cpp:1188
 msgid ""
@@ -3956,21 +3950,37 @@ msgstr "Afgeven vun %1"
 msgid "Not delegated"
 msgstr "Nich afgeven"
 
-#: kojournaleditor.cpp:49
-msgid "Edit Journal Entry"
-msgstr "Daagbookindrag bewerken"
-
 # unreviewed-context
-#: kojournaleditor.cpp:77
+#: kojournaleditor.cpp:78
 msgctxt "@title general journal settings"
 msgid "General"
 msgstr "Allgemeen"
 
-#: kojournaleditor.cpp:207
+#: kojournaleditor.cpp:106
+#, fuzzy, kde-format
+#| msgid "Edit Journal Entry"
+msgctxt "@title:window"
+msgid "Edit Journal: %1"
+msgstr "Daagbookindrag bewerken"
+
+#: kojournaleditor.cpp:116
+#, fuzzy
+#| msgid "New &Journal..."
+msgctxt "@title:window"
+msgid "New Journal"
+msgstr "Nieg &Daagbookindrag..."
+
+#: kojournaleditor.cpp:229
+#, fuzzy
+#| msgid "This journal entry will be permanently deleted."
+msgctxt "@info"
 msgid "This journal entry will be permanently deleted."
 msgstr "Disse Daagbookindrag warrt duerhaftig wegdaan."
 
-#: kojournaleditor.cpp:223
+#: kojournaleditor.cpp:247
+#, fuzzy
+#| msgid "Template does not contain a valid journal."
+msgctxt "@info"
 msgid "Template does not contain a valid journal."
 msgstr "De Vörlaag bargt keen gellen Daagbook."
 
@@ -9692,35 +9702,42 @@ msgctxt "@info"
 msgid "The archive file name is not valid."
 msgstr "De Naam vun de Archivdatei is leeg."
 
-#: koeditorgeneraljournal.cpp:69
+#: koeditorgeneraljournal.cpp:71
 msgid "Sets the title of this journal."
 msgstr "Leggt den Titel vun den Daagbookindrag fast"
 
-#: koeditorgeneraljournal.cpp:70
+#: koeditorgeneraljournal.cpp:72
 msgctxt "journal title"
 msgid "T&itle:"
 msgstr "&Titel:"
 
-#: koeditorgeneraljournal.cpp:88
+#: koeditorgeneraljournal.cpp:90
 msgid "&Date:"
 msgstr "&Datum:"
 
-#: koeditorgeneraljournal.cpp:97
+#: koeditorgeneraljournal.cpp:99
 msgid "&Time: "
 msgstr "&Tiet: "
 
-#: koeditorgeneraljournal.cpp:129
+#: koeditorgeneraljournal.cpp:131
 msgid "Allows you to select the categories that this journal belongs to."
 msgstr "Hier kannst Du de Kategorien utsöken, de dit Daagbook tohöört."
 
-#: koeditorgeneraljournal.cpp:132
+#: koeditorgeneraljournal.cpp:134
 msgid "Select Cate&gories..."
 msgstr "Kate&gorien utsöken..."
 
-#: koeditorgeneraljournal.cpp:219
+#: koeditorgeneraljournal.cpp:222
 #, kde-format
 msgid "Please specify a valid date, for example '%1'."
 msgstr "Giff bitte en gellen Datum an, t.B. \"%1\"."
+
+#: koeditorgeneraljournal.cpp:229
+#, fuzzy
+#| msgid "Please specify a valid due time."
+msgctxt "@info"
+msgid "Please specify a journal title."
+msgstr "Legg bitte en gellen Aflooptiet fast"
 
 #: templatemanagementdialog.cpp:51
 msgid "Manage Templates"
@@ -10588,6 +10605,10 @@ msgstr "Nakamen Begeefnissen drucken"
 #: plugins/printing/whatsnext/whatsnextprint.h:42
 msgid "Prints a list of all upcoming events and todos."
 msgstr "Druckt en List vun all kamen Begeefnissen un Opgaven"
+
+#~ msgctxt "Journal for DATE"
+#~ msgid "Journal for %1"
+#~ msgstr "Daagbook för den %1"
 
 #, fuzzy
 #~| msgctxt "delimiter for joining holiday names"

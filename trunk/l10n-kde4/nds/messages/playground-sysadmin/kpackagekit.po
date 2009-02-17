@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kpackagekit\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-02-14 11:52+0100\n"
+"POT-Creation-Date: 2009-02-17 09:18+0100\n"
 "PO-Revision-Date: 2009-01-27 01:11+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: Updater/KpkUpdate.cpp:116 Updater/KpkUpdate.cpp:128
 #: Updater/KpkUpdate.cpp:143 AddRm/KpkReviewChanges.cpp:162
-#: AddRm/KpkReviewChanges.cpp:199 SmartIcon/KpkTransactionTrayIcon.cpp:80
+#: AddRm/KpkReviewChanges.cpp:199 SmartIcon/KpkTransactionTrayIcon.cpp:88
 #: Settings/KpkSettings.cpp:163 KPackageKit/KpkInstallFiles.cpp:114
 msgid "You don't have the necessary privileges to perform this action."
 msgstr ""
@@ -37,7 +37,7 @@ msgstr "Strang lett sik nich opstellen"
 msgid "Failed to update package lists"
 msgstr "Paketlist warrt haalt"
 
-#: Updater/KpkUpdate.cpp:144 SmartIcon/KpkTransactionTrayIcon.cpp:81
+#: Updater/KpkUpdate.cpp:144 SmartIcon/KpkTransactionTrayIcon.cpp:89
 #, fuzzy
 #| msgid "Refresh Packages List"
 msgid "Failed to refresh package lists"
@@ -53,7 +53,7 @@ msgstr "Vörgeschicht"
 msgid "KPackageKit Update"
 msgstr "KPackageKit-Opfrischen"
 
-#: Updater/KpkDistroUpgrade.cpp:45
+#: Updater/KpkDistroUpgrade.cpp:45 SmartIcon/KpkDistroUpgrade.cpp:62
 #, fuzzy
 #| msgid "Getting distribution upgrade information"
 msgid "Distribution upgrade available"
@@ -92,24 +92,24 @@ msgstr ""
 msgid "Distribution upgrade complete."
 msgstr "Distributschoon-Opfrischeninformatschonen warrt haalt"
 
-#: Updater/KpkDistroUpgrade.cpp:104
+#: Updater/KpkDistroUpgrade.cpp:104 SmartIcon/KpkDistroUpgrade.cpp:120
 #, kde-format
 msgid "Distribution upgrade process exited with code %1."
 msgstr ""
 
-#: Updater/KpkDistroUpgrade.cpp:119
+#: Updater/KpkDistroUpgrade.cpp:119 SmartIcon/KpkDistroUpgrade.cpp:137
 #, fuzzy
 #| msgid "Getting distribution upgrade information"
 msgid "The distribution upgrade process failed to start."
 msgstr "Distributschoon-Opfrischeninformatschonen warrt haalt"
 
-#: Updater/KpkDistroUpgrade.cpp:123
+#: Updater/KpkDistroUpgrade.cpp:123 SmartIcon/KpkDistroUpgrade.cpp:140
 msgid ""
 "The distribution upgrade process crashed some time after starting "
 "successfully."
 msgstr ""
 
-#: Updater/KpkDistroUpgrade.cpp:127
+#: Updater/KpkDistroUpgrade.cpp:127 SmartIcon/KpkDistroUpgrade.cpp:143
 msgid "The distribution upgrade process failed with an unknown error."
 msgstr ""
 
@@ -210,7 +210,7 @@ msgid "Sorry, your backend does not support installing packages"
 msgstr "Dien Hülpprogramm ünnerstütt leider dat Installeren vun Paketen nich."
 
 #: AddRm/KpkReviewChanges.cpp:122 SmartIcon/main.cpp:33
-#: KPackageKit/main.cpp:33 KPackageKit/KpkInstallFiles.cpp:147
+#: KPackageKit/main.cpp:34 KPackageKit/KpkInstallFiles.cpp:147
 msgid "KPackageKit"
 msgstr "KPackageKit"
 
@@ -1466,61 +1466,69 @@ msgstr "Utproberen"
 
 #: SmartIcon/KpkUpdateIcon.cpp:170
 #, kde-format
-msgid "<br><i>And another update</i>"
-msgid_plural "<br><i>And %1 more updates</i>"
+msgid "You have %1"
+msgstr ""
+
+#: SmartIcon/KpkUpdateIcon.cpp:179
+#, fuzzy, kde-format
+#| msgid "<br><i>And another update</i>"
+#| msgid_plural "<br><i>And %1 more updates</i>"
+msgid "<br /><i>And another update</i>"
+msgid_plural "<br /><i>And %1 more updates</i>"
 msgstr[0] "<br><i>Un een anner Opfrischen</i>"
 msgstr[1] "<br><i>Un %1 anner Opfrischen</i>"
 
-#: SmartIcon/KpkUpdateIcon.cpp:174
-#, kde-format
-msgid "%1 update available"
-msgid_plural "%1 updates available"
-msgstr[0] "%1 Opfrischen verföögbor"
-msgstr[1] "%1 Opfrischen verföögbor"
-
-#: SmartIcon/KpkUpdateIcon.cpp:176
+#. i18np("%1 update available", "%1 updates available", m_updateList.size()));
+#. m_icon->show();
+#: SmartIcon/KpkUpdateIcon.cpp:187
 msgid "Review and update"
 msgstr "Bekieken un opfrischen"
 
-#: SmartIcon/KpkUpdateIcon.cpp:177
-msgid "Remind me later"
-msgstr "Stööt mi later nochmaal an"
+#: SmartIcon/KpkUpdateIcon.cpp:188
+msgid "Not now"
+msgstr "Nu nich"
 
-#: SmartIcon/KpkUpdateIcon.cpp:178
-msgid "Don't ask anymore."
+#: SmartIcon/KpkUpdateIcon.cpp:189
+#, fuzzy
+#| msgid "Don't ask anymore."
+msgid "Don't ask anymore"
 msgstr "Nich mehr fragen"
 
-#: SmartIcon/KpkUpdateIcon.cpp:214
+#: SmartIcon/KpkUpdateIcon.cpp:228
 msgid "Updates are being automatically installed."
 msgstr "Opfrischen warrt automaatsch installeert"
 
-#: SmartIcon/KpkUpdateIcon.cpp:238
+#: SmartIcon/KpkUpdateIcon.cpp:254
 msgid "Security updates are being automatically installed."
 msgstr "Sekerheit-Opfrischen warrt automaatsch installeert"
 
-#: SmartIcon/KpkUpdateIcon.cpp:266
+#: SmartIcon/KpkUpdateIcon.cpp:284
 msgid "System update was successful!"
 msgstr "Systeem mit Spood opfrischt!"
 
-#: SmartIcon/KpkUpdateIcon.cpp:276
+#: SmartIcon/KpkUpdateIcon.cpp:293
 msgid "The software update failed."
 msgstr "Dat Opfrischen vun de Software is fehlslaan."
 
-#: SmartIcon/KpkUpdateIcon.cpp:315
+#: SmartIcon/KpkDistroUpgrade.cpp:68
+msgid "Start upgrade now"
+msgstr ""
+
+#: SmartIcon/KpkDistroUpgrade.cpp:117
 #, fuzzy
-#| msgid "Installing signature"
-msgid "Installing updates."
-msgstr "Signatuur warrt installeert"
+#| msgid "Getting distribution upgrade information"
+msgid "Distribution upgrade finished. "
+msgstr "Distributschoon-Opfrischeninformatschonen warrt haalt"
 
 #: SmartIcon/main.cpp:34
 msgid "KPackageKit Tray Icon"
 msgstr "KPackageKit - Systeemafsnitt-Lüttbild"
 
-#: SmartIcon/main.cpp:35 KPackageKit/main.cpp:35
+#: SmartIcon/main.cpp:35
 msgid "(C) 2008 Daniel Nicoletti"
 msgstr "(C) 2008, Daniel Nicoletti"
 
-#: SmartIcon/main.cpp:38 KPackageKit/main.cpp:38
+#: SmartIcon/main.cpp:38 KPackageKit/main.cpp:40
 msgid "Daniel Nicoletti"
 msgstr "Daniel Nicoletti"
 
@@ -1528,11 +1536,11 @@ msgstr "Daniel Nicoletti"
 msgid "Trever Fischer"
 msgstr "Trever Fischer"
 
-#: SmartIcon/main.cpp:41 KPackageKit/main.cpp:40
+#: SmartIcon/main.cpp:41 KPackageKit/main.cpp:42
 msgid "Adrien Bustany"
 msgstr "Adrien Bustany"
 
-#: SmartIcon/main.cpp:41 KPackageKit/main.cpp:40
+#: SmartIcon/main.cpp:41 KPackageKit/main.cpp:42
 msgid "libpackagekit-qt and other stuff"
 msgstr "libpackagekit-qt un anner Saken"
 
@@ -1544,22 +1552,19 @@ msgstr "En automaatsch Systeemopfrischen na de Systeeminstellen maken"
 msgid "Transactions"
 msgstr "Vörgäng"
 
-#: SmartIcon/KpkTransactionTrayIcon.cpp:109
-msgid "Restart the application for system changes to take effect."
-msgstr "Start dat Programm nieg, anners warrt de Systeemännern nich övernahmen"
-
-#: SmartIcon/KpkTransactionTrayIcon.cpp:114
-msgid "You must logout and log back in for system changes to take effect."
+#: SmartIcon/KpkTransactionTrayIcon.cpp:176
+#: SmartIcon/KpkTransactionTrayIcon.cpp:190
+#, kde-format
+msgid "%1% - %2"
 msgstr ""
-"Du muttst Di af- un wedder anmellen, anners warrt de Systeemännern nich "
-"övernahmen."
 
-#: SmartIcon/KpkTransactionTrayIcon.cpp:118
-msgid "Please restart your computer for system changes to take effect."
+#: SmartIcon/KpkTransactionTrayIcon.cpp:178
+#: SmartIcon/KpkTransactionTrayIcon.cpp:192
+#, kde-format
+msgid "%1"
 msgstr ""
-"Start bitte Dien Reekner nieg, anners warrt de Systeemännern nich övernahmen."
 
-#: SmartIcon/KpkTransactionTrayIcon.cpp:180
+#: SmartIcon/KpkTransactionTrayIcon.cpp:226
 msgid "Refresh Packages List"
 msgstr "Paketlist opfrischen"
 
@@ -1607,11 +1612,31 @@ msgstr "Keen"
 msgid "Failed set origin data"
 msgstr "Torechtmaken fehlslaan"
 
-#: KPackageKit/main.cpp:34
-msgid "KPackageKit user interface and notification"
+#: KPackageKit/main.cpp:36
+#, fuzzy
+#| msgid "KPackageKit user interface and notification"
+msgid "KPackageKit user interface"
 msgstr "KPackageKit-Brukerkoppelsteed un Bescheden"
 
-#: KPackageKit/main.cpp:45
+#: KPackageKit/main.cpp:37
+#, fuzzy
+#| msgid "(C) 2008 Daniel Nicoletti"
+msgid "(C) 2008-2009 Daniel Nicoletti"
+msgstr "(C) 2008, Daniel Nicoletti"
+
+#: KPackageKit/main.cpp:47
+#, fuzzy
+#| msgid "Updates"
+msgid "Shows Updates"
+msgstr "Opfrischen"
+
+#: KPackageKit/main.cpp:48
+#, fuzzy
+#| msgid "Settings"
+msgid "Shows Settings"
+msgstr "Instellen"
+
+#: KPackageKit/main.cpp:49
 msgid "Package file to install"
 msgstr "Paketdatei, de Du installeren wullt"
 
@@ -1884,6 +1909,33 @@ msgstr "Herkomst vun Paketen"
 msgid "&Show origins of debug and development packages"
 msgstr "Herkomst vun Fehlersöök- un Utwickeln-Paketen wie&sen"
 
+#~ msgid "%1 update available"
+#~ msgid_plural "%1 updates available"
+#~ msgstr[0] "%1 Opfrischen verföögbor"
+#~ msgstr[1] "%1 Opfrischen verföögbor"
+
+#~ msgid "Remind me later"
+#~ msgstr "Stööt mi later nochmaal an"
+
+#, fuzzy
+#~| msgid "Installing signature"
+#~ msgid "Installing updates."
+#~ msgstr "Signatuur warrt installeert"
+
+#~ msgid "Restart the application for system changes to take effect."
+#~ msgstr ""
+#~ "Start dat Programm nieg, anners warrt de Systeemännern nich övernahmen"
+
+#~ msgid "You must logout and log back in for system changes to take effect."
+#~ msgstr ""
+#~ "Du muttst Di af- un wedder anmellen, anners warrt de Systeemännern nich "
+#~ "övernahmen."
+
+#~ msgid "Please restart your computer for system changes to take effect."
+#~ msgstr ""
+#~ "Start bitte Dien Reekner nieg, anners warrt de Systeemännern nich "
+#~ "övernahmen."
+
 #~ msgid "Vendor Home Page"
 #~ msgstr "Maker-Tohuussiet"
 
@@ -1901,11 +1953,6 @@ msgstr "Herkomst vun Fehlersöök- un Utwickeln-Paketen wie&sen"
 
 #~ msgid "Sorry an error occurred"
 #~ msgstr "Dat geev leider en Fehler."
-
-#, fuzzy
-#~| msgid "Getting distribution upgrade information"
-#~ msgid "Distribution upgrade finished. "
-#~ msgstr "Distributschoon-Opfrischeninformatschonen warrt haalt"
 
 #~ msgid "4 minutes"
 #~ msgstr "4 Minuten"
@@ -1954,9 +2001,6 @@ msgstr "Herkomst vun Fehlersöök- un Utwickeln-Paketen wie&sen"
 
 #~ msgid "Do not notify me again"
 #~ msgstr "Nienich wedder Bescheed geven"
-
-#~ msgid "Not now"
-#~ msgstr "Nu nich"
 
 #~ msgid "Smartly display/install Updates"
 #~ msgstr "Opfrischen plietsch wiesen/installeren"
