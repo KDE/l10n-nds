@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kamala\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-02-17 09:17+0100\n"
+"POT-Creation-Date: 2009-02-19 09:42+0100\n"
 "PO-Revision-Date: 2009-02-16 08:06+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -130,7 +130,7 @@ msgid "New key"
 msgstr "Nieg Slötel"
 
 #: kwman.cpp:69 kwman.cpp:181 aspman.cpp:68 aspfiltman.cpp:64
-#: planfiltman.cpp:64
+#: orbfiltman.cpp:113 planfiltman.cpp:64
 msgid "Save"
 msgstr "Sekern"
 
@@ -150,19 +150,21 @@ msgstr "Slötelnaam"
 msgid "is exclusive"
 msgstr "is utsluten"
 
-#: kwman.cpp:90 kwman.cpp:202 aspfiltman.cpp:155 planfiltman.cpp:191
+#: kwman.cpp:90 kwman.cpp:202 aspfiltman.cpp:155 orbfiltman.cpp:204
+#: planfiltman.cpp:191
 msgid "Comments"
 msgstr "Kommentaren"
 
 #: kwman.cpp:121 kwman.cpp:231 aspman.cpp:183 aspfiltman.cpp:188
-#: planfiltman.cpp:224
+#: orbfiltman.cpp:237 planfiltman.cpp:224
 msgid "Missing name"
 msgstr "Naam fehlt"
 
 #: kwman.cpp:122 kwman.cpp:152 kwman.cpp:232 kwman.cpp:261 kwman.cpp:466
 #: kwman.cpp:632 aspman.cpp:184 aspman.cpp:220 aspman.cpp:307
-#: aspfiltman.cpp:189 aspfiltman.cpp:224 aspfiltman.cpp:307 configdlg.cpp:362
-#: planfiltman.cpp:225 planfiltman.cpp:260 planfiltman.cpp:343
+#: aspfiltman.cpp:189 aspfiltman.cpp:224 aspfiltman.cpp:307 orbfiltman.cpp:238
+#: orbfiltman.cpp:273 orbfiltman.cpp:356 configdlg.cpp:362 planfiltman.cpp:225
+#: planfiltman.cpp:260 planfiltman.cpp:343
 msgid "Error"
 msgstr "Fehler"
 
@@ -370,6 +372,13 @@ msgctxt "Menu element"
 msgid "Configure Aspects Filters..."
 msgstr "Instellenpleger"
 
+#: actions.cpp:81
+#, fuzzy
+#| msgid "Settings manager"
+msgctxt "Menu element"
+msgid "Configure Orbs Filters..."
+msgstr "Instellenpleger"
+
 #: aspman.cpp:57
 #, kde-format
 msgctxt "Edit aspect [aspect name]"
@@ -388,7 +397,7 @@ msgstr "Aspekt sekern"
 msgid "Reset aspect"
 msgstr "Aspekt torüchsetten"
 
-#: aspman.cpp:80 aspfiltman.cpp:76 planfiltman.cpp:76
+#: aspman.cpp:80 aspfiltman.cpp:76 orbfiltman.cpp:125 planfiltman.cpp:76
 msgid "Name"
 msgstr "Naam"
 
@@ -469,7 +478,7 @@ msgstr "Aspekt \"%1\" verdubbeln"
 msgid "Aspects Manager"
 msgstr "Aspektenpleger"
 
-#: aspman.cpp:234 aspfiltman.cpp:238 planfiltman.cpp:274
+#: aspman.cpp:234 aspfiltman.cpp:238 orbfiltman.cpp:287 planfiltman.cpp:274
 msgid "New"
 msgstr "Nieg"
 
@@ -477,7 +486,7 @@ msgstr "Nieg"
 msgid "New aspect"
 msgstr "Nieg Aspekt"
 
-#: aspman.cpp:237 aspfiltman.cpp:241 planfiltman.cpp:277
+#: aspman.cpp:237 aspfiltman.cpp:241 orbfiltman.cpp:290 planfiltman.cpp:277
 msgid "Edit"
 msgstr "Bewerken"
 
@@ -485,7 +494,7 @@ msgstr "Bewerken"
 msgid "Edit aspect"
 msgstr "Aspekt bewerken"
 
-#: aspman.cpp:240 aspfiltman.cpp:244 planfiltman.cpp:280
+#: aspman.cpp:240 aspfiltman.cpp:244 orbfiltman.cpp:293 planfiltman.cpp:280
 msgid "Delete"
 msgstr "Wegdoon"
 
@@ -587,21 +596,21 @@ msgstr "Planetenfilter sekern"
 msgid "Reset aspects filter"
 msgstr "Planetenfilter torüchsetten"
 
-#: aspfiltman.cpp:90
+#: aspfiltman.cpp:90 orbfiltman.cpp:139
 #, fuzzy
 #| msgid "Main"
 msgctxt "Aspect category"
 msgid "Main"
 msgstr "Allmeen"
 
-#: aspfiltman.cpp:98
+#: aspfiltman.cpp:98 orbfiltman.cpp:147
 #, fuzzy
 #| msgid "Others"
 msgctxt "Aspect category"
 msgid "Others"
 msgstr "Annerswat"
 
-#: aspfiltman.cpp:106
+#: aspfiltman.cpp:106 orbfiltman.cpp:155
 #, fuzzy
 #| msgctxt "User-defined aspects 1"
 #| msgid "User1"
@@ -609,7 +618,7 @@ msgctxt "Aspect category"
 msgid "User1"
 msgstr "Bruker 1"
 
-#: aspfiltman.cpp:114
+#: aspfiltman.cpp:114 orbfiltman.cpp:163
 #, fuzzy
 #| msgctxt "User-defined aspects 2"
 #| msgid "User2"
@@ -675,6 +684,111 @@ msgstr "Planetenfilter wegdaan"
 #, fuzzy, kde-format
 #| msgid "Cannot delete planets filter \"%1\""
 msgid "Cannot delete aspects filter \"%1\""
+msgstr "Planetenfilter \"%1\" lett sik nich wegdoon."
+
+#: orbfiltman.cpp:62 orbfiltman.cpp:67
+#, fuzzy
+#| msgctxt "Degree symbol for latitude and longitude"
+#| msgid "°"
+msgctxt "Degree symbol"
+msgid "°"
+msgstr "°"
+
+#: orbfiltman.cpp:63
+msgctxt "Applying aspect"
+msgid "A"
+msgstr ""
+
+#: orbfiltman.cpp:68
+#, fuzzy
+#| msgctxt "South abbreviated"
+#| msgid "S"
+msgctxt "Separating aspect"
+msgid "S"
+msgstr "S"
+
+#: orbfiltman.cpp:102
+#, fuzzy, kde-format
+#| msgid "Edit planets filter \"%1\""
+msgid "Edit orbs filter \"%1\""
+msgstr "Planetenfilter \"%1\" bewerken"
+
+#: orbfiltman.cpp:107 orbfiltman.cpp:288
+#, fuzzy
+#| msgid "New planets filter"
+msgid "New orbs filter"
+msgstr "Nieg Planetenfilter"
+
+#: orbfiltman.cpp:114
+#, fuzzy
+#| msgid "Save planets filter"
+msgid "Save orbs filter"
+msgstr "Planetenfilter sekern"
+
+#: orbfiltman.cpp:115
+#, fuzzy
+#| msgid "Reset planets filter"
+msgid "Reset orbs filter"
+msgstr "Planetenfilter torüchsetten"
+
+#: orbfiltman.cpp:263
+#, fuzzy, kde-format
+#| msgid "Planets filter successfully saved as \"%1\""
+msgid "Orbs filter successfully saved as \"%1\""
+msgstr "Planetenfilter mit Spood as \"%1\" sekert."
+
+#: orbfiltman.cpp:264
+#, fuzzy
+#| msgid "Planets filter saved"
+msgid "Orbs filter saved"
+msgstr "Planetenfilter sekert"
+
+#: orbfiltman.cpp:272
+#, fuzzy, kde-format
+#| msgid "Duplicate planets filter \"%1\""
+msgid "Duplicate orbs filter \"%1\""
+msgstr "Planetenfilter \"%1\" verdubbeln"
+
+#: orbfiltman.cpp:283
+#, fuzzy
+#| msgid "Planets Filters manager"
+msgid "Orbs Filters manager"
+msgstr "Planetenfilters plegen"
+
+#: orbfiltman.cpp:291
+#, fuzzy
+#| msgid "Edit planets filter"
+msgid "Edit orbs filter"
+msgstr "Planetenfilter bewerken"
+
+#: orbfiltman.cpp:294 orbfiltman.cpp:341
+#, fuzzy
+#| msgid "Delete planets filter"
+msgid "Delete orbs filter"
+msgstr "Planetenfilter wegdoon"
+
+#: orbfiltman.cpp:340
+#, fuzzy, kde-format
+#| msgid "Are you certain you want to delete planets filter \"%1\" ?"
+msgid "Are you certain you want to delete orbs filter \"%1\" ?"
+msgstr "Wullt Du den Planetenfilter \"%1\" redig wegdoon?"
+
+#: orbfiltman.cpp:349
+#, fuzzy, kde-format
+#| msgid "Planets filter \"%1\" successfully deleted"
+msgid "Orbs filter \"%1\" successfully deleted"
+msgstr "Planetenfilter \"%1\" mit Spood wegdaan."
+
+#: orbfiltman.cpp:350
+#, fuzzy
+#| msgid "Planets filter deleted"
+msgid "Orbs filter deleted"
+msgstr "Planetenfilter wegdaan"
+
+#: orbfiltman.cpp:355
+#, fuzzy, kde-format
+#| msgid "Cannot delete planets filter \"%1\""
+msgid "Cannot delete orbs filter \"%1\""
 msgstr "Planetenfilter \"%1\" lett sik nich wegdoon."
 
 #: infodockwdt.cpp:34
