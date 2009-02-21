@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcachegrind_qt\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-17 09:08+0100\n"
+"POT-Creation-Date: 2009-02-19 09:34+0100\n"
 "PO-Revision-Date: 2009-02-02 10:11+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@lists.kde.org>\n"
@@ -414,7 +414,7 @@ msgid "&Cancel"
 msgstr "&Afbreken"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:1521
+#: libviews/callgraphview.cpp:1527
 msgid ""
 "<b>Call Graph around active Function</b>"
 "<p>Depending on configuration, this view shows the call graph environment of the active function. Note: the shown cost is <b>only</b> the cost which is spent while the active function was actually running; i.e. the cost shown for main() - if it is visible - should be the same as the cost of the active function, as that is the part of inclusive cost of main() spent while the active function was running.</p>"
@@ -427,7 +427,7 @@ msgstr ""
 "<p>Wenn dat Diagramm grötter is as dat Elementrebeet, warrt in en Eck en Översicht wiest. Dat gifft Dorstellen-Optschonen liek to de för de Oproop-Boomkoort; de utsöcht Funkschoon is markeert.</p>"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:1933
+#: libviews/callgraphview.cpp:1939
 msgid ""
 "Warning: a long lasting graph layouting is in progress.\n"
 "Reduce node/edge limits for speedup.\n"
@@ -436,29 +436,55 @@ msgstr ""
 "Sett de Grenzen för Knütten un Kanten daal, wenn dat gauer warrn schall.\n"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:1936
+#: libviews/callgraphview.cpp:1942
 msgid "Layouting stopped.\n"
 msgstr "Utreken vun't Diagramm anhollen.\n"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:1938
+#: libviews/callgraphview.cpp:1944
 #, qt-format
 msgid "The call graph has %1 nodes and %2 edges.\n"
 msgstr "Dat Oproopdiagramm hett %1 Knütten un %2 Kanten.\n"
 
+#. +> trunk
+#: libviews/callgraphview.cpp:1953
+#, fuzzy
+#| msgid ""
+#| "No call graph is available because the following\n"
+#| "command cannot be run:\n"
+#| "'%1'\n"
+msgid "No graph available because the layouting process failed.\n"
+msgstr ""
+"Dat gifft keen Oproopdiagramm, wiel sik de\n"
+"nakamen Befehl nich utföhren lett:\n"
+"\"%1\"\n"
+
+#. +> trunk
+#: libviews/callgraphview.cpp:1955
+#, qt-format
+msgid ""
+"Trying to run the following command did not work:\n"
+"'%1'\n"
+msgstr ""
+
 #. +> trunk stable
-#: libviews/callgraphview.cpp:1972
+#: libviews/callgraphview.cpp:1957 libviews/callgraphview.cpp:2466
+msgid "Please check that 'dot' is installed (package GraphViz)."
+msgstr "Bitte prööv, wat \"dot\" propper installeert is (Paket \"GraphViz\")."
+
+#. +> trunk stable
+#: libviews/callgraphview.cpp:1997
 msgid "No item activated for which to draw the call graph."
 msgstr "Keen Element för't Opstellen vun en Oproopdiagramm aktiveert."
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:1983
+#: libviews/callgraphview.cpp:2009
 msgid "No call graph can be drawn for the active item."
 msgstr "För dat aktiv Element lett sik keen Oproopdiagramm opstellen."
 
-#. +> trunk stable
-#: libviews/callgraphview.cpp:2010
-#, qt-format
+#. +> stable
+#: callgraphview.cpp:2012
+#, kde-format
 msgid ""
 "No call graph is available because the following\n"
 "command cannot be run:\n"
@@ -469,17 +495,12 @@ msgstr ""
 "\"%1\"\n"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2012 libviews/callgraphview.cpp:2393
-msgid "Please check that 'dot' is installed (package GraphViz)."
-msgstr "Bitte prööv, wat \"dot\" propper installeert is (Paket \"GraphViz\")."
-
-#. +> trunk stable
-#: libviews/callgraphview.cpp:2392
+#: libviews/callgraphview.cpp:2465
 msgid "Error running the graph layouting tool.\n"
 msgstr "Fehler bi't Utföhren vun dat Diagrammutsehn-Warktüüch.\n"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2397
+#: libviews/callgraphview.cpp:2470
 #, qt-format
 msgid ""
 "There is no call graph available for function\n"
@@ -490,22 +511,6 @@ msgstr ""
 "\t\"%1\",\n"
 "wiel se för den utsöchten Begeefnistyp keen Verbruuk hett."
 
-#. +> trunk stable
-#: libviews/callgraphview.cpp:2608 libviews/callgraphview.cpp:2647
-msgid "Unlimited"
-msgstr "Ahn Grenz"
-
-#. +> trunk
-#: libviews/callgraphview.cpp:2611 libviews/callgraphview.cpp:2650
-msgctxt "None"
-msgid "Depth 0"
-msgstr "Deepde 0"
-
-#. +> trunk stable
-#: libviews/callgraphview.cpp:2612 libviews/callgraphview.cpp:2651
-msgid "max. 2"
-msgstr "max. 2"
-
 #. +> stable
 #: callgraphview.cpp:2612 callgraphview.cpp:2651
 msgctxt "Depth 0"
@@ -513,226 +518,242 @@ msgid "None"
 msgstr "Keen"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2613 libviews/callgraphview.cpp:2652
+#: libviews/callgraphview.cpp:2681 libviews/callgraphview.cpp:2720
+msgid "Unlimited"
+msgstr "Ahn Grenz"
+
+#. +> trunk
+#: libviews/callgraphview.cpp:2684 libviews/callgraphview.cpp:2723
+msgctxt "None"
+msgid "Depth 0"
+msgstr "Deepde 0"
+
+#. +> trunk stable
+#: libviews/callgraphview.cpp:2685 libviews/callgraphview.cpp:2724
+msgid "max. 2"
+msgstr "max. 2"
+
+#. +> trunk stable
+#: libviews/callgraphview.cpp:2686 libviews/callgraphview.cpp:2725
 msgid "max. 5"
 msgstr "max. 5"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2614 libviews/callgraphview.cpp:2653
+#: libviews/callgraphview.cpp:2687 libviews/callgraphview.cpp:2726
 msgid "max. 10"
 msgstr "max. 10"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2615 libviews/callgraphview.cpp:2654
+#: libviews/callgraphview.cpp:2688 libviews/callgraphview.cpp:2727
 msgid "max. 15"
 msgstr "max. 15"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2686
+#: libviews/callgraphview.cpp:2759
 msgid "No Minimum"
 msgstr "Keen Minimum"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2692
+#: libviews/callgraphview.cpp:2765
 msgid "50 %"
 msgstr "50 %"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2693
+#: libviews/callgraphview.cpp:2766
 msgid "20 %"
 msgstr "20 %"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2694
+#: libviews/callgraphview.cpp:2767
 msgid "10 %"
 msgstr "10 %"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2695
+#: libviews/callgraphview.cpp:2768
 msgid "5 %"
 msgstr "5 %"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2696
+#: libviews/callgraphview.cpp:2769
 msgid "2 %"
 msgstr "2 %"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2697
+#: libviews/callgraphview.cpp:2770
 msgid "1 %"
 msgstr "1 %"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2728
+#: libviews/callgraphview.cpp:2801
 msgid "Same as Node"
 msgstr "Liek as Knütt"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2730
+#: libviews/callgraphview.cpp:2803
 #, no-c-format
 msgid "50 % of Node"
 msgstr "50% vun Knütt"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2732
+#: libviews/callgraphview.cpp:2805
 #, no-c-format
 msgid "20 % of Node"
 msgstr "20% vun Knütt"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2734
+#: libviews/callgraphview.cpp:2807
 #, no-c-format
 msgid "10 % of Node"
 msgstr "10% vun Knütt"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2766 libviews/treemap.cpp:2970
+#: libviews/callgraphview.cpp:2839 libviews/treemap.cpp:2970
 msgid "Top Left"
 msgstr "Baven links"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2767 libviews/treemap.cpp:2972
+#: libviews/callgraphview.cpp:2840 libviews/treemap.cpp:2972
 msgid "Top Right"
 msgstr "Baven rechts"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2768 libviews/treemap.cpp:2973
+#: libviews/callgraphview.cpp:2841 libviews/treemap.cpp:2973
 msgid "Bottom Left"
 msgstr "Nerrn links"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2769 libviews/treemap.cpp:2975
+#: libviews/callgraphview.cpp:2842 libviews/treemap.cpp:2975
 msgid "Bottom Right"
 msgstr "Nerrn rechts"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2770
+#: libviews/callgraphview.cpp:2843
 msgid "Automatic"
 msgstr "Automaatsch"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2771
+#: libviews/callgraphview.cpp:2844
 msgid "Hide"
 msgstr "Versteken"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2804
+#: libviews/callgraphview.cpp:2877
 msgid "Top to Down"
 msgstr "Baven na nerrn"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2805
+#: libviews/callgraphview.cpp:2878
 msgid "Left to Right"
 msgstr "Links na Rechts"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2806
+#: libviews/callgraphview.cpp:2879
 msgid "Circular"
 msgstr "Rund"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2841 libviews/callgraphview.cpp:2845
-#: libviews/callgraphview.cpp:2863 libviews/callview.cpp:122
+#: libviews/callgraphview.cpp:2914 libviews/callgraphview.cpp:2918
+#: libviews/callgraphview.cpp:2936 libviews/callview.cpp:122
 #: libviews/callview.cpp:127 libviews/coverageview.cpp:162
-#: libviews/functionselection.cpp:234 libviews/instrview.cpp:208
+#: libviews/functionselection.cpp:234 libviews/instrview.cpp:209
 #: libviews/partselection.cpp:369 libviews/sourceview.cpp:112
 #, qt-format
 msgid "Go to '%1'"
 msgstr "Na \"%1\" gahn"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2872
+#: libviews/callgraphview.cpp:2945
 msgid "Stop Layouting"
 msgstr "Utreken vun't Diagrammutsehn anhollen"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2880
+#: libviews/callgraphview.cpp:2953
 msgid "As PostScript"
 msgstr "As PostScript"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2881
+#: libviews/callgraphview.cpp:2954
 msgid "As Image ..."
 msgstr "As Bild..."
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2883
+#: libviews/callgraphview.cpp:2956
 msgid "Export Graph"
 msgstr "Diagramm exporteren"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2888
+#: libviews/callgraphview.cpp:2961
 msgid "Caller Depth"
 msgstr "Oproper-Deepde"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2889
+#: libviews/callgraphview.cpp:2962
 msgid "Callee Depth"
 msgstr "Opropen-Deepde"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2890
+#: libviews/callgraphview.cpp:2963
 msgid "Min. Node Cost"
 msgstr "Sietst Knütt-Verbruuk"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2891
+#: libviews/callgraphview.cpp:2964
 msgid "Min. Call Cost"
 msgstr "Sietst Oproop-Verbruuk"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2893
+#: libviews/callgraphview.cpp:2966
 msgid "Arrows for Skipped Calls"
 msgstr "Pielen för övergahn Oprööp"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2895
+#: libviews/callgraphview.cpp:2968
 msgid "Inner-cycle Calls"
 msgstr "Oprööp binnen Lööp"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2897
+#: libviews/callgraphview.cpp:2970
 msgid "Cluster Groups"
 msgstr "Koppeln tosamentrecken"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2902
+#: libviews/callgraphview.cpp:2975
 msgid "Compact"
 msgstr "Kompakt"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2903
+#: libviews/callgraphview.cpp:2976
 msgid "Normal"
 msgstr "Normaal"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2904
+#: libviews/callgraphview.cpp:2977
 msgid "Tall"
 msgstr "Groot"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2909
+#: libviews/callgraphview.cpp:2982
 msgid "Graph"
 msgstr "Grafik"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2910 libviews/callmapview.cpp:273
+#: libviews/callgraphview.cpp:2983 libviews/callmapview.cpp:273
 #: libviews/partselection.cpp:378
 msgid "Visualization"
 msgstr "Dorstellen"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2911
+#: libviews/callgraphview.cpp:2984
 msgid "Layout"
 msgstr "Utsehn"
 
 #. +> trunk stable
-#: libviews/callgraphview.cpp:2912
+#: libviews/callgraphview.cpp:2985
 msgid "Birds-eye View"
 msgstr "Översicht"
 
 #. +> trunk
-#: libviews/callgraphview.cpp:2954
+#: libviews/callgraphview.cpp:3027
 msgid "Save Image"
 msgstr "Bild sekern"
 
@@ -749,7 +770,7 @@ msgstr "En Naam vun en Ding"
 
 #. +> trunk stable
 #: libviews/callmapview.cpp:62 libviews/callview.cpp:43
-#: libviews/instrview.cpp:146 libviews/partselection.cpp:75
+#: libviews/instrview.cpp:147 libviews/partselection.cpp:75
 #: libviews/sourceview.cpp:50 libviews/stackselection.cpp:57
 msgid "Cost"
 msgstr "Tietverbruuk"
@@ -985,7 +1006,7 @@ msgid "(no call)"
 msgstr "(keen Oproop)"
 
 #. +> trunk stable
-#: libviews/callview.cpp:44 libviews/instrview.cpp:147
+#: libviews/callview.cpp:44 libviews/instrview.cpp:148
 #: libviews/sourceview.cpp:51
 msgid "Cost 2"
 msgstr "Verbruuk 2"
@@ -1281,27 +1302,27 @@ msgid "(cycle)"
 msgstr "(Loop)"
 
 #. +> trunk stable
-#: libviews/instrview.cpp:145 libviews/sourceview.cpp:49
+#: libviews/instrview.cpp:146 libviews/sourceview.cpp:49
 msgid "#"
 msgstr "#"
 
 #. +> trunk stable
-#: libviews/instrview.cpp:149
+#: libviews/instrview.cpp:150
 msgid "Hex"
 msgstr "Hexkode"
 
 #. +> trunk stable
-#: libviews/instrview.cpp:151
+#: libviews/instrview.cpp:152
 msgid "Assembler"
 msgstr "Assembler"
 
 #. +> trunk stable
-#: libviews/instrview.cpp:152
+#: libviews/instrview.cpp:153
 msgid "Source Position"
 msgstr "Bornpositschoon"
 
 #. +> trunk stable
-#: libviews/instrview.cpp:183
+#: libviews/instrview.cpp:184
 msgid ""
 "<b>Annotated Assembler</b>"
 "<p>The annotated assembler list shows the machine code instructions of the current selected function together with (self) cost spent while executing an instruction. If this is a call instruction, lines with details on the call happening are inserted into the source: the cost spent inside of the call, the number of calls happening, and the call destination.</p>"
@@ -1314,40 +1335,35 @@ msgstr ""
 "<p>Du kannst en Oproop sien Teelfunkschoon aktiveren, wenn Du op en Reeg mit Oproop-Informatschonen klickst.</p>"
 
 #. +> trunk stable
-#: libviews/instrview.cpp:212
+#: libviews/instrview.cpp:213
 #, qt-format
 msgid "Go to Address %1"
 msgstr "Na Adress %1 gahn"
 
 #. +> trunk stable
-#: libviews/instrview.cpp:224
+#: libviews/instrview.cpp:225
 msgid "Hex Code"
 msgstr "Hexadezimaal-Kode"
 
 #. +> trunk stable
-#: libviews/instrview.cpp:443
+#: libviews/instrview.cpp:444
 msgid "There is no instruction info in the profile data file."
 msgstr "Dat gifft keen Anwiesen-Informatschonen binnen de Profildatendatei."
 
 #. +> trunk
-#: libviews/instrview.cpp:445
+#: libviews/instrview.cpp:446
 msgid "Tip: For Callgrind, rerun with option"
 msgstr "Tipp: Wenn Du mit Callgrind arbeidst, föhr dat nochmaal ut mit de Optschoon"
 
 #. +> trunk stable
-#: libviews/instrview.cpp:446
+#: libviews/instrview.cpp:447
 msgid "      --dump-instr=yes"
 msgstr "      --dump-instr=yes"
 
 #. +> trunk stable
-#: libviews/instrview.cpp:447
+#: libviews/instrview.cpp:448
 msgid "To see (conditional) jumps, additionally specify"
 msgstr "Wenn Du (bedingte) Jumpen sehn wullt, bruuk ok noch de Optschoon"
-
-#. +> trunk stable
-#: libviews/instrview.cpp:448
-msgid "      --trace-jump=yes"
-msgstr "      --trace-jump=yes"
 
 #. +> stable
 #: instrview.cpp:448
@@ -1355,29 +1371,29 @@ msgid "For the Valgrind Calltree Skin, rerun with option"
 msgstr "Wenn Du mit dat Valgrind-Warktüüch \"Callgrind\" arbeidst, föhr dat nochmaal ut mit de Optschoon"
 
 #. +> trunk stable
-#: libviews/instrview.cpp:646
+#: libviews/instrview.cpp:449
+msgid "      --trace-jump=yes"
+msgstr "      --trace-jump=yes"
+
+#. +> trunk stable
+#: libviews/instrview.cpp:653
 msgid "There is an error trying to execute the command"
 msgstr "Dat geev en Fehler bi't Utföhren vun den Befehl"
 
 #. +> trunk stable
-#: libviews/instrview.cpp:651 libviews/instrview.cpp:913
+#: libviews/instrview.cpp:658 libviews/instrview.cpp:916
 msgid "Check that you have installed 'objdump'."
 msgstr "Prööv, wat Du \"objdump\" installeert hest."
 
 #. +> trunk stable
-#: libviews/instrview.cpp:653 libviews/instrview.cpp:915
+#: libviews/instrview.cpp:660 libviews/instrview.cpp:918
 msgid "This utility can be found in the 'binutils' package."
 msgstr "Dit Warktüüch lett sik binnen dat Paket \"binutils\" finnen."
 
 #. +> trunk stable
-#: libviews/instrview.cpp:752
+#: libviews/instrview.cpp:758
 msgid "(No Assembler)"
 msgstr "(Keen Assembler)"
-
-#. +> trunk stable
-#: libviews/instrview.cpp:890
-msgid "This happens because the code of"
-msgstr "Dat is so, wiel de Kode vun"
 
 #. +> stable
 #: instrview.cpp:890
@@ -1389,26 +1405,31 @@ msgstr[1] "Dat gifft %1 Regen ahn Assembler-Kode."
 
 #. +> trunk stable
 #: libviews/instrview.cpp:893
+msgid "This happens because the code of"
+msgstr "Dat is so, wiel de Kode vun"
+
+#. +> trunk stable
+#: libviews/instrview.cpp:896
 msgid "does not seem to match the profile data file."
 msgstr "sachens nich to de Profildatendatei passt."
 
 #. +> trunk stable
-#: libviews/instrview.cpp:896
+#: libviews/instrview.cpp:899
 msgid "Are you using an old profile data file or is the above mentioned"
 msgstr "Bruukst Du en ole Profildatendatei, oder is dat baven nöömte \"ELF\"-Objekt"
 
 #. +> trunk stable
-#: libviews/instrview.cpp:898
+#: libviews/instrview.cpp:901
 msgid "ELF object from an updated installation/another machine?"
 msgstr "ut en opfrischte Installatschoon oder vun en anner Maschien?"
 
 #. +> trunk stable
-#: libviews/instrview.cpp:906
+#: libviews/instrview.cpp:909
 msgid "There seems to be an error trying to execute the command"
 msgstr "As dat lett gifft dat bi't Utföhren vun den Befehl en Fehler"
 
 #. +> trunk stable
-#: libviews/instrview.cpp:911
+#: libviews/instrview.cpp:914
 msgid "Check that the ELF object used in the command exists."
 msgstr "Prööv, wat dat dat in den Befehl bruukte \"ELF\"-Objekt gifft."
 
