@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwenview\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-02-16 09:06+0100\n"
+"POT-Creation-Date: 2009-02-24 11:01+0100\n"
 "PO-Revision-Date: 2009-02-17 00:44+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -53,22 +53,22 @@ msgstr "Orner opstellen"
 msgid "Enter the name of the folder to create:"
 msgstr "Giff den Naam för den niegen Orner in:"
 
-#: app/documentpanel.cpp:321 app/thumbnailviewpanel.cpp:100
-#: app/mainwindow.cpp:271 lib/documentview/documentview.cpp:125
+#: app/documentpanel.cpp:319 app/thumbnailviewpanel.cpp:100
+#: app/mainwindow.cpp:271 lib/documentview/documentview.cpp:123
 msgctxt "@title actions category - means actions changing smth in interface"
 msgid "View"
 msgstr "Ansicht"
 
-#: app/documentpanel.cpp:324
+#: app/documentpanel.cpp:322
 msgid "Thumbnail Bar"
 msgstr "Vöransichtbalken"
 
-#: app/documentpanel.cpp:476
+#: app/documentpanel.cpp:474
 msgctxt "@action:button"
 msgid "Discard Changes and Reload"
 msgstr "Ännern wegsmieten un nieg laden"
 
-#: app/documentpanel.cpp:478
+#: app/documentpanel.cpp:476
 msgctxt "@info"
 msgid ""
 "This image has been modified. Reloading it will discard all your changes."
@@ -560,7 +560,10 @@ msgstr "Ümdreihen"
 msgid "Resize"
 msgstr "Grött ännern"
 
+#. i18n: file: lib/crop/cropwidget.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, CropWidget)
 #: app/imageopscontextmanageritem.cpp:101 lib/crop/cropimageoperation.cpp:48
+#: rc.cpp:135
 msgid "Crop"
 msgstr "Tosnieden"
 
@@ -671,11 +674,18 @@ msgstr[1] "%1 Biller wöörn ännert."
 msgid "If you quit now, your changes will be lost."
 msgstr "Wenn Du nu ophöllst, kaamt Di Dien Ännern weg."
 
-#: lib/crop/cropwidget.cpp:75
+#: lib/crop/cropwidget.cpp:86
+#, fuzzy
+#| msgid "Constrain ratio"
+msgctxt "Crop tool won't apply any ratio constraint"
+msgid "No Constraint"
+msgstr "Proportschoon ingrenzen"
+
+#: lib/crop/cropwidget.cpp:88
 msgid "Square"
 msgstr "Quadraat"
 
-#: lib/redeyereduction/redeyereductiontool.cpp:67
+#: lib/redeyereduction/redeyereductiontool.cpp:69
 msgid "Click on the red eye you want to fix."
 msgstr "Klick op dat rode Oog, dat Du richten wullt."
 
@@ -693,27 +703,27 @@ msgctxt "@info:tooltip of custom toolbar button"
 msgid "%1"
 msgstr "%1"
 
-#: lib/documentview/documentview.cpp:130
+#: lib/documentview/documentview.cpp:128
 msgid "Zoom to Fit"
 msgstr "Grött topassen"
 
-#: lib/documentview/documentview.cpp:132
+#: lib/documentview/documentview.cpp:130
 msgctxt "@action:button Zoom to fit, shown in status bar, keep it short please"
 msgid "Fit"
 msgstr "Passen"
 
-#: lib/documentview/documentview.cpp:138
+#: lib/documentview/documentview.cpp:136
 msgctxt ""
 "@action:button Zoom to original size, shown in status bar, keep it short "
 "please"
 msgid "100%"
 msgstr "100%"
 
-#: lib/documentview/documentview.cpp:334
+#: lib/documentview/documentview.cpp:332
 msgid "Gwenview does not know how to display this kind of document"
 msgstr "Gwenview kann disse Oort Dokmenten nich wiesen"
 
-#: lib/documentview/documentview.cpp:417
+#: lib/documentview/documentview.cpp:415
 #, kde-format
 msgid "Loading <filename>%1</filename> failed"
 msgstr "<filename>%1</filename> lett sik nich laden"
@@ -1139,53 +1149,49 @@ msgstr "Dörkieken"
 msgid "Enlarge smaller images"
 msgstr "Lütte Biller grötter maken"
 
-#. i18n: file: lib/crop/cropwidget.ui:17
+#. i18n: file: lib/crop/cropwidget.ui:20
 #. i18n: ectx: property (text), widget (QCheckBox, advancedCheckBox)
-#: rc.cpp:135
+#: rc.cpp:138
 msgid "Advanced settings"
 msgstr "Verwiedert Instellen"
 
-#. i18n: file: lib/crop/cropwidget.ui:24
+#. i18n: file: lib/crop/cropwidget.ui:27
 #. i18n: ectx: property (text), widget (QPushButton, cropButton)
-#: rc.cpp:138
+#: rc.cpp:141
 msgid "&Crop"
 msgstr "&Tosnieden"
 
-#. i18n: file: lib/crop/cropwidget.ui:36
-#. i18n: ectx: property (text), widget (QCheckBox, constrainRatioCheckBox)
-#: rc.cpp:141
-msgid "Constrain ratio"
-msgstr "Proportschoon ingrenzen"
-
-#. i18n: file: lib/crop/cropwidget.ui:70
-#. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: file: lib/crop/cropwidget.ui:44
+#. i18n: ectx: property (text), widget (QLabel, label_6)
 #: rc.cpp:144
-msgid "x"
-msgstr "x"
+#, fuzzy
+#| msgid "Rating:"
+msgid "Ratio:"
+msgstr "Beweerten:"
 
-#. i18n: file: lib/crop/cropwidget.ui:104
+#. i18n: file: lib/crop/cropwidget.ui:77
+#. i18n: ectx: property (specialValueText), widget (QSpinBox, ratioWidthSpinBox)
+#. i18n: file: lib/crop/cropwidget.ui:87
+#. i18n: ectx: property (specialValueText), widget (QSpinBox, ratioHeightSpinBox)
+#: rc.cpp:147 rc.cpp:150
+msgid "-"
+msgstr ""
+
+#. i18n: file: lib/crop/cropwidget.ui:110
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:147
-msgid "&X:"
-msgstr "&X:"
-
-#. i18n: file: lib/crop/cropwidget.ui:127
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:150
-msgid "&Y:"
-msgstr "&Y:"
+#: rc.cpp:153
+#, fuzzy
+#| msgid "Image Position"
+msgid "Position:"
+msgstr "Bildpositschoon"
 
 #. i18n: file: lib/crop/cropwidget.ui:143
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:153
-msgid "&Width:"
-msgstr "&Breed:"
-
-#. i18n: file: lib/crop/cropwidget.ui:159
-#. i18n: ectx: property (text), widget (QLabel, label_4)
 #: rc.cpp:156
-msgid "&Height:"
-msgstr "&Hööchde:"
+#, fuzzy
+#| msgid "Size"
+msgid "Size:"
+msgstr "Grött"
 
 #. i18n: file: lib/redeyereduction/redeyereductionhud.ui:16
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -1277,6 +1283,21 @@ msgstr "&Datei"
 #: rc.cpp:206
 msgid "&View"
 msgstr "&Ansicht"
+
+#~ msgid "x"
+#~ msgstr "x"
+
+#~ msgid "&X:"
+#~ msgstr "&X:"
+
+#~ msgid "&Y:"
+#~ msgstr "&Y:"
+
+#~ msgid "&Width:"
+#~ msgstr "&Breed:"
+
+#~ msgid "&Height:"
+#~ msgstr "&Hööchde:"
 
 #~ msgid "TextLabel"
 #~ msgstr "TextBeteker"
