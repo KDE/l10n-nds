@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kgpg\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-02-23 09:46+0100\n"
-"PO-Revision-Date: 2009-02-24 02:05+0100\n"
+"POT-Creation-Date: 2009-02-25 11:42+0100\n"
+"PO-Revision-Date: 2009-02-25 23:08+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -616,7 +616,7 @@ msgid "Editor Font"
 msgstr "Editor-Schriftoort"
 
 #. +> trunk stable
-#: core/convert.cpp:36
+#: core/convert.cpp:36 kgpgkeygenerate.cpp:100
 msgctxt "Encryption algorithm"
 msgid "RSA"
 msgstr "RSA"
@@ -633,7 +633,14 @@ msgctxt "Encryption algorithm"
 msgid "ElGamal"
 msgstr "ElGamal"
 
-#. +> trunk stable
+#. +> trunk
+#: core/convert.cpp:39 kgpgkeygenerate.cpp:99
+#| msgid "DSA & ElGamal"
+msgctxt "Encryption algorithm"
+msgid "DSA & ElGamal"
+msgstr "DSA & ElGamal"
+
+#. +> stable
 #: core/convert.cpp:39
 msgctxt "Encryption algorithm"
 msgid "DSA - ElGamal"
@@ -981,7 +988,7 @@ msgid "Will not import this key in your list"
 msgstr "Disse Slötel op Dien List warrt nich importeert"
 
 #. +> trunk stable
-#: editor/kgpgview.cpp:397 kgpgtextinterface.cpp:624
+#: editor/kgpgview.cpp:397 kgpgtextinterface.cpp:625
 #, kde-format
 msgid ""
 "<qt><b>Missing signature:</b><br />"
@@ -1229,7 +1236,7 @@ msgstr "Ännern vun Slötelegenschappen fehlslaan"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #. +> trunk stable
-#: keyserver.ui:32 keytreeview.cpp:148 kgpgtextinterface.cpp:625
+#: keyserver.ui:32 keytreeview.cpp:148 kgpgtextinterface.cpp:626
 msgid "Import"
 msgstr "Importeren"
 
@@ -1580,7 +1587,7 @@ msgstr[1] ""
 "</qt>"
 
 #. +> trunk stable
-#: keyservers.cpp:192 kgpginterface.cpp:1246
+#: keyservers.cpp:192 kgpginterface.cpp:1247
 msgid ""
 "No key imported... \n"
 "Check detailed log for more infos"
@@ -1614,17 +1621,33 @@ msgstr "%1 passen Slötels funnen"
 msgid "You must choose a key."
 msgstr "Du muttst en Slötel kören."
 
-#. +> trunk stable
+#. +> stable
 #: keyservers.cpp:508
 #, kde-format
 msgid "ID %1, %2 bit %3 key, created %4 revoked"
 msgstr "ID %1, %2-Bit %3-Slötel, opstellt %4 torüchropen"
 
-#. +> trunk stable
+#. +> trunk
+#: keyservers.cpp:509
+#, kde-format
+#| msgid "ID %1, %2 bit %3 key, created %4 revoked"
+msgctxt "example: ID abc123xy, 1024-bit RSA key, created Jan 12 2009, revoked"
+msgid "ID %1, %2-bit %3 key, created %4, revoked"
+msgstr "ID %1, %2-Bit %3-Slötel, opstellt den %4, torüchropen"
+
+#. +> stable
 #: keyservers.cpp:514
 #, kde-format
 msgid "ID %1, %2 bit %3 key, created %4"
 msgstr "ID %1, %2-Bit %3-Slötel, opstellt %4"
+
+#. +> trunk
+#: keyservers.cpp:516
+#, kde-format
+#| msgid "ID %1, %2 bit %3 key, created %4"
+msgctxt "example: ID abc123xy, 1024-bit RSA key, created Jan 12 2009"
+msgid "ID %1, %2-bit %3 key, created %4"
+msgstr "ID %1, %2-Bit %3-Slötel, opstellt den %4"
 
 #. +> trunk stable
 #: keysmanager.cpp:107
@@ -2112,7 +2135,23 @@ msgstr ""
 msgid "Export PRIVATE KEY As"
 msgstr "PRIVAATSLÖTEL exporteren as"
 
-#. +> trunk stable
+#. +> trunk
+#: keysmanager.cpp:1439
+#, kde-format
+#| msgid ""
+#| "<qt>Your <b>private</b> key \"%1\" was successfully exported to<br/>"
+#| "%2 .<br/>"
+#| "<b>Do not</b> leave it in an insecure place.</qt>"
+msgid ""
+"<qt>Your <b>private</b> key \"%1\" was successfully exported to<br/>"
+"%2.<br/>"
+"<b>Do not</b> leave it in an insecure place.</qt>"
+msgstr ""
+"<qt>Dien <b>Privaatslötel</b> \"%1\" wöör exporteert as<br/>"
+"%2.<br/>"
+"Wohr em <b>nich</b> an en Steed, de nich seker is.</qt>"
+
+#. +> stable
 #: keysmanager.cpp:1439
 #, kde-format
 msgid ""
@@ -2539,7 +2578,7 @@ msgid "<p>Do you want to import file <b>%1</b> into your key ring?</p>"
 msgstr "<p>Wullt Du de Datei <b>%1</b> na Dien Slötelbund importeren?</p>"
 
 #. +> trunk stable
-#: keytreeview.cpp:149 kgpgtextinterface.cpp:625
+#: keytreeview.cpp:149 kgpgtextinterface.cpp:626
 msgid "Do Not Import"
 msgstr "Nich importeren"
 
@@ -3124,20 +3163,29 @@ msgstr "As't lett is de Verschoon vun Dien GnuPG lütter as 1.2.0 (%1). Foto-IDs
 msgid " or "
 msgstr " oder "
 
-#. +> trunk stable
+#. +> trunk
+#: kgpginterface.cpp:1010 kgpgtextinterface.cpp:114
+#, kde-format
+#| msgid "<p><b>Bad passphrase</b>. You have %1 tries left.</p>"
+msgid "<p><b>Bad passphrase</b>. You have 1 try left.</p>"
+msgid_plural "<p><b>Bad passphrase</b>. You have %1 tries left.</p>"
+msgstr[0] "<p><b>Leeg Slötelsatz</b>. Du hest noch 1 Versöök.</p>"
+msgstr[1] "<p><b>Leeg Slötelsatz</b>. Du hest noch %1 Versöök.</p>"
+
+#. +> stable
 #: kgpginterface.cpp:1010 kgpgtextinterface.cpp:114
 #, kde-format
 msgid "<p><b>Bad passphrase</b>. You have %1 tries left.</p>"
 msgstr "<p><b>Leeg Slötelsatz</b>. Du hest noch %1 Versöök.</p>"
 
 #. +> trunk stable
-#: kgpginterface.cpp:1011 kgpgtextinterface.cpp:118
+#: kgpginterface.cpp:1012 kgpgtextinterface.cpp:119
 #, kde-format
 msgid "Enter passphrase for <b>%1</b>"
 msgstr "Bitte Slötelsatz för <b>%1</b> ingeven"
 
 #. +> trunk stable
-#: kgpginterface.cpp:1052
+#: kgpginterface.cpp:1053
 #, kde-format
 msgid ""
 "<qt>Signing key <b>%1</b> with key <b>%2</b> failed.<br />"
@@ -3147,7 +3195,7 @@ msgstr ""
 "Wullt Du versöken, dat Du den Slötel op de Konsool ünnerschriffst?</qt>"
 
 #. +> trunk stable
-#: kgpginterface.cpp:1205
+#: kgpginterface.cpp:1206
 #, kde-format
 msgid "<qt>%1 key processed.</qt>"
 msgid_plural "<qt>%1 keys processed.</qt>"
@@ -3155,7 +3203,7 @@ msgstr[0] "<qt>%1 Slötel verarbeidt.</qt>"
 msgstr[1] "<qt>%1 Slötels verarbeidt.</qt>"
 
 #. +> trunk stable
-#: kgpginterface.cpp:1208
+#: kgpginterface.cpp:1209
 #, kde-format
 msgid "<qt>One key without ID.</qt>"
 msgid_plural "<qt>%1 keys without ID.</qt>"
@@ -3163,7 +3211,7 @@ msgstr[0] "<qt>Een Slötel ahn ID.</qt>"
 msgstr[1] "<qt>%1 Slötels ahn ID.</qt>"
 
 #. +> trunk stable
-#: kgpginterface.cpp:1210
+#: kgpginterface.cpp:1211
 #, kde-format
 msgid "<qt><b>One key imported:</b></qt>"
 msgid_plural "<qt><b>%1 keys imported:</b></qt>"
@@ -3171,7 +3219,7 @@ msgstr[0] "<qt><b>Een Slötel importeert:</b></qt>"
 msgstr[1] "<qt><b>%1 Slötels importeert:</b></qt>"
 
 #. +> trunk stable
-#: kgpginterface.cpp:1212
+#: kgpginterface.cpp:1213
 #, kde-format
 msgid "<qt>One RSA key imported.</qt>"
 msgid_plural "<qt>%1 RSA keys imported.</qt>"
@@ -3179,7 +3227,7 @@ msgstr[0] "<qt>Een RSA-Slötel importeert.</qt>"
 msgstr[1] "<qt>%1 RSA-Slötels importeert.</qt>"
 
 #. +> trunk stable
-#: kgpginterface.cpp:1214
+#: kgpginterface.cpp:1215
 #, kde-format
 msgid "<qt>One key unchanged.</qt>"
 msgid_plural "<qt>%1 keys unchanged.</qt>"
@@ -3189,7 +3237,7 @@ msgstr[1] ""
 "</qt>"
 
 #. +> trunk stable
-#: kgpginterface.cpp:1216
+#: kgpginterface.cpp:1217
 #, kde-format
 msgid "<qt>One user ID imported.</qt>"
 msgid_plural "<qt>%1 user IDs imported.</qt>"
@@ -3197,7 +3245,7 @@ msgstr[0] "<qt>Een Bruker-ID importeert.</qt>"
 msgstr[1] "<qt>%1 Bruker-IDs importeert.</qt>"
 
 #. +> trunk stable
-#: kgpginterface.cpp:1218
+#: kgpginterface.cpp:1219
 #, kde-format
 msgid "<qt>One subkey imported.</qt>"
 msgid_plural "<qt>%1 subkeys imported.</qt>"
@@ -3205,7 +3253,7 @@ msgstr[0] "<qt>Een Ünnerslötel importeert.</qt>"
 msgstr[1] "<qt>%1 Ünnerslötels importeert.</qt>"
 
 #. +> trunk stable
-#: kgpginterface.cpp:1220
+#: kgpginterface.cpp:1221
 #, kde-format
 msgid "<qt>One signature imported.</qt>"
 msgid_plural "<qt>%1 signatures imported.</qt>"
@@ -3213,7 +3261,7 @@ msgstr[0] "<qt>Een Ünnerschrift importeert.</qt>"
 msgstr[1] "<qt>%1 Ünnerschriften importeert.</qt>"
 
 #. +> trunk stable
-#: kgpginterface.cpp:1223
+#: kgpginterface.cpp:1224
 #, kde-format
 msgid "<qt>One revocation certificate imported.</qt>"
 msgid_plural "<qt>%1 revocation certificates imported.</qt>"
@@ -3221,7 +3269,7 @@ msgstr[0] "<qt>Een Torüchroop-Zertifikaat importeert.</qt>"
 msgstr[1] "<qt>%1 Torüchroop-Zertifikaten importeert.</qt>"
 
 #. +> trunk stable
-#: kgpginterface.cpp:1229
+#: kgpginterface.cpp:1230
 #, kde-format
 msgid "<qt>One secret key processed.</qt>"
 msgid_plural "<qt>%1 secret keys processed.</qt>"
@@ -3229,7 +3277,7 @@ msgstr[0] "<qt>Een Privaatslötel verarbeidt.</qt>"
 msgstr[1] "<qt>%1 Privaatslötels verarbeidt.</qt>"
 
 #. +> trunk stable
-#: kgpginterface.cpp:1233
+#: kgpginterface.cpp:1234
 #, kde-format
 msgid "<qt><b>One secret key imported.</b></qt>"
 msgid_plural "<qt><b>%1 secret keys imported.</b></qt>"
@@ -3237,7 +3285,7 @@ msgstr[0] "<qt><b>Een Privaatslötel importeert.</b></qt>"
 msgstr[1] "<qt><b>%1 Privaatslötels importeert.</b></qt>"
 
 #. +> trunk stable
-#: kgpginterface.cpp:1235
+#: kgpginterface.cpp:1236
 #, kde-format
 msgid "<qt>One secret key unchanged.</qt>"
 msgid_plural "<qt>%1 secret keys unchanged.</qt>"
@@ -3245,7 +3293,7 @@ msgstr[0] "<qt>Bi een Privaatslötel nix ännert.</qt>"
 msgstr[1] "<qt>Bi %1 Privaatslötels nix ännert.</qt>"
 
 #. +> trunk stable
-#: kgpginterface.cpp:1237
+#: kgpginterface.cpp:1238
 #, kde-format
 msgid "<qt>One secret key not imported.</qt>"
 msgid_plural "<qt>%1 secret keys not imported.</qt>"
@@ -3253,7 +3301,7 @@ msgstr[0] "<qt>Een Privaatslötel nich importeert.</qt>"
 msgstr[1] "<qt>%1 Privaatslötels nich importeert.</qt>"
 
 #. +> trunk stable
-#: kgpginterface.cpp:1240
+#: kgpginterface.cpp:1241
 msgid ""
 "<qt><br />"
 "<b>You have imported a secret key.</b> <br />"
@@ -3266,12 +3314,12 @@ msgstr ""
 "Wenn Du dissen Privaatslötel för't Ünnerschrieven un Verslöteln heel bruken wullt, muttst Du em eerst bewerken (dubbelklick em) un sien Totroen op \"Vull\" oder \"Büterst\" setten.</qt>"
 
 #. +> trunk stable
-#: kgpginterface.cpp:1491
+#: kgpginterface.cpp:1492
 msgid "Creation of the revocation certificate failed..."
 msgstr "Opstellen vun dat Torüchroop-Zertifikaat fehlslaan..."
 
 #. +> trunk stable
-#: kgpginterface.cpp:1522
+#: kgpginterface.cpp:1523
 #, kde-format
 msgid "<qt>Enter passphrase for <b>%1</b>:</qt>"
 msgstr "<qt>Slötelsatz för <b>%1</b> ingeven:</qt>"
@@ -3369,12 +3417,12 @@ msgstr "4096"
 msgid "&Algorithm:"
 msgstr "&Algoritmus:"
 
-#. +> trunk stable
+#. +> stable
 #: kgpgkeygenerate.cpp:99
 msgid "DSA & ElGamal"
 msgstr "DSA & ElGamal"
 
-#. +> trunk stable
+#. +> stable
 #: kgpgkeygenerate.cpp:100
 msgid "RSA"
 msgstr "RSA"
@@ -3656,23 +3704,23 @@ msgid "<p><b>No user id found</b>. Trying all secret keys.</p>"
 msgstr "<p><b>Keen Bruker-ID funnen</b>. All Privaatslötels warrt utprobeert.</p>"
 
 #. +> trunk stable
-#: kgpgtextinterface.cpp:116
+#: kgpgtextinterface.cpp:117
 msgid "Enter passphrase"
 msgstr "Bitte Slötelsatz ingeven"
 
 #. +> trunk stable
-#: kgpgtextinterface.cpp:308
+#: kgpgtextinterface.cpp:309
 msgid "Bad MDC detected. The encrypted text has been manipulated."
 msgstr "Leeg MDC opdeckt. Een hett mit den verslötelten Text wat vörhatt."
 
 #. +> trunk stable
-#: kgpgtextinterface.cpp:399 kgpgtextinterface.cpp:592
-#: kgpgtextinterface.cpp:619
+#: kgpgtextinterface.cpp:400 kgpgtextinterface.cpp:593
+#: kgpgtextinterface.cpp:620
 msgid "No signature found."
 msgstr "Keen Ünnerschrift funnen."
 
 #. +> trunk stable
-#: kgpgtextinterface.cpp:595
+#: kgpgtextinterface.cpp:596
 #, kde-format
 msgid ""
 "<qt>Good signature from:<br />"
@@ -3686,7 +3734,7 @@ msgstr ""
 "</qt>"
 
 #. +> trunk stable
-#: kgpgtextinterface.cpp:600
+#: kgpgtextinterface.cpp:601
 #, kde-format
 msgid ""
 "<qt><b>BAD signature</b> from:<br />"
@@ -3704,7 +3752,7 @@ msgstr ""
 "</qt>"
 
 #. +> trunk stable
-#: kgpgtextinterface.cpp:607
+#: kgpgtextinterface.cpp:608
 msgid ""
 "<qt>The signature is valid, but the key is untrusted<br />"
 "</qt>"
@@ -3713,7 +3761,7 @@ msgstr ""
 "</qt>"
 
 #. +> trunk stable
-#: kgpgtextinterface.cpp:609
+#: kgpgtextinterface.cpp:610
 msgid ""
 "<qt>The signature is valid, and the key is ultimately trusted<br />"
 "</qt>"
@@ -4337,3 +4385,4 @@ msgstr ""
 
 #~ msgid "Another key is currently deleted. Please wait until the operation is complete."
 #~ msgstr "Opstunns warrt en anner Slötel wegdaan. Tööv bitte, bet dat afslaten is."
+
