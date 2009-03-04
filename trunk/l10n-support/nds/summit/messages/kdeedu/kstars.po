@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-02-27 10:55+0100\n"
+"POT-Creation-Date: 2009-03-02 10:01+0100\n"
 "PO-Revision-Date: 2009-02-24 22:26+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1275,16 +1275,17 @@ msgid "2000.0"
 msgstr "2000,0"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#. i18n: ectx: property (text), widget (QLabel, epochLabel)
 #. i18n: ectx: property (text), widget (QCheckBox, epochCheckBatch)
 #. i18n: ectx: property (text), widget (QLabel, EpochLabel)
 #. i18n: ectx: property (text), widget (QLabel, EpochLabel2)
 #. i18n: ectx: property (text), widget (QCheckBox, EpochCheckBatch)
-#. i18n: ectx: property (text), widget (QLabel, epochLabel)
 #. +> trunk stable
-#: dialogs/focusdialog.ui:63 tools/altvstime.ui:175 tools/modcalcaltaz.ui:393
-#: tools/modcalcapcoord.ui:95 tools/modcalcapcoord.ui:174
-#: tools/modcalcapcoord.ui:449 tools/modcalceclipticcoords.ui:257
-#: tools/modcalcgalcoord.ui:214 tools/modcalcvlsr.ui:521
+#: dialogs/focusdialog.ui:63 tools/altvstime.ui:175 tools/flagmanager.ui:59
+#: tools/modcalcaltaz.ui:393 tools/modcalcapcoord.ui:95
+#: tools/modcalcapcoord.ui:174 tools/modcalcapcoord.ui:449
+#: tools/modcalceclipticcoords.ui:257 tools/modcalcgalcoord.ui:214
+#: tools/modcalcvlsr.ui:521
 msgid "Epoch:"
 msgstr "Epoch:"
 
@@ -2107,9 +2108,10 @@ msgstr "Klöör för't Sichtfeld-Symbool utsöken"
 msgid "Select a color for the field-of-view (FOV) symbol."
 msgstr "Söök en Klöör för't Sichtfeld-Symbool (SF) ut."
 
+#. i18n: ectx: property (text), widget (QLabel, textLabelXplanetColor)
 #. i18n: ectx: property (text), widget (QLabel, textLabel8)
 #. +> trunk stable
-#: dialogs/newfov.ui:999
+#: dialogs/newfov.ui:999 xplanet/opsxplanet.ui:538
 msgid "Color:"
 msgstr "Klöör:"
 
@@ -3517,9 +3519,10 @@ msgstr "Driever:"
 msgid "Version:"
 msgstr "Verschoon:"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
 #. +> trunk stable
-#: indi/telescopeprop.ui:132
+#: indi/telescopeprop.ui:132 tools/flagmanager.ui:79
 msgid "Label:"
 msgstr "Beteker:"
 
@@ -4205,7 +4208,15 @@ msgid "Filenames of defined custom object catalogs."
 msgstr "Dateinaams vun angeven Katalogen mit egen Objekten"
 
 #. i18n: ectx: whatsthis, entry (CatalogFile), group (Catalogs)
-#. +> trunk stable
+#. +> trunk
+#: kstars.kcfg:119
+#, fuzzy
+#| msgid "List of the filenames of custom objects catalogs."
+msgid "List of the filenames of custom object catalogs."
+msgstr "List vun de Dateinaams vun Katalogen mit egen Objekten"
+
+#. i18n: ectx: whatsthis, entry (CatalogFile), group (Catalogs)
+#. +> stable
 #: kstars.kcfg:119
 msgid "List of the filenames of custom objects catalogs."
 msgstr "List vun de Dateinaams vun Katalogen mit egen Objekten"
@@ -5977,11 +5988,11 @@ msgid "Date format"
 msgstr "Formaat vun't Datum"
 
 #. i18n: ectx: whatsthis, entry (XplanetDateFormat), group (Xplanet)
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, kcfg_XplanetDateFormat)
 #. +> trunk
-#: kstars.kcfg:887 xplanet/opsxplanet.ui:511
-#, no-c-format
-msgid "Specify the format for the date/time label.  This format string is passed to strftime(3).  The default is \"%c %Z\", which shows the date, time, and time zone in the  locale’s  appropriate date and time representation."
+#: kstars.kcfg:887
+#, fuzzy, no-c-format
+#| msgid "Specify the format for the date/time label.  This format string is passed to strftime(3).  The default is \"%c %Z\", which shows the date, time, and time zone in the  locale’s  appropriate date and time representation."
+msgid "Specify the format for the date/time label.  This format string is passed to strftime(3).  The default is \"%c %Z\", which shows the date, time, and time zone in the locale’s appropriate date and time representation."
 msgstr "Dat Datum- un Tietformaat för dat Textfeld fastleggen. Disse Formaat-Tekenkeed warrt na strftime(3) övergeven. Standard is \"%c %Z\". Dit wiest dat Datum, de Tiet un dat Tietrebeet in't lokaal Datum- un Tietformaat."
 
 #. i18n: ectx: label, entry (XplanetLabelTL), group (Xplanet)
@@ -6072,10 +6083,11 @@ msgid "Longitude in degrees"
 msgstr "Geograafsch Längde, in Graad"
 
 #. i18n: ectx: whatsthis, entry (XplanetLongitude), group (Xplanet)
-#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, kcfg_XplanetLongitude)
 #. +> trunk
-#: kstars.kcfg:928 xplanet/opsxplanet.ui:792
-msgid "Place the observer above the specified longitude (in degrees).  Longitude is positive going east, negative going west (for the earth and moon), so for example Los Angeles is at  -118  or 242.  The default value is 0."
+#: kstars.kcfg:928
+#, fuzzy
+#| msgid "Place the observer above the specified longitude (in degrees).  Longitude is positive going east, negative going west (for the earth and moon), so for example Los Angeles is at  -118  or 242.  The default value is 0."
+msgid "Place the observer above the specified longitude (in degrees).  Longitude is positive going east, negative going west (for the earth and moon), so for example Los Angeles is at -118 or 242.  The default value is 0."
 msgstr "Den Kieker op de angeven Längde (in Graad) stellen. De Längde is Richt Oost positiv, un na West negativ (för de Eer un den Maand). Jaad liggt a.B. op -8 oder 352. De Standardweert is \"0\"."
 
 #. i18n: ectx: label, entry (XplanetProjection), group (Xplanet)
@@ -6086,10 +6098,11 @@ msgid "Projection"
 msgstr "Projizeren"
 
 #. i18n: ectx: whatsthis, entry (XplanetProjection), group (Xplanet)
-#. i18n: ectx: property (whatsThis), widget (KComboBox, kcfg_XplanetProjection)
 #. +> trunk
-#: kstars.kcfg:933 xplanet/opsxplanet.ui:857
-msgid "The default is  no projection.  Multiple bodies will not be shown if this option is specified, although shadows will still be drawn."
+#: kstars.kcfg:933
+#, fuzzy
+#| msgid "The default is  no projection.  Multiple bodies will not be shown if this option is specified, although shadows will still be drawn."
+msgid "The default is no projection.  Multiple bodies will not be shown if this option is specified, although shadows will still be drawn."
 msgstr "Standardwies is \"Projizeren\" utmaakt. Wenn disse Optschoon anmaakt is, warrt en Reeg vun Objekten nich wiest, man Schaddens warrt noch dorstellt."
 
 #. i18n: ectx: label, entry (XplanetWait), group (Xplanet)
@@ -6106,12 +6119,11 @@ msgstr "Ansicht opfrischen, wenn anmaakt"
 
 #. i18n: ectx: label, entry (XplanetWaitValue), group (Xplanet)
 #. i18n: ectx: whatsthis, entry (XplanetWaitValue), group (Xplanet)
-#. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_XplanetWaitValue)
-#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, kcfg_XplanetWaitValue)
 #. +> trunk
-#: kstars.kcfg:942 kstars.kcfg:943 xplanet/opsxplanet.ui:218
-#: xplanet/opsxplanet.ui:221
-msgid "Number of seconde to wait before updating"
+#: kstars.kcfg:942 kstars.kcfg:943
+#, fuzzy
+#| msgid "Number of seconde to wait before updating"
+msgid "Number of seconds to wait before updating"
 msgstr "Töövtiet ehr't Opfrischen, in Sekunnen"
 
 #. i18n: ectx: label, entry (XplanetBackground), group (Xplanet)
@@ -6235,21 +6247,27 @@ msgstr "Padd na Instellendatei"
 #. i18n: ectx: whatsthis, entry (XplanetConfigFilePath), group (Xplanet)
 #. +> trunk
 #: kstars.kcfg:993
-msgid "Use specified the configuration file."
+#, fuzzy
+#| msgid "Use specified the configuration file."
+msgid "Use the specified configuration file."
 msgstr "De angeven Instellendatei bruken"
 
 #. i18n: ectx: label, entry (XplanetFOV), group (Xplanet)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_XplanetFOV)
 #. +> trunk
 #: kstars.kcfg:997 xplanet/opsxplanet.ui:196
-msgid "Use kstars FOV"
+#, fuzzy
+#| msgid "Use kstars FOV"
+msgid "Use kstars's FOV"
 msgstr "KStars-SF bruken"
 
 #. i18n: ectx: whatsthis, entry (XplanetFOV), group (Xplanet)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_XplanetFOV)
 #. +> trunk
 #: kstars.kcfg:998 xplanet/opsxplanet.ui:193
-msgid "If checked, use kstars FOV."
+#, fuzzy
+#| msgid "If checked, use kstars FOV."
+msgid "If checked, use kstars's FOV."
 msgstr "Wenn anmaakt, warrt dat KStars-SF bruukt."
 
 #. i18n: ectx: label, entry (XplanetMarkerFile), group (Xplanet)
@@ -6273,10 +6291,11 @@ msgid "Marker file path"
 msgstr "Padd na de Markeren-Datei"
 
 #. i18n: ectx: whatsthis, entry (XplanetMarkerFilePath), group (Xplanet)
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, kcfg_XplanetMarkerFilePath)
 #. +> trunk
-#: kstars.kcfg:1008 xplanet/opsxplanet.ui:695
-msgid "Specify a file containing user defined marker data to display against the background stars."
+#: kstars.kcfg:1008
+#, fuzzy
+#| msgid "Specify a file containing user defined marker data to display against the background stars."
+msgid "Specify a file containing user-defined marker data to display against the background stars."
 msgstr "Giff en Datei mit egen Markeren-Daten an, de gegen de Achtergrundsteerns teekt warrt."
 
 #. i18n: ectx: label, entry (XplanetMarkerBounds), group (Xplanet)
@@ -7079,7 +7098,16 @@ msgctxt "Constellation name (optional)"
 msgid "SCREEN"
 msgstr "SCHIRM"
 
-#. +> trunk stable
+#. +> trunk
+#: kstars_i18n.cpp:125
+#, fuzzy
+#| msgctxt "Constellation name (optional)"
+#| msgid "SOLDIERS MARKET"
+msgctxt "Constellation name (optional)"
+msgid "SOLDIERS' MARKET"
+msgstr "SULDATENMARKT"
+
+#. +> stable
 #: kstars_i18n.cpp:125
 msgctxt "Constellation name (optional)"
 msgid "SOLDIERS MARKET"
@@ -7733,7 +7761,16 @@ msgctxt "Constellation name (optional)"
 msgid "JUDGE"
 msgstr "RICHTER"
 
-#. +> trunk stable
+#. +> trunk
+#: kstars_i18n.cpp:237
+#, fuzzy
+#| msgctxt "Constellation name (optional)"
+#| msgid "FLUTTING FLAG"
+msgctxt "Constellation name (optional)"
+msgid "FLUTTERING FLAG"
+msgstr "FLEGEN FLAGG"
+
+#. +> stable
 #: kstars_i18n.cpp:237
 msgctxt "Constellation name (optional)"
 msgid "FLUTTING FLAG"
@@ -7877,7 +7914,16 @@ msgctxt "Constellation name (optional)"
 msgid "FISH"
 msgstr "FISCH"
 
-#. +> trunk stable
+#. +> trunk
+#: kstars_i18n.cpp:261
+#, fuzzy
+#| msgctxt "Constellation name (optional)"
+#| msgid "FORCAST"
+msgctxt "Constellation name (optional)"
+msgid "FORECAST"
+msgstr "UTBLICK"
+
+#. +> stable
 #: kstars_i18n.cpp:261
 msgctxt "Constellation name (optional)"
 msgid "FORCAST"
@@ -7943,7 +7989,16 @@ msgctxt "Constellation name (optional)"
 msgid "NORTHEASTERN NATIONS"
 msgstr "NOORDOOST NATSCHONEN"
 
-#. +> trunk stable
+#. +> trunk
+#: kstars_i18n.cpp:273
+#, fuzzy
+#| msgctxt "Constellation name (optional)"
+#| msgid "OLDFARMER"
+msgctxt "Constellation name (optional)"
+msgid "OLD FARMER"
+msgstr "OOLT BUER"
+
+#. +> stable
 #: kstars_i18n.cpp:273
 msgctxt "Constellation name (optional)"
 msgid "OLDFARMER"
@@ -8333,7 +8388,16 @@ msgctxt "Constellation name (optional)"
 msgid "STORE OF WATER"
 msgstr "WATERSPIEKER"
 
-#. +> trunk stable
+#. +> trunk
+#: kstars_i18n.cpp:341
+#, fuzzy
+#| msgctxt "Constellation name (optional)"
+#| msgid "HEAP OF CORPSE"
+msgctxt "Constellation name (optional)"
+msgid "HEAP OF CORPSES"
+msgstr "LIEKENHOPEN"
+
+#. +> stable
 #: kstars_i18n.cpp:341
 msgctxt "Constellation name (optional)"
 msgid "HEAP OF CORPSE"
@@ -8519,7 +8583,16 @@ msgctxt "Constellation name (optional)"
 msgid "FORCAST CALAMITY"
 msgstr "VÖRUTSEHN MALLÖÖR"
 
-#. +> trunk stable
+#. +> trunk
+#: kstars_i18n.cpp:372
+#, fuzzy
+#| msgctxt "Constellation name (optional)"
+#| msgid "SCOUT OF THREE TROUPS"
+msgctxt "Constellation name (optional)"
+msgid "SCOUT OF THREE TROOPS"
+msgstr "PADDLÖPER VUN DREE TRUPPEN"
+
+#. +> stable
 #: kstars_i18n.cpp:372
 msgctxt "Constellation name (optional)"
 msgid "SCOUT OF THREE TROUPS"
@@ -8585,7 +8658,16 @@ msgctxt "Constellation name (optional)"
 msgid "FIVE LORDS"
 msgstr "FIEF LORDS"
 
-#. +> trunk stable
+#. +> trunk
+#: kstars_i18n.cpp:384
+#, fuzzy
+#| msgctxt "Constellation name (optional)"
+#| msgid "WINE GLASS OF SKY"
+msgctxt "Constellation name (optional)"
+msgid "WINE GLASS OF THE SKY"
+msgstr "DEN HEVEN SIEN WIENGLAS"
+
+#. +> stable
 #: kstars_i18n.cpp:384
 msgctxt "Constellation name (optional)"
 msgid "WINE GLASS OF SKY"
@@ -8609,7 +8691,16 @@ msgctxt "Constellation name (optional)"
 msgid "BALANCE OF WATER"
 msgstr "WATERBALETT"
 
-#. +> trunk stable
+#. +> trunk
+#: kstars_i18n.cpp:388
+#, fuzzy
+#| msgctxt "Constellation name (optional)"
+#| msgid "FOUR SPIRIT OF RIVER"
+msgctxt "Constellation name (optional)"
+msgid "FOUR SPIRITS OF THE RIVER"
+msgstr "VEER STROOMGEISTER"
+
+#. +> stable
 #: kstars_i18n.cpp:388
 msgctxt "Constellation name (optional)"
 msgid "FOUR SPIRIT OF RIVER"
@@ -8669,7 +8760,16 @@ msgctxt "Constellation name (optional)"
 msgid "GROWN-UP"
 msgstr "OPWUSSEN"
 
-#. +> trunk stable
+#. +> trunk
+#: kstars_i18n.cpp:398
+#, fuzzy
+#| msgctxt "Constellation name (optional)"
+#| msgid "OLDMAN"
+msgctxt "Constellation name (optional)"
+msgid "OLD MAN"
+msgstr "OOLT MANN"
+
+#. +> stable
 #: kstars_i18n.cpp:398
 msgctxt "Constellation name (optional)"
 msgid "OLDMAN"
@@ -37247,7 +37347,14 @@ msgctxt "the angle of an object above (or below) the horizon"
 msgid "Altitude"
 msgstr "Hööchde"
 
-#. +> trunk stable
+#. +> trunk
+#: tools/altvstime.cpp:142
+#, fuzzy, kde-format
+#| msgid "An object named %1 is already displayed; I will not duplicate it."
+msgid "An object named %1 is already displayed, it will not be duplicated."
+msgstr "En Objekt mit den Naam \"%1\" warrt al wiest, dat warrt nich verdubbelt."
+
+#. +> stable
 #: tools/altvstime.cpp:142
 #, kde-format
 msgid "An object named %1 is already displayed; I will not duplicate it."
@@ -37690,7 +37797,24 @@ msgid "Toggle Tracking on/off"
 msgstr "Mittrecken an-/utmaken"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, CheckTrack)
-#. +> trunk stable
+#. +> trunk
+#: tools/argsettrack.ui:38
+#, fuzzy
+#| msgid ""
+#| "If checked, the sky will remain focused on its current position or object as time passes.  This is called \"Tracking\".  Note that tracking is automatically engaged whenever an object is centered at the focus point.  So, if you use \"lookToward\" with an object name, you do not need to engage tracking.  \n"
+#| "\n"
+#| "If unchecked, then Tracking will be forced off, even if an object has been centered,  As time passes, the sky will then appear to drift by (due to the rotation of the Earth)."
+msgid ""
+"If checked, the sky will remain focused on its current position or object as time passes.  This is called \"Tracking\".  Note that tracking is automatically engaged whenever an object is centered at the focus point.  So, if you use \"lookToward\" with an object name, you do not need to engage tracking.  \n"
+"\n"
+"If unchecked, then Tracking will be forced off, even if an object has been centered.  As time passes, the sky will then appear to drift by (due to the rotation of the Earth)."
+msgstr ""
+"Wenn anmaakt, blifft de Heven op de aktuelle Positschoon oder dat Objekt utricht, bides de Tiet vörbigeiht. Dit warrt \"Mittrecken\" nöömt. Beacht, dat Mittrecken warrt automaatsch anmaakt, wenn Du de Kiekricht op en Objekt utrichtst. Wenn Du also \"lookToward\" (kieken na) mit en Objektnaam bruukst, denn is ok \"Mittrecken\" automaatsch anmaakt.  \n"
+"\n"
+"Is dit utmaakt, blifft dat Mittrecken utmaakt, ok wenn Du en Objekt inmiddelst. Wenn de Tiet vörbigeiht, denn lett dat, as wenn de Heven vörbitreck (as Folg vun de Sülvstdreihen vun de Eer)."
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, CheckTrack)
+#. +> stable
 #: tools/argsettrack.ui:38
 msgid ""
 "If checked, the sky will remain focused on its current position or object as time passes.  This is called \"Tracking\".  Note that tracking is automatically engaged whenever an object is centered at the focus point.  So, if you use \"lookToward\" with an object name, you do not need to engage tracking.  \n"
@@ -37909,7 +38033,14 @@ msgstr "<QT>Astronoomsch Bereken rund de Tiet<UL><LI><B>Juliaansch Daag:</B> Üm
 msgid "<QT>Section with algorithms for the conversion of different astronomical systems of coordinates<UL><LI><B>Galactic:</B> Galactic/Equatorial coordinates conversion</LI><LI><B>Apparent:</B> Computation of current equatorial coordinates from a given epoch</LI><LI><B>Ecliptic:</B> Ecliptic/Equatorial coordinates conversion</LI><LI><B>Horizontal:</B> Computation of azimuth and elevation for a given source, time, and location on the Earth</LI><LI><B>Angular Distance:</B> Computation of angular distance between two objects whose positions are given in equatorial coordinates</LI><LI><B>Geodetic Coords:</B> Geodetic/XYZ coordinate conversion</LI><LI><B>LSR Velocity:</B> Computation of the heliocentric, geocentric and topocentric radial velocity of a source from its LSR velocity</LI></UL></QT>"
 msgstr "<QT>Afsnitt mit Ümreken twischen verscheden astronoomsch Koordinatensystemen<UL><LI><B>Galaktsch:</B> Ümreken twischen galaktsch un Äquaterkoordinaten</LI><LI><B>Sichtbor:</B> Utreken vun aktuelle Äquaterkoordinaten ut en geven Epoch</LI><LI><B>Sünnbahn:</B> Ümreken twischen Sünnbahn- un Äquaterkoordinaten</LI><LI><B>Kimm:</B> Utreken vun Azimut un Hööchde bi geven Objekt, Tiet un Standoort op de Eer</LI><LI><B>Winkelafstand:</B> Utreken vun den Winkelafstand twischen twee Objekten, de ehr Positschonen in Äquaterkoordinaten angeven sünd</LI><LI><B>Geodäätsch:</B> Ümreken twischen geodäätsch un XYZ-Koordinaten</LI><LI><B>LRS-Gauheit:</B> Utreken vun en Objekt sien heliozentersch, geozentersch un topozentersch Radiaalgauheit ut sien LRS-Gauheit</LI></UL></QT>"
 
-#. +> trunk stable
+#. +> trunk
+#: tools/astrocalc.cpp:254
+#, fuzzy
+#| msgid "<QT>Section with algorithms regarding information on solar system bodies coordinates and times<UL><LI><B>Planets Coords:</B> Coordinates for the planets, moon and sun  at a given time and from a given position on Earth </LI></UL></QT>"
+msgid "<QT>Section with algorithms regarding information on solar system bodies coordinates and times<UL><LI><B>Planets Coords:</B> Coordinates for the planets, moon and sun at a given time and from a given position on Earth </LI></UL></QT>"
+msgstr "<QT>Afsnitt mit Ümreken vun Koordinaten vun Sünnsysteem-Objekten un Tieden<UL><LI><B>Planetenkoordinaten:</B> Koordinaten för Planeten, Maand un Sünn bi geven Tiet un Standoort op de Eer</LI></UL></QT>"
+
+#. +> stable
 #: tools/astrocalc.cpp:254
 msgid "<QT>Section with algorithms regarding information on solar system bodies coordinates and times<UL><LI><B>Planets Coords:</B> Coordinates for the planets, moon and sun  at a given time and from a given position on Earth </LI></UL></QT>"
 msgstr "<QT>Afsnitt mit Ümreken vun Koordinaten vun Sünnsysteem-Objekten un Tieden<UL><LI><B>Planetenkoordinaten:</B> Koordinaten för Planeten, Maand un Sünn bi geven Tiet un Standoort op de Eer</LI></UL></QT>"
@@ -38044,33 +38175,43 @@ msgid "Label"
 msgstr "Beteker"
 
 #. i18n: ectx: property (text), widget (QLabel, raLabel)
-#. +> trunk
-#: tools/flagmanager.ui:25
-msgid "Right ascension :"
+#. i18n: ectx: property (text), widget (QCheckBox, raCheckBatch)
+#. i18n: ectx: property (text), widget (QLabel, ra0Label)
+#. i18n: ectx: property (text), widget (QLabel, ra1Label)
+#. i18n: ectx: property (text), widget (QLabel, RaLabel)
+#. i18n: ectx: property (text), widget (QLabel, RALabel)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#. +> trunk stable
+#: tools/flagmanager.ui:25 tools/modcalcaltaz.ui:192 tools/modcalcaltaz.ui:373
+#: tools/modcalcangdist.ui:132 tools/modcalcangdist.ui:217
+#: tools/modcalcapcoord.ui:112 tools/modcalcapcoord.ui:328
+#: tools/modcalceclipticcoords.ui:94 tools/modcalceclipticcoords.ui:274
+#: tools/modcalcgalcoord.ui:73 tools/modcalcvlsr.ui:193
+msgid "Right ascension:"
 msgstr "Rektaszenschoon:"
 
 #. i18n: ectx: property (text), widget (QLabel, decLabel)
-#. +> trunk
-#: tools/flagmanager.ui:42
-msgid "Declination :"
+#. i18n: ectx: property (text), widget (QCheckBox, decCheckBatch)
+#. i18n: ectx: property (text), widget (QLabel, dec0Label)
+#. i18n: ectx: property (text), widget (QLabel, dec1Label)
+#. i18n: ectx: property (text), widget (QLabel, DecLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#. +> trunk stable
+#: tools/flagmanager.ui:42 tools/modcalcaltaz.ui:185 tools/modcalcaltaz.ui:347
+#: tools/modcalcangdist.ui:125 tools/modcalcangdist.ui:210
+#: tools/modcalcapcoord.ui:85 tools/modcalcapcoord.ui:300
+#: tools/modcalcapcoord.ui:439 tools/modcalceclipticcoords.ui:101
+#: tools/modcalceclipticcoords.ui:264 tools/modcalcgalcoord.ui:66
+#: tools/modcalcvlsr.ui:236
+msgid "Declination:"
 msgstr "Deklinatschoon:"
-
-#. i18n: ectx: property (text), widget (QLabel, epochLabel)
-#. +> trunk
-#: tools/flagmanager.ui:59
-msgid "Epoch :"
-msgstr "Epoch:"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. +> trunk
-#: tools/flagmanager.ui:79
-msgid "Label :"
-msgstr "Beteker:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. +> trunk
 #: tools/flagmanager.ui:96
-msgid "Icon :"
+#, fuzzy
+#| msgid "Icon :"
+msgid "Icon:"
 msgstr "Lüttbild:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
@@ -38314,38 +38455,6 @@ msgstr "Äquaterkoordinaten (J2000)"
 msgid "Select Object..."
 msgstr "Objekt utsöken..."
 
-#. i18n: ectx: property (text), widget (QLabel, decLabel)
-#. i18n: ectx: property (text), widget (QCheckBox, decCheckBatch)
-#. i18n: ectx: property (text), widget (QLabel, dec0Label)
-#. i18n: ectx: property (text), widget (QLabel, dec1Label)
-#. i18n: ectx: property (text), widget (QLabel, DecLabel)
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#. +> trunk stable
-#: tools/modcalcaltaz.ui:185 tools/modcalcaltaz.ui:347
-#: tools/modcalcangdist.ui:125 tools/modcalcangdist.ui:210
-#: tools/modcalcapcoord.ui:85 tools/modcalcapcoord.ui:300
-#: tools/modcalcapcoord.ui:439 tools/modcalceclipticcoords.ui:101
-#: tools/modcalceclipticcoords.ui:264 tools/modcalcgalcoord.ui:66
-#: tools/modcalcvlsr.ui:236
-msgid "Declination:"
-msgstr "Deklinatschoon:"
-
-#. i18n: ectx: property (text), widget (QLabel, raLabel)
-#. i18n: ectx: property (text), widget (QLabel, ra0Label)
-#. i18n: ectx: property (text), widget (QLabel, ra1Label)
-#. i18n: ectx: property (text), widget (QLabel, RaLabel)
-#. i18n: ectx: property (text), widget (QLabel, RALabel)
-#. i18n: ectx: property (text), widget (QCheckBox, raCheckBatch)
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#. +> trunk stable
-#: tools/modcalcaltaz.ui:192 tools/modcalcangdist.ui:132
-#: tools/modcalcangdist.ui:217 tools/modcalcapcoord.ui:112
-#: tools/modcalcapcoord.ui:328 tools/modcalceclipticcoords.ui:94
-#: tools/modcalceclipticcoords.ui:274 tools/modcalcgalcoord.ui:73
-#: tools/modcalcvlsr.ui:193
-msgid "Right ascension:"
-msgstr "Rektaszenschoon:"
-
 #. i18n: ectx: attribute (title), widget (QWidget, batch)
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
@@ -38368,12 +38477,6 @@ msgstr "Stapelbedrief"
 #: tools/modcalcapcoord.ui:389 tools/modcalceclipticcoords.ui:218
 msgid "Select Fields in Input File"
 msgstr "Feller in Ingaav-Datei utsöken"
-
-#. i18n: ectx: property (text), widget (QCheckBox, raCheckBatch)
-#. +> trunk stable
-#: tools/modcalcaltaz.ui:373 tools/modcalcapcoord.ui:429
-msgid "Right ascention:"
-msgstr "Rektaszenschoon:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, utCheckBatch)
 #. i18n: ectx: property (text), widget (QLabel, timeLabel)
@@ -38486,7 +38589,15 @@ msgid "Angular distance:"
 msgstr "Winkelafstand:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, ra0CheckBatch)
-#. +> trunk stable
+#. +> trunk
+#: tools/modcalcangdist.ui:369
+#, fuzzy
+#| msgid "Initial right ascention:"
+msgid "Initial right ascension:"
+msgstr "Anfang-Rektaszenschoon:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, ra0CheckBatch)
+#. +> stable
 #: tools/modcalcangdist.ui:369
 msgid "Initial right ascention:"
 msgstr "Anfang-Rektaszenschoon:"
@@ -38498,7 +38609,15 @@ msgid "Initial declination:"
 msgstr "Anfang-Deklinatschoon:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, ra1CheckBatch)
-#. +> trunk stable
+#. +> trunk
+#: tools/modcalcangdist.ui:389
+#, fuzzy
+#| msgid "Final right ascention:"
+msgid "Final right ascension:"
+msgstr "Enn-Rektaszenschoon:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, ra1CheckBatch)
+#. +> stable
 #: tools/modcalcangdist.ui:389
 msgid "Final right ascention:"
 msgstr "Enn-Rektaszenschoon:"
@@ -38544,6 +38663,12 @@ msgstr "+00d 00′ 00,0″"
 #: tools/modcalcapcoord.ui:315
 msgid "00h 00m 00.0s"
 msgstr "00h 00m 00,0s"
+
+#. i18n: ectx: property (text), widget (QCheckBox, raCheckBatch)
+#. +> trunk stable
+#: tools/modcalcapcoord.ui:429
+msgid "Right ascention:"
+msgstr "Rektaszenschoon:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #. +> trunk stable
@@ -39243,7 +39368,14 @@ msgstr "1. Jan. 2007  00.00"
 msgid "Specify years for the calculation in the input file."
 msgstr "Johren för de Bereken binnen de Ingaavdatei angeven"
 
-#. +> trunk stable
+#. +> trunk
+#: tools/modcalcvlsr.cpp:172
+#, fuzzy
+#| msgid "Error: I do not know which velocity to use for input."
+msgid "Error: do not know which velocity to use for input."
+msgstr "Fehler: De Gauheit för de Ingaav is nich begäng"
+
+#. +> stable
 #: tools/modcalcvlsr.cpp:172
 msgid "Error: I do not know which velocity to use for input."
 msgstr "Fehler: De Gauheit för de Ingaav is nich begäng"
@@ -41387,11 +41519,6 @@ msgid "minutes"
 msgstr "Minuten"
 
 #. +> stable
-#: widgets/dmsbox.cpp:94
-msgid "seconds"
-msgstr "Sekunnen"
-
-#. +> stable
 #: widgets/dmsbox.cpp:96
 #, kde-format
 msgid "Angle value in %1."
@@ -41572,7 +41699,9 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetTitle)
 #. +> trunk
 #: xplanet/opsxplanet.ui:36
-msgid "Window title :"
+#, fuzzy
+#| msgid "Window title :"
+msgid "Window title:"
 msgstr "Finstertitel:"
 
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_XplanetTitle)
@@ -41584,7 +41713,9 @@ msgstr "Titel vun't XPlanet-Finster"
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetGeometryX)
 #. +> trunk
 #: xplanet/opsxplanet.ui:59
-msgid "Window size : "
+#, fuzzy
+#| msgid "Window size : "
+msgid "Window size: "
 msgstr "Finstergrött: "
 
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_XplanetWidth)
@@ -41616,7 +41747,9 @@ msgstr "Pixels"
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetPath)
 #. +> trunk
 #: xplanet/opsxplanet.ui:141
-msgid "Xplanet path :"
+#, fuzzy
+#| msgid "Xplanet path :"
+msgid "Xplanet path:"
 msgstr "Padd na Xplanet:"
 
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, kcfg_XplanetPath)
@@ -41628,13 +41761,17 @@ msgstr "Giff hier den Padd na't Programm \"Xplanet\" in."
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_XplanetFOV)
 #. +> trunk
 #: xplanet/opsxplanet.ui:190
-msgid "Use kstars FOV ?"
+#, fuzzy
+#| msgid "Use kstars FOV ?"
+msgid "Use kstars's FOV?"
 msgstr "KStars-SF bruken?"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_XplanetWait)
 #. +> trunk
 #: xplanet/opsxplanet.ui:203
-msgid "Update ?"
+#, fuzzy
+#| msgid "Update ?"
+msgid "Update?"
 msgstr "Opfrischen?"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_XplanetWait)
@@ -41649,16 +41786,25 @@ msgstr "Wenn anmaakt, warrt de Ansicht opfrischt."
 msgid "Update every"
 msgstr "Opfrischen all"
 
-#. i18n: ectx: property (text), widget (QLabel, textLabelXplanetSecondes)
+#. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_XplanetWaitValue)
+#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, kcfg_XplanetWaitValue)
 #. +> trunk
+#: xplanet/opsxplanet.ui:218 xplanet/opsxplanet.ui:221
+msgid "Number of seconde to wait before updating"
+msgstr "Töövtiet ehr't Opfrischen, in Sekunnen"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabelXplanetSecondes)
+#. +> trunk stable
 #: xplanet/opsxplanet.ui:231
-msgid "secondes"
+msgid "seconds"
 msgstr "Sekunnen"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetGlare)
 #. +> trunk
 #: xplanet/opsxplanet.ui:240
-msgid "Glare of Sun :"
+#, fuzzy
+#| msgid "Glare of Sun :"
+msgid "Glare of Sun:"
 msgstr "Sünn-Överstrahlen:"
 
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_XplanetGlare)
@@ -41670,7 +41816,9 @@ msgstr "Halfmaat vun de Överstrahlen rund de Sünn."
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetMagnitude)
 #. +> trunk
 #: xplanet/opsxplanet.ui:263
-msgid "Base magnitude :"
+#, fuzzy
+#| msgid "Base magnitude :"
+msgid "Base magnitude:"
 msgstr "Basis-Magnituud:"
 
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_XplanetMagnitude)
@@ -41688,7 +41836,9 @@ msgstr "Egen Steernkoort bruken?"
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_XplanetStarmap)
 #. +> trunk
 #: xplanet/opsxplanet.ui:292
-msgid "Star map :"
+#, fuzzy
+#| msgid "Star map :"
+msgid "Star map:"
 msgstr "Steernkoort:"
 
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_XplanetArcFilePath)
@@ -41706,25 +41856,33 @@ msgstr "Padd na de Instellendatei"
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, kcfg_XplanetConfigFilePath)
 #. +> trunk
 #: xplanet/opsxplanet.ui:340
-msgid "Use specified the configuration file"
+#, fuzzy
+#| msgid "Use specified the configuration file"
+msgid "Use the specified configuration file"
 msgstr "Angeven Instellendatei bruken"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_XplanetConfigFile)
 #. +> trunk
 #: xplanet/opsxplanet.ui:347
-msgid "Config file :"
+#, fuzzy
+#| msgid "Config file :"
+msgid "Config file:"
 msgstr "Instellendatei:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_XplanetArcFile)
 #. +> trunk
 #: xplanet/opsxplanet.ui:354
-msgid "Arc file :"
+#, fuzzy
+#| msgid "Arc file :"
+msgid "Arc file:"
 msgstr "\"Arc\"-Datei:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetQuality)
 #. +> trunk
 #: xplanet/opsxplanet.ui:381
-msgid "Output file quality :"
+#, fuzzy
+#| msgid "Output file quality :"
+msgid "Output file quality:"
 msgstr "Gööd vun de Utgaavdatei:"
 
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_XplanetQuality)
@@ -41754,7 +41912,9 @@ msgstr "GMT"
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetLabelString)
 #. +> trunk
 #: xplanet/opsxplanet.ui:484
-msgid "Label string :"
+#, fuzzy
+#| msgid "Label string :"
+msgid "Label string:"
 msgstr "Textfeld-Tekenkeed:"
 
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_XplanetLabelString)
@@ -41766,7 +41926,9 @@ msgstr "Den Text för de eerste Reeg vun't Textfeld angeven"
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetDateFormat)
 #. +> trunk
 #: xplanet/opsxplanet.ui:501
-msgid "Date format :"
+#, fuzzy
+#| msgid "Date format :"
+msgid "Date format:"
 msgstr "Formaat vun't Datum:"
 
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_XplanetDateFormat)
@@ -41775,10 +41937,19 @@ msgstr "Formaat vun't Datum:"
 msgid "Specify the format for the date/time label."
 msgstr "Dat Datum- un Tietformaat för dat Textfeld fastleggen"
 
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, kcfg_XplanetDateFormat)
+#. +> trunk
+#: xplanet/opsxplanet.ui:511
+#, no-c-format
+msgid "Specify the format for the date/time label.  This format string is passed to strftime(3).  The default is \"%c %Z\", which shows the date, time, and time zone in the  locale’s  appropriate date and time representation."
+msgstr "Dat Datum- un Tietformaat för dat Textfeld fastleggen. Disse Formaat-Tekenkeed warrt na strftime(3) övergeven. Standard is \"%c %Z\". Dit wiest dat Datum, de Tiet un dat Tietrebeet in't lokaal Datum- un Tietformaat."
+
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetFontSize)
 #. +> trunk
 #: xplanet/opsxplanet.ui:521
-msgid "Font size :"
+#, fuzzy
+#| msgid "Font size :"
+msgid "Font size:"
 msgstr "Schriftgrött:"
 
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, kcfg_XplanetFontSize)
@@ -41787,16 +41958,12 @@ msgstr "Schriftgrött:"
 msgid "Label font size"
 msgstr "Textfeld-Schriftgrött"
 
-#. i18n: ectx: property (text), widget (QLabel, textLabelXplanetColor)
-#. +> trunk
-#: xplanet/opsxplanet.ui:538
-msgid "Color :"
-msgstr "Klöör:"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabelLabelPos)
 #. +> trunk
 #: xplanet/opsxplanet.ui:628
-msgid "Label position :"
+#, fuzzy
+#| msgid "Label position :"
+msgid "Label position:"
 msgstr "Textfeld-Positschoon:"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_XplanetLabel)
@@ -41820,14 +41987,24 @@ msgstr "Markeren"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_XplanetMarkerFile)
 #. +> trunk
 #: xplanet/opsxplanet.ui:679
-msgid "Use marker file ?"
+#, fuzzy
+#| msgid "Use marker file ?"
+msgid "Use marker file?"
 msgstr "Markeren-Datei bruken?"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_XplanetMarkerFile)
 #. +> trunk
 #: xplanet/opsxplanet.ui:685
-msgid "Use marker file :"
+#, fuzzy
+#| msgid "Use marker file :"
+msgid "Use marker file:"
 msgstr "Markeren-Datei bruken:"
+
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, kcfg_XplanetMarkerFilePath)
+#. +> trunk
+#: xplanet/opsxplanet.ui:695
+msgid "Specify a file containing user defined marker data to display against the background stars."
+msgstr "Giff en Datei mit egen Markeren-Daten an, de gegen de Achtergrundsteerns teekt warrt."
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_XplanetMarkerBounds)
 #. +> trunk
@@ -41844,7 +42021,9 @@ msgstr "Bildrebeetkoordinaten för elk Markeren na en Datei schrieven."
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_XplanetMarkerBounds)
 #. +> trunk
 #: xplanet/opsxplanet.ui:708
-msgid "Write marker bounds to :"
+#, fuzzy
+#| msgid "Write marker bounds to :"
+msgid "Write marker bounds to:"
 msgstr "Markerengrenzen schrieven na:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_XplanetLatLong)
@@ -41859,6 +42038,12 @@ msgstr "Den Kieker op en Breed stellen vun "
 msgid " and longitude "
 msgstr " un Längde "
 
+#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, kcfg_XplanetLongitude)
+#. +> trunk
+#: xplanet/opsxplanet.ui:792
+msgid "Place the observer above the specified longitude (in degrees).  Longitude is positive going east, negative going west (for the earth and moon), so for example Los Angeles is at  -118  or 242.  The default value is 0."
+msgstr "Den Kieker op de angeven Längde (in Graad) stellen. De Längde is Richt Oost positiv, un na West negativ (för de Eer un den Maand). Jaad liggt a.B. op -8 oder 352. De Standardweert is \"0\"."
+
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. +> trunk
 #: xplanet/opsxplanet.ui:805
@@ -41868,7 +42053,9 @@ msgstr "in Graad"
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetProjection)
 #. +> trunk
 #: xplanet/opsxplanet.ui:847
-msgid "Projection :"
+#, fuzzy
+#| msgid "Projection :"
+msgid "Projection:"
 msgstr "Projizeren:"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_XplanetProjection)
@@ -41876,6 +42063,12 @@ msgstr "Projizeren:"
 #: xplanet/opsxplanet.ui:854
 msgid "The projection type"
 msgstr "De Projizeertyp"
+
+#. i18n: ectx: property (whatsThis), widget (KComboBox, kcfg_XplanetProjection)
+#. +> trunk
+#: xplanet/opsxplanet.ui:857
+msgid "The default is  no projection.  Multiple bodies will not be shown if this option is specified, although shadows will still be drawn."
+msgstr "Standardwies is \"Projizeren\" utmaakt. Wenn disse Optschoon anmaakt is, warrt en Reeg vun Objekten nich wiest, man Schaddens warrt noch dorstellt."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBoxBackground)
 #. +> trunk
@@ -41886,7 +42079,9 @@ msgstr "Achtergrund"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_XplanetBackground)
 #. +> trunk
 #: xplanet/opsxplanet.ui:890
-msgid "Use background ?"
+#, fuzzy
+#| msgid "Use background ?"
+msgid "Use background?"
 msgstr "Achtergrundklöör bruken?"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_XplanetBackground)
@@ -41898,7 +42093,9 @@ msgstr "Wenn anmaakt, warrt en Datei oder en Klöör as Achtergrund bruukt"
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_XplanetBackgroundImage)
 #. +> trunk
 #: xplanet/opsxplanet.ui:905
-msgid "Background image :"
+#, fuzzy
+#| msgid "Background image :"
+msgid "Background image:"
 msgstr "Achtergrundbild:"
 
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_XplanetBackgroundImagePath)
@@ -41916,7 +42113,9 @@ msgstr "Giff hier den Padd na de Achtergrundbilddatei in."
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_XplanetBackgroundColor)
 #. +> trunk
 #: xplanet/opsxplanet.ui:929
-msgid "Background color :"
+#, fuzzy
+#| msgid "Background color :"
+msgid "Background color:"
 msgstr "Achtergrundklöör:"
 
 #. i18n: ectx: property (whatsThis), widget (KColorButton, kcfg_XplanetBackgroundColorValue)
@@ -41924,6 +42123,24 @@ msgstr "Achtergrundklöör:"
 #: xplanet/opsxplanet.ui:942
 msgid "Set the color for the background."
 msgstr "De Klöör för den Achtergrund fastleggen."
+
+#~ msgid "Right ascension :"
+#~ msgstr "Rektaszenschoon:"
+
+#~ msgid "Declination :"
+#~ msgstr "Deklinatschoon:"
+
+#~ msgid "Epoch :"
+#~ msgstr "Epoch:"
+
+#~ msgid "Label :"
+#~ msgstr "Beteker:"
+
+#~ msgid "secondes"
+#~ msgstr "Sekunnen"
+
+#~ msgid "Color :"
+#~ msgstr "Klöör:"
 
 #~ msgid "Night duration: 1 hour"
 #~ msgid_plural "Night duration: %1 hours"

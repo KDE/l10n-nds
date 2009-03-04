@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: khotkeys\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-02-27 10:50+0100\n"
-"PO-Revision-Date: 2009-02-28 00:38+0100\n"
+"POT-Creation-Date: 2009-03-02 09:56+0100\n"
+"PO-Revision-Date: 2009-03-03 23:38+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -163,6 +163,7 @@ msgstr "1"
 #. i18n: ectx: property (text), widget (QPushButton, new_button)
 #. +> trunk
 #: kcm_hotkeys/conditions/conditions_widget.ui:33
+#: kcm_hotkeys/hotkeys_context_menu.cpp:156
 msgid "New"
 msgstr "Nieg"
 
@@ -175,7 +176,7 @@ msgstr "Bewerken..."
 #. i18n: ectx: property (text), widget (QPushButton, delete_button)
 #. +> trunk stable
 #: kcm_hotkeys/conditions/conditions_widget.ui:47
-#: kcm_hotkeys/hotkeys_context_menu.cpp:137
+#: kcm_hotkeys/hotkeys_context_menu.cpp:136
 msgid "Delete"
 msgstr "Wegdoon"
 
@@ -197,11 +198,24 @@ msgstr "Ingaavakschonen-Dämoon bi't Anmellen opropen"
 msgid "Gestures"
 msgstr "Muustekens"
 
-#. i18n: ectx: property (text), widget (QCheckBox, gestures_enabled)
+#. i18n: ectx: property (text), widget (QLabel, gestures_timeout_label)
 #. +> trunk
-#: kcm_hotkeys/global_settings_widget.ui:60
-msgid "Enable Gestures"
-msgstr "Muustekens anmaken"
+#: kcm_hotkeys/global_settings_widget.ui:63
+msgid "Timeout"
+msgstr "Tietgrenz"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, gestures_timeout)
+#. +> trunk
+#: kcm_hotkeys/global_settings_widget.ui:76
+msgid "ms"
+msgstr "ms"
+
+#. i18n: ectx: property (text), widget (QLabel, gestures_button_label)
+#. +> trunk
+#: kcm_hotkeys/global_settings_widget.ui:105
+#| msgid "Mouse button:"
+msgid "Mouse Button"
+msgstr "Muusknoop"
 
 #. +> trunk
 #: kcm_hotkeys/helper_widgets/edit_gesture_dialog.cpp:33
@@ -261,9 +275,9 @@ msgstr "Finster-Informatschonen"
 #. i18n: ectx: attribute (title), widget (QWidget, comment_tab)
 #. +> trunk stable
 #: kcm_hotkeys/helper_widgets/window_definition_widget.ui:33
-#: kcm_hotkeys/hotkeys_context_menu.cpp:244
-#: kcm_hotkeys/hotkeys_context_menu.cpp:272
-#: kcm_hotkeys/hotkeys_context_menu.cpp:300 kcm_hotkeys/hotkeys_model.cpp:91
+#: kcm_hotkeys/hotkeys_context_menu.cpp:274
+#: kcm_hotkeys/hotkeys_context_menu.cpp:302
+#: kcm_hotkeys/hotkeys_context_menu.cpp:330 kcm_hotkeys/hotkeys_model.cpp:91
 #: kcm_hotkeys/hotkeys_widget_base.ui:23
 msgid "Comment"
 msgstr "Kommentar"
@@ -393,71 +407,84 @@ msgid "Dock"
 msgstr "Indockt"
 
 #. +> trunk stable
-#: kcm_hotkeys/hotkeys_context_menu.cpp:41
-#: kcm_hotkeys/hotkeys_context_menu.cpp:53
+#: kcm_hotkeys/hotkeys_context_menu.cpp:43
+#: kcm_hotkeys/hotkeys_context_menu.cpp:55
 msgid "Test"
 msgstr "Test"
 
 #. +> trunk stable
-#: kcm_hotkeys/hotkeys_context_menu.cpp:127
-#: kcm_hotkeys/hotkeys_context_menu.cpp:143
-#: kcm_hotkeys/hotkeys_context_menu.cpp:244
-#: kcm_hotkeys/hotkeys_context_menu.cpp:300 kcm_hotkeys/hotkeys_model.cpp:91
+#: kcm_hotkeys/hotkeys_context_menu.cpp:129
+#: kcm_hotkeys/hotkeys_context_menu.cpp:142
+#: kcm_hotkeys/hotkeys_context_menu.cpp:274
+#: kcm_hotkeys/hotkeys_context_menu.cpp:330 kcm_hotkeys/hotkeys_model.cpp:91
 msgid "New Group"
 msgstr "Nieg Koppel"
 
-#. +> trunk stable
-#: kcm_hotkeys/hotkeys_context_menu.cpp:156
-msgid "New Global Shortcut"
-msgstr "Nieg globaal Tastkombinatschoon"
+#. +> trunk
+#: kcm_hotkeys/hotkeys_context_menu.cpp:147
+msgid "Export"
+msgstr "Exporteren"
 
 #. +> trunk
-#: kcm_hotkeys/hotkeys_context_menu.cpp:169
-msgid "New Window Action"
-msgstr "Nieg Finster-Akschoon"
+#: kcm_hotkeys/hotkeys_context_menu.cpp:148
+msgid "Import"
+msgstr "Importeren"
 
 #. +> trunk
-#: kcm_hotkeys/hotkeys_context_menu.cpp:182
-msgid "New Mouse Gesture Action"
-msgstr "Nieg Muusteken"
+#: kcm_hotkeys/hotkeys_context_menu.cpp:162
+#| msgid "New Global Shortcut"
+msgid "Global Shortcut"
+msgstr "Globaal Tastkombinatschoon"
+
+#. +> trunk
+#: kcm_hotkeys/hotkeys_context_menu.cpp:175
+#| msgid "New Window Action"
+msgid "Window Action"
+msgstr "Finster-Akschoon"
+
+#. +> trunk
+#: kcm_hotkeys/hotkeys_context_menu.cpp:188
+#| msgid "New Mouse Gesture Action"
+msgid "Mouse Gesture Action"
+msgstr "Muusteken"
 
 #. +> trunk stable
-#: kcm_hotkeys/hotkeys_context_menu.cpp:201
+#: kcm_hotkeys/hotkeys_context_menu.cpp:231
 msgid "Command/URL"
 msgstr "Befehl/URL"
 
 #. +> trunk stable
-#: kcm_hotkeys/hotkeys_context_menu.cpp:208
+#: kcm_hotkeys/hotkeys_context_menu.cpp:238
 msgid "D-Bus Command"
 msgstr "D-Bus-Befehl"
 
 #. +> trunk stable
-#: kcm_hotkeys/hotkeys_context_menu.cpp:215
+#: kcm_hotkeys/hotkeys_context_menu.cpp:245
 msgid "K-Menu Entry"
 msgstr "K-Menü-Indrag"
 
 #. +> trunk
-#: kcm_hotkeys/hotkeys_context_menu.cpp:222
+#: kcm_hotkeys/hotkeys_context_menu.cpp:252
 msgid "Send Keyboard Input"
 msgstr "Tastatuuringaav loosstüern"
 
 #. +> trunk
-#: kcm_hotkeys/hotkeys_context_menu.cpp:272
+#: kcm_hotkeys/hotkeys_context_menu.cpp:302
 msgid "New Action"
 msgstr "Nieg Akschoon"
 
 #. +> trunk stable
-#: kcm_hotkeys/hotkeys_model.cpp:381
+#: kcm_hotkeys/hotkeys_model.cpp:387
 msgid "Name"
 msgstr "Naam"
 
 #. +> trunk stable
-#: kcm_hotkeys/hotkeys_model.cpp:385
+#: kcm_hotkeys/hotkeys_model.cpp:391
 msgid "Enabled"
 msgstr "Anmaakt"
 
 #. +> trunk stable
-#: kcm_hotkeys/hotkeys_model.cpp:388
+#: kcm_hotkeys/hotkeys_model.cpp:394
 msgid "Type"
 msgstr "Typ"
 
@@ -472,18 +499,17 @@ msgid "Copyright 2008 (c) Michael Jansen"
 msgstr "Copyright 2008 (c) Michael Jansen"
 
 #. +> trunk stable
-#: kcm_hotkeys/kcm_hotkeys.cpp:108
+#: kcm_hotkeys/kcm_hotkeys.cpp:108 update/update.cpp:41
 msgid "Michael Jansen"
 msgstr "Michael Jansen"
 
 #. +> trunk stable
-#: kcm_hotkeys/kcm_hotkeys.cpp:109
+#: kcm_hotkeys/kcm_hotkeys.cpp:109 update/update.cpp:41
 msgid "Maintainer"
 msgstr "Pleger"
 
 #. +> trunk
 #: kcm_hotkeys/kcm_hotkeys.cpp:308
-#| msgid "The current action has unsaved changes. If you continue those changes will be lost!"
 msgid "The current action has unsaved changes. If you continue these changes will be lost."
 msgstr "Bi disse Akschoon gifft dat Ännern, de Du noch nich sekert hest. Maakst Du nu wieder, kaamt se weg!"
 
@@ -492,9 +518,9 @@ msgstr "Bi disse Akschoon gifft dat Ännern, de Du noch nich sekert hest. Maakst
 msgid "Save changes"
 msgstr "Ännern sekern"
 
-#. +> trunk stable
-#: kcm_hotkeys/kcm_hotkeys.cpp:334
-msgid "Unable to contact khotkeys. Your changes are saved but i failed to activate them"
+#. +> trunk
+#: kcm_hotkeys/kcm_hotkeys.cpp:334 kcm_hotkeys/kcm_hotkeys.cpp:356
+msgid "Unable to contact khotkeys. Your changes are saved, but they could not be activated."
 msgstr "\"khotkeys\" lett sik nich faatkriegen. De ännern sünd sekert, man laat sik nich anmaken."
 
 #. +> stable
@@ -502,10 +528,9 @@ msgstr "\"khotkeys\" lett sik nich faatkriegen. De ännern sünd sekert, man laa
 msgid "The current action has unsaved changes. If you continue those changes will be lost!"
 msgstr "Bi disse Akschoon gifft dat Ännern, de Du noch nich sekert hest. Maakst Du nu wieder, kaamt se weg!"
 
-#. +> trunk
-#: kcm_hotkeys/kcm_hotkeys.cpp:356
-#| msgid "Unable to contact khotkeys. Your changes are saved but i failed to activate them"
-msgid "Unable to contact khotkeys. Your changes are saved, but they could not be activated."
+#. +> stable
+#: kcm_hotkeys/kcm_hotkeys.cpp:366 kcm_hotkeys/kcm_hotkeys.cpp:388
+msgid "Unable to contact khotkeys. Your changes are saved but i failed to activate them"
 msgstr "\"khotkeys\" lett sik nich faatkriegen. De ännern sünd sekert, man laat sik nich anmaken."
 
 #. i18n: ectx: property (text), widget (QPushButton, settings_button)
@@ -580,8 +605,27 @@ msgstr "D-Bus: "
 msgid "Keyboard input: "
 msgstr "Tastatuuringaav: "
 
+#. +> trunk
+#: libkhotkeysprivate/actions/menuentry_action.cpp:80
+msgid "No service configured!"
+msgstr "Keen Deenst instellt!"
+
+#. +> trunk
+#: libkhotkeysprivate/actions/menuentry_action.cpp:81
+#: libkhotkeysprivate/actions/menuentry_action.cpp:90
+#, kde-format
+#| msgid "Input Actions Daemon"
+msgid "Input Action : %1"
+msgstr "Ingaavakschoon: %1"
+
+#. +> trunk
+#: libkhotkeysprivate/actions/menuentry_action.cpp:89
+#, kde-format
+msgid "Failed to start service '%1'!"
+msgstr "De Deenst \"%1\" lett sik nich opropen!"
+
 #. +> trunk stable
-#: libkhotkeysprivate/actions/menuentry_action.cpp:87
+#: libkhotkeysprivate/actions/menuentry_action.cpp:104
 msgid "Menu entry: "
 msgstr "Menüindrag: "
 
@@ -619,17 +663,17 @@ msgid "Menu Editor entries"
 msgstr "Menüeditor-Indrääg"
 
 #. +> trunk stable
-#: libkhotkeysprivate/settings.cpp:272
+#: libkhotkeysprivate/settings.cpp:226
 msgid "This \"actions\" file has already been imported before. Are you sure you want to import it again?"
 msgstr "Disse \"Akschonen\"-Datei is al maal importeert worrn. Büst Du seker, wat Du ehr nochmaal importeren wullt?"
 
 #. +> trunk stable
-#: libkhotkeysprivate/settings.cpp:283
+#: libkhotkeysprivate/settings.cpp:241
 msgid "This \"actions\" file has no ImportId field and therefore it cannot be determined whether or not it has been imported already. Are you sure you want to import it?"
 msgstr "Disse \"Akschonen\"-Datei bargt keen \"ImportID\"-Feld. Dat lett sik nich fastslaan, wat se al maal importeert wöör. Büst Du seker, wat Du ehr importeren wullt?"
 
 #. +> trunk stable
-#: libkhotkeysprivate/settings.cpp:452
+#: libkhotkeysprivate/settings.cpp:532
 msgid "These entries were created using Menu Editor."
 msgstr "Disse Indrääg sünd mit den Menüeditor opstellt worrn."
 
@@ -658,21 +702,38 @@ msgstr "Finsterakschoon:"
 msgid "Window simple: "
 msgstr "Eenfach Finster: "
 
-#. +> trunk stable
+#. +> stable
 #: update/update.cpp:31
 msgid "KHotKeys Update"
 msgstr "KHotKeys-Opfrischen"
 
-#. +> trunk stable
+#. +> stable
 #: update/update.cpp:32
 msgid "KHotKeys update utility"
 msgstr "KHotKeys-Opfrischprogramm"
 
+#. +> trunk
+#: update/update.cpp:36 update/update.cpp:38
+#| msgid "KHotKeys Update"
+msgid "KHotKeys Update Helper"
+msgstr "KHotKeys-Opfrischhölper"
+
+#. +> trunk
+#: update/update.cpp:40
+#| msgid "(c) 1999-2005 Lubos Lunak"
+msgid "(C) 2003-2009 Lubos Lunak"
+msgstr "(C) 2003-2009 Lubos Lunak"
+
 #. +> trunk stable
-#: update/update.cpp:35
+#: update/update.cpp:46
 #, kde-format
 msgid "Id of the script to add to %1"
 msgstr "ID vun't Skript, dat Du \"%1\" tofögen wullt"
+
+#. +> stable
+#: kcm_hotkeys/hotkeys_tree_view.cpp:91
+msgid "New Global Shortcut"
+msgstr "Nieg globaal Tastkombinatschoon"
 
 #. +> stable
 #: kcm_hotkeys/hotkeys_widget_base.cpp:71
@@ -730,6 +791,9 @@ msgstr "Hier en Kommentar tofögen"
 #: kcm_hotkeys/ui/hotkeys_widget_base.ui:32
 msgid "&Enabled"
 msgstr "&Anmaakt"
+
+#~ msgid "Enable Gestures"
+#~ msgstr "Muustekens anmaken"
 
 #~ msgid "Form"
 #~ msgstr "Formulor"
@@ -898,9 +962,6 @@ msgstr "&Anmaakt"
 #~ msgid "Button 9 (if available)"
 #~ msgstr "Knoop 9 (wenn verföögbor)"
 
-#~ msgid "(c) 1999-2005 Lubos Lunak"
-#~ msgstr "(c) 1999-2005 Lubos Lunak"
-
 #~ msgid "Lubos Lunak"
 #~ msgstr "Lubos Lunak"
 
@@ -978,9 +1039,6 @@ msgstr "&Anmaakt"
 
 #~ msgid "Disable mouse gestures globally"
 #~ msgstr "Muustekens heel utmaken"
-
-#~ msgid "Mouse button:"
-#~ msgstr "Muusknoop:"
 
 #~ msgid "Gesture timeout (ms):"
 #~ msgstr "Tietgrenz för Muusteken (ms):"
