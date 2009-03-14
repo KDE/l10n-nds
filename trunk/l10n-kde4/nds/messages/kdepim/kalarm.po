@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kalarm\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-03-13 10:22+0100\n"
+"POT-Creation-Date: 2009-03-14 10:51+0100\n"
 "PO-Revision-Date: 2009-02-10 23:42+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -94,6 +94,14 @@ msgstr "Daag"
 msgctxt "@item:inlistbox Time units"
 msgid "weeks"
 msgstr "Weken"
+
+#: lib/filedialog.cpp:55
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Failed to open file"
+msgctxt "@option:check"
+msgid "Append to existing file"
+msgstr "Datei lett sik nich opmaken"
 
 #: kalarmapp.cpp:305 kalarmapp.cpp:375 kalarmapp.cpp:377 kalarmapp.cpp:387
 #: kalarmapp.cpp:389 kalarmapp.cpp:404 kalarmapp.cpp:493 kalarmapp.cpp:495
@@ -2944,17 +2952,25 @@ msgctxt "@action"
 msgid "Im&port..."
 msgstr "Im&porteren..."
 
-#: resourceselector.cpp:374
+#: resourceselector.cpp:321 mainwindow.cpp:495
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Im&port..."
+msgctxt "@action"
+msgid "E&xport..."
+msgstr "Im&porteren..."
+
+#: resourceselector.cpp:378
 msgctxt "@action"
 msgid "Use as &Default for Active Alarms"
 msgstr "As &Standard för aktiev Alarms bruken"
 
-#: resourceselector.cpp:375
+#: resourceselector.cpp:379
 msgctxt "@action"
 msgid "Use as &Default for Archived Alarms"
 msgstr "As &Standard för aflopen Alarms bruken"
 
-#: resourceselector.cpp:376
+#: resourceselector.cpp:380
 msgctxt "@action"
 msgid "Use as &Default for Alarm Templates"
 msgstr "As &Standard för Alarmvörlagen bruken"
@@ -3835,13 +3851,13 @@ msgid "Cannot defer reminder past the main alarm time (%1)"
 msgstr ""
 "Vöranstoot lett sik nich op en Tiet achter den Hööftalarm (%1) verschuven"
 
-#: alarmcalendar.cpp:274 alarmcalendar.cpp:586
+#: alarmcalendar.cpp:276 alarmcalendar.cpp:588
 #, kde-format
 msgctxt "@info"
 msgid "Cannot download calendar: <filename>%1</filename>"
 msgstr "Disse Kalenner lett sik nich daalladen: <filename>%1</filename>"
 
-#: alarmcalendar.cpp:289
+#: alarmcalendar.cpp:291
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -3851,28 +3867,57 @@ msgstr ""
 "<para>Fehler bi't Laden vun den Kalenner:</para><para><filename>%1</"
 "filename></para><para>Bitte richt de Datei, oder do ehr weg.</para>"
 
-#: alarmcalendar.cpp:352
+#: alarmcalendar.cpp:354
 #, kde-format
 msgctxt "@info"
 msgid "Failed to save calendar to <filename>%1</filename>"
 msgstr "De Kalenner lett sik nich as <filename>%1</filename> sekern"
 
-#: alarmcalendar.cpp:361
+#: alarmcalendar.cpp:363
 #, kde-format
 msgctxt "@info"
 msgid "Cannot upload calendar to <filename>%1</filename>"
 msgstr "Kalenner lett sik nich na <filename>%1</filename> hoochladen"
 
-#: alarmcalendar.cpp:555
+#: alarmcalendar.cpp:557 alarmcalendar.cpp:699
 msgctxt "@info/plain"
 msgid "Calendar Files"
 msgstr "Kalennerdateien"
 
-#: alarmcalendar.cpp:577 alarmcalendar.cpp:598
+#: alarmcalendar.cpp:579 alarmcalendar.cpp:600
 #, kde-format
 msgctxt "@info"
 msgid "Could not load calendar <filename>%1</filename>."
 msgstr "Kalenner <filename>%1</filename> lett sik nich laden."
+
+#: alarmcalendar.cpp:700
+msgctxt "@title:window"
+msgid "Choose Export Calendar"
+msgstr ""
+
+#: alarmcalendar.cpp:722
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Cannot upload calendar to <filename>%1</filename>"
+msgctxt "@info"
+msgid "Error loading calendar to append to:<nl/><filename>%1</filename>"
+msgstr "Kalenner lett sik nich na <filename>%1</filename> hoochladen"
+
+#: alarmcalendar.cpp:757
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Failed to save calendar to <filename>%1</filename>"
+msgctxt "@info"
+msgid "Failed to save new calendar to:<nl/><filename>%1</filename>"
+msgstr "De Kalenner lett sik nich as <filename>%1</filename> sekern"
+
+#: alarmcalendar.cpp:763
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Cannot upload calendar to <filename>%1</filename>"
+msgctxt "@info"
+msgid "Cannot upload new calendar to:<nl/><filename>%1</filename>"
+msgstr "Kalenner lett sik nich na <filename>%1</filename> hoochladen"
 
 #: templatelistview.cpp:37 templatedlg.cpp:83
 msgctxt "@info:whatsthis"
@@ -4725,19 +4770,19 @@ msgstr "Över't Inregen vun Nettbreven na feern Reekners Bescheed geven"
 msgid "&File"
 msgstr "&Datei"
 
-#. i18n: file: kalarmui.rc:28
+#. i18n: file: kalarmui.rc:29
 #. i18n: ectx: Menu (view)
 #: rc.cpp:358 rc.cpp:724
 msgid "&View"
 msgstr "&Ansicht"
 
-#. i18n: file: kalarmui.rc:39
+#. i18n: file: kalarmui.rc:40
 #. i18n: ectx: Menu (actions)
 #: rc.cpp:361 rc.cpp:727
 msgid "&Actions"
 msgstr "&Akschonen"
 
-#. i18n: file: kalarmui.rc:53
+#. i18n: file: kalarmui.rc:55
 #. i18n: ectx: Menu (settings)
 #: rc.cpp:364 rc.cpp:730
 msgid "&Settings"
@@ -4951,28 +4996,28 @@ msgctxt "@info"
 msgid "Cannot open audio file: <filename>%1</filename>"
 msgstr "De Klangdatei <filename>%1</filename> lett sik nich opmaken"
 
-#: messagewin.cpp:1572
+#: messagewin.cpp:1577
 msgctxt "@info"
 msgid "Do you really want to acknowledge this alarm?"
 msgstr "Wullt Du dissen Alarm redig tomaken?"
 
-#: messagewin.cpp:1573
+#: messagewin.cpp:1578
 msgctxt "@action:button"
 msgid "Acknowledge Alarm"
 msgstr "Alarm tomaken"
 
-#: messagewin.cpp:1573
+#: messagewin.cpp:1578
 msgctxt "@action:button"
 msgid "Acknowledge"
 msgstr "Tomaken"
 
-#: messagewin.cpp:1620
+#: messagewin.cpp:1625
 msgctxt "@info"
 msgid "Unable to locate this email in <application>KMail</application>"
 msgstr ""
 "De Nettbreef lett sik binnen <application>KMail</application> nich finnen"
 
-#: messagewin.cpp:1750
+#: messagewin.cpp:1755
 msgctxt "@info"
 msgid "<para>Cannot defer alarm:</para><para>Alarm not found.</para>"
 msgstr ""
@@ -5671,11 +5716,19 @@ msgid "Import &Birthdays..."
 msgstr "Ge&boortsdaag importeren..."
 
 #: mainwindow.cpp:491
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Import &Alarms..."
+msgctxt "@action"
+msgid "E&xport Selected Alarms..."
+msgstr "&Alarms importeren..."
+
+#: mainwindow.cpp:499
 msgctxt "@action"
 msgid "&Refresh Alarms"
 msgstr "Alarms opf&rischen"
 
-#: mainwindow.cpp:695
+#: mainwindow.cpp:704
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to delete the selected alarm?"
@@ -5683,66 +5736,66 @@ msgid_plural "Do you really want to delete the %1 selected alarms?"
 msgstr[0] "Wullt Du den utsöchten Alarm redig wegdoon?"
 msgstr[1] "Wullt Du de %1 utsöchten Alarms redig wegdoon?"
 
-#: mainwindow.cpp:697
+#: mainwindow.cpp:706
 msgctxt "@title:window"
 msgid "Delete Alarm"
 msgid_plural "Delete Alarms"
 msgstr[0] "Alarm wegdoon"
 msgstr[1] "Alarms wegdoon"
 
-#: mainwindow.cpp:698 templatedlg.cpp:186
+#: mainwindow.cpp:707 templatedlg.cpp:186
 msgctxt "@action:button"
 msgid "&Delete"
 msgstr "&Wegdoon"
 
-#: mainwindow.cpp:838
+#: mainwindow.cpp:858
 msgctxt "@info"
 msgid "Import birthdays"
 msgstr "Geboortsdaag importeren"
 
-#: mainwindow.cpp:1008
+#: mainwindow.cpp:1028
 #, kde-format
 msgctxt "@action Undo/Redo [action]"
 msgid "%1 %2"
 msgstr "%1: %2"
 
-#: mainwindow.cpp:1009
+#: mainwindow.cpp:1029
 #, kde-format
 msgctxt "@action Undo [action]: message"
 msgid "%1 %2: %3"
 msgstr "%3 - %2 %1"
 
-#: mainwindow.cpp:1283
+#: mainwindow.cpp:1303
 msgctxt "@item:inlistbox"
 msgid "Display Alarm"
 msgstr "Alarm wiesen"
 
-#: mainwindow.cpp:1285
+#: mainwindow.cpp:1305
 msgctxt "@item:inlistbox"
 msgid "Email Alarm"
 msgstr "Nettpostalarm"
 
-#: mainwindow.cpp:1287
+#: mainwindow.cpp:1307
 msgctxt "@item:inlistbox"
 msgid "Command Alarm"
 msgstr "Befehlalarm"
 
-#: mainwindow.cpp:1289
+#: mainwindow.cpp:1309
 msgctxt "@title:window"
 msgid "Alarm Type"
 msgstr "Alarmtyp"
 
-#: mainwindow.cpp:1290
+#: mainwindow.cpp:1310
 msgctxt "@info"
 msgid "Choose alarm type to create:"
 msgstr "Alarmtyp utsöken:"
 
-#: mainwindow.cpp:1415
+#: mainwindow.cpp:1439
 msgctxt "@action"
 msgid "Ena&ble"
 msgstr "Anma&ken"
 
-#: mainwindow.cpp:1415
+#: mainwindow.cpp:1439
 msgctxt "@action"
 msgid "Disa&ble"
 msgstr "Utma&ken"
