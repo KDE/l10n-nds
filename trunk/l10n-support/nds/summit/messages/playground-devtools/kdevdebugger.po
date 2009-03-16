@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevdebugger\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-02-19 09:42+0100\n"
+"POT-Creation-Date: 2009-03-12 10:30+0100\n"
 "PO-Revision-Date: 2009-03-08 05:46+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -159,7 +159,9 @@ msgstr "Programm \"gdb\""
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_gdbPath)
 #. +> trunk
 #: debuggerconfigwidget.ui:58
-msgid "To run \"gdb\" binary from $PATH, leave this field empty. To run custom gdb, for example, for a different architecture, enter the executable name here. You can either run gdb from $PATH, but with a different name (say, \"arm-gdb\"), by typing the name here, or specify full path to the gdb executable."
+#, fuzzy
+#| msgid "To run \"gdb\" binary from $PATH, leave this field empty. To run custom gdb, for example, for a different architecture, enter the executable name here. You can either run gdb from $PATH, but with a different name (say, \"arm-gdb\"), by typing the name here, or specify full path to the gdb executable."
+msgid "To run \"gdb\" binary from $PATH, leave this field empty. To run a custom gdb, for example, for a different architecture, enter the executable name here. You can either run gdb from $PATH, but with a different name (say, \"arm-gdb\"), by typing the name here, or by specifying the full path to a gdb executable."
 msgstr "Wenn sik \"gdb\" över Dien PATH-Variabel finnen lett, bruukst Du hier nix ingeven. Wenn Du en besünner \"gdb\" bruken wullt, a.B för en anner Ünnerbuu, giff hier bitte den Naam vun dat Programm in. Du kannst dit \"gdb\" över de PATH-Variabel opropen, man mit en anner Naam (a.B \"arm-gdb\"), wenn Du den Naam hier ingiffst, oder Du giffst den helen Padd na't \"gdb\"-Programm in."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, debuggingShell_label)
@@ -995,9 +997,13 @@ msgstr "Klick hier, wenn Du mehr Rahmens halen wullt."
 
 #. +> trunk
 #: framestackwidget.cpp:47
+#, fuzzy
+#| msgid ""
+#| "<b>Frame stack</b>"
+#| "<p>Often referred to as the \"call stack\", this is a list showing what function is currently active and who called each function to get to this point in your program. By clicking on an item you can see the values in any of the previous calling functions."
 msgid ""
 "<b>Frame stack</b>"
-"<p>Often referred to as the \"call stack\", this is a list showing what function is currently active and who called each function to get to this point in your program. By clicking on an item you can see the values in any of the previous calling functions."
+"<p>Often referred to as the \"call stack\", this is a list showing which function is currently active and what called each function to get to this point in your program. By clicking on an item you can see the values in any of the previous calling functions."
 msgstr ""
 "<b>Rahmenstapel</b>"
 "<p>Faken ok \"Oproop-Stapel\" nöömt, wiest disse List de opstunns aktive Funkschoon, un wokeen de Funkschonen op den Padd na dissen Punkt in Dien Programm opropen hett. Wenn Du op de Indrääg klickst, kannst Du de Weerten in all verleden Oproopfunkschonen bekieken."
@@ -1015,8 +1021,11 @@ msgstr "Fehlersöök-Konsool lett sik nich finnen"
 
 #. +> trunk
 #: gdb.cpp:296
+#, fuzzy
+#| msgctxt "<b>Internal debugger error</b>"
+#| msgid "<p>The debugger component encountered internal error while processing reply from gdb. Please submit a bug report."
 msgctxt "<b>Internal debugger error</b>"
-msgid "<p>The debugger component encountered internal error while processing reply from gdb. Please submit a bug report."
+msgid "<p>The debugger component encountered an internal error while processing a reply from gdb. Please submit a bug report."
 msgstr "<p>Binnen de Fehlersöker-Komponent hett dat en Fehler geven, bides se en Antwoort vun \"gdb\" afarbeidt hett. Bericht dissen Fehler bitte."
 
 #. +> trunk
@@ -1051,7 +1060,9 @@ msgstr "Fehlersöker lett sik nich opropen"
 
 #. +> trunk
 #: gdb.cpp:366
-msgid "Process didn't start"
+#, fuzzy
+#| msgid "Process didn't start"
+msgid "Process did not start"
 msgstr "Perzess hett nich start"
 
 #. +> trunk
@@ -1238,13 +1249,19 @@ msgstr ""
 
 #. +> trunk
 #: gdbcontroller.cpp:768
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "<b>Application does not exist</b>"
+#| "<p>The application you're trying to debug,<br>"
+#| "    %1\n"
+#| "<br>"
+#| "does not exist. Check that you've specified the right application in the debugger configuration."
 msgid ""
 "<b>Application does not exist</b>"
-"<p>The application you're trying to debug,<br>"
+"<p>The application you are trying to debug,<br>"
 "    %1\n"
 "<br>"
-"does not exist. Check that you've specified the right application in the debugger configuration."
+"does not exist. Check that you have specified the right application in the debugger configuration."
 msgstr ""
 "<b>Dat gifft dat Programm nich</b>"
 "<p>Dat Programm, binnen dat Du na Fehlers söken wullt,<br>"
@@ -1292,17 +1309,39 @@ msgstr "Fehlersöök-Fehler"
 #. +> trunk
 #: gdbcontroller.cpp:1151
 #, kde-format
-msgid ""
-"%1 commands in queue\n"
-"%2 commands being processed by gdb\n"
-"Debugger state: %3\n"
-msgstr ""
+msgid "1 command in queue\n"
+msgid_plural "%1 commands in queue\n"
+msgstr[0] ""
+msgstr[1] ""
+
+#. +> trunk
+#: gdbcontroller.cpp:1152
+#, fuzzy, kde-format
+#| msgid ""
+#| "%1 commands in queue\n"
+#| "%2 commands being processed by gdb\n"
+#| "Debugger state: %3\n"
+msgctxt "Only need to translate the 0 and 1 cases"
+msgid "1 command being processed by gdb\n"
+msgid_plural "%1 commands being processed by gdb\n"
+msgstr[0] ""
+"%1 Befehlen in de Reeg\n"
+"%2 Befehlen warrt vun \"gdb\" afarbeidt\n"
+"Fehlersöker-Status: %3\n"
+msgstr[1] ""
 "%1 Befehlen in de Reeg\n"
 "%2 Befehlen warrt vun \"gdb\" afarbeidt\n"
 "Fehlersöker-Status: %3\n"
 
 #. +> trunk
-#: gdbcontroller.cpp:1158
+#: gdbcontroller.cpp:1153
+#, fuzzy, kde-format
+#| msgid "Debugger status"
+msgid "Debugger state: %1\n"
+msgstr "Fehlersöker-Status"
+
+#. +> trunk
+#: gdbcontroller.cpp:1157
 #, kde-format
 msgid ""
 "Current command class: '%1'\n"
@@ -1314,7 +1353,7 @@ msgstr ""
 "Aktuell Befehl-Orginaaltext: \"%3\"\n"
 
 #. +> trunk
-#: gdbcontroller.cpp:1169
+#: gdbcontroller.cpp:1168
 msgid "Debugger status"
 msgstr "Fehlersöker-Status"
 
@@ -1386,9 +1425,12 @@ msgstr "Spiekeransicht"
 
 #. +> trunk
 #: memviewdlg.cpp:290
-#, kde-format
-msgid "%1 (%2 bytes)"
-msgstr "%1 (%2 Bytes)"
+#, fuzzy, kde-format
+#| msgid "%1 (%2 bytes)"
+msgid "%2 (1 byte)"
+msgid_plural "%2 (%1 bytes)"
+msgstr[0] "%1 (%2 Bytes)"
+msgstr[1] "%1 (%2 Bytes)"
 
 #. +> trunk
 #: memviewdlg.cpp:353
@@ -1586,7 +1628,9 @@ msgstr "Variable beluern"
 
 #. +> trunk
 #: variablewidget.cpp:326
-msgid "Reevaluate Expression"
+#, fuzzy
+#| msgid "Reevaluate Expression"
+msgid "Re-evaluate Expression"
 msgstr "Utdruck nieg utreken"
 
 #. +> trunk
