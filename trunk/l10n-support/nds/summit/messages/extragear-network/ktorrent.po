@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-03-12 10:29+0100\n"
+"POT-Creation-Date: 2009-03-19 10:33+0100\n"
 "PO-Revision-Date: 2009-03-11 07:57+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -575,6 +575,12 @@ msgstr "Bi't Hoochladen warrt bi Datenblöck, de na den Spieker laadt warrt, noc
 msgid "Recheck chunks during uploading"
 msgstr "Blöck bi't Hoochladen nochmaal pröven"
 
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useMaxSizeForUploadDataCheck)
+#. +> stable
+#: ktorrent/btpref.ui:184
+msgid "Don't recheck when chunks are bigger than"
+msgstr "Keen Blöck nieg pröven, de grötter sünd as"
+
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useMaxSizeForUploadDataCheck)
 #. +> trunk stable
 #: ktorrent/btpref.ui:186
@@ -582,9 +588,11 @@ msgid "Because rechecking big chunks can take a lot of time, the recheck can be 
 msgstr "Wiel dat Pröven vun groot Blöck so sien Tiet bruukt, kannst Du hier de Prööv för den Fall utmaken, dat en Block grötter as de fastleggte Weert is."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useMaxSizeForUploadDataCheck)
-#. +> trunk stable
+#. +> trunk
 #: ktorrent/btpref.ui:189
-msgid "Don't recheck when chunks are bigger than"
+#, fuzzy
+#| msgid "Don't recheck when chunks are bigger than"
+msgid "Do not recheck when chunks are bigger than"
 msgstr "Keen Blöck nieg pröven, de grötter sünd as"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxSizeForUploadDataCheck)
@@ -705,14 +713,30 @@ msgstr "Datendatei \"%1\" lett sik nich nieg opstellen"
 msgid "Checking Data Integrity"
 msgstr "Datenintegriteet warrt pröövt"
 
-#. +> trunk stable
+#. +> trunk
 #: ktorrent/core.cpp:1182
+#, fuzzy, kde-format
+#| msgid "KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you want to import them ?"
+msgid "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want to import it?"
+msgid_plural "KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you want to import them?"
+msgstr[0] "KTorrent hett %1 Torrents ut de KDE3-Verschoon vun KTorrent funnen, wullt Du se importeren?"
+msgstr[1] "KTorrent hett %1 Torrents ut de KDE3-Verschoon vun KTorrent funnen, wullt Du se importeren?"
+
+#. +> stable
+#: ktorrent/core.cpp:1183
 #, kde-format
 msgid "KTorrent has found %1 torrents from the KDE3 version of KTorrent, do you want to import them ?"
 msgstr "KTorrent hett %1 Torrents ut de KDE3-Verschoon vun KTorrent funnen, wullt Du se importeren?"
 
-#. +> trunk stable
+#. +> trunk
 #: ktorrent/core.cpp:1204
+#, fuzzy
+#| msgid "No torrents from the KDE3 version were found !"
+msgid "No torrents from the KDE3 version were found."
+msgstr "Keen Torrents ut de KDE3-Verschoon funnen!"
+
+#. +> stable
+#: ktorrent/core.cpp:1205
 msgid "No torrents from the KDE3 version were found !"
 msgstr "Keen Torrents ut de KDE3-Verschoon funnen!"
 
@@ -722,20 +746,36 @@ msgstr "Keen Torrents ut de KDE3-Verschoon funnen!"
 msgid "Opening %1"
 msgstr "\"%1\" warrt opmaakt"
 
-#. +> trunk
-#: ktorrent/fileselectdlg.cpp:163
-msgid "Files of the torrent have been found in the completed downloads directory. Do you want to use them, and download to the completed downloads directory ?"
-msgstr "En poor Dateien vun den Torrent liggt binnen den Orner för afslaten Daalladen. Wullt Du de bruken un na den Orner för afslaten Daalladen daalladen?"
-
-#. +> trunk stable
-#: ktorrent/fileselectdlg.cpp:180
+#. +> stable
+#: ktorrent/fileselectdlg.cpp:149
 #, kde-format
 msgid "The directory %1 does not exist, do you want to create it ?"
 msgstr "Den Orner \"%1\" gifft dat nich, wullt Du em opstellen?"
 
-#. +> trunk stable
-#: ktorrent/fileselectdlg.cpp:213
+#. +> trunk
+#: ktorrent/fileselectdlg.cpp:163
+#, fuzzy
+#| msgid "Files of the torrent have been found in the completed downloads directory. Do you want to use them, and download to the completed downloads directory ?"
+msgid "Files of the torrent have been found in the completed downloads directory. Do you want to use them, and download to the completed downloads directory?"
+msgstr "En poor Dateien vun den Torrent liggt binnen den Orner för afslaten Daalladen. Wullt Du de bruken un na den Orner för afslaten Daalladen daalladen?"
+
+#. +> trunk
+#: ktorrent/fileselectdlg.cpp:180
+#, fuzzy, kde-format
+#| msgid "The directory %1 does not exist, do you want to create it ?"
+msgid "The directory %1 does not exist, do you want to create it?"
+msgstr "Den Orner \"%1\" gifft dat nich, wullt Du em opstellen?"
+
+#. +> stable
+#: ktorrent/fileselectdlg.cpp:184
 msgid "You have deselected the following existing files. You will lose all data in these files, are you sure you want to do this ?"
+msgstr "Du hest de Köör för de nakamen, al vörhannen Dateien opheevt. Du warrst all Daten binnen disse Dateien verleren. Wullt Du redig wiedermaken?"
+
+#. +> trunk
+#: ktorrent/fileselectdlg.cpp:213
+#, fuzzy
+#| msgid "You have deselected the following existing files. You will lose all data in these files, are you sure you want to do this ?"
+msgid "You have deselected the following existing files. You will lose all data in these files, are you sure you want to do this?"
 msgstr "Du hest de Köör för de nakamen, al vörhannen Dateien opheevt. Du warrst all Daten binnen disse Dateien verleren. Wullt Du redig wiedermaken?"
 
 #. +> trunk stable
@@ -834,8 +874,19 @@ msgid "Text encoding:"
 msgstr "Textkoderen:"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_skip_data_check)
-#. +> trunk stable
+#. +> trunk
 #: ktorrent/fileselectdlg.ui:163
+#, fuzzy
+#| msgid ""
+#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+#| "p, li { white-space: pre-wrap; }\n"
+#| "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">When existing files have been found, skip the data check and assume that the files are fully downloaded.</p>"
+#| "\n"
+#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p>"
+#| "\n"
+#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Note: </span>only do this when you are absolutely sure !</p>"
+#| "</body></html>"
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -844,7 +895,7 @@ msgid ""
 "\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p>"
 "\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Note: </span>only do this when you are absolutely sure !</p>"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Note: </span>only do this when you are absolutely sure.</p>"
 "</body></html>"
 msgstr ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -868,6 +919,30 @@ msgstr "Datenprööv utlaten, wenn vörhannen Dateien funnen warrt"
 #: ktorrent/fileselectdlg.ui:173
 msgid "Disk space"
 msgstr "Platz op de Fastplaat"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, m_skip_data_check)
+#. +> stable
+#: ktorrent/fileselectdlg.ui:176
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">When existing files have been found, skip the data check and assume that the files are fully downloaded.</p>"
+"\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p>"
+"\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Note: </span>only do this when you are absolutely sure !</p>"
+"</body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">De Datenprööv utlaten un annehmen, de Dateien wöörn heel daallaadt, wenn sik vörhannen Dateien finnen laat.</p>"
+"\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p>"
+"\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Anmarken: </span>Do dat bloots, wenn Du Di afsluuts seker büst!</p>"
+"</body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #. +> trunk stable
@@ -1363,9 +1438,11 @@ msgstr "All Torrents anhollen"
 msgid "Open URL"
 msgstr "URL opropen"
 
-#. +> trunk stable
+#. +> trunk
 #: ktorrent/gui.cpp:395
-msgid "Open an URL which points to a torrent"
+#, fuzzy
+#| msgid "Open an URL which points to a torrent"
+msgid "Open a URL which points to a torrent"
 msgstr "En URL opmaken, de na en Torrent wiest"
 
 #. +> trunk stable
@@ -1424,6 +1501,11 @@ msgstr "All Torrents ut de KDE3-Verschoon vun KTorrent importeren"
 #: ktorrent/gui.cpp:431
 msgid "Show/Hide KTorrent"
 msgstr "KTorrent wiesen/versteken"
+
+#. +> stable
+#: ktorrent/gui.cpp:484
+msgid "Open an URL which points to a torrent"
+msgstr "En URL opmaken, de na en Torrent wiest"
 
 #. +> stable
 #: ktorrent/gui.cpp:489
@@ -1512,13 +1594,27 @@ msgstr "&Importeren"
 msgid "Ca&ncel"
 msgstr "&Afbreken"
 
-#. +> trunk stable
+#. +> trunk
+#: ktorrent/ipfilterlist.cpp:95
+#, fuzzy, kde-format
+#| msgid "Invalid IP address %1 !"
+msgid "Invalid IP address %1"
+msgstr "Leeg IP-Adress: %1!"
+
+#. +> stable
 #: ktorrent/ipfilterlist.cpp:95
 #, kde-format
 msgid "Invalid IP address %1 !"
 msgstr "Leeg IP-Adress: %1!"
 
-#. +> trunk stable
+#. +> trunk
+#: ktorrent/ipfilterlist.cpp:100
+#, fuzzy, kde-format
+#| msgid "Duplicate IP address %1 !"
+msgid "Duplicate IP address %1"
+msgstr "Dubbelt IP-Adress: %1!"
+
+#. +> stable
 #: ktorrent/ipfilterlist.cpp:100
 #, kde-format
 msgid "Duplicate IP address %1 !"
@@ -2033,17 +2129,38 @@ msgstr "Mit de URL geven Torrent-Datei ahn Nafraag opmaken"
 msgid "Select the directory where the data now is."
 msgstr "Söök den Orner mit de Daten ut"
 
-#. +> trunk stable
+#. +> trunk
+#: ktorrent/missingfilesdlg.cpp:91
+#, fuzzy
+#| msgid "The data files are not present in the location you selected! Do you want to create all the files in the selected directory ?"
+msgid "The data files are not present in the location you selected. Do you want to create all the files in the selected directory?"
+msgstr "De Datendateien gifft an de utsöchte Steed nich! Wullt Du all Dateien binnen den utsöchten Orner opstellen?"
+
+#. +> stable
 #: ktorrent/missingfilesdlg.cpp:91
 msgid "The data files are not present in the location you selected! Do you want to create all the files in the selected directory ?"
 msgstr "De Datendateien gifft an de utsöchte Steed nich! Wullt Du all Dateien binnen den utsöchten Orner opstellen?"
 
-#. +> trunk stable
+#. +> trunk
+#: ktorrent/missingfilesdlg.cpp:93
+#, fuzzy
+#| msgid "Not all files were found in the new location; some are still missing! Do you want to create the missing files in the selected directory ?"
+msgid "Not all files were found in the new location; some are still missing. Do you want to create the missing files in the selected directory?"
+msgstr "Nich all Dateien laat sik an de niege Steed finnen, en poor fehlt noch! Wullt Du de fehlen Dateien binnen den utsöchten Orner opstellen?"
+
+#. +> stable
 #: ktorrent/missingfilesdlg.cpp:93
 msgid "Not all files were found in the new location; some are still missing! Do you want to create the missing files in the selected directory ?"
 msgstr "Nich all Dateien laat sik an de niege Steed finnen, en poor fehlt noch! Wullt Du de fehlen Dateien binnen den utsöchten Orner opstellen?"
 
-#. +> trunk stable
+#. +> trunk
+#: ktorrent/missingfilesdlg.cpp:122
+#, fuzzy
+#| msgid "The data file is not present in the location you selected! Do you want to create the file in the selected directory ?"
+msgid "The data file is not present in the location you selected. Do you want to create the file in the selected directory?"
+msgstr "Dat gifft de Datendatei nich an de vun Di utsöchte Steed! Wullt Du de Datei binnen den utsöchten Orner opstellen?"
+
+#. +> stable
 #: ktorrent/missingfilesdlg.cpp:122
 msgid "The data file is not present in the location you selected! Do you want to create the file in the selected directory ?"
 msgstr "Dat gifft de Datendatei nich an de vun Di utsöchte Steed! Wullt Du de Datei binnen den utsöchten Orner opstellen?"
@@ -2353,7 +2470,45 @@ msgid "Network interface:"
 msgstr "Nettwark-Koppelsteed:"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_networkInterface)
-#. +> trunk stable
+#. +> trunk
+#: ktorrent/networkpref.ui:246
+#, fuzzy
+#| msgid ""
+#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+#| "p, li { white-space: pre-wrap; }\n"
+#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Which network interface to use for all network traffic.</p>"
+#| "\n"
+#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'OpenSymbol';\"></p>"
+#| "\n"
+#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'OpenSymbol';\"><span style=\" font-weight:600;\">Note: </span>Requires a restart to take effect !</p>"
+#| "</body></html>"
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Which network interface to use for all network traffic.</p>"
+"\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'OpenSymbol';\"></p>"
+"\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'OpenSymbol';\"><span style=\" font-weight:600;\">Note: </span>Requires a restart to take effect.</p>"
+"</body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Leggt de Koppelsteed na't Nettwark fast, över de all Daten loopt.</p>"
+"\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'OpenSymbol';\"></p>"
+"\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'OpenSymbol';\"><span style=\" font-weight:600;\">Beacht bitte:</span> Du muttst KTorrent nieg starten, ehr en Ännern bruukt warrt.</p>"
+"</body></html>"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_networkInterface)
+#. +> stable
 #: ktorrent/networkpref.ui:246
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
@@ -3267,7 +3422,14 @@ msgstr "En Torrent opstellen"
 msgid "Invalid url %1"
 msgstr "Leeg URL: %1"
 
-#. +> trunk stable
+#. +> trunk
+#: ktorrent/torrentcreatordlg.cpp:222
+#, fuzzy
+#| msgid "Only HTTP is supported for webseeding!"
+msgid "Only HTTP is supported for webseeding."
+msgstr "Bi't Nettverdelen warrt bloots HTTP ünnerstütt!"
+
+#. +> stable
 #: ktorrent/torrentcreatordlg.cpp:222
 msgid "Only HTTP is supported for webseeding!"
 msgstr "Bi't Nettverdelen warrt bloots HTTP ünnerstütt!"
@@ -3487,12 +3649,26 @@ msgstr[1] "%1 Torrents warrt importeert..."
 msgid "Importing <b>%1</b> ..."
 msgstr "<b>%1</b> warrt importeert..."
 
-#. +> trunk stable
+#. +> trunk
+#: ktorrent/torrentmigratordlg.cpp:110
+#, fuzzy
+#| msgid "Finished import !"
+msgid "Finished import."
+msgstr "Importeren afslaten!"
+
+#. +> stable
 #: ktorrent/torrentmigratordlg.cpp:110
 msgid "Finished import !"
 msgstr "Importeren afslaten!"
 
-#. +> trunk stable
+#. +> trunk
+#: ktorrent/torrentmigratordlg.cpp:145
+#, fuzzy, kde-format
+#| msgid "Torrent <b>%1</b> already loaded !"
+msgid "Torrent <b>%1</b> already loaded."
+msgstr "Torrent <b>%1</b> is al laadt!"
+
+#. +> stable
 #: ktorrent/torrentmigratordlg.cpp:145
 #, kde-format
 msgid "Torrent <b>%1</b> already loaded !"
@@ -4250,7 +4426,7 @@ msgid "Resolving hostname %1"
 msgstr "Reeknernaam \"%1\" warrt nakeken"
 
 #. +> trunk stable
-#: libbtcore/download/httpconnection.cpp:125 libbtcore/download/webseed.cpp:313
+#: libbtcore/download/httpconnection.cpp:125 libbtcore/download/webseed.cpp:319
 msgid "Connection closed"
 msgstr "Verbinnen tomaakt"
 
@@ -4261,45 +4437,59 @@ msgid "Error: request failed: %1"
 msgstr "Fehler: Anfraag fehlslaan: %1"
 
 #. +> trunk stable
-#: libbtcore/download/httpconnection.cpp:148
-#: libbtcore/download/httpconnection.cpp:212
+#: libbtcore/download/httpconnection.cpp:149
+#: libbtcore/download/httpconnection.cpp:213
 msgid "Connected"
 msgstr "Tokoppelt"
 
 #. +> trunk stable
-#: libbtcore/download/httpconnection.cpp:154
+#: libbtcore/download/httpconnection.cpp:155
 msgid "Error: Failed to connect to webseed"
 msgstr "Fehler: Tokoppeln na Nettverdelen fehlslaan"
 
 #. +> trunk stable
-#: libbtcore/download/httpconnection.cpp:219
+#: libbtcore/download/httpconnection.cpp:220
 msgid "Connecting"
 msgstr "Bi to verbinnen"
 
 #. +> trunk stable
-#: libbtcore/download/httpconnection.cpp:230
+#: libbtcore/download/httpconnection.cpp:231
 msgid "Failed to connect to webseed"
 msgstr "Tokoppeln na Nettverdelen fehlslaan"
 
 #. +> trunk stable
-#: libbtcore/download/httpconnection.cpp:237
+#: libbtcore/download/httpconnection.cpp:238
 msgid "Failed to resolve hostname of webseed"
 msgstr "Nakieken vun de Verdelen ehr Reeknernaam fehlslaan"
 
 #. +> trunk stable
-#: libbtcore/download/httpconnection.cpp:317
+#: libbtcore/download/httpconnection.cpp:318
 msgid "Error: failed to connect, server not responding"
 msgstr "Fehler: Tokoppeln fehlslaan, Server antert nich"
 
 #. +> trunk stable
-#: libbtcore/download/httpconnection.cpp:326
+#: libbtcore/download/httpconnection.cpp:327
 msgid "Error: request timed out"
 msgstr "Fehler: Anfraagtiet aflopen"
 
-#. +> trunk stable
-#: libbtcore/download/httpconnection.cpp:417
+#. +> trunk
+#: libbtcore/download/httpconnection.cpp:388
+#, fuzzy
+#| msgid "Redirected without a new location !"
+msgid "Redirected without a new location."
+msgstr "Ahn nieg Teel wiederleddt!"
+
+#. +> stable
+#: libbtcore/download/httpconnection.cpp:388
 msgid "Redirected without a new location !"
 msgstr "Ahn nieg Teel wiederleddt!"
+
+#. +> trunk stable
+#: libbtcore/download/webseed.cpp:301 libbtcore/download/webseed.cpp:512
+#, fuzzy
+#| msgid "Notice"
+msgid "Not in use"
+msgstr "Henwies"
 
 #. +> trunk stable
 #: libbtcore/migrate/migrate.cpp:45
@@ -4619,13 +4809,27 @@ msgstr "Verbinnen"
 msgid "Disk Input/Output"
 msgstr "Fastplaat-In-/Utgaav"
 
-#. +> trunk stable
+#. +> trunk
 #: libktcore/dbus/dbustorrent.cpp:319
+#, fuzzy
+#| msgid "Maximum share ratio reached !"
+msgid "Maximum share ratio reached."
+msgstr "Bi hööchst Verdeelrelatschoon anlangt."
+
+#. +> stable
+#: libktcore/dbus/dbustorrent.cpp:321
 msgid "Maximum share ratio reached !"
 msgstr "Bi hööchst Verdeelrelatschoon anlangt."
 
-#. +> trunk stable
+#. +> trunk
 #: libktcore/dbus/dbustorrent.cpp:322
+#, fuzzy
+#| msgid "Maximum seed time reached !"
+msgid "Maximum seed time reached."
+msgstr "Bi hööchst Verdeeltiet anlangt!"
+
+#. +> stable
+#: libktcore/dbus/dbustorrent.cpp:324
 msgid "Maximum seed time reached !"
 msgstr "Bi hööchst Verdeeltiet anlangt!"
 
@@ -4800,28 +5004,49 @@ msgstr "Du hest för't Daalladen vun dissen Torrent nich mehr noog Platz op Dien
 msgid "Insufficient disk space for %1"
 msgstr "Nich noog Platz op Fastplaat för \"%1\""
 
-#. +> trunk stable
+#. +> trunk
 #: libktcore/torrent/queuemanager.cpp:124
-#, kde-format
-msgid "The torrent \"%1\" has reached it's maximum share ratio and it's maximum seed time. Ignore the limit and start seeding anyway?"
+#, fuzzy, kde-format
+#| msgid "The torrent \"%1\" has reached it's maximum share ratio and it's maximum seed time. Ignore the limit and start seeding anyway?"
+msgid "The torrent \"%1\" has reached its maximum share ratio and its maximum seed time. Ignore the limit and start seeding anyway?"
 msgstr "Torrent \"%1\" is bi sien hööchst Verdeelrelatschoon un Verdeeltiet anlangt. Wullt Du de Grenz minnachten un em liekers verdelen?"
 
-#. +> trunk stable
+#. +> trunk
 #: libktcore/torrent/queuemanager.cpp:126
-#, kde-format
-msgid "The torrent \"%1\" has reached it's maximum share ratio. Ignore the limit and start seeding anyway?"
+#, fuzzy, kde-format
+#| msgid "The torrent \"%1\" has reached it's maximum share ratio. Ignore the limit and start seeding anyway?"
+msgid "The torrent \"%1\" has reached its maximum share ratio. Ignore the limit and start seeding anyway?"
 msgstr "Torrent \"%1\" is bi sien hööchst Verdeelrelatschoon anlangt. Wullt Du de Grenz minnachten un em liekers verdelen?"
 
-#. +> trunk stable
+#. +> trunk
 #: libktcore/torrent/queuemanager.cpp:128
-#, kde-format
-msgid "The torrent \"%1\" has reached it's maximum seed time. Ignore the limit and start seeding anyway?"
+#, fuzzy, kde-format
+#| msgid "The torrent \"%1\" has reached it's maximum seed time. Ignore the limit and start seeding anyway?"
+msgid "The torrent \"%1\" has reached its maximum seed time. Ignore the limit and start seeding anyway?"
 msgstr "Torrent \"%1\" is bi sien hööchst Verdeeltiet anlangt. Wullt Du de Grenz minnachten un em liekers verdelen?"
 
 #. +> trunk stable
 #: libktcore/torrent/queuemanager.cpp:130
 msgid "Maximum share ratio limit reached."
 msgstr "Bi de hööchst Verdeelrelatschoon anlangt."
+
+#. +> stable
+#: libktcore/torrent/queuemanager.cpp:131
+#, kde-format
+msgid "The torrent \"%1\" has reached it's maximum share ratio and it's maximum seed time. Ignore the limit and start seeding anyway?"
+msgstr "Torrent \"%1\" is bi sien hööchst Verdeelrelatschoon un Verdeeltiet anlangt. Wullt Du de Grenz minnachten un em liekers verdelen?"
+
+#. +> stable
+#: libktcore/torrent/queuemanager.cpp:133
+#, kde-format
+msgid "The torrent \"%1\" has reached it's maximum share ratio. Ignore the limit and start seeding anyway?"
+msgstr "Torrent \"%1\" is bi sien hööchst Verdeelrelatschoon anlangt. Wullt Du de Grenz minnachten un em liekers verdelen?"
+
+#. +> stable
+#: libktcore/torrent/queuemanager.cpp:135
+#, kde-format
+msgid "The torrent \"%1\" has reached it's maximum seed time. Ignore the limit and start seeding anyway?"
+msgstr "Torrent \"%1\" is bi sien hööchst Verdeeltiet anlangt. Wullt Du de Grenz minnachten un em liekers verdelen?"
 
 #. +> trunk stable
 #: libktcore/torrent/queuemanager.cpp:240
@@ -4862,12 +5087,26 @@ msgstr "Torrent \"%1\" lett sik nich anhollen: %2"
 msgid "File"
 msgstr "Datei"
 
-#. +> trunk stable
+#. +> trunk
+#: libktcore/util/mmapfile.cpp:164
+#, fuzzy
+#| msgid "Cannot write beyond end of the mmap buffer!"
+msgid "Cannot write beyond end of the mmap buffer."
+msgstr "Achter dat Enn vun den \"mmap\"-Puffer lett sik nix schrieven!"
+
+#. +> stable
 #: libktcore/util/mmapfile.cpp:164
 msgid "Cannot write beyond end of the mmap buffer!"
 msgstr "Achter dat Enn vun den \"mmap\"-Puffer lett sik nix schrieven!"
 
-#. +> trunk stable
+#. +> trunk
+#: libktupnp/httprequest.cpp:80
+#, fuzzy
+#| msgid "Connection closed unexpectedly !"
+msgid "Connection closed unexpectedly."
+msgstr "Verbinnen unverwachtens tomaakt!"
+
+#. +> stable
 #: libktupnp/httprequest.cpp:80
 msgid "Connection closed unexpectedly !"
 msgstr "Verbinnen unverwachtens tomaakt!"
@@ -4883,12 +5122,32 @@ msgstr "Tiet is aflopen"
 msgid "Failed to download %1 : %2"
 msgstr "\"%1\" lett sik nich daalladen: %2"
 
-#. +> trunk stable
+#. +> trunk
+#: libktupnp/upnprouter.cpp:152
+#, fuzzy
+#| msgid "Error parsing router description !"
+msgid "Error parsing router description."
+msgstr "Fehler bi't Inlesen vun de Nettweger-Beschrieven!"
+
+#. +> stable
 #: libktupnp/upnprouter.cpp:152
 msgid "Error parsing router description !"
 msgstr "Fehler bi't Inlesen vun de Nettweger-Beschrieven!"
 
-#. +> trunk stable
+#. +> trunk
+#: libktupnp/upnprouter.cpp:276
+#, fuzzy
+#| msgid ""
+#| "Forwarding failed: \n"
+#| "Device does not have a WANIPConnection or WANPPPConnection !"
+msgid ""
+"Forwarding failed: \n"
+"Device does not have a WANIPConnection or WANPPPConnection."
+msgstr ""
+"Wiederledden fehlslaan:\n"
+"De Reedschap hett keen WAN-IP- oder WAN-PPP-Verbinnen!"
+
+#. +> stable
 #: libktupnp/upnprouter.cpp:276
 msgid ""
 "Forwarding failed: \n"
@@ -4902,13 +5161,27 @@ msgstr ""
 msgid "Cannot find port forwarding service in the device's description!"
 msgstr "In de Reedschap-Beschrieven lett sik keen Deenst för't Port-Wiederledden finnen!"
 
-#. +> trunk stable
+#. +> trunk
 #: plasma/applet/applet.cpp:152 plasma/applet/applet.cpp:285
+#, fuzzy
+#| msgid "KTorrent is not running !"
+msgid "KTorrent is not running."
+msgstr "KTorrent löppt nich!"
+
+#. +> stable
+#: plasma/applet/applet.cpp:153 plasma/applet/applet.cpp:281
 msgid "KTorrent is not running !"
 msgstr "KTorrent löppt nich!"
 
-#. +> trunk stable
+#. +> trunk
 #: plasma/applet/applet.cpp:154 plasma/applet/applet.cpp:277
+#, fuzzy
+#| msgid "No torrents loaded !"
+msgid "No torrents loaded."
+msgstr "Keen Torrents laadt!"
+
+#. +> stable
+#: plasma/applet/applet.cpp:155 plasma/applet/applet.cpp:273
 msgid "No torrents loaded !"
 msgstr "Keen Torrents laadt!"
 
@@ -4995,17 +5268,38 @@ msgstr "Torrent, den Du wiesen wullt:"
 msgid "Add an item"
 msgstr "En Indrag tofögen"
 
-#. +> trunk stable
+#. +> trunk
+#: plugins/bwscheduler/additemdlg.cpp:72
+#, fuzzy
+#| msgid "No day has been selected !"
+msgid "No day has been selected."
+msgstr "Keen Dag utsöcht!"
+
+#. +> stable
 #: plugins/bwscheduler/additemdlg.cpp:72
 msgid "No day has been selected !"
 msgstr "Keen Dag utsöcht!"
 
-#. +> trunk stable
+#. +> trunk
+#: plugins/bwscheduler/additemdlg.cpp:100
+#, fuzzy
+#| msgid "Failed to add item, because it conflicts with another item on the schedule !"
+msgid "Failed to add item, because it conflicts with another item on the schedule."
+msgstr "Disse Indrag verdreegt sik nich mit en anner Indrag op de List, Du kannst em nich tofögen!"
+
+#. +> stable
 #: plugins/bwscheduler/additemdlg.cpp:100
 msgid "Failed to add item, because it conflicts with another item on the schedule !"
 msgstr "Disse Indrag verdreegt sik nich mit en anner Indrag op de List, Du kannst em nich tofögen!"
 
-#. +> trunk stable
+#. +> trunk
+#: plugins/bwscheduler/additemdlg.cpp:105
+#, fuzzy
+#| msgid "This item could not be added to all selected days, because it conflicts with another item on the schedule !"
+msgid "This item could not be added to all selected days, because it conflicts with another item on the schedule."
+msgstr "Disse Indrag verdreegt sik nich mit en anner Indrag op de List, Du kannst em nich na all utsöcht Daag tofögen!"
+
+#. +> stable
 #: plugins/bwscheduler/additemdlg.cpp:105
 msgid "This item could not be added to all selected days, because it conflicts with another item on the schedule !"
 msgstr "Disse Indrag verdreegt sik nich mit en anner Indrag op de List, Du kannst em nich na all utsöcht Daag tofögen!"
@@ -5856,12 +6150,26 @@ msgstr "Daallaad-Gauheit"
 msgid "Upload speed"
 msgstr "Hoochlaad-Gauheit"
 
-#. +> trunk stable
+#. +> trunk
+#: plugins/infowidget/peerviewmodel.cpp:394
+#, fuzzy
+#| msgid "Whether or not the peer has choked us, when we are choked the peer will not send any data to us"
+msgid "Whether or not the peer has choked us - when we are choked the peer will not send us any data"
+msgstr "Gifft an, wat de Partner Di afdrusselt hett. Hett he dat, kriggst Du vun em keen Daten."
+
+#. +> stable
 #: plugins/infowidget/peerviewmodel.cpp:394
 msgid "Whether or not the peer has choked us, when we are choked the peer will not send any data to us"
 msgstr "Gifft an, wat de Partner Di afdrusselt hett. Hett he dat, kriggst Du vun em keen Daten."
 
-#. +> trunk stable
+#. +> trunk
+#: plugins/infowidget/peerviewmodel.cpp:395
+#, fuzzy
+#| msgid "Snubbed means the peer hasn't sent us any data in the last 2 minutes"
+msgid "Snubbed means the peer has not sent us any data in the last 2 minutes"
+msgstr "»Afwiest« bedüüdt, de Partner hett Di binnen de verleden 2 Minuten keen Daten tostüert"
+
+#. +> stable
 #: plugins/infowidget/peerviewmodel.cpp:395
 msgid "Snubbed means the peer hasn't sent us any data in the last 2 minutes"
 msgstr "»Afwiest« bedüüdt, de Partner hett Di binnen de verleden 2 Minuten keen Daten tostüert"
@@ -5891,12 +6199,26 @@ msgstr "Bloots Partners, de en Hoochlaad-Platz hebbt, kriegt Daten vun Di"
 msgid "The number of download and upload requests"
 msgstr "De Tall vun Daal- un Hoochlaad-Anfragen"
 
-#. +> trunk stable
+#. +> trunk
+#: plugins/infowidget/peerviewmodel.cpp:401
+#, fuzzy
+#| msgid "How much data we downloaded from this peer"
+msgid "How much data we have downloaded from this peer"
+msgstr "Gifft an, woveel Daten Du vun dissen Partner daallaadt hest"
+
+#. +> stable
 #: plugins/infowidget/peerviewmodel.cpp:401
 msgid "How much data we downloaded from this peer"
 msgstr "Gifft an, woveel Daten Du vun dissen Partner daallaadt hest"
 
-#. +> trunk stable
+#. +> trunk
+#: plugins/infowidget/peerviewmodel.cpp:402
+#, fuzzy
+#| msgid "How much data we uploaded to this peer"
+msgid "How much data we have uploaded to this peer"
+msgstr "Gifft an, woveel Daten Du dissen Partner tostüert hest"
+
+#. +> stable
 #: plugins/infowidget/peerviewmodel.cpp:402
 msgid "How much data we uploaded to this peer"
 msgstr "Gifft an, woveel Daten Du dissen Partner tostüert hest"
@@ -6001,7 +6323,14 @@ msgstr "Na en privaat Torrent lett sik keen Tracker tofögen."
 msgid "Malformed URL."
 msgstr "Leeg Adress."
 
-#. +> trunk stable
+#. +> trunk
+#: plugins/infowidget/trackerview.cpp:101
+#, fuzzy, kde-format
+#| msgid "There already is a tracker named <b>%1</b> !"
+msgid "There already is a tracker named <b>%1</b>."
+msgstr "Dat gifft al en Tracker mit den Naam <b>%1</b> !"
+
+#. +> stable
 #: plugins/infowidget/trackerview.cpp:101
 #, kde-format
 msgid "There already is a tracker named <b>%1</b> !"
@@ -6208,7 +6537,9 @@ msgstr "Status: Nieg Blocklist warrt daallaadt un wannelt..."
 
 #. +> trunk
 #: plugins/ipfilter/ipblockingprefpage.cpp:193
-msgid "No update done yet!"
+#, fuzzy
+#| msgid "No update done yet!"
+msgid "No update done yet."
 msgstr "Betherto nix opfrischt!"
 
 #. +> stable
@@ -6218,8 +6549,9 @@ msgstr "Betherto nix opfrischt!"
 
 #. +> trunk
 #: plugins/ipfilter/ipblockingprefpage.cpp:197
-#, kde-format
-msgid "%1 (Last update attempt failed!)"
+#, fuzzy, kde-format
+#| msgid "%1 (Last update attempt failed!)"
+msgid "%1 (Last update attempt failed.)"
 msgstr "%1 (verleden Opfrischen fehlslaan!)"
 
 #. +> stable
@@ -7189,7 +7521,14 @@ msgstr "Bitte den Reeknernaam vun de Söökmaschien ingeven (a.B. www.google.de)
 msgid "Opensearch is not supported by %1, you will need to enter the search URL manually. The URL should contain {searchTerms}, ktorrent will replace this by the thing you are searching for."
 msgstr "%1 ünnerstütt Opensearch nich, Du muttst de Söök-URL vun Hand ingeven. De URL mutt \"{searchTerms}\" bargen, KTorrent wesselt dat mit de Begrepen ut, na de Du söchst."
 
-#. +> trunk stable
+#. +> trunk
+#: plugins/search/searchprefpage.cpp:150
+#, fuzzy, c-format
+#| msgid "The URL %s, does not contain {searchTerms} !"
+msgid "The URL %s, does not contain {searchTerms}."
+msgstr "De URL \"%s\" bargt nich \"{searchTerms}\"!"
+
+#. +> stable
 #: plugins/search/searchprefpage.cpp:150
 #, c-format
 msgid "The URL %s, does not contain {searchTerms} !"
@@ -7632,7 +7971,14 @@ msgstr "Apenmaak-Datum"
 msgid "Edit Filter"
 msgstr "Filter bewerken"
 
-#. +> trunk stable
+#. +> trunk
+#: plugins/syndication/filtereditor.cpp:199
+#, fuzzy, kde-format
+#| msgid "There already is a filter named %1, filter names must be unique !"
+msgid "There already is a filter named %1, filter names must be unique."
+msgstr "Dat gifft al en Filter mit den Naam \"%1\", Filternaams mööt eenkennig wesen!"
+
+#. +> stable
 #: plugins/syndication/filtereditor.cpp:199
 #, kde-format
 msgid "There already is a filter named %1, filter names must be unique !"
@@ -7894,7 +8240,14 @@ msgstr "Op Stroom filtern:"
 msgid "Syndication Toolbar"
 msgstr "Strööm-Warktüüchbalken"
 
-#. +> trunk stable
+#. +> trunk
+#: plugins/syndication/linkdownloader.cpp:158
+#, fuzzy, kde-format
+#| msgid "Couldn't find a valid link to a torrent on %1"
+msgid "Could not find a valid link to a torrent on %1"
+msgstr "Op %1 lett sik keen gellen Link na en Torrent finnen"
+
+#. +> stable
 #: plugins/syndication/linkdownloader.cpp:158
 #, kde-format
 msgid "Couldn't find a valid link to a torrent on %1"
@@ -7971,10 +8324,11 @@ msgstr "De URL ingeven"
 msgid "Please enter the URL of the RSS or Atom feed."
 msgstr "Giff bitte de URL vun den RSS- oder Atom-Stroom in"
 
-#. +> trunk stable
+#. +> trunk
 #: plugins/syndication/syndicationactivity.cpp:144
-#, kde-format
-msgid "Failed to load feed %1 !"
+#, fuzzy, kde-format
+#| msgid "Failed to load feed %1 !"
+msgid "Failed to load feed %1."
 msgstr "De Stroom \"%1\" lett sik nich laden!"
 
 #. +> trunk stable
@@ -8017,6 +8371,12 @@ msgstr "Filter tofögen"
 #: plugins/syndication/syndicationplugin.cpp:100
 msgid "Remove Filter"
 msgstr "Filter wegmaken"
+
+#. +> stable
+#: plugins/syndication/syndicationplugin.cpp:160
+#, kde-format
+msgid "Failed to load feed %1 !"
+msgstr "De Stroom \"%1\" lett sik nich laden!"
 
 #. +> stable
 #: plugins/syndication/syndicationplugin.cpp:265
@@ -8115,7 +8475,45 @@ msgid "The port the webinterface listens on."
 msgstr "De Port, achter de de Nettböversiet luustert"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_forward)
-#. +> trunk stable
+#. +> trunk
+#: plugins/webinterface/webinterfaceprefwidget.ui:179
+#, fuzzy
+#| msgid ""
+#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+#| "p, li { white-space: pre-wrap; }\n"
+#| "</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">If you are behind a router and you want to access the webinterface from somewhere on the internet you need to forward the correct port.</p>"
+#| "\n"
+#| "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p>"
+#| "\n"
+#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">This checkbox will ensure that the UPnP plugin automatically forwards the port. The UPnP plugin needs to be loaded for this to work.</p>"
+#| "</body></html>"
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">If you are behind a router and you want to access the webinterface from somewhere on the Internet you need to forward the correct port.</p>"
+"\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p>"
+"\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">This checkbox will ensure that the UPnP plugin automatically forwards the port. The UPnP plugin needs to be loaded for this to work.</p>"
+"</body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'OpenSymbol'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Wenn Du achter en Nettweger sittst un över't Internet op de Nettböversiet togriepen wullt, muttst Du de richtige Port wiederledden.</p>"
+"\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p>"
+"\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Disse Optschoon besekert, dat UPnP-Moduul deit de Port automaatsch wiederledden. Du muttst dat UPnP-Moduul laden,wenn dat funkscheneren schall.</p>"
+"</body></html>"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_forward)
+#. +> stable
 #: plugins/webinterface/webinterfaceprefwidget.ui:179
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
