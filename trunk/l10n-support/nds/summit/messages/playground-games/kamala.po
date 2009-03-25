@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kamala\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-03-23 10:29+0100\n"
+"POT-Creation-Date: 2009-03-24 11:04+0100\n"
 "PO-Revision-Date: 2009-03-14 20:18+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -26,6 +26,28 @@ msgstr "Sönke Dibbern, Manfred Wiese"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s_dibbern@web.de, m.j.wiese@web.de"
+
+#. +> trunk
+#: core/models/aspectfiltermodel.cpp:109
+#, fuzzy
+#| msgid "Name"
+msgctxt "Aspect filter property"
+msgid "Name"
+msgstr "Naam"
+
+#. +> trunk
+#: core/models/aspectfiltermodel.cpp:110
+#, fuzzy
+msgctxt "Aspect filter property"
+msgid "Comments"
+msgstr "Kommentaren"
+
+#. +> trunk
+#: core/models/aspectfiltermodel.cpp:116
+#, fuzzy
+#| msgid "Aspects filters"
+msgid "Aspect filter"
+msgstr "Aspektenfilters"
 
 #. +> trunk
 #: core/models/aspectmodel.cpp:91 core/models/aspectmodel.cpp:94
@@ -433,18 +455,24 @@ msgstr "Keen Stadt funnen, de to \"%1\" passt"
 #. +> trunk
 #: gui/actions.cpp:45
 msgctxt "Menu item"
+msgid "Configure Aspects Filters..."
+msgstr "Aspektenfilters instellen..."
+
+#. +> trunk
+#: gui/actions.cpp:52
+msgctxt "Menu item"
 msgid "Configure Aspects..."
 msgstr "Aspekten instellen..."
 
 #. +> trunk
-#: gui/actions.cpp:52
+#: gui/actions.cpp:59
 #, fuzzy
 msgctxt "Menu item"
 msgid "Configure Planets..."
 msgstr "Planetenfilters instellen..."
 
 #. +> trunk
-#: gui/actions.cpp:59
+#: gui/actions.cpp:66
 msgctxt "Menu item"
 msgid "Configure Keywords..."
 msgstr "Slötelwöör instellen..."
@@ -462,7 +490,8 @@ msgid "New Aspect"
 msgstr "Nieg Aspekt"
 
 #. +> trunk
-#: gui/dialogs/aspectdialog.cpp:69 gui/dialogs/keywordattributedialog.cpp:62
+#: gui/dialogs/aspectdialog.cpp:69 gui/dialogs/aspectfilterdialog.cpp:69
+#: gui/dialogs/keywordattributedialog.cpp:62
 #: gui/dialogs/keywordvaluedialog.cpp:70
 msgid "Save"
 msgstr "Sekern"
@@ -478,7 +507,7 @@ msgid "Reset aspect"
 msgstr "Aspekt torüchsetten"
 
 #. +> trunk
-#: gui/dialogs/aspectdialog.cpp:81
+#: gui/dialogs/aspectdialog.cpp:81 gui/dialogs/aspectfilterdialog.cpp:81
 msgid "Name"
 msgstr "Naam"
 
@@ -528,13 +557,17 @@ msgid "Color"
 msgstr "Klöör"
 
 #. +> trunk
-#: gui/dialogs/aspectdialog.cpp:178 gui/dialogs/keywordattributedialog.cpp:110
+#: gui/dialogs/aspectdialog.cpp:178 gui/dialogs/aspectfilterdialog.cpp:201
+#: gui/dialogs/keywordattributedialog.cpp:110
 #: gui/dialogs/keywordvaluedialog.cpp:117
 msgid "Missing name"
 msgstr "Naam fehlt"
 
 #. +> trunk
 #: gui/dialogs/aspectdialog.cpp:179 gui/dialogs/aspectdialog.cpp:211
+#: gui/dialogs/aspectfilterdialog.cpp:202
+#: gui/dialogs/aspectfilterdialog.cpp:232
+#: gui/dialogs/aspectfilterviewdialog.cpp:134
 #: gui/dialogs/aspectviewdialog.cpp:134
 #: gui/dialogs/keywordattributedialog.cpp:111
 #: gui/dialogs/keywordattributedialog.cpp:136
@@ -562,14 +595,169 @@ msgid "Trying to duplicate aspect \"%1\""
 msgstr "Aspekt \"%1\" verdubbeln"
 
 #. +> trunk
-#: gui/dialogs/aspectviewdialog.cpp:41
-msgid "Aspects Manager"
-msgstr "Aspektenpleger"
+#: gui/dialogs/aspectfilterdialog.cpp:56
+#, fuzzy, kde-format
+#| msgid "Edit aspects filter \"%1\""
+msgctxt "Edit aspects filter {name}"
+msgid "Edit aspects filter \"%1\""
+msgstr "Aspektenfilter \"%1\" bewerken"
 
 #. +> trunk
+#: gui/dialogs/aspectfilterdialog.cpp:63
+msgid "New aspects filter"
+msgstr "Nieg Aspektenfilter"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterdialog.cpp:70
+msgid "Save aspects filter"
+msgstr "Aspektenfilter sekern"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterdialog.cpp:71
+msgid "Reset aspects filter"
+msgstr "Aspektenfilter torüchsetten"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterdialog.cpp:95
+#, fuzzy
+msgctxt "Aspect category"
+msgid "Main"
+msgstr "Allmeen"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterdialog.cpp:103
+#, fuzzy
+msgctxt "Aspect category"
+msgid "Others"
+msgstr "Annerswat"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterdialog.cpp:111
+#, fuzzy
+#| msgctxt "User-defined aspects 1"
+#| msgid "User1"
+msgctxt "Aspect category"
+msgid "User1"
+msgstr "Bruker 1"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterdialog.cpp:119
+#, fuzzy
+#| msgctxt "User-defined aspects 2"
+#| msgid "User2"
+msgctxt "Aspect category"
+msgid "User2"
+msgstr "Bruker 2"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterdialog.cpp:165
+#: gui/dialogs/keywordattributedialog.cpp:83
+#: gui/dialogs/keywordvaluedialog.cpp:91
+#, fuzzy
+msgid "Comments"
+msgstr "Kommentaren"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterdialog.cpp:222
+#, kde-format
+msgid "Aspects filter successfully saved as \"%1\""
+msgstr "Aspektenfilter mit Spood as \"%1\" sekert."
+
+#. +> trunk
+#: gui/dialogs/aspectfilterdialog.cpp:223
+msgid "Aspects filter saved"
+msgstr "Aspektenfilter sekert"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterdialog.cpp:231
+#, kde-format
+msgid "Duplicate aspects filter \"%1\""
+msgstr "Aspektenfilter \"%1\" verdubbeln"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterviewdialog.cpp:41
+#, fuzzy
+#| msgid "Aspects Filters manager"
+msgid "Aspects Filters Manager"
+msgstr "Aspektenfilters plegen"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterviewdialog.cpp:45
 #: gui/dialogs/aspectviewdialog.cpp:45 gui/dialogs/planetviewdialog.cpp:45
 msgid "New"
 msgstr "Nieg"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterviewdialog.cpp:46
+#, fuzzy
+#| msgid "New aspects filter"
+msgid "New aspect filter"
+msgstr "Nieg Aspektenfilter"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterviewdialog.cpp:48
+#: gui/dialogs/aspectviewdialog.cpp:48 gui/dialogs/planetviewdialog.cpp:48
+msgid "Edit"
+msgstr "Bewerken"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterviewdialog.cpp:49
+#, fuzzy
+#| msgid "Edit aspects filter \"%1\""
+msgid "Edit aspect filter"
+msgstr "Aspektenfilter \"%1\" bewerken"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterviewdialog.cpp:51
+#: gui/dialogs/aspectviewdialog.cpp:51 gui/dialogs/planetviewdialog.cpp:51
+msgid "Delete"
+msgstr "Wegdoon"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterviewdialog.cpp:52
+#, fuzzy
+#| msgid "Reset aspects filter"
+msgid "Delete aspect filter"
+msgstr "Aspektenfilter torüchsetten"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterviewdialog.cpp:117
+#, fuzzy, kde-format
+#| msgid "Are you certain you want to delete aspects filter \"%1\" ?"
+msgid "Are you certain you want to delete aspect filter \"%1\" ?"
+msgstr "Wullt Du den Aspektenfilter \"%1\" redig wegdoon?"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterviewdialog.cpp:118
+#, fuzzy
+#| msgid "Delete Aspect"
+msgid "Delete Aspect Filter"
+msgstr "Aspekt wegdoon"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterviewdialog.cpp:126
+#, fuzzy, kde-format
+msgid "Aspect filter \"%1\" successfully deleted"
+msgstr "Aspektenfilter \"%1\" mit Spood wegdaan."
+
+#. +> trunk
+#: gui/dialogs/aspectfilterviewdialog.cpp:127
+#, fuzzy
+#| msgid "Aspects filter deleted"
+msgid "Aspect Filter Deleted"
+msgstr "Aspektenfilter wegdaan"
+
+#. +> trunk
+#: gui/dialogs/aspectfilterviewdialog.cpp:133
+#, fuzzy, kde-format
+#| msgid "Cannot delete aspects filter \"%1\""
+msgid "Cannot delete aspect filter \"%1\""
+msgstr "Aspektenfilter \"%1\" lett sik nich wegdoon."
+
+#. +> trunk
+#: gui/dialogs/aspectviewdialog.cpp:41
+msgid "Aspects Manager"
+msgstr "Aspektenpleger"
 
 #. +> trunk
 #: gui/dialogs/aspectviewdialog.cpp:46
@@ -577,19 +765,9 @@ msgid "New aspect"
 msgstr "Nieg Aspekt"
 
 #. +> trunk
-#: gui/dialogs/aspectviewdialog.cpp:48 gui/dialogs/planetviewdialog.cpp:48
-msgid "Edit"
-msgstr "Bewerken"
-
-#. +> trunk
 #: gui/dialogs/aspectviewdialog.cpp:49
 msgid "Edit aspect"
 msgstr "Aspekt bewerken"
-
-#. +> trunk
-#: gui/dialogs/aspectviewdialog.cpp:51 gui/dialogs/planetviewdialog.cpp:51
-msgid "Delete"
-msgstr "Wegdoon"
 
 #. +> trunk
 #: gui/dialogs/aspectviewdialog.cpp:52
@@ -661,13 +839,6 @@ msgstr ""
 #| msgid "is exclusive"
 msgid "is exclusive"
 msgstr "is utsluten"
-
-#. +> trunk
-#: gui/dialogs/keywordattributedialog.cpp:83
-#: gui/dialogs/keywordvaluedialog.cpp:91
-#, fuzzy
-msgid "Comments"
-msgstr "Kommentaren"
 
 #. +> trunk
 #: gui/dialogs/keywordattributedialog.cpp:126
@@ -1095,7 +1266,7 @@ msgid "Unexpected error while saving preferences"
 msgstr "Nich verwacht Fehler bi't Sekern vun de Instellen"
 
 #. +> trunk
-#: gui/mainwindow.cpp:40
+#: gui/mainwindow.cpp:41
 msgctxt "Main window title"
 msgid "Kamala"
 msgstr "Kamala"
@@ -1237,10 +1408,6 @@ msgstr "All Gitarrenhelden"
 #~ msgstr "Skript utföhren..."
 
 #~ msgctxt "Menu item"
-#~ msgid "Configure Aspects Filters..."
-#~ msgstr "Aspektenfilters instellen..."
-
-#~ msgctxt "Menu item"
 #~ msgid "Configure Orbs Filters..."
 #~ msgstr "Orbisfilters instellen..."
 
@@ -1260,50 +1427,6 @@ msgstr "All Gitarrenhelden"
 #~ msgid "Configure Settings..."
 #~ msgstr "Instellen fastleggen..."
 
-#~| msgid "Edit planets filter \"%1\""
-#~ msgid "Edit aspects filter \"%1\""
-#~ msgstr "Aspektenfilter \"%1\" bewerken"
-
-#~| msgid "New planets filter"
-#~ msgid "New aspects filter"
-#~ msgstr "Nieg Aspektenfilter"
-
-#~| msgid "Save planets filter"
-#~ msgid "Save aspects filter"
-#~ msgstr "Aspektenfilter sekern"
-
-#~| msgid "Reset planets filter"
-#~ msgid "Reset aspects filter"
-#~ msgstr "Aspektenfilter torüchsetten"
-
-#~| msgid "Planets filter successfully saved as \"%1\""
-#~ msgid "Aspects filter successfully saved as \"%1\""
-#~ msgstr "Aspektenfilter mit Spood as \"%1\" sekert."
-
-#~| msgid "Planets filter saved"
-#~ msgid "Aspects filter saved"
-#~ msgstr "Aspektenfilter sekert"
-
-#~| msgid "Duplicate planets filter \"%1\""
-#~ msgid "Duplicate aspects filter \"%1\""
-#~ msgstr "Aspektenfilter \"%1\" verdubbeln"
-
-#~| msgid "Planets Filters manager"
-#~ msgid "Aspects Filters manager"
-#~ msgstr "Aspektenfilters plegen"
-
-#~| msgid "Are you certain you want to delete planets filter \"%1\" ?"
-#~ msgid "Are you certain you want to delete aspects filter \"%1\" ?"
-#~ msgstr "Wullt Du den Aspektenfilter \"%1\" redig wegdoon?"
-
-#~| msgid "Planets filter deleted"
-#~ msgid "Aspects filter deleted"
-#~ msgstr "Aspektenfilter wegdaan"
-
-#~| msgid "Cannot delete planets filter \"%1\""
-#~ msgid "Cannot delete aspects filter \"%1\""
-#~ msgstr "Aspektenfilter \"%1\" lett sik nich wegdoon."
-
 #~ msgctxt "Main aspects"
 #~ msgid "Main"
 #~ msgstr "Allmeen"
@@ -1311,14 +1434,6 @@ msgstr "All Gitarrenhelden"
 #~ msgctxt "Other aspects"
 #~ msgid "Others"
 #~ msgstr "Annerswat"
-
-#~ msgctxt "User-defined aspects 1"
-#~ msgid "User1"
-#~ msgstr "Bruker 1"
-
-#~ msgctxt "User-defined aspects 2"
-#~ msgid "User2"
-#~ msgstr "Bruker 2"
 
 #~ msgid "Ranking"
 #~ msgstr "Beweerten"
@@ -1988,10 +2103,6 @@ msgstr "All Gitarrenhelden"
 #~| msgid "Planets filter saved"
 #~ msgid "Planets filters"
 #~ msgstr "Planetenfiltes"
-
-#~| msgid "Planets filter saved"
-#~ msgid "Aspects filters"
-#~ msgstr "Aspektenfilters"
 
 #~| msgid "Planets filter saved"
 #~ msgid "Aspects restrictions"
