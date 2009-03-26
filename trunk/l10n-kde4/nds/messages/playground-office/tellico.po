@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tellico\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-03-25 11:33+0100\n"
+"POT-Creation-Date: 2009-03-26 10:58+0100\n"
 "PO-Revision-Date: 2009-03-24 07:30+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -113,7 +113,7 @@ msgid "&Set"
 msgstr ""
 
 #: src/gui/stringmapdialog.cpp:58 src/configdialog.cpp:576
-#: src/controller.cpp:431 src/controller.cpp:447
+#: src/controller.cpp:433 src/controller.cpp:449
 msgid "&Delete"
 msgstr "&Wegdoon"
 
@@ -147,14 +147,14 @@ msgstr "TCP/IP"
 msgid "<qt>Tellico is unable to write to the server pipe at <b>%1</b>.</qt>"
 msgstr "<qt>Tellico kann nich na de Serverümledden op <b>%1</b>schrieven.</qt>"
 
-#: src/core/filehandler.cpp:129 src/translators/xmlimporter.cpp:43
-#: src/translators/xmlimporter.cpp:60
+#: src/core/filehandler.cpp:129 src/translators/tellicoimporter.cpp:109
+#: src/translators/xmlimporter.cpp:43 src/translators/xmlimporter.cpp:60
 #, kde-format
 msgid "There is an XML parsing error in line %1, column %2."
 msgstr "Dat gifft en XML-Inleesfehler in Reeg %1, Striep %2"
 
-#: src/core/filehandler.cpp:131 src/translators/xmlimporter.cpp:45
-#: src/translators/xmlimporter.cpp:62
+#: src/core/filehandler.cpp:131 src/translators/tellicoimporter.cpp:111
+#: src/translators/xmlimporter.cpp:45 src/translators/xmlimporter.cpp:62
 msgid "The error message from Qt is:"
 msgstr "De Qt-Fehlermellen is:"
 
@@ -229,7 +229,7 @@ msgstr ""
 msgid "*.html|HTML Files (*.html)"
 msgstr "*.html|HTML-Dateien (*.html)"
 
-#: src/reportdialog.cpp:205 src/importdialog.cpp:322 src/configdialog.cpp:1020
+#: src/reportdialog.cpp:205 src/importdialog.cpp:322 src/configdialog.cpp:1002
 #: src/translators/gcfilmsexporter.cpp:44
 #: src/translators/pilotdbexporter.cpp:46
 #: src/translators/tellicoxmlexporter.cpp:58
@@ -369,7 +369,7 @@ msgstr ""
 msgid "Save Entry"
 msgstr "Indrag sekern"
 
-#: src/entryeditdialog.cpp:652 src/document.cpp:165
+#: src/entryeditdialog.cpp:652 src/document.cpp:171
 msgid "Unsaved Changes"
 msgstr "Nich sekerte Ännern"
 
@@ -461,7 +461,8 @@ msgstr "Tokoppelfehler %1: %2"
 #: src/collections/stampcollection.cpp:38
 #: src/collections/bookcollection.cpp:40 src/entryupdater.cpp:236
 #: src/translators/xmlstatehandler.cpp:342
-#: src/translators/audiofileimporter.cpp:163 src/collectionfactory.cpp:82
+#: src/translators/audiofileimporter.cpp:163
+#: src/translators/tellicoimporter.cpp:434 src/collectionfactory.cpp:82
 #: src/fetchdialog.cpp:191
 msgid "Title"
 msgstr "Titel"
@@ -640,6 +641,7 @@ msgid "Amazon.com Web Services"
 msgstr "\"Amazon.com\"-Nettdeensten"
 
 #: src/fetch/amazonfetcher.cpp:819 src/collections/videocollection.cpp:167
+#: src/translators/tellicoimporter.cpp:969
 msgid "Widescreen"
 msgstr "Breed Schirm"
 
@@ -1471,12 +1473,12 @@ msgstr "Filter &sekern"
 msgid "(Empty)"
 msgstr "(Leddig)"
 
-#: src/document.cpp:66 src/document.cpp:99 src/document.cpp:342
+#: src/document.cpp:67 src/document.cpp:100 src/document.cpp:348
 #: src/translators/htmlexporter.cpp:284 src/mainwindow.cpp:1964
 msgid "Untitled"
 msgstr "Ahn Titel"
 
-#: src/document.cpp:163
+#: src/document.cpp:169
 msgid ""
 "The current file has been modified.\n"
 "Do you want to save it?"
@@ -1484,11 +1486,11 @@ msgstr ""
 "De aktuelle Datei wöör ännert.\n"
 "Wullt Du ehr sekern?"
 
-#: src/document.cpp:197 src/mainwindow.cpp:1087
+#: src/document.cpp:203 src/mainwindow.cpp:1087
 msgid "Saving file..."
 msgstr "Datei warrt sekert..."
 
-#: src/document.cpp:472 src/collections/videocollection.cpp:203
+#: src/document.cpp:478 src/collections/videocollection.cpp:203
 #: src/collections/comicbookcollection.cpp:142
 #: src/collections/musiccollection.cpp:100
 #: src/collections/gamecollection.cpp:111
@@ -1497,7 +1499,7 @@ msgstr "Datei warrt sekert..."
 msgid "Loaned"
 msgstr "Utlehnt"
 
-#: src/document.cpp:474 src/collections/videocollection.cpp:23
+#: src/document.cpp:480 src/collections/videocollection.cpp:23
 #: src/collections/comicbookcollection.cpp:22
 #: src/collections/musiccollection.cpp:21
 #: src/collections/gamecollection.cpp:20 src/collections/coincollection.cpp:20
@@ -1880,11 +1882,13 @@ msgstr ""
 
 #: src/collections/videocollection.cpp:102
 #: src/translators/xmlstatehandler.cpp:346
+#: src/translators/tellicoimporter.cpp:438
 msgid "Actor/Actress"
 msgstr "Aktöör"
 
 #: src/collections/videocollection.cpp:103
 #: src/translators/xmlstatehandler.cpp:347
+#: src/translators/tellicoimporter.cpp:439
 msgid "Role"
 msgstr "Funkschoon"
 
@@ -2265,6 +2269,7 @@ msgstr "Schiev"
 #: src/collections/musiccollection.cpp:78
 #: src/translators/xmlstatehandler.cpp:343
 #: src/translators/audiofileimporter.cpp:164
+#: src/translators/tellicoimporter.cpp:435
 msgid "Artist"
 msgstr "Künstler"
 
@@ -2279,6 +2284,7 @@ msgstr "Titeln"
 #: src/collections/musiccollection.cpp:79
 #: src/translators/xmlstatehandler.cpp:344
 #: src/translators/audiofileimporter.cpp:165
+#: src/translators/tellicoimporter.cpp:436
 msgid "Length"
 msgstr "Duer"
 
@@ -2943,20 +2949,20 @@ msgstr "Klick hier, wenn Du den markeert Datenborn wegdoon wullt."
 msgid "Click to download additional data sources via the Internet."
 msgstr "Klick hier, wenn Du mehr Datenborns ut dat Internet daalladen wullt."
 
-#: src/configdialog.cpp:1018 src/translators/xsltimporter.cpp:105
+#: src/configdialog.cpp:1000 src/translators/xsltimporter.cpp:105
 #: src/translators/xsltexporter.cpp:85
 msgid "*.xsl|XSL Files (*.xsl)"
 msgstr "*.xsl|XSL-Dateien (*.xsl)"
 
-#: src/configdialog.cpp:1019
+#: src/configdialog.cpp:1001
 msgid "*.tar.gz *.tgz|Template Packages (*.tar.gz)"
 msgstr "*.tar.gz *.tgz|Vörlaag-Paketen (*.tar.gz)"
 
-#: src/configdialog.cpp:1044
+#: src/configdialog.cpp:1026
 msgid "Delete Template"
 msgstr "Vörlaag wegdoon"
 
-#: src/configdialog.cpp:1045
+#: src/configdialog.cpp:1027
 msgid "Select template to delete:"
 msgstr "Söök de Vörlaag ut, de Du wegdoon wullt:"
 
@@ -2964,7 +2970,7 @@ msgstr "Söök de Vörlaag ut, de Du wegdoon wullt:"
 msgid "Cancel"
 msgstr ""
 
-#: src/statusbar.cpp:84 src/controller.cpp:133 src/fetchdialog.cpp:250
+#: src/statusbar.cpp:84 src/controller.cpp:134 src/fetchdialog.cpp:250
 #: src/fetchdialog.cpp:361 src/fetchdialog.cpp:459 src/fetchdialog.cpp:514
 msgid "Ready."
 msgstr "Praat."
@@ -3168,7 +3174,7 @@ msgstr "PilotDB"
 msgid "*.pdb|Pilot Database Files (*.pdb)"
 msgstr "*.pdb|Pilot-Datenbankdateien (*.pdb)"
 
-#: src/translators/pilotdbexporter.cpp:141 src/detailedlistview.cpp:434
+#: src/translators/pilotdbexporter.cpp:141 src/detailedlistview.cpp:454
 msgid "View Columns"
 msgstr "Striepen wiesen"
 
@@ -3365,10 +3371,12 @@ msgid "Loading %1..."
 msgstr "\"%1\" warrt laadt..."
 
 #: src/translators/xmlstatehandler.cpp:108
+#: src/translators/tellicoimporter.cpp:148
 msgid "It is from a future version of Tellico."
 msgstr ""
 
 #: src/translators/xmlstatehandler.cpp:112
+#: src/translators/tellicoimporter.cpp:158
 msgid ""
 "Tellico is converting the file to a more recent document format. Information "
 "loss may occur if an older version of Tellico is used to read this file in "
@@ -3376,6 +3384,7 @@ msgid ""
 msgstr ""
 
 #: src/translators/xmlstatehandler.cpp:244
+#: src/translators/tellicoimporter.cpp:363
 #: src/translators/bibtexhandler.cpp:257
 msgid "Unknown"
 msgstr "Nich begäng"
@@ -3475,13 +3484,33 @@ msgstr "Tellico-Zip-Datei"
 msgid "<qt>The file is not a valid GCstar data file.</qt>"
 msgstr ""
 
-#: src/translators/tellicoimporter.cpp:172
+#: src/translators/tellicoimporter.cpp:788
+#: src/translators/tellicosaximporter.cpp:172
 msgid "The file is empty."
 msgstr "De Datei is leddig."
 
-#: src/translators/tellicoimporter.cpp:190
+#: src/translators/tellicoimporter.cpp:806
+#: src/translators/tellicosaximporter.cpp:190
 msgid "The file contains no collection data."
 msgstr ""
+
+#: src/translators/tellicoimporter.cpp:951
+msgid "Unread Books"
+msgstr "Nich leest Böker"
+
+#: src/translators/tellicoimporter.cpp:961
+msgid "Old Movies"
+msgstr ""
+
+#: src/translators/tellicoimporter.cpp:979
+#, fuzzy
+#| msgid "My Music"
+msgid "80's Music"
+msgstr "Mien Musik"
+
+#: src/translators/tellicoimporter.cpp:991
+msgid "Favorites"
+msgstr "Leevste"
 
 #: src/translators/filelistingimporter.cpp:57
 msgid "Scanning files..."
@@ -3730,57 +3759,57 @@ msgstr "Brettspeelsammeln"
 msgid "Custom Collection"
 msgstr "Egen Sammeln"
 
-#: src/controller.cpp:428
+#: src/controller.cpp:430
 msgid "Do you really want to delete this entry?"
 msgstr "Wullt Du dissen Indrag redig wegdoon?"
 
-#: src/controller.cpp:430
+#: src/controller.cpp:432
 msgid "Delete Entry"
 msgstr "Indrag wegdoon"
 
-#: src/controller.cpp:442
+#: src/controller.cpp:444
 msgid "Do you really want to delete these entries?"
 msgstr "Wullt Du disse Indrääg redig wegdoon?"
 
-#: src/controller.cpp:446
+#: src/controller.cpp:448
 msgid "Delete Multiple Entries"
 msgstr "Indrääg wegdoon"
 
-#: src/controller.cpp:622 src/mainwindow.cpp:469
+#: src/controller.cpp:632 src/mainwindow.cpp:469
 msgid "&Edit Entry..."
 msgstr "Indrag &bewerken..."
 
-#: src/controller.cpp:623 src/mainwindow.cpp:476
+#: src/controller.cpp:633 src/mainwindow.cpp:476
 msgid "D&uplicate Entry"
 msgstr "Indrag &verdubbeln"
 
 #. i18n: file: src/tellicoui.rc:78
 #. i18n: ectx: Menu (coll_update_entry)
-#: src/controller.cpp:624 src/mainwindow.cpp:561 rc.cpp:215
+#: src/controller.cpp:634 src/mainwindow.cpp:561 rc.cpp:215
 msgid "&Update Entry"
 msgstr "Indrag &opfrischen"
 
-#: src/controller.cpp:625 src/mainwindow.cpp:483
+#: src/controller.cpp:635 src/mainwindow.cpp:483
 msgid "&Delete Entry"
 msgstr "Indrag &wegdoon"
 
-#: src/controller.cpp:628
+#: src/controller.cpp:638
 msgid "&Edit Entries..."
 msgstr "Indrääg &bewerken..."
 
-#: src/controller.cpp:629
+#: src/controller.cpp:639
 msgid "D&uplicate Entries"
 msgstr "Indrääg &verdubbeln"
 
-#: src/controller.cpp:630
+#: src/controller.cpp:640
 msgid "&Update Entries"
 msgstr "Indrääg &opfrischen"
 
-#: src/controller.cpp:631
+#: src/controller.cpp:641
 msgid "&Delete Entries"
 msgstr "Indrääg &wegdoon"
 
-#: src/controller.cpp:684
+#: src/controller.cpp:694
 msgid ""
 "The following items are already loaned, but Tellico does not currently "
 "support lending an item multiple times. They will be removed from the list "
@@ -5194,9 +5223,3 @@ msgid ""
 "types by respecting proper sorting at the same time. Consider for example\n"
 "a number field followed by a text subfield with entries 3b, 14a.</p>\n"
 msgstr ""
-
-#~ msgid "Unread Books"
-#~ msgstr "Nich leest Böker"
-
-#~ msgid "Favorites"
-#~ msgstr "Leevste"
