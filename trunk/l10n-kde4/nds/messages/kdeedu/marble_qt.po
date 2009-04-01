@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: marble\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-31 10:47+0200\n"
+"POT-Creation-Date: 2009-04-01 11:21+0200\n"
 "PO-Revision-Date: 2009-03-31 22:32+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -244,22 +244,42 @@ msgid "An error occurred while trying to save the file.\n"
 msgstr "Bi den Versöök, de Datei to sekern is en Fehler passeert.\n"
 
 #: src/QtMainWindow.cpp:473
-#: src/plugins/render/fileview/FileViewFloatItem.cpp:233
+#: src/plugins/render/fileview/FileViewFloatItem.cpp:234
 msgid "Open File"
 msgstr "Datei opmaken"
 
 #: src/QtMainWindow.cpp:475
-#: src/plugins/render/fileview/FileViewFloatItem.cpp:235
+#: src/plugins/render/fileview/FileViewFloatItem.cpp:236
 msgid ""
 "All Supported Files (*.gpx *.kml);;GPS Data (*.gpx);;Google Earth KML (*.kml)"
 msgstr ""
 "Alle Dateitypen, de ünnerstütt warrt (*.gpx *.kml);;GPS-Daten (*.gpx);;"
 "Google Earth KML (*.kml)"
 
-#: src/plugins/network/qhttp/QHttpNetworkPlugin.cpp:57
-msgid "Downloading data..."
-msgstr "Daten warrt daallaadt..."
+#: src/plugins/network/kio/KIONetworkPlugin.cpp:109
+#, fuzzy
+#| msgid "QHttp based Network Plugin"
+msgid "KIO Network Plugin"
+msgstr "Nettwark-Moduul, op QHttp opbuut"
 
+#: src/plugins/network/kio/KIONetworkPlugin.cpp:119
+#, fuzzy
+#| msgid "QHttp based Network Plugin"
+msgid "KIO based Network Plugin"
+msgstr "Nettwark-Moduul, op QHttp opbuut"
+
+#: src/plugins/network/kio/KIONetworkPlugin.cpp:124
+msgid ""
+"A network plugin which supports HTTP pipelining to deliver a better user "
+"experience."
+msgstr ""
+
+#: src/plugins/network/qnam/QNamDownloadJob.cpp:66
+#: src/plugins/network/qhttp/QHttpNetworkPlugin.cpp:133
+msgid "Download finished."
+msgstr "Allens daallaadt."
+
+#: src/plugins/network/qnam/QNamDownloadJob.cpp:69
 #: src/plugins/network/qhttp/QHttpNetworkPlugin.cpp:111
 #: src/plugins/network/qhttp/QHttpNetworkPlugin.cpp:119
 #: src/plugins/network/qhttp/QHttpNetworkPlugin.cpp:127
@@ -267,9 +287,33 @@ msgstr "Daten warrt daallaadt..."
 msgid "Download failed: %1."
 msgstr "Fehler bi't Daalladen: %1."
 
-#: src/plugins/network/qhttp/QHttpNetworkPlugin.cpp:133
-msgid "Download finished."
-msgstr "Allens daallaadt."
+#: src/plugins/network/qnam/QNamDownloadJob.cpp:77
+#, fuzzy
+#| msgid "Download failed: %1."
+msgid "Download failed."
+msgstr "Fehler bi't Daalladen: %1."
+
+#: src/plugins/network/qnam/QNamNetworkPlugin.cpp:34
+#, fuzzy
+#| msgid "QHttp based Network Plugin"
+msgid "QNam Network Plugin"
+msgstr "Nettwark-Moduul, op QHttp opbuut"
+
+#: src/plugins/network/qnam/QNamNetworkPlugin.cpp:44
+#, fuzzy
+#| msgid "QHttp based Network Plugin"
+msgid "QNetworkAccessManager based Network Plugin"
+msgstr "Nettwark-Moduul, op QHttp opbuut"
+
+#: src/plugins/network/qnam/QNamNetworkPlugin.cpp:49
+msgid ""
+"A network plugin which keeps connected to the hosts used to deliver a better "
+"user experience."
+msgstr ""
+
+#: src/plugins/network/qhttp/QHttpNetworkPlugin.cpp:57
+msgid "Downloading data..."
+msgstr "Daten warrt daallaadt..."
 
 #: src/plugins/network/qhttp/QHttpNetworkPlugin.cpp:148
 msgid "QHttp based Network Plugin"
@@ -294,7 +338,7 @@ msgid "&Test Plugin"
 msgstr "&Probeermoduul"
 
 #: src/plugins/render/test/TestPlugin.cpp:57
-#: src/plugins/render/geodata/GeoDataPlugin.cpp:84
+#: src/plugins/render/geodata/GeoRendererPlugin.cpp:84
 msgid "This is a simple test plugin."
 msgstr "Dit is en eenfach Probeermoduul."
 
@@ -356,24 +400,24 @@ msgstr "&Steerns"
 msgid "A plugin that shows the Starry Sky."
 msgstr "En Moduul, dat den Steernheven wiest."
 
-#: src/plugins/render/fileview/FileViewFloatItem.cpp:55
+#: src/plugins/render/fileview/FileViewFloatItem.cpp:56
 #: src/lib/MarbleControlBox.cpp:491
 msgid "File View"
 msgstr "Dateiansicht"
 
-#: src/plugins/render/fileview/FileViewFloatItem.cpp:60
+#: src/plugins/render/fileview/FileViewFloatItem.cpp:61
 msgid "&File View"
 msgstr "&Dateiansicht"
 
-#: src/plugins/render/fileview/FileViewFloatItem.cpp:70
+#: src/plugins/render/fileview/FileViewFloatItem.cpp:71
 msgid "A list of currently opened files"
 msgstr "En List vun opmaakt Dateien"
 
-#: src/plugins/render/fileview/FileViewFloatItem.cpp:222
+#: src/plugins/render/fileview/FileViewFloatItem.cpp:223
 msgid "Open new kml file..."
 msgstr "Nieg KML-Datei opmaken..."
 
-#: src/plugins/render/fileview/FileViewFloatItem.cpp:224
+#: src/plugins/render/fileview/FileViewFloatItem.cpp:225
 msgid "close this kml file..."
 msgstr "Disse KML-Datei tomaken..."
 
@@ -425,25 +469,29 @@ msgid ""
 "popularity"
 msgstr "Laadt automaatsch de mehrst vörtrocken Biller ut de hele Welt daal."
 
-#: src/plugins/render/navigation/NavigationFloatItem.cpp:45
+#: src/plugins/render/navigation/NavigationFloatItem.cpp:46
 #: src/lib/MarbleControlBox.cpp:467
 msgid "Navigation"
 msgstr "Navigatschoon"
 
-#: src/plugins/render/navigation/NavigationFloatItem.cpp:50
+#: src/plugins/render/navigation/NavigationFloatItem.cpp:51
 msgid "&Navigation"
 msgstr "&Navigatschoon"
 
-#: src/plugins/render/navigation/NavigationFloatItem.cpp:60
+#: src/plugins/render/navigation/NavigationFloatItem.cpp:61
 msgid "A mouse control to zoom and move the map"
 msgstr "Mit de Muus de Koort bewegen un ehr Grött ännern"
 
-#: src/plugins/render/geodata/GeoDataPlugin.cpp:69
-msgid "GeoData Plugin"
+#: src/plugins/render/geodata/GeoRendererPlugin.cpp:69
+#, fuzzy
+#| msgid "GeoData Plugin"
+msgid "GeoRenderer Plugin"
 msgstr "GeoData-Moduul"
 
-#: src/plugins/render/geodata/GeoDataPlugin.cpp:74
-msgid "&GeoData Plugin"
+#: src/plugins/render/geodata/GeoRendererPlugin.cpp:74
+#, fuzzy
+#| msgid "&GeoData Plugin"
+msgid "&GeoRenderer Plugin"
 msgstr "&GeoData-Moduul"
 
 #: src/plugins/render/twitter/twitterPlugin.cpp:47
@@ -656,11 +704,6 @@ msgstr ""
 "De <maximum>-Ünnertextinholt lett sik nich na en Heeltall wanneln. Wöör: \"%1"
 "\""
 
-#: src/lib/geodata/parser/GeoParser.cpp:97
-#, qt-format
-msgid "Parsing failed. Still %1 unclosed tag(s) after document end."
-msgstr "Inlesen fehlslaan. %1 noch nich slaten Betekers achter Dokment-Enn."
-
 #: src/lib/geodata/parser/GeoParser.cpp:185
 msgid "File format unrecognized"
 msgstr "Nich begäng Dateiformaat"
@@ -774,94 +817,122 @@ msgstr "Daten laat sik den Twischenspieker nich tofögen"
 msgid "Marble Info Center - %1"
 msgstr "Marble-Infozentrum - %1"
 
-#: src/lib/PlacemarkInfoDialog.cpp:61
+#: src/lib/PlacemarkInfoDialog.cpp:60
 msgid "Population:"
 msgstr "Inwahnertall:"
 
-#: src/lib/PlacemarkInfoDialog.cpp:70 src/lib/PlacemarkInfoDialog.cpp:73
+#: src/lib/PlacemarkInfoDialog.cpp:68 src/lib/PlacemarkInfoDialog.cpp:71
 msgid "Capital"
 msgstr "Hööftstadt"
 
-#: src/lib/PlacemarkInfoDialog.cpp:76
+#: src/lib/PlacemarkInfoDialog.cpp:74
 msgid "Regional Capital"
 msgstr "Hööftstadt vun de Regioon"
 
-#: src/lib/PlacemarkInfoDialog.cpp:79 src/lib/PlacemarkInfoDialog.cpp:82
+#: src/lib/PlacemarkInfoDialog.cpp:77 src/lib/PlacemarkInfoDialog.cpp:80
 msgid "Location"
 msgstr "Oort"
 
-#: src/lib/PlacemarkInfoDialog.cpp:86
+#: src/lib/PlacemarkInfoDialog.cpp:84
 msgid "Mountain"
 msgstr "Barg"
 
-#: src/lib/PlacemarkInfoDialog.cpp:88
+#: src/lib/PlacemarkInfoDialog.cpp:86
 msgid "Elevation extreme"
 msgstr "Gröttst Hööchde"
 
-#: src/lib/PlacemarkInfoDialog.cpp:91
+#: src/lib/PlacemarkInfoDialog.cpp:89
 msgid "Volcano"
 msgstr "Vulkaan"
 
-#: src/lib/PlacemarkInfoDialog.cpp:94
+#: src/lib/PlacemarkInfoDialog.cpp:92
 msgid "Shipwreck"
 msgstr "Wrack"
 
-#: src/lib/PlacemarkInfoDialog.cpp:97
+#: src/lib/PlacemarkInfoDialog.cpp:95
 msgid "City"
 msgstr "Stadt"
 
-#: src/lib/PlacemarkInfoDialog.cpp:100
+#: src/lib/PlacemarkInfoDialog.cpp:98
 msgid "Ocean"
 msgstr "Ozean"
 
-#: src/lib/PlacemarkInfoDialog.cpp:103
+#: src/lib/PlacemarkInfoDialog.cpp:101
 msgid "Nation"
 msgstr "Land"
 
-#: src/lib/PlacemarkInfoDialog.cpp:106
+#: src/lib/PlacemarkInfoDialog.cpp:104
 msgid "Continent"
 msgstr "Eerddeel"
 
-#: src/lib/PlacemarkInfoDialog.cpp:109
+#: src/lib/PlacemarkInfoDialog.cpp:107
 msgid "Astronomical observatory"
 msgstr "Astronoomsch Steernwacht"
 
-#: src/lib/PlacemarkInfoDialog.cpp:112
+#: src/lib/PlacemarkInfoDialog.cpp:110
+#, fuzzy
+#| msgctxt "the planet"
+#| msgid "Mars"
+msgid "Maria"
+msgstr "Mars"
+
+#: src/lib/PlacemarkInfoDialog.cpp:113
+#, fuzzy
+#| msgid "Craters"
+msgid "Crater"
+msgstr "Kraters"
+
+#: src/lib/PlacemarkInfoDialog.cpp:119
+#, fuzzy
+#| msgid "Landing Sites"
+msgid "Landing Site"
+msgstr "Landesteden"
+
+#: src/lib/PlacemarkInfoDialog.cpp:122
 msgid "Other Place"
 msgstr "Anner Oort"
 
-#: src/lib/PlacemarkInfoDialog.cpp:136
+#: src/lib/PlacemarkInfoDialog.cpp:146
 msgid "Area:"
 msgstr "Rebeet:"
 
-#: src/lib/PlacemarkInfoDialog.cpp:138
+#: src/lib/PlacemarkInfoDialog.cpp:148
 #, qt-format
 msgid "%1 sq km"
 msgstr "%1 km²"
 
-#: src/lib/PlacemarkInfoDialog.cpp:140
+#: src/lib/PlacemarkInfoDialog.cpp:150
 #, qt-format
 msgid "%1 Mio. sq km"
 msgstr "%1 Mio. km²"
 
-#: src/lib/PlacemarkInfoDialog.cpp:144
+#: src/lib/PlacemarkInfoDialog.cpp:154
 #, qt-format
 msgid "%1 inh."
 msgstr "%1 Inw."
 
-#: src/lib/PlacemarkInfoDialog.cpp:146
+#: src/lib/PlacemarkInfoDialog.cpp:156
 #, qt-format
 msgid "%1 Mio. inh."
 msgstr "%1 Mio. Inw."
 
-#: src/lib/PlacemarkInfoDialog.cpp:149
+#: src/lib/PlacemarkInfoDialog.cpp:159
 #, qt-format
 msgid "%1 m"
 msgstr "%1 m"
 
-#: src/lib/PlacemarkInfoDialog.cpp:163
+#: src/lib/PlacemarkInfoDialog.cpp:160
+#, fuzzy, qt-format
+#| msgid "%1 m"
+msgid "%1 km"
+msgstr "%1 m"
+
+#: src/lib/PlacemarkInfoDialog.cpp:176
 msgid "-"
 msgstr "-"
+
+#~ msgid "Parsing failed. Still %1 unclosed tag(s) after document end."
+#~ msgstr "Inlesen fehlslaan. %1 noch nich slaten Betekers achter Dokment-Enn."
 
 #~ msgid "not available"
 #~ msgstr "nich verföögbor"
@@ -970,12 +1041,6 @@ msgstr "-"
 #~ "<p>De Maand.<p>DeKoort baseert op den Daten vun de Mandmission "
 #~ "\"Clementine\" (UVVIS Basemap Mosaic). Dank an: NASA/SDIO, <a href="
 #~ "\"http://astrogeology.usgs.gov\">USGS Astrogeology Research Program</a>"
-
-#~ msgid "Landing Sites"
-#~ msgstr "Landesteden"
-
-#~ msgid "Craters"
-#~ msgstr "Kraters"
 
 #~ msgid "Other features"
 #~ msgstr "Anner Markmalen"
