@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-04-15 12:04+0200\n"
+"POT-Creation-Date: 2009-04-23 11:12+0200\n"
 "PO-Revision-Date: 2009-03-31 23:47+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -347,6 +347,94 @@ msgstr " OpenPGP-Exportdatei:"
 #: dialogs/exportcertificatesdialog.cpp:77
 msgid "S/MIME export file:"
 msgstr "S/MIME-Exportdatei:"
+
+#: dialogs/deletecertificatesdialog.cpp:94
+msgid "These are the certificates you have selected for deletion:"
+msgstr ""
+
+#: dialogs/deletecertificatesdialog.cpp:96
+msgid ""
+"These certificates will be deleted even though you did <emphasis>not</"
+"emphasis><nl> explicitly select them (<a href=\"whatsthis://\">Why?</a>):"
+msgstr ""
+
+#: dialogs/deletecertificatesdialog.cpp:117
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Why do you want to delete more certificates than I selected?</"
+"title><para>When you delete CA certificates (both root CAs and intermediate "
+"CAs), the certificates issued by them will also be deleted.</para><para>This "
+"can be nicely seen in <application>Kleopatra</application>'s hierarchical "
+"view mode: In this mode, if you delete a certificate that has children, "
+"those children will also be deleted. Think of CA certificates as folders "
+"containing other certificates: When you delete the folder, you delete its "
+"contents, too.</para>"
+msgstr ""
+
+#: dialogs/deletecertificatesdialog.cpp:129
+#, fuzzy
+#| msgid "Delete"
+msgctxt "@action:button"
+msgid "Delete"
+msgstr "Wegdoon"
+
+#: dialogs/deletecertificatesdialog.cpp:189
+#, fuzzy
+#| msgid ""
+#| "The certificate to be deleted is your own. It contains private key "
+#| "material, which is needed to decrypt past communication encrypted to the "
+#| "certificate, and can therefore not be deleted."
+#| msgid_plural ""
+#| "All of the certificates to be deleted are your own. They contain private "
+#| "key material, which is needed to decrypt past communication encrypted to "
+#| "the certificate, and can therefore not be deleted."
+msgid ""
+"The certificate to be deleted is your own. It contains private key material, "
+"which is needed to decrypt past communication encrypted to the certificate, "
+"and should therefore not be deleted."
+msgid_plural ""
+"All of the certificates to be deleted are your own. They contain private key "
+"material, which is needed to decrypt past communication encrypted to the "
+"certificate, and should therefore not be deleted."
+msgstr[0] ""
+"Dat Zertifikaat, dat Du wegdoon wullt, is Dien egen. Dat bargt Daten vun den "
+"Privaatslötel, den Du bruukst, wenn Du Narichten opslöteln wullt, de Du dor "
+"fröher al mit verslötelt hest. Dat lett sik nich wegdoon."
+msgstr[1] ""
+"All Zertifikaten, de Du wegdoon wullt, sünd Dien egen. Se bargt Daten vun de "
+"Privaatslötels, de Du bruukst, wenn Du Narichten opslöteln wullt, de Du dor "
+"fröher al mit verslötelt hest. Se laat sik nich wegdoon."
+
+#: dialogs/deletecertificatesdialog.cpp:203
+#, fuzzy
+#| msgid ""
+#| "The certificate to be deleted is your own. It contains private key "
+#| "material, which is needed to decrypt past communication encrypted to the "
+#| "certificate, and can therefore not be deleted."
+#| msgid_plural ""
+#| "All of the certificates to be deleted are your own. They contain private "
+#| "key material, which is needed to decrypt past communication encrypted to "
+#| "the certificate, and can therefore not be deleted."
+msgid ""
+"One of the certificates to be deleted is your own. It contains private key "
+"material, which is needed to decrypt past communication encrypted to the "
+"certificate, and should therefore not be deleted."
+msgid_plural ""
+"Some of the certificates to be deleted are your own. They contain private "
+"key material, which is needed to decrypt past communication encrypted to the "
+"certificate, and should therefore not be deleted."
+msgstr[0] ""
+"Dat Zertifikaat, dat Du wegdoon wullt, is Dien egen. Dat bargt Daten vun den "
+"Privaatslötel, den Du bruukst, wenn Du Narichten opslöteln wullt, de Du dor "
+"fröher al mit verslötelt hest. Dat lett sik nich wegdoon."
+msgstr[1] ""
+"All Zertifikaten, de Du wegdoon wullt, sünd Dien egen. Se bargt Daten vun de "
+"Privaatslötels, de Du bruukst, wenn Du Narichten opslöteln wullt, de Du dor "
+"fröher al mit verslötelt hest. Se laat sik nich wegdoon."
+
+#: dialogs/deletecertificatesdialog.cpp:218
+msgid "Secret Key Deletion"
+msgstr "Privaatslötel wegdoon"
 
 #: dialogs/certificateselectiondialog.cpp:110
 msgid "Please select one or more of the following certificates:"
@@ -2689,7 +2777,14 @@ msgstr ""
 "GpgSM weer:\n"
 "%1"
 
-#: commands/deletecertificatescommand.cpp:140
+#: commands/deletecertificatescommand.cpp:98
+#, fuzzy
+#| msgid "Deleting CA Certificates"
+msgctxt "@title:window"
+msgid "Delete Certificates"
+msgstr "ZA-Zertifikaten wegdoon"
+
+#: commands/deletecertificatescommand.cpp:163
 msgid ""
 "Neither the OpenPGP nor the CMS backends support certificate deletion.\n"
 "Check your installation."
@@ -2698,7 +2793,7 @@ msgstr ""
 "ünnerstütt dat Wegdoon vun Zertifikaten nich.\n"
 "Prööv bitte Dien Installatschoon."
 
-#: commands/deletecertificatescommand.cpp:144
+#: commands/deletecertificatescommand.cpp:167
 msgid ""
 "The OpenPGP backend does not support certificate deletion.\n"
 "Check your installation.\n"
@@ -2708,8 +2803,8 @@ msgstr ""
 "Prööv bitte Dien Installatschoon.\n"
 "Bloots de utsöchten CMS-Zertifikaten warrt wegdaan."
 
-#: commands/deletecertificatescommand.cpp:151
-#: commands/deletecertificatescommand.cpp:155
+#: commands/deletecertificatescommand.cpp:174
+#: commands/deletecertificatescommand.cpp:178
 msgid ""
 "The OpenPGP backend does not support certificate deletion.\n"
 "Check your installation."
@@ -2717,7 +2812,7 @@ msgstr ""
 "Dat OpenPGP-Hülpprogramm ünnerstütt dat Wegdoon vun Zertifikaten nich.\n"
 "Prööv bitte Dien Installatschoon."
 
-#: commands/deletecertificatescommand.cpp:161
+#: commands/deletecertificatescommand.cpp:184
 msgid ""
 "The CMS backend does not support certificate deletion.\n"
 "Check your installation.\n"
@@ -2727,8 +2822,8 @@ msgstr ""
 "Prööv bitte Dien Installatschoon.\n"
 "Bloots de utsöchten OpenPGP-Zertifikaten warrt wegdaan."
 
-#: commands/deletecertificatescommand.cpp:177
-#: commands/deletecertificatescommand.cpp:190
+#: commands/deletecertificatescommand.cpp:200
+#: commands/deletecertificatescommand.cpp:213
 msgid ""
 "The CMS backend does not support certificate deletion.\n"
 "Check your installation."
@@ -2736,148 +2831,26 @@ msgstr ""
 "Dat CMS-Hülpprogramm ünnerstütt dat Wegdoon vun Zertifikaten nich.\n"
 "Prööv bitte Dien Installatschoon."
 
-#: commands/deletecertificatescommand.cpp:219
-msgid ""
-"The certificate to be deleted is your own. It contains private key material, "
-"which is needed to decrypt past communication encrypted to the certificate, "
-"and can therefore not be deleted."
-msgid_plural ""
-"All of the certificates to be deleted are your own. They contain private key "
-"material, which is needed to decrypt past communication encrypted to the "
-"certificate, and can therefore not be deleted."
-msgstr[0] ""
-"Dat Zertifikaat, dat Du wegdoon wullt, is Dien egen. Dat bargt Daten vun den "
-"Privaatslötel, den Du bruukst, wenn Du Narichten opslöteln wullt, de Du dor "
-"fröher al mit verslötelt hest. Dat lett sik nich wegdoon."
-msgstr[1] ""
-"All Zertifikaten, de Du wegdoon wullt, sünd Dien egen. Se bargt Daten vun de "
-"Privaatslötels, de Du bruukst, wenn Du Narichten opslöteln wullt, de Du dor "
-"fröher al mit verslötelt hest. Se laat sik nich wegdoon."
-
-#: commands/deletecertificatescommand.cpp:233
-#: commands/deletecertificatescommand.cpp:277
-#: commands/deletecertificatescommand.cpp:316
-msgid "Secret Key Deletion"
-msgstr "Privaatslötel wegdoon"
-
-#: commands/deletecertificatescommand.cpp:255
-msgid ""
-"All of the certificates to be deleted are either your own, or are issuers of "
-"one of your own certificates. Your own certificates contain private key "
-"material, which is needed to decrypt past communication encrypted to the "
-"certificate. They can therefore not be deleted, and neither can their "
-"issuers."
-msgstr ""
-"All Zertifikaten, de Du wegdoon wullt, sünd Dien egen oder "
-"Rutgeverzertifikaten vun een vun Dien egen Zertifikaten. Dien egen "
-"Zertifikaten bargt Daten vun de Privaatslötels, de Du bruukst, wenn Du "
-"Narichten opslöteln wullt, de Du dor fröher al mit verslötelt hest. Se laat "
-"sik nich wegdoon, un ok ehr Rutgeverzertifikaten nich."
-
-#: commands/deletecertificatescommand.cpp:262
-msgid ""
-"The certificate to be deleted is an issuer of one of your own certificates. "
-"Your own certificates contain private key material, which is needed to "
-"decrypt past communication encrypted to the certificate. They can therefore "
-"not be deleted, and neither can their issuers."
-msgid_plural ""
-"All of the certificates to be deleted are issuers of one of your own "
-"certificates. Your own certificates contain private key material, which is "
-"needed to decrypt past communication encrypted to the certificate. They can "
-"therefore not be deleted, and neither can their issuers."
-msgstr[0] ""
-"Dat Zertifikaat, dat Du wegdoon wullt, is en Rutgeverzertifikaat vun een vun "
-"Dien egen Zertifikaten. Se bargt Daten vun de Privaatslötels, de Du bruukst, "
-"wenn Du Narichten opslöteln wullt, de Du dor fröher al mit verslötelt hest. "
-"Se laat sik nich wegdoon, un ok ehr Rutgeverzertifikaten nich."
-msgstr[1] ""
-"All Zertifikaten, de Du wegdoon wullt, sünd Rutgeverzertifikaten vun een vun "
-"Dien egen Zertifikaten. Dien egen Zertifikaten bargt Daten vun de "
-"Privaatslötels, de Du bruukst, wenn Du Narichten opslöteln wullt, de Du dor "
-"fröher al mit verslötelt hest. Se laat sik nich wegdoon, un ok ehr "
-"Rutgeverzertifikaten nich."
-
-#: commands/deletecertificatescommand.cpp:290
-msgid ""
-"Some of the certificates to be deleted are your own, or are issuers of one "
-"of your own certificates. Your own certificates contain private key "
-"material, which is needed to decrypt past communication encrypted to the "
-"certificate. They can therefore not be deleted, and neither can their "
-"issuers.\n"
-"If you choose to continue, your own, as well as any issuer certificates, "
-"will be skipped from deletion."
-msgstr ""
-"Een Reeg vun de Zertifikaat, de Du wegdoon wullt, sünd Dien egen oder "
-"Rutgeverzertifikaat vun een vun Dien egen Zertifikaten. Dien egen "
-"Zertifikaten bargt Daten vun de Privaatslötels, de Du bruukst, wenn Du "
-"Narichten opslöteln wullt, de Du dor fröher al mit verslötelt hest. Se laat "
-"sik nich wegdoon, un ok ehr Rutgeverzertifikaten nich.\n"
-"Maakst Du wieder, warrt Dien egen un ehr Rutgeverzertifikaten bi't Wegdoon "
-"utlaten."
-
-#: commands/deletecertificatescommand.cpp:300
-msgid ""
-"Some of the certificates to be deleted are your own. They contain private "
-"key material, which is needed to decrypt past communication encrypted to the "
-"certificate. They can therefore not be deleted.\n"
-"If you choose to continue, they will be skipped from deletion."
-msgstr ""
-"Een Reeg vun de Zertifikaat, de Du wegdoon wullt, sünd Dien egen "
-"Zertifikaten. Se bargt Daten vun de Privaatslötels, de Du bruukst, wenn Du "
-"Narichten opslöteln wullt, de Du dor fröher al mit verslötelt hest. Se laat "
-"sik nich wegdoon.\n"
-"Maakst Du wieder, warrt se bi't Wegdoon utlaten."
-
-#: commands/deletecertificatescommand.cpp:308
-msgid ""
-"Some of the certificates to be deleted are issuers of one of your own "
-"certificates. Your own certificates contain private key material, which is "
-"needed to decrypt past communication encrypted to the certificate. They can "
-"therefore not be deleted, and neither can their issuers.\n"
-"If you choose to continue, they will be skipped from deletion."
-msgstr ""
-"Een Reeg vun de Zertifikaat, de Du wegdoon wullt, sünd Rutgeverzertifikaten "
-"vun een vun Dien egen Zertifikaten. Dien egen Zertifikaten bargt Daten vun "
-"de Privaatslötels, de Du bruukst, wenn Du Narichten opslöteln wullt, de Du "
-"dor fröher al mit verslötelt hest. Se laat sik nich wegdoon, un ok ehr "
-"Rutgeverzertifikaten nich.\n"
-"Maakst Du wieder, warrt se bi't Wegdoon utlaten."
-
-#: commands/deletecertificatescommand.cpp:350
-msgid ""
-"Some or all of the selected certificates are issuers (CA certificates) for "
-"other, non-selected certificates.\n"
-"Deleting a CA certificate will also delete all certificates issued by it."
-msgstr ""
-"En poor oder all vun de utsöchte Zertifikaten sünd Rutgevers (Zertifikaten "
-"vun Zertifikaatautoriteten) för anner, nich utsöchte Zertifikaten.\n"
-"Wenn Du dat Zertifikaat vun en Zertifikaatautoriteet wegdeist, warrt ok all "
-"vun ehr rutgeven Zertifikaten wegdaan."
-
-#: commands/deletecertificatescommand.cpp:355
-msgid "Deleting CA Certificates"
-msgstr "ZA-Zertifikaten wegdoon"
-
-#: commands/deletecertificatescommand.cpp:373
-#: commands/deletecertificatescommand.cpp:439
+#: commands/deletecertificatescommand.cpp:281
+#: commands/deletecertificatescommand.cpp:346
 msgid "Certificate Deletion Failed"
 msgstr "Wegdoon vun Zertifikaten fehlslaan"
 
-#: commands/deletecertificatescommand.cpp:374
+#: commands/deletecertificatescommand.cpp:282
 msgid "Certificate Deletion Problem"
 msgstr "Problem bi't Wegdoon vun Zertifikaten"
 
-#: commands/deletecertificatescommand.cpp:430
+#: commands/deletecertificatescommand.cpp:337
 #, kde-format
 msgid "OpenPGP backend: %1"
 msgstr "OpenPGP-Hülpprogramm: %1"
 
-#: commands/deletecertificatescommand.cpp:433
+#: commands/deletecertificatescommand.cpp:340
 #, kde-format
 msgid "CMS backend: %1"
 msgstr "CMS-Hülpprogramm: %1"
 
-#: commands/deletecertificatescommand.cpp:435
+#: commands/deletecertificatescommand.cpp:342
 #, kde-format
 msgid ""
 "<qt><p>An error occurred while trying to delete the certificate:</p><p><b>%"
@@ -6117,6 +6090,96 @@ msgid "The GpgSM process ended prematurely because of an unexpected error."
 msgstr ""
 "De Perzess \"GpgSM\" hett sik vör Tiet utmaakt, dat geev en nich verwacht "
 "Fehler."
+
+#~ msgid ""
+#~ "All of the certificates to be deleted are either your own, or are issuers "
+#~ "of one of your own certificates. Your own certificates contain private "
+#~ "key material, which is needed to decrypt past communication encrypted to "
+#~ "the certificate. They can therefore not be deleted, and neither can their "
+#~ "issuers."
+#~ msgstr ""
+#~ "All Zertifikaten, de Du wegdoon wullt, sünd Dien egen oder "
+#~ "Rutgeverzertifikaten vun een vun Dien egen Zertifikaten. Dien egen "
+#~ "Zertifikaten bargt Daten vun de Privaatslötels, de Du bruukst, wenn Du "
+#~ "Narichten opslöteln wullt, de Du dor fröher al mit verslötelt hest. Se "
+#~ "laat sik nich wegdoon, un ok ehr Rutgeverzertifikaten nich."
+
+#~ msgid ""
+#~ "The certificate to be deleted is an issuer of one of your own "
+#~ "certificates. Your own certificates contain private key material, which "
+#~ "is needed to decrypt past communication encrypted to the certificate. "
+#~ "They can therefore not be deleted, and neither can their issuers."
+#~ msgid_plural ""
+#~ "All of the certificates to be deleted are issuers of one of your own "
+#~ "certificates. Your own certificates contain private key material, which "
+#~ "is needed to decrypt past communication encrypted to the certificate. "
+#~ "They can therefore not be deleted, and neither can their issuers."
+#~ msgstr[0] ""
+#~ "Dat Zertifikaat, dat Du wegdoon wullt, is en Rutgeverzertifikaat vun een "
+#~ "vun Dien egen Zertifikaten. Se bargt Daten vun de Privaatslötels, de Du "
+#~ "bruukst, wenn Du Narichten opslöteln wullt, de Du dor fröher al mit "
+#~ "verslötelt hest. Se laat sik nich wegdoon, un ok ehr Rutgeverzertifikaten "
+#~ "nich."
+#~ msgstr[1] ""
+#~ "All Zertifikaten, de Du wegdoon wullt, sünd Rutgeverzertifikaten vun een "
+#~ "vun Dien egen Zertifikaten. Dien egen Zertifikaten bargt Daten vun de "
+#~ "Privaatslötels, de Du bruukst, wenn Du Narichten opslöteln wullt, de Du "
+#~ "dor fröher al mit verslötelt hest. Se laat sik nich wegdoon, un ok ehr "
+#~ "Rutgeverzertifikaten nich."
+
+#~ msgid ""
+#~ "Some of the certificates to be deleted are your own, or are issuers of "
+#~ "one of your own certificates. Your own certificates contain private key "
+#~ "material, which is needed to decrypt past communication encrypted to the "
+#~ "certificate. They can therefore not be deleted, and neither can their "
+#~ "issuers.\n"
+#~ "If you choose to continue, your own, as well as any issuer certificates, "
+#~ "will be skipped from deletion."
+#~ msgstr ""
+#~ "Een Reeg vun de Zertifikaat, de Du wegdoon wullt, sünd Dien egen oder "
+#~ "Rutgeverzertifikaat vun een vun Dien egen Zertifikaten. Dien egen "
+#~ "Zertifikaten bargt Daten vun de Privaatslötels, de Du bruukst, wenn Du "
+#~ "Narichten opslöteln wullt, de Du dor fröher al mit verslötelt hest. Se "
+#~ "laat sik nich wegdoon, un ok ehr Rutgeverzertifikaten nich.\n"
+#~ "Maakst Du wieder, warrt Dien egen un ehr Rutgeverzertifikaten bi't "
+#~ "Wegdoon utlaten."
+
+#~ msgid ""
+#~ "Some of the certificates to be deleted are your own. They contain private "
+#~ "key material, which is needed to decrypt past communication encrypted to "
+#~ "the certificate. They can therefore not be deleted.\n"
+#~ "If you choose to continue, they will be skipped from deletion."
+#~ msgstr ""
+#~ "Een Reeg vun de Zertifikaat, de Du wegdoon wullt, sünd Dien egen "
+#~ "Zertifikaten. Se bargt Daten vun de Privaatslötels, de Du bruukst, wenn "
+#~ "Du Narichten opslöteln wullt, de Du dor fröher al mit verslötelt hest. Se "
+#~ "laat sik nich wegdoon.\n"
+#~ "Maakst Du wieder, warrt se bi't Wegdoon utlaten."
+
+#~ msgid ""
+#~ "Some of the certificates to be deleted are issuers of one of your own "
+#~ "certificates. Your own certificates contain private key material, which "
+#~ "is needed to decrypt past communication encrypted to the certificate. "
+#~ "They can therefore not be deleted, and neither can their issuers.\n"
+#~ "If you choose to continue, they will be skipped from deletion."
+#~ msgstr ""
+#~ "Een Reeg vun de Zertifikaat, de Du wegdoon wullt, sünd "
+#~ "Rutgeverzertifikaten vun een vun Dien egen Zertifikaten. Dien egen "
+#~ "Zertifikaten bargt Daten vun de Privaatslötels, de Du bruukst, wenn Du "
+#~ "Narichten opslöteln wullt, de Du dor fröher al mit verslötelt hest. Se "
+#~ "laat sik nich wegdoon, un ok ehr Rutgeverzertifikaten nich.\n"
+#~ "Maakst Du wieder, warrt se bi't Wegdoon utlaten."
+
+#~ msgid ""
+#~ "Some or all of the selected certificates are issuers (CA certificates) "
+#~ "for other, non-selected certificates.\n"
+#~ "Deleting a CA certificate will also delete all certificates issued by it."
+#~ msgstr ""
+#~ "En poor oder all vun de utsöchte Zertifikaten sünd Rutgevers "
+#~ "(Zertifikaten vun Zertifikaatautoriteten) för anner, nich utsöchte "
+#~ "Zertifikaten.\n"
+#~ "Wenn Du dat Zertifikaat vun en Zertifikaatautoriteet wegdeist, warrt ok "
+#~ "all vun ehr rutgeven Zertifikaten wegdaan."
 
 #~ msgid "Certificate Downloads Failed"
 #~ msgstr "Daalladen vun Zertifikaten fehlslaan"
