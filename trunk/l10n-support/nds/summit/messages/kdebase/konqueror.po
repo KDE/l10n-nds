@@ -10,14 +10,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konqueror\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-03-29 11:36+0200\n"
-"PO-Revision-Date: 2009-03-31 21:57+0200\n"
+"POT-Creation-Date: 2009-04-24 11:12+0200\n"
+"PO-Revision-Date: 2009-04-25 02:11+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 0.2\n"
+"X-Generator: Lokalize 0.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. +> trunk stable
@@ -79,7 +79,7 @@ msgid "Specifications"
 msgstr "Markmalen"
 
 #. +> trunk stable
-#: about/konq_aboutpage.cc:91 src/konqmainwindow.cpp:2037
+#: about/konq_aboutpage.cc:91 src/konqmainwindow.cpp:2039
 msgid "Home Folder"
 msgstr "Tohuusorner"
 
@@ -174,7 +174,7 @@ msgid "Konqueror is designed to embrace and support Internet standards. The aim 
 msgstr "Konqueror is so schreven, dat Internetstandards bruukt un ünnerstütt warrt. Dat Teel is en vulle Inbuu vun Standards vun Organisatschonen as W3 un OASIS. Ok warrt anner Funkschonen ünnerstütt, de dat bloots as <i>de facto</i>-Standard in't Internet gifft. Blang disse Ünnerstütten för t.B. Sietlüttbiller, Nett-Söökwöör oder <a href=\"%1\">XBEL Leestekens</a> bargt Konqueror ok disse Funkschonen:"
 
 #. +> trunk stable
-#: about/konq_aboutpage.cc:205 src/konqmainwindow.cpp:1781
+#: about/konq_aboutpage.cc:205 src/konqmainwindow.cpp:1783
 msgid "Web Browsing"
 msgstr "Nettkieken"
 
@@ -825,7 +825,7 @@ msgstr "Vörgeschicht leddig maken"
 
 #. +> trunk stable
 #: sidebar/trees/history_module/history_item.cpp:120
-#: src/konqhistorymodel.cpp:137
+#: src/konqhistorygroupmodel.cpp:137 src/konqhistorymodel.cpp:137
 #, kde-format
 msgid ""
 "<qt>"
@@ -844,7 +844,7 @@ msgstr ""
 
 #. +> trunk stable
 #: sidebar/trees/history_module/history_module.cpp:88
-#: src/konqhistorydialog.cpp:67 src/konqmainwindow.cpp:3509
+#: src/konqhistorydialog.cpp:67 src/konqmainwindow.cpp:3465
 msgid "New &Window"
 msgstr "&Nieg Finster"
 
@@ -901,7 +901,7 @@ msgstr "Vörgeschicht wegdoon?"
 
 #. +> trunk stable
 #: sidebar/trees/history_module/history_module.h:62
-#: src/konqhistorymodel.cpp:232
+#: src/konqhistorygroupmodel.cpp:232 src/konqhistorymodel.cpp:232
 msgid "Miscellaneous"
 msgstr "Anner"
 
@@ -1011,12 +1011,12 @@ msgstr "Link &opmaken"
 
 #. +> trunk stable
 #: sidebar/web_module/web_module.h:54 sidebar/web_module/web_module.h:57
-#: src/konqmainwindow.cpp:4642
+#: src/konqmainwindow.cpp:4594
 msgid "Open in New &Window"
 msgstr "In'n nieg &Finster opmaken"
 
 #. +> trunk stable
-#: sidebar/web_module/web_module.h:61 src/konqmainwindow.cpp:3752
+#: sidebar/web_module/web_module.h:61 src/konqmainwindow.cpp:3708
 msgid "&Reload"
 msgstr "&Nieg laden"
 
@@ -1026,8 +1026,8 @@ msgid "Set &Automatic Reload"
 msgstr "&Automaatsch nieg laden anmaken"
 
 #. +> trunk stable
-#: src/konqclosedwindowsmanager.cpp:379 src/konqmainwindow.cpp:5126
-#: src/konqmainwindow.cpp:5186
+#: src/konqclosedwindowsmanager.cpp:379 src/konqmainwindow.cpp:5082
+#: src/konqmainwindow.cpp:5142
 msgid "no name"
 msgstr "Keen Naam"
 
@@ -1482,17 +1482,17 @@ msgid "Loading..."
 msgstr "Bi to laden..."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:1452
+#: src/konqmainwindow.cpp:1454
 msgid "Cannot create the find part, check your installation."
 msgstr "De Söök-Komponent kann nich opstellt warrn, prööv bitte Dien Installatschoon."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:1625
+#: src/konqmainwindow.cpp:1627
 msgid "Canceled."
 msgstr "Afbraken."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:1663
+#: src/konqmainwindow.cpp:1665
 msgid ""
 "This page contains changes that have not been submitted.\n"
 "Reloading the page will discard these changes."
@@ -1501,65 +1501,56 @@ msgstr ""
 "Dat Niegladen vun de Siet warrt all Ännern wegsmieten."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:1664 src/konqmainwindow.cpp:2356
-#: src/konqmainwindow.cpp:2374 src/konqmainwindow.cpp:2463
-#: src/konqmainwindow.cpp:2481 src/konqmainwindow.cpp:2501
-#: src/konqmainwindow.cpp:2549 src/konqmainwindow.cpp:2582
-#: src/konqmainwindow.cpp:5087 src/konqviewmanager.cpp:1333
+#: src/konqmainwindow.cpp:1666 src/konqmainwindow.cpp:2361
+#: src/konqmainwindow.cpp:2379 src/konqmainwindow.cpp:2468
+#: src/konqmainwindow.cpp:2486 src/konqmainwindow.cpp:2506
+#: src/konqmainwindow.cpp:2554 src/konqmainwindow.cpp:2587
+#: src/konqmainwindow.cpp:5043 src/konqviewmanager.cpp:1333
 msgid "Discard Changes?"
 msgstr "Ännern wegsmieten ?"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:1664 src/konqmainwindow.cpp:2356
-#: src/konqmainwindow.cpp:2374 src/konqmainwindow.cpp:2463
-#: src/konqmainwindow.cpp:2481 src/konqmainwindow.cpp:2501
-#: src/konqmainwindow.cpp:2549 src/konqmainwindow.cpp:2582
-#: src/konqmainwindow.cpp:5087 src/konqviewmanager.cpp:1333
+#: src/konqmainwindow.cpp:1666 src/konqmainwindow.cpp:2361
+#: src/konqmainwindow.cpp:2379 src/konqmainwindow.cpp:2468
+#: src/konqmainwindow.cpp:2486 src/konqmainwindow.cpp:2506
+#: src/konqmainwindow.cpp:2554 src/konqmainwindow.cpp:2587
+#: src/konqmainwindow.cpp:5043 src/konqviewmanager.cpp:1333
 msgid "&Discard Changes"
 msgstr "Ännern &wegsmieten"
 
 #. +> stable
-#: src/konqmainwindow.cpp:1733
-msgid "Your sidebar is not functional or unavailable."
-msgstr "Dien Sietpaneel funkscheneert nich oder is nich verföögbor."
-
-#. +> stable
-#: src/konqmainwindow.cpp:1733 src/konqmainwindow.cpp:1752
-msgid "Show History Sidebar"
-msgstr "Vörgeschicht-Sietpaneel wiesen"
-
-#. +> stable
-#: src/konqmainwindow.cpp:1752
+#: src/konqmainwindow.cpp:1754
 msgid "Cannot find running history plugin in your sidebar."
 msgstr "En lopen Vörgeschicht-Moduul för't Sietpaneel lett sik nich finnen."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:1765
+#: src/konqmainwindow.cpp:1767
 msgid "File Management"
 msgstr "Dateipleeg"
 
+#. i18n: ectx: label, entry, group (UserSettings)
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2037
+#: src/konqmainwindow.cpp:2039 src/konqueror.kcfg:11
 msgid "Home Page"
 msgstr "Tohuussiet"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2038
+#: src/konqmainwindow.cpp:2040
 msgid "Navigate to your 'Home Folder'"
 msgstr "Na Dien Tohuusorner gahn"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2038
+#: src/konqmainwindow.cpp:2040
 msgid "Navigate to your 'Home Page'"
 msgstr "Na Dien Tohuussiet gahn"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2039
+#: src/konqmainwindow.cpp:2041
 msgid "Navigate to your local 'Home Folder'"
 msgstr "Na Dien lokaal Tohuusorner gahn"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2040
+#: src/konqmainwindow.cpp:2042
 msgid ""
 "<html>Navigate to your 'Home Page'<br />"
 "<br />"
@@ -1570,7 +1561,7 @@ msgstr ""
 "Wenn Du en anner Tohuussiet instellen wullt, kiek bi <b>Instellen -> Konqueror instellen -> Allmeen</b>.</html>"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2355 src/konqmainwindow.cpp:2373
+#: src/konqmainwindow.cpp:2360 src/konqmainwindow.cpp:2378
 msgid ""
 "This tab contains changes that have not been submitted.\n"
 "Detaching the tab will discard these changes."
@@ -1579,7 +1570,7 @@ msgstr ""
 "Dat Aflösen vun dat Paneel warrt all Ännern wegsmieten."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2462
+#: src/konqmainwindow.cpp:2467
 msgid ""
 "This view contains changes that have not been submitted.\n"
 "Closing the view will discard these changes."
@@ -1588,7 +1579,7 @@ msgstr ""
 "Dat Tomaken vun de Ansicht warrt all Ännern wegsmieten."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2480 src/konqmainwindow.cpp:2500
+#: src/konqmainwindow.cpp:2485 src/konqmainwindow.cpp:2505
 msgid ""
 "This tab contains changes that have not been submitted.\n"
 "Closing the tab will discard these changes."
@@ -1597,22 +1588,22 @@ msgstr ""
 "Dat Paneel tomaken warrt all Ännern wegsmieten."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2530
+#: src/konqmainwindow.cpp:2535
 msgid "Do you really want to close all other tabs?"
 msgstr "Wullt Du redig all anner Paneels tomaken?"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2531 src/konqmainwindow.cpp:3695 src/konqtabs.cpp:355
+#: src/konqmainwindow.cpp:2536 src/konqmainwindow.cpp:3651 src/konqtabs.cpp:357
 msgid "Close &Other Tabs"
 msgstr "&Anner Paneels tomaken"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2531
+#: src/konqmainwindow.cpp:2536
 msgid "Close Other Tabs Confirmation"
 msgstr "Nafraag: Anner Paneels tomaken"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2548
+#: src/konqmainwindow.cpp:2553
 msgid ""
 "This tab contains changes that have not been submitted.\n"
 "Closing other tabs will discard these changes."
@@ -1621,7 +1612,7 @@ msgstr ""
 "Dat Tomaken vun anner Paneels warrt all Ännern wegsmieten."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2581
+#: src/konqmainwindow.cpp:2586
 msgid ""
 "This tab contains changes that have not been submitted.\n"
 "Reloading all tabs will discard these changes."
@@ -1630,247 +1621,252 @@ msgstr ""
 "Dat Niegladen vun all Paneels warrt disse Ännern wegsmieten."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2625
+#: src/konqmainwindow.cpp:2630
 msgid "Enter Target"
 msgstr "Teel ingeven"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2634
+#: src/konqmainwindow.cpp:2639
 #, kde-format
 msgid "<qt><b>%1</b> is not valid</qt>"
 msgstr "<qt><b>%1</b> gellt nich</qt>"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2649
+#: src/konqmainwindow.cpp:2654
 #, kde-format
 msgid "Copy selected files from %1 to:"
 msgstr "Utsöcht Dateien vun %1 koperen na:"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2658
+#: src/konqmainwindow.cpp:2663
 #, kde-format
 msgid "Move selected files from %1 to:"
 msgstr "Utsöcht Dateien vun %1 verschuven na:"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2846
+#: src/konqmainwindow.cpp:2851
 msgctxt "This menu entry empties the closed items history"
 msgid "Empty Closed Items History"
 msgstr "Vörgeschicht vun tomaakt Indrääg leddig maken"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2871
+#: src/konqmainwindow.cpp:2876
 msgid "Save As..."
 msgstr "Sekern as..."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:2873
+#: src/konqmainwindow.cpp:2878
 msgid "Manage..."
 msgstr "Plegen..."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3514
+#: src/konqmainwindow.cpp:3470
 msgid "&Duplicate Window"
 msgstr "Finster ver&dubbeln"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3519
+#: src/konqmainwindow.cpp:3475
 msgid "Send &Link Address..."
 msgstr "&Linkadress sennen..."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3523
+#: src/konqmainwindow.cpp:3479
 msgid "S&end File..."
 msgstr "&Datei sennen..."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3527
+#: src/konqmainwindow.cpp:3483
 msgid "&Open Location"
 msgstr "Steed &opmaken"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3533
+#: src/konqmainwindow.cpp:3489
 msgid "&Open File..."
 msgstr "Datei &opmaken..."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3538
+#: src/konqmainwindow.cpp:3494
 msgid "&Find File..."
 msgstr "Datei &söken..."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3547
+#: src/konqmainwindow.cpp:3503
 msgid "&Use index.html"
 msgstr "index.html br&uken"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3550
+#: src/konqmainwindow.cpp:3506
 msgid "Lock to Current Location"
 msgstr "De aktuelle Adress fastnageln"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3553
+#: src/konqmainwindow.cpp:3509
 msgctxt "This option links konqueror views"
 msgid "Lin&k View"
 msgstr "Ansicht to&koppeln"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3558
+#: src/konqmainwindow.cpp:3514
 msgid "&Up"
 msgstr "Na &baven"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3570
+#: src/konqmainwindow.cpp:3526
 msgid "Closed Items"
 msgstr "Tomaakt Paneels"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3584
+#: src/konqmainwindow.cpp:3540
 msgid "Sessions"
 msgstr "Törns"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3611
+#: src/konqmainwindow.cpp:3567
 msgctxt "@action:inmenu Go"
 msgid "Most Often Visited"
 msgstr "Tomehrst besöcht"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3615
+#: src/konqmainwindow.cpp:3571
 msgctxt "@action:inmenu Go"
 msgid "Recently Visited"
 msgstr "Tolest besöcht"
 
 #. +> trunk
-#: src/konqmainwindow.cpp:3621
+#: src/konqmainwindow.cpp:3577
 msgctxt "@action:inmenu Go"
 msgid "Show History"
 msgstr "Vörgeschicht wiesen"
 
-#. +> trunk stable
-#: src/konqmainwindow.cpp:3627 src/konqmainwindow.cpp:4259
-msgid "&Save View Profile..."
-msgstr "Dat Ansichtprofil &sekern..."
+#. +> stable
+#: src/konqmainwindow.cpp:1735 src/konqmainwindow.cpp:1754
+msgid "Show History Sidebar"
+msgstr "Vörgeschicht-Sietpaneel wiesen"
 
 #. +> stable
-#: src/konqmainwindow.cpp:3640
+#: src/konqmainwindow.cpp:3645
 msgctxt "@action:inmenu Go"
 msgid "Show History in Sidebar"
 msgstr "Vörgeschicht binnen Sietpaneel wiesen"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3648
+#: src/konqmainwindow.cpp:3583 src/konqmainwindow.cpp:4211
+msgid "&Save View Profile..."
+msgstr "Dat Ansichtprofil &sekern..."
+
+#. +> trunk stable
+#: src/konqmainwindow.cpp:3604
 msgid "Configure Extensions..."
 msgstr "Verwiedern instellen..."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3652
+#: src/konqmainwindow.cpp:3608
 msgid "Configure Spell Checking..."
 msgstr "Schriefwies-Prööv instellen..."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3658
+#: src/konqmainwindow.cpp:3614
 msgid "Split View &Left/Right"
 msgstr "Finster &pielrecht delen"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3663
+#: src/konqmainwindow.cpp:3619
 msgid "Split View &Top/Bottom"
 msgstr "Finster &kimmrecht delen"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3668 src/konqtabs.cpp:473
+#: src/konqmainwindow.cpp:3624 src/konqtabs.cpp:475
 msgid "&New Tab"
 msgstr "&Nieg Paneel"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3674
+#: src/konqmainwindow.cpp:3630
 msgid "&Duplicate Current Tab"
 msgstr "Aktuell Paneel ver&dubbeln"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3679
+#: src/konqmainwindow.cpp:3635
 msgid "Detach Current Tab"
 msgstr "Aktuell Paneel aflösen"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3684
+#: src/konqmainwindow.cpp:3640
 msgid "&Close Active View"
 msgstr "Aktive Ansicht &tomaken"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3689
+#: src/konqmainwindow.cpp:3645
 msgid "Close Current Tab"
 msgstr "Aktuell Paneel tomaken"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3699
+#: src/konqmainwindow.cpp:3655
 msgid "Activate Next Tab"
 msgstr "Nakamen Paneel aktiveren"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3703
+#: src/konqmainwindow.cpp:3659
 msgid "Activate Previous Tab"
 msgstr "Verleden Paneel aktiveren"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3711
+#: src/konqmainwindow.cpp:3667
 #, kde-format
 msgid "Activate Tab %1"
 msgstr "Paneel %1 aktiveren"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3716
+#: src/konqmainwindow.cpp:3672
 msgid "Move Tab Left"
 msgstr "Paneel na links verschuven"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3721
+#: src/konqmainwindow.cpp:3677
 msgid "Move Tab Right"
 msgstr "Paneel na rechts verschuven"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3729
+#: src/konqmainwindow.cpp:3685
 msgid "Dump Debug Info"
 msgstr "Fehlersöök-Informatschonen utgeven"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3734
+#: src/konqmainwindow.cpp:3690
 msgid "C&onfigure View Profiles..."
 msgstr "Ansichtprofilen &instellen..."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3736
+#: src/konqmainwindow.cpp:3692
 msgid "Load &View Profile"
 msgstr "&Ansichtprofil laden"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3757 src/konqtabs.cpp:332
+#: src/konqmainwindow.cpp:3713 src/konqtabs.cpp:334
 msgid "&Reload All Tabs"
 msgstr "All Paneels &nieg laden"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3765
+#: src/konqmainwindow.cpp:3721
 msgid "&Force Reload"
 msgstr "Nieg laden &verdwingen"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3787
+#: src/konqmainwindow.cpp:3743
 msgid "&Stop"
 msgstr "&Anhollen"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3800 src/konqmainwindow.cpp:3803
+#: src/konqmainwindow.cpp:3752 src/konqmainwindow.cpp:3755
 msgid "L&ocation: "
 msgstr "&Adress: "
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3810
+#: src/konqmainwindow.cpp:3762
 msgid "Location Bar"
 msgstr "Adressbalken"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3816
+#: src/konqmainwindow.cpp:3768
 msgid ""
 "<html>Location Bar<br />"
 "<br />"
@@ -1881,12 +1877,12 @@ msgstr ""
 "Giff En Nettadress in, oder en Woort, dat Du söchst.</html>"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3820
+#: src/konqmainwindow.cpp:3772
 msgid "Clear Location Bar"
 msgstr "Adressbalken leddig maken"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3824
+#: src/konqmainwindow.cpp:3776
 msgid ""
 "<html>Clear Location bar<br />"
 "<br />"
@@ -1897,27 +1893,27 @@ msgstr ""
 "Maakt den Adressbalken leddig.</html>"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3829
+#: src/konqmainwindow.cpp:3781
 msgid "&Bookmarks"
 msgstr "&Leestekens"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3840
+#: src/konqmainwindow.cpp:3792
 msgid "Bookmark This Location"
 msgstr "Disse Adress de Leestekens tofögen"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3846
+#: src/konqmainwindow.cpp:3798
 msgid "Kon&queror Introduction"
 msgstr "Inföhren för Kon&queror"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3851
+#: src/konqmainwindow.cpp:3803
 msgid "Go"
 msgstr "Gah na"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3853
+#: src/konqmainwindow.cpp:3805
 msgid ""
 "<html>Go<br />"
 "<br />"
@@ -1928,7 +1924,7 @@ msgstr ""
 "Laadt de Siet, de Du in den Adressbalken ingeven hest.</html>"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3859
+#: src/konqmainwindow.cpp:3811
 #, kde-format
 msgid ""
 "<html>Enter the parent folder<br />"
@@ -1940,27 +1936,27 @@ msgstr ""
 "Wenn de aktuelle Adress a.B. \"file:/home/%1\" is, denn bringt Di en Klick op dissen Knoop na \"file:/home\".</html>"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3862
+#: src/konqmainwindow.cpp:3814
 msgid "Enter the parent folder"
 msgstr "Een Orner na baven"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3864 src/konqmainwindow.cpp:3865
+#: src/konqmainwindow.cpp:3816 src/konqmainwindow.cpp:3817
 msgid "Move backwards one step in the browsing history"
 msgstr "Een Schritt in de Vörgeschicht torüchgahn"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3867 src/konqmainwindow.cpp:3868
+#: src/konqmainwindow.cpp:3819 src/konqmainwindow.cpp:3820
 msgid "Move forward one step in the browsing history"
 msgstr "Een Schritt in de Vörgeschicht na vörn gahn"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3871 src/konqmainwindow.cpp:3872
+#: src/konqmainwindow.cpp:3823 src/konqmainwindow.cpp:3824
 msgid "Move backwards one step in the closed tabs history"
 msgstr "Een Schritt in de Vörgeschicht vun tomaakt Paneels torüchgahn"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3875
+#: src/konqmainwindow.cpp:3827
 msgid ""
 "<html>Reload the currently displayed document<br />"
 "<br />"
@@ -1971,12 +1967,12 @@ msgstr ""
 "Dat mag noot doon, wenn Du den aktuellen Tostand vun Nettsieden ankieken wullt, de sik na't Laden villicht ännert hebbt.</html>"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3878
+#: src/konqmainwindow.cpp:3830
 msgid "Reload the currently displayed document"
 msgstr "Dat aktuelle Dokment nieg laden"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3880
+#: src/konqmainwindow.cpp:3832
 msgid ""
 "<html>Reload all currently displayed documents in tabs<br />"
 "<br />"
@@ -1987,12 +1983,12 @@ msgstr ""
 "Dat mag noot doon, wenn Du den aktuellen Tostand vun Nettsieden ankieken wullt, de sik na't Laden villicht ännert hebbt.</html>"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3883
+#: src/konqmainwindow.cpp:3835
 msgid "Reload all currently displayed document in tabs"
 msgstr "All opstunns in Paneels wieste Dokmenten nieg laden"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3885
+#: src/konqmainwindow.cpp:3837
 msgid ""
 "<html>Stop loading the document<br />"
 "<br />"
@@ -2003,7 +1999,7 @@ msgstr ""
 "All Överdregen warrt anhollen un Konqueror wiest dat, wat vun den Inholt al ankamen is.</html>"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3889
+#: src/konqmainwindow.cpp:3841
 msgid ""
 "<html>Reload the currently displayed document<br />"
 "<br />"
@@ -2014,17 +2010,17 @@ msgstr ""
 "Dat mag noot doon, wenn Du den aktuellen Tostand vun Nettsieden ankieken wullt, de sik na't Laden villicht ännert hebbt. All Biller op de Siet warrt nieg laadt, ok wenn dat dor al Kopien vun binnen den Twischenspieker gifft.</html>"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3893
+#: src/konqmainwindow.cpp:3845
 msgid "Force a reload of the currently displayed document and any contained images"
 msgstr "Dat Niegladen vun dat opstunns wieste Dokment un all sien Biller verdwingen"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3896
+#: src/konqmainwindow.cpp:3848
 msgid "Stop loading the document"
 msgstr "Dat Laden vun't Dokment afbreken"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3898
+#: src/konqmainwindow.cpp:3850
 msgid ""
 "<html>Cut the currently selected text or item(s) and move it to the system clipboard<br />"
 "<br />"
@@ -2035,12 +2031,12 @@ msgstr ""
 "Maakt den Text / de Elementen för den Befehl <b>Infögen</b> binnen Konqueror oder anner Programmen verföögbor.</html>"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3902
+#: src/konqmainwindow.cpp:3854
 msgid "Move the selected text or item(s) to the clipboard"
 msgstr "Utsöcht Text oder Elementen na de Twischenaflaag verschuven"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3904
+#: src/konqmainwindow.cpp:3856
 msgid ""
 "<html>Copy the currently selected text or item(s) to the system clipboard<br />"
 "<br />"
@@ -2051,12 +2047,12 @@ msgstr ""
 "Maakt den Text / de Elementen för den Befehl <b>Infögen</b> binnen Konqueror oder anner Programmen verföögbor.</html>"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3908
+#: src/konqmainwindow.cpp:3860
 msgid "Copy the selected text or item(s) to the clipboard"
 msgstr "Utsöcht Text oder Elementen na de Twischenaflaag koperen"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3910
+#: src/konqmainwindow.cpp:3862
 msgid ""
 "<html>Paste the previously cut or copied clipboard contents<br />"
 "<br />"
@@ -2067,12 +2063,12 @@ msgstr ""
 "Dat funkscheneert ok mit Inholt, de binnen anner KDE-Programmen utknippt oder kopeert wöör.</html>"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3913
+#: src/konqmainwindow.cpp:3865
 msgid "Paste the clipboard contents"
 msgstr "Den Twischenaflaaginholt infögen"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3915
+#: src/konqmainwindow.cpp:3867
 msgid ""
 "<html>Print the currently displayed document<br />"
 "<br />"
@@ -2087,110 +2083,110 @@ msgstr ""
 "Binnen dissen Dialoog kannst Du ok besünner KDE-Druckdeensten opropen, t.B. dat Opstellen vun en PDF-Datei ut dat aktuelle Dokment.</html>"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3921
+#: src/konqmainwindow.cpp:3873
 msgid "Print the current document"
 msgstr "Dat aktuelle Dokment drucken"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3927
+#: src/konqmainwindow.cpp:3879
 msgid "If present, open index.html when entering a folder."
 msgstr "De Datei \"index.html\" opmaken, wenn ehr dat binnen en Orner gifft."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3928
+#: src/konqmainwindow.cpp:3880
 msgid "A locked view cannot change folders. Use in combination with 'link view' to explore many files from one folder"
 msgstr "In en fastnagelt Ansicht kannst Du den Orner nich wesseln. Bruuk dat tosamen mit \"Ansicht tokoppeln\", wenn Du vele Dateien ut een Orner ankieken wullt."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:3929
+#: src/konqmainwindow.cpp:3881
 msgid "Sets the view as 'linked'. A linked view follows folder changes made in other linked views."
 msgstr "Koppelt de Ansicht en anner Ansicht to. Een koppelte Ansicht kummt na, wenn Du in en anner koppelt Ansicht den Orner wesselst."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:4111
+#: src/konqmainwindow.cpp:4063
 msgid "Copy &Files..."
 msgstr "&Dateien koperen..."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:4115
+#: src/konqmainwindow.cpp:4067
 msgid "M&ove Files..."
 msgstr "Dateien &verschuven..."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:4258
+#: src/konqmainwindow.cpp:4210
 #, kde-format
 msgid "&Save View Profile \"%1\"..."
 msgstr "Ansichtprofil \"%1\" &sekern..."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:4468
+#: src/konqmainwindow.cpp:4420
 msgid "You have requested to open more than 20 bookmarks in tabs. This might take a while. Continue?"
 msgstr "Du wullt mehr as 20 Leestekens as Paneels opmaken. Dat mag sien Tiet bruken. Wullt Du wiedermaken?"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:4470
+#: src/konqmainwindow.cpp:4422
 msgid "Open bookmarks folder in new tabs"
 msgstr "Leesteken-Orner as nieg Paneels opmaken"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:4635
+#: src/konqmainwindow.cpp:4587
 msgid "Open in T&his Window"
 msgstr "Binnen dit &Finster opmaken"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:4636
+#: src/konqmainwindow.cpp:4588
 msgid "Open the document in current window"
 msgstr "Dokment binnen dit Finster opmaken"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:4643
+#: src/konqmainwindow.cpp:4595
 msgid "Open the document in a new window"
 msgstr "Dokment in'n nieg Finster opmaken"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:4649
+#: src/konqmainwindow.cpp:4601
 msgid "Open in &New Tab"
 msgstr "In'n &nieg Paneel opmaken"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:4651
+#: src/konqmainwindow.cpp:4603
 msgid "Open the document in a new tab"
 msgstr "Dokment in'n nieg Paneel opmaken"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:4871
+#: src/konqmainwindow.cpp:4823
 msgid "&Open With"
 msgstr "&Opmaken mit"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:4885
+#: src/konqmainwindow.cpp:4837
 #, kde-format
 msgid "Open with %1"
 msgstr "Mit %1 opmaken"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:4931
+#: src/konqmainwindow.cpp:4883
 msgctxt "@action:inmenu View"
 msgid "&View Mode"
 msgstr "&Ansichttyp"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:5047
+#: src/konqmainwindow.cpp:5003
 msgid "You have multiple tabs open in this window, are you sure you want to quit?"
 msgstr "Du hest en Reeg Paneels in dit Finster apen. Wullt Du dat redig tomaken?"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:5049 src/konqviewmanager.cpp:1315
+#: src/konqmainwindow.cpp:5005 src/konqviewmanager.cpp:1315
 msgid "Confirmation"
 msgstr "Nafraag"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:5051
+#: src/konqmainwindow.cpp:5007
 msgid "C&lose Current Tab"
 msgstr "Aktuell Paneel &tomaken"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:5084
+#: src/konqmainwindow.cpp:5040
 msgid ""
 "This tab contains changes that have not been submitted.\n"
 "Closing the window will discard these changes."
@@ -2199,7 +2195,7 @@ msgstr ""
 "Dat Tomaken vun dat Finster warrt all Ännern wegsmieten."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:5085
+#: src/konqmainwindow.cpp:5041
 msgid ""
 "This page contains changes that have not been submitted.\n"
 "Closing the window will discard these changes."
@@ -2208,33 +2204,38 @@ msgstr ""
 "Dat Tomaken vun't Finster warrt disse Ännern wegsmieten."
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:5253
+#: src/konqmainwindow.cpp:5209
 msgid "Your sidebar is not functional or unavailable. A new entry cannot be added."
 msgstr "Dien Sietpaneel funkscheneert nich oder is nich verföögbor. En niege Indrag kann nich toföögt warrn."
 
+#. +> stable
+#: src/konqmainwindow.cpp:1735
+msgid "Your sidebar is not functional or unavailable."
+msgstr "Dien Sietpaneel funkscheneert nich oder is nich verföögbor."
+
 #. +> trunk stable
-#: src/konqmainwindow.cpp:5253 src/konqmainwindow.cpp:5260
+#: src/konqmainwindow.cpp:5209 src/konqmainwindow.cpp:5216
 msgid "Web Sidebar"
 msgstr "Nett-Sietpaneel"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:5258
+#: src/konqmainwindow.cpp:5214
 #, kde-format
 msgid "Add new web extension \"%1\" to your sidebar?"
 msgstr "Niege Nett-Verwiedern \"%1\" Dien Sietpaneel tofögen?"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:5260
+#: src/konqmainwindow.cpp:5216
 msgid "Add"
 msgstr "Tofögen"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:5260
+#: src/konqmainwindow.cpp:5216
 msgid "Do Not Add"
 msgstr "Nich tofögen"
 
 #. +> trunk stable
-#: src/konqmainwindow.cpp:5557
+#: src/konqmainwindow.cpp:5513
 #, kde-format
 msgid "There appears to be a configuration error. You have associated Konqueror with %1, but it cannot handle this file type."
 msgstr "As dat lett gifft dat en Instellenfehler. Du hest Konqueror na \"%1\" toornt, man he kann mit dissen Dateityp nich ümgahn."
@@ -2309,28 +2310,28 @@ msgstr "Dat gifft al en Törn mit den Naam \"%1\". Wullt Du em överschrieven?"
 msgid "Session exists. Overwrite?"
 msgstr "Gifft Törn al. Överschrieven?"
 
-#. i18n: ectx: property (text), widget (QPushButton, m_pNewButton)
+#. i18n: ectx: property (text), widget (KPushButton, m_pNewButton)
 #. +> trunk stable
 #: src/konqsessiondlg_base.ui:25
 msgctxt "@action:button New session"
 msgid "New..."
 msgstr "Nieg..."
 
-#. i18n: ectx: property (text), widget (QPushButton, m_pSaveCurrentButton)
+#. i18n: ectx: property (text), widget (KPushButton, m_pSaveCurrentButton)
 #. +> trunk stable
 #: src/konqsessiondlg_base.ui:32
 msgctxt "@action:button Save current session"
 msgid "Save Current"
 msgstr "Aktuellen sekern"
 
-#. i18n: ectx: property (text), widget (QPushButton, m_pRenameButton)
+#. i18n: ectx: property (text), widget (KPushButton, m_pRenameButton)
 #. +> trunk stable
 #: src/konqsessiondlg_base.ui:39
 msgctxt "@action:button Rename session"
 msgid "Rename..."
 msgstr "Ümnömen..."
 
-#. i18n: ectx: property (text), widget (QPushButton, m_pDeleteButton)
+#. i18n: ectx: property (text), widget (KPushButton, m_pDeleteButton)
 #. +> trunk stable
 #: src/konqsessiondlg_base.ui:46
 msgctxt "@action:button Delete session"
@@ -2338,8 +2339,9 @@ msgid "Delete"
 msgstr "Wegdoon"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_pOpenTabsInsideCurrentWindow)
+#. i18n: ectx: label, entry, group (Trash)
 #. +> trunk stable
-#: src/konqsessiondlg_base.ui:72
+#: src/konqsessiondlg_base.ui:72 src/konqueror.kcfg:537
 msgid "Open tabs inside current window"
 msgstr "Törns binnen aktuell Finster opmaken"
 
@@ -2389,29 +2391,150 @@ msgid "Close the current tab"
 msgstr "Dat aktuelle Paneel tomaken"
 
 #. +> trunk stable
-#: src/konqtabs.cpp:478
+#: src/konqtabs.cpp:480
 msgid "&Duplicate Tab"
 msgstr "Paneel ver&dubbeln"
 
 #. +> trunk stable
-#: src/konqtabs.cpp:483
+#: src/konqtabs.cpp:485
 msgid "&Reload Tab"
 msgstr "Paneel &nieg laden"
 
 #. +> trunk stable
-#: src/konqtabs.cpp:490
+#: src/konqtabs.cpp:492
 msgid "Other Tabs"
 msgstr "Anner Paneels"
 
 #. +> trunk stable
-#: src/konqtabs.cpp:495
+#: src/konqtabs.cpp:497
 msgid "D&etach Tab"
 msgstr "Paneel &aflösen"
 
 #. +> trunk stable
-#: src/konqtabs.cpp:501
+#: src/konqtabs.cpp:503
 msgid "&Close Tab"
 msgstr "Paneel &tomaken"
+
+#. i18n: ectx: whatsthis, entry, group (UserSettings)
+#. +> trunk
+#: src/konqueror.kcfg:12
+msgid "This is the URL of the web page where Konqueror (as web browser) will jump to when the \\\"Home\\\" button is pressed. When Konqueror is started as a file manager, that button makes it jump to your local home folder instead."
+msgstr "Dit is de Adress, na de Konqueror (as Nettkieker) jumpt, wenn Du op den \\\"Tohuus\\\"-Knoop klickst. Röppst Du Konqueror as Dateipleger op, kannst Du mit dissen Knoop na Dien Tohuus-Orner jumpen."
+
+#. i18n: ectx: label, entry, group (UndoManagerSettings)
+#. +> trunk
+#: src/konqueror.kcfg:22
+msgid "Maximum number of Closed Items"
+msgstr "Hööchst Tall vun tomaakt Indrääg"
+
+#. i18n: ectx: whatsthis, entry, group (UndoManagerSettings)
+#. +> trunk
+#: src/konqueror.kcfg:23
+msgid "This sets the maximum number of closed items that will be stored in memory. This limit will not be surpassed."
+msgstr "Leggt de Hööchsttall fast för de tomaakten Indrääg, de binnen den Spieker wohrt warrt."
+
+#. i18n: ectx: label, entry, group (FMSettings)
+#. +> trunk
+#: src/konqueror.kcfg:32
+msgid "Open folders in separate windows"
+msgstr "Ornern binnen nieg Finstern opmaken"
+
+#. i18n: ectx: whatsthis, entry, group (FMSettings)
+#. +> trunk
+#: src/konqueror.kcfg:33
+msgid "If this option is checked, Konqueror will open a new window when you open a folder, rather than showing that folder's contents in the current window."
+msgstr "Is dit anmaakt, maakt Konqueror en nieg Finster op, wenn Du en Ornern opmaakst, ansteed dat he den niegen Orner sien Inholt binnen dat aktuelle Finster wiest."
+
+#. i18n: ectx: label, entry, group (FMSettings)
+#. +> trunk
+#: src/konqueror.kcfg:38
+msgid "Show file tips"
+msgstr "Datei-Kortinfos wiesen"
+
+#. i18n: ectx: whatsthis, entry, group (FMSettings)
+#. +> trunk
+#: src/konqueror.kcfg:39
+msgid "Here you can control if, when moving the mouse over a file, you want to see a small popup window with additional information about that file"
+msgstr "Hier kannst Du fastleggen, wat Du en lütt Opdukfinster mit Informatschonen wiest hebben wullt, wenn Du mit de Muus op en Datei wiest."
+
+#. i18n: ectx: label, entry, group (FMSettings)
+#. +> trunk
+#: src/konqueror.kcfg:50
+msgid "Show previews in file tips"
+msgstr "Vöransicht binnen Kortinfo wiesen"
+
+#. i18n: ectx: whatsthis, entry, group (FMSettings)
+#. +> trunk
+#: src/konqueror.kcfg:51
+msgid "Here you can control if you want the popup window to contain a larger preview for the file, when moving the mouse over it"
+msgstr "Hier kannst Du angeven, wat Du binnen den Opduker en grötter Vöransicht vun de Datei hebben wullt, wenn Du dor mit de Muus op wiesen deist."
+
+#. i18n: ectx: label, entry, group (FMSettings)
+#. +> trunk
+#: src/konqueror.kcfg:56
+msgid "Show 'Delete' menu entries which bypass the trashcan"
+msgstr "»Wegdoon«-Menüindrääg wiesen, de de Affalltünn övergaht"
+
+#. i18n: ectx: whatsthis, entry, group (FMSettings)
+#. +> trunk
+#: src/konqueror.kcfg:57
+msgid "Uncheck this if you do not want 'Delete' menu commands to be displayed on the desktop and in the file manager's menus and context menus. You can still delete files when hidden by holding the Shift key while calling 'Move to Trash'."
+msgstr "Maak dit ut, wenn Du op den Schriefdisch un binnen den Dateipleger sien (Rechtsklick-)Menüs den Befehl »Wegdoon« nich hebben wullt. Du kannst, ok wenn dit utmaakt is, Dateien noch wegdoon, wenn Du de Ümschalt-Tast daalhöllst, bides Du »Na Affalltünn verschuven« opröppst."
+
+#. i18n: ectx: label, entry, group (FMSettings)
+#. i18n: ectx: whatsthis, entry, group (FMSettings)
+#. +> trunk
+#: src/konqueror.kcfg:155 src/konqueror.kcfg:156
+msgid "Number of Open With items in the File menu"
+msgstr "Tall vun »Opmaken mit«-Indrääg binnen dat Datei-Menü"
+
+#. i18n: ectx: label, entry, group (HTML Settings)
+#. +> trunk
+#: src/konqueror.kcfg:165
+msgid "Standard font"
+msgstr "Standard-Schriftoort"
+
+#. i18n: ectx: whatsthis, entry, group (HTML Settings)
+#. +> trunk
+#: src/konqueror.kcfg:166
+msgid "This is the font used to display text in Konqueror windows."
+msgstr "Dit is de Schriftoort för Text binnen Konqueror-Finstern."
+
+#. i18n: ectx: label, entry, group (HistorySettings)
+#. +> trunk
+#: src/konqueror.kcfg:323
+msgid "Maximum number of history items per view"
+msgstr "Hööchsttall vun Vörgeschicht-Indrääg per Ansicht"
+
+#. i18n: ectx: label, entry, group (Trash)
+#. +> trunk
+#: src/konqueror.kcfg:524
+msgid "Ask confirmation for deleting a file."
+msgstr "Wegdoon vun Dateien beglöven laten"
+
+#. i18n: ectx: whatsthis, entry, group (Trash)
+#. +> trunk
+#: src/konqueror.kcfg:525
+msgid "This option tells Konqueror whether to ask for a confirmation when you delete a file without using the trash folder. Warning, deleted files can not be recovered, so it is recommended to leave this confirmation enabled."
+msgstr "Mit dissen Optschoon fraagt Konqueror na Beglöven, wenn Du Dateien wegdeist un dor de Affalltünn nich bi bruukst. Wohrschoen: Wegdaan Dateien laat sik nich wedderherstellen; dat is also anraadt, Du lettst de Beglöven anmaakt."
+
+#. i18n: ectx: label, entry, group (Trash)
+#. +> trunk
+#: src/konqueror.kcfg:530
+msgid "Ask confirmation for move to trash"
+msgstr "Verschuven na Affalltünn beglöven laten"
+
+#. i18n: ectx: whatsthis, entry, group (Trash)
+#. +> trunk
+#: src/konqueror.kcfg:531
+msgid "This option tells Konqueror whether to ask for a confirmation when you move the file to your trash folder, from where it can be recovered very easily."
+msgstr "Mit disse Optschoon fraagt Konqueror bi't Verschuven vun en Datei na de Affalltünn na Beglöven. Dateien binnen de Affalltünn laat sik eenfach wedderherstellen."
+
+#. i18n: ectx: whatsthis, entry, group (Trash)
+#. +> trunk
+#: src/konqueror.kcfg:538
+msgid "If true, when opening a session from within the sessions dialog the tabs will be opened inside current window."
+msgstr "Wenn anmaakt, warrt de Paneels binnen dat aktuelle Finster opmaakt, wenn Du en Törn binnen den Törndialoog opröppst."
 
 #. i18n: ectx: Menu (file)
 #. +> trunk stable
@@ -2480,15 +2603,20 @@ msgid "Bookmark Toolbar"
 msgstr "Leestekenbalken"
 
 #. +> trunk stable
-#: src/konqundomanager.cpp:110 src/konqundomanager.cpp:255
+#: src/konqundomanager.cpp:110 src/konqundomanager.cpp:263
 msgid "Und&o: Closed Tab"
 msgstr "&Torüchnehmen: Tomaakt Paneel"
 
 #. +> trunk stable
-#: src/konqundomanager.cpp:112 src/konqundomanager.cpp:115
-#: src/konqundomanager.cpp:157
+#: src/konqundomanager.cpp:112 src/konqundomanager.cpp:120
+#: src/konqundomanager.cpp:162
 msgid "Und&o: Closed Window"
 msgstr "&Torüchnehmen: Paneel tomaken"
+
+#. +> trunk
+#: src/konqundomanager.cpp:122
+msgid "Und&o"
+msgstr "Torüch&nehmen"
 
 #. +> trunk stable
 #: src/konqview.cpp:1314

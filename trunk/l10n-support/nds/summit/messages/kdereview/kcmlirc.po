@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmlirc\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-04-01 11:26+0200\n"
+"POT-Creation-Date: 2009-04-24 11:20+0200\n"
 "PO-Revision-Date: 2009-01-18 02:53+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -30,21 +30,35 @@ msgid "Your emails"
 msgstr "s_dibbern@web.de, m.j.wiese@web.de"
 
 #. +> trunk
-#: addaction.cpp:240
+#: addaction.cpp:56
+#, fuzzy
+#| msgid "&Use application:"
+msgid "D-Bus applications"
+msgstr "Programm br&uken:"
+
+#. +> trunk
+#: addaction.cpp:181
 #, kde-format
 msgid "You did not select a mode of that remote control. Please use %1, or revert back to select a different mode."
 msgstr "Du hest keen Bedriefoort för disse Feernbedenen utsöcht. Bruuk bitte %1 oder gah torüch, wenn Du en anner Bedriefoort utsöken wullt."
 
 #. +> trunk
-#: addaction.cpp:242
+#: addaction.cpp:183
 msgid "Incorrect Remote Control Detected"
 msgstr "Leeg Feernbedenen opdeckt"
 
 #. +> trunk
-#: addaction.cpp:460
-msgctxt "Unknown parameter name in function"
-msgid "&lt;anonymous&gt;"
-msgstr "&lt;Anonüm&gt;"
+#: addaction.cpp:324 editaction.cpp:71
+msgid "Argument name"
+msgstr ""
+
+#. +> trunk
+#: addaction.cpp:324 editaction.cpp:72
+#, fuzzy
+#| msgid "Value"
+msgctxt "The value of an argument"
+msgid "Value"
+msgstr "Weert"
 
 #. i18n: ectx: property (windowTitle), widget (QWizard, AddActionBase)
 #. +> trunk
@@ -60,53 +74,25 @@ msgstr "Een vun de &Programmen nerrn bruken:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, theUseDBus)
 #. +> trunk
-#: addactionbase.ui:42
+#: addactionbase.ui:35
 msgid "I wish to manually select a &function from a running program"
 msgstr "En &Funkschoon vun en lopen Programm vun Hand utsöken"
 
 #. i18n: ectx: property (text), widget (QRadioButton, theChangeMode)
 #. +> trunk
-#: addactionbase.ui:49
+#: addactionbase.ui:42
 msgid "I wish to change the remote control's &mode"
 msgstr "De &Bedriefoort vun de Feernbedenen wesseln"
 
 #. i18n: ectx: property (text), widget (QLabel, theButtonText)
 #. +> trunk
-#: addactionbase.ui:60
+#: addactionbase.ui:53
 msgid "You are attempting to configure an action for a button on [remote] (in mode [mode]). Press a button on this remote control or select from the list."
 msgstr "Du wullt en Akschoon för en Knoop op [feernbedenen] (in Bedriefoort [bedriefoort]) instellen. Drück en Knoop op disse Feernbedenen oder söök een ut de List ut."
 
-#. i18n: ectx: property (text), widget (QTreeWidget, theObjects)
-#. +> trunk
-#: addactionbase.ui:97
-msgid "Program"
-msgstr "Programm"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, theFunctions)
-#. i18n: ectx: property (text), widget (QTreeWidget, theProfileFunctions)
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#. i18n: ectx: property (text), widget (QTreeWidget, theActions)
-#. +> trunk
-#: addactionbase.ui:112 addactionbase.ui:151 editactionbase.ui:24
-#: kcmlircbase.ui:193 model.cpp:234
-msgid "Function"
-msgstr "Funkschoon"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, theFunctions)
-#. +> trunk
-#: addactionbase.ui:117 model.cpp:236
-msgid "Parameter"
-msgstr "Parameter"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, theFunctions)
-#. +> trunk
-#: addactionbase.ui:122 model.cpp:238
-msgid "Prototype"
-msgstr "Vörlaag"
-
 #. i18n: ectx: property (text), widget (QRadioButton, theNotJustStart)
 #. +> trunk
-#: addactionbase.ui:134
+#: addactionbase.ui:109
 msgid "&Perform a function in the application:"
 msgstr "F&unkschoon ut Programm utföhren:"
 
@@ -114,151 +100,140 @@ msgstr "F&unkschoon ut Programm utföhren:"
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #. i18n: ectx: property (text), widget (QTreeWidget, theActions)
 #. +> trunk
-#: addactionbase.ui:156 editactionbase.ui:234 kcmlircbase.ui:203
+#: addactionbase.ui:126 editactionbase.ui:24 kcmlircbase.ui:191 model.cpp:213
+msgid "Function"
+msgstr "Funkschoon"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, theProfileFunctions)
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#. +> trunk
+#: addactionbase.ui:131 editactionbase.ui:234
 msgid "Options"
 msgstr "Optschonen"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, theProfileFunctions)
 #. +> trunk
-#: addactionbase.ui:161
+#: addactionbase.ui:136
 msgid "Description"
 msgstr "Beschrieven"
 
 #. i18n: ectx: property (text), widget (QRadioButton, theJustStart)
 #. +> trunk
-#: addactionbase.ui:169
+#: addactionbase.ui:144
 msgid "&Just start the application. Do not do anything else."
 msgstr "&Bloots dat Programm starten, nix sünst doon"
 
-#. i18n: ectx: property (text), widget (QTreeWidget, theParameters)
+#. i18n: ectx: property (text), widget (QLabel, label)
 #. +> trunk
-#: addactionbase.ui:181
-msgid "Option Description"
-msgstr "Optschoon-Beschrieven"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, theParameters)
-#. i18n: ectx: property (text), widget (QTreeWidget, theInformation)
-#. +> trunk
-#: addactionbase.ui:186 editaction.cpp:75 editaction.cpp:235 kcmlircbase.ui:316
-msgid "Value"
-msgstr "Weert"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, theParameters)
-#. +> trunk
-#: addactionbase.ui:191
-msgid "Type"
-msgstr "Typ"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, theParameters)
-#. +> trunk
-#: addactionbase.ui:196
-msgid "Place"
-msgstr "Steed"
-
-#. i18n: ectx: property (text), widget (QLabel, theCurParameter)
-#. +> trunk
-#: addactionbase.ui:341
-msgid "Parameter:"
-msgstr "Parameter:"
+#: addactionbase.ui:158
+msgid "Specify the arguments to be passed to the application"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #. +> trunk
-#: addactionbase.ui:370
+#: addactionbase.ui:175
 msgid "Miscellaneous Options"
 msgstr "Anner Optschonen"
 
 #. i18n: ectx: property (text), widget (QCheckBox, theRepeat)
 #. +> trunk
-#: addactionbase.ui:390
+#: addactionbase.ui:195
 msgid "This action is &repeatable if the button is held down"
 msgstr "Akschoon lett sik &wedderhalen, wenn de Knoop daaldrückt blifft"
 
 #. i18n: ectx: property (text), widget (QCheckBox, theAutoStart)
 #. +> trunk
-#: addactionbase.ui:397
+#: addactionbase.ui:202
 msgid "This action causes the application to &start if not already running"
 msgstr "Akschoon &start dat Programm, wenn dat noch nich löppt"
 
 #. i18n: ectx: property (text), widget (QLabel, theIMTop)
 #. +> trunk
-#: addactionbase.ui:432 editactionbase.ui:358
+#: addactionbase.ui:237 editactionbase.ui:358
 msgid "Multiple Instances"
 msgstr "Mehr Utgaven"
 
 #. i18n: ectx: property (text), widget (QLabel, theIMLabel)
 #. +> trunk
-#: addactionbase.ui:458 editactionbase.ui:384
+#: addactionbase.ui:263 editactionbase.ui:384
 msgid "This application may have multiple instances. In the case of having multiple instances at once when this action should be executed, choose a course of action:"
 msgstr "Programm kann mehr Utgaven op eenmaal hebben. Wenn mehr Utgaven löppt, wenn de Akschoon opropen warrt, dit utföhren:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, theDontSend)
 #. +> trunk
-#: addactionbase.ui:474 editactionbase.ui:400
+#: addactionbase.ui:279 editactionbase.ui:400
 msgid "&Ignore the action"
 msgstr "Akschoon Ö&vergahn"
 
 #. i18n: ectx: property (text), widget (QRadioButton, theSendToTop)
 #. +> trunk
-#: addactionbase.ui:487
+#: addactionbase.ui:292
 msgid "Send the action to the instance hi&ghest in the window stacking order"
 msgstr "Akschoon na de op den Schirm vö&rste Utgaav sennen"
 
 #. i18n: ectx: property (text), widget (QRadioButton, theSendToBottom)
 #. +> trunk
-#: addactionbase.ui:497 editactionbase.ui:423
+#: addactionbase.ui:302 editactionbase.ui:423
 msgid "Send the action to the instance &lowest in window stacking order"
 msgstr "Akschoon na de op den Schirm &achterste Utgaav sennen"
 
 #. i18n: ectx: property (text), widget (QRadioButton, theSendToAll)
 #. +> trunk
-#: addactionbase.ui:507
+#: addactionbase.ui:312
 msgid "Send the action to &all instances"
 msgstr "Akschoon na a&ll Utgaven sennen"
 
 #. i18n: ectx: property (text), widget (QRadioButton, theSwitchMode)
 #. +> trunk
-#: addactionbase.ui:531
+#: addactionbase.ui:336
 msgid "&Switch to mode:"
 msgstr "Na &Bedriefoort wesseln:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, theExitMode)
 #. +> trunk
-#: addactionbase.ui:548
+#: addactionbase.ui:353
 msgid "&Exit current mode"
 msgstr "Aktuelle Bedriefoort &verlaten"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #. +> trunk
-#: addactionbase.ui:574
+#: addactionbase.ui:379
 msgid "<b>Options</b>"
 msgstr "<b>Optschonen</b>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, theDoBefore)
 #. +> trunk
-#: addactionbase.ui:594 editactionbase.ui:313
+#: addactionbase.ui:399 editactionbase.ui:313
 msgid "E&xecute all other actions before mode change (in original mode)"
 msgstr "All anner Akschonen &ehr't Wesseln utföhren (in ole Bedriefoort)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, theDoAfter)
 #. +> trunk
-#: addactionbase.ui:604 editactionbase.ui:326
+#: addactionbase.ui:409 editactionbase.ui:326
 msgid "Exec&ute all actions after mode change (in new mode)"
 msgstr "All Akschonen &na't Wesseln utföhren (in niege Bedriefoort)"
 
 #. +> trunk
-#: editaction.cpp:74 editaction.cpp:235
-msgid "Name"
-msgstr "Naam"
+#: dbusinterface.cpp:206
+msgctxt "The name of a parameter"
+msgid "unknown"
+msgstr ""
 
 #. +> trunk
-#: editaction.cpp:168 editaction.cpp:188 kcmlirc.cpp:186
+#: editaction.cpp:59 editaction.cpp:158 editaction.cpp:182
 msgid "[Exit current mode]"
 msgstr "[aktuelle Bedriefoort verlaten]"
 
 #. +> trunk
-#: editaction.cpp:263 editaction.cpp:264 editaction.cpp:281 editaction.cpp:282
-#: editaction.cpp:305 editaction.cpp:306 editaction.cpp:320 editaction.cpp:321
-msgid "A comma-separated list of Strings"
+#: editaction.cpp:229
+msgctxt "Name"
+msgid "Name of the argument"
+msgstr ""
+
+#. +> trunk
+#: editaction.cpp:229
+msgctxt "Value"
+msgid "Value of the argument"
 msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, EditActionBase)
@@ -394,27 +369,27 @@ msgid "Mo&de is the default for its remote "
 msgstr "Be&driefoort is Standard för de Feernbedenen"
 
 #. +> trunk
-#: kcmlirc.cpp:80
+#: kcmlirc.cpp:75
 msgid "KDE Lirc"
 msgstr "KDE Lirc"
 
 #. +> trunk
-#: kcmlirc.cpp:81
+#: kcmlirc.cpp:76
 msgid "The KDE IR Remote Control System"
 msgstr "Dat Infraroot-Feernbedeensysteem vun KDE"
 
 #. +> trunk
-#: kcmlirc.cpp:83
+#: kcmlirc.cpp:78
 msgid "Copyright (c)2003 Gav Wood"
 msgstr "Copyright (c)2003 Gav Wood"
 
 #. +> trunk
-#: kcmlirc.cpp:85
+#: kcmlirc.cpp:80
 msgid "Use this to configure KDE's infrared remote control system in order to control any KDE application with your infrared remote control."
 msgstr "Hier kannst Du dat Infraroot-Feernbedeensysteem vun KDE instellen. Du kannst dor all KDE-Programmen mit över en Infraroot-Feernbedenen stüern."
 
 #. +> trunk
-#: kcmlirc.cpp:89
+#: kcmlirc.cpp:84
 msgid ""
 "<h1>Remote Controls</h1>"
 "<p>This module allows you to configure bindings between your remote controls and KDE applications. Simply select your remote control and click Add under the Actions/Buttons list. If you want KDE to attempt to automatically assign buttons to a supported application's actions, try clicking the Auto-Populate button.</p>"
@@ -425,252 +400,279 @@ msgstr ""
 "<p>Wenn Du de begäng Programmen un Feernbedenen ankieken wullt, kiek op de Koort <em>Laadt Verwiedern</em>.</p>"
 
 #. +> trunk
-#: kcmlirc.cpp:99
+#: kcmlirc.cpp:90
 msgid "The Infrared Remote Control software is not currently running. This configuration module will not work properly without it. Would you like to start it now?"
 msgstr "Opstunns löppt dat Programm för Infraroot-Feernbedenen nich. Dit Kuntrullmoduul funkscheneert so nich propper. Wullt Du dat nu starten?"
 
 #. +> trunk
-#: kcmlirc.cpp:100
+#: kcmlirc.cpp:91
 msgid "Software Not Running"
 msgstr "Programm löppt nich"
 
 #. +> trunk
-#: kcmlirc.cpp:109
+#: kcmlirc.cpp:91
+msgid "Start"
+msgstr "Starten"
+
+#. +> trunk
+#: kcmlirc.cpp:92 kcmlirc.cpp:102
+msgid "Do Not Start"
+msgstr "Nich starten"
+
+#. +> trunk
+#: kcmlirc.cpp:100
 msgid "Would you like the infrared remote control software to start automatically when you begin KDE?"
 msgstr "Wullt Du de Programmen för Infraroot-Feernbedenen automaatsch mit KDE tosamen starten?"
 
 #. +> trunk
-#: kcmlirc.cpp:110
+#: kcmlirc.cpp:101
 msgid "Automatically Start?"
 msgstr "Automaatsch starten?"
 
 #. +> trunk
-#: kcmlirc.cpp:122
+#: kcmlirc.cpp:101
+msgid "Start Automatically"
+msgstr "Automaatsch starten"
+
+#. +> trunk
+#: kcmlirc.cpp:113
 msgctxt "Column which shows the available remotes on system"
 msgid "Remote"
 msgstr "Feernbedenen"
 
 #. +> trunk
-#: kcmlirc.cpp:122
+#: kcmlirc.cpp:113
 msgid "Used Extension"
 msgstr "Bruukt Verwiedern"
 
 #. +> trunk
-#: kcmlirc.cpp:207
+#: kcmlirc.cpp:198
 msgid "Select a profile"
 msgstr "En Profil utsöken"
 
 #. +> trunk
-#: kcmlirc.cpp:210
+#: kcmlirc.cpp:201
 msgid "Auto-Populate"
 msgstr "Automaatsch opdecken"
 
 #. +> trunk
-#: kcmlirc.cpp:464
+#: kcmlirc.cpp:360
 #, kde-format
 msgid "Are you sure you want to remove %1 and all its actions?"
 msgstr "Büst Du seker, wat Du \"%1\" un all tohören Akschonen wegdoon wullt?"
 
 #. +> trunk
-#: kcmlirc.cpp:466
+#: kcmlirc.cpp:362
 msgid "Erase Actions?"
 msgstr "Akschonen wegdoon?"
 
 #. +> trunk
-#: kcmlirc.cpp:495
-msgid "You may only drag the selected items onto a mode of the same remote control"
-msgstr "Du kannst de utsöchten Indrääg bloots op en Bedriefoort vun de sülve Feernebedenen afleggen."
-
-#. +> trunk
-#: kcmlirc.cpp:496
-msgid "You May Not Drag Here"
-msgstr "Hier muttst Du nix hentrecken"
-
-#. +> trunk
-#: kcmlirc.cpp:527
+#: kcmlirc.cpp:410
 msgid "Actions <i>always</i> available"
 msgstr "Akschonen <i>jümmers</i> verföögbor"
 
 #. +> trunk
-#: kcmlirc.cpp:528
+#: kcmlirc.cpp:411
 #, kde-format
 msgid "Actions available only in mode <b>%1</b>"
 msgstr "Akschonen bloots in Bedriefoort <b>%1</b> verföögbor"
 
 #. +> trunk
-#: kcmlirc.cpp:671 kcmlirc.cpp:712 kcmlirc.cpp:725
+#: kcmlirc.cpp:518 kcmlirc.cpp:558 kcmlirc.cpp:571
 msgid "Applications"
 msgstr "Programmen"
 
 #. +> trunk
-#: kcmlirc.cpp:683 kcmlirc.cpp:718 kcmlirc.cpp:744
+#: kcmlirc.cpp:530 kcmlirc.cpp:564 kcmlirc.cpp:590
 msgid "Remote Controls"
 msgstr "Feernbedenen"
 
 #. +> trunk
-#: kcmlirc.cpp:709 kcmlirc.cpp:742 kcmlirc.cpp:762
+#: kcmlirc.cpp:555 kcmlirc.cpp:588 kcmlirc.cpp:608
 #, kde-format
 msgid "Information on <b>%1</b>:"
 msgstr "Informatschonen över <b>%1</b>:"
 
 #. +> trunk
-#: kcmlirc.cpp:714
+#: kcmlirc.cpp:560
 msgid "Number of Applications"
 msgstr "Tall vun Programmen"
 
 #. +> trunk
-#: kcmlirc.cpp:720
+#: kcmlirc.cpp:566
 msgid "Number of Remote Controls"
 msgstr "Tall vun Feernbedenen"
 
 #. +> trunk
-#: kcmlirc.cpp:729 kcmlirc.cpp:749
+#: kcmlirc.cpp:575 kcmlirc.cpp:595
 msgid "Extension Name"
 msgstr "Naam vun de Verwiedern"
 
 #. +> trunk
-#: kcmlirc.cpp:732 kcmlirc.cpp:752
+#: kcmlirc.cpp:578 kcmlirc.cpp:598
 msgid "Extension Author"
 msgstr "Autor vun de Verwiedern"
 
 #. +> trunk
-#: kcmlirc.cpp:735
+#: kcmlirc.cpp:581
 msgid "Application Identifier"
 msgstr "Programmkennen"
 
 #. +> trunk
-#: kcmlirc.cpp:738
+#: kcmlirc.cpp:584
 msgid "Number of Actions"
 msgstr "Tall vun Akschonen"
 
 #. +> trunk
-#: kcmlirc.cpp:755
+#: kcmlirc.cpp:601
 msgid "Remote Control Identifier"
 msgstr "Feernbedenenkennen"
 
 #. +> trunk
-#: kcmlirc.cpp:758
+#: kcmlirc.cpp:604
 msgid "Number of Buttons"
 msgstr "Tall vun Knööp"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, KCMLircBase)
 #. +> trunk
-#: kcmlircbase.ui:14
+#: kcmlircbase.ui:15
 msgid "Linux Infrared Remote Control"
 msgstr "Infraroot-Feernbedenen för Linux"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #. +> trunk
-#: kcmlircbase.ui:27
+#: kcmlircbase.ui:28
 msgid "Controller Functions"
 msgstr "Feernbedeen-Funkschonen"
 
 #. i18n: ectx: property (text), widget (QLabel, theMainLabel)
 #. +> trunk
-#: kcmlircbase.ui:48
+#: kcmlircbase.ui:49
 msgid "There are currently no remote controls available. You must first set up LIRC correctly; see www.lirc.org for more information."
 msgstr "Opstunns sünd keen Feernbedenen verföögbor, Du muttst toeerst LIRC richtig inrichten; kiek ünner www.lirc.org na mehr Informatschonen."
 
 #. i18n: ectx: property (text), widget (QLabel, theRemotesLabel)
 #. +> trunk
-#: kcmlircbase.ui:72
+#: kcmlircbase.ui:73
 msgid "Remote controls and modes:"
 msgstr "Feernbedenen un Bedriefoorden:"
 
 #. i18n: ectx: property (text), widget (KPushButton, theAddMode)
 #. +> trunk
-#: kcmlircbase.ui:104
+#: kcmlircbase.ui:105
 msgid "&Add..."
 msgstr "&Tofögen..."
 
 #. i18n: ectx: property (text), widget (KPushButton, theEditMode)
 #. +> trunk
-#: kcmlircbase.ui:120
+#: kcmlircbase.ui:121
 msgid "&Edit..."
 msgstr "&Bewerken..."
 
 #. i18n: ectx: property (text), widget (KPushButton, theRemoveMode)
 #. +> trunk
-#: kcmlircbase.ui:136
+#: kcmlircbase.ui:137
 msgid "&Remove"
 msgstr "&Wegmaken"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, theActions)
 #. +> trunk
-#: kcmlircbase.ui:183
+#: kcmlircbase.ui:181
 msgid "Button"
 msgstr "Knoop"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, theActions)
 #. +> trunk
-#: kcmlircbase.ui:188
+#: kcmlircbase.ui:186
 msgid "Application"
 msgstr "Programm"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, theActions)
 #. +> trunk
-#: kcmlircbase.ui:198
-msgid "Parameters"
-msgstr "Parameters"
+#: kcmlircbase.ui:196
+msgid "Arguments"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTreeWidget, theActions)
+#. +> trunk
+#: kcmlircbase.ui:201
+msgid "Notes"
+msgstr "Notizen"
 
 #. i18n: ectx: property (text), widget (KPushButton, theAddActions)
 #. +> trunk
-#: kcmlircbase.ui:218
+#: kcmlircbase.ui:216
 msgid "Auto-Populate..."
 msgstr "Automaatsch opdecken..."
 
 #. i18n: ectx: property (text), widget (KPushButton, theAddAction)
 #. +> trunk
-#: kcmlircbase.ui:231
+#: kcmlircbase.ui:229
 msgid "A&dd..."
 msgstr "To&fögen..."
 
 #. i18n: ectx: property (text), widget (QPushButton, theEditAction)
 #. +> trunk
-#: kcmlircbase.ui:241
+#: kcmlircbase.ui:239
 msgid "Ed&it..."
 msgstr "B&ewerken..."
 
 #. i18n: ectx: property (text), widget (KPushButton, theRemoveAction)
 #. +> trunk
-#: kcmlircbase.ui:251
+#: kcmlircbase.ui:249
 msgid "Re&move"
 msgstr "&Wegdoon"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #. +> trunk
-#: kcmlircbase.ui:278
+#: kcmlircbase.ui:276
 msgid "Extension overview"
 msgstr "Verwiedern-Översicht"
 
-#. i18n: ectx: property (text), widget (QTreeWidget, theInformation)
-#. +> trunk
-#: kcmlircbase.ui:311
-msgid "Information"
-msgstr "Informatschonen"
-
 #. i18n: ectx: property (text), widget (QTreeWidget, theExtensions)
 #. +> trunk
-#: kcmlircbase.ui:329
+#: kcmlircbase.ui:283
 msgid "Available extensions"
 msgstr "Verföögbor Verwiedern"
 
+#. i18n: ectx: property (text), widget (QTreeWidget, theInformation)
 #. +> trunk
-#: model.cpp:274
-msgid "A comma-separated list oft Strings"
-msgstr ""
+#: kcmlircbase.ui:318
+msgid "Information"
+msgstr "Informatschonen"
 
+#. i18n: ectx: property (text), widget (QTreeWidget, theInformation)
 #. +> trunk
-#: model.cpp:304
-msgid "True"
-msgstr ""
-
-#. +> trunk
-#: model.cpp:305
-#, fuzzy
-#| msgid "Value"
-msgid "False"
+#: kcmlircbase.ui:323
+msgid "Value"
 msgstr "Weert"
+
+#. +> trunk
+#: model.cpp:215
+msgid "Parameter"
+msgstr "Parameter"
+
+#. +> trunk
+#: model.cpp:217
+msgid "Prototype"
+msgstr "Vörlaag"
+
+#. +> trunk
+#: model.cpp:260 model.cpp:370
+msgid "A comma-separated list of Strings"
+msgstr ""
+
+#. +> trunk
+#: model.cpp:290
+msgctxt "True"
+msgid "Value is true"
+msgstr ""
+
+#. +> trunk
+#: model.cpp:291
+msgctxt "False"
+msgid "Value is false"
+msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, NewMode)
 #. +> trunk
@@ -702,6 +704,42 @@ msgstr "As Standardbedriefoort bruken"
 #: newmode.ui:101
 msgid "&Icon "
 msgstr "&Lüttbild "
+
+#~ msgctxt "Unknown parameter name in function"
+#~ msgid "&lt;anonymous&gt;"
+#~ msgstr "&lt;Anonüm&gt;"
+
+#~ msgid "Program"
+#~ msgstr "Programm"
+
+#~ msgid "Option Description"
+#~ msgstr "Optschoon-Beschrieven"
+
+#~ msgid "Type"
+#~ msgstr "Typ"
+
+#~ msgid "Place"
+#~ msgstr "Steed"
+
+#~ msgid "Parameter:"
+#~ msgstr "Parameter:"
+
+#~ msgid "Name"
+#~ msgstr "Naam"
+
+#~ msgid "You may only drag the selected items onto a mode of the same remote control"
+#~ msgstr "Du kannst de utsöchten Indrääg bloots op en Bedriefoort vun de sülve Feernebedenen afleggen."
+
+#~ msgid "You May Not Drag Here"
+#~ msgstr "Hier muttst Du nix hentrecken"
+
+#~ msgid "Parameters"
+#~ msgstr "Parameters"
+
+#, fuzzy
+#~| msgid "Value"
+#~ msgid "False"
+#~ msgstr "Weert"
 
 #, fuzzy
 #~| msgid "A&pplication/D-Bus options:"
@@ -765,9 +803,6 @@ msgstr "&Lüttbild "
 #~ msgid "New Column"
 #~ msgstr "Nieg Striep"
 
-#~ msgid "Notes"
-#~ msgstr "Notizen"
-
 #~ msgid "Select Action to Carry Out on Button Press"
 #~ msgstr "Akschoon utsöken, de op Knoopdruck utföhrt warrt"
 
@@ -788,12 +823,3 @@ msgstr "&Lüttbild "
 
 #~ msgid "KDE LIRC"
 #~ msgstr "KDE Lirc"
-
-#~ msgid "Start"
-#~ msgstr "Starten"
-
-#~ msgid "Do Not Start"
-#~ msgstr "Nich starten"
-
-#~ msgid "Start Automatically"
-#~ msgstr "Automaatsch starten"
