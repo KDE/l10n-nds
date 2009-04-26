@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaffeine\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-04-25 11:52+0200\n"
+"POT-Creation-Date: 2009-04-26 11:02+0200\n"
 "PO-Revision-Date: 2009-03-25 00:28+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -294,7 +294,7 @@ msgstr "Vörut övergahn"
 msgid "Skip 1min Forward"
 msgstr "Vörut övergahn"
 
-#: mediawidget.cpp:291 dvb/dvbepg.cpp:217
+#: mediawidget.cpp:291 dvb/dvbepg.cpp:217 playlist/playlistmodel.cpp:78
 #, fuzzy
 #| msgid "&File"
 msgid "Title"
@@ -337,7 +337,8 @@ msgstr "Bewerken"
 
 #. i18n: file: dvb/dvbscandialog.ui:26
 #. i18n: ectx: property (text), widget (QPushButton, removeChannelButton)
-#: rc.cpp:11 dvb/dvbrecording.cpp:427 dvb/dvbrecording.cpp:440
+#: rc.cpp:11 dvb/dvbchannelui.cpp:382 dvb/dvbrecording.cpp:427
+#: dvb/dvbrecording.cpp:440
 msgid "Remove"
 msgstr "Wegmaken"
 
@@ -359,7 +360,7 @@ msgstr "Kanaal"
 
 #. i18n: file: dvb/dvbscandialog.ui:53
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:20 dvb/dvbchannelui.cpp:449 dvb/dvbconfigdialog.cpp:481
+#: rc.cpp:20 dvb/dvbchannelui.cpp:449 dvb/dvbconfigdialog.cpp:496
 msgid "Source:"
 msgstr "Born:"
 
@@ -459,15 +460,9 @@ msgstr ""
 msgid "Name"
 msgstr "Naam"
 
-#: dvb/dvbchannelui.cpp:208
+#: dvb/dvbchannelui.cpp:208 playlist/playlistmodel.cpp:76
 msgid "Number"
 msgstr "Nummer"
-
-#: dvb/dvbchannelui.cpp:382
-#, fuzzy
-#| msgid "Delete all"
-msgid "Delete"
-msgstr "All wegdoon"
 
 #: dvb/dvbchannelui.cpp:425
 #, fuzzy
@@ -475,7 +470,7 @@ msgstr "All wegdoon"
 msgid "Channel Settings"
 msgstr "Kanaals"
 
-#: dvb/dvbchannelui.cpp:431 dvb/dvbconfigdialog.cpp:490
+#: dvb/dvbchannelui.cpp:431 dvb/dvbconfigdialog.cpp:505
 #: dvb/dvbrecording.cpp:518
 msgid "Name:"
 msgstr "Naam:"
@@ -642,158 +637,180 @@ msgstr "Reedschap %1"
 msgid "Downloading scan data"
 msgstr ""
 
-#: dvb/dvbconfigdialog.cpp:308 dvb/dvbconfigdialog.cpp:319
+#: dvb/dvbconfigdialog.cpp:308 dvb/dvbconfigdialog.cpp:320
 #, fuzzy
 #| msgid "Scan file last updated<br>on %1"
 msgid "Scan data update failed."
 msgstr "Söökdatei tolest opfrischt<br>op den %1"
 
 #: dvb/dvbconfigdialog.cpp:317
-#, fuzzy
-#| msgid "Scan file last updated<br>on %1"
-msgid "Scan data successfully updated."
-msgstr "Söökdatei tolest opfrischt<br>op den %1"
+msgid ""
+"Scan data successfully updated. Changes take\n"
+"effect after you have closed the configuration dialog."
+msgstr ""
 
-#: dvb/dvbconfigdialog.cpp:327
+#: dvb/dvbconfigdialog.cpp:328
 #, kde-format
 msgid "Name: %1"
 msgstr "Naam: %1"
 
-#: dvb/dvbconfigdialog.cpp:336
+#: dvb/dvbconfigdialog.cpp:337
 msgid "device not connected"
 msgstr "Reedschap nich tokoppelt"
 
-#: dvb/dvbconfigdialog.cpp:450
+#: dvb/dvbconfigdialog.cpp:452
 msgid "Cable"
 msgstr "Kavel"
 
-#: dvb/dvbconfigdialog.cpp:452
+#: dvb/dvbconfigdialog.cpp:455
 msgid "DVB-C"
 msgstr "DVB-C"
 
-#: dvb/dvbconfigdialog.cpp:458
+#: dvb/dvbconfigdialog.cpp:461
 msgid "Terrestrial"
 msgstr "Terrestersch"
 
-#: dvb/dvbconfigdialog.cpp:460
+#: dvb/dvbconfigdialog.cpp:469
+#, fuzzy
+#| msgid "Stop scan"
+msgid "Autoscan"
+msgstr "Söök anhollen"
+
+#: dvb/dvbconfigdialog.cpp:470
+msgid "Autoscan with 167 kHz Offsets"
+msgstr ""
+
+#: dvb/dvbconfigdialog.cpp:471
+msgid "Autoscan Australia"
+msgstr ""
+
+#: dvb/dvbconfigdialog.cpp:472
+msgid "Autoscan Italy"
+msgstr ""
+
+#: dvb/dvbconfigdialog.cpp:473
+msgid "Autoscan Taiwan"
+msgstr ""
+
+#: dvb/dvbconfigdialog.cpp:474
 msgid "DVB-T"
 msgstr "DVB-T"
 
-#: dvb/dvbconfigdialog.cpp:463
+#: dvb/dvbconfigdialog.cpp:477
 msgid "Atsc"
 msgstr "ATSC"
 
-#: dvb/dvbconfigdialog.cpp:465
+#: dvb/dvbconfigdialog.cpp:480
 msgid "ATSC"
 msgstr "ATSC"
 
-#: dvb/dvbconfigdialog.cpp:472 dvb/dvbconfigdialog.cpp:555
+#: dvb/dvbconfigdialog.cpp:487 dvb/dvbconfigdialog.cpp:590
 msgid "Tuner timeout (ms):"
 msgstr "Insteller-Tiet (ms):"
 
-#: dvb/dvbconfigdialog.cpp:484 dvb/dvbconfigdialog.cpp:591
+#: dvb/dvbconfigdialog.cpp:499 dvb/dvbconfigdialog.cpp:626
 #, fuzzy
 #| msgid "No source"
 msgid "No Source"
 msgstr "Keen Born"
 
-#: dvb/dvbconfigdialog.cpp:550
+#: dvb/dvbconfigdialog.cpp:585
 msgid "DVB-S"
 msgstr "DVB-S"
 
-#: dvb/dvbconfigdialog.cpp:563
+#: dvb/dvbconfigdialog.cpp:598
 msgid "Configuration:"
 msgstr "Instellen:"
 
-#: dvb/dvbconfigdialog.cpp:566
+#: dvb/dvbconfigdialog.cpp:601
 #, fuzzy
 #| msgid "DiSEqC switch"
 msgid "DiSEqC Switch"
 msgstr "DiSEqC-Schalter"
 
-#: dvb/dvbconfigdialog.cpp:567
+#: dvb/dvbconfigdialog.cpp:602
 #, fuzzy
 #| msgid "USALS rotor"
 msgid "USALS Rotor"
 msgstr "USALS-Dreiher"
 
-#: dvb/dvbconfigdialog.cpp:568
+#: dvb/dvbconfigdialog.cpp:603
 #, fuzzy
 #| msgid "Positions rotor"
 msgid "Positions Rotor"
 msgstr "Positschoon-Dreiher"
 
-#: dvb/dvbconfigdialog.cpp:585
+#: dvb/dvbconfigdialog.cpp:620
 #, fuzzy, kde-format
 #| msgid "LNB %1 settings"
 msgid "LNB %1 Settings"
 msgstr "LNB-%1-Instellen"
 
-#: dvb/dvbconfigdialog.cpp:603 dvb/dvbconfigdialog.cpp:826
+#: dvb/dvbconfigdialog.cpp:638 dvb/dvbconfigdialog.cpp:861
 #, fuzzy
 #| msgid "LNB settings"
 msgid "LNB Settings"
 msgstr "LNB-Instellen"
 
-#: dvb/dvbconfigdialog.cpp:618 dvb/dvbconfigdialog.cpp:630
+#: dvb/dvbconfigdialog.cpp:653 dvb/dvbconfigdialog.cpp:665
 #, fuzzy
 #| msgid "Add satellite"
 msgid "Add Satellite"
 msgstr "Satellit tofögen"
 
-#: dvb/dvbconfigdialog.cpp:638
+#: dvb/dvbconfigdialog.cpp:673
 msgid "Satellite"
 msgstr "Satellit"
 
-#: dvb/dvbconfigdialog.cpp:638
+#: dvb/dvbconfigdialog.cpp:673
 msgid "Position"
 msgstr "Positschoon"
 
-#: dvb/dvbconfigdialog.cpp:655
+#: dvb/dvbconfigdialog.cpp:690
 #, fuzzy
 #| msgid "Remove satellite"
 msgid "Remove Satellite"
 msgstr "Satellit wegmaken"
 
-#: dvb/dvbconfigdialog.cpp:835
+#: dvb/dvbconfigdialog.cpp:870
 msgid "Universal LNB"
 msgstr "Universaal-LNB"
 
-#: dvb/dvbconfigdialog.cpp:839
+#: dvb/dvbconfigdialog.cpp:874
 msgid "C-band LNB"
 msgstr "C-Band-LNB"
 
-#: dvb/dvbconfigdialog.cpp:843
+#: dvb/dvbconfigdialog.cpp:878
 #, fuzzy
 #| msgid "C-band multipoint LNB"
 msgid "C-band Multipoint LNB"
 msgstr "C-Band-Mehrpünkt-LNB"
 
-#: dvb/dvbconfigdialog.cpp:847
+#: dvb/dvbconfigdialog.cpp:882
 msgid "Custom LNB"
 msgstr "Sünner-LNB"
 
-#: dvb/dvbconfigdialog.cpp:858
+#: dvb/dvbconfigdialog.cpp:893
 msgid "Switch frequency (MHz)"
 msgstr "Wesselfrequenz (MHz)"
 
-#: dvb/dvbconfigdialog.cpp:931
+#: dvb/dvbconfigdialog.cpp:966
 msgid "Low band LOF (MHz)"
 msgstr "Sietband-LOF (MHz)"
 
-#: dvb/dvbconfigdialog.cpp:936
+#: dvb/dvbconfigdialog.cpp:971
 msgid "High band LOF (MHz)"
 msgstr "Hoochband-LOF (MHz)"
 
-#: dvb/dvbconfigdialog.cpp:942
+#: dvb/dvbconfigdialog.cpp:977
 msgid "Horizontal LOF (MHz)"
 msgstr "Kimmrecht LOF (MHz)"
 
-#: dvb/dvbconfigdialog.cpp:947
+#: dvb/dvbconfigdialog.cpp:982
 msgid "Vertical LOF (MHz)"
 msgstr "Pielrecht LOF (MHz)"
 
-#: dvb/dvbconfigdialog.cpp:953
+#: dvb/dvbconfigdialog.cpp:988
 msgid "LOF (MHz)"
 msgstr "LOF (MHz)"
 
@@ -809,17 +826,17 @@ msgstr "Duer"
 msgid "Program Guide"
 msgstr ""
 
-#: dvb/dvbepg.cpp:443
+#: dvb/dvbepg.cpp:445
 #, kde-format
 msgid "<font color=#008000 size=\"+1\">%1</font><br>"
 msgstr ""
 
-#: dvb/dvbepg.cpp:446
+#: dvb/dvbepg.cpp:448
 #, kde-format
 msgid "<font color=#808000>%1</font><br>"
 msgstr ""
 
-#: dvb/dvbepg.cpp:449
+#: dvb/dvbepg.cpp:454
 #, kde-format
 msgid "<font color=#800000>%1 - %2</font><br><br>"
 msgstr ""
@@ -879,7 +896,7 @@ msgstr "SNR"
 msgid "Scan data last updated<br>on %1"
 msgstr "Söökdatei tolest opfrischt<br>op den %1"
 
-#: dvb/dvbscandialog.cpp:172
+#: dvb/dvbscandialog.cpp:172 dvb/dvbscandialog.cpp:237
 #, fuzzy
 #| msgid "Start scan"
 msgid "Start Scan"
@@ -891,16 +908,14 @@ msgstr "Söök anfangen"
 msgid "Current Transponder"
 msgstr "Aktuell Transponder"
 
-#: dvb/dvbscandialog.cpp:237
-msgid "Start scan"
-msgstr "Söök anfangen"
-
-#: dvb/dvbscandialog.cpp:265 dvb/dvbtab.cpp:487
+#: dvb/dvbscandialog.cpp:272 dvb/dvbtab.cpp:487
 msgid "No suitable device found."
 msgstr "Keen passen Reedschap funnen"
 
-#: dvb/dvbscandialog.cpp:270
-msgid "Stop scan"
+#: dvb/dvbscandialog.cpp:277
+#, fuzzy
+#| msgid "Stop scan"
+msgid "Stop Scan"
 msgstr "Söök anhollen"
 
 #: dvb/dvbtab.cpp:201
@@ -910,6 +925,19 @@ msgstr ""
 #: dvb/dvbtab.cpp:236
 msgid "Search:"
 msgstr "Söken:"
+
+#, fuzzy
+#~| msgid "Delete all"
+#~ msgid "Delete"
+#~ msgstr "All wegdoon"
+
+#, fuzzy
+#~| msgid "Scan file last updated<br>on %1"
+#~ msgid "Scan data successfully updated."
+#~ msgstr "Söökdatei tolest opfrischt<br>op den %1"
+
+#~ msgid "Start scan"
+#~ msgstr "Söök anfangen"
 
 #~ msgid "No source"
 #~ msgstr "Keen Born"
