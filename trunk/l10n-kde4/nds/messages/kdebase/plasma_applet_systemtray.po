@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_systemtray\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-05-03 11:05+0200\n"
+"POT-Creation-Date: 2009-05-04 12:01+0200\n"
 "PO-Revision-Date: 2009-04-25 02:20+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -18,6 +18,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 0.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: notificationitemwatcher/notificationitemwatcher.cpp:36
+#, fuzzy
+#| msgid "%1 notification"
+#| msgid_plural "%1 notifications"
+msgid "notificationitemwatcher"
+msgstr "%1 Bescheed"
+
+#: core/job.cpp:170
+#, kde-format
+msgid "%1 file, to: %2"
+msgid_plural "%1 files, to: %2"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/manager.cpp:198
+#, fuzzy, kde-format
+#| msgid "%1 (%2 remaining)"
+msgid "1 running job (%2 remaining)"
+msgid_plural "%1 running jobs (%2 remaining)"
+msgstr[0] "%1 (noch %2 över)"
+msgstr[1] "%1 (noch %2 över)"
+
+#: core/manager.cpp:203
+#, fuzzy
+#| msgid "%1 running job"
+#| msgid_plural "%1 running jobs"
+msgid "no running jobs"
+msgstr "%1 lopen Opgaav"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
@@ -29,80 +58,74 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s_dibbern@web.de"
 
-#. i18n: file: ui/autohide.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, AutoHideConfig)
-#: rc.cpp:5
-msgid "Form"
-msgstr ""
-
-#. i18n: file: ui/autohide.ui:26
+#. i18n: file: ui/autohide.ui:23
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:8
+#: rc.cpp:5
 #, fuzzy
 #| msgid "%1 notification"
 #| msgid_plural "%1 notifications"
 msgid "Jobs and notifications:"
 msgstr "%1 Bescheed"
 
-#. i18n: file: ui/autohide.ui:33
+#. i18n: file: ui/autohide.ui:30
 #. i18n: ectx: property (text), widget (QCheckBox, autoHide)
-#: rc.cpp:11
+#: rc.cpp:8
 msgid "Automatically hide new notifications and jobs after a short delay"
 msgstr ""
 
-#. i18n: file: ui/autohide.ui:46
+#. i18n: file: ui/autohide.ui:43
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:14
+#: rc.cpp:11
 #, fuzzy
 #| msgid "System services"
-msgid "Systemtray icons:"
+msgid "System tray icons:"
 msgstr "Systeemdeensten"
 
 #. i18n: file: ui/protocols.ui:26
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:17
+#: rc.cpp:14
 msgid "Pop Up Notices"
 msgstr "Opduk-Notizen"
 
 #. i18n: file: ui/protocols.ui:33
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:20
+#: rc.cpp:17
 msgid "Application notifications"
 msgstr "Programm-Bescheden"
 
 #. i18n: file: ui/protocols.ui:50
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:23
+#: rc.cpp:20
 msgid "File transfers and other jobs"
 msgstr "Dateiöverdregen un anner Opgaven"
 
 #. i18n: file: ui/protocols.ui:73
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:26
+#: rc.cpp:23
 msgid "Icons"
 msgstr "Lüttbiller"
 
 #. i18n: file: ui/protocols.ui:80
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:29
+#: rc.cpp:26
 msgid "Application status"
 msgstr "Programm-Status"
 
 #. i18n: file: ui/protocols.ui:97
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:32
+#: rc.cpp:29
 msgid "Communications"
 msgstr "Överdregen"
 
 #. i18n: file: ui/protocols.ui:114
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:35
+#: rc.cpp:32
 msgid "System services"
 msgstr "Systeemdeensten"
 
 #. i18n: file: ui/protocols.ui:131
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:38
+#: rc.cpp:35
 msgid "Hardware control"
 msgstr "Hardware-Kuntrull"
 
@@ -123,7 +146,9 @@ msgid "Information"
 msgstr "Informatschonen"
 
 #: ui/applet.cpp:413
-msgid "Select which kinds of information to show"
+#, fuzzy
+#| msgid "Select which kinds of information to show"
+msgid "Choose which information to show"
 msgstr "De Informatschonen utsöken, de Du wiesen wullt"
 
 #: ui/applet.cpp:414
@@ -134,16 +159,15 @@ msgstr "Automaatsch versteken"
 msgid "clear all"
 msgstr ""
 
-#: ui/applet.cpp:572 ui/applet.cpp:576
-msgid "Destination"
-msgstr ""
+#: ui/applet.cpp:609
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is the name of the job, can be things like Copying, deleting, moving"
+#| msgid "(finished) %1"
+msgid "%1 [finished]"
+msgstr "%1 (afslaten)"
 
-#: ui/applet.cpp:634
-#, kde-format
-msgid "Destination: %1"
-msgstr ""
-
-#: ui/applet.cpp:662
+#: ui/applet.cpp:640
 msgid "Completed jobs"
 msgstr ""
 
