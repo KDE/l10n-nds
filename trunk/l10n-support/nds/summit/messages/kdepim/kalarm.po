@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kalarm\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-04-30 11:45+0200\n"
+"POT-Creation-Date: 2009-05-05 11:24+0200\n"
 "PO-Revision-Date: 2009-04-30 00:30+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -562,19 +562,55 @@ msgctxt "@title:column"
 msgid "Birthday"
 msgstr "Geboortsdag"
 
-#. +> trunk stable
+#. +> trunk
+#: calendarcompat.cpp:94
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Resource <resource>%1</resource> is in an old format (<application>KAlarm</application> version %2), and will be read-only unless you choose to update it to the current format."
+msgctxt "@info"
+msgid "Calendar <resource>%1</resource> is in an old format (<application>KAlarm</application> version %2), and will be read-only unless you choose to update it to the current format."
+msgstr "Ressource <resource>%1</resource> hett en ool Formaat (<application>KAlarm</application> Verschoon %2). Se blifft so lang bloots leesbor, as Du ehr nich op't aktuelle Formaat opfrischst."
+
+#. +> stable
 #: calendarcompat.cpp:94
 msgctxt "@info"
 msgid "Resource <resource>%1</resource> is in an old format (<application>KAlarm</application> version %2), and will be read-only unless you choose to update it to the current format."
 msgstr "Ressource <resource>%1</resource> hett en ool Formaat (<application>KAlarm</application> Verschoon %2). Se blifft so lang bloots leesbor, as Du ehr nich op't aktuelle Formaat opfrischst."
 
-#. +> trunk stable
+#. +> trunk
+#: calendarcompat.cpp:96
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Some or all of the alarms in resource <resource>%1</resource> are in an old <application>KAlarm</application> format, and will be read-only unless you choose to update them to the current format."
+msgctxt "@info"
+msgid "Some or all of the alarms in calendar <resource>%1</resource> are in an old <application>KAlarm</application> format, and will be read-only unless you choose to update them to the current format."
+msgstr "En poor oder all Alarms binnen de Ressource <resource>%1</resource> hebbt en ool <application> KAlarm</application>-Formaat. Se blievt so lang bloots leesbor, as Du se nich op't aktuelle Formaat opfrischst."
+
+#. +> stable
 #: calendarcompat.cpp:96
 msgctxt "@info"
 msgid "Some or all of the alarms in resource <resource>%1</resource> are in an old <application>KAlarm</application> format, and will be read-only unless you choose to update them to the current format."
 msgstr "En poor oder all Alarms binnen de Ressource <resource>%1</resource> hebbt en ool <application> KAlarm</application>-Formaat. Se blievt so lang bloots leesbor, as Du se nich op't aktuelle Formaat opfrischst."
 
-#. +> trunk stable
+#. +> trunk
+#: calendarcompat.cpp:99
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>%1</para>"
+#| "<para><warning>Do not update the resource if it is shared with other users who run an older version of <application>KAlarm</application>. If you do so, they may be unable to use it any more.</warning></para>"
+#| "<para>Do you wish to update the resource?</para>"
+msgctxt "@info"
+msgid ""
+"<para>%1</para>"
+"<para><warning>Do not update the calendar if it is shared with other users who run an older version of <application>KAlarm</application>. If you do so, they may be unable to use it any more.</warning></para>"
+"<para>Do you wish to update the calendar?</para>"
+msgstr ""
+"<para>%1</para>"
+"<para><warning>Du muttst de Ressource nich opfrischen, wenn Du ehr mit anner Brukers deelst, de en öller Verschoon vun <application>KAlarm</application> hebbt. Deist Du dat liekers, köönt se ehr wull nich mehr bruken.</warning></para>"
+"<para> Wullt Du de Ressource opfrischen?</para>"
+
+#. +> stable
 #: calendarcompat.cpp:99
 msgctxt "@info"
 msgid ""
@@ -830,8 +866,17 @@ msgctxt "@info"
 msgid "For a repetition within the recurrence, its period must be in units of days or weeks for a date-only alarm"
 msgstr "Du muttst de Tiet för Wedderhalen binnen de Wedderhaalperiood in Daag oder Weken angeven, wenn för den Alarm bloots en Datum angeven is."
 
-#. +> trunk stable
+#. +> trunk
 #: editdlg.cpp:980
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "You must select a resource to save the alarm in"
+msgctxt "@info"
+msgid "You must select a calendar to save the alarm in"
+msgstr "Du muttst en Ressource utsöken, binnen de Du den Alarm sekern wullt"
+
+#. +> stable
+#: editdlg.cpp:980 functions.cpp:962
 msgctxt "@info"
 msgid "You must select a resource to save the alarm in"
 msgstr "Du muttst en Ressource utsöken, binnen de Du den Alarm sekern wullt"
@@ -1753,8 +1798,11 @@ msgstr ""
 
 #. +> trunk
 #: functions.cpp:976
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "You must enable a template resource to save the template in"
 msgctxt "@info"
-msgid "You must enable a template resource to save the template in"
+msgid "You must enable a template calendar to save the template in"
 msgstr "Du muttst en Vörlaag-Ressource anmaken, binnen de Du de Vörlaag sekern wullt"
 
 #. +> trunk stable
@@ -2083,20 +2131,46 @@ msgctxt "@info:whatsthis"
 msgid "Enter the default time interval (in minutes) to defer alarms, used by the Defer Alarm dialog."
 msgstr "Hier kannst Du de Standardtiet (in Minuten) för de Alarmverschuven ingeven, de vun den Alarmverschuven-Dialoog bruukt warrt."
 
+#. i18n: ectx: whatsthis, entry (AskResource), group (General)
+#. +> stable
+#: kalarmconfig.kcfg:88 prefdlg.cpp:787
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>When saving a new alarm or alarm template, prompt for which resource to store it in, if there is more than one active resource.</para>"
+"<para>Note that archived alarms are always stored in the default archived alarm resource.</para>"
+msgstr ""
+"<para>Bi't Sekern vun en nieg Alarm oder Alarmvörlaag warrt na de Ressource fraagt, na de Du sekern wullt, wenn mehr as een Ressource anmaakt is.</para>"
+"<para>Beacht bitte: Aflopen Alarms warrt jümmers binnen de Standardressource för aflopen Alarms wohrt.</para>"
+
 #. i18n: ectx: label, entry (AskResource), group (General)
-#. +> trunk stable
+#. +> trunk
 #: kalarmconfig.kcfg:92
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Prompt for which resource to store in"
+msgctxt "@label"
+msgid "Prompt for which calendar to store in"
+msgstr "Na de Ressource fragen, na de sekert warrt"
+
+#. i18n: ectx: label, entry (AskResource), group (General)
+#. +> stable
+#: kalarmconfig.kcfg:87
 msgctxt "@label"
 msgid "Prompt for which resource to store in"
 msgstr "Na de Ressource fragen, na de sekert warrt"
 
 #. i18n: ectx: whatsthis, entry (AskResource), group (General)
-#. +> trunk stable
+#. +> trunk
 #: kalarmconfig.kcfg:93 prefdlg.cpp:805
+#, fuzzy
+#| msgctxt "@info:whatsthis"
+#| msgid ""
+#| "<para>When saving a new alarm or alarm template, prompt for which resource to store it in, if there is more than one active resource.</para>"
+#| "<para>Note that archived alarms are always stored in the default archived alarm resource.</para>"
 msgctxt "@info:whatsthis"
 msgid ""
-"<para>When saving a new alarm or alarm template, prompt for which resource to store it in, if there is more than one active resource.</para>"
-"<para>Note that archived alarms are always stored in the default archived alarm resource.</para>"
+"<para>When saving a new alarm or alarm template, prompt for which calendar to store it in, if there is more than one active calendar.</para>"
+"<para>Note that archived alarms are always stored in the default archived alarm calendar.</para>"
 msgstr ""
 "<para>Bi't Sekern vun en nieg Alarm oder Alarmvörlaag warrt na de Ressource fraagt, na de Du sekern wullt, wenn mehr as een Ressource anmaakt is.</para>"
 "<para>Beacht bitte: Aflopen Alarms warrt jümmers binnen de Standardressource för aflopen Alarms wohrt.</para>"
@@ -4156,20 +4230,47 @@ msgctxt "@title:group"
 msgid "New Alarms && Templates"
 msgstr "Nieg Alarms un Vörlagen"
 
-#. +> trunk stable
+#. +> trunk
 #: prefdlg.cpp:798
+#, fuzzy
+#| msgctxt "@option:radio"
+#| msgid "Store in default resource"
+msgctxt "@option:radio"
+msgid "Store in default calendar"
+msgstr "Na de Standardressource sekern"
+
+#. +> stable
+#: prefdlg.cpp:780
 msgctxt "@option:radio"
 msgid "Store in default resource"
 msgstr "Na de Standardressource sekern"
 
-#. +> trunk stable
+#. +> trunk
 #: prefdlg.cpp:800
+#, fuzzy
+#| msgctxt "@info:whatsthis"
+#| msgid "Add all new alarms and alarm templates to the default resources, without prompting."
+msgctxt "@info:whatsthis"
+msgid "Add all new alarms and alarm templates to the default calendars, without prompting."
+msgstr "Föögt ahn Beglöven all niege Alarms un Alarmvörlagen de Standardressource to."
+
+#. +> stable
+#: prefdlg.cpp:782
 msgctxt "@info:whatsthis"
 msgid "Add all new alarms and alarm templates to the default resources, without prompting."
 msgstr "Föögt ahn Beglöven all niege Alarms un Alarmvörlagen de Standardressource to."
 
-#. +> trunk stable
+#. +> trunk
 #: prefdlg.cpp:802
+#, fuzzy
+#| msgctxt "@option:radio"
+#| msgid "Prompt for which resource to store in"
+msgctxt "@option:radio"
+msgid "Prompt for which calendar to store in"
+msgstr "Na de Ressource fragen, na de sekert warrt"
+
+#. +> stable
+#: prefdlg.cpp:784
 msgctxt "@option:radio"
 msgid "Prompt for which resource to store in"
 msgstr "Na de Ressource fragen, na de sekert warrt"
@@ -4222,14 +4323,38 @@ msgctxt "@info:whatsthis"
 msgid "Delete all existing archived alarms."
 msgstr "All aflopen Alarms wegdoon"
 
-#. +> trunk stable
+#. +> trunk
 #: prefdlg.cpp:843
+#, fuzzy
+#| msgctxt "@info:whatsthis"
+#| msgid "Delete all existing archived alarms (from the default archived alarm resource only)."
+msgctxt "@info:whatsthis"
+msgid "Delete all existing archived alarms (from the default archived alarm calendar only)."
+msgstr "All vörhannen aflopen Alarms wegdoon (bloots ut de Standardressource för aflopen Alarms)"
+
+#. +> stable
+#: prefdlg.cpp:825
 msgctxt "@info:whatsthis"
 msgid "Delete all existing archived alarms (from the default archived alarm resource only)."
 msgstr "All vörhannen aflopen Alarms wegdoon (bloots ut de Standardressource för aflopen Alarms)"
 
-#. +> trunk stable
+#. +> trunk
 #: prefdlg.cpp:887
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>A default resource is required in order to archive alarms, but none is currently enabled.</para>"
+#| "<para>If you wish to keep expired alarms, please first use the resources view to select a default archived alarms resource.</para>"
+msgctxt "@info"
+msgid ""
+"<para>A default calendar is required in order to archive alarms, but none is currently enabled.</para>"
+"<para>If you wish to keep expired alarms, please first use the calendars view to select a default archived alarms calendar.</para>"
+msgstr ""
+"<para>För't Wohren vun aflopen Alarms deit en Standardressource noot, man opstunns hest Du keen anmaakt.</para>"
+"<para>Wenn Du aflopen Alarms wohren wullt, muttst Du dor toeerst en Standardressource för binnen de Ressourcenansicht utsöken.</para>"
+
+#. +> stable
+#: prefdlg.cpp:869
 msgctxt "@info"
 msgid ""
 "<para>A default resource is required in order to archive alarms, but none is currently enabled.</para>"
@@ -4244,8 +4369,17 @@ msgctxt "@info"
 msgid "Do you really want to delete all archived alarms?"
 msgstr "Wullt Du redig all aflopen Alarms wegdoon?"
 
-#. +> trunk stable
+#. +> trunk
 #: prefdlg.cpp:904
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Do you really want to delete all alarms in the default archived alarm resource?"
+msgctxt "@info"
+msgid "Do you really want to delete all alarms in the default archived alarm calendar?"
+msgstr "Wullt Du redig all aflopen Alarms binnen de Standardressource för aflopen Alarms wegdoon?"
+
+#. +> stable
+#: prefdlg.cpp:886
 msgctxt "@info"
 msgid "Do you really want to delete all alarms in the default archived alarm resource?"
 msgstr "Wullt Du redig all aflopen Alarms binnen de Standardressource för aflopen Alarms wegdoon?"
@@ -5270,7 +5404,16 @@ msgctxt "@info:whatsthis"
 msgid "Enter the length of time to repeat the alarm"
 msgstr "Hier kannst Du de Duer ingeven, över de de Alarm wedderhaalt warrn schall"
 
-#. +> trunk stable
+#. +> trunk
+#: resourceconfigdialog.cpp:47 resourceselector.cpp:162
+#, fuzzy
+#| msgctxt "@title:group"
+#| msgid "Alarm Configuration"
+msgctxt "@title:window"
+msgid "Calendar Configuration"
+msgstr "Alarm inrichten"
+
+#. +> stable
 #: resourceconfigdialog.cpp:47 resourceselector.cpp:162
 msgctxt "@title:window"
 msgid "Resource Configuration"
@@ -5282,7 +5425,16 @@ msgctxt "@title:group"
 msgid "General Settings"
 msgstr "Allgemeen Instellen"
 
-#. +> trunk stable
+#. +> trunk
+#: resourceconfigdialog.cpp:62
+#, fuzzy
+#| msgctxt "@label:textbox Resource name"
+#| msgid "Name:"
+msgctxt "@label:textbox Calendar name"
+msgid "Name:"
+msgstr "Naam:"
+
+#. +> stable
 #: resourceconfigdialog.cpp:62
 msgctxt "@label:textbox Resource name"
 msgid "Name:"
@@ -5294,13 +5446,31 @@ msgctxt "@option:check"
 msgid "Read-only"
 msgstr "bloots leesbor"
 
-#. +> trunk stable
+#. +> trunk
+#: resourceconfigdialog.cpp:80
+#, fuzzy
+#| msgctxt "@title:group"
+#| msgid "<resource>%1</resource> Resource Settings"
+msgctxt "@title:group"
+msgid "<resource>%1</resource> Calendar Settings"
+msgstr "Instellen för de Ressource <resource>%1</resource>"
+
+#. +> stable
 #: resourceconfigdialog.cpp:80
 msgctxt "@title:group"
 msgid "<resource>%1</resource> Resource Settings"
 msgstr "Instellen för de Ressource <resource>%1</resource>"
 
-#. +> trunk stable
+#. +> trunk
+#: resourceconfigdialog.cpp:122
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Please enter a resource name."
+msgctxt "@info"
+msgid "Please enter a calendar name."
+msgstr "Giff bitte en Ressourcenaam in."
+
+#. +> stable
 #: resourceconfigdialog.cpp:122
 msgctxt "@info"
 msgid "Please enter a resource name."
@@ -5352,19 +5522,46 @@ msgstr ""
 "%1<nl/>"
 "%2: <filename>%3</filename>"
 
-#. +> trunk stable
+#. +> trunk
+#: resourcemodelview.cpp:416
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "You cannot disable your default active alarm resource."
+msgctxt "@info"
+msgid "You cannot disable your default active alarm calendar."
+msgstr "Du muttst Dien Standardressource för lopen Alarms nich utmaken."
+
+#. +> stable
 #: resourcemodelview.cpp:416
 msgctxt "@info"
 msgid "You cannot disable your default active alarm resource."
 msgstr "Du muttst Dien Standardressource för lopen Alarms nich utmaken."
 
-#. +> trunk stable
+#. +> trunk
+#: resourcemodelview.cpp:425
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "You cannot disable your default archived alarm resource while expired alarms are configured to be kept."
+msgctxt "@info"
+msgid "You cannot disable your default archived alarm calendar while expired alarms are configured to be kept."
+msgstr "Du muttst Dien Standardressource för aflopen Alarms nich utmaken, bides Du instellt hest, dat Du aflopen Alarms wohren wullt."
+
+#. +> stable
 #: resourcemodelview.cpp:425
 msgctxt "@info"
 msgid "You cannot disable your default archived alarm resource while expired alarms are configured to be kept."
 msgstr "Du muttst Dien Standardressource för aflopen Alarms nich utmaken, bides Du instellt hest, dat Du aflopen Alarms wohren wullt."
 
-#. +> trunk stable
+#. +> trunk
+#: resourcemodelview.cpp:430
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Do you really want to disable your default resource?"
+msgctxt "@info"
+msgid "Do you really want to disable your default calendar?"
+msgstr "Wullt Du Dien Standardressource redig utmaken?"
+
+#. +> stable
 #: resourcemodelview.cpp:430
 msgctxt "@info"
 msgid "Do you really want to disable your default resource?"
@@ -5400,19 +5597,67 @@ msgctxt "@info/plain"
 msgid "Enabled"
 msgstr "Anmaakt"
 
-#. +> trunk stable
+#. +> trunk
+#: resources/alarmresource.cpp:334
+#, fuzzy
+#| msgctxt "@info/plain Parameter in 'Default resource: Yes/No'"
+#| msgid "Yes"
+msgctxt "@info/plain Parameter in 'Default calendar: Yes/No'"
+msgid "Yes"
+msgstr "Jo"
+
+#. +> stable
 #: resources/alarmresource.cpp:334
 msgctxt "@info/plain Parameter in 'Default resource: Yes/No'"
 msgid "Yes"
 msgstr "Jo"
 
-#. +> trunk stable
+#. +> trunk
+#: resources/alarmresource.cpp:334
+#, fuzzy
+#| msgctxt "@info/plain Parameter in 'Default resource: Yes/No'"
+#| msgid "No"
+msgctxt "@info/plain Parameter in 'Default calendar: Yes/No'"
+msgid "No"
+msgstr "Nee"
+
+#. +> stable
 #: resources/alarmresource.cpp:334
 msgctxt "@info/plain Parameter in 'Default resource: Yes/No'"
 msgid "No"
 msgstr "Nee"
 
-#. +> trunk stable
+#. +> trunk
+#: resources/alarmresource.cpp:336
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "<title>%1</title>"
+#| "<para>Resource type: %2<nl/>"
+#| "Contents: %3<nl/>"
+#| "%4: <filename>%5</filename><nl/>"
+#| "Permissions: %6<nl/>"
+#| "Status: %7<nl/>"
+#| "Default resource: %8</para>"
+msgctxt "@info"
+msgid ""
+"<title>%1</title>"
+"<para>Calendar type: %2<nl/>"
+"Contents: %3<nl/>"
+"%4: <filename>%5</filename><nl/>"
+"Permissions: %6<nl/>"
+"Status: %7<nl/>"
+"Default calendar: %8</para>"
+msgstr ""
+"<title>%1</title>"
+"<para>Ressourcetyp: %2<nl/>"
+"Inholt: %3<nl/>"
+"%4: <filename>%5</filename><nl/>"
+"Verlöven: %6<nl/>"
+"Status: %7<nl/>"
+"Standardressource: %8</para>"
+
+#. +> stable
 #: resources/alarmresource.cpp:336
 msgctxt "@info"
 msgid ""
@@ -5504,13 +5749,31 @@ msgctxt "@info"
 msgid "You have specified no upload URL: the alarm calendar will be read-only."
 msgstr "Du hest keen Hoochlaadteel angeven. De Alarmkalenner is denn bloots leesbor."
 
-#. +> trunk stable
+#. +> trunk
+#: resources/resourcewidget.cpp:53
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Resource <resource>%1</resource> cannot be made writable since it either was not created by <application>KAlarm</application>, or was created by a newer version of <application>KAlarm</application>"
+msgctxt "@info"
+msgid "Calendar <resource>%1</resource> cannot be made writable since it either was not created by <application>KAlarm</application>, or was created by a newer version of <application>KAlarm</application>"
+msgstr "De Ressource <resource>%1</resource> lett sik nich schrieven. En nieger Verschoon vun <application>KAlarm</application> oder en anner Programm hett ehr opstellt."
+
+#. +> stable
 #: resources/resourcewidget.cpp:53
 msgctxt "@info"
 msgid "Resource <resource>%1</resource> cannot be made writable since it either was not created by <application>KAlarm</application>, or was created by a newer version of <application>KAlarm</application>"
 msgstr "De Ressource <resource>%1</resource> lett sik nich schrieven. En nieger Verschoon vun <application>KAlarm</application> oder en anner Programm hett ehr opstellt."
 
-#. +> trunk stable
+#. +> trunk
+#: resourceselector.cpp:73
+#, fuzzy
+#| msgctxt "@info/plain"
+#| msgid "Calendar Files"
+msgctxt "@title:group"
+msgid "Calendars"
+msgstr "Kalennerdateien"
+
+#. +> stable
 #: resourceselector.cpp:73
 msgctxt "@title:group"
 msgid "Resources"
@@ -5534,13 +5797,31 @@ msgctxt "@item:inlistbox"
 msgid "Alarm Templates"
 msgstr "Alarmvörlagen"
 
-#. +> trunk stable
+#. +> trunk
+#: resourceselector.cpp:81
+#, fuzzy
+#| msgctxt "@info:whatsthis"
+#| msgid "Choose which type of data to show alarm resources for"
+msgctxt "@info:whatsthis"
+msgid "Choose which type of data to show alarm calendars for"
+msgstr "Söök den Datentyp ut, den sien Alarmressourcen Du wiesen wullt"
+
+#. +> stable
 #: resourceselector.cpp:81
 msgctxt "@info:whatsthis"
 msgid "Choose which type of data to show alarm resources for"
 msgstr "Söök den Datentyp ut, den sien Alarmressourcen Du wiesen wullt"
 
-#. +> trunk stable
+#. +> trunk
+#: resourceselector.cpp:95
+#, fuzzy
+#| msgctxt "@info:whatsthis"
+#| msgid "List of available resources of the selected type. The checked state shows whether a resource is enabled (checked) or disabled (unchecked). The default resource is shown in bold."
+msgctxt "@info:whatsthis"
+msgid "List of available calendars of the selected type. The checked state shows whether a calendar is enabled (checked) or disabled (unchecked). The default calendar is shown in bold."
+msgstr "De List vun verföögbor Ressourcen för den utsöchten Typ. Anmaakt Ressourcen sünd ankrüüzt, de Standardressource is fett."
+
+#. +> stable
 #: resourceselector.cpp:95
 msgctxt "@info:whatsthis"
 msgid "List of available resources of the selected type. The checked state shows whether a resource is enabled (checked) or disabled (unchecked). The default resource is shown in bold."
@@ -5552,13 +5833,37 @@ msgctxt "@action:button"
 msgid "Edit..."
 msgstr "Bewerken..."
 
-#. +> trunk stable
+#. +> trunk
+#: resourceselector.cpp:111
+#, fuzzy
+#| msgctxt "@info:whatsthis"
+#| msgid "Edit the highlighted resource"
+msgctxt "@info:whatsthis"
+msgid "Edit the highlighted calendar"
+msgstr "De utsöchte Ressource bewerken"
+
+#. +> stable
 #: resourceselector.cpp:111
 msgctxt "@info:whatsthis"
 msgid "Edit the highlighted resource"
 msgstr "De utsöchte Ressource bewerken"
 
-#. +> trunk stable
+#. +> trunk
+#: resourceselector.cpp:112
+#, fuzzy
+#| msgctxt "@info:whatsthis"
+#| msgid ""
+#| "<para>Remove the highlighted resource from the list.</para>"
+#| "<para>The resource itself is left intact, and may subsequently be reinstated in the list if desired.</para>"
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>Remove the highlighted calendar from the list.</para>"
+"<para>The calendar itself is left intact, and may subsequently be reinstated in the list if desired.</para>"
+msgstr ""
+"<para>De utsöchte Ressource vun de List wegmaken</para>"
+"<para>De Ressource sülven blifft as se is, Du kannst ehr later de List wedder tofögen.</para>"
+
+#. +> stable
 #: resourceselector.cpp:112
 msgctxt "@info:whatsthis"
 msgid ""
@@ -5568,85 +5873,208 @@ msgstr ""
 "<para>De utsöchte Ressource vun de List wegmaken</para>"
 "<para>De Ressource sülven blifft as se is, Du kannst ehr later de List wedder tofögen.</para>"
 
-#. +> trunk stable
+#. +> trunk
+#: resourceselector.cpp:138
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Add a new active alarm resource"
+msgctxt "@info:tooltip"
+msgid "Add a new active alarm calendar"
+msgstr "En nieg aktiev Alarmressource tofögen"
+
+#. +> stable
 #: resourceselector.cpp:138
 msgctxt "@info:tooltip"
 msgid "Add a new active alarm resource"
 msgstr "En nieg aktiev Alarmressource tofögen"
 
-#. +> trunk stable
+#. +> trunk
+#: resourceselector.cpp:142
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Add a new archived alarm resource"
+msgctxt "@info:tooltip"
+msgid "Add a new archived alarm calendar"
+msgstr "En nieg Ressource för aflopen Alarms tofögen"
+
+#. +> stable
 #: resourceselector.cpp:142
 msgctxt "@info:tooltip"
 msgid "Add a new archived alarm resource"
 msgstr "En nieg Ressource för aflopen Alarms tofögen"
 
-#. +> trunk stable
+#. +> trunk
+#: resourceselector.cpp:146
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Add a new alarm template resource"
+msgctxt "@info:tooltip"
+msgid "Add a new alarm template calendar"
+msgstr "En nieg Alarmvörlaag-Ressource tofögen"
+
+#. +> stable
 #: resourceselector.cpp:146
 msgctxt "@info:tooltip"
 msgid "Add a new alarm template resource"
 msgstr "En nieg Alarmvörlaag-Ressource tofögen"
 
-#. +> trunk stable
+#. +> trunk
+#: resourceselector.cpp:163
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Select storage type of new resource:"
+msgctxt "@info"
+msgid "Select storage type of new calendar:"
+msgstr "De Typ vun de niege Ressource:"
+
+#. +> stable
 #: resourceselector.cpp:163
 msgctxt "@info"
 msgid "Select storage type of new resource:"
 msgstr "De Typ vun de niege Ressource:"
 
-#. +> trunk stable
+#. +> trunk
+#: resourceselector.cpp:170
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Unable to create resource of type <resource>%1</resource>."
+msgctxt "@info"
+msgid "Unable to create calendar of type <resource>%1</resource>."
+msgstr "Ressource vun den Typ <resource>%1</resource> lett sik nich opstellen."
+
+#. +> stable
 #: resourceselector.cpp:170
 msgctxt "@info"
 msgid "Unable to create resource of type <resource>%1</resource>."
 msgstr "Ressource vun den Typ <resource>%1</resource> lett sik nich opstellen."
 
-#. +> trunk stable
+#. +> trunk
+#: resourceselector.cpp:173
+msgctxt "@info/plain"
+msgid "%1 calendar"
+msgstr ""
+
+#. +> stable
 #: resourceselector.cpp:173
 msgctxt "@info/plain"
 msgid "%1 resource"
 msgstr "%1-Ressource"
 
-#. +> trunk stable
+#. +> trunk
+#: resourceselector.cpp:212
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "You cannot make your default active alarm resource read-only."
+msgctxt "@info"
+msgid "You cannot make your default active alarm calendar read-only."
+msgstr "Du muttst Dien Standardressource för aktiev Alarms nich bloots-leesbor maken."
+
+#. +> stable
 #: resourceselector.cpp:212
 msgctxt "@info"
 msgid "You cannot make your default active alarm resource read-only."
 msgstr "Du muttst Dien Standardressource för aktiev Alarms nich bloots-leesbor maken."
 
-#. +> trunk stable
+#. +> trunk
+#: resourceselector.cpp:219
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "You cannot make your default archived alarm resource read-only while expired alarms are configured to be kept."
+msgctxt "@info"
+msgid "You cannot make your default archived alarm calendar read-only while expired alarms are configured to be kept."
+msgstr "Du muttst Dien Standardressource för aflopen Alarms nich bloots-leesbor maken, bides Du instellt hest, dat Du aflopen Alarms wohren wullt."
+
+#. +> stable
 #: resourceselector.cpp:219
 msgctxt "@info"
 msgid "You cannot make your default archived alarm resource read-only while expired alarms are configured to be kept."
 msgstr "Du muttst Dien Standardressource för aflopen Alarms nich bloots-leesbor maken, bides Du instellt hest, dat Du aflopen Alarms wohren wullt."
 
-#. +> trunk stable
+#. +> trunk
+#: resourceselector.cpp:223
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Do you really want to make your default resource read-only?"
+msgctxt "@info"
+msgid "Do you really want to make your default calendar read-only?"
+msgstr "Wullt Du Dien Standardressource redig bloots-leesbor maken?"
+
+#. +> stable
 #: resourceselector.cpp:223
 msgctxt "@info"
 msgid "Do you really want to make your default resource read-only?"
 msgstr "Wullt Du Dien Standardressource redig bloots-leesbor maken?"
 
-#. +> trunk stable
+#. +> trunk
+#: resourceselector.cpp:246
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "You cannot remove your default active alarm resource."
+msgctxt "@info"
+msgid "You cannot remove your default active alarm calendar."
+msgstr "Du muttst Dien Standardressource för aktiev Alarms nich wegmaken."
+
+#. +> stable
 #: resourceselector.cpp:246
 msgctxt "@info"
 msgid "You cannot remove your default active alarm resource."
 msgstr "Du muttst Dien Standardressource för aktiev Alarms nich wegmaken."
 
-#. +> trunk stable
+#. +> trunk
+#: resourceselector.cpp:253
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "You cannot remove your default archived alarm resource while expired alarms are configured to be kept."
+msgctxt "@info"
+msgid "You cannot remove your default archived alarm calendar while expired alarms are configured to be kept."
+msgstr "Du muttst Dien Standardressource för aflopen Alarms nich wegmaken, bides Du instellt hest, dat Du aflopen Alarms wohren wullt."
+
+#. +> stable
 #: resourceselector.cpp:253
 msgctxt "@info"
 msgid "You cannot remove your default archived alarm resource while expired alarms are configured to be kept."
 msgstr "Du muttst Dien Standardressource för aflopen Alarms nich wegmaken, bides Du instellt hest, dat Du aflopen Alarms wohren wullt."
 
-#. +> trunk stable
+#. +> trunk
+#: resourceselector.cpp:258
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Do you really want to remove your default resource (<resource>%1</resource>) from the list?"
+msgctxt "@info"
+msgid "Do you really want to remove your default calendar (<resource>%1</resource>) from the list?"
+msgstr "Wullt Du Dien Standardressource (<resource>%1</resource>) redig vun de List wegmaken?"
+
+#. +> stable
 #: resourceselector.cpp:258
 msgctxt "@info"
 msgid "Do you really want to remove your default resource (<resource>%1</resource>) from the list?"
 msgstr "Wullt Du Dien Standardressource (<resource>%1</resource>) redig vun de List wegmaken?"
 
-#. +> trunk stable
+#. +> trunk
+#: resourceselector.cpp:259
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Do you really want to remove the resource <resource>%1</resource> from the list?"
+msgctxt "@info"
+msgid "Do you really want to remove the calendar <resource>%1</resource> from the list?"
+msgstr "Wullt Du de Ressource <resource>%1</resource> redig vun de List wegmaken?"
+
+#. +> stable
 #: resourceselector.cpp:259
 msgctxt "@info"
 msgid "Do you really want to remove the resource <resource>%1</resource> from the list?"
 msgstr "Wullt Du de Ressource <resource>%1</resource> redig vun de List wegmaken?"
 
-#. +> trunk stable
+#. +> trunk
+#: resourceselector.cpp:291
+#, fuzzy
+#| msgctxt "@action Reload resource"
+#| msgid "Re&load"
+msgctxt "@action Reload calendar"
+msgid "Re&load"
+msgstr "Nieg &laden"
+
+#. +> stable
 #: resourceselector.cpp:291
 msgctxt "@action Reload resource"
 msgid "Re&load"
