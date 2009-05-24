@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-05-23 12:06+0200\n"
+"POT-Creation-Date: 2009-05-24 11:29+0200\n"
 "PO-Revision-Date: 2009-04-29 07:27+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1048,7 +1048,7 @@ msgid "Deselect"
 msgstr "Köör torüchnehmen"
 
 #. +> trunk stable
-#: image/commands/kis_image_convert_type_command.cpp:38 image/kis_image.cc:565
+#: image/commands/kis_image_convert_type_command.cpp:38 image/kis_image.cc:590
 msgid "Convert Image Type"
 msgstr "Bildtyp ümwanneln"
 
@@ -1266,7 +1266,6 @@ msgstr "Achtergrund"
 
 #. +> trunk stable
 #: image/kis_image.cc:281
-#, kde-format
 msgid "Layer %1"
 msgstr "Laag %1"
 
@@ -1275,14 +1274,21 @@ msgstr "Laag %1"
 msgid "Crop Image"
 msgstr "Bild tosnieden"
 
+#. +> trunk
+#: image/kis_image.cc:413
+#, fuzzy
+#| msgid "Size Curve"
+msgid "Size Canvas"
+msgstr "Grött-Bagen"
+
 #. +> trunk stable
-#: image/kis_image.cc:437
+#: image/kis_image.cc:462
 msgid "Scale Image"
 msgstr "Bild topassen"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgRotateImage)
 #. +> trunk stable
-#: image/kis_image.cc:478 plugins/extensions/rotateimage/dlg_rotateimage.cc:31
+#: image/kis_image.cc:503 plugins/extensions/rotateimage/dlg_rotateimage.cc:31
 #: plugins/extensions/rotateimage/rotateimage.cc:115
 #: plugins/extensions/rotateimage/wdg_rotateimage.ui:16
 msgid "Rotate Image"
@@ -1290,19 +1296,19 @@ msgstr "Bild dreihen"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgShearImage)
 #. +> trunk stable
-#: image/kis_image.cc:530 plugins/extensions/shearimage/dlg_shearimage.cc:32
+#: image/kis_image.cc:555 plugins/extensions/shearimage/dlg_shearimage.cc:32
 #: plugins/extensions/shearimage/shearimage.cc:90
 #: plugins/extensions/shearimage/wdg_shearimage.ui:16
 msgid "Shear Image"
 msgstr "Bild scheren"
 
 #. +> trunk stable
-#: image/kis_image.cc:728 ui/kis_layer_manager.cc:927
+#: image/kis_image.cc:753 ui/kis_layer_manager.cc:927
 msgid "Flatten Image"
 msgstr "Bild glattmaken"
 
 #. +> trunk stable
-#: image/kis_image.cc:765
+#: image/kis_image.cc:790
 msgid "Merge with Layer Below"
 msgstr "Mit nerrn Laag tosamenföhren"
 
@@ -1316,7 +1322,6 @@ msgstr "Deckstärk"
 
 #. +> trunk stable
 #: image/kis_layer.cc:97
-#, kde-format
 msgid "%1%"
 msgstr "%1%"
 
@@ -1356,8 +1361,10 @@ msgid "Mixability"
 msgstr "Mischborkeit"
 
 #. i18n: ectx: property (text), widget (QLabel, heightInfoLbl)
+#. i18n: ectx: property (text), widget (QLabel, label_4)
 #. +> trunk stable
 #: image/kis_painterly_overlay_colorspace.cpp:74
+#: plugins/extensions/imagesize/wdg_canvassize.ui:55
 #: plugins/paintops/spray/wdgshapeoptions.ui:137
 msgid "Height"
 msgstr "Hööchde"
@@ -1414,7 +1421,6 @@ msgstr "Naam vun't Opstellwarktüüch un dat Ännerdatum tofögen"
 
 #. +> trunk stable
 #: image/metadata/kis_meta_data_filter_p.cc:112
-#, kde-format
 msgid "Krita %1"
 msgstr "Krita %1"
 
@@ -1526,7 +1532,7 @@ msgstr "&Mask"
 #. i18n: ectx: property (text), widget (QPushButton, bnSelect)
 #. +> trunk stable
 #: krita.rc:131 plugins/extensions/colorrange/wdg_colorrange.ui:133
-#: plugins/extensions/imagesize/imagesize.rc:11
+#: plugins/extensions/imagesize/imagesize.rc:12
 #: plugins/extensions/modify_selection/modify_selection.rc:4
 msgid "&Select"
 msgstr "&Utsöken"
@@ -1566,7 +1572,7 @@ msgstr "Ansicht"
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbType)
 #. +> trunk stable
 #: krita_readonly.rc:10 plugins/extensions/compose/layercompose.rc:4
-#: plugins/extensions/imagesize/imagesize.rc:8
+#: plugins/extensions/imagesize/imagesize.rc:9
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:132
 msgid "Layer"
 msgstr "Laag"
@@ -2916,6 +2922,13 @@ msgstr "+"
 msgid "-"
 msgstr "-"
 
+#. i18n: ectx: property (windowTitle), widget (QWidget, WdgCanvasSize)
+#. +> trunk
+#: plugins/extensions/imagesize/dlg_canvassize.cc:27
+#: plugins/extensions/imagesize/wdg_canvassize.ui:14
+msgid "Canvas Size"
+msgstr ""
+
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgImageScale)
 #. +> trunk stable
 #: plugins/extensions/imagesize/dlg_imagesize.cc:37
@@ -2938,29 +2951,83 @@ msgid "Print Size"
 msgstr "Druckgrött"
 
 #. +> trunk stable
-#: plugins/extensions/imagesize/imagesize.cc:73
+#: plugins/extensions/imagesize/imagesize.cc:74
 msgid "Scale To New Size..."
 msgstr "Na nieg Grött topassen..."
 
+#. +> trunk
+#: plugins/extensions/imagesize/imagesize.cc:78
+msgid "Size Canvas..."
+msgstr ""
+
 #. +> trunk stable
-#: plugins/extensions/imagesize/imagesize.cc:77
+#: plugins/extensions/imagesize/imagesize.cc:82
 msgid "Scale &Layer..."
 msgstr "&Laag topassen..."
 
 #. +> trunk stable
-#: plugins/extensions/imagesize/imagesize.cc:83
+#: plugins/extensions/imagesize/imagesize.cc:88
 msgid "&Scale Selection..."
 msgstr "Köör &topassen..."
 
 #. +> trunk stable
-#: plugins/extensions/imagesize/imagesize.cc:133
+#: plugins/extensions/imagesize/imagesize.cc:158
 msgid "Layer Size"
 msgstr "Laag-Grött"
 
 #. +> trunk stable
-#: plugins/extensions/imagesize/imagesize.cc:171
+#: plugins/extensions/imagesize/imagesize.cc:196
 msgid "Scale Selection"
 msgstr "Köör topassen"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#. i18n: ectx: property (title), widget (QGroupBox, Size)
+#. +> trunk stable
+#: plugins/extensions/imagesize/wdg_canvassize.ui:29
+#: plugins/extensions/scripting/scripts/pilimport.ui:157
+#: plugins/paintops/dynamicbrush/programs/basicshape/BasicDynamicProgramEditor.ui:20
+#: plugins/paintops/libpaintop/kis_pressure_size_option.cpp:27
+msgid "Size"
+msgstr "Grött"
+
+#. i18n: ectx: property (text), widget (QLabel, widthInfoLbl)
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. +> trunk
+#: plugins/extensions/imagesize/wdg_canvassize.ui:35
+#: plugins/paintops/spray/wdgshapeoptions.ui:116
+msgid "Width"
+msgstr "Breed"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox3_2)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. +> trunk stable
+#: plugins/extensions/imagesize/wdg_canvassize.ui:110
+#: ui/forms/wdggridsettings.ui:340
+msgid "Offset"
+msgstr "Verscheel"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#. +> trunk
+#: plugins/extensions/imagesize/wdg_canvassize.ui:116
+#, fuzzy
+#| msgid "Offset"
+msgid "X Offset"
+msgstr "Verscheel"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#. +> trunk
+#: plugins/extensions/imagesize/wdg_canvassize.ui:158
+#, fuzzy
+#| msgid "Offset"
+msgid "Y Offset"
+msgstr "Verscheel"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#. +> trunk
+#: plugins/extensions/imagesize/wdg_canvassize.ui:437
+msgid "Anchor"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lblWidth)
 #. i18n: ectx: property (text), widget (QLabel, intWidthzqffs)
@@ -3906,7 +3973,6 @@ msgstr "Vun'n Bildrang schrimpen"
 
 #. +> trunk stable
 #: plugins/extensions/painterlyframework/kis_ks_colorspace.h:77
-#, kde-format
 msgid "Painterly Color Space, %1 wavelengths"
 msgstr "Malerisch Klöörruum, %1 Bülgenlängden"
 
@@ -3934,7 +4000,6 @@ msgstr "Streuen"
 
 #. +> trunk stable
 #: plugins/extensions/painterlyframework/kis_ks_colorspace_engine.h:45
-#, kde-format
 msgid "KS%1 Engine"
 msgstr "KS%1-Karn"
 
@@ -4120,19 +4185,16 @@ msgstr "&Egen:"
 #: plugins/extensions/scripting/kritacore/krs_wavelet.cpp:56
 #: plugins/extensions/scripting/kritacore/krs_wavelet.cpp:67
 #: plugins/extensions/scripting/kritacore/krs_wavelet.cpp:78
-#, kde-format
 msgid "An error has occurred in %1"
 msgstr "Dat geev den Fehler binnen %1"
 
 #. +> trunk stable
 #: plugins/extensions/scripting/kritacore/krs_module.cpp:188
-#, kde-format
 msgid "Unknown pattern \"%1\""
 msgstr "Nich begäng Muster \"%1\""
 
 #. +> trunk stable
 #: plugins/extensions/scripting/kritacore/krs_module.cpp:198
-#, kde-format
 msgid "Unknown brush \"%1\""
 msgstr "Nich begäng Pinsel \"%1\""
 
@@ -4143,7 +4205,6 @@ msgstr "Leeg Bildgrött"
 
 #. +> trunk stable
 #: plugins/extensions/scripting/kritacore/krs_module.cpp:220
-#, kde-format
 msgid "ColorSpace %1 is not available, please check your installation."
 msgstr "Klöörruum %1 is nich verföögbor, bitte prööv Dien Installatschoon."
 
@@ -4157,7 +4218,6 @@ msgstr "Index güntsiets de Grenzen"
 
 #. +> trunk stable
 #: plugins/extensions/scripting/scriptingpart.cpp:137
-#, kde-format
 msgid "&Show %1"
 msgstr "%1 &wiesen"
 
@@ -4192,15 +4252,6 @@ msgstr "Aktiv Laag"
 #: plugins/extensions/scripting/scripts/pilimport.ui:134
 msgid "New Layer"
 msgstr "Nieg Laag"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#. i18n: ectx: property (title), widget (QGroupBox, Size)
-#. +> trunk stable
-#: plugins/extensions/scripting/scripts/pilimport.ui:157
-#: plugins/paintops/dynamicbrush/programs/basicshape/BasicDynamicProgramEditor.ui:20
-#: plugins/paintops/libpaintop/kis_pressure_size_option.cpp:27
-msgid "Size"
-msgstr "Grött"
 
 #. i18n: ectx: property (text), widget (QRadioButton, Ignore)
 #. +> trunk stable
@@ -4366,7 +4417,6 @@ msgstr "Lütt Klöörköör"
 
 #. +> trunk stable
 #: plugins/extensions/specificcolorselector/kis_color_input.cc:41
-#, kde-format
 msgid "%1:"
 msgstr "%1:"
 
@@ -5420,7 +5470,6 @@ msgstr "All Biller"
 #: plugins/formats/jpeg/kis_jpeg_converter.cc:86
 #: plugins/formats/tiff/kis_tiff_writer_visitor.cpp:65
 #: ui/kis_png_converter.cpp:73
-#, kde-format
 msgid "Cannot export images in %1.\n"
 msgstr "Biller laat sik nich as %1 exporteren.\n"
 
@@ -5617,7 +5666,6 @@ msgstr "Import-Optschonen för PDF-Dateien"
 
 #. +> trunk
 #: plugins/formats/pdf/kis_pdf_import.cpp:141
-#, kde-format
 msgid "Page %1"
 msgstr "Siet %1"
 
@@ -6583,7 +6631,6 @@ msgstr "Dünaamsch Programmen bewerken"
 
 #. +> trunk stable
 #: plugins/paintops/dynamicbrush/kis_dynamic_programs_editor.cc:76
-#, kde-format
 msgid "New program %1"
 msgstr "Nieg Programm %1"
 
@@ -7128,12 +7175,6 @@ msgstr "Ellips"
 msgid "Metaball"
 msgstr "Metadaten"
 
-#. i18n: ectx: property (text), widget (QLabel, widthInfoLbl)
-#. +> trunk
-#: plugins/paintops/spray/wdgshapeoptions.ui:116
-msgid "Width"
-msgstr "Breed"
-
 #. i18n: ectx: property (text), widget (QCheckBox, jitterShape)
 #. +> trunk
 #: plugins/paintops/spray/wdgshapeoptions.ui:158
@@ -7390,7 +7431,6 @@ msgstr "De Klöör lett sik nich utsöken, wiel de aktuell Laag nich sichtbor is
 #. +> trunk stable
 #: plugins/tools/defaulttools/kis_tool_colorpicker.cc:183
 #: ui/kis_custom_palette.cc:113 ui/kis_custom_palette.cc:152
-#, kde-format
 msgid "Cannot write to palette file %1. Maybe it is read-only."
 msgstr "Klörensett-Datei \"%1\" lett sik nich schrieven. Villicht is se schrievschuult."
 
@@ -8281,7 +8321,6 @@ msgstr "Nieg Ümform-Mask"
 
 #. +> trunk stable
 #: ui/flake/kis_shape_controller.cpp:287
-#, kde-format
 msgid "Flake shapes %1"
 msgstr "Flake-Formen %1"
 
@@ -8903,12 +8942,6 @@ msgstr "Pünkt"
 #: ui/forms/wdggridsettings.ui:199
 msgid "Spacing"
 msgstr "Afstand"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox3_2)
-#. +> trunk stable
-#: ui/forms/wdggridsettings.ui:340
-msgid "Offset"
-msgstr "Verscheel"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgImageProperties)
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgNewImage)
@@ -9541,7 +9574,6 @@ msgstr "Belichten:"
 
 #. +> trunk stable
 #: ui/kis_bookmarked_configurations_editor.cc:69
-#, kde-format
 msgid "New configuration %1"
 msgstr "Nieg Instellen %1"
 
@@ -9634,7 +9666,6 @@ msgstr "Klörensett-Naam:"
 
 #. +> trunk stable
 #: ui/kis_filter_handler.cc:94
-#, kde-format
 msgid "The %1 filter will convert your %2 data to 16-bit L*a*b* and vice versa. "
 msgstr "De Filter \"%1\" wannelt Dien %2-Daten na 16-Bit L*a*b* üm un torüch. "
 
@@ -9645,7 +9676,6 @@ msgstr "De Filter wannelt Dien Laag-Daten üm"
 
 #. +> trunk stable
 #: ui/kis_filter_handler.cc:103
-#, kde-format
 msgid "The %1 filter will convert your %2 data to 16-bit RGBA and vice versa. "
 msgstr "De Filter \"%1\" wannelt Dien %2-Daten na 16-Bit RGBA üm un torüch. "
 
@@ -9656,7 +9686,6 @@ msgstr "Filter nochmaal anwennen"
 
 #. +> trunk stable
 #: ui/kis_filter_manager.cc:137
-#, kde-format
 msgid "Apply Filter Again: %1"
 msgstr "Filter nochmaal anwennen: %1"
 
@@ -9873,7 +9902,6 @@ msgstr "Nieg Filterlaag"
 
 #. +> trunk stable
 #: ui/kis_layer_manager.cc:709
-#, kde-format
 msgid "Duplicate of '%1'"
 msgstr "Kopie vun \"%1\""
 
@@ -10151,7 +10179,6 @@ msgstr "Rand"
 
 #. +> trunk stable
 #: ui/kis_statusbar.cc:126
-#, kde-format
 msgid "Selection Active: x = %1 y = %2 width = %3 height = %4"
 msgstr "Aktiv Köör: x = %1, y = %2, Breed = %3, Hööchde = %4"
 
