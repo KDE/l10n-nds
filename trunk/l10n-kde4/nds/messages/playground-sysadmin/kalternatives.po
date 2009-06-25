@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kalternatives\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-12-25 09:47+0100\n"
+"POT-Creation-Date: 2009-06-25 15:00+0200\n"
 "PO-Revision-Date: 2008-12-26 03:31+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -33,8 +33,9 @@ msgid "Broken alternative group."
 msgstr "Schaadhaftig Alternativen-Koppel."
 
 #: src/alternativemodels.cpp:436
-msgid "Alternatives"
-msgstr "Alternativen"
+msgctxt "Groups of alternatives"
+msgid "Groups"
+msgstr ""
 
 #: src/alternativemodels.cpp:749
 #, kde-format
@@ -82,48 +83,67 @@ msgstr "Keen Beschrieven"
 msgid "Kalternatives"
 msgstr "Kalternatives"
 
-#. i18n: file: src/mainwindow.ui:212
+#: src/kalternatives.cpp:79
+msgid "Removes the selected alternative from the current group."
+msgstr ""
+
+#. i18n: file: src/mainwindow.ui:231
 #. i18n: ectx: property (text), widget (KPushButton, m_bAdd)
-#: src/kalternatives.cpp:78 rc.cpp:24
+#: src/kalternatives.cpp:80 rc.cpp:42
 msgid "&Add"
 msgstr "&Tofögen"
 
-#. i18n: file: src/mainwindow.ui:219
+#: src/kalternatives.cpp:81
+msgid "Adds a new alternative for the selected group."
+msgstr ""
+
+#. i18n: file: src/mainwindow.ui:238
 #. i18n: ectx: property (text), widget (KPushButton, m_bProperties)
-#: src/kalternatives.cpp:79 rc.cpp:27
+#: src/kalternatives.cpp:82 rc.cpp:45
 msgid "&Properties"
 msgstr "&Egenschappen"
 
-#: src/kalternatives.cpp:81
+#: src/kalternatives.cpp:83
+msgid ""
+"Shows the properties (path, priority, and slaves) of the selected "
+"alternative."
+msgstr ""
+
+#: src/kalternatives.cpp:85
 msgctxt "Automatic alternative choice"
 msgid "Automatic"
 msgstr "Automaatsch"
 
-#: src/kalternatives.cpp:82
+#: src/kalternatives.cpp:86
 msgctxt "Manual alternative choice"
 msgid "Manual"
 msgstr "Vun Hand"
 
-#: src/kalternatives.cpp:171
+#: src/kalternatives.cpp:173
 #, kde-format
 msgid "Are you really sure you want to delete the alternative '%1'?"
 msgstr "Wullt Du de Alternative \"%1\" redig wegdoon?"
 
-#: src/kalternatives.cpp:172
+#: src/kalternatives.cpp:174
 msgid "Delete Alternative"
 msgstr "Alternative wegdoon"
 
 #. i18n: file: src/propertieswindow.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, PropertiesWindow)
-#: src/kalternatives.cpp:186 rc.cpp:33
+#: src/kalternatives.cpp:188 rc.cpp:51
 msgid "Alternative Properties"
 msgstr "Alternatiev-Egenschappen"
 
-#: src/kalternatives.cpp:255
+#: src/kalternatives.cpp:257
+#, fuzzy
+#| msgid ""
+#| "<h1>Kalternatives</h1>\n"
+#| "Kalternatives allows you to configure the system alternatives in Debian/"
+#| "Fedora/Mandriva distributions."
 msgid ""
-"<h1>Kalternatives</h1>\n"
-"Kalternatives allows you to configure the system alternatives in Debian/"
-"Fedora/Mandriva distributions."
+"<h1>Alternatives Configuration</h1>\n"
+"This modules allows you to configure the system alternatives in Debian/"
+"Fedora/Mandriva/openSUSE/Ubuntu distributions."
 msgstr ""
 "<h1>Kalternatives</h1>\n"
 "Mit Kalternatives kannst Du de Systeem-Alternativen bi de Distributschonen "
@@ -149,14 +169,21 @@ msgid "Slave link for %1:"
 msgstr "Moduultowiesen för %1:"
 
 #: src/aboutdata.h:24
-msgid "KDE manager for the Debian/Fedora/Mandriva alternatives system"
+#, fuzzy
+#| msgid "KDE manager for the Debian/Fedora/Mandriva alternatives system"
+msgid "KDE manager for the distribution alternatives system."
 msgstr "KDE-Pleger för't Alternativen-Systeem vun Debian, Fedora un Mandriva"
 
 #: src/aboutdata.h:26
+#, fuzzy
+#| msgid ""
+#| "© 2004 Juanjo Álvarez Martinez\n"
+#| "© 2004 Mario Bensi\n"
+#| "© 2008 Pino Toscano"
 msgid ""
 "© 2004 Juanjo Álvarez Martinez\n"
 "© 2004 Mario Bensi\n"
-"© 2008 Pino Toscano"
+"© 2008-2009 Pino Toscano"
 msgstr ""
 "© 2004 Juanjo Álvarez Martinez\n"
 "© 2004 Mario Bensi\n"
@@ -196,7 +223,7 @@ msgstr "s_dibbern@web.de"
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #. i18n: file: src/propertieswindow.ui:21
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:5 rc.cpp:36
+#: rc.cpp:5 rc.cpp:54
 msgid "Path:"
 msgstr "Padd:"
 
@@ -204,7 +231,7 @@ msgstr "Padd:"
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #. i18n: file: src/propertieswindow.ui:55
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:8 rc.cpp:44
+#: rc.cpp:8 rc.cpp:62
 msgid "Priority:"
 msgstr "Prioriteet:"
 
@@ -214,41 +241,87 @@ msgstr "Prioriteet:"
 msgid "Slaves:"
 msgstr "Modulen:"
 
-#. i18n: file: src/mainwindow.ui:25
-#. i18n: ectx: property (windowTitle), widget (QWidget, MainWindow)
+#. i18n: file: src/mainwindow.ui:45
+#. i18n: ectx: property (whatsThis), widget (QTreeView, m_altList)
 #: rc.cpp:14
-msgid "Alternatives Manager"
-msgstr "Alternativen-Pleger"
+msgid "This is a list of the available alternative groups."
+msgstr ""
 
-#. i18n: file: src/mainwindow.ui:66
-#. i18n: ectx: property (text), widget (QCheckBox, m_hideAlt)
+#. i18n: file: src/mainwindow.ui:58
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
 #: rc.cpp:17
-msgid "&Hide useless alternatives"
+#, fuzzy
+#| msgid "Option"
+msgid "Options"
+msgstr "Optschoon"
+
+#. i18n: file: src/mainwindow.ui:70
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_hideAlt)
+#: rc.cpp:20
+msgid ""
+"If this option is active, all the alternative groups with only one "
+"alternative available will be hidden from the list."
+msgstr ""
+
+#. i18n: file: src/mainwindow.ui:73
+#. i18n: ectx: property (text), widget (QCheckBox, m_hideAlt)
+#: rc.cpp:23
+#, fuzzy
+#| msgid "&Hide useless alternatives"
+msgctxt "Hide useless alternatives"
+msgid "&Hide useless"
 msgstr "Nich nödig Alternative &versteken"
 
-#. i18n: file: src/mainwindow.ui:96
+#. i18n: file: src/mainwindow.ui:103
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:20
+#: rc.cpp:26
 msgid "Status:"
 msgstr "Status:"
 
-#. i18n: file: src/mainwindow.ui:226
+#. i18n: file: src/mainwindow.ui:125
+#. i18n: ectx: property (whatsThis), widget (KComboBox, m_statusCombo)
+#: rc.cpp:29
+msgid ""
+"<qt>The status of the current alternative:\n"
+"<ul>\n"
+"<li>Automatic: the alternative system will always choose the alternative "
+"with the highest priority, updating it (if necessary) when an alternative is "
+"installed or removed</li>\n"
+"<li>Manual: the choice is done manually, updated by the alternative system "
+"only when it is uninstalled</li>\n"
+"</ul>\n"
+"</qt>\n"
+msgstr ""
+
+#. i18n: file: src/mainwindow.ui:194
+#. i18n: ectx: property (whatsThis), widget (QTreeView, m_optionsList)
+#: rc.cpp:39
+msgid "This shows the alternatives available for the selected group."
+msgstr ""
+
+#. i18n: file: src/mainwindow.ui:245
 #. i18n: ectx: property (text), widget (KPushButton, m_bDelete)
-#: rc.cpp:30
+#: rc.cpp:48
 msgid "&Delete"
 msgstr "&Wegdoon"
 
 #. i18n: file: src/propertieswindow.ui:38
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:40
+#: rc.cpp:58
 msgid "Description:"
 msgstr "Beschrieven:"
 
 #. i18n: file: src/propertieswindow.ui:74
 #. i18n: ectx: property (title), widget (QGroupBox, slavesGroup)
-#: rc.cpp:48
+#: rc.cpp:66
 msgid "Slaves"
 msgstr "Modulen"
+
+#~ msgid "Alternatives"
+#~ msgstr "Alternativen"
+
+#~ msgid "Alternatives Manager"
+#~ msgstr "Alternativen-Pleger"
 
 #~ msgid ""
 #~ "Description:\n"
