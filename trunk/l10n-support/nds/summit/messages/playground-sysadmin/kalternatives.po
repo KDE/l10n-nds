@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kalternatives\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-12-25 09:47+0100\n"
+"POT-Creation-Date: 2009-06-25 15:00+0200\n"
 "PO-Revision-Date: 2008-12-26 03:31+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -28,15 +28,22 @@ msgstr "s_dibbern@web.de"
 
 #. +> trunk
 #: src/aboutdata.h:24
-msgid "KDE manager for the Debian/Fedora/Mandriva alternatives system"
+#, fuzzy
+#| msgid "KDE manager for the Debian/Fedora/Mandriva alternatives system"
+msgid "KDE manager for the distribution alternatives system."
 msgstr "KDE-Pleger för't Alternativen-Systeem vun Debian, Fedora un Mandriva"
 
 #. +> trunk
 #: src/aboutdata.h:26
+#, fuzzy
+#| msgid ""
+#| "© 2004 Juanjo Álvarez Martinez\n"
+#| "© 2004 Mario Bensi\n"
+#| "© 2008 Pino Toscano"
 msgid ""
 "© 2004 Juanjo Álvarez Martinez\n"
 "© 2004 Mario Bensi\n"
-"© 2008 Pino Toscano"
+"© 2008-2009 Pino Toscano"
 msgstr ""
 "© 2004 Juanjo Álvarez Martinez\n"
 "© 2004 Mario Bensi\n"
@@ -109,11 +116,13 @@ msgstr "Schaadhaftig Alternativen-Koppel."
 
 #. +> trunk
 #: src/alternativemodels.cpp:436
-msgid "Alternatives"
-msgstr "Alternativen"
+msgctxt "Groups of alternatives"
+msgid "Groups"
+msgstr ""
 
 #. +> trunk
 #: src/alternativemodels.cpp:749
+#, kde-format
 msgctxt "%1 is the alternative path, %2 its description"
 msgid ""
 "%1\n"
@@ -128,6 +137,7 @@ msgstr ""
 
 #. +> trunk
 #: src/alternativemodels.cpp:751
+#, kde-format
 msgctxt "%1 is the alternative path, %2 its description"
 msgid ""
 "%1\n"
@@ -163,78 +173,137 @@ msgstr "Keen Beschrieven"
 msgid "Kalternatives"
 msgstr "Kalternatives"
 
+#. +> trunk
+#: src/kalternatives.cpp:79
+msgid "Removes the selected alternative from the current group."
+msgstr ""
+
 #. i18n: ectx: property (text), widget (KPushButton, m_bAdd)
 #. +> trunk
-#: src/kalternatives.cpp:78 src/mainwindow.ui:212
+#: src/kalternatives.cpp:80 src/mainwindow.ui:231
 msgid "&Add"
 msgstr "&Tofögen"
 
+#. +> trunk
+#: src/kalternatives.cpp:81
+msgid "Adds a new alternative for the selected group."
+msgstr ""
+
 #. i18n: ectx: property (text), widget (KPushButton, m_bProperties)
 #. +> trunk
-#: src/kalternatives.cpp:79 src/mainwindow.ui:219
+#: src/kalternatives.cpp:82 src/mainwindow.ui:238
 msgid "&Properties"
 msgstr "&Egenschappen"
 
 #. +> trunk
-#: src/kalternatives.cpp:81
+#: src/kalternatives.cpp:83
+msgid "Shows the properties (path, priority, and slaves) of the selected alternative."
+msgstr ""
+
+#. +> trunk
+#: src/kalternatives.cpp:85
 msgctxt "Automatic alternative choice"
 msgid "Automatic"
 msgstr "Automaatsch"
 
 #. +> trunk
-#: src/kalternatives.cpp:82
+#: src/kalternatives.cpp:86
 msgctxt "Manual alternative choice"
 msgid "Manual"
 msgstr "Vun Hand"
 
 #. +> trunk
-#: src/kalternatives.cpp:171
+#: src/kalternatives.cpp:173
+#, kde-format
 msgid "Are you really sure you want to delete the alternative '%1'?"
 msgstr "Wullt Du de Alternative \"%1\" redig wegdoon?"
 
 #. +> trunk
-#: src/kalternatives.cpp:172
+#: src/kalternatives.cpp:174
 msgid "Delete Alternative"
 msgstr "Alternative wegdoon"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, PropertiesWindow)
 #. +> trunk
-#: src/kalternatives.cpp:186 src/propertieswindow.ui:13
+#: src/kalternatives.cpp:188 src/propertieswindow.ui:13
 msgid "Alternative Properties"
 msgstr "Alternatiev-Egenschappen"
 
 #. +> trunk
-#: src/kalternatives.cpp:255
+#: src/kalternatives.cpp:257
+#, fuzzy
+#| msgid ""
+#| "<h1>Kalternatives</h1>"
+#| "\n"
+#| "Kalternatives allows you to configure the system alternatives in Debian/Fedora/Mandriva distributions."
 msgid ""
-"<h1>Kalternatives</h1>"
+"<h1>Alternatives Configuration</h1>"
 "\n"
-"Kalternatives allows you to configure the system alternatives in Debian/Fedora/Mandriva distributions."
+"This modules allows you to configure the system alternatives in Debian/Fedora/Mandriva/openSUSE/Ubuntu distributions."
 msgstr ""
 "<h1>Kalternatives</h1>"
 "\n"
 "Mit Kalternatives kannst Du de Systeem-Alternativen bi de Distributschonen Debian, Fedora un Mandriva instellen."
 
-#. i18n: ectx: property (windowTitle), widget (QWidget, MainWindow)
+#. i18n: ectx: property (whatsThis), widget (QTreeView, m_altList)
 #. +> trunk
-#: src/mainwindow.ui:25
-msgid "Alternatives Manager"
-msgstr "Alternativen-Pleger"
+#: src/mainwindow.ui:45
+msgid "This is a list of the available alternative groups."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
+#. +> trunk
+#: src/mainwindow.ui:58
+#, fuzzy
+#| msgid "Option"
+msgid "Options"
+msgstr "Optschoon"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_hideAlt)
+#. +> trunk
+#: src/mainwindow.ui:70
+msgid "If this option is active, all the alternative groups with only one alternative available will be hidden from the list."
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_hideAlt)
 #. +> trunk
-#: src/mainwindow.ui:66
-msgid "&Hide useless alternatives"
+#: src/mainwindow.ui:73
+#, fuzzy
+#| msgid "&Hide useless alternatives"
+msgctxt "Hide useless alternatives"
+msgid "&Hide useless"
 msgstr "Nich nödig Alternative &versteken"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #. +> trunk
-#: src/mainwindow.ui:96
+#: src/mainwindow.ui:103
 msgid "Status:"
 msgstr "Status:"
 
+#. i18n: ectx: property (whatsThis), widget (KComboBox, m_statusCombo)
+#. +> trunk
+#: src/mainwindow.ui:125
+msgid ""
+"<qt>The status of the current alternative:\n"
+"<ul>\n"
+"<li>Automatic: the alternative system will always choose the alternative with the highest priority, updating it (if necessary) when an alternative is installed or removed</li>"
+"\n"
+"<li>Manual: the choice is done manually, updated by the alternative system only when it is uninstalled</li>"
+"\n"
+"</ul>"
+"\n"
+"</qt>\n"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, m_optionsList)
+#. +> trunk
+#: src/mainwindow.ui:194
+msgid "This shows the alternatives available for the selected group."
+msgstr ""
+
 #. i18n: ectx: property (text), widget (KPushButton, m_bDelete)
 #. +> trunk
-#: src/mainwindow.ui:226
+#: src/mainwindow.ui:245
 msgid "&Delete"
 msgstr "&Wegdoon"
 
@@ -269,8 +338,15 @@ msgstr "Moduul utsöken"
 
 #. +> trunk
 #: src/slavewidget.cpp:25
+#, kde-format
 msgid "Slave link for %1:"
 msgstr "Moduultowiesen för %1:"
+
+#~ msgid "Alternatives"
+#~ msgstr "Alternativen"
+
+#~ msgid "Alternatives Manager"
+#~ msgstr "Alternativen-Pleger"
 
 #~ msgid ""
 #~ "Description:\n"
