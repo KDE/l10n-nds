@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rsibreak\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-07-09 12:23+0200\n"
+"POT-Creation-Date: 2009-07-11 13:29+0200\n"
 "PO-Revision-Date: 2009-03-11 09:20+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -34,22 +34,13 @@ msgstr "s_dibbern@web.de, heiko.evermann@gmx.de, m.j.wiese@web.de"
 msgid "C&ustom"
 msgstr "&Egen"
 
-#: src/boxdialog.cpp:58
+#: src/breakcontrol.cpp:41
 msgid "Skip"
 msgstr "Utlaten"
 
-#: src/boxdialog.cpp:62
+#: src/breakcontrol.cpp:44
 msgid "Lock"
 msgstr "Afsluten"
-
-#: src/boxdialog.cpp:91
-#, kde-format
-msgid ""
-"Remaining time:\n"
-"%1"
-msgstr ""
-"Nablieven Tiet:\n"
-"%1"
 
 #: src/main.cpp:61
 msgid "RSIBreak"
@@ -103,6 +94,17 @@ msgstr "Achim Bohnet"
 #: src/main.cpp:83
 msgid "Packaging and help with related issues"
 msgstr "Utlevern un Hülp bi allens, wat dor wat mit to doon hett"
+
+#: src/popupeffect.cpp:33
+msgid "Take a break...."
+msgstr ""
+
+#: src/popupeffect.cpp:57
+#, fuzzy, kde-format
+#| msgid "Please relax for 1 second"
+#| msgid_plural "Please relax for %1 seconds"
+msgid "Take a break for %1 seconds"
+msgstr "Verpuust Di för 1 Sekunn"
 
 #: src/rsidock.cpp:48
 msgid "About &KDE"
@@ -462,8 +464,7 @@ msgctxt ""
 msgid "seconds"
 msgstr "Sekunnen"
 
-#: src/rsitooltip.cpp:54 src/rsiwidget.cpp:258 src/rsiwidget.cpp:259
-#: src/rsiwidget.cpp:260
+#: src/rsitooltip.cpp:54 src/rsiwidget.cpp:230
 msgid "Suspended"
 msgstr "Utsett"
 
@@ -477,13 +478,13 @@ msgstr "%1 bet to de nakamen korte Paus"
 msgid "%1 remaining until next long break"
 msgstr "%1 bet to de nakamen lange Paus"
 
-#: src/rsiwidget.cpp:165
+#: src/rsiwidget.cpp:154
 msgid "<p>Welcome to RSIBreak</p><p>In your tray you can now see RSIBreak:</p>"
 msgstr ""
 "<p>Willkamen bi RSIBreak</p><p>In den Systeemafsnitt vun't Paneel is nu "
 "RSIBreak to bekieken:</p>"
 
-#: src/rsiwidget.cpp:168
+#: src/rsiwidget.cpp:157
 msgid ""
 "<p>When you right-click on that you will see a menu, from which you can go "
 "to the configuration for example.</p><p>When you want to know when the next "
@@ -493,35 +494,35 @@ msgstr ""
 "Instellen kamen kannst.</p><p>Wenn Du weten wullt, wannehr de nakamen Paus "
 "kummt, wies mit de Muus op't Lüttbild.</p><p>Bruuk RSIBreak klook.</p>"
 
-#: src/rsiwidget.cpp:171
+#: src/rsiwidget.cpp:160
 msgid "Welcome"
 msgstr "Willkamen"
 
-#: src/rsiwidget.cpp:179
+#: src/rsiwidget.cpp:168
 msgid "<p>RSIBreak is already running</p><p>It is located here:</p>"
 msgstr "<p>RSIBreak löppt al</p><p>Dat lett sik hier finnen:</p>"
 
-#: src/rsiwidget.cpp:181
+#: src/rsiwidget.cpp:170
 msgid "Already Running"
 msgstr "Löppt al"
 
-#: src/rsiwidget.cpp:246
+#: src/rsiwidget.cpp:220
 #, kde-format
 msgctxt "minutes:seconds"
 msgid "%1:%2"
 msgstr "%1:%2"
 
-#: src/rsiwidget.cpp:251
+#: src/rsiwidget.cpp:225
 #, kde-format
 msgctxt "minutes:seconds"
 msgid "%1:00"
 msgstr "%1:00"
 
-#: src/rsiwidget.cpp:304
+#: src/rsiwidget.cpp:272
 msgid "Timer for the short break has now been reset"
 msgstr "De Tietgever för kort Pausen wöör torüchsett"
 
-#: src/rsiwidget.cpp:313
+#: src/rsiwidget.cpp:281
 msgid "The timers have now been reset"
 msgstr "De Tietgevers sünd nu torüchsett"
 
@@ -625,14 +626,20 @@ msgstr ""
 "man liekers af un an en lütt Paus hebben wullt."
 
 #: src/setupmaximized.cpp:72
+msgid "Chose the effect you want to during breaks"
+msgstr ""
+
+#: src/setupmaximized.cpp:83
 msgid "Skipping Breaks"
 msgstr "Pausen utlaten"
 
-#: src/setupmaximized.cpp:74
-msgid "H&ide button"
+#: src/setupmaximized.cpp:85
+#, fuzzy
+#| msgid "H&ide button"
+msgid "&Hide skip button"
 msgstr "Knoop &versteken"
 
-#: src/setupmaximized.cpp:75
+#: src/setupmaximized.cpp:86
 msgid ""
 "Check this option to disable and hide the skip button. This way you can "
 "prevent skipping the break."
@@ -640,31 +647,47 @@ msgstr ""
 "Maak dit an, wenn Du den Utlaat-Knoop utmaken un versteken wullt. Denn "
 "kannst Du de Paus nich övergahn."
 
-#: src/setupmaximized.cpp:78
-msgid "&Shortcut Locks"
-msgstr "Ta&stkombinatschoon slutt af"
+#: src/setupmaximized.cpp:89
+msgid "&Disable shortcut"
+msgstr ""
 
-#: src/setupmaximized.cpp:79
+#: src/setupmaximized.cpp:90
+#, fuzzy
+#| msgid ""
+#| "Check this option to disable and hide the skip button. This way you can "
+#| "prevent skipping the break."
 msgid ""
 "Check this option to disable the skip shortcut. This way you can prevent "
-"skipping the break. Instead it will lock the screen."
+"skipping the break."
 msgstr ""
-"Maak dit an, wenn Du de Tastkombinatschoon för't Utlaten utmaken wullt. So "
-"kannst Du de Paus nich utlaten, ansteed warrt de Schirm afslaten."
+"Maak dit an, wenn Du den Utlaat-Knoop utmaken un versteken wullt. Denn "
+"kannst Du de Paus nich övergahn."
 
-#: src/setupmaximized.cpp:92
+#: src/setupmaximized.cpp:101
 msgid "Plasma Dashboard"
 msgstr ""
 
-#: src/setupmaximized.cpp:96
+#: src/setupmaximized.cpp:103
 msgid "Read Only"
 msgstr ""
 
-#: src/setupmaximized.cpp:104 src/setuptiming.cpp:128
+#: src/setupmaximized.cpp:111
+msgid "Transparancy level"
+msgstr ""
+
+#: src/setupmaximized.cpp:115
+msgid "Transparant"
+msgstr ""
+
+#: src/setupmaximized.cpp:123
+msgid "Solid"
+msgstr ""
+
+#: src/setupmaximized.cpp:131 src/setuptiming.cpp:128
 msgid "Slideshow"
 msgstr "Diaschau"
 
-#: src/setupmaximized.cpp:110
+#: src/setupmaximized.cpp:135
 msgid ""
 "Select the folder from which you want to see images. These images are "
 "randomly shown during the breaks. It will be searched recursively if you "
@@ -674,19 +697,19 @@ msgstr ""
 "Paus tofällig wiest. Wenn Du wullt, kann de Orner ok rekursiev dörsöcht "
 "warrn..."
 
-#: src/setupmaximized.cpp:113
+#: src/setupmaximized.cpp:138
 msgid "&Change..."
 msgstr "Ä&nnern..."
 
-#: src/setupmaximized.cpp:115
+#: src/setupmaximized.cpp:140
 msgid "Search path recursively"
 msgstr "Den Padd rekursiev dörsöken"
 
-#: src/setupmaximized.cpp:131
+#: src/setupmaximized.cpp:156
 msgid "Popup"
 msgstr "Opdukfinster"
 
-#: src/setupmaximized.cpp:133
+#: src/setupmaximized.cpp:158
 msgid ""
 "RSIBreak can show a popup near the systray instead of replacing your whole "
 "screen with a picture."
@@ -694,11 +717,11 @@ msgstr ""
 "RSIBreak kann en Opduker blang den Systeemafsnitt wiesen, ansteed dat Di op "
 "Dien heel Schirm en Bild wiest warrt."
 
-#: src/setupmaximized.cpp:137
+#: src/setupmaximized.cpp:162
 msgid "&Use the popup"
 msgstr "Opdukfinster br&uken"
 
-#: src/setupmaximized.cpp:139
+#: src/setupmaximized.cpp:164
 msgid ""
 "With this checkbox you can indicate if you want to see the popup when it is "
 "time to break. It will count down to zero, so you know how long this break "
@@ -708,17 +731,17 @@ msgstr ""
 "wenn dat wedder Tiet is, dat Du föffteihn maakst. Dat tellt denn daal op "
 "Null, so dat Du weetst, wo lang de Paus is."
 
-#: src/setupmaximized.cpp:144
+#: src/setupmaximized.cpp:169
 msgid "The popup can flash when it detects that you are still active."
 msgstr ""
 "Dat Opdukfinster kann blixen, wenn dat faststellt, dat Du liekers noch bi "
 "büst to arbeiden."
 
-#: src/setupmaximized.cpp:148
+#: src/setupmaximized.cpp:173
 msgid "&Flash on activity"
 msgstr "&Blix bi Aktiviteet"
 
-#: src/setupmaximized.cpp:149
+#: src/setupmaximized.cpp:174
 msgid ""
 "With this checkbox you can indicate if you want to see the popup flash when "
 "there is activity."
@@ -800,6 +823,23 @@ msgid ""
 msgstr ""
 "Hier kannst Du instellen, wo lang en Bild wiest warrt, ehr dat mit en anner "
 "Bild utwesselt warrt."
+
+#~ msgid ""
+#~ "Remaining time:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Nablieven Tiet:\n"
+#~ "%1"
+
+#~ msgid "&Shortcut Locks"
+#~ msgstr "Ta&stkombinatschoon slutt af"
+
+#~ msgid ""
+#~ "Check this option to disable the skip shortcut. This way you can prevent "
+#~ "skipping the break. Instead it will lock the screen."
+#~ msgstr ""
+#~ "Maak dit an, wenn Du de Tastkombinatschoon för't Utlaten utmaken wullt. "
+#~ "So kannst Du de Paus nich utlaten, ansteed warrt de Schirm afslaten."
 
 #~ msgid "second"
 #~ msgid_plural "seconds"
