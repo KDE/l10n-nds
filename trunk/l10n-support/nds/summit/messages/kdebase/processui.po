@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: processui\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-07-05 11:40+0200\n"
+"POT-Creation-Date: 2009-07-15 13:05+0200\n"
 "PO-Revision-Date: 2009-05-18 22:48+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -328,69 +328,69 @@ msgid "You do not have the permission to set the I/O priority and there was a pr
 msgstr "Du muttst de In-Utgaav-Prioriteet nich fastleggen, un bi't Utföhren as Systeempleger geev dat Problemen."
 
 #. +> trunk stable
-#: ProcessModel.cc:240
+#: ProcessModel.cc:242
 msgid "- Process is doing some work."
 msgstr "- Perzess deit wat."
 
 #. +> trunk stable
-#: ProcessModel.cc:242
+#: ProcessModel.cc:244
 msgid "- Process is waiting for something to happen."
 msgstr "- Perzess töövt op wat."
 
 #. +> trunk stable
-#: ProcessModel.cc:244
+#: ProcessModel.cc:246
 msgid "- Process has been stopped. It will not respond to user input at the moment."
 msgstr "- Perzess wöör anhollen. He antert opstunns nich op Brukeringaven."
 
 #. +> trunk stable
-#: ProcessModel.cc:246
+#: ProcessModel.cc:248
 msgid "- Process has finished and is now dead, but the parent process has not cleaned up."
 msgstr "- Perzess is afslaten un doot, man de Böverperzess hett nich opkloort."
 
 #. +> trunk stable
-#: ProcessModel.cc:544
+#: ProcessModel.cc:546
 msgid "The process name."
 msgstr "De Naam vun den Perzess"
 
 #. +> trunk stable
-#: ProcessModel.cc:546
+#: ProcessModel.cc:548
 msgid "The user who owns this process."
 msgstr "De Bruker, den de Perzess tohöört"
 
 #. +> trunk stable
-#: ProcessModel.cc:548
+#: ProcessModel.cc:550
 msgid "The controlling terminal on which this process is running."
 msgstr "De kuntrulleren Konsool, op de disse Perzess löppt"
 
 #. +> trunk stable
-#: ProcessModel.cc:550
+#: ProcessModel.cc:552
 msgid "The priority with which this process is being run. Ranges from 19 (very nice, least priority) to -19 (top priority)."
 msgstr "De Prioriteet, mit de disse Perzess löppt (vun 19, bannig fründlich, siet Prioriteet, to -19, böverst Prioriteet)"
 
 #. +> trunk stable
-#: ProcessModel.cc:553
+#: ProcessModel.cc:555
 msgid "The current CPU usage of the process."
 msgstr "De aktuelle CPU-Bruuk vun den Perzess"
 
 #. +> trunk stable
-#: ProcessModel.cc:558
+#: ProcessModel.cc:560
 msgid "The current total CPU usage of the process, divided by the %1 processor core in the machine."
 msgid_plural "The current total CPU usage of the process, divided by the %1 processor cores in the machine."
 msgstr[0] "De aktuelle CPU-Bruuk vun den Perzess, deelt mit den %1 Systeemperzesser binnen den Reekner."
 msgstr[1] "De aktuelle CPU-Bruuk vun den Perzess, deelt mit de %1 Systeemperzessern binnen den Reekner."
 
 #. +> trunk stable
-#: ProcessModel.cc:560
+#: ProcessModel.cc:562
 msgid "The current total CPU usage of the process."
 msgstr "Den Perzess sien aktuelle hele CPU-Bruuk"
 
 #. +> trunk stable
-#: ProcessModel.cc:563
+#: ProcessModel.cc:565
 msgid "<qt>This is the amount of virtual memory space that the process is using, included shared libraries, graphics memory, files on disk, and so on. This number is almost meaningless.</qt>"
 msgstr "<qt>Dit is de virtuelle Spieker, den de Perzess bruukt. Inslaten sünd deelt Bibliotheken, Grafikspieker, Dateien op de Fastplaat usw. Disse Tall seggt meist nix ut.</qt>"
 
 #. +> trunk stable
-#: ProcessModel.cc:565
+#: ProcessModel.cc:567
 msgid ""
 "<qt>This is the amount of real physical memory that this process is using by itself.<br>"
 "It does not include any swapped out memory, nor the code size of its shared libraries.<br>"
@@ -401,7 +401,7 @@ msgstr ""
 "Disse Tall seggt faken dat mehrste, wenn Een wat över den Spiekerbruuk vun en Programm seggen will.</qt>"
 
 #. +> trunk stable
-#: ProcessModel.cc:567
+#: ProcessModel.cc:569
 msgid ""
 "<qt>This is the amount of real physical memory that this process's shared libraries are using.<br>"
 "This memory is shared among all processes that use this library.</qt>"
@@ -410,72 +410,139 @@ msgstr ""
 "All Perzessen, de disse Bibliotheken bruukt, deelt sik dissen Spieker.</qt>"
 
 #. +> trunk stable
-#: ProcessModel.cc:569
+#: ProcessModel.cc:571
 msgid "<qt>The command with which this process was launched.</qt>"
 msgstr "<qt>De Befehl, mit den disse Perzess opropen wöör</qt>"
 
 #. +> trunk stable
-#: ProcessModel.cc:571
+#: ProcessModel.cc:573
 msgid "<qt>The title of any windows that this process is showing.</qt>"
 msgstr "<qt>De Titel vun de Finstern, de dissen Perzess tohöört</qt>"
 
 #. +> trunk stable
-#: ProcessModel.cc:573
+#: ProcessModel.cc:575
 msgid "The unique Process ID that identifies this process."
 msgstr "De eenkennige Perzess-ID, de dissen Perzess utwiest"
 
+#. +> trunk
+#: ProcessModel.cc:584
+msgid "<qt><i>Technical information: </i>The kernel process name is a maximum of 8 characters long, so the full command is examined.  If the first word in the full command line starts with the process name, the first word of the command line is shown, otherwise the process name is used."
+msgstr ""
+
+#. +> trunk
+#: ProcessModel.cc:586
+msgid ""
+"<qt>The user who owns this process.  If the effective, setuid etc user is different, the user who owns the process will be shown, followed by the effective user.  The ToolTip contains the full information.  "
+"<p>"
+"<table>"
+"<tr>"
+"<td>Login Name/Group</td>"
+"<td>The username of the Real User/Group who created this process</td>"
+"</tr>"
+"<tr>"
+"<td>Effective User/Group</td>"
+"<td>The process is running with privileges of the Effective User/Group.  This is shown if different from the real user.</td>"
+"</tr>"
+"<tr>"
+"<td>Setuid User/Group</td>"
+"<td>The saved username of the binary.  The process can escalate its Effective User/Group to the Setuid User/Group.</td>"
+"</tr>"
+"<tr>"
+"<td>File System User/Group</td>"
+"<td>Accesses to the filesystem are checked with the File System User/Group.  This is a Linux specific call. See setfsuid(2) for more information.</td>"
+"</tr>"
+"</table>"
+msgstr ""
+
+#. +> trunk
+#: ProcessModel.cc:596
+msgid ""
+"<qt>This is the size of allocated address space - not memory, but address space. This value in practice means next to nothing. When a process requests a large memory block from the system but uses only a small part of it, the real usage will be low, VIRT will be high. "
+"<p><i>Technical information: </i>This is VmSize in proc/*/status and VIRT in top."
+msgstr ""
+
+#. +> trunk
+#: ProcessModel.cc:598
+msgid "<qt><i>Technical information: </i>This is the URSS - Unique Resident Set Size, calculated as VmRSS - Shared, from /proc/*/statm.  This tends to underestimate the 'true' memory usage of a process (by not including i/o backed memory pages, but is the best estimation that is fast to determine."
+msgstr ""
+
+#. +> trunk
+#: ProcessModel.cc:600
+msgid "The CPU usage of a process and all of its threads."
+msgstr ""
+
+#. +> trunk
+#: ProcessModel.cc:602
+msgid "<qt><i>Technical information: </i>This is the Shared memory, called SHR in top.  It is the number of pages that are backed by a file (see kernel Documentation/filesystems/proc.txt)"
+msgstr ""
+
+#. +> trunk
+#: ProcessModel.cc:604
+msgid "<qt><i>Technical information: </i>This is from /proc/*/cmdline"
+msgstr ""
+
+#. +> trunk
+#: ProcessModel.cc:606
+msgid "<qt><i>Technical information: </i>For each X11 window, the X11 property _NET_WM_PID is used to map the window to a PID.  If a process's windows are not shown, then that application incorrectly is not setting _NET_WM_PID."
+msgstr ""
+
+#. +> trunk
+#: ProcessModel.cc:608
+msgid "<qt><i>Technical information: </i>This is the Process ID.  A multi-threaded application is treated a single process, with all threads sharing the same PID.  The CPU usage etc will be the total, accumulated, CPU usage of all the threads."
+msgstr ""
+
 #. +> trunk stable
-#: ProcessModel.cc:653
+#: ProcessModel.cc:688
 msgid "Login Name: %1<br/>"
 msgstr "Brukernaam: %1<br/>"
 
 #. +> trunk stable
-#: ProcessModel.cc:657
+#: ProcessModel.cc:692
 msgid "This user is not recognized for some reason."
 msgstr "Disse Bruker is ut jichtenseen Grund nich begäng"
 
 #. +> trunk stable
-#: ProcessModel.cc:660
+#: ProcessModel.cc:695
 msgid "<b>%1</b><br/>"
 msgstr "<b>%1</b><br/>"
 
 #. +> trunk stable
-#: ProcessModel.cc:661
+#: ProcessModel.cc:696
 msgid "Login Name: %1 (uid: %2)<br/>"
 msgstr "Brukernaam %1 (UID: %2)<br/>"
 
 #. +> trunk stable
-#: ProcessModel.cc:663
+#: ProcessModel.cc:698
 msgid "  Room Number: %1<br/>"
 msgstr "  Kontoor: %1<br/>"
 
 #. +> trunk stable
-#: ProcessModel.cc:665
+#: ProcessModel.cc:700
 msgid "  Work Phone: %1<br/>"
 msgstr "Telefoon (Arbeit): %1<br/>"
 
 #. +> trunk stable
-#: ProcessModel.cc:672
+#: ProcessModel.cc:707
 msgid "Effective User: %1<br/>"
 msgstr "Effektiv Bruker: %1<br/>"
 
 #. +> trunk stable
-#: ProcessModel.cc:674
+#: ProcessModel.cc:709
 msgid "Setuid User: %1<br/>"
 msgstr "SetUID-Bruker: %1<br/>"
 
 #. +> trunk stable
-#: ProcessModel.cc:676
+#: ProcessModel.cc:711
 msgid "File System User: %1<br/>"
 msgstr "Dateisysteem-Bruker: %1<br/>"
 
 #. +> trunk stable
-#: ProcessModel.cc:680
+#: ProcessModel.cc:715
 msgid "Group: %1"
 msgstr "Koppel: %1"
 
 #. +> trunk stable
-#: ProcessModel.cc:685
+#: ProcessModel.cc:720
 msgid ""
 "<br/>"
 "Effective Group: %1"
@@ -484,7 +551,7 @@ msgstr ""
 "Effektiv Koppel: %1"
 
 #. +> trunk stable
-#: ProcessModel.cc:687
+#: ProcessModel.cc:722
 msgid ""
 "<br/>"
 "Setuid Group: %1"
@@ -493,7 +560,7 @@ msgstr ""
 "SetUID-Koppel: %1"
 
 #. +> trunk stable
-#: ProcessModel.cc:689
+#: ProcessModel.cc:724
 msgid ""
 "<br/>"
 "File System Group: %1"
@@ -502,39 +569,39 @@ msgstr ""
 "Dateisysteem-Koppel: %1"
 
 #. +> trunk stable
-#: ProcessModel.cc:696
+#: ProcessModel.cc:731
 msgctxt "Short description of a process. PID, name, user"
 msgid "<numid>%1</numid>: %2, owned by user %3"
 msgstr "<numid>%1</numid>: %2, höört Bruker %3 to"
 
 #. +> trunk stable
-#: ProcessModel.cc:703
+#: ProcessModel.cc:738
 msgid "%1 (gid: <numid>%2</numid>)"
 msgstr "%1 (GID: <numid>%2</numid>)"
 
 #. +> trunk stable
-#: ProcessModel.cc:724
+#: ProcessModel.cc:759
 msgid "%1 (uid: %2)"
 msgstr "%1 (UID: %2)"
 
 #. +> trunk stable
-#: ProcessModel.cc:827
+#: ProcessModel.cc:862
 msgctxt "tooltip. name,pid "
 msgid "This process is being debugged by %1 (<numid>%2</numid>)"
 msgstr "%1 (<numid>%2</numid>) söcht binnen dissen Perzess na Fehlers."
 
 #. +> trunk stable
-#: ProcessModel.cc:849
+#: ProcessModel.cc:884
 msgid "<b>Init</b> is the parent of all other processes and cannot be killed.<br/>"
 msgstr "<b>Init</b> is all anner Perzessen överornt un lett sik nich afscheten.<br/>"
 
 #. +> trunk stable
-#: ProcessModel.cc:851
+#: ProcessModel.cc:886
 msgid "<b>KThreadd</b> manages kernel threads. The children processes run in the kernel, controlling hard disk access, etc.<br/>"
 msgstr "<b>KThreadd</b> pleegt de Kernel-Perzesssträng. De Ünnerperzessen loopt binnen den Kernel, se kuntrulleert dat Togriepen op de Fastplaat usw.<br/>"
 
 #. +> trunk stable
-#: ProcessModel.cc:853
+#: ProcessModel.cc:888
 msgctxt "name column tooltip. first item is the name"
 msgid ""
 "<b>%1</b><br />"
@@ -544,7 +611,7 @@ msgstr ""
 "Perzess-ID: <numid>%2</numid>"
 
 #. +> trunk stable
-#: ProcessModel.cc:858
+#: ProcessModel.cc:893
 msgctxt "name column tooltip. first item is the name"
 msgid ""
 "<b>%1</b><br />"
@@ -558,7 +625,7 @@ msgstr ""
 "Oproper-ID: <numid>%4</numid>"
 
 #. +> trunk stable
-#: ProcessModel.cc:860
+#: ProcessModel.cc:895
 msgctxt "name column tooltip. first item is the name"
 msgid ""
 "<b>%1</b><br />"
@@ -570,7 +637,7 @@ msgstr ""
 "Oproper-ID: <numid>%3</numid>"
 
 #. +> trunk stable
-#: ProcessModel.cc:864
+#: ProcessModel.cc:899
 msgid ""
 "<br/>"
 "Command: %1"
@@ -579,7 +646,7 @@ msgstr ""
 "Befehl: %1"
 
 #. +> trunk stable
-#: ProcessModel.cc:867
+#: ProcessModel.cc:902
 msgid ""
 "<br />"
 "Running on: %1"
@@ -588,7 +655,7 @@ msgstr ""
 "Löppt op: %1"
 
 #. +> trunk stable
-#: ProcessModel.cc:875
+#: ProcessModel.cc:910
 msgid ""
 "<qt>This process was run with the following command:<br />"
 "%1"
@@ -597,7 +664,7 @@ msgstr ""
 "%1"
 
 #. +> trunk stable
-#: ProcessModel.cc:877
+#: ProcessModel.cc:912
 msgid ""
 "<br />"
 "<br />"
@@ -608,17 +675,17 @@ msgstr ""
 "Löppt op: %1"
 
 #. +> trunk stable
-#: ProcessModel.cc:891
+#: ProcessModel.cc:926
 msgid "Nice level: %1 (%2)"
 msgstr "Prioriteet: %1 (%2)"
 
 #. +> trunk stable
-#: ProcessModel.cc:895
+#: ProcessModel.cc:930
 msgid "Scheduler priority: %1"
 msgstr "Plaant Prioriteet: %1"
 
 #. +> trunk stable
-#: ProcessModel.cc:899
+#: ProcessModel.cc:934
 msgid ""
 "<br/>"
 "Scheduler: %1"
@@ -627,7 +694,7 @@ msgstr ""
 "Planer: %1"
 
 #. +> trunk stable
-#: ProcessModel.cc:903 ProcessModel.cc:942
+#: ProcessModel.cc:938 ProcessModel.cc:977
 msgid ""
 "<br/>"
 "I/O Nice level: %1 (%2)"
@@ -636,7 +703,7 @@ msgstr ""
 "In-/Utgaav-Prioriteet: %1 (%2)"
 
 #. +> trunk stable
-#: ProcessModel.cc:904 ProcessModel.cc:943
+#: ProcessModel.cc:939 ProcessModel.cc:978
 msgid ""
 "<br/>"
 "I/O Class: %1"
@@ -645,7 +712,7 @@ msgstr ""
 "In-/Utgaav-Klass: %1"
 
 #. +> trunk stable
-#: ProcessModel.cc:911
+#: ProcessModel.cc:946
 msgid ""
 "<qt>"
 "<p style='white-space:pre'>Process status: %1 %2<br />"
@@ -658,7 +725,7 @@ msgstr ""
 "Systeem-Perzesserlast: %4%</qt>"
 
 #. +> trunk stable
-#: ProcessModel.cc:922
+#: ProcessModel.cc:957
 msgid ""
 "<br />"
 "Number of children: %1<br />"
@@ -673,7 +740,7 @@ msgstr ""
 "Heel Perzesserlast: %4%"
 
 #. +> trunk stable
-#: ProcessModel.cc:931
+#: ProcessModel.cc:966
 msgid ""
 "<br />"
 "<br />"
@@ -684,7 +751,7 @@ msgstr ""
 "Perzessertiet, bruukt as Bruker: %1 Sekunnen"
 
 #. +> trunk stable
-#: ProcessModel.cc:935
+#: ProcessModel.cc:970
 msgid ""
 "<br />"
 "CPU time spent running in kernel: %1 seconds"
@@ -693,7 +760,7 @@ msgstr ""
 "Perzessertiet, bruukt binnen Kernel: %1 Sekunnen"
 
 #. +> trunk stable
-#: ProcessModel.cc:939
+#: ProcessModel.cc:974
 msgid ""
 "<br />"
 "Nice level: %1 (%2)"
@@ -702,124 +769,124 @@ msgstr ""
 "Prioriteet: %1 (%2)"
 
 #. +> trunk stable
-#: ProcessModel.cc:958
+#: ProcessModel.cc:993
 msgid "Memory usage: %1 out of %2  (%3 %)<br />"
 msgstr "Spiekerbruuk: %1 vun %2 (%3 %)<br />"
 
 #. +> trunk stable
-#: ProcessModel.cc:960
+#: ProcessModel.cc:995
 msgid "Memory usage: %1<br />"
 msgstr "Spiekerbruuk: %1<br />"
 
 #. +> trunk stable
-#: ProcessModel.cc:963
+#: ProcessModel.cc:998
 msgid "RSS Memory usage: %1 out of %2  (%3 %)"
 msgstr "RSS-Spiekerbruuk: %1 vun %2 (%3 %)"
 
 #. +> trunk stable
-#: ProcessModel.cc:965
+#: ProcessModel.cc:1000
 msgid "RSS Memory usage: %1"
 msgstr "RSS-Spiekerbruuk: %1"
 
 #. +> trunk stable
-#: ProcessModel.cc:971
+#: ProcessModel.cc:1006
 msgid "<qt>Your system does not seem to have this information available to be read.</qt>"
 msgstr "<qt>As't lett stellt Dien Systeem dissen Weerten nich för't Utlesen praat.</qt>"
 
 #. +> trunk stable
-#: ProcessModel.cc:975
+#: ProcessModel.cc:1010
 msgid "Shared library memory usage: %1 out of %2  (%3 %)"
 msgstr "Spiekerbruuk för deelt Bibliotheken: %1 vun %2 (%3 %)"
 
 #. +> trunk stable
-#: ProcessModel.cc:977
+#: ProcessModel.cc:1012
 msgid "Shared library memory usage: %1"
 msgstr "Spiekerbruuk för deelt Bibliotheken: %1"
 
 #. +> trunk stable
-#: ProcessModel.cc:1239
+#: ProcessModel.cc:1274
 msgctxt "process heading"
 msgid "Name"
 msgstr "Naam"
 
 #. +> trunk stable
-#: ProcessModel.cc:1240
+#: ProcessModel.cc:1275
 msgctxt "process heading"
 msgid "Username"
 msgstr "Brukernaam"
 
 #. +> trunk stable
-#: ProcessModel.cc:1241
+#: ProcessModel.cc:1276
 msgctxt "process heading"
 msgid "PID"
 msgstr "PID"
 
 #. +> trunk stable
-#: ProcessModel.cc:1242
+#: ProcessModel.cc:1277
 msgctxt "process heading"
 msgid "TTY"
 msgstr "TTY"
 
 #. +> trunk stable
-#: ProcessModel.cc:1243
+#: ProcessModel.cc:1278
 msgctxt "process heading"
 msgid "Niceness"
 msgstr "Prioriteet"
 
 #. +> trunk stable
-#: ProcessModel.cc:1245
+#: ProcessModel.cc:1280
 #, no-c-format
 msgctxt "process heading"
 msgid "CPU %"
 msgstr "CPU %"
 
 #. +> trunk stable
-#: ProcessModel.cc:1246
+#: ProcessModel.cc:1281
 msgctxt "process heading"
 msgid "Virtual Size"
 msgstr "Virtuell Grött"
 
 #. +> trunk stable
-#: ProcessModel.cc:1247
+#: ProcessModel.cc:1282
 msgctxt "process heading"
 msgid "Memory"
 msgstr "Spieker"
 
 #. +> trunk stable
-#: ProcessModel.cc:1248
+#: ProcessModel.cc:1283
 msgctxt "process heading"
 msgid "Shared Mem"
 msgstr "Deelt Spieker"
 
 #. +> trunk stable
-#: ProcessModel.cc:1249
+#: ProcessModel.cc:1284
 msgctxt "process heading"
 msgid "Command"
 msgstr "Befehl"
 
 #. +> trunk stable
-#: ProcessModel.cc:1251
+#: ProcessModel.cc:1286
 msgctxt "process heading"
 msgid "Window Title"
 msgstr "Finstertitel"
 
 #. +> trunk stable
-#: ProcessModel.cc:1318
+#: ProcessModel.cc:1353
 msgid "%1 K"
 msgstr "%1 k"
 
 #. +> trunk stable
-#: ProcessModel.cc:1319
+#: ProcessModel.cc:1354
 msgid "%1 M"
 msgstr "%1 M"
 
 #. +> trunk stable
-#: ProcessModel.cc:1320
+#: ProcessModel.cc:1355
 msgid "%1 G"
 msgstr "%1 G"
 
 #. +> trunk stable
-#: ProcessModel.cc:1321
+#: ProcessModel.cc:1356
 msgid "%1%"
 msgstr "%1%"
 
