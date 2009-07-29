@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_networkmanager\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-07-25 06:58+0200\n"
+"POT-Creation-Date: 2009-07-28 06:59+0200\n"
 "PO-Revision-Date: 2009-02-18 08:11+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -20,6 +20,23 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. +> trunk
+#: applet_wip.cpp:50
+#, fuzzy
+#| msgctxt "Notification for hardware removed"
+#| msgid "Network interface removed"
+msgctxt "Warning message to deter non-developers from using this"
+msgid "Network Management is changing!"
+msgstr "Nettwark-Koppelsteed wegdaan"
+
+#. +> trunk
+#: applet_wip.cpp:51
+msgctxt "Tooltip sub text"
+msgid ""
+"It is highly unstable and will crash your desktop.\n"
+"  Until further notice, please use KDE 4 knetworkmanager instead."
+msgstr ""
+
+#. +> trunk
 #: generalextender.cpp:47
 #, fuzzy
 #| msgid "General Settings"
@@ -28,7 +45,7 @@ msgid "General Settings"
 msgstr "Allgemeen Instellen"
 
 #. +> trunk
-#: generalextender.cpp:75
+#: generalextender.cpp:75 nmextenderitem.cpp:146
 #, fuzzy
 #| msgctxt "CheckBox to enable or disable wireless interface (rfkill)"
 #| msgid "Enable Wireless"
@@ -37,7 +54,7 @@ msgid "Enable wireless"
 msgstr "Funknettwark anmaken"
 
 #. +> trunk
-#: generalextender.cpp:87
+#: generalextender.cpp:87 nmextenderitem.cpp:158
 #, fuzzy
 #| msgid "Manage Connections..."
 msgctxt "button in general settings extender"
@@ -67,7 +84,6 @@ msgstr "Nettwark-Koppelsteed wegdaan"
 
 #. +> trunk
 #: interfacegroup.cpp:439 wirelessinterfaceitem.cpp:112
-#, kde-format
 msgctxt "Notification text when activating a connection"
 msgid "Connecting %1"
 msgstr "An't Tokoppeln na %1"
@@ -97,64 +113,69 @@ msgid "<b>IP Address:</b> dum.my.ip.addr"
 msgstr "<b>IP-Adress:</b> en.ip.a.dress"
 
 #. +> trunk
-#: interfaceitem.cpp:232
-#, kde-format
+#: interfaceitem.cpp:239
 msgid "<b>%1</b>"
 msgstr "<b>%1</b>"
 
 #. +> trunk
-#: interfaceitem.cpp:234
+#: interfaceitem.cpp:241
 msgctxt "network interface name unknown"
 msgid "<b>Unknown Network Interface</b>"
 msgstr "<b> Nich begäng Nettwark-Koppelsteed</b>"
 
 #. +> trunk
-#: interfaceitem.cpp:254
+#: interfaceitem.cpp:263 interfaceitem.cpp:410
 msgctxt "wireless interface is connected"
 msgid "Connected"
 msgstr "Tokoppelt"
 
 #. +> trunk
-#: interfaceitem.cpp:256
-#, fuzzy, kde-format
+#: interfaceitem.cpp:265 interfaceitem.cpp:412
+#, fuzzy
 #| msgid "xxxConnected to \"%1\""
 msgctxt "wireless interface is connected"
 msgid "Connected to %1"
 msgstr "xxxTokoppelt na \"%1\""
 
 #. +> trunk
-#: interfaceitem.cpp:258
-#, kde-format
+#: interfaceitem.cpp:267 interfaceitem.cpp:414
 msgctxt "ip address of the network interface"
 msgid "Address: %1"
 msgstr "Adress: %1"
 
 #. +> trunk
-#: interfaceitem.cpp:274
+#: interfaceitem.cpp:283
 #, fuzzy
 #| msgid "IP Address"
 msgid "No IP address."
 msgstr "IP-Adress"
 
 #. +> trunk
-#: interfaceitem.cpp:279
+#: interfaceitem.cpp:288
 #, fuzzy
 #| msgid "ip display error"
 msgid "IP display error."
 msgstr "IP-Wiesfehler"
 
 #. +> trunk
-#: interfaceitem.cpp:364
-#, fuzzy, kde-format
+#: interfaceitem.cpp:369
+#, fuzzy
+#| msgctxt "Label for network interfaces that cannot be activated"
+#| msgid "Unavailable"
+msgid "Unavailable"
+msgstr "Nich verföögbor"
+
+#. +> trunk
+#: interfaceitem.cpp:374
+#, fuzzy
 #| msgctxt "networking device is not connected"
 #| msgid "Disconnected"
-msgctxt "Notification text when a network interface was disconnected"
-msgid "%1 disconnected"
+msgid "Disconnected"
 msgstr "Afkoppelt"
 
 #. +> trunk
-#: interfaceitem.cpp:370
-#, fuzzy, kde-format
+#: interfaceitem.cpp:380
+#, fuzzy
 #| msgctxt "network interface connection failed state label"
 #| msgid "Connection Failed"
 msgctxt "Notification text when a network interface connection attempt failed"
@@ -162,7 +183,7 @@ msgid "Connection on %1 failed"
 msgstr "Tokoppeln fehlslaan"
 
 #. +> trunk
-#: interfaceitem.cpp:372
+#: interfaceitem.cpp:381
 #, fuzzy
 #| msgctxt "network interface connection failed state label"
 #| msgid "Connection Failed"
@@ -170,15 +191,15 @@ msgid "Connection failed"
 msgstr "Tokoppeln fehlslaan"
 
 #. +> trunk
-#: interfaceitem.cpp:375 interfaceitem.cpp:380 interfaceitem.cpp:385
-#: interfaceitem.cpp:390
+#: interfaceitem.cpp:385 interfaceitem.cpp:391 interfaceitem.cpp:397
+#: interfaceitem.cpp:403
 #, fuzzy
 #| msgid "Connection"
 msgid "Connecting..."
 msgstr "Verbinnen"
 
 #. +> trunk
-#: interfaceitem.cpp:376
+#: interfaceitem.cpp:386
 #, fuzzy
 #| msgctxt "description of preparing to connect network interface state"
 #| msgid "Preparing to connect"
@@ -186,7 +207,7 @@ msgid "Preparing network connection"
 msgstr "Tokoppeln warrt torechtmaakt"
 
 #. +> trunk
-#: interfaceitem.cpp:381
+#: interfaceitem.cpp:392
 #, fuzzy
 #| msgctxt "Edit connection dialog caption"
 #| msgid "Edit network connection"
@@ -194,14 +215,14 @@ msgid "Configuring network connection"
 msgstr "Nettwarkverbinnen bewerken"
 
 #. +> trunk
-#: interfaceitem.cpp:386
+#: interfaceitem.cpp:398
 #, fuzzy
 #| msgid "Inner &authentication"
 msgid "Requesting authentication"
 msgstr "Binnen-&Identiteetprööv"
 
 #. +> trunk
-#: interfaceitem.cpp:391
+#: interfaceitem.cpp:404
 #, fuzzy
 #| msgctxt "network interface doing dhcp request in most cases"
 #| msgid "Setting network address"
@@ -209,16 +230,23 @@ msgid "Setting network address"
 msgstr "Nettwark-Adress warrt fastleggt"
 
 #. +> trunk
-#: interfaceitem.cpp:396
-#, fuzzy, kde-format
-#| msgctxt "description of unconnected network interface state"
-#| msgid "Not connected"
-msgctxt "Notification text when a network interface connection succeeded"
-msgid "%1 connected"
-msgstr "Nich tokoppelt"
+#: interfaceitem.cpp:419
+#, fuzzy
+#| msgctxt "description of unmanaged network interface state"
+#| msgid "Unmanaged"
+msgid "Unmanaged"
+msgstr "Nich pleegt"
 
 #. +> trunk
-#: interfaceitem.cpp:409 interfaceitem.cpp:448
+#: interfaceitem.cpp:424
+#, fuzzy
+#| msgctxt "description of unknown network interface state"
+#| msgid "Unknown"
+msgid "Unknown"
+msgstr "Nich begäng"
+
+#. +> trunk
+#: interfaceitem.cpp:433 interfaceitem.cpp:474
 #, fuzzy
 #| msgctxt "icon to connect network interface"
 #| msgid "Connect"
@@ -226,7 +254,7 @@ msgid "Connect"
 msgstr "Tokoppeln"
 
 #. +> trunk
-#: interfaceitem.cpp:412 interfaceitem.cpp:484
+#: interfaceitem.cpp:436 interfaceitem.cpp:511
 #, fuzzy
 #| msgctxt "icon to disconnect network interface"
 #| msgid "Disconnect"
@@ -234,20 +262,19 @@ msgid "Disconnect"
 msgstr "Afkoppeln"
 
 #. +> trunk
-#: interfaceitem.cpp:445
+#: interfaceitem.cpp:471
 msgctxt "networking device is not connected"
 msgid "Disconnected"
 msgstr "Afkoppelt"
 
 #. +> trunk
-#: interfaceitem.cpp:471
+#: interfaceitem.cpp:498
 msgctxt "Text for connections not owned by a service"
 msgid "Orphaned connection"
 msgstr "Nableven Verbinnen"
 
 #. +> trunk
-#: interfaceitem.cpp:478
-#, kde-format
+#: interfaceitem.cpp:505
 msgid "%1:\"%2\""
 msgstr "%1:\"%2\""
 
@@ -264,7 +291,6 @@ msgstr "Keen Nettwark-Koppelsteden"
 
 #. +> trunk
 #: networkmanager.cpp:480
-#, kde-format
 msgctxt "Display of the IP (network) address in the tooltip"
 msgid "<font size=\"-1\">Address: %1</font>"
 msgstr ""
@@ -437,7 +463,16 @@ msgid "&Show this many wireless networks"
 msgstr "Dissen Barg Funknettwarken &wiesen"
 
 #. +> trunk
-#: nmextenderitem.cpp:176
+#: nmextenderitem.cpp:66
+#, fuzzy
+#| msgctxt "Notification for hardware removed"
+#| msgid "Network interface removed"
+msgctxt "Extender title"
+msgid "Network Management"
+msgstr "Nettwark-Koppelsteed wegdaan"
+
+#. +> trunk
+#: nmextenderitem.cpp:230
 #, fuzzy
 #| msgid "Wireless"
 msgctxt "title of the wireless tab"
@@ -445,7 +480,7 @@ msgid "Wireless"
 msgstr "Funk"
 
 #. +> trunk
-#: nmextenderitem.cpp:195
+#: nmextenderitem.cpp:249
 #, fuzzy
 #| msgid "Wired"
 msgctxt "title of the wired tab"
@@ -460,7 +495,6 @@ msgstr "Tokoppeln"
 
 #. +> trunk
 #: serialinterfaceitem.cpp:116
-#, kde-format
 msgctxt "Label for PPP/cellular network connection traffic data, bytes in and out"
 msgid "In: %1 Out %2"
 msgstr "Rin: %1 Rut %2"
@@ -489,7 +523,7 @@ msgid "Not plugged in"
 msgstr "Nich insteken"
 
 #. +> trunk
-#: wirelessinterfaceitem.cpp:169 wirelessnetworkitem.cpp:174
+#: wirelessinterfaceitem.cpp:169 wirelessnetworkitem.cpp:166
 #, fuzzy
 #| msgctxt "button to connect to wired network"
 #| msgid "Connect to wired network %1"
@@ -498,30 +532,44 @@ msgid "Unencrypted network"
 msgstr "Na Kavelnettwark \"%1\" tokoppeln"
 
 #. +> trunk
-#: wirelessinterfaceitem.cpp:173 wirelessnetworkitem.cpp:178
+#: wirelessinterfaceitem.cpp:173 wirelessnetworkitem.cpp:170
 msgctxt "tooltip of the security icon in the connection list"
 msgid "Weakly encrypted network (WEP)"
 msgstr ""
 
 #. +> trunk
-#: wirelessinterfaceitem.cpp:176 wirelessnetworkitem.cpp:182
-#: wirelessnetworkitem.cpp:186
+#: wirelessinterfaceitem.cpp:176 wirelessnetworkitem.cpp:174
+#: wirelessnetworkitem.cpp:178
 msgctxt "tooltip of the security icon in the connection list"
 msgid "Encrypted network (WPA-PSK)"
 msgstr ""
 
 #. +> trunk
-#: wirelessinterfaceitem.cpp:180 wirelessnetworkitem.cpp:189
+#: wirelessinterfaceitem.cpp:180 wirelessnetworkitem.cpp:181
 msgctxt "tooltip of the security icon in the connection list"
 msgid "Encrypted network (WPA-EAP)"
 msgstr ""
 
 #. +> trunk
 #: wirelessinterfaceitem.cpp:192
-#, fuzzy, kde-format
+#, fuzzy
 #| msgid "xxxConnected to \"%1\""
 msgid "Connected to \"%1\""
 msgstr "xxxTokoppelt na \"%1\""
+
+#, fuzzy
+#~| msgctxt "networking device is not connected"
+#~| msgid "Disconnected"
+#~ msgctxt "Notification text when a network interface was disconnected"
+#~ msgid "%1 disconnected"
+#~ msgstr "Afkoppelt"
+
+#, fuzzy
+#~| msgctxt "description of unconnected network interface state"
+#~| msgid "Not connected"
+#~ msgctxt "Notification text when a network interface connection succeeded"
+#~ msgid "%1 connected"
+#~ msgstr "Nich tokoppelt"
 
 #~ msgctxt "Notification for hardware added"
 #~ msgid "Network interface %1 attached"
