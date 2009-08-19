@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_networkmanager\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-08-16 06:23+0200\n"
+"POT-Creation-Date: 2009-08-18 06:58+0200\n"
 "PO-Revision-Date: 2009-05-28 07:39+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -961,8 +961,9 @@ msgid "Sets the size of the largest packet that can be transmitted on this netwo
 msgstr "Leggt de maximale Paketgrött fast, de sik överdregen lett. \"0\" leggt de MTU automaatsch fast."
 
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, mtu)
+#. i18n: ectx: property (text), item, widget (KComboBox, cboPeapVersion)
 #. +> trunk
-#: ui/802-11-wireless.ui:160 ui/wired.ui:82
+#: ui/802-11-wireless.ui:160 ui/security/eapmethodpeapbase.ui:65 ui/wired.ui:82
 msgid "Automatic"
 msgstr "Automaatsch"
 
@@ -997,37 +998,39 @@ msgstr "&Tall:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (text), widget (QLabel, label_4)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #. i18n: ectx: property (text), widget (QLabel, label_15)
 #. +> trunk
 #: ui/cdma.ui:38 ui/gsm.ui:46 ui/pppoe.ui:38
 #: ui/security/eapmethodleapbase.ui:22 ui/security/eapmethodsimple.ui:17
-#: ui/security/eapmethodsimplebase.ui:17 ui/security/security.ui:135
-#: ui/security/security.ui:257 ui/security/security.ui:406
+#: ui/security/eapmethodsimplebase.ui:17 ui/security/leap.ui:17
+#: ui/security/security.ui:135 ui/security/security.ui:257
+#: ui/security/security.ui:406
 msgid "&Username:"
 msgstr "&Brukernaam:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (text), widget (QLabel, label_14)
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #. i18n: ectx: property (text), widget (QLabel, label_17)
 #. +> trunk
 #: ui/cdma.ui:54 ui/gsm.ui:62 ui/pppoe.ui:58
 #: ui/security/eapmethodleapbase.ui:42 ui/security/eapmethodsimple.ui:33
-#: ui/security/eapmethodsimplebase.ui:33 ui/security/security.ui:151
-#: ui/security/security.ui:273 ui/security/security.ui:422
-#: ui/security/wpapsk.ui:19
+#: ui/security/eapmethodsimplebase.ui:33 ui/security/leap.ui:33
+#: ui/security/security.ui:151 ui/security/security.ui:273
+#: ui/security/security.ui:422 ui/security/wpapsk.ui:19
 msgid "&Password:"
 msgstr "&Passwoort:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkShowPass)
 #. +> trunk
-#: ui/cdma.ui:79 ui/pppoe.ui:76 ui/security/wep.ui:160 ui/security/wpapsk.ui:39
+#: ui/cdma.ui:79 ui/pppoe.ui:76 ui/security/leap.ui:53 ui/security/wep.ui:160
+#: ui/security/wpapsk.ui:39
 msgid "&Show password"
 msgstr "Passwoort &wiesen"
 
@@ -1038,19 +1041,19 @@ msgstr "Nieg Mobilfunk-Verbinnen"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. +> trunk
-#: ui/connection.ui:19
+#: ui/connection.ui:53
 msgid "&Connection name:"
 msgstr "&Verbinnennaam:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, autoconnect)
 #. +> trunk
-#: ui/connection.ui:37
+#: ui/connection.ui:91
 msgid "Connect &automatically"
 msgstr "&Automaatsch tokoppeln"
 
 #. i18n: ectx: property (text), widget (QCheckBox, system)
 #. +> trunk
-#: ui/connection.ui:50
+#: ui/connection.ui:104
 msgid "&System connection"
 msgstr "&Systeemverbinnen"
 
@@ -1067,13 +1070,18 @@ msgid "Add Network Connection"
 msgstr "Nettwarkverbinnen tofögen"
 
 #. +> trunk
-#: ui/connectionsecretsjob.cpp:144
-#, kde-format
-#| msgctxt "@title:window for network secrets request"
-#| msgid "Secrets for %1"
+#: ui/connectionsecretsjob.cpp:143
 msgctxt "@title:window for network secrets request"
 msgid "Secrets for %1"
 msgstr ""
+
+#. +> trunk
+#: ui/connectionwidget.cpp:44
+#, fuzzy
+#| msgid "Use TCP connection"
+msgctxt "@info:tooltip user action"
+msgid "Choose a connection icon"
+msgstr "TCP-Verbinnen bruken"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. +> trunk
@@ -1384,58 +1392,6 @@ msgstr "Koort"
 msgid "Details"
 msgstr "Enkelheiten"
 
-#. i18n: ectx: property (windowTitle), widget (QWidget, Wired8021xSecurity)
-#. +> trunk
-#: ui/security/802_1x.ui:13
-msgid "802.1x"
-msgstr "802.1x"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#. i18n: ectx: property (text), widget (QLabel, authalgLabel)
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. +> trunk
-#: ui/security/802_1x.ui:21 ui/security/eapmethodstackbase.ui:19
-#: ui/security/security.ui:19 ui/security/wep.ui:91
-msgid "&Authentication:"
-msgstr "&Identiteetprööv:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
-#. +> trunk
-#: ui/security/802_1x.ui:31
-#, fuzzy
-msgid "Use authentication:"
-msgstr "Identiteetprööv bruken:"
-
-#. i18n: ectx: property (toolTip), widget (KComboBox, kcombobox_4)
-#. +> trunk
-#: ui/security/802_1x.ui:38 ui/security/security.ui:32
-msgid "Authentication scheme to use"
-msgstr "Identiteetprööv-Schema, dat Du bruken wullt"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcombobox_4)
-#. +> trunk
-#: ui/security/802_1x.ui:42 ui/security/security.ui:36
-msgid "TLS"
-msgstr "TLS"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcombobox_4)
-#. +> trunk
-#: ui/security/802_1x.ui:47 ui/security/security.ui:41
-msgid "Tunneled TLS"
-msgstr "Tunnelt TLS"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcombobox_4)
-#. +> trunk
-#: ui/security/802_1x.ui:52 ui/security/security.ui:46
-msgid "Protected EAP (PEAP)"
-msgstr "Schuult EAP (PEAP)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, inUse)
-#. +> trunk
-#: ui/security/802_1x.ui:62
-msgid "&Use 802.1x authentication"
-msgstr "802.1&x-Identiteetprööv bruken"
-
 #. +> trunk
 #: ui/security/eapmethodinnerauth.cpp:34
 #, fuzzy
@@ -1482,23 +1438,32 @@ msgstr "PEAP-&Verschoon:"
 #. i18n: ectx: property (text), item, widget (KComboBox, cboPeapVersion)
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_phase1peapver)
 #. +> trunk
-#: ui/security/eapmethodpeapbase.ui:65 ui/security/security.ui:356
+#: ui/security/eapmethodpeapbase.ui:70 ui/security/security.ui:356
 msgid "Version 0"
 msgstr "Verschoon 0"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, cboPeapVersion)
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_phase1peapver)
 #. +> trunk
-#: ui/security/eapmethodpeapbase.ui:70 ui/security/security.ui:361
+#: ui/security/eapmethodpeapbase.ui:75 ui/security/security.ui:361
 msgid "Version 1"
 msgstr "Verschoon 1"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkUseSystemCaCerts)
 #. +> trunk
-#: ui/security/eapmethodpeapbase.ui:78 ui/security/eapmethodtlsbase.ui:103
+#: ui/security/eapmethodpeapbase.ui:83 ui/security/eapmethodtlsbase.ui:103
 #: ui/security/eapmethodttlsbase.ui:51
 msgid "Use Syste&m CA Certs"
 msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, authalgLabel)
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#. +> trunk
+#: ui/security/eapmethodstackbase.ui:19 ui/security/security.ui:19
+#: ui/security/wep.ui:91
+msgid "&Authentication:"
+msgstr "&Identiteetprööv:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, label_12)
@@ -1544,6 +1509,30 @@ msgstr "MSCHAPv2"
 msgctxt "MD5 inner auth method"
 msgid "MD5"
 msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, kcombobox_4)
+#. +> trunk
+#: ui/security/security.ui:32
+msgid "Authentication scheme to use"
+msgstr "Identiteetprööv-Schema, dat Du bruken wullt"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcombobox_4)
+#. +> trunk
+#: ui/security/security.ui:36
+msgid "TLS"
+msgstr "TLS"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcombobox_4)
+#. +> trunk
+#: ui/security/security.ui:41
+msgid "Tunneled TLS"
+msgstr "Tunnelt TLS"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcombobox_4)
+#. +> trunk
+#: ui/security/security.ui:46
+msgid "Protected EAP (PEAP)"
+msgstr "Schuult EAP (PEAP)"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. +> trunk
@@ -1602,10 +1591,60 @@ msgid "PEAP &version:"
 msgstr "PEAP-&Verschoon:"
 
 #. +> trunk
-#: ui/security/security801xwidget.cpp:45
-msgctxt "Label for 8021x wired security settings"
-msgid "802.1x"
-msgstr "802.1x"
+#: ui/security/securityeap.cpp:56
+#, fuzzy
+#| msgid "&Show password"
+msgctxt "show passwords button"
+msgid "&Show Passwords"
+msgstr "Passwoort &wiesen"
+
+#. +> trunk
+#: ui/security/securityeap.cpp:62
+#, fuzzy
+#| msgid "TLS"
+msgctxt "TLS auth type"
+msgid "TLS"
+msgstr "TLS"
+
+#. +> trunk
+#: ui/security/securityeap.cpp:66
+#, fuzzy
+#| msgid "EAP"
+msgctxt "LEAP auth type"
+msgid "LEAP"
+msgstr "EAP"
+
+#. +> trunk
+#: ui/security/securityeap.cpp:70
+#, fuzzy
+#| msgid "Protected EAP (PEAP)"
+msgctxt "Peap outer auth type"
+msgid "Protected EAP (PEAP)"
+msgstr "Schuult EAP (PEAP)"
+
+#. +> trunk
+#: ui/security/securityeap.cpp:73
+#, fuzzy
+#| msgid "Tunneled TLS"
+msgctxt "TTLS outer auth type"
+msgid "Tunnelled TLS (TTLS)"
+msgstr "Tunnelt TLS"
+
+#. +> trunk
+#: ui/security/securitywired8021x.cpp:43
+#, fuzzy
+#| msgid "Use 802.1x security"
+msgctxt "@title:tab wired 802.1x security"
+msgid "802.1x Security"
+msgstr "\"802.1x\" -Sekerheit bruken"
+
+#. +> trunk
+#: ui/security/securitywired8021x.cpp:46
+#, fuzzy
+#| msgid "&Use 802.1x authentication"
+msgctxt "@option:check enables/disables 802.1x auth on wired ethernet"
+msgid "Use &802.1x authentication"
+msgstr "802.1&x-Identiteetprööv bruken"
 
 #. +> trunk
 #: ui/security/ttlswidget.cpp:41
@@ -1719,68 +1758,42 @@ msgid "&Security:"
 msgstr "&Sekerheit"
 
 #. +> trunk
-#: ui/security/wirelesssecuritysettingwidget.cpp:137
+#: ui/security/wirelesssecuritysettingwidget.cpp:141
 msgctxt "Label for no wireless security"
 msgid "None"
 msgstr "Keen"
 
 #. +> trunk
-#: ui/security/wirelesssecuritysettingwidget.cpp:143
+#: ui/security/wirelesssecuritysettingwidget.cpp:147
 msgctxt "Label for WEP wireless security"
 msgid "WEP"
 msgstr "WEP"
 
 #. +> trunk
-#: ui/security/wirelesssecuritysettingwidget.cpp:151
+#: ui/security/wirelesssecuritysettingwidget.cpp:153
+#, fuzzy
+#| msgid "EAP"
+msgctxt "Label for LEAP wireless security"
+msgid "LEAP"
+msgstr "EAP"
+
+#. +> trunk
+#: ui/security/wirelesssecuritysettingwidget.cpp:160
+msgctxt "Label for Dynamic WEP wireless security"
+msgid "Dynamic WEP (802.1x)"
+msgstr ""
+
+#. +> trunk
+#: ui/security/wirelesssecuritysettingwidget.cpp:168
 msgctxt "Label for WPA-PSK wireless security"
 msgid "WPA/WPA2 Personal"
 msgstr ""
 
 #. +> trunk
-#: ui/security/wirelesssecuritysettingwidget.cpp:158
+#: ui/security/wirelesssecuritysettingwidget.cpp:175
 msgctxt "Label for WPA-EAP wireless security"
 msgid "WPA/WPA2 Enterprise"
 msgstr ""
-
-#. +> trunk
-#: ui/security/wpaeapwidget.cpp:65
-#, fuzzy
-#| msgid "&Show password"
-msgctxt "show passwords button"
-msgid "&Show Passwords"
-msgstr "Passwoort &wiesen"
-
-#. +> trunk
-#: ui/security/wpaeapwidget.cpp:71
-#, fuzzy
-#| msgid "TLS"
-msgctxt "TLS auth type"
-msgid "TLS"
-msgstr "TLS"
-
-#. +> trunk
-#: ui/security/wpaeapwidget.cpp:74
-#, fuzzy
-#| msgid "EAP"
-msgctxt "LEAP auth type"
-msgid "LEAP"
-msgstr "EAP"
-
-#. +> trunk
-#: ui/security/wpaeapwidget.cpp:77
-#, fuzzy
-#| msgid "Protected EAP (PEAP)"
-msgctxt "Peap outer auth type"
-msgid "Protected EAP (PEAP)"
-msgstr "Schuult EAP (PEAP)"
-
-#. +> trunk
-#: ui/security/wpaeapwidget.cpp:80
-#, fuzzy
-#| msgid "Tunneled TLS"
-msgctxt "TTLS outer auth type"
-msgid "Tunnelled TLS (TTLS)"
-msgstr "Tunnelt TLS"
 
 #. +> trunk
 #: ui/vpnpreferences.cpp:51
@@ -1852,6 +1865,17 @@ msgstr "&MTU:"
 #: ui/wirelesspreferences.cpp:87
 msgid "New Wireless Connection"
 msgstr "Nieg Funk-Verbinnen"
+
+#~ msgid "802.1x"
+#~ msgstr "802.1x"
+
+#, fuzzy
+#~ msgid "Use authentication:"
+#~ msgstr "Identiteetprööv bruken:"
+
+#~ msgctxt "Label for 8021x wired security settings"
+#~ msgid "802.1x"
+#~ msgstr "802.1x"
 
 #~ msgid "Form"
 #~ msgstr "Form"
@@ -2218,9 +2242,6 @@ msgstr "Nieg Funk-Verbinnen"
 #~ msgid "Use TAP device"
 #~ msgstr "TAP-Reedschap bruken"
 
-#~ msgid "Use TCP connection"
-#~ msgstr "TCP-Verbinnen bruken"
-
 #~ msgid "Use cipher"
 #~ msgstr "Cipher bruken"
 
@@ -2463,9 +2484,6 @@ msgstr "Nieg Funk-Verbinnen"
 
 #~ msgid "Default"
 #~ msgstr "Standard"
-
-#~ msgid "Use 802.1x security"
-#~ msgstr "\"802.1x\" -Sekerheit bruken"
 
 #~ msgid "Addresses"
 #~ msgstr "Adressen"
