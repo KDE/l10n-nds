@@ -3,11 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Manfred Wiese <m.j.wiese@web.de>, 2009.
+#: aki/basewindow.cpp:326
 msgid ""
 msgstr ""
 "Project-Id-Version: aki\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-08-21 06:10+0200\n"
+"POT-Creation-Date: 2009-08-25 07:23+0200\n"
 "PO-Revision-Date: 2009-08-22 07:54+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -29,14 +30,17 @@ msgstr ""
 msgid "Unable to load network list. Invalid network list."
 msgstr ""
 
-#: aki/servertab.cpp:190 aki/servertab.cpp:200
+#: aki/servertab.cpp:169 aki/servertab.cpp:179
 #, kde-format
 msgid "*** Looking up %1"
 msgstr ""
 
-#: aki/servertab.cpp:217 aki/servertab.cpp:229
-msgid "** Disconnected"
-msgstr ""
+#: aki/servertab.cpp:194 aki/servertab.cpp:196 aki/servertab.cpp:206
+#: aki/servertab.cpp:208
+#, fuzzy
+#| msgid "Disconnect"
+msgid "*** Disconnected"
+msgstr "Afkoppeln"
 
 #: aki/dialogs/messagelog.cpp:38
 msgid "Clear"
@@ -356,7 +360,7 @@ msgstr "Serverport"
 msgid "Nickname"
 msgstr "Ökelnaam"
 
-#: aki/serverview.cpp:174 aki/channelview.cpp:300
+#: aki/serverview.cpp:181 aki/channelview.cpp:291
 msgid "Close Tab"
 msgstr "Paneel tomaken"
 
@@ -382,7 +386,7 @@ msgstr "Server:"
 msgid "Ops: %1 Half-Ops: %2 Voices: %3 Users: %4 -"
 msgstr ""
 
-#: aki/channeltab.cpp:391
+#: aki/channeltab.cpp:391 aki/channel.cpp:259
 msgid "Modes"
 msgstr ""
 
@@ -390,11 +394,11 @@ msgstr ""
 msgid "Kick / Ban"
 msgstr ""
 
-#: aki/channeltab.cpp:395
+#: aki/channeltab.cpp:395 aki/channel.cpp:263
 msgid "Give Ops"
 msgstr ""
 
-#: aki/channeltab.cpp:401
+#: aki/channeltab.cpp:401 aki/channel.cpp:269
 msgid "Take Ops"
 msgstr ""
 
@@ -406,19 +410,19 @@ msgstr ""
 msgid "Take Half-Ops"
 msgstr ""
 
-#: aki/channeltab.cpp:417
+#: aki/channeltab.cpp:417 aki/channel.cpp:286
 msgid "Give Voice"
 msgstr "Stimm geven"
 
-#: aki/channeltab.cpp:423
+#: aki/channeltab.cpp:423 aki/channel.cpp:292
 msgid "Take Voice"
 msgstr "Stimm wegnehmen"
 
-#: aki/channeltab.cpp:438
+#: aki/channeltab.cpp:438 aki/channel.cpp:306
 msgid "Kick"
 msgstr "Rutsmieten"
 
-#: aki/channeltab.cpp:443
+#: aki/channeltab.cpp:443 aki/channel.cpp:311
 msgid "Ban"
 msgstr "Utsluten"
 
@@ -430,133 +434,237 @@ msgstr ""
 msgid "Ban *!*@!.host"
 msgstr ""
 
-#: aki/channeltab.cpp:454
+#: aki/channeltab.cpp:454 aki/channel.cpp:319
 msgid "Ban *!*@domain"
 msgstr ""
 
-#: aki/channeltab.cpp:457
+#: aki/channeltab.cpp:457 aki/channel.cpp:324
 msgid "Ban *!user@*.host"
 msgstr ""
 
-#: aki/channeltab.cpp:460
+#: aki/channeltab.cpp:460 aki/channel.cpp:329
 msgid "Ban *!user@domain"
 msgstr ""
 
-#: aki/channeltab.cpp:463
+#: aki/channeltab.cpp:463 aki/channel.cpp:334
 msgid "KickBan *!*@*.host"
 msgstr ""
 
-#: aki/channeltab.cpp:466
+#: aki/channeltab.cpp:466 aki/channel.cpp:339
 msgid "KickBan *!*@domain"
 msgstr ""
 
-#: aki/channeltab.cpp:469
+#: aki/channeltab.cpp:469 aki/channel.cpp:344
 msgid "KickBan *!user@*.host"
 msgstr ""
 
-#: aki/channeltab.cpp:472
+#: aki/channeltab.cpp:472 aki/channel.cpp:349
 msgid "KickBan *!user@domain"
 msgstr ""
 
-#: aki/channeltab.cpp:764
+#: aki/channeltab.cpp:764 aki/basewindow.cpp:658
 #, kde-format
 msgid ""
 "%1 has invited you to join channel: %2.\n"
 "Would you like to accept the invitation?"
 msgstr ""
 
-#: aki/channeltab.cpp:766
+#: aki/channeltab.cpp:766 aki/basewindow.cpp:660
 msgid "Received a channel invitation"
 msgstr ""
 
-#: aki/channelview.cpp:290
+#: aki/basewindow.cpp:314
+#, fuzzy
+#| msgid "Direction"
+msgid "Topic protection"
+msgstr "Richt"
+
+#: aki/basewindow.cpp:316
+#, fuzzy
+#| msgid "Quit message:"
+msgid "No outside messages"
+msgstr "Naricht bi't Verlaten:"
+
+#: aki/basewindow.cpp:318
+#, fuzzy
+#| msgid "Servers"
+msgid "Secret"
+msgstr "Servers"
+
+#: aki/basewindow.cpp:320
+#, fuzzy
+#| msgid "Invite-only channel"
+msgid "Invite only"
+msgstr "\"Bloots Inladen\"-Klöönruum"
+
+#: aki/basewindow.cpp:322
+#, fuzzy
+#| msgid "Private channel"
+msgid "Private"
+msgstr "Privaat Klöönruum"
+
+#: aki/basewindow.cpp:324
+#, fuzzy
+#| msgid "Moderated channel"
+msgid "Moderated"
+msgstr "Modereert Klöönruum"
+
+#: aki/basewindow.cpp:328
+#, kde-format
+msgid "Password protected: %1"
+msgstr ""
+
+#: aki/basewindow.cpp:330
+#, kde-format
+msgid "Limited to %1"
+msgstr ""
+
+#: aki/basewindow.cpp:332
+#, kde-format
+msgid "Flood limited: %1"
+msgstr ""
+
+#: aki/channelview.cpp:283
 msgid "Split View"
 msgstr "Ansicht delen"
 
-#: aki/channelview.cpp:321
+#: aki/channelview.cpp:314
 #, kde-format
 msgid "Aki IRC Client %1 - %2"
 msgstr ""
 
-#: aki/mainwindow.cpp:92
+#: aki/chatparser.cpp:114
+msgid "Ban requires you to be on a channel"
+msgstr ""
+
+#: aki/chatparser.cpp:208 aki/chatparser.cpp:214 aki/chatparser.cpp:220
+msgid ""
+"/ctcp <nick> <message>, sends message to nick, common ones are USERINFO and "
+"VERSION"
+msgstr ""
+
+#: aki/chatparser.cpp:240 aki/chatparser.cpp:245
+msgid "/ghost <nick> <password>, kill a ghost nick."
+msgstr ""
+
+#: aki/chatparser.cpp:258
+msgid "Invite requires you to be on a channel"
+msgstr ""
+
+#: aki/chatparser.cpp:271
+msgid ""
+"/invite <nick> [<channel>], invites nick to a channel, by default the "
+"current one. Requires channel operator status"
+msgstr ""
+
+#: aki/chatparser.cpp:296
+msgid ""
+"/join <channel> *(',' <channel>) [<key> *(',' <key>)], joins the specified "
+"channel. By default requires no channel key."
+msgstr ""
+
+#: aki/chatparser.cpp:320
+msgid ""
+"/kick <nick> [<message>], kicks a user from the channel. Optional kick "
+"message. Requires channel operator status"
+msgstr ""
+
+#: aki/chatparser.cpp:335
+msgid "CTCP ACTION requires you to be on a channel"
+msgstr ""
+
+#: aki/chatparser.cpp:346
+msgid "/me <message>, talks in 3rd person view to the channel in an RPG style"
+msgstr ""
+
+#: aki/chatparser.cpp:417
+msgid "/nick <nick>, changes your current nick"
+msgstr ""
+
+#: aki/chatparser.cpp:465
+msgid ""
+"TOPIC requires you to be on a channel. Channel operator status maybe required"
+msgstr ""
+
+#: aki/mainwindow.cpp:97
 #, kde-format
 msgid "Aki IRC Client %1"
 msgstr ""
 
-#: aki/mainwindow.cpp:170
+#: aki/mainwindow.cpp:174
 msgid "New Server Tab"
 msgstr ""
 
-#: aki/mainwindow.cpp:176
+#: aki/mainwindow.cpp:180
 msgid "Reconnect"
 msgstr "Wedder tokoppeln"
 
-#: aki/mainwindow.cpp:182
+#: aki/mainwindow.cpp:186
 msgid "Disconnect"
 msgstr "Afkoppeln"
 
-#: aki/mainwindow.cpp:188
+#: aki/mainwindow.cpp:192
 msgctxt "Quit application"
 msgid "&Quit"
 msgstr ""
 
-#: aki/mainwindow.cpp:195
+#: aki/mainwindow.cpp:199
 msgid "Character Selector..."
 msgstr "Tekenköör..."
 
-#: aki/mainwindow.cpp:203
+#: aki/mainwindow.cpp:207
 msgid "Configure Identities..."
 msgstr ""
 
-#: aki/mainwindow.cpp:210
+#: aki/mainwindow.cpp:214
 msgid "U&RL Watcher..."
 msgstr ""
 
-#: aki/mainwindow.cpp:216
+#: aki/mainwindow.cpp:220
 msgid "Clear All Windows"
 msgstr "All Finstern leddig maken"
 
-#: aki/mainwindow.cpp:222
+#: aki/mainwindow.cpp:226
 msgid "Message Log..."
 msgstr "Narichten-Logbook"
 
-#: aki/mainwindow.cpp:246
+#: aki/mainwindow.cpp:252
 msgid "Invite-only channel."
 msgstr "\"Bloots Inladen\"-Klöönruum"
 
-#: aki/mainwindow.cpp:254
+#: aki/mainwindow.cpp:260
 msgid "Maximum allowed users in the channel."
 msgstr ""
 
-#: aki/mainwindow.cpp:261
+#: aki/mainwindow.cpp:267
 msgid "Set number of allowed users in the channel."
 msgstr ""
 
-#: aki/mainwindow.cpp:265
+#: aki/mainwindow.cpp:271
 msgid "Limit Edit"
 msgstr ""
 
-#: aki/mainwindow.cpp:274
+#: aki/mainwindow.cpp:280
 msgid "Moderated channel."
 msgstr "Modereert Klöönruum"
 
-#: aki/mainwindow.cpp:281
+#: aki/mainwindow.cpp:287
 msgid "No messages from clients on the outside."
 msgstr ""
 
-#: aki/mainwindow.cpp:288
+#: aki/mainwindow.cpp:294
 msgid "Protects the channel with a password."
 msgstr ""
 
-#: aki/mainwindow.cpp:295
+#: aki/mainwindow.cpp:301
 msgid "Private channel."
 msgstr "Privaat Klöönruum"
 
-#: aki/mainwindow.cpp:302
+#: aki/mainwindow.cpp:308
 msgid "Secret channel."
 msgstr "Geheem Klöönruum"
 
-#: aki/mainwindow.cpp:309
+#: aki/mainwindow.cpp:315
 msgid "Topic can only be changed by channel operators."
 msgstr "Bloots Klöönruumbasen köönt dat Thema ännern"
 
@@ -582,232 +690,237 @@ msgstr ""
 
 #: aki/chatview.cpp:78
 #, kde-format
-msgid "<span style='color: %1;'>*** Channel Url: <a href='%2'>%2</a></span>"
+msgid "<span style='color: %1;'>*** Channel Modes: %2</span>"
 msgstr ""
 
-#: aki/chatview.cpp:101
+#: aki/chatview.cpp:86
 #, kde-format
-msgid "<span style='color: %1;'>[CTCP] Received CTCP-%2 from %3</span>"
+msgid "<span style='color: %1;'>*** Channel Url: <a href='%2'>%2</a></span>"
 msgstr ""
 
 #: aki/chatview.cpp:109
 #, kde-format
-msgid "<span style='color: %1;'>[ERROR] %2</span>"
+msgid "<span style='color: %1;'>[CTCP] Received CTCP-%2 from %3</span>"
 msgstr ""
 
 #: aki/chatview.cpp:117
 #, kde-format
-msgid "<span style='color: %1;'>[ERROR] %2: %3</span>"
+msgid "<span style='color: %1;'>[ERROR] %2</span>"
 msgstr ""
 
 #: aki/chatview.cpp:125
+#, kde-format
+msgid "<span style='color: %1;'>[ERROR] %2: %3</span>"
+msgstr ""
+
+#: aki/chatview.cpp:139
 #, kde-format
 msgid ""
 "<span style='color: %1;'>[INVITE] You've invited %2 to channel %3</span>"
 msgstr ""
 
-#: aki/chatview.cpp:138
+#: aki/chatview.cpp:152
 #, kde-format
 msgid "<span style='color: %1;'>*** You gave yourself operator status</span>"
 msgstr ""
 
-#: aki/chatview.cpp:141
+#: aki/chatview.cpp:155
 #, kde-format
 msgid "<span style='color: %1;'>*** You gave operator status to %2</span>"
 msgstr ""
 
-#: aki/chatview.cpp:144
+#: aki/chatview.cpp:158
 #, kde-format
 msgid "<span style='color: %1;'>*** %2 gave operator status to you</span>"
 msgstr ""
 
-#: aki/chatview.cpp:147
-#, kde-format
-msgid "<span style='color: %1;'>*** %2 gave operator status to %3</span>"
-msgstr ""
-
-#: aki/chatview.cpp:152
-#, kde-format
-msgid ""
-"<span style='color: %1;'>*** You gave yourself half operator status</span>"
-msgstr ""
-
-#: aki/chatview.cpp:155
-#, kde-format
-msgid "<span style='color: %1;'>*** You gave half operator status to %2</span>"
-msgstr ""
-
-#: aki/chatview.cpp:158
-#, kde-format
-msgid "<span style='color: %1;'>*** %2 gave half operator status to you</span>"
-msgstr ""
-
 #: aki/chatview.cpp:161
 #, kde-format
-msgid "<span style='color: %1;'>*** %2 gave half operator status to %3</span>"
+msgid "<span style='color: %1;'>*** %2 gave operator status to %3</span>"
 msgstr ""
 
 #: aki/chatview.cpp:166
 #, kde-format
 msgid ""
-"<span style='color: %1;'>*** You gave yourself permission to talk</span>"
+"<span style='color: %1;'>*** You gave yourself half operator status</span>"
 msgstr ""
 
 #: aki/chatview.cpp:169
 #, kde-format
-msgid "<span style='color: %1;'>*** You gave %2 permission to talk</span>"
+msgid "<span style='color: %1;'>*** You gave half operator status to %2</span>"
 msgstr ""
 
 #: aki/chatview.cpp:172
 #, kde-format
-msgid "<span style='color: %1;'>*** %2 gave you permission to talk</span>"
+msgid "<span style='color: %1;'>*** %2 gave half operator status to you</span>"
 msgstr ""
 
 #: aki/chatview.cpp:175
 #, kde-format
+msgid "<span style='color: %1;'>*** %2 gave half operator status to %3</span>"
+msgstr ""
+
+#: aki/chatview.cpp:180
+#, kde-format
+msgid ""
+"<span style='color: %1;'>*** You gave yourself permission to talk</span>"
+msgstr ""
+
+#: aki/chatview.cpp:183
+#, kde-format
+msgid "<span style='color: %1;'>*** You gave %2 permission to talk</span>"
+msgstr ""
+
+#: aki/chatview.cpp:186
+#, kde-format
+msgid "<span style='color: %1;'>*** %2 gave you permission to talk</span>"
+msgstr ""
+
+#: aki/chatview.cpp:189
+#, kde-format
 msgid "<span style='color: %1;'>*** %2 gave %3 permission to talk</span>"
 msgstr ""
 
-#: aki/chatview.cpp:188
+#: aki/chatview.cpp:202
 #, kde-format
 msgid "<span style=\"color: %1;\">[MOTD] %2</span>"
 msgstr ""
 
-#: aki/chatview.cpp:196
+#: aki/chatview.cpp:210
 #, kde-format
 msgid "<span style=\"color: %1;\">*** %2 is now known as %3</span>"
 msgstr ""
 
-#: aki/chatview.cpp:204 aki/chatview.cpp:220
+#: aki/chatview.cpp:218 aki/chatview.cpp:234
 #, kde-format
 msgid "<span style=\"color: %1;\">[NOTICE] %2</span>"
 msgstr ""
 
-#: aki/chatview.cpp:212
+#: aki/chatview.cpp:226
 #, kde-format
 msgid "<span style=\"color: %1;\">[NOTICE] &gt;%2&lt; %3</span>"
 msgstr ""
 
-#: aki/chatview.cpp:247
+#: aki/chatview.cpp:261
 #, kde-format
 msgid ""
 "<span style='color: %1;'>*** You took operator status from yourself</span>"
 msgstr ""
 
-#: aki/chatview.cpp:250
+#: aki/chatview.cpp:264
 #, kde-format
 msgid "<span style='color: %1;'>*** You took operator status from %2</span>"
 msgstr ""
 
-#: aki/chatview.cpp:253
+#: aki/chatview.cpp:267
 #, kde-format
 msgid "<span style='color: %1;'>*** %2 took operator status from you</span>"
 msgstr ""
 
-#: aki/chatview.cpp:256
+#: aki/chatview.cpp:270
 #, kde-format
 msgid "<span style='color: %1;'>*** %2 took operator status from %3</span>"
 msgstr ""
 
-#: aki/chatview.cpp:261
+#: aki/chatview.cpp:275
 #, kde-format
 msgid ""
 "<span style='color: %1;'>*** You took half operator status from yourself</"
 "span>"
 msgstr ""
 
-#: aki/chatview.cpp:264
+#: aki/chatview.cpp:278
 #, kde-format
 msgid ""
 "<span style='color: %1;'>*** You took half operator status from %2</span>"
 msgstr ""
 
-#: aki/chatview.cpp:267
+#: aki/chatview.cpp:281
 #, kde-format
 msgid ""
 "<span style='color: %1;'>*** %2 took half operator status from you</span>"
 msgstr ""
 
-#: aki/chatview.cpp:270
+#: aki/chatview.cpp:284
 #, kde-format
 msgid ""
 "<span style='color: %1;'>*** %2 took half operator status from %3</span>"
 msgstr ""
 
-#: aki/chatview.cpp:275
+#: aki/chatview.cpp:289
 #, kde-format
 msgid ""
 "<span style='color: %1;'>*** You took permission to talk from yourself</span>"
 msgstr ""
 
-#: aki/chatview.cpp:278
+#: aki/chatview.cpp:292
 #, kde-format
 msgid "<span style='color: %1;'>*** You took %2 permission to talk</span>"
 msgstr ""
 
-#: aki/chatview.cpp:281
+#: aki/chatview.cpp:295
 #, kde-format
 msgid "<span style='color: %1;'>*** %2 took your permission to talk</span>"
 msgstr ""
 
-#: aki/chatview.cpp:284
+#: aki/chatview.cpp:298
 #, kde-format
 msgid "<span style='color: %1;'>*** %2 took %3 permission to talk</span>"
 msgstr ""
 
-#: aki/chatview.cpp:297
+#: aki/chatview.cpp:311
 #, kde-format
 msgid "<span style=\"color: %1;\">[SUPPORT] %2</span>"
 msgstr ""
 
-#: aki/chatview.cpp:305
+#: aki/chatview.cpp:319
 #, kde-format
 msgid "[TIME] %1 %2"
 msgstr ""
 
-#: aki/chatview.cpp:311
+#: aki/chatview.cpp:325
 #, kde-format
 msgid "<span style=\"color: %1;\">*** The channel's topic is \"%2\"</span>"
 msgstr ""
 
-#: aki/chatview.cpp:319
+#: aki/chatview.cpp:333
 #, kde-format
 msgid ""
 "<span style='color: %1;'>*** %2 has changed the channel's topic to '%3'</"
 "span>"
 msgstr ""
 
-#: aki/chatview.cpp:327
+#: aki/chatview.cpp:341
 #, kde-format
 msgid "<span style=\"color: %1;\">*** Topic set by %2 on %3</span>"
 msgstr ""
 
-#: aki/chatview.cpp:335
+#: aki/chatview.cpp:349
 #, kde-format
 msgid "<span style=\"color: %1;\"> --&gt; %2 (%3) has joined %4</span>"
 msgstr ""
 
-#: aki/chatview.cpp:344
+#: aki/chatview.cpp:358
 #, kde-format
 msgid "<span style=\"color: %1;\"> &lt;-- %2 (%3) has left %4</span>"
 msgstr ""
 
-#: aki/chatview.cpp:355
+#: aki/chatview.cpp:369
 #, kde-format
 msgid "<span style=\"color: %1;\"> &lt;-- %2 (%3) has quit</span>"
 msgstr ""
 
-#: aki/chatview.cpp:364
+#: aki/chatview.cpp:378
 #, kde-format
 msgid "[VERSION] %1"
 msgstr ""
 
-#: aki/chatview.cpp:370
+#: aki/chatview.cpp:384
 #, kde-format
 msgid "<span style=\"color: %1;\"> [WELCOME] %2</span>"
 msgstr ""
 
-#: aki/chatview.cpp:386
+#: aki/chatview.cpp:400
 #, kde-format
 msgid ""
 "[WHO] %1: <b><u>Username</u></b>: %2, <b><u>Address</u></b>: %3, "
@@ -815,22 +928,22 @@ msgid ""
 "<b><u>Hops</u></b>: %7, <b><u>Real Name</u></b>: %8"
 msgstr ""
 
-#: aki/chatview.cpp:396
+#: aki/chatview.cpp:410
 #, kde-format
 msgid "[WHOIS] %1 is currently on channels: %2"
 msgstr ""
 
-#: aki/chatview.cpp:403
+#: aki/chatview.cpp:417
 #, kde-format
 msgid "[WHOIS] %1 %2"
 msgstr ""
 
-#: aki/chatview.cpp:409
+#: aki/chatview.cpp:423
 #, kde-format
 msgid "[WHOIS] %1 is online via %2 (%3)"
 msgstr ""
 
-#: aki/chatview.cpp:416
+#: aki/chatview.cpp:430
 #, kde-format
 msgid "[WHOIS] %1 is %2@%3 (%4)"
 msgstr ""
@@ -846,6 +959,24 @@ msgstr ""
 
 #: aki/plugins/sample/sampleplugin.cpp:30
 msgid "Unloaded SamplePlugin"
+msgstr ""
+
+#: aki/channel.cpp:260
+#, fuzzy
+#| msgid "Kick"
+msgid "Kick/Ban"
+msgstr "Rutsmieten"
+
+#: aki/channel.cpp:275
+msgid "Give Half-Op"
+msgstr ""
+
+#: aki/channel.cpp:280
+msgid "Take Half-Op"
+msgstr ""
+
+#: aki/channel.cpp:314
+msgid "Ban *!*@*.host"
 msgstr ""
 
 #: rc.cpp:1
