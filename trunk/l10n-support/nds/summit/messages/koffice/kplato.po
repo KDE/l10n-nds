@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kplato\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-08-25 07:16+0200\n"
+"POT-Creation-Date: 2009-08-29 07:29+0200\n"
 "PO-Revision-Date: 2009-07-29 02:19+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -161,10 +161,10 @@ msgstr "Opgavenbeschrieven"
 msgid "Automatically check for new work packages"
 msgstr "Daten automaatsch opfrischen"
 
-#. i18n: ectx: label, entry (RetreiveUrl), group (Work Package)
+#. i18n: ectx: label, entry (RetrieveUrl), group (Work Package)
 #. +> trunk
 #: kplatosettings.kcfg:87
-msgid "Directory where kplato retreives work packages from project members"
+msgid "Directory where kplato retrieves work packages from project members"
 msgstr ""
 
 #. i18n: ectx: label, entry (DeleteFile), group (Work Package)
@@ -179,21 +179,27 @@ msgstr ""
 msgid "If set, kplato will save the file after it has been read"
 msgstr ""
 
-#. i18n: ectx: label, entry (SaveUrl), group (Work Package)
+#. i18n: ectx: label, entry (LeaveFile), group (Work Package)
 #. +> trunk
 #: kplatosettings.kcfg:96
+msgid "If set, kplato will leave where it is the file after it has been read"
+msgstr ""
+
+#. i18n: ectx: label, entry (SaveUrl), group (Work Package)
+#. +> trunk
+#: kplatosettings.kcfg:99
 msgid "Directory where kplato saves work packages when the package has been read"
 msgstr ""
 
 #. i18n: ectx: label, entry (MinimumDurationUnit), group (Miscellaneous)
 #. +> trunk
-#: kplatosettings.kcfg:102
+#: kplatosettings.kcfg:105
 msgid "The smallest duration unit allowed"
 msgstr "De körtst tolaten Tieteenheit"
 
 #. i18n: ectx: label, entry (MaximumDurationUnit), group (Miscellaneous)
 #. +> trunk
-#: kplatosettings.kcfg:106
+#: kplatosettings.kcfg:109
 msgid "The largest duration unit allowed"
 msgstr "De längst tolaten Tieteenheit"
 
@@ -214,6 +220,7 @@ msgstr "© 1998-2009: De KPlato-Koppel"
 
 #. +> trunk
 #: kptaboutdata.h:39
+#, kde-format
 msgid "Part of KOffice release %1"
 msgstr "Deel vun de KOffice-Utgaav %1"
 
@@ -539,19 +546,21 @@ msgid "Insert after current node"
 msgstr "Achter aktuell Knütt infögen"
 
 #. +> trunk stable
-#: kptpart.cpp:158 kptpart.cpp:412
+#: kptpart.cpp:175 kptpart.cpp:428
 msgid "Invalid document. No mimetype specified."
 msgstr "Leeg Dokment. Keen MIME-Typ angeven."
 
 # unreviewed-context
 #. +> trunk stable
-#: kptpart.cpp:162
+#: kptpart.cpp:179
+#, kde-format
 msgid "Invalid document. Expected mimetype application/x-vnd.kde.kplato, got %1"
 msgstr "Leeg Dokment. Verwacht MIME-Typ \"application/x-vnd.kde.kplato\", kregen \"%1\""
 
 # unreviewed-context
 #. +> trunk stable
-#: kptpart.cpp:169
+#: kptpart.cpp:186
+#, kde-format
 msgid ""
 "This document was created with a newer version of KPlato (syntax version: %1)\n"
 "Opening it in this version of KPlato will lose some information."
@@ -560,39 +569,43 @@ msgstr ""
 "opstellt. Bi't Opmaken mit disse Verschoon gaht en poor Informatschonen verloren."
 
 #. +> trunk stable
-#: kptpart.cpp:171 kptpart.cpp:425
+#: kptpart.cpp:188 kptpart.cpp:441
 msgid "File-Format Mismatch"
 msgstr "Leeg Dateiformaat"
 
 #. +> trunk stable
-#: kptpart.cpp:171 kptpart.cpp:425
+#: kptpart.cpp:188 kptpart.cpp:441
 msgid "Continue"
 msgstr "Wiedermaken"
 
 #. +> trunk stable
-#: kptpart.cpp:312
+#: kptpart.cpp:330
+#, kde-format
 msgid "Could not create the workpackage file for saving: %1"
 msgstr "Arbeitpaket-Datei för't Sekern lett sik nich opstellen: %1"
 
 #. +> trunk stable
-#: kptpart.cpp:320
+#: kptpart.cpp:338
+#, kde-format
 msgid "Not able to write '%1'. Partition full?"
 msgstr "\"%1\" lett sik nich schrieven. Partitschoon full?"
 
 #. +> trunk stable
-#: kptpart.cpp:347
+#: kptpart.cpp:365
 msgid "Saving..."
 msgstr "An't Sekern..."
 
 # unreviewed-context
 #. +> trunk stable
-#: kptpart.cpp:416
+#: kptpart.cpp:432
+#, kde-format
 msgid "Invalid document. Expected mimetype application/x-vnd.kde.kplato.work, got %1"
 msgstr "Leeg Dokment. MIME-Typ application/x-vnd.kde.kplato.work verwacht, man %1 kregen"
 
 # unreviewed-context
 #. +> trunk stable
-#: kptpart.cpp:423
+#: kptpart.cpp:439
+#, kde-format
 msgid ""
 "This document was created with a newer version of KPlatoWork (syntax version: %1)\n"
 "Opening it in this version of KPlatoWork will lose some information."
@@ -601,7 +614,18 @@ msgstr ""
 ".Bi't Opmaken mit disse Verschoon vun KPlatowork warrt Di villicht en poor Informatschonen wegkamen."
 
 #. +> trunk
-#: kptpart.cpp:726
+#: kptpart.cpp:654
+#, kde-format
+msgid "The package owner '%1' is not a resource in this project. You must handle this manually."
+msgstr ""
+
+#. +> trunk
+#: kptpart.cpp:676 kptpart.cpp:688
+msgid "Nothing to save from this package"
+msgstr ""
+
+#. +> trunk
+#: kptpart.cpp:824
 msgid "Insert project nodes"
 msgstr "Projektknütten infögen"
 
@@ -923,16 +947,19 @@ msgstr "De plaanten un aktuellen Kösten ankieken"
 
 #. +> trunk stable
 #: kptview.cpp:1381
+#, kde-format
 msgid "%1: Calculating..."
 msgstr "%1: An't Utreken..."
 
 #. +> trunk stable
 #: kptview.cpp:1389
+#, kde-format
 msgid "Calculate %1"
 msgstr "%1 utreken"
 
 #. +> trunk stable
 #: kptview.cpp:1393
+#, kde-format
 msgid "%1: Calculating done"
 msgstr "%1: Utreekt"
 
@@ -948,21 +975,25 @@ msgstr "Disse Plaan bargt en Grundlien. Wullt Du ehr wegdoon?"
 
 #. +> trunk stable
 #: kptview.cpp:1429
+#, kde-format
 msgid "Reset Baseline %1"
 msgstr "Grundlien %1 torüchsetten"
 
 #. +> trunk stable
 #: kptview.cpp:1431
+#, kde-format
 msgid "Baseline %1"
 msgstr "Grundlien %1"
 
 #. +> trunk stable
 #: kptview.cpp:1442
+#, kde-format
 msgid "Add Schedule %1"
 msgstr "Plaan \"%1\" tofögen"
 
 #. +> trunk stable
 #: kptview.cpp:1451
+#, kde-format
 msgid "Delete Schedule %1"
 msgstr "Plaan \"%1\" wegmaken"
 
@@ -1057,32 +1088,39 @@ msgid "Delete Resource Objects"
 msgstr "Ressourceobjekten wegdoon"
 
 #. +> trunk stable
-#: kptview.cpp:2307
+#: kptview.cpp:2302
 msgid "Modify Name"
 msgstr "Naam ännern"
 
 #. +> trunk stable
-#: kptview.cpp:2392
+#: kptview.cpp:2387
 msgid "Not scheduled"
 msgstr "Nich plaant"
 
 #. +> trunk stable
-#: kptview.cpp:2408 kptview.cpp:2448
+#: kptview.cpp:2403 kptview.cpp:2443
 msgid "Failed to open temporary file"
 msgstr "Temporeerdatei lett sik nich opmaken"
 
 #. +> trunk stable
-#: kptview.cpp:2415 kptview.cpp:2455
+#: kptview.cpp:2410 kptview.cpp:2450
+#, kde-format
 msgid "Failed to save to temporary file: %1"
 msgstr "Temporeerdatei lett sik nich sekern: %1"
 
 #. +> trunk stable
-#: kptview.cpp:2423
+#: kptview.cpp:2418
+#, kde-format
 msgid "Work Package: %1"
 msgstr "Arbeitpaket: %1"
 
 #. +> trunk
-#: kptview.cpp:2424
+#: kptview.cpp:2419
+#, kde-format
+#| msgctxt "1=project name, 2=task name"
+#| msgid ""
+#| "%1\n"
+#| "%2"
 msgctxt "1=project name, 2=task name"
 msgid ""
 "%1\n"
@@ -1090,24 +1128,24 @@ msgid ""
 msgstr ""
 
 #. +> trunk
-#: kptview.cpp:2438
-#, fuzzy
+#: kptview.cpp:2433
+#, fuzzy, kde-format
 #| msgid "Work Package: %1"
 msgid "Work Package for project: %1"
 msgstr "Arbeitpaket: %1"
 
 #. +> trunk
-#: kptviewlist.cpp:525
+#: kptviewlist.cpp:538
 msgid "Removing this category will also remove all its views."
 msgstr "Dat Wegdoon vun disse Kategorie warrt ok all ehr Ansichten wegdoon."
 
 #. +> trunk stable
-#: kptviewlist.cpp:630 kptviewlist.cpp:647
+#: kptviewlist.cpp:653 kptviewlist.cpp:670
 msgid "Rename"
 msgstr "Ümnömen"
 
 #. +> trunk
-#: kptviewlist.cpp:634
+#: kptviewlist.cpp:657 kptviewlist.cpp:674 kptviewlist.cpp:687
 msgctxt "@action Insert View"
 msgid "Insert..."
 msgstr "Infögen..."
@@ -1118,18 +1156,13 @@ msgctxt "@action Add View"
 msgid "View..."
 msgstr "Ansicht..."
 
-#. +> stable
-#: kptviewlist.cpp:726
-msgid "Insert"
-msgstr "Infögen"
-
 #. +> trunk stable
-#: kptviewlist.cpp:638 kptviewlist.cpp:651
+#: kptviewlist.cpp:661 kptviewlist.cpp:678
 msgid "Configure..."
 msgstr "Instellen..."
 
 #. +> trunk stable
-#: kptviewlist.cpp:642 kptviewlist.cpp:655
+#: kptviewlist.cpp:665 kptviewlist.cpp:682
 msgid "Remove"
 msgstr "Wegmaken"
 
@@ -1142,6 +1175,11 @@ msgstr "Dokment wegmaken"
 #: kptviewlist.cpp:716
 msgid "Edit"
 msgstr "Bewerken"
+
+#. +> stable
+#: kptviewlist.cpp:726
+msgid "Insert"
+msgstr "Infögen"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. +> trunk stable
@@ -1238,9 +1276,16 @@ msgid "Top"
 msgstr "Baven"
 
 #. +> trunk stable
-#: kptviewlistdialog.cpp:231 kptviewlistdialog.cpp:340
+#: kptviewlistdialog.cpp:231
 msgid "Configure View"
 msgstr "Ansicht instellen"
+
+#. +> trunk
+#: kptviewlistdialog.cpp:340
+#, fuzzy
+#| msgid "Configure KPlato"
+msgid "Configure Category"
+msgstr "KPlato instellen"
 
 #. +> trunk stable
 #: kptviewlistdocker.cpp:38
@@ -1324,25 +1369,31 @@ msgstr "Ut Arbeitpaket opfrischen"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. +> trunk
 #: kptworkpackageconfigpanel.ui:32
-msgid "Retreive url:"
+msgid "Retrieve url:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_DeleteFile)
 #. +> trunk
 #: kptworkpackageconfigpanel.ui:42
-msgid "Delete file after read"
+msgid "Delete file after  it has been retreived"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_SaveFile)
 #. +> trunk
 #: kptworkpackageconfigpanel.ui:49
-msgid "Save file after read"
+msgid "Save file after it has been retreived"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. +> trunk
 #: kptworkpackageconfigpanel.ui:56
 msgid "Save url:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_LeaveFile)
+#. +> trunk
+#: kptworkpackageconfigpanel.ui:79
+msgid "Leave file after it has been retreived"
 msgstr ""
 
 #. +> trunk stable
