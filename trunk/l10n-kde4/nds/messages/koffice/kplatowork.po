@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kplatowork\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-08-20 06:17+0200\n"
+"POT-Creation-Date: 2009-08-29 07:29+0200\n"
 "PO-Revision-Date: 2009-07-11 07:08+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -30,6 +30,16 @@ msgstr "Datei, de opmaakt warrn schall"
 #, kde-format
 msgid "The file %1 does not exist."
 msgstr "De Datei \"%1\" gifft dat nich."
+
+#: packagesettings.cpp:34
+#, fuzzy
+#| msgid "Work Package: %1"
+msgid "Work Package Settings"
+msgstr "Arbeitpaket: %1"
+
+#: packagesettings.cpp:76
+msgid "Modify package settings"
+msgstr ""
 
 #: part.cpp:172
 #, fuzzy, kde-format
@@ -65,11 +75,7 @@ msgstr "Datei \"%1\" gifft dat nich"
 msgid "Edit with:"
 msgstr "Bewerken mit:"
 
-#: part.cpp:353
-msgid "Invalid work package.<br>The package does not contain a task."
-msgstr ""
-
-#: part.cpp:360
+#: part.cpp:352
 #, fuzzy, kde-format
 #| msgid ""
 #| "This workpackage already exists in your project store:\n"
@@ -77,20 +83,20 @@ msgstr ""
 #| "Do you want to overwrite it?"
 msgid ""
 "<p>The work package already exists in the projects store.</p><p>Project: %"
-"1<br>Task: %2</p><p>Do you want to merge the new package with the existing "
-"one?</p>"
+"1<br>Task: %2</p><p>Do you want to update the existing package with data "
+"from the new?</p>"
 msgstr ""
 "Dit Arbeitpaket gifft dat al binnen Dien Projektspieker:\n"
 "%1\n"
 "Wullt Du dat överschrieven?"
 
-#: part.cpp:392
+#: part.cpp:379
 #, fuzzy
 #| msgid "Cannot find work package"
 msgid "Remove failed. Cannot find work package"
 msgstr "Arbeitpaket lett sik nich finnen."
 
-#: part.cpp:395 part.cpp:406
+#: part.cpp:382 part.cpp:393
 #, fuzzy
 #| msgid "Cannot find work package"
 msgid "Remove work package"
@@ -98,7 +104,7 @@ msgid_plural "Remove work packages"
 msgstr[0] "Arbeitpaket lett sik nich finnen."
 msgstr[1] "Arbeitpaket lett sik nich finnen."
 
-#: part.cpp:444
+#: part.cpp:431
 #, fuzzy, kde-format
 #| msgid ""
 #| "Failed to load:\n"
@@ -108,19 +114,19 @@ msgstr ""
 "Laden fehlslaan:\n"
 "%1"
 
-#: part.cpp:457
+#: part.cpp:444
 #, fuzzy, kde-format
 #| msgid "Not a valid KPlatoWork file: %1"
 msgid "Not a valid work package file:<br>%1"
 msgstr "Keen gellen KPlatoWork-Datei: %1"
 
-#: part.cpp:485
+#: part.cpp:472
 #, fuzzy
 #| msgid "Invalid document: no file 'maindoc.xml'."
 msgid "Invalid document. The document does not contain 'maindoc.xml'."
 msgstr "Leeg Dokment: Keen Datei \"maindoc.xml\"."
 
-#: part.cpp:511
+#: part.cpp:498
 #, fuzzy, kde-format
 #| msgid ""
 #| "Failed to open store:\n"
@@ -130,7 +136,7 @@ msgstr ""
 "Spieker lett sik nich opmaken:\n"
 " %1"
 
-#: part.cpp:523
+#: part.cpp:510
 #, fuzzy, kde-format
 #| msgid ""
 #| "Parsing error in %1 at line %2, column %3\n"
@@ -140,11 +146,11 @@ msgstr ""
 "Inleesfehler in %1 in Reeg %2, Striep %3\n"
 "Fehlermellen: %4"
 
-#: part.cpp:541
+#: part.cpp:528
 msgid "Invalid document. No mimetype specified."
 msgstr "Leeg Dokment. Keen MIME-Typ angeven."
 
-#: part.cpp:545
+#: part.cpp:532
 #, kde-format
 msgid ""
 "Invalid document. Expected mimetype application/x-vnd.kde.kplato.work, got %1"
@@ -152,7 +158,7 @@ msgstr ""
 "Leeg Dokment. MIME-Typ application/x-vnd.kde.kplato.work verwacht, man \"%1"
 "\" kregen"
 
-#: part.cpp:552
+#: part.cpp:539
 #, fuzzy, kde-format
 #| msgid ""
 #| "This document was created with a newer version of KPlatoWork (syntax "
@@ -168,20 +174,15 @@ msgstr ""
 ".Bi't Opmaken mit disse Verschoon vun KPlatowork warrt Di villicht en poor "
 "Informatschonen wegkamen."
 
-#: part.cpp:554
+#: part.cpp:541
 msgid "File-Format Mismatch"
 msgstr "Leeg Dateiformaat"
 
-#: part.cpp:554
+#: part.cpp:541
 msgid "Continue"
 msgstr "Wiedermaken"
 
-#: part.cpp:579
-#, kde-format
-msgid "Failed to load project: %1"
-msgstr "Projekt lett sik nich laden: %1"
-
-#: part.cpp:678
+#: part.cpp:627
 #, fuzzy
 #| msgid "Cannot find work package"
 msgid "Edit failed. Cannot find a work package."
@@ -205,15 +206,135 @@ msgstr "&Instellen"
 msgid "&View"
 msgstr "&Ansicht"
 
-#: rc.cpp:10
+#. i18n: file: packagesettings.ui:24
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:12
+msgid ""
+"Package data:\n"
+"These settings indicates to the receiver of the package which information is "
+"relevant."
+msgstr ""
+
+#. i18n: file: packagesettings.ui:34
+#. i18n: ectx: property (toolTip), widget (QCheckBox, ui_usedEffort)
+#: rc.cpp:16
+msgid "The effort you have used on this task."
+msgstr ""
+
+#. i18n: file: packagesettings.ui:37
+#. i18n: ectx: property (text), widget (QCheckBox, ui_usedEffort)
+#: rc.cpp:19
+msgid "Used effort"
+msgstr ""
+
+#. i18n: file: packagesettings.ui:44
+#. i18n: ectx: property (toolTip), widget (QCheckBox, ui_progress)
+#: rc.cpp:22
+msgid ""
+"Progress includes started / start time, finished / finish time and completion"
+msgstr ""
+
+#. i18n: file: packagesettings.ui:47
+#. i18n: ectx: property (text), widget (QCheckBox, ui_progress)
+#: rc.cpp:25
+#, fuzzy
+#| msgid "Progress..."
+msgid "Progress"
+msgstr "Vörankamen..."
+
+#. i18n: file: packagesettings.ui:54
+#. i18n: ectx: property (toolTip), widget (QCheckBox, ui_remainingEffort)
+#: rc.cpp:28
+msgid "Estimate of the remaining effort"
+msgstr ""
+
+#. i18n: file: packagesettings.ui:57
+#. i18n: ectx: property (text), widget (QCheckBox, ui_remainingEffort)
+#: rc.cpp:31
+#, fuzzy
+#| msgid "Modify Remainig Effort"
+msgid "Remaining effort"
+msgstr "Övrigbleven Leisten ännern"
+
+#. i18n: file: packagesettings.ui:64
+#. i18n: ectx: property (toolTip), widget (QCheckBox, ui_documents)
+#: rc.cpp:34
+msgid "The documents attached to this task"
+msgstr ""
+
+#. i18n: file: packagesettings.ui:67
+#. i18n: ectx: property (text), widget (QCheckBox, ui_documents)
+#: rc.cpp:37
+msgid "Documents"
+msgstr "Dokmenten"
+
+#. i18n: file: taskcompletionpanel.ui:30
+#. i18n: ectx: property (text), widget (QCheckBox, started)
+#: rc.cpp:40
+msgid "Started:"
+msgstr ""
+
+#. i18n: file: taskcompletionpanel.ui:47
+#. i18n: ectx: property (text), widget (QCheckBox, finished)
+#: rc.cpp:43
+#, fuzzy
+#| msgid "Set finished"
+msgid "Finished:"
+msgstr "Sett afslaten"
+
+#. i18n: file: taskcompletionpanel.ui:77
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:46
+#, fuzzy
+#| msgid "Edit with:"
+msgid "Edit Mode:"
+msgstr "Bewerken mit:"
+
+#. i18n: file: taskcompletionpanel.ui:88
+#. i18n: ectx: property (text), item, widget (KComboBox, editmode)
+#: rc.cpp:49
+msgid "Calculate"
+msgstr ""
+
+#. i18n: file: taskcompletionpanel.ui:93
+#. i18n: ectx: property (text), item, widget (KComboBox, editmode)
+#: rc.cpp:52
+msgid "Manual entry"
+msgstr ""
+
+#. i18n: file: taskcompletionpanel.ui:106
+#. i18n: ectx: property (text), widget (QPushButton, addEntryBtn)
+#: rc.cpp:55
+msgid "Add Entry"
+msgstr ""
+
+#. i18n: file: taskcompletionpanel.ui:113
+#. i18n: ectx: property (text), widget (QPushButton, removeEntryBtn)
+#: rc.cpp:58
+msgid "Remove Entry"
+msgstr ""
+
+#: rc.cpp:59
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Sönke Dibbern, Manfred Wiese"
 
-#: rc.cpp:11
+#: rc.cpp:60
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s_dibbern@web.de, m.j.wiese@web.de"
+
+#: taskcompletiondialog.cpp:39
+#, fuzzy
+#| msgid "Progress..."
+msgid "Task Progress"
+msgstr "Vörankamen..."
+
+#: taskcompletiondialog.cpp:132
+#, fuzzy
+#| msgid "Modify % Completed"
+msgid "Modify task completion"
+msgstr "Fardig Perzenten ännern"
 
 #: taskworkpackagemodel.cpp:313
 #, no-c-format
@@ -248,92 +369,93 @@ msgstr "Projekt"
 msgid "Configure View..."
 msgstr "Ansicht instellen..."
 
-#: view.cpp:120
+#: view.cpp:123
 #, fuzzy
 #| msgid "Send Package..."
 msgid "Remove Packages"
 msgstr "Paket loosstüern..."
 
-#: view.cpp:124
+#: view.cpp:127
 #, fuzzy
 #| msgid "Send Package..."
 msgid "Remove Package"
 msgstr "Paket loosstüern..."
 
-#: view.cpp:129
-msgid "Progress..."
-msgstr "Vörankamen..."
-
-#: view.cpp:134
+#: view.cpp:137
 msgid "Configure KPlatoWork..."
 msgstr "KPlatoWork instellen..."
 
-#: view.cpp:138
+#: view.cpp:141
 msgid "Edit..."
 msgstr "Bewerken..."
 
-#: view.cpp:142
+#: view.cpp:145
 msgctxt "@verb"
 msgid "View..."
 msgstr "Ankieken..."
 
-#: view.cpp:149
+#: view.cpp:152
 msgid "Send Package..."
 msgstr "Paket loosstüern..."
 
-#: view.cpp:153
+#: view.cpp:156
+msgid "Package Settings..."
+msgstr ""
+
+#: view.cpp:164
 #, fuzzy
 #| msgid "Progress..."
 msgid "Edit Progress..."
 msgstr "Vörankamen..."
 
-#: view.cpp:157
+#: view.cpp:168
 msgid "View Description..."
 msgstr ""
 
-#: view.cpp:302
+#: view.cpp:313
 msgid "This file is not editable"
 msgstr "Disse Datei lett sik nich bewerken"
 
-#: view.cpp:317
+#: view.cpp:345
 msgid "No node selected"
 msgstr "Keen Knütt utsöcht"
 
-#: view.cpp:323
+#: view.cpp:351
 msgid "Cannot find work package"
 msgstr "Arbeitpaket lett sik nich finnen."
 
-#: view.cpp:327
-msgid ""
-"This work package has been modified.\n"
-"Do you want to save it before sending?"
+#: view.cpp:366
+msgid "Could not open temporary file. Sending is aborted."
 msgstr ""
-"Dit Arbeitpaket wöör ännert.\n"
-"Wullt Du dat sekern, ehr dat loosstüert warrt?"
 
-#: view.cpp:340
+#: view.cpp:379
 #, kde-format
 msgid "Work Package: %1"
 msgstr "Arbeitpaket: %1"
 
-#: workpackage.cpp:89
+#: workpackage.cpp:104
 msgid "Document is already open"
 msgstr "Dokment is al apen"
 
-#: workpackage.cpp:161
+#: workpackage.cpp:176
+#, kde-format
+msgid "Failed to load project: %1"
+msgstr "Projekt lett sik nich laden: %1"
+
+#: workpackage.cpp:234
 msgid "Cannot save to empty filename"
 msgstr "Sekern ahn Dateinaam nich mööglich"
 
-#: workpackage.cpp:167
+#: workpackage.cpp:240
 msgid "Could not create the file for saving"
 msgstr "Datei för't Sekern lett sik nich opstellen."
 
-#: workpackage.cpp:179
+#: workpackage.cpp:252
 #, kde-format
 msgid "Not able to write '%1'. Partition full?"
 msgstr "\"%1\" lett sik nich schrieven. Partitschoon vull?"
 
-#: workpackage.cpp:203
+#: workpackage.cpp:276
 #, kde-format
 msgid ""
 "Failed to open store:\n"
@@ -342,7 +464,7 @@ msgstr ""
 "Spieker lett sik nich opmaken:\n"
 " %1"
 
-#: workpackage.cpp:268
+#: workpackage.cpp:341
 #, kde-format
 msgid ""
 "Cannot save to projects store:\n"
@@ -351,7 +473,7 @@ msgstr ""
 "Sekern na Projektspieker nich mööglich:\n"
 "%1"
 
-#: workpackage.cpp:295
+#: workpackage.cpp:375
 #, kde-format
 msgid ""
 "Failed read file:\n"
@@ -360,7 +482,7 @@ msgstr ""
 "Datei lett sik nich lesen:\n"
 " %1"
 
-#: workpackage.cpp:299
+#: workpackage.cpp:379
 #, kde-format
 msgid ""
 "Failed write file:\n"
@@ -369,7 +491,7 @@ msgstr ""
 "Datei lett sik nich schrieven:\n"
 " %1"
 
-#: workpackage.cpp:391
+#: workpackage.cpp:472
 #, kde-format
 msgid ""
 "<p>The work package <b>'%2'</b> has an open document.</p><p>Data may be lost "
@@ -384,7 +506,7 @@ msgstr[1] ""
 "<p>Dat Arbeitpaket <b>\"%2\"</b> hett Dokmenten opmaakt.</p><p>Di kaamt "
 "villicht Daten weg, wenn Du wiedermaakst.</p>"
 
-#: workpackage.cpp:412
+#: workpackage.cpp:493
 #, kde-format
 msgid ""
 "<p>The work package <b>'%1'</b> has been modified.</p><p>Do you want to save "
@@ -392,14 +514,14 @@ msgid ""
 msgstr ""
 "<p>Dat Arbeitpaket <b>\"%1\"</b> wöör ännert.</p><p>Wullt Du dat sekern?</p>"
 
-#: workpackage.cpp:438
+#: workpackage.cpp:519
 #, kde-format
 msgid "<p>Work package <b>'%1'</b></p><p>Could not open store:</p><p>%2</p>"
 msgstr ""
 "<p>Arbeitpaket <b>\"%1\"</b></p><p>Spieker lett sik nich opmaken:</p><p>%2</"
 "p>"
 
-#: workpackage.cpp:448
+#: workpackage.cpp:529
 #, kde-format
 msgid "<p>Work package <b>'%1'</b></p><p>Could not extract file:</p><p>%2</p>"
 msgstr ""
@@ -421,6 +543,13 @@ msgstr "© 2007-2009: De KPlato-Schrieverslüüd"
 #: aboutdata.h:42
 msgid "Dag Andersen"
 msgstr "Dag Andersen"
+
+#~ msgid ""
+#~ "This work package has been modified.\n"
+#~ "Do you want to save it before sending?"
+#~ msgstr ""
+#~ "Dit Arbeitpaket wöör ännert.\n"
+#~ "Wullt Du dat sekern, ehr dat loosstüert warrt?"
 
 #~ msgid ""
 #~ "Document is already open:\n"
@@ -451,9 +580,6 @@ msgstr "Dag Andersen"
 
 #~ msgid "Information"
 #~ msgstr "Informatschonen"
-
-#~ msgid "Documents"
-#~ msgstr "Dokmenten"
 
 #~ msgid "Not scheduled"
 #~ msgstr "Nich plaant"
