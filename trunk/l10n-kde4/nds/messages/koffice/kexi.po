@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kexi\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-08-31 06:14+0200\n"
+"POT-Creation-Date: 2009-09-01 06:49+0200\n"
 "PO-Revision-Date: 2009-08-11 06:19+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -2373,6 +2373,7 @@ msgid "Could not load data from table or query."
 msgstr "Daten ut de Tabell oder de Anfraag laat sik nich laden."
 
 #: main/printing/kexisimpleprintingengine.cpp:327
+#: formeditor/factories/containerfactory.cpp:276
 #, kde-format
 msgid "Page %1"
 msgstr "Siet %1"
@@ -2561,11 +2562,13 @@ msgstr ""
 
 #: koproperty1/koproperty/editors/stringlistedit.cpp:95
 #: koproperty2/koproperty/editors/stringlistedit.cpp:95
+#: formeditor/widgetfactory.cpp:204
 msgid "Edit List of Items"
 msgstr "List vun Indrääg bewerken"
 
 #: koproperty1/koproperty/editors/stringlistedit.cpp:101
 #: koproperty2/koproperty/editors/stringlistedit.cpp:101
+#: formeditor/widgetfactory.cpp:208
 #, kde-format
 msgid "Contents of %1"
 msgstr "Inholt vun %1"
@@ -2580,10 +2583,12 @@ msgid "Change font"
 msgstr "Schriftoort ännern"
 
 #: koproperty1/koproperty/editors/fontedit.cpp:101
+#: formeditor/richtextdialog.cpp:66
 msgid "Bold"
 msgstr "Fett"
 
 #: koproperty1/koproperty/editors/fontedit.cpp:102
+#: formeditor/richtextdialog.cpp:68
 msgid "Italic"
 msgstr "Kursiev"
 
@@ -2663,6 +2668,7 @@ msgstr "Allgemeen"
 #: koproperty1/koproperty/customproperty.cpp:187
 #: koproperty2/koproperty/editors/rectedit.cpp:49
 #: koproperty2/koproperty/editors/sizeedit.cpp:43
+#: formeditor/editlistviewdialog.cpp:122
 msgid "Width"
 msgstr "Breed"
 
@@ -2693,7 +2699,7 @@ msgstr "Y"
 #: koproperty1/koproperty/customproperty.cpp:285
 #: koproperty1/koproperty/customproperty.cpp:286
 #: koproperty1/koproperty/customproperty.cpp:287
-#: koproperty1/koproperty/customproperty.cpp:288
+#: koproperty1/koproperty/customproperty.cpp:288 formeditor/form.cpp:416
 msgid "Size Policy"
 msgstr "Grött-Regel"
 
@@ -2743,7 +2749,8 @@ msgstr "Ännern torüchnehmen"
 #. i18n: file: plugins/queries/kexiparameterlisteditor.ui:30
 #. i18n: ectx: property (text), widget (K3ListView)
 #: koproperty1/koproperty/editor.cpp:153
-#: koproperty2/koproperty/EditorView.cpp:744 rc.cpp:105 rc.cpp:306
+#: koproperty2/koproperty/EditorView.cpp:744 formeditor/form.cpp:408
+#: formeditor/form.cpp:409 rc.cpp:105 rc.cpp:306
 #: plugins/tables/kexitabledesignerview.cpp:351
 msgid "Name"
 msgstr "Naam"
@@ -3326,7 +3333,7 @@ msgstr "Eenfach naue Tiet"
 msgid "Double Precision Number"
 msgstr "Dubbelt naue Tiet"
 
-#: kexidb/field.cpp:716 kexidb/field.cpp:737
+#: kexidb/field.cpp:716 kexidb/field.cpp:737 formeditor/form.cpp:412
 #: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:1499
 msgid "Text"
 msgstr "Text"
@@ -4131,6 +4138,2111 @@ msgstr "Tall"
 msgid "Image"
 msgstr "Bild"
 
+#: formeditor/commands.cpp:153
+#, fuzzy, kde-format
+#| msgid "Change \"%1\" property for table field from \"%2\" to \"%3\""
+msgid "Change \"%1\" property for multiple widgets"
+msgstr "Egenschap \"%1\" för Tabellenfeld vun \"%2\" na \"%3\" ännern"
+
+#: formeditor/commands.cpp:156
+#, fuzzy, kde-format
+#| msgid "Set \"%1\" property for field \"%2\""
+msgid "Change \"%1\" property for widget \"%2\""
+msgstr "Egenschap \"%1\" för Feld \"%2\" fastleggen"
+
+#: formeditor/commands.cpp:325 formeditor/container.cpp:1437
+msgid "Move multiple widgets"
+msgstr ""
+
+#: formeditor/commands.cpp:419
+#, fuzzy
+#| msgid "Align Widgets Position"
+msgid "Align Widgets to Grid"
+msgstr "Stüerelementen utrichten"
+
+#: formeditor/commands.cpp:422
+#, fuzzy
+#| msgid "Align Widgets Position"
+msgid "Align Widgets to Left"
+msgstr "Stüerelementen utrichten"
+
+#: formeditor/commands.cpp:425
+#, fuzzy
+#| msgid "Align Widgets Position"
+msgid "Align Widgets to Right"
+msgstr "Stüerelementen utrichten"
+
+#: formeditor/commands.cpp:428
+#, fuzzy
+#| msgid "Align Widgets Position"
+msgid "Align Widgets to Top"
+msgstr "Stüerelementen utrichten"
+
+#: formeditor/commands.cpp:431
+#, fuzzy
+#| msgid "Align Widgets Position"
+msgid "Align Widgets to Bottom"
+msgstr "Stüerelementen utrichten"
+
+#: formeditor/commands.cpp:582
+#, fuzzy
+#| msgid "Bring Widget to Front"
+msgid "Resize Widgets to Grid"
+msgstr "Stüerelement na vörn"
+
+#: formeditor/commands.cpp:585
+#, fuzzy
+#| msgid "Clear Widget Contents"
+msgid "Resize Widgets to Fit Contents"
+msgstr "Stüerelementinholt leddig maken"
+
+#: formeditor/commands.cpp:588
+#, fuzzy
+#| msgid "Bring Widget to Front"
+msgid "Resize Widgets to Narrowest"
+msgstr "Stüerelement na vörn"
+
+#: formeditor/commands.cpp:591
+msgid "Resize Widgets to Widest"
+msgstr ""
+
+#: formeditor/commands.cpp:594
+msgid "Resize Widgets to Shortest"
+msgstr ""
+
+#: formeditor/commands.cpp:597
+msgid "Resize Widgets to Tallest"
+msgstr ""
+
+#: formeditor/commands.cpp:812
+#, kde-format
+msgid "Change layout of widget \"%1\""
+msgstr ""
+
+#: formeditor/commands.cpp:916
+#, fuzzy, kde-format
+#| msgid "Insert table field \"%1\""
+msgid "Insert widget \"%1\""
+msgstr "Tabellenfeld \"%1\" infögen"
+
+#: formeditor/commands.cpp:919
+#, fuzzy
+#| msgid "Insert AutoField widget"
+msgid "Insert widget"
+msgstr "Autofeld-Stüerelement infögen"
+
+#: formeditor/commands.cpp:960
+#, kde-format
+msgid ""
+"Could not insert widget of type \"%1\". A problem with widget's creation "
+"encountered."
+msgstr ""
+
+#: formeditor/commands.cpp:1139
+#, fuzzy
+#| msgctxt "Mouse Cursor Shape"
+#| msgid "Split Horizontal"
+msgid "Group Widgets Horizontally"
+msgstr "Kimmrecht delen"
+
+#: formeditor/commands.cpp:1142
+#, fuzzy
+#| msgctxt "Mouse Cursor Shape"
+#| msgid "Split Vertical"
+msgid "Group Widgets Vertically"
+msgstr "Pielrecht delen"
+
+#: formeditor/commands.cpp:1145
+msgid "Group Widgets in a Grid"
+msgstr ""
+
+#: formeditor/commands.cpp:1148
+#, fuzzy
+#| msgid "Horizontally in &Splitter"
+msgid "Group Widgets Horizontally in a Splitter"
+msgstr "Kimmrecht in &Trenner"
+
+#: formeditor/commands.cpp:1151
+#, fuzzy
+#| msgid "Verti&cally in Splitter"
+msgid "Group Widgets Vertically in a Splitter"
+msgstr "&Pielrecht in Trenner"
+
+#: formeditor/commands.cpp:1154
+msgid "Group Widgets By Rows"
+msgstr ""
+
+#: formeditor/commands.cpp:1157
+msgid "Group Widgets Vertically By Columns"
+msgstr ""
+
+#: formeditor/commands.cpp:1160
+#, fuzzy
+#| msgid "Group Sections"
+msgid "Group widgets"
+msgstr "Koppelafsnitten"
+
+#: formeditor/commands.cpp:1290
+#, fuzzy, kde-format
+#| msgid "&Break Layout"
+msgid "Break Layout: \"%1\""
+msgstr "Anornen op&breken"
+
+#: formeditor/commands.cpp:1372
+#: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:1071
+#: plugins/reportspgz/kexireportdesignview.cpp:41
+msgid "Paste"
+msgstr "Infögen"
+
+#: formeditor/commands.cpp:1699
+#, fuzzy
+#| msgid "Delete Row"
+msgid "Delete widget"
+msgstr "Reeg wegdoon"
+
+#: formeditor/commands.cpp:1834
+msgid "Duplicate widget"
+msgstr ""
+
+#: formeditor/commands.cpp:1883
+#: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:1067
+#: plugins/reportspgz/kexireportdesignview.cpp:37
+msgid "Cut"
+msgstr "Knippen"
+
+#: formeditor/factories/stdwidgetfactory.cpp:139
+msgctxt "Edit rich text for a widget"
+msgid "Edit Rich Text"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:184 formeditor/form.cpp:720
+#: plugins/forms/kexidbfactory.cpp:77 plugins/forms/kexiformpart.cpp:92
+msgid "Form"
+msgstr "Kiekwark"
+
+#: formeditor/factories/stdwidgetfactory.cpp:186
+#, fuzzy
+#| msgctxt ""
+#| "Widget name. This string will be used to name widgets of this class. It "
+#| "must _not_ contain white spaces and non latin1 characters."
+#| msgid "form"
+msgctxt ""
+"This string will be used to name widgets of this class. It must _not_ "
+"contain white spaces and non latin1 characters."
+msgid "form"
+msgstr "kiekwark"
+
+#: formeditor/factories/stdwidgetfactory.cpp:187
+#, fuzzy
+#| msgid "A simple frame widget"
+msgid "A simple form widget"
+msgstr "En eenfach Rahmen-Stüerelement"
+
+#: formeditor/factories/stdwidgetfactory.cpp:193
+#, fuzzy
+#| msgid "Layout Widgets"
+msgid "Custom Widget"
+msgstr "Stüerelementen anornen"
+
+#: formeditor/factories/stdwidgetfactory.cpp:195
+#, fuzzy
+#| msgid "Widgets"
+msgctxt ""
+"This string will be used to name widgets of this class. It must _not_ "
+"contain white spaces and non latin1 characters."
+msgid "customWidget"
+msgstr "Stüerelementen"
+
+#: formeditor/factories/stdwidgetfactory.cpp:196
+#, fuzzy
+#| msgid "A combo box widget"
+msgid "A custom or non-supported widget"
+msgstr "En Utsöökfeld-Stüerelement"
+
+#: formeditor/factories/stdwidgetfactory.cpp:202
+#, fuzzy
+#| msgid "TextLabel"
+msgid "Text Label"
+msgstr "TextBeteker"
+
+#: formeditor/factories/stdwidgetfactory.cpp:204
+#: plugins/forms/kexidbfactory.cpp:148
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "label"
+msgstr "textfeld"
+
+#: formeditor/factories/stdwidgetfactory.cpp:205
+#, fuzzy
+#| msgid "A widget for displaying text"
+msgid "A widget to display text"
+msgstr "En Stüerelement för't Wiesen vun Text"
+
+#: formeditor/factories/stdwidgetfactory.cpp:211
+#, fuzzy
+#| msgid "Auto Label"
+msgid "Picture Label"
+msgstr "Automaatsch Beschriften"
+
+#: formeditor/factories/stdwidgetfactory.cpp:216
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "picture"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:217
+#, fuzzy
+#| msgid "A widget for displaying images"
+msgid "A widget to display pictures"
+msgstr "En Stüerelement för't Wiesen vun Biller"
+
+#: formeditor/factories/stdwidgetfactory.cpp:225
+#, fuzzy
+#| msgid "Line"
+msgid "Line Edit"
+msgstr "Lien"
+
+#: formeditor/factories/stdwidgetfactory.cpp:227
+#, fuzzy
+#| msgid "&Edit"
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "lineEdit"
+msgstr "&Bewerken"
+
+#: formeditor/factories/stdwidgetfactory.cpp:228
+#, fuzzy
+#| msgid "A widget for displaying text"
+msgid "A widget to input text"
+msgstr "En Stüerelement för't Wiesen vun Text"
+
+#: formeditor/factories/stdwidgetfactory.cpp:234
+#, fuzzy
+#| msgid "Sorting"
+msgid "Spring"
+msgstr "Sorteren"
+
+#: formeditor/factories/stdwidgetfactory.cpp:236
+#, fuzzy
+#| msgid "printing"
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "spring"
+msgstr "An't Drucken"
+
+#: formeditor/factories/stdwidgetfactory.cpp:237
+msgid "A spring to place between widgets"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:245
+msgid "Push Button"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:247
+#: plugins/forms/kexidbfactory.cpp:274
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "button"
+msgstr "knoop"
+
+#: formeditor/factories/stdwidgetfactory.cpp:248
+#, fuzzy
+#| msgid "A command button to execute actions"
+msgid "A simple push button to execute actions"
+msgstr "En Befehlknoop för't Utföhren vun Akschonen"
+
+#: formeditor/factories/stdwidgetfactory.cpp:254
+#, fuzzy
+#| msgid "Command Button"
+msgid "Option Button"
+msgstr "Befehlknoop"
+
+#: formeditor/factories/stdwidgetfactory.cpp:256
+#, fuzzy
+#| msgid "Command Button"
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "optionButton"
+msgstr "Befehlknoop"
+
+#: formeditor/factories/stdwidgetfactory.cpp:257
+#, fuzzy
+#| msgid "A check box with text label"
+msgid "An option button with text or pixmap label"
+msgstr "En Ankrüüzfeld mit Text"
+
+#: formeditor/factories/stdwidgetfactory.cpp:263
+#: plugins/forms/kexidbfactory.cpp:190
+msgid "Check Box"
+msgstr "Ankrüüzfeld"
+
+#: formeditor/factories/stdwidgetfactory.cpp:265
+#: plugins/forms/kexidbfactory.cpp:193
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "checkBox"
+msgstr "ankrüüzfeld"
+
+#: formeditor/factories/stdwidgetfactory.cpp:266
+#, fuzzy
+#| msgid "A check box with text label"
+msgid "A check box with text or pixmap label"
+msgstr "En Ankrüüzfeld mit Text"
+
+#: formeditor/factories/stdwidgetfactory.cpp:274
+msgid "Spin Box"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:276
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "spinBox"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:277
+#, fuzzy
+#| msgid "A combo box widget"
+msgid "A spin box widget"
+msgstr "En Utsöökfeld-Stüerelement"
+
+#: formeditor/factories/stdwidgetfactory.cpp:285
+#: plugins/forms/kexidbfactory.cpp:178
+msgid "Combo Box"
+msgstr "Utsöökfeld"
+
+#: formeditor/factories/stdwidgetfactory.cpp:287
+#: plugins/forms/kexidbfactory.cpp:181
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "comboBox"
+msgstr "utsöökfeld"
+
+#: formeditor/factories/stdwidgetfactory.cpp:288
+#: plugins/forms/kexidbfactory.cpp:182
+msgid "A combo box widget"
+msgstr "En Utsöökfeld-Stüerelement"
+
+#: formeditor/factories/stdwidgetfactory.cpp:298
+#, fuzzy
+#| msgid "Listen port"
+msgid "List Box"
+msgstr "Luusterport"
+
+#: formeditor/factories/stdwidgetfactory.cpp:300
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "listBox"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:301
+#, fuzzy
+#| msgid "A simple frame widget"
+msgid "A simple list widget"
+msgstr "En eenfach Rahmen-Stüerelement"
+
+#: formeditor/factories/stdwidgetfactory.cpp:310
+#: plugins/forms/kexidbfactory.cpp:119
+msgid "Text Editor"
+msgstr "Texteditor"
+
+#: formeditor/factories/stdwidgetfactory.cpp:312
+#: plugins/forms/kexidbfactory.cpp:122
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "textEditor"
+msgstr "texteditor"
+
+#: formeditor/factories/stdwidgetfactory.cpp:313
+#, fuzzy
+#| msgid "A multiline text editor"
+msgid "A simple single-page rich text editor"
+msgstr "En Text-Ingaavfeld"
+
+#: formeditor/factories/stdwidgetfactory.cpp:323
+#, fuzzy
+#| msgid "Layout Widgets"
+msgid "List Widget"
+msgstr "Stüerelementen anornen"
+
+#: formeditor/factories/stdwidgetfactory.cpp:325
+#, fuzzy
+#| msgid "Widgets"
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "listWidget"
+msgstr "Stüerelementen"
+
+#: formeditor/factories/stdwidgetfactory.cpp:326
+msgid "A list (or tree) widget"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:333
+#, fuzzy
+#| msgid "Size"
+msgid "Slider"
+msgstr "Grött"
+
+#: formeditor/factories/stdwidgetfactory.cpp:335
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "slider"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:336
+#, fuzzy
+#| msgid "Horizontal Policy"
+msgid "An horizontal slider"
+msgstr "Kimmrecht-Regel"
+
+#: formeditor/factories/stdwidgetfactory.cpp:342
+msgid "Progress Bar"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:344
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "progressBar"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:345
+msgid "A progress indicator widget"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:351
+#: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:1503
+#: plugins/reportspgz/koreport/common/krchartdata.cpp:145
+msgid "Line"
+msgstr "Lien"
+
+#: formeditor/factories/stdwidgetfactory.cpp:353
+#, fuzzy
+#| msgid "Line"
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "line"
+msgstr "Lien"
+
+#: formeditor/factories/stdwidgetfactory.cpp:354
+msgid "A line to be used as a separator"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:362
+#, fuzzy
+#| msgid "Other Widgets"
+msgid "Date Widget"
+msgstr "Anner Stüerelementen"
+
+#: formeditor/factories/stdwidgetfactory.cpp:364
+#, fuzzy
+#| msgid "Widgets"
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "dateWidget"
+msgstr "Stüerelementen"
+
+#: formeditor/factories/stdwidgetfactory.cpp:365
+#, fuzzy
+#| msgid "A widget for entering and displaying text"
+msgid "A widget to input and display a date"
+msgstr "En Stüerelement för't Ingeven un Wiesen vun Text"
+
+#: formeditor/factories/stdwidgetfactory.cpp:373
+#, fuzzy
+#| msgid "To Widest"
+msgid "Time Widget"
+msgstr "Na't Breedst"
+
+#: formeditor/factories/stdwidgetfactory.cpp:375
+#, fuzzy
+#| msgid "Widgets"
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "timeWidget"
+msgstr "Stüerelementen"
+
+#: formeditor/factories/stdwidgetfactory.cpp:376
+#, fuzzy
+#| msgid "A widget for entering and displaying text"
+msgid "A widget to input and display a time"
+msgstr "En Stüerelement för't Ingeven un Wiesen vun Text"
+
+#: formeditor/factories/stdwidgetfactory.cpp:384
+#, fuzzy
+#| msgid "Date/Time"
+msgid "Date/Time Widget"
+msgstr "Datum/Tiet"
+
+#: formeditor/factories/stdwidgetfactory.cpp:386
+#, fuzzy
+#| msgid "Date/Time"
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "dateTimeWidget"
+msgstr "Datum/Tiet"
+
+#: formeditor/factories/stdwidgetfactory.cpp:387
+#, fuzzy
+#| msgid "A widget for entering and displaying text"
+msgid "A widget to input and display a time and a date"
+msgstr "En Stüerelement för't Ingeven un Wiesen vun Text"
+
+#: formeditor/factories/stdwidgetfactory.cpp:390
+msgid "Toggle"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:391
+#, fuzzy
+#| msgid "Check"
+msgctxt "Button is checkable"
+msgid "Checkable"
+msgstr "Pröven"
+
+#: formeditor/factories/stdwidgetfactory.cpp:392
+msgid "Auto Repeat"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:393
+msgctxt "Auto Repeat Button's Delay"
+msgid "Auto Rep. Delay"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:394
+msgctxt "Auto Repeat Button's Interval"
+msgid "Auto Rep. Interval"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:395
+#, fuzzy
+#| msgid "Default"
+msgid "Auto Default"
+msgstr "Standard"
+
+#: formeditor/factories/stdwidgetfactory.cpp:396
+#: plugins/reportspgz/koreport/common/krchartdata.cpp:161
+msgid "Default"
+msgstr "Standard"
+
+#: formeditor/factories/stdwidgetfactory.cpp:397
+#: formeditor/factories/containerfactory.cpp:778
+#, fuzzy
+#| msgid "Format"
+msgid "Flat"
+msgstr "Formaat"
+
+#: formeditor/factories/stdwidgetfactory.cpp:399
+msgctxt "Echo mode for Line Edit widget eg. Normal, NoEcho, Password"
+msgid "Echo Mode"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:400
+#, fuzzy
+#| msgctxt "Insert selected field into form"
+#| msgid "Insert"
+msgid "Indent"
+msgstr "Infögen"
+
+#: formeditor/factories/stdwidgetfactory.cpp:402
+#, fuzzy
+#| msgid "Authentication"
+msgid "Orientation"
+msgstr "Identiteetprööv"
+
+#: formeditor/factories/stdwidgetfactory.cpp:404
+#, fuzzy
+#| msgid "Check"
+msgctxt "Checked checkbox"
+msgid "Checked"
+msgstr "Pröven"
+
+#: formeditor/factories/stdwidgetfactory.cpp:405
+msgctxt "Tristate checkbox"
+msgid "Tristate"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:408
+#, fuzzy
+#| msgid "Horz. Size Type"
+msgid "Size Type"
+msgstr "Kimmr. Grött-Typ"
+
+#: formeditor/factories/stdwidgetfactory.cpp:411
+#, fuzzy
+#| msgid "Format"
+msgid "Text Format"
+msgstr "Formaat"
+
+#: formeditor/factories/stdwidgetfactory.cpp:412
+#, fuzzy
+#| msgid "Print"
+msgctxt "For Text Format"
+msgid "Plain"
+msgstr "Drucken"
+
+#: formeditor/factories/stdwidgetfactory.cpp:413
+#, fuzzy
+#| msgid "text"
+msgctxt "For Text Format"
+msgid "Hypertext"
+msgstr "Text"
+
+#: formeditor/factories/stdwidgetfactory.cpp:414
+#, fuzzy
+#| msgctxt "AutoField editor's type"
+#| msgid "Auto"
+msgctxt "For Text Format"
+msgid "Auto"
+msgstr "Automaatsch"
+
+#: formeditor/factories/stdwidgetfactory.cpp:415
+msgctxt "For Text Format"
+msgid "Log"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:416
+#, fuzzy
+#| msgid "Open External File"
+msgctxt "property: Can open external links in label"
+msgid "Open Ext. Links"
+msgstr "Extern Datei opmaken"
+
+#: formeditor/factories/stdwidgetfactory.cpp:419
+#, fuzzy
+#| msgid "Message:"
+msgctxt "Property: \"Click Me\" message for line edit"
+msgid "Click Message"
+msgstr "Mellen:"
+
+#: formeditor/factories/stdwidgetfactory.cpp:420
+#, fuzzy
+#| msgid "Command Button"
+msgctxt "Property: Show Clear Button"
+msgid "Clear Button"
+msgstr "Befehlknoop"
+
+#: formeditor/factories/stdwidgetfactory.cpp:426
+#, fuzzy
+#| msgid "&Password:"
+msgctxt "Password Mode for line edit"
+msgid "Password Mode"
+msgstr "&Passwoort:"
+
+#: formeditor/factories/stdwidgetfactory.cpp:427
+msgctxt "Squeezed Text Mode for line edit"
+msgid "Squeezed Text"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:430
+#, fuzzy
+#| msgid "To Widest"
+msgid "Tab Stop Width"
+msgstr "Na't Breedst"
+
+#: formeditor/factories/stdwidgetfactory.cpp:431
+#, fuzzy
+#| msgid "Save Changes"
+msgid "Tab Changes Focus"
+msgstr "Ännern sekern"
+
+#: formeditor/factories/stdwidgetfactory.cpp:432
+#, fuzzy
+#| msgid "Hor. Policy"
+msgid "Word Wrap Policy"
+msgstr "Kimmr.-Regel"
+
+#: formeditor/factories/stdwidgetfactory.cpp:433
+msgctxt "For Word Wrap Policy"
+msgid "At Word Boundary"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:434
+msgctxt "For Word Wrap Policy"
+msgid "Anywhere"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:435
+msgctxt "For Word Wrap Policy"
+msgid "At Word Boundary If Possible"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:436
+msgid "Word Wrapping"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:437
+#, fuzzy
+#| msgid "Label Position"
+msgid "Word Wrap Position"
+msgstr "Beschriftenpositschoon"
+
+#: formeditor/factories/stdwidgetfactory.cpp:438
+#, fuzzy
+#| msgid "None"
+msgctxt "For Word Wrap Position"
+msgid "None"
+msgstr "Keen"
+
+#: formeditor/factories/stdwidgetfactory.cpp:439
+#, fuzzy
+#| msgid "Widgets"
+msgctxt "For Word Wrap Position"
+msgid "Widget's Width"
+msgstr "Stüerelementen"
+
+#: formeditor/factories/stdwidgetfactory.cpp:440
+msgctxt "For Word Wrap Position"
+msgid "In Pixels"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:441
+#, fuzzy
+#| msgid "Column"
+msgctxt "For Word Wrap Position"
+msgid "In Columns"
+msgstr "Striep"
+
+#: formeditor/factories/stdwidgetfactory.cpp:442
+msgid "Links Underlined"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:443
+#, fuzzy
+#| msgid "Horizontal Policy"
+msgid "Horizontal Scroll Bar"
+msgstr "Kimmrecht-Regel"
+
+#: formeditor/factories/stdwidgetfactory.cpp:444
+#, fuzzy
+#| msgid "Vertical Policy"
+msgid "Vertical Scroll Bar"
+msgstr "Pielrecht-Regel"
+
+#: formeditor/factories/stdwidgetfactory.cpp:446
+msgctxt "Show Scroll Bar As Needed"
+msgid "As Needed"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:447
+msgctxt "Scroll Bar Always Off"
+msgid "Always Off"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:448
+msgctxt "Scroll Bar Always On"
+msgid "Always On"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:449
+#, fuzzy
+#| msgid "Text"
+msgctxt "Property: Text Edit accepts rich text"
+msgid "Rich Text"
+msgstr "Text"
+
+#: formeditor/factories/stdwidgetfactory.cpp:450
+msgctxt "Property: HTML value of text edit"
+msgid "HTML"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:456
+#, fuzzy
+#| msgctxt "Mouse Cursor Shape"
+#| msgid "Size Horizontal"
+msgid "Insert &Horizontal Line"
+msgstr "Grött kimmrecht"
+
+#: formeditor/factories/stdwidgetfactory.cpp:457
+msgid "Insert &Vertical Line"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:461
+#, fuzzy
+#| msgid "Horizontal Stretch"
+msgid "Insert &Horizontal Spring"
+msgstr "Kimmrecht Utwiedern"
+
+#: formeditor/factories/stdwidgetfactory.cpp:462
+msgid "Insert &Vertical Spring"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:511
+#, fuzzy
+#| msgid "Column %1"
+msgid "Column 1"
+msgstr "Striep %1"
+
+#: formeditor/factories/stdwidgetfactory.cpp:573
+msgid "Edit Contents of List Widget"
+msgstr ""
+
+#: formeditor/factories/stdwidgetfactory.cpp:1063
+#, fuzzy
+#| msgid "Default"
+msgctxt "default indent value"
+msgid "default"
+msgstr "Standard"
+
+#: formeditor/factories/containerfactory.cpp:253
+#, fuzzy
+#| msgid "Odd Page(s)"
+msgid "Add Page"
+msgstr "Unevene Sieden"
+
+#: formeditor/factories/containerfactory.cpp:381
+#, fuzzy
+#| msgid "Odd Page(s)"
+msgctxt "Add page to tab widget"
+msgid "Add Page"
+msgstr "Unevene Sieden"
+
+#: formeditor/factories/containerfactory.cpp:419
+#, fuzzy
+#| msgid "Remove Item"
+msgctxt "Remove tab widget's page"
+msgid "Remove Page"
+msgstr "Element wegmaken"
+
+#: formeditor/factories/containerfactory.cpp:460
+#, fuzzy
+#| msgid "Rename Item"
+msgctxt "Rename tab widget's page"
+msgid "Rename Page..."
+msgstr "Element ümnömen"
+
+#: formeditor/factories/containerfactory.cpp:475
+#: formeditor/factories/containerfactory.cpp:1132
+#, fuzzy
+#| msgid "Page title:"
+msgid "New Page Title"
+msgstr "Siedentitel:"
+
+#: formeditor/factories/containerfactory.cpp:476
+#: formeditor/factories/containerfactory.cpp:1133
+msgid "Enter a new title for the current page:"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:498
+#, fuzzy
+#| msgid "&Add..."
+msgctxt "Add page to a stacked widget"
+msgid "Add Page..."
+msgstr "&Tofögen..."
+
+#: formeditor/factories/containerfactory.cpp:539
+#, fuzzy
+#| msgid "Remove Item"
+msgctxt "Remove page from a stacked widget"
+msgid "Remove Page"
+msgstr "Element wegmaken"
+
+#: formeditor/factories/containerfactory.cpp:607
+#, fuzzy
+#| msgid "Previous Page"
+msgctxt "Go to Previous Page of a Stacked Widget"
+msgid "Go to Previous Page"
+msgstr "Verleden Siet"
+
+#: formeditor/factories/containerfactory.cpp:608
+#, fuzzy
+#| msgid "Next Page"
+msgctxt "Go to Next Page of a Stacked Widget"
+msgid "Go to Next Page"
+msgstr "Nakamen Siet"
+
+#: formeditor/factories/containerfactory.cpp:646
+msgid "Button Group"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:648
+#, fuzzy
+#| msgctxt ""
+#| "Widget name. This string will be used to name widgets of this class. It "
+#| "must _not_ contain white spaces and non latin1 characters."
+#| msgid "button"
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "buttonGroup"
+msgstr "knoop"
+
+#: formeditor/factories/containerfactory.cpp:649
+msgid "A simple container to group buttons"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:661
+#, fuzzy
+#| msgid "To Widest"
+msgid "Tab Widget"
+msgstr "Na't Breedst"
+
+#: formeditor/factories/containerfactory.cpp:663
+#, fuzzy
+#| msgid "Widgets"
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "tabWidget"
+msgstr "Stüerelementen"
+
+#: formeditor/factories/containerfactory.cpp:664
+#, fuzzy
+#| msgid "A widget for displaying images"
+msgid "A widget to display multiple pages using tabs"
+msgstr "En Stüerelement för't Wiesen vun Biller"
+
+#: formeditor/factories/containerfactory.cpp:671
+msgid "Basic container"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:673
+#, fuzzy
+#| msgid "Pointer"
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "container"
+msgstr "Wieser"
+
+#: formeditor/factories/containerfactory.cpp:674
+msgid "An empty container with no frame"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:680
+#, fuzzy
+#| msgid "Group by"
+msgid "Group Box"
+msgstr "Ornen na"
+
+#: formeditor/factories/containerfactory.cpp:682
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "groupBox"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:683
+msgid "A container to group some widgets"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:689 formeditor/form.cpp:433
+#: plugins/forms/kexidbfactory.cpp:132
+msgid "Frame"
+msgstr "Rahmen"
+
+#: formeditor/factories/containerfactory.cpp:691
+#: plugins/forms/kexidbfactory.cpp:135
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "frame"
+msgstr "rahmen"
+
+#: formeditor/factories/containerfactory.cpp:692
+#, fuzzy
+#| msgid "A simple frame widget"
+msgid "A simple frame container"
+msgstr "En eenfach Rahmen-Stüerelement"
+
+#: formeditor/factories/containerfactory.cpp:699
+#, fuzzy
+#| msgid "Send Widget to Back"
+msgid "Widget Stack"
+msgstr "Stüerelement na achtern"
+
+#: formeditor/factories/containerfactory.cpp:701
+#, fuzzy
+#| msgid "Send Widget to Back"
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "widgetStack"
+msgstr "Stüerelement na achtern"
+
+#: formeditor/factories/containerfactory.cpp:702
+msgid "A container with multiple pages"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:708
+#, fuzzy
+#| msgid "Horizontal Policy"
+msgid "Horizontal Box"
+msgstr "Kimmrecht-Regel"
+
+#: formeditor/factories/containerfactory.cpp:710
+#, fuzzy
+#| msgctxt "Mouse Cursor Shape"
+#| msgid "Size horizontal"
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "horizontalBox"
+msgstr "Grött kimmrecht"
+
+#: formeditor/factories/containerfactory.cpp:711
+msgid "A simple container to group widgets horizontally"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:717
+#, fuzzy
+#| msgid "Vertical Policy"
+msgid "Vertical Box"
+msgstr "Pielrecht-Regel"
+
+#: formeditor/factories/containerfactory.cpp:719
+#, fuzzy
+#| msgctxt "Mouse Cursor Shape"
+#| msgid "Size vertical"
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "verticalBox"
+msgstr "Grött pielrecht"
+
+#: formeditor/factories/containerfactory.cpp:720
+msgid "A simple container to group widgets vertically"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:726
+msgid "Grid Box"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:728
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "gridBox"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:729
+msgid "A simple container to group widgets in a grid"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:737
+#, fuzzy
+#| msgctxt "Mouse Cursor Shape"
+#| msgid "Split Vertical"
+msgid "Splitter"
+msgstr "Pielrecht delen"
+
+#: formeditor/factories/containerfactory.cpp:739
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "splitter"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:740
+msgid "A container that enables user to resize its children"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:747
+#, fuzzy
+#| msgid "&Break Layout"
+msgid "Row Layout"
+msgstr "Anornen op&breken"
+
+#: formeditor/factories/containerfactory.cpp:749
+#, fuzzy
+#| msgid "&Break Layout"
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "rowLayout"
+msgstr "Anornen op&breken"
+
+#: formeditor/factories/containerfactory.cpp:750
+msgid "A simple container to group widgets by rows"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:757
+#, fuzzy
+#| msgid "Column name"
+msgid "Column Layout"
+msgstr "Striepnaam"
+
+#: formeditor/factories/containerfactory.cpp:759
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "columnLayout"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:760
+msgid "A simple container to group widgets by columns"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:768
+#: plugins/forms/kexidbfactory.cpp:89
+msgid "Sub Form"
+msgstr "Ünnerkiekwark"
+
+#: formeditor/factories/containerfactory.cpp:770
+#: plugins/forms/kexidbfactory.cpp:92
+msgctxt ""
+"Widget name. This string will be used to name widgets of this class. It must "
+"_not_ contain white spaces and non latin1 characters."
+msgid "subForm"
+msgstr "ünnerkiekwark"
+
+#: formeditor/factories/containerfactory.cpp:771
+#: plugins/forms/kexidbfactory.cpp:93
+msgid "A form widget included in another Form"
+msgstr "En Kiekwarkstüerelement, dat binnen en anner Kiekwark inbett is"
+
+#: formeditor/factories/containerfactory.cpp:777
+#, fuzzy
+#| msgid "File"
+msgid "Title"
+msgstr "Datei"
+
+#: formeditor/factories/containerfactory.cpp:781
+#: formeditor/factories/containerfactory.cpp:787
+#: formeditor/factories/containerfactory.cpp:788
+#, fuzzy
+#| msgid "Label Position"
+msgid "Tab Position"
+msgstr "Beschriftenpositschoon"
+
+#: formeditor/factories/containerfactory.cpp:782
+#, fuzzy
+#| msgid "Current"
+msgid "Current Page"
+msgstr "Aktuell"
+
+#: formeditor/factories/containerfactory.cpp:783
+#, fuzzy
+#| msgid "Shape"
+msgid "Tab Shape"
+msgstr "Form"
+
+#: formeditor/factories/containerfactory.cpp:784
+msgctxt "Tab Widget's Elide Mode"
+msgid "Elide Mode"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:785
+msgctxt "Tab Widget uses scroll buttons"
+msgid "Scroll Buttons"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:790
+msgctxt "for Tab Shape"
+msgid "Rounded"
+msgstr ""
+
+#: formeditor/factories/containerfactory.cpp:791
+#, fuzzy
+#| msgid "Tabulator"
+msgctxt "for Tab Shape"
+msgid "Triangular"
+msgstr "Tabulator"
+
+#: formeditor/formIO.cpp:142 formeditor/formIO.cpp:325
+msgid "*.ui|Qt Designer UI Files"
+msgstr ""
+
+#: formeditor/richtextdialog.cpp:44
+msgid "Edit Rich Text"
+msgstr ""
+
+#: formeditor/richtextdialog.cpp:70
+msgid "Underline"
+msgstr ""
+
+#: formeditor/richtextdialog.cpp:74
+#, fuzzy
+#| msgid "Description"
+msgid "Superscript"
+msgstr "Beschrieven"
+
+#: formeditor/richtextdialog.cpp:76
+#, fuzzy
+#| msgid "Description"
+msgid "Subscript"
+msgstr "Beschrieven"
+
+#: formeditor/richtextdialog.cpp:81
+msgid "Left Align"
+msgstr ""
+
+#: formeditor/richtextdialog.cpp:84
+#, fuzzy
+#| msgid "Center"
+msgid "Centered"
+msgstr "Merrn"
+
+#: formeditor/richtextdialog.cpp:87
+#, fuzzy
+#| msgid "Right"
+msgid "Right Align"
+msgstr "Rechts"
+
+#: formeditor/richtextdialog.cpp:90
+#, fuzzy
+#| msgctxt "unspecified user"
+#| msgid "(unspecified)"
+msgid "Justified"
+msgstr "(nich angeven)"
+
+#: formeditor/editlistviewdialog.cpp:51
+#, fuzzy
+#| msgid "Edit List of Items"
+msgid "Edit Listview Contents"
+msgstr "List vun Indrääg bewerken"
+
+#: formeditor/editlistviewdialog.cpp:54
+#, fuzzy
+#| msgid "Column"
+msgid "Columns"
+msgstr "Striep"
+
+#: formeditor/editlistviewdialog.cpp:61 formeditor/editlistviewdialog.cpp:137
+#, fuzzy
+#| msgid "Edit Item"
+msgid "&Add Item"
+msgstr "Indrag bewerken"
+
+#: formeditor/editlistviewdialog.cpp:68
+msgid "New &Subitem"
+msgstr ""
+
+#: formeditor/editlistviewdialog.cpp:75 formeditor/editlistviewdialog.cpp:144
+#, fuzzy
+#| msgid "Remove Item"
+msgid "&Remove Item"
+msgstr "Element wegmaken"
+
+#: formeditor/editlistviewdialog.cpp:82 formeditor/editlistviewdialog.cpp:151
+#, fuzzy
+#| msgid "Move &Up"
+msgid "Move Item &Up"
+msgstr "Na &baven"
+
+#: formeditor/editlistviewdialog.cpp:89 formeditor/editlistviewdialog.cpp:158
+#, fuzzy
+#| msgid "Move &Down"
+msgid "Move Item &Down"
+msgstr "Na ner&rn"
+
+#: formeditor/editlistviewdialog.cpp:112
+#, fuzzy
+#| msgid "Comments"
+msgid "Contents"
+msgstr "Kommentaren"
+
+#: formeditor/editlistviewdialog.cpp:120 formeditor/form.cpp:410
+#: plugins/queries/kexiquerydesignerguieditor.cpp:1687
+#: plugins/tables/kexitabledesignerview.cpp:390
+msgid "Caption"
+msgstr "Titeltext"
+
+#: formeditor/editlistviewdialog.cpp:124
+msgid "Clickable"
+msgstr ""
+
+#: formeditor/editlistviewdialog.cpp:126
+#, fuzzy
+#| msgid "&Design Table"
+msgid "Resizable"
+msgstr "Tabellen&plaan"
+
+#: formeditor/editlistviewdialog.cpp:128
+#, fuzzy
+#| msgid "Width"
+msgid "Full Width"
+msgstr "Breed"
+
+#: formeditor/editlistviewdialog.cpp:283 formeditor/editlistviewdialog.cpp:284
+#, fuzzy
+#| msgid "Column"
+msgid "New Column"
+msgstr "Striep"
+
+#: formeditor/editlistviewdialog.cpp:424
+#, fuzzy
+#| msgid "Rename Item"
+msgid "New Item"
+msgstr "Element ümnömen"
+
+#: formeditor/editlistviewdialog.cpp:437
+#, fuzzy
+#| msgid "Subtype"
+msgid "Sub Item"
+msgstr "Ünnertyp"
+
+#: formeditor/form.cpp:411
+#, fuzzy
+#| msgid "&Window"
+msgid "Window title"
+msgstr "&Finster"
+
+#: formeditor/form.cpp:413
+msgid "Background Pixmap"
+msgstr ""
+
+#: formeditor/form.cpp:414
+#, fuzzy
+#| msgid "Table"
+msgid "Enabled"
+msgstr "Tabell"
+
+#: formeditor/form.cpp:415
+msgid "Geometry"
+msgstr ""
+
+#: formeditor/form.cpp:417
+#, fuzzy
+#| msgctxt "Size Policy"
+#| msgid "Minimum"
+msgid "Minimum Size"
+msgstr "Lüttst"
+
+#: formeditor/form.cpp:418
+#, fuzzy
+#| msgctxt "Size Policy"
+#| msgid "Maximum"
+msgid "Maximum Size"
+msgstr "Gröttst"
+
+#: formeditor/form.cpp:419
+#, fuzzy
+#| msgid "&Font..."
+msgid "Font"
+msgstr "Schri&ftoort..."
+
+#: formeditor/form.cpp:420
+#, fuzzy
+#| msgctxt "Mouse Cursor Shape"
+#| msgid "No Cursor"
+msgid "Cursor"
+msgstr "Keen Muuswieser"
+
+#: formeditor/form.cpp:421
+#, fuzzy
+#| msgid "Frame Color"
+msgid "Foreground Color"
+msgstr "Rahmenklöör"
+
+#: formeditor/form.cpp:422
+#, fuzzy
+#| msgctxt "(a property name, keep the text narrow!)"
+#| msgid ""
+#| "Label Background\n"
+#| "Color"
+msgid "Background Color"
+msgstr ""
+"Beschriftenachtergrund\n"
+"Klöör"
+
+#: formeditor/form.cpp:423
+#, fuzzy
+#| msgid "Hor. Policy"
+msgid "Focus Policy"
+msgstr "Kimmr.-Regel"
+
+#: formeditor/form.cpp:424
+#, fuzzy
+#| msgid "margins:"
+msgid "Margin"
+msgstr "Ränners:"
+
+#: formeditor/form.cpp:425
+#, fuzzy
+#| msgid "Read only"
+msgid "Read Only"
+msgstr "Bloots lesen"
+
+#: formeditor/form.cpp:426
+#, fuzzy
+#| msgid "Style"
+msgid "Style Sheet"
+msgstr "Stil"
+
+#: formeditor/form.cpp:427
+#, fuzzy
+#| msgid "Tools"
+msgctxt "Widget's Tooltip"
+msgid "Tooltip"
+msgstr "Warktüüch"
+
+#: formeditor/form.cpp:428
+#, fuzzy
+#| msgctxt "Mouse Cursor Shape"
+#| msgid "What's This?"
+msgctxt "Widget's Whats This"
+msgid "Whats This"
+msgstr "Wat is dat?"
+
+#: formeditor/form.cpp:429
+#, fuzzy
+#| msgid "Layout Widgets"
+msgid "Layout direction"
+msgstr "Stüerelementen anornen"
+
+#: formeditor/form.cpp:430
+#, fuzzy
+#| msgid "Size"
+msgid "Icon Size"
+msgstr "Grött"
+
+#: formeditor/form.cpp:434
+#, fuzzy
+#| msgid "Width"
+msgid "Frame Width"
+msgstr "Breed"
+
+#: formeditor/form.cpp:435
+msgid "Mid Frame Width"
+msgstr ""
+
+#: formeditor/form.cpp:436
+#, fuzzy
+#| msgid "Frame"
+msgid "Frame Shape"
+msgstr "Rahmen"
+
+#: formeditor/form.cpp:437
+#, fuzzy
+#| msgid "Frame Color"
+msgid "Frame Shadow"
+msgstr "Rahmenklöör"
+
+#: formeditor/form.cpp:439
+#, fuzzy
+#| msgid "Vertical Policy"
+msgid "Vertical ScrollBar"
+msgstr "Pielrecht-Regel"
+
+#: formeditor/form.cpp:440
+#, fuzzy
+#| msgid "Horizontal Policy"
+msgid "Horizontal ScrollBar"
+msgstr "Kimmrecht-Regel"
+
+#: formeditor/form.cpp:442
+#, fuzzy
+#| msgid "No action"
+msgid "No Background"
+msgstr "Keen Akschoon"
+
+#: formeditor/form.cpp:443
+msgid "Palette Foreground"
+msgstr ""
+
+#: formeditor/form.cpp:444
+#, fuzzy
+#| msgctxt "AutoField editor's type"
+#| msgid "Auto"
+msgctxt "Auto (HINT: for AutoText)"
+msgid "Auto"
+msgstr "Automaatsch"
+
+#: formeditor/form.cpp:446
+#, fuzzy
+#| msgctxt "AutoField editor's type"
+#| msgid "Auto"
+msgctxt "Auto (HINT: for Align)"
+msgid "Auto"
+msgstr "Automaatsch"
+
+#: formeditor/form.cpp:447
+#, fuzzy
+#| msgid "Left"
+msgctxt "Left (HINT: for Align)"
+msgid "Left"
+msgstr "Links"
+
+#: formeditor/form.cpp:448
+#, fuzzy
+#| msgid "Right"
+msgctxt "Right (HINT: for Align)"
+msgid "Right"
+msgstr "Rechts"
+
+#: formeditor/form.cpp:449 formeditor/form.cpp:451
+#, fuzzy
+#| msgid "Center"
+msgctxt "Center (HINT: for Align)"
+msgid "Center"
+msgstr "Merrn"
+
+#: formeditor/form.cpp:450
+msgctxt "Justify (HINT: for Align)"
+msgid "Justify"
+msgstr ""
+
+#: formeditor/form.cpp:452
+#, fuzzy
+#| msgid "Top"
+msgctxt "Top (HINT: for Align)"
+msgid "Top"
+msgstr "Baven"
+
+#: formeditor/form.cpp:453
+#, fuzzy
+#| msgid "Bottom"
+msgctxt "Bottom (HINT: for Align)"
+msgid "Bottom"
+msgstr "Nerrn"
+
+#: formeditor/form.cpp:455
+#, fuzzy
+#| msgid "Frame"
+msgctxt "No Frame (HINT: for Frame Shape)"
+msgid "No Frame"
+msgstr "Rahmen"
+
+#: formeditor/form.cpp:456
+msgctxt "Box (HINT: for Frame Shape)"
+msgid "Box"
+msgstr ""
+
+#: formeditor/form.cpp:457
+#, fuzzy
+#| msgid "Cancel"
+msgctxt "Panel (HINT: for Frame Shape)"
+msgid "Panel"
+msgstr "Afbreken"
+
+#: formeditor/form.cpp:458
+#, fuzzy
+#| msgid "&Window"
+msgctxt "Windows Panel (HINT: for Frame Shape)"
+msgid "Windows Panel"
+msgstr "&Finster"
+
+#: formeditor/form.cpp:459
+#, fuzzy
+#| msgid "Horz. Size Type"
+msgctxt "Horiz. Line (HINT: for Frame Shape)"
+msgid "Horiz. Line"
+msgstr "Kimmr. Grött-Typ"
+
+#: formeditor/form.cpp:460
+#, fuzzy
+#| msgid "Vertical Policy"
+msgctxt "Vertical Line (HINT: for Frame Shape)"
+msgid "Vertical Line"
+msgstr "Pielrecht-Regel"
+
+#: formeditor/form.cpp:461
+#, fuzzy
+#| msgid "Style"
+msgctxt "Styled (HINT: for Frame Shape)"
+msgid "Styled"
+msgstr "Stil"
+
+#: formeditor/form.cpp:462
+msgctxt "Popup (HINT: for Frame Shape)"
+msgid "Popup"
+msgstr ""
+
+#: formeditor/form.cpp:463
+msgctxt "Menu Bar (HINT: for Frame Shape)"
+msgid "Menu Bar"
+msgstr ""
+
+#: formeditor/form.cpp:464
+#, fuzzy
+#| msgid "Main Toolbar"
+msgctxt "Toolbar (HINT: for Frame Shape)"
+msgid "Toolbar"
+msgstr "Hööft-Warktüüchbalken"
+
+#: formeditor/form.cpp:465
+#, fuzzy
+#| msgid "Text Box"
+msgctxt "Text Box (HINT: for Frame Shape)"
+msgid "Text Box"
+msgstr "Textfeld"
+
+#: formeditor/form.cpp:466
+#, fuzzy
+#| msgid "To Widest"
+msgctxt "Tab Widget (HINT: for Frame Shape)"
+msgid "Tab Widget"
+msgstr "Na't Breedst"
+
+#: formeditor/form.cpp:467
+#, fuzzy
+#| msgid "Group by"
+msgctxt "Group Box (HINT: for Frame Shape)"
+msgid "Group Box"
+msgstr "Ornen na"
+
+#: formeditor/form.cpp:469
+#, fuzzy
+#| msgid "Print"
+msgctxt "Plain (HINT: for Frame Shadow)"
+msgid "Plain"
+msgstr "Drucken"
+
+#: formeditor/form.cpp:470
+#, fuzzy
+#| msgid "Raise"
+msgctxt "Raised (HINT: for Frame Shadow)"
+msgid "Raised"
+msgstr "Höger"
+
+#: formeditor/form.cpp:471
+msgctxt "Sunken (HINT: for Frame Shadow)"
+msgid "Sunken"
+msgstr ""
+
+#: formeditor/form.cpp:472
+#, fuzzy
+#| msgid "Internal"
+msgctxt "for Frame Shadow"
+msgid "Internal"
+msgstr "Intern"
+
+#: formeditor/form.cpp:474
+#, fuzzy
+#| msgctxt "Mouse Cursor Shape"
+#| msgid "No cursor"
+msgctxt "No Focus (HINT: for Focus)"
+msgid "No Focus"
+msgstr "Keen Muuswieser"
+
+#: formeditor/form.cpp:475
+#, fuzzy
+#| msgid "Table"
+msgctxt "Tab (HINT: for Focus)"
+msgid "Tab"
+msgstr "Tabell"
+
+#: formeditor/form.cpp:476
+#, fuzzy
+#| msgid "On Click"
+msgctxt "Click (HINT: for Focus)"
+msgid "Click"
+msgstr "Bi't Anklicken"
+
+#: formeditor/form.cpp:477
+#, fuzzy
+#| msgid "Tick"
+msgctxt "Tab/Click (HINT: for Focus)"
+msgid "Tab/Click"
+msgstr "Hoken"
+
+#: formeditor/form.cpp:478
+msgctxt "Tab/Click/MouseWheel (HINT: for Focus)"
+msgid "Tab/Click/MouseWheel"
+msgstr ""
+
+#: formeditor/form.cpp:480
+#, fuzzy
+#| msgctxt "AutoField editor's type"
+#| msgid "Auto"
+msgid "Auto"
+msgstr "Automaatsch"
+
+#: formeditor/form.cpp:481
+msgid "Always Off"
+msgstr ""
+
+#: formeditor/form.cpp:482
+msgid "Always On"
+msgstr ""
+
+#: formeditor/form.cpp:485
+#, fuzzy
+#| msgid "&Horizontally"
+msgid "Horizontal"
+msgstr "&Kimmrecht"
+
+#: formeditor/form.cpp:486
+#, fuzzy
+#| msgid "&Vertically"
+msgid "Vertical"
+msgstr "&Pielrecht"
+
+#: formeditor/form.cpp:489
+#, fuzzy
+#| msgid "To Right"
+msgid "Left to Right"
+msgstr "Na rechts"
+
+#: formeditor/form.cpp:490
+#, fuzzy
+#| msgid "To Left"
+msgid "Right to Left"
+msgstr "Na links"
+
+#: formeditor/form.cpp:1255
+#, fuzzy, kde-format
+#| msgid "Renaming object \"%1\" failed."
+msgid "Renaming widget \"%1\" to \"%2\" failed."
+msgstr "Ümnömen vun Objekt \"%1\" is fehlslaan."
+
+#: formeditor/form.cpp:1930
+#, fuzzy, kde-format
+#| msgid ""
+#| "Could not rename table \"%1\" to \"%2\". Table \"%3\" already exists."
+msgid ""
+"Could not rename widget \"%1\" to \"%2\" because \"%3\" is not a valid name "
+"(identifier) for a widget.\n"
+msgstr ""
+"Tabell \"%1\" lett sik nich na \"%2\" ümnömen. Tabell \"%3\" gifft dat al."
+
+#: formeditor/form.cpp:1941
+#, fuzzy, kde-format
+#| msgid ""
+#| "Could not rename table \"%1\" to \"%2\". Table \"%3\" already exists."
+msgid ""
+"Could not rename widget \"%1\" to \"%2\" because a widget with the name \"%3"
+"\" already exists.\n"
+msgstr ""
+"Tabell \"%1\" lett sik nich na \"%2\" ümnömen. Tabell \"%3\" gifft dat al."
+
+#: formeditor/form.cpp:2039 formeditor/form.cpp:2359
+#, kde-format
+msgid "Multiple Widgets (%1)"
+msgstr ""
+
+#: formeditor/form.cpp:2203 formeditor/form.cpp:2455
+msgid "Events"
+msgstr ""
+
+#: formeditor/form.cpp:2349
+#, fuzzy, kde-format
+#| msgctxt "Object name : Object type"
+#| msgid "%1 : %2"
+msgid "%1 : Form"
+msgstr "%1 : %2"
+
+#: formeditor/form.cpp:2411
+msgid "No Buddy"
+msgstr ""
+
+#: formeditor/form.cpp:2919
+msgid ""
+"<b>Cannot create the layout.</b>\n"
+"All selected widgets must have the same parent."
+msgstr ""
+
+#: formeditor/form.cpp:2985
+msgctxt "Translators: please keep this string short (less than 20 chars)"
+msgid "Hor. Alignment"
+msgstr ""
+
+#: formeditor/form.cpp:2986
+#, fuzzy
+#| msgid "Horizontal Policy"
+msgid "Horizontal Alignment"
+msgstr "Kimmrecht-Regel"
+
+#: formeditor/form.cpp:3007
+msgctxt "Translators: please keep this string short (less than 20 chars)"
+msgid "Ver. Alignment"
+msgstr ""
+
+#: formeditor/form.cpp:3008
+#, fuzzy
+#| msgid "Vertical Policy"
+msgid "Vertical Alignment"
+msgstr "Pielrecht-Regel"
+
+#: formeditor/form.cpp:3023
+msgid "Word Break"
+msgstr ""
+
+#: formeditor/form.cpp:3093
+msgid "Container's Layout"
+msgstr ""
+
+#: formeditor/form.cpp:3100
+msgid "Layout Margin"
+msgstr ""
+
+#: formeditor/form.cpp:3107
+#, fuzzy
+#| msgid "Layout Widgets"
+msgid "Layout Spacing"
+msgstr "Stüerelementen anornen"
+
+#: formeditor/kexiactionselectiondialog.cpp:192
+msgid "No action"
+msgstr "Keen Akschoon"
+
+#: formeditor/kexiactionselectiondialog.cpp:195
+msgid "Application actions"
+msgstr "Programm-Akschonen"
+
+#: formeditor/kexiactionselectiondialog.cpp:209
+#, fuzzy
+#| msgid "Current"
+msgctxt "Current form's actions"
+msgid "Current"
+msgstr "Aktuell"
+
+#: formeditor/kexiactionselectiondialog.cpp:263
+msgid "Open in Data View"
+msgstr "As Datenansicht opmaken"
+
+#: formeditor/kexiactionselectiondialog.cpp:267 widget/kexibrowser.cpp:195
+msgid "Execute"
+msgstr "Utföhren"
+
+#: formeditor/kexiactionselectiondialog.cpp:272
+#: plugins/reportspgz/kexireportview.cpp:70
+msgid "Print"
+msgstr "Drucken"
+
+#: formeditor/kexiactionselectiondialog.cpp:280
+msgid "Show Page Setup"
+msgstr "Siedeninstellen wiesen"
+
+#: formeditor/kexiactionselectiondialog.cpp:288
+msgctxt "Note: use multiple rows if needed"
+msgid ""
+"Export to File\n"
+"As Data Table"
+msgstr ""
+"Na Datei exporteren\n"
+"As Datentabell"
+
+#: formeditor/kexiactionselectiondialog.cpp:293
+msgctxt "Note: use multiple rows if needed"
+msgid ""
+"Copy to Clipboard\n"
+"As Data Table"
+msgstr ""
+"Na Twischenaflaag exporteren\n"
+"As Datentabell"
+
+#: formeditor/kexiactionselectiondialog.cpp:299
+msgid "Create New Object"
+msgstr "Nieg Objekt opstellen"
+
+#: formeditor/kexiactionselectiondialog.cpp:302
+msgid "Open in Design View"
+msgstr "As Plaanansicht opmaken"
+
+#: formeditor/kexiactionselectiondialog.cpp:306
+msgid "Open in Text View"
+msgstr "As Textansicht opmaken"
+
+#: formeditor/kexiactionselectiondialog.cpp:309
+msgid "Close View"
+msgstr "Ansicht tomaken"
+
+#: formeditor/kexiactionselectiondialog.cpp:348
+#, kde-format
+msgid "&Select macro to be executed after clicking \"%1\" button:"
+msgstr ""
+"Makro &utsöken, dat na en Klick op den Knoop \"%1\" utföhrt warrn schall:"
+
+#: formeditor/kexiactionselectiondialog.cpp:351
+#, kde-format
+msgid "&Select script to be executed after clicking \"%1\" button:"
+msgstr ""
+"Skript &utsöken, dat na en Klick op den Knoop \"%1\" utföhrt warrn schall:"
+
+#: formeditor/kexiactionselectiondialog.cpp:355
+#, kde-format
+msgid "&Select object to be opened after clicking \"%1\" button:"
+msgstr ""
+"Objekt &utsöken, dat na en Klick op den Knoop \"%1\" opmaakt warrn schall:"
+
+#: formeditor/kexiactionselectiondialog.cpp:398
+msgid "Assigning Action to Command Button"
+msgstr "Akschoon warrt den Befehlknoop towiest"
+
+#: formeditor/kexiactionselectiondialog.cpp:402
+msgctxt "Assign action"
+msgid "&Assign"
+msgstr "&Towiesen"
+
+#: formeditor/kexiactionselectiondialog.cpp:402
+msgid "Assign action"
+msgstr "Akschoon towiesen"
+
+#: formeditor/kexiactionselectiondialog.cpp:436
+msgid "Action category:"
+msgstr "Akschoon-Kategorie:"
+
+#: formeditor/kexiactionselectiondialog.cpp:489
+msgid "Action to execute:"
+msgstr "Akschoon för't Utföhren:"
+
+#: formeditor/kexiactionselectiondialog.cpp:591
+#, kde-format
+msgid "&Select action to be executed after clicking \"%1\" button:"
+msgstr ""
+"En Akschoon &utsöken, de na en Klick op den Knoop \"%1\" utföhrt warrn "
+"schall:"
+
+#: formeditor/objecttreeview.cpp:163
+#, fuzzy
+#| msgid "Widgets"
+msgid "Widget name"
+msgstr "Stüerelementen"
+
+#: formeditor/objecttreeview.cpp:164
+#, fuzzy
+#| msgid "Type"
+msgctxt "Widget's type"
+msgid "Type"
+msgstr "Typ"
+
+#: formeditor/tabstopdialog.cpp:48
+#, fuzzy
+#| msgid "Edit Tab Order..."
+msgid "Edit Tab Order"
+msgstr "Paneel-Reeg bewerken..."
+
+#: formeditor/tabstopdialog.cpp:71
+#, fuzzy
+#| msgid "Move &Up"
+msgid "Move Up"
+msgstr "Na &baven"
+
+#: formeditor/tabstopdialog.cpp:72
+msgid "Move widget up"
+msgstr ""
+
+#: formeditor/tabstopdialog.cpp:76
+#, fuzzy
+#| msgid "Move &Down"
+msgid "Move Down"
+msgstr "Na ner&rn"
+
+#: formeditor/tabstopdialog.cpp:77
+#, fuzzy
+#| msgid "Move &Down"
+msgid "Move widget down"
+msgstr "Na ner&rn"
+
+#: formeditor/tabstopdialog.cpp:82
+msgid "Handle tab order automatically"
+msgstr ""
+
+#: formeditor/widgetlibrary.cpp:743
+#, fuzzy
+#| msgctxt "Mouse Cursor Shape"
+#| msgid "Size Horizontal"
+msgctxt "Insert Horizontal Widget"
+msgid "Insert Horizontal"
+msgstr "Grött kimmrecht"
+
+#: formeditor/widgetlibrary.cpp:749
+#, fuzzy
+#| msgctxt "Mouse Cursor Shape"
+#| msgid "Size Vertical"
+msgctxt "Insert Vertical Widget"
+msgid "Insert Vertical"
+msgstr "Grött pielrecht"
+
+#: formeditor/widgetlibrary.cpp:753
+#, fuzzy, kde-format
+#| msgid "Insert AutoField widget"
+msgid "Insert Widget: %1"
+msgstr "Autofeld-Stüerelement infögen"
+
+#: formeditor/widgetlibrary.cpp:757
+#: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:396
+msgid "Cancel"
+msgstr "Afbreken"
+
+#: formeditor/connectiondialog.cpp:55
+#, fuzzy
+#| msgid "Edit Database Connection"
+msgid "Edit Form Connections"
+msgstr "Datenbankverbinnen bewerken"
+
+#: formeditor/connectiondialog.cpp:97
+#, fuzzy
+#| msgid "&Test Connection"
+msgid "&New Connection"
+msgstr "Verbinnen &utproberen"
+
+#: formeditor/connectiondialog.cpp:101
+#, fuzzy
+#| msgid "&Test Connection"
+msgid "&Remove Connection"
+msgstr "Verbinnen &utproberen"
+
+#: formeditor/connectiondialog.cpp:120
+#, fuzzy
+#| msgid "&OK"
+msgid "OK?"
+msgstr "&OK"
+
+#: formeditor/connectiondialog.cpp:123
+#, fuzzy
+#| msgid "Connection"
+msgid "Connection correctness"
+msgstr "Verbinnen"
+
+#: formeditor/connectiondialog.cpp:126
+#, fuzzy
+#| msgid "Center"
+msgid "Sender"
+msgstr "Merrn"
+
+#: formeditor/connectiondialog.cpp:131
+#, fuzzy
+#| msgid "Original"
+msgid "Signal"
+msgstr "Orginaal"
+
+#: formeditor/connectiondialog.cpp:136
+msgid "Receiver"
+msgstr ""
+
+#: formeditor/connectiondialog.cpp:140
+#, fuzzy
+#| msgid "Sort"
+msgid "Slot"
+msgstr "Sorteren"
+
+#: formeditor/connectiondialog.cpp:228
+msgid "<qt><h2>The connection is OK.</h2></qt>"
+msgstr ""
+
+#: formeditor/connectiondialog.cpp:247
+msgid "<qt><h2>The connection is invalid.</h2></qt>"
+msgstr ""
+
+#: formeditor/connectiondialog.cpp:338
+#, kde-format
+msgid "<qt>You have not selected item: <b>%1</b>.</qt>"
+msgstr ""
+
+#: formeditor/connectiondialog.cpp:351
+msgid "The signal/slot arguments are not compatible."
+msgstr ""
+
+#: formeditor/connectiondialog.cpp:412
+#, fuzzy
+#| msgid "Do you want to delete selected row?"
+msgid "Do you want to delete this connection?"
+msgstr "Wullt Du de utsöcht Reeg wegdoon?"
+
+#: formeditor/connectiondialog.cpp:414
+#, fuzzy
+#| msgid "&Test Connection"
+msgid "&Delete Connection"
+msgstr "Verbinnen &utproberen"
+
 #. i18n: file: data/kexiui.rc:5
 #. i18n: ectx: Menu (file)
 #: rc.cpp:5
@@ -4804,27 +6916,6 @@ msgstr "&OK"
 msgid "&Cancel"
 msgstr "&Afbreken"
 
-#: shapes/relationdesign/kexirelationdesignfactory.cpp:24
-msgid "Kexi Relation Design"
-msgstr "Kexi - Betöög opstellen"
-
-#: shapes/relationdesign/kexirelationdesignfactory.cpp:25
-msgid "A kexi relation design shape"
-msgstr "En Form för't Opstellen vun Betöög mit Kexi"
-
-#: shapes/relationdesign/kexirelationdesigntool.cpp:88
-#: widget/kexidbconnectionwidget.cpp:373
-msgid "Open Database"
-msgstr "Datenbank opmaken"
-
-#: shapes/relationdesign/kexirelationdesigntoolfactory.cpp:22
-msgid "Kexi Relation Design Tool"
-msgstr "Warktüüch »Betöög opstellen« för Kexi"
-
-#: shapes/relationdesign/kexirelationdesigntoolfactory.cpp:24
-msgid "Relation design tool"
-msgstr "Warktüüch för't Opstellen vun Betöög"
-
 #: widget/kexibrowser.cpp:130
 msgid "Open object"
 msgstr "Objekt opmaken"
@@ -4876,10 +6967,6 @@ msgstr "Objekt as Textansicht opmaken"
 #: widget/kexibrowser.cpp:172
 msgid "Opens selected object in the list in text view."
 msgstr "Maakt dat utsöchte Objekt as Textansicht op."
-
-#: widget/kexibrowser.cpp:195
-msgid "Execute"
-msgstr "Utföhren"
 
 #: widget/kexibrowser.cpp:201
 #: plugins/importexport/csv/kexicsvexportwizard.cpp:69
@@ -4987,6 +7074,10 @@ msgstr "Parameters"
 #: widget/kexidbconnectionwidget.cpp:256
 msgid "Details"
 msgstr "Enkelheiten"
+
+#: widget/kexidbconnectionwidget.cpp:373
+msgid "Open Database"
+msgstr "Datenbank opmaken"
 
 #: widget/kexidbconnectionwidget.cpp:384
 msgid "Connect to a Database Server"
@@ -5450,10 +7541,6 @@ msgstr "Aktuell"
 msgid "Original"
 msgstr "Orginaal"
 
-#: plugins/forms/kexidbfactory.cpp:77 plugins/forms/kexiformpart.cpp:92
-msgid "Form"
-msgstr "Kiekwark"
-
 #: plugins/forms/kexidbfactory.cpp:80 plugins/forms/kexiformview.cpp:255
 msgctxt ""
 "Widget name. This string will be used to name widgets of this class. It must "
@@ -5464,21 +7551,6 @@ msgstr "kiekwark"
 #: plugins/forms/kexidbfactory.cpp:81
 msgid "A data-aware form widget"
 msgstr "En datenkünnig Kiekwarkstüerelement"
-
-#: plugins/forms/kexidbfactory.cpp:89
-msgid "Sub Form"
-msgstr "Ünnerkiekwark"
-
-#: plugins/forms/kexidbfactory.cpp:92
-msgctxt ""
-"Widget name. This string will be used to name widgets of this class. It must "
-"_not_ contain white spaces and non latin1 characters."
-msgid "subForm"
-msgstr "ünnerkiekwark"
-
-#: plugins/forms/kexidbfactory.cpp:93
-msgid "A form widget included in another Form"
-msgstr "En Kiekwarkstüerelement, dat binnen en anner Kiekwark inbett is"
 
 #: plugins/forms/kexidbfactory.cpp:105
 msgid "Text Box"
@@ -5495,31 +7567,9 @@ msgstr "textfeld"
 msgid "A widget for entering and displaying text"
 msgstr "En Stüerelement för't Ingeven un Wiesen vun Text"
 
-#: plugins/forms/kexidbfactory.cpp:119
-msgid "Text Editor"
-msgstr "Texteditor"
-
-#: plugins/forms/kexidbfactory.cpp:122
-msgctxt ""
-"Widget name. This string will be used to name widgets of this class. It must "
-"_not_ contain white spaces and non latin1 characters."
-msgid "textEditor"
-msgstr "texteditor"
-
 #: plugins/forms/kexidbfactory.cpp:123
 msgid "A multiline text editor"
 msgstr "En Text-Ingaavfeld"
-
-#: plugins/forms/kexidbfactory.cpp:132
-msgid "Frame"
-msgstr "Rahmen"
-
-#: plugins/forms/kexidbfactory.cpp:135
-msgctxt ""
-"Widget name. This string will be used to name widgets of this class. It must "
-"_not_ contain white spaces and non latin1 characters."
-msgid "frame"
-msgstr "rahmen"
 
 #: plugins/forms/kexidbfactory.cpp:136
 msgid "A simple frame widget"
@@ -5529,13 +7579,6 @@ msgstr "En eenfach Rahmen-Stüerelement"
 msgctxt "Text Label"
 msgid "Label"
 msgstr "Textfeld"
-
-#: plugins/forms/kexidbfactory.cpp:148
-msgctxt ""
-"Widget name. This string will be used to name widgets of this class. It must "
-"_not_ contain white spaces and non latin1 characters."
-msgid "label"
-msgstr "textfeld"
 
 #: plugins/forms/kexidbfactory.cpp:149
 msgid "A widget for displaying text"
@@ -5555,32 +7598,6 @@ msgstr "bild"
 #: plugins/forms/kexidbfactory.cpp:163
 msgid "A widget for displaying images"
 msgstr "En Stüerelement för't Wiesen vun Biller"
-
-#: plugins/forms/kexidbfactory.cpp:178
-msgid "Combo Box"
-msgstr "Utsöökfeld"
-
-#: plugins/forms/kexidbfactory.cpp:181
-msgctxt ""
-"Widget name. This string will be used to name widgets of this class. It must "
-"_not_ contain white spaces and non latin1 characters."
-msgid "comboBox"
-msgstr "utsöökfeld"
-
-#: plugins/forms/kexidbfactory.cpp:182
-msgid "A combo box widget"
-msgstr "En Utsöökfeld-Stüerelement"
-
-#: plugins/forms/kexidbfactory.cpp:190
-msgid "Check Box"
-msgstr "Ankrüüzfeld"
-
-#: plugins/forms/kexidbfactory.cpp:193
-msgctxt ""
-"Widget name. This string will be used to name widgets of this class. It must "
-"_not_ contain white spaces and non latin1 characters."
-msgid "checkBox"
-msgstr "ankrüüzfeld"
 
 #: plugins/forms/kexidbfactory.cpp:194
 msgid "A check box with text label"
@@ -5608,13 +7625,6 @@ msgstr ""
 #: plugins/forms/kexidbfactory.cpp:271
 msgid "Command Button"
 msgstr "Befehlknoop"
-
-#: plugins/forms/kexidbfactory.cpp:274
-msgctxt ""
-"Widget name. This string will be used to name widgets of this class. It must "
-"_not_ contain white spaces and non latin1 characters."
-msgid "button"
-msgstr "knoop"
 
 #: plugins/forms/kexidbfactory.cpp:275
 msgid "A command button to execute actions"
@@ -6157,11 +8167,6 @@ msgstr "För en leddig Reeg lett sik keen Markmaal fastleggen"
 msgid "Query column"
 msgstr "Striep anfragen"
 
-#: plugins/queries/kexiquerydesignerguieditor.cpp:1687
-#: plugins/tables/kexitabledesignerview.cpp:390
-msgid "Caption"
-msgstr "Titeltext"
-
 #: plugins/queries/kexiquerydesignerguieditor.cpp:1692
 msgid "Alias"
 msgstr "Alias"
@@ -6286,10 +8291,6 @@ msgstr "Anfraag \"%1\" gifft dat al."
 #: plugins/reportspgz/kexireportview.cpp:64
 msgid "Page"
 msgstr "Siet"
-
-#: plugins/reportspgz/kexireportview.cpp:70
-msgid "Print"
-msgstr "Drucken"
 
 #: plugins/reportspgz/kexireportview.cpp:72
 msgid "Print Report"
@@ -6437,10 +8438,6 @@ msgstr "Sekern"
 msgid "Discard"
 msgstr "Wegsmieten"
 
-#: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:396
-msgid "Cancel"
-msgstr "Afbreken"
-
 #: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:542
 msgid "Page Header (Any)"
 msgstr "Siet-Koppreeg (all)"
@@ -6481,21 +8478,11 @@ msgstr "Siet-Footreeg (eerst)"
 msgid "Page Footer (Last)"
 msgstr "Siet-Footreeg (lest)"
 
-#: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:1067
-#: plugins/reportspgz/kexireportdesignview.cpp:37
-msgid "Cut"
-msgstr "Knippen"
-
 #: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:1068
 #: plugins/reportspgz/kexireportdesignview.cpp:39
 #: plugins/importexport/csv/kexicsvexportwizard.cpp:66
 msgid "Copy"
 msgstr "Koperen"
-
-#: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:1071
-#: plugins/reportspgz/kexireportdesignview.cpp:41
-msgid "Paste"
-msgstr "Infögen"
 
 #: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:1491
 msgid "Label"
@@ -6504,11 +8491,6 @@ msgstr "Textfeld"
 #: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:1495
 msgid "Field"
 msgstr "Feld"
-
-#: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:1503
-#: plugins/reportspgz/koreport/common/krchartdata.cpp:145
-msgid "Line"
-msgstr "Lien"
 
 #: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:1507
 msgid "Barcode"
@@ -6617,10 +8599,6 @@ msgstr "Perzent"
 #: plugins/reportspgz/koreport/common/krchartdata.cpp:152
 msgid "Rows"
 msgstr "Regen"
-
-#: plugins/reportspgz/koreport/common/krchartdata.cpp:161
-msgid "Default"
-msgstr "Standard"
 
 #: plugins/reportspgz/koreport/common/krchartdata.cpp:161
 msgid "Rainbow"
@@ -7377,6 +9355,18 @@ msgctxt "Empty table row"
 msgid "Empty Row"
 msgstr "Leddig Reeg"
 
+#~ msgid "Kexi Relation Design"
+#~ msgstr "Kexi - Betöög opstellen"
+
+#~ msgid "A kexi relation design shape"
+#~ msgstr "En Form för't Opstellen vun Betöög mit Kexi"
+
+#~ msgid "Kexi Relation Design Tool"
+#~ msgstr "Warktüüch »Betöög opstellen« för Kexi"
+
+#~ msgid "Relation design tool"
+#~ msgstr "Warktüüch för't Opstellen vun Betöög"
+
 #~ msgid "Clear row source"
 #~ msgstr "Reegborn leddig maken"
 
@@ -7400,79 +9390,6 @@ msgstr "Leddig Reeg"
 #~ "KOffice suite."
 #~ msgstr "Dit is de Enkelverschoon vun't Programm buten de KOffice-Ümgeven."
 
-#~ msgid "No action"
-#~ msgstr "Keen Akschoon"
-
-#~ msgid "Application actions"
-#~ msgstr "Programm-Akschonen"
-
-#~ msgid "Open in Data View"
-#~ msgstr "As Datenansicht opmaken"
-
-#~ msgid "Show Page Setup"
-#~ msgstr "Siedeninstellen wiesen"
-
-#~ msgctxt "Note: use multiple rows if needed"
-#~ msgid ""
-#~ "Export to File\n"
-#~ "As Data Table"
-#~ msgstr ""
-#~ "Na Datei exporteren\n"
-#~ "As Datentabell"
-
-#~ msgctxt "Note: use multiple rows if needed"
-#~ msgid ""
-#~ "Copy to Clipboard\n"
-#~ "As Data Table"
-#~ msgstr ""
-#~ "Na Twischenaflaag exporteren\n"
-#~ "As Datentabell"
-
-#~ msgid "Create New Object"
-#~ msgstr "Nieg Objekt opstellen"
-
-#~ msgid "Open in Design View"
-#~ msgstr "As Plaanansicht opmaken"
-
-#~ msgid "Open in Text View"
-#~ msgstr "As Textansicht opmaken"
-
-#~ msgid "Close View"
-#~ msgstr "Ansicht tomaken"
-
-#~ msgid "&Select macro to be executed after clicking \"%1\" button:"
-#~ msgstr ""
-#~ "Makro &utsöken, dat na en Klick op den Knoop \"%1\" utföhrt warrn schall:"
-
-#~ msgid "&Select script to be executed after clicking \"%1\" button:"
-#~ msgstr ""
-#~ "Skript &utsöken, dat na en Klick op den Knoop \"%1\" utföhrt warrn schall:"
-
-#~ msgid "&Select object to be opened after clicking \"%1\" button:"
-#~ msgstr ""
-#~ "Objekt &utsöken, dat na en Klick op den Knoop \"%1\" opmaakt warrn schall:"
-
-#~ msgid "Assigning Action to Command Button"
-#~ msgstr "Akschoon warrt den Befehlknoop towiest"
-
-#~ msgctxt "Assign action"
-#~ msgid "&Assign"
-#~ msgstr "&Towiesen"
-
-#~ msgid "Assign action"
-#~ msgstr "Akschoon towiesen"
-
-#~ msgid "Action category:"
-#~ msgstr "Akschoon-Kategorie:"
-
-#~ msgid "Action to execute:"
-#~ msgstr "Akschoon för't Utföhren:"
-
-#~ msgid "&Select action to be executed after clicking \"%1\" button:"
-#~ msgstr ""
-#~ "En Akschoon &utsöken, de na en Klick op den Knoop \"%1\" utföhrt warrn "
-#~ "schall:"
-
 #~ msgid ""
 #~ "(c) 2002-2008, Kexi Team\n"
 #~ "(c) 2003-2008, OpenOffice Polska LLC\n"
@@ -7492,9 +9409,6 @@ msgstr "Leddig Reeg"
 #~ "vun den Bedrief \"OpenOffice Polska\".\n"
 #~ "\n"
 #~ "Besöök maal den Bedrief sien Nettsiet: http://www.openoffice.com.pl"
-
-#~ msgid "TextLabel"
-#~ msgstr "TextBeteker"
 
 #~ msgid "Script Editor"
 #~ msgstr "Skripteditor"
@@ -7542,9 +9456,6 @@ msgstr "Leddig Reeg"
 
 #~ msgid "Enable directory listing"
 #~ msgstr "Ornerinholtlist anmaken"
-
-#~ msgid "text"
-#~ msgstr "Text"
 
 #~ msgid "number"
 #~ msgstr "Tall"
