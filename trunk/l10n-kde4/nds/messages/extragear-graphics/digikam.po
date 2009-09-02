@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: digikam\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-08-30 06:08+0200\n"
+"POT-Creation-Date: 2009-09-02 07:33+0200\n"
 "PO-Revision-Date: 2009-08-25 08:20+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -759,7 +759,7 @@ msgstr "Slötelwoort \"%1\" wegdoon?"
 #: utilities/gpssearch/gpssearchfolderview.cpp:284
 #: utilities/searchwindow/searchfolderview.cpp:215
 #: utilities/cameragui/cameraui.cpp:1872
-#: utilities/cameragui/cameraiconview.cpp:492
+#: utilities/cameragui/cameraiconview.cpp:497
 #: utilities/timeline/timelinefolderview.cpp:171
 #: utilities/timeline/timelinefolderview.cpp:263
 #: utilities/fuzzysearch/fuzzysearchfolderview.cpp:183
@@ -788,8 +788,7 @@ msgstr "Egenschappen"
 #: libs/imageproperties/imagepropertiessidebarcamgui.cpp:107
 #: libs/imageproperties/imagepropertiessidebar.cpp:85
 #: showfoto/setup/setup.cpp:107 utilities/setup/setup.cpp:178
-#: utilities/manualrename/parsers/metadataparser.cpp:38
-#: utilities/manualrename/parsers/metadataparser.cpp:40
+#: utilities/manualrename/parsers/metadataparser.cpp:63
 msgid "Metadata"
 msgstr "Metadaten"
 
@@ -842,7 +841,7 @@ msgstr "Hierhen &verschuven"
 #: digikam/imagedragdrop.cpp:71 digikam/imagedragdrop.cpp:296
 #: digikam/albumdragdrop.cpp:80 digikam/albumdragdrop.cpp:142
 #: digikam/albumdragdrop.cpp:179 digikam/albumdragdrop.cpp:236
-#: digikam/albumdragdrop.cpp:277 utilities/cameragui/cameraiconview.cpp:684
+#: digikam/albumdragdrop.cpp:277 utilities/cameragui/cameraiconview.cpp:689
 msgid "C&ancel"
 msgstr "&Afbreken"
 
@@ -4458,23 +4457,23 @@ msgstr "All utsöken"
 msgid "Clear"
 msgstr "Leddig maken"
 
-#: libs/widgets/metadata/metadatapanel.cpp:218
+#: libs/widgets/metadata/metadatapanel.cpp:219
 msgid "EXIF viewer"
 msgstr ""
 
-#: libs/widgets/metadata/metadatapanel.cpp:222
+#: libs/widgets/metadata/metadatapanel.cpp:223
 #, fuzzy
 #| msgid "Makernote"
 msgid "Makernotes viewer"
 msgstr "Makernotiz"
 
-#: libs/widgets/metadata/metadatapanel.cpp:226
+#: libs/widgets/metadata/metadatapanel.cpp:227
 #, fuzzy
 #| msgid "IPTC Records"
 msgid "IPTC viewer"
 msgstr "IPTC-Daten"
 
-#: libs/widgets/metadata/metadatapanel.cpp:230
+#: libs/widgets/metadata/metadatapanel.cpp:231
 msgid "XMP viewer"
 msgstr ""
 
@@ -8655,7 +8654,7 @@ msgstr "Formaat"
 
 #. i18n: file: utilities/manualrename/parsers/dateparserdialogwidget.ui:22
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:362 utilities/cameragui/renamecustomizer.cpp:213
+#: rc.cpp:362 utilities/cameragui/renamecustomizer.cpp:214
 #: utilities/cameragui/cameraui.cpp:219
 msgid "Date format:"
 msgstr "Datumformaat:"
@@ -10660,6 +10659,7 @@ msgid "Manual Adjustment"
 msgstr "Vun Hand topassen"
 
 #: imageplugins/freerotation/freerotationtool.cpp:273
+#: utilities/manualrename/parsers/metadataparser.cpp:105
 #: utilities/cameragui/cameraui.cpp:297
 msgid "Settings"
 msgstr "Instellen"
@@ -17509,13 +17509,34 @@ msgstr "Fixsöök"
 msgid "Enter custom rename string"
 msgstr ""
 
-#: utilities/manualrename/parsers/metadataparser.cpp:41
-msgid "add metadata (key = EXIF|IPTC|XMP:keyword)"
+#: utilities/manualrename/parsers/metadataparser.cpp:61
+#, fuzzy
+#| msgid "Metadata"
+msgid "Metadata..."
+msgstr "Metadaten"
+
+#: utilities/manualrename/parsers/metadataparser.cpp:64
+msgid "add metadata (use the quick access dialog for keycodes)"
+msgstr ""
+
+#: utilities/manualrename/parsers/metadataparser.cpp:74
+msgid "Keyword separator:"
+msgstr ""
+
+#: utilities/manualrename/parsers/metadataparser.cpp:114
+#, fuzzy
+#| msgid "Metadata"
+msgid "Metadata Keywords"
+msgstr "Metadaten"
+
+#: utilities/manualrename/parsers/metadataparser.cpp:136
+msgid "Add Metadata Keywords"
 msgstr ""
 
 #: utilities/manualrename/parsers/dateparser.cpp:100
-#: utilities/cameragui/renamecustomizer.cpp:208
-msgid "Add Date && Time"
+#, fuzzy
+#| msgid "Add Date && Time"
+msgid "Add Date & Time"
 msgstr "Datum un Tiet tofögen"
 
 #: utilities/manualrename/parsers/dateparser.cpp:112
@@ -17523,6 +17544,11 @@ msgid "Enter custom date format"
 msgstr ""
 
 #: utilities/manualrename/parsers/dateparser.cpp:171
+#, fuzzy
+#| msgid "Date && Time"
+msgid "Date && Time..."
+msgstr "Datum un Tiet"
+
 #: utilities/manualrename/parsers/dateparser.cpp:175
 msgid "Date && Time"
 msgstr "Datum un Tiet"
@@ -17583,32 +17609,37 @@ msgstr "Schritt:"
 msgid "Custom Range"
 msgstr "Egen Rebeet"
 
-#: utilities/manualrename/parsers/sequencenumberparser.cpp:91
-#: utilities/manualrename/parsers/sequencenumberparser.cpp:95
-msgid "Sequence Number"
+#: utilities/manualrename/parsers/sequencenumberparser.cpp:92
+#, fuzzy
+#| msgid "Sequence Number"
+msgid "Sequence Number..."
 msgstr "Reegnummer"
 
 #: utilities/manualrename/parsers/sequencenumberparser.cpp:96
+msgid "Sequence Number"
+msgstr "Reegnummer"
+
+#: utilities/manualrename/parsers/sequencenumberparser.cpp:97
 msgid "sequence number"
 msgstr "Reegnummer"
 
-#: utilities/manualrename/parsers/sequencenumberparser.cpp:98
+#: utilities/manualrename/parsers/sequencenumberparser.cpp:99
 msgid "Sequence Number (start)"
 msgstr "Reegnummer (Start)"
 
-#: utilities/manualrename/parsers/sequencenumberparser.cpp:99
+#: utilities/manualrename/parsers/sequencenumberparser.cpp:100
 #, fuzzy
 #| msgid "sequence number"
 msgid "sequence number (custom start)"
 msgstr "Reegnummer"
 
-#: utilities/manualrename/parsers/sequencenumberparser.cpp:101
+#: utilities/manualrename/parsers/sequencenumberparser.cpp:102
 #, fuzzy
 #| msgid "sequence number"
 msgid "Sequence Number (start, step)"
 msgstr "Reegnummer"
 
-#: utilities/manualrename/parsers/sequencenumberparser.cpp:102
+#: utilities/manualrename/parsers/sequencenumberparser.cpp:103
 msgid "sequence number (custom start + step)"
 msgstr ""
 
@@ -17789,105 +17820,109 @@ msgid ""
 msgstr ""
 "<p>Söök bitte den Kameraorner ut, na den Du de Biller hoochladen wullt</p>"
 
-#: utilities/cameragui/renamecustomizer.cpp:159
+#: utilities/cameragui/renamecustomizer.cpp:160
 msgid "Camera filenames"
 msgstr "Kamera-Dateinaams"
 
-#: utilities/cameragui/renamecustomizer.cpp:161
+#: utilities/cameragui/renamecustomizer.cpp:162
 msgid ""
 "Turn on this option to use the camera provided image filenames without "
 "modifications."
 msgstr ""
 "Maak dit an, wenn Du de Dateinaams vun de Kamera ahn Ännern övernehmen wullt."
 
-#: utilities/cameragui/renamecustomizer.cpp:167
+#: utilities/cameragui/renamecustomizer.cpp:168
 msgid "Change case to:"
 msgstr "Groot-/Lüttschrieven ännern:"
 
-#: utilities/cameragui/renamecustomizer.cpp:171
+#: utilities/cameragui/renamecustomizer.cpp:172
 msgctxt "Leave filename as it is"
 msgid "Leave as-is"
 msgstr "So laten"
 
-#: utilities/cameragui/renamecustomizer.cpp:172
+#: utilities/cameragui/renamecustomizer.cpp:173
 msgctxt "Filename to uppercase"
 msgid "Upper"
 msgstr "Grootschrieven"
 
-#: utilities/cameragui/renamecustomizer.cpp:173
+#: utilities/cameragui/renamecustomizer.cpp:174
 msgctxt "Filename to lowercase"
 msgid "Lower"
 msgstr "Lüttschrieven"
 
-#: utilities/cameragui/renamecustomizer.cpp:175
+#: utilities/cameragui/renamecustomizer.cpp:176
 msgid "Set the method to use to change the case of the image filenames."
 msgstr "Hier kannst Du de Schriefwies för de Bilddateinaams fastleggen."
 
-#: utilities/cameragui/renamecustomizer.cpp:186
+#: utilities/cameragui/renamecustomizer.cpp:187
 msgid "Customize"
 msgstr "Ännern"
 
-#: utilities/cameragui/renamecustomizer.cpp:188
+#: utilities/cameragui/renamecustomizer.cpp:189
 msgid "Turn on this option to customize the image filenames during download."
 msgstr "Maak dit an, wenn Du de Bilddateien bi't Daalladen ümnömen wullt."
 
-#: utilities/cameragui/renamecustomizer.cpp:194
+#: utilities/cameragui/renamecustomizer.cpp:195
 msgid "Prefix:"
 msgstr "Prefix:"
 
-#: utilities/cameragui/renamecustomizer.cpp:197
+#: utilities/cameragui/renamecustomizer.cpp:198
 msgid "Set the prefix which will be added to the image filenames."
 msgstr ""
 "Hier kannst Du dat Prefix fastleggen, dat de Dateinaams vöranstellt warrt."
 
-#: utilities/cameragui/renamecustomizer.cpp:200
+#: utilities/cameragui/renamecustomizer.cpp:201
 msgid "Suffix:"
 msgstr "Suffix:"
 
-#: utilities/cameragui/renamecustomizer.cpp:202
+#: utilities/cameragui/renamecustomizer.cpp:203
 msgid "Set the suffix which will be added to the image filenames."
 msgstr "Hier kannst Du dat Suffix fastleggen, dat de Dateinaams anhangt warrt."
 
-#: utilities/cameragui/renamecustomizer.cpp:205
+#: utilities/cameragui/renamecustomizer.cpp:206
 msgid "Add Original &Filename"
 msgstr "Orginaal-&Dateinaam tofögen"
 
-#: utilities/cameragui/renamecustomizer.cpp:206
+#: utilities/cameragui/renamecustomizer.cpp:207
 msgid "Set this option to add the original filename."
 msgstr "Bruuk dit, wenn Du den Orginaal-Dateinaam tofögen wullt."
 
 #: utilities/cameragui/renamecustomizer.cpp:209
+msgid "Add Date && Time"
+msgstr "Datum un Tiet tofögen"
+
+#: utilities/cameragui/renamecustomizer.cpp:210
 msgid "Set this option to add the camera-provided date and time."
 msgstr ""
 "Maak dit an, wenn Du de vun de Kamera praatstellten Weerten för Datum un "
 "Tiet tofögen wullt."
 
-#: utilities/cameragui/renamecustomizer.cpp:217
+#: utilities/cameragui/renamecustomizer.cpp:218
 msgctxt "Standard time format"
 msgid "Standard"
 msgstr "Standard"
 
-#: utilities/cameragui/renamecustomizer.cpp:219
+#: utilities/cameragui/renamecustomizer.cpp:220
 msgctxt "ISO time format"
 msgid "ISO"
 msgstr "ISO"
 
-#: utilities/cameragui/renamecustomizer.cpp:221
+#: utilities/cameragui/renamecustomizer.cpp:222
 #: utilities/cameragui/cameraui.cpp:222
 msgid "Full Text"
 msgstr "Text"
 
-#: utilities/cameragui/renamecustomizer.cpp:223
+#: utilities/cameragui/renamecustomizer.cpp:224
 #: utilities/cameragui/cameraui.cpp:223
 msgid "Local Settings"
 msgstr "Lokaalinstellen"
 
-#: utilities/cameragui/renamecustomizer.cpp:225
+#: utilities/cameragui/renamecustomizer.cpp:226
 msgctxt "Advanced time format settings"
 msgid "Advanced..."
 msgstr "Verwiedert..."
 
-#: utilities/cameragui/renamecustomizer.cpp:227
+#: utilities/cameragui/renamecustomizer.cpp:228
 msgid ""
 "<p>Select your preferred date format for creating the new albums. The "
 "options available are:</p><p><b>Standard</b>: the date format that has been "
@@ -17908,42 +17943,42 @@ msgstr ""
 "warrt bruukt.</p><p><b>Verwiedert</b>: Hier kannst Du en egen Datumformaat "
 "fastleggen.</p>"
 
-#: utilities/cameragui/renamecustomizer.cpp:249
+#: utilities/cameragui/renamecustomizer.cpp:250
 msgid "Add Camera Name"
 msgstr "Kameranaam tofögen"
 
-#: utilities/cameragui/renamecustomizer.cpp:250
+#: utilities/cameragui/renamecustomizer.cpp:251
 msgid "Set this option to add the camera name."
 msgstr "Bruuk dit, wenn Du den Kameranaam tofögen wullt."
 
-#: utilities/cameragui/renamecustomizer.cpp:252
+#: utilities/cameragui/renamecustomizer.cpp:253
 msgid "Add Sequence Number"
 msgstr "Reegnummer tofögen"
 
-#: utilities/cameragui/renamecustomizer.cpp:253
+#: utilities/cameragui/renamecustomizer.cpp:254
 msgid ""
 "Set this option to add a sequence number starting with the index set below."
 msgstr ""
 "Maak dit an, wenn Du Nummern na de Reeg tofögen wullt. De eerste Nummer is "
 "de nerrn."
 
-#: utilities/cameragui/renamecustomizer.cpp:256
+#: utilities/cameragui/renamecustomizer.cpp:257
 msgid "Start Index:"
 msgstr "Eerst Nummer:"
 
-#: utilities/cameragui/renamecustomizer.cpp:260
+#: utilities/cameragui/renamecustomizer.cpp:261
 msgid ""
 "Set the starting index value used to rename files with a sequence number."
 msgstr ""
 "Hier kannst Du de eerste Nummer fastleggen, de för't Ümnömen vun de "
 "Bilddateien mit en Reegnummer bruukt warrt."
 
-#: utilities/cameragui/renamecustomizer.cpp:282
+#: utilities/cameragui/renamecustomizer.cpp:283
 msgctxt "Manual Image Renaming"
 msgid "Manual"
 msgstr "Per Hand"
 
-#: utilities/cameragui/renamecustomizer.cpp:516
+#: utilities/cameragui/renamecustomizer.cpp:523
 msgid ""
 "<p>Enter the format for date and time.</p><p>Use <i>dd</i> for the day, "
 "<i>MM</i> for the month, <i>yyyy</i> for the year, <i>hh</i> for the hour, "
@@ -17957,11 +17992,11 @@ msgstr ""
 "<i>yyyyMMddThhmmss</i> gifft \"20060824T142418\",<br/><i>dd. MM. yyyy, Klock "
 "hh.mm</i> gifft \"24. 08. 2006, Klock 14.24\"</p>"
 
-#: utilities/cameragui/renamecustomizer.cpp:528
+#: utilities/cameragui/renamecustomizer.cpp:535
 msgid "Change Date and Time Format"
 msgstr "Datum- un Tiet-Formaat ännern"
 
-#: utilities/cameragui/renamecustomizer.cpp:548
+#: utilities/cameragui/renamecustomizer.cpp:555
 msgid "photo"
 msgstr "Foto"
 
@@ -18321,7 +18356,7 @@ msgid "Upload..."
 msgstr "Hoochladen..."
 
 #: utilities/cameragui/cameraui.cpp:405
-#: utilities/cameragui/cameraiconview.cpp:490
+#: utilities/cameragui/cameraiconview.cpp:495
 msgid "Toggle Lock"
 msgstr "Af-/Opsluten"
 
@@ -18496,20 +18531,20 @@ msgstr ""
 "3</b><br/>Indrääg hoochladen: <b>%4</b><br/>Ornern opstellen: <b>%5</b><br/"
 ">Ornern wegdoon: <b>%6</b><br/><br/>"
 
-#: utilities/cameragui/cameraiconview.cpp:486
+#: utilities/cameragui/cameraiconview.cpp:491
 msgctxt "View the selected image"
 msgid "&View"
 msgstr "&Ankieken"
 
-#: utilities/cameragui/cameraiconview.cpp:488
+#: utilities/cameragui/cameraiconview.cpp:493
 msgid "Download"
 msgstr "Daalladen"
 
-#: utilities/cameragui/cameraiconview.cpp:489
+#: utilities/cameragui/cameraiconview.cpp:494
 msgid "Download && Delete"
 msgstr "Daalladen un wegdoon"
 
-#: utilities/cameragui/cameraiconview.cpp:682
+#: utilities/cameragui/cameraiconview.cpp:687
 msgid "&Upload to camera"
 msgstr "Na Kamera &hoochladen"
 
