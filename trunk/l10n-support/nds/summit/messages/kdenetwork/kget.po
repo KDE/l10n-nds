@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kget\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-08-25 07:10+0200\n"
+"POT-Creation-Date: 2009-09-02 07:25+0200\n"
 "PO-Revision-Date: 2009-08-27 20:59+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -46,7 +46,7 @@ msgstr "Akschoon utföhren, wenn all Överdregen afslaten sünd:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_AfterFinishAction)
 #. +> trunk stable
-#: conf/dlgadvanced.ui:40 core/kget.cpp:1248 core/kget.cpp:1258
+#: conf/dlgadvanced.ui:40 core/kget.cpp:1255 core/kget.cpp:1265
 #: ui/droptarget.cpp:94
 msgid "Quit KGet"
 msgstr "KGet utmaken"
@@ -401,7 +401,6 @@ msgstr "Nieg Koppel"
 
 #. +> trunk stable
 #: conf/transfersgroupwidget.cpp:126
-#, kde-format
 msgid "Are you sure that you want to remove the group named %1?"
 msgstr "Wullt Du dissen Koppel redig wegdoon? \"%1\""
 
@@ -422,8 +421,10 @@ msgstr[1] "Koppeln wegdoon"
 msgid "Use default directories for groups as suggestion"
 msgstr "Standardornern för Koppeln as Vörslag bruken"
 
+#. i18n: ectx: property (text), widget (KPushButton, add)
 #. +> trunk stable
 #: conf/transfersgroupwidget.cpp:171
+#: transfer-plugins/checksumsearch/checksumsearch.ui:30
 msgid "Add"
 msgstr "Tofögen"
 
@@ -432,8 +433,9 @@ msgstr "Tofögen"
 msgid "Delete"
 msgstr "Wegdoon"
 
+#. i18n: ectx: property (text), widget (KPushButton, rename)
 #. +> trunk stable
-#: conf/transfersgroupwidget.cpp:176
+#: conf/transfersgroupwidget.cpp:176 ui/transfersettingsdialog.ui:122
 msgid "Rename"
 msgstr "Ümnömen"
 
@@ -447,6 +449,46 @@ msgstr "Lüttbild utsöken..."
 msgid "Configure..."
 msgstr "Instellen..."
 
+#. +> trunk
+#: core/datasourcefactory.cpp:607
+msgctxt "A mirror is removed when the file has the wrong download size"
+msgid "%1 removed as it did report a wrong file size."
+msgstr ""
+
+#. +> trunk stable
+#: core/datasourcefactory.cpp:607 core/kget.cpp:496 core/kget.cpp:843
+#: core/kget.cpp:851 transfer-plugins/bittorrent/bttransfer.cpp:422
+#: transfer-plugins/bittorrent/bttransfer.cpp:433
+#: transfer-plugins/metalink/metalink.cpp:198
+#: ui/metalinkcreator/metalinkcreator.cpp:273
+#: ui/metalinkcreator/metalinkcreator.cpp:292
+msgid "Error"
+msgstr "Fehler"
+
+#. +> trunk
+#: core/filemodel.cpp:237
+#, fuzzy
+#| msgid "File"
+msgctxt "file in a filsystem"
+msgid "File"
+msgstr "Datei"
+
+#. +> trunk
+#: core/filemodel.cpp:237
+#, fuzzy
+#| msgid "Status"
+msgctxt "status of the download"
+msgid "Status"
+msgstr "Status"
+
+#. +> trunk
+#: core/filemodel.cpp:237
+#, fuzzy
+#| msgid "Size"
+msgctxt "size of the download"
+msgid "Size"
+msgstr "Grött"
+
 #. +> trunk stable
 #: core/kget.cpp:209
 msgid "Rename transfer"
@@ -454,7 +496,6 @@ msgstr "Överdregen ümnömen"
 
 #. +> trunk stable
 #: core/kget.cpp:481
-#, kde-format
 msgid ""
 "The file %1 already exists.\n"
 "Overwrite?"
@@ -468,42 +509,33 @@ msgid "Overwrite existing file?"
 msgstr "Vörhannen Datei överschrieven?"
 
 #. +> trunk stable
-#: core/kget.cpp:495
-#, kde-format
+#: core/kget.cpp:495 ui/metalinkcreator/metalinkcreator.cpp:292
 msgid "Unable to save to: %1"
 msgstr "\"%1\" lett sik nich sekern"
 
 #. +> trunk stable
-#: core/kget.cpp:496 core/kget.cpp:836 core/kget.cpp:844
-#: transfer-plugins/bittorrent/bttransfer.cpp:333
-#: transfer-plugins/bittorrent/bttransfer.cpp:344
-msgid "Error"
-msgstr "Fehler"
-
-#. +> trunk stable
-#: core/kget.cpp:704 ui/contextmenu.cpp:139
+#: core/kget.cpp:709 ui/contextmenu.cpp:135
 msgid "My Downloads"
 msgstr "De Daalladen"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, titleWidget)
 #. +> trunk stable
-#: core/kget.cpp:776 ui/newtransferdialog.cpp:238 ui/newtransferwidget.ui:25
+#: core/kget.cpp:783 ui/newtransferdialog.cpp:249 ui/newtransferwidget.ui:25
 msgid "New Download"
 msgstr "Nieg Daalladen"
 
 #. +> trunk stable
-#: core/kget.cpp:776
+#: core/kget.cpp:783
 msgid "Enter URL:"
 msgstr "Bitte URL ingeven:"
 
 #. +> trunk stable
-#: core/kget.cpp:809
+#: core/kget.cpp:816
 msgid "Save As"
 msgstr "Sekern as"
 
 #. +> trunk stable
-#: core/kget.cpp:835
-#, kde-format
+#: core/kget.cpp:842
 msgid ""
 "Malformed URL:\n"
 "%1"
@@ -512,8 +544,7 @@ msgstr ""
 "%1"
 
 #. +> trunk stable
-#: core/kget.cpp:843
-#, kde-format
+#: core/kget.cpp:850
 msgid ""
 "Malformed URL, protocol missing:\n"
 "%1"
@@ -522,8 +553,7 @@ msgstr ""
 "%1"
 
 #. +> trunk stable
-#: core/kget.cpp:856
-#, kde-format
+#: core/kget.cpp:863
 msgid ""
 "URL already saved:\n"
 "%1\n"
@@ -534,18 +564,17 @@ msgstr ""
 "Nochmaal daalladen?"
 
 #. +> trunk stable
-#: core/kget.cpp:857
+#: core/kget.cpp:864
 msgid "Download URL again?"
 msgstr "URL nochmaal daalladen?"
 
 #. +> trunk stable
-#: core/kget.cpp:885 core/kget.cpp:892
+#: core/kget.cpp:892 core/kget.cpp:899
 msgid "Directory is not writable"
 msgstr "Schrieven na Orner nich mööglich"
 
 #. +> trunk stable
-#: core/kget.cpp:902
-#, kde-format
+#: core/kget.cpp:909
 msgid ""
 "Destination file \n"
 "%1\n"
@@ -557,13 +586,12 @@ msgstr ""
 "al. Wullt Du ehr överschrieven?"
 
 #. +> trunk stable
-#: core/kget.cpp:903
+#: core/kget.cpp:910
 msgid "Overwrite destination"
 msgstr "Teel överschrieven"
 
 #. +> trunk stable
-#: core/kget.cpp:1031
-#, kde-format
+#: core/kget.cpp:1038
 msgid ""
 "<html>"
 "<p>Plugin loader could not load the plugin:<br/>"
@@ -576,8 +604,7 @@ msgstr ""
 "</html>"
 
 #. +> trunk stable
-#: core/kget.cpp:1049
-#, kde-format
+#: core/kget.cpp:1056
 msgid ""
 "Not deleting\n"
 "%1\n"
@@ -588,8 +615,7 @@ msgstr ""
 "Dat is en Orner."
 
 #. +> trunk stable
-#: core/kget.cpp:1059
-#, kde-format
+#: core/kget.cpp:1066
 msgid ""
 "Not deleting\n"
 "%1\n"
@@ -600,51 +626,62 @@ msgstr ""
 "Dat is keen lokaal Datei."
 
 #. +> trunk stable
-#: core/kget.cpp:1249
+#: core/kget.cpp:1256
 msgid "KGet is now closing, as all downloads have completed."
 msgstr "All Daalladen sünd afslaten, KGet maakt sik nu ut."
 
 #. +> trunk stable
-#: core/kget.cpp:1259
+#: core/kget.cpp:1266
 msgid "The computer will now turn off, as all downloads have completed."
 msgstr "De Reekner maakt sik nu ut, all Daalladen sünd afslaten."
 
 #. +> trunk stable
 #: core/linkimporter.cpp:90
-#, kde-format
 msgid "Error trying to get %1"
 msgstr "Fehler bi't Halen vun %1"
 
 #. +> trunk stable
-#: core/transfer.cpp:49 core/transfer.cpp:142 core/transfer.cpp:210
-#: transfer-plugins/bittorrent/bttransfer.cpp:231
-#: transfer-plugins/contentfetch/contentfetch.cpp:64
-#: transfer-plugins/kio/transferKio.cpp:56
-#: transfer-plugins/metalink/metalink.cpp:59
-#: transfer-plugins/mms/mmsTransfer.cpp:52
-#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:64
-msgctxt "transfer state: stopped"
-msgid "Stopped"
-msgstr "Anhollen"
+#: core/transfer.cpp:30
+msgid "Downloading...."
+msgstr "Bi to daalladen..."
 
 #. +> trunk stable
-#: core/transfer.cpp:135
+#: core/transfer.cpp:30
 msgctxt "transfer state: delayed"
 msgid "Delayed"
 msgstr "Töövt"
 
 #. +> trunk stable
-#: core/transfer.cpp:206 transfer-plugins/bittorrent/bttransfer.cpp:228
-#: transfer-plugins/kio/transferKio.cpp:117
-#: transfer-plugins/metalink/metalink.cpp:110
-#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:209
+#: core/transfer.cpp:30 core/transfer.cpp:229 core/transfer.cpp:254
+#: transfer-plugins/bittorrent/bttransfer.cpp:316
+#: transfer-plugins/contentfetch/contentfetch.cpp:64
+#: transfer-plugins/mms/mmsTransfer.cpp:52
+msgctxt "transfer state: stopped"
+msgid "Stopped"
+msgstr "Anhollen"
+
+#. +> trunk stable
+#: core/transfer.cpp:30
+msgctxt "transfer state: aborted"
+msgid "Aborted"
+msgstr "Afbraken"
+
+#. +> trunk stable
+#: core/transfer.cpp:30 transfer-plugins/bittorrent/bttransfer.cpp:313
 msgctxt "transfer state: finished"
 msgid "Finished"
 msgstr "Afslaten"
 
+#. +> trunk
+#: core/transfer.cpp:30 transfer-plugins/bittorrent/bttransfer.cpp:136
+#, fuzzy
+#| msgid "Open Destination"
+msgctxt "changing the destination of the file"
+msgid "Changing destination"
+msgstr "Teel opmaken"
+
 #. +> trunk stable
 #: core/transfergrouphandler.cpp:96
-#, kde-format
 msgid "1 Item"
 msgid_plural "%1 Items"
 msgstr[0] "1 Indrag"
@@ -653,8 +690,7 @@ msgstr[1] "%1 Indrääg"
 #. +> trunk stable
 #: core/transfergrouphandler.cpp:112 core/transferhandler.cpp:143
 #: transfer-plugins/bittorrent/libbtcore/util/functions.cpp:263
-#: ui/transferdetails.cpp:108
-#, kde-format
+#: ui/transferdetails.cpp:98
 msgid "%1/s"
 msgstr "%1/s"
 
@@ -688,7 +724,7 @@ msgstr "n.v."
 #. +> trunk stable
 #: core/transferhandler.cpp:138
 #: transfer-plugins/bittorrent/libbtcore/torrent/torrentcontrol.cpp:1489
-#: ui/transferdetails.cpp:103
+#: ui/transferdetails.cpp:93
 msgid "Stalled"
 msgstr "Töövt"
 
@@ -766,13 +802,27 @@ msgstr "Gauigkeit"
 msgid "Remaining Time"
 msgstr "Nablieven Tiet"
 
+#. +> trunk
+#: core/verifier.cpp:381
+#, fuzzy
+#| msgid "File Type"
+msgctxt "the type of the hash, e.g. MD5"
+msgid "Type"
+msgstr "Dateityp"
+
+#. +> trunk
+#: core/verifier.cpp:385
+msgctxt "the used hash for verification"
+msgid "Hash"
+msgstr ""
+
 #. +> trunk stable
 #: extensions/konqueror/kget_plug_in.cpp:47 ui/tray_newproto.cpp:49
 msgid "Download Manager"
 msgstr "Daallaad-Pleger"
 
 #. +> trunk stable
-#: extensions/konqueror/kget_plug_in.cpp:54 mainwindow.cpp:299
+#: extensions/konqueror/kget_plug_in.cpp:54 mainwindow.cpp:306
 msgid "Show Drop Target"
 msgstr "Treckteel wiesen"
 
@@ -804,14 +854,12 @@ msgstr "&Warktüüch"
 
 #. +> trunk stable
 #: extensions/webinterface/httpserver.cpp:35
-#, kde-format
 msgctxt "@info"
 msgid "Unable to start the server: %1."
 msgstr "De Server \"%1\" lett sik nich opropen."
 
 #. +> trunk stable
 #: extensions/webinterface/httpserver.cpp:87
-#, kde-format
 msgctxt "@item speed of transfer per seconds"
 msgid "%1/s"
 msgstr "%1/s"
@@ -943,7 +991,7 @@ msgid "KGet Web Interface | Valid XHTML 1.0 Strict &amp; CSS"
 msgstr "KGet-Nettböversiet | Valid XHTML 1.0 Strict &amp; CSS"
 
 #. +> trunk stable
-#: main.cpp:133 mainwindow.cpp:89 mainwindow.cpp:458 ui/tray_newproto.cpp:45
+#: main.cpp:133 mainwindow.cpp:90 mainwindow.cpp:465 ui/tray_newproto.cpp:45
 msgid "KGet"
 msgstr "KGet"
 
@@ -1091,61 +1139,66 @@ msgid "URL(s) to download"
 msgstr "URL(s), de Du daalladen wullt"
 
 #. +> trunk stable
-#: mainwindow.cpp:142
+#: mainwindow.cpp:145
 msgid "KGet Transfer List"
 msgstr "KGet-Överdregenlist:"
 
 #. +> trunk stable
-#: mainwindow.cpp:149
+#: mainwindow.cpp:152
 msgid "Export Transfers"
 msgstr "Överdregen exporteren"
 
 #. +> trunk stable
-#: mainwindow.cpp:159
+#: mainwindow.cpp:162
 msgid "&New Download..."
 msgstr "&Nieg Daalladen..."
 
 #. +> trunk stable
-#: mainwindow.cpp:165
+#: mainwindow.cpp:168
 msgid "&Import Transfers..."
 msgstr "Överdregen &importeren..."
 
 #. +> trunk stable
-#: mainwindow.cpp:171
+#: mainwindow.cpp:174
 msgid "&Export Transfers List..."
 msgstr "Överdregen-List &exporteren..."
 
 #. +> trunk stable
-#: mainwindow.cpp:177
+#: mainwindow.cpp:180
 msgid "&Export Transfers as Plain Text..."
 msgstr "Överdregen as eenfach Text &exporteren..."
 
+#. +> trunk
+#: mainwindow.cpp:186
+msgid "&Create a Metalink"
+msgstr ""
+
 #. +> trunk stable
-#: mainwindow.cpp:183 ui/contextmenu.cpp:148
+#: mainwindow.cpp:190 ui/contextmenu.cpp:144
 msgid "Delete Group"
 msgid_plural "Delete Groups"
 msgstr[0] "Koppel wegdoon"
 msgstr[1] "Koppeln wegdoon"
 
 #. +> trunk stable
-#: mainwindow.cpp:188 ui/contextmenu.cpp:152
+#: mainwindow.cpp:195 ui/contextmenu.cpp:148
 msgid "Rename Group..."
 msgid_plural "Rename Groups..."
 msgstr[0] "Koppel ümnömen..."
 msgstr[1] "Koppeln ümnömen..."
 
 #. +> trunk stable
-#: mainwindow.cpp:193
+#: mainwindow.cpp:200
 msgid "Set Icon..."
 msgstr "Lüttbild fastleggen..."
 
 #. +> trunk stable
-#: mainwindow.cpp:198
+#: mainwindow.cpp:205
 msgid "Auto-Paste Mode"
 msgstr "Automaatsch infögen"
 
 #. +> trunk stable
-#: mainwindow.cpp:201
+#: mainwindow.cpp:208
 msgid ""
 "<b>Auto paste</b> button toggles the auto-paste mode on and off.\n"
 "When set, KGet will periodically scan the clipboard for URLs and paste them automatically."
@@ -1154,100 +1207,100 @@ msgstr ""
 "Wenn anmaakt, kiekt KGet jümmers wedder na URLs binnen de Twischenaflaag un föögt ehr automaatsch in, wenn dat een finnen deit."
 
 #. +> trunk stable
-#: mainwindow.cpp:207
+#: mainwindow.cpp:214
 msgid "Use KGet as Konqueror Download Manager"
 msgstr "KGet as Daallaad-Pleger för Konqueror bruken"
 
 #. +> trunk stable
-#: mainwindow.cpp:225
+#: mainwindow.cpp:232
 msgctxt "delete selected transfer item"
 msgid "Delete Selected"
 msgstr "Utsöchte wegdoon"
 
 #. +> trunk stable
-#: mainwindow.cpp:231
+#: mainwindow.cpp:238
 msgctxt "delete all finished transfers"
 msgid "Delete All Finished"
 msgstr "All Afslaten wegdoon"
 
 #. +> trunk stable
-#: mainwindow.cpp:236
+#: mainwindow.cpp:243
 msgctxt "redownload selected transfer item"
 msgid "Redownload Selected"
 msgstr "Utsöcht Indrag nieg daalladen"
 
 #. +> trunk stable
-#: mainwindow.cpp:241
+#: mainwindow.cpp:248
 msgid "Start / Resume All"
 msgstr "All anfangen / wiedermaken"
 
 #. +> trunk stable
-#: mainwindow.cpp:247
+#: mainwindow.cpp:254
 msgid "Start / Resume Selected"
 msgstr "Utsöchte anfangen / wiedermaken"
 
 #. +> trunk stable
-#: mainwindow.cpp:252
+#: mainwindow.cpp:259
 msgid "Stop All"
 msgstr "All anhollen"
 
 #. +> trunk stable
-#: mainwindow.cpp:258
+#: mainwindow.cpp:265
 msgid "Stop Selected"
 msgstr "Utsöchte anhollen"
 
 #. +> trunk stable
-#: mainwindow.cpp:262
+#: mainwindow.cpp:269
 msgid "Start / Resume"
 msgstr "Anfangen / Wiedermaken"
 
 #. +> trunk stable
-#: mainwindow.cpp:270
+#: mainwindow.cpp:277
 msgid "Stop"
 msgstr "Anhollen"
 
 #. +> trunk stable
-#: mainwindow.cpp:279
+#: mainwindow.cpp:286
 msgid "Open Destination"
 msgstr "Teel opmaken"
 
 #. +> trunk stable
-#: mainwindow.cpp:284 mainwindow.cpp:440
+#: mainwindow.cpp:291 mainwindow.cpp:447
 msgid "Open File"
 msgstr "Datei opmaken"
 
 #. +> trunk stable
-#: mainwindow.cpp:289
+#: mainwindow.cpp:296
 msgid "Show Details"
 msgstr "Enkelheiten wiesen"
 
 #. +> trunk stable
-#: mainwindow.cpp:294
+#: mainwindow.cpp:301
 msgid "Copy URL to Clipboard"
 msgstr "URL na Twischenaflaag koperen"
 
 #. +> trunk stable
-#: mainwindow.cpp:305
+#: mainwindow.cpp:312
 msgid "&Transfer History"
 msgstr "Ö&verdregen-Vörgeschicht"
 
 #. +> trunk stable
-#: mainwindow.cpp:311
+#: mainwindow.cpp:318
 msgid "&Group Settings"
 msgstr "&Koppelinstellen"
 
 #. +> trunk stable
-#: mainwindow.cpp:317
+#: mainwindow.cpp:324
 msgid "&Transfer Settings"
 msgstr "Ö&verdregen-Instellen"
 
 #. +> trunk stable
-#: mainwindow.cpp:323
+#: mainwindow.cpp:330
 msgid "Import &Links..."
 msgstr "&Links importeren..."
 
 #. +> trunk stable
-#: mainwindow.cpp:364
+#: mainwindow.cpp:371
 msgid ""
 "This is the first time you have run KGet.\n"
 "Would you like to enable KGet as the download manager for Konqueror?"
@@ -1256,34 +1309,33 @@ msgstr ""
 "Wullt Du KGet as Daallaad-Pleger för Konqueror bruken?"
 
 #. +> trunk stable
-#: mainwindow.cpp:366
+#: mainwindow.cpp:373
 msgid "Konqueror Integration"
 msgstr "Inbinnen na Konqueror"
 
 #. +> trunk stable
-#: mainwindow.cpp:366
+#: mainwindow.cpp:373
 msgid "Enable"
 msgstr "Inbinnen"
 
 #. +> trunk stable
-#: mainwindow.cpp:367
+#: mainwindow.cpp:374
 msgid "Do Not Enable"
 msgstr "Nich inbinnen"
 
 #. +> trunk stable
-#: mainwindow.cpp:439
+#: mainwindow.cpp:446
 msgid "All Openable Files"
 msgstr "All Dateien, de sik opmaken laat"
 
 #. +> trunk stable
-#: mainwindow.cpp:456
-#, kde-format
+#: mainwindow.cpp:463
 msgctxt "window title including overall download progress in percent"
 msgid "KGet - %1%"
 msgstr "KGet - %1%"
 
 #. +> trunk stable
-#: mainwindow.cpp:498
+#: mainwindow.cpp:505
 msgid ""
 "Some transfers are still running.\n"
 "Are you sure you want to close KGet?"
@@ -1292,56 +1344,55 @@ msgstr ""
 "Wullt Du KGet redig utmaken?"
 
 #. +> trunk stable
-#: mainwindow.cpp:500
+#: mainwindow.cpp:507
 msgid "Confirm Quit"
 msgstr "Utmaken beglöven"
 
 #. +> trunk stable
-#: mainwindow.cpp:555
+#: mainwindow.cpp:569
 msgid "Enter Group Name"
 msgstr "Koppelnaam ingeven"
 
 #. +> trunk stable
-#: mainwindow.cpp:556
+#: mainwindow.cpp:570
 msgid "Group name:"
 msgstr "Koppelnaam:"
 
 #. +> trunk stable
-#: mainwindow.cpp:624
+#: mainwindow.cpp:638
 msgid "Are you sure you want to delete the selected transfer?"
 msgid_plural "Are you sure you want to delete the selected transfers?"
 msgstr[0] "Wullt Du de utsöchte Överdregen redig wegdoon?"
 msgstr[1] "Wullt Du de utsöchten Överdregen redig wegdoon?"
 
 #. +> trunk stable
-#: mainwindow.cpp:626
+#: mainwindow.cpp:640
 msgid "Confirm transfer delete"
 msgstr "Wegdoon vun Överdregen beglöven"
 
 #. +> trunk stable
-#: mainwindow.cpp:826
+#: mainwindow.cpp:840
 msgid "KGet has been temporarily disabled as download manager for Konqueror. If you want to disable it forever, go to Settings->Advanced and disable \"Use as download manager for Konqueror\"."
 msgstr "Du hest KGet för en Tiet as Konqueror sien Daallaadpleger utmaakt. Wenn Du dat heel utmaken wullt, kiek binnen \"Instellen\" -> \"Verwiedert\" un maak \"As Daallaadpleger för Konqueror bruken\" ut."
 
 #. +> trunk stable
-#: mainwindow.cpp:956 ui/droptarget.cpp:224
+#: mainwindow.cpp:970 ui/droptarget.cpp:224
 msgid "The dropped file is a KGet Transfer List"
 msgstr "De afleggt Datei is en KGet-Överdregenlist"
 
 #. +> trunk stable
-#: mainwindow.cpp:957 ui/droptarget.cpp:225
+#: mainwindow.cpp:971 ui/droptarget.cpp:225
 msgid "&Download"
 msgstr "&Daalladen"
 
 #. +> trunk stable
-#: mainwindow.cpp:958 ui/droptarget.cpp:226
+#: mainwindow.cpp:972 ui/droptarget.cpp:226
 msgid "&Load transfer list"
 msgstr "Överdregenlist &laden"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/advanceddetails/btadvanceddetailswidget.cpp:51
 #: transfer-plugins/bittorrent/advanceddetails/btadvanceddetailswidget.cpp:55
-#, kde-format
 msgid "Advanced Details for %1"
 msgstr "Verwiedert Enkelheiten för \"%1\""
 
@@ -1586,7 +1637,6 @@ msgstr "Keen"
 #: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:150
 #: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:170
 #: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:176
-#, kde-format
 msgid "%1 %"
 msgstr "%1 %"
 
@@ -1815,19 +1865,18 @@ msgstr "Datei"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/advanceddetails/trackerview.cpp:87
-#: transfer-plugins/bittorrent/bttransfer.cpp:189
+#: transfer-plugins/bittorrent/bttransfer.cpp:270
 msgid "Cannot add a tracker to a private torrent."
 msgstr "Na en privaat Torrent lett sik keen Tracker tofögen."
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/advanceddetails/trackerview.cpp:94
-#: transfer-plugins/bittorrent/bttransfer.cpp:195
+#: transfer-plugins/bittorrent/bttransfer.cpp:276
 msgid "Malformed URL."
 msgstr "Leeg URL"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/advanceddetails/trackerview.cpp:101
-#, kde-format
 msgid "There already is a tracker named <b>%1</b>."
 msgstr "Dat gifft al en Tracker mit den Naam <b>%1</b>."
 
@@ -1860,7 +1909,7 @@ msgstr "URL:"
 #. i18n: ectx: property (text), widget (QLabel, statusLabel)
 #. +> trunk stable
 #: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:55
-#: ui/transferdetails.cpp:40 ui/transferdetailsfrm.ui:113
+#: ui/transferdetailsfrm.ui:114
 msgid "Status:"
 msgstr "Status:"
 
@@ -1943,13 +1992,11 @@ msgstr "URL"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/advanceddetails/webseedstab.cpp:92
-#, kde-format
 msgid "Cannot add the webseed %1, it is already part of the list of webseeds."
 msgstr "De Verdeler \"%1\" lett sik nich tofögen, he steiht al op de Verdelerlist."
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/advanceddetails/webseedstab.cpp:109
-#, kde-format
 msgid "Cannot remove webseed %1, it is part of the torrent."
 msgstr "De Verdelder \"%1\" lett sik nich wegmaken, he is keen Deel vun den Torrent."
 
@@ -2045,7 +2092,7 @@ msgstr "All:"
 #. i18n: ectx: property (text), widget (QLabel, sourceLabel)
 #. +> trunk stable
 #: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:240
-#: ui/transferdetailsfrm.ui:50
+#: ui/transferdetailsfrm.ui:51
 msgctxt "source-file"
 msgid "Source:"
 msgstr "Born:"
@@ -2054,7 +2101,7 @@ msgstr "Born:"
 #. i18n: ectx: property (text), widget (QLabel, destLabel)
 #. +> trunk stable
 #: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:247
-#: ui/transferdetails.cpp:39 ui/transferdetailsfrm.ui:43
+#: ui/transferdetailsfrm.ui:44
 msgid "Saving to:"
 msgstr "Sekern as:"
 
@@ -2090,7 +2137,7 @@ msgstr "Keen Grenz"
 #: transfer-plugins/bittorrent/btsettingswidget.ui:58
 #: transfer-plugins/bittorrent/btsettingswidget.ui:78
 #: ui/groupsettingsdialog.ui:91 ui/groupsettingsdialog.ui:117
-#: ui/transfersettingsdialog.ui:41 ui/transfersettingsdialog.ui:61
+#: ui/transfersettingsdialog.ui:55 ui/transfersettingsdialog.ui:75
 msgid "KiB"
 msgstr "KiB"
 
@@ -2125,29 +2172,31 @@ msgid "Pre-allocate disk space"
 msgstr "Plaatspieker vörweg towiesen"
 
 #. +> trunk stable
-#: transfer-plugins/bittorrent/bttransfer.cpp:77
+#: transfer-plugins/bittorrent/bttransfer.cpp:108
 msgid "Downloading Torrent File...."
 msgstr "Torrent-Datei warrt daallaadt..."
 
 #. +> trunk stable
-#: transfer-plugins/bittorrent/bttransfer.cpp:213
+#: transfer-plugins/bittorrent/bttransfer.cpp:153
+#: transfer-plugins/bittorrent/bttransfer.cpp:294
 msgctxt "transfer state: downloading"
 msgid "Downloading...."
 msgstr "Bi to daalladen..."
 
 #. +> trunk stable
-#: transfer-plugins/bittorrent/bttransfer.cpp:283
+#: transfer-plugins/bittorrent/bttransfer.cpp:368
 msgid "Analyzing torrent...."
 msgstr "Torrent warrt ünnersöcht..."
 
 #. +> trunk stable
-#: transfer-plugins/bittorrent/bttransfer.cpp:332
-#: transfer-plugins/bittorrent/bttransfer.cpp:343
+#: transfer-plugins/bittorrent/bttransfer.cpp:421
+#: transfer-plugins/bittorrent/bttransfer.cpp:432
+#: transfer-plugins/metalink/metalink.cpp:199
 msgid "An error occurred...."
 msgstr "Dat geev en Fehler..."
 
 #. +> trunk stable
-#: transfer-plugins/bittorrent/bttransfer.cpp:353
+#: transfer-plugins/bittorrent/bttransfer.cpp:442
 msgctxt "Transfer status: seeding"
 msgid "Seeding...."
 msgstr "Bi to verdelen..."
@@ -2164,7 +2213,6 @@ msgstr "&Dateien dörkieken"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/bcodec/bdecoder.cpp:61
-#, kde-format
 msgid "Illegal token: %1"
 msgstr "Leeg Beteker: %1"
 
@@ -2182,7 +2230,6 @@ msgstr "Nich verwacht Ingaav-Enn"
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/bcodec/bdecoder.cpp:163
 #: transfer-plugins/bittorrent/libbtcore/bcodec/bdecoder.cpp:197
-#, kde-format
 msgid "Cannot convert %1 to an int"
 msgstr "\"%1\" lett sik nich na en Heeltall ümwanneln"
 
@@ -2193,7 +2240,6 @@ msgstr "Torrent is nich komplett!"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/datachecker/singledatachecker.cpp:49
-#, kde-format
 msgid "Cannot open file : %1 : %2"
 msgstr "Datei \"%1\" lett sik nich opmaken: %2"
 
@@ -2202,7 +2248,6 @@ msgstr "Datei \"%1\" lett sik nich opmaken: %2"
 #: transfer-plugins/bittorrent/libbtcore/util/fileops.cpp:318
 #: transfer-plugins/bittorrent/libbtcore/util/fileops.cpp:347
 #: transfer-plugins/bittorrent/libbtcore/util/fileops.cpp:406
-#, kde-format
 msgid "Cannot open %1 : %2"
 msgstr "\"%1\" lett sik nich opmaken: %2"
 
@@ -2211,97 +2256,82 @@ msgstr "\"%1\" lett sik nich opmaken: %2"
 #: transfer-plugins/bittorrent/libbtcore/diskio/cachefile.cpp:243
 #: transfer-plugins/bittorrent/libbtcore/diskio/cachefile.cpp:429
 #: transfer-plugins/bittorrent/libbtcore/diskio/cachefile.cpp:496
-#, kde-format
 msgid "Cannot open %1 for writing : readonly filesystem"
 msgstr "\"%1\" lett sik nich schrieven: Bloots leesbor Dateisysteem"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/diskio/cachefile.cpp:253
-#, kde-format
 msgid "Cannot expand file %1 : %2"
 msgstr "Datei \"%1\" lett sik nich utpacken: %2"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/diskio/cachefile.cpp:395
-#, kde-format
 msgid "Error : Reading past the end of the file %1"
 msgstr "Fehler: Achter dat Enn vun Datei \"%1\" lett sik nix lesen"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/diskio/cachefile.cpp:400
 #: transfer-plugins/bittorrent/libbtcore/diskio/cachefile.cpp:446
-#, kde-format
 msgid "Failed to seek file %1 : %2"
 msgstr "Datei \"%1\" lett sik nich finnen: %2"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/diskio/cachefile.cpp:408
-#, kde-format
 msgid "Error reading from %1"
 msgstr "Fehler bi't Lesen ut \"%1\""
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/diskio/cachefile.cpp:450
-#, kde-format
 msgid "Failed to write to file %1 : %2"
 msgstr "\"%1\" lett sik nich schrieven: %2"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/diskio/cachefile.cpp:523
 #: transfer-plugins/bittorrent/libbtcore/diskio/multifilecache.cpp:833
-#, kde-format
 msgid "Cannot preallocate diskspace : %1"
 msgstr "Plaatspieker lett sik nuich vörweg towiesen: %1"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/diskio/chunkmanager.cpp:209
 #: transfer-plugins/bittorrent/libbtcore/diskio/chunkmanager.cpp:324
-#, kde-format
 msgid "Cannot open index file %1 : %2"
 msgstr "Index-Datei \"%1\" lett sik nich opmaken: %2"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/diskio/dndfile.cpp:89
-#, kde-format
 msgid "Cannot create file %1 : %2"
 msgstr "Datei \"%1\" lett sik nich opstellen: %2"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/diskio/dndfile.cpp:137
-#, kde-format
 msgid "Failed to write first chunk to DND file : %1"
 msgstr "Eerst Block lett sik nich na DND-Datei schrieven: %1"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/diskio/dndfile.cpp:155
-#, kde-format
 msgid "Failed to write last chunk to DND file : %1"
 msgstr "Lest Block lett sik nich na DND-Datei schrieven: %1"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/diskio/multifilecache.cpp:106
 #: transfer-plugins/bittorrent/libbtcore/diskio/singlefilecache.cpp:71
-#, kde-format
 msgid "Failed to open %1 : %2"
 msgstr "\"%1\" lett sik nich opmaken: %2"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/diskio/multifilecache.cpp:133
 #: transfer-plugins/bittorrent/libbtcore/diskio/singlefilecache.cpp:82
-#, kde-format
 msgid "Failed to create %1 : %2"
 msgstr "\"%1\" lett sik nich opstellen: %2"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/diskio/multifilecache.cpp:769
 #: transfer-plugins/bittorrent/libbtcore/diskio/multifilecache.cpp:849
-#, kde-format
 msgid "Cannot open file %1 : %2"
 msgstr "Datei \"%1\" lett sik nich opmaken: %2"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/download/chunkdownload.cpp:379
-#, kde-format
 msgid "1 peer"
 msgid_plural "%1 peers"
 msgstr[0] "1 Partner"
@@ -2316,13 +2346,11 @@ msgstr "Nich tokoppelt"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/download/httpconnection.cpp:103
-#, kde-format
 msgid "Resolving proxy %1:%2"
 msgstr "Proxy \"%1\" warrt nakeken: %2"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/download/httpconnection.cpp:112
-#, kde-format
 msgid "Resolving hostname %1"
 msgstr "Reeknernaam \"%1\" warrt nakeken"
 
@@ -2334,7 +2362,6 @@ msgstr "Verbinnen tomaakt"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/download/httpconnection.cpp:132
-#, kde-format
 msgid "Error: request failed: %1"
 msgstr "Fehler: Anfraag fehlslaan: %1"
 
@@ -2387,7 +2414,6 @@ msgstr "Nich in Bruuk"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/migrate/migrate.cpp:45
-#, kde-format
 msgid "The directory %1 does not exist"
 msgstr "Den Orner \"%1\" gifft dat nich"
 
@@ -2439,7 +2465,6 @@ msgstr "Torrent is schaadhaftig!"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/torrent/torrent.cpp:136
-#, kde-format
 msgid " Unable to open torrent file %1 : %2"
 msgstr " Torrent-Datei \"%1\" lett sik nich opmaken: %2"
 
@@ -2451,7 +2476,6 @@ msgstr "Inleesfehler"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/torrent/torrentcontrol.cpp:533
-#, kde-format
 msgid ""
 "An error occurred while loading the torrent <b>%1</b>:<br/>"
 "<b>%2</b><br/>"
@@ -2463,7 +2487,6 @@ msgstr ""
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/torrent/torrentcontrol.cpp:563
-#, kde-format
 msgid ""
 "An error occurred while loading the torrent:<br/>"
 "<b>%1</b><br/>"
@@ -2475,31 +2498,26 @@ msgstr ""
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/torrent/torrentcontrol.cpp:573
-#, kde-format
 msgid "Unable to create %1 : %2"
 msgstr "\"%1\" lett sik nich opstellen: %2"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/torrent/torrentcontrol.cpp:588
-#, kde-format
 msgid "You are already downloading this torrent %1, the list of trackers of both torrents has been merged."
 msgstr "Du laadst den Torrent \"%1\" al daal; de Listen vun Trackers wöörn tosamenföhrt."
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/torrent/torrentcontrol.cpp:592
-#, kde-format
 msgid "You are already downloading the torrent %1"
 msgstr "Du laadst den Torrent \"%1\" al daal"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/torrent/torrentcontrol.cpp:691
-#, kde-format
 msgid "Cannot migrate %1 : %2"
 msgstr "\"%1\" lett sik nich verlagern: %2"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/torrent/torrentcontrol.cpp:1387
-#, kde-format
 msgid "The torrent %1 was started with a previous version of KTorrent. To make sure this torrent still works with this version of KTorrent, we will migrate this torrent. You will be asked for a location to save the torrent to. If you press cancel, we will select your home directory."
 msgstr "De Torrent \"%1\" wöör mit en verleden Verschoon vun KTorrent opropen. Wullt Du besekern, dat de Torrent ok mit disse Verschoon vun KTorrent funkscheneert, muttst Du em na en anner Steed verschuven. Du warrst na en nieg Spiekersteed fraagt. Klickst Du op \"Afbreken\", warrt Dien Tohuusorner bruukt."
 
@@ -2562,13 +2580,11 @@ msgstr "Anhollen. Keen Platz mehr op Reedschap na."
 #: transfer-plugins/bittorrent/libbtcore/torrent/torrentcreator.cpp:124
 #: transfer-plugins/bittorrent/libbtcore/torrent/torrentcreator.cpp:259
 #: transfer-plugins/bittorrent/libbtcore/torrent/torrentcreator.cpp:297
-#, kde-format
 msgid "Cannot open file %1: %2"
 msgstr "Datei \"%1\" lett sik nich opmaken: %2"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/torrent/torrentcreator.cpp:359
-#, kde-format
 msgid "Cannot create index file: %1"
 msgstr "Indexdatei \"%1\" lett sik nich opstellen"
 
@@ -2592,74 +2608,62 @@ msgstr "Leeg Tracker-Adress"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/tracker/udptracker.cpp:307
-#, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "Reeknernaam \"%1\" lett sik nich oplösen"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/tracker/udptrackersocket.cpp:66
-#, kde-format
 msgid "Cannot bind to udp port %1 or the 10 following ports."
 msgstr "UDP-Port %1 un de 10 nakamen Porten laat sik nich bruken."
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/util/file.cpp:83
-#, kde-format
 msgid "Cannot write to %1 : %2"
 msgstr "Datei \"%1\" lett sik nich schrieven: %2"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/util/file.cpp:97
-#, kde-format
 msgid "Cannot read from %1"
 msgstr "Datei \"%1\" lett sik nich lesen"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/util/fileops.cpp:88
-#, kde-format
 msgid "Cannot create directory %1"
 msgstr "Orner \"%1\" lett sik nich opstellen"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/util/fileops.cpp:129
-#, kde-format
 msgid "Cannot symlink %1 to %2: %3"
 msgstr "Symlink vun %1 na %2 lett sik nich opstellen: %3"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/util/fileops.cpp:146
-#, kde-format
 msgid "Cannot move %1 to %2: %3"
 msgstr "\"%1\" lett sik nich na %2 verschuven: %3"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/util/fileops.cpp:162
 #: transfer-plugins/bittorrent/libbtcore/util/fileops.cpp:178
-#, kde-format
 msgid "Cannot copy %1 to %2: %3"
 msgstr "\"%1\" lett sik nich na %2 koperen: %3"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/util/fileops.cpp:239
-#, kde-format
 msgid "Cannot delete %1: %2"
 msgstr "\"%1\" lett sik nich wegdoon: %2"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/util/fileops.cpp:256
-#, kde-format
 msgid "Cannot create %1: %2"
 msgstr "\"%1\" lett sik nich opstellen: %2"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/util/fileops.cpp:274
-#, kde-format
 msgid "Cannot calculate the filesize of %1: %2"
 msgstr "Dateigrött vun \"%1\" lett sik nich utreken : %2"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/util/fileops.cpp:290
-#, kde-format
 msgid "Cannot calculate the filesize : %1"
 msgstr "Dateigrött lett sik nich utreken : %1"
 
@@ -2669,19 +2673,16 @@ msgstr "Dateigrött lett sik nich utreken : %1"
 #: transfer-plugins/bittorrent/libbtcore/util/fileops.cpp:377
 #: transfer-plugins/bittorrent/libbtcore/util/fileops.cpp:392
 #: transfer-plugins/bittorrent/libbtcore/util/fileops.cpp:394
-#, kde-format
 msgid "Cannot expand file: %1"
 msgstr "Datei \"%1\" lett sik nich ruttrecken"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/util/fileops.cpp:427
-#, kde-format
 msgid "Cannot seek in file : %1"
 msgstr "Binnen Datei \"%1\" lett sik nich söken"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/util/functions.cpp:274
-#, kde-format
 msgid "1 day "
 msgid_plural "%1 days "
 msgstr[0] "1 Dag "
@@ -2689,7 +2690,6 @@ msgstr[1] "%1 Daag "
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/libbtcore/util/log.cpp:112
-#, kde-format
 msgid "Cannot open log file %1 : %2"
 msgstr "Logbookdatei \"%1\" lett sik nich opmaken: %2"
 
@@ -2715,13 +2715,11 @@ msgstr "Fastplaat-In-/Utgaav"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/scandlg.cpp:81
-#, kde-format
 msgid "Error scanning data: %1"
 msgstr "Fehler bi't Daten-Inlesen: %1"
 
 #. +> trunk stable
 #: transfer-plugins/bittorrent/scandlg.cpp:87
-#, kde-format
 msgid "Scanning data of <b>%1</b> :"
 msgstr "Daten vun <b>%1</b> warrt dörkeken:"
 
@@ -2772,6 +2770,119 @@ msgstr "0"
 #: transfer-plugins/bittorrent/scandlg.ui:183
 msgid "Cancel"
 msgstr "Afbreken"
+
+#. +> trunk
+#: transfer-plugins/checksumsearch/checksumsearch.cpp:30
+#, fuzzy
+#| msgid "Appearance"
+msgid "Append"
+msgstr "Utsehn"
+
+#. +> trunk
+#: transfer-plugins/checksumsearch/checksumsearch.cpp:30
+#, fuzzy
+#| msgid "Open file"
+msgid "Replace file"
+msgstr "Datei opmaken"
+
+#. +> trunk
+#: transfer-plugins/checksumsearch/checksumsearch.cpp:30
+msgid "Replace file-ending"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KPushButton, remove)
+#. i18n: ectx: property (text), widget (QPushButton, removeEngineBt)
+#. i18n: ectx: property (text), widget (QPushButton, removeScriptButton)
+#. +> trunk stable
+#: transfer-plugins/checksumsearch/checksumsearch.ui:37
+#: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:67
+#: transfer-plugins/mirrorsearch/dlgmirrorsearch.ui:62
+msgid "Remove"
+msgstr "Wegmaken"
+
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#. +> trunk
+#: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:19
+#, fuzzy
+#| msgid "Change appearance settings"
+msgid "Change string:"
+msgstr "De Instellen för't Utsehn topassen"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. +> trunk
+#: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:33
+msgid "Mode:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. +> trunk
+#: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:43
+msgid "Checksum type:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#. +> trunk
+#: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:77
+msgid "Result:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. +> trunk
+#: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:84
+msgid "label"
+msgstr ""
+
+#. +> trunk
+#: transfer-plugins/checksumsearch/dlgchecksumsearch.cpp:41
+msgid "Add item"
+msgstr ""
+
+#. +> trunk
+#: transfer-plugins/checksumsearch/dlgchecksumsearch.cpp:69
+msgid "%1 would become %2"
+msgstr ""
+
+#. +> trunk
+#: transfer-plugins/checksumsearch/dlgchecksumsearch.cpp:197
+#, fuzzy
+#| msgid "Change appearance settings"
+msgctxt "the string that is used to modify an url"
+msgid "Change string"
+msgstr "De Instellen för't Utsehn topassen"
+
+#. +> trunk
+#: transfer-plugins/checksumsearch/dlgchecksumsearch.cpp:198
+#, fuzzy
+#| msgid "Change Tracker"
+msgctxt "the mode defines how the url should be changed"
+msgid "Change mode"
+msgstr "Tracker wesseln"
+
+#. +> trunk
+#: transfer-plugins/checksumsearch/dlgchecksumsearch.cpp:199
+msgctxt "the type of the checksum e.g. md5"
+msgid "Checksum type"
+msgstr ""
+
+#. i18n: ectx: label, entry (SearchStrings), group (ChecksumSearch)
+#. i18n: ectx: label, entry (SearchEnginesNameList), group (SearchEngines)
+#. +> trunk stable
+#: transfer-plugins/checksumsearch/kget_checksumsearchfactory.kcfg:7
+#: transfer-plugins/mirrorsearch/kget_mirrorsearchfactory.kcfg:10
+msgid "List of the available search engines"
+msgstr "List mit verföögbor Söökmaschienen"
+
+#. i18n: ectx: label, entry (UrlChangeModeList), group (ChecksumSearch)
+#. i18n: ectx: label, entry (ChecksumTypeList), group (ChecksumSearch)
+#. i18n: ectx: label, entry (SearchEnginesUrlList), group (SearchEngines)
+#. i18n: ectx: label, entry (PathList), group (UserScripts)
+#. +> trunk stable
+#: transfer-plugins/checksumsearch/kget_checksumsearchfactory.kcfg:11
+#: transfer-plugins/checksumsearch/kget_checksumsearchfactory.kcfg:15
+#: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:11
+#: transfer-plugins/mirrorsearch/kget_mirrorsearchfactory.kcfg:14
+msgid "Urls list of the available search engines"
+msgstr "URL-List vun de verföögboren Söökmaschienen"
 
 #. +> trunk stable
 #: transfer-plugins/contentfetch/contentfetch.cpp:47
@@ -2828,14 +2939,6 @@ msgstr "Beschrieven"
 msgid "New Script...."
 msgstr "Nieg Skript..."
 
-#. i18n: ectx: property (text), widget (QPushButton, removeEngineBt)
-#. i18n: ectx: property (text), widget (QPushButton, removeScriptButton)
-#. +> trunk stable
-#: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:67
-#: transfer-plugins/mirrorsearch/dlgmirrorsearch.ui:62
-msgid "Remove"
-msgstr "Wegmaken"
-
 #. i18n: ectx: property (text), widget (QPushButton, editScriptButton)
 #. +> trunk stable
 #: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:74
@@ -2876,8 +2979,10 @@ msgid "Path:"
 msgstr "Padd:"
 
 #. i18n: ectx: property (text), widget (QLabel, scriptDescriptionLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
 #. +> trunk stable
 #: transfer-plugins/contentfetch/dlgscriptediting.ui:43
+#: ui/metalinkcreator/filedlg.ui:248 ui/metalinkcreator/general.ui:69
 msgid "Description:"
 msgstr "Beschrieven:"
 
@@ -2886,14 +2991,6 @@ msgstr "Beschrieven:"
 #: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:7
 msgid "List of the Regexp to match input Url"
 msgstr "Reguleer Utdrück för Ingaav-URLs"
-
-#. i18n: ectx: label, entry (SearchEnginesUrlList), group (SearchEngines)
-#. i18n: ectx: label, entry (PathList), group (UserScripts)
-#. +> trunk stable
-#: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:11
-#: transfer-plugins/mirrorsearch/kget_mirrorsearchfactory.kcfg:14
-msgid "Urls list of the available search engines"
-msgstr "URL-List vun de verföögboren Söökmaschienen"
 
 #. i18n: ectx: label, entry (DescriptionList), group (UserScripts)
 #. +> trunk stable
@@ -2914,8 +3011,10 @@ msgid "File Settings"
 msgstr "Datei-Instellen"
 
 #. i18n: ectx: property (text), widget (QLabel, fileNameLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_10)
 #. +> trunk stable
 #: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:25
+#: ui/metalinkcreator/filedlg.ui:54
 msgid "Filename:"
 msgstr "Dateinaam:"
 
@@ -2980,34 +3079,82 @@ msgid "User .netrc file"
 msgstr "Bruker-.netrc-Datei"
 
 #. +> trunk stable
-#: transfer-plugins/kio/transferKio.cpp:38
-#: transfer-plugins/metalink/metalink.cpp:43
-#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:46
+#: transfer-plugins/kio/transferKio.cpp:97
 msgctxt "transfer state: connecting"
 msgid "Connecting...."
 msgstr "Bi to tokoppeln..."
 
-#. +> trunk stable
-#: transfer-plugins/kio/transferKio.cpp:128
+#. +> stable
+#: transfer-plugins/kio/transferKio.cpp:129
 #: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:220
 msgid "Aborted"
 msgstr "Afbraken"
 
-#. +> trunk stable
-#: transfer-plugins/kio/transferKio.cpp:156
-#: transfer-plugins/kio/transferKio.cpp:170
-#: transfer-plugins/kio/transferKio.cpp:185
-#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:251
-#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:268
-#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:285
-msgid "Downloading...."
-msgstr "Bi to daalladen..."
+#. +> trunk
+#: transfer-plugins/kio/transferKio.cpp:257
+#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:213
+msgid "The download (%1) could not be verfied. Do you want to repair it?"
+msgstr ""
 
-#. +> trunk stable
-#: transfer-plugins/metalink/metalink.cpp:119
-msgctxt "transfer state: aborted"
-msgid "Aborted"
-msgstr "Afbraken"
+#. +> trunk
+#: transfer-plugins/kio/transferKio.cpp:258
+#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:214
+msgid "Verification failed."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. +> trunk
+#: transfer-plugins/metalink/dlgmetalink.ui:22
+#, fuzzy
+#| msgid "Number of chunks downloaded:"
+msgid "Number of simultanous downloaded files:"
+msgstr "Tall vun daallaadt Blöck:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. +> trunk
+#: transfer-plugins/metalink/dlgmetalink.ui:39
+#, fuzzy
+#| msgid "Number of retries:"
+msgid "Number of mirrors per file:"
+msgstr "Tall vun Versöök:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. +> trunk
+#: transfer-plugins/metalink/dlgmetalink.ui:56
+#, fuzzy
+#| msgid "Number of retries:"
+msgid "Number of connections per url:"
+msgstr "Tall vun Versöök:"
+
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
+#. +> trunk
+#: transfer-plugins/metalink/fileselection.ui:17
+msgid "Select the files you want to be downloaded."
+msgstr ""
+
+#. +> trunk
+#: transfer-plugins/metalink/metalink.cpp:91
+#, fuzzy
+#| msgid "Downloading Torrent File...."
+msgid "Downloading Metalink File...."
+msgstr "Torrent-Datei warrt daallaadt..."
+
+#. +> trunk
+#: transfer-plugins/metalink/metalink.cpp:198
+msgid "Download failed, no working urls were found."
+msgstr ""
+
+#. +> trunk
+#: transfer-plugins/metalink/metalink.cpp:222
+#, fuzzy
+#| msgid "File Settings"
+msgid "File Selection"
+msgstr "Datei-Instellen"
+
+#. +> trunk
+#: transfer-plugins/metalink/metalink.cpp:502
+msgid "The cownload could not be verified, try to repair it?"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, engineNameLabel)
 #. +> trunk stable
@@ -3021,8 +3168,14 @@ msgstr "Naam vun de Söökmaschien:"
 msgid "Insert Engine"
 msgstr "Söökmaschien tofögen"
 
+#. i18n: ectx: property (text), widget (QLabel, label_23)
+#. i18n: ectx: property (text), widget (QLabel, label_21)
+#. i18n: ectx: property (text), widget (QLabel, label_26)
+#. i18n: ectx: property (text), widget (QLabel, label_27)
 #. +> trunk stable
 #: transfer-plugins/mirrorsearch/dlgmirrorsearch.cpp:29
+#: ui/metalinkcreator/filedlg.ui:357 ui/metalinkcreator/filedlg.ui:411
+#: ui/metalinkcreator/general2.ui:57 ui/metalinkcreator/general2.ui:98
 msgid "Url:"
 msgstr "URL:"
 
@@ -3044,12 +3197,6 @@ msgstr "Naam vun de Söökmaschien"
 msgid "New Engine..."
 msgstr "Nieg Söökmaschien..."
 
-#. i18n: ectx: label, entry (SearchEnginesNameList), group (SearchEngines)
-#. +> trunk stable
-#: transfer-plugins/mirrorsearch/kget_mirrorsearchfactory.kcfg:10
-msgid "List of the available search engines"
-msgstr "List mit verföögbor Söökmaschienen"
-
 #. +> trunk stable
 #: transfer-plugins/mms/mmsTransfer.cpp:36
 msgctxt "transfer state: running"
@@ -3058,44 +3205,50 @@ msgstr "An't Lopen..."
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
 #. +> trunk stable
-#: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:16
+#: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:17
 msgid "Threads"
 msgstr "Utföhrsträng"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. +> trunk stable
-#: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:25
+#: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:29
 msgid "Number of threads:"
 msgstr "Tall vun Sträng:"
 
 #. i18n: ectx: property (text), widget (QLabel, segmentSizeLabel)
-#. +> trunk stable
+#. +> stable
 #: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:45
 msgid "Minimal segment size:"
 msgstr "Lüttst Deel:"
 
+#. i18n: ectx: property (text), widget (QCheckBox, enginesCheckBox)
+#. +> trunk stable
+#: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:51
+msgid "Use search engines"
+msgstr "Söökmaschienen bruken"
+
 #. i18n: ectx: property (suffix), widget (QSpinBox, minSegSizeSpinBox)
 #. i18n: ectx: property (suffix), widget (QSpinBox, saveDataSizeSpinBox)
-#. +> trunk stable
+#. +> stable
 #: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:52
 #: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:81
 msgid "kBi"
 msgstr "KiB"
 
+#. i18n: ectx: property (text), widget (QCheckBox, verificationCheckBox)
+#. +> trunk
+#: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:58
+msgid "Search for verification information"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QLabel, saveDataLabel)
-#. +> trunk stable
+#. +> stable
 #: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:74
 msgid "Save data every:"
 msgstr "Daten jümmers sekern na:"
 
-#. i18n: ectx: property (text), widget (QCheckBox, enginesCheckBox)
 #. +> trunk stable
-#: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:102
-msgid "Use search engines"
-msgstr "Söökmaschienen bruken"
-
-#. +> trunk stable
-#: ui/contextmenu.cpp:74
+#: ui/contextmenu.cpp:71
 msgid "Semantic Desktop"
 msgstr "Schriefdischbeslöteln"
 
@@ -3121,44 +3274,40 @@ msgid "You can drag download links into the drop target."
 msgstr "Du kannst Daallaadlinks na't Treckteel trecken"
 
 #. +> trunk stable
-#: ui/droptarget.cpp:408
-#, kde-format
-msgctxt "%1 filename, %2 percent complete, %3 downloaded out of %4 total size, %5 status"
-msgid "%1(%2% %3/%4) %5"
-msgstr "%1(%2% %3/%4) %5"
-
-#. +> trunk stable
-#: ui/droptarget.cpp:416
-#, kde-format
+#: ui/droptarget.cpp:406
 msgctxt "%1 filename, %2 total size, %3 status"
 msgid "%1(%2) %3"
 msgstr "%1(%2) %3"
 
 #. +> trunk stable
-#: ui/droptarget.cpp:422
-#, kde-format
+#: ui/droptarget.cpp:412
 msgctxt "%1 filename, %2 percent complete, %3 downloaded out of %4 total size"
 msgid "%1(%2% %3/%4) Speed:%5/s"
 msgstr "%1(%2% %3/%4) Gauigkeit:%5/s"
 
 #. +> trunk stable
-#: ui/droptarget.cpp:436
+#: ui/droptarget.cpp:420
+msgctxt "%1 filename, %2 percent complete, %3 downloaded out of %4 total size, %5 status"
+msgid "%1(%2% %3/%4) %5"
+msgstr "%1(%2% %3/%4) %5"
+
+#. +> trunk stable
+#: ui/droptarget.cpp:434
 msgid "Ready"
 msgstr "Praat."
 
 #. +> trunk stable
-#: ui/droptarget.cpp:446
+#: ui/droptarget.cpp:444
 msgid "Drop target has been hidden. If you want to show it again, go to Settings->Configure KGet->Look & Feel."
 msgstr "Du hest dat Treckteel versteken. Wenn Du dat wedder wiesen wullt, kiek bi \"Instellen\" -> \"KGet instellen\" -> \"Utsehn\""
 
 #. +> trunk stable
-#: ui/droptarget.cpp:448
+#: ui/droptarget.cpp:446
 msgid "Hiding drop target"
 msgstr "Treckteel versteken"
 
 #. +> trunk stable
 #: ui/groupsettingsdialog.cpp:24
-#, kde-format
 msgid "Group Settings for %1"
 msgstr "Koppelinstellen för %1"
 
@@ -3462,25 +3611,25 @@ msgstr "&Datei"
 
 #. i18n: ectx: Menu (Downloads)
 #. +> trunk stable
-#: ui/kgetui.rc:16
+#: ui/kgetui.rc:17
 msgid "&Downloads"
 msgstr "&Daalladen"
 
 #. i18n: ectx: Menu (settings)
 #. +> trunk stable
-#: ui/kgetui.rc:26
+#: ui/kgetui.rc:27
 msgid "&Settings"
 msgstr "&Instellen"
 
 #. i18n: ectx: Menu (help)
 #. +> trunk stable
-#: ui/kgetui.rc:30
+#: ui/kgetui.rc:31
 msgid "&Help"
 msgstr "&Hülp"
 
 #. i18n: ectx: ToolBar (kget_toolbar)
 #. +> trunk stable
-#: ui/kgetui.rc:33
+#: ui/kgetui.rc:34
 msgid "Main Toolbar"
 msgstr "Hööft-Warktüüchbalken"
 
@@ -3622,7 +3771,6 @@ msgstr "Oort (URL)"
 
 #. +> trunk stable
 #: ui/linkview/kget_linkview.cpp:196
-#, kde-format
 msgid "Links in: %1 - KGet"
 msgstr "Links in: %1 - KGet"
 
@@ -3635,6 +3783,541 @@ msgstr "All Filterte &utsöken"
 #: ui/linkview/kget_linkview.cpp:265
 msgid "D&eselect All Filtered"
 msgstr "All filterte &afkören"
+
+#. +> trunk
+#: ui/metalinkcreator/dragdlg.cpp:54
+msgid "Import dropped files"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. +> trunk
+#: ui/metalinkcreator/dragdlg.ui:23
+msgid "Create checksums:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. +> trunk
+#: ui/metalinkcreator/dragdlg.ui:30
+msgid "Automatically create create checksums for the selected types. Keep in mind that this might take a while."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. +> trunk
+#: ui/metalinkcreator/dragdlg.ui:40
+msgid "Types of the checksums:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. +> trunk
+#: ui/metalinkcreator/dragdlg.ui:53
+#, fuzzy
+#| msgid "General"
+msgid "General url:"
+msgstr "Allmeen"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#. +> trunk
+#: ui/metalinkcreator/dragdlg.ui:60
+msgid "Enter urls here if all the dropped files are on that server and in the same directory. For each dropped file the url would consist of the entered part and the filename."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, partialChecksums)
+#. +> trunk
+#: ui/metalinkcreator/dragdlg.ui:105
+msgid "Create partial checksums"
+msgstr ""
+
+#. +> trunk
+#: ui/metalinkcreator/filedlg.cpp:100
+#, fuzzy
+#| msgid "File Settings"
+msgid "File Properties"
+msgstr "Datei-Instellen"
+
+#. +> trunk
+#: ui/metalinkcreator/filedlg.cpp:109
+#, fuzzy
+#| msgid "Enter a new Tag"
+msgid "Enter a filename."
+msgstr "En nieg Slötelwoort ingeven"
+
+#. +> trunk
+#: ui/metalinkcreator/filedlg.cpp:110
+msgid "Enter at least one url."
+msgstr ""
+
+#. +> trunk
+#: ui/metalinkcreator/filedlg.cpp:111
+msgid "The filename exists already, choose a different one."
+msgstr ""
+
+#. +> trunk
+#: ui/metalinkcreator/filedlg.cpp:142
+msgid "Required data entered, also consider to enter additional information."
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:24
+#, fuzzy
+#| msgid "Requests"
+msgid "Required"
+msgstr "Anfragen"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:95
+#, fuzzy
+#| msgid "Used tags:"
+msgid "Used Mirrors:"
+msgstr "Bruukt Slötelwöör::"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:103
+msgid "Recommended"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:111
+msgid "File size (in bytes):"
+msgstr ""
+
+#. i18n: ectx: property (validChars), widget (KRestrictedLine, size)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:121
+msgid "0123456789"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:152
+#, fuzzy
+#| msgid "Description:"
+msgid "Verification:"
+msgstr "Beschrieven:"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_3)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:200 ui/metalinkcreator/general.ui:39
+msgctxt "the basic identity of the metalink-file, e.g. KDE"
+msgid "The identity of the file"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:203 ui/metalinkcreator/general.ui:42
+msgid "Identity:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_4)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:217 ui/metalinkcreator/general.ui:56
+msgctxt "the version of the file e.g. 4.3 for KDE"
+msgid "The version of the file"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:220 ui/metalinkcreator/general.ui:59
+#, fuzzy
+#| msgid "Description:"
+msgid "Version:"
+msgstr "Beschrieven:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, Seite)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:237
+msgid "Optional"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_12)
+#. i18n: ectx: property (text), widget (QLabel, label_17)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:262 ui/metalinkcreator/general.ui:83
+msgid "Logo:"
+msgstr ""
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, logo)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:272 ui/metalinkcreator/general.ui:93
+msgid "Url to the logo"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_13)
+#. i18n: ectx: property (toolTip), widget (QLabel, label_19)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:282 ui/metalinkcreator/general.ui:103
+msgid "The language of the file"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_13)
+#. i18n: ectx: property (text), widget (QLabel, label_19)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:285 ui/metalinkcreator/general.ui:106
+msgid "Language:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_14)
+#. i18n: ectx: property (text), widget (QLabel, label_20)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:295 ui/metalinkcreator/general.ui:116
+msgid "Operating system:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_18)
+#. i18n: ectx: property (text), widget (QLabel, label_23)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:309 ui/metalinkcreator/general2.ui:22
+msgid "Copyright:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_22)
+#. i18n: ectx: property (text), widget (QLabel, label_24)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:331 ui/metalinkcreator/general2.ui:139
+msgid "License:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_19)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#. i18n: ectx: property (text), widget (QLabel, label_25)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:340 ui/metalinkcreator/filedlg.ui:391
+#: ui/metalinkcreator/general2.ui:40 ui/metalinkcreator/general2.ui:78
+#, fuzzy
+#| msgid "Name"
+msgid "Name:"
+msgstr "Naam"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, lic_name)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:347 ui/metalinkcreator/general2.ui:47
+#, fuzzy
+#| msgid "Number of the chunk"
+msgid "Name of the license"
+msgstr "Blocknummer:"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, lic_url)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:364 ui/metalinkcreator/general2.ui:64
+msgid "Url to the license"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_20)
+#. i18n: ectx: property (text), widget (QLabel, label_28)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:382 ui/metalinkcreator/general2.ui:126
+msgid "Publisher:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KLineEdit, pub_name)
+#. i18n: ectx: property (toolTip), widget (KLineEdit, pub_url)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:398 ui/metalinkcreator/filedlg.ui:418
+#: ui/metalinkcreator/general2.ui:85 ui/metalinkcreator/general2.ui:105
+msgid "publisher"
+msgstr ""
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, pub_name)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:401 ui/metalinkcreator/general2.ui:88
+#, fuzzy
+#| msgid "IP address of the peer"
+msgid "Name of the publisher"
+msgstr "IP-Adress vun den Partner"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, pub_url)
+#. +> trunk
+#: ui/metalinkcreator/filedlg.ui:421 ui/metalinkcreator/general2.ui:108
+msgid "Url to the publisher"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. +> trunk
+#: ui/metalinkcreator/files.ui:23
+#, fuzzy
+#| msgid "Files"
+msgctxt "Files as in files on a server"
+msgid "Files:"
+msgstr "Dateien"
+
+#. i18n: ectx: property (text), widget (KPushButton, add_local_file)
+#. +> trunk
+#: ui/metalinkcreator/files.ui:51
+msgid "Add local files"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. +> trunk
+#: ui/metalinkcreator/files.ui:82
+msgid "Add at least one file. You can also drag and drop local files into this window, that would enter a lot information automatically."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. +> trunk
+#: ui/metalinkcreator/files.ui:98
+msgid "Adding dropped files."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, needUrl)
+#. +> trunk
+#: ui/metalinkcreator/files.ui:115
+msgid "You need to set mirrors for the entries with an icon."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. +> trunk
+#: ui/metalinkcreator/general.ui:22
+msgid "Origin:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelDynamic)
+#. +> trunk
+#: ui/metalinkcreator/general.ui:29
+msgid "Dynamic means that updated metalinks can be found at \"Origin\"."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, labelDynamic)
+#. +> trunk
+#: ui/metalinkcreator/general.ui:32
+msgid "Dynamic:"
+msgstr ""
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, identity)
+#. +> trunk
+#: ui/metalinkcreator/general.ui:49
+msgid "Identity e.g. \"KDE\""
+msgstr ""
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, origin)
+#. +> trunk
+#: ui/metalinkcreator/general.ui:130
+msgid "Web-Url to the metalink"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_30)
+#. i18n: ectx: property (text), widget (QLabel, label_29)
+#. +> trunk
+#: ui/metalinkcreator/general.ui:149 ui/metalinkcreator/general.ui:192
+#, fuzzy
+#| msgid "Remaining time:"
+msgid "Date and time:"
+msgstr "Nablieven Tiet:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, use_publishedtimeoffset)
+#. i18n: ectx: property (text), widget (QCheckBox, use_updatedtimeoffset)
+#. +> trunk
+#: ui/metalinkcreator/general.ui:159 ui/metalinkcreator/general.ui:202
+msgid "Timezone offset:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#. +> trunk
+#: ui/metalinkcreator/general.ui:176 ui/metalinkcreator/general.ui:212
+msgid "Negative offset:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, use_published)
+#. +> trunk
+#: ui/metalinkcreator/general.ui:242
+msgid "Metalink published:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#. +> trunk
+#: ui/metalinkcreator/general.ui:255
+msgid "General information:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, use_updated)
+#. +> trunk
+#: ui/metalinkcreator/general.ui:262
+#, fuzzy
+#| msgid "Next update in:"
+msgid "Metalink updated:"
+msgstr "Nakamen Opfrischen in:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#. +> trunk
+#: ui/metalinkcreator/general.ui:301
+msgid "Here you can enter optional general information on the metalink. What you set here applies to all files, if an option is set here and later on a specific file then the later is preferred."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. +> trunk
+#: ui/metalinkcreator/introduction.ui:17
+msgid "This assistant allows you to create metalinks from scratch or base them on existing metalinks. A lot of the fields are optional or recommended, so enter them at will. The minimum is a save location, at least one file and one url."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. +> trunk
+#: ui/metalinkcreator/introduction.ui:45
+msgid "Save created Metalink at:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, createButton)
+#. +> trunk
+#: ui/metalinkcreator/introduction.ui:71
+msgid "Create new Metalink"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, loadButton)
+#. +> trunk
+#: ui/metalinkcreator/introduction.ui:78
+msgid "Load existing Metalink:"
+msgstr ""
+
+#. +> trunk
+#: ui/metalinkcreator/metalinkcreator.cpp:226
+msgid "Create a Metalink"
+msgstr ""
+
+#. +> trunk
+#: ui/metalinkcreator/metalinkcreator.cpp:273
+#, fuzzy
+#| msgid "Unable to save to: %1"
+msgid "Unable to load: %1"
+msgstr "\"%1\" lett sik nich sekern"
+
+#. +> trunk
+#: ui/metalinkcreator/metalinkcreator.cpp:303
+#: ui/metalinkcreator/metalinkcreator.cpp:308
+#, fuzzy
+#| msgid "Open file"
+msgid "Metalink file"
+msgstr "Datei opmaken"
+
+#. +> trunk
+#: ui/metalinkcreator/metalinkcreator.cpp:314
+msgid "Define the saving location."
+msgstr ""
+
+#. +> trunk
+#: ui/metalinkcreator/metalinkcreator.cpp:346
+#: ui/metalinkcreator/metalinkcreator.cpp:447
+msgid "General optional information for the metalink."
+msgstr ""
+
+#. +> trunk
+#: ui/metalinkcreator/metalinkcreator.cpp:492
+msgctxt "file as in file on hard drive"
+msgid "Enter at least one file."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, successLabel)
+#. +> trunk
+#: ui/mirror/mirroradddlg.ui:17 ui/verificationadddlg.ui:17
+#, fuzzy
+#| msgid "KSqueezedTextLabel"
+msgid "TextLabel"
+msgstr "KSqueezedTextLabel"
+
+#. i18n: ectx: property (text), widget (QLabel, labelMirror)
+#. +> trunk
+#: ui/mirror/mirroradddlg.ui:29
+#, fuzzy
+#| msgid "Error: "
+msgid "Mirror:"
+msgstr "Fehler: "
+
+#. i18n: ectx: property (text), widget (QLabel, labelConnections)
+#. +> trunk
+#: ui/mirror/mirroradddlg.ui:36
+#, fuzzy
+#| msgid "Number of retries:"
+msgid "Number of connections:"
+msgstr "Tall vun Versöök:"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, url)
+#. +> trunk
+#: ui/mirror/mirroradddlg.ui:43
+#, fuzzy
+#| msgid "Enter a new Tag"
+msgid "Enter an url"
+msgstr "En nieg Slötelwoort ingeven"
+
+#. i18n: ectx: property (text), widget (QLabel, labelPreference)
+#. +> trunk
+#: ui/mirror/mirroradddlg.ui:63
+msgid "Preference:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KIntNumInput, preference)
+#. +> trunk
+#: ui/mirror/mirroradddlg.ui:70
+msgid "Optional: The preference of the mirror, 1 lowest 100 highest."
+msgstr ""
+
+#. i18n: ectx: property (specialValueText), widget (KIntNumInput, preference)
+#. +> trunk
+#: ui/mirror/mirroradddlg.ui:82 ui/mirror/mirrormodel.cpp:201
+#: ui/mirror/mirrormodel.cpp:219
+msgid "not specified"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, labelLocation)
+#. +> trunk
+#: ui/mirror/mirroradddlg.ui:89
+#, fuzzy
+#| msgid "Location (URL)"
+msgid "Location:"
+msgstr "Oort (URL)"
+
+#. +> trunk
+#: ui/mirror/mirrormodel.cpp:378
+#, fuzzy
+#| msgid "Error"
+msgctxt "Mirror as in server, in url"
+msgid "Mirror"
+msgstr "Fehler"
+
+#. +> trunk
+#: ui/mirror/mirrormodel.cpp:380
+#, fuzzy
+#| msgid "Connections"
+msgctxt "Number of paralell connections to the mirror"
+msgid "Connections"
+msgstr "Verbinnen"
+
+#. +> trunk
+#: ui/mirror/mirrormodel.cpp:382
+msgctxt "The preference of the mirror"
+msgid "Preference"
+msgstr ""
+
+#. +> trunk
+#: ui/mirror/mirrormodel.cpp:384
+#, fuzzy
+#| msgid "Location (URL)"
+msgctxt "Location = country"
+msgid "Location"
+msgstr "Oort (URL)"
+
+#. +> trunk
+#: ui/mirror/mirrorsettings.cpp:44
+msgid "Add mirror"
+msgstr ""
+
+#. +> trunk
+#: ui/mirror/mirrorsettings.cpp:60 ui/verificationdialog.cpp:48
+#, fuzzy
+#| msgid "Add Tracker"
+msgctxt "Adds the item and reopens the dialog to add a further item"
+msgid "Add more"
+msgstr "Tracker tofögen"
+
+#. +> trunk
+#: ui/mirror/mirrorsettings.cpp:122
+msgid "%1 has been successfully added."
+msgstr ""
+
+#. +> trunk
+#: ui/mirror/mirrorsettings.cpp:162
+msgid "Modify the used mirrors."
+msgstr ""
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, lineEdit)
 #. +> trunk stable
@@ -3654,53 +4337,140 @@ msgstr "Teel:"
 msgid "Transfer group:"
 msgstr "Överdregenkoppel:"
 
-#. +> trunk stable
-#: ui/transferdetails.cpp:38
+#. +> trunk
+#: ui/renamefile.cpp:32
+#, fuzzy
+#| msgid "Rename"
+msgid "Rename File"
+msgstr "Ümnömen"
+
+#. +> trunk
+#: ui/renamefile.cpp:41
+#, fuzzy
+#| msgid "Rename Group"
+msgid "Rename %1 to:"
+msgstr "Koppel ümnömen"
+
+#. +> trunk
+#: ui/renamefile.cpp:44
+#, fuzzy
+#| msgid "Rename"
+msgid "&Rename"
+msgstr "Ümnömen"
+
+#. +> stable
+#: ui/transferdetails.cpp:37
 msgctxt "@label transfer source"
 msgid "Source:"
 msgstr "Born:"
 
 #. +> trunk stable
-#: ui/transferdetails.cpp:88
-#, kde-format
+#: ui/transferdetails.cpp:78
 msgid "%1 of %2"
 msgstr "%1 vun %2"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#. +> trunk stable
+#. +> trunk
+#: ui/transferdetailsfrm.ui:165
+msgid "Remaining Time:"
+msgstr "Nablieven Tiet:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. +> stable
 #: ui/transferdetailsfrm.ui:164
 msgid "Remaining time:"
 msgstr "Nablieven Tiet:"
 
 #. +> trunk stable
-#: ui/transfersettingsdialog.cpp:18
-#, kde-format
+#: ui/transfersettingsdialog.cpp:29
 msgid "Transfer Settings for %1"
 msgstr "Överdreeginstellen för %1"
 
+#. +> trunk
+#: ui/transfersettingsdialog.cpp:122
+msgid "Changing the destination did not work, the destination stays unmodified."
+msgstr ""
+
+#. +> trunk
+#: ui/transfersettingsdialog.cpp:122
+#, fuzzy
+#| msgid "Destination"
+msgid "Destination unmodified"
+msgstr "Teel"
+
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
 #. +> trunk stable
-#: ui/transfersettingsdialog.ui:22
+#: ui/transfersettingsdialog.ui:23
 msgid "Transfer Settings"
 msgstr "Överdreeg-Instellen"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. +> trunk
+#: ui/transfersettingsdialog.ui:35
+#, fuzzy
+#| msgid "Destination:"
+msgid "Download Destination:"
+msgstr "Teel:"
+
 #. i18n: ectx: property (text), widget (QCheckBox, uploadCheck)
-#. +> trunk stable
+#. +> trunk
+#: ui/transfersettingsdialog.ui:45
+msgid "Upload Limit"
+msgstr "Hoochlaad-Grenz"
+
+#. i18n: ectx: property (text), widget (QCheckBox, uploadCheck)
+#. +> stable
 #: ui/transfersettingsdialog.ui:31
 msgid "Upload limit:"
 msgstr "Hoochlaad-Grenz:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, downloadCheck)
-#. +> trunk stable
+#. +> trunk
+#: ui/transfersettingsdialog.ui:65
+msgid "Download Limit"
+msgstr "Daallaad-Grenz"
+
+#. i18n: ectx: property (text), widget (QCheckBox, downloadCheck)
+#. +> stable
 #: ui/transfersettingsdialog.ui:51
 msgid "Download limit:"
 msgstr "Daallaad-Grenz:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, ratioCheck)
-#. +> trunk stable
+#. +> trunk
+#: ui/transfersettingsdialog.ui:85
+msgid "Maximum Share Ratio"
+msgstr "Hööchst deelt Andeel"
+
+#. i18n: ectx: property (text), widget (QCheckBox, ratioCheck)
+#. +> stable
 #: ui/transfersettingsdialog.ui:71
 msgid "Maximum share ratio:"
 msgstr "Hööchst deelt Andeel:"
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, mirrors)
+#. +> trunk
+#: ui/transfersettingsdialog.ui:112
+msgid "Modify the mirrors used for downloading."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KPushButton, mirrors)
+#. +> trunk
+#: ui/transfersettingsdialog.ui:115
+#, fuzzy
+#| msgid "Error"
+msgctxt "The available mirrors (servers) for downloading"
+msgid "Mirrors"
+msgstr "Fehler"
+
+#. i18n: ectx: property (text), widget (KPushButton, verification)
+#. +> trunk
+#: ui/transfersettingsdialog.ui:129
+#, fuzzy
+#| msgid "Integration"
+msgctxt "verification of the download (e.g. by using MD5)"
+msgid "Verification"
+msgstr "Inbinnen"
 
 #. +> trunk stable
 #: ui/transfersview.cpp:152
@@ -3717,9 +4487,75 @@ msgstr "Överdregen-Enkelheiten"
 msgid "KGet - Download Manager"
 msgstr "KGet - Daallaad-Pleger"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. +> trunk
+#: ui/verificationadddlg.ui:29
+msgctxt "hash type as in md5t, sha1 etc."
+msgid "Hash type:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. +> trunk
+#: ui/verificationadddlg.ui:36
+#, fuzzy
+#| msgid "Path:"
+msgctxt "hash as a hash of type md5, sha1 etc."
+msgid "Hash:"
+msgstr "Padd:"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, newHash)
+#. +> trunk
+#: ui/verificationadddlg.ui:43
+msgid "Enter a hash key"
+msgstr ""
+
+#. +> trunk
+#: ui/verificationdialog.cpp:35
+msgid "Add chechksum"
+msgstr ""
+
+#. +> trunk
+#: ui/verificationdialog.cpp:81
+msgid "%1 %2 has been successfully added."
+msgstr ""
+
+#. +> trunk
+#: ui/verificationdialog.cpp:101
+#, fuzzy
+#| msgid "Transfer Settings for %1"
+msgid "Transfer Verification for %1"
+msgstr "Överdreeginstellen för %1"
+
+#. +> trunk
+#: ui/verificationdialog.cpp:187
+msgid "%1 was successfully verified."
+msgstr ""
+
+#. +> trunk
+#: ui/verificationdialog.cpp:188
+msgid "Verification successful"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, verify)
+#. +> trunk
+#: ui/verificationdialog.ui:33
+msgid "Verify the finnished download with the selected checksum."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KPushButton, verify)
+#. +> trunk
+#: ui/verificationdialog.ui:36
+msgid "&Verify"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. +> trunk
+#: ui/verificationdialog.ui:62
+msgid "Verifying:"
+msgstr ""
+
 #. +> trunk stable
 #: ui/viewscontainer.cpp:44
-#, kde-format
 msgid "Details for: %1"
 msgstr "Enkelheiten för: %1"
 
@@ -3869,9 +4705,6 @@ msgstr "Överdregen-Enkelheiten:"
 
 #~ msgid "&Export Transfers as Plain Text"
 #~ msgstr "Överdregen as eenfach Text &exporteren"
-
-#~ msgid "Rename Group"
-#~ msgstr "Koppel ümnömen"
 
 #~ msgid "Set Icon"
 #~ msgstr "Lüttbild fastleggen"
@@ -4143,23 +4976,11 @@ msgstr "Överdregen-Enkelheiten:"
 #~ msgid "Transfer Group:"
 #~ msgstr "Överdregenkoppel:"
 
-#~ msgid "Remaining Time:"
-#~ msgstr "Nablieven Tiet:"
-
 #~ msgid "Transfer-Settings for %1"
 #~ msgstr "Överdreeginstellen för %1"
 
 #~ msgid "Transfer-Settings"
 #~ msgstr "Överdreeg-Instellen"
-
-#~ msgid "Upload Limit"
-#~ msgstr "Hoochlaad-Grenz"
-
-#~ msgid "Download Limit"
-#~ msgstr "Daallaad-Grenz"
-
-#~ msgid "Maximum Share Ratio"
-#~ msgstr "Hööchst deelt Andeel"
 
 #~ msgid "Transfer details"
 #~ msgstr "Överdregen-Enkelheiten"
@@ -4297,9 +5118,6 @@ msgstr "Överdregen-Enkelheiten:"
 #~ msgid "Konqueror Integration disabled"
 #~ msgstr "Inbinnen na Konqueror utmaakt"
 
-#~ msgid "KSqueezedTextLabel"
-#~ msgstr "KSqueezedTextLabel"
-
 #~ msgid "Upload Limit per Transfer: (0 if no limit)"
 #~ msgstr "Hoochlaad-Grenz per Överdregen: (0 för \"keen Grenz\")"
 
@@ -4349,9 +5167,6 @@ msgstr "Överdregen-Enkelheiten:"
 
 #~ msgid "All"
 #~ msgstr "All"
-
-#~ msgid "File Type"
-#~ msgstr "Dateityp"
 
 #~ msgid ""
 #~ "(C) 2005 - 2007, The KGet developers\n"
