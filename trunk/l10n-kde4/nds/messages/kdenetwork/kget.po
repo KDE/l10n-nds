@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kget\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-09-23 07:16+0200\n"
+"POT-Creation-Date: 2009-09-24 06:18+0200\n"
 "PO-Revision-Date: 2009-09-24 00:03+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -219,8 +219,8 @@ msgctxt "A mirror is removed when the file has the wrong download size"
 msgid "%1 removed as it did report a wrong file size."
 msgstr "\"%1\" wegdaan, dor weer en leeg Dateigrött angeven."
 
-#: core/datasourcefactory.cpp:636 core/kget.cpp:529 core/kget.cpp:878
-#: core/kget.cpp:886 transfer-plugins/metalink/metalink.cpp:193
+#: core/datasourcefactory.cpp:636 core/kget.cpp:554 core/kget.cpp:902
+#: core/kget.cpp:911 transfer-plugins/metalink/metalink.cpp:193
 #: transfer-plugins/bittorrent/bttransfer.cpp:494
 #: transfer-plugins/bittorrent/bttransfer.cpp:505
 #: ui/metalinkcreator/metalinkcreator.cpp:287
@@ -247,7 +247,7 @@ msgctxt "transfer state: delayed"
 msgid "Delayed"
 msgstr "Töövt"
 
-#: core/transfer.cpp:30 core/transfer.cpp:240 core/transfer.cpp:265
+#: core/transfer.cpp:30 core/transfer.cpp:234 core/transfer.cpp:259
 #: transfer-plugins/mms/mmsTransfer.cpp:52
 #: transfer-plugins/bittorrent/bttransfer.cpp:321
 #: transfer-plugins/contentfetch/contentfetch.cpp:64
@@ -299,11 +299,42 @@ msgstr "Wullt Du disse Koppeln redig wegdoon?"
 msgid "Remove groups"
 msgstr "Koppeln wegdoon"
 
-#: core/kget.cpp:237
-msgid "Rename transfer"
-msgstr "Överdregen ümnömen"
+#: core/kget.cpp:241
+msgid ""
+"You have already downloaded that file from another location\n"
+"\n"
+"Download and delete the previous one?"
+msgstr ""
 
-#: core/kget.cpp:514
+#: core/kget.cpp:242
+#, fuzzy
+#| msgid ""
+#| "URL already saved:\n"
+#| "%1\n"
+#| "Download again?"
+msgid "File already downloaded. Download anyway?"
+msgstr ""
+"URL wöör al sekert:\n"
+"%1\n"
+"Nochmaal daalladen?"
+
+#: core/kget.cpp:251
+#, fuzzy
+#| msgid "You are already downloading the torrent %1"
+msgid "You are already downloading the same file"
+msgstr "Du laadst den Torrent \"%1\" al daal"
+
+#: core/kget.cpp:255
+#, fuzzy
+#| msgid ""
+#| "The file %1 already exists.\n"
+#| "Overwrite?"
+msgid "File already exists"
+msgstr ""
+"Dat gifft de Datei \"%1\" al.\n"
+"Wullt Du ehr överschrieven?"
+
+#: core/kget.cpp:539
 #, kde-format
 msgid ""
 "The file %1 already exists.\n"
@@ -312,34 +343,34 @@ msgstr ""
 "Dat gifft de Datei \"%1\" al.\n"
 "Wullt Du ehr överschrieven?"
 
-#: core/kget.cpp:515
+#: core/kget.cpp:540
 msgid "Overwrite existing file?"
 msgstr "Vörhannen Datei överschrieven?"
 
-#: core/kget.cpp:528 ui/metalinkcreator/metalinkcreator.cpp:306
+#: core/kget.cpp:553 ui/metalinkcreator/metalinkcreator.cpp:306
 #, kde-format
 msgid "Unable to save to: %1"
 msgstr "\"%1\" lett sik nich sekern"
 
-#: core/kget.cpp:747 ui/contextmenu.cpp:135
+#: core/kget.cpp:772 ui/contextmenu.cpp:135
 msgid "My Downloads"
 msgstr "De Daalladen"
 
 #. i18n: file: ui/newtransferwidget.ui:25
 #. i18n: ectx: property (text), widget (KTitleWidget, titleWidget)
-#: core/kget.cpp:817 ui/newtransferdialog.cpp:254 rc.cpp:520
+#: core/kget.cpp:842 ui/newtransferdialog.cpp:254 rc.cpp:520
 msgid "New Download"
 msgstr "Nieg Daalladen"
 
-#: core/kget.cpp:817
+#: core/kget.cpp:842
 msgid "Enter URL:"
 msgstr "Bitte URL ingeven:"
 
-#: core/kget.cpp:849
+#: core/kget.cpp:874
 msgid "Save As"
 msgstr "Sekern as"
 
-#: core/kget.cpp:877
+#: core/kget.cpp:901
 #, kde-format
 msgid ""
 "Malformed URL:\n"
@@ -348,7 +379,7 @@ msgstr ""
 "Leeg URL:\n"
 "%1"
 
-#: core/kget.cpp:885
+#: core/kget.cpp:910
 #, kde-format
 msgid ""
 "Malformed URL, protocol missing:\n"
@@ -357,26 +388,43 @@ msgstr ""
 "Leeg URL, Protokoll fehlt:\n"
 "%1"
 
-#: core/kget.cpp:898
+#: core/kget.cpp:922
 #, kde-format
 msgid ""
-"URL already saved:\n"
+"You have already completed a download from the location: \n"
+"\n"
 "%1\n"
-"Download again?"
+"\n"
+"Download it again?"
 msgstr ""
-"URL wöör al sekert:\n"
+
+#: core/kget.cpp:923
+#, fuzzy
+#| msgid "Download again"
+msgid "Download it again?"
+msgstr "Nochmaal daalladen"
+
+#: core/kget.cpp:935
+#, kde-format
+msgid ""
+"You have a download in progress from the location: \n"
+"\n"
 "%1\n"
-"Nochmaal daalladen?"
+"\n"
+"Delete it and download again?"
+msgstr ""
 
-#: core/kget.cpp:899
-msgid "Download URL again?"
-msgstr "URL nochmaal daalladen?"
+#: core/kget.cpp:936
+#, fuzzy
+#| msgid "Download again"
+msgid "Delete it and download again?"
+msgstr "Nochmaal daalladen"
 
-#: core/kget.cpp:927 core/kget.cpp:934
+#: core/kget.cpp:959 core/kget.cpp:966
 msgid "Directory is not writable"
 msgstr "Schrieven na Orner nich mööglich"
 
-#: core/kget.cpp:944
+#: core/kget.cpp:976
 #, kde-format
 msgid ""
 "Destination file \n"
@@ -388,17 +436,17 @@ msgstr ""
 "%1\n"
 "al. Wullt Du ehr överschrieven?"
 
-#: core/kget.cpp:945
+#: core/kget.cpp:977
 msgid "Overwrite destination"
 msgstr "Teel överschrieven"
 
-#: core/kget.cpp:1076
+#: core/kget.cpp:1108
 #, kde-format
 msgid ""
 "<html><p>Plugin loader could not load the plugin:<br/><i>%1</i></p></html>"
 msgstr "<html><p>Dat Moduul lett sik nich laden:<br/><i>%1</i></p></html>"
 
-#: core/kget.cpp:1094
+#: core/kget.cpp:1126
 #, kde-format
 msgid ""
 "Not deleting\n"
@@ -409,7 +457,7 @@ msgstr ""
 "warrt nich wegdaan.\n"
 "Dat is en Orner."
 
-#: core/kget.cpp:1104
+#: core/kget.cpp:1136
 #, kde-format
 msgid ""
 "Not deleting\n"
@@ -422,15 +470,15 @@ msgstr ""
 
 #. i18n: file: conf/dlgadvanced.ui:40
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_AfterFinishAction)
-#: core/kget.cpp:1295 core/kget.cpp:1305 ui/droptarget.cpp:94 rc.cpp:65
+#: core/kget.cpp:1327 core/kget.cpp:1337 ui/droptarget.cpp:94 rc.cpp:65
 msgid "Quit KGet"
 msgstr "KGet utmaken"
 
-#: core/kget.cpp:1296
+#: core/kget.cpp:1328
 msgid "KGet is now closing, as all downloads have completed."
 msgstr "All Daalladen sünd afslaten, KGet maakt sik nu ut."
 
-#: core/kget.cpp:1306
+#: core/kget.cpp:1338
 msgid "The computer will now turn off, as all downloads have completed."
 msgstr "De Reekner maakt sik nu ut, all Daalladen sünd afslaten."
 
@@ -4163,6 +4211,12 @@ msgstr "List mit Beschrieven vun de Bruker-Skripten"
 #: rc.cpp:1018
 msgid "List of whether the script is enabled"
 msgstr "List, de angifft, wat en Skript anmaakt is"
+
+#~ msgid "Rename transfer"
+#~ msgstr "Överdregen ümnömen"
+
+#~ msgid "Download URL again?"
+#~ msgstr "URL nochmaal daalladen?"
 
 #~ msgctxt "file in a filsystem"
 #~ msgid "File"
