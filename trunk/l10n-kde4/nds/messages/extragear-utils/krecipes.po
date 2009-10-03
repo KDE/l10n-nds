@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krecipes\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-10-02 06:14+0200\n"
+"POT-Creation-Date: 2009-10-03 06:25+0200\n"
 "PO-Revision-Date: 2009-09-12 00:26+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -423,7 +423,7 @@ msgstr "Datenbank-Datei:"
 msgid "Open file dialog"
 msgstr "Dateidialoog opmaken"
 
-#: setupassistant.cpp:636 pref.cpp:398
+#: setupassistant.cpp:636 pref.cpp:423
 msgid "Select SQLite database file"
 msgstr "SQLite-Datenbankdatei utsöken"
 
@@ -1174,7 +1174,7 @@ msgstr "Eenheiten ümreken"
 msgid "New Unit Conversion"
 msgstr "Nieg Eenheiten-Ümreken"
 
-#: dialogs/unitsdialog.cpp:70 dialogs/recipeinputdialog.cpp:348 pref.cpp:483
+#: dialogs/unitsdialog.cpp:70 dialogs/recipeinputdialog.cpp:348 pref.cpp:512
 #: widgets/propertylistview.cpp:120 krecipesview.cpp:346 krecipesview.cpp:441
 msgid "Units"
 msgstr "Eenheiten"
@@ -2247,7 +2247,7 @@ msgstr ""
 msgid "Export Recipes"
 msgstr "Rezepten exporteren"
 
-#: actionshandlers/recipeactionshandler.cpp:255 pref.cpp:559
+#: actionshandlers/recipeactionshandler.cpp:255 pref.cpp:588
 msgid "Export"
 msgstr "Exporteren"
 
@@ -2259,7 +2259,7 @@ msgstr "Komprimeert KRecipes-Formaat"
 msgid "Web page"
 msgstr "Nettsiet"
 
-#: actionshandlers/recipeactionshandler.cpp:350 pref.cpp:564
+#: actionshandlers/recipeactionshandler.cpp:350 pref.cpp:593
 msgid "Plain Text"
 msgstr "Eenfach Text"
 
@@ -2635,13 +2635,26 @@ msgstr ""
 msgid "Unsaved Changes"
 msgstr "Nich sekerte Ännern"
 
-#: convert_sqlite3.cpp:68
+#: convert_sqlite3.cpp:83 convert_sqlite3.cpp:91
+#, fuzzy, kde-format
+#| msgid ""
+#| "Unable to find or run the program '%1'.  Either it is not installed on "
+#| "your system or it is not in $PATH."
+msgid ""
+"Unable to find or run the program '%1'.  Either it is not installed on your "
+"system or it is not in $PATH. Do you want to configure other path for this "
+"command?"
+msgstr ""
+"Dat Programm \"%1\" lett sik nich finnen oder opropen. Dat is nich "
+"installeert oder lett sik nich över Dien PATH-Variabel finnen."
+
+#: convert_sqlite3.cpp:100
 #, kde-format
 msgid ""
 "Conversion process failed. Probably the file %1 is not an SQLite 2 database."
 msgstr ""
 
-#: convert_sqlite3.cpp:91
+#: convert_sqlite3.cpp:141
 #, kde-format
 msgid "Conversion successful! SQLite 2 database backed up to %1"
 msgstr ""
@@ -2756,50 +2769,74 @@ msgstr "MySQL-\"dump\"-Befehl utsöken"
 msgid "Select SQLite command"
 msgstr "SQLite-Befehl utsöken"
 
-#: pref.cpp:434
+#: pref.cpp:397
+msgid "SQLite converter"
+msgstr ""
+
+#: pref.cpp:400
+msgid "Path to SQLite old version command:"
+msgstr ""
+
+#: pref.cpp:403
+#, fuzzy
+#| msgid "Select SQLite command"
+msgid "Select old SQLite version command"
+msgstr "SQLite-Befehl utsöken"
+
+#: pref.cpp:406
+msgid "Path to SQLite new version command:"
+msgstr ""
+
+#: pref.cpp:409
+#, fuzzy
+#| msgid "Select SQLite command"
+msgid "Select new SQLite version command"
+msgstr "SQLite-Befehl utsöken"
+
+#: pref.cpp:463
 msgid "Re-run wizard on next startup"
 msgstr "Bi den nakamen Oproop Hölper nochmaal utföhren"
 
-#: pref.cpp:440
+#: pref.cpp:469
 msgid ""
 "Note: Krecipes must be restarted for most server preferences to take effect."
 msgstr ""
 "Beacht: Bi de mehrsten Server-Optschonen muttst Du KRecipe nieg starten, ehr "
 "Ännern dor an övernahmen warrt."
 
-#: pref.cpp:484
+#: pref.cpp:513
 msgid "Use abbreviations"
 msgstr "Afkörten bruken"
 
-#: pref.cpp:520
+#: pref.cpp:549
 msgid "Number Format"
 msgstr "Tallenformaat"
 
-#: pref.cpp:521
+#: pref.cpp:550
 msgid "Fraction"
 msgstr "Brook"
 
-#: pref.cpp:522
+#: pref.cpp:551
 msgid "Decimal"
 msgstr "Dezimaal"
 
-#: pref.cpp:542
+#: pref.cpp:571
 msgid "Import"
 msgstr "Import"
 
-#: pref.cpp:544
+#: pref.cpp:573
 msgid "Overwrite recipes with same title"
 msgstr "Rezepten mit sülven Titel överschrieven"
 
-#: pref.cpp:549
+#: pref.cpp:578
 msgid "Ask which recipes to import"
 msgstr "Nafragen, welke Rezepten Du importeren wullt"
 
-#: pref.cpp:561
+#: pref.cpp:590
 msgid "'Copy to Clipboard' format:"
 msgstr "Formaat för't Koperen na de Twischenaflaag:"
 
-#: pref.cpp:588
+#: pref.cpp:617
 msgid ""
 "When this is enabled, the importer will show every recipe in the file(s) and "
 "allow you to select which recipes you want imported.\n"
@@ -2811,11 +2848,11 @@ msgstr ""
 " \t\t\t\t\t\t\t\t\tMaak dit ut, wenn Du jümmers all Rezepten importeren "
 "wullt. Dat geiht gauer un bruukt minn Spieker."
 
-#: pref.cpp:623
+#: pref.cpp:652
 msgid "Search as you type"
 msgstr "Al bi't Ingeven söken"
 
-#: pref.cpp:626
+#: pref.cpp:655
 msgid ""
 "In most instances these options do not need to be changed.  However, "
 "limiting the amount of items displayed at once will <b>allow Krecipes to "
@@ -2826,15 +2863,15 @@ msgstr ""
 "Hööchsttall för de op eenmaal wiesten Indrääg gifft,<b>is KRecipes gauer, "
 "wenn dat binnen de Datenbank vele Dusend Rezepten gifft</b>."
 
-#: pref.cpp:632
+#: pref.cpp:661
 msgid "Number of categories to display at once:"
 msgstr "Tall vun Kategorien, de op eenmaal wiest warrt:"
 
-#: pref.cpp:635 pref.cpp:645
+#: pref.cpp:664 pref.cpp:674
 msgid "Unlimited"
 msgstr "Keen Grenz"
 
-#: pref.cpp:642
+#: pref.cpp:671
 msgid "Number of elements to display at once:"
 msgstr "Tall vun Indrääg, de op eenmaal wiest warrt:"
 
