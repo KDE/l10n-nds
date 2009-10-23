@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-10-22 06:24+0200\n"
+"POT-Creation-Date: 2009-10-23 06:10+0200\n"
 "PO-Revision-Date: 2009-09-24 00:32+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -53,6 +53,24 @@ msgid_plural "minutes"
 msgstr[0] "Minuut"
 msgstr[1] "Minuten"
 
+#: collectioncreatejob.cpp:58
+#, fuzzy
+#| msgid "Invalid resource instance."
+msgid "Invalid parent"
+msgstr "Leeg Ressource-Utgaav."
+
+#: collectiondeletejob.cpp:59 collectionmodifyjob.cpp:57
+#, fuzzy
+#| msgid "no collection"
+msgid "Invalid collection"
+msgstr "keen Sammeln"
+
+#: collectionfetchjob.cpp:129
+#, fuzzy
+#| msgid "no collection"
+msgid "Invalid collection given."
+msgstr "keen Sammeln"
+
 #: collectiongeneralpropertiespage.cpp:36
 msgctxt "@title:tab general properties page"
 msgid "General"
@@ -78,6 +96,10 @@ msgstr "Sammeln-Dialoog opmaken"
 msgid "no collection"
 msgstr "keen Sammeln"
 
+#: collectionselectjob.cpp:72
+msgid "Invalid collection specified"
+msgstr ""
+
 #: collectionstatisticsmodel.cpp:157
 msgctxt "@title:column, number of unread messages"
 msgid "Unread"
@@ -92,6 +114,22 @@ msgstr "Tosamen"
 msgctxt "@title:column, total size (in bytes) of the collection"
 msgid "Size"
 msgstr "Grött"
+
+#: collectionsync.cpp:172
+msgid ""
+"Inconsistent local collection tree detected! OMG, what have you done to my "
+"database?!?!"
+msgstr ""
+
+#: collectionsync.cpp:269
+msgid ""
+"Remote collection without root-terminated ancestor chain provided, fix your "
+"resource dude!"
+msgstr ""
+
+#: collectionsync.cpp:466
+msgid "Found unresolved orphan collections"
+msgstr ""
 
 #: collectionview.cpp:222 dragdropmanager.cpp:111
 msgid "&Move here"
@@ -142,6 +180,12 @@ msgstr ""
 msgid "Favorite Folders"
 msgstr "Na Vörtrocken Ornern tofögen"
 
+#: itemfetchjob.cpp:149
+#, fuzzy
+#| msgid "No such collection."
+msgid "Cannot list root collection."
+msgstr "Dat gifft disse Sammeln nich."
+
 #: itemmodel.cpp:312
 msgid "Id"
 msgstr "ID"
@@ -173,6 +217,30 @@ msgstr "Bruker hett Akschoon afbraken."
 #: job.cpp:241
 msgid "Unknown error."
 msgstr "Nich begäng Fehler."
+
+#: partfetcher.cpp:61
+#, fuzzy
+msgid "Unable to fetch item for index"
+msgstr "bet Toll."
+
+#: partfetcher.cpp:76
+msgid "Index is no longer available"
+msgstr ""
+
+#: partfetcher.cpp:123
+#, kde-format
+msgid "Payload part '%1' is not available for this index"
+msgstr ""
+
+#: partfetcher.cpp:132
+#, fuzzy
+#| msgid "No description available"
+msgid "No session available for this index"
+msgstr "Keen Beschrieven verföögbor"
+
+#: partfetcher.cpp:141
+msgid "No item available for this index"
+msgstr ""
 
 #: pluginloader.cpp:137
 msgid "Unnamed plugin"
@@ -1050,11 +1118,12 @@ msgstr[1] "%1 Indrääg &koperen"
 
 #: standardactionmanager.cpp:82 standardactionmanager.cpp:117
 #, fuzzy, kde-format
-#| msgid "no collection"
-msgid "&Cut Collection"
-msgid_plural "&Cut %1 Collections"
-msgstr[0] "keen Sammeln"
-msgstr[1] "keen Sammeln"
+#| msgid "&Copy Folder"
+#| msgid_plural "&Copy %1 Folders"
+msgid "&Cut Folder"
+msgid_plural "&Cut %1 Folders"
+msgstr[0] "Orner &koperen"
+msgstr[1] "%1 Ornern &koperen"
 
 #: standardactionmanager.cpp:114
 #, kde-format
@@ -1214,18 +1283,32 @@ msgctxt "@info:status"
 msgid "Error."
 msgstr "Fehler."
 
+#: linkjobimpl_p.h:49 movejobimpl_p.h:49
+#, fuzzy
+#| msgid "No remote identifier specified"
+msgid "No valid destination specified"
+msgstr "Keen feern Kennen angeven"
+
+#: movejobimpl_p.h:43
+msgid "No objects specified for moving"
+msgstr ""
+
 #: qtest_akonadi.h:44
 msgid "KDE Test Program"
 msgstr "KDE-Testprogramm"
+
+#, fuzzy
+#~| msgid "no collection"
+#~ msgid "&Cut Collection"
+#~ msgid_plural "&Cut %1 Collections"
+#~ msgstr[0] "keen Sammeln"
+#~ msgstr[1] "keen Sammeln"
 
 #~ msgid "Could not copy data: %1"
 #~ msgstr "Daten laat sik nich koperen: %1"
 
 #~ msgid "Copy failed"
 #~ msgstr "Koperen fehlslaan"
-
-#~ msgid "No remote identifier specified"
-#~ msgstr "Keen feern Kennen angeven"
 
 #~ msgid "TextLabel"
 #~ msgstr "TextBeteker"
@@ -1236,11 +1319,6 @@ msgstr "KDE-Testprogramm"
 #, fuzzy
 #~ msgid "Error!"
 #~ msgstr "Fehler!"
-
-#, fuzzy
-#~ msgctxt "@info"
-#~ msgid "Unable to fetch item in replay mode."
-#~ msgstr "bet Toll."
 
 #, fuzzy
 #~ msgctxt "@info"
