@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kexi\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-09-22 06:14+0200\n"
+"POT-Creation-Date: 2009-10-28 07:23+0100\n"
 "PO-Revision-Date: 2009-09-24 01:10+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -667,7 +667,14 @@ msgid "Do not show this message again"
 msgstr "Disse Naricht nich wedder wiesen"
 
 #. +> trunk
-#: core/kexiinternalpart.cpp:51
+#: core/kexiinternalpart.cpp:53 core/kexipartmanager.cpp:145
+#, fuzzy, kde-format
+#| msgid "Incompatible migration driver's \"%1\" version: found version %2, expected version %3."
+msgid "Incompatible plugin \"%1\" version: found version %2, expected version %3."
+msgstr "Verschoon \"%1\" vun den Datenutlagern-Driever is nich kompatibel: funnen Verschoon %2, verwacht Verschoon %3."
+
+#. +> trunk
+#: core/kexiinternalpart.cpp:68
 #, kde-format
 msgid "Could not load \"%1\" plugin."
 msgstr "Moduul \"%1\" lett sik nich laden."
@@ -754,19 +761,19 @@ msgid "Object"
 msgstr "Objekt"
 
 #. +> trunk
-#: core/kexipartmanager.cpp:67
+#: core/kexipartmanager.cpp:66
 #, kde-format
 msgid "No \"%1\" service type installed. Check your Kexi installation. Aborting."
 msgstr "Keen \"%1\"-Deensttyp installeert. Prööv Dien Kexi-Installatschoon. Afbrook."
 
 #. +> trunk
-#: core/kexipartmanager.cpp:144
+#: core/kexipartmanager.cpp:158
 #, kde-format
 msgid "Error while loading plugin \"%1\""
 msgstr "Fehler bi't Laden vun Moduul \"%1\""
 
 #. +> trunk
-#: core/kexipartmanager.cpp:177 core/kexipartmanager.cpp:187
+#: core/kexipartmanager.cpp:191 core/kexipartmanager.cpp:201
 #, kde-format
 msgid "No plugin for class \"%1\""
 msgstr "Keen Moduul för de Klass \"%1\""
@@ -815,7 +822,7 @@ msgid "This project is opened as read only."
 msgstr "Dit Projekt wöör bloots leesbor opmaakt."
 
 #. +> trunk
-#: core/kexiproject.cpp:872 main/KexiMainWindow.cpp:4312
+#: core/kexiproject.cpp:872 main/KexiMainWindow.cpp:4311
 msgid "Could not set empty name for this object."
 msgstr "För dit Objekt lett sik keen leddig Naam fastleggen."
 
@@ -984,15 +991,13 @@ msgstr "Sekert de Ännern an den aktuellen Plaan."
 msgid "Show:"
 msgstr "Wiesen:"
 
-#. i18n: ectx: ToolBar (dataToolBar)
 #. +> trunk
-#: core/KexiView.cpp:591 data/kexiui.rc:185 main/KexiMainWindow_p.h:194
+#: core/KexiView.cpp:591 main/KexiMainWindow_p.h:194
 msgid "Data"
 msgstr "Daten"
 
-#. i18n: ectx: ToolBar (designToolBar)
 #. +> trunk
-#: core/KexiView.cpp:602 data/kexiui.rc:197
+#: core/KexiView.cpp:602
 msgid "Design"
 msgstr "Plaan"
 
@@ -1002,18 +1007,18 @@ msgid "Design has been changed. You must save it before switching to other view.
 msgstr "De Plaan wöör ännert. Du muttst em sekern, ehr Du na en anner Ansicht wesselst."
 
 #. +> trunk
-#: core/KexiWindow.cpp:673 main/KexiMainWindow.cpp:3411
+#: core/KexiWindow.cpp:673 main/KexiMainWindow.cpp:3410
 #, kde-format
 msgid "Switching to other view failed (%1)."
 msgstr "Dat Wesseln na en anner Ansicht is fehlslaan (%1)."
 
 #. +> trunk
-#: core/KexiWindow.cpp:849
+#: core/KexiWindow.cpp:850
 msgid "Saving object's definition failed."
 msgstr "Dat Sekern vun de Objektdefinitschoon is fehlslaan."
 
 #. +> trunk
-#: core/KexiWindow.cpp:933
+#: core/KexiWindow.cpp:934
 msgid "Saving object's data failed."
 msgstr "Dat Sekern vun de Objektdaten is fehlslaan."
 
@@ -1022,298 +1027,165 @@ msgstr "Dat Sekern vun de Objektdaten is fehlslaan."
 msgid "Here will be shown help according to your actions"
 msgstr "Hier gifft dat en Hülp för Dien Akschonen"
 
-#. i18n: ectx: Menu (file)
 #. +> trunk
-#: data/kexiui.rc:5
-msgid "&Project"
-msgstr "&Projekt"
-
-#. i18n: ectx: Menu (file)
-#. +> trunk
-#: data/kexiui.rc:11 main/KexiMainWindow.cpp:654 main/KexiMainWindow.cpp:3211
-msgid "Open Recent"
-msgstr "Verleden opmaken"
-
-#. i18n: ectx: Menu (project_import)
-#. +> trunk
-#: data/kexiui.rc:21 main/KexiMainWindow.cpp:408
-msgid "&Import"
-msgstr "&Importeren"
-
-#. i18n: ectx: Menu (project_export)
-#. +> trunk
-#: data/kexiui.rc:26
-msgid "&Export"
-msgstr "&Exporteren"
-
-#. i18n: ectx: Menu (edit)
-#. i18n: ectx: property (text), widget (QPushButton, btnEdit)
-#. +> trunk
-#: data/kexiui.rc:44 plugins/reportspgz/koreport/wrtembed/sectioneditor.ui:248
-msgid "&Edit"
-msgstr "&Bewerken"
-
-#. i18n: ectx: Menu (edit_copy_special)
-#. +> trunk
-#: data/kexiui.rc:53
-msgid "Copy &Special"
-msgstr "&Besünner koperen"
-
-#. i18n: ectx: Menu (edit_paste_special)
-#. +> trunk
-#: data/kexiui.rc:57 main/KexiMainWindow.cpp:409
-msgid "Paste &Special"
-msgstr "&Besünner infögen"
-
-#. i18n: ectx: Menu (view)
-#. +> trunk
-#: data/kexiui.rc:75
-msgid "&View"
-msgstr "&Ansicht"
-
-#. i18n: ectx: Menu (insert)
-#. +> trunk
-#: data/kexiui.rc:88 main/KexiMainWindow.cpp:402
-msgid "&Insert"
-msgstr "&Infögen"
-
-#. i18n: ectx: Menu (format)
-#. +> trunk
-#: data/kexiui.rc:92
-msgid "&Format"
-msgstr "&Formateren"
-
-#. i18n: ectx: Menu (data)
-#. +> trunk
-#: data/kexiui.rc:99
-msgid "&Data"
-msgstr "&Daten"
-
-#. i18n: ectx: Menu (data_sort)
-#. +> trunk
-#: data/kexiui.rc:104
-msgid "Sort"
-msgstr "Sorteren"
-
-#. i18n: ectx: Menu (tools)
-#. +> trunk
-#: data/kexiui.rc:114
-msgid "&Tools"
-msgstr "&Warktüüch"
-
-#. i18n: ectx: Menu (tools)
-#. +> trunk
-#: data/kexiui.rc:116
-msgid "&Migrate"
-msgstr "&Datenutlagern"
-
-#. i18n: ectx: Menu (window)
-#. +> trunk
-#: data/kexiui.rc:125 main/KexiMainWindow.cpp:481
-msgid "&Window"
-msgstr "&Finster"
-
-#. i18n: ectx: Menu (settings)
-#. +> trunk
-#: data/kexiui.rc:130
-msgid "&Settings"
-msgstr "&Instellen"
-
-#. i18n: ectx: Menu (settings)
-#. +> trunk
-#: data/kexiui.rc:140
-msgid "&Other"
-msgstr "&Anner"
-
-#. i18n: ectx: Menu (help)
-#. +> trunk
-#: data/kexiui.rc:152
-msgid "&Help"
-msgstr "&Hülp"
-
-#. i18n: ectx: Menu (help)
-#. +> trunk
-#: data/kexiui.rc:156
-msgid "Other &Licenses"
-msgstr "Anner &Lizenzen"
-
-#. i18n: ectx: ToolBar (mainToolBar)
-#. +> trunk
-#: data/kexiui.rc:163
-msgid "Main Toolbar"
-msgstr "Hööft-Warktüüchbalken"
-
-#. i18n: ectx: ToolBar (viewToolBar)
-#. +> trunk
-#: data/kexiui.rc:178
-msgid "View"
-msgstr "Ansicht"
-
-#. i18n: ectx: ToolBar (format)
-#. +> trunk
-#: data/kexiui.rc:201
-msgid "Format"
-msgstr "Formaat"
-
-#. +> trunk
-#: formeditor/commands.cpp:153
+#: formeditor/commands.cpp:154
 #, kde-format
 msgid "Change \"%1\" property for multiple widgets"
 msgstr "Egenschap »%1« för mehr Stüerelementen ännern"
 
 #. +> trunk
-#: formeditor/commands.cpp:156
+#: formeditor/commands.cpp:157
 #, kde-format
 msgid "Change \"%1\" property for widget \"%2\""
 msgstr "Egenschap »%1« för Stüerelement »%2« ännern"
 
 #. +> trunk
-#: formeditor/commands.cpp:325 formeditor/container.cpp:1437
+#: formeditor/commands.cpp:326 formeditor/container.cpp:1449
 msgid "Move multiple widgets"
 msgstr "Mehr Stüerelementen verschuven"
 
 #. +> trunk
-#: formeditor/commands.cpp:419
+#: formeditor/commands.cpp:420
 msgid "Align Widgets to Grid"
 msgstr "Stüerelementen an't Gadder utrichten"
 
 #. +> trunk
-#: formeditor/commands.cpp:422
+#: formeditor/commands.cpp:423
 msgid "Align Widgets to Left"
 msgstr "Stüerelementen linkerhand utrichten"
 
 #. +> trunk
-#: formeditor/commands.cpp:425
+#: formeditor/commands.cpp:426
 msgid "Align Widgets to Right"
 msgstr "Stüerelementen rechterhand utrichten"
 
 #. +> trunk
-#: formeditor/commands.cpp:428
+#: formeditor/commands.cpp:429
 msgid "Align Widgets to Top"
 msgstr "Stüerelementen baven utrichten"
 
 #. +> trunk
-#: formeditor/commands.cpp:431
+#: formeditor/commands.cpp:432
 msgid "Align Widgets to Bottom"
 msgstr "Stüerelementen nerrn utrichten"
 
 #. +> trunk
-#: formeditor/commands.cpp:582
+#: formeditor/commands.cpp:583
 msgid "Resize Widgets to Grid"
 msgstr "Grött vun de Stüerelementen an't Gadder topassen"
 
 #. +> trunk
-#: formeditor/commands.cpp:585
+#: formeditor/commands.cpp:586
 msgid "Resize Widgets to Fit Contents"
 msgstr "Grött vun de Stüerelementen an'n Inholt topassen"
 
 #. +> trunk
-#: formeditor/commands.cpp:588
+#: formeditor/commands.cpp:589
 msgid "Resize Widgets to Narrowest"
 msgstr "Grött vun de Stüerelementen na't Drangst topassen"
 
 #. +> trunk
-#: formeditor/commands.cpp:591
+#: formeditor/commands.cpp:592
 msgid "Resize Widgets to Widest"
 msgstr "Grött vun de Stüerelementen na't Breedst topassen"
 
 #. +> trunk
-#: formeditor/commands.cpp:594
+#: formeditor/commands.cpp:595
 msgid "Resize Widgets to Shortest"
 msgstr "Grött vun de Stüerelementen na't Körtst topassen"
 
 #. +> trunk
-#: formeditor/commands.cpp:597
+#: formeditor/commands.cpp:598
 msgid "Resize Widgets to Tallest"
 msgstr "Grött vun de Stüerelementen na't Längst topassen"
 
 #. +> trunk
-#: formeditor/commands.cpp:812
+#: formeditor/commands.cpp:813
 #, kde-format
 msgid "Change layout of widget \"%1\""
 msgstr "Utsehn vun Stüerelement \"%1\" ännern"
 
 #. +> trunk
-#: formeditor/commands.cpp:916
+#: formeditor/commands.cpp:917
 #, kde-format
 msgid "Insert widget \"%1\""
 msgstr "Stüerelement \"%1\" infögen"
 
 #. +> trunk
-#: formeditor/commands.cpp:919
+#: formeditor/commands.cpp:920
 msgid "Insert widget"
 msgstr "Stüerelement infögen"
 
 #. +> trunk
-#: formeditor/commands.cpp:960
+#: formeditor/commands.cpp:961
 #, kde-format
 msgid "Could not insert widget of type \"%1\". A problem with widget's creation encountered."
 msgstr "Stüerelement vun den Typ \"%1\" lett sik nich infögen. Dat hett en Problem mit dat Opstellen vun dat Stüerelement."
 
 #. +> trunk
-#: formeditor/commands.cpp:1139
+#: formeditor/commands.cpp:1146
 msgid "Group Widgets Horizontally"
 msgstr "Stüerelementen kimmrecht tosamenkoppeln"
 
 #. +> trunk
-#: formeditor/commands.cpp:1142
+#: formeditor/commands.cpp:1149
 msgid "Group Widgets Vertically"
 msgstr "Stüerelementen pielrecht tosamenkoppeln"
 
 #. +> trunk
-#: formeditor/commands.cpp:1145
+#: formeditor/commands.cpp:1152
 msgid "Group Widgets in a Grid"
 msgstr "Stüerelementen an't Gadder tosamenkoppeln"
 
 #. +> trunk
-#: formeditor/commands.cpp:1148
+#: formeditor/commands.cpp:1155
 msgid "Group Widgets Horizontally in a Splitter"
 msgstr "Stüerelementen kimmrecht in Trenner tosamenkoppeln"
 
 #. +> trunk
-#: formeditor/commands.cpp:1151
+#: formeditor/commands.cpp:1158
 msgid "Group Widgets Vertically in a Splitter"
 msgstr "Stüerelementen pielrecht in Trenner tosamenkoppeln"
 
 #. +> trunk
-#: formeditor/commands.cpp:1154
+#: formeditor/commands.cpp:1161
 msgid "Group Widgets By Rows"
 msgstr "Stüerelementen na Regen tosamenkoppeln"
 
 #. +> trunk
-#: formeditor/commands.cpp:1157
+#: formeditor/commands.cpp:1164
 msgid "Group Widgets Vertically By Columns"
 msgstr "Stüerelementen pielrecht na Striepen tosamenkoppeln"
 
 #. +> trunk
-#: formeditor/commands.cpp:1160
+#: formeditor/commands.cpp:1167
 msgid "Group widgets"
 msgstr "Stüerelementen tosamenkoppeln"
 
 #. +> trunk
-#: formeditor/commands.cpp:1290
+#: formeditor/commands.cpp:1297
 #, kde-format
 msgid "Break Layout: \"%1\""
 msgstr "Anornen opbreken: \"%1\""
 
 #. +> trunk
-#: formeditor/commands.cpp:1372 plugins/reportspgz/kexireportdesignview.cpp:41
+#: formeditor/commands.cpp:1379 plugins/reportspgz/kexireportdesignview.cpp:41
 #: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:1071
 msgid "Paste"
 msgstr "Infögen"
 
 #. +> trunk
-#: formeditor/commands.cpp:1699
+#: formeditor/commands.cpp:1706
 msgid "Delete widget"
 msgstr "Stüerelement wegdoon"
 
 #. +> trunk
-#: formeditor/commands.cpp:1834
+#: formeditor/commands.cpp:1841
 msgid "Duplicate widget"
 msgstr "Stüerelement verdubbeln"
 
 #. +> trunk
-#: formeditor/commands.cpp:1883 plugins/reportspgz/kexireportdesignview.cpp:37
+#: formeditor/commands.cpp:1890 plugins/reportspgz/kexireportdesignview.cpp:37
 #: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:1067
 msgid "Cut"
 msgstr "Knippen"
@@ -1447,7 +1319,7 @@ msgid "Contents"
 msgstr "Inholt"
 
 #. +> trunk
-#: formeditor/editlistviewdialog.cpp:120 formeditor/form.cpp:410
+#: formeditor/editlistviewdialog.cpp:120 formeditor/form.cpp:411
 #: plugins/queries/kexiquerydesignerguieditor.cpp:1689
 #: plugins/tables/kexitabledesignerview.cpp:390
 msgid "Caption"
@@ -1520,13 +1392,13 @@ msgstr "Siet ümnömen..."
 
 #. +> trunk
 #: formeditor/factories/containerfactory.cpp:475
-#: formeditor/factories/containerfactory.cpp:1132
+#: formeditor/factories/containerfactory.cpp:1133
 msgid "New Page Title"
 msgstr "Nieg Siedentitel"
 
 #. +> trunk
 #: formeditor/factories/containerfactory.cpp:476
-#: formeditor/factories/containerfactory.cpp:1133
+#: formeditor/factories/containerfactory.cpp:1134
 msgid "Enter a new title for the current page:"
 msgstr "En niegen Titel för de aktuelle Siet ingeven:"
 
@@ -1619,14 +1491,14 @@ msgid "A container to group some widgets"
 msgstr "En Gelaats för't Tosamenkoppeln vun Stüerelementen"
 
 #. +> trunk
-#: formeditor/factories/containerfactory.cpp:689 formeditor/form.cpp:433
-#: plugins/forms/kexidbfactory.cpp:132
+#: formeditor/factories/containerfactory.cpp:689 formeditor/form.cpp:434
+#: plugins/forms/kexidbfactory.cpp:137
 msgid "Frame"
 msgstr "Rahmen"
 
 #. +> trunk
 #: formeditor/factories/containerfactory.cpp:691
-#: plugins/forms/kexidbfactory.cpp:135
+#: plugins/forms/kexidbfactory.cpp:140
 msgctxt "Widget name. This string will be used to name widgets of this class. It must _not_ contain white spaces and non latin1 characters."
 msgid "frame"
 msgstr "rahmen"
@@ -1826,8 +1698,8 @@ msgid "Edit Rich Text"
 msgstr "Formaattext bewerken"
 
 #. +> trunk
-#: formeditor/factories/stdwidgetfactory.cpp:184 formeditor/form.cpp:721
-#: plugins/forms/kexidbfactory.cpp:77 plugins/forms/kexiformpart.cpp:92
+#: formeditor/factories/stdwidgetfactory.cpp:184 formeditor/form.cpp:722
+#: plugins/forms/kexidbfactory.cpp:77 plugins/forms/kexiformpart.cpp:91
 msgid "Form"
 msgstr "Kiekwark"
 
@@ -1865,7 +1737,7 @@ msgstr "Textfeld"
 
 #. +> trunk
 #: formeditor/factories/stdwidgetfactory.cpp:204
-#: plugins/forms/kexidbfactory.cpp:148
+#: plugins/forms/kexidbfactory.cpp:154
 msgctxt "Widget name. This string will be used to name widgets of this class. It must _not_ contain white spaces and non latin1 characters."
 msgid "label"
 msgstr "textfeld"
@@ -1930,7 +1802,7 @@ msgstr "Knoop"
 
 #. +> trunk
 #: formeditor/factories/stdwidgetfactory.cpp:247
-#: plugins/forms/kexidbfactory.cpp:274
+#: plugins/forms/kexidbfactory.cpp:283
 msgctxt "Widget name. This string will be used to name widgets of this class. It must _not_ contain white spaces and non latin1 characters."
 msgid "button"
 msgstr "knoop"
@@ -1958,13 +1830,13 @@ msgstr "En Optschoon-Knoop mit Text- oder Kachelbildfeld"
 
 #. +> trunk
 #: formeditor/factories/stdwidgetfactory.cpp:263
-#: plugins/forms/kexidbfactory.cpp:190
+#: plugins/forms/kexidbfactory.cpp:200
 msgid "Check Box"
 msgstr "Ankrüüzfeld"
 
 #. +> trunk
 #: formeditor/factories/stdwidgetfactory.cpp:265
-#: plugins/forms/kexidbfactory.cpp:193
+#: plugins/forms/kexidbfactory.cpp:203
 msgctxt "Widget name. This string will be used to name widgets of this class. It must _not_ contain white spaces and non latin1 characters."
 msgid "checkBox"
 msgstr "ankrüüzfeld"
@@ -1992,20 +1864,20 @@ msgstr "En Dreihfeld-Stüerelement"
 
 #. +> trunk
 #: formeditor/factories/stdwidgetfactory.cpp:285
-#: plugins/forms/kexidbfactory.cpp:178
+#: plugins/forms/kexidbfactory.cpp:186
 msgid "Combo Box"
 msgstr "Utsöökfeld"
 
 #. +> trunk
 #: formeditor/factories/stdwidgetfactory.cpp:287
-#: plugins/forms/kexidbfactory.cpp:181
+#: plugins/forms/kexidbfactory.cpp:189
 msgctxt "Widget name. This string will be used to name widgets of this class. It must _not_ contain white spaces and non latin1 characters."
 msgid "comboBox"
 msgstr "utsöökfeld"
 
 #. +> trunk
 #: formeditor/factories/stdwidgetfactory.cpp:288
-#: plugins/forms/kexidbfactory.cpp:182
+#: plugins/forms/kexidbfactory.cpp:190
 msgid "A combo box widget"
 msgstr "En Utsöökfeld-Stüerelement"
 
@@ -2027,13 +1899,13 @@ msgstr "En eenfach List-Stüerelement"
 
 #. +> trunk
 #: formeditor/factories/stdwidgetfactory.cpp:310
-#: plugins/forms/kexidbfactory.cpp:119
+#: plugins/forms/kexidbfactory.cpp:123
 msgid "Text Editor"
 msgstr "Texteditor"
 
 #. +> trunk
 #: formeditor/factories/stdwidgetfactory.cpp:312
-#: plugins/forms/kexidbfactory.cpp:122
+#: plugins/forms/kexidbfactory.cpp:126
 msgctxt "Widget name. This string will be used to name widgets of this class. It must _not_ contain white spaces and non latin1 characters."
 msgid "textEditor"
 msgstr "texteditor"
@@ -2072,7 +1944,9 @@ msgstr "schuver"
 
 #. +> trunk
 #: formeditor/factories/stdwidgetfactory.cpp:336
-msgid "An horizontal slider"
+#, fuzzy
+#| msgid "An horizontal slider"
+msgid "A horizontal slider"
 msgstr "En kimmrecht Schuver"
 
 #. +> trunk
@@ -2426,424 +2300,431 @@ msgid "Column 1"
 msgstr "Striep 1"
 
 #. +> trunk
-#: formeditor/factories/stdwidgetfactory.cpp:573
+#: formeditor/factories/stdwidgetfactory.cpp:574
 msgid "Edit Contents of List Widget"
 msgstr "Inholt vun't List-Element bewerken"
 
 #. +> trunk
-#: formeditor/factories/stdwidgetfactory.cpp:1063
+#: formeditor/factories/stdwidgetfactory.cpp:1065
 msgctxt "default indent value"
 msgid "default"
 msgstr "Standard"
 
 #. i18n: ectx: property (text), widget (Q3ListView, list)
 #. +> trunk
-#: formeditor/form.cpp:408 formeditor/form.cpp:409
+#: formeditor/form.cpp:409 formeditor/form.cpp:410
 #: main/startup/KexiConnSelector.ui:78
 #: plugins/tables/kexitabledesignerview.cpp:351
 msgid "Name"
 msgstr "Naam"
 
 #. +> trunk
-#: formeditor/form.cpp:411
+#: formeditor/form.cpp:412
 msgid "Window title"
 msgstr "Finstertitel"
 
 #. +> trunk
-#: formeditor/form.cpp:412 kexidb/field.cpp:716 kexidb/field.cpp:737
+#: formeditor/form.cpp:413 kexidb/field.cpp:716 kexidb/field.cpp:737
 #: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:1499
 msgid "Text"
 msgstr "Text"
 
 #. +> trunk
-#: formeditor/form.cpp:413
+#: formeditor/form.cpp:414
 msgid "Background Pixmap"
 msgstr "Achtergrund-Kachelbild"
 
 #. +> trunk
-#: formeditor/form.cpp:414
+#: formeditor/form.cpp:415
 msgid "Enabled"
 msgstr "Anmaakt"
 
 #. +> trunk
-#: formeditor/form.cpp:415
+#: formeditor/form.cpp:416
 msgid "Geometry"
 msgstr "Grött"
 
 #. +> trunk
-#: formeditor/form.cpp:416
+#: formeditor/form.cpp:417
 msgid "Size Policy"
 msgstr "Grött-Regel"
 
 #. +> trunk
-#: formeditor/form.cpp:417
+#: formeditor/form.cpp:418
 msgid "Minimum Size"
 msgstr "Minimaal Grött"
 
 #. +> trunk
-#: formeditor/form.cpp:418
+#: formeditor/form.cpp:419
 msgid "Maximum Size"
 msgstr "Maximaal Grött"
 
 #. +> trunk
-#: formeditor/form.cpp:419
+#: formeditor/form.cpp:420
 msgid "Font"
 msgstr "Schriftoort"
 
 #. +> trunk
-#: formeditor/form.cpp:420
+#: formeditor/form.cpp:421
 msgid "Cursor"
 msgstr "Blinker"
 
 #. +> trunk
-#: formeditor/form.cpp:421
+#: formeditor/form.cpp:422
 msgid "Foreground Color"
 msgstr "Vörgrundklöör"
 
 #. +> trunk
-#: formeditor/form.cpp:422
+#: formeditor/form.cpp:423
 msgid "Background Color"
 msgstr "Achtergrundklöör"
 
 #. +> trunk
-#: formeditor/form.cpp:423
+#: formeditor/form.cpp:424
 msgid "Focus Policy"
 msgstr "Aktiveren-Regel"
 
 #. +> trunk
-#: formeditor/form.cpp:424
+#: formeditor/form.cpp:425
 msgid "Margin"
 msgstr "Rand"
 
 #. +> trunk
-#: formeditor/form.cpp:425
+#: formeditor/form.cpp:426
 msgid "Read Only"
 msgstr "Bloots lesen"
 
 #. +> trunk
-#: formeditor/form.cpp:426
+#: formeditor/form.cpp:427
 msgid "Style Sheet"
 msgstr "Stilvörlaag"
 
 #. +> trunk
-#: formeditor/form.cpp:427
+#: formeditor/form.cpp:428
 msgctxt "Widget's Tooltip"
 msgid "Tooltip"
 msgstr "Kortinfo"
 
 #. +> trunk
-#: formeditor/form.cpp:428
+#: formeditor/form.cpp:429
+#, fuzzy
+#| msgctxt "Mouse Cursor Shape"
+#| msgid "What's This?"
 msgctxt "Widget's Whats This"
-msgid "Whats This"
-msgstr "Wat is dat"
+msgid "What's This"
+msgstr "Wat is dat?"
 
 #. +> trunk
-#: formeditor/form.cpp:429
+#: formeditor/form.cpp:430
 msgid "Layout direction"
 msgstr "Anornen-Richt"
 
 #. +> trunk
-#: formeditor/form.cpp:430
+#: formeditor/form.cpp:431
 msgid "Icon Size"
 msgstr "Lüttbildgrött"
 
 #. +> trunk
-#: formeditor/form.cpp:434
+#: formeditor/form.cpp:435
 msgid "Frame Width"
 msgstr "Rahmenbreed"
 
 #. +> trunk
-#: formeditor/form.cpp:435
+#: formeditor/form.cpp:436
 msgid "Mid Frame Width"
 msgstr "Middel Rahmenbreed"
 
 #. +> trunk
-#: formeditor/form.cpp:436
+#: formeditor/form.cpp:437
 msgid "Frame Shape"
 msgstr "Rahmenform"
 
 #. +> trunk
-#: formeditor/form.cpp:437
+#: formeditor/form.cpp:438
 msgid "Frame Shadow"
 msgstr "Rahmenschadden"
 
 #. +> trunk
-#: formeditor/form.cpp:439
-msgid "Vertical ScrollBar"
+#: formeditor/form.cpp:440
+#, fuzzy
+#| msgid "Vertical ScrollBar"
+msgid "Vertical Scrollbar"
 msgstr "Pielrecht Rullbalken"
 
 #. +> trunk
-#: formeditor/form.cpp:440
-msgid "Horizontal ScrollBar"
+#: formeditor/form.cpp:441
+#, fuzzy
+#| msgid "Horizontal ScrollBar"
+msgid "Horizontal Scrollbar"
 msgstr "Kimmrecht Rullbalken"
 
 #. +> trunk
-#: formeditor/form.cpp:442
+#: formeditor/form.cpp:443
 msgid "No Background"
 msgstr "Keen Achtergrund"
 
 #. +> trunk
-#: formeditor/form.cpp:443
+#: formeditor/form.cpp:444
 msgid "Palette Foreground"
 msgstr "Vörgrund-Klörensett"
 
 #. +> trunk
-#: formeditor/form.cpp:444
+#: formeditor/form.cpp:445
 msgctxt "Auto (HINT: for AutoText)"
 msgid "Auto"
 msgstr "Automaatsch"
 
 #. +> trunk
-#: formeditor/form.cpp:446
+#: formeditor/form.cpp:447
 msgctxt "Auto (HINT: for Align)"
 msgid "Auto"
 msgstr "Automaatsch"
 
 #. +> trunk
-#: formeditor/form.cpp:447
+#: formeditor/form.cpp:448
 msgctxt "Left (HINT: for Align)"
 msgid "Left"
 msgstr "Links"
 
 #. +> trunk
-#: formeditor/form.cpp:448
+#: formeditor/form.cpp:449
 msgctxt "Right (HINT: for Align)"
 msgid "Right"
 msgstr "Rechts"
 
 #. +> trunk
-#: formeditor/form.cpp:449 formeditor/form.cpp:451
+#: formeditor/form.cpp:450 formeditor/form.cpp:452
 msgctxt "Center (HINT: for Align)"
 msgid "Center"
 msgstr "In de Merrn"
 
 #. +> trunk
-#: formeditor/form.cpp:450
+#: formeditor/form.cpp:451
 msgctxt "Justify (HINT: for Align)"
 msgid "Justify"
 msgstr "Blocksatz"
 
 #. +> trunk
-#: formeditor/form.cpp:452
+#: formeditor/form.cpp:453
 msgctxt "Top (HINT: for Align)"
 msgid "Top"
 msgstr "Baven"
 
 #. +> trunk
-#: formeditor/form.cpp:453
+#: formeditor/form.cpp:454
 msgctxt "Bottom (HINT: for Align)"
 msgid "Bottom"
 msgstr "Nerrn"
 
 #. +> trunk
-#: formeditor/form.cpp:455
+#: formeditor/form.cpp:456
 msgctxt "No Frame (HINT: for Frame Shape)"
 msgid "No Frame"
 msgstr "Keen Rahmen"
 
 #. +> trunk
-#: formeditor/form.cpp:456
+#: formeditor/form.cpp:457
 msgctxt "Box (HINT: for Frame Shape)"
 msgid "Box"
 msgstr "Feld"
 
 #. +> trunk
-#: formeditor/form.cpp:457
+#: formeditor/form.cpp:458
 msgctxt "Panel (HINT: for Frame Shape)"
 msgid "Panel"
 msgstr "Paneel"
 
 #. +> trunk
-#: formeditor/form.cpp:458
+#: formeditor/form.cpp:459
 msgctxt "Windows Panel (HINT: for Frame Shape)"
 msgid "Windows Panel"
 msgstr "Finster-Paneel"
 
 #. +> trunk
-#: formeditor/form.cpp:459
+#: formeditor/form.cpp:460
 msgctxt "Horiz. Line (HINT: for Frame Shape)"
 msgid "Horiz. Line"
 msgstr "Kimmr. Lien"
 
 #. +> trunk
-#: formeditor/form.cpp:460
+#: formeditor/form.cpp:461
 msgctxt "Vertical Line (HINT: for Frame Shape)"
 msgid "Vertical Line"
 msgstr "Pielrecht Lien"
 
 #. +> trunk
-#: formeditor/form.cpp:461
+#: formeditor/form.cpp:462
 msgctxt "Styled (HINT: for Frame Shape)"
 msgid "Styled"
 msgstr "Stilvull"
 
 #. +> trunk
-#: formeditor/form.cpp:462
+#: formeditor/form.cpp:463
 msgctxt "Popup (HINT: for Frame Shape)"
 msgid "Popup"
 msgstr "Opfooldmenü"
 
 #. +> trunk
-#: formeditor/form.cpp:463
+#: formeditor/form.cpp:464
 msgctxt "Menu Bar (HINT: for Frame Shape)"
 msgid "Menu Bar"
 msgstr "Menübalken"
 
 #. +> trunk
-#: formeditor/form.cpp:464
+#: formeditor/form.cpp:465
 msgctxt "Toolbar (HINT: for Frame Shape)"
 msgid "Toolbar"
 msgstr "Warktüüchbalken"
 
 #. +> trunk
-#: formeditor/form.cpp:465
+#: formeditor/form.cpp:466
 msgctxt "Text Box (HINT: for Frame Shape)"
 msgid "Text Box"
 msgstr "Textfeld"
 
 #. +> trunk
-#: formeditor/form.cpp:466
+#: formeditor/form.cpp:467
 msgctxt "Tab Widget (HINT: for Frame Shape)"
 msgid "Tab Widget"
 msgstr "Paneel-Stüerelement"
 
 #. +> trunk
-#: formeditor/form.cpp:467
+#: formeditor/form.cpp:468
 msgctxt "Group Box (HINT: for Frame Shape)"
 msgid "Group Box"
 msgstr "Koppelfeld"
 
 #. +> trunk
-#: formeditor/form.cpp:469
+#: formeditor/form.cpp:470
 msgctxt "Plain (HINT: for Frame Shadow)"
 msgid "Plain"
 msgstr "Eenfach"
 
 #. +> trunk
-#: formeditor/form.cpp:470
+#: formeditor/form.cpp:471
 msgctxt "Raised (HINT: for Frame Shadow)"
 msgid "Raised"
 msgstr "Rutheevt"
 
 #. +> trunk
-#: formeditor/form.cpp:471
+#: formeditor/form.cpp:472
 msgctxt "Sunken (HINT: for Frame Shadow)"
 msgid "Sunken"
 msgstr "Inlaten"
 
 #. +> trunk
-#: formeditor/form.cpp:472
+#: formeditor/form.cpp:473
 msgctxt "for Frame Shadow"
 msgid "Internal"
 msgstr "Intern"
 
 #. +> trunk
-#: formeditor/form.cpp:474
+#: formeditor/form.cpp:475
 msgctxt "No Focus (HINT: for Focus)"
 msgid "No Focus"
 msgstr "Keen Aktiveren"
 
 #. +> trunk
-#: formeditor/form.cpp:475
+#: formeditor/form.cpp:476
 msgctxt "Tab (HINT: for Focus)"
 msgid "Tab"
 msgstr "Tabulator"
 
 #. +> trunk
-#: formeditor/form.cpp:476
+#: formeditor/form.cpp:477
 msgctxt "Click (HINT: for Focus)"
 msgid "Click"
 msgstr "Klick"
 
 #. +> trunk
-#: formeditor/form.cpp:477
+#: formeditor/form.cpp:478
 msgctxt "Tab/Click (HINT: for Focus)"
 msgid "Tab/Click"
 msgstr "Tabulator/Klick"
 
 #. +> trunk
-#: formeditor/form.cpp:478
+#: formeditor/form.cpp:479
 msgctxt "Tab/Click/MouseWheel (HINT: for Focus)"
 msgid "Tab/Click/MouseWheel"
 msgstr "Tabulator/Klick/Muusrad"
 
 #. +> trunk
-#: formeditor/form.cpp:480
+#: formeditor/form.cpp:481
 msgid "Auto"
 msgstr "Automaatsch"
 
 #. +> trunk
-#: formeditor/form.cpp:481
+#: formeditor/form.cpp:482
 msgid "Always Off"
 msgstr "Jümmers ut"
 
 #. +> trunk
-#: formeditor/form.cpp:482
+#: formeditor/form.cpp:483
 msgid "Always On"
 msgstr "Jümmers an"
 
 #. +> trunk
-#: formeditor/form.cpp:485
+#: formeditor/form.cpp:486
 msgid "Horizontal"
 msgstr "Kimmrecht"
 
 #. +> trunk
-#: formeditor/form.cpp:486
+#: formeditor/form.cpp:487
 msgid "Vertical"
 msgstr "Pielrecht"
 
 #. +> trunk
-#: formeditor/form.cpp:489
+#: formeditor/form.cpp:490
 msgid "Left to Right"
 msgstr "Vun links na rechts"
 
 #. +> trunk
-#: formeditor/form.cpp:490
+#: formeditor/form.cpp:491
 msgid "Right to Left"
 msgstr "Vun rechts na links"
 
 #. +> trunk
-#: formeditor/form.cpp:1256
+#: formeditor/form.cpp:1268
 #, kde-format
 msgid "Renaming widget \"%1\" to \"%2\" failed."
 msgstr "Ümnömen vun Stüerelement \"%1\" na \"%2\" fehlslaan."
 
 #. +> trunk
-#: formeditor/form.cpp:1931
+#: formeditor/form.cpp:1899
 #, kde-format
 msgid "Could not rename widget \"%1\" to \"%2\" because \"%3\" is not a valid name (identifier) for a widget.\n"
 msgstr "Stüerelement \"%1\" lett sik nich na \"%2\" ümnömen, wiel \"%3\" keen gellen Naam (Beteker) för en Stüerelement is.\n"
 
 #. +> trunk
-#: formeditor/form.cpp:1942
+#: formeditor/form.cpp:1910
 #, kde-format
 msgid "Could not rename widget \"%1\" to \"%2\" because a widget with the name \"%3\" already exists.\n"
 msgstr "Stüerelement \"%1\" lett sik nich na \"%2\" ümnömen, wiel dat al en Stüerelement mit den Naam \"%3\" gifft.\n"
 
 #. +> trunk
-#: formeditor/form.cpp:2040 formeditor/form.cpp:2360
+#: formeditor/form.cpp:2008 formeditor/form.cpp:2328
 #, kde-format
 msgid "Multiple Widgets (%1)"
 msgstr "Mehr Stüerelementen (%1)"
 
 #. +> trunk
-#: formeditor/form.cpp:2204 formeditor/form.cpp:2456
+#: formeditor/form.cpp:2172 formeditor/form.cpp:2424
 msgid "Events"
 msgstr "Begeefnissen"
 
 #. +> trunk
-#: formeditor/form.cpp:2350
+#: formeditor/form.cpp:2318
 #, kde-format
 msgid "%1 : Form"
 msgstr "%1 : Kiekwark"
 
 #. +> trunk
-#: formeditor/form.cpp:2412
+#: formeditor/form.cpp:2380
 msgid "No Buddy"
 msgstr "Keen Macker"
 
 #. +> trunk
-#: formeditor/form.cpp:2920
+#: formeditor/form.cpp:2894
 msgid ""
 "<b>Cannot create the layout.</b>\n"
 "All selected widgets must have the same parent."
@@ -2852,44 +2733,44 @@ msgstr ""
 "All utsöcht Stüerelementen mööt vun't sülve överornt Element afleddt wesen."
 
 #. +> trunk
-#: formeditor/form.cpp:2986
+#: formeditor/form.cpp:2962
 msgctxt "Translators: please keep this string short (less than 20 chars)"
 msgid "Hor. Alignment"
 msgstr "Kimmr. Utrichten"
 
 #. +> trunk
-#: formeditor/form.cpp:2987
+#: formeditor/form.cpp:2963
 msgid "Horizontal Alignment"
 msgstr "Kimmrecht Utrichten"
 
 #. +> trunk
-#: formeditor/form.cpp:3008
+#: formeditor/form.cpp:2985
 msgctxt "Translators: please keep this string short (less than 20 chars)"
 msgid "Ver. Alignment"
 msgstr "Pielr. Utrichten"
 
 #. +> trunk
-#: formeditor/form.cpp:3009
+#: formeditor/form.cpp:2986
 msgid "Vertical Alignment"
 msgstr "Pielrecht Utrichten"
 
 #. +> trunk
-#: formeditor/form.cpp:3024
+#: formeditor/form.cpp:3001
 msgid "Word Break"
 msgstr "Reegümbrook"
 
 #. +> trunk
-#: formeditor/form.cpp:3094
+#: formeditor/form.cpp:3070
 msgid "Container's Layout"
 msgstr "Anornen vun't Gelaats"
 
 #. +> trunk
-#: formeditor/form.cpp:3101
+#: formeditor/form.cpp:3077
 msgid "Layout Margin"
 msgstr "Rand anornen"
 
 #. +> trunk
-#: formeditor/form.cpp:3108
+#: formeditor/form.cpp:3084
 msgid "Layout Spacing"
 msgstr "Afstand anornen"
 
@@ -3118,36 +2999,42 @@ msgid "Handle tab order automatically"
 msgstr "Paneelreeg automaatsch towiesen"
 
 #. +> trunk
-#: formeditor/widgetfactory.cpp:204
+#: formeditor/widgetfactory.cpp:118
 msgid "Edit List of Items"
 msgstr "List vun Indrääg bewerken"
 
 #. +> trunk
-#: formeditor/widgetfactory.cpp:208
+#: formeditor/widgetfactory.cpp:122
 #, kde-format
 msgid "Contents of %1"
 msgstr "Inholt vun %1"
 
 #. +> trunk
-#: formeditor/widgetlibrary.cpp:743
+#: formeditor/widgetlibrary.cpp:247 kexidb/drivermanager.cpp:225
+#, kde-format
+msgid "Incompatible database driver's \"%1\" version: found version %2, expected version %3."
+msgstr "Verschoon \"%1\" vun den Datenbankdriever is nich kompatibel: funnen Verschoon %2, verwacht Verschoon %3."
+
+#. +> trunk
+#: formeditor/widgetlibrary.cpp:779
 msgctxt "Insert Horizontal Widget"
 msgid "Insert Horizontal"
 msgstr "Kimmrecht infögen"
 
 #. +> trunk
-#: formeditor/widgetlibrary.cpp:749
+#: formeditor/widgetlibrary.cpp:785
 msgctxt "Insert Vertical Widget"
 msgid "Insert Vertical"
 msgstr "Pielrecht infögen"
 
 #. +> trunk
-#: formeditor/widgetlibrary.cpp:753
+#: formeditor/widgetlibrary.cpp:789
 #, kde-format
 msgid "Insert Widget: %1"
 msgstr "Stüerelement infögen: %1"
 
 #. +> trunk
-#: formeditor/widgetlibrary.cpp:757
+#: formeditor/widgetlibrary.cpp:793
 #: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:396
 msgid "Cancel"
 msgstr "Afbreken"
@@ -3664,8 +3551,8 @@ msgid "Ignored"
 msgstr "Övergahn"
 
 #. +> trunk
-#: kexidb/driver_p.cpp:63 plugins/importexport/csv/kexicsvwidgets.cpp:163
-#: plugins/importexport/csv/kexicsvwidgets.cpp:178
+#: kexidb/driver_p.cpp:63 plugins/importexport/csv/kexicsvwidgets.cpp:167
+#: plugins/importexport/csv/kexicsvwidgets.cpp:182
 #: plugins/queries/kexiquerydesignerguieditor.cpp:1706
 #: plugins/tables/kexitabledesignerview.cpp:426
 msgid "None"
@@ -3701,12 +3588,6 @@ msgstr "Datenbankdrievers laat sik nich finnen."
 #, kde-format
 msgid "Could not find database driver \"%1\"."
 msgstr "Datenbankdriever \"%1\" lett sik nich finnen."
-
-#. +> trunk
-#: kexidb/drivermanager.cpp:225
-#, kde-format
-msgid "Incompatible database driver's \"%1\" version: found version %2, expected version %3."
-msgstr "Verschoon \"%1\" vun den Datenbankdriever is nich kompatibel: funnen Verschoon %2, verwacht Verschoon %3."
 
 #. +> trunk
 #: kexidb/drivermanager.cpp:237
@@ -4157,7 +4038,7 @@ msgid "Number"
 msgstr "Tall"
 
 #. +> trunk
-#: kexidb/utils.cpp:1239 plugins/forms/kexidbfactory.cpp:313
+#: kexidb/utils.cpp:1239 plugins/forms/kexidbfactory.cpp:324
 #: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:1511
 #: widget/utils/kexicontextmenuutils.cpp:290
 msgid "Image"
@@ -4222,7 +4103,7 @@ msgstr "&Söken:"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_btnReplace)
 #. +> trunk
-#: main/kexifinddialog.ui:103 main/KexiMainWindow.cpp:3519
+#: main/kexifinddialog.ui:103 main/KexiMainWindow.cpp:3518
 #: migration/importwizard.cpp:801 widget/utils/kexicontextmenuutils.cpp:230
 msgid "&Replace"
 msgstr "&Utwesseln"
@@ -4312,511 +4193,535 @@ msgid "Prompt on replace"
 msgstr "Ehr't Utwesseln nafragen"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:189
+#: main/KexiMainWindow.cpp:188
 msgid "Close the current tab"
 msgstr "Dat aktuelle Paneel tomaken"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:439
+#: main/KexiMainWindow.cpp:401
+msgid "&Insert"
+msgstr "&Infögen"
+
+#. +> trunk
+#: main/KexiMainWindow.cpp:407
+msgid "&Import"
+msgstr "&Importeren"
+
+#. +> trunk
+#: main/KexiMainWindow.cpp:408
+msgid "Paste &Special"
+msgstr "&Besünner infögen"
+
+#. +> trunk
+#: main/KexiMainWindow.cpp:438
 msgctxt "Close the current tab page in Kexi tab interface"
 msgid "Close the current tab"
 msgstr "Aktuell Paneel tomaken"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:551
+#: main/KexiMainWindow.cpp:480
+msgid "&Window"
+msgstr "&Finster"
+
+#. +> trunk
+#: main/KexiMainWindow.cpp:550
 #, kde-format
 msgid "User interface mode will be switched to IDEAl at next %1 application startup."
 msgstr "Wielt den tokamen Start vun Programm %1 warrt de Brukerkoppelsteed na IDEAI-Bedrief ännert."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:576
+#: main/KexiMainWindow.cpp:575
 #, kde-format
 msgid "User interface mode will be switched to Childframe at next %1 application startup."
 msgstr "Wielt den tokamen Start vun Programm %1 warrt de Brukerkoppelsteed na Finsterbedrief ännert."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:628
+#: main/KexiMainWindow.cpp:627
 msgid "&New..."
 msgstr "&Nieg..."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:630
+#: main/KexiMainWindow.cpp:629
 msgid "Create a new project"
 msgstr "Nieg Projekt opstellen"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:632
+#: main/KexiMainWindow.cpp:631
 msgid "Creates a new project. Currently opened project is not affected."
 msgstr "Stellt en nieg Projekt op. Warkt sik nich op dat opstunns opmaakt Projekt ut."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:637
+#: main/KexiMainWindow.cpp:636
 msgid "Open an existing project"
 msgstr "Vörhannen Projekt opmaken"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:639
+#: main/KexiMainWindow.cpp:638
 msgid "Opens an existing project. Currently opened project is not affected."
 msgstr "Maakt en vörhannen Projekt op. Warkt sik nich op dat opstunns opmaakt Projekt ut."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:643
+#: main/KexiMainWindow.cpp:642
 msgid "&Download Example Databases..."
 msgstr "Bispill-Datenbanken &daalladen..."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:644
+#: main/KexiMainWindow.cpp:643
 msgid "Download example databases from the Internet"
 msgstr "Bispilldatenbanken ut dat Internet daalladen"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:645
+#: main/KexiMainWindow.cpp:644
 msgid "Downloads example databases from the Internet."
 msgstr "Laadt Bispilldatenbanken ut dat Internet daal."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:674
+#: main/KexiMainWindow.cpp:653 main/KexiMainWindow.cpp:3210
+msgid "Open Recent"
+msgstr "Verleden opmaken"
+
+#. +> trunk
+#: main/KexiMainWindow.cpp:673
 msgid "Save object changes"
 msgstr "Objektännern sekern"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:675
+#: main/KexiMainWindow.cpp:674
 msgid "Saves object changes from currently selected window."
 msgstr "Sekert de Objektännern vun dat opstunns utsöchte Finster."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:680
+#: main/KexiMainWindow.cpp:679
 msgid "Save &As..."
 msgstr "Sekern &as..."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:681 main/KexiMainWindow.cpp:3227
+#: main/KexiMainWindow.cpp:680 main/KexiMainWindow.cpp:3226
 msgid "Save object as"
 msgstr "Objekt sekern as"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:683
+#: main/KexiMainWindow.cpp:682
 msgid "Saves object changes from currently selected window under a new name (within the same project)."
 msgstr "Sekert de Objektännern vun dat opstunns utsöchte Finster mit en nieg Naam (binnen dat sülve Projekt)."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:689
+#: main/KexiMainWindow.cpp:688
 msgid "Project Properties"
 msgstr "Projekt-Egenschappen"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:698
+#: main/KexiMainWindow.cpp:697
 msgid "&Close Project"
 msgstr "Projekt &tomaken"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:699
+#: main/KexiMainWindow.cpp:698
 msgid "Close the current project"
 msgstr "Aktuell Projekt tomaken"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:700
+#: main/KexiMainWindow.cpp:699
 msgid "Closes the current project."
 msgstr "Maakt dat aktuelle Projekt to."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:706
+#: main/KexiMainWindow.cpp:705
 msgid "Quits Kexi application. Kexi prompts you to save changes."
 msgstr "Beendt Kexi. Kexi fraagt na't Sekern vun Ännern."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:711
+#: main/KexiMainWindow.cpp:710
 msgid "&Relationships..."
 msgstr "&Betöög..."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:713
+#: main/KexiMainWindow.cpp:712
 msgid "Project relationships"
 msgstr "Projektbetöög"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:714
+#: main/KexiMainWindow.cpp:713
 msgid "Shows project relationships."
 msgstr "Wiest de Projektbetöög."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:723
+#: main/KexiMainWindow.cpp:722
 msgid "&Import Database..."
 msgstr "Datenbank &importeren..."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:724
+#: main/KexiMainWindow.cpp:723
 msgid "Import entire database as a Kexi project"
 msgstr "Hele Datenbank as Kexi-Projekt importeren"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:726
+#: main/KexiMainWindow.cpp:725
 msgid "Imports entire database as a Kexi project."
 msgstr "Importeert hele Datenbank as Kexi-Projekt."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:731
-#| msgid "Import Database"
+#: main/KexiMainWindow.cpp:730
 msgid "Import Tables"
 msgstr "Tabellen importeren"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:732 main/KexiMainWindow.cpp:733
+#: main/KexiMainWindow.cpp:731 main/KexiMainWindow.cpp:732
 msgid "Import data from an external source into this database"
 msgstr "Daten ut en extern Born na disse Datenbank importeren"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:741
+#: main/KexiMainWindow.cpp:740
 msgid "&Compact Database..."
 msgstr "Datenbank &komprimeren..."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:742
+#: main/KexiMainWindow.cpp:741
 msgid "Compact the current database project"
 msgstr "Aktuell Datenbankprojekt komprimeren"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:744
+#: main/KexiMainWindow.cpp:743
 msgid "Compacts the current database project, so it will take less space and work faster."
 msgstr "Komprimeert dat aktuelle Datenbankprojekt, so dat dat weniger Spieker bruukt un gauer löppt."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:754
+#: main/KexiMainWindow.cpp:753
 msgctxt "Import->Table Data From File..."
 msgid "Table Data From &File..."
 msgstr "Tabellendaten ut &Datei..."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:755
+#: main/KexiMainWindow.cpp:754
 msgid "Import table data from a file"
 msgstr "Tabellendaten ut Datei importeren"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:756
+#: main/KexiMainWindow.cpp:755
 msgid "Imports table data from a file."
 msgstr "Importeert Tabellendaten ut en Datei."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:764
+#: main/KexiMainWindow.cpp:763
 msgctxt "Export->Table or Query Data to File..."
 msgid "Table or Query Data to &File..."
 msgstr "Tabellen- oder Anfraagdaten na &Datei..."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:766
+#: main/KexiMainWindow.cpp:765
 msgid "Export data from the active table or query data to a file"
 msgstr "Daten ut de aktive Tabell oder Anfraagdaten na en Datei exporteren"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:768
+#: main/KexiMainWindow.cpp:767
 msgid "Exports data from the active table or query data to a file."
 msgstr "Exporteert Daten ut de aktive Tabell oder Anfraagdaten na en Datei."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:779
+#: main/KexiMainWindow.cpp:778
 msgid "Print data from the active table or query"
 msgstr "Daten ut de aktive Tabell oder Anfraag drucken"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:780
+#: main/KexiMainWindow.cpp:779
 msgid "Prints data from the active table or query."
 msgstr "Druckt de Daten ut de aktive Tabell oder Anfraag."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:786
+#: main/KexiMainWindow.cpp:785
 msgid "Show print preview for the active table or query"
 msgstr "Druckvöransicht för de aktuelle Tabell oder Anfraag wiesen"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:788
+#: main/KexiMainWindow.cpp:787
 msgid "Shows print preview for the active table or query."
 msgstr "Wiest de Druckvöransicht för de aktuelle Tabell oder Anfraag."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:793
+#: main/KexiMainWindow.cpp:792
 #: main/printing/kexisimpleprintpreviewwindow.cpp:183
 msgid "Page Set&up..."
 msgstr "Sieden&instellen..."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:795
+#: main/KexiMainWindow.cpp:794
 msgid "Show page setup for printing the active table or query"
 msgstr "Siedeninstellen för't Drucken vun de aktuelle Tabell oder Anfraag wiesen"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:797 widget/KexiProjectListView.cpp:216
+#: main/KexiMainWindow.cpp:796 widget/KexiProjectListView.cpp:216
 msgid "Shows page setup for printing the active table or query."
 msgstr "Wiest de Siedeninstellen för't Drucken vun de aktuelle Tabell oder Anfraag."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:812
+#: main/KexiMainWindow.cpp:811
 msgctxt "Paste Special->As Data &Table..."
 msgid "As Data &Table..."
 msgstr "As Daten&tabell..."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:814
+#: main/KexiMainWindow.cpp:813
 msgid "Paste clipboard data as a table"
 msgstr "Daten ut de Twischenaflaag as Tabell infögen"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:816
+#: main/KexiMainWindow.cpp:815
 msgid "Pastes clipboard data to a table."
 msgstr "Föögt de Daten ut de Twischenaflaag as Tabell in."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:824
+#: main/KexiMainWindow.cpp:823
 msgctxt "Copy Special->Table or Query Data..."
 msgid "Table or Query as Data Table..."
 msgstr "Tabell oder Anfraag as Datentabell..."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:827
+#: main/KexiMainWindow.cpp:826
 msgid "Copy selected table or query data to clipboard"
 msgstr "Utsöchte Tabell oder Anfraagdaten na de Twischenaflaag koperen"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:829
+#: main/KexiMainWindow.cpp:828
 msgid "Copies selected table or query data to clipboard."
 msgstr "Kopeert de utsöchte Tabell oder Anfraagdaten na de Twischenaflaag."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:834
+#: main/KexiMainWindow.cpp:833
 msgid "Reverts the most recent editing action."
 msgstr "Nimmt dat leste Bewerken torüch."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:836
+#: main/KexiMainWindow.cpp:835
 msgid "Reverts the most recent undo action."
 msgstr "Nimmt de leste Torüchnahm torüch."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:865 widget/KexiProjectListView.cpp:149
+#: main/KexiMainWindow.cpp:864 widget/KexiProjectListView.cpp:149
 msgid "&Delete"
 msgstr "&Wegdoon"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:867
+#: main/KexiMainWindow.cpp:866
 msgid "Delete selected object"
 msgstr "Utsöcht Objekt wegdoon"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:868
+#: main/KexiMainWindow.cpp:867
 msgid "Deletes currently selected object."
 msgstr "Deit dat opstunns utsöchte Objekt weg."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:870
+#: main/KexiMainWindow.cpp:869
 msgid "Delete Row"
 msgstr "Reeg wegdoon"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:872
+#: main/KexiMainWindow.cpp:871
 msgid "Delete currently selected row"
 msgstr "Opstunns utsöchte Reeg wegdoon"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:873
+#: main/KexiMainWindow.cpp:872
 msgid "Deletes currently selected row."
 msgstr "Deit de opstunns utsöchte Reeg weg."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:875
+#: main/KexiMainWindow.cpp:874
 msgid "Clear Table Contents"
 msgstr "Tabelleninholt wegdoon"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:877
+#: main/KexiMainWindow.cpp:876
 msgid "Clear table contents"
 msgstr "Tabelleninholt wegdoon"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:878
+#: main/KexiMainWindow.cpp:877
 msgid "Clears table contents."
 msgstr "Deit den Tabelleninholt weg."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:881
+#: main/KexiMainWindow.cpp:880
 msgid "Edit Item"
 msgstr "Indrag bewerken"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:884
+#: main/KexiMainWindow.cpp:883
 msgid "Edit currently selected item"
 msgstr "Aktuell utsöcht Element bewerken"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:885
+#: main/KexiMainWindow.cpp:884
 msgid "Edits currently selected item."
 msgstr "Bewerkt dat aktuell utsöchte Element."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:887
+#: main/KexiMainWindow.cpp:886
 msgid "&Insert Empty Row"
 msgstr "Leddig Reeg &infögen"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:891
+#: main/KexiMainWindow.cpp:890
 msgid "Insert one empty row above"
 msgstr "Baven en leddig Reeg infögen"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:893
+#: main/KexiMainWindow.cpp:892
 msgid "Inserts one empty row above currently selected table row."
 msgstr "Föögt baven de opstunns utsöchte Tabellenreeg en leddig Reeg in."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:950 widget/KexiProjectListView.cpp:86
+#: main/KexiMainWindow.cpp:949 widget/KexiProjectListView.cpp:86
 msgid "Project Navigator"
 msgstr "Projektnavigatschoon"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:952
+#: main/KexiMainWindow.cpp:951
 msgid "Go to project navigator panel"
 msgstr "Na de Projektnavigatschoon gahn"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:953
+#: main/KexiMainWindow.cpp:952
 msgid "Goes to project navigator panel."
 msgstr "Geiht na de Projektnavigatschoon."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:960
+#: main/KexiMainWindow.cpp:959
 msgid "Main Area"
 msgstr "Hööftrebeet"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:962
+#: main/KexiMainWindow.cpp:961
 msgid "Go to main area"
 msgstr "Na't Hööftrebeet gahn"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:963
+#: main/KexiMainWindow.cpp:962
 msgid "Goes to main area."
 msgstr "Geiht na't Hööftrebeet."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:969 main/KexiMainWindow.cpp:2112
+#: main/KexiMainWindow.cpp:968 main/KexiMainWindow.cpp:2111
 msgid "Property Editor"
 msgstr "Egenschappen-Editor"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:971
+#: main/KexiMainWindow.cpp:970
 msgid "Go to property editor panel"
 msgstr "Na den Egenschappen-Editor gahn"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:972
+#: main/KexiMainWindow.cpp:971
 msgid "Goes to property editor panel."
 msgstr "Geiht na den Egenschappen-Editor."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:979
+#: main/KexiMainWindow.cpp:978
 msgid "&Save Row"
 msgstr "Reeg &sekern"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:981
+#: main/KexiMainWindow.cpp:980
 msgid "Save changes made to the current row"
 msgstr "Ännern an de aktuelle Reeg sekern"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:982
+#: main/KexiMainWindow.cpp:981
 msgid "Saves changes made to the current row."
 msgstr "Sekert de Ännern an de aktuelle Reeg."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:985
+#: main/KexiMainWindow.cpp:984
 msgid "&Cancel Row Changes"
 msgstr "Reegännern &wegdoon"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:988
+#: main/KexiMainWindow.cpp:987
 msgid "Cancel changes made to the current row"
 msgstr "Ännern an de aktuellen Reeg wegdoon"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:990
+#: main/KexiMainWindow.cpp:989
 msgid "Cancels changes made to the current row."
 msgstr "Deit de Ännern an de aktuellen Reeg weg."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:994
+#: main/KexiMainWindow.cpp:993
 msgid "&Execute"
 msgstr "&Utföhren"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:999
+#: main/KexiMainWindow.cpp:998
 msgid "&Filter"
 msgstr "&Filtern"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1025
+#: main/KexiMainWindow.cpp:1024
 msgid "&Font..."
 msgstr "Schri&ftoort..."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1027
+#: main/KexiMainWindow.cpp:1026
 msgid "Change font for selected object"
 msgstr "Schriftoort för dat utsöchte Objekt ännern"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1028
+#: main/KexiMainWindow.cpp:1027
 msgid "Changes font for selected object."
 msgstr "Ännert de Schriftoort för dat utsöchte Objekt."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1052
+#: main/KexiMainWindow.cpp:1051
 msgid "&Next Window"
 msgstr "&Nakamen Finster"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1060
+#: main/KexiMainWindow.cpp:1059
 msgid "Next window"
 msgstr "Nakamen Finster"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1061
+#: main/KexiMainWindow.cpp:1060
 msgid "Switches to the next window."
 msgstr "Wesselt na't nakamen Finster."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1066
+#: main/KexiMainWindow.cpp:1065
 msgid "&Previous Window"
 msgstr "&Verleden Finster"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1074
+#: main/KexiMainWindow.cpp:1073
 msgid "Previous window"
 msgstr "Verleden Finster"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1075
+#: main/KexiMainWindow.cpp:1074
 msgid "Switches to the previous window."
 msgstr "Wesselt na't verleden Finster."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1086
+#: main/KexiMainWindow.cpp:1085
 msgid "Lets you configure shortcut keys."
 msgstr "Hier laat sik de Tastkombinatschonen instellen."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1128
+#: main/KexiMainWindow.cpp:1127
 msgid "Lets you configure Kexi."
 msgstr "Hier lett sik Kexi instellen."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1137
+#: main/KexiMainWindow.cpp:1136
 msgid "Shows bug reporting tool for Kexi application."
 msgstr "Wiest dat Fehlerbericht-Warktüüch för Kexi."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1139
+#: main/KexiMainWindow.cpp:1138
 msgid "Shows \"What's This\" tool."
 msgstr "Wiest dat \"Wat is dat\"-Warktüüch."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1141 migration/importwizard.cpp:959
+#: main/KexiMainWindow.cpp:1140 migration/importwizard.cpp:959
 #: migration/importwizard.cpp:966 migration/importwizard.cpp:968
 #: migration/importwizard.cpp:970 migration/importwizard.cpp:972
 #: migration/importwizard.cpp:974
@@ -4824,42 +4729,42 @@ msgid "Help"
 msgstr "Hülp"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1142
+#: main/KexiMainWindow.cpp:1141
 msgid "Shows Kexi Handbook."
 msgstr "Wiest dat Kexi-Handbook."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1144
+#: main/KexiMainWindow.cpp:1143
 msgid "Shows information about Kexi application."
 msgstr "Wiest Informatschonen över Kexi."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1146
+#: main/KexiMainWindow.cpp:1145
 msgid "Shows information about K Desktop Environment."
 msgstr "Wiest Informatschonen över KDE."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1150
+#: main/KexiMainWindow.cpp:1149
 msgid "This shows useful tips on the use of this application."
 msgstr "Wiest sinnvull Tipps för den Bruuk vun dit Programm."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1153 main/KexiMainWindow.cpp:4469
+#: main/KexiMainWindow.cpp:1152 main/KexiMainWindow.cpp:4468
 msgid "Important Information"
 msgstr "Wichtige Informatschonen"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1160
+#: main/KexiMainWindow.cpp:1159
 msgid "Give Feedback..."
 msgstr "Torüchmellen geven..."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1523
+#: main/KexiMainWindow.cpp:1522
 msgid "reason:"
 msgstr "Oorsaak:"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1558
+#: main/KexiMainWindow.cpp:1557
 #, kde-format
 msgid ""
 "<qt>Database project %1 does not appear to have been created using Kexi.<br>"
@@ -4871,206 +4776,206 @@ msgstr ""
 "Wullt Du dat as nieg Kexi-Projekt importeren?</qt>"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1560
+#: main/KexiMainWindow.cpp:1559
 msgctxt "Import Database"
 msgid "&Import..."
 msgstr "&Importeren..."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1594
+#: main/KexiMainWindow.cpp:1593
 msgid "Select New Project's Location"
 msgstr "Adress vun't nieg Projekt utsöken"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1685
+#: main/KexiMainWindow.cpp:1684
 #, kde-format
 msgid "cannot create object - unknown object type \"%1\""
 msgstr "Objekt lett sik nich opstellen - nich begäng Objekttyp \"%1\""
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1687
+#: main/KexiMainWindow.cpp:1686
 #, kde-format
 msgid "unknown object type \"%1\""
 msgstr "Nich begäng Objekttyp \"%1\""
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1695
+#: main/KexiMainWindow.cpp:1694
 #, kde-format
 msgid "cannot create object of type \"%1\""
 msgstr "Objekt vun den Typ \"%1\" lett sik nich opstellen"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1707
+#: main/KexiMainWindow.cpp:1706
 msgid "making print preview for"
 msgstr "Druckvöransicht warrt opstellt för"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1709
+#: main/KexiMainWindow.cpp:1708
 msgid "printing"
 msgstr "An't Drucken"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1711
+#: main/KexiMainWindow.cpp:1710
 msgctxt "\"executing object\" action"
 msgid "executing"
 msgstr "Utföhren"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1713
+#: main/KexiMainWindow.cpp:1712
 msgid "opening"
 msgstr "An't opmaken"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1717
+#: main/KexiMainWindow.cpp:1716
 msgid "table not found"
 msgstr "Tabell lett sik nich finnen"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1719
+#: main/KexiMainWindow.cpp:1718
 msgid "query not found"
 msgstr "Anfraag lett sik nich finnen"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1721
+#: main/KexiMainWindow.cpp:1720
 msgid "macro not found"
 msgstr "Makro lett sik nich finnen"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1723
+#: main/KexiMainWindow.cpp:1722
 msgid "script not found"
 msgstr "Skript lett sik nich finnen"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1725
+#: main/KexiMainWindow.cpp:1724
 msgid "object not found"
 msgstr "Objekt lett sik nich finnen"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1733
+#: main/KexiMainWindow.cpp:1732
 msgid "cannot execute object"
 msgstr "Objekt lett sik nich utföhren"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1740
+#: main/KexiMainWindow.cpp:1739
 msgid "cannot print object"
 msgstr "Objekt lett sik nich drucken"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1747
+#: main/KexiMainWindow.cpp:1746
 msgid "cannot make print preview of object"
 msgstr "Druckvöransicht vun't Objekt lett sik nich opstellen"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1768
+#: main/KexiMainWindow.cpp:1767
 msgid "cannot open object"
 msgstr "Objekt lett sik nich opmaken"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:1782
+#: main/KexiMainWindow.cpp:1781
 msgid "You have requested selected objects to be automatically opened or processed on startup. Several objects cannot be opened or processed."
 msgstr "Du wullt wielt den Programmstart Objekten automaatsch opmaken oder utföhren. En Reeg Objekten laat sik nich opmaken oder utföhren."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:2137 widget/KexiPropertyEditorView.cpp:46
+#: main/KexiMainWindow.cpp:2136 widget/KexiPropertyEditorView.cpp:46
 #: widget/utils/kexicontextmenuutils.cpp:98
 msgid "Properties"
 msgstr "Egenschappen"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:3168
+#: main/KexiMainWindow.cpp:3167
 msgid "Recently Opened Databases"
 msgstr "Tolest opmaakte Datenbanken"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:3187
+#: main/KexiMainWindow.cpp:3186
 msgid "Recently Connected Database Servers"
 msgstr "Tolest tokoppelt Datenbankservers"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:3281
+#: main/KexiMainWindow.cpp:3280
 msgid "From File..."
 msgstr "Ut Datei..."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:3286
+#: main/KexiMainWindow.cpp:3285
 msgid "From Server..."
 msgstr "Vun Server..."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:3397
+#: main/KexiMainWindow.cpp:3396
 #, kde-format
 msgid "Selected view is not supported for \"%1\" object."
 msgstr "De utsöchte Ansicht för Objekt \"%1\" warrt nich ünnerstütt."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:3399
+#: main/KexiMainWindow.cpp:3398
 #, kde-format
 msgid "Selected view (%1) is not supported by this object type (%2)."
 msgstr "De utsöchte Ansicht (%1) warrt vun dissen Objekttyp (%2) nich ünnerstütt."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:3496
+#: main/KexiMainWindow.cpp:3495
 msgid "Save Object As"
 msgstr "Objekt sekern as"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:3517
+#: main/KexiMainWindow.cpp:3516
 msgid "Do you want to replace it?"
 msgstr "Wullt Du dat utwesseln?"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:3520
+#: main/KexiMainWindow.cpp:3519
 msgid "&Choose Other Name..."
 msgstr "Anner Naam &utsöken..."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:3537
+#: main/KexiMainWindow.cpp:3536
 msgid "Please choose other name."
 msgstr "Bitte en anner Naam utsöken."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:3560
+#: main/KexiMainWindow.cpp:3559
 #, kde-format
 msgid "Saving \"%1\" object failed."
 msgstr "Sekern vun Objekt \"%1\" fehlslaan."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:3577
+#: main/KexiMainWindow.cpp:3576
 #, kde-format
 msgid "Saving new \"%1\" object failed."
 msgstr "Sekern vun't nieg Objekt \"%1\" is fehlslaan."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:3629 main/KexiMainWindow.cpp:4926
+#: main/KexiMainWindow.cpp:3628 main/KexiMainWindow.cpp:4925
 msgid "Save changes"
 msgstr "Ännern sekern"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:3631 main/KexiMainWindow.cpp:4928
+#: main/KexiMainWindow.cpp:3630 main/KexiMainWindow.cpp:4927
 #, kde-format
 msgid "Pressing this button will save all recent changes made in \"%1\" object."
 msgstr "Mit dissen Knoop laat sik all tolest binnen Objekt \"%1\" maakte Ännern sekern."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:3635
+#: main/KexiMainWindow.cpp:3634
 #, kde-format
 msgid "Pressing this button will discard all recent changes made in \"%1\" object."
 msgstr "Mit dissen Knoop laat sik all tolest binnen Objekt \"%1\" maakte Ännern wegsmieten."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:3657
+#: main/KexiMainWindow.cpp:3656
 msgid "Do you want to save changes?"
 msgstr "Wullt Du de Ännern sekern?"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:4027
+#: main/KexiMainWindow.cpp:4026
 #, kde-format
 msgctxt "opening is not allowed in \"data view/design view/text view\" mode"
 msgid "opening is not allowed in \"%1\" mode"
 msgstr "Opmaken is in Bedrief \"%1\" nich tolaten"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:4244
+#: main/KexiMainWindow.cpp:4243
 #, kde-format
 msgid ""
 "Do you want to permanently delete:\n"
@@ -5082,57 +4987,57 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, btnRemove)
 #. +> trunk
-#: main/KexiMainWindow.cpp:4248 plugins/reportspgz/kexireportdesignview.cpp:43
+#: main/KexiMainWindow.cpp:4247 plugins/reportspgz/kexireportdesignview.cpp:43
 #: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:1075
 #: plugins/reportspgz/koreport/wrtembed/sectioneditor.ui:255
 msgid "Delete"
 msgstr "Wegdoon"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:4298
+#: main/KexiMainWindow.cpp:4297
 msgid "Could not remove object."
 msgstr "Objekt lett sik nich wegdoon."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:4320
+#: main/KexiMainWindow.cpp:4319
 #, kde-format
 msgid "Renaming object \"%1\" failed."
 msgstr "Ümnömen vun Objekt \"%1\" is fehlslaan."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:4530
+#: main/KexiMainWindow.cpp:4529
 #, kde-format
 msgid "Could not start project \"%1\" in Final Mode."
 msgstr "Projekt \"%1\" lett sik nich in'n Afsluttbedrief starten."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:4534
+#: main/KexiMainWindow.cpp:4533
 msgid "No Final Mode data found."
 msgstr "Daten för Afsluttbedrief laat sik nich finnen."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:4541
+#: main/KexiMainWindow.cpp:4540
 msgid "Error reading Final Mode data."
 msgstr "Fehler bi't Lesen vun Afsluttbedrief-Daten."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:4570
+#: main/KexiMainWindow.cpp:4569
 msgid "Specified plugin does not exist."
 msgstr "Dat angeven Moduul gifft dat nich."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:4579
+#: main/KexiMainWindow.cpp:4578
 msgid "Specified object could not be opened."
 msgstr "Dat angeven Objekt lett sik nich opmaken."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:4663
+#: main/KexiMainWindow.cpp:4662
 #, kde-format
 msgid "Compacting database file <nobr>\"%1\"</nobr> is not supported."
 msgstr "Komprimeren vun Datenbankdatei <nobr>\"%1\"</nobr> nich ünnerstütt."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:4675
+#: main/KexiMainWindow.cpp:4674
 msgid ""
 "The current project has to be closed before compacting the database. It will be open again after compacting.\n"
 "\n"
@@ -5143,23 +5048,23 @@ msgstr ""
 "Wullt Du wiedermaken?"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:4932
+#: main/KexiMainWindow.cpp:4931
 #, kde-format
 msgid "Pressing this button will ignore all unsaved changes made in \"%1\" object."
 msgstr "Mit dissen Knoop warrt all binnen Objekt \"%1\" nich sekerte Ännern övergahn."
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:4937
+#: main/KexiMainWindow.cpp:4936
 msgid "Do you want to save changes before printing?"
 msgstr "Wullt Du de Ännern ehr't Drucken sekern?"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:4939
+#: main/KexiMainWindow.cpp:4938
 msgid "Do you want to save changes before making print preview?"
 msgstr "Wullt Du de Ännern sekern, ehr de Druckvöransicht opstellt warrt?"
 
 #. +> trunk
-#: main/KexiMainWindow.cpp:4941
+#: main/KexiMainWindow.cpp:4940
 msgid "Do you want to save changes before showing page setup?"
 msgstr "Wullt Du de Ännern sekern, ehr de Siedeninstellen wiest warrt?"
 
@@ -5544,6 +5449,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (Q3ListView, list)
 #. +> trunk
 #: main/startup/KexiConnSelector.ui:83 main/startup/KexiProjectSelector.ui:101
+#: migration/AlterSchemaWidget.cpp:43
 #: plugins/tables/kexitabledesignerview.cpp:356
 msgid "Type"
 msgstr "Typ"
@@ -6144,6 +6050,21 @@ msgid "Overwrite"
 msgstr "Överschrieven"
 
 #. +> trunk
+#: migration/AlterSchemaWidget.cpp:42
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:946
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:959
+#, kde-format
+msgid "Column %1"
+msgstr "Striep %1"
+
+#. +> trunk
+#: migration/AlterSchemaWidget.cpp:44
+#: plugins/tables/kexitabledesignerview.cpp:193
+#: plugins/tables/kexitabledesignerview.cpp:430
+msgid "Primary Key"
+msgstr "Hööftslötel"
+
+#. +> trunk
 #: migration/importoptionsdlg.cpp:45
 msgid "Advanced Import Options"
 msgstr "Verwiedert Import-Optschonen"
@@ -6164,7 +6085,7 @@ msgstr ""
 
 #. +> trunk
 #: migration/importoptionsdlg.cpp:69
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:182
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:181
 msgid "Text encoding:"
 msgstr "Textkoderen:"
 
@@ -6174,61 +6095,69 @@ msgid "Always use this encoding in similar situations"
 msgstr "Bi lieke Lagen jümmers disse Koderen bruken"
 
 #. +> trunk
-#: migration/importtablewizard.cpp:116
-#| msgid "Database Importing wizard allows you to import an existing database into a Kexi database."
+#: migration/importtablewizard.cpp:118
 msgid "Table importing wizard allows you to import a table from an existing database into the current Kexi database."
 msgstr "Mit den Tabell-Importhölper lett sik en vörhannen Datenbank-Tabell na de aktuelle Kexi-Datenbank importeren."
 
 #. +> trunk
-#: migration/importtablewizard.cpp:119 migration/importwizard.cpp:181
+#: migration/importtablewizard.cpp:121 migration/importwizard.cpp:181
 msgid "Click \"Next\" button to continue or \"Cancel\" button to exit this wizard."
 msgstr "Klick op \"Nakamen\", wenn Du wiedermaken wullt, oder op \"Afbreken\", wenn Du dissen Hülper tomaken wullt."
 
 #. +> trunk
-#: migration/importtablewizard.cpp:122
-#| msgid "Welcome to the Database Importing Wizard"
+#: migration/importtablewizard.cpp:124
 msgid "Welcome to the Table Importing Wizard"
 msgstr "Willkamen bi den Tabell-Importhölper"
 
 #. +> trunk
-#: migration/importtablewizard.cpp:152 migration/importwizard.cpp:213
+#: migration/importtablewizard.cpp:155 migration/importwizard.cpp:213
 msgid "Select Location for Source Database"
 msgstr "Adress för Born-Datenbank utsöken"
 
 #. +> trunk
-#: migration/importtablewizard.cpp:166
-#| msgid "Select Type of Import"
-msgid "Select the Tables to Import"
+#: migration/importtablewizard.cpp:169
+#, fuzzy
+#| msgid "Select the Tables to Import"
+msgid "Select the Table to Import"
 msgstr "De Tabellen utsöken, de Du importeren wullt"
 
 #. +> trunk
-#: migration/importtablewizard.cpp:198 migration/importwizard.cpp:372
+#: migration/importtablewizard.cpp:202 migration/importwizard.cpp:372
 msgid "Advanced Options"
 msgstr "Verwiedert Optschonen"
 
 #. +> trunk
-#: migration/importtablewizard.cpp:207 migration/importwizard.cpp:382
+#: migration/importtablewizard.cpp:211 migration/importwizard.cpp:382
 msgid "Importing"
 msgstr "An't Importeren"
 
 #. +> trunk
-#: migration/importtablewizard.cpp:224 migration/importwizard.cpp:406
+#: migration/importtablewizard.cpp:227
+msgid "Alter the Detected Design"
+msgstr ""
+
+#. +> trunk
+#: migration/importtablewizard.cpp:244 migration/importwizard.cpp:406
 #: migration/importwizard.cpp:822
 msgid "Success"
 msgstr "Hett funkscheneert"
 
 #. +> trunk
-#: migration/importtablewizard.cpp:286
+#: migration/importtablewizard.cpp:350
+#, fuzzy
 #| msgid ""
 #| "All required information has now been gathered. Click \"Next\" button to start importing.\n"
 #| "\n"
-#| "Depending on size of the database this may take some time."
+#| "Depending on size of the tables this may take some time.\n"
+#| "\n"
+#| "You have chosen to import the following tables:\n"
 msgid ""
 "All required information has now been gathered. Click \"Next\" button to start importing.\n"
 "\n"
 "Depending on size of the tables this may take some time.\n"
 "\n"
-"You have chosen to import the following tables:\n"
+"You have chosen to import the following table:\n"
+"\n"
 msgstr ""
 "All nödig Informatschonen wöörn nu sammelt. Klick op \"Nakamen\", wenn Du mit dat Importeren anfangen wullt.\n"
 "\n"
@@ -6237,9 +6166,15 @@ msgstr ""
 "Du wullt disse Tabellen importeren:\n"
 
 #. +> trunk
-#: migration/importtablewizard.cpp:340 migration/importwizard.cpp:701
+#: migration/importtablewizard.cpp:402 migration/importwizard.cpp:701
 msgid "No appropriate migration driver found."
 msgstr "Keen passen Datenutlagern-Driever funnen."
+
+#. +> trunk
+#: migration/importtablewizard.cpp:490
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:1403
+msgid "No project available."
+msgstr "Keen Projektnaam verföögbor."
 
 #. +> trunk
 #: migration/importwizard.cpp:69
@@ -6519,24 +6454,24 @@ msgid "Source Database Non-Unicode Encoding"
 msgstr "Borndatenbank hett keen Unicode-Koderen"
 
 #. +> trunk
-#: migration/migratemanager.cpp:166
+#: migration/migratemanager.cpp:165
 msgid "Could not find any import/export database drivers."
 msgstr "Import-/Export-Datenbankdrievers laat sik nich finnen."
 
 #. +> trunk
-#: migration/migratemanager.cpp:186
+#: migration/migratemanager.cpp:185
 #, kde-format
 msgid "Could not find import/export database driver \"%1\"."
 msgstr "Import-/Export-Datenbankdriever \"%1\" lett sik nich finnen."
 
 #. +> trunk
-#: migration/migratemanager.cpp:201
+#: migration/migratemanager.cpp:200
 #, kde-format
 msgid "Incompatible migration driver's \"%1\" version: found version %2, expected version %3."
 msgstr "Verschoon \"%1\" vun den Datenutlagern-Driever is nich kompatibel: funnen Verschoon %2, verwacht Verschoon %3."
 
 #. +> trunk
-#: migration/migratemanager.cpp:215
+#: migration/migratemanager.cpp:214
 #, kde-format
 msgid "Could not load import/export database driver \"%1\"."
 msgstr "Import-/Export-Datenbankdriever \"%1\" lett sik nich laden."
@@ -6627,166 +6562,166 @@ msgid "A data-aware form widget"
 msgstr "En datenkünnig Kiekwarkstüerelement"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:105
+#: plugins/forms/kexidbfactory.cpp:107
 msgid "Text Box"
 msgstr "Textfeld"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:108
+#: plugins/forms/kexidbfactory.cpp:110
 msgctxt "Widget name. This string will be used to name widgets of this class. It must _not_ contain white spaces and non latin1 characters."
 msgid "textBox"
 msgstr "textfeld"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:109
+#: plugins/forms/kexidbfactory.cpp:111
 msgid "A widget for entering and displaying text"
 msgstr "En Stüerelement för't Ingeven un Wiesen vun Text"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:123
+#: plugins/forms/kexidbfactory.cpp:127
 msgid "A multiline text editor"
 msgstr "En Text-Ingaavfeld"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:136
+#: plugins/forms/kexidbfactory.cpp:141
 msgid "A simple frame widget"
 msgstr "En eenfach Rahmen-Stüerelement"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:145
+#: plugins/forms/kexidbfactory.cpp:151
 msgctxt "Text Label"
 msgid "Label"
 msgstr "Textfeld"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:149
+#: plugins/forms/kexidbfactory.cpp:155
 msgid "A widget for displaying text"
 msgstr "En Stüerelement för't Wiesen vun Text"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:159
+#: plugins/forms/kexidbfactory.cpp:166
 msgid "Image Box"
 msgstr "Bildfeld"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:162
+#: plugins/forms/kexidbfactory.cpp:169
 msgctxt "Widget name. This string will be used to name widgets of this class. It must _not_ contain white spaces and non latin1 characters."
 msgid "image"
 msgstr "bild"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:163
+#: plugins/forms/kexidbfactory.cpp:170
 msgid "A widget for displaying images"
 msgstr "En Stüerelement för't Wiesen vun Biller"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:194
+#: plugins/forms/kexidbfactory.cpp:204
 msgid "A check box with text label"
 msgstr "En Ankrüüzfeld mit Text"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:202
+#: plugins/forms/kexidbfactory.cpp:212
 msgid "Auto Field"
 msgstr "Automaatsch Feld"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:205
+#: plugins/forms/kexidbfactory.cpp:215
 msgctxt "Widget name. This string will be used to name widgets of this class. It must _not_ contain white spaces and non latin1 characters"
 msgid "autoField"
 msgstr "automaatschfeld"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:206
+#: plugins/forms/kexidbfactory.cpp:216
 msgid "A widget containing an automatically selected editor and a label to edit the value of a database field of any type."
 msgstr "En Stüerelement mit en automaatsch utsöcht Editor un en Feld för't Bewerken vun all Sorten vun Datenbankfeller."
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:271
+#: plugins/forms/kexidbfactory.cpp:280
 msgid "Command Button"
 msgstr "Befehlknoop"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:275
+#: plugins/forms/kexidbfactory.cpp:284
 msgid "A command button to execute actions"
 msgstr "En Befehlknoop för't Utföhren vun Akschonen"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:278 plugins/forms/kexiformpart.cpp:489
+#: plugins/forms/kexidbfactory.cpp:289 plugins/forms/kexiformpart.cpp:488
 msgid "Data Source"
 msgstr "Datenborn"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:279
+#: plugins/forms/kexidbfactory.cpp:290
 msgid "Form Name"
 msgstr "Kiekwark-Naam"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:280
+#: plugins/forms/kexidbfactory.cpp:291
 msgid "On Click"
 msgstr "Bi't Anklicken"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:281
+#: plugins/forms/kexidbfactory.cpp:292
 msgid "On Click Option"
 msgstr "Anklickoptschoon"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:282
+#: plugins/forms/kexidbfactory.cpp:293
 msgid "Auto Tab Order"
 msgstr "Automaatsche Paneel-Reeg"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:283
+#: plugins/forms/kexidbfactory.cpp:294
 msgid "Shadow Enabled"
 msgstr "Schadden anmaakt"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:284
+#: plugins/forms/kexidbfactory.cpp:295
 msgctxt "On: button"
 msgid "On"
 msgstr "An"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:286
+#: plugins/forms/kexidbfactory.cpp:297
 msgid "Editor Type"
 msgstr "Editortyp"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:288
+#: plugins/forms/kexidbfactory.cpp:299
 msgctxt "AutoField editor's type"
 msgid "Auto"
 msgstr "Automaatsch"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:296
+#: plugins/forms/kexidbfactory.cpp:307
 msgctxt "AutoField editor's type"
 msgid "Multiline Text"
 msgstr "Textfeld"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:297
+#: plugins/forms/kexidbfactory.cpp:308
 msgctxt "AutoField editor's type"
 msgid "Drop-Down List"
 msgstr "Köörlist"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:298
+#: plugins/forms/kexidbfactory.cpp:309
 msgctxt "AutoField editor's type"
 msgid "Image"
 msgstr "Bild"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:301
+#: plugins/forms/kexidbfactory.cpp:312
 msgid "Auto Label"
 msgstr "Automaatsch Beschriften"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:302
+#: plugins/forms/kexidbfactory.cpp:313
 msgid "Label Text Color"
 msgstr "De Beschriften ehr Textklöör"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:304
+#: plugins/forms/kexidbfactory.cpp:315
 msgctxt "(a property name, keep the text narrow!)"
 msgid ""
 "Label Background\n"
@@ -6796,51 +6731,51 @@ msgstr ""
 "Klöör"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:306
+#: plugins/forms/kexidbfactory.cpp:317
 msgid "Label Position"
 msgstr "Beschriftenpositschoon"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:307
+#: plugins/forms/kexidbfactory.cpp:318
 msgctxt "Label Position"
 msgid "Left"
 msgstr "Links"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:308
+#: plugins/forms/kexidbfactory.cpp:319
 msgctxt "Label Position"
 msgid "Top"
 msgstr "Baven"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:309
+#: plugins/forms/kexidbfactory.cpp:320
 msgctxt "Label Position"
 msgid "No Label"
 msgstr "Keen Beschriften"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:311
+#: plugins/forms/kexidbfactory.cpp:322
 msgid "Size"
 msgstr "Grött"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:314
+#: plugins/forms/kexidbfactory.cpp:325
 msgid "Scaled Contents"
 msgstr "Topasst Inholt"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:315
+#: plugins/forms/kexidbfactory.cpp:326
 msgctxt "Keep Aspect Ratio (short)"
 msgid "Keep Ratio"
 msgstr "Proportschoon wohren"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:322
+#: plugins/forms/kexidbfactory.cpp:333
 msgid "Frame Color"
 msgstr "Rahmenklöör"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:325
+#: plugins/forms/kexidbfactory.cpp:336
 msgctxt "Drop-Down Button for Image Box Visible (a property name, keep the text narrow!)"
 msgid ""
 "Drop-Down\n"
@@ -6850,36 +6785,36 @@ msgstr ""
 "Knoop sichtbor"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:328
+#: plugins/forms/kexidbfactory.cpp:339
 msgctxt "Tristate checkbox, default"
 msgid "Default"
 msgstr "Standard"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:329
+#: plugins/forms/kexidbfactory.cpp:340
 msgctxt "Tristate checkbox, yes"
 msgid "Yes"
 msgstr "Jo"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:330
+#: plugins/forms/kexidbfactory.cpp:341
 msgctxt "Tristate checkbox, no"
 msgid "No"
 msgstr "Nee"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:333
+#: plugins/forms/kexidbfactory.cpp:344
 msgctxt "Editable combobox"
 msgid "Editable"
 msgstr "Bewerkbor"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:413
+#: plugins/forms/kexidbfactory.cpp:426
 msgid "&Image"
 msgstr "&Bild"
 
 #. +> trunk
-#: plugins/forms/kexidbfactory.cpp:435
+#: plugins/forms/kexidbfactory.cpp:448
 msgid "&Assign Action..."
 msgstr "Akschoon &towiesen..."
 
@@ -6920,177 +6855,177 @@ msgid "Set Form's Data Source to \"%1\""
 msgstr "Datenborn vun't Kiekwark op \"%1\" fastleggen"
 
 #. +> trunk
-#: plugins/forms/kexiformmanager.cpp:466
+#: plugins/forms/kexiformmanager.cpp:468
 msgid "Form's UI Code"
 msgstr "Koppelsteed-Kode vun't Kiekwark"
 
 #. +> trunk
-#: plugins/forms/kexiformmanager.cpp:471
+#: plugins/forms/kexiformmanager.cpp:473
 msgid "Current"
 msgstr "Aktuell"
 
 #. +> trunk
-#: plugins/forms/kexiformmanager.cpp:479
+#: plugins/forms/kexiformmanager.cpp:481
 msgid "Original"
 msgstr "Orginaal"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:91
+#: plugins/forms/kexiformpart.cpp:90
 msgctxt "Translate this word using only lowercase alphanumeric characters (a..z, 0..9). Use '_' character instead of spaces. First character should be a..z character. If you cannot use latin characters in your language, use english word."
 msgid "form"
 msgstr "kiekwark"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:93
+#: plugins/forms/kexiformpart.cpp:92
 msgctxt "tooltip"
 msgid "Create new form"
 msgstr "Nieg Kiekwark opstellen"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:94
+#: plugins/forms/kexiformpart.cpp:93
 msgctxt "what's this"
 msgid "Creates new form."
 msgstr "Stellt en nieg Kiekwark op."
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:147 plugins/forms/kexiformpart.cpp:172
+#: plugins/forms/kexiformpart.cpp:146 plugins/forms/kexiformpart.cpp:171
 msgid "Edit Tab Order..."
 msgstr "Paneel-Reeg bewerken..."
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:148
+#: plugins/forms/kexiformpart.cpp:147
 msgid "Adjust Size"
 msgstr "Grött topassen"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:170
+#: plugins/forms/kexiformpart.cpp:169
 msgid "Clear Widget Contents"
 msgstr "Stüerelementinholt leddig maken"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:179
+#: plugins/forms/kexiformpart.cpp:178
 msgid "Layout Widgets"
 msgstr "Stüerelementen anornen"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:183
+#: plugins/forms/kexiformpart.cpp:182
 msgid "&Horizontally"
 msgstr "&Kimmrecht"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:185
+#: plugins/forms/kexiformpart.cpp:184
 msgid "&Vertically"
 msgstr "&Pielrecht"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:187
+#: plugins/forms/kexiformpart.cpp:186
 msgid "In &Grid"
 msgstr "An't &Gadder"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:190
+#: plugins/forms/kexiformpart.cpp:189
 msgid "Horizontally in &Splitter"
 msgstr "Kimmrecht in &Trenner"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:192
+#: plugins/forms/kexiformpart.cpp:191
 msgid "Verti&cally in Splitter"
 msgstr "&Pielrecht in Trenner"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:196
+#: plugins/forms/kexiformpart.cpp:195
 msgid "&Break Layout"
 msgstr "Anornen op&breken"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:203
+#: plugins/forms/kexiformpart.cpp:202
 msgid "Bring Widget to Front"
 msgstr "Stüerelement na vörn"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:205
+#: plugins/forms/kexiformpart.cpp:204
 msgid "Send Widget to Back"
 msgstr "Stüerelement na achtern"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:209
+#: plugins/forms/kexiformpart.cpp:208
 msgid "Other Widgets"
 msgstr "Anner Stüerelementen"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:213
+#: plugins/forms/kexiformpart.cpp:212
 msgid "Align Widgets Position"
 msgstr "Stüerelementen utrichten"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:216
+#: plugins/forms/kexiformpart.cpp:215
 msgid "To Left"
 msgstr "Na links"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:218
+#: plugins/forms/kexiformpart.cpp:217
 msgid "To Right"
 msgstr "Na rechts"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:220
+#: plugins/forms/kexiformpart.cpp:219
 msgid "To Top"
 msgstr "Na baven"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:222
+#: plugins/forms/kexiformpart.cpp:221
 msgid "To Bottom"
 msgstr "Na nerrn"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:224 plugins/forms/kexiformpart.cpp:232
+#: plugins/forms/kexiformpart.cpp:223 plugins/forms/kexiformpart.cpp:231
 msgid "To Grid"
 msgstr "An't Gadder"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:227
+#: plugins/forms/kexiformpart.cpp:226
 msgid "Adjust Widgets Size"
 msgstr "Stüerelementgrött topassen"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:230
+#: plugins/forms/kexiformpart.cpp:229
 msgid "To Fit"
 msgstr "Topassen"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:234
+#: plugins/forms/kexiformpart.cpp:233
 msgid "To Shortest"
 msgstr "Na't Körtst"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:236
+#: plugins/forms/kexiformpart.cpp:235
 msgid "To Tallest"
 msgstr "Na't Langst"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:238
+#: plugins/forms/kexiformpart.cpp:237
 msgid "To Narrowest"
 msgstr "Na't Drangst"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:240
+#: plugins/forms/kexiformpart.cpp:239
 msgid "To Widest"
 msgstr "Na't Breedst"
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:423
+#: plugins/forms/kexiformpart.cpp:422
 #, kde-format
 msgid "Design of form \"%1\" has been modified."
 msgstr "Plaan vun Kiekwark \"%1\" wöör ännert."
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:425
+#: plugins/forms/kexiformpart.cpp:424
 #, kde-format
 msgid "Form \"%1\" already exists."
 msgstr "Kiekwark \"%1\" gifft dat al."
 
 #. +> trunk
-#: plugins/forms/kexiformpart.cpp:492
+#: plugins/forms/kexiformpart.cpp:491
 msgid "Widgets"
 msgstr "Stüerelementen"
 
@@ -7106,205 +7041,219 @@ msgid "Insert %1 AutoField widgets"
 msgstr "%1 Autofeld-Stüerelementen infögen"
 
 #. +> trunk
-#: plugins/forms/widgets/kexidbautofield.cpp:566
+#: plugins/forms/widgets/kexidbautofield.cpp:569
+#, fuzzy, kde-format
+#| msgctxt "Unbound Auto Field"
+#| msgid " (unbound)"
 msgctxt "Unbound Auto Field"
-msgid "(unbound)"
-msgstr "(nich bunnen)"
+msgid "%1 (unbound)"
+msgstr " (nich bunnen)"
 
 #. +> trunk
-#: plugins/forms/widgets/kexidbautofield.cpp:675
+#: plugins/forms/widgets/kexidbautofield.cpp:678
 msgctxt "Unbound Auto Field"
 msgid " (unbound)"
 msgstr " (nich bunnen)"
 
 #. +> trunk
-#: plugins/forms/widgets/kexidbimagebox.cpp:566
+#: plugins/forms/widgets/kexidbimagebox.cpp:567
 msgid "Click to show actions for this image box"
 msgstr "Klick för't Wiesen vun Akschonen för dit Bildfeld"
 
 #. +> trunk
-#: plugins/forms/widgets/kexidbimagebox.cpp:578
+#: plugins/forms/widgets/kexidbimagebox.cpp:579
 #, kde-format
 msgid "Click to show actions for \"%1\" image box"
 msgstr "Klick för't Wiesen vun Akschonen för Bildfeld \"%1\""
 
 #. +> trunk
-#: plugins/forms/widgets/kexidbimagebox.cpp:666
+#: plugins/forms/widgets/kexidbimagebox.cpp:667
 msgctxt "Unbound Image Box"
 msgid "(unbound)"
 msgstr "(nich bunnen)"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:66
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:65
 #: plugins/reportspgz/kexireportdesignview.cpp:39
 #: plugins/reportspgz/koreport/wrtembed/reportdesigner.cpp:1068
 msgid "Copy"
 msgstr "Koperen"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:69
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:68
 #: widget/KexiProjectListView.cpp:201
 msgid "Export"
 msgstr "Exporteren"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:79
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:78
 msgid "Copy Data From Table to Clipboard"
 msgstr "Daten ut Tabell na Twischenaflaag koperen"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:80
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:88
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:79
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:87
 msgid "Copying data from table:"
 msgstr "Daten ut Tabell warrt kopeert:"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:82
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:81
 msgid "Export Data From Table to CSV File"
 msgstr "Daten ut Tabell na CSV-Datei exporteren"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:83
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:82
 msgid "Exporting data from table:"
 msgstr "Daten ut Tabell warrt exporteert:"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:87
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:86
 msgid "Copy Data From Query to Clipboard"
 msgstr "Daten ut Anfraag na Twischenaflaag exporteren"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:90
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:89
 msgid "Export Data From Query to CSV File"
 msgstr "Daten ut Anfraag na CSV-Datei exporteren"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:91
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:90
 msgid "Exporting data from query:"
 msgstr "Daten ut Anfraag warrt exporteert:"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:95
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:94
 msgid "Could not open data for exporting."
 msgstr "Daten laat sik nich för't Exporteren opmaken."
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:116
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:115
 msgid "Enter Name of File You Want to Save Data To"
 msgstr "Den Naam vun de Datei för't Sekern vun Daten ingeven"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:133
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:132
 msgid "To CSV file:"
 msgstr "Na CVS-Datei:"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:133
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:132
 msgid "To clipboard:"
 msgstr "Na Twischenaflaag:"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:140
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:341
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:139
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:340
 msgid "Show Options >>"
 msgstr "Optschonen wiesen >>"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:147
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:146
 msgid "Options"
 msgstr "Optschonen"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:162
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:221
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:161
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:224
 msgid "Delimiter:"
 msgstr "Trennteken:"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:174
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:261
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:173
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:264
 msgid "Text quote:"
 msgstr "Textzitaat:"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:187
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:186
 msgid "Add column names as the first row"
 msgstr "Striepnaams as eerste Reeg tofögen"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:192
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:191
 msgid "Always use above options for exporting"
 msgstr "De Optschonen baven jümmers för't Exporteren bruken"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:206
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:205
 msgid "Copying"
 msgstr "An't Koperen"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:206
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:205
 msgid "Exporting"
 msgstr "An't Exporteren"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:265
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:264
 #, kde-format
 msgid "(rows: %1, columns: %2)"
 msgstr "(Regen: %1, Striepen: %2)"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:267
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:266
 #, kde-format
 msgid "(columns: %1)"
 msgstr "(Striepen: %1)"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:347
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:346
 msgid "Hide Options <<"
 msgstr "Optschonen versteken <<"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvexportwizard.cpp:363
+#: plugins/importexport/csv/kexicsvexportwizard.cpp:362
 msgid "Defaults"
 msgstr "Vörinstellen"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:167
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:168
 msgid "no"
 msgstr "Keen"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:169
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:170
 msgid "false"
 msgstr "Falsch"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:172
-msgid "Import CSV Data File"
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:174
+#, fuzzy
+#| msgid "Import CSV Data File"
+msgid "Import CSV Data From File"
 msgstr "CSV-Datendatei importeren"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:180
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:174
+#, fuzzy
+#| msgid "Copy Data From Table to Clipboard"
+msgid "Paste CSV Data From Clipboard"
+msgstr "Daten ut Tabell na Twischenaflaag koperen"
+
+#. +> trunk
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:182
 msgid "&Options"
 msgstr "&Optschonen"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:183
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:185
 msgid "&Import..."
 msgstr "&Importeren..."
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:206
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:209
 msgid "Preview of data from file:"
 msgstr "Vöransicht vun Daten ut Datei:"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:207
-msgid "Preview of data from clipboard:"
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:210
+#, fuzzy
+#| msgid "Preview of data from clipboard:"
+msgid "Preview of data from clipboard"
 msgstr "Vöransicht vun Daten ut Twischenaflaag:"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:253
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:256
 msgid "Primary key"
 msgstr "Hööftslötel"
 
@@ -7319,79 +7268,68 @@ msgid "First row contains column names"
 msgstr "Eerste Reeg barg Striepnaams"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:336
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:340
 msgid "Open CSV Data File"
 msgstr "CSV-Datei opmaken"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:388
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:392
 msgid "Loading CSV Data"
 msgstr "CSV-Daten warrt laadt"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:389
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:393
 #, kde-format
 msgid "Loading CSV Data from \"%1\"..."
 msgstr "CSV-Daten vun \"%1\" warrt laadt..."
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:477
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:481
 #, kde-format
 msgid "Cannot open input file <nobr>\"%1\"</nobr>."
 msgstr "Ingaavdatei<nobr> \"%1\"</nobr> lett sik nich opmaken."
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:567
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:573
 #, kde-format
 msgid "Start at line (1-%1):"
 msgstr "Anfangen bi Reeg (1-%1):"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:568
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:574
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:582
 msgid "Start at line:"
 msgstr "Anfangen bi Reeg:"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:930
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:943
-#, kde-format
-msgid "Column %1"
-msgstr "Striep %1"
-
-#. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:1198
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:1219
 #: plugins/queries/kexiquerydesignerguieditor.cpp:225
 msgid "Column"
 msgstr "Striep"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:1223
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:1244
 msgid "Column name"
 msgstr "Striepnaam"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:1328
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:1349
 #, kde-format
 msgid "Format for column %1:"
 msgstr "Formaat för Striep %1:"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:1355
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:1397
 msgid "Data set contains no rows. Do you want to import empty table?"
 msgstr "Datensett bargt keen Regen. Wullt Du en leddig Tabell importeren?"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:1361
-msgid "No project available."
-msgstr "Keen Projektnaam verföögbor."
-
-#. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:1366
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:1408
 msgid "No database connection available."
 msgstr "Keen Datenbankverbinnen verföögbor."
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:1428
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:1464
 msgid ""
 "No Primary Key (autonumber) has been defined.\n"
 "Should it be automatically defined on import (recommended)?\n"
@@ -7404,68 +7342,68 @@ msgstr ""
 "Beacht: En importeert Tabell ahn Hööftslötel lett sik villicht nich bewerken (hangt vun den Datenbanktyp af)."
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:1431
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:1468
 msgctxt "Add Database Primary Key to a Table"
 msgid "Add Primary Key"
 msgstr "Hööftslötel tofögen"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:1432
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:1469
 msgctxt "Do Not Add Database Primary Key to a Table"
 msgid "Do Not Add"
 msgstr "Nich tofögen"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:1553
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:1585
 msgid "Importing CSV Data"
 msgstr "CSV-Daten importeren"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:1558
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:1590
 #, kde-format
 msgid "Importing CSV Data from <nobr>\"%1\"</nobr> into \"%2\" table..."
 msgstr "CSV-Daten warrt vun <nobr>\"%1\"</nobr> na Tabell \"%2\" importeert..."
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:1605
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:1641
 #, kde-format
 msgid "Data has been successfully imported to table \"%1\"."
 msgstr "Daten na Tabell \"%1\" importeert."
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:1615
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:1651
 msgctxt "Text type for column"
 msgid "Text"
 msgstr "Text"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:1617
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:1653
 msgctxt "Numeric type for column"
 msgid "Number"
 msgstr "Tall"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:1619
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:1655
 msgctxt "Currency type for column"
 msgid "Currency"
 msgstr "Geld"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:1688
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:1724
 #, kde-format
 msgctxt "row count"
 msgid "(rows: %1)"
 msgstr "(Regen: %1)"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:1692
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:1728
 #, kde-format
 msgctxt "row count"
 msgid "(rows: more than %1)"
 msgstr "(Regen: Mehr as %1)"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:1693
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:1729
 msgid "Not all rows are visible on this preview"
 msgstr "Disse Vöransicht wiest nich all Regen"
 
@@ -7523,27 +7461,27 @@ msgid "Strip leading and trailing blanks off of text values"
 msgstr "Freetekens vör un achter Textweerten wegmaken"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvwidgets.cpp:67
+#: plugins/importexport/csv/kexicsvwidgets.cpp:71
 msgid "Comma \",\""
 msgstr "Komma \",\""
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvwidgets.cpp:68
+#: plugins/importexport/csv/kexicsvwidgets.cpp:72
 msgid "Semicolon \";\""
 msgstr "Streekpunkt \";\""
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvwidgets.cpp:69
+#: plugins/importexport/csv/kexicsvwidgets.cpp:73
 msgid "Tabulator"
 msgstr "Tabulator"
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvwidgets.cpp:70
+#: plugins/importexport/csv/kexicsvwidgets.cpp:74
 msgid "Space \" \""
 msgstr "Freeteken \" \""
 
 #. +> trunk
-#: plugins/importexport/csv/kexicsvwidgets.cpp:71
+#: plugins/importexport/csv/kexicsvwidgets.cpp:75
 msgid "Other"
 msgstr "Annerswat"
 
@@ -8058,7 +7996,6 @@ msgstr "As't lett is dat Berichtschema leeg oder schaadhaftig"
 
 #. +> trunk
 #: plugins/reportspgz/kexireportview.cpp:254
-#| msgid "Saving failed"
 msgid "Opening failed"
 msgstr "Opmaken fehlslaan"
 
@@ -8436,6 +8373,12 @@ msgstr "All Sieden"
 msgid "Group Sections"
 msgstr "Koppelafsnitten"
 
+#. i18n: ectx: property (text), widget (QPushButton, btnEdit)
+#. +> trunk
+#: plugins/reportspgz/koreport/wrtembed/sectioneditor.ui:248
+msgid "&Edit"
+msgstr "&Bewerken"
+
 #. i18n: ectx: property (text), widget (QPushButton, btnMoveUp)
 #. +> trunk
 #: plugins/reportspgz/koreport/wrtembed/sectioneditor.ui:262
@@ -8531,12 +8474,6 @@ msgstr "Kommentaren"
 #: plugins/tables/kexitabledesignerview.cpp:164
 msgid "Describes additional comments for the field"
 msgstr "Beschrievt mehr Kommentaren för dat Feld"
-
-#. +> trunk
-#: plugins/tables/kexitabledesignerview.cpp:193
-#: plugins/tables/kexitabledesignerview.cpp:430
-msgid "Primary Key"
-msgstr "Hööftslötel"
 
 #. +> trunk
 #: plugins/tables/kexitabledesignerview.cpp:196
@@ -9669,6 +9606,67 @@ msgstr "Geiht na de leste Reeg."
 msgid "Moves cursor to new row and allows inserting."
 msgstr "Geiht na de niege Reeg un lett Infögen to."
 
+#~ msgid "&Project"
+#~ msgstr "&Projekt"
+
+#~ msgid "&Export"
+#~ msgstr "&Exporteren"
+
+#~ msgid "Copy &Special"
+#~ msgstr "&Besünner koperen"
+
+#~ msgid "&View"
+#~ msgstr "&Ansicht"
+
+#~ msgid "&Format"
+#~ msgstr "&Formateren"
+
+#~ msgid "&Data"
+#~ msgstr "&Daten"
+
+#~ msgid "Sort"
+#~ msgstr "Sorteren"
+
+#~ msgid "&Tools"
+#~ msgstr "&Warktüüch"
+
+#~ msgid "&Migrate"
+#~ msgstr "&Datenutlagern"
+
+#~ msgid "&Settings"
+#~ msgstr "&Instellen"
+
+#~ msgid "&Other"
+#~ msgstr "&Anner"
+
+#~ msgid "&Help"
+#~ msgstr "&Hülp"
+
+#~ msgid "Other &Licenses"
+#~ msgstr "Anner &Lizenzen"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Hööft-Warktüüchbalken"
+
+#~ msgid "View"
+#~ msgstr "Ansicht"
+
+#~ msgid "Format"
+#~ msgstr "Formaat"
+
+#~ msgctxt "Widget's Whats This"
+#~ msgid "Whats This"
+#~ msgstr "Wat is dat"
+
+#, fuzzy
+#~| msgid "Column 1"
+#~ msgid "Column Type"
+#~ msgstr "Striep 1"
+
+#~ msgctxt "Unbound Auto Field"
+#~ msgid "(unbound)"
+#~ msgstr "(nich bunnen)"
+
 #~ msgid "Height"
 #~ msgstr "Hööchde"
 
@@ -9770,10 +9768,6 @@ msgstr "Geiht na de niege Reeg un lett Infögen to."
 #~ msgctxt "Mouse Cursor Shape"
 #~ msgid "Forbidden"
 #~ msgstr "Nich tolaten"
-
-#~ msgctxt "Mouse Cursor Shape"
-#~ msgid "What's This?"
-#~ msgstr "Wat is dat?"
 
 #~ msgid "..."
 #~ msgstr "..."

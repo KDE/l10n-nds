@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-09-26 06:15+0200\n"
+"POT-Creation-Date: 2009-10-25 05:44+0100\n"
 "PO-Revision-Date: 2009-09-24 00:32+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -78,7 +78,7 @@ msgid "Unable to create agent instance."
 msgstr "Hölper lett sik nich opstellen."
 
 #. +> trunk stable
-#: agentinstancemodel.cpp:175 collectionmodel_p.h:51 entitytreemodel.cpp:595
+#: agentinstancemodel.cpp:175 collectionmodel_p.h:51 entitytreemodel.cpp:624
 msgctxt "@title:column, name of a thing"
 msgid "Name"
 msgstr "Naam"
@@ -151,6 +151,27 @@ msgstr "Op Nafraag synkroniseren"
 #: cachepolicypage.ui:100
 msgid "Locally Cached Parts"
 msgstr "Lokaal wohrt Delen"
+
+#. +> trunk
+#: collectioncreatejob.cpp:58
+#, fuzzy
+#| msgid "Invalid resource instance."
+msgid "Invalid parent"
+msgstr "Leeg Ressource-Utgaav."
+
+#. +> trunk
+#: collectiondeletejob.cpp:59 collectionmodifyjob.cpp:57
+#, fuzzy
+#| msgid "no collection"
+msgid "Invalid collection"
+msgstr "keen Sammeln"
+
+#. +> trunk
+#: collectionfetchjob.cpp:129
+#, fuzzy
+#| msgid "no collection"
+msgid "Invalid collection given."
+msgstr "keen Sammeln"
 
 #. +> trunk stable
 #: collectiongeneralpropertiespage.cpp:36
@@ -231,6 +252,11 @@ msgstr "Sammeln-Dialoog opmaken"
 msgid "no collection"
 msgstr "keen Sammeln"
 
+#. +> trunk
+#: collectionselectjob.cpp:72
+msgid "Invalid collection specified"
+msgstr ""
+
 #. +> trunk stable
 #: collectionstatisticsmodel.cpp:157
 msgctxt "@title:column, number of unread messages"
@@ -249,18 +275,33 @@ msgctxt "@title:column, total size (in bytes) of the collection"
 msgid "Size"
 msgstr "Grött"
 
+#. +> trunk
+#: collectionsync.cpp:172
+msgid "Inconsistent local collection tree detected."
+msgstr ""
+
+#. +> trunk
+#: collectionsync.cpp:269
+msgid "Remote collection without root-terminated ancestor chain provided, resource is broken."
+msgstr ""
+
+#. +> trunk
+#: collectionsync.cpp:466
+msgid "Found unresolved orphan collections"
+msgstr ""
+
 #. +> trunk stable
-#: collectionview.cpp:222
+#: collectionview.cpp:222 dragdropmanager.cpp:111
 msgid "&Move here"
 msgstr "Hierhen &verschuven"
 
 #. +> trunk stable
-#: collectionview.cpp:223
+#: collectionview.cpp:223 dragdropmanager.cpp:118
 msgid "&Copy here"
 msgstr "Hierhen &koperen"
 
 #. +> trunk stable
-#: collectionview.cpp:225
+#: collectionview.cpp:225 dragdropmanager.cpp:141
 msgid "Cancel"
 msgstr "Afbreken"
 
@@ -273,6 +314,13 @@ msgstr "Akonadi-Server warrt opropen..."
 #: control.cpp:237
 msgid "Stopping Akonadi server..."
 msgstr "Akonadi-Server warrt anhollen..."
+
+#. +> trunk
+#: dragdropmanager.cpp:124
+#, fuzzy
+#| msgid "&Move here"
+msgid "&Link here"
+msgstr "Hierhen &verschuven"
 
 #. +> trunk stable
 #: erroroverlay.cpp:97
@@ -291,6 +339,20 @@ msgid ""
 msgstr ""
 "Dat Rahmenwark för de Pleeg vun persöönlich Informatschonen - Akonadi - funkscheneert nich.\n"
 "Klick op \"Enkelheiten\", wenn Du mehr över dat Problem weten wullt."
+
+#. +> trunk
+#: favoritecollectionsmodel.cpp:198
+#, fuzzy
+#| msgid "Add to Favorite Folders"
+msgid "Favorite Folders"
+msgstr "Na Vörtrocken Ornern tofögen"
+
+#. +> trunk
+#: itemfetchjob.cpp:149
+#, fuzzy
+#| msgid "No such collection."
+msgid "Cannot list root collection."
+msgstr "Dat gifft disse Sammeln nich."
 
 #. +> trunk stable
 #: itemmodel.cpp:312
@@ -326,6 +388,46 @@ msgstr "Bruker hett Akschoon afbraken."
 #: job.cpp:241
 msgid "Unknown error."
 msgstr "Nich begäng Fehler."
+
+#. +> trunk
+#: linkjobimpl_p.h:49 movejobimpl_p.h:49
+#, fuzzy
+#| msgid "No remote identifier specified"
+msgid "No valid destination specified"
+msgstr "Keen feern Kennen angeven"
+
+#. +> trunk
+#: movejobimpl_p.h:43
+msgid "No objects specified for moving"
+msgstr ""
+
+#. +> trunk
+#: partfetcher.cpp:61
+msgid "Unable to fetch item for index"
+msgstr ""
+
+#. +> trunk
+#: partfetcher.cpp:76
+msgid "Index is no longer available"
+msgstr ""
+
+#. +> trunk
+#: partfetcher.cpp:123
+#, kde-format
+msgid "Payload part '%1' is not available for this index"
+msgstr ""
+
+#. +> trunk
+#: partfetcher.cpp:132
+#, fuzzy
+#| msgid "No description available"
+msgid "No session available for this index"
+msgstr "Keen Beschrieven verföögbor"
+
+#. +> trunk
+#: partfetcher.cpp:141
+msgid "No item available for this index"
+msgstr ""
 
 #. +> trunk stable
 #: pluginloader.cpp:137
@@ -777,13 +879,16 @@ msgstr "De Nepomuk-Söökdeenst bruukt dat anraadte Hülpprogramm \"Sesame2\". "
 
 #. +> trunk
 #: selftestdialog.cpp:436
-msgid "Nepomuk search service uses insufficient backend."
+#, fuzzy
+#| msgid "Nepomuk search service uses insufficient backend."
+msgid "Nepomuk search service uses inappropriate backend."
 msgstr "De Nepomuk-Söökdeenst bruukt en Hülpprogramm, wat nich noog kann."
 
 #. +> trunk
 #: selftestdialog.cpp:437
-#, kde-format
-msgid "The Nepomuk search service uses the '%1' backend that is not recommended to use with Akonadi."
+#, fuzzy, kde-format
+#| msgid "The Nepomuk search service uses the '%1' backend that is not recommended to use with Akonadi."
+msgid "The Nepomuk search service uses the '%1' backend, which is not recommended for use with Akonadi."
 msgstr "De Nepomuk-Söökdeenst bruukt dat Hülpprogramm \"%1\". Dat is nich anraadt, dat Een dat mit Akonadi bruukt."
 
 #. +> trunk stable
@@ -1013,8 +1118,42 @@ msgstr "Orner koperen na..."
 msgid "Copy Item To..."
 msgstr "Indrag koperen na..."
 
+#. +> trunk
+#: standardactionmanager.cpp:79
+#, fuzzy
+#| msgid "Copy Folder To..."
+msgid "Move Folder To..."
+msgstr "Orner koperen na..."
+
+#. +> trunk
+#: standardactionmanager.cpp:80
+#, fuzzy
+#| msgid "Copy Item To..."
+msgid "Move Item To..."
+msgstr "Indrag koperen na..."
+
+#. +> trunk
+#: standardactionmanager.cpp:81 standardactionmanager.cpp:116
+#, fuzzy, kde-format
+#| msgid "&Copy Item"
+#| msgid_plural "&Copy %1 Items"
+msgid "&Cut Item"
+msgid_plural "&Cut %1 Items"
+msgstr[0] "Indrag &koperen"
+msgstr[1] "%1 Indrääg &koperen"
+
+#. +> trunk
+#: standardactionmanager.cpp:82 standardactionmanager.cpp:117
+#, fuzzy, kde-format
+#| msgid "&Copy Folder"
+#| msgid_plural "&Copy %1 Folders"
+msgid "&Cut Folder"
+msgid_plural "&Cut %1 Folders"
+msgstr[0] "Orner &koperen"
+msgstr[1] "%1 Ornern &koperen"
+
 #. +> trunk stable
-#: standardactionmanager.cpp:110
+#: standardactionmanager.cpp:114
 #, kde-format
 msgid "&Copy Folder"
 msgid_plural "&Copy %1 Folders"
@@ -1022,7 +1161,7 @@ msgstr[0] "Orner &koperen"
 msgstr[1] "%1 Ornern &koperen"
 
 #. +> trunk stable
-#: standardactionmanager.cpp:111
+#: standardactionmanager.cpp:115
 #, kde-format
 msgid "&Copy Item"
 msgid_plural "&Copy %1 Items"
@@ -1030,7 +1169,7 @@ msgstr[0] "Indrag &koperen"
 msgstr[1] "%1 Indrääg &koperen"
 
 #. +> trunk stable
-#: standardactionmanager.cpp:112
+#: standardactionmanager.cpp:118
 #, kde-format
 msgid "&Delete Item"
 msgid_plural "&Delete %1 Items"
@@ -1038,133 +1177,135 @@ msgstr[0] "Indrag &wegdoon"
 msgstr[1] "%1 Indrääg &wegdoon"
 
 #. +> trunk stable
-#: standardactionmanager.cpp:296
+#: standardactionmanager.cpp:325
 msgctxt "@title:window"
 msgid "New Folder"
 msgstr "Nieg Orner"
 
 #. +> trunk stable
-#: standardactionmanager.cpp:297
+#: standardactionmanager.cpp:326
 msgctxt "@label:textbox, name of a thing"
 msgid "Name"
 msgstr "Naam"
 
 #. +> trunk stable
-#: standardactionmanager.cpp:328
+#: standardactionmanager.cpp:362
 #, kde-format
 msgid "Do you really want to delete folder '%1' and all its sub-folders?"
 msgstr "Wullt Du den Orner \"%1\" un all sien Ünnerornern redig wegdoon?"
 
 #. +> trunk stable
-#: standardactionmanager.cpp:330
+#: standardactionmanager.cpp:364
 #, kde-format
 msgid "Do you really want to delete the search view '%1'?"
 msgstr "Wullt Du de Söökansicht \"%1\" redig wegdoon?"
 
 #. +> trunk stable
-#: standardactionmanager.cpp:333
+#: standardactionmanager.cpp:367
 msgid "Delete folder?"
 msgstr "Orner wegdoon?"
 
+#. +> trunk
+#: standardactionmanager.cpp:402
+#, kde-format
+msgid "Properties of Folder %1"
+msgstr ""
+
 #. +> trunk stable
-#: standardactionmanager.cpp:394
+#: standardactionmanager.cpp:436
 msgid "Do you really want to delete all selected items?"
 msgstr "Wullt Du redig all utsöchte Indrääg wegdoon?"
 
 #. +> trunk stable
-#: standardactionmanager.cpp:395
+#: standardactionmanager.cpp:437
 msgid "Delete?"
 msgstr "Wegdoon?"
 
 #. +> trunk
-#: standardactionmanager.cpp:459
+#: standardactionmanager.cpp:502
 msgid "Rename Favorite"
 msgstr "Leesteken ümnömen"
 
 #. +> trunk
-#: standardactionmanager.cpp:460
+#: standardactionmanager.cpp:503
 msgctxt "@label:textbox New name of the folder."
 msgid "Name:"
 msgstr "Naam:"
 
 #. +> trunk stable
-#: standardactionmanager.cpp:502
+#: standardactionmanager.cpp:552
 #, kde-format
 msgid "Could not create folder: %1"
 msgstr "Orner \"%1\" lett sik nich opstellen"
 
 #. +> trunk stable
-#: standardactionmanager.cpp:503
+#: standardactionmanager.cpp:553
 msgid "Folder creation failed"
 msgstr "Opstellen vun den Orner fehlslaan"
 
 #. +> trunk stable
-#: standardactionmanager.cpp:510
+#: standardactionmanager.cpp:560
 #, kde-format
 msgid "Could not delete folder: %1"
 msgstr "Orner \"%1\" lett sik nich wegdoon"
 
 #. +> trunk stable
-#: standardactionmanager.cpp:511
+#: standardactionmanager.cpp:561
 msgid "Folder deletion failed"
 msgstr "Wegdoon vun den Orner fehlslaan"
 
 #. +> trunk stable
-#: standardactionmanager.cpp:518
+#: standardactionmanager.cpp:568
 #, kde-format
 msgid "Could not paste data: %1"
 msgstr "Daten laat sik nich infögen: %1"
 
 #. +> trunk stable
-#: standardactionmanager.cpp:519
+#: standardactionmanager.cpp:569
 msgid "Paste failed"
 msgstr "Infögen fehlslaan"
 
 #. +> trunk
-#: standardactionmanager.cpp:526
-#, kde-format
-msgid "Could not copy data: %1"
-msgstr "Daten laat sik nich koperen: %1"
-
-#. +> trunk
-#: standardactionmanager.cpp:527
-msgid "Copy failed"
-msgstr "Koperen fehlslaan"
-
-#. +> trunk
-#: standardactionmanager.cpp:565
+#: standardactionmanager.cpp:638
 msgid "Copy to This Folder"
 msgstr "Na dissen Orner koperen"
 
 #. +> trunk
-#: statisticsproxymodel.cpp:113
-msgid "Size"
-msgstr "Grött"
-
-#. +> trunk
-#: statisticsproxymodel.cpp:115
-msgid "Total"
-msgstr "Tosamen"
-
-#. +> trunk
-#: statisticsproxymodel.cpp:117
-msgid "Unread"
-msgstr "Nich leest"
-
-#. +> trunk
-#: statisticstooltipproxymodel.cpp:97
+#: statisticsproxymodel.cpp:84
 msgid "Total Messages"
 msgstr "Narichten tosamen"
 
 #. +> trunk
-#: statisticstooltipproxymodel.cpp:98
+#: statisticsproxymodel.cpp:85
 msgid "Unread Messages"
 msgstr "Nich leest Narichten"
 
 #. +> trunk
-#: statisticstooltipproxymodel.cpp:107
+#: statisticsproxymodel.cpp:96
+#, fuzzy
+#| msgid "Total"
+msgid "Quota"
+msgstr "Tosamen"
+
+#. +> trunk
+#: statisticsproxymodel.cpp:103
 msgid "Storage Size"
 msgstr "Spiekergrött"
+
+#. +> trunk
+#: statisticsproxymodel.cpp:248
+msgid "Size"
+msgstr "Grött"
+
+#. +> trunk
+#: statisticsproxymodel.cpp:250
+msgid "Total"
+msgstr "Tosamen"
+
+#. +> trunk
+#: statisticsproxymodel.cpp:252
+msgid "Unread"
+msgstr "Nich leest"
 
 #. +> trunk stable
 #: subscriptionchangeproxymodel.cpp:71
@@ -1225,6 +1366,12 @@ msgstr "Utsöcht Orner afbestellen"
 #: protocolhelper.cpp:218
 msgid "No remote identifier specified"
 msgstr "Keen feern Kennen angeven"
+
+#~ msgid "Could not copy data: %1"
+#~ msgstr "Daten laat sik nich koperen: %1"
+
+#~ msgid "Copy failed"
+#~ msgstr "Koperen fehlslaan"
 
 #~ msgctxt "@info:status"
 #~ msgid "Error!"

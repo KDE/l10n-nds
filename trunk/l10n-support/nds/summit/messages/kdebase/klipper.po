@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-09-22 06:08+0200\n"
+"POT-Creation-Date: 2009-10-17 06:46+0200\n"
 "PO-Revision-Date: 2009-09-23 22:52+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -41,9 +41,8 @@ msgid "Regular Expression"
 msgstr "Reguleer Utdruck"
 
 #. i18n: ectx: property (text), widget (ActionsTreeWidget, kcfg_ActionList)
-#. i18n: ectx: property (text), widget (QTreeWidget, twCommandList)
 #. +> trunk stable
-#: actionsconfig.ui:33 editactiondialog.ui:80
+#: actionsconfig.ui:33 editactiondialog.cpp:223
 msgid "Description"
 msgstr "Beschrieven"
 
@@ -97,50 +96,50 @@ msgstr[0] "  Indrag"
 msgstr[1] " Indrääg"
 
 #. +> trunk stable
-#: configdialog.cpp:245
+#: configdialog.cpp:239
 msgid "Advanced Settings"
 msgstr "Verwiedert Instellen"
 
 #. +> trunk stable
-#: configdialog.cpp:267
+#: configdialog.cpp:261
 msgctxt "General Config"
 msgid "General"
 msgstr "Allgemeen"
 
 #. +> trunk stable
-#: configdialog.cpp:267
+#: configdialog.cpp:261
 msgid "General Config"
 msgstr "Allgemeen Instellen"
 
 #. +> trunk stable
-#: configdialog.cpp:268
+#: configdialog.cpp:262
 msgctxt "Actions Config"
 msgid "Actions"
 msgstr "Akschonen"
 
 #. +> trunk stable
-#: configdialog.cpp:268
+#: configdialog.cpp:262
 msgid "Actions Config"
 msgstr "Akschonen instellen"
 
 #. +> trunk stable
-#: configdialog.cpp:272
+#: configdialog.cpp:266
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Tastkombinatschonen"
 
 #. +> trunk stable
-#: configdialog.cpp:272
+#: configdialog.cpp:266
 msgid "Shortcuts Config"
 msgstr "Tastkombinatschonen instellen"
 
 #. +> trunk stable
-#: configdialog.cpp:355
+#: configdialog.cpp:349
 msgid "D&isable Actions for Windows of Type WM_CLASS"
 msgstr "Akschonen för Finstern vun den Typ WM_CLASS ver&höden"
 
 #. +> trunk stable
-#: configdialog.cpp:360
+#: configdialog.cpp:354
 msgid ""
 "<qt>This lets you specify windows in which Klipper should not invoke \"actions\". Use<br />"
 "<br />"
@@ -153,18 +152,45 @@ msgstr ""
 "<center><b>xprop | grep WM_CLASS</b></center>"
 " bruken, wenn Du de WM_CLASS vun en Finster rutfinnen wullt. Achteran klick op dat Finster, dat Du ünnersöken wullt. De eerste Tekenkeed achter dat Liekteken is de, de Du hier angeven muttst.</qt>"
 
+#. +> trunk
+#: editactiondialog.cpp:35
+#, fuzzy
+#| msgid "Ignore images"
+msgid "Ignore"
+msgstr "Biller övergahn"
+
+#. +> trunk
+#: editactiondialog.cpp:37
+msgid "Replace"
+msgstr ""
+
+#. +> trunk
+#: editactiondialog.cpp:39
+msgid "Add"
+msgstr ""
+
 #. +> trunk stable
-#: editactiondialog.cpp:32
+#: editactiondialog.cpp:219
+msgid "Command"
+msgstr "Befehl"
+
+#. +> trunk
+#: editactiondialog.cpp:221
+msgid "Use Output"
+msgstr ""
+
+#. +> trunk stable
+#: editactiondialog.cpp:263
 msgid "Action Properties"
 msgstr "Akschoon-Egenschappen"
 
 #. +> trunk stable
-#: editactiondialog.cpp:136
+#: editactiondialog.cpp:347
 msgid "new command"
 msgstr "nieg Befehl"
 
 #. +> trunk stable
-#: editactiondialog.cpp:138
+#: editactiondialog.cpp:348
 msgid "Command Description"
 msgstr "Befehl-Beschrieven"
 
@@ -186,102 +212,109 @@ msgstr "Reguleer Utdruck:"
 msgid "Description:"
 msgstr "Beschrieven:"
 
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#. +> trunk
+#: editactiondialog.ui:62
+msgid "Automatic:"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. +> trunk stable
-#: editactiondialog.ui:64
+#: editactiondialog.ui:87
 msgid "List of commands for this action:"
 msgstr "List mit Befehlen för disse Akschoon:"
 
-#. i18n: ectx: property (toolTip), widget (QTreeWidget, twCommandList)
-#. +> trunk stable
-#: editactiondialog.ui:71
-msgid "Double-click an item to edit"
-msgstr "Dubbelklicken, wenn Du en Indrag bewerken wullt"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, twCommandList)
-#. +> trunk stable
-#: editactiondialog.ui:75
-msgid "Command"
-msgstr "Befehl"
-
 #. i18n: ectx: property (text), widget (QPushButton, pbAddCommand)
 #. +> trunk stable
-#: editactiondialog.ui:138
+#: editactiondialog.ui:144
 msgid "Add Command"
 msgstr "Befehl tofögen"
 
 #. i18n: ectx: property (text), widget (QPushButton, pbRemoveCommand)
 #. +> trunk stable
-#: editactiondialog.ui:145
+#: editactiondialog.ui:151
 msgid "Remove Command"
 msgstr "Befehl wegdoon"
 
+#. i18n: ectx: property (toolTip), widget (QTableView, twCommandList)
+#. +> trunk stable
+#: editactiondialog.ui:176
+msgid "Double-click an item to edit"
+msgstr "Dubbelklicken, wenn Du en Indrag bewerken wullt"
+
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_PopupAtMousePosition)
 #. +> trunk stable
-#: generalconfig.ui:16
+#: generalconfig.ui:17
 msgid "Popup menu at mouse-cursor position"
 msgstr "Menü bi de Steed vun de Muus opmaken"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_KeepClipboardContents)
 #. +> trunk stable
-#: generalconfig.ui:23
+#: generalconfig.ui:24
 msgid "Save clipboard contents on exit"
 msgstr "Twischenaflaag-Inholt bi't Utmaken sekern"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_StripWhiteSpace)
 #. +> trunk stable
-#: generalconfig.ui:30
+#: generalconfig.ui:31
 msgid "Remove whitespace when executing actions"
 msgstr "Freetekens wegmaken, wenn Akschonen utföhrt warrt"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ReplayActionInHistory)
 #. +> trunk stable
-#: generalconfig.ui:37
+#: generalconfig.ui:38
 msgid "Replay actions on an item selected from history"
 msgstr "Akschonen för en Indrag ut de Vörgeschicht nochmaal utföhren"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_PreventEmptyClipboard)
 #. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
 #. +> trunk stable
-#: generalconfig.ui:44 klipper.kcfg:29
+#: generalconfig.ui:45 klipper.kcfg:29
 msgid "Prevent empty clipboard"
 msgstr "Leddig Twischenaflaag verhöden"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_IgnoreSelection)
-#. i18n: ectx: label, entry (IgnoreSelection), group (General)
-#. +> trunk stable
-#: generalconfig.ui:51 klipper.kcfg:34
-msgid "Ignore selection"
-msgstr "Köör övergahn"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_IgnoreImages)
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #. +> trunk stable
-#: generalconfig.ui:58 klipper.kcfg:39
+#: generalconfig.ui:52 klipper.kcfg:34
 msgid "Ignore images"
 msgstr "Biller övergahn"
 
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SelectionTextOnly)
+#. +> trunk
+#: generalconfig.ui:59
+#, fuzzy
+#| msgid "Selection text only"
+msgid "Text selection only"
+msgstr "Bloots köört Text"
+
 #. i18n: ectx: property (title), widget (KButtonGroup, kcfg_Synchronize)
 #. +> trunk stable
-#: generalconfig.ui:65
+#: generalconfig.ui:66
 msgid "Clipboard/Selection Behavior"
 msgstr "Twischenaflaag / Markeren-Bedregen"
 
 #. i18n: ectx: property (text), widget (QRadioButton, rbSynchronize)
 #. +> trunk stable
-#: generalconfig.ui:71
+#: generalconfig.ui:72
 msgid "Synchronize contents of the clipboard and the selection"
 msgstr "Inholt vun Twischenaflaag un Köör synkroniseren"
 
 #. i18n: ectx: property (text), widget (QRadioButton, rbSeparate)
 #. +> trunk stable
-#: generalconfig.ui:78
+#: generalconfig.ui:79
 msgid "Separate clipboard and selection"
 msgstr "Twischenaflaag un Markeren scheden"
 
+#. i18n: ectx: property (text), widget (QRadioButton, rbIgnore)
+#. +> trunk stable
+#: generalconfig.ui:86
+msgid "Ignore selection"
+msgstr "Köör övergahn"
+
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. +> trunk stable
-#: generalconfig.ui:88
+#: generalconfig.ui:96
 msgid "Timeout for action popups:"
 msgstr "Tietgrenz för't Akschonen-Menü:"
 
@@ -293,7 +326,7 @@ msgstr " s"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. +> trunk stable
-#: generalconfig.ui:102
+#: generalconfig.ui:110
 msgid "Clipboard history size:"
 msgstr "Grött för de Twischenaflaag-Vörgeschicht:"
 
@@ -304,77 +337,94 @@ msgid " entries"
 msgstr "Indrääg"
 
 #. +> trunk stable
-#: klipper.cpp:140
+#: klipper.cpp:142
 msgid "Enable Clipboard &Actions"
 msgstr "Twischenaflaag-&Akschonen anmaken"
 
 #. +> trunk stable
-#: klipper.cpp:144
+#: klipper.cpp:146
 msgid "C&lear Clipboard History"
 msgstr "Twischenaflaag-Vörgeschicht &leddig maken"
 
 #. +> trunk stable
-#: klipper.cpp:149
+#: klipper.cpp:151
 msgid "&Configure Klipper..."
 msgstr "Klipper &instellen..."
 
 #. +> trunk stable
-#: klipper.cpp:154
+#: klipper.cpp:156
 msgid "&Quit"
 msgstr "&Verlaten"
 
 #. +> trunk stable
-#: klipper.cpp:185
+#: klipper.cpp:187
 msgid "Show Klipper Popup-Menu"
 msgstr "Klipper-Opdukmenü wiesen"
 
 #. +> trunk stable
-#: klipper.cpp:190
+#: klipper.cpp:192
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Akschoon för de aktuelle Twischenaflaag vun Hand opropen"
 
 #. +> trunk stable
-#: klipper.cpp:194
+#: klipper.cpp:199
+msgid "&Edit Contents..."
+msgstr "Inholden b&ewerken..."
+
+#. +> trunk
+#: klipper.cpp:205
+msgid "Next history item"
+msgstr ""
+
+#. +> trunk
+#: klipper.cpp:209
+#, fuzzy
+#| msgid "Clipboard history size"
+msgid "Previous history item"
+msgstr "Grött vun de Twischenaflaag-Vörgeschicht"
+
+#. +> trunk stable
+#: klipper.cpp:214
 msgid "Enable Clipboard Actions"
 msgstr "Twischenaflaag-Akschonen anmaken"
 
 #. +> trunk stable
-#: klipper.cpp:491
+#: klipper.cpp:509
 msgid "You can enable URL actions later by right-clicking on the Klipper icon and selecting 'Enable Actions'"
 msgstr "Du kannst URL-Akschonen ok later noch tolaten, wenn Du op dat Klipper-Lüttbild rechtsklickst un \"Akschonen tolaten\" utsöchst"
 
 #. +> trunk stable
-#: klipper.cpp:519
+#: klipper.cpp:537
 msgid "Should Klipper start automatically when you login?"
 msgstr "Wullt Du Klipper bi't Anmellen automaatsch opropen?"
 
 #. +> trunk stable
-#: klipper.cpp:520
+#: klipper.cpp:538
 msgid "Automatically Start Klipper?"
 msgstr "Klipper automaatsch starten?"
 
 #. +> trunk stable
-#: klipper.cpp:520
+#: klipper.cpp:538
 msgid "Start"
 msgstr "Starten"
 
 #. +> trunk stable
-#: klipper.cpp:521
+#: klipper.cpp:539
 msgid "Do Not Start"
 msgstr "Nich starten"
 
 #. +> trunk stable
-#: klipper.cpp:997
+#: klipper.cpp:1005
 msgid "KDE cut & paste history utility"
 msgstr "KDE-Vörgeschichtwarktüüch för't Knippen & Infögen"
 
 #. +> trunk stable
-#: klipper.cpp:1001
+#: klipper.cpp:1009
 msgid "Klipper"
 msgstr "Klipper"
 
 #. +> trunk stable
-#: klipper.cpp:1003
+#: klipper.cpp:1011
 msgid ""
 "(c) 1998, Andrew Stanley-Jones\n"
 "1998-2002, Carsten Pfeiffer\n"
@@ -385,66 +435,91 @@ msgstr ""
 "2001, Patrick Dubroy"
 
 #. +> trunk stable
-#: klipper.cpp:1007
+#: klipper.cpp:1015
 msgid "Carsten Pfeiffer"
 msgstr "Carsten Pfeiffer"
 
 #. +> trunk stable
-#: klipper.cpp:1008
+#: klipper.cpp:1016
 msgid "Author"
 msgstr "Autor"
 
 #. +> trunk stable
-#: klipper.cpp:1011
+#: klipper.cpp:1019
 msgid "Andrew Stanley-Jones"
 msgstr "Andrew Stanley-Jones"
 
 #. +> trunk stable
-#: klipper.cpp:1012
+#: klipper.cpp:1020
 msgid "Original Author"
 msgstr "Orginaalautor"
 
 #. +> trunk stable
-#: klipper.cpp:1015
+#: klipper.cpp:1023
 msgid "Patrick Dubroy"
 msgstr "Patrick Dubroy"
 
 #. +> trunk stable
-#: klipper.cpp:1016
+#: klipper.cpp:1024
 msgid "Contributor"
 msgstr "Bidreger"
 
 #. +> trunk stable
-#: klipper.cpp:1019
+#: klipper.cpp:1027
 msgid "Luboš Luňák"
 msgstr "Luboš Luňák"
 
 #. +> trunk stable
-#: klipper.cpp:1020
+#: klipper.cpp:1028
 msgid "Bugfixes and optimizations"
 msgstr "Kode richten un verbetern"
 
 #. +> trunk stable
-#: klipper.cpp:1023
+#: klipper.cpp:1031
 msgid "Esben Mose Hansen"
 msgstr "Esben Mose Hansen"
 
 #. +> trunk stable
-#: klipper.cpp:1024
+#: klipper.cpp:1032
 msgid "Maintainer"
 msgstr "Pleger"
 
+#. +> trunk stable
+#: klipper.cpp:1067
+msgid "Edit Contents"
+msgstr "Inholden bewerken"
+
 #. +> trunk
-#: klipper.cpp:1056
-#| msgid "C&lear Clipboard History"
+#: klipper.cpp:1095
 msgid "Really delete entire clipboard history?"
 msgstr "Twischenaflaag-Vörgeschicht redig heel leddig maken?"
 
 #. +> trunk
-#: klipper.cpp:1057
-#| msgid "C&lear Clipboard History"
+#: klipper.cpp:1096
 msgid "Delete clipboard history?"
 msgstr "Twischenaflaag-Vörgeschicht leddig maken?"
+
+#. +> trunk
+#: klipper.cpp:1112 klipper.cpp:1118
+#, fuzzy
+#| msgid "Clipboard history size"
+msgid "Clipboard history"
+msgstr "Grött vun de Twischenaflaag-Vörgeschicht"
+
+#. +> trunk
+#: klipper.cpp:1130
+msgid "up"
+msgstr ""
+
+#. +> trunk
+#: klipper.cpp:1136
+msgid "current"
+msgstr ""
+
+#. +> trunk
+#: klipper.cpp:1142
+msgid "down"
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #. +> trunk stable
@@ -489,25 +564,43 @@ msgid "Selecting this option has the effect, that the clipboard can never be emp
 msgstr "Wenn disse Optschoon anmaakt is, warrt de Twischenaflaag nich leddig maakt. Normalerwies warrt se t.B. leddig maakt, wenn en Programm beendt warrt."
 
 #. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
-#. +> trunk stable
+#. +> stable
 #: klipper.kcfg:36
 msgid "This option prevents the selection being recorded in the clipboard history. Only explicit clipboard changes are recorded."
 msgstr "Disse Optschoon verhöödt, dat de Markeren in de Twischenaflaag-Vörgeschicht opnahmen warrt. Bloots direkte Ännern warrt opnahmen."
 
 #. i18n: ectx: label, entry (Synchronize), group (General)
 #. +> trunk stable
-#: klipper.kcfg:43
+#: klipper.kcfg:38
 msgid "Synchronize clipboard and selection"
 msgstr "Twischenaflaag un Köör synkroniseren"
 
+#. i18n: ectx: whatsthis, entry (Synchronize), group (General)
+#. +> trunk
+#: klipper.kcfg:40
+msgid "<qt>When an area of the screen is selected with mouse or keyboard, this is called \"the selection\". These options tells Klipper what to do with the selection. If \"synchronized\", the selection and the clipboard is kept the same, so that anything in the selection is immediately available for pasting elsewhere using any method, including the traditional middle mouse button. If \"separate\", the selection is recorded in the clipboard history, but the selection can only be pasted using the middle mouse button. If set to \"ignore\", the selection is not entered into the clipboard history, though it is still available for pasting using the middle mouse button.</qt>"
+msgstr ""
+
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #. +> trunk stable
-#: klipper.kcfg:47
+#: klipper.kcfg:43
 msgid "Selection text only"
 msgstr "Bloots köört Text"
 
 #. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#. +> trunk
+#: klipper.kcfg:45
+msgid "<qt>When an area of the screen is selected with mouse or keyboard, this is called <em>\"the selection\"</em>. If this option is selected, only text selections are stored in the history, while images and other selections are not.</qt>"
+msgstr ""
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
 #. +> trunk stable
+#: klipper.kcfg:48
+msgid "Use graphical regexp editor"
+msgstr "Graafsch Editor för reguleer Utdrück bruken"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#. +> stable
 #: klipper.kcfg:49
 msgid ""
 "<qt>There are two different clipboard buffers available:<br />"
@@ -526,45 +619,39 @@ msgstr ""
 "<br />"
 "Du kannst den Tosamenhang vun Twischenaflaag un Markeren fastleggen.</qt>"
 
-#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
-#. +> trunk stable
-#: klipper.kcfg:52
-msgid "Use graphical regexp editor"
-msgstr "Graafsch Editor för reguleer Utdrück bruken"
-
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #. +> trunk stable
-#: klipper.kcfg:56
+#: klipper.kcfg:52
 msgid "URL grabber enabled"
 msgstr "URL-Grieper anmaakt"
 
 #. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
 #. +> trunk stable
-#: klipper.kcfg:61
+#: klipper.kcfg:57
 msgid "No actions for WM_CLASS"
 msgstr "Keen Akschonen för WM_CLASS"
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #. +> trunk stable
-#: klipper.kcfg:64
+#: klipper.kcfg:60
 msgid "Timeout for action popups (seconds)"
 msgstr "Tietgrenz för't Akschonen-Menü (Sekunnen)"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
 #. +> trunk stable
-#: klipper.kcfg:68
+#: klipper.kcfg:64
 msgid "A value of 0 disables the timeout"
 msgstr "Mit 0 as Weert gellt keen Tietgrenz"
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
 #. +> trunk stable
-#: klipper.kcfg:71
+#: klipper.kcfg:67
 msgid "Clipboard history size"
 msgstr "Grött vun de Twischenaflaag-Vörgeschicht"
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #. +> trunk stable
-#: klipper.kcfg:77
+#: klipper.kcfg:73
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "Platzhollindrag för Ännern binnen den Akschonenboom"
 
@@ -594,36 +681,25 @@ msgid "Klipper - clipboard tool"
 msgstr "Klipper - Twischenaflaagwarktüüch"
 
 #. +> trunk
-#: tray.cpp:47
-#| msgid "Clipboard history size"
+#: tray.cpp:49
 msgid "Clipboard is empty"
 msgstr "Twischenaflaag is leddig"
 
 #. +> trunk stable
-#: urlgrabber.cpp:218
+#: urlgrabber.cpp:211
 #, kde-format
 msgid "%1 - Actions For: %2"
 msgstr "%1 - Akschonen för: %2"
 
 #. +> trunk stable
-#: urlgrabber.cpp:246
+#: urlgrabber.cpp:239
 msgid "Disable This Popup"
 msgstr "Dit Popup utmaken"
 
 #. +> trunk stable
-#: urlgrabber.cpp:252
-msgid "&Edit Contents..."
-msgstr "Inholden b&ewerken..."
-
-#. +> trunk stable
-#: urlgrabber.cpp:256
+#: urlgrabber.cpp:245
 msgid "&Cancel"
 msgstr "&Afbreken"
-
-#. +> trunk stable
-#: urlgrabber.cpp:333
-msgid "Edit Contents"
-msgstr "Inholden bewerken"
 
 #~ msgid "&Popup menu at mouse-cursor position"
 #~ msgstr "Menü an Muuspositschoon o&pmaken"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kigo\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-08-14 06:54+0200\n"
+"POT-Creation-Date: 2009-10-28 07:25+0100\n"
 "PO-Revision-Date: 2009-01-23 23:02+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -28,27 +28,34 @@ msgid "Your emails"
 msgstr "s_dibbern@web.de, m.j.wiese@web.de"
 
 #. +> trunk
-#: game/engine.cpp:282 game/engine.cpp:323
+#: game/game.cpp:303 game/game.cpp:354 game/game.cpp:442
 msgid "White "
 msgstr "Witt"
 
 #. +> trunk
-#: game/engine.cpp:284 game/engine.cpp:326
+#: game/game.cpp:305 game/game.cpp:356 game/game.cpp:440
 msgid "Black "
 msgstr "Swatt"
 
 #. +> trunk
-#: game/engine.cpp:289
+#: game/game.cpp:311 game/game.cpp:366
 msgid "passed"
 msgstr "utlaten"
 
 #. +> trunk
-#: game/engine.cpp:335
+#: game/game.cpp:370
+#, fuzzy
+#| msgid "resign"
+msgid "resigned"
+msgstr "opgeven"
+
+#. +> trunk
+#: game/game.cpp:450
 msgid "pass"
 msgstr "utlaten"
 
 #. +> trunk
-#: game/engine.cpp:338
+#: game/game.cpp:453
 msgid "resign"
 msgstr "opgeven"
 
@@ -90,20 +97,20 @@ msgstr "Dit is de rutkamen Hanteerkarn-Befehl, den Kigo bruukt"
 
 #. i18n: ectx: property (toolTip), widget (KLed, engineLed)
 #. +> trunk
-#: gui/config/generalconfig.ui:100
+#: gui/config/generalconfig.ui:97
 msgid "Indicates whether the Go engine works correctly"
 msgstr "Wiest, wat de Go-Hanteerkarn propper löppt"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. +> trunk
-#: gui/config/generalconfig.ui:114
+#: gui/config/generalconfig.ui:111
 #, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Please select a Go engine that supports the <span style=\" font-style:italic;\">GnuGo Text Procotol (GTP)</span>. The indicator light turns green when the selected backend is working.</p>"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Please select a Go engine that supports the <span style=\" font-style:italic;\">GnuGo Text Protocol (GTP)</span>. The indicator light turns green when the selected backend is working.</p>"
 "</body></html>"
 msgstr ""
 "HTML DTD HTMLhttp://www.w3.org/TR/REC-html40/strict.dtd\n"
@@ -114,13 +121,13 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, appearanceGroupBox)
 #. +> trunk
-#: gui/config/generalconfig.ui:134
+#: gui/config/generalconfig.ui:131
 msgid "Appearance"
 msgstr "Utsehn"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowBoardLabels)
 #. +> trunk
-#: gui/config/generalconfig.ui:143
+#: gui/config/generalconfig.ui:140
 #, fuzzy
 #| msgid "Display board labels"
 msgid "Display Board Labels"
@@ -128,7 +135,7 @@ msgstr "Brettmarken wiesen"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. +> trunk
-#: gui/config/generalconfig.ui:150
+#: gui/config/generalconfig.ui:147
 #, fuzzy
 #| msgid "Move hint visibility:"
 msgid "Hint Visibility Time:"
@@ -136,7 +143,7 @@ msgstr "Tipp-Sichtborkeitduer:"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_HintVisibleTime)
 #. +> trunk
-#: gui/config/generalconfig.ui:169
+#: gui/config/generalconfig.ui:166
 msgid " Seconds"
 msgstr " Sekunnen"
 
@@ -149,95 +156,134 @@ msgstr "&Speel"
 
 #. i18n: ectx: Menu (move)
 #. +> trunk
-#: gui/kigoui.rc:15
+#: gui/kigoui.rc:17
 msgctxt "@title:menu"
 msgid "&Move"
 msgstr "&Tog"
 
 #. i18n: ectx: Menu (settings)
 #. +> trunk
-#: gui/kigoui.rc:20
+#: gui/kigoui.rc:22
 msgctxt "@title:menu"
 msgid "&Settings"
 msgstr "&Instellen"
 
 #. i18n: ectx: Menu (dockers)
 #. +> trunk
-#: gui/kigoui.rc:22
+#: gui/kigoui.rc:24
 msgctxt "@title:menu"
 msgid "&Dockers"
 msgstr "&Andockers"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #. +> trunk
-#: gui/kigoui.rc:31
+#: gui/kigoui.rc:33
 msgctxt "@title:menu"
 msgid "Main Toolbar"
 msgstr "Hööft-Warktüüchbalken"
 
 #. i18n: ectx: ToolBar (moveToolBar)
 #. +> trunk
-#: gui/kigoui.rc:35
+#: gui/kigoui.rc:39
 msgctxt "@title:menu"
 msgid "Move Toolbar"
 msgstr "Warktüüchbalken verschuven"
 
 #. +> trunk
-#: gui/mainwindow.cpp:101
-msgid "Setup a new game..."
+#: gui/mainwindow.cpp:103
+#, fuzzy
+#| msgid "Setup a new game..."
+msgid "Set up a new game..."
 msgstr "En nieg Speel inrichten"
 
 #. +> trunk
-#: gui/mainwindow.cpp:136
-msgid "Setup a loaded game..."
+#: gui/mainwindow.cpp:139
+#, fuzzy
+#| msgid "Setup a loaded game..."
+msgid "Set up a loaded game..."
 msgstr "En laadt Speel inrichten..."
 
 #. +> trunk
-#: gui/mainwindow.cpp:138
+#: gui/mainwindow.cpp:141
 msgid "Unable to load game..."
 msgstr "Speel lett sik nich laden..."
 
 #. +> trunk
-#: gui/mainwindow.cpp:180
+#: gui/mainwindow.cpp:192
 msgid "Game saved..."
 msgstr "Speel sekert..."
 
 #. +> trunk
-#: gui/mainwindow.cpp:182
+#: gui/mainwindow.cpp:194
 #, fuzzy
 #| msgid "Unable to save game!"
 msgid "Unable to save game."
 msgstr "Speel lett sik nich sekern!"
 
 #. +> trunk
-#: gui/mainwindow.cpp:223
+#: gui/mainwindow.cpp:238
 msgid "Game started..."
 msgstr "Speel start..."
 
 #. +> trunk
-#: gui/mainwindow.cpp:264
-#, fuzzy
-#| msgid "These are the recommended moves ..."
-msgid "These are the recommended moves..."
-msgstr "Dit sünd de anraadt Töög..."
+#: gui/mainwindow.cpp:270
+#, kde-format
+msgid "%1 has won this game with a score of %2 (bounded by %3 and %4)."
+msgstr ""
 
 #. +> trunk
-#: gui/mainwindow.cpp:273
+#: gui/mainwindow.cpp:277
+#, fuzzy
+#| msgid "No move"
+msgid "Undone move"
+msgstr "Keen Tog"
+
+#. +> trunk
+#: gui/mainwindow.cpp:285
+#, fuzzy
+#| msgid "No move"
+msgid "Redone move"
+msgstr "Keen Tog"
+
+#. +> trunk
+#: gui/mainwindow.cpp:310
 msgid "General"
 msgstr "Allmeen"
 
 #. +> trunk
-#: gui/mainwindow.cpp:274
+#: gui/mainwindow.cpp:311
 msgid "Themes"
 msgstr "Mustern"
 
 #. +> trunk
-#: gui/mainwindow.cpp:292
+#: gui/mainwindow.cpp:328
 msgid "Backend was changed, restart necessary..."
 msgstr ""
 
 #. +> trunk
-#: gui/mainwindow.cpp:336 gui/mainwindow.cpp:338
+#: gui/mainwindow.cpp:379
+#, fuzzy
+#| msgid "White "
+msgid "White passed"
+msgstr "Witt"
+
+#. +> trunk
+#: gui/mainwindow.cpp:381
+#, fuzzy
+#| msgid "Black "
+msgid "Black passed"
+msgstr "Swatt"
+
+#. +> trunk
+#: gui/mainwindow.cpp:391 gui/mainwindow.cpp:393
+#, fuzzy
+#| msgid "Setup a loaded game..."
+msgctxt "@action"
+msgid "Get More Games..."
+msgstr "En laadt Speel inrichten..."
+
+#. +> trunk
+#: gui/mainwindow.cpp:399 gui/mainwindow.cpp:401
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Start game"
@@ -246,7 +292,7 @@ msgid "Start Game"
 msgstr "Speel starten"
 
 #. +> trunk
-#: gui/mainwindow.cpp:342 gui/mainwindow.cpp:344
+#: gui/mainwindow.cpp:405 gui/mainwindow.cpp:407
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Finish game"
@@ -255,13 +301,16 @@ msgid "Finish Game"
 msgstr "Speel beennen"
 
 #. +> trunk
-#: gui/mainwindow.cpp:352
+#: gui/mainwindow.cpp:415
+#, fuzzy
+#| msgctxt "@action:inmenu Move"
+#| msgid "Pass move"
 msgctxt "@action:inmenu Move"
-msgid "Pass move"
+msgid "Pass Move"
 msgstr "Tog utlaten"
 
 #. +> trunk
-#: gui/mainwindow.cpp:357
+#: gui/mainwindow.cpp:420
 #, fuzzy
 #| msgctxt "@action:inmenu View"
 #| msgid "Show move &numbers"
@@ -270,7 +319,7 @@ msgid "Show Move &Numbers"
 msgstr "Tog&nummern wiesen"
 
 #. +> trunk
-#: gui/mainwindow.cpp:370
+#: gui/mainwindow.cpp:433
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Game setup"
@@ -279,24 +328,24 @@ msgid "Game Setup"
 msgstr "Speel instellen"
 
 #. +> trunk
-#: gui/mainwindow.cpp:382
+#: gui/mainwindow.cpp:445
 msgctxt "@title:window"
 msgid "Information"
 msgstr "Informatschonen"
 
 #. +> trunk
-#: gui/mainwindow.cpp:395 gui/mainwindow.cpp:400
+#: gui/mainwindow.cpp:458 gui/mainwindow.cpp:467
 msgctxt "@title:window"
 msgid "Moves"
 msgstr "Töög"
 
 #. +> trunk
-#: gui/mainwindow.cpp:398
+#: gui/mainwindow.cpp:461
 msgid "No move"
 msgstr "Keen Tog"
 
 #. +> trunk
-#: gui/mainwindow.cpp:405
+#: gui/mainwindow.cpp:472
 #, fuzzy
 #| msgid "Error"
 msgctxt "@title:window"
@@ -328,95 +377,49 @@ msgstr ""
 #. i18n: ectx: property (text), widget (KPushButton, configureButton)
 #. +> trunk
 #: gui/widgets/errorwidget.ui:49
-msgid "Configure Kigo ..."
-msgstr ""
+#, fuzzy
+msgid "Configure Kigo..."
+msgstr "Instellen"
 
 #. +> trunk
-#: gui/widgets/gamewidget.cpp:52 gui/widgets/gamewidget.cpp:56
+#: gui/widgets/gamewidget.cpp:53 gui/widgets/gamewidget.cpp:58
 #, kde-format
 msgid "Computer (Level %1)"
 msgstr "Reekner (Stoop %1)"
 
 #. +> trunk
-#: gui/widgets/gamewidget.cpp:70
+#: gui/widgets/gamewidget.cpp:73
 #, kde-format
 msgid " (White %1)"
 msgstr "(Witt %1)"
 
 #. +> trunk
-#: gui/widgets/gamewidget.cpp:72
+#: gui/widgets/gamewidget.cpp:75
 #, kde-format
 msgid " (Black %1)"
 msgstr "(Swatt %1)"
 
 #. +> trunk
-#: gui/widgets/gamewidget.cpp:78
+#: gui/widgets/gamewidget.cpp:82
 msgid "White's move"
 msgstr "Witt sien Tog"
 
 #. +> trunk
-#: gui/widgets/gamewidget.cpp:80
+#: gui/widgets/gamewidget.cpp:84
 msgid "Black's move"
 msgstr "Swatt sien Tog"
 
 #. i18n: ectx: property (prefix), widget (KIntSpinBox, startMoveSpinBox)
 #. i18n: ectx: property (prefix), widget (QSpinBox, moveSpinBox)
 #. +> trunk
-#: gui/widgets/gamewidget.ui:32 gui/widgets/setupwidget.ui:468
+#: gui/widgets/gamewidget.ui:32 gui/widgets/setupwidget.ui:474
 msgid "Move "
 msgstr "Tog"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#. i18n: ectx: property (title), widget (QGroupBox, capturesBox)
-#. +> trunk
-#: gui/widgets/gamewidget.ui:61 gui/widgets/setupwidget.ui:25
-#, fuzzy
-#| msgid "White player"
-msgid "White Player"
-msgstr "Witt Speler"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#. +> trunk
-#: gui/widgets/gamewidget.ui:67 gui/widgets/gamewidget.ui:148
-msgid "Captures:"
-msgstr "Büüt:"
-
-#. i18n: ectx: property (text), widget (QLabel, whiteCapturesLabel)
-#. i18n: ectx: property (text), widget (QLabel, blackCapturesLabel)
-#. +> trunk
-#: gui/widgets/gamewidget.ui:77 gui/widgets/gamewidget.ui:158
-msgid "0"
-msgstr "0"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#. +> trunk
-#: gui/widgets/gamewidget.ui:87 gui/widgets/gamewidget.ui:168
-#, fuzzy
-#| msgid "Time left:"
-msgid "Time Left:"
-msgstr "Resttiet:"
-
-#. i18n: ectx: property (text), widget (QLabel, whiteTimeLabel)
-#. i18n: ectx: property (text), widget (QLabel, blackTimeLabel)
-#. +> trunk
-#: gui/widgets/gamewidget.ui:97 gui/widgets/gamewidget.ui:178
-msgid "00:00"
-msgstr "00:00"
-
-#. i18n: ectx: property (text), widget (KLineEdit, whitePlayerName)
-#. i18n: ectx: property (text), widget (KLineEdit, blackPlayerName)
-#. +> trunk
-#: gui/widgets/gamewidget.ui:119 gui/widgets/setupwidget.ui:47
-#: gui/widgets/setupwidget.ui:170
-msgid "Name"
-msgstr "Naam"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. +> trunk
-#: gui/widgets/gamewidget.ui:142 gui/widgets/setupwidget.ui:151
+#: gui/widgets/gamewidget.ui:64 gui/widgets/setupwidget.ui:151
 #, fuzzy
 #| msgid "Black player"
 msgid "Black Player"
@@ -424,66 +427,90 @@ msgstr "Swatt Speler"
 
 #. i18n: ectx: property (text), widget (KLineEdit, blackPlayerName)
 #. +> trunk
-#: gui/widgets/gamewidget.ui:200
+#: gui/widgets/gamewidget.ui:82
 msgid "Computer (Level 10)"
 msgstr "Reekner (Stoop 10)"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#. i18n: ectx: property (text), widget (QLabel, label)
 #. +> trunk
-#: gui/widgets/gamewidget.ui:230 gui/widgets/setupwidget.ui:699
-msgid "Komi:"
-msgstr "Komi:"
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, komiSpinBox)
-#. +> trunk
-#: gui/widgets/gamewidget.ui:261 gui/widgets/setupwidget.ui:378
-msgid " Points"
-msgstr " Pünkt"
+#: gui/widgets/gamewidget.ui:112 gui/widgets/gamewidget.ui:266
+msgid "Captures:"
+msgstr "Büüt:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. +> trunk
-#: gui/widgets/gamewidget.ui:277
+#: gui/widgets/gamewidget.ui:125
 msgid "Handicap:"
 msgstr "Vörgaav:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, handicapSpinBox)
 #. +> trunk
-#: gui/widgets/gamewidget.ui:308 gui/widgets/setupwidget.ui:412
+#: gui/widgets/gamewidget.ui:159 gui/widgets/setupwidget.ui:412
 msgid " Stones"
 msgstr "Stenen"
 
 #. i18n: ectx: property (text), widget (KPushButton, finishButton)
 #. +> trunk
-#: gui/widgets/gamewidget.ui:355
+#: gui/widgets/gamewidget.ui:209
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Finish game"
 msgid "Finish Game"
 msgstr "Speel beennen"
 
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. i18n: ectx: property (title), widget (QGroupBox, capturesBox)
 #. +> trunk
-#: gui/widgets/setupwidget.cpp:112
+#: gui/widgets/gamewidget.ui:218 gui/widgets/setupwidget.ui:25
+#, fuzzy
+#| msgid "White player"
+msgid "White Player"
+msgstr "Witt Speler"
+
+#. i18n: ectx: property (text), widget (KLineEdit, whitePlayerName)
+#. i18n: ectx: property (text), widget (KLineEdit, blackPlayerName)
+#. +> trunk
+#: gui/widgets/gamewidget.ui:236 gui/widgets/setupwidget.ui:47
+#: gui/widgets/setupwidget.ui:170
+msgid "Name"
+msgstr "Naam"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. +> trunk
+#: gui/widgets/gamewidget.ui:279 gui/widgets/setupwidget.ui:690
+msgid "Komi:"
+msgstr "Komi:"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, komiSpinBox)
+#. +> trunk
+#: gui/widgets/gamewidget.ui:313 gui/widgets/setupwidget.ui:378
+msgid " Points"
+msgstr " Pünkt"
+
+#. +> trunk
+#: gui/widgets/setupwidget.cpp:124
 #, kde-format
 msgid " of %1"
 msgstr " vun %1"
 
 #. +> trunk
-#: gui/widgets/setupwidget.cpp:152
+#: gui/widgets/setupwidget.cpp:165
 msgid "for White"
 msgstr "för Witt"
 
 #. i18n: ectx: property (text), widget (KLineEdit, playerLabel)
 #. +> trunk
-#: gui/widgets/setupwidget.cpp:154 gui/widgets/setupwidget.ui:647
+#: gui/widgets/setupwidget.cpp:167 gui/widgets/setupwidget.ui:641
 msgid "for Black"
 msgstr "för Swatt"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, whitePlayerCombo)
 #. i18n: ectx: property (text), item, widget (KComboBox, blackPlayerCombo)
 #. +> trunk
-#: gui/widgets/setupwidget.cpp:225 gui/widgets/setupwidget.cpp:232
-#: gui/widgets/setupwidget.cpp:270 gui/widgets/setupwidget.cpp:271
+#: gui/widgets/setupwidget.cpp:244 gui/widgets/setupwidget.cpp:252
+#: gui/widgets/setupwidget.cpp:291 gui/widgets/setupwidget.cpp:292
 #: gui/widgets/setupwidget.ui:129 gui/widgets/setupwidget.ui:252
 msgid "Human"
 msgstr "Minsch"
@@ -491,7 +518,7 @@ msgstr "Minsch"
 #. i18n: ectx: property (text), item, widget (KComboBox, whitePlayerCombo)
 #. i18n: ectx: property (text), item, widget (KComboBox, blackPlayerCombo)
 #. +> trunk
-#: gui/widgets/setupwidget.cpp:227 gui/widgets/setupwidget.cpp:234
+#: gui/widgets/setupwidget.cpp:246 gui/widgets/setupwidget.cpp:254
 #: gui/widgets/setupwidget.ui:134 gui/widgets/setupwidget.ui:257
 msgid "Computer"
 msgstr "Reekner"
@@ -547,8 +574,8 @@ msgstr "Normaal (19x19)"
 #. i18n: ectx: property (text), widget (QRadioButton, sizeOther)
 #. +> trunk
 #: gui/widgets/setupwidget.ui:346
-msgid "Other:"
-msgstr "Anner:"
+msgid "Custom:"
+msgstr ""
 
 #. i18n: ectx: label, entry (Komi), group (Game)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
@@ -575,49 +602,49 @@ msgstr "Laadt Speel"
 
 #. i18n: ectx: property (suffix), widget (KIntSpinBox, startMoveSpinBox)
 #. +> trunk
-#: gui/widgets/setupwidget.ui:465
+#: gui/widgets/setupwidget.ui:471
 msgid " of 999"
 msgstr " vun 999"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #. +> trunk
-#: gui/widgets/setupwidget.ui:550
+#: gui/widgets/setupwidget.ui:547
 msgid "Event:"
 msgstr "Begeefnis:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #. +> trunk
-#: gui/widgets/setupwidget.ui:560
+#: gui/widgets/setupwidget.ui:557
 msgid "Date:"
 msgstr "Datum:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. +> trunk
-#: gui/widgets/setupwidget.ui:577
+#: gui/widgets/setupwidget.ui:574
 msgid "Continue"
 msgstr "Wiedermaken"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #. +> trunk
-#: gui/widgets/setupwidget.ui:590
+#: gui/widgets/setupwidget.ui:587
 msgid "Score:"
 msgstr "Pünkt:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #. +> trunk
-#: gui/widgets/setupwidget.ui:600
+#: gui/widgets/setupwidget.ui:597
 msgid "Round:"
 msgstr "Törn:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. +> trunk
-#: gui/widgets/setupwidget.ui:657
+#: gui/widgets/setupwidget.ui:651
 msgid "Location:"
 msgstr "Steed:"
 
 #. i18n: ectx: property (text), widget (KPushButton, startButton)
 #. +> trunk
-#: gui/widgets/setupwidget.ui:729
+#: gui/widgets/setupwidget.ui:720
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Start game"
@@ -749,6 +776,45 @@ msgstr "Sascha Peilicke (saschpe)"
 msgid "Original author"
 msgstr "Orginaalautor"
 
+#. +> trunk
+#: main.cpp:46
+msgid "Yuri Chornoivan"
+msgstr ""
+
+#. +> trunk
+#: main.cpp:46
+msgid "Documentation editor"
+msgstr ""
+
+#. +> trunk
+#: main.cpp:48
+msgid "Arturo Silva"
+msgstr ""
+
+#. +> trunk
+#: main.cpp:48
+msgid "Default theme designer"
+msgstr ""
+
+#, fuzzy
+#~| msgid "These are the recommended moves ..."
+#~ msgid "These are the recommended moves..."
+#~ msgstr "Dit sünd de anraadt Töög..."
+
+#~ msgid "0"
+#~ msgstr "0"
+
+#, fuzzy
+#~| msgid "Time left:"
+#~ msgid "Time Left:"
+#~ msgstr "Resttiet:"
+
+#~ msgid "00:00"
+#~ msgstr "00:00"
+
+#~ msgid "Other:"
+#~ msgstr "Anner:"
+
 #~ msgid "Form"
 #~ msgstr "Form"
 
@@ -759,10 +825,6 @@ msgstr "Orginaalautor"
 #~ msgctxt "@action"
 #~ msgid "Finish"
 #~ msgstr "Beennen"
-
-#, fuzzy
-#~ msgid "configure"
-#~ msgstr "Instellen"
 
 #~ msgid "White"
 #~ msgstr "Witt"
