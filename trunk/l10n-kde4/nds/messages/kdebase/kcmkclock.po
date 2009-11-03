@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-09-01 06:23+0200\n"
+"POT-Creation-Date: 2009-11-03 06:09+0100\n"
 "PO-Revision-Date: 2009-09-01 23:53+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -17,16 +17,7 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: dtime.cpp:76
-msgid "Set date and time &automatically:"
-msgstr "Datum un Tiet &automaatsch fastleggen:"
-
-#: dtime.cpp:102
-msgid "Here you can change the system date's day of the month, month and year."
-msgstr ""
-"Hier kannst Du den Dag, den Maand un dat Johr vun dat Systeemdatum ännern."
-
-#: dtime.cpp:130
+#: dtime.cpp:98
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
 "seconds field to change the relevant value, either using the up and down "
@@ -36,7 +27,12 @@ msgstr ""
 "oder Sekunnen, wenn Du den Weert nieg fastleggen wullt. Du kannst dor de "
 "Hooch-/Daal-Knööp rechterhand för bruken oder en niegen Weert ingeven."
 
-#: dtime.cpp:215
+#: dtime.cpp:122
+#, kde-format
+msgid "Current local time zone: %1 (%2)"
+msgstr "Aktuell lokaal Tietrebeet: %1 (%2)"
+
+#: dtime.cpp:188
 msgid ""
 "Public Time Server (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
 "north-america.pool.ntp.org,oceania.pool.ntp.org"
@@ -44,16 +40,24 @@ msgstr ""
 "Apen Tietserver (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,north-"
 "america.pool.ntp.org,oceania.pool.ntp.org"
 
-#: dtime.cpp:275
+#: dtime.cpp:267
 #, kde-format
 msgid "Unable to contact time server: %1."
 msgstr "Tietserver lett sik nich ansnacken: %1."
 
-#: dtime.cpp:279
+#: dtime.cpp:271
 msgid "Can not set date."
 msgstr "Datum lett sik nich fastleggen."
 
-#: dtime.cpp:297 main.cpp:62
+#: dtime.cpp:274
+msgid "Error setting new time zone."
+msgstr "Fehler bi't Fastleggen vun't niege Tietrebeet."
+
+#: dtime.cpp:275
+msgid "Time zone Error"
+msgstr "Tietrebeet-Fehler"
+
+#: dtime.cpp:292 main.cpp:61
 msgid ""
 "<h1>Date & Time</h1> This control module can be used to set the system date "
 "and time. As these settings do not only affect you as a user, but rather the "
@@ -68,74 +72,118 @@ msgstr ""
 "liekers glöövst, dat de Tiet topasst warrn schull, snack dor bitte mit den "
 "Systeempleger över."
 
-#: main.cpp:54
+#: main.cpp:53
 msgid "kcmclock"
 msgstr "kcmclock"
 
-#: main.cpp:54
+#: main.cpp:53
 msgid "KDE Clock Control Module"
 msgstr "KDE-Kuntrullmoduul för de Klock"
 
-#: main.cpp:56
+#: main.cpp:55
 msgid "(c) 1996 - 2001 Luca Montecchiani"
 msgstr "(c) 1996 - 2001 Luca Montecchiani"
 
-#: main.cpp:58
+#: main.cpp:57
 msgid "Luca Montecchiani"
 msgstr "Luca Montecchiani"
 
-#: main.cpp:58
+#: main.cpp:57
 msgid "Original author"
 msgstr "Orginaalautor"
 
-#: main.cpp:59
+#: main.cpp:58
 msgid "Paul Campbell"
 msgstr "Paul Campbell"
 
-#: main.cpp:59
+#: main.cpp:58
 msgid "Current Maintainer"
 msgstr "Aktuell Pleger"
 
-#: main.cpp:60
+#: main.cpp:59
 msgid "Benjamin Meyer"
 msgstr "Benjamin Meyer"
 
-#: main.cpp:60
+#: main.cpp:59
 msgid "Added NTP support"
 msgstr "Hett NTP-Ünnerstütten toföögt"
 
-#: main.cpp:103
+#: main.cpp:97
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "Identiteetprööv/Akschoon lett sik nich utföhren: %1, %2"
 
-#: rc.cpp:1
+#. i18n: file: dateandtime.ui:15
+#. i18n: ectx: property (windowTitle), widget (QWidget, DateAndTime)
+#: rc.cpp:3
+msgid "Form"
+msgstr ""
+
+#. i18n: file: dateandtime.ui:25
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: rc.cpp:6
+msgid "Date and Time"
+msgstr ""
+
+#. i18n: file: dateandtime.ui:31
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: rc.cpp:9
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr ""
+"Hier kannst Du den Dag, den Maand un dat Johr vun dat Systeemdatum ännern."
+
+#. i18n: file: dateandtime.ui:49
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: rc.cpp:12
+#, fuzzy
+#| msgid "Time zone Error"
+msgid "Time Zone"
+msgstr "Tietrebeet-Fehler"
+
+#. i18n: file: dateandtime.ui:55
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:15
+#, fuzzy
+#| msgid "To change the local time zone, select your area from the list below"
+msgid "To change the local time zone, select your area from the list below."
+msgstr ""
+"Wenn Du dat Tietrebeet ännern wullt, söök Dien Rebeet nerrn ut de List ut"
+
+#. i18n: file: dateandtime.ui:78
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: rc.cpp:18
+#, fuzzy
+#| msgid "Current local time zone: %1 (%2)"
+msgid "Current local time zone:"
+msgstr "Aktuell lokaal Tietrebeet: %1 (%2)"
+
+#. i18n: file: dateandtime.ui:105
+#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
+#: rc.cpp:24
+msgid "NTP"
+msgstr ""
+
+#. i18n: file: dateandtime.ui:111
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: rc.cpp:27
+msgid "Set date and time &automatically:"
+msgstr "Datum un Tiet &automaatsch fastleggen:"
+
+#. i18n: file: dateandtime.ui:134
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:30
+msgid "Time server:"
+msgstr ""
+
+#: rc.cpp:31
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Sönke Dibbern"
 
-#: rc.cpp:2
+#: rc.cpp:32
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s_dibbern@web.de"
-
-#: tzone.cpp:58
-msgid "To change the local time zone, select your area from the list below"
-msgstr ""
-"Wenn Du dat Tietrebeet ännern wullt, söök Dien Rebeet nerrn ut de List ut"
-
-#: tzone.cpp:88
-#, kde-format
-msgid "Current local time zone: %1 (%2)"
-msgstr "Aktuell lokaal Tietrebeet: %1 (%2)"
-
-#: tzone.cpp:114
-msgid "Error setting new time zone."
-msgstr "Fehler bi't Fastleggen vun't niege Tietrebeet."
-
-#: tzone.cpp:115
-msgid "Time zone Error"
-msgstr "Tietrebeet-Fehler"
 
 #~ msgid "Failed to set system date/time/time zone."
 #~ msgstr "Systeem-Datum/-Tiet/-Tietrebeet lett sik nich fastleggen"
