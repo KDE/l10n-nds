@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: palapeli\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-02 07:11+0100\n"
+"POT-Creation-Date: 2009-11-10 06:17+0100\n"
 "PO-Revision-Date: 2008-12-07 02:15+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -108,8 +108,8 @@ msgstr ""
 
 #: src/main.cpp:37
 msgid ""
-"Import the given puzzle file into the library (does nothing if no puzzle "
-"file is given)"
+"Import the given puzzle file into the local collection (does nothing if no "
+"puzzle file is given)"
 msgstr ""
 
 #: src/main.cpp:38
@@ -124,7 +124,7 @@ msgctxt "Filter for a file dialog"
 msgid "*.puzzle|Palapeli puzzles (*.puzzle)"
 msgstr ""
 
-#: src/file-io/collection-list.cpp:89
+#: src/file-io/collection-list.cpp:89 src/window/mainwindow.cpp:66
 msgid "My collection"
 msgstr ""
 
@@ -147,83 +147,105 @@ msgctxt "Author attribution, e.g. \"by Jack\""
 msgid "by %1"
 msgstr ""
 
-#: src/engine/zoomwidget.cpp:38
-msgid "Lock the puzzle table size"
+#: src/engine/scene.cpp:224
+msgid ""
+"You have finished the puzzle the last time. Do you want to restart it now?"
 msgstr ""
 
-#: src/window/librarywidget.cpp:44
+#: src/engine/scene.cpp:279
+msgid "Great! You have finished the puzzle."
+msgstr ""
+
+#: src/engine/zoomwidget.cpp:38
+#, fuzzy
+#| msgid "Puzzle table"
+msgid "Lock the puzzle table area"
+msgstr "Radel-Tabell"
+
+#: src/engine/view.cpp:148
+msgid "Your progress is saved automatically while you play."
+msgstr ""
+
+#: src/engine/view.cpp:148
+msgctxt "used as caption for a dialog that explains the autosave feature"
+msgid "Automatic saving"
+msgstr ""
+
+#: src/window/collectionwidget.cpp:45
 #, fuzzy
 #| msgid "Create a new puzzle"
 msgid "Create &new puzzle..."
 msgstr "En nieg Radel opstellen"
 
-#: src/window/librarywidget.cpp:46
+#: src/window/collectionwidget.cpp:47
 msgid "Create a new puzzle using an image file from your disk"
 msgstr ""
 
-#: src/window/librarywidget.cpp:49
+#: src/window/collectionwidget.cpp:50
 msgid "&Import from file..."
 msgstr ""
 
-#: src/window/librarywidget.cpp:50
+#: src/window/collectionwidget.cpp:51
 #, fuzzy
 #| msgid "Import a puzzle into your library"
-msgid "Import a new puzzle from a file"
+msgid "Import a new puzzle from a file into your collection"
 msgstr "En Radel na Dien Bibliotheek  importeren"
 
-#: src/window/librarywidget.cpp:53
+#: src/window/collectionwidget.cpp:54
 msgid "&Export to file..."
 msgstr ""
 
-#: src/window/librarywidget.cpp:55
-msgid "Export the selected puzzle from the library into a file"
-msgstr ""
+#: src/window/collectionwidget.cpp:56
+#, fuzzy
+#| msgid "Open the puzzle library"
+msgid "Export the selected puzzle from your collection into a file"
+msgstr "De Radelbibliotheek opmaken"
 
-#: src/window/librarywidget.cpp:58
+#: src/window/collectionwidget.cpp:59
 msgid "&Delete"
 msgstr ""
 
-#: src/window/librarywidget.cpp:60
+#: src/window/collectionwidget.cpp:61
 #, fuzzy
 #| msgid "Open the puzzle library"
-msgid "Delete the selected puzzle from the library"
+msgid "Delete the selected puzzle from your collection"
 msgstr "De Radelbibliotheek opmaken"
 
-#: src/window/puzzletablewidget.cpp:59
+#: src/window/puzzletablewidget.cpp:61
 #, fuzzy
 #| msgid "Loading puzzle..."
 msgid "&Restart puzzle..."
 msgstr "Radel warrt laadt..."
 
-#: src/window/puzzletablewidget.cpp:60
+#: src/window/puzzletablewidget.cpp:62
 msgid "Delete the saved progress"
 msgstr ""
 
-#: src/window/puzzletablewidget.cpp:65
+#: src/window/puzzletablewidget.cpp:67
 msgid "No puzzle loaded"
 msgstr ""
 
-#: src/window/puzzletablewidget.cpp:112
+#: src/window/puzzletablewidget.cpp:124
 msgid "You finished the puzzle."
 msgstr ""
 
-#: src/window/puzzletablewidget.cpp:116
+#: src/window/puzzletablewidget.cpp:128
 #, kde-format
 msgctxt "Progress display"
 msgid "%1% finished"
 msgstr ""
 
-#: src/window/mainwindow.cpp:59
-msgid "My library"
+#: src/window/mainwindow.cpp:60
+msgid "Show statusbar of puzzle table"
 msgstr ""
 
 #. i18n: file: src/settings.ui:17
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: src/window/mainwindow.cpp:60 rc.cpp:17
+#: src/window/mainwindow.cpp:67 rc.cpp:20
 msgid "Puzzle table"
 msgstr "Radel-Tabell"
 
-#: src/window/mainwindow.cpp:180
+#: src/window/mainwindow.cpp:187
 msgid "General settings"
 msgstr ""
 
@@ -239,13 +261,13 @@ msgstr ""
 #: src/importhelper.cpp:60
 #, fuzzy
 #| msgid "Puzzle archive to import into the library"
-msgid "The puzzle file could not be imported into the library."
+msgid "The puzzle file could not be imported into the local collection."
 msgstr "Radelarchiev, dat Du na de Bibliotheek importeren wullt"
 
 #: src/importhelper.cpp:65
 #, fuzzy, kde-format
 #| msgid "Import a puzzle into your library"
-msgid "Importing puzzle \"%1\" into local library"
+msgid "Importing puzzle \"%1\" into your collection"
 msgstr "En Radel na Dien Bibliotheek  importeren"
 
 #: tools/libpala-puzzlebuilder.cpp:37
@@ -277,11 +299,11 @@ msgstr ""
 msgid "Piece aspect ratio"
 msgstr ""
 
-#: libpala-example/myslicer.cpp:36 slicers/slicer-jigsaw.cpp:94
+#: libpala-example/myslicer.cpp:36
 msgid "Piece count in horizontal direction"
 msgstr ""
 
-#: libpala-example/myslicer.cpp:40 slicers/slicer-jigsaw.cpp:98
+#: libpala-example/myslicer.cpp:40
 msgid "Piece count in vertical direction"
 msgstr ""
 
@@ -295,9 +317,15 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s_dibbern@web.de"
 
+#. i18n: file: src/palapeli-collectionui.rc:8
+#. i18n: ectx: ToolBar (collectionToolbar)
+#: rc.cpp:5
+msgid "Collection actions toolbar"
+msgstr ""
+
 #. i18n: file: src/palapeli-puzzletableui.rc:8
 #. i18n: ectx: ToolBar (puzzleTableToolbar)
-#: rc.cpp:5
+#: rc.cpp:8
 #, fuzzy
 #| msgid "Puzzle table"
 msgid "Puzzle table toolbar"
@@ -305,37 +333,42 @@ msgstr "Radel-Tabell"
 
 #. i18n: file: src/palapeli.kcfg:6
 #. i18n: ectx: label, entry (SnappingPrecision), group (Puzzling)
-#: rc.cpp:8
+#: rc.cpp:11
 msgid "Precision of snapping (in percent of piece size)."
 msgstr ""
 
 #. i18n: file: src/palapeli.kcfg:12
 #. i18n: ectx: label, entry (ViewBackground), group (Appearance)
-#: rc.cpp:11
+#: rc.cpp:14
 msgid "The background image to use for the View."
 msgstr ""
 
-#. i18n: file: src/palapeli-libraryui.rc:8
-#. i18n: ectx: ToolBar (libraryToolbar)
-#: rc.cpp:14
-#, fuzzy
-#| msgid "Main toolbar"
-msgid "Library toolbar"
-msgstr "Hööft-Warktüüchbalken"
+#. i18n: file: src/palapeli.kcfg:16
+#. i18n: ectx: label, entry (ShowStatusBar), group (Appearance)
+#: rc.cpp:17
+msgid ""
+"Whether to show the status bar on the puzzle table. (It's not a real status "
+"bar, but the position and provided functionality is similar.)"
+msgstr ""
 
 #. i18n: file: src/settings.ui:23
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:20
+#: rc.cpp:23
 msgid "Background:"
 msgstr ""
 
 #. i18n: file: src/settings.ui:65
 #. i18n: ectx: property (text), widget (QLabel, label_1)
-#: rc.cpp:23
+#: rc.cpp:26
 #, fuzzy
 #| msgid "Piece snapping precision"
 msgid "Snapping precision:"
 msgstr "Steen-Anbacknauigkeit"
+
+#, fuzzy
+#~| msgid "Main toolbar"
+#~ msgid "Library toolbar"
+#~ msgstr "Hööft-Warktüüchbalken"
 
 #~ msgid "This puzzle archive is unreadable. It might be corrupted."
 #~ msgstr "Dit Radelarchiev lett sik nich lesen, dat is villicht schaadhaftig."
