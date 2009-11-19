@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: palapeli\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-02 07:11+0100\n"
+"POT-Creation-Date: 2009-11-12 09:18+0100\n"
 "PO-Revision-Date: 2008-12-07 02:15+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -27,12 +27,12 @@ msgid "Your emails"
 msgstr "s_dibbern@web.de"
 
 #. +> trunk
-#: libpala-example/myslicer.cpp:36 slicers/slicer-jigsaw.cpp:94
+#: libpala-example/myslicer.cpp:36
 msgid "Piece count in horizontal direction"
 msgstr ""
 
 #. +> trunk
-#: libpala-example/myslicer.cpp:40 slicers/slicer-jigsaw.cpp:98
+#: libpala-example/myslicer.cpp:40
 msgid "Piece count in vertical direction"
 msgstr ""
 
@@ -128,9 +128,32 @@ msgid "Puzzle cannot be created: Slicing failed because of undetermined problems
 msgstr ""
 
 #. +> trunk
-#: src/engine/zoomwidget.cpp:38
-msgid "Lock the puzzle table size"
+#: src/engine/scene.cpp:226
+msgid "You have finished the puzzle the last time. Do you want to restart it now?"
 msgstr ""
+
+#. +> trunk
+#: src/engine/scene.cpp:282
+msgid "Great! You have finished the puzzle."
+msgstr ""
+
+#. +> trunk
+#: src/engine/view.cpp:148
+msgid "Your progress is saved automatically while you play."
+msgstr ""
+
+#. +> trunk
+#: src/engine/view.cpp:148
+msgctxt "used as caption for a dialog that explains the autosave feature"
+msgid "Automatic saving"
+msgstr ""
+
+#. +> trunk
+#: src/engine/zoomwidget.cpp:38
+#, fuzzy
+#| msgid "Puzzle table"
+msgid "Lock the puzzle table area"
+msgstr "Radel-Tabell"
 
 #. +> trunk
 #: src/file-io/collection-delegate.cpp:78
@@ -162,7 +185,7 @@ msgid "*.puzzle|Palapeli puzzles (*.puzzle)"
 msgstr ""
 
 #. +> trunk
-#: src/file-io/collection-list.cpp:89
+#: src/file-io/collection-list.cpp:89 src/window/mainwindow.cpp:66
 msgid "My collection"
 msgstr ""
 
@@ -181,14 +204,14 @@ msgstr ""
 #: src/importhelper.cpp:60
 #, fuzzy
 #| msgid "Puzzle archive to import into the library"
-msgid "The puzzle file could not be imported into the library."
+msgid "The puzzle file could not be imported into the local collection."
 msgstr "Radelarchiev, dat Du na de Bibliotheek importeren wullt"
 
 #. +> trunk
 #: src/importhelper.cpp:65
 #, fuzzy, kde-format
 #| msgid "Import a puzzle into your library"
-msgid "Importing puzzle \"%1\" into local library"
+msgid "Importing puzzle \"%1\" into your collection"
 msgstr "En Radel na Dien Bibliotheek  importeren"
 
 #. +> trunk
@@ -219,7 +242,7 @@ msgstr ""
 
 #. +> trunk
 #: src/main.cpp:37
-msgid "Import the given puzzle file into the library (does nothing if no puzzle file is given)"
+msgid "Import the given puzzle file into the local collection (does nothing if no puzzle file is given)"
 msgstr ""
 
 #. +> trunk
@@ -227,13 +250,11 @@ msgstr ""
 msgid "If the -i/--import option is specified, the main window will not be shown after importing the given puzzle."
 msgstr ""
 
-#. i18n: ectx: ToolBar (libraryToolbar)
+#. i18n: ectx: ToolBar (collectionToolbar)
 #. +> trunk
-#: src/palapeli-libraryui.rc:8
-#, fuzzy
-#| msgid "Main toolbar"
-msgid "Library toolbar"
-msgstr "Hööft-Warktüüchbalken"
+#: src/palapeli-collectionui.rc:8
+msgid "Collection actions toolbar"
+msgstr ""
 
 #. i18n: ectx: ToolBar (puzzleTableToolbar)
 #. +> trunk
@@ -246,7 +267,7 @@ msgstr "Radel-Tabell"
 #. i18n: ectx: label, entry (SnappingPrecision), group (Puzzling)
 #. +> trunk
 #: src/palapeli.kcfg:6
-msgid "Precision of snapping (in percent of piece size)."
+msgid "Precision of snapping (as a percentage of piece size)."
 msgstr ""
 
 #. i18n: ectx: label, entry (ViewBackground), group (Appearance)
@@ -255,9 +276,15 @@ msgstr ""
 msgid "The background image to use for the View."
 msgstr ""
 
+#. i18n: ectx: label, entry (ShowStatusBar), group (Appearance)
+#. +> trunk
+#: src/palapeli.kcfg:16
+msgid "Whether to show the status bar on the puzzle table. (It is not a real status bar, but the position and provided functionality is similar.)"
+msgstr ""
+
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. +> trunk
-#: src/settings.ui:17 src/window/mainwindow.cpp:60
+#: src/settings.ui:17 src/window/mainwindow.cpp:67
 msgid "Puzzle table"
 msgstr "Radel-Tabell"
 
@@ -276,85 +303,87 @@ msgid "Snapping precision:"
 msgstr "Steen-Anbacknauigkeit"
 
 #. +> trunk
-#: src/window/librarywidget.cpp:44
+#: src/window/collectionwidget.cpp:45
 #, fuzzy
 #| msgid "Create a new puzzle"
 msgid "Create &new puzzle..."
 msgstr "En nieg Radel opstellen"
 
 #. +> trunk
-#: src/window/librarywidget.cpp:46
+#: src/window/collectionwidget.cpp:47
 msgid "Create a new puzzle using an image file from your disk"
 msgstr ""
 
 #. +> trunk
-#: src/window/librarywidget.cpp:49
+#: src/window/collectionwidget.cpp:50
 msgid "&Import from file..."
 msgstr ""
 
 #. +> trunk
-#: src/window/librarywidget.cpp:50
+#: src/window/collectionwidget.cpp:51
 #, fuzzy
 #| msgid "Import a puzzle into your library"
-msgid "Import a new puzzle from a file"
+msgid "Import a new puzzle from a file into your collection"
 msgstr "En Radel na Dien Bibliotheek  importeren"
 
 #. +> trunk
-#: src/window/librarywidget.cpp:53
+#: src/window/collectionwidget.cpp:54
 msgid "&Export to file..."
 msgstr ""
 
 #. +> trunk
-#: src/window/librarywidget.cpp:55
-msgid "Export the selected puzzle from the library into a file"
-msgstr ""
+#: src/window/collectionwidget.cpp:56
+#, fuzzy
+#| msgid "Open the puzzle library"
+msgid "Export the selected puzzle from your collection into a file"
+msgstr "De Radelbibliotheek opmaken"
 
 #. +> trunk
-#: src/window/librarywidget.cpp:58
+#: src/window/collectionwidget.cpp:59
 msgid "&Delete"
 msgstr ""
 
 #. +> trunk
-#: src/window/librarywidget.cpp:60
+#: src/window/collectionwidget.cpp:61
 #, fuzzy
 #| msgid "Open the puzzle library"
-msgid "Delete the selected puzzle from the library"
+msgid "Delete the selected puzzle from your collection"
 msgstr "De Radelbibliotheek opmaken"
 
 #. +> trunk
-#: src/window/mainwindow.cpp:59
-msgid "My library"
+#: src/window/mainwindow.cpp:60
+msgid "Show statusbar of puzzle table"
 msgstr ""
 
 #. +> trunk
-#: src/window/mainwindow.cpp:180
+#: src/window/mainwindow.cpp:187
 msgid "General settings"
 msgstr ""
 
 #. +> trunk
-#: src/window/puzzletablewidget.cpp:59
+#: src/window/puzzletablewidget.cpp:61
 #, fuzzy
 #| msgid "Loading puzzle..."
 msgid "&Restart puzzle..."
 msgstr "Radel warrt laadt..."
 
 #. +> trunk
-#: src/window/puzzletablewidget.cpp:60
+#: src/window/puzzletablewidget.cpp:62
 msgid "Delete the saved progress"
 msgstr ""
 
 #. +> trunk
-#: src/window/puzzletablewidget.cpp:65
+#: src/window/puzzletablewidget.cpp:67
 msgid "No puzzle loaded"
 msgstr ""
 
 #. +> trunk
-#: src/window/puzzletablewidget.cpp:112
+#: src/window/puzzletablewidget.cpp:124
 msgid "You finished the puzzle."
 msgstr ""
 
 #. +> trunk
-#: src/window/puzzletablewidget.cpp:116
+#: src/window/puzzletablewidget.cpp:128
 #, kde-format
 msgctxt "Progress display"
 msgid "%1% finished"
@@ -384,6 +413,11 @@ msgstr "Palapeli instellen"
 msgctxt "description for a command line switch"
 msgid "Output file"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Main toolbar"
+#~ msgid "Library toolbar"
+#~ msgstr "Hööft-Warktüüchbalken"
 
 #~ msgid "Do not open main window (to be used with --import)"
 #~ msgstr "Hööftfinster nich opmaken (för Bruuk mit --import)"

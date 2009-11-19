@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audex\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-04 07:27+0100\n"
+"POT-Creation-Date: 2009-11-15 10:34+0100\n"
 "PO-Revision-Date: 2009-11-03 07:58+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -142,13 +142,13 @@ msgstr "&Instellen"
 #. +> trunk
 #: core/audex.cpp:117
 #, fuzzy
-msgid "No profile selected. Operation abort."
+msgid "No profile selected. Operation aborted."
 msgstr "Nee Profil Akschoon."
 
 #. +> trunk
 #: core/audex.cpp:131
 #, fuzzy, kde-format
-msgid "Unable to create temporary directory \"%1\". Please check. Abort operation."
+msgid "Operation aborted: unable to create temporary directory \"%1\". Please check whether it is possible."
 msgstr "bet Afbreken."
 
 #. +> trunk
@@ -160,7 +160,7 @@ msgstr "Start un mit Profil."
 #. +> trunk
 #: core/audex.cpp:451
 #, fuzzy, kde-format
-msgid "Cant find path \"%1\"."
+msgid "Cannot find path \"%1\"."
 msgstr "Bagenbahn."
 
 #. +> trunk
@@ -196,14 +196,14 @@ msgstr "Free An is weniger MB Problemen mit Siet."
 #. +> trunk
 #: core/audex.cpp:479
 #, fuzzy, kde-format
-msgid "Warning! File \"%1\" already exists. Overwriting."
+msgid "Warning: file \"%1\" already exists. Overwriting."
 msgstr "Wohrschoen Datei."
 
 #. +> trunk
 #: core/audex.cpp:481 core/audex.cpp:583 core/audex.cpp:615 core/audex.cpp:663
 #: core/audex.cpp:702 core/audex.cpp:739
 #, fuzzy, kde-format
-msgid "Warning! File \"%1\" already exists. Skipping."
+msgid "Warning: file \"%1\" already exists. Skipping."
 msgstr "Wohrschoen Datei."
 
 #. +> trunk
@@ -221,7 +221,7 @@ msgstr "Sett een."
 #. +> trunk
 #: core/audex.cpp:508
 #, fuzzy, kde-format
-msgid "Temporary directory \"%1\" does not exists."
+msgid "Temporary directory \"%1\" does not exist."
 msgstr "Temporeer nich."
 
 #. +> trunk
@@ -279,6 +279,12 @@ msgstr ""
 #. +> trunk
 #: core/audex.cpp:752
 msgid "Discid successfully stored."
+msgstr ""
+
+#. +> trunk
+#: core/audex.cpp:791
+#, kde-format
+msgid "Ripping of CD %1 - %2 finished"
 msgstr ""
 
 #. +> trunk
@@ -472,8 +478,8 @@ msgid ""
 "\n"
 "<p>This tag has two properties:\n"
 "<ul>"
-"<li><i>length</i> defines how many digits the number should consist of at least (Default: 2).</li>"
-"<li><i>fillchar</i> sets the character usedto fill the free spaces in front of the number, if it has less digits than defined by <i>length</i>. (Default: 0).</li>"
+"<li><i>length</i> defines how many digits the number should at least consist of (Default: 2).</li>"
+"<li><i>fillchar</i> sets the character used to fill the free spaces in front of the number, if it has fewer digits than <i>length</i>. (Default: 0).</li>"
 "</ul>"
 "</p>"
 msgstr ""
@@ -506,9 +512,9 @@ msgid ""
 "\n"
 "<p>This tag has two properties:\n"
 "<ul>"
-"<li><i>length</i> defines how many digits the number should consist of at least (Default: 2).</li>"
+"<li><i>length</i> defines how many digits the number should at least consist of (Default: 2).</li>"
 "\n"
-"<li><i>fillchar</i> sets the char taken to fill the free spaces in front of the number, if it has less digits than defined by <i>length</i>. (Default: 0).</li>"
+"<li><i>fillchar</i> sets the char taken to fill the free spaces in front of the number, if it has fewer digits than <i>length</i>. (Default: 0).</li>"
 "</ul>"
 "</p>"
 "\n"
@@ -582,9 +588,9 @@ msgid ""
 "<ul>\n"
 "<li><i>format</i> defines the image format. Possible values are \"PNG\", \"JPG\" and \"GIF\" (Default: \"JPG\"). </li>"
 "\n"
-"<li><i>x</i> (width) and <i>y</i> (height) can be used to resize the cover image. If these are not set, then size of the cover image won't be changed.</li>"
+"<li><i>x</i> (width) and <i>y</i> (height) can be used to resize the cover image. If these are not set, then size of the cover image will not be changed.</li>"
 "\n"
-"<li><i>usenocover</i> if this is set to <i>true</i> then the image which is shown if no cover for the current album is set will be used. (Default: false).</li>"
+"<li><i>usenocover</i> if this is set to <i>true</i> then the image which is shown if no cover for the current album is set will be used. (Default: false.)</li>"
 "\n"
 "<li><i>preparam</i> and <i>postparam</i> define parameters inserted before (pre) or behind (post) the filename of the temporary cover. </li>"
 "</ul>"
@@ -682,8 +688,10 @@ msgstr "Vöransicht."
 #. +> trunk
 #: dialogs/coverbrowserdialog.cpp:77
 #, fuzzy, kde-format
-msgid "Found %1 Covers"
-msgstr "Funnen"
+msgid "Found %1 Cover"
+msgid_plural "Found %1 Covers"
+msgstr[0] "Funnen"
+msgstr[1] "Funnen"
 
 #. +> trunk
 #: dialogs/coverbrowserdialog.cpp:82
@@ -723,114 +731,116 @@ msgid "Encoding Track  0 / %1"
 msgstr "Koderen Stück 1"
 
 #. +> trunk
-#: dialogs/extractingprogressdialog.cpp:117
+#: dialogs/extractingprogressdialog.cpp:118
 #, fuzzy
 msgid "Do you really want to cancel?"
 msgstr "Wullt Du redig afbreken?"
 
 #. +> trunk
-#: dialogs/extractingprogressdialog.cpp:118
+#: dialogs/extractingprogressdialog.cpp:119
 msgid "Cancel"
 msgstr "Afbreken"
 
 #. +> trunk
-#: dialogs/extractingprogressdialog.cpp:131
+#: dialogs/extractingprogressdialog.cpp:132
 #, fuzzy
 msgid "Ripping Track"
 msgstr "Stück"
 
 #. +> trunk
-#: dialogs/extractingprogressdialog.cpp:131
+#: dialogs/extractingprogressdialog.cpp:132
 #, fuzzy, kde-format
 msgid "Ripping Track %1 / %2"
 msgstr "Stück 2"
 
 #. +> trunk
-#: dialogs/extractingprogressdialog.cpp:139
+#: dialogs/extractingprogressdialog.cpp:140
 #, fuzzy
 msgid "Waiting for an encoding job..."
 msgstr "An't Töven för."
 
 #. +> trunk
-#: dialogs/extractingprogressdialog.cpp:143
+#: dialogs/extractingprogressdialog.cpp:144
 #, fuzzy
 msgid "Encoding Track"
 msgstr "Koderen Stück"
 
 #. +> trunk
-#: dialogs/extractingprogressdialog.cpp:143
+#: dialogs/extractingprogressdialog.cpp:144
 #, fuzzy, kde-format
 msgid "Encoding Track %1 / %2"
 msgstr "Koderen Stück 2"
 
 #. +> trunk
-#: dialogs/extractingprogressdialog.cpp:185
-#: dialogs/extractingprogressdialog.cpp:192
+#: dialogs/extractingprogressdialog.cpp:186
+#: dialogs/extractingprogressdialog.cpp:193
 #, fuzzy, kde-format, c-format
 msgid "Speed: %1x"
 msgstr "Gauigkeit 1x"
 
 #. +> trunk
-#: dialogs/extractingprogressdialog.cpp:204
+#: dialogs/extractingprogressdialog.cpp:205
 #, fuzzy
 msgid "All jobs successfully done."
 msgstr "All afslaten."
 
 #. +> trunk
-#: dialogs/extractingprogressdialog.cpp:208
 #: dialogs/extractingprogressdialog.cpp:209
-msgid "Finished!"
+#: dialogs/extractingprogressdialog.cpp:210
+#, fuzzy
+#| msgid "Finished!"
+msgid "Finished."
 msgstr "Afslaten!"
 
 #. +> trunk
-#: dialogs/extractingprogressdialog.cpp:213
+#: dialogs/extractingprogressdialog.cpp:214
 #, fuzzy
 msgid "At least one job failed."
 msgstr "een fehlslaan."
 
 #. +> trunk
-#: dialogs/extractingprogressdialog.cpp:217
 #: dialogs/extractingprogressdialog.cpp:218
+#: dialogs/extractingprogressdialog.cpp:219
 #, fuzzy
-msgid "Failed!"
+msgid "Failed."
 msgstr "Fehlslaan!"
 
 #. +> trunk
-#: dialogs/extractingprogressdialog.cpp:226
+#: dialogs/extractingprogressdialog.cpp:227
 #, fuzzy
 msgid "Show encoding log..."
 msgstr "Wiesen."
 
 #. +> trunk
-#: dialogs/extractingprogressdialog.cpp:230
+#: dialogs/extractingprogressdialog.cpp:231
 #, fuzzy
 msgid "Show rip log..."
 msgstr "Wiesen."
 
 #. +> trunk
-#: dialogs/extractingprogressdialog.cpp:267
+#: dialogs/extractingprogressdialog.cpp:268
 #, fuzzy
 msgid ""
-"Ripping speed is extremely slow for the last 5 minutes by now.\n"
-"Due to extraction quality, audex is so configured, never skip any detected error. So if your disc is really broken extracting maybe never ends.\n"
-"In some cases only this drive can't rip audio data from this disc. Maybe try another one.\n"
+"Ripping speed has been extremely slow for the last 5 minutes.\n"
+"To preserve extraction quality, audex is configured to never skip any detected errors. As such, if your disc is really broken, extracting might never finish.\n"
+"In some cases, only this drive cannot rip audio data from the disc, so perhaps try another one.\n"
 "\n"
-"However, do you want to continue extraction?"
+"Do you want to continue extraction?"
 msgstr "is langsam för Minuten to nu bet is nienich elkeen Fehler wenn Schiev is nienich En poor disse Büss t vun disse Schiev een n bet?"
 
 #. +> trunk
-#: dialogs/extractingprogressdialog.cpp:270
+#: dialogs/extractingprogressdialog.cpp:271
 msgid "Cancel extraction"
 msgstr "Ruttrecken afbreken"
 
 #. +> trunk
-#: dialogs/extractingprogressdialog.cpp:279
+#: dialogs/extractingprogressdialog.cpp:280
 #, fuzzy
 msgid "Encoding protocol"
 msgstr "Koderen"
 
 #. +> trunk
-#: dialogs/extractingprogressdialog.cpp:285
+#: dialogs/extractingprogressdialog.cpp:286
 msgid "Ripping protocol"
 msgstr ""
 
@@ -1011,10 +1021,10 @@ msgid ""
 "</div>or the equivalent<br />"
 "<div style=\"font-family:monospace; background: #b3c1d6; color: black\">"
 "<pre>${artist}</pre>"
-"</div>will be replaced by the relevant artist of the cd.<br />"
-"Also variables can have attributes. See this example:<div style=\"font-family:monospace; background: #b3c1d6; color: black\">"
+"</div>will be replaced by the relevant artist of the CD.<br />"
+"Also, variables can have attributes. For instance:<div style=\"font-family:monospace; background: #b3c1d6; color: black\">"
 "<pre>${today format=\"yyyy-MM-dd\" }</pre>"
-"</div>This means, that the current date is printed. To define how this is done, you can set a format. The examplewould result to the output 2008-10-07, as this would be the current date. See below for more details.<br />"
+"</div>This means that the current date is printed. To define how this is done, you can set a format. The example given would result in output of the form 2008-10-07. See below for more details.<br />"
 "<br />"
 "You can make use of the following variables:<br />"
 "<table border=1><thead>"
@@ -1028,25 +1038,25 @@ msgid ""
 "<tr>"
 "<td>$artist</td>"
 "<td></td>"
-"<td>Prints the relevant artist of the extracted cd.</td>"
+"<td>Prints the relevant artist of the extracted CD.</td>"
 "<td>${artist }</td>"
 "</tr>"
 "<tr>"
 "<td>$title</td>"
 "<td></td>"
-"<td>Prints the relevant title of the extracted cd.</td>"
+"<td>Prints the relevant title of the extracted CD.</td>"
 "<td></td>"
 "</tr>"
 "<tr>"
 "<td>$date</td>"
 "<td></td>"
-"<td>Prints the relevant date (usually release year) of the extracted cd.</td>"
+"<td>Prints the relevant date (usually release year) of the extracted CD.</td>"
 "<td></td>"
 "</tr>"
 "<tr>"
 "<td>$genre;</td>"
 "<td></td>"
-"<td>Prints the relevant genre of the extracted cd.</td>"
+"<td>Prints the relevant genre of the extracted CD.</td>"
 "<td></td>"
 "</tr>"
 "<tr>"
@@ -1070,7 +1080,7 @@ msgid ""
 "<tr>"
 "<td>$discid</td>"
 "<td>base</td>"
-"<td>Prints the discid of the current cd. The attribute base is the base of the number. The default is 16 (hexadecimal).</td>"
+"<td>Prints the disc ID of the current CD. The base attribute specifies the base of the number. The default is 16 (hexadecimal).</td>"
 "<td>${discid base=\"16\"}</td>"
 "</tr>"
 "<tr>"
@@ -1103,11 +1113,11 @@ msgid ""
 "</thead>"
 "<tr valign=\"top\">"
 "<td>d</td>"
-"<td>The day as a number without a leading zero (1 to 31).</td>"
+"<td>The day as a number, without a leading zero (1 to 31).</td>"
 "</tr>"
 "<tr valign=\"top\">"
 "<td>dd</td>"
-"<td>The day as a number with a leading zero (01 to 31).</td>"
+"<td>The day as a number, with a leading zero (01 to 31).</td>"
 "</tr>"
 "<tr valign=\"top\">"
 "<td>ddd</td>"
@@ -1119,11 +1129,11 @@ msgid ""
 "</tr>"
 "<tr valign=\"top\">"
 "<td>M</td>"
-"<td>The month as a number without a leading zero (1 to 12).</td>"
+"<td>The month as a number, without a leading zero (1 to 12).</td>"
 "</tr>"
 "<tr valign=\"top\">"
 "<td>MM</td>"
-"<td>The month as a number with a leading zero (01 to 12).</td>"
+"<td>The month as a number, with a leading zero (01 to 12).</td>"
 "</tr>"
 "<tr valign=\"top\">"
 "<td>MMM</td>"
@@ -1135,11 +1145,11 @@ msgid ""
 "</tr>"
 "<tr valign=\"top\">"
 "<td>yy</td>"
-"<td>The year as two digit number (00 to 99).</td>"
+"<td>The year as a two-digit number (00 to 99).</td>"
 "</tr>"
 "<tr valign=\"top\">"
 "<td>yyyy</td>"
-"<td>The year as four digit number.</td>"
+"<td>The year as four-digit number.</td>"
 "</tr>"
 "</table>"
 "<br />"
@@ -1151,11 +1161,11 @@ msgid ""
 "</thead>"
 "<tr valign=\"top\">"
 "<td>h</td>"
-"<td>The hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display).</td>"
+"<td>The hour without a leading zero (0 to 23, or 1 to 12 if AM/PM display).</td>"
 "</tr>"
 "<tr valign=\"top\">"
 "<td>hh</td>"
-"<td>The hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display).</td>"
+"<td>The hour with a leading zero (00 to 23, or 01 to 12 if AM/PM display).</td>"
 "</tr>"
 "<tr valign=\"top\">"
 "<td>H</td>"
@@ -1610,7 +1620,7 @@ msgstr "bet Objekt."
 #. +> trunk
 #: mainwindow.cpp:26 mainwindow.cpp:39
 #, fuzzy
-msgid "Internal error. Check your hardware. If all okay please make bug report."
+msgid "Internal error. Check your hardware, and if it is all okay, please make a bug report."
 msgstr "Intern Fehler Pröven all Bericht."
 
 #. +> trunk
@@ -1823,7 +1833,7 @@ msgstr "bet Objekt."
 #. +> trunk
 #: models/cddamodel.cpp:26 models/cddamodel.cpp:38
 #, fuzzy
-msgid "This is an internal error. Check your hardware. If all okay please make bug report."
+msgid "This is an internal error. Check your hardware, and if it is all okay, please make a bug report."
 msgstr "is Fehler Pröven all Bericht."
 
 #. +> trunk
@@ -1920,9 +1930,9 @@ msgid "There is an error with the cddb server. Please wait or contact the admini
 msgstr "is Fehler mit CDDB server tööv oder vun CDDB server."
 
 #. +> trunk
-#: models/cddamodel.cpp:759 models/cddamodel.cpp:889
+#: models/cddamodel.cpp:759
 #, fuzzy
-msgid "Can't find the cddb server. Check your network. Maybe the cddb server is offline."
+msgid "Cannot find the cddb server. Check your network. Maybe the cddb server is offline."
 msgstr "t CDDB server Pröven CDDB server is afkoppelt."
 
 #. +> trunk
@@ -1950,15 +1960,21 @@ msgid "Please make a bug report and contact the cddb server administrator."
 msgstr "a Bericht un CDDB server."
 
 #. +> trunk
+#: models/cddamodel.cpp:889
+#, fuzzy
+msgid "Can't find the cddb server. Check your network. Maybe the cddb server is offline."
+msgstr "t CDDB server Pröven CDDB server is afkoppelt."
+
+#. +> trunk
 #: models/cddamodel.cpp:897
 #, fuzzy
-msgid "This means no data found in the CDDB database. Please enter the data manually. Maybe try another CDDB server."
+msgid "This means no data was found in the CDDB database. Please enter the data manually, or maybe try another CDDB server."
 msgstr "Nee Opdeckt Toll CDDB Datenbank CDDB server."
 
 #. +> trunk
 #: models/cddamodel.cpp:899
 #, fuzzy
-msgid "This means no data found in the CDDB database."
+msgid "This means no data was found in the CDDB database."
 msgstr "Nee Opdeckt Toll CDDB Datenbank."
 
 #. +> trunk
@@ -2007,7 +2023,7 @@ msgstr "Profil Naam nich leddig."
 #. +> trunk
 #: models/profilemodel.cpp:119
 #, fuzzy
-msgid "You've given no name for the profile. Please set one."
+msgid "You have not given a name for the profile, please set one."
 msgstr "Du Nee Naam för Profil Sett een."
 
 #. +> trunk
@@ -2019,7 +2035,7 @@ msgstr "Profil is nich."
 #. +> trunk
 #: models/profilemodel.cpp:129
 #, fuzzy
-msgid "You've given no encoder for the profile. Please set one."
+msgid "You have not specified an encoder for the profile, please set one."
 msgstr "Du Nee för Profil Sett een."
 
 #. +> trunk
@@ -2031,7 +2047,7 @@ msgstr "Profil Dateinaam Muster is nich."
 #. +> trunk
 #: models/profilemodel.cpp:139
 #, fuzzy
-msgid "You've given no filename pattern for the profile. Please set one."
+msgid "You have not given a filename pattern for the profile, please set one."
 msgstr "Du Nee Dateinaam Muster för Profil Sett een."
 
 #. +> trunk
@@ -2043,7 +2059,7 @@ msgstr "Bild Datei is nich begäng."
 #. +> trunk
 #: models/profilemodel.cpp:154
 #, fuzzy
-msgid "Your given image file format is unknown. Please choose on of these formats: JPG/JPEG, PNG or BMP."
+msgid "The given image file format is unknown. Please choose one of these formats: JPG/JPEG, PNG or BMP."
 msgstr "Bild Datei is nich begäng An vun JPG JPEG PNG oder BMP."
 
 #. +> trunk
@@ -2055,7 +2071,7 @@ msgstr "Titelbild Naam nich leddig."
 #. +> trunk
 #: models/profilemodel.cpp:164
 #, fuzzy
-msgid "You've given no name for the cover. Please set one."
+msgid "You have not given a name for the cover, please set one."
 msgstr "Du Nee Naam för Sett een."
 
 #. +> trunk
@@ -2067,7 +2083,7 @@ msgstr "Datei is nich begäng."
 #. +> trunk
 #: models/profilemodel.cpp:175
 #, fuzzy
-msgid "Your given playlist file format is unknown. Please choose on of these formats: M3U, PLS or XSPF."
+msgid "The given playlist file format is unknown. Please choose one of these formats: M3U, PLS or XSPF."
 msgstr "Datei is nich begäng An vun M3U oder."
 
 #. +> trunk
@@ -2079,7 +2095,7 @@ msgstr "Afspeellist Naam nich leddig."
 #. +> trunk
 #: models/profilemodel.cpp:185
 #, fuzzy
-msgid "You've given no name for the playlist. Please set one."
+msgid "You have not given a name for the playlist, please set one."
 msgstr "Du Nee Naam för Sett een."
 
 #. +> trunk
@@ -2091,7 +2107,7 @@ msgstr "Info Text Naam nich leddig."
 #. +> trunk
 #: models/profilemodel.cpp:198
 #, fuzzy
-msgid "You've given no name for the info text file. Please set one."
+msgid "You have not given a name for the info text file, please set one."
 msgstr "Du Nee Naam för Info Text Datei Sett een."
 
 #. +> trunk
@@ -2103,7 +2119,7 @@ msgstr "Info Text Datei Naam nich leddig."
 #. +> trunk
 #: models/profilemodel.cpp:208
 #, fuzzy
-msgid "You've given no suffix for the info text file. Please set one."
+msgid "You have not given a suffix for the info text file, please set one."
 msgstr "Du Nee för Info Text Datei Sett een."
 
 #. +> trunk
@@ -2115,8 +2131,8 @@ msgstr "Datei is nich begäng."
 #. +> trunk
 #: models/profilemodel.cpp:219
 #, fuzzy
-msgid "Your given hashlist file format is unknown. Please choose on of these formats: SFV."
-msgstr "Datei is nich begäng An vun."
+msgid "The given hashlist file format is unknown: it must be SFV."
+msgstr "Datei is nich begäng."
 
 #. +> trunk
 #: models/profilemodel.cpp:228
@@ -2127,7 +2143,7 @@ msgstr "Naam nich leddig."
 #. +> trunk
 #: models/profilemodel.cpp:229
 #, fuzzy
-msgid "You've given no name for the hashlist. Please set one."
+msgid "You have not given a name for the hashlist, please set one."
 msgstr "Du Nee Naam för Sett een."
 
 #. +> trunk
@@ -2139,7 +2155,7 @@ msgstr "Profil Naam."
 #. +> trunk
 #: models/profilemodel.cpp:254
 #, fuzzy, kde-format
-msgid "Your profile name %1 already exists in the set of profiles. Please choose an unique one."
+msgid "The profile name %1 already exists in the set of profiles. Please choose a unique one."
 msgstr "Profil Naam Toll Sett vun Profilen eensoortet een."
 
 #. +> trunk
@@ -2151,7 +2167,7 @@ msgstr "Profil Index."
 #. +> trunk
 #: models/profilemodel.cpp:271
 #, fuzzy, kde-format
-msgid "Your profile index %1 already exists in the set of profiles. Please choose an unique one."
+msgid "The profile index %1 already exists in the set of profiles. Please choose a unique one."
 msgstr "Profil Index Toll Sett vun Profilen eensoortet een."
 
 #. +> trunk
@@ -2204,13 +2220,13 @@ msgstr "wenn Datei."
 #. +> trunk
 #: utils/cachedimage.cpp:151
 #, fuzzy
-msgid "Can't open file."
+msgid "Cannot open file."
 msgstr "t Datei."
 
 #. +> trunk
 #: utils/cachedimage.cpp:151
 #, fuzzy
-msgid "Please check your file. Maybe you don't have proper permissions."
+msgid "Please check your file. Maybe you do not have proper permissions."
 msgstr "Datei t."
 
 #. +> trunk
@@ -2227,7 +2243,9 @@ msgstr "Datei is bet Bild mit Extern Programm bet a Allmeen Datei liek as JPEG."
 
 #. +> trunk
 #: utils/cachedimage.cpp:174
-msgid "Can't open file"
+#, fuzzy
+#| msgid "Can't open file"
+msgid "Cannot open file"
 msgstr "Datei lett sik nich opmaken."
 
 #. +> trunk
@@ -2237,7 +2255,9 @@ msgstr ""
 
 #. +> trunk
 #: utils/cachedimage.cpp:181
-msgid "Can't save file"
+#, fuzzy
+#| msgid "Can't save file"
+msgid "Cannot save file"
 msgstr "Datei lett sik nich sekern."
 
 #. +> trunk
@@ -2254,7 +2274,7 @@ msgstr "Allmeen Bild liek as png oder as An all."
 #. +> trunk
 #: utils/cachedimage.cpp:212
 #, fuzzy
-msgid "Can't write on device"
+msgid "Cannot write to device"
 msgstr "t Schrieven An"
 
 #. +> trunk
@@ -2264,7 +2284,7 @@ msgid "Please check your permissions. Do you have enough space on your device?"
 msgstr "An?"
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:32 utils/cddaparanoia.cpp:41
+#: utils/cddaextractthread.cpp:32 utils/cddaparanoia.cpp:42
 msgid "Internal device error."
 msgstr "Intern Reedschapfehler"
 
@@ -2280,120 +2300,122 @@ msgid "Extracting finished."
 msgstr "Ruttrecken afslaten"
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:97
+#: utils/cddaextractthread.cpp:96
 #, kde-format
 msgid "Ripping track %1 (%2:%3)..."
 msgstr ""
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:99
+#: utils/cddaextractthread.cpp:98
 #, fuzzy, kde-format
-msgid "Start reading track %1 with %2 sectors"
-msgstr "Start mit"
+msgid "Start reading track %2 with %1 sector"
+msgid_plural "Start reading track %2 with %1 sectors"
+msgstr[0] "Start mit"
+msgstr[1] "Start mit"
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:137
+#: utils/cddaextractthread.cpp:136
 #, fuzzy
 msgid "User canceled extracting."
 msgstr "Bruker."
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:140
+#: utils/cddaextractthread.cpp:139
 #, fuzzy, kde-format
 msgid "An error occurred while ripping track %1."
 msgstr "Fehler aslang."
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:142
+#: utils/cddaextractthread.cpp:141
 #, fuzzy, kde-format
 msgid "Ripping OK (Track %1)."
 msgstr "OK Stück."
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:145
+#: utils/cddaextractthread.cpp:144
 msgid "Reading finished"
 msgstr "Lesen afslaten"
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:188
+#: utils/cddaextractthread.cpp:187
 #, fuzzy, kde-format
 msgid "Fixed edge jitter (absolute sector %1, relative sector %2, track time pos %3:%4)"
 msgstr "Fast Över Watermiddel Tiet"
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:192
+#: utils/cddaextractthread.cpp:191
 #, fuzzy, kde-format
 msgid "Fixed atom jitter (absolute sector %1, relative sector %2, track time pos %3:%4)"
 msgstr "Fast Över Watermiddel Tiet"
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:197
+#: utils/cddaextractthread.cpp:196
 #, fuzzy, kde-format
 msgid "Scratch detected (absolute sector %1, relative sector %2, track time pos %3:%4)"
 msgstr "Över Watermiddel Tiet"
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:198
+#: utils/cddaextractthread.cpp:197
 #, fuzzy, kde-format
 msgid "SCRATCH DETECTED (absolute sector %1, relative sector %2, track time pos %3:%4)"
 msgstr "Över Watermiddel Tiet"
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:202
+#: utils/cddaextractthread.cpp:201
 #, fuzzy, kde-format
 msgid "Repair (absolute sector %1, relative sector %2, track time pos %3:%4)"
 msgstr "Över Watermiddel Tiet"
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:207
+#: utils/cddaextractthread.cpp:206
 #, fuzzy, kde-format
 msgid "Skip sectors (absolute sector %1, relative sector %2, track time pos %3:%4)"
 msgstr "Övergahn Över Watermiddel Tiet"
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:208
+#: utils/cddaextractthread.cpp:207
 #, fuzzy, kde-format
 msgid "SKIP (absolute sector %1, relative sector %2, track time pos %3:%4)"
 msgstr "Över Watermiddel Tiet"
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:212
+#: utils/cddaextractthread.cpp:211
 #, fuzzy, kde-format
 msgid "Drift (absolute sector %1, relative sector %2, track time pos %3:%4)"
 msgstr "Drift Över Watermiddel Tiet"
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:216
+#: utils/cddaextractthread.cpp:215
 #, fuzzy, kde-format
 msgid "Backoff (absolute sector %1, relative sector %2, track time pos %3:%4)"
 msgstr "Över Watermiddel Tiet"
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:226
+#: utils/cddaextractthread.cpp:225
 #, fuzzy, kde-format
 msgid "Fixup dropped (absolute sector %1, relative sector %2, track time pos %3:%4)"
 msgstr "Över Watermiddel Tiet"
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:230
+#: utils/cddaextractthread.cpp:229
 #, fuzzy, kde-format
 msgid "Fixup duped (absolute sector %1, relative sector %2, track time pos %3:%4)"
 msgstr "Över Watermiddel Tiet"
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:234
+#: utils/cddaextractthread.cpp:233
 #, fuzzy, kde-format
 msgid "Read error detected (absolute sector %1, relative sector %2, track time pos %3:%4)"
 msgstr "Lesen Fehler Över Watermiddel Tiet"
 
 #. +> trunk
-#: utils/cddaextractthread.cpp:235
+#: utils/cddaextractthread.cpp:234
 #, fuzzy, kde-format
 msgid "READ ERROR (absolute sector %1, relative sector %2, track time pos %3:%4)"
 msgstr "Fehler Över Watermiddel Tiet"
 
 #. +> trunk
-#: utils/cddaparanoia.cpp:41
+#: utils/cddaparanoia.cpp:42
 #, fuzzy, kde-format
 msgid "Check your device. Is it really \"%1\"? If so also check your permissions on \"%1\"."
 msgstr "Pröven is An."
@@ -2471,92 +2493,98 @@ msgid "Command pattern is empty."
 msgstr "Befehl Muster is leddig."
 
 #. +> trunk
-#: utils/encoderwrapper.cpp:68
+#: utils/encoderwrapper.cpp:72
 #, fuzzy, kde-format
 msgid "Encoding track %1..."
 msgstr "Koderen."
 
 #. +> trunk
-#: utils/encoderwrapper.cpp:86
+#: utils/encoderwrapper.cpp:90
 #, fuzzy, kde-format
 msgid "Deleted partial file \"%1\"."
 msgstr "Wegdaan Datei."
 
 #. +> trunk
-#: utils/encoderwrapper.cpp:91
+#: utils/encoderwrapper.cpp:95
 #, fuzzy
 msgid "User canceled encoding."
 msgstr "Bruker."
 
 #. +> trunk
-#: utils/encoderwrapper.cpp:139
+#: utils/encoderwrapper.cpp:143
 #, fuzzy, kde-format
 msgid "Encoding OK (\"%1\")."
 msgstr "Koderen OK."
 
 #. +> trunk
-#: utils/encoderwrapper.cpp:142
+#: utils/encoderwrapper.cpp:144
+#, fuzzy, kde-format
+msgid "Ripping of Track %1/%2 (%3 - %4) finished"
+msgstr "Stück 2"
+
+#. +> trunk
+#: utils/encoderwrapper.cpp:146
 #, fuzzy, kde-format
 msgid "An error occurred while encoding file \"%1\"."
 msgstr "Fehler aslang Datei."
 
 #. +> trunk
-#: utils/encoderwrapper.cpp:143 utils/encoderwrapper.cpp:155
-#: utils/encoderwrapper.cpp:157 utils/encoderwrapper.cpp:163
+#: utils/encoderwrapper.cpp:147 utils/encoderwrapper.cpp:159
+#: utils/encoderwrapper.cpp:161 utils/encoderwrapper.cpp:167
 #, fuzzy
 msgid "Please check your profile."
 msgstr "Profil."
 
 #. +> trunk
-#: utils/encoderwrapper.cpp:153
+#: utils/encoderwrapper.cpp:157
 #, fuzzy, kde-format
 msgid "%1 failed to start."
 msgstr "fehlslaan bet Start."
 
 #. +> trunk
-#: utils/encoderwrapper.cpp:153
+#: utils/encoderwrapper.cpp:157
 #, fuzzy
 msgid "Either it is missing, or you may have insufficient permissions to invoke the program."
 msgstr "is oder Mai bet Programm."
 
 #. +> trunk
-#: utils/encoderwrapper.cpp:155
+#: utils/encoderwrapper.cpp:159
 #, fuzzy, kde-format
 msgid "%1 crashed some time after starting successfully."
 msgstr "afstört En poor Tiet."
 
 #. +> trunk
-#: utils/encoderwrapper.cpp:157
+#: utils/encoderwrapper.cpp:161
 #, fuzzy, kde-format
 msgid "%1 timed out. This should not happen."
 msgstr "Utgaav nich."
 
 #. +> trunk
-#: utils/encoderwrapper.cpp:159
+#: utils/encoderwrapper.cpp:163
 #, fuzzy, kde-format
 msgid "An error occurred when attempting to write to %1."
 msgstr "Fehler bet Schrieven bet."
 
 #. +> trunk
-#: utils/encoderwrapper.cpp:159
+#: utils/encoderwrapper.cpp:163
 #, fuzzy
 msgid "For example, the proc may not be running, or it may have closed its input channel."
 msgstr "För Bispill Mai nich löppt oder Mai Kanaal."
 
 #. +> trunk
-#: utils/encoderwrapper.cpp:161
+#: utils/encoderwrapper.cpp:165
 #, fuzzy, kde-format
 msgid "An error occurred when attempting to read from %1."
 msgstr "Fehler bet Lesen vun."
 
 #. +> trunk
-#: utils/encoderwrapper.cpp:161
+#: utils/encoderwrapper.cpp:165
 #, fuzzy
 msgid "For example, the proc may not be running."
 msgstr "För Bispill Mai nich löppt."
 
 #. +> trunk
-#: utils/encoderwrapper.cpp:163
+#: utils/encoderwrapper.cpp:167
 #, fuzzy, kde-format
 msgid "An unknown error occurred to %1. This should not happen."
 msgstr "nich begäng Fehler bet nich."
@@ -2962,7 +2990,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_init)
 #. +> trunk
-#: widgets/profilewidget.cpp:139 widgets/profilewidget.cpp:149
+#: widgets/profilewidget.cpp:139 widgets/profilewidget.cpp:147
 #: widgets/profilewidgetUI.ui:65
 #, fuzzy
 msgid "Codec Scan"
@@ -2975,16 +3003,12 @@ msgid "No new codecs found"
 msgstr "Nee Nieg Opdeckt"
 
 #. +> trunk
-#: widgets/profilewidget.cpp:147
-#, fuzzy
-msgid "1 new profile added"
-msgstr "Nieg Profil toföögt"
-
-#. +> trunk
-#: widgets/profilewidget.cpp:148
+#: widgets/profilewidget.cpp:146
 #, fuzzy, kde-format
-msgid "%1 new profiles added"
-msgstr "Nieg Profilen toföögt"
+msgid "%1 new profile added"
+msgid_plural "%1 new profiles added"
+msgstr[0] "Nieg Profilen toföögt"
+msgstr[1] "Nieg Profilen toföögt"
 
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_add)
 #. +> trunk
@@ -3052,3 +3076,11 @@ msgstr ""
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:italic;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> Nee Instellen för Dateien</p>"
 "</body></html>"
+
+#, fuzzy
+#~ msgid "Your given hashlist file format is unknown. Please choose on of these formats: SFV."
+#~ msgstr "Datei is nich begäng An vun."
+
+#, fuzzy
+#~ msgid "1 new profile added"
+#~ msgstr "Nieg Profil toföögt"
