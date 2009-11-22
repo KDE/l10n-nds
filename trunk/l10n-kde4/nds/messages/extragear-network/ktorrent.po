@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-21 06:39+0100\n"
+"POT-Creation-Date: 2009-11-22 06:22+0100\n"
 "PO-Revision-Date: 2009-08-10 07:58+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -404,9 +404,10 @@ msgstr "En Torrent in de Töövreeg heel na nerrn verschuven"
 msgid "Open an URL"
 msgstr "En Adress opropen"
 
-#: ktorrent/pastedialog.cpp:59
-msgid "Invalid URL: "
-msgstr "Leeg URL: "
+#: ktorrent/pastedialog.cpp:59 ktorrent/gui.cpp:314
+#, kde-format
+msgid "Invalid URL: %1"
+msgstr "Leeg URL: %1"
 
 #: ktorrent/viewmanager.cpp:533
 msgid "Start"
@@ -513,8 +514,7 @@ msgstr "Mellen vun Hand"
 msgid "Scrape"
 msgstr "Raken"
 
-#: ktorrent/viewmanager.cpp:596 plugins/infowidget/iwfilelistmodel.cpp:78
-#: plugins/infowidget/iwfiletreemodel.cpp:90
+#: ktorrent/viewmanager.cpp:596
 msgid "Preview"
 msgstr "Vöransicht"
 
@@ -1040,7 +1040,6 @@ msgid "Name"
 msgstr "Naam"
 
 #: ktorrent/viewmodel.cpp:433 ktorrent/queuemanagermodel.cpp:120
-#: plugins/infowidget/infowidgetplugin.cpp:83
 #: plugins/infowidget/trackermodel.cpp:148
 #: plugins/infowidget/webseedsmodel.cpp:127
 msgid "Status"
@@ -1435,11 +1434,6 @@ msgstr "All Dateien"
 #: ktorrent/gui.cpp:230 ktorrent/gui.cpp:245
 msgid "Open Location"
 msgstr "Adress opmaken"
-
-#: ktorrent/gui.cpp:314
-#, kde-format
-msgid "Invalid URL: %1"
-msgstr "Leeg URL: %1"
 
 #: ktorrent/gui.cpp:375
 msgid "Create a new torrent"
@@ -6342,7 +6336,10 @@ msgstr "Verbinnen"
 
 #. i18n: file: plugins/stats/Spd.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpdWgt)
-#: rc.cpp:1805 plugins/infowidget/webseedsmodel.cpp:125
+#: rc.cpp:1805
+#, fuzzy
+#| msgid "Speed"
+msgctxt "@title:window"
 msgid "Speed"
 msgstr "Gauigkeit"
 
@@ -8248,12 +8245,21 @@ msgstr "Gifft an, wat Du Daten vun dissen Partner daalladen wullt"
 msgid "Info Widget"
 msgstr "Informatschonen-Finster"
 
+#: plugins/infowidget/infowidgetplugin.cpp:83
+#, fuzzy
+#| msgid "Status"
+msgctxt "@title:tab"
+msgid "Status"
+msgstr "Status"
+
 #: plugins/infowidget/infowidgetplugin.cpp:84
 msgid "Displays status information about a torrent"
 msgstr "Wiest Status-Informatschonen över en Torrent"
 
 #: plugins/infowidget/infowidgetplugin.cpp:85
-#: plugins/infowidget/chunkdownloadmodel.cpp:214
+#, fuzzy
+#| msgid "Files"
+msgctxt "@title:tab"
 msgid "Files"
 msgstr "Dateien"
 
@@ -8304,6 +8310,10 @@ msgstr "Nakamen Opfrischen"
 msgid "URL"
 msgstr "Adress"
 
+#: plugins/infowidget/webseedsmodel.cpp:125
+msgid "Speed"
+msgstr "Gauigkeit"
+
 #: plugins/infowidget/webseedstab.cpp:96
 #, kde-format
 msgid "Cannot add the webseed %1, it is already part of the list of webseeds."
@@ -8349,6 +8359,14 @@ msgstr ""
 "<img src=\"available_color\">&nbsp; - Verföögbor Blöck<br><img src="
 "\"unavailable_color\">&nbsp; - Nich verföögbor Blöck<br><img src="
 "\"excluded_color\">&nbsp; - Utslaten Blöck"
+
+#: plugins/infowidget/iwfilelistmodel.cpp:78
+#: plugins/infowidget/iwfiletreemodel.cpp:90
+#, fuzzy
+#| msgid "Preview"
+msgctxt "@title:column"
+msgid "Preview"
+msgstr "Vöransicht"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:80
 #: plugins/infowidget/iwfiletreemodel.cpp:92
@@ -8417,6 +8435,10 @@ msgstr "Vörankamen"
 #: plugins/infowidget/chunkdownloadmodel.cpp:212
 msgid "Peer"
 msgstr "Partner"
+
+#: plugins/infowidget/chunkdownloadmodel.cpp:214
+msgid "Files"
+msgstr "Dateien"
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:222
 msgid "Number of the chunk"
@@ -8614,7 +8636,7 @@ msgstr "Begeefnis"
 msgid "Shutdown Enabled"
 msgstr "Utmaken anmaakt"
 
-#: plugins/shutdown/shutdownplugin.cpp:49 plugins/shutdown/shutdowndlg.cpp:29
+#: plugins/shutdown/shutdownplugin.cpp:49
 msgid "Configure Shutdown"
 msgstr "Utmaken instellen"
 
@@ -8633,6 +8655,13 @@ msgstr "Slapen (in't RAM)"
 #: plugins/shutdown/shutdownplugin.cpp:164 plugins/shutdown/shutdowndlg.cpp:42
 msgid "Hibernate (suspend to disk)"
 msgstr "Infreren (op Fastplaat)"
+
+#: plugins/shutdown/shutdowndlg.cpp:29
+#, fuzzy
+#| msgid "Configure Shutdown"
+msgctxt "@title:window"
+msgid "Configure Shutdown"
+msgstr "Utmaken instellen"
 
 #: plugins/shutdown/shutdowndlg.cpp:44
 msgid "When all torrents finish downloading"
@@ -9586,19 +9615,19 @@ msgstr "Plattenspieker lett sik nich vörweg towiesen: %1"
 msgid "Cannot open file %1 : %2"
 msgstr "Datei \"%1\" lett sik nich opmaken: %2"
 
-#: libbtcore/torrent/torrent.cpp:83 libbtcore/torrent/torrent.cpp:154
-#: libbtcore/torrent/torrent.cpp:182 libbtcore/torrent/torrent.cpp:189
-#: libbtcore/torrent/torrent.cpp:197 libbtcore/torrent/torrent.cpp:201
-#: libbtcore/torrent/torrent.cpp:222 libbtcore/torrent/torrent.cpp:293
+#: libbtcore/torrent/torrent.cpp:83 libbtcore/torrent/torrent.cpp:155
+#: libbtcore/torrent/torrent.cpp:183 libbtcore/torrent/torrent.cpp:190
+#: libbtcore/torrent/torrent.cpp:198 libbtcore/torrent/torrent.cpp:202
+#: libbtcore/torrent/torrent.cpp:223 libbtcore/torrent/torrent.cpp:294
 msgid "Corrupted torrent."
 msgstr "Torrent is schaadhaftig."
 
-#: libbtcore/torrent/torrent.cpp:145
+#: libbtcore/torrent/torrent.cpp:146
 #, kde-format
 msgid " Unable to open torrent file %1 : %2"
 msgstr " Torrent-Datei \"%1\" lett sik nich opmaken: %2"
 
-#: libbtcore/torrent/torrent.cpp:275
+#: libbtcore/torrent/torrent.cpp:276
 msgid "Parse Error"
 msgstr "Inleesfehler"
 
@@ -9736,6 +9765,9 @@ msgstr "Leeg Tracker-Adress"
 #, kde-format
 msgid "Cannot open file : %1 : %2"
 msgstr "Datei \"%1\" lett sik nich opmaken: %2"
+
+#~ msgid "Invalid URL: "
+#~ msgstr "Leeg URL: "
 
 #~ msgid "Normal priority:"
 #~ msgstr "Normaal Prioriteet:"
