@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: okteta\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-25 06:36+0100\n"
+"POT-Creation-Date: 2009-11-26 06:15+0100\n"
 "PO-Revision-Date: 2009-11-14 06:49+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -139,7 +139,6 @@ msgid "Pattern:"
 msgstr "Muster:"
 
 #: gui/io/bytearraypatterngeneratorconfigeditor.cpp:56
-#: controllers/view/libfinddialog/kabstractfinddialog.cpp:75
 msgctxt "@info:whatsthis"
 msgid ""
 "Enter a pattern to search for, or select a previous pattern from the list."
@@ -225,7 +224,21 @@ msgctxt "@item:inlistbox coding of the bytes as characters with the values"
 msgid "Char"
 msgstr "Teken"
 
-#: core/io/filesystem/bytearrayrawfileloadthread.cpp:65
+#: gui/liboktetawidgets/bytearraycombobox_p.cpp:48
+#, fuzzy
+#| msgctxt "@label:textbox"
+#| msgid "UTF-8:"
+msgctxt ""
+"@item:inlistbox coding of the bytes as UTF-8 characters with the values"
+msgid "UTF-8"
+msgstr "UTF-8:"
+
+#: core/io/filesystem/bytearrayrawfilereloadthread.cpp:62
+#: core/io/filesystem/bytearrayrawfileloadthread.cpp:73
+msgid "There is not enough working memory to load this file."
+msgstr ""
+
+#: core/io/filesystem/bytearrayrawfileloadthread.cpp:63
 msgctxt "destination of the byte array"
 msgid "Loaded from file."
 msgstr "Ut Datei laadt."
@@ -376,26 +389,21 @@ msgctxt "@info:tooltip column contains the character with the value"
 msgid "Character"
 msgstr "Teken"
 
-#: controllers/view/structures/structview.cpp:58
-msgctxt "@action:button"
-msgid "Add/Remove structures"
-msgstr ""
-
-#: controllers/view/structures/structview.cpp:89
+#: controllers/view/structures/structview.cpp:85
 #: controllers/view/libbytearraychecksum/algorithm/modsumbytearraychecksumparametersetedit.cpp:44
-#: controllers/view/poddecoder/podtableview.cpp:81
+#: controllers/view/poddecoder/podtableview.cpp:82
 msgctxt "@item:inlistbox"
 msgid "Little-endian"
 msgstr "Little-Endian"
 
-#: controllers/view/structures/structview.cpp:90
+#: controllers/view/structures/structview.cpp:86
 #: controllers/view/libbytearraychecksum/algorithm/modsumbytearraychecksumparametersetedit.cpp:45
-#: controllers/view/poddecoder/podtableview.cpp:82
+#: controllers/view/poddecoder/podtableview.cpp:83
 msgctxt "@item:inlistbox"
 msgid "Big-endian"
 msgstr "Big-Endian"
 
-#: controllers/view/structures/structview.cpp:95
+#: controllers/view/structures/structview.cpp:91
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "The byte order to use for decoding the bytes."
@@ -403,30 +411,34 @@ msgctxt "@info:tooltip"
 msgid "The byte order used to decode the values."
 msgstr "De Byte-Reeg, de Du bi't Dekoderen vun de Bytes bruken wullt."
 
-#: controllers/view/structures/structview.cpp:102
+#: controllers/view/structures/structview.cpp:98
 #, fuzzy
 #| msgctxt "@title:window of the tool to extract strings"
 #| msgid "Strings"
 msgid "Settings"
 msgstr "Tekenkeden"
 
-#: controllers/view/structures/structview.cpp:103
+#: controllers/view/structures/structview.cpp:99
 msgctxt "@info:tooltip"
 msgid "Open settings."
 msgstr ""
 
-#: controllers/view/structures/structview.cpp:127
-msgid "Display settings"
-msgstr ""
-
-#: controllers/view/structures/structview.cpp:128
+#: controllers/view/structures/structview.cpp:122
 #, fuzzy
-#| msgid "Paste As"
-msgid "Paths"
-msgstr "Infögen as"
+#| msgctxt "@item name of the encoding result"
+#| msgid "Values"
+msgid "Value Display"
+msgstr "Weerten"
 
-#: controllers/view/structures/structview.cpp:138
-msgid "Loaded structures"
+#: controllers/view/structures/structview.cpp:132
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "&Selected bytes"
+msgid "Structures"
+msgstr "&Utsöcht Bytes"
+
+#: controllers/view/structures/structview.cpp:134
+msgid "Structures management"
 msgstr ""
 
 #: controllers/view/structures/datatypes/bool16datainformation.cpp:27
@@ -491,13 +503,6 @@ msgctxt "subelem type then array name and length"
 msgid "%1[%2] (%3)"
 msgstr ""
 
-#: controllers/view/structures/datatypes/abstractarraydatainformation.cpp:62
-#: controllers/view/structures/datatypes/structuredatainformation.cpp:82
-#: controllers/view/structures/datatypes/primitivedatainformation.cpp:309
-#: controllers/view/structures/datatypes/uniondatainformation.cpp:132
-msgid "<invalid name>"
-msgstr ""
-
 #: controllers/view/structures/datatypes/structuredatainformation.cpp:26
 msgctxt "data type in C/C++"
 msgid "struct"
@@ -511,6 +516,23 @@ msgid ""
 "\n"
 "Type: %3\n"
 "Size: %4"
+msgstr ""
+
+#: controllers/view/structures/datatypes/enumdatainformation.cpp:57
+#, fuzzy, kde-format
+#| msgctxt "@item description of bookmark"
+#| msgid "%1: %2"
+msgid "%1 (%2)"
+msgstr "%1: %2"
+
+#: controllers/view/structures/datatypes/enumdatainformation.cpp:60
+#, kde-format
+msgid "%1 (value not in enum)"
+msgstr ""
+
+#: controllers/view/structures/datatypes/enumdatainformation.cpp:68
+#, kde-format
+msgid "enum (%1)"
 msgstr ""
 
 #: controllers/view/structures/datatypes/uniondatainformation.cpp:27
@@ -535,34 +557,81 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: controllers/view/structures/settings/structviewpathsettingswidget.cpp:42
-msgid "*.osd|Okteta structure definition XML files (*.osd)"
+#: controllers/view/structures/structuredefinitionfile.cpp:95
+#: controllers/view/structures/structuredefinitionfile.cpp:110
+msgid "<no name specified>"
 msgstr ""
 
-#: controllers/view/structures/settings/structureaddremovewidget.cpp:55
-msgctxt "@info:label"
-msgid "Available structures:"
+#: controllers/view/structures/structuredefinitionfile.cpp:254
+#: controllers/view/structures/structuredefinitionfile.cpp:299
+#: controllers/view/structures/structuredefinitionfile.cpp:314
+#: controllers/view/structures/structuredefinitionfile.cpp:330
+#: controllers/view/structures/structuredefinitionfile.cpp:346
+msgid "<invalid name>"
 msgstr ""
 
-#: controllers/view/structures/settings/structureaddremovewidget.cpp:65
+#: controllers/view/structures/settings/structuresmanagerview.cpp:80
+#, fuzzy
+#| msgctxt "@title:column description of the change"
+#| msgid "Changes"
+msgid "Apply Changes"
+msgstr "Ännern"
+
+#: controllers/view/structures/settings/structuresmanagerview.cpp:95
+msgid "Structure Definitions"
+msgstr ""
+
+#: controllers/view/structures/settings/structuresmanagerview.cpp:116
+#: controllers/view/structures/settings/structuresmanagerview.cpp:139
+msgid "*.osd|Okteta structure definition files (*.osd)"
+msgstr ""
+
+#: controllers/view/structures/settings/structuresmanagerview.cpp:118
+msgctxt "@title:window Do import the structure definitions"
+msgid "Import Structure Definitions"
+msgstr ""
+
+#: controllers/view/structures/settings/structuresmanagerview.cpp:141
+msgctxt "@title:window Do export the structure definition"
+msgid "Export Structure Definition"
+msgstr ""
+
+#: controllers/view/structures/settings/structuresmanagerview.cpp:153
+#: controllers/view/structures/settings/structuresmanagerview.cpp:184
+msgid "Error"
+msgstr ""
+
+#: controllers/view/structures/settings/structuresmanagerview.cpp:183
+msgid "You do not have permission to delete that structure definition."
+msgstr ""
+
+#: controllers/view/structures/settings/structureaddremovewidget.cpp:56
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "&Selected bytes"
 msgctxt "@info:label"
-msgid "Selected structures:"
+msgid "Installed structures:"
 msgstr "&Utsöcht Bytes"
 
-#: controllers/view/structures/structtool.cpp:77
+#: controllers/view/structures/settings/structureaddremovewidget.cpp:66
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "&Selected bytes"
+msgctxt "@info:label"
+msgid "Used structures:"
+msgstr "&Utsöcht Bytes"
+
+#: controllers/view/structures/structtool.cpp:75
 msgctxt "@title:window"
 msgid "Structures"
 msgstr ""
 
-#: controllers/view/structures/structtool.cpp:190
+#: controllers/view/structures/structtool.cpp:188
 msgctxt "name of a data structure"
 msgid "Name"
 msgstr ""
 
-#: controllers/view/structures/structtool.cpp:192
+#: controllers/view/structures/structtool.cpp:190
 #, fuzzy
 #| msgctxt "@title:column name of the datatype"
 #| msgid "Type"
@@ -570,7 +639,7 @@ msgctxt "type of a data structure"
 msgid "Type"
 msgstr "Typ"
 
-#: controllers/view/structures/structtool.cpp:194
+#: controllers/view/structures/structtool.cpp:192
 #, fuzzy
 #| msgctxt "@title:column value of the bytes for the datatype"
 #| msgid "Value"
@@ -657,22 +726,22 @@ msgctxt "@action:button"
 msgid "Replace"
 msgstr "Utwesseln"
 
-#: controllers/view/replace/kreplacedialog.cpp:48
+#: controllers/view/replace/kreplacedialog.cpp:45
 msgctxt "@title:window"
 msgid "Replace Bytes"
 msgstr "Bytes utwesseln"
 
-#: controllers/view/replace/kreplacedialog.cpp:49
+#: controllers/view/replace/kreplacedialog.cpp:46
 msgctxt "@action;button"
 msgid "&Replace"
 msgstr "&Utwesseln"
 
-#: controllers/view/replace/kreplacedialog.cpp:50
+#: controllers/view/replace/kreplacedialog.cpp:47
 msgctxt "@info:tooltip"
 msgid "Start replace"
 msgstr "Utwesseln starten"
 
-#: controllers/view/replace/kreplacedialog.cpp:52
+#: controllers/view/replace/kreplacedialog.cpp:49
 msgctxt "@info:whatsthis"
 msgid ""
 "If you press the <interface>Replace</interface> button, the bytes you "
@@ -683,29 +752,33 @@ msgstr ""
 "dat Byterebeet na de baven ingeven Bytes söcht, un elk Vörkamen dör de "
 "Tuuschbytes utwesselt."
 
-#: controllers/view/replace/kreplacedialog.cpp:60
+#: controllers/view/replace/kreplacedialog.cpp:57
+#, fuzzy
+#| msgctxt "@title:window prompt for iterative replacement"
+#| msgid "Replace"
 msgctxt "@title:group"
-msgid "Replace By"
-msgstr "Utwesseln mit"
+msgid "Replace With"
+msgstr "Utwesseln"
 
 #: controllers/view/replace/kreplacedialog.cpp:64
-msgctxt "@label:textbox"
-msgid "Replacing bytes:"
-msgstr "Bytes warrt utwesselt:"
-
-#: controllers/view/replace/kreplacedialog.cpp:68
-msgctxt "@info:whatsthis"
+#, fuzzy
+#| msgctxt "@info:whatsthis"
+#| msgid ""
+#| "Enter a pattern to replace with, or select a previous pattern from the "
+#| "list."
+msgctxt "@info:tooltip"
 msgid ""
-"Enter a pattern to replace with, or select a previous pattern from the list."
+"Enter the bytes to replace with, or select bytes previously replaced with "
+"from the list."
 msgstr ""
 "Giff en Muster för't Inwesseln in, oder köör en verleden Muster vun de List."
 
-#: controllers/view/replace/kreplacedialog.cpp:79
+#: controllers/view/replace/kreplacedialog.cpp:73
 msgctxt "@option:check"
 msgid "&Prompt on replace"
 msgstr "&Ehr't Utwesseln nafragen"
 
-#: controllers/view/replace/kreplacedialog.cpp:80
+#: controllers/view/replace/kreplacedialog.cpp:74
 msgctxt "@info:whatsthis"
 msgid "Ask before replacing each match found."
 msgstr "Fraagt na, wat en passen Steed utwesselt warrn schall."
@@ -867,32 +940,6 @@ msgctxt "name of the checksum algorithm, Cyclic Redundancy Check 32"
 msgid "CRC-32"
 msgstr "CRC-32"
 
-#: controllers/view/libbytearraychecksum/algorithm/template/template_bytearraychecksumalgorithm.cpp:25
-msgctxt "name of the checksum algorithm"
-msgid "Template"
-msgstr "Vörlaag"
-
-#: controllers/view/libbytearraychecksum/algorithm/template/template_bytearraychecksumparametersetedit.cpp:59
-msgctxt "@label:spinbox number of the bit to use"
-msgid "Number of bit:"
-msgstr "Bit-Tall:"
-
-#: controllers/view/libbytearraychecksum/algorithm/template/template_bytearraychecksumparametersetedit.cpp:62
-msgctxt "@info:tooltip"
-msgid ""
-"The number of the bit to use for the parity calculation. 1 means the LSB, 8 "
-"the MSB."
-msgstr ""
-"De Tall vun't Bit, dat för't Pariteet-Utreken bruukt warrt. »1« bedüüdt »LSB«, "
-"»8« dat »MSB«."
-
-#: controllers/view/libbytearraychecksum/algorithm/template/template_bytearraychecksumparametersetedit.cpp:66
-msgctxt "@info:whatsthis"
-msgid ""
-"Select the bit which should be used for the parity calculation. And more "
-"explanation."
-msgstr "Dat för't Pariteet-Utreken bruukt Bit utsöken. Un mehr Verkloren."
-
 #: controllers/view/libbytearraychecksum/algorithm/modsum8bytearraychecksumalgorithm.cpp:36
 msgctxt "name of the checksum algorithm"
 msgid "Modular sum 8-bit"
@@ -998,7 +1045,7 @@ msgstr "Köör mit Blinkerbewegen verwiedern"
 
 #: controllers/view/selectrange/selectrangeview.cpp:100
 #: controllers/view/gotooffset/gotooffsetview.cpp:82
-#: controllers/view/libfinddialog/kabstractfinddialog.cpp:112
+#: controllers/view/libfinddialog/kabstractfinddialog.cpp:106
 msgctxt "@option:check"
 msgid "&Backwards"
 msgstr "&Torüch"
@@ -1044,7 +1091,7 @@ msgctxt "@label:textbox"
 msgid "UTF-16:"
 msgstr "UTF-16:"
 
-#: controllers/view/poddecoder/poddecodertool.cpp:254
+#: controllers/view/poddecoder/poddecodertool.cpp:258
 #, kde-format
 msgctxt "Edited as %datatype"
 msgid "Edited as %1"
@@ -1192,17 +1239,17 @@ msgctxt "@info:tooltip for column Value"
 msgid "The value of the bytes for the datatype"
 msgstr "De Bytes ehr Weert för den Datentyp"
 
-#: controllers/view/poddecoder/podtableview.cpp:88
+#: controllers/view/poddecoder/podtableview.cpp:89
 msgctxt "@info:tooltip"
 msgid "The byte order to use for decoding the bytes."
 msgstr "De Byte-Reeg, de Du bi't Dekoderen vun de Bytes bruken wullt."
 
-#: controllers/view/poddecoder/podtableview.cpp:92
+#: controllers/view/poddecoder/podtableview.cpp:93
 msgctxt "@option:check"
 msgid "Unsigned as hexadecimal:"
 msgstr "Ahn Vörteken as Hexadezimaal:"
 
-#: controllers/view/poddecoder/podtableview.cpp:102
+#: controllers/view/poddecoder/podtableview.cpp:103
 msgctxt "@info:tooltip"
 msgid ""
 "Sets whether the values of the unsigned integer types are shown as "
@@ -1210,6 +1257,32 @@ msgid ""
 msgstr ""
 "Leggt fast, wat de Weerten vun de Heeltall-Typen ahn Vörteken as Hex-Tallen "
 "ansteed vun Dezimaaltallen wiest warrt."
+
+#: controllers/view/poddecoder/podtableview.cpp:125
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The new value needs <emphasis>less</emphasis> bytes (%1 instead of %2).<nl/"
+">Keep the unused bytes or remove them?"
+msgstr ""
+
+#: controllers/view/poddecoder/podtableview.cpp:128
+msgctxt "@action:button keep the unused bytes"
+msgid "&Keep"
+msgstr ""
+
+#: controllers/view/poddecoder/podtableview.cpp:130
+msgctxt "@info:tooltip"
+msgid "Keep the unsed bytes with their old values."
+msgstr ""
+
+#: controllers/view/poddecoder/podtableview.cpp:140
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The new value needs <emphasis>more</emphasis> bytes (%1 instead of %2).<nl/"
+">Overwrite the following bytes or insert new ones as needed?"
+msgstr ""
 
 #: controllers/view/stringsextract/containedstringtablemodel.cpp:100
 msgctxt "@title:column offset of the extracted string"
@@ -1321,7 +1394,7 @@ msgid "O&ffset:"
 msgstr "&Versatz:"
 
 #: controllers/view/gotooffset/gotooffsetview.cpp:74
-#: controllers/view/libfinddialog/kabstractfinddialog.cpp:109
+#: controllers/view/libfinddialog/kabstractfinddialog.cpp:103
 msgctxt "@option:check"
 msgid "From c&ursor"
 msgstr "Vun den &Blinker af"
@@ -1459,7 +1532,7 @@ msgstr "Söken"
 
 #: controllers/view/search/searchcontroller.cpp:108
 #: controllers/view/search/searchcontroller.cpp:114
-#: controllers/view/libfinddialog/kabstractfinddialog.cpp:64
+#: controllers/view/libfinddialog/kabstractfinddialog.cpp:61
 msgctxt "@title:window"
 msgid "Find"
 msgstr "Söken"
@@ -1469,22 +1542,29 @@ msgctxt "@info"
 msgid "Search key not found in byte array."
 msgstr "Söökslötel binnen dat Byte-Rebeet nich funnen."
 
-#: controllers/view/libfinddialog/kabstractfinddialog.cpp:69
-msgctxt "@label:textbox"
-msgid "Byte string to f&ind:"
-msgstr "&Söök-Bytekeed:"
+#: controllers/view/libfinddialog/kabstractfinddialog.cpp:71
+#, fuzzy
+#| msgctxt "@info:whatsthis"
+#| msgid ""
+#| "Enter a pattern to search for, or select a previous pattern from the list."
+msgctxt "@info:tooltip"
+msgid ""
+"Enter the bytes to search for, or select bytes previously searched for from "
+"the list."
+msgstr ""
+"Giff en Muster för de Söök in, oder köör en verleden Muster vun de List."
 
-#: controllers/view/libfinddialog/kabstractfinddialog.cpp:99
+#: controllers/view/libfinddialog/kabstractfinddialog.cpp:93
 msgctxt "@title:group"
 msgid "Options"
 msgstr "Optschonen"
 
-#: controllers/view/libfinddialog/kabstractfinddialog.cpp:104
+#: controllers/view/libfinddialog/kabstractfinddialog.cpp:98
 msgctxt "@option:check"
 msgid "C&ase sensitive"
 msgstr "Grootschrieven be&achten"
 
-#: controllers/view/libfinddialog/kabstractfinddialog.cpp:105
+#: controllers/view/libfinddialog/kabstractfinddialog.cpp:99
 msgctxt "@info:whatsthis"
 msgid ""
 "Perform a case sensitive search: entering the pattern 'Joe' will not match "
@@ -1493,32 +1573,32 @@ msgstr ""
 "Bi't Söken op Grootschrieven oppassen: Dat Muster \"Klaas\" passt nich op "
 "\"klaas\" oder op \"KLAAS\", bloots op \"Klaas\"."
 
-#: controllers/view/libfinddialog/kabstractfinddialog.cpp:107
+#: controllers/view/libfinddialog/kabstractfinddialog.cpp:101
 msgctxt "@option:check"
 msgid "&Whole words only"
 msgstr "&Bloots hele Wöör"
 
-#: controllers/view/libfinddialog/kabstractfinddialog.cpp:108
+#: controllers/view/libfinddialog/kabstractfinddialog.cpp:102
 msgctxt "@info:whatsthis"
 msgid "Require word boundaries in both ends of a match to succeed."
 msgstr "Woortgrenzen deit op beed Sieden vun en passen Steed noot."
 
-#: controllers/view/libfinddialog/kabstractfinddialog.cpp:110
+#: controllers/view/libfinddialog/kabstractfinddialog.cpp:104
 msgctxt "@info:whatsthis"
 msgid "Start searching at the current cursor location rather than at the top."
 msgstr "De Söök bi de aktuelle Blinkerpositschoon starten, nich an'n Anfang."
 
-#: controllers/view/libfinddialog/kabstractfinddialog.cpp:113
+#: controllers/view/libfinddialog/kabstractfinddialog.cpp:107
 msgctxt "@info:whatsthis"
 msgid "Replace backwards."
 msgstr "Na baven utwesseln"
 
-#: controllers/view/libfinddialog/kabstractfinddialog.cpp:114
+#: controllers/view/libfinddialog/kabstractfinddialog.cpp:108
 msgctxt "@option:check"
 msgid "&Selected bytes"
 msgstr "&Utsöcht Bytes"
 
-#: controllers/view/libfinddialog/kabstractfinddialog.cpp:115
+#: controllers/view/libfinddialog/kabstractfinddialog.cpp:109
 msgctxt "@info:whatsthis"
 msgid "Only search within the current selection."
 msgstr "Bloots binnen de aktuelle Markeren söken."
@@ -1806,32 +1886,6 @@ msgctxt "name of the filter; it moves the bits, setting freed ones to zero"
 msgid "SHIFT data"
 msgstr "Daten verschuven"
 
-#: controllers/view/libbytearrayfilter/filter/template/template_bytearrayfilterparametersetedit.cpp:59
-msgctxt "@label:spinbox decimal value up to which bytes are set to 0"
-msgid "Level:"
-msgstr "Stoop:"
-
-#: controllers/view/libbytearrayfilter/filter/template/template_bytearrayfilterparametersetedit.cpp:62
-msgctxt "@info:tooltip"
-msgid ""
-"The decimal value up to which the bytes are set to x00. Bytes above this "
-"value are set to x01."
-msgstr ""
-"De Dezimaalweert, bet den de Bytes op x00 sett warrt. Bytes mit höger "
-"Weerten warrt op x01 sett."
-
-#: controllers/view/libbytearrayfilter/filter/template/template_bytearrayfilterparametersetedit.cpp:66
-msgctxt "@info:whatsthis"
-msgid ""
-"Control the value which decides how the bytes are ending up. And more "
-"explanation."
-msgstr ""
-
-#: controllers/view/libbytearrayfilter/filter/template/template_bytearrayfilter.cpp:26
-msgctxt "name of the filter; it does a TEMPLATE OPERATION ON operation"
-msgid "TEMPLATE OPERATION ON data"
-msgstr ""
-
 #: controllers/view/libbytearrayfilter/filter/andbytearrayfilter.cpp:34
 msgctxt "name of the filter; it does a logic AND operation"
 msgid "operand AND data"
@@ -1926,6 +1980,222 @@ msgctxt "@action:inmenu"
 msgid "Overwrite only"
 msgstr "Bloots överschrieven"
 
+#. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:8
+#. i18n: ectx: label, entry (UnsignedDisplayBase), group (ValueDisplay)
+#: rc.cpp:3
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Unsigned as hexadecimal"
+msgid "Unsigned values display"
+msgstr "Ahn Vörteken hexadezimaal"
+
+#. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:9
+#. i18n: ectx: tooltip, entry (UnsignedDisplayBase), group (ValueDisplay)
+#: rc.cpp:6
+msgctxt "@info:tooltip"
+msgid "The base to use when converting unsigned numbers to a string."
+msgstr ""
+
+#. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:18
+#. i18n: ectx: tooltip, entry (SignedDisplayBase), group (ValueDisplay)
+#: rc.cpp:9
+msgctxt "@info:tooltip"
+msgid "The base to use when converting signed numbers to a string."
+msgstr ""
+
+#. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:27
+#. i18n: ectx: tooltip, entry (CharDisplayBase), group (ValueDisplay)
+#: rc.cpp:12
+msgctxt "@info:tooltip"
+msgid "The base to use when converting characters to a value string."
+msgstr ""
+
+#. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:36
+#. i18n: ectx: tooltip, entry (ShowCharNumericalValue), group (ValueDisplay)
+#: rc.cpp:15
+msgctxt "@info:tooltip"
+msgid "Whether to show the numerical value of chars"
+msgstr ""
+
+#. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:40
+#. i18n: ectx: tooltip, entry (LocaleAwareFloatFormatting), group (ValueDisplay)
+#: rc.cpp:18
+msgctxt "@info:tooltip"
+msgid "Whether to format floating point values according to the current locale"
+msgstr ""
+
+#. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:44
+#. i18n: ectx: tooltip, entry (LocaleAwareDecimalFormatting), group (ValueDisplay)
+#: rc.cpp:21
+msgctxt "@info:tooltip"
+msgid ""
+"If true, integers being displayed in decimal format will be formatted "
+"according to the current locale settings"
+msgstr ""
+
+#. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:45
+#. i18n: ectx: whatsthis, entry (LocaleAwareDecimalFormatting), group (ValueDisplay)
+#: rc.cpp:24
+msgid "Whether to format integer values according to the current locale"
+msgstr ""
+
+#. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:49
+#. i18n: ectx: tooltip, entry (FloatPrecision), group (ValueDisplay)
+#: rc.cpp:27
+msgctxt "@info:tooltip"
+msgid ""
+"The precision used for converting floating-point numbers to strings (number "
+"of decimal digits)"
+msgstr ""
+
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, StructViewSettings)
+#: rc.cpp:30
+#, fuzzy
+#| msgctxt "@label:listbox"
+#| msgid "Format:"
+msgid "Form"
+msgstr "Formaat:"
+
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:23
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_UnsignedDisplayBase)
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:52
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SignedDisplayBase)
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:105
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_CharDisplayBase)
+#: rc.cpp:33 rc.cpp:45 rc.cpp:63
+#, fuzzy
+#| msgctxt "@item:inmenu encoding of the bytes as values in the binary format"
+#| msgid "Binary"
+msgid "Binary"
+msgstr "Bineer"
+
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:28
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_UnsignedDisplayBase)
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:57
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SignedDisplayBase)
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:110
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_CharDisplayBase)
+#: rc.cpp:36 rc.cpp:48 rc.cpp:66
+#, fuzzy
+#| msgctxt "@item:inmenu encoding of the bytes as values in the decimal format"
+#| msgid "Decimal"
+msgid "Decimal"
+msgstr "Dezimaal"
+
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:33
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_UnsignedDisplayBase)
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:62
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SignedDisplayBase)
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:115
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_CharDisplayBase)
+#: rc.cpp:39 rc.cpp:51 rc.cpp:69
+#, fuzzy
+#| msgctxt ""
+#| "@item:inmenu encoding of the bytes as values in the hexadecimal format"
+#| msgid "Hexadecimal"
+msgid "Hexadecimal"
+msgstr "Hexadezimaal"
+
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:41
+#. i18n: ectx: property (text), widget (QLabel, signed_label)
+#: rc.cpp:42
+msgid "Signed values:"
+msgstr ""
+
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:70
+#. i18n: ectx: property (text), widget (QLabel, unsigned_label)
+#: rc.cpp:54
+msgid "Unsigned values:"
+msgstr ""
+
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:87
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowCharNumericalValue)
+#: rc.cpp:57
+#, fuzzy
+#| msgctxt "@title:menu"
+#| msgid "&Show Values or Chars"
+msgid "Show numerical value of chars"
+msgstr "&Weerten oder Tekens wiesen"
+
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:94
+#. i18n: ectx: property (text), widget (QLabel, char_label)
+#: rc.cpp:60
+#, fuzzy
+#| msgctxt "@info:tooltip column contains the character with the value"
+#| msgid "Character"
+msgid "Character value:"
+msgstr "Teken"
+
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:127
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_LocaleAwareFloatFormatting)
+#: rc.cpp:72
+msgid "Use locale-aware floating-point formatting"
+msgstr ""
+
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:134
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:75
+msgid "Floating-point precision:"
+msgstr ""
+
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:146
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_LocaleAwareDecimalFormatting)
+#: rc.cpp:78
+msgid "Use locale-aware integer formatting"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Paste As"
+#~ msgid "Paths"
+#~ msgstr "Infögen as"
+
+#~ msgctxt "@title:group"
+#~ msgid "Replace By"
+#~ msgstr "Utwesseln mit"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Replacing bytes:"
+#~ msgstr "Bytes warrt utwesselt:"
+
+#~ msgctxt "name of the checksum algorithm"
+#~ msgid "Template"
+#~ msgstr "Vörlaag"
+
+#~ msgctxt "@label:spinbox number of the bit to use"
+#~ msgid "Number of bit:"
+#~ msgstr "Bit-Tall:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "The number of the bit to use for the parity calculation. 1 means the LSB, "
+#~ "8 the MSB."
+#~ msgstr ""
+#~ "De Tall vun't Bit, dat för't Pariteet-Utreken bruukt warrt. »1« bedüüdt "
+#~ "»LSB«, »8« dat »MSB«."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Select the bit which should be used for the parity calculation. And more "
+#~ "explanation."
+#~ msgstr "Dat för't Pariteet-Utreken bruukt Bit utsöken. Un mehr Verkloren."
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Byte string to f&ind:"
+#~ msgstr "&Söök-Bytekeed:"
+
+#~ msgctxt "@label:spinbox decimal value up to which bytes are set to 0"
+#~ msgid "Level:"
+#~ msgstr "Stoop:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "The decimal value up to which the bytes are set to x00. Bytes above this "
+#~ "value are set to x01."
+#~ msgstr ""
+#~ "De Dezimaalweert, bet den de Bytes op x00 sett warrt. Bytes mit höger "
+#~ "Weerten warrt op x01 sett."
+
 #~ msgid "&Go to"
 #~ msgstr "&Gah na"
 
@@ -1985,10 +2255,6 @@ msgstr "Bloots överschrieven"
 #~ msgstr "Dezimaal"
 
 #~ msgctxt "@label:listbox"
-#~ msgid "Format:"
-#~ msgstr "Formaat:"
-
-#~ msgctxt "@label:listbox"
 #~ msgid "Fo&rmat:"
 #~ msgstr "Fo&rmaat:"
 
@@ -2017,10 +2283,6 @@ msgstr "Bloots överschrieven"
 #~ msgctxt "@info:tooltip"
 #~ msgid "Updates the byte frequency statistics."
 #~ msgstr "Frischt Bytefrequenzstatistik op."
-
-#~ msgctxt "@option:check"
-#~ msgid "Unsigned as hexadecimal"
-#~ msgstr "Ahn Vörteken hexadezimaal"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Executes the filter."
@@ -2250,10 +2512,6 @@ msgstr "Bloots överschrieven"
 #~ msgctxt "@title:column Id of the version"
 #~ msgid "Id"
 #~ msgstr "ID"
-
-#~ msgctxt "@title:column description of the change"
-#~ msgid "Changes"
-#~ msgstr "Ännern"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Id of the version"
