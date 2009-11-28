@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-18 10:11+0100\n"
+"POT-Creation-Date: 2009-11-27 14:14+0100\n"
 "PO-Revision-Date: 2009-08-10 07:58+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -72,7 +72,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLineEdit, m_ip)
 #. i18n: ectx: property (text), widget (KLineEdit, m_ip_to_add)
 #. +> trunk stable
-#: ktorrent/addpeersdlg.ui:48 ktorrent/ipfilterwidget.ui:28
+#: ktorrent/addpeersdlg.ui:48 ktorrent/ipfilterwidget.ui:34
 msgid "127.0.0.1"
 msgstr "127.0.0.1"
 
@@ -96,7 +96,7 @@ msgstr "Port:"
 #. i18n: ectx: property (text), widget (KPushButton, m_add_webseed)
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
 #. +> trunk stable
-#: ktorrent/addpeersdlg.ui:111 ktorrent/ipfilterwidget.ui:40
+#: ktorrent/addpeersdlg.ui:111 ktorrent/ipfilterwidget.ui:46
 #: ktorrent/torrentcreatordlg.ui:177 ktorrent/torrentcreatordlg.ui:266
 #: ktorrent/torrentcreatordlg.ui:327 plugins/search/searchpref.ui:139
 #: plugins/syndication/managefiltersdlg.ui:60
@@ -107,7 +107,7 @@ msgstr "Tofögen"
 #. i18n: ectx: property (text), widget (KPushButton, m_close_button)
 #. i18n: ectx: property (text), widget (KPushButton, close_button)
 #. +> trunk stable
-#: ktorrent/addpeersdlg.ui:118 ktorrent/ipfilterwidget.ui:100
+#: ktorrent/addpeersdlg.ui:118 ktorrent/ipfilterwidget.ui:106
 #: ktorrent/scanextender.ui:233 ktorrent/torrentmigratordlg.ui:61
 msgid "Close"
 msgstr "Tomaken"
@@ -1410,7 +1410,7 @@ msgid "Open Location"
 msgstr "Adress opmaken"
 
 #. +> trunk stable
-#: ktorrent/gui.cpp:314
+#: ktorrent/gui.cpp:314 ktorrent/pastedialog.cpp:59
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "Leeg URL: %1"
@@ -1569,7 +1569,7 @@ msgstr "\"%1\" lett sik nich opmaken: %2"
 
 #. +> trunk stable
 #: ktorrent/importdialog.cpp:385 ktorrent/importdialog.cpp:402
-#: libbtcore/diskio/multifilecache.cpp:133
+#: libbtcore/diskio/multifilecache.cpp:134
 #: libbtcore/diskio/singlefilecache.cpp:83
 #, kde-format
 msgid "Failed to create %1 : %2"
@@ -1612,13 +1612,13 @@ msgid "Ca&ncel"
 msgstr "&Afbreken"
 
 #. +> trunk stable
-#: ktorrent/ipfilterlist.cpp:95
+#: ktorrent/ipfilterlist.cpp:158
 #, kde-format
 msgid "Invalid IP address %1"
 msgstr "Leeg IP-Adress: %1"
 
 #. +> trunk stable
-#: ktorrent/ipfilterlist.cpp:100
+#: ktorrent/ipfilterlist.cpp:163
 #, kde-format
 msgid "Duplicate IP address %1"
 msgstr "Dubbelt IP-Adress: %1"
@@ -1628,33 +1628,54 @@ msgstr "Dubbelt IP-Adress: %1"
 msgid "IP Filter List"
 msgstr "IP-Filterlist"
 
-#. +> trunk stable
+#. +> trunk
+#: ktorrent/ipfilterwidget.cpp:103
+#, fuzzy, kde-format
+#| msgid "Invalid IP address %1. You must enter an IP address in the format 'XXX.XXX.XXX.XXX'. You can also use wildcards for ranges like '127.0.0.*'."
+msgid ""
+"Invalid IP address <b>%1</b>. IP addresses must be in the format 'XXX.XXX.XXX.XXX'.<br/>"
+"<br/>"
+"You can also use wildcards like '127.0.0.*' or specify ranges like '200.10.10.0-200.10.10.40'."
+msgstr "%1 is as IP-Adress leeg. Du muttst dat Formaat \"XXX.XXX.XXX.XXX\" för de IP-Adress bruken; Du kannst ok Platzhollers bruken, wenn Du en Adressrebeet angeven wullt, a.B. \"127.0.0.*\"."
+
+#. +> stable
 #: ktorrent/ipfilterwidget.cpp:101
 #, kde-format
 msgid "Invalid IP address %1. You must enter an IP address in the format 'XXX.XXX.XXX.XXX'. You can also use wildcards for ranges like '127.0.0.*'."
 msgstr "%1 is as IP-Adress leeg. Du muttst dat Formaat \"XXX.XXX.XXX.XXX\" för de IP-Adress bruken; Du kannst ok Platzhollers bruken, wenn Du en Adressrebeet angeven wullt, a.B. \"127.0.0.*\"."
 
 #. +> trunk stable
-#: ktorrent/ipfilterwidget.cpp:132
+#: ktorrent/ipfilterwidget.cpp:135
 msgid "Choose a file"
 msgstr "Datei utsöken"
 
 #. +> trunk stable
-#: ktorrent/ipfilterwidget.cpp:144
+#: ktorrent/ipfilterwidget.cpp:147
 msgid "Choose a filename to save under"
 msgstr "Söök en Dateinaam för't Sekern ut"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, IPFilterWidget)
 #. +> trunk stable
-#: ktorrent/ipfilterwidget.ui:13
+#: ktorrent/ipfilterwidget.ui:14
 msgid "KTorrent Blacklisted Peers"
 msgstr "KTorrent-Partnerleeglist"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. +> trunk stable
-#: ktorrent/ipfilterwidget.ui:21
+#: ktorrent/ipfilterwidget.ui:22
 msgid "Add peer:"
 msgstr "Partner tofögen:"
+
+#. i18n: ectx: property (toolTip), widget (KLineEdit, m_ip_to_add)
+#. +> trunk
+#: ktorrent/ipfilterwidget.ui:31
+#, fuzzy
+#| msgid "Invalid IP address %1. You must enter an IP address in the format 'XXX.XXX.XXX.XXX'. You can also use wildcards for ranges like '127.0.0.*'."
+msgid ""
+"IP addresses must be in the format 'XXX.XXX.XXX.XXX'.\n"
+"                                        \n"
+"You can also use wildcards like '127.0.0.*' or specify ranges like '200.10.10.0-200.10.10.40'."
+msgstr "%1 is as IP-Adress leeg. Du muttst dat Formaat \"XXX.XXX.XXX.XXX\" för de IP-Adress bruken; Du kannst ok Platzhollers bruken, wenn Du en Adressrebeet angeven wullt, a.B. \"127.0.0.*\"."
 
 #. i18n: ectx: property (text), widget (KPushButton, m_remove_tracker)
 #. i18n: ectx: property (text), widget (KPushButton, m_remove_node)
@@ -1662,7 +1683,7 @@ msgstr "Partner tofögen:"
 #. i18n: ectx: property (text), widget (KPushButton, m_remove)
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
 #. +> trunk stable
-#: ktorrent/ipfilterwidget.ui:59 ktorrent/torrentcreatordlg.ui:189
+#: ktorrent/ipfilterwidget.ui:65 ktorrent/torrentcreatordlg.ui:189
 #: ktorrent/torrentcreatordlg.ui:295 ktorrent/torrentcreatordlg.ui:339
 #: ktorrent/viewmanager.cpp:545 plugins/mediaplayer/playlistwidget.cpp:107
 #: plugins/syndication/managefiltersdlg.ui:67
@@ -1671,19 +1692,19 @@ msgstr "Wegmaken"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_clear)
 #. +> trunk stable
-#: ktorrent/ipfilterwidget.ui:66
+#: ktorrent/ipfilterwidget.ui:72
 msgid "Clear"
 msgstr "Leddig maken"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_open)
 #. +> trunk stable
-#: ktorrent/ipfilterwidget.ui:86
+#: ktorrent/ipfilterwidget.ui:92
 msgid "Open..."
 msgstr "Opmaken..."
 
 #. i18n: ectx: property (text), widget (KPushButton, m_save_as)
 #. +> trunk stable
-#: ktorrent/ipfilterwidget.ui:93
+#: ktorrent/ipfilterwidget.ui:99
 msgid "Save As..."
 msgstr "Sekern as..."
 
@@ -2135,13 +2156,23 @@ msgstr "Amichai Rothman"
 msgid "Patch to make the plasma applet a popup applet"
 msgstr "Kodeplaster, dat ut dat Plasma- en Opduk-Lüttprogramm maakt"
 
+#. +> trunk
+#: ktorrent/main.cpp:133
+msgid "Leo Trubach"
+msgstr ""
+
+#. +> trunk
+#: ktorrent/main.cpp:133
+msgid "Patch to add support for IP ranges in IP filter dialog"
+msgstr ""
+
 #. +> trunk stable
-#: ktorrent/main.cpp:136
+#: ktorrent/main.cpp:137
 msgid "Document to open"
 msgstr "Dokment, dat opmaakt warrn schall"
 
 #. +> trunk stable
-#: ktorrent/main.cpp:137
+#: ktorrent/main.cpp:138
 msgid "Silently open torrent given on URL"
 msgstr "Mit de URL geven Torrent-Datei ahn Nafraag opmaken"
 
@@ -2495,7 +2526,7 @@ msgstr "Anraadt Instellen"
 msgid "Open an URL"
 msgstr "En Adress opropen"
 
-#. +> trunk stable
+#. +> stable
 #: ktorrent/pastedialog.cpp:59
 msgid "Invalid URL: "
 msgstr "Leeg URL: "
@@ -2991,7 +3022,6 @@ msgstr "Naam"
 
 #. +> trunk stable
 #: ktorrent/queuemanagermodel.cpp:120 ktorrent/viewmodel.cpp:433
-#: plugins/infowidget/infowidgetplugin.cpp:83
 #: plugins/infowidget/trackermodel.cpp:148
 #: plugins/infowidget/webseedsmodel.cpp:127
 msgid "Status"
@@ -3889,7 +3919,7 @@ msgstr "All köört Torrents in't aktuelle Paneel starten"
 
 #. +> trunk stable
 #: ktorrent/viewmanager.cpp:539
-#: plugins/mediaplayer/mediaplayeractivity.cpp:105
+#: plugins/mediaplayer/mediaplayeractivity.cpp:106
 #: plugins/mediaplayer/videowidget.cpp:60
 msgid "Stop"
 msgstr "Anhollen"
@@ -3934,7 +3964,7 @@ msgstr "Partners tofögen"
 #. i18n: ectx: property (text), widget (QLabel, label_12)
 #. +> trunk stable
 #: ktorrent/viewmanager.cpp:576 libbtcore/util/logsystemmanager.cpp:36
-#: plugins/infowidget/peerviewmodel.cpp:312 plugins/stats/Conns.ui:31
+#: plugins/infowidget/peerviewmodel.cpp:311 plugins/stats/Conns.ui:31
 #: plugins/stats/DisplaySettings.ui:795 plugins/stats/Settings.ui:234
 msgid "DHT"
 msgstr "VPT"
@@ -3955,8 +3985,7 @@ msgid "Scrape"
 msgstr "Raken"
 
 #. +> trunk stable
-#: ktorrent/viewmanager.cpp:596 plugins/infowidget/iwfilelistmodel.cpp:78
-#: plugins/infowidget/iwfiletreemodel.cpp:90
+#: ktorrent/viewmanager.cpp:596
 msgid "Preview"
 msgstr "Vöransicht"
 
@@ -4011,7 +4040,7 @@ msgid "Torrents (*.torrent)"
 msgstr "Torrents (*.torrent)"
 
 #. +> trunk stable
-#: ktorrent/viewmodel.cpp:434 plugins/infowidget/peerviewmodel.cpp:316
+#: ktorrent/viewmodel.cpp:434 plugins/infowidget/peerviewmodel.cpp:315
 #: plugins/infowidget/webseedsmodel.cpp:126
 msgid "Downloaded"
 msgstr "Daallaadt"
@@ -4023,18 +4052,18 @@ msgid "Size"
 msgstr "Grött"
 
 #. +> trunk stable
-#: ktorrent/viewmodel.cpp:436 plugins/infowidget/peerviewmodel.cpp:317
+#: ktorrent/viewmodel.cpp:436 plugins/infowidget/peerviewmodel.cpp:316
 msgid "Uploaded"
 msgstr "Hoochlaadt"
 
 #. +> trunk stable
 #: ktorrent/viewmodel.cpp:437 plugins/infowidget/chunkdownloadmodel.cpp:213
-#: plugins/infowidget/peerviewmodel.cpp:307
+#: plugins/infowidget/peerviewmodel.cpp:306
 msgid "Down Speed"
 msgstr "Daalladengauheit"
 
 #. +> trunk stable
-#: ktorrent/viewmodel.cpp:438 plugins/infowidget/peerviewmodel.cpp:308
+#: ktorrent/viewmodel.cpp:438 plugins/infowidget/peerviewmodel.cpp:307
 msgid "Up Speed"
 msgstr "Hoochladengauheit"
 
@@ -4301,7 +4330,7 @@ msgid "Failed to write to file %1 : %2"
 msgstr "\"%1\" lett sik nich schrieven: %2"
 
 #. +> trunk stable
-#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:794
+#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:795
 #, kde-format
 msgid "Cannot preallocate diskspace : %1"
 msgstr "Plattenspieker lett sik nich vörweg towiesen: %1"
@@ -4331,15 +4360,15 @@ msgid "Failed to write last chunk to DND file : %1"
 msgstr "Lest Block lett sik nich na DND-Datei schrieven: %1"
 
 #. +> trunk stable
-#: libbtcore/diskio/multifilecache.cpp:106
+#: libbtcore/diskio/multifilecache.cpp:107
 #: libbtcore/diskio/singlefilecache.cpp:72
 #, kde-format
 msgid "Failed to open %1 : %2"
 msgstr "\"%1\" lett sik nich opmaken: %2"
 
 #. +> trunk stable
-#: libbtcore/diskio/multifilecache.cpp:738
-#: libbtcore/diskio/multifilecache.cpp:802
+#: libbtcore/diskio/multifilecache.cpp:739
+#: libbtcore/diskio/multifilecache.cpp:803
 #, kde-format
 msgid "Cannot open file %1 : %2"
 msgstr "Datei \"%1\" lett sik nich opmaken: %2"
@@ -4456,21 +4485,21 @@ msgid "Unknown client"
 msgstr "Nich begäng Client"
 
 #. +> trunk stable
-#: libbtcore/torrent/torrent.cpp:83 libbtcore/torrent/torrent.cpp:154
-#: libbtcore/torrent/torrent.cpp:182 libbtcore/torrent/torrent.cpp:189
-#: libbtcore/torrent/torrent.cpp:197 libbtcore/torrent/torrent.cpp:201
-#: libbtcore/torrent/torrent.cpp:222 libbtcore/torrent/torrent.cpp:293
+#: libbtcore/torrent/torrent.cpp:83 libbtcore/torrent/torrent.cpp:155
+#: libbtcore/torrent/torrent.cpp:183 libbtcore/torrent/torrent.cpp:190
+#: libbtcore/torrent/torrent.cpp:198 libbtcore/torrent/torrent.cpp:202
+#: libbtcore/torrent/torrent.cpp:223 libbtcore/torrent/torrent.cpp:294
 msgid "Corrupted torrent."
 msgstr "Torrent is schaadhaftig."
 
 #. +> trunk stable
-#: libbtcore/torrent/torrent.cpp:145
+#: libbtcore/torrent/torrent.cpp:146
 #, kde-format
 msgid " Unable to open torrent file %1 : %2"
 msgstr " Torrent-Datei \"%1\" lett sik nich opmaken: %2"
 
 #. +> trunk stable
-#: libbtcore/torrent/torrent.cpp:275
+#: libbtcore/torrent/torrent.cpp:276
 msgid "Parse Error"
 msgstr "Inleesfehler"
 
@@ -4614,30 +4643,30 @@ msgid "Redirect without a redirect location"
 msgstr "Ahn nieg Teel wiederleddt."
 
 #. +> trunk stable
-#: libbtcore/tracker/httptracker.cpp:282 libbtcore/tracker/httptracker.cpp:302
-#: libbtcore/tracker/httptracker.cpp:342 libbtcore/tracker/httptracker.cpp:461
+#: libbtcore/tracker/httptracker.cpp:280 libbtcore/tracker/httptracker.cpp:300
+#: libbtcore/tracker/httptracker.cpp:340 libbtcore/tracker/httptracker.cpp:459
 msgid "Invalid response from tracker"
 msgstr "Leeg Antwoort vun Tracker"
 
 #. +> trunk stable
-#: libbtcore/tracker/httptracker.cpp:295
+#: libbtcore/tracker/httptracker.cpp:293
 msgid "Invalid data from tracker"
 msgstr "Leeg Daten vun Tracker"
 
 #. +> trunk stable
-#: libbtcore/tracker/httptracker.cpp:478
+#: libbtcore/tracker/httptracker.cpp:476
 msgid "Invalid tracker URL"
 msgstr "Leeg Tracker-Adress"
 
 #. +> trunk stable
-#: libbtcore/tracker/httptracker.cpp:559 libbtcore/tracker/udptracker.cpp:298
-#: libbtcore/tracker/udptracker.cpp:308
+#: libbtcore/tracker/httptracker.cpp:557 libbtcore/tracker/udptracker.cpp:297
+#: libbtcore/tracker/udptracker.cpp:307
 #, kde-format
 msgid "Timeout contacting tracker %1"
 msgstr ""
 
 #. +> trunk stable
-#: libbtcore/tracker/udptracker.cpp:330
+#: libbtcore/tracker/udptracker.cpp:329
 #, kde-format
 msgid "Unable to resolve hostname %1"
 msgstr "Reeknernaam \"%1\" lett sik nich oplösen"
@@ -5753,7 +5782,6 @@ msgstr "Partner"
 
 #. +> trunk stable
 #: plugins/infowidget/chunkdownloadmodel.cpp:214
-#: plugins/infowidget/infowidgetplugin.cpp:85
 msgid "Files"
 msgstr "Dateien"
 
@@ -5892,10 +5920,26 @@ msgstr[1] "Di warrt all Daten binnen disse Datei wegkamen. Wullt Du dat redig do
 msgid "Info Widget"
 msgstr "Informatschonen-Finster"
 
+#. +> trunk
+#: plugins/infowidget/infowidgetplugin.cpp:83
+#, fuzzy
+#| msgid "Status"
+msgctxt "@title:tab"
+msgid "Status"
+msgstr "Status"
+
 #. +> trunk stable
 #: plugins/infowidget/infowidgetplugin.cpp:84
 msgid "Displays status information about a torrent"
 msgstr "Wiest Status-Informatschonen över en Torrent"
+
+#. +> trunk
+#: plugins/infowidget/infowidgetplugin.cpp:85
+#, fuzzy
+#| msgid "Files"
+msgctxt "@title:tab"
+msgid "Files"
+msgstr "Dateien"
 
 #. +> trunk stable
 #: plugins/infowidget/infowidgetplugin.cpp:86
@@ -5936,6 +5980,15 @@ msgstr "Nettverdelen"
 #: plugins/infowidget/infowidgetplugin.cpp:286
 msgid "Displays all the webseeds of a torrent"
 msgstr "Wiest all Nettverdelen vun en Torrent"
+
+#. +> trunk
+#: plugins/infowidget/iwfilelistmodel.cpp:78
+#: plugins/infowidget/iwfiletreemodel.cpp:90
+#, fuzzy
+#| msgid "Preview"
+msgctxt "@title:column"
+msgid "Preview"
+msgstr "Vöransicht"
 
 #. +> trunk stable
 #: plugins/infowidget/iwfilelistmodel.cpp:80
@@ -6015,49 +6068,49 @@ msgstr "Verföögbor"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. +> trunk stable
-#: plugins/infowidget/iwprefpage.ui:16
+#: plugins/infowidget/iwprefpage.ui:17
 msgid "Tabs"
 msgstr "Paneels"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showPeerView)
 #. +> trunk stable
-#: plugins/infowidget/iwprefpage.ui:22
+#: plugins/infowidget/iwprefpage.ui:23
 msgid "Whether or not to show the peers tab in the bottom of the window."
 msgstr "Leggt fast, wat dat Partnerpaneel nerrn binnen dat Finster wiest warrt"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showPeerView)
 #. +> trunk stable
-#: plugins/infowidget/iwprefpage.ui:25
+#: plugins/infowidget/iwprefpage.ui:26
 msgid "Show list of peers"
 msgstr "Partner-List wiesen"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showChunkView)
 #. +> trunk stable
-#: plugins/infowidget/iwprefpage.ui:32
+#: plugins/infowidget/iwprefpage.ui:33
 msgid "Whether or not to show the chunks tab in the bottom of the window."
 msgstr "Leggt fast, wat dat Blöckpaneel nerrn binnen dat Finster wiest warrt"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showChunkView)
 #. +> trunk stable
-#: plugins/infowidget/iwprefpage.ui:35
+#: plugins/infowidget/iwprefpage.ui:36
 msgid "Show list of chunks currently downloading"
 msgstr "List mit opstunns daallaadt Blöck wiesen"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showTrackersView)
 #. +> trunk stable
-#: plugins/infowidget/iwprefpage.ui:42
+#: plugins/infowidget/iwprefpage.ui:43
 msgid "Whether or not to show the trackers tab in the bottom of the window."
 msgstr "Leggt fast, wat dat Trackerpaneel nerrn binnen dat Finster wiest warrt"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showTrackersView)
 #. +> trunk stable
-#: plugins/infowidget/iwprefpage.ui:45
+#: plugins/infowidget/iwprefpage.ui:46
 msgid "Show list of trackers"
 msgstr "Tracker-List wiesen"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showWebSeedsTab)
 #. +> trunk stable
-#: plugins/infowidget/iwprefpage.ui:55
+#: plugins/infowidget/iwprefpage.ui:56
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -6073,25 +6126,25 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showWebSeedsTab)
 #. +> trunk stable
-#: plugins/infowidget/iwprefpage.ui:58
+#: plugins/infowidget/iwprefpage.ui:59
 msgid "Show list of webseeds"
 msgstr "Nettverdelen-List wiesen"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. +> trunk stable
-#: plugins/infowidget/iwprefpage.ui:68
+#: plugins/infowidget/iwprefpage.ui:69
 msgid "File Priority Colors"
 msgstr "Dateiprioriteten-Klören"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. +> trunk stable
-#: plugins/infowidget/iwprefpage.ui:74
+#: plugins/infowidget/iwprefpage.ui:75
 msgid "First priority:"
 msgstr "Hööchst Prioriteet:"
 
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_firstColor)
 #. +> trunk stable
-#: plugins/infowidget/iwprefpage.ui:84
+#: plugins/infowidget/iwprefpage.ui:85
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -6105,37 +6158,15 @@ msgstr ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Klöör för Dateien mit hööchst Prioriteet.</p>"
 "</body></html>"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#. +> trunk stable
-#: plugins/infowidget/iwprefpage.ui:91
-msgid "Normal priority:"
-msgstr "Normaal Prioriteet:"
-
-#. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_normalColor)
-#. +> trunk stable
-#: plugins/infowidget/iwprefpage.ui:101
-msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Color to use for normal priority files.</p>"
-"</body></html>"
-msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Klöör för Dateien mit normaal Prioriteet.</p>"
-"</body></html>"
-
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. +> trunk stable
-#: plugins/infowidget/iwprefpage.ui:108
+#: plugins/infowidget/iwprefpage.ui:92
 msgid "Last priority:"
 msgstr "Sietst Prioriteet"
 
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_lastColor)
 #. +> trunk stable
-#: plugins/infowidget/iwprefpage.ui:118
+#: plugins/infowidget/iwprefpage.ui:102
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -6178,185 +6209,185 @@ msgid "Ban Peer"
 msgstr "Partner utsluten"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:147
+#: plugins/infowidget/peerviewmodel.cpp:146
 msgctxt "Choked"
 msgid "Yes"
 msgstr "Jo"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:147
+#: plugins/infowidget/peerviewmodel.cpp:146
 msgctxt "Not choked"
 msgid "No"
 msgstr "Nee"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:148
+#: plugins/infowidget/peerviewmodel.cpp:147
 msgctxt "Snubbed"
 msgid "Yes"
 msgstr "Jo"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:148
+#: plugins/infowidget/peerviewmodel.cpp:147
 msgctxt "Not snubbed"
 msgid "No"
 msgstr "Nee"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:156
+#: plugins/infowidget/peerviewmodel.cpp:155
 msgctxt "Interested"
 msgid "Yes"
 msgstr "Jo"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:156
+#: plugins/infowidget/peerviewmodel.cpp:155
 msgctxt "Not Interested"
 msgid "No"
 msgstr "Nee"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:157
+#: plugins/infowidget/peerviewmodel.cpp:156
 msgctxt "Interesting"
 msgid "Yes"
 msgstr "Jo"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:157
+#: plugins/infowidget/peerviewmodel.cpp:156
 msgctxt "Not Interesting"
 msgid "No"
 msgstr "Nee"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:304
+#: plugins/infowidget/peerviewmodel.cpp:303
 msgid "Address"
 msgstr "Adress"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:305
+#: plugins/infowidget/peerviewmodel.cpp:304
 msgid "Country"
 msgstr "Land"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:306
+#: plugins/infowidget/peerviewmodel.cpp:305
 msgid "Client"
 msgstr "Client"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:309
+#: plugins/infowidget/peerviewmodel.cpp:308
 msgid "Choked"
 msgstr "Drosselt"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:310
+#: plugins/infowidget/peerviewmodel.cpp:309
 msgid "Snubbed"
 msgstr "Afwiest"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:311
+#: plugins/infowidget/peerviewmodel.cpp:310
 msgid "Availability"
 msgstr "Verföögborkeit"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:313
+#: plugins/infowidget/peerviewmodel.cpp:312
 msgid "Score"
 msgstr "Pünkt"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:314
+#: plugins/infowidget/peerviewmodel.cpp:313
 msgid "Upload Slot"
 msgstr "Hoochlaad-Platz"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:315
+#: plugins/infowidget/peerviewmodel.cpp:314
 msgid "Requests"
 msgstr "Anfragen"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:318
+#: plugins/infowidget/peerviewmodel.cpp:317
 msgid "Interested"
 msgstr "Vermaak"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:319
+#: plugins/infowidget/peerviewmodel.cpp:318
 msgid "Interesting"
 msgstr "Intressant"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:327
+#: plugins/infowidget/peerviewmodel.cpp:326
 msgid "IP address of the peer"
 msgstr "Den Partner sien IP-Adress"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:328
+#: plugins/infowidget/peerviewmodel.cpp:327
 msgid "Country the peer is in"
 msgstr "Dat Land, binnen dat de Partner is"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:329
+#: plugins/infowidget/peerviewmodel.cpp:328
 msgid "Which client the peer is using"
 msgstr "Gifft dat Programm an, dat de Partner bruukt"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:330
+#: plugins/infowidget/peerviewmodel.cpp:329
 msgid "Download speed"
 msgstr "Daallaad-Gauheit"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:331
+#: plugins/infowidget/peerviewmodel.cpp:330
 msgid "Upload speed"
 msgstr "Hoochlaad-Gauheit"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:332
+#: plugins/infowidget/peerviewmodel.cpp:331
 msgid "Whether or not the peer has choked us - when we are choked the peer will not send us any data"
 msgstr "Gifft an, wat de Partner Di afdrusselt hett. Hett he dat, kriggst Du vun em keen Daten."
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:333
+#: plugins/infowidget/peerviewmodel.cpp:332
 msgid "Snubbed means the peer has not sent us any data in the last 2 minutes"
 msgstr "»Afwiest« bedüüdt, de Partner hett Di binnen de verleden 2 Minuten keen Daten tostüert"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:334
+#: plugins/infowidget/peerviewmodel.cpp:333
 msgid "How much data the peer has of the torrent"
 msgstr "Gifft an, wo veel vun den Torrent de Partner hett"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:335
+#: plugins/infowidget/peerviewmodel.cpp:334
 msgid "Whether or not the peer has DHT enabled"
 msgstr "Gifft an, wat de Partner VPT anmaakt hett"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:336
+#: plugins/infowidget/peerviewmodel.cpp:335
 msgid "The score of the peer, KTorrent uses this to determine who to upload to"
 msgstr "Den Partner sien Pünkt. Dor klamüüstert KTorrent mit ut, wokeen wat tostüert warrt"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:337
+#: plugins/infowidget/peerviewmodel.cpp:336
 msgid "Only peers which have an upload slot will get data from us"
 msgstr "Bloots Partners, de en Hoochlaad-Platz hebbt, kriegt Daten vun Di"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:338
+#: plugins/infowidget/peerviewmodel.cpp:337
 msgid "The number of download and upload requests"
 msgstr "De Tall vun Daal- un Hoochlaad-Anfragen"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:339
+#: plugins/infowidget/peerviewmodel.cpp:338
 msgid "How much data we have downloaded from this peer"
 msgstr "Gifft an, woveel Daten Du vun dissen Partner daallaadt hest"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:340
+#: plugins/infowidget/peerviewmodel.cpp:339
 msgid "How much data we have uploaded to this peer"
 msgstr "Gifft an, woveel Daten Du dissen Partner tostüert hest"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:341
+#: plugins/infowidget/peerviewmodel.cpp:340
 msgid "Whether the peer is interested in downloading data from us"
 msgstr "Gifft an, wat disse Partner Daten vun Di daalladen will"
 
 #. +> trunk stable
-#: plugins/infowidget/peerviewmodel.cpp:342
+#: plugins/infowidget/peerviewmodel.cpp:341
 msgid "Whether we are interested in downloading from this peer"
 msgstr "Gifft an, wat Du Daten vun dissen Partner daalladen wullt"
 
@@ -6522,9 +6553,8 @@ msgstr "Standardweerten wedderherstellen"
 msgid "URL"
 msgstr "Adress"
 
-#. i18n: ectx: property (windowTitle), widget (QWidget, SpdWgt)
 #. +> trunk stable
-#: plugins/infowidget/webseedsmodel.cpp:125 plugins/stats/Spd.ui:13
+#: plugins/infowidget/webseedsmodel.cpp:125
 msgid "Speed"
 msgstr "Gauigkeit"
 
@@ -6624,18 +6654,18 @@ msgid "Cannot open zip file %1."
 msgstr "Zip-Datei \"%1\" lett sik nich opmaken."
 
 #. +> trunk stable
-#: plugins/ipfilter/downloadandconvertjob.cpp:157
+#: plugins/ipfilter/downloadandconvertjob.cpp:158
 #, kde-format
 msgid "Cannot find blocklist in zip file %1."
 msgstr "Blocklist lett sik binnen Zip-Datei \"%1\" nich finnen."
 
 #. +> trunk stable
-#: plugins/ipfilter/downloadandconvertjob.cpp:228
+#: plugins/ipfilter/downloadandconvertjob.cpp:229
 msgid "Filter file (level1.dat) already exists, do you want to convert it again?"
 msgstr "Dat gifft de Filterdatei (level1.dat) al, wullt Du ehr nochmaal wanneln?"
 
 #. +> trunk stable
-#: plugins/ipfilter/downloadandconvertjob.cpp:229
+#: plugins/ipfilter/downloadandconvertjob.cpp:230
 msgid "File Exists"
 msgstr "Gifft Datei al"
 
@@ -6975,59 +7005,59 @@ msgstr ""
 
 #. +> trunk stable
 #: plugins/mediaplayer/mediaplayeractivity.cpp:47
-#: plugins/mediaplayer/mediaplayeractivity.cpp:150
+#: plugins/mediaplayer/mediaplayeractivity.cpp:151
 #: plugins/mediaplayer/mediaplayerplugin.cpp:49
 #: plugins/mediaplayer/mediaplayerplugin.cpp:61
 msgid "Media Player"
 msgstr "Afspeler"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:73
+#: plugins/mediaplayer/mediaplayeractivity.cpp:74
 msgid "Play List"
 msgstr "Afspeellist"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:97
+#: plugins/mediaplayer/mediaplayeractivity.cpp:98
 #: plugins/mediaplayer/videowidget.cpp:58
 msgid "Play"
 msgstr "Afspelen"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:101
+#: plugins/mediaplayer/mediaplayeractivity.cpp:102
 #: plugins/mediaplayer/videowidget.cpp:59
 msgid "Pause"
 msgstr "Anhollen"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:109
+#: plugins/mediaplayer/mediaplayeractivity.cpp:110
 msgid "Previous"
 msgstr "Verleden"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:113
+#: plugins/mediaplayer/mediaplayeractivity.cpp:114
 msgid "Next"
 msgstr "Nakamen"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:117
+#: plugins/mediaplayer/mediaplayeractivity.cpp:118
 msgid "Show Video"
 msgstr "Video wiesen"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:121
+#: plugins/mediaplayer/mediaplayeractivity.cpp:122
 #: plugins/mediaplayer/playlistwidget.cpp:109
 msgid "Add Media"
 msgstr "Medien tofögen"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:125
+#: plugins/mediaplayer/mediaplayeractivity.cpp:126
 #: plugins/mediaplayer/playlistwidget.cpp:110
 msgid "Clear Playlist"
 msgstr "Afspeellist leddigmaken"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:164
-#: plugins/mediaplayer/mediaplayeractivity.cpp:366
+#: plugins/mediaplayer/mediaplayeractivity.cpp:165
+#: plugins/mediaplayer/mediaplayeractivity.cpp:367
 msgid "Movie player"
 msgstr "Filmafspeler"
 
@@ -7416,7 +7446,7 @@ msgid "No script found in archive."
 msgstr "Keen Skript binnen Archiev funnen."
 
 #. +> trunk stable
-#: plugins/scripting/scriptmodel.cpp:178 plugins/syndication/feedlist.cpp:176
+#: plugins/scripting/scriptmodel.cpp:178 plugins/syndication/feedlist.cpp:177
 #, kde-format
 msgid ""
 "<b>%1</b><br/>"
@@ -7839,8 +7869,11 @@ msgstr "Utmaken"
 msgid "Shutdown Toolbar"
 msgstr "Utmaken-Warktüüchbalken"
 
-#. +> trunk stable
-#: plugins/shutdown/shutdowndlg.cpp:29 plugins/shutdown/shutdownplugin.cpp:49
+#. +> trunk
+#: plugins/shutdown/shutdowndlg.cpp:29
+#, fuzzy
+#| msgid "Configure Shutdown"
+msgctxt "@title:window"
 msgid "Configure Shutdown"
 msgstr "Utmaken instellen"
 
@@ -7901,6 +7934,11 @@ msgstr "Akschoon utföhren, wenn:"
 #: plugins/shutdown/shutdownplugin.cpp:45
 msgid "Shutdown Enabled"
 msgstr "Utmaken anmaakt"
+
+#. +> trunk stable
+#: plugins/shutdown/shutdownplugin.cpp:49
+msgid "Configure Shutdown"
+msgstr "Utmaken instellen"
 
 #. +> trunk stable
 #: plugins/shutdown/shutdowntorrentmodel.cpp:92
@@ -8436,6 +8474,15 @@ msgstr "Statistiken"
 msgid "(= %1 ms)"
 msgstr "(= %1 ms)"
 
+#. i18n: ectx: property (windowTitle), widget (QWidget, SpdWgt)
+#. +> trunk
+#: plugins/stats/Spd.ui:13
+#, fuzzy
+#| msgid "Speed"
+msgctxt "@title:window"
+msgid "Speed"
+msgstr "Gauigkeit"
+
 #. +> trunk stable
 #: plugins/stats/SpdTabPage.cc:69 plugins/stats/SpdTabPage.cc:70
 msgid "Speed limit"
@@ -8462,7 +8509,7 @@ msgid "Displays charts about connections"
 msgstr "Diagrammen över Verbinnen wiesen"
 
 #. +> trunk stable
-#: plugins/syndication/feedlist.cpp:171
+#: plugins/syndication/feedlist.cpp:172
 #, kde-format
 msgid ""
 "%2\n"
@@ -9157,6 +9204,22 @@ msgstr " s"
 #: plugins/zeroconf/zeroconfplugin.cpp:68
 msgid "ZeroConf"
 msgstr "ZeroConf"
+
+#~ msgid "Normal priority:"
+#~ msgstr "Normaal Prioriteet:"
+
+#~ msgid ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Color to use for normal priority files.</p>"
+#~ "</body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Bitstream Vera Sans'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Klöör för Dateien mit normaal Prioriteet.</p>"
+#~ "</body></html>"
 
 #~ msgid "Disk space reservation method:"
 #~ msgstr "Freeruum-Towiesmetood:"
