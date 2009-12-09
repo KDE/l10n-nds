@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-12-08 06:49+0100\n"
+"POT-Creation-Date: 2009-12-09 08:00+0100\n"
 "PO-Revision-Date: 2009-11-12 07:00+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -55,7 +55,7 @@ msgstr ""
 #: debugger/util/pathmappings.cpp:242
 #: debugger/breakpoint/breakpointwidget.cpp:130
 #: shell/workingsetcontroller.cpp:718 rc.cpp:149 rc.cpp:164 rc.cpp:316
-#: rc.cpp:419
+#: rc.cpp:413
 msgid "Delete"
 msgstr "Wegdoon"
 
@@ -790,7 +790,7 @@ msgstr[1] ""
 msgid "Uses of %1"
 msgstr "Bruken vun %1"
 
-#: language/backgroundparser/backgroundparser.cpp:364
+#: language/backgroundparser/backgroundparser.cpp:377
 msgid "Background Parser"
 msgstr "Achtergrund-Inleser"
 
@@ -804,6 +804,16 @@ msgstr[1] "%1 Dateien binnen %2 afarbeiden"
 #: project/projectitemlineedit.cpp:176
 msgid "Enter the path to an item from the projects tree"
 msgstr "Den Padd na en Indrag binnen den Projektboom hier ingeven"
+
+#: project/importprojectjob.cpp:76
+#, fuzzy, kde-format
+#| msgid "Project loaded: %1"
+msgid "Project Import: %1"
+msgstr "Projekt laadt: %1"
+
+#: project/importprojectjob.cpp:108
+msgid "Project import cancelled."
+msgstr ""
 
 #. i18n: file: shell/launchconfigurationdialog.ui:71
 #. i18n: ectx: property (text), widget (QLabel, configName)
@@ -1172,7 +1182,7 @@ msgstr "Ümsetten opstellen"
 msgid "Verbose output"
 msgstr "Snackhaftig Utgaav"
 
-#: shell/tests/sessioncontrollertest.cpp:201 shell/sessioncontroller.cpp:316
+#: shell/tests/sessioncontrollertest.cpp:201 shell/sessioncontroller.cpp:326
 #, kde-format
 msgid "Copy of %1"
 msgstr "Kopie vun %1"
@@ -1205,32 +1215,32 @@ msgstr "Projekt warrt laadt "
 msgid "Loading"
 msgstr "An't Laden"
 
-#: shell/project.cpp:274
+#: shell/project.cpp:279
 #, kde-format
 msgid "Unable to load the project file %1"
 msgstr "De Projektdatei \"%1\" lett sik nich laden"
 
-#: shell/project.cpp:297
+#: shell/project.cpp:302
 #, kde-format
 msgid "Unable to create hidden dir (%1) for developer file"
 msgstr "Versteken Orner (%1) för Schrieverdatei lett sik nich opstellen"
 
-#: shell/project.cpp:309
+#: shell/project.cpp:314
 #, kde-format
 msgid "Unable to get project file: %1"
 msgstr "Projektdatei lett sik nich halen: %1"
 
-#: shell/project.cpp:344
+#: shell/project.cpp:349
 #, kde-format
 msgid "Could not load %1, a project with the same name '%2' is already open."
 msgstr ""
 
-#: shell/project.cpp:375
+#: shell/project.cpp:380
 #, kde-format
 msgid "Could not load project management plugin %1."
 msgstr "Projektpleegmoduul lett sik nich halen: %1"
 
-#: shell/project.cpp:382
+#: shell/project.cpp:387
 #, kde-format
 msgid ""
 "project importing plugin (%1) does not support the IProjectFileManager "
@@ -1239,11 +1249,11 @@ msgstr ""
 "Projektimport-Moduul (%1) deit de IProjectFileManager-Koppelsteed nich "
 "ünnerstütten."
 
-#: shell/project.cpp:426
+#: shell/project.cpp:431
 msgid "Could not open project"
 msgstr "Projekt lett sik nich opmaken"
 
-#: shell/project.cpp:553
+#: shell/project.cpp:558
 msgid ""
 "Could not store developer specific project configuration.\n"
 "Attention: The project settings you changed will be lost."
@@ -1483,24 +1493,24 @@ msgstr ""
 "<b>Hollpunkt an/ut</b><p>Maakt den Hollpunkt för de aktuelle Editorreeg an "
 "oder ut.</p>"
 
-#: shell/projectcontroller.cpp:308
+#: shell/projectcontroller.cpp:302
 #, kde-format
 msgid "Unable to create configuration file %1"
 msgstr "Instellendatei \"%1\" lett sik nich opstellen."
 
-#: shell/projectcontroller.cpp:320
+#: shell/projectcontroller.cpp:314
 msgid "Reopen the current project?"
 msgstr "Dat aktuelle Projekt wedder opmaken?"
 
-#: shell/projectcontroller.cpp:363
+#: shell/projectcontroller.cpp:357
 msgid "Open / Import Project..."
 msgstr "Projekt opmaken oder importeren..."
 
-#: shell/projectcontroller.cpp:365
+#: shell/projectcontroller.cpp:359
 msgid "Open / Import Project"
 msgstr "Projekt opmaken oder importeren"
 
-#: shell/projectcontroller.cpp:366
+#: shell/projectcontroller.cpp:360
 msgid ""
 "<b>Open / Import project</b><p>Open an existing KDevelop 4 project or import "
 "an existing Project into KDevelop 4. This entry allows to select a KDevelop4 "
@@ -1514,82 +1524,66 @@ msgstr ""
 "KDevelop opmaken. Maakst Du en vörhannen Orner op, binnen den dat noch keen "
 "KDevelop-4-Projektdatei gifft, warrt een opstellt.</p>"
 
-#: shell/projectcontroller.cpp:377
-msgid "Close All Projects"
-msgstr "All Projekten tomaken"
-
-#: shell/projectcontroller.cpp:379
-msgid ""
-"Close the current session with all its open open projects, and start a new "
-"one"
-msgstr ""
-
-#: shell/projectcontroller.cpp:380
-msgid ""
-"<b>Close all projects</b><p>Closes all of the currently open projects.</p>"
-msgstr ""
-"<b>All Projekten tomaken</b><p>All opstunns opmaakt Projekten tomaken.</p>"
-
-#: shell/projectcontroller.cpp:386
+#: shell/projectcontroller.cpp:372
 msgid "Close Project(s)"
 msgstr "Projekten tomaken"
 
-#: shell/projectcontroller.cpp:388
+#: shell/projectcontroller.cpp:374
 msgid "Closes all currently selected projects"
 msgstr "All opstunns utsöcht Projekten tomaken"
 
-#: shell/projectcontroller.cpp:393
+#: shell/projectcontroller.cpp:379
 msgid "Open Configuration..."
 msgstr "Instellen opmaken..."
 
-#: shell/projectcontroller.cpp:404
+#: shell/projectcontroller.cpp:390
 msgid "Open Recent"
 msgstr "Verleden opmaken"
 
-#: shell/projectcontroller.cpp:405
+#: shell/projectcontroller.cpp:391
 msgid "Open recent project"
 msgstr "Verleden Projekt opmaken"
 
-#: shell/projectcontroller.cpp:407
+#: shell/projectcontroller.cpp:393
 msgid "<b>Open recent project</b><p>Opens recently opened project.</p>"
 msgstr ""
 "<b>Verleden Projekt opmaken</b><p>Maakt en annerlest opmaakt Projekt op.</p>"
 
-#: shell/projectcontroller.cpp:412
+#: shell/projectcontroller.cpp:398
 msgid "Open Project for Current File"
 msgstr "Projekt för aktuelle Datei opmaken"
 
-#: shell/projectcontroller.cpp:508
+#: shell/projectcontroller.cpp:489
 #, kde-format
 msgid "Project already open: %1"
 msgstr "Projekt is al op: %1"
 
-#: shell/projectcontroller.cpp:511
+#: shell/projectcontroller.cpp:492
 msgid "No active document"
 msgstr "Keen aktiv Dokment"
 
-#: shell/projectcontroller.cpp:557
+#: shell/projectcontroller.cpp:538
 #, kde-format
 msgid ""
 "The project you are opening is part of the session %1, do you want to open "
 "the session instead?"
 msgstr ""
 
-#: shell/projectcontroller.cpp:577
+#: shell/projectcontroller.cpp:570
 #, kde-format
 msgid "Invalid Location: %1"
 msgstr "Leeg Steed: %1"
 
-#: shell/projectcontroller.cpp:583
+#: shell/projectcontroller.cpp:576
 msgid "Project already being opened"
 msgstr "Projekt warrt al opmaakt"
 
-#: shell/projectcontroller.cpp:584
+#: shell/projectcontroller.cpp:577
 #, kde-format
 msgid "Already opening %1, not opening again"
 msgstr "\"%1\" warrt al opmaakt, man keen tweet maal"
 
-#: shell/projectcontroller.cpp:610
+#: shell/projectcontroller.cpp:603
 #, kde-format
 msgid "Project could not be opened: %1"
 msgstr "Projekt lett sik nich opmaken: %1"
@@ -2115,23 +2109,23 @@ msgstr "Dokment extern ännert"
 msgid " Line: %1 Col: %2 "
 msgstr " Reeg: %1 Str: %2 "
 
-#: shell/sessioncontroller.cpp:159
+#: shell/sessioncontroller.cpp:165
 msgid "Start New Session"
 msgstr ""
 
-#: shell/sessioncontroller.cpp:160
+#: shell/sessioncontroller.cpp:166
 msgid "Start a new KDevelop instance with an empty session"
 msgstr ""
 
-#: shell/sessioncontroller.cpp:163
+#: shell/sessioncontroller.cpp:169
 msgid "Configure Sessions..."
 msgstr "Törns instellen..."
 
-#: shell/sessioncontroller.cpp:164
+#: shell/sessioncontroller.cpp:170
 msgid "Create/Delete/Activate Sessions"
 msgstr "Törns opstellen/wegdoon/opropen"
 
-#: shell/sessioncontroller.cpp:165
+#: shell/sessioncontroller.cpp:171
 msgid ""
 "<b>Configure Sessions</b><p>Shows a dialog to Create/Delete Sessions and set "
 "a new active session.</p>"
@@ -2552,7 +2546,7 @@ msgstr "Trecken..."
 
 #. i18n: file: vcs/dvcs/ui/branchmanager.ui:13
 #. i18n: ectx: property (windowTitle), widget (QDialog, BranchDialogBase)
-#: vcs/dvcs/dvcsplugin.cpp:260 rc.cpp:407
+#: vcs/dvcs/dvcsplugin.cpp:260 rc.cpp:401
 msgid "Branch Manager"
 msgstr "Telgpleger"
 
@@ -2562,7 +2556,7 @@ msgstr "Revischoon-Vörgeschicht"
 
 #. i18n: file: vcs/widgets/vcscommitdialog.ui:22
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: vcs/vcsdiffpatchsources.cpp:81 rc.cpp:458
+#: vcs/vcsdiffpatchsources.cpp:81 rc.cpp:452
 msgid "Commit Message:"
 msgstr "Inspeel-Naricht:"
 
@@ -3049,7 +3043,7 @@ msgstr "Oproop-Instellen"
 #. i18n: ectx: property (text), widget (KPushButton, newButton)
 #. i18n: file: vcs/dvcs/ui/branchmanager.ui:45
 #. i18n: ectx: property (text), widget (QPushButton, newButton)
-#: rc.cpp:155 rc.cpp:313 rc.cpp:413
+#: rc.cpp:155 rc.cpp:313 rc.cpp:407
 msgid "New"
 msgstr "Nieg"
 
@@ -3338,25 +3332,9 @@ msgstr "Projekt-Wörtelorner:"
 msgid "Select the base directory where new projects are to be created."
 msgstr "Den Orner utsöken, binnen den nieg Projekten opstellt warrt"
 
-#. i18n: file: shell/settings/projectsettings.ui:34
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:325
-msgid "Reopen projects on startup:"
-msgstr "Projekten bi't Starten wedder opmaken:"
-
-#. i18n: file: shell/settings/projectsettings.ui:44
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_reopenProjectsOnStartup)
-#: rc.cpp:328
-msgid ""
-"Automatically re-open all projects that were open when KDevelop shutdown on "
-"the next startup."
-msgstr ""
-"Bi den nakamen Oproop all Projekten wedder opmaken, de bi't Tomaken vun "
-"KDevelop opmaakt weern."
-
-#. i18n: file: shell/settings/projectsettings.ui:55
+#. i18n: file: shell/settings/projectsettings.ui:35
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:331
+#: rc.cpp:325
 msgid ""
 "Schedule all project\n"
 "files for parsing:"
@@ -3364,15 +3342,15 @@ msgstr ""
 "All Projektdateien\n"
 "inlesen:"
 
-#. i18n: file: shell/settings/projectsettings.ui:65
+#. i18n: file: shell/settings/projectsettings.ui:45
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_parseAllProjectSources)
-#: rc.cpp:335
+#: rc.cpp:329
 msgid "Parse all files in a project after the project has been opened."
 msgstr "All Dateien vun en Projekt na't Opmaken inlesen"
 
-#. i18n: file: shell/settings/projectsettings.ui:96
+#. i18n: file: shell/settings/projectsettings.ui:76
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:338
+#: rc.cpp:332
 msgid ""
 "Save All Documents\n"
 "Before Building"
@@ -3380,9 +3358,9 @@ msgstr ""
 "Ehr't Buen all\n"
 "Dokmenten sekern"
 
-#. i18n: file: shell/settings/projectsettings.ui:104
+#. i18n: file: shell/settings/projectsettings.ui:84
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:342
+#: rc.cpp:336
 msgid ""
 "Automatically Add Opened\n"
 "Projects to the Buildset"
@@ -3390,31 +3368,31 @@ msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:17
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:346
+#: rc.cpp:340
 msgid "Code Completion"
 msgstr "Kodekompletteren"
 
 #. i18n: file: shell/settings/ccsettings.ui:23
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_automaticInvocation)
-#: rc.cpp:349
+#: rc.cpp:343
 msgid "Enable Automatic Invocation"
 msgstr "Automaatsch Opropen anmaken"
 
 #. i18n: file: shell/settings/ccsettings.ui:30
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showMultiLineSelectionInformation)
-#: rc.cpp:352
+#: rc.cpp:346
 msgid "Additional Information For Current Item"
 msgstr "Informatschonen bito för't aktuelle Element"
 
 #. i18n: file: shell/settings/ccsettings.ui:37
 #. i18n: ectx: property (title), widget (QGroupBox, completionLevelGroup)
-#: rc.cpp:355
+#: rc.cpp:349
 msgid "Level"
 msgstr "Stoop"
 
 #. i18n: file: shell/settings/ccsettings.ui:43
 #. i18n: ectx: property (toolTip), widget (QRadioButton, kcfg_minimalAutomaticCompletion)
-#: rc.cpp:358
+#: rc.cpp:352
 msgid ""
 "Use minimal completion when the completion is automatic, and full completion "
 "when it is triggered manually"
@@ -3424,13 +3402,13 @@ msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:46
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_minimalAutomaticCompletion)
-#: rc.cpp:361
+#: rc.cpp:355
 msgid "Minimal Automatic Completion"
 msgstr "Automaatsch lüttst Kompletteerstoop"
 
 #. i18n: file: shell/settings/ccsettings.ui:56
 #. i18n: ectx: property (toolTip), widget (QRadioButton, kcfg_alwaysFullCompletion)
-#: rc.cpp:364
+#: rc.cpp:358
 msgid ""
 "When this is enabled, the completion-box will always show full type-"
 "information and argument-hints"
@@ -3440,31 +3418,31 @@ msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:59
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_alwaysFullCompletion)
-#: rc.cpp:367
+#: rc.cpp:361
 msgid "Always Full Completion"
 msgstr "Jümmers vull kompletteren"
 
 #. i18n: file: shell/settings/ccsettings.ui:66
 #. i18n: ectx: property (toolTip), widget (QRadioButton, kcfg_alwaysMinimalCompletion)
-#: rc.cpp:370
+#: rc.cpp:364
 msgid "Do not show type-information or argument-hints"
 msgstr "Keen Typinfos oder Argumententipps wiesen"
 
 #. i18n: file: shell/settings/ccsettings.ui:69
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_alwaysMinimalCompletion)
-#: rc.cpp:373
+#: rc.cpp:367
 msgid "Always Minimal Completion"
 msgstr "Jümmers sietst kompletteren"
 
 #. i18n: file: shell/settings/ccsettings.ui:82
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:376
+#: rc.cpp:370
 msgid "Semantic Code Highlighting"
 msgstr "Inholtbaseert Kode-Rutheven"
 
 #. i18n: file: shell/settings/ccsettings.ui:90
 #. i18n: ectx: property (toolTip), widget (QLabel, localColorizationLabel)
-#: rc.cpp:379
+#: rc.cpp:373
 msgid ""
 "This setting decides about the intensity of colors for local variables, for "
 "example function arguments, variables and the like."
@@ -3474,13 +3452,13 @@ msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:93
 #. i18n: ectx: property (text), widget (QLabel, localColorizationLabel)
-#: rc.cpp:382
+#: rc.cpp:376
 msgid "Local Colorization Intensity"
 msgstr "Klöörstoop för Lokale"
 
 #. i18n: file: shell/settings/ccsettings.ui:126
 #. i18n: ectx: property (toolTip), widget (QLabel, globalColorizationLabel)
-#: rc.cpp:385
+#: rc.cpp:379
 msgid ""
 "This settings lets you change the intensity of globally accessible types, "
 "for example classes, methods, functions etc."
@@ -3490,13 +3468,13 @@ msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:129
 #. i18n: ectx: property (text), widget (QLabel, globalColorizationLabel)
-#: rc.cpp:388
+#: rc.cpp:382
 msgid "Global Colorization Intensity"
 msgstr "Klöörstoop för Globale"
 
 #. i18n: file: shell/settings/ccsettings.ui:160
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_highlightSemanticProblems)
-#: rc.cpp:391
+#: rc.cpp:385
 msgid ""
 "Highlight semantic problems, such as non-existent or inaccessible "
 "declarations."
@@ -3506,13 +3484,13 @@ msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:163
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_highlightSemanticProblems)
-#: rc.cpp:394
+#: rc.cpp:388
 msgid "Highlight Semantic Problems"
 msgstr "Inholtproblemen rutheven"
 
 #. i18n: file: shell/settings/ccsettings.ui:173
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:397
+#: rc.cpp:391
 #, fuzzy
 #| msgid "Project Settings"
 msgid "Project Parsing"
@@ -3520,94 +3498,95 @@ msgstr "Projektinstellen"
 
 #. i18n: file: shell/settings/ccsettings.ui:181
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:400
+#: rc.cpp:394
 msgid "Minimum project size for simplified parsing"
 msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:201
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_minFilesForSimplifiedParsing)
-#: rc.cpp:403
+#: rc.cpp:397
 msgid ""
 "When a project contains more files than this number, the project will be\n"
 "parsed in simplified mode, increasing the efficiency by gathering less "
-"information."
+"information. Global code navigation and quickopen capabilities will be "
+"reduced."
 msgstr ""
 
 #. i18n: file: vcs/dvcs/ui/branchmanager.ui:42
 #. i18n: ectx: property (toolTip), widget (QPushButton, newButton)
-#: rc.cpp:410
+#: rc.cpp:404
 msgid "Creates new branch based on the selected branch"
 msgstr "Stellt ut den utsöchten en nieg Telg op"
 
 #. i18n: file: vcs/dvcs/ui/branchmanager.ui:55
 #. i18n: ectx: property (toolTip), widget (QPushButton, deleteButton)
-#: rc.cpp:416
+#: rc.cpp:410
 msgid "The same as git branch -D"
 msgstr "Dat sülve as \"git-branch -D\""
 
 #. i18n: file: vcs/dvcs/ui/branchmanager.ui:68
 #. i18n: ectx: property (toolTip), widget (QPushButton, checkoutButton)
-#: rc.cpp:422
+#: rc.cpp:416
 msgid "Checkout to the selected branch"
 msgstr "Den utsöchten Telg utlesen"
 
 #. i18n: file: vcs/dvcs/ui/branchmanager.ui:71
 #. i18n: ectx: property (text), widget (QPushButton, checkoutButton)
-#: rc.cpp:425
+#: rc.cpp:419
 msgid "Checkout"
 msgstr "Utlesen"
 
 #. i18n: file: vcs/dvcs/ui/branchmanager.ui:78
 #. i18n: ectx: property (text), widget (QPushButton, cancelButton)
-#: rc.cpp:428
+#: rc.cpp:422
 msgid "Cancel"
 msgstr "Afbreken"
 
 #. i18n: file: vcs/dvcs/ui/importmetadatawidget.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, ImportMetadataWidget)
-#: rc.cpp:431
+#: rc.cpp:425
 msgid "Import"
 msgstr "Importeren"
 
 #. i18n: file: vcs/dvcs/ui/importmetadatawidget.ui:19
 #. i18n: ectx: property (text), widget (QLabel, labelUrl)
-#: rc.cpp:434
+#: rc.cpp:428
 msgid "Source Directory:"
 msgstr "Bornorner:"
 
 #. i18n: file: vcs/dvcs/ui/logview.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, LogViewBase)
-#: rc.cpp:437
+#: rc.cpp:431
 msgid "Log"
 msgstr "Logbook"
 
 #. i18n: file: vcs/widgets/vcsdiffwidget.ui:16
 #. i18n: ectx: property (text), widget (QLabel, revLabel)
-#: rc.cpp:440
+#: rc.cpp:434
 msgid "Difference between revisions"
 msgstr "Verscheel twischen Revischonen"
 
 #. i18n: file: vcs/widgets/vcseventwidget.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, VcsEventWidget)
-#: rc.cpp:443
+#: rc.cpp:437
 msgid "Logview"
 msgstr "Logbook-Ansicht"
 
 #. i18n: file: vcs/widgets/vcseventwidget.ui:19
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:446
+#: rc.cpp:440
 msgid "Events:"
 msgstr "Begeefnissen:"
 
 #. i18n: file: vcs/widgets/vcseventwidget.ui:54
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:449
+#: rc.cpp:443
 msgid "Event Details:"
 msgstr "Begeefnis-Enkelheiten"
 
 #. i18n: file: vcs/widgets/vcseventwidget.ui:89
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:452
+#: rc.cpp:446
 msgid "Message:"
 msgstr "Naricht:"
 
@@ -3615,13 +3594,13 @@ msgstr "Naricht:"
 #. i18n: ectx: property (windowTitle), widget (QWidget, VcsCommitDialog)
 #. i18n: file: vcs/widgets/vcscommitdialog.ui:66
 #. i18n: ectx: property (windowTitle), widget (QTreeWidget, files)
-#: rc.cpp:455 rc.cpp:471
+#: rc.cpp:449 rc.cpp:465
 msgid "Select Files to commit"
 msgstr "Dateien utsöken, de Du tofögen wullt"
 
 #. i18n: file: vcs/widgets/vcscommitdialog.ui:36
 #. i18n: ectx: property (html), widget (KTextEdit, message)
-#: rc.cpp:461
+#: rc.cpp:455
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -3647,56 +3626,37 @@ msgstr ""
 
 #. i18n: file: vcs/widgets/vcscommitdialog.ui:56
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:468
+#: rc.cpp:462
 msgid "Commit Files:"
 msgstr "Dateien inspelen:"
 
 #. i18n: file: vcs/widgets/vcscommitdialog.ui:81
 #. i18n: ectx: property (text), widget (QTreeWidget, files)
-#: rc.cpp:474
+#: rc.cpp:468
 msgid "Status"
 msgstr "Status"
 
 #. i18n: file: vcs/widgets/vcscommitdialog.ui:86
 #. i18n: ectx: property (text), widget (QTreeWidget, files)
-#: rc.cpp:477
+#: rc.cpp:471
 msgid "Files to commit"
 msgstr "Dateien, de Du inspelen wullt"
 
 #. i18n: file: vcs/widgets/vcscommitdialog.ui:94
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:480
+#: rc.cpp:474
 msgid "Recursive:"
 msgstr "Rekursiev:"
 
 #. i18n: file: vcs/widgets/vcscommitdialog.ui:111
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:483
+#: rc.cpp:477
 msgid "Previous Messages:"
 msgstr "Verleden Narichten:"
 
 #. i18n: file: shell/settings/projectconfig.kcfg:11
-#. i18n: ectx: label, entry (reopenProjectsOnStartup), group (Project Manager)
-#: rc.cpp:486
-msgid "Open the last project(s) that were loaded on startup"
-msgstr "De tolest laadt Projekten bi't Starten opmaken"
-
-#. i18n: file: shell/settings/projectconfig.kcfg:14
-#. i18n: ectx: whatsthis, entry (reopenProjectsOnStartup), group (Project Manager)
-#: rc.cpp:489
-msgid ""
-"If this option is set, KDevelop will reopen the project(s) that\n"
-"        were open when KDevelop was closed. If this option is not set, no "
-"project\n"
-"        will be loaded during KDevelop startup"
-msgstr ""
-"Is dit anmaakt, maakt KDevelop de Projekten wedder op, de\n"
-"        opmaakt weern, as Du KDevelop tomaakt hest. Is dat ut,\n"
-"        laadt KDevelop bi't Starten keen Projekten."
-
-#. i18n: file: shell/settings/projectconfig.kcfg:18
 #. i18n: ectx: label, entry (parseAllProjectSources), group (Project Manager)
-#: rc.cpp:494
+#: rc.cpp:480
 msgid ""
 "Schedule all project source code to be parsed by the language support in the "
 "background"
@@ -3704,9 +3664,9 @@ msgstr ""
 "All Projekt-Borndateien vun de Spraak-Ünnerstütten in'n Achtergrund "
 "dörkieken laten"
 
-#. i18n: file: shell/settings/projectconfig.kcfg:22
+#. i18n: file: shell/settings/projectconfig.kcfg:15
 #. i18n: ectx: whatsthis, entry (parseAllProjectSources), group (Project Manager)
-#: rc.cpp:497
+#: rc.cpp:483
 msgid ""
 "If this option is set, KDevelop will schedule all source code\n"
 "        found by the current build system for parsing by the appropriate "
@@ -3722,21 +3682,21 @@ msgstr ""
 "ok\n"
 "        wat langsamer."
 
-#. i18n: file: shell/settings/projectconfig.kcfg:26
+#. i18n: file: shell/settings/projectconfig.kcfg:19
 #. i18n: ectx: whatsthis, entry (projectsBaseDirectory), group (Project Manager)
-#: rc.cpp:503
+#: rc.cpp:489
 msgid "Chooses the base directory where new projects are created."
 msgstr "Den Orner utsöken, binnen den nieg Projekten opstellt warrt"
 
-#. i18n: file: shell/settings/projectconfig.kcfg:30
+#. i18n: file: shell/settings/projectconfig.kcfg:23
 #. i18n: ectx: label, entry (saveDocuments), group (Project Manager)
-#: rc.cpp:506
+#: rc.cpp:492
 msgid "Save all open documents before building anything"
 msgstr "All opmaakt Dokmenten sekern, ehr jichtenswat buut warrt"
 
-#. i18n: file: shell/settings/projectconfig.kcfg:31
+#. i18n: file: shell/settings/projectconfig.kcfg:24
 #. i18n: ectx: whatsthis, entry (saveDocuments), group (Project Manager)
-#: rc.cpp:509
+#: rc.cpp:495
 msgid ""
 "If this option is set all open documents will be automatically saved before "
 "any build is started."
@@ -3744,15 +3704,15 @@ msgstr ""
 "Is dit anmaakt, warrt all opmaakt Dokmenten sekert, ehr jichtenswat buut "
 "warrt."
 
-#. i18n: file: shell/settings/projectconfig.kcfg:35
+#. i18n: file: shell/settings/projectconfig.kcfg:28
 #. i18n: ectx: label, entry (autoAddProjectsToBuildset), group (Project Manager)
-#: rc.cpp:512
+#: rc.cpp:498
 msgid "Automatically add opened projects to the Buildset"
 msgstr ""
 
-#. i18n: file: shell/settings/projectconfig.kcfg:36
+#. i18n: file: shell/settings/projectconfig.kcfg:29
 #. i18n: ectx: whatsthis, entry (autoAddProjectsToBuildset), group (Project Manager)
-#: rc.cpp:515
+#: rc.cpp:501
 #, fuzzy
 #| msgid ""
 #| "If this option is set all open documents will be automatically saved "
@@ -3763,6 +3723,37 @@ msgid ""
 msgstr ""
 "Is dit anmaakt, warrt all opmaakt Dokmenten sekert, ehr jichtenswat buut "
 "warrt."
+
+#~ msgid "Close All Projects"
+#~ msgstr "All Projekten tomaken"
+
+#~ msgid ""
+#~ "<b>Close all projects</b><p>Closes all of the currently open projects.</p>"
+#~ msgstr ""
+#~ "<b>All Projekten tomaken</b><p>All opstunns opmaakt Projekten tomaken.</p>"
+
+#~ msgid "Reopen projects on startup:"
+#~ msgstr "Projekten bi't Starten wedder opmaken:"
+
+#~ msgid ""
+#~ "Automatically re-open all projects that were open when KDevelop shutdown "
+#~ "on the next startup."
+#~ msgstr ""
+#~ "Bi den nakamen Oproop all Projekten wedder opmaken, de bi't Tomaken vun "
+#~ "KDevelop opmaakt weern."
+
+#~ msgid "Open the last project(s) that were loaded on startup"
+#~ msgstr "De tolest laadt Projekten bi't Starten opmaken"
+
+#~ msgid ""
+#~ "If this option is set, KDevelop will reopen the project(s) that\n"
+#~ "        were open when KDevelop was closed. If this option is not set, no "
+#~ "project\n"
+#~ "        will be loaded during KDevelop startup"
+#~ msgstr ""
+#~ "Is dit anmaakt, maakt KDevelop de Projekten wedder op, de\n"
+#~ "        opmaakt weern, as Du KDevelop tomaakt hest. Is dat ut,\n"
+#~ "        laadt KDevelop bi't Starten keen Projekten."
 
 #~ msgid "Close all currently open projects"
 #~ msgstr "All opstunns opmaakt Projekten tomaken"
@@ -3883,9 +3874,6 @@ msgstr ""
 
 #~ msgid "Could not fetch information for remote url: %1"
 #~ msgstr "Informatschonen för feern URL laat sik nich halen: %1"
-
-#~ msgid "Project loaded: %1"
-#~ msgstr "Projekt laadt: %1"
 
 #~ msgid "<b>Open project</b><p>Opens a KDevelop 4 project.</p>"
 #~ msgstr "<b>Projekt opmaken</b><p>En KDevelop-4-Projekt opmaken</p>"
