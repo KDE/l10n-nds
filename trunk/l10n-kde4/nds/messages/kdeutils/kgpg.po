@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kgpg\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-12-16 06:46+0100\n"
+"POT-Creation-Date: 2009-12-19 05:50+0100\n"
 "PO-Revision-Date: 2009-11-13 06:55+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -337,19 +337,19 @@ msgstr "Foto weg&doon"
 msgid "Import &Missing Signatures From Keyserver"
 msgstr "Fe&hlen Ünnerschriften vun Slötelserver importeren"
 
-#: keysmanager.cpp:304 model/kgpgitemmodel.cpp:281
+#: keysmanager.cpp:304 model/kgpgitemmodel.cpp:284
 msgid "Trust"
 msgstr "Vertroen"
 
-#: keysmanager.cpp:307 model/kgpgitemmodel.cpp:282
+#: keysmanager.cpp:307 model/kgpgitemmodel.cpp:285
 msgid "Size"
 msgstr "Grött"
 
-#: keysmanager.cpp:310 model/kgpgitemmodel.cpp:284
+#: keysmanager.cpp:310 model/kgpgitemmodel.cpp:287
 msgid "Creation"
 msgstr "Opstellt"
 
-#: keysmanager.cpp:313 model/kgpgitemmodel.cpp:283
+#: keysmanager.cpp:313 model/kgpgitemmodel.cpp:286
 msgid "Expiration"
 msgstr "Löppt af"
 
@@ -1549,7 +1549,7 @@ msgstr "(Standard)"
 msgid "Enter passphrase (symmetrical encryption)"
 msgstr "Bitte Slötelsatz ingeven (symmetersch Verslöteln)"
 
-#: kgpgtextinterface.cpp:106 model/kgpgitemnode.cpp:1086
+#: kgpgtextinterface.cpp:106 core/KGpgRefNode.cpp:126
 #: transactions/kgpgtransaction.cpp:260
 msgid "[No user id found]"
 msgstr "[Keen Bruker-ID funnen]"
@@ -2278,7 +2278,7 @@ msgstr "Verföögbore troot Slötels"
 #. i18n: ectx: property (text), widget (QTableView, availableKeys)
 #. i18n: file: groupedit.ui:135
 #. i18n: ectx: property (text), widget (QTableView, groupKeys)
-#: rc.cpp:253 rc.cpp:265 model/kgpgitemmodel.cpp:279
+#: rc.cpp:253 rc.cpp:265 model/kgpgitemmodel.cpp:282
 #: model/kgpgsearchresultmodel.cpp:323
 msgid "Name"
 msgstr "Naam"
@@ -2287,7 +2287,7 @@ msgstr "Naam"
 #. i18n: ectx: property (text), widget (QTableView, availableKeys)
 #. i18n: file: groupedit.ui:140
 #. i18n: ectx: property (text), widget (QTableView, groupKeys)
-#: rc.cpp:256 rc.cpp:268 model/kgpgitemmodel.cpp:280
+#: rc.cpp:256 rc.cpp:268 model/kgpgitemmodel.cpp:283
 #: model/kgpgsearchresultmodel.cpp:325
 msgctxt "@title:column Title of a column of emails"
 msgid "Email"
@@ -3317,10 +3317,50 @@ msgctxt "Unknown trust in key"
 msgid "Unknown"
 msgstr "Nich begäng"
 
-#: core/kgpgkey.cpp:512
+#: core/KGpgGroupNode.cpp:68
+#, kde-format
+msgid "1 key"
+msgid_plural "%1 keys"
+msgstr[0] "1 Slötel"
+msgstr[1] "%1 Slötels"
+
+#: core/kgpgkey.cpp:504
 msgctxt "Unlimited key lifetime"
 msgid "Unlimited"
 msgstr "Keen Grenz"
+
+#: core/KGpgKeyNode.cpp:76
+#, kde-format
+msgctxt "size of signing key / size of encryption key"
+msgid "%1 / %2"
+msgstr "%1 / %2"
+
+#: core/KGpgKeyNode.cpp:182 core/KGpgSignableNode.cpp:48
+#, kde-format
+msgid "1 signature"
+msgid_plural "%1 signatures"
+msgstr[0] "1 Ünnerschrift"
+msgstr[1] "%1 Ünnerschriften"
+
+#: core/KGpgNode.cpp:48
+#, kde-format
+msgctxt "Name of uid (comment)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: core/KGpgSignNode.cpp:63
+#, kde-format
+msgid "%1 [local signature]"
+msgstr "%1 [lokaal Ünnerschrift]"
+
+#: core/KGpgSubkeyNode.cpp:74
+#, kde-format
+msgid "%1 subkey"
+msgstr "%1-Ünnerslötel"
+
+#: core/KGpgUatNode.cpp:43
+msgid "Photo id"
+msgstr "Foto-ID"
 
 #: editor/kgpgeditor.cpp:89 editor/kgpgeditor.cpp:246
 #: editor/kgpgeditor.cpp:723 editor/kgpgeditor.cpp:752
@@ -3534,63 +3574,32 @@ msgctxt "Name <Email>: ID"
 msgid "%1 &lt;%2&gt;: %3"
 msgstr "%1 &lt;%2&gt;: %3"
 
-#: model/kgpgitemmodel.cpp:193
+#: model/kgpgitemmodel.cpp:199
 #, kde-format
 msgid "1 Key"
 msgid_plural "%1 Keys"
 msgstr[0] "Een Slötel"
 msgstr[1] "%1 Slötels"
 
-#: model/kgpgitemmodel.cpp:198
-#, kde-format
-msgid "1 Group"
-msgid_plural "%1 Groups"
-msgstr[0] "Een Koppel"
-msgstr[1] "%1 Koppeln"
+#: model/kgpgitemmodel.cpp:201
+#, fuzzy, kde-format
+#| msgid "Key Group"
+msgid "1 Key, 1 Group"
+msgid_plural "%1 Keys, 1 Group"
+msgstr[0] "Slötelkoppel"
+msgstr[1] "Slötelkoppel"
 
-#: model/kgpgitemmodel.cpp:285
+#: model/kgpgitemmodel.cpp:203
+#, fuzzy, kde-format
+#| msgid "Key Group"
+msgid "1 Key, %2 Groups"
+msgid_plural "%1 Keys, %2 Groups"
+msgstr[0] "Slötelkoppel"
+msgstr[1] "Slötelkoppel"
+
+#: model/kgpgitemmodel.cpp:288
 msgid "ID"
 msgstr "ID"
-
-#: model/kgpgitemnode.cpp:51
-#, kde-format
-msgctxt "Name of uid (comment)"
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
-
-#: model/kgpgitemnode.cpp:307 model/kgpgitemnode.cpp:627
-#, kde-format
-msgid "1 signature"
-msgid_plural "%1 signatures"
-msgstr[0] "1 Ünnerschrift"
-msgstr[1] "%1 Ünnerschriften"
-
-#: model/kgpgitemnode.cpp:535
-#, kde-format
-msgctxt "size of signing key / size of encryption key"
-msgid "%1 / %2"
-msgstr "%1 / %2"
-
-#: model/kgpgitemnode.cpp:859
-#, kde-format
-msgid "%1 [local signature]"
-msgstr "%1 [lokaal Ünnerschrift]"
-
-#: model/kgpgitemnode.cpp:890
-#, kde-format
-msgid "%1 subkey"
-msgstr "%1-Ünnerslötel"
-
-#: model/kgpgitemnode.cpp:918
-msgid "Photo id"
-msgstr "Foto-ID"
-
-#: model/kgpgitemnode.cpp:972
-#, kde-format
-msgid "1 key"
-msgid_plural "%1 keys"
-msgstr[0] "1 Slötel"
-msgstr[1] "%1 Slötels"
 
 #: model/kgpgsearchresultmodel.cpp:217
 #, kde-format
@@ -3887,6 +3896,11 @@ msgstr ""
 msgctxt "State of operation as in status"
 msgid "State"
 msgstr "Büterst"
+
+#~ msgid "1 Group"
+#~ msgid_plural "%1 Groups"
+#~ msgstr[0] "Een Koppel"
+#~ msgstr[1] "%1 Koppeln"
 
 #~ msgid "textLabel7"
 #~ msgstr "textLabel7"
