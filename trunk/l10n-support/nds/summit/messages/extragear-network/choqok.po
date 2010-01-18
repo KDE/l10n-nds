@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: choqok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-29 09:57+0100\n"
+"POT-Creation-Date: 2010-01-17 10:44+0100\n"
 "PO-Revision-Date: 2009-08-10 05:41+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -37,7 +37,7 @@ msgstr "Datei"
 #. i18n: ectx: Menu (tools)
 #. +> trunk
 #: choqok/choqokui.rc:11 plugins/nowlistening/nowlisteningui.rc:4
-#: plugins/searchaction/searchactionui.rc:4
+#: plugins/searchaction/searchactionui.rc:4 plugins/twitpic/twitpicui.rc:4
 msgid "Tools"
 msgstr ""
 
@@ -262,35 +262,52 @@ msgid "&General"
 msgstr "Allmeen"
 
 #. +> trunk
-#: choqok/config/behavior/behaviorconfig.cpp:83
+#: choqok/config/behavior/behaviorconfig.cpp:72
+#, fuzzy
+#| msgid " Minutes"
+msgid " Minute"
+msgid_plural " Minutes"
+msgstr[0] " Minuten"
+msgstr[1] " Minuten"
+
+#. +> trunk
+#: choqok/config/behavior/behaviorconfig.cpp:85
 #, fuzzy
 #| msgid "Url Shortening"
 msgid "URL &Shortening"
 msgstr "URLs afkörten"
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_showMainWinOnStart)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. +> trunk
 #: choqok/config/behavior/behaviorconfig_general.ui:17
 #, fuzzy
+#| msgid "General"
+msgid "General Options"
+msgstr "Allmeen"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_showSplashScreen)
+#. +> trunk
+#: choqok/config/behavior/behaviorconfig_general.ui:23
+#, fuzzy
 #| msgid "Show main &window when application starts."
-msgid "Show main &window on startup"
+msgid "Show splash-screen on startup"
 msgstr "Hööft&finster bi Programmstart wiesen"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_markAllAsReadOnHideToSystray)
 #. +> trunk
-#: choqok/config/behavior/behaviorconfig_general.ui:30
+#: choqok/config/behavior/behaviorconfig_general.ui:36
 msgid "Mark all unread posts as read, when hiding to system tray"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableSpellChecker)
 #. +> trunk
-#: choqok/config/behavior/behaviorconfig_general.ui:40
+#: choqok/config/behavior/behaviorconfig_general.ui:46
 msgid "Enable automatic spellchecking in the message editor"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useCustomBrowser)
 #. +> trunk
-#: choqok/config/behavior/behaviorconfig_general.ui:55
+#: choqok/config/behavior/behaviorconfig_general.ui:61
 #, fuzzy
 #| msgid "Use custom browser:"
 msgid "Use &custom web browser:"
@@ -298,15 +315,15 @@ msgstr "Egen Nettkieker bruken:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. +> trunk
-#: choqok/config/behavior/behaviorconfig_general.ui:71
+#: choqok/config/behavior/behaviorconfig_general.ui:80
 #, fuzzy
 #| msgid "Update Timelines"
-msgid "Timelines"
+msgid "Timelines Options"
 msgstr "Tietlienen opfrischen"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. +> trunk
-#: choqok/config/behavior/behaviorconfig_general.ui:81
+#: choqok/config/behavior/behaviorconfig_general.ui:90
 #, fuzzy
 #| msgid "Update interval"
 msgid "&Update interval:"
@@ -314,7 +331,7 @@ msgstr "Opfrischtiet"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. +> trunk
-#: choqok/config/behavior/behaviorconfig_general.ui:100
+#: choqok/config/behavior/behaviorconfig_general.ui:109
 #, fuzzy
 #| msgid "Number of posts shown in timelines:"
 msgid "&Number of posts to show in timelines:"
@@ -322,15 +339,9 @@ msgstr "Tall vun wiest Narichten binnen Tietregen:"
 
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, kcfg_updateInterval)
 #. +> trunk
-#: choqok/config/behavior/behaviorconfig_general.ui:117
+#: choqok/config/behavior/behaviorconfig_general.ui:126
 msgid "Disabled"
 msgstr "Utmaakt"
-
-#. i18n: ectx: property (suffix), widget (KIntSpinBox, kcfg_updateInterval)
-#. +> trunk
-#: choqok/config/behavior/behaviorconfig_general.ui:120
-msgid " Minutes"
-msgstr " Minuten"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showAllNotifiesInOne)
 #. +> trunk
@@ -347,14 +358,6 @@ msgstr "All nieg Narichten binnen een Bescheed &wiesen"
 #| msgid "&Notify duration:"
 msgid "&Notification duration:"
 msgstr "&Bescheedduer:"
-
-#. i18n: ectx: property (suffix), widget (KIntSpinBox, kcfg_notifyInterval)
-#. +> trunk
-#: choqok/config/behavior/behaviorconfig_notifications.ui:39
-#, fuzzy
-#| msgid " seconds."
-msgid " Seconds"
-msgstr " Sekunnen."
 
 #. +> trunk
 #: choqok/config/behavior/behaviorconfig_shorten.cpp:68
@@ -390,8 +393,8 @@ msgid "KDE Micro-Blogging Client."
 msgstr ""
 
 #. +> trunk
-#: choqok/main.cpp:40 choqok/mainwindow.cpp:61 choqok/mainwindow.cpp:440
-#: choqok/mainwindow.cpp:497 choqok/systrayicon.cpp:128
+#: choqok/main.cpp:40 choqok/mainwindow.cpp:75 choqok/mainwindow.cpp:458
+#: choqok/mainwindow.cpp:515 choqok/systrayicon.cpp:128
 msgid "Choqok"
 msgstr "Choqok"
 
@@ -417,7 +420,9 @@ msgstr "Roozbeh Shafiee"
 
 #. +> trunk
 #: choqok/main.cpp:45
-msgid "Icon designer"
+#, fuzzy
+#| msgid "Icon designer"
+msgid "Graphic designer"
 msgstr "Lüttbild-Maker"
 
 #. +> trunk
@@ -451,54 +456,54 @@ msgid "Developer"
 msgstr "Programmschriever"
 
 #. +> trunk
-#: choqok/mainwindow.cpp:167
+#: choqok/mainwindow.cpp:184
 msgid "Update Timelines"
 msgstr "Tietlienen opfrischen"
 
 #. +> trunk
-#: choqok/mainwindow.cpp:176 libchoqok/ui/quickpost.cpp:98
+#: choqok/mainwindow.cpp:193 libchoqok/ui/quickpost.cpp:98
 msgid "Quick Post"
 msgstr "Fixnaricht"
 
 #. +> trunk
-#: choqok/mainwindow.cpp:183
+#: choqok/mainwindow.cpp:200
 msgid "Mark All As Read"
 msgstr "All as leest markeren"
 
 #. +> trunk
-#: choqok/mainwindow.cpp:192
+#: choqok/mainwindow.cpp:209
 msgid "Minimize"
 msgstr "Minimeren"
 
 #. +> trunk
-#: choqok/mainwindow.cpp:199
+#: choqok/mainwindow.cpp:216
 msgid "Enable Update Timer"
 msgstr "Opfrisch-Tietgever anmaken"
 
 #. +> trunk
-#: choqok/mainwindow.cpp:205
+#: choqok/mainwindow.cpp:222
 msgid "Enable Notifications"
 msgstr "Bescheden anmaken"
 
 #. +> trunk
-#: choqok/mainwindow.cpp:211
+#: choqok/mainwindow.cpp:228
 #, fuzzy
 #| msgid "Clear Avatar cache"
 msgid "Clear Avatar Cache"
 msgstr "Bildteken-Twischenspieker leddig maken"
 
 #. +> trunk
-#: choqok/mainwindow.cpp:213
+#: choqok/mainwindow.cpp:230
 msgid "You have to restart Choqok to load avatars again"
 msgstr "Du muttst Choqok nieg starten, wenn Du de Bildtekens woller laden wullt."
 
 #. +> trunk
-#: choqok/mainwindow.cpp:253
+#: choqok/mainwindow.cpp:270
 msgid "No account created. You have to create an account before being able to make posts."
 msgstr ""
 
 #. +> trunk
-#: choqok/mainwindow.cpp:283
+#: choqok/mainwindow.cpp:300
 #, fuzzy
 #| msgid ""
 #| "<qt>In order to use this program you need at least one account on <a href='http://identi.ca'>Identi.ca</a> or <a href='http://twitter.com'>Twitter.com</a> services.<br/>"
@@ -511,7 +516,7 @@ msgstr ""
 "Wullt Du Dien Konto nu tofögen?</qt>"
 
 #. +> trunk
-#: choqok/mainwindow.cpp:438
+#: choqok/mainwindow.cpp:456
 #, fuzzy, kde-format
 #| msgid "Choqok"
 msgid "Choqok (%1)"
@@ -533,14 +538,14 @@ msgid "Choqok - Disabled"
 msgstr "Choqok - utmaakt"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:54
+#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:55
 #, fuzzy
 #| msgid "Sending direct message..."
 msgid "Send Private Message"
 msgstr "Direktnaricht warrt loosstüert..."
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:64
+#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:69
 #, fuzzy
 #| msgid "Sent"
 msgctxt "Send private message"
@@ -548,33 +553,33 @@ msgid "Send"
 msgstr "Loosstüert"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:77
+#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:82
 msgctxt "Send message to"
 msgid "To:"
 msgstr ""
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:82
+#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:87
 msgid "Reload friends list"
 msgstr "Mackerlist nieg laden"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:109
-#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:331
+#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:114
+#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:332
 #, fuzzy
 #| msgid "Please wait...."
 msgid "Please wait..."
 msgstr "Bitte töven..."
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:155
+#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:160
 #, fuzzy
 #| msgid "Private messages you have sent"
 msgid "Private message sent successfully"
 msgstr "Dien loosstüert Privaatnarichten"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:93
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:94
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "Home"
@@ -583,7 +588,7 @@ msgid "Home"
 msgstr "Tohuus"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:94
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:95
 #, fuzzy
 #| msgid "You and your friends"
 msgctxt "Timeline description"
@@ -591,7 +596,7 @@ msgid "You and your friends"
 msgstr "Du un Dien Mackers"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:99
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:100
 #, fuzzy
 #| msgid "Reply"
 msgctxt "Timeline Name"
@@ -599,7 +604,7 @@ msgid "Reply"
 msgstr "Antern"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:100
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:101
 #, fuzzy
 #| msgid "Replies to you"
 msgctxt "Timeline description"
@@ -607,7 +612,7 @@ msgid "Replies to you"
 msgstr "Antern op Di"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:105
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:106
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "Inbox"
@@ -616,7 +621,7 @@ msgid "Inbox"
 msgstr "Ingang"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:106
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:107
 #, fuzzy
 #| msgid "Your incoming private messages"
 msgctxt "Timeline description"
@@ -624,7 +629,7 @@ msgid "Your incoming private messages"
 msgstr "Dien ankamen Privaatnarichten"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:111
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:112
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "Outbox"
@@ -633,7 +638,7 @@ msgid "Outbox"
 msgstr "Utgang"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:112
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:113
 #, fuzzy
 #| msgid "Private messages you have sent"
 msgctxt "Timeline description"
@@ -641,14 +646,14 @@ msgid "Private messages you have sent"
 msgstr "Dien loosstüert Privaatnarichten"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:127
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:128
 #, fuzzy
 #| msgid "Sending direct message..."
 msgid "Send Private Message..."
 msgstr "Direktnaricht warrt loosstüert..."
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:132
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:133
 #: plugins/searchaction/searchaction.cpp:41
 #, fuzzy
 #| msgid "Searching..."
@@ -656,97 +661,151 @@ msgid "Search..."
 msgstr "An't Söken..."
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:328
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:267
+#, fuzzy
+#| msgid "Posting new status failed: %1"
+msgid "Creating the new post failed. Text is empty."
+msgstr "Nieg Status lett sik nich loosstüern: %1"
+
+#. +> trunk
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:331
 #, fuzzy, kde-format
 #| msgid "Posting new status failed: %1"
 msgid "Creating the new post failed. %1"
 msgstr "Nieg Status lett sik nich loosstüern: %1"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:336
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:341
 msgid "Creating the new post failed. The result data could not be parsed."
 msgstr ""
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:400
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:345
+#, fuzzy, kde-format
+#| msgid "Posting new status failed: %1"
+msgid "Creating the new post failed, with error: %1"
+msgstr "Nieg Status lett sik nich loosstüern: %1"
+
+#. +> trunk
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:413
 #, fuzzy, kde-format
 #| msgid "Posting new status failed: %1"
 msgid "Fetching the new post failed. %1"
 msgstr "Nieg Status lett sik nich loosstüern: %1"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:407
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:422
 msgid "Fetching new post failed. The result data could not be parsed."
 msgstr ""
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:452
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:427
+#, fuzzy, kde-format
+#| msgid "Posting new status failed: %1"
+msgid "Fetching new post failed, with error: %1"
+msgstr "Nieg Status lett sik nich loosstüern: %1"
+
+#. +> trunk
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:474
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:483
 #, fuzzy, kde-format
 #| msgid "Posting new status failed: %1"
 msgid "Removing the post failed. %1"
 msgstr "Nieg Status lett sik nich loosstüern: %1"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:488
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:518
 #, fuzzy, kde-format
 #| msgid "Authorization failed: %1"
 msgid "Favorite creation failed. %1"
 msgstr "Verlööf fehlt: %1"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:524
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:554
 #, fuzzy, kde-format
 #| msgid "Posting new status failed: %1"
 msgid "Removing the favorite failed. %1"
 msgstr "Nieg Status lett sik nich loosstüern: %1"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:621
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:651
 #, kde-format
 msgid "Timeline update failed, %1"
 msgstr ""
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:870
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:900
 #, fuzzy
 #| msgid "Data returned from server corrupted!"
 msgid "Retrieving the friends list failed. The data returned from the server is corrupted."
 msgstr "Daten vun Server schaadhaftig torüchkamen!"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:984
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1014
 #, fuzzy, kde-format
 #| msgid "Posting new status failed: %1"
 msgid "Creating friendship with %1 failed. %2"
 msgstr "Nieg Status lett sik nich loosstüern: %1"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:992
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1021
+#, kde-format
+msgid "You are now listening to %1's posts."
+msgstr ""
+
+#. +> trunk
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1029
 #, kde-format
 msgid "Creating friendship with %1 failed: the server returned invalid data."
 msgstr ""
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1027
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1034
+#, fuzzy, kde-format
+#| msgid "Posting new status failed: %1"
+msgid "Creating friendship with %1 failed: %2"
+msgstr "Nieg Status lett sik nich loosstüern: %1"
+
+#. +> trunk
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1071
 #, kde-format
 msgid "Destroying friendship with %1 failed. %2"
 msgstr ""
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1035
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1078
+#, kde-format
+msgid "You will not receive %1's updates."
+msgstr ""
+
+#. +> trunk
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1086
 #, kde-format
 msgid "Destroying friendship with %1 failed: the server returned invalid data."
 msgstr ""
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1071
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1091
+#, fuzzy, kde-format
+#| msgid "Posting new status failed: %1"
+msgid "Destroying friendship with %1 failed: %2"
+msgstr "Nieg Status lett sik nich loosstüern: %1"
+
+#. +> trunk
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1127
 #, fuzzy, kde-format
 #| msgid "Posting new status failed: %1"
 msgid "Blocking %1 failed. %2"
 msgstr "Nieg Status lett sik nich loosstüern: %1"
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1079
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1133
+#, kde-format
+msgid "Your posts are blocked for %1."
+msgstr ""
+
+#. +> trunk
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1137
 #, kde-format
 msgid "Blocking %1 failed: the server returned invalid data."
 msgstr ""
@@ -844,24 +903,6 @@ msgid "Block"
 msgstr ""
 
 #. +> trunk
-#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:422
-#, kde-format
-msgid "You are now listening to %1's posts."
-msgstr ""
-
-#. +> trunk
-#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:434
-#, kde-format
-msgid "You will not receive %1's updates."
-msgstr ""
-
-#. +> trunk
-#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:446
-#, kde-format
-msgid "Your posts are blocked for %1."
-msgstr ""
-
-#. +> trunk
 #: libchoqok/accountmanager.cpp:111 libchoqok/accountmanager.cpp:142
 #, kde-format
 msgid "There is no account with alias %1."
@@ -873,20 +914,20 @@ msgid "An account with this alias already exists: a unique alias has to be speci
 msgstr "Dat gifft al en Konto mit dissen Alias. Du muttst en eenkennig Alias bruken."
 
 #. +> trunk
-#: libchoqok/mediamanager.cpp:99
+#: libchoqok/mediamanager.cpp:100
 #, fuzzy
 #| msgid "Cannot create an http GET request, please check your Internet connection."
 msgid "Cannot create a KDE Job. Please check your installation."
 msgstr "HTTP-GET-Anfraag lett sik nich utföhren, prööv bitte Dien Verbinnen na't Internet."
 
 #. +> trunk
-#: libchoqok/mediamanager.cpp:118
+#: libchoqok/mediamanager.cpp:119
 #, kde-format
 msgid "Cannot download image from %1."
 msgstr "Brukerbild lett sik nich vun \"%1\" daalladen."
 
 #. +> trunk
-#: libchoqok/mediamanager.cpp:127
+#: libchoqok/mediamanager.cpp:130
 #, fuzzy
 #| msgid "Data returned from server is corrupted."
 msgid "The download failed. The returned file is corrupted."
@@ -962,7 +1003,7 @@ msgstr ""
 "<em>Strg+S</em> maakt de automaatsche Schriefwiesprööv an- oder ut."
 
 #. +> trunk
-#: libchoqok/ui/composerwidget.cpp:93
+#: libchoqok/ui/composerwidget.cpp:92
 msgid "Abort"
 msgstr ""
 
@@ -974,21 +1015,21 @@ msgid "New post submitted successfully"
 msgstr "Nieg Status mit Spood loosstüert"
 
 #. +> trunk
-#: libchoqok/ui/microblogwidget.cpp:208 libchoqok/ui/timelinewidget.cpp:176
+#: libchoqok/ui/microblogwidget.cpp:210 libchoqok/ui/timelinewidget.cpp:176
 #, fuzzy
 #| msgid "Mark All As Read"
 msgid "Mark all as read"
 msgstr "All as leest markeren"
 
 #. +> trunk
-#: libchoqok/ui/microblogwidget.cpp:300
+#: libchoqok/ui/microblogwidget.cpp:302
 #, fuzzy
 #| msgid "Accounts"
 msgid "Actions"
 msgstr "Kontos"
 
 #. +> trunk
-#: libchoqok/ui/microblogwidget.cpp:302
+#: libchoqok/ui/microblogwidget.cpp:304
 msgid "Latest update:"
 msgstr ""
 
@@ -1089,6 +1130,8 @@ msgstr "Identiteetprööv fehlslaan: %1"
 #. +> trunk
 #: microblogs/laconica/laconicaeditaccount.cpp:156
 #: microblogs/twitter/twittereditaccount.cpp:151
+#: plugins/twitpic/twitpicuploadimage.cpp:173
+#: plugins/twitpic/twitpicuploadimage.cpp:188
 #, fuzzy
 msgid "Unrecognized result."
 msgstr "Nich begäng Resultaat"
@@ -1291,7 +1334,7 @@ msgid "Do not show replies to me on the Home tab"
 msgstr "Op't Tohuus-Paneel keen Antern wiesen"
 
 #. +> trunk
-#: microblogs/laconica/laconicapostwidget.cpp:88
+#: microblogs/laconica/laconicapostwidget.cpp:90
 #: microblogs/twitter/twitterpostwidget.cpp:61
 #, kde-format
 msgctxt "Who is user"
@@ -1299,7 +1342,7 @@ msgid "Who is %1"
 msgstr ""
 
 #. +> trunk
-#: microblogs/laconica/laconicapostwidget.cpp:90
+#: microblogs/laconica/laconicapostwidget.cpp:92
 #: microblogs/twitter/twitterpostwidget.cpp:63
 #, fuzzy, kde-format
 #| msgid "from %1"
@@ -1308,13 +1351,36 @@ msgid "Posts from %1"
 msgstr "vun %1"
 
 #. +> trunk
-#: microblogs/laconica/laconicapostwidget.cpp:92
+#: microblogs/laconica/laconicapostwidget.cpp:94
 #: microblogs/twitter/twitterpostwidget.cpp:65
 #, fuzzy, kde-format
 #| msgid "replies to %1"
 msgctxt "Replies to user"
 msgid "Replies to %1"
 msgstr "Antern op %1"
+
+#. +> trunk
+#: microblogs/laconica/laconicapostwidget.cpp:114
+#, fuzzy, kde-format
+#| msgid "from %1"
+msgctxt "Unsubscribe from user"
+msgid "Unsubscribe from %1"
+msgstr "vun %1"
+
+#. +> trunk
+#: microblogs/laconica/laconicapostwidget.cpp:119
+#, kde-format
+msgctxt "Subscribe to user"
+msgid "Subscribe to %1"
+msgstr ""
+
+#. +> trunk
+#: microblogs/laconica/laconicapostwidget.cpp:124
+#: microblogs/twitter/twitterpostwidget.cpp:99
+#, kde-format
+msgctxt "Block user"
+msgid "Block %1"
+msgstr ""
 
 #. +> trunk
 #: microblogs/laconica/laconicasearch.cpp:45
@@ -1418,6 +1484,22 @@ msgid "Including %1"
 msgstr "mit %1"
 
 #. +> trunk
+#: microblogs/twitter/twitterpostwidget.cpp:90
+#, fuzzy, kde-format
+#| msgid "from %1"
+msgctxt "Unfollow user"
+msgid "Unfollow %1"
+msgstr "vun %1"
+
+#. +> trunk
+#: microblogs/twitter/twitterpostwidget.cpp:95
+#, fuzzy, kde-format
+#| msgid "from %1"
+msgctxt "Follow user"
+msgid "Follow %1"
+msgstr "vun %1"
+
+#. +> trunk
 #: microblogs/twitter/twittersearch.cpp:45
 msgid "Custom Search"
 msgstr "Egen Söök"
@@ -1470,6 +1552,82 @@ msgstr "Vörlaag:"
 #: plugins/searchaction/searchaction.cpp:61
 msgid "The Search action plugin does not support the current microblog."
 msgstr ""
+
+#. +> trunk
+#: plugins/twitpic/twitpic.cpp:43
+msgid "Upload to TwitPic"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#. +> trunk
+#: plugins/twitpic/twitpicprefs.ui:17
+msgid "Twitter password:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. +> trunk
+#: plugins/twitpic/twitpicprefs.ui:27
+#, fuzzy
+#| msgid "Twitter.com"
+msgid "Twitter username:"
+msgstr "Twitter.com"
+
+#. +> trunk
+#: plugins/twitpic/twitpicuploadimage.cpp:42
+msgid "Upload image to Twitpic"
+msgstr ""
+
+#. +> trunk
+#: plugins/twitpic/twitpicuploadimage.cpp:51
+msgid ""
+"You did not set your twitter account.\n"
+"In order to use this plugin, you have to set a twitter account: please go to Plugin Configuration and set it."
+msgstr ""
+
+#. +> trunk
+#: plugins/twitpic/twitpicuploadimage.cpp:84
+#: plugins/twitpic/twitpicuploadimage.cpp:90
+msgid "Uploading medium failed: cannot read the medium file."
+msgstr ""
+
+#. +> trunk
+#: plugins/twitpic/twitpicuploadimage.cpp:144
+#: plugins/twitpic/twitpicuploadimage.cpp:176
+#: plugins/twitpic/twitpicuploadimage.cpp:187
+msgid "Uploading image to Twitpic failed."
+msgstr ""
+
+#. +> trunk
+#: plugins/twitpic/twitpicuploadimage.cpp:165
+msgid "Image successfully uploaded to Twitpic, and posted to Twitter."
+msgstr ""
+
+#. i18n: ectx: property (filter), widget (KUrlRequester, kcfg_imageUrl)
+#. +> trunk
+#: plugins/twitpic/twitpicuploadimage_base.ui:30
+msgid "*.gif, *.jpeg, *.png"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. +> trunk
+#: plugins/twitpic/twitpicuploadimage_base.ui:37
+#, fuzzy
+#| msgid "Homepage:"
+msgid "Image:"
+msgstr "Tohuussiet:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. +> trunk
+#: plugins/twitpic/twitpicuploadimage_base.ui:48
+msgid ""
+"Message:\n"
+"(Optional)"
+msgstr ""
+
+#, fuzzy
+#~| msgid " seconds."
+#~ msgid " Seconds"
+#~ msgstr " Sekunnen."
 
 #, fuzzy
 #~| msgid "Authorization failed: %1"
@@ -1576,9 +1734,6 @@ msgstr ""
 
 #~ msgid "Custom Laconica"
 #~ msgstr "Egen Laconica"
-
-#~ msgid "Homepage:"
-#~ msgstr "Tohuussiet:"
 
 #~ msgid "Enter your custom Laconica homepage"
 #~ msgstr "Dien egen Laconica-Tohuussiet ingeven"
@@ -1774,11 +1929,6 @@ msgstr ""
 
 #~ msgid "Direct message to"
 #~ msgstr "Direktnaricht na"
-
-#, fuzzy
-#~| msgid "from %1"
-#~ msgid "Follow %1"
-#~ msgstr "vun %1"
 
 #~ msgid "Form"
 #~ msgstr "Formulor"
