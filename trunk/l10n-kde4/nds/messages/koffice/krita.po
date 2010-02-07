@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-02-03 06:58+0100\n"
+"POT-Creation-Date: 2010-02-07 07:49+0100\n"
 "PO-Revision-Date: 2010-01-27 05:18+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -2444,7 +2444,7 @@ msgstr "Maskeffekt opstellen"
 #. i18n: ectx: property (text), widget (QPushButton, pushButtonCancel)
 #. i18n: file: plugins/extensions/tonemapping/wdgtonemappingdialog.ui:93
 #. i18n: ectx: property (text), widget (QPushButton, pushButtonCancel)
-#: rc.cpp:615 rc.cpp:2633 rc.cpp:3375 rc.cpp:3534 ui/kis_view2.cpp:349
+#: rc.cpp:615 rc.cpp:2633 rc.cpp:3375 rc.cpp:3534 ui/kis_view2.cpp:346
 msgid "Cancel"
 msgstr "Afbreken"
 
@@ -3089,7 +3089,7 @@ msgstr "&Tosnieden"
 
 #. i18n: file: plugins/tools/tool_star/wdg_tool_star.ui:16
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgToolStar)
-#: rc.cpp:848 plugins/tools/tool_star/kis_tool_star.cc:121
+#: rc.cpp:848 plugins/tools/tool_star/kis_tool_star.cc:134
 msgid "Star"
 msgstr "Steern"
 
@@ -3346,7 +3346,8 @@ msgstr "Form:"
 #. i18n: file: plugins/paintops/gridbrush/wdgshapeoptions.ui:36
 #. i18n: ectx: property (text), item, widget (QComboBox, shapeCBox)
 #: rc.cpp:956 rc.cpp:1242 rc.cpp:1566
-#: plugins/tools/defaulttools/kis_tool_ellipse.cc:57
+#: image/recorder/kis_recorded_shape_paint_action.cpp:54
+#: plugins/tools/defaulttools/kis_tool_ellipse.cc:68
 msgid "Ellipse"
 msgstr "Ellips"
 
@@ -3367,7 +3368,8 @@ msgstr "Ellips"
 #. i18n: file: plugins/filters/blur/wdgblur.ui:130
 #. i18n: ectx: property (text), item, widget (KComboBox, cbShape)
 #: rc.cpp:959 rc.cpp:1245 rc.cpp:1569 rc.cpp:1650
-#: plugins/tools/defaulttools/kis_tool_rectangle.cc:70
+#: image/recorder/kis_recorded_shape_paint_action.cpp:56
+#: plugins/tools/defaulttools/kis_tool_rectangle.cc:80
 msgid "Rectangle"
 msgstr "Rechteck"
 
@@ -3421,6 +3423,7 @@ msgstr "Tofällig Grött"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: rc.cpp:983 rc.cpp:1269
 #: plugins/paintops/libpaintop/kis_pressure_rotation_option.cpp:27
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:39
 msgid "Rotation"
 msgstr "Dreihen"
 
@@ -4161,7 +4164,7 @@ msgstr "Towass"
 
 #. i18n: file: plugins/paintops/libpaintop/wdgcustombrush.ui:62
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox2)
-#: rc.cpp:1374 plugins/paintops/libpaintop/kis_dynamic_sensor.h:39
+#: rc.cpp:1374 plugins/paintops/libpaintop/kis_dynamic_sensor.h:40
 msgid "Pressure"
 msgstr "Druck"
 
@@ -4495,7 +4498,7 @@ msgstr "Regentall"
 
 #. i18n: file: plugins/paintops/dynadraw/wdgdynaoptions.ui:271
 #. i18n: ectx: property (text), widget (QRadioButton, polygonRBox)
-#: rc.cpp:1557 plugins/tools/tool_polygon/kis_tool_polygon.cc:78
+#: rc.cpp:1557 plugins/tools/tool_polygon/kis_tool_polygon.cc:77
 msgid "Polygon"
 msgstr "Veeleck"
 
@@ -6030,7 +6033,7 @@ msgstr "Laagprofil:"
 
 #. i18n: file: plugins/extensions/compose/wdg_compose.ui:52
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:2357 ui/tool/kis_tool_paint.cc:168
+#: rc.cpp:2357 ui/tool/kis_tool_paint.cc:167
 msgid "Opacity: "
 msgstr "Dörsichtigkeit: "
 
@@ -6450,7 +6453,7 @@ msgstr "Ansicht:"
 
 #. i18n: file: plugins/extensions/shearimage/wdg_shearimage.ui:16
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgShearImage)
-#: rc.cpp:2657 image/kis_image.cc:568
+#: rc.cpp:2657 image/kis_image.cc:566
 #: plugins/extensions/shearimage/dlg_shearimage.cc:32
 #: plugins/extensions/shearimage/shearimage.cc:90
 msgid "Shear Image"
@@ -6802,7 +6805,7 @@ msgstr "Köör &torüchnehmen"
 
 #. i18n: file: plugins/extensions/rotateimage/wdg_rotateimage.ui:16
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgRotateImage)
-#: rc.cpp:2910 image/kis_image.cc:516
+#: rc.cpp:2910 image/kis_image.cc:514
 #: plugins/extensions/rotateimage/rotateimage.cc:117
 #: plugins/extensions/rotateimage/dlg_rotateimage.cc:31
 msgid "Rotate Image"
@@ -8345,23 +8348,19 @@ msgstr "Köör"
 msgid "&Finish"
 msgstr "&Afsluten"
 
-#: ui/tool/kis_tool.cc:103
+#: ui/tool/kis_tool.cc:104
 msgid "Swap Foreground and Background Color"
 msgstr "Vör- un Achtergrundklöör tuschen"
 
-#: ui/tool/kis_tool.cc:108
+#: ui/tool/kis_tool.cc:109
 msgid "Reset Foreground and Background Color"
 msgstr "Vör- un Achtergrundklöör torüchsetten"
 
-#: ui/tool/kis_tool.cc:378
+#: ui/tool/kis_tool.cc:384
 msgid "No options"
 msgstr "Keen Optschonen"
 
-#: ui/tool/kis_tool_freehand.cc:416 ui/tool/kis_tool_freehand.cc:425
-msgid "Freehand tool"
-msgstr "Freehannig"
-
-#: ui/tool/kis_tool_paint.cc:176
+#: ui/tool/kis_tool_paint.cc:175
 msgid "Mode: "
 msgstr "Bedriefoort: "
 
@@ -8377,7 +8376,7 @@ msgstr "Egenschappen..."
 msgid "Import Image"
 msgstr "Bild importeren"
 
-#: ui/kis_doc2.cc:451
+#: ui/kis_doc2.cc:452
 msgid ""
 "The KOffice LittleCMS color management plugin is not installed. Krita will "
 "quit now."
@@ -8385,7 +8384,7 @@ msgstr ""
 "Dat KOffice-Klöörpleegmoduul \"LittleCMS\" is nich installeert. Krita warrt "
 "nu utmaakt."
 
-#: ui/kis_doc2.cc:452
+#: ui/kis_doc2.cc:453
 msgid "Installation Error"
 msgstr "Installatschoonfehler"
 
@@ -8468,7 +8467,7 @@ msgstr "Nochmaal anwennen"
 msgid "New Transformation Mask"
 msgstr "Nieg Ümform-Mask"
 
-#: ui/flake/kis_shape_controller.cpp:295
+#: ui/flake/kis_shape_controller.cpp:303
 #, kde-format
 msgid "Flake shapes %1"
 msgstr "Flake-Formen %1"
@@ -8795,7 +8794,7 @@ msgstr "Laag scheren"
 msgid "The image contains hidden layers that will be lost."
 msgstr "Dat Bild bargt versteken Lagen, de verloren geiht."
 
-#: ui/kis_layer_manager.cc:795 image/kis_image.cc:765
+#: ui/kis_layer_manager.cc:795 image/kis_image.cc:768
 msgid "Flatten Image"
 msgstr "Bild glattmaken"
 
@@ -8943,8 +8942,8 @@ msgstr "Sichtbor"
 msgid "Locked"
 msgstr "Afslaten"
 
-#: ui/kis_node_model.cpp:297 image/kis_paint_layer.cc:146
-#: image/kis_paint_layer.cc:153
+#: ui/kis_node_model.cpp:297 image/kis_paint_layer.cc:139
+#: image/kis_paint_layer.cc:146
 msgid "Alpha Locked"
 msgstr "Alpha afslaten"
 
@@ -9007,31 +9006,31 @@ msgstr "All opfrischen"
 msgid "Show Dockers"
 msgstr "Andockers wiesen"
 
-#: ui/kis_view2.cpp:238
+#: ui/kis_view2.cpp:240
 msgid "Tools"
 msgstr "Warktüüch"
 
-#: ui/kis_view2.cpp:343
+#: ui/kis_view2.cpp:340
 msgid "Insert as New Layer"
 msgstr "As nieg Laag infögen"
 
-#: ui/kis_view2.cpp:344
+#: ui/kis_view2.cpp:341
 msgid "Insert as New Layers"
 msgstr "As niege Lagen infögen"
 
-#: ui/kis_view2.cpp:346
+#: ui/kis_view2.cpp:343
 msgid "Open in New Document"
 msgstr "In'n nieg Dokment opmaken"
 
-#: ui/kis_view2.cpp:347
+#: ui/kis_view2.cpp:344
 msgid "Open in New Documents"
 msgstr "In nieg Dokmenten opmaken"
 
-#: ui/kis_view2.cpp:549
+#: ui/kis_view2.cpp:546
 msgid "Edit Palette..."
 msgstr "Klörensett bewerken..."
 
-#: ui/kis_view2.cpp:686 ui/kis_view2.cpp:689
+#: ui/kis_view2.cpp:683 ui/kis_view2.cpp:686
 msgid "Edit Palette"
 msgstr "Klörensett bewerken"
 
@@ -9256,12 +9255,12 @@ msgstr "Copyright 2009: Matthew Woehlke"
 msgid "Matthew Woehlke"
 msgstr "Matthew Woehlke"
 
-#: image/kis_adjustment_layer.cc:88
+#: image/kis_adjustment_layer.cc:124
 #: plugins/paintops/libpaintop/kis_filter_option.cpp:51
 msgid "Filter"
 msgstr "Filter"
 
-#: image/kis_transformation_mask.cpp:110
+#: image/kis_transformation_mask.cpp:111
 msgid "Transformation Mask Settings"
 msgstr "Ümform-Mask instellen"
 
@@ -9297,7 +9296,7 @@ msgstr "Lanczos 3"
 msgid "Mitchell"
 msgstr "Mitchell"
 
-#: image/commands/kis_image_resize_command.cpp:38 image/kis_image.cc:394
+#: image/commands/kis_image_resize_command.cpp:38 image/kis_image.cc:392
 msgid "Resize Image"
 msgstr "Bildgrött ännern"
 
@@ -9320,7 +9319,7 @@ msgstr "Egenschappen-Ännern"
 msgid "Raise"
 msgstr "Na vörn"
 
-#: image/commands/kis_image_convert_type_command.cpp:38 image/kis_image.cc:603
+#: image/commands/kis_image_convert_type_command.cpp:38 image/kis_image.cc:601
 msgid "Convert Image Type"
 msgstr "Bildtyp ümwanneln"
 
@@ -9405,32 +9404,32 @@ msgstr "Standard"
 msgid "Rotate Node"
 msgstr "Knütt dreihen"
 
-#: image/kis_image.cc:285
+#: image/kis_image.cc:283
 msgid "background"
 msgstr "Achtergrund"
 
-#: image/kis_image.cc:288
+#: image/kis_image.cc:286
 #, kde-format
 msgid "Layer %1"
 msgstr "Laag %1"
 
-#: image/kis_image.cc:392
+#: image/kis_image.cc:390
 msgid "Crop Image"
 msgstr "Bild tosnieden"
 
-#: image/kis_image.cc:426
+#: image/kis_image.cc:424
 msgid "Size Canvas"
 msgstr "Lienwandgrött"
 
-#: image/kis_image.cc:475
+#: image/kis_image.cc:473
 msgid "Scale Image"
 msgstr "Bild topassen"
 
-#: image/kis_image.cc:801
+#: image/kis_image.cc:798
 msgid "Merge with Layer Below"
 msgstr "Mit nerrn Laag tosamenföhren"
 
-#: image/kis_image.cc:841
+#: image/kis_image.cc:835
 msgid "Flatten Layer"
 msgstr "Laag glattmaken"
 
@@ -9438,11 +9437,16 @@ msgstr "Laag glattmaken"
 msgid "Last used"
 msgstr "Tolest bruukt"
 
+#: image/recorder/kis_recorded_path_paint_action.cpp:62
+#: plugins/tools/defaulttools/kis_tool_path.cc:124
+msgid "Path"
+msgstr "Bahn"
+
 #: image/recorder/kis_macro.cc:96
 msgid "Play macro"
 msgstr "Makro afspelen"
 
-#: image/kis_clone_layer.cpp:199
+#: image/kis_clone_layer.cpp:192
 msgid "Copy From"
 msgstr "Koperen vun"
 
@@ -9490,51 +9494,35 @@ msgstr "Dat Bild op en Rebeet tosnieden"
 msgid "Dyna"
 msgstr "Dünaamsch"
 
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:223
-#: plugins/tools/defaulttools/kis_tool_brush.cc:142
-msgctxt "smooth out the curves while drawing"
-msgid "Smoothness"
-msgstr "Weekheit"
-
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:236
-#: plugins/tools/defaulttools/kis_tool_brush.cc:165
-msgid "Assistant:"
-msgstr "Hölper:"
-
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:238
-#: plugins/tools/defaulttools/kis_tool_brush.cc:167
-msgid "Magnetism:"
-msgstr "Magnetismus:"
-
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:248
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:211
 msgid "Initial width:"
 msgstr "Startbreed:"
 
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:249
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:212
 msgid "Mass:"
 msgstr "Mass:"
 
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:250
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:213
 msgid "Drag:"
 msgstr "Dregen:"
 
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:251
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:214
 msgid "X angle:"
 msgstr "X-Winkel:"
 
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:252
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:215
 msgid "Y angle:"
 msgstr "Y-Winkel:"
 
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:253
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:216
 msgid "Width range:"
 msgstr "Breedrebeet:"
 
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:255
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:218
 msgid "Fixed angle:"
 msgstr "Fast Winkel:"
 
-#: plugins/tools/tool_dyna/kis_tool_dyna.h:170
+#: plugins/tools/tool_dyna/kis_tool_dyna.h:164
 msgid "Paint with brushes using dynamic movements"
 msgstr "Dünaamsch Verschuven bi't Malen mit Pinsels bruken"
 
@@ -9576,20 +9564,29 @@ msgstr "En Klöör ut dat Bild oder de aktuelle Laag utsöken"
 msgid "ms"
 msgstr "ms"
 
+#: plugins/tools/defaulttools/kis_tool_brush.cc:142
+msgctxt "smooth out the curves while drawing"
+msgid "Smoothness"
+msgstr "Weekheit"
+
 #: plugins/tools/defaulttools/kis_tool_brush.cc:147
 msgid "Rate:"
 msgstr "Stärk:"
 
-#: plugins/tools/defaulttools/kis_tool_line.cc:155
+#: plugins/tools/defaulttools/kis_tool_brush.cc:165
+msgid "Assistant:"
+msgstr "Hölper:"
+
+#: plugins/tools/defaulttools/kis_tool_brush.cc:167
+msgid "Magnetism:"
+msgstr "Magnetismus:"
+
+#: plugins/tools/defaulttools/kis_tool_line.cc:156
 msgctxt "a straight drawn line"
 msgid "Line"
 msgstr "Lien"
 
-#: plugins/tools/defaulttools/kis_tool_line.cc:176
-msgid "Line tool"
-msgstr "Lien-Warktüüch"
-
-#: plugins/tools/defaulttools/kis_tool_line.cc:269
+#: plugins/tools/defaulttools/kis_tool_line.cc:270
 msgid ""
 "Alt+Drag will move the origin of the currently displayed line around, Shift"
 "+Drag will force you to draw straight lines"
@@ -9658,10 +9655,6 @@ msgstr ""
 #: plugins/tools/defaulttools/kis_tool_ellipse.h:55
 msgid "Draw an ellipse"
 msgstr "En Ellips teken"
-
-#: plugins/tools/defaulttools/kis_tool_path.cc:72
-msgid "Path"
-msgstr "Bahn"
 
 #: plugins/tools/defaulttools/kis_tool_gradient.h:124
 msgid "Draw a gradient."
@@ -9761,14 +9754,7 @@ msgid "Draw a polygon. Shift-mouseclick ends the polygon."
 msgstr ""
 "En Veeleck teken. En Muusklick bi daalhollen Ümschalttast slutt dat af."
 
-#: plugins/tools/tool_polygon/kis_tool_polygon.cc:65
-#: plugins/tools/tool_polyline/kis_tool_polyline.cc:54
-#, fuzzy
-#| msgid "Polyline"
-msgid "Polyline tool"
-msgstr "Lienenkeed"
-
-#: plugins/tools/tool_polyline/kis_tool_polyline.cc:66
+#: plugins/tools/tool_polyline/kis_tool_polyline.cc:65
 msgid "Polyline"
 msgstr "Lienenkeed"
 
@@ -9859,8 +9845,8 @@ msgstr "&Bézierbagen"
 msgid "Select areas of the image with Bezier paths."
 msgstr "Rebeden vun't Bild mit Bézier-Bagenbahnen kören."
 
-#: plugins/tools/selectiontools/kis_tool_select_outline.cc:101
-#: plugins/tools/selectiontools/kis_tool_select_outline.cc:204
+#: plugins/tools/selectiontools/kis_tool_select_outline.cc:114
+#: plugins/tools/selectiontools/kis_tool_select_outline.cc:218
 msgid "Outline Selection"
 msgstr "Ümreetköör"
 
@@ -9910,7 +9896,7 @@ msgstr "Liekheit-Köör"
 msgid "Select a contiguous area of colors"
 msgstr "En tosamenhangen Rebeet vun Klören utsöken"
 
-#: plugins/tools/selectiontools/kis_tool_select_outline.h:63
+#: plugins/tools/selectiontools/kis_tool_select_outline.h:67
 msgid "Select an area by its outline"
 msgstr "En Rebeet na sien Ümreet utsöken"
 
@@ -10048,11 +10034,11 @@ msgstr "Tiet"
 msgid "Drawing angle"
 msgstr "Treckwinkel"
 
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:40
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:41
 msgid "X-Tilt"
 msgstr "X-Negen"
 
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:41
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:42
 msgid "Y-Tilt"
 msgstr "Y-Negen"
 
@@ -11176,14 +11162,6 @@ msgstr "Export-Optschonen för JPEG-Dateien"
 msgid "TIFF Export Options"
 msgstr "Export-Optschonen för TIFF-Dateien"
 
-#: plugins/formats/openexr/kis_openexr_export.cpp:103
-msgid ""
-"The image is using an unsupported color space. Please convert to 16-bit "
-"floating point RGB/Alpha before saving in the OpenEXR format."
-msgstr ""
-"Dat Bild bruukt en nich ünnerstütt Klörenruum. Bitte ehr't Sekern na dat "
-"\"OpenEXR\"-Formaat toeerst na 16-Bit Fleetkomma RGB/Alpha ümwanneln."
-
 #: plugins/generators/solid/colorgenerator.cpp:66
 msgid "&Solid Color..."
 msgstr "&Enkelklöör..."
@@ -11306,23 +11284,23 @@ msgstr ""
 msgid "Success"
 msgstr "Spood"
 
-#: plugins/extensions/bigbrother/bigbrother.cc:60
+#: plugins/extensions/bigbrother/bigbrother.cc:81
 msgid "Open and play..."
 msgstr "Opmaken un afspelen..."
 
-#: plugins/extensions/bigbrother/bigbrother.cc:64
+#: plugins/extensions/bigbrother/bigbrother.cc:85
 msgid "Open and edit..."
 msgstr "Opmaken un bewerken..."
 
-#: plugins/extensions/bigbrother/bigbrother.cc:68
+#: plugins/extensions/bigbrother/bigbrother.cc:89
 msgid "Save all actions"
 msgstr "All Akschonen sekern"
 
-#: plugins/extensions/bigbrother/bigbrother.cc:72
+#: plugins/extensions/bigbrother/bigbrother.cc:93
 msgid "Start recording macro"
 msgstr "Makro nu opnehmen"
 
-#: plugins/extensions/bigbrother/bigbrother.cc:76
+#: plugins/extensions/bigbrother/bigbrother.cc:97
 msgid "Stop recording actions"
 msgstr "Opnahm ophollen"
 
@@ -11717,7 +11695,7 @@ msgstr "Dat geev den Fehler binnen %1"
 msgid "Index out of bound"
 msgstr "Index güntsiets de Grenzen"
 
-#: plugins/extensions/scripting/scriptingpart.cpp:137
+#: plugins/extensions/scripting/scriptingpart.cpp:138
 #, kde-format
 msgid "&Show %1"
 msgstr "%1 &wiesen"
@@ -11820,6 +11798,24 @@ msgstr "Lineal"
 #: plugins/assistants/RulerAssistant/kis_ruler_assistant_tool.h:68
 msgid "Ruler assistant editor tool"
 msgstr "Linealenhölper-Editorwarktüüch"
+
+#~ msgid "Freehand tool"
+#~ msgstr "Freehannig"
+
+#~ msgid "Line tool"
+#~ msgstr "Lien-Warktüüch"
+
+#, fuzzy
+#~| msgid "Polyline"
+#~ msgid "Polyline tool"
+#~ msgstr "Lienenkeed"
+
+#~ msgid ""
+#~ "The image is using an unsupported color space. Please convert to 16-bit "
+#~ "floating point RGB/Alpha before saving in the OpenEXR format."
+#~ msgstr ""
+#~ "Dat Bild bruukt en nich ünnerstütt Klörenruum. Bitte ehr't Sekern na dat "
+#~ "\"OpenEXR\"-Formaat toeerst na 16-Bit Fleetkomma RGB/Alpha ümwanneln."
 
 #~ msgid "Form"
 #~ msgstr "Form"
