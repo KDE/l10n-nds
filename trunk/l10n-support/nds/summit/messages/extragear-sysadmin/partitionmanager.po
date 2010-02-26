@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: partitionmanager\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-02-24 10:53+0100\n"
+"POT-Creation-Date: 2010-02-25 10:29+0100\n"
 "PO-Revision-Date: 2010-02-16 08:24+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -36,14 +36,14 @@ msgid "LibParted Exception: %1"
 msgstr "Utnahm binnen \"libparted\": %1"
 
 #. +> trunk
-#: core/libpartedbackend.cpp:347
+#: core/libpartedbackend.cpp:351
 #, kde-format
 msgctxt "@info/plain"
 msgid "Could not access device <filename>%1</filename>"
 msgstr "Keen Togriep op Reedschap <filename>%1</filename>"
 
 #. +> trunk
-#: core/libpartedbackend.cpp:351
+#: core/libpartedbackend.cpp:355
 #, kde-format
 msgctxt "@info/plain"
 msgid "Device found: %1"
@@ -250,7 +250,7 @@ msgid "msft-reserved"
 msgstr "Msft-reserveert"
 
 #. +> trunk
-#: core/partitiontable.cpp:259
+#: core/partitiontable.cpp:260
 #, fuzzy, kde-format
 #| msgctxt "@info/plain"
 #| msgid "Partition <filename>%1</filename> does not start at the recommended boundary (first sector: %2, modulo: %3)."
@@ -259,7 +259,7 @@ msgid "Partition <filename>%1</filename> is not properly aligned (first sector: 
 msgstr "Partitschoon <filename>%1</filename> fangt nich bi de anraadt Grenz an (eerst Sektor: %2, Modulo: %3)"
 
 #. +> trunk
-#: core/partitiontable.cpp:267
+#: core/partitiontable.cpp:268
 #, fuzzy, kde-format
 #| msgctxt "@info/plain"
 #| msgid "Partition <filename>%1</filename> does not end at the recommended boundary (last sector: %2, modulo: %3)."
@@ -268,26 +268,35 @@ msgid "Partition <filename>%1</filename> is not properly aligned (last sector: %
 msgstr "Partitschoon <filename>%1</filename> höllt nich bi de anraadt Grenz op (eerst Sektor: %2, Modulo: %3)"
 
 #. +> trunk
-#: core/partitiontable.cpp:416
-#, kde-format
+#: core/partitiontable.cpp:417
+#, fuzzy, kde-format
+#| msgctxt "@info/plain"
+#| msgid "The partition cannot be created with the requested length of 1 sector, "
+#| msgid_plural "The partition cannot be created with the requested length of %1 sectors, "
 msgctxt "@info/plain"
-msgid "The partition cannot be created with the requested length of 1 sector, "
+msgid "The partition cannot be created with the requested length of one sector, "
 msgid_plural "The partition cannot be created with the requested length of %1 sectors, "
 msgstr[0] "De Partitschoon lett sik nich mit en Längde vun 1 Sektor opstellen, "
 msgstr[1] "De Partitschoon lett sik nich mit en Längde vun %1 Sektoren opstellen, "
 
 #. +> trunk
-#: core/partitiontable.cpp:417
-#, kde-format
+#: core/partitiontable.cpp:418
+#, fuzzy, kde-format
+#| msgctxt "@info/plain"
+#| msgid "and will instead only be 1 sector long."
+#| msgid_plural "and will instead only be %1 sectors long."
 msgctxt "@info/plain"
-msgid "and will instead only be 1 sector long."
+msgid "and will instead only be one sector long."
 msgid_plural "and will instead only be %1 sectors long."
 msgstr[0] "ansteed warrt se bloots 1 Sektor lang."
 msgstr[1] "ansteed warrt se bloots %1 Sektoren lang."
 
 #. +> trunk
-#: core/partitiontable.cpp:621
-msgctxt "@item/plain disk label name"
+#: core/partitiontable.cpp:622
+#, fuzzy
+#| msgctxt "@item/plain disk label name"
+#| msgid "unknown"
+msgctxt "@item/plain partition table name"
 msgid "unknown"
 msgstr "nich begäng"
 
@@ -988,7 +997,7 @@ msgid "Device properties: <filename>%1</filename>"
 msgstr "Partitschoon-Egenschappen: <filename>%1</filename>"
 
 #. +> trunk
-#: gui/devicepropsdialog.cpp:73 gui/infopane.cpp:155
+#: gui/devicepropsdialog.cpp:74 gui/infopane.cpp:155
 #, kde-format
 msgctxt "@label"
 msgid "1 Sector"
@@ -997,7 +1006,7 @@ msgstr[0] "1 Sektor"
 msgstr[1] "%1 Sektoren"
 
 #. +> trunk
-#: gui/devicepropsdialog.cpp:79 gui/infopane.cpp:143
+#: gui/devicepropsdialog.cpp:80 gui/infopane.cpp:143
 #, kde-format
 msgctxt "@label device"
 msgid "%1 (read only)"
@@ -1006,13 +1015,34 @@ msgstr "%1 (bloots-leesbor)"
 #. i18n: ectx: property (text), widget (QLabel, m_LabelType)
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextType)
 #. +> trunk
-#: gui/devicepropswidgetbase.ui:20 gui/editmountpointdialogwidgetbase.ui:56
+#: gui/devicepropswidgetbase.ui:61 gui/editmountpointdialogwidgetbase.ui:56
 msgid "Type:"
 msgstr "Typ:"
 
+#. i18n: ectx: property (text), widget (QRadioButton, m_RadioLegacy)
+#. +> trunk
+#: gui/devicepropswidgetbase.ui:86
+msgid "Legacy Alignment"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, m_RadioVista)
+#. +> trunk
+#: gui/devicepropswidgetbase.ui:93
+msgid "Vista Compatible Alignment"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_LabelTextCapacity)
+#. +> trunk
+#: gui/devicepropswidgetbase.ui:122
+#, fuzzy
+#| msgctxt "@label partition"
+#| msgid "Capacity:"
+msgid "Capacity:"
+msgstr "Grött:"
+
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextTotalSectors)
 #. +> trunk
-#: gui/devicepropswidgetbase.ui:56
+#: gui/devicepropswidgetbase.ui:145
 #, fuzzy
 #| msgctxt "@label device"
 #| msgid "Total sectors:"
@@ -1021,13 +1051,13 @@ msgstr "Sektoren tosamen:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextCHS)
 #. +> trunk
-#: gui/devicepropswidgetbase.ui:79
+#: gui/devicepropswidgetbase.ui:175
 msgid "Cylinders/Heads/Sectors:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextSectorSize)
 #. +> trunk
-#: gui/devicepropswidgetbase.ui:102
+#: gui/devicepropswidgetbase.ui:198
 #, fuzzy
 #| msgctxt "@label device"
 #| msgid "Sector size:"
@@ -1036,7 +1066,7 @@ msgstr "Sektorgrött:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextCylinderSize)
 #. +> trunk
-#: gui/devicepropswidgetbase.ui:125
+#: gui/devicepropswidgetbase.ui:221
 #, fuzzy
 #| msgctxt "@label device"
 #| msgid "Cylinder size:"
@@ -1045,21 +1075,12 @@ msgstr "Zylinnergrött:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextPrimariesMax)
 #. +> trunk
-#: gui/devicepropswidgetbase.ui:148
+#: gui/devicepropswidgetbase.ui:251
 #, fuzzy
 #| msgctxt "@label device"
 #| msgid "Primaries/Max:"
 msgid "Primaries/Max:"
 msgstr "Hööft/Tohööchst:"
-
-#. i18n: ectx: property (text), widget (QLabel, m_LabelTextCapacity)
-#. +> trunk
-#: gui/devicepropswidgetbase.ui:171
-#, fuzzy
-#| msgctxt "@label partition"
-#| msgid "Capacity:"
-msgid "Capacity:"
-msgstr "Grött:"
 
 #. +> trunk
 #: gui/editmountoptionsdialog.cpp:33
