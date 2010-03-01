@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: systemsettings\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-01-08 06:12+0100\n"
+"POT-Creation-Date: 2010-02-26 20:28+0100\n"
 "PO-Revision-Date: 2009-08-25 01:20+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -18,6 +18,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.0\n"
 
+#: app/ToolTips/tooltipmanager.cpp:209
+#, kde-format
+msgid "<i>Contains 1 item</i>"
+msgid_plural "<i>Contains %1 items</i>"
+msgstr[0] "<i>Bargt een Element</i>"
+msgstr[1] "<i>Bargt %1 Elementen</i>"
+
 #: app/main.cpp:35 classic/CategoryList.cpp:38
 msgid "System Settings"
 msgstr "Systeeminstellen"
@@ -26,11 +33,11 @@ msgstr "Systeeminstellen"
 msgid "Central configuration center for KDE."
 msgstr "Hööft-Instellenzentrum för KDE"
 
-#: app/main.cpp:36 icons/IconMode.cpp:66 classic/ClassicMode.cpp:69
+#: app/main.cpp:36 classic/ClassicMode.cpp:69 icons/IconMode.cpp:66
 msgid "(c) 2009, Ben Cooksley"
 msgstr "(c) 2009: Ben Cooksley"
 
-#: app/main.cpp:37 icons/IconMode.cpp:67 classic/ClassicMode.cpp:70
+#: app/main.cpp:37 classic/ClassicMode.cpp:70 icons/IconMode.cpp:67
 msgid "Ben Cooksley"
 msgstr "Ben Cooksley"
 
@@ -38,11 +45,11 @@ msgstr "Ben Cooksley"
 msgid "Maintainer"
 msgstr "Pleger"
 
-#: app/main.cpp:38 icons/IconMode.cpp:68 classic/ClassicMode.cpp:71
+#: app/main.cpp:38 classic/ClassicMode.cpp:71 icons/IconMode.cpp:68
 msgid "Mathias Soeken"
 msgstr "Mathias Soeken"
 
-#: app/main.cpp:38 icons/IconMode.cpp:68 classic/ClassicMode.cpp:71
+#: app/main.cpp:38 classic/ClassicMode.cpp:71 icons/IconMode.cpp:68
 msgid "Developer"
 msgstr "Schriever"
 
@@ -53,13 +60,6 @@ msgstr "Will Stephenson"
 #: app/main.cpp:39
 msgid "Internal module representation, internal module model"
 msgstr "Intern Moduuldorstellen, intern Moduulmodell"
-
-#: app/ToolTips/tooltipmanager.cpp:209
-#, kde-format
-msgid "<i>Contains 1 item</i>"
-msgid_plural "<i>Contains %1 items</i>"
-msgstr[0] "<i>Bargt een Element</i>"
-msgstr[1] "<i>Bargt %1 Elementen</i>"
 
 #: app/SettingsBase.cpp:57
 msgctxt "Search through a list of control modules"
@@ -112,15 +112,29 @@ msgstr "Vertell wat över de aktive Ansicht"
 msgid "About %1"
 msgstr "Vertell wat över %1"
 
-#: core/ExternalAppModule.cpp:31
-#, kde-format
-msgid "%1 is an external application and has been automatically launched"
-msgstr "%1 is en extern Programm un wöör automaatsch opropen"
+#: classic/ClassicMode.cpp:67 classic/ClassicMode.cpp:237
+msgid "Tree View"
+msgstr "Boomansicht"
 
-#: core/ExternalAppModule.cpp:32
-#, kde-format
-msgid "Relaunch %1"
-msgstr "%1 nieg starten"
+#: classic/ClassicMode.cpp:68
+msgid "Provides a classic tree-based view of control modules."
+msgstr "Wiest de Kuntrullmodulen as klass'sch Boomansicht"
+
+#: classic/ClassicMode.cpp:70 icons/IconMode.cpp:67
+msgid "Author"
+msgstr "Autor"
+
+#: classic/CategoryList.cpp:39
+msgid "Configure your system"
+msgstr "Stell Dien Systeem in"
+
+#: classic/CategoryList.cpp:40
+msgid ""
+"Welcome to \"System Settings\", a central place to configure your computer "
+"system."
+msgstr ""
+"Willkamen bi de Systeeminstellen, een zentraal Steed för't Instellen vun "
+"Dien Systeem."
 
 #: core/ModuleView.cpp:81
 msgid "Reset all current changes to previous values"
@@ -138,6 +152,16 @@ msgstr ""
 msgid "Apply Settings"
 msgstr "Instellen bruken"
 
+#: core/ExternalAppModule.cpp:31
+#, kde-format
+msgid "%1 is an external application and has been automatically launched"
+msgstr "%1 is en extern Programm un wöör automaatsch opropen"
+
+#: core/ExternalAppModule.cpp:32
+#, kde-format
+msgid "Relaunch %1"
+msgstr "%1 nieg starten"
+
 #: icons/IconMode.cpp:64
 msgid "Icon View"
 msgstr "Lüttbild-Ansicht"
@@ -145,10 +169,6 @@ msgstr "Lüttbild-Ansicht"
 #: icons/IconMode.cpp:65
 msgid "Provides a categorized icons view of control modules."
 msgstr "Wiest de Kuntrullmodulen as Lüttbildansicht, na Kategorien ornt."
-
-#: icons/IconMode.cpp:67 classic/ClassicMode.cpp:70
-msgid "Author"
-msgstr "Autor"
 
 #: icons/IconMode.cpp:72
 msgid "Overview"
@@ -181,55 +201,35 @@ msgstr "Ansichtstil"
 msgid "Show detailed tooltips"
 msgstr "Utföhrliche Knoopinformatschonen wiesen"
 
+#. i18n: file: app/systemsettingsui.rc:16
+#. i18n: ectx: ToolBar (mainToolBar)
+#: rc.cpp:11
+msgid "About System Settings"
+msgstr "Vertell wat över de Systeeminstellen"
+
 #. i18n: file: app/systemsettings.kcfg:9
 #. i18n: ectx: label, entry (ShowToolTips), group (Main)
-#: rc.cpp:11
+#: rc.cpp:14
 msgid "Determines whether detailed tooltips should be used"
 msgstr "Leggt fast, wat Kortinfos Enkelheiten wiest"
 
 #. i18n: file: app/systemsettings.kcfg:13
 #. i18n: ectx: label, entry (ActiveView), group (Main)
-#: rc.cpp:14
+#: rc.cpp:17
 msgid "Internal name for the view used"
 msgstr "Intern Naam vun de bruukte Ansicht"
 
-#. i18n: file: app/systemsettingsui.rc:16
-#. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:17
-msgid "About System Settings"
-msgstr "Vertell wat över de Systeeminstellen"
-
-#. i18n: file: core/externalModule.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, ExternalModule)
-#: rc.cpp:20
-msgid "Dialog"
-msgstr "Dialoog"
-
 #. i18n: file: classic/configClassic.ui:17
 #. i18n: ectx: property (text), widget (QCheckBox, CbExpand)
-#: rc.cpp:23
+#: rc.cpp:20
 msgid "Expand the first level automatically"
 msgstr "De eerste Evene automaatsch utfoolden"
 
-#: classic/ClassicMode.cpp:67 classic/ClassicMode.cpp:237
-msgid "Tree View"
-msgstr "Boomansicht"
-
-#: classic/ClassicMode.cpp:68
-msgid "Provides a classic tree-based view of control modules."
-msgstr "Wiest de Kuntrullmodulen as klass'sch Boomansicht"
-
-#: classic/CategoryList.cpp:39
-msgid "Configure your system"
-msgstr "Stell Dien Systeem in"
-
-#: classic/CategoryList.cpp:40
-msgid ""
-"Welcome to \"System Settings\", a central place to configure your computer "
-"system."
-msgstr ""
-"Willkamen bi de Systeeminstellen, een zentraal Steed för't Instellen vun "
-"Dien Systeem."
+#. i18n: file: core/externalModule.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, ExternalModule)
+#: rc.cpp:23
+msgid "Dialog"
+msgstr "Dialoog"
 
 #~ msgid ""
 #~ "Below you can select your preferred style for viewing System Settings"
