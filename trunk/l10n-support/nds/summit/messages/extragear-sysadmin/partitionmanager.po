@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: partitionmanager\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-02-25 10:29+0100\n"
+"POT-Creation-Date: 2010-03-01 10:42+0100\n"
 "PO-Revision-Date: 2010-02-27 08:50+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -29,25 +29,59 @@ msgid "Your emails"
 msgstr "s_dibbern@web.de, m.j.wiese@web.de"
 
 #. +> trunk
-#: core/libpartedbackend.cpp:67
+#: backend/libpartedbackend.cpp:69
 #, kde-format
 msgctxt "@info/plain"
 msgid "LibParted Exception: %1"
 msgstr "Utnahm binnen \"libparted\": %1"
 
 #. +> trunk
-#: core/libpartedbackend.cpp:351
+#: backend/libpartedbackend.cpp:359
 #, kde-format
 msgctxt "@info/plain"
 msgid "Could not access device <filename>%1</filename>"
 msgstr "Keen Togriep op Reedschap <filename>%1</filename>"
 
 #. +> trunk
-#: core/libpartedbackend.cpp:355
+#: backend/libpartedbackend.cpp:363
 #, kde-format
 msgctxt "@info/plain"
 msgid "Device found: %1"
 msgstr "Reedschap funnen: %1"
+
+#. +> trunk
+#: backend/libparteddevice.cpp:170
+#, kde-format
+msgctxt "@info/plain"
+msgid "Unknown partition role for new partition <filename>%1</filename> (roles: %2)"
+msgstr "Nich begäng Partitschoontyp för nieg Partitschoon <filename>%1</filename> (Typen: %2)"
+
+#. +> trunk
+#: backend/libparteddevice.cpp:180
+#, kde-format
+msgctxt "@info/plain"
+msgid "Failed to create new partition <filename>%1</filename>."
+msgstr "De niege Partitschoon <filename>%1</filename> lett sik nich opstellen."
+
+#. +> trunk
+#: backend/libparteddevice.cpp:192
+msgctxt "@info/plain"
+msgid "Failed to create a new partition: could not get geometry for constraint."
+msgstr "En nieg Partitschoon lett sik nich opstellen: Geometrie lett sik nich utreken"
+
+#. +> trunk
+#: backend/libparteddevice.cpp:207 jobs/createpartitionjob.cpp:58
+#, kde-format
+msgctxt "@info/plain"
+msgid "Failed to add partition <filename>%1</filename> to device <filename>%2</filename>."
+msgstr "Partitschoon <filename>%1</filename> lett sik de Reedschap <filename>%2</filename> nich tofögen."
+
+#. +> trunk
+#: backend/libpartedpartition.cpp:51
+#, kde-format
+msgctxt "@info/plain"
+msgid "The flag \"%1\" is not available on the partition's partition table."
+msgstr "De Mark \"%1\" gifft dat för de Partitschoon ehr Partitschonentabell nich."
 
 #. +> trunk
 #: core/operationstack.cpp:104
@@ -252,8 +286,6 @@ msgstr "Msft-reserveert"
 #. +> trunk
 #: core/partitiontable.cpp:260
 #, kde-format
-#| msgctxt "@info/plain"
-#| msgid "Partition <filename>%1</filename> does not start at the recommended boundary (first sector: %2, modulo: %3)."
 msgctxt "@info/plain"
 msgid "Partition <filename>%1</filename> is not properly aligned (first sector: %2, modulo: %3)."
 msgstr "Partitschoon <filename>%1</filename> is nich propper towiest (eerst Sektor: %2, Modulo: %3)."
@@ -261,8 +293,6 @@ msgstr "Partitschoon <filename>%1</filename> is nich propper towiest (eerst Sekt
 #. +> trunk
 #: core/partitiontable.cpp:268
 #, kde-format
-#| msgctxt "@info/plain"
-#| msgid "Partition <filename>%1</filename> does not end at the recommended boundary (last sector: %2, modulo: %3)."
 msgctxt "@info/plain"
 msgid "Partition <filename>%1</filename> is not properly aligned (last sector: %2, modulo: %3)."
 msgstr "Partitschoon <filename>%1</filename> is nich propper towiest (lest Sektor: %2, Modulo: %3)."
@@ -270,9 +300,6 @@ msgstr "Partitschoon <filename>%1</filename> is nich propper towiest (lest Sekto
 #. +> trunk
 #: core/partitiontable.cpp:417
 #, kde-format
-#| msgctxt "@info/plain"
-#| msgid "The partition cannot be created with the requested length of 1 sector, "
-#| msgid_plural "The partition cannot be created with the requested length of %1 sectors, "
 msgctxt "@info/plain"
 msgid "The partition cannot be created with the requested length of one sector, "
 msgid_plural "The partition cannot be created with the requested length of %1 sectors, "
@@ -282,9 +309,6 @@ msgstr[1] "De Partitschoon lett sik nich mit en Längde vun %1 Sektoren opstelle
 #. +> trunk
 #: core/partitiontable.cpp:418
 #, kde-format
-#| msgctxt "@info/plain"
-#| msgid "and will instead only be 1 sector long."
-#| msgid_plural "and will instead only be %1 sectors long."
 msgctxt "@info/plain"
 msgid "and will instead only be one sector long."
 msgid_plural "and will instead only be %1 sectors long."
@@ -293,8 +317,6 @@ msgstr[1] "ansteed warrt se bloots %1 Sektoren lang."
 
 #. +> trunk
 #: core/partitiontable.cpp:622
-#| msgctxt "@item/plain disk label name"
-#| msgid "unknown"
 msgctxt "@item/plain partition table name"
 msgid "unknown"
 msgstr "nich begäng"
@@ -698,14 +720,11 @@ msgstr "Allmeen Instellen"
 
 #. +> trunk
 #: gui/configureoptionsdialog.cpp:49
-#| msgid "File System"
 msgid "File System Colors"
 msgstr "Dateisysteemklören"
 
 #. +> trunk
 #: gui/configureoptionsdialog.cpp:49
-#| msgctxt "@title:window"
-#| msgid "File System Support"
 msgid "File System Color Settings"
 msgstr "Dateisysteemklöör instellen"
 
@@ -719,12 +738,12 @@ msgstr "Verwiedert"
 msgid "Advanced Settings"
 msgstr "Verwiedert Instellen"
 
-#. i18n: ectx: property (windowTitle), widget (QWidget, ConfigurePageAdvanced)
 #. i18n: ectx: property (windowTitle), widget (QWidget, ConfigurePageGeneral)
-#. i18n: ectx: property (windowTitle), widget (QWidget, ConfigurePageFileSystemColors)
+#. i18n: ectx: property (windowTitle), widget (QWidget, ConfigurePageAdvanced)
 #. i18n: ectx: property (windowTitle), widget (QWidget, CreatePartitionTableWidgetBase)
-#. i18n: ectx: property (windowTitle), widget (QWidget, EditMountPointDialogWidgetBase)
+#. i18n: ectx: property (windowTitle), widget (QWidget, ConfigurePageFileSystemColors)
 #. i18n: ectx: property (windowTitle), widget (QWidget, DevicePropsWidgetBase)
+#. i18n: ectx: property (windowTitle), widget (QWidget, EditMountPointDialogWidgetBase)
 #. +> trunk
 #: gui/configurepageadvanced.ui:14 gui/configurepagefilesystemcolors.ui:14
 #: gui/configurepagegeneral.ui:14 gui/createpartitiontablewidgetbase.ui:14
@@ -751,143 +770,108 @@ msgstr "Partitschoon-Typ:"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:26
-#| msgid "File System"
 msgid "File Systems"
 msgstr "Dateisystemen"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:32
-#| msgctxt "@item/plain filesystem name"
-#| msgid "ext2"
 msgid "ext2:"
 msgstr "Ext2:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel_2)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:61
-#| msgctxt "@item/plain filesystem name"
-#| msgid "ext3"
 msgid "ext3:"
 msgstr "Ext3:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel_3)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:90
-#| msgctxt "@item/plain filesystem name"
-#| msgid "ext4"
 msgid "ext4:"
 msgstr "Ext4:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel_4)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:106
-#| msgctxt "@item/plain filesystem name"
-#| msgid "linuxswap"
 msgid "linuxswap:"
 msgstr "Linux-Swap:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel_6)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:135
-#| msgctxt "@item/plain filesystem name"
-#| msgid "fat16"
 msgid "fat16:"
 msgstr "FAT16:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel_5)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:164
-#| msgctxt "@item/plain filesystem name"
-#| msgid "fat32"
 msgid "fat32:"
 msgstr "FAT32:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel_9)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:180
-#| msgctxt "@item/plain filesystem name"
-#| msgid "ntfs"
 msgid "ntfs:"
 msgstr "NTFS:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel_7)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:209
-#| msgctxt "@item/plain filesystem name"
-#| msgid "reiser"
 msgid "reiserfs:"
 msgstr "Reiser:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel_8)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:238
-#| msgctxt "@item/plain filesystem name"
-#| msgid "reiser4"
 msgid "reiser4:"
 msgstr "Reiser4:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel_10)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:254
-#| msgctxt "@item/plain filesystem name"
-#| msgid "xfs"
 msgid "xfs:"
 msgstr "XFS:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel_11)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:283
-#| msgctxt "@item/plain filesystem name"
-#| msgid "jfs"
 msgid "jfs"
 msgstr "JFS"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel_12)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:312
-#| msgctxt "@item/plain filesystem name"
-#| msgid "hfs"
 msgid "hfs:"
 msgstr "HFS:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel_14)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:328
-#| msgctxt "@item/plain filesystem name"
-#| msgid "hfsplus"
 msgid "hfsplus:"
 msgstr "HFS-Plus:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel_15)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:357
-#| msgctxt "@item/plain filesystem name"
-#| msgid "ufs"
 msgid "ufs:"
 msgstr "UFS:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel_13)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:386
-#| msgctxt "@item partition role"
-#| msgid "extended"
 msgid "extended:"
 msgstr "verwiedert:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel_16)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:402
-#| msgctxt "@item/plain disk label name"
-#| msgid "unknown"
 msgid "unknown:"
 msgstr "nich begäng:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel_17)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:431
-#| msgctxt "@item/plain filesystem name"
-#| msgid "unformatted"
 msgid "unformatted:"
 msgstr "nich formateert:"
 
@@ -900,16 +884,12 @@ msgstr "Verföögbor un bruukt Spiekerplatz"
 #. i18n: ectx: property (text), widget (QLabel, textLabel_19)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:475
-#| msgctxt "@label partition"
-#| msgid "Available:"
 msgid "Available:"
 msgstr "Verföögbor:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel_18)
 #. +> trunk
 #: gui/configurepagefilesystemcolors.ui:504
-#| msgctxt "@label partition"
-#| msgid "Used:"
 msgid "Used:"
 msgstr "Bruukt:"
 
@@ -968,8 +948,6 @@ msgstr "<b>Wohrschoen:</b> Dit deit all Daten duerhaftig vun de Reedschap weg!"
 #. +> trunk
 #: gui/devicepropsdialog.cpp:43
 #, kde-format
-#| msgctxt "@title:window"
-#| msgid "Partition properties: <filename>%1</filename>"
 msgctxt "@title:window"
 msgid "Device properties: <filename>%1</filename>"
 msgstr "Reedschap-Egenschappen: <filename>%1</filename>"
@@ -990,8 +968,8 @@ msgctxt "@label device"
 msgid "%1 (read only)"
 msgstr "%1 (bloots-leesbor)"
 
-#. i18n: ectx: property (text), widget (QLabel, m_LabelType)
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextType)
+#. i18n: ectx: property (text), widget (QLabel, m_LabelType)
 #. +> trunk
 #: gui/devicepropswidgetbase.ui:61 gui/editmountpointdialogwidgetbase.ui:56
 msgid "Type:"
@@ -1014,16 +992,12 @@ msgstr "kompatibel to Vista"
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextCapacity)
 #. +> trunk
 #: gui/devicepropswidgetbase.ui:122
-#| msgctxt "@label partition"
-#| msgid "Capacity:"
 msgid "Capacity:"
 msgstr "Grött:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextTotalSectors)
 #. +> trunk
 #: gui/devicepropswidgetbase.ui:145
-#| msgctxt "@label device"
-#| msgid "Total sectors:"
 msgid "Total Sectors:"
 msgstr "Sektoren tosamen:"
 
@@ -1036,16 +1010,12 @@ msgstr "Zylinners/Köpp/Sektoren:"
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextSectorSize)
 #. +> trunk
 #: gui/devicepropswidgetbase.ui:198
-#| msgctxt "@label device"
-#| msgid "Sector size:"
 msgid "Logical Sector Size:"
 msgstr "Logisch Sektorgrött:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextCylinderSize)
 #. +> trunk
 #: gui/devicepropswidgetbase.ui:221
-#| msgctxt "@label device"
-#| msgid "Cylinder size:"
 msgid "Cylinder Size:"
 msgstr "Zylinnergrött:"
 
@@ -1221,16 +1191,16 @@ msgstr "Tall vun Dörgäng:"
 msgid "Device Node"
 msgstr "Reedschapknütt"
 
-#. i18n: ectx: property (text), widget (QRadioButton, m_RadioUUID)
 #. i18n: ectx: property (text), widget (QTreeWidget, m_TreePartitions)
+#. i18n: ectx: property (text), widget (QRadioButton, m_RadioUUID)
 #. +> trunk
 #: gui/editmountpointdialogwidgetbase.ui:298
 #: gui/partitionmanagerwidgetbase.ui:87
 msgid "UUID"
 msgstr "UUID"
 
-#. i18n: ectx: property (text), widget (QRadioButton, m_RadioLabel)
 #. i18n: ectx: property (text), widget (QTreeWidget, m_TreePartitions)
+#. i18n: ectx: property (text), widget (QRadioButton, m_RadioLabel)
 #. +> trunk
 #: gui/editmountpointdialogwidgetbase.ui:305
 #: gui/partitionmanagerwidgetbase.ui:82
@@ -1952,8 +1922,8 @@ msgctxt "@info/plain"
 msgid "Clearing the list of pending operations."
 msgstr "De List mit utstahn Akschonen warrt leddig maakt."
 
-#. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindowBase)
 #. i18n: ectx: property (windowTitle), widget (QWidget, PartitionManagerWidgetBase)
+#. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindowBase)
 #. +> trunk
 #: gui/mainwindowbase.ui:14 gui/partitionmanagerwidgetbase.ui:14
 msgctxt "@title:window"
@@ -2211,32 +2181,24 @@ msgstr "Bruukt"
 #. i18n: ectx: property (text), widget (QTreeWidget, m_TreePartitions)
 #. +> trunk
 #: gui/partitionmanagerwidgetbase.ui:102
-#| msgctxt "@label partition"
-#| msgid "Available:"
 msgid "Available"
 msgstr "Verföögbor"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, m_TreePartitions)
 #. +> trunk
 #: gui/partitionmanagerwidgetbase.ui:107
-#| msgctxt "@label partition"
-#| msgid "First sector:"
 msgid "First Sector"
 msgstr "Eerst Sektor"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, m_TreePartitions)
 #. +> trunk
 #: gui/partitionmanagerwidgetbase.ui:112
-#| msgctxt "@label partition"
-#| msgid "Last sector:"
 msgid "Last Sector"
 msgstr "Lest Sektor"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, m_TreePartitions)
 #. +> trunk
 #: gui/partitionmanagerwidgetbase.ui:117
-#| msgctxt "@label partition"
-#| msgid "Number of sectors:"
 msgid "Number of Sectors"
 msgstr "Tall vun Sektoren"
 
@@ -2640,48 +2602,21 @@ msgid "Create file system %1 on partition <filename>%2</filename>"
 msgstr "%1-Dateisystem op Partitschoon <filename>%2</filename> opstellen"
 
 #. +> trunk
-#: jobs/createpartitionjob.cpp:64
-#, kde-format
-msgctxt "@info/plain"
-msgid "Unknown partition role for new partition <filename>%1</filename> (roles: %2)"
-msgstr "Nich begäng Partitschoontyp för nieg Partitschoon <filename>%1</filename> (Typen: %2)"
-
-#. +> trunk
-#: jobs/createpartitionjob.cpp:93
-#, kde-format
-msgctxt "@info/plain"
-msgid "Failed to add partition <filename>%1</filename> to device <filename>%2</filename>."
-msgstr "Partitschoon <filename>%1</filename> lett sik de Reedschap <filename>%2</filename> nich tofögen."
-
-#. +> trunk
-#: jobs/createpartitionjob.cpp:98
-msgctxt "@info/plain"
-msgid "Failed to create a new partition: could not get geometry for constraint."
-msgstr "En nieg Partitschoon lett sik nich opstellen: Geometrie lett sik nich utreken"
-
-#. +> trunk
-#: jobs/createpartitionjob.cpp:101
-#, kde-format
-msgctxt "@info/plain"
-msgid "Failed to create new partition <filename>%1</filename>."
-msgstr "De niege Partitschoon <filename>%1</filename> lett sik nich opstellen."
-
-#. +> trunk
-#: jobs/createpartitionjob.cpp:106
+#: jobs/createpartitionjob.cpp:68
 #, kde-format
 msgctxt "@info/plain"
 msgid "Could not open device <filename>%1</filename> to create new partition <filename>%2</filename>."
 msgstr "Reedschap <filename>%1</filename> lett sik nich för't Opstellen vun de niege Partitschoon <filename>%2</filename> opmaken."
 
 #. +> trunk
-#: jobs/createpartitionjob.cpp:116
+#: jobs/createpartitionjob.cpp:78
 #, kde-format
 msgctxt "@info/plain"
 msgid "Create new partition <filename>%1</filename>"
 msgstr "Nieg Partitschoon <filename>%1</filename> opstellen"
 
 #. +> trunk
-#: jobs/createpartitionjob.cpp:118
+#: jobs/createpartitionjob.cpp:80
 #, kde-format
 msgctxt "@info/plain"
 msgid "Create new partition on device <filename>%1</filename>"
@@ -2772,34 +2707,34 @@ msgid "Delete the partition <filename>%1</filename>"
 msgstr "De Partitschoon <filename>%1</filename> wegdoon"
 
 #. +> trunk
-#: jobs/job.cpp:143
+#: jobs/job.cpp:111
 msgctxt "@info/plain"
 msgid "The sector size in the source and target for copying are not the same. This is currently unsupported."
 msgstr "De Sektorgrött vun Kopeerborn un -teel sünd nich liek. Opstunns warrt dat nich ünnerstütt."
 
 #. +> trunk
-#: jobs/job.cpp:162
+#: jobs/job.cpp:130
 #, kde-format
 msgctxt "@info/plain"
 msgid "Copying %1 blocks (%2 sectors) from %3 to %4, direction: %5."
 msgstr "%1 Blöck (%2 Sektoren) warrt vun %3 na %4 kopeert, Richt: %5.                         %1"
 
 #. +> trunk
-#: jobs/job.cpp:187
+#: jobs/job.cpp:155
 #, kde-format
 msgctxt "@info/plain"
 msgid "Copying %1 MiB/second, estimated time left: %2"
 msgstr "%1 MiB/s warrt kopeert, estemeert nablieven Tiet: %2"
 
 #. +> trunk
-#: jobs/job.cpp:206
+#: jobs/job.cpp:174
 #, kde-format
 msgctxt "@info/plain"
 msgid "Copying remainder of block size %1 from  %2 to %3."
 msgstr "Överblevels mit Blockgrött %1 warrt vun %2 na %3 kopeert."
 
 #. +> trunk
-#: jobs/job.cpp:219
+#: jobs/job.cpp:187
 #, kde-format
 msgid "1 sector"
 msgid_plural "%1 sectors"
@@ -2807,7 +2742,7 @@ msgstr[0] "1 Sektor"
 msgstr[1] "%1 Sektoren"
 
 #. +> trunk
-#: jobs/job.cpp:219
+#: jobs/job.cpp:187
 #, kde-format
 msgctxt "@info/plain argument 2 is a string such as 7 sectors (localized accordingly)"
 msgid "Copying 1 block (%2) finished."
@@ -2816,73 +2751,73 @@ msgstr[0] "Koperen vun 1 Block (%2) afslaten."
 msgstr[1] "Koperen vun %1 Blöck (%2) afslaten."
 
 #. +> trunk
-#: jobs/job.cpp:228
+#: jobs/job.cpp:196
 msgctxt "@info/plain"
 msgid "Source and target for copying do not overlap: Rollback is not required."
 msgstr "Kopeerborn un -teel överlappt nich, Torüchdreihen deit nich noot."
 
 #. +> trunk
-#: jobs/job.cpp:254
+#: jobs/job.cpp:222
 #, kde-format
 msgctxt "@info/plain"
 msgid "Rollback from: First sector: %1, last sector: %2."
 msgstr "Torüchdreihen vun: Eerst Sekor: %1, lest Sektor: %2."
 
 #. +> trunk
-#: jobs/job.cpp:255
+#: jobs/job.cpp:223
 #, kde-format
 msgctxt "@info/plain"
 msgid "Rollback to: First sector: %1, last sector: %2."
 msgstr "Torüchdreihen na: Eerst Sektor %1, lest Sektor: %2."
 
 #. +> trunk
-#: jobs/job.cpp:260 jobs/job.cpp:267
+#: jobs/job.cpp:228 jobs/job.cpp:235
 #, kde-format
 msgctxt "@info/plain"
 msgid "Could not open device <filename>%1</filename> to rollback copying."
 msgstr "Reedschap <filename>%1</filename> lett sik nich för't Torüchdreihen opmaken"
 
 #. +> trunk
-#: jobs/job.cpp:275
+#: jobs/job.cpp:243
 msgctxt "@info/plain"
 msgid "Rollback failed: Source or target are not devices."
 msgstr "Torüchdreihen is fehlslaan. Born oder Teel is keen Reedschap."
 
 #. +> trunk
-#: jobs/job.cpp:293
+#: jobs/job.cpp:261
 #, kde-format
 msgctxt "@info/plain"
 msgid "Could not determine file system of partition at sector %1 on device <filename>%2</filename>."
 msgstr "Dateisysteem vun de Partitschoon op Sektor %1 vun de Reedschap <filename>%2</filename> lett sik nich fastslaan."
 
 #. +> trunk
-#: jobs/job.cpp:388
+#: jobs/job.cpp:356
 #, kde-format
 msgctxt "@info/plain"
 msgid "Job: %1"
 msgstr "Opgaav: %1"
 
 #. +> trunk
-#: jobs/job.cpp:397
+#: jobs/job.cpp:365
 #, kde-format
 msgctxt "@info/plain job status (error, warning, ...)"
 msgid "%1: %2"
 msgstr "%1: %2"
 
 #. +> trunk
-#: jobs/job.cpp:423
+#: jobs/job.cpp:391
 msgctxt "@info:progress job"
 msgid "Pending"
 msgstr "Utstahn"
 
 #. +> trunk
-#: jobs/job.cpp:424
+#: jobs/job.cpp:392
 msgctxt "@info:progress job"
 msgid "Success"
 msgstr "Spood"
 
 #. +> trunk
-#: jobs/job.cpp:425
+#: jobs/job.cpp:393
 msgctxt "@info:progress job"
 msgid "Error"
 msgstr "Fehler"
@@ -3038,54 +2973,53 @@ msgid "Set the file system label on partition <filename>%1</filename> to \"%2\""
 msgstr "Dateisyteembeteker op Partitschoon <filename>%1</filename> op \"%2\" setten"
 
 #. +> trunk
-#: jobs/setpartflagsjob.cpp:68
-#, kde-format
-msgctxt "@info/plain"
-msgid "The flag \"%1\" is not available on the partition's partition table."
-msgstr "De Mark \"%1\" gifft dat för de Partitschoon ehr Partitschonentabell nich."
-
-#. +> trunk
-#: jobs/setpartflagsjob.cpp:82
-msgctxt "@info flag turned on, active"
+#: jobs/setpartflagsjob.cpp:77
+#, fuzzy
+#| msgctxt "@info flag turned on, active"
+#| msgid "on"
+msgctxt "@info/plain flag turned on, active"
 msgid "on"
 msgstr "An"
 
 #. +> trunk
-#: jobs/setpartflagsjob.cpp:82
-msgctxt "@info flag turned off, inactive"
+#: jobs/setpartflagsjob.cpp:77
+#, fuzzy
+#| msgctxt "@info flag turned off, inactive"
+#| msgid "off"
+msgctxt "@info/plain flag turned off, inactive"
 msgid "off"
 msgstr "Ut"
 
 #. +> trunk
-#: jobs/setpartflagsjob.cpp:82
+#: jobs/setpartflagsjob.cpp:77
 #, kde-format
 msgctxt "@info/plain"
 msgid "There was an error setting flag %1 for partition <filename>%2</filename> to state %3."
 msgstr "Dat geev en Fehler bi't Setten vun de Partitschoon <filename>%2</filename> ehr %1-Mark op \"%3\""
 
 #. +> trunk
-#: jobs/setpartflagsjob.cpp:92
+#: jobs/setpartflagsjob.cpp:89
 #, kde-format
 msgctxt "@info/plain"
 msgid "Could not find partition <filename>%1</filename> on device <filename>%2</filename> to set partition flags."
 msgstr "Partitschoon <filename>%1</filename> op Reedschap <filename>%2</filename> lett sik nich för't Setten vun Partitschoonmarken finnen."
 
 #. +> trunk
-#: jobs/setpartflagsjob.cpp:97
+#: jobs/setpartflagsjob.cpp:94
 #, kde-format
 msgctxt "@info/plain"
 msgid "Could not open device <filename>%1</filename> to set partition flags for partition <filename>%2</filename>."
 msgstr "Reedschap <filename>%1</filename> lett sik nich för't Setten vun Partitschoonmarken för Partitschoon <filename>%2</filename> opmaken."
 
 #. +> trunk
-#: jobs/setpartflagsjob.cpp:110 ops/setpartflagsoperation.cpp:64
+#: jobs/setpartflagsjob.cpp:107 ops/setpartflagsoperation.cpp:64
 #, kde-format
 msgctxt "@info/plain"
 msgid "Clear flags for partition <filename>%1</filename>"
 msgstr "Marken för Partitschoon <filename>%1</filename> torüchsetten"
 
 #. +> trunk
-#: jobs/setpartflagsjob.cpp:112
+#: jobs/setpartflagsjob.cpp:109
 #, kde-format
 msgctxt "@info/plain"
 msgid "Set the flags for partition <filename>%1</filename> to \"%2\""
