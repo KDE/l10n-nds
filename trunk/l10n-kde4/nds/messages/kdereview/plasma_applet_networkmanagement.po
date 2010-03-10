@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_networkmanager\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-03-06 04:19+0100\n"
+"POT-Creation-Date: 2010-03-10 04:55+0100\n"
 "PO-Revision-Date: 2010-01-18 14:45+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -38,27 +38,35 @@ msgstr "Nich begäng"
 msgid "Disconnect"
 msgstr "Afkoppeln"
 
-#: interfaceitem.cpp:204
+#: interfaceitem.cpp:209
+#, fuzzy
+#| msgctxt "network interface name unknown"
+#| msgid "<b>Unknown Network Interface</b>"
+msgctxt "generic label for an interface"
+msgid "<b>Network Interface</b>"
+msgstr "<b> Nich begäng Nettwark-Koppelsteed</b>"
+
+#: interfaceitem.cpp:213
 msgctxt "network interface name unknown"
 msgid "<b>Unknown Network Interface</b>"
 msgstr "<b> Nich begäng Nettwark-Koppelsteed</b>"
 
-#: interfaceitem.cpp:232
+#: interfaceitem.cpp:243
 msgctxt "label of the network interface"
 msgid "No IP address."
 msgstr "Keen IP-Adress"
 
-#: interfaceitem.cpp:237
+#: interfaceitem.cpp:248
 msgctxt "label of the network interface"
 msgid "IP display error."
 msgstr "IP-Wiesfehler"
 
-#: interfaceitem.cpp:333
+#: interfaceitem.cpp:348
 msgctxt "wired interface network cable unplugged"
 msgid "Cable Unplugged"
 msgstr ""
 
-#: interfaceitem.cpp:366
+#: interfaceitem.cpp:381 vpninterfaceitem.cpp:114
 msgctxt "tooltip on disconnect icon"
 msgid "Disconnect"
 msgstr "Afkoppeln"
@@ -79,64 +87,71 @@ msgctxt "tooltip, all interfaces are down"
 msgid "Disconnected"
 msgstr "Afkoppelt"
 
-#: nmpopup.cpp:82
+#: nmpopup.cpp:83 nmpopup.cpp:412
 #, fuzzy
 #| msgid "Interface"
 msgctxt "title on the LHS of the plasmoid"
 msgid "<h3>Interfaces</h3>"
 msgstr "Koppelsteed"
 
-#: nmpopup.cpp:89
+#: nmpopup.cpp:90
 #, fuzzy
 msgctxt "title on the RHS of the plasmoid"
 msgid "<h3>Connections</h3>"
 msgstr "Verbinnen"
 
-#: nmpopup.cpp:112
+#: nmpopup.cpp:116
 msgctxt "CheckBox to enable or disable networking completely"
 msgid "Enable networking"
 msgstr "Nettwarkfunkschonen anmaken"
 
-#: nmpopup.cpp:121
+#: nmpopup.cpp:125
 msgctxt "CheckBox to enable or disable wireless interface (rfkill)"
 msgid "Enable wireless"
 msgstr "Funknettwark anmaken"
 
-#: nmpopup.cpp:131
+#: nmpopup.cpp:135
 #, fuzzy
 #| msgid "Interface"
 msgctxt "tabbar on the left side"
 msgid "Interfaces"
 msgstr "Koppelsteed"
 
-#: nmpopup.cpp:138
+#: nmpopup.cpp:142
 #, fuzzy
 #| msgid "Details"
 msgctxt "details for the interface"
 msgid "Details"
 msgstr "Enkelheiten"
 
-#: nmpopup.cpp:168
+#: nmpopup.cpp:172
 #, fuzzy
 #| msgid "Manage Connections..."
 msgctxt "manage connections button in the applet's popup"
 msgid "Manage Connections..."
 msgstr "Verbinnen plegen..."
 
-#: nmpopup.cpp:176
+#: nmpopup.cpp:180
 msgctxt "manage connections button in the applet's popup"
 msgid "Show More..."
 msgstr ""
 
-#: nmpopup.cpp:362
+#: nmpopup.cpp:375
 msgctxt "pressed show more button"
 msgid "Show Less..."
 msgstr ""
 
-#: nmpopup.cpp:370
+#: nmpopup.cpp:383
 msgctxt "unpressed show more button"
 msgid "Show More..."
 msgstr ""
+
+#: nmpopup.cpp:409
+#, fuzzy
+#| msgid "Interface"
+msgctxt "title on the LHS of the plasmoid"
+msgid "<h3>Interface Details</h3>"
+msgstr "Koppelsteed"
 
 #. i18n: file: nmConfig.ui:25
 #. i18n: ectx: property (windowTitle), widget (QWidget, nmConfig)
@@ -180,9 +195,46 @@ msgstr "&VPN-Verbinnen wiesen"
 msgid "&Show this many wireless networks"
 msgstr "Dissen Barg Funknettwarken &wiesen"
 
-#~ msgctxt "label of the interface: interface is connected"
-#~ msgid "Connected"
-#~ msgstr "Tokoppelt"
+#: vpninterfaceitem.cpp:44
+#, fuzzy
+#| msgid "Best Available"
+msgctxt "initial label for VPN connection name"
+msgid "Not Available"
+msgstr "Best verföögbor"
+
+#: vpninterfaceitem.cpp:94
+#, fuzzy, kde-format
+#| msgid "<b>%1</b>"
+msgctxt "VPN label in interfaces"
+msgid "<b>%1</b>"
+msgstr "<b>%1</b>"
+
+#: vpninterfaceitem.cpp:96
+#, fuzzy
+#| msgctxt "label of the interface: interface is connected"
+#| msgid "Connected"
+msgctxt "VPN state label"
+msgid "Connected"
+msgstr "Tokoppelt"
+
+#: vpninterfaceitem.cpp:99
+#, fuzzy
+msgctxt "VPN state label"
+msgid "Connecting..."
+msgstr "An't Tokoppeln..."
+
+#: vpninterfaceitem.cpp:105
+msgctxt "VPN connections interface"
+msgid "<b>Virtual Private Network</b>"
+msgstr ""
+
+#: vpninterfaceitem.cpp:106
+#, fuzzy
+#| msgctxt "description of unconnected network interface state"
+#| msgid "Not connected"
+msgctxt "VPN state label"
+msgid "Not Connected..."
+msgstr "Nich tokoppelt"
 
 #~ msgctxt "label of the interface: wireless interface is connected"
 #~ msgid "Connected to %1"
@@ -228,11 +280,6 @@ msgstr "Dissen Barg Funknettwarken &wiesen"
 #~ msgctxt "label on the connectabel button"
 #~ msgid "%1 (connecting...)"
 #~ msgstr "%1 (an't Tokoppeln...)"
-
-#, fuzzy
-#~ msgctxt "subtext on connection button"
-#~ msgid "Connecting..."
-#~ msgstr "An't Tokoppeln..."
 
 #~ msgctxt "Label for extender"
 #~ msgid "Network Management"
@@ -334,10 +381,6 @@ msgstr "Dissen Barg Funknettwarken &wiesen"
 #~ msgid "Unavailable"
 #~ msgstr "Nich verföögbor"
 
-#~ msgctxt "description of unconnected network interface state"
-#~ msgid "Not connected"
-#~ msgstr "Nich tokoppelt"
-
 #~ msgctxt "description of preparing to connect network interface state"
 #~ msgid "Preparing to connect"
 #~ msgstr "Tokoppeln warrt torechtmaakt"
@@ -364,9 +407,6 @@ msgstr "Dissen Barg Funknettwarken &wiesen"
 
 #~ msgid "UNKNOWN STATE FIX ME"
 #~ msgstr "Nich begäng Status. Richten."
-
-#~ msgid "<b>%1</b>"
-#~ msgstr "<b>%1</b>"
 
 #, fuzzy
 #~| msgctxt "Label for network interfaces that cannot be activated"
@@ -1437,9 +1477,6 @@ msgstr "Dissen Barg Funknettwarken &wiesen"
 
 #~ msgid "Pre-Shared Key"
 #~ msgstr "Vörweg deelt Slötel"
-
-#~ msgid "Best Available"
-#~ msgstr "Best verföögbor"
 
 #~ msgid "Home"
 #~ msgstr "Tohuus"
