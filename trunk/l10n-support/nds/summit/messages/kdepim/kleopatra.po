@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-03-10 10:40+0100\n"
+"POT-Creation-Date: 2010-03-17 11:41+0100\n"
 "PO-Revision-Date: 2010-02-24 11:27+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -240,19 +240,7 @@ msgstr "Totroen mit Spood ännert."
 msgid "Owner Trust Change Succeeded"
 msgstr "Totroen ännert"
 
-#. +> trunk stable
-#: commands/changepassphrasecommand.cpp:79
-msgctxt "@title:window"
-msgid "Passphrase Change Error"
-msgstr "Fehler bi't Ännern vun den Slötelsatz"
-
-#. +> trunk stable
-#: commands/changepassphrasecommand.cpp:83
-msgctxt "@title:window"
-msgid "Passphrase Change Finished"
-msgstr "Ännern vun den Slötelsatz afslaten"
-
-#. +> trunk stable
+#. +> stable
 #: commands/changepassphrasecommand.cpp:88
 #, kde-format
 msgctxt "@info"
@@ -263,7 +251,20 @@ msgstr ""
 "<para>De Perzess \"GPG\" oder \"GpgSM\", de den Slötelsatz ännern schull, hett sik vör Tiet utmaakt, dat geev en nich verwacht Fehler.</para>"
 "<para>Kiek Di bitte de Utgaav vun <icode>%1</icode> an, wenn Du de Enkelheiten weten wullt.</para>"
 
-#. +> trunk stable
+#. +> trunk
+#: commands/changepassphrasecommand.cpp:189
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>An error occurred while trying to change the expiry date for <b>%1</b>:</p>"
+#| "<p>%2</p>"
+msgid ""
+"<p>An error occurred while trying to change the passphrase for <b>%1</b>:</p>"
+"<p>%2</p>"
+msgstr ""
+"<p>Dat geev en Fehler bi't Ännern vun't Afloopdatum för <b>%1</b>:</p>"
+"<p>%2</p>"
+
+#. +> stable
 #: commands/changepassphrasecommand.cpp:95
 #, kde-format
 msgctxt "@info"
@@ -276,11 +277,40 @@ msgstr ""
 " "
 "<para>De Utgaav vun <command>%1</command> weer: <message>%2</message></para>"
 
-#. +> trunk stable
+#. +> trunk
+#: commands/changepassphrasecommand.cpp:193
+msgid "Passphrase Change Error"
+msgstr "Fehler bi't Ännern vun den Slötelsatz"
+
+#. +> stable
+#: commands/changepassphrasecommand.cpp:79
+msgctxt "@title:window"
+msgid "Passphrase Change Error"
+msgstr "Fehler bi't Ännern vun den Slötelsatz"
+
+#. +> trunk
+#: commands/changepassphrasecommand.cpp:198
+msgid "Passphrase changed successfully."
+msgstr "Slötelsatz mit Spood ännert."
+
+#. +> stable
 #: commands/changepassphrasecommand.cpp:101
 msgctxt "@info"
 msgid "Passphrase changed successfully."
 msgstr "Slötelsatz mit Spood ännert."
+
+#. +> trunk
+#: commands/changepassphrasecommand.cpp:199
+#, fuzzy
+#| msgid "Expiry Date Change Succeeded"
+msgid "Passphrase Change Succeeded"
+msgstr "Afloopdatum ännern: Spood"
+
+#. +> stable
+#: commands/changepassphrasecommand.cpp:83
+msgctxt "@title:window"
+msgid "Passphrase Change Finished"
+msgstr "Ännern vun den Slötelsatz afslaten"
 
 #. +> trunk stable
 #: commands/clearcrlcachecommand.cpp:62 commands/importcrlcommand.cpp:160
@@ -674,7 +704,7 @@ msgid "Secret certificate successfully exported."
 msgstr "Privaatzertifikaat mit Spood exporteert."
 
 #. +> trunk stable
-#: commands/gnupgprocesscommand.cpp:141
+#: commands/gnupgprocesscommand.cpp:143
 #, kde-format
 msgid "Unable to start process %1. Please check your installation."
 msgstr "De Perzess \"%1\" lett sik nich starten. Prööv bitte Dien Installatschoon."
@@ -702,7 +732,7 @@ msgid "Could not determine certificate type of clipboard contents."
 msgstr "Zertifikaattyp vun de Twischenaflaag ehr Inholt lett sik nich fastslaan."
 
 #. +> trunk stable
-#: commands/importcertificatefromclipboardcommand.cpp:122 systrayicon.cpp:199
+#: commands/importcertificatefromclipboardcommand.cpp:122 systrayicon.cpp:202
 #: utils/output.cpp:365
 msgid "Clipboard"
 msgstr "Twischenaflaag"
@@ -1014,7 +1044,7 @@ msgstr ""
 "<para>De Perzess \"GPG\" oder \"GpgSM\", de de SmartKoort inlesen schull, hett sik vör Tiet utmaakt, dat geev en nich verwacht Fehler.</para>"
 "<para>Kiek Di bitte de Utgaav vun <icode>%1</icode> an, wenn Du de Enkelheiten weten wullt.</para>"
 
-#. +> trunk stable
+#. +> stable
 #: commands/learncardkeyscommand.cpp:88
 #, kde-format
 msgctxt "@info"
@@ -1027,7 +1057,7 @@ msgstr ""
 " "
 "<para>De Utgaav vun <command>%1</command> weer: <message>%2</message></para>"
 
-#. +> trunk stable
+#. +> stable
 #: commands/learncardkeyscommand.cpp:94
 msgid "Smart card certificates successfully learned."
 msgstr "Smartkoort-Zertifikaten mit Spood inleest."
@@ -1657,76 +1687,152 @@ msgstr "Zertifikaatpleger-Fehler"
 msgid "The GpgSM process ended prematurely because of an unexpected error."
 msgstr "De Perzess \"GpgSM\" hett sik vör Tiet utmaakt, dat geev en nich verwacht Fehler."
 
+#. +> trunk
+#: crypto/createchecksumscontroller.cpp:215
+msgid "Create Checksums: input files must be either all checksum files or all files to be checksummed, not a mixture of both."
+msgstr ""
+
+#. +> trunk
+#: crypto/createchecksumscontroller.cpp:236
+msgid "Initialising..."
+msgstr ""
+
+#. +> trunk stable
+#: crypto/createchecksumscontroller.cpp:236 mainwindow.cpp:648
+msgid "Cancel"
+msgstr "Afbreken"
+
+#. +> trunk
+#: crypto/createchecksumscontroller.cpp:239
+msgctxt "@title:window"
+msgid "Create Checksum Progress"
+msgstr ""
+
+#. +> trunk
+#: crypto/createchecksumscontroller.cpp:474
+#, fuzzy, kde-format
+#| msgid "Could not open file \"%1\" for reading"
+msgid "Failed to open file \"%1\" for reading and writing: %2"
+msgstr "Datei \"%1\" lett sik nich lesen"
+
+#. +> trunk
+#: crypto/createchecksumscontroller.cpp:494
+#, fuzzy, kde-format
+#| msgid "Error while writing to file %1."
+msgid "Error while running %1: %2"
+msgstr "Fehler bi't Schrieven vun \"%1\"."
+
+#. +> trunk
+#: crypto/createchecksumscontroller.cpp:497
+#, kde-format
+msgid "Failed to execute %1: %2"
+msgstr ""
+
+#. +> trunk
+#: crypto/createchecksumscontroller.cpp:501
+#, kde-format
+msgid "Failed to move file %1 to its final destination, %2: %3"
+msgstr ""
+
+#. +> trunk
+#: crypto/createchecksumscontroller.cpp:527
+msgid "Scanning directories..."
+msgstr ""
+
+#. +> trunk
+#: crypto/createchecksumscontroller.cpp:542
+msgid "Calculating total size..."
+msgstr ""
+
+#. +> trunk
+#: crypto/createchecksumscontroller.cpp:559
+#, kde-format
+msgid "MD5-summing in %1"
+msgstr ""
+
+#. +> trunk
+#: crypto/createchecksumscontroller.cpp:560
+#, kde-format
+msgid "SHA1-summing in %1"
+msgstr ""
+
+#. +> trunk
+#: crypto/createchecksumscontroller.cpp:569
+#, fuzzy
+#| msgid "None"
+msgid "Done."
+msgstr "Keen"
+
 #. +> trunk stable
 #: crypto/decryptverifyemailcontroller.cpp:83
 msgid "Status and progress of the crypto operations is shown here."
 msgstr "De Status un dat Vörankamen vun de Verslötelakschoon warrt hier wiest."
 
 #. +> trunk stable
-#: crypto/decryptverifyemailcontroller.cpp:162
-#: crypto/decryptverifyfilescontroller.cpp:196
+#: crypto/decryptverifyemailcontroller.cpp:163
+#: crypto/decryptverifyfilescontroller.cpp:197
 msgid "User canceled"
 msgstr "Brukerafbrook"
 
 #. +> trunk stable
-#: crypto/decryptverifyemailcontroller.cpp:250
+#: crypto/decryptverifyemailcontroller.cpp:251
 msgid "Decrypt/Verify E-Mail"
 msgstr "Nettbreef opslöteln/pröven"
 
 #. +> trunk stable
-#: crypto/decryptverifyemailcontroller.cpp:272
+#: crypto/decryptverifyemailcontroller.cpp:273
 msgid "At least one input needs to be provided"
 msgstr "Du muttst tominnst een Ingaav praatstellen"
 
 #. +> trunk stable
-#: crypto/decryptverifyemailcontroller.cpp:276
+#: crypto/decryptverifyemailcontroller.cpp:277
 msgid "Informative sender/signed data count mismatch"
 msgstr "Tall vun Info-Senners un ünnerschreven Daten passt nich"
 
 #. +> trunk stable
-#: crypto/decryptverifyemailcontroller.cpp:281
+#: crypto/decryptverifyemailcontroller.cpp:282
 msgid "Signature/signed data count mismatch"
 msgstr "Tall vun Ünnerschriften un ünnerschreven Daten passt nich"
 
 #. +> trunk stable
-#: crypto/decryptverifyemailcontroller.cpp:284
+#: crypto/decryptverifyemailcontroller.cpp:285
 msgid "Signed data can only be given for detached signature verification"
 msgstr "Ünnerschreven Daten laat sik bloots bi't Pröven vun aflööst Ünnerschriften angeven"
 
 #. +> trunk stable
-#: crypto/decryptverifyemailcontroller.cpp:290
+#: crypto/decryptverifyemailcontroller.cpp:291
 msgid "Input/Output count mismatch"
 msgstr "Tall vun In- un Utgaven passt nich"
 
 #. +> trunk stable
-#: crypto/decryptverifyemailcontroller.cpp:293
+#: crypto/decryptverifyemailcontroller.cpp:294
 msgid "Cannot use output and signed data simultaneously"
 msgstr "Ünnerschreven Daten un Utgaav laat sik nich tosamen bruken"
 
 #. +> trunk stable
-#: crypto/decryptverifyemailcontroller.cpp:300
+#: crypto/decryptverifyemailcontroller.cpp:301
 #, kde-format
 msgid "No backend support for %1"
 msgstr "Dat Hülpprogramm ünnerstütt %1 nich"
 
 #. +> trunk stable
-#: crypto/decryptverifyfilescontroller.cpp:185
+#: crypto/decryptverifyfilescontroller.cpp:186
 #, kde-format
 msgid "Caught unexpected exception in DecryptVerifyFilesController::Private::slotWizardOperationPrepared: %1"
 msgstr "Nich verwacht Utnahm binnen \"DecryptVerifyFilesController::Private::slotWizardOperationPrepared\" affungen: %1"
 
 #. +> trunk stable
-#: crypto/decryptverifyfilescontroller.cpp:189
+#: crypto/decryptverifyfilescontroller.cpp:190
 msgid "Caught unknown exception in DecryptVerifyFilesController::Private::slotWizardOperationPrepared"
 msgstr "Nich verwacht Utnahm binnen \"DecryptVerifyFilesController::Private::slotWizardOperationPrepared\" affungen"
 
 #. +> trunk stable
-#: crypto/decryptverifyfilescontroller.cpp:240
+#: crypto/decryptverifyfilescontroller.cpp:241
 msgid "Decrypt/Verify Files"
 msgstr "Dateien opslöteln/pröven"
 
 #. +> trunk stable
-#: crypto/decryptverifyfilescontroller.cpp:321
+#: crypto/decryptverifyfilescontroller.cpp:322
 msgid "No usable inputs found"
 msgstr "Keen Ingaav funnen, de sik bruken lett"
 
@@ -2079,7 +2185,7 @@ msgstr "Oproop vun \"EncryptEMailController::protocolAsString()\" is nich eenken
 #. +> trunk stable
 #: crypto/encryptemailcontroller.cpp:168
 #: crypto/newsignencryptemailcontroller.cpp:239
-#: crypto/signemailcontroller.cpp:179 crypto/signencryptfilescontroller.cpp:276
+#: crypto/signemailcontroller.cpp:179 crypto/signencryptfilescontroller.cpp:277
 msgid "User cancel"
 msgstr "Brukerafbrook"
 
@@ -2427,7 +2533,7 @@ msgstr "Adressaat tofögen..."
 
 #. +> trunk stable
 #: crypto/gui/resolverecipientspage.cpp:431
-#: crypto/gui/signencryptemailconflictdialog.cpp:520 utils/formatting.cpp:401
+#: crypto/gui/signencryptemailconflictdialog.cpp:520 utils/formatting.cpp:404
 msgid "OpenPGP"
 msgstr "OpenPGP"
 
@@ -2617,19 +2723,19 @@ msgstr "Söchst Du för de Adressaten OpenPGP- un ok S/MIME-Zertifikaten ut, war
 
 #. +> trunk stable
 #: crypto/gui/signencryptfileswizard.cpp:131
-#: crypto/signencryptfilescontroller.cpp:157
+#: crypto/signencryptfilescontroller.cpp:158
 msgid "Sign/Encrypt Files"
 msgstr "Dateien ünnerschrieven/verslöteln"
 
 #. +> trunk stable
 #: crypto/gui/signencryptfileswizard.cpp:132
-#: crypto/signencryptfilescontroller.cpp:144
+#: crypto/signencryptfilescontroller.cpp:145
 msgid "Sign Files"
 msgstr "Dateien ünnerschrieven"
 
 #. +> trunk stable
 #: crypto/gui/signencryptfileswizard.cpp:133
-#: crypto/signencryptfilescontroller.cpp:151
+#: crypto/signencryptfilescontroller.cpp:152
 msgid "Encrypt Files"
 msgstr "Dateien verslöteln"
 
@@ -2747,28 +2853,28 @@ msgid "Signing succeeded."
 msgstr "Mit Spood ünnerschreven."
 
 #. +> trunk stable
-#: crypto/signencryptfilescontroller.cpp:142
+#: crypto/signencryptfilescontroller.cpp:143
 msgid "Archive and Sign Files"
 msgstr "Dateien archiveren un ünnerschrieven"
 
 #. +> trunk stable
-#: crypto/signencryptfilescontroller.cpp:149
+#: crypto/signencryptfilescontroller.cpp:150
 msgid "Archive and Encrypt Files"
 msgstr "Dateien archiveren un verslöteln"
 
 #. +> trunk stable
-#: crypto/signencryptfilescontroller.cpp:155
+#: crypto/signencryptfilescontroller.cpp:156
 msgid "Archive and Sign/Encrypt Files"
 msgstr "Dateien archiveren un ünnerschrieven/verslöteln"
 
 #. +> trunk stable
-#: crypto/signencryptfilescontroller.cpp:472
+#: crypto/signencryptfilescontroller.cpp:473
 #, kde-format
 msgid "Caught unexpected exception in SignEncryptFilesController::Private::slotWizardOperationPrepared: %1"
 msgstr "Nich verwacht Utnahm binnen \"SignEncryptFilesController::Private::slotWizardOperationPrepared\" affungen: %1"
 
 #. +> trunk stable
-#: crypto/signencryptfilescontroller.cpp:476
+#: crypto/signencryptfilescontroller.cpp:477
 msgid "Caught unknown exception in SignEncryptFilesController::Private::slotWizardOperationPrepared"
 msgstr "Nich verwacht Utnahm binnen \"SignEncryptFilesController::Private::slotWizardOperationPrepared\" affungen"
 
@@ -4557,33 +4663,33 @@ msgid "KWatchGnuPG Log Viewer"
 msgstr "KWatchGnuPG-Logbookkieker"
 
 #. +> trunk stable
-#: main.cpp:131
+#: main.cpp:132
 msgid "Performing Self-Check..."
 msgstr "Sülvsttest warrt utföhrt..."
 
 #. +> trunk stable
-#: main.cpp:142
+#: main.cpp:143
 msgctxt "did not pass"
 msgid "Self-Check Failed"
 msgstr "Sülvsttest fehlslaan"
 
 #. +> trunk stable
-#: main.cpp:145
+#: main.cpp:146
 msgid "Self-Check Passed"
 msgstr "Sülvsttest OK"
 
 #. +> trunk stable
-#: main.cpp:160
+#: main.cpp:161
 msgid "Loading certificate cache..."
 msgstr "Zertifikaat-Twischenspieker warrt laadt..."
 
 #. +> trunk stable
-#: main.cpp:163
+#: main.cpp:164
 msgid "Certificate cache loaded."
 msgstr "Zertifikaat-Twischenspieker laadt."
 
 #. +> trunk stable
-#: main.cpp:194
+#: main.cpp:195
 msgctxt "@info"
 msgid ""
 "<para>The version of the <application>GpgME</application> library you are running against is older than the one that the <application>GpgME++</application> library was built against.</para>"
@@ -4595,18 +4701,18 @@ msgstr ""
 "<para>Snack dor bitte Dien Systeempleger op an, he schall Di dor bi hölpen.</para>"
 
 #. +> trunk stable
-#: main.cpp:198
+#: main.cpp:199
 msgctxt "@title"
 msgid "GpgME Too Old"
 msgstr "GpgME to oolt"
 
 #. +> trunk stable
-#: main.cpp:276
+#: main.cpp:278
 msgid "GPG UI Server Error"
 msgstr "GPG-Böversietserver-Fehler"
 
 #. +> trunk stable
-#: main.cpp:277
+#: main.cpp:279
 #, kde-format
 msgid ""
 "<qt>The Kleopatra GPG UI Server Module could not be initialized.<br/>"
@@ -4815,7 +4921,7 @@ msgid "Sign/Encrypt..."
 msgstr "Ünnerschrieven/verslöteln..."
 
 #. +> trunk stable
-#: mainwindow.cpp:636 systrayicon.cpp:204
+#: mainwindow.cpp:636 systrayicon.cpp:207
 msgid "Decrypt/Verify..."
 msgstr "Opslöteln/pröven..."
 
@@ -4828,11 +4934,6 @@ msgstr "Zertifikaten importeren"
 #: mainwindow.cpp:641
 msgid "Import CRLs"
 msgstr "ZTLs importeren..."
-
-#. +> trunk stable
-#: mainwindow.cpp:648
-msgid "Cancel"
-msgstr "Afbreken"
 
 #. +> trunk stable
 #: models/keycache.cpp:957
@@ -4903,25 +5004,25 @@ msgid "Strength"
 msgstr "Stärk"
 
 #. +> trunk stable
-#: models/useridlistmodel.cpp:304 utils/formatting.cpp:435
-#: utils/formatting.cpp:447
+#: models/useridlistmodel.cpp:304 utils/formatting.cpp:441
+#: utils/formatting.cpp:453
 msgid "revoked"
 msgstr "torüchropen"
 
 #. +> trunk stable
-#: models/useridlistmodel.cpp:306 utils/formatting.cpp:437
-#: utils/formatting.cpp:473
+#: models/useridlistmodel.cpp:306 utils/formatting.cpp:443
+#: utils/formatting.cpp:479
 msgid "expired"
 msgstr "aflopen"
 
 #. +> trunk stable
-#: models/useridlistmodel.cpp:308 utils/formatting.cpp:439
+#: models/useridlistmodel.cpp:308 utils/formatting.cpp:445
 msgid "disabled"
 msgstr "utmaakt"
 
 #. +> trunk stable
-#: models/useridlistmodel.cpp:310 utils/formatting.cpp:441
-#: utils/formatting.cpp:449 utils/formatting.cpp:472
+#: models/useridlistmodel.cpp:310 utils/formatting.cpp:447
+#: utils/formatting.cpp:455 utils/formatting.cpp:478
 msgid "invalid"
 msgstr "leeg"
 
@@ -5980,59 +6081,64 @@ msgid "Quit any other running instances of <application>Kleopatra</application>.
 msgstr "All anner lopen Utgaven vun <application>Kleopatra</application> utmaken"
 
 #. +> trunk stable
-#: systrayicon.cpp:195
+#: systrayicon.cpp:198
 msgid "&Open Certificate Manager..."
 msgstr "Zertifikaatpleger &opmaken..."
 
 #. +> trunk stable
-#: systrayicon.cpp:196
+#: systrayicon.cpp:199
 #, kde-format
 msgid "&Configure %1..."
 msgstr "%1 &instellen..."
 
 #. +> trunk stable
-#: systrayicon.cpp:197
+#: systrayicon.cpp:200
 #, kde-format
 msgid "&About %1..."
 msgstr "Ö&ver %1..."
 
 #. +> trunk stable
-#: systrayicon.cpp:198
+#: systrayicon.cpp:201
 msgid "&Shutdown Kleopatra"
 msgstr "Kleopatra &utmaken"
 
 #. +> trunk stable
-#: systrayicon.cpp:200
+#: systrayicon.cpp:203
 msgid "Certificate Import"
 msgstr "Zertifikaat importeren"
 
 #. +> trunk stable
-#: systrayicon.cpp:201
+#: systrayicon.cpp:204
 msgid "Encrypt..."
 msgstr "Verslöteln..."
 
 #. +> trunk stable
-#: systrayicon.cpp:202
+#: systrayicon.cpp:205
 msgid "S/MIME-Sign..."
 msgstr "S/MIME-Ünnerschrift..."
 
 #. +> trunk stable
-#: systrayicon.cpp:203
+#: systrayicon.cpp:206
 msgid "OpenPGP-Sign..."
 msgstr "OpenPGP-Ünnerschrift..."
 
 #. +> trunk stable
-#: systrayicon.cpp:205
+#: systrayicon.cpp:208
 msgid "SmartCard"
 msgstr "SmartKoort"
 
+#. +> trunk
+#: systrayicon.cpp:209
+msgid "Update Card Status"
+msgstr ""
+
 #. +> trunk stable
-#: systrayicon.cpp:206
+#: systrayicon.cpp:210
 msgid "Set NetKey v3 Initial PIN..."
 msgstr "\"NetKey v3\"-Eerst-PIN fastleggen..."
 
 #. +> trunk stable
-#: systrayicon.cpp:207
+#: systrayicon.cpp:211
 msgid "Learn NetKey v3 Card Certificates"
 msgstr "\"NetKey v3\"-Koort-Zertifikaten inlesen"
 
@@ -6261,6 +6367,13 @@ msgid "invalid protocol \"%1\""
 msgstr "Protokoll \"%1\" is leeg"
 
 #. +> trunk stable
+#: uiserver/createchecksumscommand.cpp:78
+#: uiserver/decryptverifycommandfilesbase.cpp:164
+#: uiserver/signencryptfilescommand.cpp:83
+msgid "At least one FILE must be present"
+msgstr "Du muttst tominnst een \"FILE\" bruken"
+
+#. +> trunk stable
 #: uiserver/decryptverifycommandemailbase.cpp:145
 msgid "Can not use non-info SENDER"
 msgstr "Nich-Info-\"SENDER\" lett sik nich bruken"
@@ -6340,12 +6453,6 @@ msgstr "\"MESSAGE\" angeven"
 #: uiserver/decryptverifycommandfilesbase.cpp:160
 msgid "OUTPUT present"
 msgstr "\"OUTPUT\" angeven"
-
-#. +> trunk stable
-#: uiserver/decryptverifycommandfilesbase.cpp:164
-#: uiserver/signencryptfilescommand.cpp:83
-msgid "At least one FILE must be present"
-msgstr "Du muttst tominnst een \"FILE\" bruken"
 
 #. +> trunk stable
 #: uiserver/decryptverifycommandfilesbase.cpp:167
@@ -6770,202 +6877,209 @@ msgid "Key-ID"
 msgstr "Bruker-ID"
 
 #. +> trunk
-#: utils/formatting.cpp:306 utils/formatting.cpp:308
+#: utils/formatting.cpp:306
+#, fuzzy
+#| msgid "untrusted"
+msgid "Ownertrust"
+msgstr "nich troot"
+
+#. +> trunk
+#: utils/formatting.cpp:309 utils/formatting.cpp:311
 msgid "Stored"
 msgstr ""
 
 #. +> trunk
-#: utils/formatting.cpp:306
+#: utils/formatting.cpp:309
 #, kde-format
 msgctxt "stored..."
 msgid "on SmartCard with serial no. %1"
 msgstr ""
 
 #. +> trunk
-#: utils/formatting.cpp:308
+#: utils/formatting.cpp:311
 msgctxt "stored..."
 msgid "on this computer"
 msgstr ""
 
 #. +> trunk stable
-#: utils/formatting.cpp:399
+#: utils/formatting.cpp:402
 msgctxt "X.509/CMS encryption standard"
 msgid "X.509"
 msgstr "X.509"
 
 #. +> trunk stable
-#: utils/formatting.cpp:402
+#: utils/formatting.cpp:405
 msgctxt "Unknown encryption protocol"
 msgid "Unknown"
 msgstr "nich begäng"
 
 #. +> trunk stable
-#: utils/formatting.cpp:420 utils/formatting.cpp:451
+#: utils/formatting.cpp:426 utils/formatting.cpp:457
 msgctxt "unknown trust level"
 msgid "unknown"
 msgstr "nich begäng"
 
 #. +> trunk stable
-#: utils/formatting.cpp:421 utils/formatting.cpp:453
+#: utils/formatting.cpp:427 utils/formatting.cpp:459
 msgid "untrusted"
 msgstr "nich troot"
 
 #. +> trunk stable
-#: utils/formatting.cpp:422 utils/formatting.cpp:454
+#: utils/formatting.cpp:428 utils/formatting.cpp:460
 msgctxt "marginal trust"
 msgid "marginal"
 msgstr "deelwies"
 
 #. +> trunk stable
-#: utils/formatting.cpp:423 utils/formatting.cpp:455
+#: utils/formatting.cpp:429 utils/formatting.cpp:461
 msgctxt "full trust"
 msgid "full"
 msgstr "vull"
 
 #. +> trunk stable
-#: utils/formatting.cpp:424 utils/formatting.cpp:456
+#: utils/formatting.cpp:430 utils/formatting.cpp:462
 msgctxt "ultimate trust"
 msgid "ultimate"
 msgstr "büterst"
 
 #. +> trunk stable
-#: utils/formatting.cpp:425 utils/formatting.cpp:452
+#: utils/formatting.cpp:431 utils/formatting.cpp:458
 msgctxt "undefined trust"
 msgid "undefined"
 msgstr "nich fastleggt"
 
 #. +> trunk stable
-#: utils/formatting.cpp:442
+#: utils/formatting.cpp:448
 msgctxt "as in good/valid signature"
 msgid "good"
 msgstr "gellt"
 
 #. +> trunk stable
-#: utils/formatting.cpp:466
+#: utils/formatting.cpp:472
 #, kde-format
 msgid "class %1"
 msgstr "Klass %1"
 
 #. +> trunk stable
-#: utils/formatting.cpp:468
+#: utils/formatting.cpp:474
 msgctxt "good/valid signature"
 msgid "good"
 msgstr "gellt"
 
 #. +> trunk stable
-#: utils/formatting.cpp:474
+#: utils/formatting.cpp:480
 msgid "certificate expired"
 msgstr "Zertifikaat aflopen"
 
 #. +> trunk stable
-#: utils/formatting.cpp:475
+#: utils/formatting.cpp:481
 msgctxt "fake/invalid signature"
 msgid "bad"
 msgstr "leeg"
 
 #. +> trunk stable
-#: utils/formatting.cpp:492
+#: utils/formatting.cpp:498
 #, kde-format
 msgctxt "name, email, key id"
 msgid "%1 %2 (%3)"
 msgstr "%1 %2 (%3):"
 
 #. +> trunk stable
-#: utils/formatting.cpp:534
+#: utils/formatting.cpp:540
 #, kde-format
 msgid "Bad signature by unknown certificate %1: %2"
 msgstr "Leeg Ünnerschrift mit nich begäng Zertifikaat %1: %2"
 
 #. +> trunk stable
-#: utils/formatting.cpp:536
+#: utils/formatting.cpp:542
 #, kde-format
 msgid "Bad signature by an unknown certificate: %1"
 msgstr "Leeg Ünnerschrift mit en nich begäng Zertifikaat: %1"
 
 #. +> trunk stable
-#: utils/formatting.cpp:538
+#: utils/formatting.cpp:544
 #, kde-format
 msgid "Bad signature by %1: %2"
 msgstr "Leeg Ünnerschrift vun %1: %2"
 
 #. +> trunk stable
-#: utils/formatting.cpp:543
+#: utils/formatting.cpp:549
 #, kde-format
 msgid "Good signature by unknown certificate %1."
 msgstr "Ünnerschrift vun nich begäng Zertifikaat %1 gellt."
 
 #. +> trunk stable
-#: utils/formatting.cpp:545
+#: utils/formatting.cpp:551
 msgid "Good signature by an unknown certificate."
 msgstr "Ünnerschrift vun en nich begäng Zertifikaat gellt."
 
 #. +> trunk stable
-#: utils/formatting.cpp:547
+#: utils/formatting.cpp:553
 #, kde-format
 msgid "Good signature by %1."
 msgstr "Ünnerschrift vun %1 gellt."
 
 #. +> trunk stable
-#: utils/formatting.cpp:552
+#: utils/formatting.cpp:558
 #, kde-format
 msgid "Invalid signature by unknown certificate %1: %2"
 msgstr "Ünnerschrift vun nich begäng Zertifikaat %1 gellt nich: %2"
 
 #. +> trunk stable
-#: utils/formatting.cpp:554
+#: utils/formatting.cpp:560
 #, kde-format
 msgid "Invalid signature by an unknown certificate: %1"
 msgstr "Ünnerschrift vun en nich begäng Zertifikaat gellt nich: %1"
 
 #. +> trunk stable
-#: utils/formatting.cpp:556
+#: utils/formatting.cpp:562
 #, kde-format
 msgid "Invalid signature by %1: %2"
 msgstr "Ünnerschrift vun %1 gellt nich: %2"
 
 #. +> trunk stable
-#: utils/formatting.cpp:569
+#: utils/formatting.cpp:575
 msgid "This certificate was imported from the following sources:"
 msgstr "Dit Zertifikaat wöör vun disse Borns importeert:"
 
 #. +> trunk stable
-#: utils/formatting.cpp:579
+#: utils/formatting.cpp:585
 msgid "The import of this certificate was canceled."
 msgstr "Dat Importeren vun dit Zertifikaat wöör afbraken."
 
 #. +> trunk stable
-#: utils/formatting.cpp:581
+#: utils/formatting.cpp:587
 #, kde-format
 msgid "An error occurred importing this certificate: %1"
 msgstr "Bi't Importeren vun dit Zertifikaat geev dat en Fehler: %1"
 
 #. +> trunk stable
-#: utils/formatting.cpp:587
+#: utils/formatting.cpp:593
 msgid "This certificate was new to your keystore. The secret key is available."
 msgstr "Dit Zertifikaat weer nieg binnen Dien Slötelbund. De Privaatslötel is verföögbor."
 
 #. +> trunk stable
-#: utils/formatting.cpp:588
+#: utils/formatting.cpp:594
 msgid "This certificate is new to your keystore."
 msgstr "Dit Zertifikaat is nieg binnen Dien Slötelbund."
 
 #. +> trunk stable
-#: utils/formatting.cpp:592
+#: utils/formatting.cpp:598
 msgid "New user-ids were added to this certificate by the import."
 msgstr "Dat Importeren hett dit Zertifikaat nieg Bruker-IDs toföögt."
 
 #. +> trunk stable
-#: utils/formatting.cpp:594
+#: utils/formatting.cpp:600
 msgid "New signatures were added to this certificate by the import."
 msgstr "Dat Importeren hett dit Zertifikaat nieg Ünnerschriften toföögt."
 
 #. +> trunk stable
-#: utils/formatting.cpp:596
+#: utils/formatting.cpp:602
 msgid "New subkeys were added to this certificate by the import."
 msgstr "Dat Importeren hett dit Zertifikaat nieg Ünnerslötels toföögt."
 
 #. +> trunk stable
-#: utils/formatting.cpp:599
+#: utils/formatting.cpp:605
 msgid "The import contained no new data for this certificate. It is unchanged."
 msgstr "Dat Importeren hett dit Zertifikaat keen nieg Daten toföögt. Dat blifft, as dat is."
 
@@ -7342,14 +7456,8 @@ msgstr "Nieg Paneeltitel:"
 #~ msgid "Add User-ID Succeeded"
 #~ msgstr "Bruker-ID mit Spood toföögt"
 
-#~ msgid "Passphrase Change Error"
-#~ msgstr "Fehler bi't Ännern vun den Slötelsatz"
-
 #~ msgid "Passphrase Change Finished"
 #~ msgstr "Ännern vun den Slötelsatz afslaten"
-
-#~ msgid "Passphrase changed successfully."
-#~ msgstr "Slötelsatz mit Spood ännert."
 
 #~ msgid "OpenPGP Certificate Export"
 #~ msgstr "OpenPGP-Zertifikaten exporteren"
