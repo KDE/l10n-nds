@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-03-31 08:32+0200\n"
+"POT-Creation-Date: 2010-04-02 10:46+0200\n"
 "PO-Revision-Date: 2010-03-25 07:22+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -1445,6 +1445,14 @@ msgid "Maximum similar artists to be shown"
 msgstr ""
 
 #. +> trunk
+#: amarokurls/AmarokUrlHandler.cpp:222
+#, fuzzy
+#| msgid "Unknown"
+msgctxt "The command type of this url is not known"
+msgid "Unknown"
+msgstr "Nich begäng"
+
+#. +> trunk
 #: amarokurls/BookmarkCurrentButton.cpp:31 amarokurls/BookmarkModel.cpp:547
 msgid "New Bookmark"
 msgstr "Nieg Leesteken"
@@ -1487,7 +1495,8 @@ msgstr "Steedmark tofögen"
 
 #. +> trunk
 #: amarokurls/BookmarkModel.cpp:86
-msgid "group"
+#: browsers/playlistbrowser/MetaPlaylistModel.cpp:284
+msgid "Group"
 msgstr "Koppel"
 
 #. +> trunk
@@ -1504,7 +1513,7 @@ msgstr "URL"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. +> trunk
 #: amarokurls/BookmarkModel.cpp:268
-#: core-implementations/collections/audiocd/FormatSelectionDialog.ui:66
+#: core-impl/collections/audiocd/FormatSelectionDialog.ui:66
 msgid "Description"
 msgstr "Beschrieven"
 
@@ -1542,11 +1551,10 @@ msgstr "Nieg Stück-Tietmark"
 #. +> trunk
 #: amarokurls/BookmarkTreeView.cpp:378 amarokurls/BookmarkTreeView.cpp:379
 #: amarokurls/BookmarkTreeView.cpp:380 context/applets/albums/AlbumItem.cpp:74
-#: core-implementations/collections/audiocd/AudioCdCollection.cpp:417
-#: core-implementations/collections/audiocd/AudioCdCollection.cpp:418
-#: core-implementations/collections/audiocd/AudioCdCollection.cpp:419
-#: core-implementations/collections/audiocd/AudioCdCollection.cpp:420
-#: MainWindow.cpp:1236
+#: core-impl/collections/audiocd/AudioCdCollection.cpp:417
+#: core-impl/collections/audiocd/AudioCdCollection.cpp:418
+#: core-impl/collections/audiocd/AudioCdCollection.cpp:419
+#: core-impl/collections/audiocd/AudioCdCollection.cpp:420 MainWindow.cpp:1236
 msgid "Unknown"
 msgstr "Nich begäng"
 
@@ -1562,6 +1570,14 @@ msgstr "Kontext: %1"
 #| msgid "Bookmark this Artist"
 msgid "Bookmark Context View Applets"
 msgstr "Leesteken för Kontextkieker-Lüttprogrammen"
+
+#. +> trunk
+#: amarokurls/ContextUrlRunner.cpp:72
+#, fuzzy
+#| msgid "Context"
+msgctxt "A type of command that affects the context view"
+msgid "Context"
+msgstr "Kontext"
 
 #. +> trunk
 #: amarokurls/NavigationUrlGenerator.cpp:132 MainWindow.cpp:360
@@ -1605,10 +1621,27 @@ msgid "Bookmark Media Sources View"
 msgstr "Leesteken för Medienbornkiekeransicht"
 
 #. +> trunk
+#: amarokurls/NavigationUrlRunner.cpp:128
+#, fuzzy
+#| msgctxt "The quality of music"
+#| msgid "Favorite"
+msgctxt "A type of command that affects the view in the browser category"
+msgid "Navigate"
+msgstr "Afsluuts basig"
+
+#. +> trunk
 #: amarokurls/PlayUrlGenerator.cpp:85
 #, fuzzy
 msgid "Bookmark Track Position"
 msgstr "Leesteken för Titelpositschoon"
+
+#. +> trunk
+#: amarokurls/PlayUrlRunner.cpp:84
+#, fuzzy
+#| msgid "Play"
+msgctxt "A type of command that starts playing at a specific position in a track"
+msgid "Play"
+msgstr "Afspelen"
 
 #. +> trunk
 #: analyzers/analyzerfactory.cpp:82
@@ -1657,8 +1690,7 @@ msgstr "Timp-Beslünigen: "
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, FormatSelectionDialog)
 #. +> trunk
-#: App.cpp:115
-#: core-implementations/collections/audiocd/FormatSelectionDialog.ui:14
+#: App.cpp:115 core-impl/collections/audiocd/FormatSelectionDialog.ui:14
 msgid "Amarok"
 msgstr "Amarok"
 
@@ -2008,7 +2040,9 @@ msgstr "Tosamenföhrt Ansicht"
 
 #. +> trunk
 #: browsers/collectionbrowser/CollectionWidget.cpp:310
-msgid "This is where you will find your local music, as well as music from mobile audio players and cd's."
+#, fuzzy
+#| msgid "This is where you will find your local music, as well as music from mobile audio players and cd's."
+msgid "This is where you will find your local music, as well as music from mobile audio players and CDs."
 msgstr "Hier kannst Du Dien lokaal Musik finnen, man ok Musik vun dreegbor Klangafspelers un CDs"
 
 #. +> trunk
@@ -2019,7 +2053,7 @@ msgstr "Nich begäng"
 
 #. +> trunk
 #: browsers/CollectionTreeItem.cpp:194
-#: core-implementations/collections/sqlcollection/ScanManager.cpp:739
+#: core-impl/collections/sqlcollection/ScanManager.cpp:739
 #: covermanager/CoverManager.cpp:846 covermanager/CoverViewDialog.h:45
 #: dialogs/OrganizeCollectionDialog.cpp:147
 #: widgets/AlbumBreadcrumbWidget.cpp:60
@@ -2216,17 +2250,22 @@ msgid "Delete Tracks"
 msgstr "Stücken wegdoon"
 
 #. +> trunk
-#: browsers/filebrowser/FileBrowser.cpp:65
+#: browsers/filebrowser/FileBrowser.cpp:66
 msgid "Filter Files"
 msgstr "Dateifilter"
 
 #. +> trunk
-#: browsers/filebrowser/FileBrowser.cpp:319 browsers/InfoProxy.cpp:164
+#: browsers/filebrowser/FileBrowser.cpp:112
+msgid "The file browser lets you browse files anywhere on your system, regardless of whether these files are part of your local collection. You can then add these files to the playlist as well as perform basic file operations."
+msgstr "Mit den Dateikieker kannst Du Dien Reekner na Dateien dörkieken, egaal, wat se Dien lokaal Sammeln tohöört oder nich. Mit den Kieker laat sik de Dateien de Afspeellist tofögen oder eenfach Dateioptschonen utföhren."
+
+#. +> trunk
+#: browsers/filebrowser/FileBrowser.cpp:325 browsers/InfoProxy.cpp:164
 msgid "Home"
 msgstr "Tohuus"
 
 #. +> trunk
-#: browsers/filebrowser/FileBrowser.cpp:423
+#: browsers/filebrowser/FileBrowser.cpp:429
 #, fuzzy
 #| msgid "Patches"
 msgid "Places"
@@ -2234,9 +2273,9 @@ msgstr "Kodeplasters"
 
 #. +> trunk
 #: browsers/filebrowser/FileView.cpp:456
-#: core-implementations/collections/umscollection/podcasts/UmsPodcastProvider.cpp:252
-#: playlistmanager/file/PlaylistFileProvider.cpp:272
-#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:239
+#: core-impl/collections/umscollection/podcasts/UmsPodcastProvider.cpp:251
+#: playlistmanager/file/PlaylistFileProvider.cpp:271
+#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:238
 msgid "Confirm Delete"
 msgstr "Wegdoon beglöven"
 
@@ -2250,7 +2289,7 @@ msgstr[1] "Wullt Du disse %1 Stücken redig wegdoon?"
 
 #. +> trunk
 #: browsers/filebrowser/FileView.cpp:463
-#: playlistmanager/file/PlaylistFileProvider.cpp:279
+#: playlistmanager/file/PlaylistFileProvider.cpp:278
 #, fuzzy
 msgid "Yes, delete from disk."
 msgstr "Jo Wegdoon vun Schiev."
@@ -2558,11 +2597,6 @@ msgid "One Playlist"
 msgid_plural "%1 playlists"
 msgstr[0] "Een Afspeellist"
 msgstr[1] "%1 Afspeellisten"
-
-#. +> trunk
-#: browsers/playlistbrowser/MetaPlaylistModel.cpp:284
-msgid "Group"
-msgstr "Koppel"
 
 #. +> trunk
 #: browsers/playlistbrowser/MetaPlaylistModel.cpp:285
@@ -3335,8 +3369,8 @@ msgstr "Op"
 #: context/applets/currenttrack/CurrentTrack.cpp:117
 #: context/applets/photos/PhotosApplet.cpp:134
 #: context/applets/similarartists/SimilarArtistsApplet.cpp:261
-#: context/engines/current/CurrentEngine.cpp:150 EngineController.cpp:1270
-#: mac/GrowlInterface.cpp:39 widgets/Osd.cpp:578
+#: context/engines/current/CurrentEngine.cpp:150 EngineController.cpp:1313
+#: mac/GrowlInterface.cpp:39 widgets/Osd.cpp:580
 msgid "No track playing"
 msgstr "Keen Stück warrt speelt"
 
@@ -4231,8 +4265,8 @@ msgid "Containments"
 msgstr "Gelaatsen"
 
 #. +> trunk
-#: context/widgets/RatingWidget.cpp:66 context/widgets/RatingWidget.cpp:217
-#: context/widgets/RatingWidget.cpp:243
+#: context/widgets/RatingWidget.cpp:68 context/widgets/RatingWidget.cpp:219
+#: context/widgets/RatingWidget.cpp:245
 #, kde-format
 msgid "Track rating: %1"
 msgstr "Stückbeweerten: %1"
@@ -4250,226 +4284,226 @@ msgid "%1 - %2 (%3)"
 msgstr "%1 - %2 (%3)"
 
 #. +> trunk
-#: core-implementations/capabilities/timecode/TimecodeWriteCapability.cpp:99
+#: core-impl/capabilities/timecode/TimecodeWriteCapability.cpp:99
 #, kde-format
 msgid "%1 - Stopped %2"
 msgstr "%1 - Anhollen %2"
 
 #. +> trunk
-#: core-implementations/capabilities/timecode/TimecodeWriteCapability.cpp:104
+#: core-impl/capabilities/timecode/TimecodeWriteCapability.cpp:104
 msgid "Playback Ended Markers"
 msgstr "Afspeelennmarken"
 
 #. +> trunk
-#: core-implementations/collections/audiocd/AudioCdCollection.cpp:74
+#: core-impl/collections/audiocd/AudioCdCollection.cpp:74
 msgid "&Eject"
 msgstr "Rutfohr&en"
 
 #. +> trunk
-#: core-implementations/collections/audiocd/FormatSelectionDialog.cpp:62
+#: core-impl/collections/audiocd/FormatSelectionDialog.cpp:62
 #, fuzzy
 msgid "Ogg Vorbis is a fully free and unencumbered compressed audio format that is perfect for storing your compressed music on your computer. The sound quality is slightly better than Mp3 at the same bitrate. Note that not all mobile players support the Ogg Vorbis format."
 msgstr "Ogg Vorbis is en Klangformaat."
 
 #. +> trunk
-#: core-implementations/collections/audiocd/FormatSelectionDialog.cpp:68
+#: core-impl/collections/audiocd/FormatSelectionDialog.cpp:68
 #, fuzzy
 msgid "Flac is a lossless compressed audio format free of any patents or license fees. It maintains perfect CD audio quality while reducing file size by about 50%. Because the filesize is much larger than Ogg Vorbis or Mp3 it is not recommended if you want to transfer your music to a mobile player."
 msgstr "Flac is en Klangformaat."
 
 #. +> trunk
-#: core-implementations/collections/audiocd/FormatSelectionDialog.cpp:74
+#: core-impl/collections/audiocd/FormatSelectionDialog.cpp:74
 #, fuzzy
 msgid "Wav is a basic, uncompressed audio file format. It takes up a lot of space but maintains perfect quality. It is generally not recommended unless you know what you are doing. If you want perfect quality, use Flac instead."
 msgstr "WAV is en Klangformaat."
 
 #. +> trunk
-#: core-implementations/collections/audiocd/FormatSelectionDialog.cpp:80
+#: core-impl/collections/audiocd/FormatSelectionDialog.cpp:80
 #, fuzzy
 msgid "Mp3 is the de facto standard in compressed audio compatible with almost all mobile players. It is however non free and generally not recommended."
 msgstr "MP3 is en Klangformaat."
 
 #. +> trunk
-#: core-implementations/collections/audiocd/FormatSelectionDialog.cpp:113
+#: core-impl/collections/audiocd/FormatSelectionDialog.cpp:113
 msgid "Audio CD settings - Amarok"
 msgstr "Klang.CD instellen - Amarok"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. +> trunk
-#: core-implementations/collections/audiocd/FormatSelectionDialog.ui:29
+#: core-impl/collections/audiocd/FormatSelectionDialog.ui:29
 msgid "Available formats"
 msgstr "Verföögbor Formaten"
 
 #. i18n: ectx: property (text), widget (QRadioButton, oggButton)
 #. +> trunk
-#: core-implementations/collections/audiocd/FormatSelectionDialog.ui:35
+#: core-impl/collections/audiocd/FormatSelectionDialog.ui:35
 msgid "Ogg Vorbis"
 msgstr "Ogg-Vorbis"
 
 #. i18n: ectx: property (text), widget (QRadioButton, flacButton)
 #. +> trunk
-#: core-implementations/collections/audiocd/FormatSelectionDialog.ui:42
+#: core-impl/collections/audiocd/FormatSelectionDialog.ui:42
 msgid "Flac"
 msgstr "FLAC"
 
 #. i18n: ectx: property (text), widget (QRadioButton, wavButton)
 #. +> trunk
-#: core-implementations/collections/audiocd/FormatSelectionDialog.ui:49
+#: core-impl/collections/audiocd/FormatSelectionDialog.ui:49
 msgid "Wav"
 msgstr "Wav"
 
 #. i18n: ectx: property (text), widget (QRadioButton, mp3Button)
 #. +> trunk
-#: core-implementations/collections/audiocd/FormatSelectionDialog.ui:56
+#: core-impl/collections/audiocd/FormatSelectionDialog.ui:56
 msgid "Mp3"
 msgstr "MP3"
 
 #. i18n: ectx: property (text), widget (QPushButton, advancedButton)
 #. +> trunk
-#: core-implementations/collections/audiocd/FormatSelectionDialog.ui:85
+#: core-impl/collections/audiocd/FormatSelectionDialog.ui:85
 msgid "Advanced"
 msgstr "Verwiedert"
 
 #. +> trunk
-#: core-implementations/collections/audiocd/handler/AudioCdHandler.cpp:37
+#: core-impl/collections/audiocd/handler/AudioCdHandler.cpp:37
 msgid "Audio CD"
 msgstr "Klang-CD"
 
 #. +> trunk
-#: core-implementations/collections/daap/DaapCollection.cpp:86
+#: core-impl/collections/daap/DaapCollection.cpp:86
 #, kde-format
 msgid "Loading remote collection from host %1"
 msgstr "Feern Sammeln warrt vun Reekner %1 laadt."
 
 #. +> trunk
-#: core-implementations/collections/daap/DaapCollection.cpp:261
+#: core-impl/collections/daap/DaapCollection.cpp:261
 #, kde-format
 msgid "Music share at %1"
 msgstr "Musikfreegaav op %1"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:229
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:229
 msgid "iPod was not initialized:"
 msgstr "iPott is nich torechtmaakt:"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:230
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:230
 msgid "iPod Initialization Failed"
 msgstr "iPott lett sik nich torechtmaken."
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:254
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:254
 #, fuzzy, kde-format
 msgid "Media Device: could not find iTunesDB on device mounted at %1. Attempt to initialize your iPod?"
 msgstr "Medienreedschap: iTunesDB lett sik nich finnen."
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:256
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:256
 msgid "Initialize iPod?"
 msgstr "iPott torechtmaken?"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:257
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:257
 msgid "&Initialize"
 msgstr "&Torechtmaken"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:298
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:298
 msgid "Set iPod Model"
 msgstr "iPott-Modell instellen"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:298
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:298
 msgid "iPod Models"
 msgstr "iPott-Modellen"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:302
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:302
 #, fuzzy, kde-format
 msgid "%1 the iPod Model is necessary to initialize the iPod"
 msgstr "iPott Modell is bet iPott"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:328
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:328
 #, fuzzy, kde-format
 msgid "%1 failed to write to iPod, make sure you have write permissions on the iPod"
 msgstr "fehlslaan bet Schrieven bet iPott Schrieven An iPott"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:344
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:344
 #, fuzzy, kde-format
 msgid "%1 failed to write SysInfo file to iPod, make sure you have write permissions on the iPod"
 msgstr "fehlslaan bet Schrieven Datei bet iPott Schrieven An iPott"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:368
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:368
 #, fuzzy, kde-format
 msgid "%1 failed to initialize the iPod"
 msgstr "fehlslaan bet iPott"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:376
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:376
 msgid "The iPod was successfully initialized."
 msgstr "De iPott wöör mit Spood torechtmaakt."
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:376
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:376
 msgid "iPod Initialized"
 msgstr "iPott torechtmaakt"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:384
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:384
 #, fuzzy, kde-format
 msgid "%1 you chose not to initialize the iPod. It will not be usable until it is initialized."
 msgstr "nich bet iPott nich is."
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:458
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:458
 #, fuzzy
 msgid "&Stale and Orphaned"
 msgstr "un"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:468
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:630
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:468
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:630
 msgid "Synchronize Artwork"
 msgstr "Billerwark synkroniseren"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:484
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:484
 #, fuzzy
 msgid "Do you really want to initialize this iPod? Its database will be cleared of all information, but the files will not be deleted."
 msgstr "bet iPott Datenbank Wegdaan vun all nich wegdaan."
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:488
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:488
 msgid "Initialize iPod"
 msgstr "iPott torechtmaken"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:494
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:494
 msgid "The iPod has been initialized"
 msgstr "De iPott wöör torechtmaakt"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:496
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:496
 msgid "The iPod was unable to be initialized"
 msgstr "De iPott leet sik nich torechtmaken"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:505
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:505
 #, fuzzy
 msgid "Amarok is about to search for stale tracks. This may take a while, do you want to continue?"
 msgstr "Amarok is bet för Stücken Mai a aslang bet?"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:509
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:509
 #, fuzzy
 msgid "Find Stale Tracks"
 msgstr "Markeert Stücken"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:592
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:592
 #, fuzzy, kde-format
 msgctxt "@info"
 msgid "One stale track removed from the database. Scan for orphaned tracks?"
@@ -4478,53 +4512,53 @@ msgstr[0] "Een vun Datenbank Dörkieken för Stücken?"
 msgstr[1] "Een vun Datenbank Dörkieken för Stücken?"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:597
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:597
 #, fuzzy
 msgid "Find Orphaned Tracks"
 msgstr "Verlaten Stücken söken"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:628
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:628
 #, fuzzy, kde-format
 msgid "Amarok is about to synchronize artwork on <i>%1</i>. Do you want to continue?"
 msgstr "Amarok is bet Billerwark An<i></i> bet?"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:639
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:639
 msgid "iPod artwork could not be synchronized"
 msgstr "iPott-Billerwark lett sik nich synkroniseren"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:650
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:650
 msgid "Artwork synchronized"
 msgstr "Billerwark synkroniseert"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:860
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:860
 #, fuzzy
 msgid "Amarok requires sudo access to get the FirewireGuid required to connect to your device. Please enter your sudo password"
 msgstr "Amarok sudo bet bet bet sudo Passwoort"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:2134
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:2134
 #, fuzzy
 msgid "Select Stale Tracks To Delete"
 msgstr "Markeert Stücken"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:2134
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:2134
 #, fuzzy
 msgid "Stale Tracks"
 msgstr "Markeert Stücken"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:2187
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:2187
 #, fuzzy
 msgid "Adding Orphaned Tracks to iPod Database"
 msgstr "Titeln bet iPott Datenbank"
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:2225
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:2225
 #, fuzzy, kde-format
 msgctxt "@info"
 msgid "One orphaned track added to the database."
@@ -4533,52 +4567,52 @@ msgstr[0] "Een toföögt bet Datenbank."
 msgstr[1] "Een toföögt bet Datenbank."
 
 #. +> trunk
-#: core-implementations/collections/ipodcollection/handler/IpodHandler.cpp:2230
+#: core-impl/collections/ipodcollection/handler/IpodHandler.cpp:2230
 #, fuzzy
 msgid "Orphaned Tracks Added"
 msgstr "Stücken toföögt"
 
 #. +> trunk
-#: core-implementations/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:301
+#: core-impl/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:301
 msgid "Copying Tracks Failed"
 msgstr "Stücken laat sik nich koperen"
 
 #. +> trunk
-#: core-implementations/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:305
+#: core-impl/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:305
 #, fuzzy
 msgid "Tracks not copied: the device is already being copied to"
 msgstr "Stücken nich kopeert"
 
 #. +> trunk
-#: core-implementations/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:342
+#: core-impl/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:342
 #, kde-format
 msgid "Unsupported format: %1"
 msgstr "Nich ünnerstütt Formaat: %1"
 
 #. +> trunk
-#: core-implementations/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:389
+#: core-impl/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:389
 msgid "Already on device"
 msgstr "Al op de Reedschap"
 
 #. +> trunk
-#: core-implementations/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:405
+#: core-impl/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:405
 #, fuzzy
 msgid "Tracks not copied: the device already has these tracks"
 msgstr "Stücken nich kopeert"
 
 #. +> trunk
-#: core-implementations/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:426
+#: core-impl/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:426
 #, fuzzy
 msgid "Tracks not copied: the device has insufficient space"
 msgstr "Stücken nich kopeert: Reedschap bargt nich noog free Platz"
 
 #. +> trunk
-#: core-implementations/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:435
+#: core-impl/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:435
 msgid "Transferring Tracks to Device"
 msgstr "Stücken warrt na Reedschap överdragen"
 
 #. +> trunk
-#: core-implementations/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:556
+#: core-impl/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:556
 #, kde-format
 msgid "%1 track failed to copy to the device"
 msgid_plural "%1 tracks failed to copy to the device"
@@ -4586,145 +4620,145 @@ msgstr[0] "Een Stück lett sik nich na de Reedschap koperen."
 msgstr[1] "%1 Stücken laat sik nich na de Reedschap koperen."
 
 #. +> trunk
-#: core-implementations/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:581
+#: core-impl/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:581
 msgid "The track failed to copy to the device"
 msgstr "Dat Stück lett sik nich na de Reedschap koperen."
 
 #. +> trunk
-#: core-implementations/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:591
+#: core-impl/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:591
 msgid "Track not deleted:"
 msgid_plural "Tracks not deleted:"
 msgstr[0] "Stück nich wegdaan:"
 msgstr[1] "Stücken nich wegdaan:"
 
 #. +> trunk
-#: core-implementations/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:592
+#: core-impl/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:592
 msgid "Deleting Track Failed"
 msgid_plural "Deleting Tracks Failed"
 msgstr[0] "Stück lett sik nich wegdoon"
 msgstr[1] "Stücken laat sik nich wegdoon"
 
 #. +> trunk
-#: core-implementations/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:596
+#: core-impl/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:596
 #, fuzzy, kde-format
 msgid "%1 tracks are already being deleted from the device."
 msgstr "Een Stück is al op de Medienreedschap"
 
 #. +> trunk
-#: core-implementations/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:613
+#: core-impl/collections/mediadevicecollection/handler/MediaDeviceHandler.cpp:613
 msgid "Removing Track from Device"
 msgid_plural "Removing Tracks from Device"
 msgstr[0] "Stück warrt vun de Reedschap wegdaan"
 msgstr[1] "Stücken warrt vun de Reedschap wegdaan"
 
 #. +> trunk
-#: core-implementations/collections/mediadevicecollection/MediaDeviceCollection.cpp:281
+#: core-impl/collections/mediadevicecollection/MediaDeviceCollection.cpp:281
 msgid "&Disconnect Device"
 msgstr "Reedschap &afkoppeln"
 
 #. +> trunk
-#: core-implementations/collections/mediadevicecollection/playlist/MediaDeviceUserPlaylistProvider.cpp:115
+#: core-impl/collections/mediadevicecollection/playlist/MediaDeviceUserPlaylistProvider.cpp:115
 #: playlistmanager/PlaylistManager.cpp:252
 #: playlistmanager/sql/SqlUserPlaylistProvider.cpp:121
 msgid "Change playlist"
 msgstr "Afspeellist ännern"
 
 #. +> trunk
-#: core-implementations/collections/mediadevicecollection/playlist/MediaDeviceUserPlaylistProvider.cpp:116
+#: core-impl/collections/mediadevicecollection/playlist/MediaDeviceUserPlaylistProvider.cpp:116
 #: playlistmanager/PlaylistManager.cpp:253
 #: playlistmanager/sql/SqlUserPlaylistProvider.cpp:122
 msgid "Enter new name for playlist:"
 msgstr "Giff en niegen Naam för de Afspeellist in:"
 
 #. +> trunk
-#: core-implementations/collections/mediadevicecollection/playlist/MediaDeviceUserPlaylistProvider.h:42
+#: core-impl/collections/mediadevicecollection/playlist/MediaDeviceUserPlaylistProvider.h:42
 msgid "Media Device playlists"
 msgstr "Medienreedschap-Afspeellisten"
 
 #. +> trunk
-#: core-implementations/collections/mediadevicecollection/podcast/MediaDevicePodcastProvider.cpp:58
-#: core-implementations/collections/umscollection/podcasts/UmsPodcastProvider.cpp:154
+#: core-impl/collections/mediadevicecollection/podcast/MediaDevicePodcastProvider.cpp:58
+#: core-impl/collections/umscollection/podcasts/UmsPodcastProvider.cpp:154
 #, kde-format
 msgctxt "Podcasts on a media device"
 msgid "Podcasts on %1"
 msgstr "Podcasts op %1"
 
 #. +> trunk
-#: core-implementations/collections/mtpcollection/handler/MtpHandler.cpp:151
+#: core-impl/collections/mtpcollection/handler/MtpHandler.cpp:151
 msgid "Could not connect to MTP Device"
 msgstr "Tokoppeln na MTP-Reedschap nich mööglich"
 
 #. +> trunk
-#: core-implementations/collections/mtpcollection/handler/MtpHandler.cpp:374
+#: core-impl/collections/mtpcollection/handler/MtpHandler.cpp:374
 msgid "Could not copy track from device."
 msgstr "Stück lett sik nich vun de Reedschap koperen."
 
 #. +> trunk
-#: core-implementations/collections/mtpcollection/handler/MtpHandler.cpp:417
+#: core-impl/collections/mtpcollection/handler/MtpHandler.cpp:417
 msgid "Unknown Artist"
 msgstr "Nich begäng Künstler"
 
 #. +> trunk
-#: core-implementations/collections/mtpcollection/handler/MtpHandler.cpp:427
+#: core-impl/collections/mtpcollection/handler/MtpHandler.cpp:427
 msgid "Unknown Album"
 msgstr "Nich begäng Album"
 
 #. +> trunk
-#: core-implementations/collections/mtpcollection/handler/MtpHandler.cpp:433
+#: core-impl/collections/mtpcollection/handler/MtpHandler.cpp:433
 msgid "Unknown Genre"
 msgstr "Nich begäng Musikoort"
 
 #. +> trunk
-#: core-implementations/collections/mtpcollection/handler/MtpHandler.cpp:589
-#: core-implementations/collections/mtpcollection/handler/MtpHandler.cpp:740
-#: core-implementations/collections/mtpcollection/handler/MtpHandler.cpp:923
+#: core-impl/collections/mtpcollection/handler/MtpHandler.cpp:589
+#: core-impl/collections/mtpcollection/handler/MtpHandler.cpp:740
+#: core-impl/collections/mtpcollection/handler/MtpHandler.cpp:923
 msgid "Could not delete item"
 msgstr "Indrag lett sik nich wegdoon."
 
 #. +> trunk
-#: core-implementations/collections/mtpcollection/handler/MtpHandler.cpp:600
+#: core-impl/collections/mtpcollection/handler/MtpHandler.cpp:600
 msgid "Delete failed"
 msgstr "Wegdoon fehlslaan"
 
 #. +> trunk
-#: core-implementations/collections/mtpcollection/handler/MtpHandler.cpp:896
+#: core-impl/collections/mtpcollection/handler/MtpHandler.cpp:896
 msgid "Could not save playlist."
 msgstr "Afspeellist lett sik nich sekern."
 
 #. +> trunk
-#: core-implementations/collections/nepomukcollection/NepomukCollection.cpp:129
+#: core-impl/collections/nepomukcollection/NepomukCollection.cpp:129
 msgid "Nepomuk Collection"
 msgstr "Nepomuk-Sammeln"
 
 #. +> trunk
-#: core-implementations/collections/nepomukcollection/NepomukCollection.cpp:131
+#: core-impl/collections/nepomukcollection/NepomukCollection.cpp:131
 msgid "Nepomuk Collection (slow, Redland)"
 msgstr "Nepomuk-Sammeln (langsam, Redland)"
 
 #. +> trunk
-#: core-implementations/collections/proxycollection/ProxyCollection.cpp:53
+#: core-impl/collections/proxycollection/ProxyCollection.cpp:53
 msgid "Proxy Collection"
 msgstr "Proxy-Sammeln"
 
 #. +> trunk
-#: core-implementations/collections/sqlcollection/CapabilityDelegateImpl.cpp:54
+#: core-impl/collections/sqlcollection/CapabilityDelegateImpl.cpp:54
 msgid "Do not show under Various Artists"
 msgstr "Nich as \"Verscheden Künstlers\" wiesen"
 
 #. +> trunk
-#: core-implementations/collections/sqlcollection/CapabilityDelegateImpl.cpp:56
+#: core-impl/collections/sqlcollection/CapabilityDelegateImpl.cpp:56
 msgid "Show under Various Artists"
 msgstr "As \"Verscheden Künstlers\" wiesen"
 
 #. +> trunk
-#: core-implementations/collections/sqlcollection/mysqlecollection/MySqlEmbeddedCollection.cpp:35
-#: core-implementations/collections/sqlcollection/mysqlservercollection/MySqlServerCollection.cpp:41
-#: core-implementations/collections/sqlcollection/SqlCollectionLocation.cpp:69
+#: core-impl/collections/sqlcollection/mysqlecollection/MySqlEmbeddedCollection.cpp:35
+#: core-impl/collections/sqlcollection/mysqlservercollection/MySqlServerCollection.cpp:41
+#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:69
 msgid "Local Collection"
 msgstr "Lokaal Sammeln"
 
 #. +> trunk
-#: core-implementations/collections/sqlcollection/ScanManager.cpp:523
+#: core-impl/collections/sqlcollection/ScanManager.cpp:523
 msgid ""
 "<p>Sorry, the collection scan had to be aborted.</p>"
 "<p>Too many errors were encountered during the scan.</p>"
@@ -4733,94 +4767,94 @@ msgstr ""
 "<p>Dat geev dor to vele Fehlers bi.</p>"
 
 #. +> trunk
-#: core-implementations/collections/sqlcollection/ScanManager.cpp:524
+#: core-impl/collections/sqlcollection/ScanManager.cpp:524
 msgid "Collection Scan Error"
 msgstr "Fehler bi't Dörkieker vun en Sammeln"
 
 #. +> trunk
-#: core-implementations/collections/sqlcollection/ScanManager.cpp:644
+#: core-impl/collections/sqlcollection/ScanManager.cpp:644
 msgid "Scanning music"
 msgstr "Musik warrt dörkeken"
 
 #. +> trunk
-#: core-implementations/collections/sqlcollection/ScanResultProcessor.cpp:192
+#: core-impl/collections/sqlcollection/ScanResultProcessor.cpp:192
 msgctxt "Front cover of an album"
 msgid "front"
 msgstr "Vörsiet"
 
 #. +> trunk
-#: core-implementations/collections/sqlcollection/ScanResultProcessor.cpp:200
+#: core-impl/collections/sqlcollection/ScanResultProcessor.cpp:200
 msgctxt "(Front) Cover of an album"
 msgid "cover"
 msgstr "Titelbild"
 
 #. +> trunk
-#: core-implementations/collections/sqlcollection/ScanResultProcessor.cpp:211
+#: core-impl/collections/sqlcollection/ScanResultProcessor.cpp:211
 msgctxt "(Large front) Cover of an album"
 msgid "large"
 msgstr "groot"
 
 #. +> trunk
-#: core-implementations/collections/sqlcollection/ScanResultProcessor.cpp:222
+#: core-impl/collections/sqlcollection/ScanResultProcessor.cpp:222
 msgctxt "(Front) Cover of an album"
 msgid "folder"
 msgstr "Orner"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, OrganizeCollectionDialogBase)
 #. +> trunk
-#: core-implementations/collections/sqlcollection/SqlCollectionLocation.cpp:228
+#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:228
 #: dialogs/OrganizeCollectionDialogBase.ui:21
 msgid "Organize Files"
 msgstr "Dateien bestüern"
 
 #. +> trunk
-#: core-implementations/collections/sqlcollection/SqlCollectionLocation.cpp:364
+#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:364
 msgid "Organizing tracks"
 msgstr ""
 
 #. +> trunk
-#: core-implementations/collections/sqlcollection/SqlCollectionLocation.cpp:366
+#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:366
 msgid "Moving tracks"
 msgstr "Stücken warrt verschaven"
 
 #. +> trunk
-#: core-implementations/collections/sqlcollection/SqlCollectionLocation.cpp:368
+#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:368
 msgid "Copying tracks"
 msgstr "Stücken warrt kopeert"
 
 #. +> trunk
-#: core-implementations/collections/sqlcollection/SqlCollectionLocation.cpp:522
+#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:522
 #, kde-format
 msgid "Could not create directory: %1"
 msgstr "Orner \"%1\" lett sik nich opstellen"
 
 #. +> trunk
-#: core-implementations/collections/sqlcollection/SqlCollectionLocation.cpp:550
+#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:550
 #, kde-format
 msgid "Transferring: %1"
 msgstr "Bi to överdregen: %1"
 
 #. +> trunk
-#: core-implementations/collections/sqlcollection/SqlCollectionLocation.cpp:583
-#: core-implementations/collections/support/FileCollectionLocation.cpp:92
+#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:583
+#: core-impl/collections/support/FileCollectionLocation.cpp:92
 #, kde-format
 msgid "Removing: %1"
 msgstr "An't Wegmaken: %1"
 
 #. +> trunk
-#: core-implementations/collections/sqlcollection/SqlImportedPlaylistProvider.h:29
+#: core-impl/collections/sqlcollection/SqlImportedPlaylistProvider.h:29
 msgid "Imported Playlist Files"
 msgstr "Importeert Afspeellist-Dateien"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, typeComboBox)
 #. +> trunk
-#: core-implementations/collections/sqlcollection/SqlMeta.cpp:230
+#: core-impl/collections/sqlcollection/SqlMeta.cpp:230
 #: services/magnatune/MagnatuneConfigWidget.ui:90
 msgid "Stream"
 msgstr "Stroom"
 
 #. +> trunk
-#: core-implementations/collections/sqlcollection/SqlMeta.cpp:243
+#: core-impl/collections/sqlcollection/SqlMeta.cpp:243
 #: covermanager/CoverManager.cpp:846 covermanager/CoverViewDialog.h:44
 #: services/lastfm/meta/LastFmMeta.cpp:137
 #, kde-format
@@ -4828,7 +4862,7 @@ msgid "%1 - %2"
 msgstr "%1 - %2"
 
 #. +> trunk
-#: core-implementations/collections/support/CollectionLocationDelegateImpl.cpp:38
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:38
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to delete this track? It will be removed from disk as well as your collection."
@@ -4837,26 +4871,29 @@ msgstr[0] "Wullt Du dit Stück redig wegdoon? Dat warrt vun de Fastplaat un ut D
 msgstr[1] "Wullt Du disse %1 Stücken redig wegdoon? De warrt vun de Fastplaat un ut Dien Sammeln wegdaan."
 
 #. +> trunk
-#: core-implementations/collections/support/CollectionLocationDelegateImpl.cpp:43
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:43
 msgid "Delete Files"
 msgstr "Dateien wegdoon"
 
 #. +> trunk
-#: core-implementations/collections/support/CollectionLocationDelegateImpl.cpp:56
-#, kde-format
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:56
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Do you really want to move this track? It will be renamed and the original deleted."
+#| msgid_plural "Do you really want to move these %1 tracks? They will be renamed and the originals deleted"
 msgctxt "@info"
 msgid "Do you really want to move this track? It will be renamed and the original deleted."
-msgid_plural "Do you really want to move these %1 tracks? They will be renamed and the originals deleted"
+msgid_plural "Do you really want to move these %1 tracks? They will be renamed and the originals deleted."
 msgstr[0] "Wullt Du dit Stück redig verschuven? Dat warrt ümnöömt un de Orginaaldatei warrt wegdaan."
 msgstr[1] "Wullt Du disse %1 Stücken redig verschuven? Se warrt ümnöömt un de Orginaaldateien warrt wegdaan."
 
 #. +> trunk
-#: core-implementations/collections/support/CollectionLocationDelegateImpl.cpp:61
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:61
 msgid "Move Files"
 msgstr "Dateien verschuven"
 
 #. +> trunk
-#: core-implementations/collections/support/CollectionLocationDelegateImpl.cpp:72
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:72
 #, kde-format
 msgctxt "@info"
 msgid "There was a problem and this track could not be removed. Make sure the directory is writeable."
@@ -4865,17 +4902,17 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. +> trunk
-#: core-implementations/collections/support/CollectionLocationDelegateImpl.cpp:77
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:77
 msgid "Unable to be removed tracks"
 msgstr ""
 
 #. +> trunk
-#: core-implementations/collections/support/CollectionLocationDelegateImpl.cpp:83
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:83
 msgid "The collection does not have enough free space available or is not writeable."
 msgstr ""
 
 #. +> trunk
-#: core-implementations/collections/support/CollectionManager.cpp:162
+#: core-impl/collections/support/CollectionManager.cpp:162
 msgid ""
 "<p>Amarok could not find any collection plugins. It is possible that Amarok is installed under the wrong prefix, please fix your installation using:"
 "<pre>$ cd /path/to/amarok/source-code/<br>"
@@ -4894,28 +4931,28 @@ msgstr ""
 "Mehr Informatschonen gifft dat binnen de Datei \"README\". Bruukst Du mehr Ünnerstütten, draap uns binnen #amarok op irc.freenode.net.</p>"
 
 #. +> trunk
-#: core-implementations/collections/umscollection/handler/UmsHandler.cpp:476
+#: core-impl/collections/umscollection/handler/UmsHandler.cpp:476
 msgid "&Use as Collection"
 msgstr "As Sammeln &bruken"
 
 #. +> trunk
-#: core-implementations/collections/umscollection/handler/UmsHandler.cpp:490
+#: core-impl/collections/umscollection/handler/UmsHandler.cpp:490
 #, kde-format
 msgid "&Configure %1"
 msgstr "%1 &instellen"
 
 #. +> trunk
-#: core-implementations/collections/umscollection/handler/UmsHandler.cpp:523
+#: core-impl/collections/umscollection/handler/UmsHandler.cpp:523
 msgid "Configure USB Mass Storage Device"
 msgstr "USB-Bültspieker-Reedschap instellen"
 
 #. +> trunk
-#: core-implementations/collections/umscollection/podcasts/UmsPodcastProvider.cpp:182
+#: core-impl/collections/umscollection/podcasts/UmsPodcastProvider.cpp:181
 msgid "&Delete Episode"
 msgstr "Kapitel &wegdoon"
 
 #. +> trunk
-#: core-implementations/collections/umscollection/podcasts/UmsPodcastProvider.cpp:254
+#: core-impl/collections/umscollection/podcasts/UmsPodcastProvider.cpp:253
 #, fuzzy, kde-format
 msgid "Are you sure you want to delete this episode?"
 msgid_plural "Are you sure you want to delete these %1 episodes?"
@@ -4923,13 +4960,13 @@ msgstr[0] "Wullt Du disse %1 Stücken redig wegdoon?"
 msgstr[1] "Wullt Du disse %1 Stücken redig wegdoon?"
 
 #. +> trunk
-#: core-implementations/collections/umscollection/podcasts/UmsPodcastProvider.cpp:270
+#: core-impl/collections/umscollection/podcasts/UmsPodcastProvider.cpp:269
 #, kde-format
 msgid "Yes, delete from %1."
 msgstr "Jo, vun %1 wegdoon."
 
 #. +> trunk
-#: core-implementations/collections/umscollection/podcasts/UmsPodcastProvider.cpp:326
+#: core-impl/collections/umscollection/podcasts/UmsPodcastProvider.cpp:325
 #, fuzzy
 #| msgid "&Delete Downloaded Episode"
 msgid "&Delete Channel and Episodes"
@@ -4937,7 +4974,7 @@ msgstr "Daallaadt Kapitel &wegdoon"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, UmsConfiguration)
 #. +> trunk
-#: core-implementations/collections/umscollection/UmsConfiguration.ui:20
+#: core-impl/collections/umscollection/UmsConfiguration.ui:20
 #, fuzzy
 #| msgid "Sound system configuration"
 msgid "USB Mass Storage device configuration"
@@ -4945,33 +4982,33 @@ msgstr "USB-Bültspieker-Reedschap instellen"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. +> trunk
-#: core-implementations/collections/umscollection/UmsConfiguration.ui:26
+#: core-impl/collections/umscollection/UmsConfiguration.ui:26
 msgid "Music folder:"
 msgstr "Musikorner:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. +> trunk
-#: core-implementations/collections/umscollection/UmsConfiguration.ui:36
+#: core-impl/collections/umscollection/UmsConfiguration.ui:36
 msgid "Podcast folder:"
 msgstr "Podcast-Orner:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_autoConnect)
 #. +> trunk
-#: core-implementations/collections/umscollection/UmsConfiguration.ui:46
+#: core-impl/collections/umscollection/UmsConfiguration.ui:46
 msgid "Enabled"
 msgstr "Anmaakt"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. +> trunk
-#: core-implementations/collections/umscollection/UmsConfiguration.ui:53
+#: core-impl/collections/umscollection/UmsConfiguration.ui:53
 #, fuzzy
 msgid "Use automatically when connected"
 msgstr "Automaatsch bruken, wenn tokoppelt"
 
 #. +> trunk
-#: core-implementations/meta/default/DefaultMetaTypes.h:39
-#: core-implementations/meta/default/DefaultMetaTypes.h:79
-#: core-implementations/meta/default/DefaultMetaTypes.h:97
+#: core-impl/meta/default/DefaultMetaTypes.h:39
+#: core-impl/meta/default/DefaultMetaTypes.h:79
+#: core-impl/meta/default/DefaultMetaTypes.h:97
 #: services/scriptable/ScriptableServiceMeta_p.h:108
 #: services/scriptable/ScriptableServiceMeta_p.h:166
 #: services/scriptable/ScriptableServiceMeta_p.h:215
@@ -4982,60 +5019,60 @@ msgid "Unknown"
 msgstr "Nich begäng"
 
 #. +> trunk
-#: core-implementations/meta/default/DefaultMetaTypes.h:61
+#: core-impl/meta/default/DefaultMetaTypes.h:61
 msgctxt "The Value is not known"
 msgid "Unknown"
 msgstr "Nich begäng"
 
 #. +> trunk
-#: core-implementations/meta/stream/Stream.cpp:52
+#: core-impl/meta/stream/Stream.cpp:52
 #, kde-format
 msgid "Stream (%1)"
 msgstr "Stroom (%1)"
 
 #. +> trunk
-#: core-implementations/playlists/types/dynamic/DynamicPlaylist.cpp:36
+#: core-impl/playlists/types/dynamic/DynamicPlaylist.cpp:36
 msgid "Default Dynamic Playlist"
 msgstr "Dünaamsche Standard-Afspeellist"
 
 #. +> trunk
-#: core-implementations/playlists/types/file/PlaylistFileSupport.cpp:93
+#: core-impl/playlists/types/file/PlaylistFileSupport.cpp:93
 #, kde-format
 msgid "Cannot read playlist (%1)."
 msgstr "Afspeellist lett sik nich lesen (%1)."
 
 #. +> trunk
-#: core-implementations/playlists/types/file/PlaylistFileSupport.cpp:111
+#: core-impl/playlists/types/file/PlaylistFileSupport.cpp:111
 #, fuzzy
 msgid "Could not create a temporary file to download playlist."
 msgstr "Temporeerdatei för't Daalladen vun Afspeellist lett sik nich opstellen."
 
 #. +> trunk
-#: core-implementations/playlists/types/file/PlaylistFileSupport.cpp:126
+#: core-impl/playlists/types/file/PlaylistFileSupport.cpp:126
 msgid "Downloading remote playlist"
 msgstr "Feern Afspeellist warrt daallaadt."
 
 #. +> trunk
-#: core-implementations/playlists/types/file/PlaylistFileSupport.cpp:209
+#: core-impl/playlists/types/file/PlaylistFileSupport.cpp:209
 #, kde-format
 msgid "Playlist_%1"
 msgstr "Afspeellist_%1"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, PodcastSettingsBase)
 #. +> trunk
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:30
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:30
 msgid "Podcast Configuration"
 msgstr "Podcast instellen"
 
 #. i18n: ectx: property (text), widget (QLabel, m_urlLabel)
 #. +> trunk
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:52
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:52
 msgid "URL:"
 msgstr "URL:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_saveLocationlabel)
 #. +> trunk
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:68
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:68
 #, fuzzy
 #| msgid "Save location:"
 msgid "Save Location:"
@@ -5044,100 +5081,100 @@ msgstr "Oort för't Sekern:"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_autoFetchCheck)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_autoFetchCheck)
 #. +> trunk
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:99
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:102
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:99
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:102
 msgid "When checked, Amarok will automatically scan the podcast for updates"
 msgstr "Wenn anmaakt, kiekt Amarok de Podcasts automaatsch na Opfrischen dör"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_autoFetchCheck)
 #. +> trunk
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:105
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:105
 msgid "Automatically scan for updates"
 msgstr "Automaatsch na Opfrischen kieken"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, kbuttongroup)
 #. +> trunk
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:112
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:112
 msgid "Media Download"
 msgstr "Medien daalladen"
 
 #. i18n: ectx: property (toolTip), widget (QRadioButton, m_downloadRadio)
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, m_downloadRadio)
 #. +> trunk
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:121
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:124
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:121
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:124
 msgid "Download media as soon as it becomes available"
 msgstr "Medium daalladen, as draad as dat verföögbor is"
 
 #. i18n: ectx: property (text), widget (QRadioButton, m_downloadRadio)
 #. +> trunk
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:127
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:127
 msgid "Download when a&vailable"
 msgstr "&Daalladen (wenn verföögbor)"
 
 #. i18n: ectx: property (toolTip), widget (QRadioButton, m_streamRadio)
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, m_streamRadio)
 #. +> trunk
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:134
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:137
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:134
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:137
 msgid "Media must be explicitly downloaded, otherwise the podcast will be played from the remote server."
 msgstr "Du muttst Medien daalladen, anners warrt de Podcast vun den feern Server ut afspeelt."
 
 #. i18n: ectx: property (text), widget (QRadioButton, m_streamRadio)
 #. +> trunk
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:140
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:140
 msgid "Stream or download on re&quest"
 msgstr "Stroom oder Daalladen op An&fraag"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_purgeCheck)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_purgeCheck)
 #. +> trunk
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:152
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:155
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:152
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:155
 msgid "If checked, Amarok will throw away old podcast episodes"
 msgstr "Wenn anmaakt, smitt Amarok ole Podcasts weg"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_purgeCheck)
 #. +> trunk
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:158
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:158
 msgid "Limit &number of episodes"
 msgstr "Tall vun Kapitels &ingrenzen"
 
 #. i18n: ectx: property (text), widget (QLabel, m_purgeCountLabel)
 #. +> trunk
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:181
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:181
 msgid "Keep maximum of:"
 msgstr "Nich mehr wohren as:"
 
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, m_purgeCountSpinBox)
 #. i18n: ectx: property (whatsThis), widget (KIntSpinBox, m_purgeCountSpinBox)
 #. +> trunk
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:191
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:194
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:191
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:194
 msgid "The maximum number of podcast items to store"
 msgstr "De hööchste Tall vun Podcasts, de wohrt warrt"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_writeTagsCheck)
 #. +> trunk
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:208
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:208
 msgid "The RSS feed and the tags in the downloaded file sometimes do not contain the same information. Writing the tags ensures the information in the playlist and on media devices will be the same as in the feed."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_writeTagsCheck)
 #. +> trunk
-#: core-implementations/podcasts/sql/PodcastSettingsBase.ui:211
+#: core-impl/podcasts/sql/PodcastSettingsBase.ui:211
 msgid "Write feed information to tags after downloading."
 msgstr ""
 
 #. +> trunk
-#: core-implementations/podcasts/sql/PodcastSettingsDialog.cpp:35
+#: core-impl/podcasts/sql/PodcastSettingsDialog.cpp:35
 #, kde-format
 msgctxt "change options"
 msgid "Configure %1"
 msgstr "%1 instellen"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/PodcastSettingsDialog.cpp:68
+#: core-impl/podcasts/sql/PodcastSettingsDialog.cpp:68
 #, fuzzy
 #| msgid " Items"
 msgid " Item"
@@ -5146,66 +5183,66 @@ msgstr[0] " Indrääg"
 msgstr[1] " Indrääg"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastMeta.cpp:389
+#: core-impl/podcasts/sql/SqlPodcastMeta.cpp:389
 #: core/podcasts/PodcastMeta.h:414
 msgid "Podcast"
 msgstr "Podcast"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:269
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:269
 msgid "&Update All Channels"
 msgstr "All Kanaals &opfrischen"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:277
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:277
 msgid "&Configure General Settings"
 msgstr "&Allmeen Instellen fastleggen"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:301
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:784
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:301
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:784
 msgid "&Configure"
 msgstr "&Instellen"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:319
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:802
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:319
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:802
 msgid "&Remove Subscription"
 msgstr "Bestellen &wegmaken"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:340
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:823
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:340
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:823
 msgid "&Update Channel"
 msgstr "Kanaal &opfrischen"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:379
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:704
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:379
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:704
 msgid "&Delete Downloaded Episode"
 msgstr "Daallaadt Kapitel &wegdoon"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:390
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:717
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:390
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:717
 #, fuzzy
 msgid "&Write Feed Information to File"
 msgstr "Stroom-Informatschonen na Datei &schrieven"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:414
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:754
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:414
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:754
 msgid "&Download Episode"
 msgstr "Kapitel &daalladen"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:457
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:457
 #, kde-format
 msgid "Already subscribed to %1."
 msgstr "Du hest \"%1\" al bestellt."
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:576
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:576
 #, fuzzy
 #| msgid "Minutes"
 msgid " minute"
@@ -5214,36 +5251,36 @@ msgstr[0] "Minuten"
 msgstr[1] "Minuten"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:585
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:585
 #, fuzzy
 #| msgid "Configure Podcasts..."
 msgid "Configure Local Podcasts"
 msgstr "Podcasts instellen..."
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:875
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:875
 msgid "Unsubscribe"
 msgstr "Afbestellen"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:879
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:879
 #, fuzzy
 msgid "Do you really want to unsubscribe from "
 msgstr "Wullt du redig afbestellen?"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:886
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:886
 msgid "Delete downloaded episodes"
 msgstr "Daallaadt Kapitel wegdoon"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:1015
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:1015
 #, fuzzy
 msgid "Waiting for Podcast Downloads to Finish"
 msgstr "An't Töven för Podcast Daalladen bet Afsluten"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:1016
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:1016
 #, fuzzy, kde-format
 msgid "There is still a podcast download in progress"
 msgid_plural "There are still %1 podcast downloads in progress"
@@ -5251,62 +5288,62 @@ msgstr[0] "Dor warrt noch wat daallaadt"
 msgstr[1] "Dor warrt noch wat daallaadt"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:1020
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:1020
 msgid "Cancel Download and Quit."
 msgstr ""
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:1183
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:1183
 msgid "Downloading Podcast Media"
 msgstr "Podcast-Medien warrt daallaadt"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:1184
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:1184
 #, kde-format
 msgid "Downloading Podcast \"%1\""
 msgstr "Podcast \"%1\" warrt daallaadt"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:1258
-#: core-implementations/podcasts/sql/SqlPodcastProvider.cpp:1408
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:1258
+#: core-impl/podcasts/sql/SqlPodcastProvider.cpp:1408
 #, kde-format
 msgid "Unable to save podcast episode file to %1"
 msgstr "Podcast-Kapitel lett sik nich as \"%1\" sekern"
 
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProvider.h:50
+#: core-impl/podcasts/sql/SqlPodcastProvider.h:50
 msgid "Local Podcasts"
 msgstr "Lokaal Podcasts"
 
 #. i18n: ectx: property (text), widget (QLabel, m_intervalLabel)
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProviderSettingsWidget.ui:29
+#: core-impl/podcasts/sql/SqlPodcastProviderSettingsWidget.ui:29
 msgid "Auto-update:"
 msgstr "Autom. opfrischen:"
 
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, m_autoUpdateInterval)
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProviderSettingsWidget.ui:54
+#: core-impl/podcasts/sql/SqlPodcastProviderSettingsWidget.ui:54
 msgctxt "automatic updates turned off"
 msgid "disabled"
 msgstr "utmaakt"
 
 #. i18n: ectx: property (prefix), widget (KIntSpinBox, m_autoUpdateInterval)
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProviderSettingsWidget.ui:57
+#: core-impl/podcasts/sql/SqlPodcastProviderSettingsWidget.ui:57
 msgctxt "prefix to update interval in minutes"
 msgid "every "
 msgstr "elk "
 
 #. i18n: ectx: property (text), widget (QLabel, m_baseDirLabel)
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProviderSettingsWidget.ui:76
+#: core-impl/podcasts/sql/SqlPodcastProviderSettingsWidget.ui:76
 msgid "Base directory:"
 msgstr "Basisorner:"
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, m_baseDirUrl)
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProviderSettingsWidget.ui:104
+#: core-impl/podcasts/sql/SqlPodcastProviderSettingsWidget.ui:104
 #, fuzzy
 #| msgid ""
 #| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
@@ -5336,7 +5373,7 @@ msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, m_baseDirUrl)
 #. +> trunk
-#: core-implementations/podcasts/sql/SqlPodcastProviderSettingsWidget.ui:109
+#: core-impl/podcasts/sql/SqlPodcastProviderSettingsWidget.ui:109
 msgid ""
 "Base directory for all new podcast channels.\n"
 "When a podcast channel is added <base directory>/<channel name> is used as the download directory.\n"
@@ -7109,7 +7146,7 @@ msgstr "Orner"
 #. i18n: ectx: property (mimeType), widget (TokenPool, tokenPool)
 #. +> trunk
 #: dialogs/FilenameLayoutDialog.ui:89
-#: playlist/layouts/PlaylistLayoutEditDialog.ui:259
+#: playlist/layouts/PlaylistLayoutEditDialog.ui:262
 msgid "application/x-amarok-tag-token"
 msgstr "application/x-amarok-tag-token"
 
@@ -7364,7 +7401,7 @@ msgstr "\"The\" binnen Künstlernaams ö&vergahn"
 #. +> trunk
 #: dialogs/OrganizeCollectionDialogBase.ui:101
 #: dialogs/OrganizeCollectionDialogBase.ui:104
-msgid "If checked all non-ASCII characters will be replaced with underscores. Do not check this option if you have non-english characters in your tags. Most people can leave this option unchecked."
+msgid "If checked all non-ASCII characters will be replaced with underscores. Do not check this option if you have non-English characters in your tags. Most people can leave this option unchecked."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, asciiCheck)
@@ -7431,7 +7468,7 @@ msgstr "Orginaalautor"
 #. i18n: ectx: property (text), widget (QPushButton, previewButton)
 #. +> trunk
 #: dialogs/OrganizeCollectionDialogBase.ui:202
-#: playlist/layouts/PlaylistLayoutEditDialog.ui:333
+#: playlist/layouts/PlaylistLayoutEditDialog.ui:336
 msgid "Preview"
 msgstr "Vöransicht"
 
@@ -7928,7 +7965,7 @@ msgstr "Tofögen"
 #. i18n: ectx: property (text), widget (KPushButton, removeButton)
 #. +> trunk
 #: dialogs/TagDialogBase.ui:825
-#: playlistmanager/file/PlaylistFileProvider.cpp:157
+#: playlistmanager/file/PlaylistFileProvider.cpp:156
 #: services/ampache/AmpacheConfigWidget.ui:98
 msgid "Remove"
 msgstr "Wegdoon"
@@ -8062,7 +8099,7 @@ msgid "Match Type:"
 msgstr "Passt:"
 
 #. +> trunk
-#: EngineController.cpp:244
+#: EngineController.cpp:251
 msgid ""
 "<p>Phonon claims it <b>cannot</b> play MP3 files. You may want to examine the installation of the backend that phonon uses.</p>"
 "<p>You may find useful information in the <i>FAQ</i> section of the <i>Amarok Handbook</i>.</p>"
@@ -8071,54 +8108,54 @@ msgstr ""
 "<p>Mehr Informatschonen gifft dat ok binnen den Afsnitt <i>FAQ</i> vun't <i>Amarok-Handbook</i>.</p>"
 
 #. +> trunk
-#: EngineController.cpp:265
+#: EngineController.cpp:272
 msgid "Install MP3 Support"
 msgstr "MP3-Ünnerstütten installeren"
 
 #. +> trunk
-#: EngineController.cpp:267
+#: EngineController.cpp:274
 msgid "Amarok currently cannot play MP3 files. Do you want to install support for MP3?"
 msgstr "Amarok kann opstunns keen MP3-Dateien afspelen. Wullt Du Ünnerstütten för MP3-Dateien installeren?"
 
 #. +> trunk
-#: EngineController.cpp:268
+#: EngineController.cpp:275
 msgid "No MP3 Support"
 msgstr "Keen MP3-Ünnerstütten"
 
 #. +> trunk
-#: EngineController.cpp:802
+#: EngineController.cpp:814
 #, fuzzy
 msgid "Preamp"
 msgstr "Vörverstärken"
 
 #. +> trunk
-#: EngineController.cpp:1240
+#: EngineController.cpp:1283
 #, kde-format
 msgctxt "track by artist on album"
 msgid "<b>%1</b> by <b>%2</b> on <b>%3</b>"
 msgstr "<b>%1</b> vun <b>%2</b>, op <b>%3</b>"
 
 #. +> trunk
-#: EngineController.cpp:1243
+#: EngineController.cpp:1286
 #, kde-format
 msgctxt "track by artist"
 msgid "<b>%1</b> by <b>%2</b>"
 msgstr "<b>%1</b> vun <b>%2</b>"
 
 #. +> trunk
-#: EngineController.cpp:1247
+#: EngineController.cpp:1290
 #, kde-format
 msgctxt "track on album"
 msgid "<b>%1</b> on <b>%2</b>"
 msgstr "<b>%1</b>op <b>%2</b>"
 
 #. +> trunk
-#: EngineController.cpp:1252
+#: EngineController.cpp:1295
 msgid "Unknown track"
 msgstr "Nich begäng Stück"
 
 #. +> trunk
-#: EngineController.cpp:1259
+#: EngineController.cpp:1302
 #, kde-format
 msgctxt "track from source"
 msgid "from <b>%1</b>"
@@ -8417,7 +8454,7 @@ msgid ""
 msgstr ""
 
 #. +> trunk
-#: mac/GrowlInterface.cpp:60 widgets/Osd.cpp:601
+#: mac/GrowlInterface.cpp:60 widgets/Osd.cpp:603
 msgid "No information available for this track"
 msgstr "För dit Stück sünd keen Informatschonen verföögbor"
 
@@ -9734,27 +9771,27 @@ msgstr "Verföögbor Böversieden"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. +> trunk
-#: playlist/layouts/PlaylistLayoutEditDialog.ui:291
+#: playlist/layouts/PlaylistLayoutEditDialog.ui:294
 msgid "Layout"
 msgstr "Böversiet"
 
 #. i18n: ectx: property (text), widget (QCheckBox, inlineControlsChekbox)
 #. +> trunk
-#: playlist/layouts/PlaylistLayoutEditDialog.ui:297
+#: playlist/layouts/PlaylistLayoutEditDialog.ui:300
 #, fuzzy
 msgid "Show inline playback controls"
 msgstr "Afspeelknööp inbett wiesen"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. +> trunk
-#: playlist/layouts/PlaylistLayoutEditDialog.ui:309
+#: playlist/layouts/PlaylistLayoutEditDialog.ui:312
 #: services/ServiceBase.cpp:143
 msgid "Group By"
 msgstr "Ornen na"
 
 #. i18n: ectx: property (text), widget (QCheckBox, tooltipsCheckbox)
 #. +> trunk
-#: playlist/layouts/PlaylistLayoutEditDialog.ui:321
+#: playlist/layouts/PlaylistLayoutEditDialog.ui:324
 msgid "Show tooltips"
 msgstr "Kortinformatschonen wiesen"
 
@@ -10104,6 +10141,14 @@ msgid "%1 layout"
 msgstr "%1 Böversiet"
 
 #. +> trunk
+#: playlist/PlaylistViewUrlRunner.cpp:107
+#, fuzzy
+#| msgid "Playlist"
+msgctxt "A type of command that affects the sorting, layout and filtering int he Playlist"
+msgid "Playlist"
+msgstr "Afspeellist"
+
+#. +> trunk
 #: playlist/PlaylistWidget.cpp:58
 #, fuzzy
 msgid "Dynamic Mode Enabled"
@@ -10229,7 +10274,7 @@ msgstr "Afspeellist-Dateien op Fastplaat"
 
 #. +> trunk
 #: playlistmanager/file/PlaylistFileProvider.cpp:130
-#: playlistmanager/file/PlaylistFileProvider.cpp:140
+#: playlistmanager/file/PlaylistFileProvider.cpp:139
 #: playlistmanager/sql/SqlUserPlaylistProvider.cpp:199
 #, kde-format
 msgctxt "Remove a track from a saved playlist"
@@ -10237,8 +10282,8 @@ msgid "Remove From \"%1\""
 msgstr "Ut \"%1\" wegmaken"
 
 #. +> trunk
-#: playlistmanager/file/PlaylistFileProvider.cpp:274
-#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:241
+#: playlistmanager/file/PlaylistFileProvider.cpp:273
+#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:240
 #, kde-format
 msgid "Are you sure you want to delete this playlist?"
 msgid_plural "Are you sure you want to delete these %1 playlist files?"
@@ -10246,8 +10291,8 @@ msgstr[0] "Wullt Du disse Afspeellist redig wegdoon?"
 msgstr[1] "Wullt Du disse %1 Afspeellisten redig wegdoon?"
 
 #. +> trunk
-#: playlistmanager/file/PlaylistFileProvider.cpp:321
-#: playlistmanager/file/PlaylistFileProvider.cpp:347
+#: playlistmanager/file/PlaylistFileProvider.cpp:320
+#: playlistmanager/file/PlaylistFileProvider.cpp:346
 #, kde-format
 msgid "The playlist file \"%1\" could not be loaded."
 msgstr "De Afspeellist-Datei \"%1\" lett sik nich laden."
@@ -10290,7 +10335,7 @@ msgid "&Delete..."
 msgstr "Weg&doon..."
 
 #. +> trunk
-#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:246
+#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:245
 msgid "Yes, delete from database."
 msgstr "Jo, ut Datenbank wegdoon."
 
@@ -11136,40 +11181,40 @@ msgid "Loading album info..."
 msgstr "Albuminfos warrt laadt..."
 
 #. +> trunk
-#: services/magnatune/MagnatuneInfoParser.cpp:73
+#: services/magnatune/MagnatuneInfoParser.cpp:74
 msgid "Release Year: "
 msgstr "Utgaavjohr: "
 
 #. +> trunk
-#: services/magnatune/MagnatuneInfoParser.cpp:78
+#: services/magnatune/MagnatuneInfoParser.cpp:79
 msgid "Description:"
 msgstr "Beschrieven:"
 
 #. +> trunk
-#: services/magnatune/MagnatuneInfoParser.cpp:82
+#: services/magnatune/MagnatuneInfoParser.cpp:83
 msgid "From Magnatune.com"
 msgstr "Vun Magnatune.com"
 
 #. +> trunk
-#: services/magnatune/MagnatuneInfoParser.cpp:157
+#: services/magnatune/MagnatuneInfoParser.cpp:165
 msgid "Loading Magnatune.com frontpage..."
 msgstr "Magnatune.com-Startsiet warrt laadt..."
 
 #. +> trunk
-#: services/magnatune/MagnatuneInfoParser.cpp:160
+#: services/magnatune/MagnatuneInfoParser.cpp:168
 msgid "Fetching Magnatune.com front page"
 msgstr "Magnatune.com-Startsiet warrt daallaadt"
 
 #. +> trunk
-#: services/magnatune/MagnatuneInfoParser.cpp:173
-#: services/magnatune/MagnatuneInfoParser.cpp:189
+#: services/magnatune/MagnatuneInfoParser.cpp:181
+#: services/magnatune/MagnatuneInfoParser.cpp:197
 #, fuzzy
 msgid "Loading your Magnatune.com favorites page..."
 msgstr "Magnatune.com-Startsiet warrt laadt..."
 
 #. +> trunk
-#: services/magnatune/MagnatuneInfoParser.cpp:202
-#: services/magnatune/MagnatuneInfoParser.cpp:218
+#: services/magnatune/MagnatuneInfoParser.cpp:210
+#: services/magnatune/MagnatuneInfoParser.cpp:226
 #, fuzzy
 msgid "Loading your personal Magnatune.com recommendations page..."
 msgstr "Magnatune.com-Startsiet warrt laadt..."
@@ -11346,6 +11391,14 @@ msgstr "OK"
 #: services/magnatune/MagnatuneStore.cpp:681
 msgid "ERROR: Unknown argument."
 msgstr "Fehler: Argument nich begäng"
+
+#. +> trunk
+#: services/magnatune/MagnatuneUrlRunner.cpp:36
+#, fuzzy
+#| msgid "Magnatune info"
+msgctxt "A type of command that triggers an action in the integrated Magnatune.com service"
+msgid "Magnatune"
+msgstr "Magnatune-Info"
 
 #. +> trunk
 #: services/magnatune/MagnatuneXmlParser.cpp:62
@@ -11744,19 +11797,20 @@ msgstr "Hööft-Warktüüchbalken"
 
 #. +> trunk
 #: toolbar/VolumePopupButton.cpp:104 toolbar/VolumePopupButton.cpp:115
-#: widgets/Osd.cpp:151
+#: widgets/Osd.cpp:153
 msgid "(muted)"
 msgstr "(stumm)"
 
 #. +> trunk
 #: toolbar/VolumePopupButton.cpp:104 toolbar/VolumePopupButton.cpp:115
-#: widgets/Osd.cpp:151
+#: widgets/Osd.cpp:153
 #, kde-format
 msgid "Volume: %1% %2"
 msgstr "Luutstärk: %1 % %2"
 
 #. +> trunk
-#: TrayIcon.cpp:126 TrayIconLegacy.cpp:144 widgets/VolumeDial.cpp:341
+#: TrayIcon.cpp:126 TrayIconLegacy.cpp:144 widgets/VolumeDial.cpp:298
+#: widgets/VolumeDial.cpp:337
 msgid "Muted"
 msgstr "Stillmaakt"
 
@@ -11807,17 +11861,17 @@ msgid "Copy Current View Bookmark to Clipboard"
 msgstr ""
 
 #. +> trunk
-#: widgets/Osd.cpp:135
+#: widgets/Osd.cpp:137
 msgid "Rating changed"
 msgstr "Beweerten ännert"
 
 #. +> trunk
-#: widgets/Osd.cpp:213
+#: widgets/Osd.cpp:215
 msgid "Volume: 100% (muted)"
 msgstr "Luutstärk: 100% (stillmaakt)"
 
 #. +> trunk
-#: widgets/Osd.cpp:443
+#: widgets/Osd.cpp:445
 #, fuzzy
 #| msgid "OSD Preview - drag to reposition"
 msgid ""
@@ -11826,7 +11880,7 @@ msgid ""
 msgstr "OSD-Vöransicht - treck ehr, wenn Du de Positschoon ännern wullt"
 
 #. +> trunk
-#: widgets/Osd.cpp:687
+#: widgets/Osd.cpp:689
 msgid "Paused"
 msgstr "Anhollen"
 
@@ -12142,8 +12196,9 @@ msgid "[suffix]"
 msgstr "[Suffix]"
 
 #. +> trunk
-#: widgets/VolumeDial.cpp:341 widgets/VolumeWidget.cpp:53
-#: widgets/VolumeWidget.cpp:79 widgets/VolumeWidget.cpp:91
+#: widgets/VolumeDial.cpp:298 widgets/VolumeDial.cpp:337
+#: widgets/VolumeWidget.cpp:53 widgets/VolumeWidget.cpp:79
+#: widgets/VolumeWidget.cpp:91
 #, kde-format
 msgid "Volume: %1%"
 msgstr "Luutstärk: %1%"
@@ -12157,6 +12212,9 @@ msgstr "Stumm"
 #: widgets/VolumeWidget.cpp:89
 msgid "Volume: <i>Muted</i>"
 msgstr "Luutstärk: <i>Stillmaakt</i>"
+
+#~ msgid "group"
+#~ msgstr "Koppel"
 
 #~ msgid "&Purchase Album"
 #~ msgstr "Album &köpen"
@@ -12407,9 +12465,6 @@ msgstr "Luutstärk: <i>Stillmaakt</i>"
 
 #~ msgid "<p>This button clears the name filter when toggled off, or reapplies the last filter used when toggled on.</p>"
 #~ msgstr "<p>Disse Knoop maakt den Filter leddig, wenn he utmaakt is, oder aktiveert den tolest bruukten Filter, wenn he anmaakt is.</p>"
-
-#~ msgid "The file browser lets you browse files anywhere on your system, regardless of whether these files are part of your local collection. You can then add these files to the playlist as well as perform basic file operations."
-#~ msgstr "Mit den Dateikieker kannst Du Dien Reekner na Dateien dörkieken, egaal, wat se Dien lokaal Sammeln tohöört oder nich. Mit den Kieker laat sik de Dateien de Afspeellist tofögen oder eenfach Dateioptschonen utföhren."
 
 #~ msgid "Apply last filter (\"%1\")"
 #~ msgstr "Verleden Filter anwennen (\"%1\")"
