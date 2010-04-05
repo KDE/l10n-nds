@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-04-02 10:46+0200\n"
+"POT-Creation-Date: 2010-04-04 10:32+0200\n"
 "PO-Revision-Date: 2010-03-25 07:22+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -248,6 +248,7 @@ msgstr "Na den Bidreger sien \"StackOverflow\"-Profil gahn"
 #. +> trunk
 #: aboutdialog/OcsPersonItem.ui:137 amarokurls/BookmarkModel.cpp:265
 #: browsers/playlistbrowser/MetaPlaylistModel.cpp:283
+#: playlistgenerator/TreeModel.cpp:68
 msgid "Name"
 msgstr "Naam"
 
@@ -1444,6 +1445,18 @@ msgstr "Lieke Künstlers halen"
 msgid "Maximum similar artists to be shown"
 msgstr ""
 
+#. i18n: ectx: label, entry, group (PlaylistGenerator)
+#. +> trunk
+#: amarokconfig.kcfg:636
+msgid "Quality factor for Automated Playlist Generator"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (PlaylistGenerator)
+#. +> trunk
+#: amarokconfig.kcfg:637
+msgid "A value between 0 and 10 that controls whether the Automated Playlist Generator tries to optimize for speed (0) or accuracy (10)."
+msgstr ""
+
 #. +> trunk
 #: amarokurls/AmarokUrlHandler.cpp:222
 #, fuzzy
@@ -1458,7 +1471,7 @@ msgid "New Bookmark"
 msgstr "Nieg Leesteken"
 
 #. +> trunk
-#: amarokurls/BookmarkManager.cpp:43 MainWindow.cpp:791
+#: amarokurls/BookmarkManager.cpp:43 MainWindow.cpp:789
 msgid "Bookmark Manager"
 msgstr "Leesteken-Pleger"
 
@@ -1554,7 +1567,7 @@ msgstr "Nieg Stück-Tietmark"
 #: core-impl/collections/audiocd/AudioCdCollection.cpp:417
 #: core-impl/collections/audiocd/AudioCdCollection.cpp:418
 #: core-impl/collections/audiocd/AudioCdCollection.cpp:419
-#: core-impl/collections/audiocd/AudioCdCollection.cpp:420 MainWindow.cpp:1236
+#: core-impl/collections/audiocd/AudioCdCollection.cpp:420 MainWindow.cpp:1508
 msgid "Unknown"
 msgstr "Nich begäng"
 
@@ -1580,7 +1593,7 @@ msgid "Context"
 msgstr "Kontext"
 
 #. +> trunk
-#: amarokurls/NavigationUrlGenerator.cpp:132 MainWindow.cpp:360
+#: amarokurls/NavigationUrlGenerator.cpp:132 MainWindow.cpp:353
 msgid "Files"
 msgstr "Dateien"
 
@@ -1615,7 +1628,7 @@ msgid "Artist \"%1\""
 msgstr "Künstler \"%1\""
 
 #. +> trunk
-#: amarokurls/NavigationUrlGenerator.cpp:250 MainWindow.cpp:787
+#: amarokurls/NavigationUrlGenerator.cpp:250 MainWindow.cpp:785
 #, fuzzy
 msgid "Bookmark Media Sources View"
 msgstr "Leesteken för Medienbornkiekeransicht"
@@ -1880,7 +1893,7 @@ msgid "Media Sources Home"
 msgstr "Medienreedschappen"
 
 #. +> trunk
-#: browsers/BrowserBreadcrumbWidget.cpp:55
+#: browsers/BrowserBreadcrumbWidget.cpp:57
 msgid "Click For Location Navigation"
 msgstr ""
 
@@ -2086,21 +2099,29 @@ msgstr "Künstler"
 
 #. +> trunk
 #: browsers/CollectionTreeItemModelBase.cpp:551
+#: playlistgenerator/Constraint.cpp:100 playlistgenerator/Constraint.cpp:114
+#: playlistgenerator/Constraint.cpp:146
 msgid "genre"
 msgstr "Musikoort"
 
 #. +> trunk
 #: browsers/CollectionTreeItemModelBase.cpp:556
+#: playlistgenerator/Constraint.cpp:99 playlistgenerator/Constraint.cpp:111
+#: playlistgenerator/Constraint.cpp:143
 msgid "title"
 msgstr "Titel"
 
 #. +> trunk
 #: browsers/CollectionTreeItemModelBase.cpp:561
+#: playlistgenerator/Constraint.cpp:100 playlistgenerator/Constraint.cpp:115
+#: playlistgenerator/Constraint.cpp:147
 msgid "composer"
 msgstr "Komponist"
 
 #. +> trunk
 #: browsers/CollectionTreeItemModelBase.cpp:566
+#: playlistgenerator/Constraint.cpp:100 playlistgenerator/Constraint.cpp:116
+#: playlistgenerator/Constraint.cpp:148
 msgid "year"
 msgstr "Johr"
 
@@ -2111,6 +2132,8 @@ msgstr "BPM"
 
 #. +> trunk
 #: browsers/CollectionTreeItemModelBase.cpp:575
+#: playlistgenerator/Constraint.cpp:100 playlistgenerator/Constraint.cpp:117
+#: playlistgenerator/Constraint.cpp:149
 msgid "comment"
 msgstr "Kommentar"
 
@@ -2121,11 +2144,18 @@ msgstr "Bitwedderhalen"
 
 #. +> trunk
 #: browsers/CollectionTreeItemModelBase.cpp:583
+#: playlistgenerator/Constraint.cpp:102 playlistgenerator/Constraint.cpp:130
+#: playlistgenerator/Constraint.cpp:162
+#: playlistgenerator/constraints/TagMatch.cpp:167
+#: playlistgenerator/constraints/TagMatch.cpp:674
+#: playlistgenerator/constraints/TagMatch.cpp:747
 msgid "rating"
 msgstr "Beweerten"
 
 #. +> trunk
 #: browsers/CollectionTreeItemModelBase.cpp:587
+#: playlistgenerator/Constraint.cpp:102 playlistgenerator/Constraint.cpp:129
+#: playlistgenerator/Constraint.cpp:161
 msgid "score"
 msgstr "Pünkt"
 
@@ -2141,6 +2171,12 @@ msgstr "Aftastwedderhalen"
 
 #. +> trunk
 #: browsers/CollectionTreeItemModelBase.cpp:599
+#: playlistgenerator/Constraint.cpp:101 playlistgenerator/Constraint.cpp:122
+#: playlistgenerator/Constraint.cpp:154
+#: playlistgenerator/constraints/TagMatch.cpp:170
+#: playlistgenerator/constraints/TagMatch.cpp:185
+#: playlistgenerator/constraints/TagMatch.cpp:678
+#: playlistgenerator/constraints/TagMatch.cpp:745
 msgid "length"
 msgstr "Längde"
 
@@ -2295,6 +2331,78 @@ msgid "Yes, delete from disk."
 msgstr "Jo Wegdoon vun Schiev."
 
 #. +> trunk
+#: browsers/playlistbrowser/APGCategory.cpp:41
+msgid "Automated Playlist Generator"
+msgstr ""
+
+#. +> trunk
+#: browsers/playlistbrowser/APGCategory.cpp:42
+#: browsers/playlistbrowser/APGCategory.cpp:45
+#, fuzzy
+msgid "Create playlists by specifying criteria"
+msgstr "Instellen för Afspeellist-Sorteren leddigmaken."
+
+#. +> trunk
+#: browsers/playlistbrowser/APGCategory.cpp:61
+msgid "Add new preset"
+msgstr "Nieg Profil tofögen"
+
+#. +> trunk
+#: browsers/playlistbrowser/APGCategory.cpp:64
+#, fuzzy
+msgid "Edit selected preset"
+msgstr "Dat Profil wegdoon"
+
+#. +> trunk
+#: browsers/playlistbrowser/APGCategory.cpp:69
+#, fuzzy
+#| msgid "Delete the preset."
+msgid "Delete selected preset"
+msgstr "Dat Profil wegdoon"
+
+#. +> trunk
+#: browsers/playlistbrowser/APGCategory.cpp:74
+#, fuzzy
+#| msgid "Add new preset"
+msgid "Import a new preset"
+msgstr "Nieg Profil tofögen"
+
+#. +> trunk
+#: browsers/playlistbrowser/APGCategory.cpp:78
+#, fuzzy
+msgid "Export the selected preset"
+msgstr "Fehler bi't Opstellen vun Datei"
+
+#. +> trunk
+#: browsers/playlistbrowser/APGCategory.cpp:95
+msgid "Run APG with selected preset"
+msgstr ""
+
+#. +> trunk
+#: browsers/playlistbrowser/APGCategory.cpp:101
+#, fuzzy
+#| msgid "Presets"
+msgid "APG Presets"
+msgstr "Profilen"
+
+#. +> trunk
+#: browsers/playlistbrowser/APGCategory.cpp:115
+#, fuzzy
+#| msgid "General Options"
+msgid "Generator Optimization"
+msgstr "Allgemeen Optschonen"
+
+#. +> trunk
+#: browsers/playlistbrowser/APGCategory.cpp:119
+msgid "Speed"
+msgstr ""
+
+#. +> trunk
+#: browsers/playlistbrowser/APGCategory.cpp:124
+msgid "Accuracy"
+msgstr ""
+
+#. +> trunk
 #: browsers/playlistbrowser/DynamicBiasModel.cpp:83
 msgid "Proportional Bias"
 msgstr "Andeel-Negen"
@@ -2348,10 +2456,21 @@ msgstr "Hier kannst Du fastleggen, woveel vun de Afspeellist ünner den Beding f
 msgid "Proportion:"
 msgstr "Deel:"
 
+#. i18n: ectx: property (text), widget (QLabel, label_Strictness)
+#. i18n: ectx: property (text), widget (QLabel, label_StrictnessInt)
+#. i18n: ectx: property (text), widget (QLabel, label_strictnessDate)
+#. i18n: ectx: property (text), widget (QLabel, label_StrictnessTime)
+#. i18n: ectx: property (text), widget (QLabel, label_StrictnessRating)
 #. +> trunk
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:208
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:669
 #: dynamic/biases/EchoNest.cpp:112
+#: playlistgenerator/constraints/CheckpointEditWidget.ui:110
+#: playlistgenerator/constraints/PlaylistLengthEditWidget.ui:100
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:164
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:355
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:547
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:670
 msgid "Match:"
 msgstr "Passt:"
 
@@ -2368,7 +2487,7 @@ msgstr "Titel"
 #. +> trunk
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:254
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:693
-#: playlist/PlaylistModel.cpp:713 TrayIcon.cpp:161 TrayIconLegacy.cpp:179
+#: playlist/PlaylistModel.cpp:713 TrayIcon.cpp:162 TrayIconLegacy.cpp:179
 msgid "Play Count"
 msgstr "Afspeelklock"
 
@@ -2377,7 +2496,7 @@ msgstr "Afspeelklock"
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:255
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:694
 #: dialogs/EditFilterDialog.ui:110 playlist/PlaylistModel.cpp:712
-#: playlist/ProgressiveSearchWidget.cpp:112 TrayIcon.cpp:154
+#: playlist/ProgressiveSearchWidget.cpp:112 TrayIcon.cpp:155
 #: TrayIconLegacy.cpp:172 widgets/SmartPlaylistEditor.cpp:185
 msgid "Rating"
 msgstr "Beweerten"
@@ -2389,7 +2508,7 @@ msgstr "Beweerten"
 #: context/applets/currenttrack/CurrentTrack.cpp:124
 #: context/applets/currenttrack/CurrentTrack.cpp:575
 #: dialogs/EditFilterDialog.ui:120 playlist/PlaylistModel.cpp:711
-#: TrayIcon.cpp:136 TrayIconLegacy.cpp:154 widgets/SmartPlaylistEditor.cpp:185
+#: TrayIcon.cpp:137 TrayIconLegacy.cpp:154 widgets/SmartPlaylistEditor.cpp:185
 msgid "Score"
 msgstr "Pünkt"
 
@@ -2424,7 +2543,7 @@ msgstr "Toeerst speelt"
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:261
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:700
 #: context/applets/currenttrack/CurrentTrack.cpp:125
-#: context/applets/currenttrack/CurrentTrack.cpp:576 TrayIcon.cpp:166
+#: context/applets/currenttrack/CurrentTrack.cpp:576 TrayIcon.cpp:167
 #: TrayIconLegacy.cpp:184
 msgid "Last Played"
 msgstr "Tolest speelt"
@@ -2449,18 +2568,40 @@ msgstr "Dateinaam"
 msgid "With:"
 msgstr "Mit:"
 
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonInt)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonTime)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonRating)
 #. +> trunk
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:405
+#: playlistgenerator/constraints/TagMatch.cpp:471
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:116
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:482
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:619
 msgid "less than"
 msgstr "minn as"
 
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_Comparison)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonInt)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonTime)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonRating)
 #. +> trunk
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:406
+#: playlistgenerator/constraints/PlaylistLengthEditWidget.ui:47
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:121
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:487
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:624
 msgid "equal to"
 msgstr "liek as"
 
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonInt)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonTime)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonRating)
 #. +> trunk
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:407
+#: playlistgenerator/constraints/TagMatch.cpp:469
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:126
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:492
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:629
 msgid "greater than"
 msgstr "grötter as"
 
@@ -2604,7 +2745,7 @@ msgid "Source"
 msgstr "Born"
 
 #. +> trunk
-#: browsers/playlistbrowser/PlaylistBrowser.cpp:47
+#: browsers/playlistbrowser/PlaylistBrowser.cpp:49
 #, fuzzy
 msgid "The playlist browser contains your list of imported and saved playlists. It is also where you can specify powerful dynamic playlists and manage your podcast subscriptions and episodes."
 msgstr "Afspeellisten-Kieker"
@@ -3369,7 +3510,7 @@ msgstr "Op"
 #: context/applets/currenttrack/CurrentTrack.cpp:117
 #: context/applets/photos/PhotosApplet.cpp:134
 #: context/applets/similarartists/SimilarArtistsApplet.cpp:261
-#: context/engines/current/CurrentEngine.cpp:150 EngineController.cpp:1313
+#: context/engines/current/CurrentEngine.cpp:150 EngineController.cpp:1299
 #: mac/GrowlInterface.cpp:39 widgets/Osd.cpp:580
 msgid "No track playing"
 msgstr "Keen Stück warrt speelt"
@@ -4178,9 +4319,9 @@ msgid "Leo Franchi"
 msgstr "Leo Franchi"
 
 #. +> trunk
-#: context/tools/amarokpkg.cpp:83 main.cpp:90 main.cpp:135 main.cpp:139
-#: main.cpp:141 main.cpp:153 main.cpp:163 main.cpp:169 main.cpp:171
-#: main.cpp:183 main.cpp:189 main.cpp:191 main.cpp:195 main.cpp:203
+#: context/tools/amarokpkg.cpp:83 main.cpp:90 main.cpp:139 main.cpp:141
+#: main.cpp:153 main.cpp:163 main.cpp:169 main.cpp:171 main.cpp:183
+#: main.cpp:189 main.cpp:191 main.cpp:195 main.cpp:203
 msgid "Developer"
 msgstr "Programmschriever"
 
@@ -4802,40 +4943,40 @@ msgstr "Orner"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, OrganizeCollectionDialogBase)
 #. +> trunk
-#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:228
+#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:232
 #: dialogs/OrganizeCollectionDialogBase.ui:21
 msgid "Organize Files"
 msgstr "Dateien bestüern"
 
 #. +> trunk
-#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:364
+#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:371
 msgid "Organizing tracks"
 msgstr ""
 
 #. +> trunk
-#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:366
+#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:373
 msgid "Moving tracks"
 msgstr "Stücken warrt verschaven"
 
 #. +> trunk
-#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:368
+#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:375
 msgid "Copying tracks"
 msgstr "Stücken warrt kopeert"
 
 #. +> trunk
-#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:522
+#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:529
 #, kde-format
 msgid "Could not create directory: %1"
 msgstr "Orner \"%1\" lett sik nich opstellen"
 
 #. +> trunk
-#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:550
+#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:561
 #, kde-format
 msgid "Transferring: %1"
 msgstr "Bi to överdregen: %1"
 
 #. +> trunk
-#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:583
+#: core-impl/collections/sqlcollection/SqlCollectionLocation.cpp:600
 #: core-impl/collections/support/FileCollectionLocation.cpp:92
 #, kde-format
 msgid "Removing: %1"
@@ -5938,7 +6079,7 @@ msgid "Fetching Large Cover"
 msgstr "Titelbild warrt haalt"
 
 #. +> trunk
-#: covermanager/CoverManager.cpp:102 MainWindow.cpp:807
+#: covermanager/CoverManager.cpp:102 MainWindow.cpp:805
 msgid "Cover Manager"
 msgstr "Titelbild-Pleger"
 
@@ -7497,7 +7638,7 @@ msgid "Overwrite &Destination"
 msgstr "Teel ö&verschrieven"
 
 #. +> trunk
-#: dialogs/ScriptManager.cpp:100 MainWindow.cpp:816
+#: dialogs/ScriptManager.cpp:100 MainWindow.cpp:814
 msgid "Script Manager"
 msgstr "Skripten-Pleger"
 
@@ -8082,7 +8223,7 @@ msgid "Current Track"
 msgstr "Aktuell Stück"
 
 #. +> trunk
-#: dynamic/biases/EchoNest.cpp:116 MainWindow.cpp:284
+#: dynamic/biases/EchoNest.cpp:116 MainWindow.cpp:277
 msgid "Playlist"
 msgstr "Afspeellist"
 
@@ -8129,33 +8270,33 @@ msgid "Preamp"
 msgstr "Vörverstärken"
 
 #. +> trunk
-#: EngineController.cpp:1283
+#: EngineController.cpp:1269
 #, kde-format
 msgctxt "track by artist on album"
 msgid "<b>%1</b> by <b>%2</b> on <b>%3</b>"
 msgstr "<b>%1</b> vun <b>%2</b>, op <b>%3</b>"
 
 #. +> trunk
-#: EngineController.cpp:1286
+#: EngineController.cpp:1272
 #, kde-format
 msgctxt "track by artist"
 msgid "<b>%1</b> by <b>%2</b>"
 msgstr "<b>%1</b> vun <b>%2</b>"
 
 #. +> trunk
-#: EngineController.cpp:1290
+#: EngineController.cpp:1276
 #, kde-format
 msgctxt "track on album"
 msgid "<b>%1</b> on <b>%2</b>"
 msgstr "<b>%1</b>op <b>%2</b>"
 
 #. +> trunk
-#: EngineController.cpp:1295
+#: EngineController.cpp:1281
 msgid "Unknown track"
 msgstr "Nich begäng Stück"
 
 #. +> trunk
-#: EngineController.cpp:1302
+#: EngineController.cpp:1288
 #, kde-format
 msgctxt "track from source"
 msgid "from <b>%1</b>"
@@ -8891,6 +9032,11 @@ msgid "Soren Harward"
 msgstr "Soren Harward"
 
 #. +> trunk
+#: main.cpp:135
+msgid "Developer, Automated Playlist Generator"
+msgstr ""
+
+#. +> trunk
 #: main.cpp:137
 msgid "Sven Krohlas"
 msgstr "Sven Krohlas"
@@ -9195,323 +9341,323 @@ msgid "Loads of stuff"
 msgstr "vun"
 
 #. +> trunk
-#: MainWindow.cpp:272
+#: MainWindow.cpp:265
 msgid "Media Sources"
 msgstr "Medienborns"
 
 #. +> trunk
-#: MainWindow.cpp:305
+#: MainWindow.cpp:298
 msgid "Context"
 msgstr "Kontext"
 
 #. +> trunk
-#: MainWindow.cpp:333
+#: MainWindow.cpp:326
 msgid "Local Music"
 msgstr "Lokaal Musik"
 
 #. +> trunk
-#: MainWindow.cpp:335
+#: MainWindow.cpp:328
 #, fuzzy
 msgid "Local sources of content"
 msgstr "Lokaal Borns vun"
 
 #. +> trunk
-#: MainWindow.cpp:343
+#: MainWindow.cpp:336
 msgid "Internet"
 msgstr "Internet"
 
 #. +> trunk
-#: MainWindow.cpp:345
+#: MainWindow.cpp:338
 #, fuzzy
 msgid "Online sources of content"
 msgstr "Tokoppelt Borns vun"
 
 #. +> trunk
-#: MainWindow.cpp:351
+#: MainWindow.cpp:344
 msgid "Playlists"
 msgstr "Afspeellisten"
 
 #. +> trunk
-#: MainWindow.cpp:353
+#: MainWindow.cpp:346
 #, fuzzy
 msgid "Various types of playlists"
 msgstr "Verscheden Künstlers"
 
 #. +> trunk
-#: MainWindow.cpp:362
+#: MainWindow.cpp:355
 #, fuzzy
 msgid "Browse local hard drive for content"
 msgstr "Dörkieken lokaal Hart för"
 
 #. +> trunk
-#: MainWindow.cpp:432
+#: MainWindow.cpp:429
 msgctxt "@item:inmenu"
 msgid "&View"
 msgstr "&Ansicht"
 
 #. +> trunk
-#: MainWindow.cpp:435
+#: MainWindow.cpp:432
 #, fuzzy
 msgid "Lock Layout"
 msgstr "Böversiet"
 
 #. +> trunk
-#: MainWindow.cpp:546
+#: MainWindow.cpp:544
 msgid "<qt>Closing the main window will keep Amarok running in the System Tray. Use <B>Quit</B> from the menu, or the Amarok tray icon to exit the application.</qt>"
 msgstr "<qt>Wenn Du dat Hööftfinster tomaakst, löppt Amarok binnen den Systeemafsnitt wieder. Wenn Du dat Programm utmaken wullt, bruuk <b>Verlaten</b> binnen dat Menü \"Akschonen\" oder dat Rechtsklickmenü vun dat Systeemafsnitt-Lüttbild.</qt>"
 
 #. +> trunk
-#: MainWindow.cpp:548
+#: MainWindow.cpp:546
 msgid "Docking in System Tray"
 msgstr "In Systeemafsnitt lopen"
 
 #. +> trunk
-#: MainWindow.cpp:566
+#: MainWindow.cpp:564
 msgid "Use relative path for &saving"
 msgstr "Relatiev Padd bi't &Sekern bruken"
 
 #. +> trunk
-#: MainWindow.cpp:577
+#: MainWindow.cpp:575
 msgid "Save As"
 msgstr "Sekern as"
 
 #. +> trunk
-#: MainWindow.cpp:626
+#: MainWindow.cpp:624
 msgid "Play Media (Files or URLs)"
 msgstr "Medien afspelen (Dateien oder URLs)"
 
 #. +> trunk
-#: MainWindow.cpp:626
+#: MainWindow.cpp:624
 msgid "Add Media (Files or URLs)"
 msgstr "Medien tofögen (Dateien oder URLs)"
 
 #. +> trunk
-#: MainWindow.cpp:642
+#: MainWindow.cpp:640
 msgid "Add Stream"
 msgstr "Stroom tofögen"
 
 #. +> trunk
-#: MainWindow.cpp:642
+#: MainWindow.cpp:640
 msgid "Enter Stream URL:"
 msgstr "Stroom-Adress (URL) ingeven:"
 
 #. +> trunk
-#: MainWindow.cpp:763
+#: MainWindow.cpp:761
 msgid "&Add Media..."
 msgstr "Medien &tofögen..."
 
 #. +> trunk
-#: MainWindow.cpp:768
+#: MainWindow.cpp:766
 msgctxt "clear playlist"
 msgid "&Clear Playlist"
 msgstr "Afspeellist &leddigmaken"
 
 #. +> trunk
-#: MainWindow.cpp:772
+#: MainWindow.cpp:770
 msgctxt "Remove duplicate and dead (unplayable) tracks from the playlist"
 msgid "Re&move Duplicates"
 msgstr "Dubbels &wegmaken"
 
 #. +> trunk
-#: MainWindow.cpp:779
+#: MainWindow.cpp:777
 msgid "&Add Stream..."
 msgstr "Stroom &tofögen..."
 
 #. +> trunk
-#: MainWindow.cpp:783
+#: MainWindow.cpp:781
 msgid "&Export Playlist As..."
 msgstr "Afspeellist &exporteren as..."
 
 #. +> trunk
-#: MainWindow.cpp:795
+#: MainWindow.cpp:793
 msgid "Equalizer"
 msgstr "Liekmaker"
 
 #. +> trunk
-#: MainWindow.cpp:799 playlist/PlaylistViewUrlGenerator.cpp:101
+#: MainWindow.cpp:797 playlist/PlaylistViewUrlGenerator.cpp:101
 #, fuzzy
 #| msgid "Smart Playlist"
 msgid "Bookmark Playlist Setup"
 msgstr "Plietsche Afspeellist"
 
 #. +> trunk
-#: MainWindow.cpp:803
+#: MainWindow.cpp:801
 #, fuzzy
 #| msgid "Bookmark this Artist"
 msgid "Bookmark Context Applets"
 msgstr "Dissen Künstler de Leestekens tofögen"
 
 #. +> trunk
-#: MainWindow.cpp:811
+#: MainWindow.cpp:809
 msgid "Play Media..."
 msgstr "Medien afspelen..."
 
 #. +> trunk
-#: MainWindow.cpp:820
+#: MainWindow.cpp:818
 msgid "&Seek Forward"
 msgstr "&Vörut söken"
 
 #. +> trunk
-#: MainWindow.cpp:826
+#: MainWindow.cpp:824
 msgid "&Seek Backward"
 msgstr "A&chterut söken"
 
 #. +> trunk
-#: MainWindow.cpp:833
+#: MainWindow.cpp:831
 msgid "Update Collection"
 msgstr "Sammeln opfrischen"
 
 #. +> trunk
-#: MainWindow.cpp:840 widgets/MainControlsWidget.cpp:62
+#: MainWindow.cpp:838 widgets/MainControlsWidget.cpp:62
 msgid "Previous Track"
 msgstr "Verleden Stück"
 
 #. +> trunk
-#: MainWindow.cpp:846
+#: MainWindow.cpp:844
 msgid "Repopulate Playlist"
 msgstr "Afspeellist nieg vullmaken"
 
 #. +> trunk
-#: MainWindow.cpp:856 widgets/MainControlsWidget.cpp:86
+#: MainWindow.cpp:854 widgets/MainControlsWidget.cpp:86
 msgid "Next Track"
 msgstr "Nakamen Stück"
 
 #. +> trunk
-#: MainWindow.cpp:861
+#: MainWindow.cpp:859
 msgid "Increase Volume"
 msgstr "Luder maken"
 
 #. +> trunk
-#: MainWindow.cpp:867
+#: MainWindow.cpp:865
 msgid "Decrease Volume"
 msgstr "Lieser maken"
 
 #. +> trunk
-#: MainWindow.cpp:873
+#: MainWindow.cpp:871
 msgid "Toggle Main Window"
 msgstr "Hööftfinster an-/utmaken"
 
 #. +> trunk
-#: MainWindow.cpp:878
+#: MainWindow.cpp:876
 msgid "Toggle Full Screen"
 msgstr "Heelschirm an-/utmaken"
 
 #. +> trunk
-#: MainWindow.cpp:883
+#: MainWindow.cpp:881
 msgid "Jump to"
 msgstr "Jump na"
 
 #. +> trunk
-#: MainWindow.cpp:888
+#: MainWindow.cpp:886
 msgid "Show active track"
 msgstr "Aktiev Stück wiesen"
 
 #. +> trunk
-#: MainWindow.cpp:892
+#: MainWindow.cpp:890
 #, fuzzy
 #| msgid "Location:"
 msgid "Show Notification Popup"
 msgstr "Bescheed-Opduker wiesen"
 
 #. +> trunk
-#: MainWindow.cpp:897
+#: MainWindow.cpp:895
 msgid "Mute Volume"
 msgstr "Stillmaken"
 
 #. +> trunk
-#: MainWindow.cpp:902
+#: MainWindow.cpp:900
 #, fuzzy
 #| msgid "Love Current Track"
 msgid "Last.fm: Love Current Track"
 msgstr "Last.fm: Dat aktuelle Stück mögen"
 
 #. +> trunk
-#: MainWindow.cpp:907
+#: MainWindow.cpp:905
 #, fuzzy
 #| msgid "Love Current Track"
 msgid "Last.fm: Ban Current Track"
 msgstr "Last.fm: Dat aktuelle Stück utsluten"
 
 #. +> trunk
-#: MainWindow.cpp:912
+#: MainWindow.cpp:910
 #, fuzzy
 #| msgid "Love Current Track"
 msgid "Last.fm: Skip Current Track"
 msgstr "Last.fm: Dat aktuelle Stück övergahn"
 
 #. +> trunk
-#: MainWindow.cpp:917 playlist/view/PlaylistViewCommon.cpp:128
+#: MainWindow.cpp:915 playlist/view/PlaylistViewCommon.cpp:128
 msgid "Queue Track"
 msgstr "Stück inregen"
 
 #. +> trunk
-#: MainWindow.cpp:922
+#: MainWindow.cpp:920
 msgid "Rate Current Track: 1"
 msgstr "Aktuell Stück beweerten: 1"
 
 #. +> trunk
-#: MainWindow.cpp:927
+#: MainWindow.cpp:925
 msgid "Rate Current Track: 2"
 msgstr "Aktuell Stück beweerten: 2"
 
 #. +> trunk
-#: MainWindow.cpp:932
+#: MainWindow.cpp:930
 msgid "Rate Current Track: 3"
 msgstr "Aktuell Stück beweerten: 3"
 
 #. +> trunk
-#: MainWindow.cpp:937
+#: MainWindow.cpp:935
 msgid "Rate Current Track: 4"
 msgstr "Aktuell Stück beweerten: 4"
 
 #. +> trunk
-#: MainWindow.cpp:942
+#: MainWindow.cpp:940
 msgid "Rate Current Track: 5"
 msgstr "Aktuell Stück beweerten: 5"
 
 #. +> trunk
-#: MainWindow.cpp:959
+#: MainWindow.cpp:957
 msgid "&About Amarok"
 msgstr "&Vertell wat över Amarok"
 
 #. +> trunk
-#: MainWindow.cpp:963
+#: MainWindow.cpp:961
 msgid "&Report Bug..."
 msgstr "&Fehler künnig maken..."
 
 #. +> trunk
-#: MainWindow.cpp:1023
+#: MainWindow.cpp:1021
 msgid "&Music"
 msgstr "&Musik"
 
 #. +> trunk
-#: MainWindow.cpp:1027
+#: MainWindow.cpp:1025
 msgid "&Amarok"
 msgstr "&Amarok"
 
 #. +> trunk
-#: MainWindow.cpp:1046
+#: MainWindow.cpp:1044
 msgid "&Playlist"
 msgstr "&Afspeellist"
 
 #. +> trunk
-#: MainWindow.cpp:1062
+#: MainWindow.cpp:1060
 msgid "&Tools"
 msgstr "&Warktüüch"
 
 #. +> trunk
-#: MainWindow.cpp:1074
+#: MainWindow.cpp:1072
 msgid "&Settings"
 msgstr "&Instellen"
 
 #. +> trunk
-#: MainWindow.cpp:1217
+#: MainWindow.cpp:1489
 #, kde-format
 msgid "Paused  ::  %1"
 msgstr "Anhollen  ::  %1"
 
 #. +> trunk
-#: MainWindow.cpp:1236
+#: MainWindow.cpp:1508
 #, kde-format
 msgid "%1 - %2  ::  %3"
 msgstr "%1 - %2  ::  %3"
@@ -10266,6 +10412,806 @@ msgstr "Born utsöken"
 #: playlist/view/tooltips/ToolTipManager.cpp:189
 msgid "No extra information available"
 msgstr "Keen Bito-Informatschonen verföögbor"
+
+#. +> trunk
+#: playlistgenerator/Constraint.cpp:99 playlistgenerator/Constraint.cpp:110
+#: playlistgenerator/Constraint.cpp:142
+#, fuzzy
+msgid "url"
+msgstr "URL:"
+
+#. +> trunk
+#: playlistgenerator/Constraint.cpp:99 playlistgenerator/Constraint.cpp:112
+#: playlistgenerator/Constraint.cpp:144
+#, fuzzy
+#| msgid "Playlist name:"
+msgid "artist name"
+msgstr "Naam vun de Afspeellist:"
+
+#. +> trunk
+#: playlistgenerator/Constraint.cpp:99 playlistgenerator/Constraint.cpp:113
+#: playlistgenerator/Constraint.cpp:145
+#, fuzzy
+#| msgid "album"
+msgid "album name"
+msgstr "Album"
+
+#. +> trunk
+#: playlistgenerator/Constraint.cpp:101 playlistgenerator/Constraint.cpp:118
+#: playlistgenerator/Constraint.cpp:150
+#, fuzzy
+#| msgid "tracknumber"
+msgid "track number"
+msgstr "Stücknummer"
+
+#. +> trunk
+#: playlistgenerator/Constraint.cpp:101 playlistgenerator/Constraint.cpp:119
+#: playlistgenerator/Constraint.cpp:151
+#, fuzzy
+#| msgid "discnumber"
+msgid "disc number"
+msgstr "Schievnummer"
+
+#. +> trunk
+#: playlistgenerator/Constraint.cpp:102 playlistgenerator/Constraint.cpp:127
+#: playlistgenerator/Constraint.cpp:159
+#, fuzzy
+#| msgid "Move to Collection"
+msgid "added to collection"
+msgstr "Na Sammeln verschuven"
+
+#. +> trunk
+#: playlistgenerator/Constraint.cpp:103 playlistgenerator/Constraint.cpp:131
+#: playlistgenerator/Constraint.cpp:163
+#, fuzzy
+#| msgid "First Played"
+msgid "first played"
+msgstr "Toeerst speelt"
+
+#. +> trunk
+#: playlistgenerator/Constraint.cpp:103 playlistgenerator/Constraint.cpp:132
+#: playlistgenerator/Constraint.cpp:164
+#, fuzzy
+#| msgid "Last played"
+msgid "last played"
+msgstr "Tolest speelt"
+
+#. +> trunk
+#: playlistgenerator/Constraint.cpp:104 playlistgenerator/Constraint.cpp:133
+#: playlistgenerator/Constraint.cpp:165
+#, fuzzy
+#| msgid "playcount"
+msgid "play count"
+msgstr "Afspeelklock"
+
+#. +> trunk
+#: playlistgenerator/Constraint.cpp:104 playlistgenerator/Constraint.cpp:136
+#: playlistgenerator/Constraint.cpp:170
+#, fuzzy
+#| msgid "Label"
+msgid "label"
+msgstr "Firma"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, ConstraintGroupEditWidget)
+#. i18n: ectx: property (windowTitle), widget (QWidget, CheckpointEditWidget)
+#. i18n: ectx: property (windowTitle), widget (QWidget, PlaylistLengthEditWidget)
+#. i18n: ectx: property (windowTitle), widget (QWidget, PreventDuplicatesEditWidget)
+#. i18n: ectx: property (windowTitle), widget (QWidget, TagMatchEditWidget)
+#. +> trunk
+#: playlistgenerator/ConstraintGroupEditWidget.ui:15
+#: playlistgenerator/constraints/CheckpointEditWidget.ui:15
+#: playlistgenerator/constraints/PlaylistLengthEditWidget.ui:15
+#: playlistgenerator/constraints/PreventDuplicatesEditWidget.ui:15
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:15
+msgid "Form"
+msgstr "Formulor"
+
+#. i18n: ectx: property (whatsThis), widget (QWidget, ConstraintGroupEditWidget)
+#. +> trunk
+#: playlistgenerator/ConstraintGroupEditWidget.ui:18
+msgid "An editor for Constraint Groups.  You can set the group type to \"match all\" or \"match any\".  When the group type is set to \"match all\", the Generator will try to have the playlist match all the constraints within the group.  When the group type is set to \"match any\", the Generator will try to have the playlist match any of the constraints within the group."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. +> trunk
+#: playlistgenerator/ConstraintGroupEditWidget.ui:24
+#, fuzzy
+#| msgid "Connection Settings"
+msgid "Constraint Group Settings"
+msgstr "Verbinnen instellen"
+
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, radioButton_MatchAll)
+#. +> trunk
+#: playlistgenerator/ConstraintGroupEditWidget.ui:32
+msgid "The APG will consider the constraint group satisfied only if all of the constraints within the group are satisfied.  This is analogous to a logical AND: \"the tracks should match properties A, B, and C\"."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_MatchAll)
+#. +> trunk
+#: playlistgenerator/ConstraintGroupEditWidget.ui:35
+msgid "Match all constraints in the group"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, radioButton_MatchAny)
+#. +> trunk
+#: playlistgenerator/ConstraintGroupEditWidget.ui:42
+msgid "The APG will consider the constraint group satisfied if any one of the constraints within it is satisfied.  This is analogous to a logical OR: \"the tracks should match properties A, B, or C\"."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_MatchAny)
+#. +> trunk
+#: playlistgenerator/ConstraintGroupEditWidget.ui:45
+msgid "Match any constraint in the group"
+msgstr ""
+
+#. +> trunk
+#: playlistgenerator/constraints/Checkpoint.cpp:53
+msgid "Checkpoint"
+msgstr ""
+
+#. +> trunk
+#: playlistgenerator/constraints/Checkpoint.cpp:54
+#, fuzzy
+#| msgid "Match a certain portion of the playlist to a value."
+msgid "Fixes a track to a certain position in the playlist"
+msgstr "En Deel vun de Afspeellist na en Weert inrichten"
+
+#. i18n: ectx: property (whatsThis), widget (QWidget, CheckpointEditWidget)
+#. i18n: ectx: property (whatsThis), widget (QWidget, PlaylistLengthEditWidget)
+#. +> trunk
+#: playlistgenerator/constraints/CheckpointEditWidget.ui:18
+#: playlistgenerator/constraints/PlaylistLengthEditWidget.ui:18
+msgid "An editor for a PlaylistLength constraint.  The user can set the name of the constraint; the target duration and whether the playlist should be less than, equal to, or greater than that duration; and the strictness with which the APG should match that duration."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. +> trunk
+#: playlistgenerator/constraints/CheckpointEditWidget.ui:24
+#, fuzzy
+#| msgid "Connection Settings"
+msgid "Checkpoint Constraint Settings"
+msgstr "Verbinnen instellen"
+
+#. i18n: ectx: property (whatsThis), widget (TrackSelectWidget, trackSelector)
+#. +> trunk
+#: playlistgenerator/constraints/CheckpointEditWidget.ui:38
+msgid "Select the track that you want to use as the checkpoint."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_Position)
+#. +> trunk
+#: playlistgenerator/constraints/CheckpointEditWidget.ui:51
+#, fuzzy
+#| msgid "Proportion:"
+msgid "Position:"
+msgstr "Deel:"
+
+#. i18n: ectx: property (whatsThis), widget (QTimeEdit, timeEdit_Position)
+#. +> trunk
+#: playlistgenerator/constraints/CheckpointEditWidget.ui:69
+msgid "The desired position of the song in the playlist, in hours, minutes, and seconds.  Note: because of Qt limitations, the maximum playlist duration that you can specify is 24 hours."
+msgstr ""
+
+#. i18n: ectx: property (displayFormat), widget (QTimeEdit, timeEdit_Position)
+#. i18n: ectx: property (displayFormat), widget (QTimeEdit, timeEdit_Duration)
+#. i18n: ectx: property (displayFormat), widget (QTimeEdit, timeEdit_TimeValue)
+#. +> trunk
+#: playlistgenerator/constraints/CheckpointEditWidget.ui:72
+#: playlistgenerator/constraints/PlaylistLengthEditWidget.ui:68
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:515
+msgid "h:mm:ss"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_Strictness)
+#. i18n: ectx: property (whatsThis), widget (QSlider, slider_Strictness)
+#. +> trunk
+#: playlistgenerator/constraints/CheckpointEditWidget.ui:107
+#: playlistgenerator/constraints/CheckpointEditWidget.ui:138
+msgid "How strict the APG should be about placing the selected track at the specified time."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_FuzzyPos)
+#. i18n: ectx: property (text), widget (QLabel, label_Fuzzy)
+#. i18n: ectx: property (text), widget (QLabel, label_FuzzyInt)
+#. i18n: ectx: property (text), widget (QLabel, label_FuzzyDate)
+#. i18n: ectx: property (text), widget (QLabel, label_FuzzyTime)
+#. i18n: ectx: property (text), widget (QLabel, label_FuzzyRating)
+#. +> trunk
+#: playlistgenerator/constraints/CheckpointEditWidget.ui:122
+#: playlistgenerator/constraints/PlaylistLengthEditWidget.ui:112
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:176
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:367
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:559
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:682
+msgid "fuzzy"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_ExactPos)
+#. i18n: ectx: property (text), widget (QLabel, label_Exact)
+#. i18n: ectx: property (text), widget (QLabel, label_ExactInt)
+#. i18n: ectx: property (text), widget (QLabel, label_ExactDate)
+#. i18n: ectx: property (text), widget (QLabel, label_ExactTime)
+#. i18n: ectx: property (text), widget (QLabel, label_ExactRating)
+#. +> trunk
+#: playlistgenerator/constraints/CheckpointEditWidget.ui:154
+#: playlistgenerator/constraints/PlaylistLengthEditWidget.ui:138
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:199
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:390
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:582
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:705
+#, fuzzy
+msgid "exact"
+msgstr "&Nakamen"
+
+#. +> trunk
+#: playlistgenerator/constraints/PlaylistLength.cpp:56
+#, fuzzy
+#| msgid "Playlist"
+msgid "PlaylistLength"
+msgstr "Afspeellist"
+
+#. +> trunk
+#: playlistgenerator/constraints/PlaylistLength.cpp:57
+#, fuzzy
+#| msgid "User generated and imported playlists"
+msgid "Sets the preferred duration of the playlist"
+msgstr "Sülven opstellt un importeert Afspeellisten"
+
+#. +> trunk
+#: playlistgenerator/constraints/PlaylistLength.cpp:113
+#, fuzzy, kde-format
+#| msgid "Playlist_%1"
+msgid "Playlist length %1 %2"
+msgstr "Afspeellist_%1"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonString)
+#. +> trunk
+#: playlistgenerator/constraints/PlaylistLength.cpp:255
+#: playlistgenerator/constraints/TagMatch.cpp:467
+#: playlistgenerator/constraints/TagMatch.cpp:485
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:424
+#, fuzzy
+#| msgid "equal to"
+msgid "equals"
+msgstr "liek as"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_Comparison)
+#. +> trunk
+#: playlistgenerator/constraints/PlaylistLength.cpp:257
+#: playlistgenerator/constraints/PlaylistLengthEditWidget.ui:52
+#, fuzzy
+#| msgid "less than"
+msgid "longer than"
+msgstr "minn as"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_Comparison)
+#. +> trunk
+#: playlistgenerator/constraints/PlaylistLength.cpp:259
+#: playlistgenerator/constraints/PlaylistLengthEditWidget.ui:42
+#, fuzzy
+#| msgid "greater than"
+msgid "shorter than"
+msgstr "grötter as"
+
+#. +> trunk
+#: playlistgenerator/constraints/PlaylistLength.cpp:261
+#: playlistgenerator/constraints/TagMatch.cpp:496
+#, fuzzy
+#| msgid "Unknown Artist"
+msgid "unknown comparison"
+msgstr "Nich begäng Künstler"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. +> trunk
+#: playlistgenerator/constraints/PlaylistLengthEditWidget.ui:24
+msgid "PlaylistLength Constraint Settings"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, comboBox_Comparison)
+#. +> trunk
+#: playlistgenerator/constraints/PlaylistLengthEditWidget.ui:35
+msgid "Whether the duration of the generated playlist should be shorter than, equal to, or longer than the specified value."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QTimeEdit, timeEdit_Duration)
+#. +> trunk
+#: playlistgenerator/constraints/PlaylistLengthEditWidget.ui:65
+msgid "The desired duration of the playlist, in hours, minutes, and seconds.  Note: because of Qt limitations, the maximum playlist duration that you can specify is 24 hours."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_Strictness)
+#. i18n: ectx: property (whatsThis), widget (QSlider, slider_Strictness)
+#. +> trunk
+#: playlistgenerator/constraints/PlaylistLengthEditWidget.ui:97
+#: playlistgenerator/constraints/PlaylistLengthEditWidget.ui:122
+msgid "How strict the APG should be about matching the playlist duration to the specified time."
+msgstr ""
+
+#. +> trunk
+#: playlistgenerator/constraints/PreventDuplicates.cpp:52
+#, fuzzy
+#| msgctxt "Remove duplicate and dead (unplayable) tracks from the playlist"
+#| msgid "Re&move Duplicates"
+msgid "PreventDuplicates"
+msgstr "Dubbels &wegmaken"
+
+#. +> trunk
+#: playlistgenerator/constraints/PreventDuplicates.cpp:53
+msgid "Prevents duplicate tracks, albums, or artists from appearing in the playlist"
+msgstr ""
+
+#. +> trunk
+#: playlistgenerator/constraints/PreventDuplicates.cpp:97
+#, fuzzy, kde-format
+#| msgctxt "Remove duplicate and dead (unplayable) tracks from the playlist"
+#| msgid "Re&move Duplicates"
+msgid "Prevent duplicate %1"
+msgstr "Dubbels &wegmaken"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_Field)
+#. +> trunk
+#: playlistgenerator/constraints/PreventDuplicates.cpp:100
+#: playlistgenerator/constraints/PreventDuplicatesEditWidget.ui:54
+#: widgets/SmartPlaylistEditor.cpp:253
+msgid "tracks"
+msgstr "Stücken"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_Field)
+#. +> trunk
+#: playlistgenerator/constraints/PreventDuplicates.cpp:102
+#: playlistgenerator/constraints/PreventDuplicatesEditWidget.ui:64
+#, fuzzy
+#| msgid "artist"
+msgid "artists"
+msgstr "Künstler"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_Field)
+#. +> trunk
+#: playlistgenerator/constraints/PreventDuplicates.cpp:104
+#: playlistgenerator/constraints/PreventDuplicatesEditWidget.ui:59
+#, fuzzy
+#| msgid "album"
+msgid "albums"
+msgstr "Album"
+
+#. i18n: ectx: property (whatsThis), widget (QWidget, PreventDuplicatesEditWidget)
+#. +> trunk
+#: playlistgenerator/constraints/PreventDuplicatesEditWidget.ui:18
+msgid "An editor for a PreventDuplicants constraint.  When set to \"track\", it will try to prevent more than one copy of the same track from ending up in the playlist.  When set to \"album\" or \"artist\", it will try to prevent more than one track from a given album or a given artist from ending up in the playlist."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. +> trunk
+#: playlistgenerator/constraints/PreventDuplicatesEditWidget.ui:24
+msgid "Prevent Duplicates Constraint Settings"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_Field)
+#. i18n: ectx: property (whatsThis), widget (QComboBox, comboBox_Field)
+#. +> trunk
+#: playlistgenerator/constraints/PreventDuplicatesEditWidget.ui:32
+#: playlistgenerator/constraints/PreventDuplicatesEditWidget.ui:50
+msgid "Control which duplicates to prevent.  \"Prevent duplicate tracks\" is the least restrictive, and \"prevent duplicate artists\" is the most restrictive."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_Field)
+#. +> trunk
+#: playlistgenerator/constraints/PreventDuplicatesEditWidget.ui:35
+#, fuzzy
+#| msgctxt "Remove duplicate and dead (unplayable) tracks from the playlist"
+#| msgid "Re&move Duplicates"
+msgid "Prevent duplicate"
+msgstr "Dubbels &wegmaken"
+
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:55
+#, fuzzy
+#| msgid "Match:"
+msgid "TagMatch"
+msgstr "Passt:"
+
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:56
+#, fuzzy
+#| msgid "Number of tracks to load into the playlist after the active track."
+msgid "Make all tracks in the playlist match the specified characteristic"
+msgstr "Tall vun Stücken, de na dat aktuelle Stück na de Afspeellist laadt warrt"
+
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:166
+#, fuzzy
+#| msgid "is not"
+msgid " not"
+msgstr "is nich"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonDate)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:475
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:236
+#, fuzzy
+#| msgid "is before"
+msgid "before"
+msgstr "is vör"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonDate)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:477
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:241
+#, fuzzy
+#| msgid "none"
+msgid "on"
+msgstr "keen"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonDate)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:479
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:246
+#, fuzzy
+#| msgid "is after"
+msgid "after"
+msgstr "is achter"
+
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:481
+#, fuzzy
+#| msgid "with"
+msgid "within"
+msgstr "mit"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonString)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:487
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:429
+#: widgets/SmartPlaylistEditor.cpp:737 widgets/SmartPlaylistEditor.cpp:1034
+msgid "starts with"
+msgstr "fangt an mit"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonString)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:489
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:434
+#: widgets/SmartPlaylistEditor.cpp:759 widgets/SmartPlaylistEditor.cpp:1035
+msgid "ends with"
+msgstr "endt mit"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonString)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:491
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:439
+#: widgets/SmartPlaylistEditor.cpp:715 widgets/SmartPlaylistEditor.cpp:1033
+msgid "contains"
+msgstr "bargt"
+
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:493
+msgid "regexp"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QWidget, TagMatchEditWidget)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:18
+msgid "An editor for a TagMatch constraint.  The user can specify a track characteristic, and the APG will fill the playlist with tracks that match that characteristic.  This functions similarity to the matching attributes of the smart playlists in Amarok 1.4."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:24
+#, fuzzy
+#| msgid "Connection Settings"
+msgid "Tag Match Constraint Settings"
+msgstr "Verbinnen instellen"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_Match)
+#. i18n: ectx: property (whatsThis), widget (QComboBox, comboBox_Field)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:32
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:47
+msgid "Selects which track characteristic you want to match."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_Match)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:35
+#, fuzzy
+#| msgid "Failed"
+msgid "Field:"
+msgstr "Fehlslaan"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, checkBox_Invert)
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_Invert)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:73
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:87
+#, fuzzy
+#| msgid ""
+#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+#| "p, li { white-space: pre-wrap; }\n"
+#| "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"https://shop.mp3tunes.com/myaccount/registration/\"><span style=\" text-decoration: underline; color:#0057ae;\">Get an Mp3tunes locker</span></a></p>"
+#| "</body></html>"
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Calibri'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">The APG will choose all tracks that do <span style=\" font-weight:600;\">not</span> match the specified characteristics.</p>"
+"</body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"https://shop.mp3tunes.com/myaccount/registration/\"><span style=\" text-decoration: underline; color:#0057ae;\">En Mp3tunes-Schapp kriegen</span></a></p>"
+"</body></html>"
+
+#. i18n: ectx: property (text), widget (QLabel, label_Invert)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:90
+#, fuzzy
+#| msgid "Internet"
+msgid "Invert:"
+msgstr "Internet"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, comboBox_ComparisonInt)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:109
+msgid "Whether the APG should choose tracks that are less than, equal to, or greater than the specified value."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, spinBox_ValueInt)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:136
+msgid "The numerical value that the track characteristic should match."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_StrictnessInt)
+#. i18n: ectx: property (whatsThis), widget (QSlider, slider_StrictnessInt)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:161
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:183
+msgid "How strict the APG should be about matching tracks to the specified value."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, comboBox_ComparisonDate)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:229
+msgid "Whether the APG should choose tracks that are before, on, or after a specific date; or whether it should choose tracks that are within a certain time range."
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonDate)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:251
+#, fuzzy
+#| msgid "is in the last"
+msgid "within the last"
+msgstr "is binnen de lesten"
+
+#. i18n: ectx: property (whatsThis), widget (QWidget, page_DateSpecific)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:269
+msgid "The specific date that the APG should use for matching."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QWidget, page_DateRange)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:303
+msgid "The relative time period that the APG should try to match."
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ValueDateUnit)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:315
+#, fuzzy
+#| msgid "Days"
+msgid "days"
+msgstr "Daag"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ValueDateUnit)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:320
+#, fuzzy
+#| msgid "Months"
+msgid "months"
+msgstr "Maanden"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ValueDateUnit)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:325
+#, fuzzy
+#| msgid "year"
+msgid "years"
+msgstr "Johr"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_strictnessDate)
+#. i18n: ectx: property (whatsThis), widget (QSlider, slider_StrictnessDate)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:352
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:374
+msgid "How strict the APG should be about matching tracks to the specified date."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, comboBox_ComparisonString)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:420
+msgid "Whether the APG should match tracks that equal, start with, end with, or contain the specified string."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, lineEdit_StringValue)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:447
+msgid "The string that the APG should use when matching tracks."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, comboBox_ComparisonTime)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:475
+msgid "Whether the APG should choose tracks that are less than, equal to, or greater than the specified time."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QTimeEdit, timeEdit_TimeValue)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:502
+msgid "The time that the APG should try to match."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_StrictnessTime)
+#. i18n: ectx: property (whatsThis), widget (QSlider, slider_StrictnessTime)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:544
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:566
+msgid "How strict the APG should be about matching tracks to the specified time."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, comboBox_ComparisonRating)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:612
+msgid "Whether the APG should choose tracks that are less than, equal to, or greater than the specified rating."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KRatingWidget, rating_RatingValue)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:639
+msgid "The rating that the APG should try to match."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_StrictnessRating)
+#. i18n: ectx: property (whatsThis), widget (QSlider, slider_StrictnessRating)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:667
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:689
+msgid "How strict the APG should be about matching tracks to the specified rating."
+msgstr ""
+
+#. +> trunk
+#: playlistgenerator/ConstraintSolver.cpp:228
+msgid "The playlist generator failed to load any tracks from the collection."
+msgstr ""
+
+#. +> trunk
+#: playlistgenerator/ConstraintSolver.cpp:235
+msgid "There are no tracks that match all constraints.  The playlist generator will find the tracks that match best, but you may want to consider loosening the constraints to find more tracks."
+msgstr ""
+
+#. +> trunk
+#: playlistgenerator/Preset.cpp:41 playlistgenerator/Preset.cpp:54
+#, fuzzy
+#| msgid "New playlist layout"
+msgid "New playlist preset"
+msgstr "Nieg Afspeellist-Böversiet"
+
+#. +> trunk
+#: playlistgenerator/Preset.cpp:44 playlistgenerator/Preset.cpp:66
+#, fuzzy
+msgid "Unnamed playlist preset"
+msgstr "Afspeellist &sekern"
+
+#. +> trunk
+#: playlistgenerator/Preset.cpp:128
+#, fuzzy
+#| msgid "Generating playlist..."
+msgid "Generating a new playlist"
+msgstr "Afspeellist warrt opstellt..."
+
+#. +> trunk
+#: playlistgenerator/Preset.cpp:148
+msgid "The playlist generator created a playlist which does not meet all of your constraints.  If you are not satisfied with the results, try loosening or removing some constraints and then generating a new playlist."
+msgstr ""
+
+#. +> trunk
+#: playlistgenerator/PresetEditDialog.cpp:57
+#, fuzzy
+#| msgid "Add new preset"
+msgid "Add new"
+msgstr "Nieg Profil tofögen"
+
+#. +> trunk
+#: playlistgenerator/PresetEditDialog.cpp:58
+#: playlistgenerator/PresetEditDialog.cpp:60
+#: playlistgenerator/PresetEditDialog.cpp:88
+msgid "ConstraintGroup"
+msgstr ""
+
+#. +> trunk
+#: playlistgenerator/PresetEditDialog.cpp:68
+#, fuzzy
+#| msgid "Remove Applet"
+msgid "Remove selected"
+msgstr "Lüttprogramm wegmaken"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, PresetEditDialog)
+#. +> trunk
+#: playlistgenerator/PresetEditDialog.ui:15
+msgid "APG Preset Editor"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_Tree)
+#. +> trunk
+#: playlistgenerator/PresetEditDialog.ui:23
+msgid "Constraint Tree"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_Title)
+#. +> trunk
+#: playlistgenerator/PresetEditDialog.ui:41
+#, fuzzy
+#| msgid "Enter preset name:"
+msgid "APG Preset Name"
+msgstr "Profilnaam ingeven:"
+
+#. +> trunk
+#: playlistgenerator/PresetModel.cpp:148
+#, fuzzy
+#| msgid "Statistics"
+msgid "Import preset"
+msgstr "Statistik"
+
+#. +> trunk
+#: playlistgenerator/PresetModel.cpp:152 playlistgenerator/PresetModel.cpp:278
+msgid "Preset files (*.xml)"
+msgstr ""
+
+#. +> trunk
+#: playlistgenerator/PresetModel.cpp:153
+msgid "Import"
+msgstr ""
+
+#. +> trunk
+#: playlistgenerator/PresetModel.cpp:205
+#, kde-format
+msgid "Preset exported to %1"
+msgstr ""
+
+#. +> trunk
+#: playlistgenerator/PresetModel.cpp:208
+#, fuzzy
+#| msgid "Lyrics data could not be parsed"
+msgid "Preset could not be exported to "
+msgstr "Leedtext-Daten laat sik nich inlesen"
+
+#. +> trunk
+#: playlistgenerator/PresetModel.cpp:224
+#, fuzzy, kde-format
+#| msgid "Database could not be found at: %1"
+msgid "Presets could not be imported from %1"
+msgstr "Datenbank lett sik nich finnen bi: %1"
+
+#. +> trunk
+#: playlistgenerator/PresetModel.cpp:229
+#, kde-format
+msgid "%1 could not be opened for preset import"
+msgstr ""
+
+#. +> trunk
+#: playlistgenerator/PresetModel.cpp:271
+#, kde-format
+msgid "Export `%1' preset"
+msgstr ""
+
+#. +> trunk
+#: playlistgenerator/PresetModel.cpp:279
+msgid "Export"
+msgstr ""
 
 #. +> trunk
 #: playlistmanager/file/PlaylistFileProvider.cpp:78
@@ -11809,13 +12755,13 @@ msgid "Volume: %1% %2"
 msgstr "Luutstärk: %1 % %2"
 
 #. +> trunk
-#: TrayIcon.cpp:126 TrayIconLegacy.cpp:144 widgets/VolumeDial.cpp:298
+#: TrayIcon.cpp:127 TrayIconLegacy.cpp:144 widgets/VolumeDial.cpp:298
 #: widgets/VolumeDial.cpp:337
 msgid "Muted"
 msgstr "Stillmaakt"
 
 #. +> trunk
-#: TrayIcon.cpp:130 TrayIconLegacy.cpp:148 widgets/SliderWidget.cpp:320
+#: TrayIcon.cpp:131 TrayIconLegacy.cpp:148 widgets/SliderWidget.cpp:320
 msgid "Volume"
 msgstr "Luutstärk"
 
@@ -12027,11 +12973,6 @@ msgid "Limit to"
 msgstr "Ingrenzen op"
 
 #. +> trunk
-#: widgets/SmartPlaylistEditor.cpp:253
-msgid "tracks"
-msgstr "Stücken"
-
-#. +> trunk
 #: widgets/SmartPlaylistEditor.cpp:258
 msgid "Expand by"
 msgstr "Sorteren na"
@@ -12093,11 +13034,6 @@ msgid "is not in the last"
 msgstr "is nich binnen de lesten"
 
 #. +> trunk
-#: widgets/SmartPlaylistEditor.cpp:715 widgets/SmartPlaylistEditor.cpp:1033
-msgid "contains"
-msgstr "bargt"
-
-#. +> trunk
 #: widgets/SmartPlaylistEditor.cpp:717 widgets/SmartPlaylistEditor.cpp:1033
 msgid "does not contain"
 msgstr "bargt nich"
@@ -12115,19 +13051,9 @@ msgid "is not"
 msgstr "is nich"
 
 #. +> trunk
-#: widgets/SmartPlaylistEditor.cpp:737 widgets/SmartPlaylistEditor.cpp:1034
-msgid "starts with"
-msgstr "fangt an mit"
-
-#. +> trunk
 #: widgets/SmartPlaylistEditor.cpp:748 widgets/SmartPlaylistEditor.cpp:1034
 msgid "does not start with"
 msgstr "fangt nich an mit"
-
-#. +> trunk
-#: widgets/SmartPlaylistEditor.cpp:759 widgets/SmartPlaylistEditor.cpp:1035
-msgid "ends with"
-msgstr "endt mit"
 
 #. +> trunk
 #: widgets/SmartPlaylistEditor.cpp:761 widgets/SmartPlaylistEditor.cpp:1035
@@ -12352,9 +13278,6 @@ msgstr "Luutstärk: <i>Stillmaakt</i>"
 #~ msgid "Cannot write playlist (%1)."
 #~ msgstr "Afspeellist lett sik nich schrieven (%1)."
 
-#~ msgid "Form"
-#~ msgstr "Formulor"
-
 #, fuzzy
 #~| msgid "with"
 #~ msgid "width"
@@ -12428,10 +13351,6 @@ msgstr "Luutstärk: <i>Stillmaakt</i>"
 #, fuzzy
 #~ msgid "Previous"
 #~ msgstr "&Verleden Stück"
-
-#, fuzzy
-#~ msgid "Next"
-#~ msgstr "&Nakamen"
 
 #~ msgid "Cannot rename one of the default layouts."
 #~ msgstr "Standard-Böversieden laat sik nich ümnömen."
@@ -12526,9 +13445,6 @@ msgstr "Luutstärk: <i>Stillmaakt</i>"
 #~ msgid "On"
 #~ msgstr "An"
 
-#~ msgid "Presets"
-#~ msgstr "Profilen"
-
 #~ msgid "Manual"
 #~ msgstr "Handbedrief"
 
@@ -12547,9 +13463,6 @@ msgstr "Luutstärk: <i>Stillmaakt</i>"
 #~ msgid "All presets will be deleted and defaults will be restored. Are you sure?"
 #~ msgstr "All Profilen warrt wegdaan un de Vörinstellen wedderherstellt. Büst Du seker?"
 
-#~ msgid "Add new preset"
-#~ msgstr "Nieg Profil tofögen"
-
 #~ msgid "Manage presets"
 #~ msgstr "Profilen plegen"
 
@@ -12561,9 +13474,6 @@ msgstr "Luutstärk: <i>Stillmaakt</i>"
 
 #~ msgid "Add Equalizer Preset"
 #~ msgstr "Liekmakerprofil tofögen"
-
-#~ msgid "Enter preset name:"
-#~ msgstr "Profilnaam ingeven:"
 
 #~ msgid "Untitled"
 #~ msgstr "Ahn Titel"
@@ -12729,10 +13639,6 @@ msgstr "Luutstärk: <i>Stillmaakt</i>"
 
 #~ msgid "The font to use for the On-Screen Display."
 #~ msgstr "De Schriftoort för de Op-Schirm-Dorstellen."
-
-#, fuzzy
-#~ msgid "Url"
-#~ msgstr "URL:"
 
 #~ msgid "On Screen Display"
 #~ msgstr "Op-Schirm-Dorstellen"
