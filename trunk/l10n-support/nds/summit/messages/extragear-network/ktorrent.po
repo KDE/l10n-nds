@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-04-08 10:49+0200\n"
+"POT-Creation-Date: 2010-04-09 10:51+0200\n"
 "PO-Revision-Date: 2010-04-06 21:22+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -3732,6 +3732,7 @@ msgstr "Stüerelement för de Pleeg vun de Torrentreeg"
 
 #. +> trunk
 #: ktorrent/torrentactivity.cpp:78
+#: plugins/magnetgenerator/magnetgeneratorplugin.cpp:143
 msgid "Magnet"
 msgstr "Magnet"
 
@@ -6725,35 +6726,37 @@ msgstr "<font color=\"#FF0000\">Logbookutgaav wöör ophollen.</font>"
 msgid "<font color=\"#00FF00\">Logging output resumed</font>"
 msgstr "<font color=\"#00FF00\">Logbookutgaav wedder opnahmen.</font>"
 
-#. i18n: ectx: label, entry (tracker), group (general)
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_torrenttracker)
+#. i18n: ectx: label, entry (torrenttracker), group (general)
 #. +> trunk
 #: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:10
+#: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:40
+#, fuzzy
+#| msgid "Cannot add a tracker to a private torrent."
+msgid "Grabs a tracker from the torrent file"
+msgstr "Na en privaat Torrent lett sik keen Tracker tofögen."
+
+#. i18n: ectx: label, entry (customtracker), group (general)
+#. +> trunk
+#: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:14
 #, fuzzy
 #| msgid "Tracker"
-msgid "Toggles tracker"
+msgid "Toggles if a custom tracker is used"
 msgstr "Tracker"
 
 #. i18n: ectx: label, entry (tr), group (general)
 #. +> trunk
-#: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:14
+#: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:18
 msgid "The default tracker"
 msgstr "De Standardtracker"
 
 #. i18n: ectx: label, entry (dn), group (general)
 #. +> trunk
-#: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:18
+#: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:22
 #, fuzzy
 #| msgid "Show Feed"
 msgid "Show dn"
 msgstr "Stroom wiesen"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_clipboard)
-#. i18n: ectx: label, entry (clipboard), group (general)
-#. +> trunk
-#: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:22
-#: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:80
-msgid "Copy to clipboard"
-msgstr "Na Twischenaflaag koperen"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_popup)
 #. i18n: ectx: label, entry (popup), group (general)
@@ -6763,16 +6766,31 @@ msgstr "Na Twischenaflaag koperen"
 msgid "Show popup"
 msgstr "Opduker wiesen"
 
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_onlypublic)
+#. i18n: ectx: label, entry (onlypublic), group (general)
 #. +> trunk
-#: plugins/magnetgenerator/magnetgeneratorplugin.cpp:47
+#: plugins/magnetgenerator/ktmagnetgeneratorplugin.kcfg:30
+#: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:77
+msgid "Only enable on public torrents"
+msgstr ""
+
+#. +> trunk
+#: plugins/magnetgenerator/magnetgeneratorplugin.cpp:49
 #, fuzzy
 #| msgid "Stop Magnet"
 msgid "Copy Magnet URI"
 msgstr "Magnet-Adress koperen"
 
+#. +> trunk
+#: plugins/magnetgenerator/magnetgeneratorplugin.cpp:143
+#, fuzzy
+#| msgid "Copy to clipboard"
+msgid "Magnet link copied to clipboard"
+msgstr "Na Twischenaflaag koperen"
+
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_x2)
 #. +> trunk
-#: plugins/magnetgenerator/magnetgeneratorprefwidget.cpp:40
+#: plugins/magnetgenerator/magnetgeneratorprefwidget.cpp:35
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:32
 msgid "Magnet Generator"
 msgstr ""
@@ -6785,23 +6803,27 @@ msgstr ""
 msgid "Magnet Generator Preferences"
 msgstr "Söök instellen"
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_tracker)
-#. +> trunk
-#: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:40
-msgid "Toggles if the tracker will be a part of the magnet link"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_tracker)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_torrenttracker)
 #. +> trunk
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:43
-msgid "Add tracker"
-msgstr "Tracker tofögen"
+#, fuzzy
+#| msgid "Cannot add a tracker to a private torrent."
+msgid "Add a tracker from the torrent file"
+msgstr "Na en privaat Torrent lett sik keen Tracker tofögen."
 
-#. i18n: ectx: property (text), widget (QLabel, textLabelx5)
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_customtracker)
 #. +> trunk
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:50
-msgid "Tracker:"
-msgstr "Tracker:"
+msgid "Define what tracker to add"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_customtracker)
+#. +> trunk
+#: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:53
+#, fuzzy
+#| msgid "Add tracker"
+msgid "Add a custom tracker URL"
+msgstr "Tracker tofögen"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_tr)
 #. +> trunk
@@ -6823,19 +6845,19 @@ msgstr "En Torrent in de Töövreeg na nerrn verschuven"
 msgid "Add name"
 msgstr "Naam tofögen"
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_clipboard)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_onlypublic)
 #. +> trunk
-#: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:77
+#: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:80
 #, fuzzy
-msgid "Copy the generated URI to the clipboard"
-msgstr "Opstellt Adress na de Twischenaflaag koperen"
+#| msgid "Displays all the webseeds of a torrent"
+msgid "Disable the menu item for private torrents"
+msgstr "Wiest all Nettverdelen vun en Torrent"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_popup)
 #. +> trunk
 #: plugins/magnetgenerator/magnetgeneratorprefwidget.ui:87
-#, fuzzy
-msgid "Display a popup with the URI"
-msgstr "De Adress as Opduker wiesen"
+msgid "Give feedback in form of a popup"
+msgstr ""
 
 #. i18n: ectx: Menu (MediaPlayerMenu)
 #. +> trunk stable
@@ -9648,6 +9670,17 @@ msgstr "Allmeen"
 msgid "Disk Input/Output"
 msgstr "Fastplaat-In-/Utgaav"
 
+#~ msgid "Tracker:"
+#~ msgstr "Tracker:"
+
+#, fuzzy
+#~ msgid "Copy the generated URI to the clipboard"
+#~ msgstr "Opstellt Adress na de Twischenaflaag koperen"
+
+#, fuzzy
+#~ msgid "Display a popup with the URI"
+#~ msgstr "De Adress as Opduker wiesen"
+
 #, fuzzy
 #~| msgid "Insufficient disk space for %1"
 #~ msgid "Not enough free disk space for %1"
@@ -10069,9 +10102,6 @@ msgstr "Fastplaat-In-/Utgaav"
 
 #~ msgid "Next update in:"
 #~ msgstr "Tokamen Opfrischen in:"
-
-#~ msgid "Cannot add a tracker to a private torrent."
-#~ msgstr "Na en privaat Torrent lett sik keen Tracker tofögen."
 
 #~ msgid "There already is a tracker named <b>%1</b> !"
 #~ msgstr "Dat gifft al en Tracker mit den Naam <b>%1</b> !"
