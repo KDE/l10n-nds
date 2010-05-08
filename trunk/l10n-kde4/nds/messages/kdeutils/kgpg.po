@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kgpg\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-05-03 04:54+0200\n"
+"POT-Creation-Date: 2010-05-08 04:44+0200\n"
 "PO-Revision-Date: 2010-04-12 06:32+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -223,7 +223,7 @@ msgstr[1] "Slötels vun Slötelserver importeren"
 
 #. i18n: file: keyserver.ui:144
 #. i18n: ectx: property (text), widget (QPushButton, Buttonimport)
-#: keyservers.cpp:197 rc.cpp:330 editor/kgpgtextedit.cpp:377
+#: keyservers.cpp:197 rc.cpp:330 editor/kgpgtextedit.cpp:304
 msgid "&Import"
 msgstr "&Importeren"
 
@@ -1050,11 +1050,11 @@ msgstr "<p>Wullt Du de Datei <b>%1</b> na Dien Slötelbund importeren?</p>"
 
 #. i18n: file: keyserver.ui:32
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: keytreeview.cpp:167 kgpgtextinterface.cpp:669 rc.cpp:304
+#: keytreeview.cpp:167 kgpgtextinterface.cpp:652 rc.cpp:304
 msgid "Import"
 msgstr "Importeren"
 
-#: keytreeview.cpp:168 kgpgtextinterface.cpp:669
+#: keytreeview.cpp:168 kgpgtextinterface.cpp:652
 msgid "Do Not Import"
 msgstr "Nich importeren"
 
@@ -1154,8 +1154,7 @@ msgid_plural "Decryption of these files failed:"
 msgstr[0] "Opslöteln vun disse Datei is fehlslaan:"
 msgstr[1] "Opslöteln vun disse Dateien is fehlslaan:"
 
-#: kgpgexternalactions.cpp:383 editor/kgpgtextedit.cpp:302
-#: editor/kgpgtextedit.cpp:341
+#: kgpgexternalactions.cpp:383 editor/kgpgtextedit.cpp:254
 msgid "Decryption failed."
 msgstr "Opslöteln fehlslaan."
 
@@ -1588,18 +1587,18 @@ msgstr "Bitte Slötelsatz för <b>%1</b> ingeven"
 msgid "Bad MDC detected. The encrypted text has been manipulated."
 msgstr "Leeg MDC opdeckt. Een hett mit den verslötelten Text wat vörhatt."
 
-#: kgpgtextinterface.cpp:442 kgpgtextinterface.cpp:635
-#: kgpgtextinterface.cpp:663
+#: kgpgtextinterface.cpp:442 kgpgtextinterface.cpp:618
+#: kgpgtextinterface.cpp:646
 msgid "No signature found."
 msgstr "Keen Ünnerschrift funnen."
 
-#: kgpgtextinterface.cpp:638
+#: kgpgtextinterface.cpp:621
 #, kde-format
 msgid "<qt>Good signature from:<br /><b>%1</b><br />Key ID: %2<br /></qt>"
 msgstr ""
 "<qt>Gode Ünnerschrift vun:<br /><b>%1</b><br />Slötel-ID: %2<br /></qt>"
 
-#: kgpgtextinterface.cpp:643
+#: kgpgtextinterface.cpp:626
 #, kde-format
 msgid ""
 "<qt><b>BAD signature</b> from:<br /> %1<br />Key id: %2<br /><br /><b>The "
@@ -1608,17 +1607,17 @@ msgstr ""
 "<qt><b>Leeg Ünnerschrift</b> vun:<br /> %1<br />Slötel-ID: %2<br /><br /"
 "><b>De Datei is schaadhaftig!</b><br /></qt>"
 
-#: kgpgtextinterface.cpp:650
+#: kgpgtextinterface.cpp:633
 msgid "<qt>The signature is valid, but the key is untrusted<br /></qt>"
 msgstr "<qt>De Ünnerschrift gellt, man den Slötel warrt nich troot.<br /></qt>"
 
-#: kgpgtextinterface.cpp:652
+#: kgpgtextinterface.cpp:635
 msgid ""
 "<qt>The signature is valid, and the key is ultimately trusted<br /></qt>"
 msgstr ""
 "<qt>De Ünnerschrift gellt, un den Slötel warrt büterst troot.<br /></qt>"
 
-#: kgpgtextinterface.cpp:668 editor/kgpgtextedit.cpp:384
+#: kgpgtextinterface.cpp:651 editor/kgpgtextedit.cpp:311
 #, kde-format
 msgid ""
 "<qt><b>Missing signature:</b><br />Key id: %1<br /><br />Do you want to "
@@ -3526,7 +3525,7 @@ msgstr "<b>Richtige Pröövsumm</b>, Datei is goot."
 msgid "<b>Wrong checksum, <em>file corrupted</em></b>"
 msgstr "<b>Leeg Pröövsumm, <em>Datei is schaadhaftig</em></b>"
 
-#: editor/kgpgtextedit.cpp:85
+#: editor/kgpgtextedit.cpp:82
 msgid ""
 "<qt><b>Remote file dropped</b>.<br />The remote file will now be copied to a "
 "temporary file to process requested operation. This temporary file will be "
@@ -3536,53 +3535,61 @@ msgstr ""
 "Temporeerdatei kopeert, mit disse warrt denn de Akschoon utföhrt. De "
 "Temporeerdatei warrt achteran wegdaan.</qt>"
 
-#: editor/kgpgtextedit.cpp:90
+#: editor/kgpgtextedit.cpp:87
 msgid "Could not download file."
 msgstr "Datei lett sik nich daalladen."
 
-#: editor/kgpgtextedit.cpp:224
-msgid "Unable to read file."
-msgstr "Datei lett sik nich lesen."
-
-#: editor/kgpgtextedit.cpp:261
+#: editor/kgpgtextedit.cpp:117
+#, fuzzy
+#| msgid ""
+#| "<p>The file <b>%1</b> is a public key.<br />Do you want to import it ?</p>"
 msgid ""
-"<qt>This file is a <b>public</b> key.\n"
-"Please use kgpg key management to import it.</qt>"
+"<qt>This file is a <b>public</b> key.<br />Do you want to import it instead "
+"of opening it in editor?</qt>"
 msgstr ""
-"<qt>Disse Datei is en <b>apen</b> Slötel.\n"
-"Bruuk bitte de KGpg-Slötelpleeg, wenn Du em importeren wullt.</qt>"
+"<p>De Datei <b>%1</b> is en apen Slötel.<br />Wullt Du em importeren?</p>"
 
-#: editor/kgpgtextedit.cpp:264
+#: editor/kgpgtextedit.cpp:120
+#, fuzzy
+#| msgid ""
+#| "<qt>This file is a <b>private</b> key.\n"
+#| "Please use kgpg key management to import it.</qt>"
 msgid ""
-"<qt>This file is a <b>private</b> key.\n"
-"Please use kgpg key management to import it.</qt>"
+"<qt>This file is a <b>private</b> key.<br />Do you want to import it instead "
+"of opening it in editor?</qt>"
 msgstr ""
 "<qt>Disse Datei is en <b>Privaatslötel</b>.\n"
 "Bruuk bitte de KGpg-Slötelpleeg, wenn Du em importeren wullt.</qt>"
 
-#: editor/kgpgtextedit.cpp:313
+#: editor/kgpgtextedit.cpp:125
+#, fuzzy
+#| msgid "Decrypt & Open in Editor"
+msgid "Key file dropped on Editor"
+msgstr "Opslöteln & in Editor opmaken"
+
+#: editor/kgpgtextedit.cpp:268
 msgid "Encryption failed."
 msgstr "Verslöteln fehlslaan."
 
-#: editor/kgpgtextedit.cpp:349
+#: editor/kgpgtextedit.cpp:276
 msgid "Signing not possible: bad passphrase or missing key"
 msgstr ""
 "Ünnerschrieven nich mööglich, wiel de Slötelsatz leeg is oder en Slötel "
 "fehlt."
 
-#: editor/kgpgtextedit.cpp:378
+#: editor/kgpgtextedit.cpp:305
 msgid "Import key in your list"
 msgstr "Slötel op Dien List importeren"
 
-#: editor/kgpgtextedit.cpp:381
+#: editor/kgpgtextedit.cpp:308
 msgid "Do &Not Import"
 msgstr "&Nich importeren"
 
-#: editor/kgpgtextedit.cpp:382
+#: editor/kgpgtextedit.cpp:309
 msgid "Will not import this key in your list"
 msgstr "Disse Slötel op Dien List warrt nich importeert"
 
-#: editor/kgpgtextedit.cpp:384
+#: editor/kgpgtextedit.cpp:311
 msgid "Missing Key"
 msgstr "Slötel fehlt"
 
@@ -3736,7 +3743,7 @@ msgstr "Slötel »%1« opstellt"
 msgid "Generating Revocation Certificate for key %1"
 msgstr "Torüchroop-Zertifikaat för Slötel »%1« warrt opstellt."
 
-#: transactions/kgpgimport.cpp:204
+#: transactions/kgpgimport.cpp:118
 msgid ""
 "The import result string has an unsupported format.<br />Please see the "
 "detailed log for more information."
@@ -3744,98 +3751,98 @@ msgstr ""
 "De Import-Resultaattekenkeed hett en Formaat, wat nich ünnerstütt warrt.<br /"
 ">Mehr Informatschonen gifft dat binnen dat Logbook."
 
-#: transactions/kgpgimport.cpp:206
+#: transactions/kgpgimport.cpp:120
 #, kde-format
 msgid "<qt>%1 key processed.</qt>"
 msgid_plural "<qt>%1 keys processed.</qt>"
 msgstr[0] "<qt>%1 Slötel verarbeidt.</qt>"
 msgstr[1] "<qt>%1 Slötels verarbeidt.</qt>"
 
-#: transactions/kgpgimport.cpp:209
+#: transactions/kgpgimport.cpp:123
 #, kde-format
 msgid "<qt><br />One key without ID.</qt>"
 msgid_plural "<qt><br />%1 keys without ID.</qt>"
 msgstr[0] "<qt><br />Een Slötel ahn ID.</qt>"
 msgstr[1] "<qt><br />%1 Slötels ahn ID.</qt>"
 
-#: transactions/kgpgimport.cpp:211
+#: transactions/kgpgimport.cpp:125
 #, kde-format
 msgid "<qt><br /><b>One key imported:</b></qt>"
 msgid_plural "<qt><br /><b>%1 keys imported:</b></qt>"
 msgstr[0] "<qt><br /><b>Een Slötel importeert:</b></qt>"
 msgstr[1] "<qt><br /><b>%1 Slötels importeert:</b></qt>"
 
-#: transactions/kgpgimport.cpp:213
+#: transactions/kgpgimport.cpp:127
 #, kde-format
 msgid "<qt><br />One RSA key imported.</qt>"
 msgid_plural "<qt><br />%1 RSA keys imported.</qt>"
 msgstr[0] "<qt><br />Een RSA-Slötel importeert.</qt>"
 msgstr[1] "<qt><br />%1 RSA-Slötels importeert.</qt>"
 
-#: transactions/kgpgimport.cpp:215
+#: transactions/kgpgimport.cpp:129
 #, kde-format
 msgid "<qt><br />One key unchanged.</qt>"
 msgid_plural "<qt><br />%1 keys unchanged.</qt>"
 msgstr[0] "<qt><br />Bi een Slötel nix ännert.</qt>"
 msgstr[1] "<qt><br />Bi %1 Slötels nix ännert.</qt>"
 
-#: transactions/kgpgimport.cpp:217
+#: transactions/kgpgimport.cpp:131
 #, kde-format
 msgid "<qt><br />One user ID imported.</qt>"
 msgid_plural "<qt><br />%1 user IDs imported.</qt>"
 msgstr[0] "<qt><br />Een Bruker-ID importeert.</qt>"
 msgstr[1] "<qt><br />%1 Bruker-IDs importeert.</qt>"
 
-#: transactions/kgpgimport.cpp:219
+#: transactions/kgpgimport.cpp:133
 #, kde-format
 msgid "<qt><br />One subkey imported.</qt>"
 msgid_plural "<qt><br />%1 subkeys imported.</qt>"
 msgstr[0] "<qt><br />Een Ünnerslötel importeert.</qt>"
 msgstr[1] "<qt><br />%1 Ünnerslötels importeert.</qt>"
 
-#: transactions/kgpgimport.cpp:221
+#: transactions/kgpgimport.cpp:135
 #, kde-format
 msgid "<qt><br />One signature imported.</qt>"
 msgid_plural "<qt><br />%1 signatures imported.</qt>"
 msgstr[0] "<qt><br />Een Ünnerschrift importeert.</qt>"
 msgstr[1] "<qt><br />%1 Ünnerschriften importeert.</qt>"
 
-#: transactions/kgpgimport.cpp:223
+#: transactions/kgpgimport.cpp:137
 #, kde-format
 msgid "<qt><br />One revocation certificate imported.</qt>"
 msgid_plural "<qt><br />%1 revocation certificates imported.</qt>"
 msgstr[0] "<qt><br />Een Torüchroop-Zertifikaat importeert.</qt>"
 msgstr[1] "<qt><br />%1 Torüchroop-Zertifikaten importeert.</qt>"
 
-#: transactions/kgpgimport.cpp:225
+#: transactions/kgpgimport.cpp:139
 #, kde-format
 msgid "<qt><br />One secret key processed.</qt>"
 msgid_plural "<qt><br />%1 secret keys processed.</qt>"
 msgstr[0] "<qt><br />Een Privaatslötel verarbeidt.</qt>"
 msgstr[1] "<qt><br />%1 Privaatslötels verarbeidt.</qt>"
 
-#: transactions/kgpgimport.cpp:227
+#: transactions/kgpgimport.cpp:141
 #, kde-format
 msgid "<qt><br /><b>One secret key imported.</b></qt>"
 msgid_plural "<qt><br /><b>%1 secret keys imported.</b></qt>"
 msgstr[0] "<qt><br /><b>Een Privaatslötel importeert.</b></qt>"
 msgstr[1] "<qt><br /><b>%1 Privaatslötels importeert.</b></qt>"
 
-#: transactions/kgpgimport.cpp:229
+#: transactions/kgpgimport.cpp:143
 #, kde-format
 msgid "<qt><br />One secret key unchanged.</qt>"
 msgid_plural "<qt><br />%1 secret keys unchanged.</qt>"
 msgstr[0] "<qt><br />Bi een Privaatslötel nix ännert.</qt>"
 msgstr[1] "<qt><br />Bi %1 Privaatslötels nix ännert.</qt>"
 
-#: transactions/kgpgimport.cpp:231
+#: transactions/kgpgimport.cpp:145
 #, kde-format
 msgid "<qt><br />One secret key not imported.</qt>"
 msgid_plural "<qt><br />%1 secret keys not imported.</qt>"
 msgstr[0] "<qt><br />Een Privaatslötel nich importeert.</qt>"
 msgstr[1] "<qt><br />%1 Privaatslötels nich importeert.</qt>"
 
-#: transactions/kgpgimport.cpp:234
+#: transactions/kgpgimport.cpp:148
 msgid ""
 "<qt><br /><b>You have imported a secret key.</b> <br />Please note that "
 "imported secret keys are not trusted by default.<br />To fully use this "
@@ -3848,43 +3855,43 @@ msgstr ""
 "Du em eerst bewerken (dubbelklick em) un sien Totroen op \"Vull\" oder "
 "\"Büterst\" setten.</qt>"
 
-#: transactions/kgpgimport.cpp:241
+#: transactions/kgpgimport.cpp:155
 msgid "No key imported.<br />Please see the detailed log for more information."
 msgstr ""
 "Keen Slötel importeert.<br />Mehr Informatschonen gifft dat binnen dat "
 "Logbook."
 
-#: transactions/kgpgimport.cpp:278
+#: transactions/kgpgimport.cpp:192
 msgid "New Key"
 msgid_plural "New Keys"
 msgstr[0] "Nieg Slötel"
 msgstr[1] "Nieg Slötels"
 
-#: transactions/kgpgimport.cpp:281
+#: transactions/kgpgimport.cpp:195
 msgid "Key with new User Id"
 msgid_plural "Keys with new User Ids"
 msgstr[0] "Slötel mit nieg Bruker-ID"
 msgstr[1] "Slötels mit nieg Bruker-ID"
 
-#: transactions/kgpgimport.cpp:284
+#: transactions/kgpgimport.cpp:198
 msgid "Key with new Signatures"
 msgid_plural "Keys with new Signatures"
 msgstr[0] "Slötel mit nieg Ünnerschriften"
 msgstr[1] "Slötels mit nieg Ünnerschriften"
 
-#: transactions/kgpgimport.cpp:287
+#: transactions/kgpgimport.cpp:201
 msgid "Key with new Subkeys"
 msgid_plural "Keys with new Subkeys"
 msgstr[0] "Slötel mit nieg Ünnerslötels"
 msgstr[1] "Slötels mit nieg Ünnerslötels"
 
-#: transactions/kgpgimport.cpp:290
+#: transactions/kgpgimport.cpp:204
 msgid "New Private Key"
 msgid_plural "New Private Keys"
 msgstr[0] "Nieg Privaatslötel"
 msgstr[1] "Nieg Privaatslötels"
 
-#: transactions/kgpgimport.cpp:307
+#: transactions/kgpgimport.cpp:221
 msgid "Unchanged Key"
 msgid_plural "Unchanged Keys"
 msgstr[0] "Nich ännert Slötel"
@@ -3911,6 +3918,16 @@ msgstr "Bi't Starten"
 msgctxt "State of operation as in status"
 msgid "State"
 msgstr "Status"
+
+#~ msgid "Unable to read file."
+#~ msgstr "Datei lett sik nich lesen."
+
+#~ msgid ""
+#~ "<qt>This file is a <b>public</b> key.\n"
+#~ "Please use kgpg key management to import it.</qt>"
+#~ msgstr ""
+#~ "<qt>Disse Datei is en <b>apen</b> Slötel.\n"
+#~ "Bruuk bitte de KGpg-Slötelpleeg, wenn Du em importeren wullt.</qt>"
 
 #~ msgid ""
 #~ "Your GnuPG version seems to be older than 1.2.0 (%1). Photo Id's and Key "
@@ -4158,11 +4175,6 @@ msgstr "Status"
 #~ msgstr "Utpacken na: "
 
 #~ msgid ""
-#~ "<p>The file <b>%1</b> is a public key.<br />Do you want to import it ?</p>"
-#~ msgstr ""
-#~ "<p>De Datei <b>%1</b> is en apen Slötel.<br />Wullt Du em importeren?</p>"
-
-#~ msgid ""
 #~ "<p>The file <b>%1</b> is a private key block. Please use KGpg key manager "
 #~ "to import it.</p>"
 #~ msgstr ""
@@ -4213,9 +4225,6 @@ msgstr "Status"
 
 #~ msgid "Decrypt & Save"
 #~ msgstr "Opslöteln & Sekern"
-
-#~ msgid "Decrypt & Open in Editor"
-#~ msgstr "Opslöteln & in Editor opmaken"
 
 #~ msgid "&Abort"
 #~ msgstr "&Afbreken"
