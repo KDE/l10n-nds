@@ -1,1 +1,1 @@
-add_subdirectory( autocorrect )
+add_subdirectory(autocorrect)
