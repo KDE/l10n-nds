@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kget\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-05-16 01:23+0200\n"
+"POT-Creation-Date: 2010-05-18 01:26+0200\n"
 "PO-Revision-Date: 2010-04-06 20:55+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -198,7 +198,7 @@ msgid "Unable to save to: %1"
 msgstr "\"%1\" lett sik nich sekern"
 
 #: core/kget.cpp:524 core/kget.cpp:903 core/kget.cpp:912
-#: core/datasourcefactory.cpp:622 transfer-plugins/metalink/metalink.cpp:207
+#: core/datasourcefactory.cpp:626 transfer-plugins/metalink/metalink.cpp:208
 #: transfer-plugins/bittorrent/bttransfer.cpp:500
 #: transfer-plugins/bittorrent/bttransfer.cpp:511
 #: ui/metalinkcreator/metalinkcreator.cpp:300
@@ -312,6 +312,7 @@ msgid "You are already downloading the same file"
 msgstr "Du laadst de sülve Datei al daal"
 
 #: core/kget.cpp:1009 core/kget.cpp:1012
+#: transfer-plugins/metalink/metalink.cpp:734
 msgid "File already exists"
 msgstr "Gifft de Datei al"
 
@@ -357,27 +358,27 @@ msgstr "All Daalladen sünd afslaten, KGet maakt sik nu ut."
 msgid "The computer will now turn off, as all downloads have completed."
 msgstr "De Reekner maakt sik nu ut, all Daalladen sünd afslaten."
 
-#: core/filemodel.cpp:277
+#: core/filemodel.cpp:276
 msgctxt "file in a filesystem"
 msgid "File"
 msgstr "Datei"
 
-#: core/filemodel.cpp:277
+#: core/filemodel.cpp:276
 msgctxt "status of the download"
 msgid "Status"
 msgstr "Status"
 
-#: core/filemodel.cpp:277
+#: core/filemodel.cpp:276
 msgctxt "size of the download"
 msgid "Size"
 msgstr "Grött"
 
-#: core/filemodel.cpp:277
+#: core/filemodel.cpp:276
 msgctxt "checksum of a file"
 msgid "Checksum"
 msgstr "Pröövsumm"
 
-#: core/filemodel.cpp:277
+#: core/filemodel.cpp:276
 msgctxt "signature of a file"
 msgid "Signature"
 msgstr "Ünnerschrift"
@@ -437,7 +438,7 @@ msgstr ""
 "Keen bruukbor Slötelserver funnen, keen Slötel daallaadt. Föög de Instellen "
 "mehr Slötelservers to, oder start KGet nieg un versöök dat nochmaal."
 
-#: core/datasourcefactory.cpp:622
+#: core/datasourcefactory.cpp:626
 #, kde-format
 msgctxt "A mirror is removed when the file has the wrong download size"
 msgid "%1 removed as it did report a wrong file size."
@@ -610,25 +611,25 @@ msgctxt "Transfer State: Aborted"
 msgid "Aborted"
 msgstr "Afbraken"
 
-#: transfer-plugins/metalink/metalink.cpp:87
+#: transfer-plugins/metalink/metalink.cpp:88
 msgid "Downloading Metalink File...."
 msgstr "Metalink-Datei warrt daallaadt..."
 
-#: transfer-plugins/metalink/metalink.cpp:207
+#: transfer-plugins/metalink/metalink.cpp:208
 msgid "Download failed, no working URLs were found."
 msgstr "Daalladen fehlslaan, keen funkscheneren URLs funnen."
 
-#: transfer-plugins/metalink/metalink.cpp:232
-msgid "File Selection"
-msgstr "Dateiköör"
-
-#: transfer-plugins/metalink/metalink.cpp:536
+#: transfer-plugins/metalink/metalink.cpp:511
 msgid ""
 "The download could not be verified, do you want to repair (if repairing does "
 "not work the download would be restarted) it?"
 msgstr ""
 "De Daalladen lett sik nich pröven. Wullt Du em richten? (Sleit dat Richten "
 "fehl, warrt de Datei nieg daallaadt.)"
+
+#: transfer-plugins/metalink/fileselectiondlg.cpp:31
+msgid "File Selection"
+msgstr "Dateiköör"
 
 #: transfer-plugins/checksumsearch/dlgchecksumsearch.cpp:42
 msgid "Add item"
@@ -2090,11 +2091,11 @@ msgstr "Problemen:"
 msgid "Information:"
 msgstr "Informatschonen:"
 
-#: ui/transfersview.cpp:149
+#: ui/transfersview.cpp:125
 msgid "Select columns"
 msgstr "Striepen utsöken"
 
-#: ui/transfersview.cpp:310
+#: ui/transfersview.cpp:303
 msgid "Transfer Details"
 msgstr "Överdregen-Enkelheiten"
 
@@ -4394,19 +4395,19 @@ msgstr "Teel:"
 msgid "Transfer group:"
 msgstr "Överdregenkoppel:"
 
-#. i18n: file: ui/verificationdialog.ui:39
+#. i18n: file: ui/verificationdialog.ui:42
 #. i18n: ectx: property (toolTip), widget (KPushButton, verify)
 #: rc.cpp:941
 msgid "Verify the finished download with the selected checksum."
 msgstr "De afslaten Daalladen mit de utsöchte Pröövsumm pröven"
 
-#. i18n: file: ui/verificationdialog.ui:42
+#. i18n: file: ui/verificationdialog.ui:45
 #. i18n: ectx: property (text), widget (KPushButton, verify)
 #: rc.cpp:944
 msgid "&Verify"
 msgstr "&Pröven"
 
-#. i18n: file: ui/verificationdialog.ui:68
+#. i18n: file: ui/verificationdialog.ui:71
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: rc.cpp:947
 msgid "Verifying:"
@@ -4448,21 +4449,15 @@ msgstr "Hööft-Warktüüchbalken"
 msgid "&Tools"
 msgstr "&Warktüüch"
 
-#. i18n: file: conf/kget.kcfg:34
+#. i18n: file: conf/kget.kcfg:33
 #. i18n: ectx: label, entry (ShowSplashscreen), group (Appearance)
 #: rc.cpp:968
 msgid "Sets to show the splashscreen while KGet is loading"
 msgstr "Leggt fast, de Startschirm warrt wiest bides KGet laadt warrt"
 
-#. i18n: file: conf/kget.kcfg:170
-#. i18n: ectx: label, entry (ColumnWidths), group (Geometry)
-#: rc.cpp:971
-msgid "The width of the columns in the main view"
-msgstr "De Breed vun de Hööftansicht ehr Striepen"
-
-#. i18n: file: conf/kget.kcfg:173
+#. i18n: file: conf/kget.kcfg:169
 #. i18n: ectx: label, entry (HistoryColumnWidths), group (Geometry)
-#: rc.cpp:974
+#: rc.cpp:971
 msgid "The width of the columns in the history view"
 msgstr "De Breed vun de Vörgeschichtansicht ehr Striepen"
 
@@ -4470,7 +4465,7 @@ msgstr "De Breed vun de Vörgeschichtansicht ehr Striepen"
 #. i18n: ectx: label, entry (SearchEnginesNameList), group (SearchEngines)
 #. i18n: file: transfer-plugins/checksumsearch/kget_checksumsearchfactory.kcfg:9
 #. i18n: ectx: label, entry (SearchStrings), group (ChecksumSearch)
-#: rc.cpp:977 rc.cpp:999
+#: rc.cpp:974 rc.cpp:996
 msgid "List of the available search engines"
 msgstr "List mit verföögbor Söökmaschienen"
 
@@ -4482,27 +4477,30 @@ msgstr "List mit verföögbor Söökmaschienen"
 #. i18n: ectx: label, entry (UrlChangeModeList), group (ChecksumSearch)
 #. i18n: file: transfer-plugins/checksumsearch/kget_checksumsearchfactory.kcfg:17
 #. i18n: ectx: label, entry (ChecksumTypeList), group (ChecksumSearch)
-#: rc.cpp:980 rc.cpp:986 rc.cpp:1002 rc.cpp:1005
+#: rc.cpp:977 rc.cpp:983 rc.cpp:999 rc.cpp:1002
 msgid "List of the available search engine URLs"
 msgstr "List mit verföögbor Söökmaschienadressen"
 
 #. i18n: file: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:9
 #. i18n: ectx: label, entry (UrlRegexpList), group (UserScripts)
-#: rc.cpp:983
+#: rc.cpp:980
 msgid "List of the Regexp to match input URL"
 msgstr "Reguleer Utdrück för Ingaav-URL"
 
 #. i18n: file: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:21
 #. i18n: ectx: label, entry (DescriptionList), group (UserScripts)
-#: rc.cpp:989
+#: rc.cpp:986
 msgid "List of descriptions for user scripts"
 msgstr "List mit Beschrieven vun de Bruker-Skripten"
 
 #. i18n: file: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:25
 #. i18n: ectx: label, entry (EnableList), group (UserScripts)
-#: rc.cpp:992
+#: rc.cpp:989
 msgid "List of whether the script is enabled"
 msgstr "List, de angifft, wat en Skript anmaakt is"
+
+#~ msgid "The width of the columns in the main view"
+#~ msgstr "De Breed vun de Hööftansicht ehr Striepen"
 
 #~ msgid "License:"
 #~ msgstr "Verlööfnis:"
