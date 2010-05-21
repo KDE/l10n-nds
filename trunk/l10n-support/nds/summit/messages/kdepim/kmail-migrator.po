@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail-migrator\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-05-18 18:10+0200\n"
+"POT-Creation-Date: 2010-05-20 10:16+0200\n"
 "PO-Revision-Date: 2010-02-15 06:57+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -28,7 +28,36 @@ msgid "Your emails"
 msgstr "m.j.wiese@web.de"
 
 #. +> trunk
-#: kmailmigrator.cpp:84
+#: abstractcollectionmigrator.cpp:107
+#, kde-format
+msgctxt "@info:status"
+msgid "Resource '%1' didn't create any folders"
+msgstr ""
+
+#. +> trunk
+#: abstractcollectionmigrator.cpp:144
+#, kde-format
+msgctxt "@info:status"
+msgid "Resource '%1' it not working correctly"
+msgstr ""
+
+#. +> trunk
+#: dimapcachecollectionmigrator.cpp:251
+#, fuzzy, kde-format
+#| msgid "No backend for '%1' available."
+msgctxt "@info:status"
+msgid "No cache for account %1 available"
+msgstr "Keen Hülpprogramm för »%1« verföögbor."
+
+#. +> trunk
+#: dimapcachecollectionmigrator.cpp:269
+#, kde-format
+msgctxt "@info:status"
+msgid "Starting cache migration for folder %1 of account %2"
+msgstr ""
+
+#. +> trunk
+#: kmailmigrator.cpp:86
 msgid "Beginning KMail migration..."
 msgstr "KMail-Wanneln warrt start..."
 
@@ -38,24 +67,24 @@ msgid "Beginning KMail migration"
 msgstr "KMail-Wanneln warrt start"
 
 #. +> trunk stable
-#: kmailmigrator.cpp:103
+#: kmailmigrator.cpp:105
 #, kde-format
 msgid "No backend for '%1' available."
 msgstr "Keen Hülpprogramm för »%1« verföögbor."
 
 #. +> trunk stable
-#: kmailmigrator.cpp:110
+#: kmailmigrator.cpp:112
 #, kde-format
 msgid "'%1' has been already migrated."
 msgstr "»%1« wöör al wannelt."
 
 #. +> trunk
-#: kmailmigrator.cpp:121
+#: kmailmigrator.cpp:123
 msgid "Local folders have already been migrated."
 msgstr "Lokaal Ornern wöörn al wannelt."
 
 #. +> trunk
-#: kmailmigrator.cpp:135
+#: kmailmigrator.cpp:137
 #, fuzzy, kde-format
 #| msgid "Migrating local folders in '%1'..."
 msgctxt "@info:status"
@@ -63,87 +92,137 @@ msgid "Migrating local folders in '%1'..."
 msgstr "Lokaal Ornernbinnen \"%1\" warrt wannelt."
 
 #. +> trunk
-#: kmailmigrator.cpp:144
+#: kmailmigrator.cpp:146
 msgid "Migration successfully completed."
 msgstr "Wanneln mit Spood afslaten."
 
 #. +> trunk stable
-#: kmailmigrator.cpp:152
+#: kmailmigrator.cpp:154
 #, kde-format
 msgid "Migration of '%1' to akonadi resource failed: %2"
 msgstr "Wanneln vun »%1« na Akonadi-Ressource fehlslaan: %2"
 
 #. +> trunk stable
-#: kmailmigrator.cpp:167
+#: kmailmigrator.cpp:169
 #, kde-format
 msgid "Migration of '%1' succeeded."
 msgstr "Wanneln vun »%1« mit Spood afslaten."
 
 #. +> trunk stable
-#: kmailmigrator.cpp:178
+#: kmailmigrator.cpp:180
 #, kde-format
 msgid "Trying to migrate '%1' to resource..."
 msgstr "Bi to versöken, dat »%1« na Ressource wannelt warrt..."
 
 #. +> trunk stable
-#: kmailmigrator.cpp:212 kmailmigrator.cpp:222 kmailmigrator.cpp:300
-#: kmailmigrator.cpp:375 kmailmigrator.cpp:413
+#: kmailmigrator.cpp:214 kmailmigrator.cpp:224 kmailmigrator.cpp:316
+#: kmailmigrator.cpp:391 kmailmigrator.cpp:429
 #, kde-format
 msgid "Failed to create resource: %1"
 msgstr "Ressource lett sik nich opstellen: %1"
 
 #. +> trunk
-#: kmailmigrator.cpp:215
+#: kmailmigrator.cpp:217
 msgid "Created disconnected imap resource"
 msgstr "Afkoppelt IMAP-Ressource opstellt"
 
 #. +> trunk stable
-#: kmailmigrator.cpp:225
+#: kmailmigrator.cpp:227
 msgid "Created imap resource"
 msgstr "IMAP-Ressource opstellt"
 
 #. +> trunk stable
-#: kmailmigrator.cpp:240 kmailmigrator.cpp:388 kmailmigrator.cpp:426
-#: kmailmigrator.cpp:453
+#: kmailmigrator.cpp:242 kmailmigrator.cpp:404 kmailmigrator.cpp:442
+#: kmailmigrator.cpp:469
 msgid "Failed to obtain D-Bus interface for remote configuration."
 msgstr "D-Bus-Koppelsteed för feern Instellen lett sik nich faatkriegen."
 
 #. +> trunk
-#: kmailmigrator.cpp:303
+#: kmailmigrator.cpp:319
 msgid "Created pop3 resource"
 msgstr "POP3-Ressource opstellt"
 
 #. +> trunk stable
-#: kmailmigrator.cpp:378
+#: kmailmigrator.cpp:394
 msgid "Created mbox resource"
 msgstr "MBox-Ressource opstellt"
 
 #. +> trunk stable
-#: kmailmigrator.cpp:416
+#: kmailmigrator.cpp:432
 msgid "Created maildir resource"
 msgstr "Maildir-Ressource opstellt"
 
 #. +> trunk
-#: kmailmigrator.cpp:440
+#: kmailmigrator.cpp:456
 #, fuzzy, kde-format
 #| msgid "Failed to create resource: %1"
 msgid "Failed to resource for local folders: %1"
 msgstr "Ressource för lokaal Ornern lett sik nich opstellen: %1"
 
 #. +> trunk
-#: kmailmigrator.cpp:444
+#: kmailmigrator.cpp:460
 msgid "Created local maildir resource."
 msgstr "Lokaal Nettpost-Ressource opstellt"
 
 #. +> trunk
-#: kmailmigrator.cpp:459
+#: kmailmigrator.cpp:496
 msgid "KMail Folders"
 msgstr "KMail-Ornern"
 
 #. +> trunk
-#: kmailmigrator.cpp:462
+#: kmailmigrator.cpp:504
+#, kde-format
+msgctxt "@info:status resource that will provide folder such as outbox, sent"
+msgid "Using '%1' for default outbox, sent mail, trash, etc."
+msgstr ""
+
+#. +> trunk
+#: kmailmigrator.cpp:509
+#, kde-format
+msgctxt "@info:status resource that will provide folder such as outbox, sent"
+msgid "Keeping '%1' for default outbox, sent mail, trash, etc."
+msgstr ""
+
+#. +> trunk
+#: kmailmigrator.cpp:528
 msgid "Local folders migrated successfully."
 msgstr "Lokaal Ornern mit Spood wannelt."
+
+#. +> trunk
+#: localfolderscollectionmigrator.cpp:67
+msgctxt "mail folder name for role inbox"
+msgid "inbox"
+msgstr ""
+
+#. +> trunk
+#: localfolderscollectionmigrator.cpp:70
+msgctxt "mail folder name for role outbox"
+msgid "outbox"
+msgstr ""
+
+#. +> trunk
+#: localfolderscollectionmigrator.cpp:73
+msgctxt "mail folder name for role sent-mail"
+msgid "sent-mail"
+msgstr ""
+
+#. +> trunk
+#: localfolderscollectionmigrator.cpp:76
+msgctxt "mail folder name for role trash"
+msgid "trash"
+msgstr ""
+
+#. +> trunk
+#: localfolderscollectionmigrator.cpp:79
+msgctxt "mail folder name for role drafts"
+msgid "drafts"
+msgstr ""
+
+#. +> trunk
+#: localfolderscollectionmigrator.cpp:82
+msgctxt "mail folder name for role templates"
+msgid "templates"
+msgstr ""
 
 #. +> trunk stable
 #: main.cpp:41
