@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-05-03 04:55+0200\n"
+"POT-Creation-Date: 2010-05-22 04:50+0200\n"
 "PO-Revision-Date: 2010-02-24 11:27+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -191,6 +191,10 @@ msgstr "&Keen Grenz fastsetten"
 msgid "Enable &word wrapping"
 msgstr "&Reegümbrook anmaken"
 
+#: conf/configuredialog.cpp:52
+msgid "Configure"
+msgstr "Instellen"
+
 #: conf/dirservconfigpage.cpp:171
 msgid "LDAP &timeout (minutes:seconds):"
 msgstr "&Tietgrenz för LDAP (Minuten:Sekunnen):"
@@ -214,17 +218,13 @@ msgstr "Hölper-Fehler: \"gpgconf\" kennt den Indrag för %1/%2/%3 wull nich"
 msgid "Backend error: gpgconf has wrong type for %1/%2/%3: %4 %5"
 msgstr "Hölper-Fehler: \"gpgconf\" hett en legen Typ för %1/%2/%3: %4 %5"
 
-#: conf/configuredialog.cpp:52
-msgid "Configure"
-msgstr "Instellen"
-
 #: conf/smimevalidationconfigurationwidget.cpp:132
 msgid "This option requires dirmngr >= 0.9.0"
 msgstr "Disse Optschoon bruukt \"dirmngr\" >= 0.9.0"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:217
 #. i18n: ectx: property (text), widget (QLabel, systemHTTPProxy)
-#: conf/smimevalidationconfigurationwidget.cpp:264 rc.cpp:128
+#: conf/smimevalidationconfigurationwidget.cpp:264 rc.cpp:159
 msgid "no proxy"
 msgstr "Keen Proxy"
 
@@ -657,6 +657,13 @@ msgstr ""
 "Socket lett sik nich na Qt övergeven: %1. Dit schull nich vörkamen, stüer "
 "bitte en Fehlerbericht loos."
 
+#: uiserver/verifychecksumscommand.cpp:78
+#: uiserver/signencryptfilescommand.cpp:83
+#: uiserver/createchecksumscommand.cpp:78
+#: uiserver/decryptverifycommandfilesbase.cpp:165
+msgid "At least one FILE must be present"
+msgstr "Du muttst tominnst een \"FILE\" bruken"
+
 #: uiserver/prepencryptcommand.cpp:81
 msgid "INPUT/OUTPUT/MESSAGE may only be given after PREP_ENCRYPT"
 msgstr ""
@@ -696,12 +703,59 @@ msgstr ""
 "Nich verwacht Utnahm binnen \"PrepEncryptCommand::Private::"
 "slotRecipientsResolved\" affungen"
 
-#: uiserver/signencryptfilescommand.cpp:83
-#: uiserver/decryptverifycommandfilesbase.cpp:165
-#: uiserver/createchecksumscommand.cpp:78
-#: uiserver/verifychecksumscommand.cpp:78
-msgid "At least one FILE must be present"
-msgstr "Du muttst tominnst een \"FILE\" bruken"
+#: uiserver/prepsigncommand.cpp:84
+#, fuzzy
+#| msgid "INPUT/OUTPUT/MESSAGE may only be given after PREP_ENCRYPT"
+msgid "INPUT/OUTPUT/MESSAGE may only be given after PREP_SIGN"
+msgstr ""
+"\"INPUT\"/\"OUTPUT\"/\"MESSAGE\" dörvt bloots achter \"PREP_ENCRYPT\" stahn."
+
+#: uiserver/prepsigncommand.cpp:88
+#, fuzzy
+#| msgid ""
+#| "SIGN is an email mode command, connection seems to be in filemanager mode"
+msgid ""
+"PREP_SIGN is an email mode command, connection seems to be in filemanager "
+"mode"
+msgstr ""
+"\"SIGN\" is en Befehl ut den Nettbreefbedrief, man de Verbinnen is in "
+"Dateiplegerbedrief, as't lett."
+
+#: uiserver/prepsigncommand.cpp:92
+msgid "No SENDER given"
+msgstr ""
+
+#: uiserver/prepsigncommand.cpp:101 uiserver/signcommand.cpp:114
+#, fuzzy
+#| msgid "Protocol given conflicts with protocol determined by PREP_ENCRYPT"
+msgid ""
+"Protocol given conflicts with protocol determined by PREP_ENCRYPT in this "
+"session"
+msgstr ""
+"Angeven Protokoll verdreegt sik nich mit dat Protokoll, dat \"PREP_ENCRYPT\" "
+"fastslaan hett."
+
+#: uiserver/prepsigncommand.cpp:169
+#, fuzzy, kde-format
+#| msgid ""
+#| "Caught unexpected exception in SignCommand::Private::"
+#| "slotRecipientsResolved: %1"
+msgid ""
+"Caught unexpected exception in PrepSignCommand::Private::"
+"slotRecipientsResolved: %1"
+msgstr ""
+"Nich verwacht Utnahm binnen \"SignCommand::Private::slotRecipientsResolved\" "
+"affungen: %1"
+
+#: uiserver/prepsigncommand.cpp:173
+#, fuzzy
+#| msgid ""
+#| "Caught unknown exception in SignCommand::Private::slotRecipientsResolved"
+msgid ""
+"Caught unknown exception in PrepSignCommand::Private::slotRecipientsResolved"
+msgstr ""
+"Nich verwacht Utnahm binnen \"SignCommand::Private::slotRecipientsResolved\" "
+"affungen"
 
 #: uiserver/signencryptfilescommand.cpp:88
 #: uiserver/signencryptfilescommand.cpp:93
@@ -739,16 +793,6 @@ msgstr "Tall vun \"INPUT\" un \"OUTPUT\" passt nich"
 #: uiserver/signcommand.cpp:106
 msgid "MESSAGE command is not allowed before SIGN"
 msgstr "De \"MESSAGE\"-Befehl mutt nich vör \"SIGN\" stahn"
-
-#: uiserver/signcommand.cpp:114 uiserver/prepsigncommand.cpp:101
-#, fuzzy
-#| msgid "Protocol given conflicts with protocol determined by PREP_ENCRYPT"
-msgid ""
-"Protocol given conflicts with protocol determined by PREP_ENCRYPT in this "
-"session"
-msgstr ""
-"Angeven Protokoll verdreegt sik nich mit dat Protokoll, dat \"PREP_ENCRYPT\" "
-"fastslaan hett."
 
 #: uiserver/signcommand.cpp:127
 msgid "No senders given, or only with --info"
@@ -914,50 +958,6 @@ msgid ""
 msgstr ""
 "Nich verwacht Utnahm binnen \"EncryptCommand::Private::slotRecipientsResolved"
 "\" affungen"
-
-#: uiserver/prepsigncommand.cpp:84
-#, fuzzy
-#| msgid "INPUT/OUTPUT/MESSAGE may only be given after PREP_ENCRYPT"
-msgid "INPUT/OUTPUT/MESSAGE may only be given after PREP_SIGN"
-msgstr ""
-"\"INPUT\"/\"OUTPUT\"/\"MESSAGE\" dörvt bloots achter \"PREP_ENCRYPT\" stahn."
-
-#: uiserver/prepsigncommand.cpp:88
-#, fuzzy
-#| msgid ""
-#| "SIGN is an email mode command, connection seems to be in filemanager mode"
-msgid ""
-"PREP_SIGN is an email mode command, connection seems to be in filemanager "
-"mode"
-msgstr ""
-"\"SIGN\" is en Befehl ut den Nettbreefbedrief, man de Verbinnen is in "
-"Dateiplegerbedrief, as't lett."
-
-#: uiserver/prepsigncommand.cpp:92
-msgid "No SENDER given"
-msgstr ""
-
-#: uiserver/prepsigncommand.cpp:169
-#, fuzzy, kde-format
-#| msgid ""
-#| "Caught unexpected exception in SignCommand::Private::"
-#| "slotRecipientsResolved: %1"
-msgid ""
-"Caught unexpected exception in PrepSignCommand::Private::"
-"slotRecipientsResolved: %1"
-msgstr ""
-"Nich verwacht Utnahm binnen \"SignCommand::Private::slotRecipientsResolved\" "
-"affungen: %1"
-
-#: uiserver/prepsigncommand.cpp:173
-#, fuzzy
-#| msgid ""
-#| "Caught unknown exception in SignCommand::Private::slotRecipientsResolved"
-msgid ""
-"Caught unknown exception in PrepSignCommand::Private::slotRecipientsResolved"
-msgstr ""
-"Nich verwacht Utnahm binnen \"SignCommand::Private::slotRecipientsResolved\" "
-"affungen"
 
 #: view/searchbar.cpp:90
 msgid "&Find:"
@@ -2074,6 +2074,102 @@ msgstr "Nich begäng Utnahm binnen \"Task::start()\""
 msgid "User cancel"
 msgstr "Brukerafbrook"
 
+#: crypto/createchecksumscontroller.cpp:203
+msgid ""
+"Create Checksums: input files must be either all checksum files or all files "
+"to be checksummed, not a mixture of both."
+msgstr ""
+
+#: crypto/createchecksumscontroller.cpp:224
+#, fuzzy
+#| msgid "Initial query string"
+msgid "Initializing..."
+msgstr "Start-Anfraagtekenkeed"
+
+#: crypto/createchecksumscontroller.cpp:224 mainwindow.cpp:661
+msgid "Cancel"
+msgstr "Afbreken"
+
+#: crypto/createchecksumscontroller.cpp:227
+msgctxt "@title:window"
+msgid "Create Checksum Progress"
+msgstr ""
+
+#: crypto/createchecksumscontroller.cpp:431
+#, fuzzy, kde-format
+#| msgid "Could not open file \"%1\" for reading"
+msgid "Failed to open file \"%1\" for reading and writing: %2"
+msgstr "Datei \"%1\" lett sik nich lesen"
+
+#: crypto/createchecksumscontroller.cpp:449
+#: crypto/verifychecksumscontroller.cpp:529
+#, fuzzy, kde-format
+#| msgid "Error while writing to file %1."
+msgid "Error while running %1: %2"
+msgstr "Fehler bi't Schrieven vun \"%1\"."
+
+#: crypto/createchecksumscontroller.cpp:452
+#: crypto/verifychecksumscontroller.cpp:532
+#, fuzzy, kde-format
+#| msgid ""
+#| "Failed to execute gpgsm:\n"
+#| "%1"
+msgid "Failed to execute %1: %2"
+msgstr ""
+"Fehler bi't Utföhren vun \"gpgsm\":\n"
+"%1"
+
+#: crypto/createchecksumscontroller.cpp:456
+#: commands/changeroottrustcommand.cpp:318
+#, kde-format
+msgid "Failed to move file %1 to its final destination, %2: %3"
+msgstr ""
+
+#: crypto/createchecksumscontroller.cpp:482
+msgid "No checksum programs defined."
+msgstr ""
+
+#: crypto/createchecksumscontroller.cpp:494
+#: crypto/verifychecksumscontroller.cpp:565
+msgid "Scanning directories..."
+msgstr ""
+
+#: crypto/createchecksumscontroller.cpp:509
+#: crypto/verifychecksumscontroller.cpp:578
+msgid "Calculating total size..."
+msgstr ""
+
+#: crypto/createchecksumscontroller.cpp:526
+#, kde-format
+msgid "Checksumming (%2) in %1"
+msgstr ""
+
+#: crypto/createchecksumscontroller.cpp:535
+#: crypto/verifychecksumscontroller.cpp:606
+#, fuzzy
+msgid "Done."
+msgstr "Fardig."
+
+#: crypto/verifychecksumscontroller.cpp:218
+msgctxt "@title:window"
+msgid "Verify Checksum Results"
+msgstr ""
+
+#: crypto/verifychecksumscontroller.cpp:427
+#, fuzzy, kde-format
+#| msgid ""
+#| "Cannot find common base directory for these files:\n"
+#| "%1"
+msgid "Cannot find checksums file for file %1"
+msgstr ""
+"För disse Dateien lett sik keen gemeen Wörtelorner finnen:\n"
+"%1"
+
+#: crypto/verifychecksumscontroller.cpp:597
+#, kde-format
+msgid "Verifying checksums (%2) in %1"
+msgstr ""
+
 #: crypto/signemailtask.cpp:85 crypto/signencryptfilestask.cpp:133
 msgid "Signing canceled."
 msgstr "Ünnerschrieven afbraken."
@@ -2120,6 +2216,50 @@ msgstr ""
 msgid "Call to EncryptEMailController::protocolAsString() is ambiguous."
 msgstr ""
 "Oproop vun \"EncryptEMailController::protocolAsString()\" is nich eenkennig."
+
+#: crypto/decryptverifyemailcontroller.cpp:83
+msgid "Status and progress of the crypto operations is shown here."
+msgstr "De Status un dat Vörankamen vun de Verslötelakschoon warrt hier wiest."
+
+#: crypto/decryptverifyemailcontroller.cpp:163
+#: crypto/decryptverifyfilescontroller.cpp:197
+msgid "User canceled"
+msgstr "Brukerafbrook"
+
+#: crypto/decryptverifyemailcontroller.cpp:251
+msgid "Decrypt/Verify E-Mail"
+msgstr "Nettbreef opslöteln/pröven"
+
+#: crypto/decryptverifyemailcontroller.cpp:273
+msgid "At least one input needs to be provided"
+msgstr "Du muttst tominnst een Ingaav praatstellen"
+
+#: crypto/decryptverifyemailcontroller.cpp:277
+msgid "Informative sender/signed data count mismatch"
+msgstr "Tall vun Info-Senners un ünnerschreven Daten passt nich"
+
+#: crypto/decryptverifyemailcontroller.cpp:282
+msgid "Signature/signed data count mismatch"
+msgstr "Tall vun Ünnerschriften un ünnerschreven Daten passt nich"
+
+#: crypto/decryptverifyemailcontroller.cpp:285
+msgid "Signed data can only be given for detached signature verification"
+msgstr ""
+"Ünnerschreven Daten laat sik bloots bi't Pröven vun aflööst Ünnerschriften "
+"angeven"
+
+#: crypto/decryptverifyemailcontroller.cpp:291
+msgid "Input/Output count mismatch"
+msgstr "Tall vun In- un Utgaven passt nich"
+
+#: crypto/decryptverifyemailcontroller.cpp:294
+msgid "Cannot use output and signed data simultaneously"
+msgstr "Ünnerschreven Daten un Utgaav laat sik nich tosamen bruken"
+
+#: crypto/decryptverifyemailcontroller.cpp:301
+#, kde-format
+msgid "No backend support for %1"
+msgstr "Dat Hülpprogramm ünnerstütt %1 nich"
 
 #: crypto/signencryptfilestask.cpp:73 crypto/decryptverifytask.cpp:290
 #, kde-format
@@ -2170,50 +2310,6 @@ msgstr "%1: <b>%2</b>"
 #: crypto/signencryptfilestask.cpp:341
 msgid "Cannot determine protocol for task"
 msgstr "Protokoll för disse Opgaav lett sik nich fastslaan."
-
-#: crypto/decryptverifyemailcontroller.cpp:83
-msgid "Status and progress of the crypto operations is shown here."
-msgstr "De Status un dat Vörankamen vun de Verslötelakschoon warrt hier wiest."
-
-#: crypto/decryptverifyemailcontroller.cpp:163
-#: crypto/decryptverifyfilescontroller.cpp:197
-msgid "User canceled"
-msgstr "Brukerafbrook"
-
-#: crypto/decryptverifyemailcontroller.cpp:251
-msgid "Decrypt/Verify E-Mail"
-msgstr "Nettbreef opslöteln/pröven"
-
-#: crypto/decryptverifyemailcontroller.cpp:273
-msgid "At least one input needs to be provided"
-msgstr "Du muttst tominnst een Ingaav praatstellen"
-
-#: crypto/decryptverifyemailcontroller.cpp:277
-msgid "Informative sender/signed data count mismatch"
-msgstr "Tall vun Info-Senners un ünnerschreven Daten passt nich"
-
-#: crypto/decryptverifyemailcontroller.cpp:282
-msgid "Signature/signed data count mismatch"
-msgstr "Tall vun Ünnerschriften un ünnerschreven Daten passt nich"
-
-#: crypto/decryptverifyemailcontroller.cpp:285
-msgid "Signed data can only be given for detached signature verification"
-msgstr ""
-"Ünnerschreven Daten laat sik bloots bi't Pröven vun aflööst Ünnerschriften "
-"angeven"
-
-#: crypto/decryptverifyemailcontroller.cpp:291
-msgid "Input/Output count mismatch"
-msgstr "Tall vun In- un Utgaven passt nich"
-
-#: crypto/decryptverifyemailcontroller.cpp:294
-msgid "Cannot use output and signed data simultaneously"
-msgstr "Ünnerschreven Daten un Utgaav laat sik nich tosamen bruken"
-
-#: crypto/decryptverifyemailcontroller.cpp:301
-#, kde-format
-msgid "No backend support for %1"
-msgstr "Dat Hülpprogramm ünnerstütt %1 nich"
 
 #: crypto/encryptemailtask.cpp:88
 #, kde-format
@@ -2551,102 +2647,6 @@ msgctxt "@title:window"
 msgid "Error"
 msgstr "Fehler"
 
-#: crypto/createchecksumscontroller.cpp:203
-msgid ""
-"Create Checksums: input files must be either all checksum files or all files "
-"to be checksummed, not a mixture of both."
-msgstr ""
-
-#: crypto/createchecksumscontroller.cpp:224
-#, fuzzy
-#| msgid "Initial query string"
-msgid "Initializing..."
-msgstr "Start-Anfraagtekenkeed"
-
-#: crypto/createchecksumscontroller.cpp:224 mainwindow.cpp:661
-msgid "Cancel"
-msgstr "Afbreken"
-
-#: crypto/createchecksumscontroller.cpp:227
-msgctxt "@title:window"
-msgid "Create Checksum Progress"
-msgstr ""
-
-#: crypto/createchecksumscontroller.cpp:431
-#, fuzzy, kde-format
-#| msgid "Could not open file \"%1\" for reading"
-msgid "Failed to open file \"%1\" for reading and writing: %2"
-msgstr "Datei \"%1\" lett sik nich lesen"
-
-#: crypto/createchecksumscontroller.cpp:449
-#: crypto/verifychecksumscontroller.cpp:529
-#, fuzzy, kde-format
-#| msgid "Error while writing to file %1."
-msgid "Error while running %1: %2"
-msgstr "Fehler bi't Schrieven vun \"%1\"."
-
-#: crypto/createchecksumscontroller.cpp:452
-#: crypto/verifychecksumscontroller.cpp:532
-#, fuzzy, kde-format
-#| msgid ""
-#| "Failed to execute gpgsm:\n"
-#| "%1"
-msgid "Failed to execute %1: %2"
-msgstr ""
-"Fehler bi't Utföhren vun \"gpgsm\":\n"
-"%1"
-
-#: crypto/createchecksumscontroller.cpp:456
-#: commands/changeroottrustcommand.cpp:318
-#, kde-format
-msgid "Failed to move file %1 to its final destination, %2: %3"
-msgstr ""
-
-#: crypto/createchecksumscontroller.cpp:482
-msgid "No checksum programs defined."
-msgstr ""
-
-#: crypto/createchecksumscontroller.cpp:494
-#: crypto/verifychecksumscontroller.cpp:565
-msgid "Scanning directories..."
-msgstr ""
-
-#: crypto/createchecksumscontroller.cpp:509
-#: crypto/verifychecksumscontroller.cpp:578
-msgid "Calculating total size..."
-msgstr ""
-
-#: crypto/createchecksumscontroller.cpp:526
-#, kde-format
-msgid "Checksumming (%2) in %1"
-msgstr ""
-
-#: crypto/createchecksumscontroller.cpp:535
-#: crypto/verifychecksumscontroller.cpp:606
-#, fuzzy
-msgid "Done."
-msgstr "Fardig."
-
-#: crypto/verifychecksumscontroller.cpp:218
-msgctxt "@title:window"
-msgid "Verify Checksum Results"
-msgstr ""
-
-#: crypto/verifychecksumscontroller.cpp:427
-#, fuzzy, kde-format
-#| msgid ""
-#| "Cannot find common base directory for these files:\n"
-#| "%1"
-msgid "Cannot find checksums file for file %1"
-msgstr ""
-"För disse Dateien lett sik keen gemeen Wörtelorner finnen:\n"
-"%1"
-
-#: crypto/verifychecksumscontroller.cpp:597
-#, kde-format
-msgid "Verifying checksums (%2) in %1"
-msgstr ""
-
 #: dialogs/selftestdialog.cpp:95
 msgid "Skipped"
 msgstr "Utlaten"
@@ -2700,82 +2700,6 @@ msgstr ""
 #: dialogs/lookupcertificatesdialog.cpp:120
 msgid "Import"
 msgstr "Importeren"
-
-#: dialogs/certificatedetailsdialog.cpp:230
-#, kde-format
-msgctxt "@info"
-msgid ""
-"<para>An error occurred while loading the certifications: <message>%1</"
-"message></para>"
-msgstr ""
-"<para>Dat geev en Fehler bi't Laden vun de Beglöven: <message>%1</message></"
-"para>"
-
-#: dialogs/certificatedetailsdialog.cpp:233
-msgctxt "@title"
-msgid "Certifications Loading Failed"
-msgstr "Laden vun Beglöven fehlslaan"
-
-#: dialogs/certificatedetailsdialog.cpp:256
-msgid "Please wait while generating the dump..."
-msgstr "Tööv bitte, de Utgaav warrt torechtmaakt..."
-
-#: dialogs/certificatedetailsdialog.cpp:334
-msgid "(please wait while certifications are being loaded)"
-msgstr "(tööv bitte, de Beglöven warrt laadt)"
-
-#: dialogs/certificatedetailsdialog.cpp:335
-msgid "Load Certifications (may take a while)"
-msgstr "Beglöven laden (mag en Stoot duern)"
-
-#: dialogs/certificatedetailsdialog.cpp:361
-#, kde-format
-msgid "Issuer Certificate Not Found (%1)"
-msgstr "Rutgever-Zertifikaat nich funnen (%1)"
-
-#: dialogs/certificatedetailsdialog.cpp:417
-msgctxt "@title"
-msgid "Subkeys"
-msgstr "Ünnerslötels"
-
-#: dialogs/certificateselectiondialog.cpp:110
-msgid "Please select one or more of the following certificates:"
-msgstr "Söök bitte een oder mehr vun disse Zertifikaten ut:"
-
-#: dialogs/certificateselectiondialog.cpp:111
-msgid "Please select one of the following certificates:"
-msgstr "Söök bitte een vun disse Zertifikaten ut:"
-
-#: dialogs/certificateselectiondialog.cpp:148
-msgid "Reload"
-msgstr "Nieg laden"
-
-#: dialogs/certificateselectiondialog.cpp:149
-msgid "Lookup..."
-msgstr "Naslaan..."
-
-#: dialogs/certificateselectiondialog.cpp:150
-msgid "New..."
-msgstr "Nieg..."
-
-#: dialogs/certificateselectiondialog.cpp:152
-msgctxt "@info:tooltip"
-msgid "Lookup certificates on server"
-msgstr "Zertifikaten op Server söken..."
-
-#: dialogs/certificateselectiondialog.cpp:153
-msgctxt "@info:tooltip"
-msgid "Refresh certificate list"
-msgstr "Zertifikatenlist opfrischen"
-
-#: dialogs/certificateselectiondialog.cpp:154
-msgctxt "@info:tooltip"
-msgid "Create a new certificate"
-msgstr "En nieg Zertifikaat opstellen"
-
-#: dialogs/certificateselectiondialog.cpp:180
-msgid "Certificate Selection"
-msgstr "Zertifikaatköör"
 
 #: dialogs/deletecertificatesdialog.cpp:94
 msgid "These are the certificates you have selected for deletion:"
@@ -2856,6 +2780,82 @@ msgstr[1] ""
 #: dialogs/deletecertificatesdialog.cpp:218
 msgid "Secret Certificate Deletion"
 msgstr "Privaatzertifikaat wegdoon"
+
+#: dialogs/certificateselectiondialog.cpp:110
+msgid "Please select one or more of the following certificates:"
+msgstr "Söök bitte een oder mehr vun disse Zertifikaten ut:"
+
+#: dialogs/certificateselectiondialog.cpp:111
+msgid "Please select one of the following certificates:"
+msgstr "Söök bitte een vun disse Zertifikaten ut:"
+
+#: dialogs/certificateselectiondialog.cpp:148
+msgid "Reload"
+msgstr "Nieg laden"
+
+#: dialogs/certificateselectiondialog.cpp:149
+msgid "Lookup..."
+msgstr "Naslaan..."
+
+#: dialogs/certificateselectiondialog.cpp:150
+msgid "New..."
+msgstr "Nieg..."
+
+#: dialogs/certificateselectiondialog.cpp:152
+msgctxt "@info:tooltip"
+msgid "Lookup certificates on server"
+msgstr "Zertifikaten op Server söken..."
+
+#: dialogs/certificateselectiondialog.cpp:153
+msgctxt "@info:tooltip"
+msgid "Refresh certificate list"
+msgstr "Zertifikatenlist opfrischen"
+
+#: dialogs/certificateselectiondialog.cpp:154
+msgctxt "@info:tooltip"
+msgid "Create a new certificate"
+msgstr "En nieg Zertifikaat opstellen"
+
+#: dialogs/certificateselectiondialog.cpp:180
+msgid "Certificate Selection"
+msgstr "Zertifikaatköör"
+
+#: dialogs/certificatedetailsdialog.cpp:230
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while loading the certifications: <message>%1</"
+"message></para>"
+msgstr ""
+"<para>Dat geev en Fehler bi't Laden vun de Beglöven: <message>%1</message></"
+"para>"
+
+#: dialogs/certificatedetailsdialog.cpp:233
+msgctxt "@title"
+msgid "Certifications Loading Failed"
+msgstr "Laden vun Beglöven fehlslaan"
+
+#: dialogs/certificatedetailsdialog.cpp:256
+msgid "Please wait while generating the dump..."
+msgstr "Tööv bitte, de Utgaav warrt torechtmaakt..."
+
+#: dialogs/certificatedetailsdialog.cpp:334
+msgid "(please wait while certifications are being loaded)"
+msgstr "(tööv bitte, de Beglöven warrt laadt)"
+
+#: dialogs/certificatedetailsdialog.cpp:335
+msgid "Load Certifications (may take a while)"
+msgstr "Beglöven laden (mag en Stoot duern)"
+
+#: dialogs/certificatedetailsdialog.cpp:361
+#, kde-format
+msgid "Issuer Certificate Not Found (%1)"
+msgstr "Rutgever-Zertifikaat nich funnen (%1)"
+
+#: dialogs/certificatedetailsdialog.cpp:417
+msgctxt "@title"
+msgid "Subkeys"
+msgstr "Ünnerslötels"
 
 #: dialogs/exportsecretkeydialog.cpp:103
 msgid "Secret Key Files"
@@ -3947,6 +3947,22 @@ msgstr "Köör"
 msgid "Could not find clipboard"
 msgstr "Twischenaflaag lett sik nich finnen"
 
+#: utils/auditlog.cpp:62
+msgid "No Audit Log available"
+msgstr "Keen Pröövlogbook verföögbor"
+
+#: utils/auditlog.cpp:64
+#, kde-format
+msgid "Error Retrieving Audit Log: %1"
+msgstr ""
+
+#: utils/auditlog.cpp:71
+#, fuzzy
+#| msgid "Show Audit Log"
+msgctxt "The Audit Log is a detailed error log from the gnupg backend"
+msgid "Show Audit Log"
+msgstr "Pröövlogbook wiesen"
+
 #: utils/path-helper.cpp:103
 #, kde-format
 msgid "Cannot remove directory %1"
@@ -4010,22 +4026,6 @@ msgstr ""
 msgid "Caught unknown exception in group %1"
 msgstr "Nich verwacht Utnahm affungen"
 
-#: utils/auditlog.cpp:62
-msgid "No Audit Log available"
-msgstr "Keen Pröövlogbook verföögbor"
-
-#: utils/auditlog.cpp:64
-#, kde-format
-msgid "Error Retrieving Audit Log: %1"
-msgstr ""
-
-#: utils/auditlog.cpp:71
-#, fuzzy
-#| msgid "Show Audit Log"
-msgctxt "The Audit Log is a detailed error log from the gnupg backend"
-msgid "Show Audit Log"
-msgstr "Pröövlogbook wiesen"
-
 #: commands/lookupcertificatescommand.cpp:276
 #: commands/lookupcertificatescommand.cpp:281
 #, kde-format
@@ -4081,23 +4081,59 @@ msgctxt "@title"
 msgid "No Directory Servers Configured"
 msgstr "Keen Vertekenservers inricht"
 
-#: commands/decryptverifyfilescommand.cpp:161
-#: commands/decryptverifyclipboardcommand.cpp:157
-#: commands/signclipboardcommand.cpp:146 commands/signclipboardcommand.cpp:159
-#: commands/signencryptfilescommand.cpp:231
-#: commands/encryptclipboardcommand.cpp:143
-#: commands/encryptclipboardcommand.cpp:156
+#: commands/importcrlcommand.cpp:69
+msgid ""
+"Certificate Revocation Lists, DER encoded (*.crl *.arl *-crl.der *-arl.der)"
+msgstr ""
+"Zertifikaat-Torüchrooplisten, DER-kodeert (*.crl *.arl *-crl.der *-arl.der)"
+
+#: commands/importcrlcommand.cpp:70
+msgid "Select CRL File to Import"
+msgstr "Torüchrooplist utsöken, de Du importeren wullt"
+
+#: commands/importcrlcommand.cpp:157
+msgid "Unable to start process dirmngr. Please check your installation."
+msgstr ""
+"De Perzess \"dirmngr\" lett sik nich starten. Prööv bitte Dien "
+"Installatschoon."
+
+#: commands/importcrlcommand.cpp:159 commands/clearcrlcachecommand.cpp:62
+msgid "Clear CRL Cache Error"
+msgstr "Fehler bi't Leddigmaken vun den ZTL-Twischenspieker"
+
+#: commands/importcrlcommand.cpp:175
+msgid ""
+"The GpgSM process that tried to import the CRL file ended prematurely "
+"because of an unexpected error. Please check the output of gpgsm --call-"
+"dirmngr loadcrl &lt;filename&gt; for details."
+msgstr ""
+"De Perzess \"GpgSM\", de de Torüchrooplist-Datei importeren schull, hett sik "
+"vör Tiet utmaakt, dat geev en nich verwacht Fehler. Kiek bitte de Utgaav vun "
+"\"gpgsm --call-dirmngr loadcrl &lt;Dateinaam&gt; an, wenn Du de Enkelheiten "
+"weten wullt."
+
+#: commands/importcrlcommand.cpp:178 commands/importcrlcommand.cpp:182
+msgid "Import CRL Error"
+msgstr "Fehler bi ZTL-Import"
+
+#: commands/importcrlcommand.cpp:180
 #, kde-format
-msgid "An error occurred: %1"
-msgstr "Dat geev en Fehler: %1"
+msgid ""
+"An error occurred while trying to import the CRL file. The output from gpgsm "
+"was:\n"
+"%1"
+msgstr ""
+"Dat geev en Fehler bi't Importeren vun de ZTL-Datei. De Utgaav vun \"gpgsm\" "
+"weer:\n"
+"%1"
 
-#: commands/decryptverifyfilescommand.cpp:163
-msgid "Decrypt/Verify Files Error"
-msgstr "Fehler bi't Opslöteln/Pröven vun Dateien"
+#: commands/importcrlcommand.cpp:184
+msgid "CRL file imported successfully."
+msgstr "Torüchrooplist-Datei importeert."
 
-#: commands/decryptverifyfilescommand.cpp:174
-msgid "Select One or More Files to Decrypt and/or Verify"
-msgstr "Een oder mehr Dateien för't Opslöteln un/oder Pröven utsöken"
+#: commands/importcrlcommand.cpp:185
+msgid "Import CRL Finished"
+msgstr "ZTL-Import afslaten"
 
 #: commands/importcertificatescommand.cpp:212
 #, kde-format
@@ -4300,6 +4336,24 @@ msgstr ""
 msgid "Certification Not Possible"
 msgstr "Beglöven nich mööglich"
 
+#: commands/decryptverifyfilescommand.cpp:161
+#: commands/decryptverifyclipboardcommand.cpp:157
+#: commands/signclipboardcommand.cpp:146 commands/signclipboardcommand.cpp:159
+#: commands/signencryptfilescommand.cpp:231
+#: commands/encryptclipboardcommand.cpp:143
+#: commands/encryptclipboardcommand.cpp:156
+#, kde-format
+msgid "An error occurred: %1"
+msgstr "Dat geev en Fehler: %1"
+
+#: commands/decryptverifyfilescommand.cpp:163
+msgid "Decrypt/Verify Files Error"
+msgstr "Fehler bi't Opslöteln/Pröven vun Dateien"
+
+#: commands/decryptverifyfilescommand.cpp:174
+msgid "Select One or More Files to Decrypt and/or Verify"
+msgstr "Een oder mehr Dateien för't Opslöteln un/oder Pröven utsöken"
+
 #: commands/refreshopenpgpcertscommand.cpp:74
 msgctxt "@info"
 msgid ""
@@ -4403,9 +4457,40 @@ msgstr "All Dateien"
 msgid "Select Certificate File"
 msgstr "Zertifikaatdatei utsöken"
 
-#: commands/clearcrlcachecommand.cpp:62 commands/importcrlcommand.cpp:159
-msgid "Clear CRL Cache Error"
-msgstr "Fehler bi't Leddigmaken vun den ZTL-Twischenspieker"
+#: commands/exportcertificatecommand.cpp:212
+msgid "Export Certificates"
+msgstr "Zertifikaten exporteren"
+
+#: commands/exportcertificatecommand.cpp:216
+msgid "OpenPGP Certificates"
+msgstr "OpenPGP-Zertifikaten"
+
+#: commands/exportcertificatecommand.cpp:217
+msgid "S/MIME Certificates"
+msgstr "S/MIME-Zertifikaten"
+
+#: commands/exportcertificatecommand.cpp:251
+msgid "Exporting certificates..."
+msgstr "Zertifikaten warrt exporteert..."
+
+#: commands/exportcertificatecommand.cpp:262
+#, kde-format
+msgid ""
+"<qt><p>An error occurred while trying to export the certificate:</p><p><b>%"
+"1</b></p></qt>"
+msgstr ""
+"<qt><p>Bi't Exporteren vun dat Zertifikaat geev dat en Fehler:</p><p><b>%1</"
+"b></p></qt>"
+
+#: commands/exportcertificatecommand.cpp:266
+#: commands/exportcertificatecommand.cpp:309
+msgid "Certificate Export Failed"
+msgstr "Zertifikaatexport fehlslaan"
+
+#: commands/exportcertificatecommand.cpp:308
+#, kde-format
+msgid "Could not write to file %1."
+msgstr "Datei \"%1\" lett sik nich schrieven."
 
 #: commands/clearcrlcachecommand.cpp:66
 msgid "Clear CRL Cache Finished"
@@ -4595,40 +4680,45 @@ msgctxt "@info"
 msgid "OpenPGP certificates exported successfully."
 msgstr "OpenPGP-Zertifikaten mit Spood exporteert."
 
-#: commands/exportcertificatecommand.cpp:212
-msgid "Export Certificates"
-msgstr "Zertifikaten exporteren"
-
-#: commands/exportcertificatecommand.cpp:216
-msgid "OpenPGP Certificates"
-msgstr "OpenPGP-Zertifikaten"
-
-#: commands/exportcertificatecommand.cpp:217
-msgid "S/MIME Certificates"
-msgstr "S/MIME-Zertifikaten"
-
-#: commands/exportcertificatecommand.cpp:251
-msgid "Exporting certificates..."
-msgstr "Zertifikaten warrt exporteert..."
-
-#: commands/exportcertificatecommand.cpp:262
+#: commands/changeroottrustcommand.cpp:94
 #, kde-format
 msgid ""
-"<qt><p>An error occurred while trying to export the certificate:</p><p><b>%"
-"1</b></p></qt>"
+"Failed to update the trust database:\n"
+"%1"
 msgstr ""
-"<qt><p>Bi't Exporteren vun dat Zertifikaat geev dat en Fehler:</p><p><b>%1</"
-"b></p></qt>"
 
-#: commands/exportcertificatecommand.cpp:266
-#: commands/exportcertificatecommand.cpp:309
-msgid "Certificate Export Failed"
-msgstr "Zertifikaatexport fehlslaan"
+#: commands/changeroottrustcommand.cpp:96
+msgid "Root Trust Update Failed"
+msgstr ""
 
-#: commands/exportcertificatecommand.cpp:308
+#: commands/changeroottrustcommand.cpp:256
+#, fuzzy, kde-format
+#| msgid "Could not open file \"%1\" for reading"
+msgid "Cannot open existing file \"%1\" for reading: %2"
+msgstr "Datei \"%1\" lett sik nich lesen"
+
+#: commands/changeroottrustcommand.cpp:264
+#, fuzzy, kde-format
+#| msgid "Could not open file \"%1\" for reading"
+msgid "Cannot open file \"%1\" for reading and writing: %2"
+msgstr "Datei \"%1\" lett sik nich lesen"
+
+#: commands/changeroottrustcommand.cpp:268
+#, fuzzy, kde-format
+#| msgid "Cannot remove file %1: %2"
+msgid "Cannot set restrictive permissions on file %1: %2"
+msgstr "Datei \"%1\" lett sik nich wegdoon: %2"
+
+#: commands/changeroottrustcommand.cpp:329
+#, fuzzy
+#| msgid "Could not find clipboard"
+msgid "Could not find gpgconf executable"
+msgstr "Twischenaflaag lett sik nich finnen"
+
+#: commands/changeroottrustcommand.cpp:339
 #, kde-format
-msgid "Could not write to file %1."
-msgstr "Datei \"%1\" lett sik nich schrieven."
+msgid "\"gpgconf --reload gpg-agent\" failed: %1"
+msgstr ""
 
 #: commands/dumpcertificatecommand.cpp:90 commands/dumpcrlcachecommand.cpp:87
 msgctxt "@action:button Update the log text widget"
@@ -4678,11 +4768,60 @@ msgctxt "@title"
 msgid "Set Initial Pin"
 msgstr "Eerst PIN fastleggen"
 
+#: commands/decryptverifyclipboardcommand.cpp:143
+msgid "The clipboard does not appear to contain a signature or encrypted text."
+msgstr ""
+"As't lett bargt de Twischenaflaag keen Ünnerschrift oder verslötelt Text."
+
+#: commands/decryptverifyclipboardcommand.cpp:145
+#: commands/decryptverifyclipboardcommand.cpp:159
+msgid "Decrypt/Verify Clipboard Error"
+msgstr "Fehler bi't Opslöteln/Pröven vun de Twischenaflaag"
+
+#: commands/changepassphrasecommand.cpp:188
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>An error occurred while trying to change the expiry date for <b>%1</b>:"
+#| "</p><p>%2</p>"
+msgid ""
+"<p>An error occurred while trying to change the passphrase for <b>%1</b>:</"
+"p><p>%2</p>"
+msgstr ""
+"<p>Dat geev en Fehler bi't Ännern vun't Afloopdatum för <b>%1</b>:</p><p>%2</"
+"p>"
+
+#: commands/changepassphrasecommand.cpp:192
+msgid "Passphrase Change Error"
+msgstr "Fehler bi't Ännern vun den Slötelsatz"
+
+#: commands/changepassphrasecommand.cpp:196
+msgid "Passphrase changed successfully."
+msgstr "Slötelsatz mit Spood ännert."
+
+#: commands/changepassphrasecommand.cpp:197
+#, fuzzy
+#| msgid "Expiry Date Change Succeeded"
+msgid "Passphrase Change Succeeded"
+msgstr "Afloopdatum ännern: Spood"
+
 #: commands/gnupgprocesscommand.cpp:142
 #, kde-format
 msgid "Unable to start process %1. Please check your installation."
 msgstr ""
 "De Perzess \"%1\" lett sik nich starten. Prööv bitte Dien Installatschoon."
+
+#: commands/signclipboardcommand.cpp:148 commands/signclipboardcommand.cpp:161
+msgid "Sign Clipboard Error"
+msgstr "Fehler bi't Ünnerschrieven vun de Twischenaflaag"
+
+#: commands/importcertificatefromclipboardcommand.cpp:115
+msgid "Clipboard contents do not look like a certificate."
+msgstr "De Twischenaflaag ehr Inholt lett nich as en Zertifikaat."
+
+#: commands/importcertificatefromclipboardcommand.cpp:120
+msgid "Could not determine certificate type of clipboard contents."
+msgstr ""
+"Zertifikaattyp vun de Twischenaflaag ehr Inholt lett sik nich fastslaan."
 
 #: commands/refreshx509certscommand.cpp:62
 msgctxt "@info"
@@ -4744,16 +4883,6 @@ msgstr ""
 msgctxt "@info"
 msgid "X.509 certificates refreshed successfully."
 msgstr "X.509-Zertifikaten mit Spood opfrischt."
-
-#: commands/decryptverifyclipboardcommand.cpp:143
-msgid "The clipboard does not appear to contain a signature or encrypted text."
-msgstr ""
-"As't lett bargt de Twischenaflaag keen Ünnerschrift oder verslötelt Text."
-
-#: commands/decryptverifyclipboardcommand.cpp:145
-#: commands/decryptverifyclipboardcommand.cpp:159
-msgid "Decrypt/Verify Clipboard Error"
-msgstr "Fehler bi't Opslöteln/Pröven vun de Twischenaflaag"
 
 #: commands/deletecertificatescommand.cpp:99
 msgctxt "@title:window"
@@ -4835,44 +4964,13 @@ msgstr ""
 "<qt><p>Dat geev en Fehler bi't Wegdoon vun dat Zertifikaat:</p><p><b>%1</b></"
 "p></qt>"
 
-#: commands/changepassphrasecommand.cpp:188
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>An error occurred while trying to change the expiry date for <b>%1</b>:"
-#| "</p><p>%2</p>"
-msgid ""
-"<p>An error occurred while trying to change the passphrase for <b>%1</b>:</"
-"p><p>%2</p>"
-msgstr ""
-"<p>Dat geev en Fehler bi't Ännern vun't Afloopdatum för <b>%1</b>:</p><p>%2</"
-"p>"
+#: commands/signencryptfilescommand.cpp:233
+msgid "Sign/Encrypt Files Error"
+msgstr "Fehler bi't Ünnerschrieven/Verslöteln vun Dateien"
 
-#: commands/changepassphrasecommand.cpp:192
-msgid "Passphrase Change Error"
-msgstr "Fehler bi't Ännern vun den Slötelsatz"
-
-#: commands/changepassphrasecommand.cpp:196
-msgid "Passphrase changed successfully."
-msgstr "Slötelsatz mit Spood ännert."
-
-#: commands/changepassphrasecommand.cpp:197
-#, fuzzy
-#| msgid "Expiry Date Change Succeeded"
-msgid "Passphrase Change Succeeded"
-msgstr "Afloopdatum ännern: Spood"
-
-#: commands/signclipboardcommand.cpp:148 commands/signclipboardcommand.cpp:161
-msgid "Sign Clipboard Error"
-msgstr "Fehler bi't Ünnerschrieven vun de Twischenaflaag"
-
-#: commands/importcertificatefromclipboardcommand.cpp:115
-msgid "Clipboard contents do not look like a certificate."
-msgstr "De Twischenaflaag ehr Inholt lett nich as en Zertifikaat."
-
-#: commands/importcertificatefromclipboardcommand.cpp:120
-msgid "Could not determine certificate type of clipboard contents."
-msgstr ""
-"Zertifikaattyp vun de Twischenaflaag ehr Inholt lett sik nich fastslaan."
+#: commands/signencryptfilescommand.cpp:244
+msgid "Select One or More Files to Sign and/or Encrypt"
+msgstr "Een oder mehr Dateien för't Ünnerschrieven un/oder Verslöteln utsöken"
 
 #: commands/dumpcrlcachecommand.cpp:226
 msgid "CRL Cache Dump"
@@ -4904,14 +5002,6 @@ msgstr ""
 "GpgSM weer:\n"
 "%1"
 
-#: commands/signencryptfilescommand.cpp:233
-msgid "Sign/Encrypt Files Error"
-msgstr "Fehler bi't Ünnerschrieven/Verslöteln vun Dateien"
-
-#: commands/signencryptfilescommand.cpp:244
-msgid "Select One or More Files to Sign and/or Encrypt"
-msgstr "Een oder mehr Dateien för't Ünnerschrieven un/oder Verslöteln utsöken"
-
 #: commands/changeownertrustcommand.cpp:221
 #, kde-format
 msgid ""
@@ -4932,100 +5022,10 @@ msgstr "Totroen mit Spood ännert."
 msgid "Owner Trust Change Succeeded"
 msgstr "Totroen ännert"
 
-#: commands/changeroottrustcommand.cpp:94
-#, kde-format
-msgid ""
-"Failed to update the trust database:\n"
-"%1"
-msgstr ""
-
-#: commands/changeroottrustcommand.cpp:96
-msgid "Root Trust Update Failed"
-msgstr ""
-
-#: commands/changeroottrustcommand.cpp:256
-#, fuzzy, kde-format
-#| msgid "Could not open file \"%1\" for reading"
-msgid "Cannot open existing file \"%1\" for reading: %2"
-msgstr "Datei \"%1\" lett sik nich lesen"
-
-#: commands/changeroottrustcommand.cpp:264
-#, fuzzy, kde-format
-#| msgid "Could not open file \"%1\" for reading"
-msgid "Cannot open file \"%1\" for reading and writing: %2"
-msgstr "Datei \"%1\" lett sik nich lesen"
-
-#: commands/changeroottrustcommand.cpp:268
-#, fuzzy, kde-format
-#| msgid "Cannot remove file %1: %2"
-msgid "Cannot set restrictive permissions on file %1: %2"
-msgstr "Datei \"%1\" lett sik nich wegdoon: %2"
-
-#: commands/changeroottrustcommand.cpp:329
-#, fuzzy
-#| msgid "Could not find clipboard"
-msgid "Could not find gpgconf executable"
-msgstr "Twischenaflaag lett sik nich finnen"
-
-#: commands/changeroottrustcommand.cpp:339
-#, kde-format
-msgid "\"gpgconf --reload gpg-agent\" failed: %1"
-msgstr ""
-
 #: commands/encryptclipboardcommand.cpp:145
 #: commands/encryptclipboardcommand.cpp:158
 msgid "Encrypt Clipboard Error"
 msgstr "Fehler bi't Verslöteln vun de Twischenaflaag"
-
-#: commands/importcrlcommand.cpp:69
-msgid ""
-"Certificate Revocation Lists, DER encoded (*.crl *.arl *-crl.der *-arl.der)"
-msgstr ""
-"Zertifikaat-Torüchrooplisten, DER-kodeert (*.crl *.arl *-crl.der *-arl.der)"
-
-#: commands/importcrlcommand.cpp:70
-msgid "Select CRL File to Import"
-msgstr "Torüchrooplist utsöken, de Du importeren wullt"
-
-#: commands/importcrlcommand.cpp:157
-msgid "Unable to start process dirmngr. Please check your installation."
-msgstr ""
-"De Perzess \"dirmngr\" lett sik nich starten. Prööv bitte Dien "
-"Installatschoon."
-
-#: commands/importcrlcommand.cpp:175
-msgid ""
-"The GpgSM process that tried to import the CRL file ended prematurely "
-"because of an unexpected error. Please check the output of gpgsm --call-"
-"dirmngr loadcrl &lt;filename&gt; for details."
-msgstr ""
-"De Perzess \"GpgSM\", de de Torüchrooplist-Datei importeren schull, hett sik "
-"vör Tiet utmaakt, dat geev en nich verwacht Fehler. Kiek bitte de Utgaav vun "
-"\"gpgsm --call-dirmngr loadcrl &lt;Dateinaam&gt; an, wenn Du de Enkelheiten "
-"weten wullt."
-
-#: commands/importcrlcommand.cpp:178 commands/importcrlcommand.cpp:182
-msgid "Import CRL Error"
-msgstr "Fehler bi ZTL-Import"
-
-#: commands/importcrlcommand.cpp:180
-#, kde-format
-msgid ""
-"An error occurred while trying to import the CRL file. The output from gpgsm "
-"was:\n"
-"%1"
-msgstr ""
-"Dat geev en Fehler bi't Importeren vun de ZTL-Datei. De Utgaav vun \"gpgsm\" "
-"weer:\n"
-"%1"
-
-#: commands/importcrlcommand.cpp:184
-msgid "CRL file imported successfully."
-msgstr "Torüchrooplist-Datei importeert."
-
-#: commands/importcrlcommand.cpp:185
-msgid "Import CRL Finished"
-msgstr "ZTL-Import afslaten"
 
 #: aboutdata.cpp:53
 msgid "Certificate Manager and Unified Crypto GUI"
@@ -5594,13 +5594,72 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s_dibbern@web.de, m.j.wiese@web.de"
 
+#. i18n: file: conf/cryptooperationsconfigwidget.ui:18
+#. i18n: ectx: attribute (title), widget (QWidget, emailOperationsTab)
+#: rc.cpp:41
+#, fuzzy
+#| msgid "Stop Operation"
+msgid "EMail Operations"
+msgstr "Akschoon afbreken"
+
+#. i18n: file: conf/cryptooperationsconfigwidget.ui:24
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, quickSignCB)
+#. i18n: file: conf/cryptooperationsconfigwidget.ui:34
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, quickEncryptCB)
+#: rc.cpp:44 rc.cpp:50
+msgctxt "@info:whatsthis"
+msgid ""
+"When 'Quick Mode' is enabled, no dialog is shown when signing (encrypting) "
+"emails, respectively, unless there is a conflict that needs manual "
+"resolution."
+msgstr ""
+
+#. i18n: file: conf/cryptooperationsconfigwidget.ui:27
+#. i18n: ectx: property (text), widget (QCheckBox, quickSignCB)
+#: rc.cpp:47
+msgid "Use 'Quick Mode' when signing"
+msgstr ""
+
+#. i18n: file: conf/cryptooperationsconfigwidget.ui:37
+#. i18n: ectx: property (text), widget (QCheckBox, quickEncryptCB)
+#: rc.cpp:53
+msgid "Use 'Quick Mode' when encrypting"
+msgstr ""
+
+#. i18n: file: conf/cryptooperationsconfigwidget.ui:58
+#. i18n: ectx: attribute (title), widget (QWidget, checksumOperationsTab)
+#: rc.cpp:56
+#, fuzzy
+#| msgid "Stop Operation"
+msgid "Checksum Operations"
+msgstr "Akschoon afbreken"
+
+#. i18n: file: conf/cryptooperationsconfigwidget.ui:66
+#. i18n: ectx: property (whatsThis), widget (QLabel, label)
+#. i18n: file: conf/cryptooperationsconfigwidget.ui:78
+#. i18n: ectx: property (whatsThis), widget (QComboBox, checksumDefinitionCB)
+#: rc.cpp:59 rc.cpp:67
+msgctxt "@info:whatsthis"
+msgid ""
+"<p>Choose here which of the configured checksum programs should be used when "
+"creating checksum files.</p>\n"
+"<p>When verifying checksums, the program to use is automatically found, "
+"based on the checksum files found.</p>\n"
+msgstr ""
+
+#. i18n: file: conf/cryptooperationsconfigwidget.ui:69
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:64
+msgid "Checksum program to use:"
+msgstr ""
+
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:18
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, intervalRefreshCB)
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:31
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, intervalRefreshSB)
 #. i18n: file: kcfg/smimevalidationpreferences.kcfg:7
 #. i18n: ectx: whatsthis, entry (RefreshInterval), group (SMime Validation)
-#: rc.cpp:41 rc.cpp:47 rc.cpp:692
+#: rc.cpp:72 rc.cpp:78 rc.cpp:692
 msgid ""
 "This option enables interval checking of certificate validity. You can also "
 "choose the checking interval (in hours). Note that validation is perfomed "
@@ -5614,25 +5673,25 @@ msgstr ""
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:21
 #. i18n: ectx: property (text), widget (QCheckBox, intervalRefreshCB)
-#: rc.cpp:44
+#: rc.cpp:75
 msgid "Check certificate validity every"
 msgstr "Zertifikaatgellen jümmers na"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:37
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, intervalRefreshSB)
-#: rc.cpp:50
+#: rc.cpp:81
 msgid "hour"
 msgstr "Stünn pröven"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:40
 #. i18n: ectx: property (suffix), widget (QSpinBox, intervalRefreshSB)
-#: rc.cpp:53
+#: rc.cpp:84
 msgid " hours"
 msgstr "Stünnen pröven"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:68
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, CRLRB)
-#: rc.cpp:56
+#: rc.cpp:87
 msgid ""
 "If this option is selected, S/MIME certificates are validated using "
 "Certificate Revocation Lists (CRLs)."
@@ -5642,13 +5701,13 @@ msgstr ""
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:71
 #. i18n: ectx: property (text), widget (QRadioButton, CRLRB)
-#: rc.cpp:59
+#: rc.cpp:90
 msgid "Validate certificates using CRLs"
 msgstr "Zertifikaatgellen mit ZTLs pröven"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:81
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, OCSPRB)
-#: rc.cpp:62
+#: rc.cpp:93
 msgid ""
 "If this option is selected, S/MIME certificates are validated online using "
 "the Online Certificates Status Protocol (OCSP). Fill in the URL of the OCSP "
@@ -5660,25 +5719,25 @@ msgstr ""
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:84
 #. i18n: ectx: property (text), widget (QRadioButton, OCSPRB)
-#: rc.cpp:65
+#: rc.cpp:96
 msgid "Validate certificates online (OCSP)"
 msgstr "Zertifikaten över Internet pröven (OCSP)"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:94
 #. i18n: ectx: property (title), widget (QGroupBox, OCSPGroupBox)
-#: rc.cpp:68
+#: rc.cpp:99
 msgid "Online Certificate Validation"
 msgstr "Internet-Zertifikaatprööv"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:100
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:71
+#: rc.cpp:102
 msgid "OCSP responder URL:"
 msgstr "URL vun den OCSP-Server:"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:110
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, OCSPResponderURL)
-#: rc.cpp:74
+#: rc.cpp:105
 msgid ""
 "Enter here the address of the server for online validation of certificates "
 "(OCSP responder). The URL is usually starting with http://."
@@ -5688,19 +5747,19 @@ msgstr ""
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:117
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:77
+#: rc.cpp:108
 msgid "OCSP responder signature:"
 msgstr "Ünnerschrift vun den OCSP-Server:"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:127
 #. i18n: ectx: property (text), widget (QCheckBox, ignoreServiceURLCB)
-#: rc.cpp:80
+#: rc.cpp:111
 msgid "Ignore service URL of certificates"
 msgstr "Deenst-URLs binnen Zertifikaten övergahn"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:140
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, doNotCheckCertPolicyCB)
-#: rc.cpp:83
+#: rc.cpp:114
 msgid ""
 "By default GnuPG uses the file ~/.gnupg/policies.txt to check if a "
 "certificate policy is allowed. If this option is selected, policies are not "
@@ -5711,13 +5770,13 @@ msgstr ""
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:143
 #. i18n: ectx: property (text), widget (QCheckBox, doNotCheckCertPolicyCB)
-#: rc.cpp:86
+#: rc.cpp:117
 msgid "Do not check certificate policies"
 msgstr "Zertifikaatregeln nich pröven"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:150
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, neverConsultCB)
-#: rc.cpp:89
+#: rc.cpp:120
 msgid ""
 "If this option is checked, Certificate Revocation Lists are never used to "
 "validate S/MIME certificates."
@@ -5727,13 +5786,13 @@ msgstr ""
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:153
 #. i18n: ectx: property (text), widget (QCheckBox, neverConsultCB)
-#: rc.cpp:92
+#: rc.cpp:123
 msgid "Never consult a CRL"
 msgstr "ZTLs nienich bruken"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:160
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, allowMarkTrustedCB)
-#: rc.cpp:95
+#: rc.cpp:126
 msgid ""
 "If this option is checked while a root CA certificate is being imported, you "
 "will be asked to confirm its fingerprint and state whether or not you "
@@ -5745,13 +5804,13 @@ msgstr ""
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:163
 #. i18n: ectx: property (text), widget (QCheckBox, allowMarkTrustedCB)
-#: rc.cpp:98
+#: rc.cpp:129
 msgid "Allow to mark root certificates as trusted"
 msgstr "Tolaten, dat Wörtelzertifikaten as \"troot\" markeert warrt"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:170
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, fetchMissingCB)
-#: rc.cpp:101
+#: rc.cpp:132
 msgid ""
 "If this option is checked, missing issuer certificates are fetched when "
 "necessary (this applies to both validation methods, CRLs and OCSP)."
@@ -5761,31 +5820,31 @@ msgstr ""
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:173
 #. i18n: ectx: property (text), widget (QCheckBox, fetchMissingCB)
-#: rc.cpp:104
+#: rc.cpp:135
 msgid "Fetch missing issuer certificates"
 msgstr "Fehlen Rutgeverzertifikaten daalladen"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:181
 #. i18n: ectx: attribute (title), widget (QWidget, tabHTTP)
-#: rc.cpp:107
+#: rc.cpp:138
 msgid "&HTTP Requests"
 msgstr "&HTTP-Anfragen"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:187
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, disableHTTPCB)
-#: rc.cpp:110
+#: rc.cpp:141
 msgid "Entirely disables the use of HTTP for S/MIME."
 msgstr "Maakt HTTP för S/MIME heel ut"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:190
 #. i18n: ectx: property (text), widget (QCheckBox, disableHTTPCB)
-#: rc.cpp:113
+#: rc.cpp:144
 msgid "Do not perform any HTTP requests"
 msgstr "Keen HTTP-Anfragen utföhren"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:197
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, ignoreHTTPDPCB)
-#: rc.cpp:116
+#: rc.cpp:147
 msgid ""
 "When looking for the location of a CRL, the to-be-tested certificate usually "
 "contains what are known as \"CRL Distribution Point\" (DP) entries, which "
@@ -5801,13 +5860,13 @@ msgstr ""
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:200
 #. i18n: ectx: property (text), widget (QCheckBox, ignoreHTTPDPCB)
-#: rc.cpp:119
+#: rc.cpp:150
 msgid "Ignore HTTP CRL distribution point of certificates"
 msgstr "HTTP-ZTL-Verdeelsteden ut Zertifikaten övergahn"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:207
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, honorHTTPProxyRB)
-#: rc.cpp:122
+#: rc.cpp:153
 msgid ""
 "If this option is selected, the value of the HTTP proxy shown on the right "
 "(which comes from the environment variable http_proxy) will be used for any "
@@ -5818,19 +5877,19 @@ msgstr ""
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:210
 #. i18n: ectx: property (text), widget (QRadioButton, honorHTTPProxyRB)
-#: rc.cpp:125
+#: rc.cpp:156
 msgid "Use system HTTP proxy:"
 msgstr "Systeem-HTTP-Proxyserver bruken:"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:227
 #. i18n: ectx: property (text), widget (QRadioButton, useCustomHTTPProxyRB)
-#: rc.cpp:131
+#: rc.cpp:162
 msgid "Use this proxy for HTTP requests: "
 msgstr "Dissen Proxy för HTTP-Anfragen bruken: "
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:234
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, customHTTPProxy)
-#: rc.cpp:134
+#: rc.cpp:165
 msgid ""
 "Enter here the location of your HTTP Proxy, which will be used for all HTTP "
 "requests relating to S/MIME. The syntax is host:port, for instance myproxy."
@@ -5842,25 +5901,25 @@ msgstr ""
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:255
 #. i18n: ectx: attribute (title), widget (QWidget, tabLDAP)
-#: rc.cpp:137
+#: rc.cpp:168
 msgid "&LDAP Requests"
 msgstr "&LDAP-Anfragen"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:261
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, disableLDAPCB)
-#: rc.cpp:140
+#: rc.cpp:171
 msgid "Entirely disables the use of LDAP for S/MIME."
 msgstr "Maakt den Bruuk vun LDAP för S/MIME heel ut."
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:264
 #. i18n: ectx: property (text), widget (QCheckBox, disableLDAPCB)
-#: rc.cpp:143
+#: rc.cpp:174
 msgid "Do not perform any LDAP requests"
 msgstr "Keen LDAP-Anfragen utföhren"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:271
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, ignoreLDAPDPCB)
-#: rc.cpp:146
+#: rc.cpp:177
 msgid ""
 "When looking for the location of a CRL, the to-be-tested certificate usually "
 "contains what are known as \"CRL Distribution Point\" (DP) entries, which "
@@ -5875,19 +5934,19 @@ msgstr ""
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:274
 #. i18n: ectx: property (text), widget (QCheckBox, ignoreLDAPDPCB)
-#: rc.cpp:149
+#: rc.cpp:180
 msgid "Ignore LDAP CRL distribution point of certificates"
 msgstr "LDAP-ZTL-Verdeelsteden ut Zertifikaten övergahn"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:281
 #. i18n: ectx: property (text), widget (QLabel, customLDAPLabel)
-#: rc.cpp:152
+#: rc.cpp:183
 msgid "Primary host for LDAP requests:"
 msgstr "Hööftreekner för LDAP-Anfragen:"
 
 #. i18n: file: conf/smimevalidationconfigurationwidget.ui:292
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, customLDAPProxy)
-#: rc.cpp:155
+#: rc.cpp:186
 msgid ""
 "Entering a LDAP server here will make all LDAP requests go to that server "
 "first. More precisely, this setting overrides any specified host and port "
@@ -5907,31 +5966,31 @@ msgstr ""
 
 #. i18n: file: conf/appearanceconfigwidget.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, AppearanceConfigWidget)
-#: rc.cpp:159
+#: rc.cpp:190
 msgid "Color && Font Configuration"
 msgstr "Klören un Schriftoorden instellen"
 
 #. i18n: file: conf/appearanceconfigwidget.ui:28
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: rc.cpp:162
+#: rc.cpp:193
 msgid "General"
 msgstr "Allgemeen"
 
 #. i18n: file: conf/appearanceconfigwidget.ui:34
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:165
+#: rc.cpp:196
 msgid "Tooltips"
 msgstr "Kortinfos"
 
 #. i18n: file: conf/appearanceconfigwidget.ui:40
 #. i18n: ectx: property (text), widget (QCheckBox, tooltipValidityCheckBox)
-#: rc.cpp:168
+#: rc.cpp:199
 msgid "Show validity"
 msgstr "Gellen wiesen"
 
 #. i18n: file: conf/appearanceconfigwidget.ui:47
 #. i18n: ectx: property (text), widget (QCheckBox, tooltipOwnerCheckBox)
-#: rc.cpp:171
+#: rc.cpp:202
 msgid "Show owner information"
 msgstr "Eegner-Informatschonen wiesen"
 
@@ -5939,122 +5998,63 @@ msgstr "Eegner-Informatschonen wiesen"
 #. i18n: ectx: property (text), widget (QCheckBox, tooltipDetailsCheckBox)
 #. i18n: file: kcfg/tooltippreferences.kcfg:19
 #. i18n: ectx: label, entry (ShowCertificateDetails), group (Tooltip)
-#: rc.cpp:174 rc.cpp:707
+#: rc.cpp:205 rc.cpp:707
 msgid "Show certificate details"
 msgstr "Zertifikaat-Enkelheiten wiesen"
 
 #. i18n: file: conf/appearanceconfigwidget.ui:99
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: rc.cpp:177
+#: rc.cpp:208
 msgid "Certificate Filters"
 msgstr "Zertifikaat-Filtern"
 
 #. i18n: file: conf/appearanceconfigwidget.ui:113
 #. i18n: ectx: property (text), widget (QPushButton, iconButton)
-#: rc.cpp:180
+#: rc.cpp:211
 msgid "Set &Icon..."
 msgstr "&Lüttbild fastleggen..."
 
 #. i18n: file: conf/appearanceconfigwidget.ui:123
 #. i18n: ectx: property (text), widget (QPushButton, foregroundButton)
-#: rc.cpp:183
+#: rc.cpp:214
 msgid "Set &Text Color..."
 msgstr "&Textklöör fastleggen..."
 
 #. i18n: file: conf/appearanceconfigwidget.ui:133
 #. i18n: ectx: property (text), widget (QPushButton, backgroundButton)
-#: rc.cpp:186
+#: rc.cpp:217
 msgid "Set &Background Color..."
 msgstr "&Achtergrundklöör fastleggen..."
 
 #. i18n: file: conf/appearanceconfigwidget.ui:143
 #. i18n: ectx: property (text), widget (QPushButton, fontButton)
-#: rc.cpp:189
+#: rc.cpp:220
 msgid "Set F&ont..."
 msgstr "Schrift&oort fastleggen..."
 
 #. i18n: file: conf/appearanceconfigwidget.ui:153
 #. i18n: ectx: property (text), widget (QCheckBox, italicCB)
-#: rc.cpp:192
+#: rc.cpp:223
 msgid "Italic"
 msgstr "Kursiev"
 
 #. i18n: file: conf/appearanceconfigwidget.ui:163
 #. i18n: ectx: property (text), widget (QCheckBox, boldCB)
-#: rc.cpp:195
+#: rc.cpp:226
 msgid "Bold"
 msgstr "Fett"
 
 #. i18n: file: conf/appearanceconfigwidget.ui:173
 #. i18n: ectx: property (text), widget (QCheckBox, strikeoutCB)
-#: rc.cpp:198
+#: rc.cpp:229
 msgid "Strikeout"
 msgstr "Dörstreken"
 
 #. i18n: file: conf/appearanceconfigwidget.ui:199
 #. i18n: ectx: property (text), widget (QPushButton, defaultLookPB)
-#: rc.cpp:201
+#: rc.cpp:232
 msgid "Default Appearance"
 msgstr "Vörinstellt Utsehn"
-
-#. i18n: file: conf/cryptooperationsconfigwidget.ui:18
-#. i18n: ectx: attribute (title), widget (QWidget, emailOperationsTab)
-#: rc.cpp:204
-#, fuzzy
-#| msgid "Stop Operation"
-msgid "EMail Operations"
-msgstr "Akschoon afbreken"
-
-#. i18n: file: conf/cryptooperationsconfigwidget.ui:24
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, quickSignCB)
-#. i18n: file: conf/cryptooperationsconfigwidget.ui:34
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, quickEncryptCB)
-#: rc.cpp:207 rc.cpp:213
-msgctxt "@info:whatsthis"
-msgid ""
-"When 'Quick Mode' is enabled, no dialog is shown when signing (encrypting) "
-"emails, respectively, unless there is a conflict that needs manual "
-"resolution."
-msgstr ""
-
-#. i18n: file: conf/cryptooperationsconfigwidget.ui:27
-#. i18n: ectx: property (text), widget (QCheckBox, quickSignCB)
-#: rc.cpp:210
-msgid "Use 'Quick Mode' when signing"
-msgstr ""
-
-#. i18n: file: conf/cryptooperationsconfigwidget.ui:37
-#. i18n: ectx: property (text), widget (QCheckBox, quickEncryptCB)
-#: rc.cpp:216
-msgid "Use 'Quick Mode' when encrypting"
-msgstr ""
-
-#. i18n: file: conf/cryptooperationsconfigwidget.ui:58
-#. i18n: ectx: attribute (title), widget (QWidget, checksumOperationsTab)
-#: rc.cpp:219
-#, fuzzy
-#| msgid "Stop Operation"
-msgid "Checksum Operations"
-msgstr "Akschoon afbreken"
-
-#. i18n: file: conf/cryptooperationsconfigwidget.ui:66
-#. i18n: ectx: property (whatsThis), widget (QLabel, label)
-#. i18n: file: conf/cryptooperationsconfigwidget.ui:78
-#. i18n: ectx: property (whatsThis), widget (QComboBox, checksumDefinitionCB)
-#: rc.cpp:222 rc.cpp:230
-msgctxt "@info:whatsthis"
-msgid ""
-"<p>Choose here which of the configured checksum programs should be used when "
-"creating checksum files.</p>\n"
-"<p>When verifying checksums, the program to use is automatically found, "
-"based on the checksum files found.</p>\n"
-msgstr ""
-
-#. i18n: file: conf/cryptooperationsconfigwidget.ui:69
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:227
-msgid "Checksum program to use:"
-msgstr ""
 
 #. i18n: file: kgpgconf/mainwidget.ui:17
 #. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)

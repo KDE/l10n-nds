@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akregator\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-05-03 04:55+0200\n"
+"POT-Creation-Date: 2010-05-22 04:50+0200\n"
 "PO-Revision-Date: 2010-05-18 07:56+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -115,40 +115,6 @@ msgstr "Didier Hoarau"
 msgid "No Archive"
 msgstr "Keen Archiev"
 
-#: src/pluginmanager.cpp:165
-msgctxt "Name of the plugin"
-msgid "Name"
-msgstr "Naam"
-
-#: src/pluginmanager.cpp:166
-msgctxt "Library name"
-msgid "Library"
-msgstr "Bibliotheek"
-
-#: src/pluginmanager.cpp:167
-msgctxt "Plugin authors"
-msgid "Authors"
-msgstr "Autoren"
-
-#: src/pluginmanager.cpp:168
-msgctxt "Plugin authors' emaila addresses"
-msgid "Email"
-msgstr "Nettpost"
-
-#: src/pluginmanager.cpp:169
-msgctxt "Plugin version"
-msgid "Version"
-msgstr "Verschoon"
-
-#: src/pluginmanager.cpp:170
-msgctxt "Framework version plugin requires"
-msgid "Framework Version"
-msgstr "Rahmenwark-Verschoon"
-
-#: src/pluginmanager.cpp:174
-msgid "Plugin Information"
-msgstr "Moduulinformatschoon"
-
 #: src/pageviewer.cpp:101 src/actionmanagerimpl.cpp:569
 msgctxt "Go back in browser history"
 msgid "Back"
@@ -190,9 +156,29 @@ msgstr "Siet mit extern Nettkieker opmaken"
 msgid "Add to Konqueror Bookmarks"
 msgstr "To Konqueror-Leestekens tofögen"
 
-#: src/feedlist.cpp:177
-msgid "All Feeds"
-msgstr "All Strööm"
+#: src/importfeedlistcommand.cpp:64
+msgid "Imported Feeds"
+msgstr "Importeert Strööm"
+
+#: src/importfeedlistcommand.cpp:96
+msgid "Add Imported Folder"
+msgstr "Importeert Orner tofögen"
+
+#: src/importfeedlistcommand.cpp:97
+msgid "Imported folder name:"
+msgstr "Naam för importeerten Orner:"
+
+#: src/progressmanager.cpp:178
+msgid "Fetch completed"
+msgstr "Afropen fardig"
+
+#: src/progressmanager.cpp:188
+msgid "Fetch error"
+msgstr "Afroopfehler"
+
+#: src/progressmanager.cpp:198
+msgid "Fetch aborted"
+msgstr "Afropen afbraken"
 
 #: src/akregator_options.h:37 src/akregator_options.h:41
 msgid "Add a feed with the given URL"
@@ -206,17 +192,9 @@ msgstr "Toföögt Strööm binnen dissen Koppel platzeren"
 msgid "Hide main window on startup"
 msgstr "Hööftfinster bi't Hoochfohren versteken"
 
-#: src/progressmanager.cpp:178
-msgid "Fetch completed"
-msgstr "Afropen fardig"
-
-#: src/progressmanager.cpp:188
-msgid "Fetch error"
-msgstr "Afroopfehler"
-
-#: src/progressmanager.cpp:198
-msgid "Fetch aborted"
-msgstr "Afropen afbraken"
+#: src/feedlist.cpp:177
+msgid "All Feeds"
+msgstr "All Strööm"
 
 #: src/akregator_part.cpp:107
 msgid "Akregator News"
@@ -507,6 +485,17 @@ msgstr "Philipp Droessler"
 #: src/aboutdata.cpp:55
 msgid "Gentoo Ebuild"
 msgstr "Gentoo Ebuild"
+
+#: src/trayicon.cpp:63
+msgid "Akregator - Feed Reader"
+msgstr "Akregator - Mellenströöm-Kieker"
+
+#: src/trayicon.cpp:120
+#, kde-format
+msgid "Akregator - 1 unread article"
+msgid_plural "Akregator - %1 unread articles"
+msgstr[0] "Akregator - 1 nich leest Naricht"
+msgstr[1] "Akregator - %1 nich leest Narichten"
 
 #: src/articleviewer.cpp:135
 msgid "Copy &Link Address"
@@ -804,17 +793,35 @@ msgstr ""
 msgid "Docking in System Tray"
 msgstr "Na Systeemafsnitt minimeren"
 
-#: src/importfeedlistcommand.cpp:64
-msgid "Imported Feeds"
-msgstr "Importeert Strööm"
+#: src/articlemodel.cpp:106
+msgctxt "Articlelist's column header"
+msgid "Title"
+msgstr "Titel"
 
-#: src/importfeedlistcommand.cpp:96
-msgid "Add Imported Folder"
-msgstr "Importeert Orner tofögen"
+#: src/articlemodel.cpp:108
+msgctxt "Articlelist's column header"
+msgid "Feed"
+msgstr "Stroom"
 
-#: src/importfeedlistcommand.cpp:97
-msgid "Imported folder name:"
-msgstr "Naam för importeerten Orner:"
+#: src/articlemodel.cpp:110
+msgctxt "Articlelist's column header"
+msgid "Date"
+msgstr "Datum"
+
+#: src/articlemodel.cpp:112
+msgctxt "Articlelist's column header"
+msgid "Author"
+msgstr "Autor"
+
+#: src/articlemodel.cpp:114
+msgctxt "Articlelist's column header"
+msgid "Description"
+msgstr "Beschrieven"
+
+#: src/articlemodel.cpp:116
+msgctxt "Articlelist's column header"
+msgid "Content"
+msgstr "Inholt"
 
 #: src/actionmanagerimpl.cpp:76 src/actionmanagerimpl.cpp:253
 msgid "&Fetch Feed"
@@ -1118,46 +1125,39 @@ msgstr[1] "<qt>Büst Du seker, Du wullt de %1 utsöchten Narichten wegdoon?</qt>
 msgid "Delete Article"
 msgstr "Naricht wegdoon"
 
-#: src/articlemodel.cpp:106
-msgctxt "Articlelist's column header"
-msgid "Title"
-msgstr "Titel"
+#: src/pluginmanager.cpp:165
+msgctxt "Name of the plugin"
+msgid "Name"
+msgstr "Naam"
 
-#: src/articlemodel.cpp:108
-msgctxt "Articlelist's column header"
-msgid "Feed"
-msgstr "Stroom"
+#: src/pluginmanager.cpp:166
+msgctxt "Library name"
+msgid "Library"
+msgstr "Bibliotheek"
 
-#: src/articlemodel.cpp:110
-msgctxt "Articlelist's column header"
-msgid "Date"
-msgstr "Datum"
+#: src/pluginmanager.cpp:167
+msgctxt "Plugin authors"
+msgid "Authors"
+msgstr "Autoren"
 
-#: src/articlemodel.cpp:112
-msgctxt "Articlelist's column header"
-msgid "Author"
-msgstr "Autor"
+#: src/pluginmanager.cpp:168
+msgctxt "Plugin authors' emaila addresses"
+msgid "Email"
+msgstr "Nettpost"
 
-#: src/articlemodel.cpp:114
-msgctxt "Articlelist's column header"
-msgid "Description"
-msgstr "Beschrieven"
+#: src/pluginmanager.cpp:169
+msgctxt "Plugin version"
+msgid "Version"
+msgstr "Verschoon"
 
-#: src/articlemodel.cpp:116
-msgctxt "Articlelist's column header"
-msgid "Content"
-msgstr "Inholt"
+#: src/pluginmanager.cpp:170
+msgctxt "Framework version plugin requires"
+msgid "Framework Version"
+msgstr "Rahmenwark-Verschoon"
 
-#: src/trayicon.cpp:63
-msgid "Akregator - Feed Reader"
-msgstr "Akregator - Mellenströöm-Kieker"
-
-#: src/trayicon.cpp:120
-#, kde-format
-msgid "Akregator - 1 unread article"
-msgid_plural "Akregator - %1 unread articles"
-msgstr[0] "Akregator - 1 nich leest Naricht"
-msgstr[1] "Akregator - %1 nich leest Narichten"
+#: src/pluginmanager.cpp:174
+msgid "Plugin Information"
+msgstr "Moduulinformatschoon"
 
 #: src/loadfeedlistcommand.cpp:72
 #, kde-format
@@ -1857,7 +1857,7 @@ msgstr "Sett den Fixfilter bi't Wesseln vun Strööm torüch."
 #. i18n: ectx: Menu (edit)
 #. i18n: file: src/akregator_part.rc:14
 #. i18n: ectx: Menu (edit)
-#: rc.cpp:235 rc.cpp:325
+#: rc.cpp:235 rc.cpp:322
 msgid "&Edit"
 msgstr "&Bewerken"
 
@@ -1865,17 +1865,17 @@ msgstr "&Bewerken"
 #. i18n: ectx: Menu (view)
 #. i18n: file: src/akregator_part.rc:21
 #. i18n: ectx: Menu (view)
-#: rc.cpp:238 rc.cpp:328
+#: rc.cpp:238 rc.cpp:325
 msgid "&View"
 msgstr "&Ansicht"
 
 #. i18n: file: src/akregator_shell.rc:21
 #. i18n: ectx: Menu (go)
-#. i18n: file: src/pageviewer.rc:34
-#. i18n: ectx: Menu (go)
 #. i18n: file: src/akregator_part.rc:31
 #. i18n: ectx: Menu (go)
-#: rc.cpp:241 rc.cpp:322 rc.cpp:331
+#. i18n: file: src/pageviewer.rc:34
+#. i18n: ectx: Menu (go)
+#: rc.cpp:241 rc.cpp:328 rc.cpp:349
 msgid "&Go"
 msgstr "&Gah"
 
@@ -1883,7 +1883,7 @@ msgstr "&Gah"
 #. i18n: ectx: Menu (feed)
 #. i18n: file: src/akregator_part.rc:44
 #. i18n: ectx: Menu (feed)
-#: rc.cpp:244 rc.cpp:334
+#: rc.cpp:244 rc.cpp:331
 msgid "Fee&d"
 msgstr "&Stroom"
 
@@ -1891,7 +1891,7 @@ msgstr "&Stroom"
 #. i18n: ectx: Menu (article)
 #. i18n: file: src/akregator_part.rc:57
 #. i18n: ectx: Menu (article)
-#: rc.cpp:247 rc.cpp:337
+#: rc.cpp:247 rc.cpp:334
 msgid "&Article"
 msgstr "N&aricht"
 
@@ -1899,7 +1899,7 @@ msgstr "N&aricht"
 #. i18n: ectx: Menu (settings)
 #. i18n: file: src/akregator_part.rc:73
 #. i18n: ectx: Menu (settings)
-#: rc.cpp:250 rc.cpp:340
+#: rc.cpp:250 rc.cpp:337
 msgid "&Settings"
 msgstr "&Instellen"
 
@@ -1907,7 +1907,7 @@ msgstr "&Instellen"
 #. i18n: ectx: ToolBar (mainToolBar)
 #. i18n: file: src/akregator_part.rc:84
 #. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:253 rc.cpp:343
+#: rc.cpp:253 rc.cpp:340
 msgid "Main Toolbar"
 msgstr "Hööft-Warktüüchbalken"
 
@@ -1915,7 +1915,7 @@ msgstr "Hööft-Warktüüchbalken"
 #. i18n: ectx: ToolBar (browserToolBar)
 #. i18n: file: src/akregator_part.rc:94
 #. i18n: ectx: ToolBar (browserToolBar)
-#: rc.cpp:256 rc.cpp:346
+#: rc.cpp:256 rc.cpp:343
 msgid "Browser Toolbar"
 msgstr "Kieker-Warktüüchbalken"
 
@@ -1923,7 +1923,7 @@ msgstr "Kieker-Warktüüchbalken"
 #. i18n: ectx: ToolBar (textToSpeechToolBar)
 #. i18n: file: src/akregator_part.rc:102
 #. i18n: ectx: ToolBar (textToSpeechToolBar)
-#: rc.cpp:259 rc.cpp:349
+#: rc.cpp:259 rc.cpp:346
 msgid "Speech Toolbar"
 msgstr "Vörlees-Warktüüchbalken"
 
