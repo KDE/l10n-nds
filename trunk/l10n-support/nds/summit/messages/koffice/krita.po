@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-06-19 10:27+0200\n"
+"POT-Creation-Date: 2010-06-20 09:38+0200\n"
 "PO-Revision-Date: 2010-06-08 20:01+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -3589,6 +3589,7 @@ msgstr "Afmeten&grenzen"
 #: plugins/extensions/imagesize/wdg_imagesize.ui:270
 #: plugins/paintops/libpaintop/wdgfilteroption.ui:21
 #: plugins/tools/tool_transform/wdg_tool_transform.ui:145
+#: plugins/tools/tool_transform2/wdg_tool_transform.ui:145
 #: ui/forms/wdgfilterselector.ui:27 ui/forms/wdgtransformationeffect.ui:119
 msgid "Filter:"
 msgstr "Filter:"
@@ -7697,12 +7698,14 @@ msgstr "Sattheit"
 msgid "Thickness"
 msgstr ""
 
+#. i18n: ectx: property (windowTitle), widget (QWidget, WdgAirbrush)
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgHatchingOptions)
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgHatchingPreferences)
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgPaintOpSettings)
 #. +> trunk
 #: plugins/paintops/hatching/wdghatchingoptions.ui:26
 #: plugins/paintops/hatching/wdghatchingpreferences.ui:20
+#: plugins/paintops/libpaintop/wdgairbrush.ui:14
 #: ui/forms/wdgpaintopsettings.ui:14
 msgid "Form"
 msgstr "Form"
@@ -7810,6 +7813,13 @@ msgstr "Pixelköör"
 #| msgid "background"
 msgid "Opaque background"
 msgstr "Achtergrund"
+
+#. +> trunk
+#: plugins/paintops/libpaintop/kis_airbrush_option.cpp:43
+#, fuzzy
+#| msgid "Hairy brush"
+msgid "Airbrush"
+msgstr "Smeerpinsel"
 
 #. +> trunk stable
 #: plugins/paintops/libpaintop/kis_bidirectional_mixing_option_widget.cpp:27
@@ -7954,8 +7964,10 @@ msgstr "Toon"
 msgid "Mix"
 msgstr "Mischen"
 
+#. i18n: ectx: property (text), widget (QLabel, rateLbl)
 #. +> trunk stable
 #: plugins/paintops/libpaintop/kis_pressure_rate_option.cpp:32
+#: plugins/paintops/libpaintop/wdgairbrush.ui:29
 msgid "Rate"
 msgstr "Stärk"
 
@@ -8901,35 +8913,35 @@ msgstr "Tall"
 msgid "Gaussian distribution"
 msgstr "Gauß'sch Verdelen"
 
-#. +> trunk stable
+#. +> stable
 #: plugins/tools/defaulttools/kis_tool_brush.cc:121
 #: plugins/tools/defaulttools/kis_tool_brush.cc:146
 msgid "ms"
 msgstr "ms"
 
 #. +> trunk stable
+#: plugins/tools/defaulttools/kis_tool_brush.cc:138
+msgctxt "smooth out the curves while drawing"
+msgid "Smoothness:"
+msgstr "Weekheit:"
+
+#. +> stable
 #: plugins/tools/defaulttools/kis_tool_brush.cc:140
 msgid "Rate:"
 msgstr "Stärk:"
 
 #. +> trunk stable
-#: plugins/tools/defaulttools/kis_tool_brush.cc:150
-msgctxt "smooth out the curves while drawing"
-msgid "Smoothness:"
-msgstr "Weekheit:"
-
-#. +> trunk stable
-#: plugins/tools/defaulttools/kis_tool_brush.cc:165
+#: plugins/tools/defaulttools/kis_tool_brush.cc:153
 msgid "Assistant:"
 msgstr "Hölper:"
 
 #. +> trunk stable
-#: plugins/tools/defaulttools/kis_tool_brush.cc:168
+#: plugins/tools/defaulttools/kis_tool_brush.cc:156
 msgid "Assistant Magnetism"
 msgstr "Den Hölper sien Magnetismus"
 
 #. +> trunk stable
-#: plugins/tools/defaulttools/kis_tool_brush.h:81
+#: plugins/tools/defaulttools/kis_tool_brush.h:79
 msgid "Paint with brushes"
 msgstr "Mit Pinsels malen"
 
@@ -9531,37 +9543,37 @@ msgid "Dyna"
 msgstr "Dünaamsch"
 
 #. +> trunk stable
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:211
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:214
 msgid "Initial width:"
 msgstr "Startbreed:"
 
 #. +> trunk stable
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:212
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:215
 msgid "Mass:"
 msgstr "Mass:"
 
 #. +> trunk stable
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:213
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:216
 msgid "Drag:"
 msgstr "Dregen:"
 
 #. +> trunk stable
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:214
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:217
 msgid "X angle:"
 msgstr "X-Winkel:"
 
 #. +> trunk stable
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:215
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:218
 msgid "Y angle:"
 msgstr "Y-Winkel:"
 
 #. +> trunk stable
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:216
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:219
 msgid "Width range:"
 msgstr "Breedrebeet:"
 
 #. +> trunk stable
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:218
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:221
 msgid "Fixed angle:"
 msgstr "Fast Winkel:"
 
@@ -9643,11 +9655,15 @@ msgstr "En Steern mit den aktuellen Pinsel teken"
 #: plugins/tools/tool_transform/kis_tool_transform.cc:102
 #: plugins/tools/tool_transform/kis_tool_transform.cc:669
 #: plugins/tools/tool_transform/wdg_tool_transform.ui:16
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:124
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:696
+#: plugins/tools/tool_transform2/wdg_tool_transform.ui:16
 msgid "Transform"
 msgstr "Ümwanneln"
 
 #. +> trunk stable
 #: plugins/tools/tool_transform/kis_tool_transform.h:140
+#: plugins/tools/tool_transform2/kis_tool_transform.h:164
 msgid "Transform a layer or a selection"
 msgstr "En Laag oder Köör ümwanneln"
 
@@ -9655,6 +9671,7 @@ msgstr "En Laag oder Köör ümwanneln"
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. +> trunk stable
 #: plugins/tools/tool_transform/wdg_tool_transform.ui:43
+#: plugins/tools/tool_transform2/wdg_tool_transform.ui:43
 #: ui/forms/wdgtransformationeffect.ui:99
 msgid "Move X:"
 msgstr "Verschuven X:"
@@ -9663,6 +9680,7 @@ msgstr "Verschuven X:"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. +> trunk stable
 #: plugins/tools/tool_transform/wdg_tool_transform.ui:67
+#: plugins/tools/tool_transform2/wdg_tool_transform.ui:67
 #: ui/forms/wdgtransformationeffect.ui:35
 msgid "Scale X:"
 msgstr "Skala X:"
@@ -9671,6 +9689,7 @@ msgstr "Skala X:"
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #. +> trunk stable
 #: plugins/tools/tool_transform/wdg_tool_transform.ui:98
+#: plugins/tools/tool_transform2/wdg_tool_transform.ui:98
 #: ui/forms/wdgtransformationeffect.ui:109
 msgid "Move Y:"
 msgstr "Verschuven Y:"
@@ -9679,6 +9698,7 @@ msgstr "Verschuven Y:"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. +> trunk stable
 #: plugins/tools/tool_transform/wdg_tool_transform.ui:122
+#: plugins/tools/tool_transform2/wdg_tool_transform.ui:122
 #: ui/forms/wdgtransformationeffect.ui:52
 msgid "Scale Y:"
 msgstr "Skala Y:"
