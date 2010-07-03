@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-06-27 09:59+0200\n"
+"POT-Creation-Date: 2010-07-03 09:53+0200\n"
 "PO-Revision-Date: 2010-06-08 20:01+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -1429,7 +1429,7 @@ msgstr "Füllen"
 
 #. +> trunk stable
 #: image/recorder/kis_recorded_path_paint_action.cpp:62
-#: plugins/tools/defaulttools/kis_tool_path.cc:120
+#: plugins/tools/defaulttools/kis_tool_path.cc:159
 msgid "Path"
 msgstr "Bahn"
 
@@ -3135,6 +3135,7 @@ msgstr "Dörsichtigkeit:"
 #. i18n: ectx: property (suffix), widget (KDoubleNumInput, flowSPBox)
 #. i18n: ectx: property (suffix), widget (KDoubleNumInput, coverageSpin)
 #. i18n: ectx: property (suffix), widget (KDoubleNumInput, densityBox)
+#. i18n: ectx: property (suffix), widget (KDoubleNumInput, offsetSPBox)
 #. +> trunk stable
 #: plugins/extensions/dropshadow/wdg_dropshadow.ui:67
 #: plugins/extensions/imagesize/wdg_imagesize.ui:227
@@ -3142,6 +3143,7 @@ msgstr "Dörsichtigkeit:"
 #: plugins/extensions/imagesize/wdg_layersize.ui:123
 #: plugins/extensions/imagesize/wdg_layersize.ui:136
 #: plugins/paintops/libpaintop/wdgBrushSizeOptions.ui:371
+#: plugins/paintops/sketch/wdgsketchoptions.ui:109
 #: plugins/paintops/softbrush/wdgsoftoptions.ui:161
 #: plugins/paintops/spray/wdgsprayoptions.ui:347
 #, no-c-format
@@ -5452,9 +5454,11 @@ msgstr "Achteck (8)"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (label), widget (KIntNumInput, irisRadiusSlider)
+#. i18n: ectx: property (text), widget (QLabel, radiusLabel)
 #. +> trunk stable
 #: plugins/filters/blur/wdg_lens_blur.ui:73
 #: plugins/filters/roundcorners/kis_round_corners_filter.cpp:152
+#: plugins/paintops/sketch/wdgsketchoptions.ui:29
 #: plugins/tools/selectiontools/kis_tool_select_magnetic_option_widget.ui:31
 msgid "Radius"
 msgstr "Halfmaat"
@@ -6004,6 +6008,7 @@ msgstr "Ö&ölbild..."
 #: plugins/paintops/experiment/kis_experimentop_option.cpp:37
 #: plugins/paintops/gridbrush/kis_gridop_option.cpp:34
 #: plugins/paintops/particle/kis_particleop_option.cpp:37
+#: plugins/paintops/sketch/kis_sketchop_option.cpp:32
 #: plugins/paintops/spray/kis_sprayop_option.cpp:37
 msgid "Brush size"
 msgstr "Pinselgrött"
@@ -7492,9 +7497,11 @@ msgstr "Scheren"
 #. i18n: ectx: property (text), widget (QRadioButton, densityRadioButton)
 #. i18n: ectx: property (text), widget (QLabel, densityLbl)
 #. i18n: ectx: property (text), widget (QLabel, density)
+#. i18n: ectx: property (text), widget (QLabel, label_3)
 #. +> trunk stable
 #: plugins/paintops/hairy/wdgbristleoptions.ui:82
 #: plugins/paintops/libpaintop/wdgBrushSizeOptions.ui:399
+#: plugins/paintops/sketch/wdgsketchoptions.ui:122
 #: plugins/paintops/spray/wdgsprayoptions.ui:322
 msgid "Density"
 msgstr "Dicht"
@@ -7958,6 +7965,27 @@ msgstr "Afdüüstern"
 #: plugins/paintops/softbrush/wdgHsvOptions.ui:33
 msgid "Hue"
 msgstr "Toon"
+
+#. +> trunk
+#: plugins/paintops/libpaintop/kis_pressure_mirror_option.cpp:31
+#, fuzzy
+#| msgid "Mirror Image"
+msgid "Mirror"
+msgstr "Bild spegeln"
+
+#. +> trunk
+#: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:35
+#, fuzzy
+#| msgid "Horizontal:"
+msgid "Horizontally"
+msgstr "Kimmrecht:"
+
+#. +> trunk
+#: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:37
+#, fuzzy
+#| msgid "Vertical:"
+msgid "Vertically"
+msgstr "Pielrecht:"
 
 #. +> trunk stable
 #: plugins/paintops/libpaintop/kis_pressure_mix_option.cpp:26
@@ -8835,6 +8863,61 @@ msgstr "Wedderhalen"
 msgid "gravity"
 msgstr "Swoorkraft"
 
+#. +> trunk
+#: plugins/paintops/sketch/sketch_paintop_plugin.cpp:46
+#, fuzzy
+#| msgid "Soft brush"
+msgid "Sketch brush"
+msgstr "Week Pinsel"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. +> trunk
+#: plugins/paintops/sketch/wdgsketchoptions.ui:58
+#, fuzzy
+#| msgid "Pixel width"
+msgid "Line width"
+msgstr "Pixelbreed"
+
+#. i18n: ectx: property (suffix), widget (KDoubleNumInput, lineWidthSPBox)
+#. +> trunk
+#: plugins/paintops/sketch/wdgsketchoptions.ui:77
+#, fuzzy
+#| msgid "px"
+msgid " px"
+msgstr "px"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. +> trunk
+#: plugins/paintops/sketch/wdgsketchoptions.ui:93
+#, fuzzy
+#| msgid "Offset X:"
+msgid "Offset scale"
+msgstr "X-Verschuven:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, lowOpacityCHBox)
+#. +> trunk
+#: plugins/paintops/sketch/wdgsketchoptions.ui:157
+#, fuzzy
+#| msgid "Preview opacity:"
+msgid "Force low opacity"
+msgstr "Deckstärk-Vöransicht:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, connectionCHBox)
+#. +> trunk
+#: plugins/paintops/sketch/wdgsketchoptions.ui:164
+#, fuzzy
+#| msgid "Paint connection"
+msgid "Paint connection line"
+msgstr "Verbinnen teken"
+
+#. i18n: ectx: property (text), widget (QCheckBox, magnetifyCHBox)
+#. +> trunk
+#: plugins/paintops/sketch/wdgsketchoptions.ui:174
+#, fuzzy
+#| msgid "Magnetism:"
+msgid "Magnetify"
+msgstr "Magnetismus:"
+
 #. +> trunk stable
 #: plugins/paintops/softbrush/kis_hsv_option.cpp:35
 msgid "HSV dynamics"
@@ -9140,7 +9223,7 @@ msgid "Move a layer"
 msgstr "En Laag verschuven"
 
 #. +> trunk stable
-#: plugins/tools/defaulttools/kis_tool_path.h:50
+#: plugins/tools/defaulttools/kis_tool_path.h:75
 msgid "Draw a path."
 msgstr "En Bahn teken"
 
@@ -11175,7 +11258,7 @@ msgstr "&Mustern"
 
 #. +> trunk stable
 #: ui/kis_control_frame.cpp:88 ui/kis_control_frame.cpp:89
-#: ui/kis_control_frame.cpp:210
+#: ui/kis_control_frame.cpp:214
 msgid "Gradients"
 msgstr "Övergäng"
 
@@ -11185,32 +11268,32 @@ msgid "&Gradients"
 msgstr "Ö&vergäng"
 
 #. +> trunk stable
-#: ui/kis_control_frame.cpp:97
+#: ui/kis_control_frame.cpp:101
 msgid "&Color"
 msgstr "&Klöör"
 
 #. +> trunk stable
-#: ui/kis_control_frame.cpp:115
+#: ui/kis_control_frame.cpp:119
 msgid "&Painter's Tools"
 msgstr "Den &Maler sien Warktüüchkist"
 
 #. +> trunk stable
-#: ui/kis_control_frame.cpp:122
+#: ui/kis_control_frame.cpp:126
 msgid "Save to Palette"
 msgstr "Na  Klörensett sekern"
 
 #. +> trunk stable
-#: ui/kis_control_frame.cpp:124
+#: ui/kis_control_frame.cpp:128
 msgid "&Palette"
 msgstr "&Klörensett"
 
 #. +> trunk stable
-#: ui/kis_control_frame.cpp:159
+#: ui/kis_control_frame.cpp:163
 msgid "Patterns"
 msgstr "Mustern"
 
 #. +> trunk stable
-#: ui/kis_control_frame.cpp:162 ui/kis_control_frame.cpp:164
+#: ui/kis_control_frame.cpp:166 ui/kis_control_frame.cpp:168
 msgid "Custom Pattern"
 msgstr "Egen Muster"
 
@@ -12236,9 +12319,6 @@ msgstr "Keen Instellenoptschonen."
 #~ msgctxt "smooth out the curves while drawing"
 #~ msgid "Smoothness"
 #~ msgstr "Weekheit"
-
-#~ msgid "Magnetism:"
-#~ msgstr "Magnetismus:"
 
 #~ msgid "Contiguous Fill"
 #~ msgstr "Tosamenhangen vullmaken"
