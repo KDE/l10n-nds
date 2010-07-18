@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mathematik\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-07-03 09:50+0200\n"
+"POT-Creation-Date: 2010-07-17 09:39+0200\n"
 "PO-Revision-Date: 2010-07-15 05:49+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -283,8 +283,10 @@ msgstr "Padd na't Programm »Maxima«"
 
 #. i18n: ectx: label, entry (integratePlots), group (RBackend)
 #. i18n: ectx: label, entry (integratePlots), group (MaximaBackend)
+#. i18n: ectx: label, entry (integratePlots), group (OctaveBackend)
 #. +> trunk stable
-#: backends/maxima/maximabackend.kcfg:14 backends/R/rserver/rserver.kcfg:9
+#: backends/maxima/maximabackend.kcfg:14 backends/octave/octavebackend.kcfg:14
+#: backends/R/rserver/rserver.kcfg:9
 msgid "Integrate Plots into the Worksheet"
 msgstr "Diagrammen na Arbeitblatt inbinnen"
 
@@ -327,15 +329,58 @@ msgid "Path to Maxima"
 msgstr "Padd na Maxima"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_integratePlots)
-#. +> trunk stable
+#. +> trunk
+#: backends/maxima/settings.ui:31 backends/octave/settings.ui:31
+#: backends/R/settings.ui:17
+#, fuzzy
+#| msgid "integrate Plots in Worksheet"
+msgid "Integrate Plots in Worksheet"
+msgstr "Diagrammen in Arbeitblatt inbinnen"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_integratePlots)
+#. +> stable
 #: backends/maxima/settings.ui:31 backends/R/settings.ui:17
 msgid "integrate Plots in Worksheet"
 msgstr "Diagrammen in Arbeitblatt inbinnen"
 
+#. +> trunk
+#: backends/octave/octavebackend.cpp:70
+msgctxt "the url to the documentation of Octave, please check if there is a translated version (currently Czech and Japanese) and use the correct url"
+msgid "http://www.gnu.org/software/octave/doc/interpreter/"
+msgstr ""
+
+#. +> trunk
+#: backends/octave/octavebackend.cpp:75
+msgid ""
+"GNU Octave is a high-level language, primarily intended for numerical computations. <br/>"
+"It provides a convenient command line interface for solving linear and nonlinear problems numerically, and for performing other numerical experiments using a language that is mostly compatible with Matlab."
+msgstr ""
+
+#. i18n: ectx: label, entry (Path), group (OctaveBackend)
+#. +> trunk
+#: backends/octave/octavebackend.kcfg:10
+#, fuzzy
+#| msgid "Path to the Sage executable"
+msgid "Path to the Octave executable"
+msgstr "Padd na't Programm »Sage«"
+
+#. +> trunk
+#: backends/octave/octaveextensions.cpp:47
+#, fuzzy
+#| msgid "*.R|R script file"
+msgid "*.m|Octave script file"
+msgstr "*.R|R-Skriptdatei"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. +> trunk
+#: backends/octave/settings.ui:19
+#, fuzzy
+#| msgid "Path to Sage"
+msgid "Path to Octave"
+msgstr "Padd na »Sage«"
+
 #. +> trunk stable
 #: backends/R/rbackend.cpp:87
-#| msgctxt "the url to the documentation of R, please check if there is a translated version and use the correct url"
-#| msgid "http://wiki.r-project.org/rwiki/doku.php?id=rdoc:rdoc"
 msgctxt "the url to the documentation of R, please check if there is a translated version and use the correct url"
 msgid "http://rwiki.sciviews.org/doku.php?id=rdoc:rdoc"
 msgstr "http://rwiki.sciviews.org/doku.php?id=rdoc:rdoc"
@@ -675,13 +720,11 @@ msgstr "Indrag utreken"
 
 #. +> trunk
 #: cantor_part.cpp:148
-#| msgid "Insert Entry"
 msgid "Insert Command Entry"
 msgstr "Befehl infögen"
 
 #. +> trunk
 #: cantor_part.cpp:153
-#| msgid "Insert Entry"
 msgid "Insert Text Entry"
 msgstr "Text infögen"
 
@@ -870,6 +913,12 @@ msgstr "Padd na't utföhrbor Programm »LaTeX«"
 msgid "Path to the dvips executable"
 msgstr "Padd na't Programm »dvips«"
 
+#. +> trunk
+#: lib/test/backendtest.cpp:76
+#, kde-format
+msgid "This test requires a functioning %1 backend"
+msgstr ""
+
 #. +> trunk stable
 #: main.cpp:29
 msgid "KDE Frontend to mathematical applications"
@@ -946,14 +995,12 @@ msgstr ""
 
 #. +> trunk stable
 #: scripteditorwidget.cpp:133
-#| msgid "Show Script Editor"
 msgid "Script Editor"
 msgstr "Skripteditor"
 
 #. +> trunk stable
 #: scripteditorwidget.cpp:136
 #, kde-format
-#| msgid "Show Script Editor"
 msgid "Script Editor - %1"
 msgstr "Skripteditor - %1"
 
