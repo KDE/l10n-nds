@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-07-17 09:37+0200\n"
+"POT-Creation-Date: 2010-07-20 11:49+0200\n"
 "PO-Revision-Date: 2010-05-21 07:50+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -249,7 +249,7 @@ msgstr "Na den Bidreger sien \"StackOverflow\"-Profil gahn"
 #. i18n: ectx: property (text), widget (QLabel, m_textLabel)
 #. +> trunk
 #: aboutdialog/OcsPersonItem.ui:137 amarokurls/BookmarkModel.cpp:265
-#: browsers/playlistbrowser/MetaPlaylistModel.cpp:362
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:362
 #: network/NetworkRequests.ui:89 network/NetworkRequests.ui:103
 #: playlistgenerator/TreeModel.cpp:67
 msgid "Name"
@@ -1531,7 +1531,7 @@ msgstr "Steedmark tofögen"
 
 #. +> trunk
 #: amarokurls/BookmarkModel.cpp:86
-#: browsers/playlistbrowser/MetaPlaylistModel.cpp:363
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:363
 msgid "Group"
 msgstr "Koppel"
 
@@ -2114,7 +2114,7 @@ msgid "Counting"
 msgstr "Tellen"
 
 #. +> trunk
-#: browsers/CollectionTreeItem.cpp:224
+#: browsers/CollectionTreeItem.cpp:225
 #: playlist/proxymodels/GroupingProxy.cpp:186
 #, kde-format
 msgid "1 track"
@@ -2319,7 +2319,7 @@ msgstr "Mehr..."
 
 #. +> trunk
 #: browsers/CollectionTreeView.cpp:799 browsers/filebrowser/FileView.cpp:347
-#: browsers/playlistbrowser/MetaPlaylistModel.cpp:41
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:41
 #: context/applets/albums/AlbumsView.cpp:117
 #: services/lastfm/LastFmTreeView.cpp:112 TrayIconLegacy.cpp:218
 msgid "&Add to Playlist"
@@ -2327,7 +2327,7 @@ msgstr "Na Afspeellist &anhangen"
 
 #. +> trunk
 #: browsers/CollectionTreeView.cpp:808 browsers/filebrowser/FileView.cpp:356
-#: browsers/playlistbrowser/MetaPlaylistModel.cpp:48
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:48
 #: context/applets/albums/AlbumsView.cpp:118
 #: services/lastfm/LastFmTreeView.cpp:121
 msgctxt "Replace the currently loaded tracks with these"
@@ -2802,9 +2802,15 @@ msgid "Random (modified)"
 msgstr "Tofällig (ännert)"
 
 #. +> trunk
-#: browsers/playlistbrowser/MetaPlaylistModel.cpp:90
-#: browsers/playlistbrowser/MetaPlaylistModel.cpp:171
-#: browsers/playlistbrowser/MetaPlaylistModel.cpp:216
+#: browsers/playlistbrowser/PlaylistBrowser.cpp:49
+#, fuzzy
+msgid "The playlist browser contains your list of imported and saved playlists. It is also where you can specify powerful dynamic playlists and manage your podcast subscriptions and episodes."
+msgstr "Afspeellisten-Kieker"
+
+#. +> trunk
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:90
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:171
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:216
 #, kde-format
 msgctxt "number of playlists from one source"
 msgid "One Playlist"
@@ -2813,15 +2819,9 @@ msgstr[0] "Een Afspeellist"
 msgstr[1] "%1 Afspeellisten"
 
 #. +> trunk
-#: browsers/playlistbrowser/MetaPlaylistModel.cpp:364
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:364
 msgid "Source"
 msgstr "Born"
-
-#. +> trunk
-#: browsers/playlistbrowser/PlaylistBrowser.cpp:49
-#, fuzzy
-msgid "The playlist browser contains your list of imported and saved playlists. It is also where you can specify powerful dynamic playlists and manage your podcast subscriptions and episodes."
-msgstr "Afspeellisten-Kieker"
 
 #. +> trunk
 #: browsers/playlistbrowser/PlaylistsInGroupsProxy.cpp:33
@@ -3985,6 +3985,11 @@ msgid "Loading picture..."
 msgstr "Bild warrt laadt..."
 
 #. +> trunk
+#: context/applets/upcomingevents/UpcomingEventsWidget.cpp:155
+msgid "No other participants"
+msgstr ""
+
+#. +> trunk
 #: context/applets/upcomingevents/UpcomingEventsWidget.cpp:222
 #, fuzzy
 msgid "Event website"
@@ -4816,14 +4821,14 @@ msgstr[0] "Stück warrt vun de Reedschap wegdaan"
 msgstr[1] "Stücken warrt vun de Reedschap wegdaan"
 
 #. +> trunk
-#: core-impl/collections/mediadevicecollection/MediaDeviceCollection.cpp:281
+#: core-impl/collections/mediadevicecollection/MediaDeviceCollection.cpp:275
 msgid "&Disconnect Device"
 msgstr "Reedschap &afkoppeln"
 
 #. +> trunk
 #: core-impl/collections/mediadevicecollection/playlist/MediaDeviceUserPlaylistProvider.cpp:115
 #: playlistmanager/file/PlaylistFileProvider.cpp:442
-#: playlistmanager/PlaylistManager.cpp:343
+#: playlistmanager/PlaylistManager.cpp:346
 #: playlistmanager/sql/SqlUserPlaylistProvider.cpp:122
 msgid "Change playlist"
 msgstr "Afspeellist ännern"
@@ -4831,7 +4836,7 @@ msgstr "Afspeellist ännern"
 #. +> trunk
 #: core-impl/collections/mediadevicecollection/playlist/MediaDeviceUserPlaylistProvider.cpp:116
 #: playlistmanager/file/PlaylistFileProvider.cpp:443
-#: playlistmanager/PlaylistManager.cpp:344
+#: playlistmanager/PlaylistManager.cpp:347
 #: playlistmanager/sql/SqlUserPlaylistProvider.cpp:123
 msgid "Enter new name for playlist:"
 msgstr "Giff en niegen Naam för de Afspeellist in:"
@@ -11706,9 +11711,16 @@ msgid "The playlist file \"%1\" could not be loaded."
 msgstr "De Afspeellist-Datei \"%1\" lett sik nich laden."
 
 #. +> trunk
-#: playlistmanager/PlaylistManager.cpp:267
+#: playlistmanager/PlaylistManager.cpp:270
 msgid "Downloading Playlist"
 msgstr "Afspeellist warrt daallaadt"
+
+#. +> trunk
+#: playlistmanager/sql/SqlPlaylist.cpp:40
+#, fuzzy
+#| msgid "Playlist name:"
+msgid "Playlist in database"
+msgstr "Naam vun de Afspeellist:"
 
 #. +> trunk
 #: playlistmanager/sql/SqlUserPlaylistProvider.cpp:83
@@ -11737,8 +11749,10 @@ msgstr "Jo, ut Datenbank wegdoon."
 
 #. +> trunk
 #: playlistmanager/sql/SqlUserPlaylistProvider.h:44
-msgid "Internal Database"
-msgstr "Intern Datenbank"
+#, fuzzy
+#| msgid "Database"
+msgid "Amarok Database"
+msgstr "Datenbank"
 
 #. +> trunk
 #: playlistmanager/sql/SqlUserPlaylistProvider.h:45
@@ -13627,6 +13641,9 @@ msgstr "Stumm"
 #: widgets/VolumeWidget.cpp:89
 msgid "Volume: <i>Muted</i>"
 msgstr "Luutstärk: <i>Stillmaakt</i>"
+
+#~ msgid "Internal Database"
+#~ msgstr "Intern Datenbank"
 
 #~ msgid "Synchronizing Amarok database..."
 #~ msgstr "Amarok-Datenbank warrt synkroniseert..."
