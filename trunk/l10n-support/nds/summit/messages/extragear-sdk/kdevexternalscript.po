@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevexternalscript\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-07-06 11:27+0200\n"
+"POT-Creation-Date: 2010-07-24 09:39+0200\n"
 "PO-Revision-Date: 2010-06-21 05:41+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -91,12 +91,12 @@ msgstr ""
 
 #. +> trunk
 #: editexternalscript.cpp:68
-msgid "<p>Defines whether the external script should get <code>STDIN</code> or not.</p>"
+msgid "<p>Defines what the external script should get as input (via <code>STDIN</code>).</p>"
 msgstr ""
 
 #. +> trunk
 #: editexternalscript.cpp:74
-msgid "<p>Defines what should be done with the <code>STDOUT</code> of the script.</p>"
+msgid "<p>Defines what should be done with the output (i.e. <code>STDOUT</code>) of the script.</p>"
 msgstr ""
 
 #. +> trunk
@@ -185,10 +185,8 @@ msgstr "En Befehl ingeven, den Du utföhren wullt."
 #. i18n: ectx: property (text), widget (QLabel, stdinLabel)
 #. +> trunk
 #: editexternalscript.ui:83
-#, fuzzy
-#| msgid "STDIN:"
-msgid "STD&IN:"
-msgstr "Standardingaav:"
+msgid "&Input:"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, stdinCombo)
 #. +> trunk
@@ -199,44 +197,68 @@ msgstr "Keen"
 #. i18n: ectx: property (text), item, widget (QComboBox, stdinCombo)
 #. +> trunk
 #: editexternalscript.ui:99
-msgid "selection in current file"
+msgid "selection in current file or nothing"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, stdinCombo)
 #. +> trunk
 #: editexternalscript.ui:104
+msgid "selection in current file or whole file"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, stdinCombo)
+#. +> trunk
+#: editexternalscript.ui:109
 msgid "contents of current file"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, stdoutLabel)
 #. +> trunk
-#: editexternalscript.ui:115
+#: editexternalscript.ui:120
 #, fuzzy
-#| msgid "STDOUT:"
-msgid "STD&OUT:"
-msgstr "Standardutgaav:"
+#| msgid "Show Output"
+msgid "&Output:"
+msgstr "Utgaav wiesen"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, stdoutCombo)
 #. +> trunk
-#: editexternalscript.ui:126
+#: editexternalscript.ui:131
 msgid "ignore"
 msgstr "Övergahn"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, stdoutCombo)
 #. +> trunk
-#: editexternalscript.ui:131
-msgid "replace selection in current file"
+#: editexternalscript.ui:136
+msgid "insert at cursor position of current file"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, stdoutCombo)
 #. +> trunk
-#: editexternalscript.ui:136
+#: editexternalscript.ui:141
+msgid "replace selection of current file or insert at cursor position"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, stdoutCombo)
+#. +> trunk
+#: editexternalscript.ui:146
+msgid "replace selection of current file or whole file"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, stdoutCombo)
+#. +> trunk
+#: editexternalscript.ui:151
 msgid "replace contents of current file"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, stdoutCombo)
+#. +> trunk
+#: editexternalscript.ui:156
+msgid "create new file"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, saveLabel)
 #. +> trunk
-#: editexternalscript.ui:144
+#: editexternalscript.ui:164
 #, fuzzy
 #| msgid "Save Mode:"
 msgid "Save &Mode:"
@@ -244,25 +266,25 @@ msgstr "Sekermetood:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, saveCombo)
 #. +> trunk
-#: editexternalscript.ui:155
+#: editexternalscript.ui:175
 msgid "save nothing"
 msgstr "Nix sekern"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, saveCombo)
 #. +> trunk
-#: editexternalscript.ui:160
+#: editexternalscript.ui:180
 msgid "save active document"
 msgstr "Aktiev Dokment sekern"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, saveCombo)
 #. +> trunk
-#: editexternalscript.ui:165
+#: editexternalscript.ui:185
 msgid "save all open documents"
 msgstr "All opmaakt Dokmenten sekern"
 
 #. i18n: ectx: property (text), widget (QCheckBox, showOutputBox)
 #. +> trunk
-#: editexternalscript.ui:173
+#: editexternalscript.ui:193
 #, fuzzy
 #| msgid "Show Output"
 msgid "Show Out&put"
@@ -271,7 +293,7 @@ msgstr "Utgaav wiesen"
 #. +> trunk
 #: externalscriptjob.cpp:66
 #, kde-format
-msgid "Cannot run script '%1' since it tries to replace the editor contents but no document is open."
+msgid "Cannot run script '%1' since it tries to access the editor contents but no document is open."
 msgstr ""
 
 #. +> trunk
@@ -280,46 +302,46 @@ msgid "No Document Open"
 msgstr ""
 
 #. +> trunk
-#: externalscriptjob.cpp:155
+#: externalscriptjob.cpp:152
 #, kde-format
 msgid "Running external script: %1"
 msgstr "Extern Skript \"%1\" warrt utföhrt."
 
 #. +> trunk
-#: externalscriptjob.cpp:184
+#: externalscriptjob.cpp:196
 msgid "*** Killed Application ***"
 msgstr "*** Programm afschaten ***"
 
 #. +> trunk
-#: externalscriptjob.cpp:211
+#: externalscriptjob.cpp:249
 msgid "*** Exited normally ***"
 msgstr "*** Normaal afslaten ***"
 
 #. +> trunk
-#: externalscriptjob.cpp:214
+#: externalscriptjob.cpp:252
 #, kde-format
 msgid "*** Exited with return code: %1 ***"
 msgstr "*** Mit Utstiegkode %1 afslaten ***"
 
 #. +> trunk
-#: externalscriptjob.cpp:217
+#: externalscriptjob.cpp:255
 msgid "*** Process aborted ***"
 msgstr "*** Perzess afbraken ***"
 
 #. +> trunk
-#: externalscriptjob.cpp:219
+#: externalscriptjob.cpp:257
 #, kde-format
 msgid "*** Crashed with return code: %1 ***"
 msgstr "*** Mit Utstiegkode %1 afstört ***"
 
 #. +> trunk
-#: externalscriptjob.cpp:231
+#: externalscriptjob.cpp:269
 #, kde-format
 msgid "Could not start program '%1'. Make sure that the path is specified correctly."
 msgstr "Programm »%1« lett sik nich opropen. Beseker bitte, de Padd is propper angeven."
 
 #. +> trunk
-#: externalscriptjob.cpp:233
+#: externalscriptjob.cpp:271
 msgid "Could not start application"
 msgstr "Programm lett sik nich starten"
 
@@ -345,7 +367,7 @@ msgid "google selection"
 msgstr ""
 
 #. +> trunk
-#: externalscriptplugin.cpp:117
+#: externalscriptplugin.cpp:118
 msgid "sort selection"
 msgstr ""
 
@@ -388,3 +410,13 @@ msgstr "Hier Filter fastleggen"
 #: externalscriptview.ui:38
 msgid "Filter..."
 msgstr "Filter..."
+
+#, fuzzy
+#~| msgid "STDIN:"
+#~ msgid "STD&IN:"
+#~ msgstr "Standardingaav:"
+
+#, fuzzy
+#~| msgid "STDOUT:"
+#~ msgid "STD&OUT:"
+#~ msgstr "Standardutgaav:"
