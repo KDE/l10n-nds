@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-08-03 06:17+0200\n"
+"POT-Creation-Date: 2010-08-04 05:11+0200\n"
 "PO-Revision-Date: 2010-08-04 06:15+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -444,7 +444,8 @@ msgstr "Infögen"
 
 #. i18n: file: language/codegen/ui/newclass.ui:77
 #. i18n: ectx: property (toolTip), widget (KPushButton, removeInheritancePushButton)
-#: language/codegen/applychangeswidget.cpp:268 sublime/ideal.cpp:489 rc.cpp:116
+#: language/codegen/applychangeswidget.cpp:268 sublime/ideal.cpp:489
+#: rc.cpp:116
 msgid "Remove"
 msgstr "Wegmaken"
 
@@ -1218,15 +1219,6 @@ msgstr ""
 msgid "This session (%1) is already active in another running instance"
 msgstr "Disse Törn (%1) is al binnen en anner lopen Utgaav aktiev."
 
-#: shell/openprojectdialog.cpp:121
-#, kde-format
-msgid "open %1 as project"
-msgstr "%1 as Projekt opmaken"
-
-#: shell/openprojectdialog.cpp:127
-msgid "Selected URL is invalid."
-msgstr "Köört URL is leeg."
-
 #: shell/kross/xmltokross/mainduchain.cpp:46 shell/mainwindow_p.cpp:71
 #: shell/uicontroller.cpp:76
 msgid "Code"
@@ -1575,24 +1567,38 @@ msgstr "All nieg laden"
 msgid "Configure Project %1"
 msgstr "Projekt \"%1\" instellen"
 
-#: shell/projectcontroller.cpp:298
+#: shell/projectcontroller.cpp:231
+#, kde-format
+msgid "Invalid Location: %1"
+msgstr "Leeg Steed: %1"
+
+#: shell/projectcontroller.cpp:237
+msgid "Project already being opened"
+msgstr "Projekt warrt al opmaakt"
+
+#: shell/projectcontroller.cpp:238
+#, kde-format
+msgid "Already opening %1, not opening again"
+msgstr "\"%1\" warrt al opmaakt, man keen tweet maal"
+
+#: shell/projectcontroller.cpp:341
 #, kde-format
 msgid "Unable to create configuration file %1"
 msgstr "Instellendatei \"%1\" lett sik nich opstellen."
 
-#: shell/projectcontroller.cpp:310
+#: shell/projectcontroller.cpp:353
 msgid "Reopen the current project?"
 msgstr "Dat aktuelle Projekt wedder opmaken?"
 
-#: shell/projectcontroller.cpp:353
+#: shell/projectcontroller.cpp:396
 msgid "Open / Import Project..."
 msgstr "Projekt opmaken oder importeren..."
 
-#: shell/projectcontroller.cpp:355
+#: shell/projectcontroller.cpp:397
 msgid "Open / Import Project"
 msgstr "Projekt opmaken oder importeren"
 
-#: shell/projectcontroller.cpp:356
+#: shell/projectcontroller.cpp:398
 msgid ""
 "<b>Open / Import project</b><p>Open an existing KDevelop 4 project or import "
 "an existing Project into KDevelop 4. This entry allows to select a KDevelop4 "
@@ -1606,45 +1612,63 @@ msgstr ""
 "KDevelop opmaken. Maakst Du en vörhannen Orner op, binnen den dat noch keen "
 "KDevelop-4-Projektdatei gifft, warrt een opstellt.</p>"
 
-#: shell/projectcontroller.cpp:368
+#: shell/projectcontroller.cpp:403
+#, fuzzy
+#| msgid "Open / Import Project..."
+msgid "Fetch Project..."
+msgstr "Projekt opmaken oder importeren..."
+
+#: shell/projectcontroller.cpp:404
+#, fuzzy
+#| msgid "Project"
+msgid "Fetch Project"
+msgstr "Projekt"
+
+#: shell/projectcontroller.cpp:405
+msgid ""
+"<b>Fetch project</b><p>Fetches a project from either a Version Control "
+"System or somewhere else and puts into the disk and lets </p>"
+msgstr ""
+
+#: shell/projectcontroller.cpp:418
 msgid "Close Project(s)"
 msgstr "Projekten tomaken"
 
-#: shell/projectcontroller.cpp:370
+#: shell/projectcontroller.cpp:420
 msgid "Closes all currently selected projects"
 msgstr "All opstunns utsöcht Projekten tomaken"
 
-#: shell/projectcontroller.cpp:375
+#: shell/projectcontroller.cpp:425
 msgid "Open Configuration..."
 msgstr "Instellen opmaken..."
 
-#: shell/projectcontroller.cpp:386
+#: shell/projectcontroller.cpp:436
 msgid "Open Recent"
 msgstr "Verleden opmaken"
 
-#: shell/projectcontroller.cpp:387
+#: shell/projectcontroller.cpp:437
 msgid "Open recent project"
 msgstr "Verleden Projekt opmaken"
 
-#: shell/projectcontroller.cpp:389
+#: shell/projectcontroller.cpp:439
 msgid "<b>Open recent project</b><p>Opens recently opened project.</p>"
 msgstr ""
 "<b>Verleden Projekt opmaken</b><p>Maakt en annerlest opmaakt Projekt op.</p>"
 
-#: shell/projectcontroller.cpp:394
+#: shell/projectcontroller.cpp:444
 msgid "Open Project for Current File"
 msgstr "Projekt för aktuelle Datei opmaken"
 
-#: shell/projectcontroller.cpp:485
+#: shell/projectcontroller.cpp:535
 #, kde-format
 msgid "Project already open: %1"
 msgstr "Projekt is al op: %1"
 
-#: shell/projectcontroller.cpp:488
+#: shell/projectcontroller.cpp:538
 msgid "No active document"
 msgstr "Keen aktiv Dokment"
 
-#: shell/projectcontroller.cpp:534
+#: shell/projectcontroller.cpp:584
 #, kde-format
 msgid ""
 "The project you are opening is part of the session %1, do you want to open "
@@ -1652,20 +1676,6 @@ msgid ""
 msgstr ""
 "Du wullt en Projekt opmaken, man dat is Deel vun Törn  \"%1\". Wullt Du den "
 "Törn opmaken?"
-
-#: shell/projectcontroller.cpp:566
-#, kde-format
-msgid "Invalid Location: %1"
-msgstr "Leeg Steed: %1"
-
-#: shell/projectcontroller.cpp:572
-msgid "Project already being opened"
-msgstr "Projekt warrt al opmaakt"
-
-#: shell/projectcontroller.cpp:573
-#, kde-format
-msgid "Already opening %1, not opening again"
-msgstr "\"%1\" warrt al opmaakt, man keen tweet maal"
 
 #: shell/partdocument.cpp:108 shell/textdocument.cpp:351
 #, kde-format
@@ -1823,6 +1833,15 @@ msgstr "Nieg Instellen: %1"
 #, kde-format
 msgid "%1 As..."
 msgstr "%1 as..."
+
+#: shell/openprojectdialog.cpp:123
+#, kde-format
+msgid "open %1 as project"
+msgstr "%1 as Projekt opmaken"
+
+#: shell/openprojectdialog.cpp:129
+msgid "Selected URL is invalid."
+msgstr "Köört URL is leeg."
 
 #: shell/savedialog.cpp:55
 msgid "Save Modified Files?"
@@ -2183,11 +2202,11 @@ msgstr "Tohuus"
 msgid "Open detailed progress dialog"
 msgstr "Utföhrlich Vörankamendialoog wiesen"
 
-#: shell/progresswidget.cpp:266
+#: shell/progresswidget.cpp:265
 msgid "Hide detailed progress window"
 msgstr "Utföhrlich Vörankamenfinster versteken"
 
-#: shell/progresswidget.cpp:270
+#: shell/progresswidget.cpp:269
 msgid "Show detailed progress window"
 msgstr "Utföhrlich Vörankamenfinster wiesen"
 
@@ -2966,8 +2985,8 @@ msgstr "%2-Vörgeschicht (%1)"
 
 #: vcs/vcspluginhelper.cpp:323
 msgid ""
-"Cannot display annotations, missing interface "
-"KTextEditor::AnnotationInterface for the editor."
+"Cannot display annotations, missing interface KTextEditor::"
+"AnnotationInterface for the editor."
 msgstr ""
 "Anmarken laat sik nich wiesen, den Editor fehlt de Koppelsteed "
 "\"KTextEditor::AnnotationInterface\"."
@@ -3743,8 +3762,8 @@ msgstr "Dateien utsöken, de Du tofögen wullt"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-"css\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -3754,8 +3773,8 @@ msgid ""
 msgstr ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-"css\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
