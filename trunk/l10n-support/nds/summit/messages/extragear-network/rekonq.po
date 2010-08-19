@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rekonq\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-08-12 10:46+0200\n"
+"POT-Creation-Date: 2010-08-19 10:23+0200\n"
 "PO-Revision-Date: 2010-07-01 07:31+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -146,13 +146,18 @@ msgid "Properties"
 msgstr "Egenschappen"
 
 #. +> trunk
-#: bookmarks/bookmarkcontextmenu.cpp:98 bookmarks/bookmarksmanager.cpp:239
+#: bookmarks/bookmarkcontextmenu.cpp:98 bookmarks/bookmarksmanager.cpp:278
 #: history/historypanel.cpp:167
 msgid "Open Folder in Tabs"
 msgstr "Orner as Paneels opmaken"
 
 #. +> trunk
-#: bookmarks/bookmarkcontextmenu.cpp:221 bookmarks/bookmarkspanel.cpp:227
+#: bookmarks/bookmarksmanager.cpp:85
+msgid "Bookmark Folder Deletion"
+msgstr "Leestekenorner wegdoon"
+
+#. +> trunk
+#: bookmarks/bookmarksmanager.cpp:86
 #, kde-format
 msgid ""
 "Are you sure you wish to remove the bookmark folder\n"
@@ -162,7 +167,30 @@ msgstr ""
 "\"%1\"?"
 
 #. +> trunk
-#: bookmarks/bookmarkcontextmenu.cpp:222 bookmarks/bookmarkspanel.cpp:228
+#: bookmarks/bookmarksmanager.cpp:90
+#, fuzzy
+#| msgid "Bookmark Deletion"
+msgid "Separator Deletion"
+msgstr "Leesteken wegdoon"
+
+#. +> trunk
+#: bookmarks/bookmarksmanager.cpp:91
+#, fuzzy
+#| msgid ""
+#| "Are you sure you wish to remove the bookmark\n"
+#| "\"%1\"?"
+msgid "Are you sure you wish to remove this separator?"
+msgstr ""
+"Büst Du seker, wat Du dit Leesteken wegdoon wullt:\n"
+"\"%1\"?"
+
+#. +> trunk
+#: bookmarks/bookmarksmanager.cpp:95
+msgid "Bookmark Deletion"
+msgstr "Leesteken wegdoon"
+
+#. +> trunk
+#: bookmarks/bookmarksmanager.cpp:96
 #, kde-format
 msgid ""
 "Are you sure you wish to remove the bookmark\n"
@@ -172,17 +200,7 @@ msgstr ""
 "\"%1\"?"
 
 #. +> trunk
-#: bookmarks/bookmarkcontextmenu.cpp:223 bookmarks/bookmarkspanel.cpp:229
-msgid "Bookmark Folder Deletion"
-msgstr "Leestekenorner wegdoon"
-
-#. +> trunk
-#: bookmarks/bookmarkcontextmenu.cpp:224 bookmarks/bookmarkspanel.cpp:230
-msgid "Bookmark Deletion"
-msgstr "Leesteken wegdoon"
-
-#. +> trunk
-#: bookmarks/bookmarksmanager.cpp:104 history/historypanel.cpp:190
+#: bookmarks/bookmarksmanager.cpp:143 history/historypanel.cpp:190
 #, kde-format
 msgctxt "%1=Number of tabs. Value is always >=8"
 msgid ""
@@ -199,7 +217,7 @@ msgstr[1] ""
 "Büst Du seker?"
 
 #. +> trunk
-#: bookmarks/bookmarksmanager.cpp:240
+#: bookmarks/bookmarksmanager.cpp:279
 #, fuzzy
 #| msgid "Open all bookmarks in this folder as a new tab."
 msgid "Open all bookmarks in this folder as new tabs."
@@ -207,12 +225,12 @@ msgstr "All Leestekens binnen dissen Orner as nieg Paneel opmaken"
 
 #. i18n: ectx: Menu (go)
 #. +> trunk
-#: bookmarks/bookmarksmanager.cpp:458 rekonqui.rc:58
+#: bookmarks/bookmarksmanager.cpp:499 rekonqui.rc:58
 msgid "&Bookmarks"
 msgstr "&Leestekens"
 
 #. +> trunk
-#: bookmarks/bookmarksmanager.cpp:470
+#: bookmarks/bookmarksmanager.cpp:511
 #, fuzzy
 #| msgid "Bookmarks"
 msgid "Bookmarks Bar"
@@ -241,14 +259,14 @@ msgstr "Leesteken"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_newTabStartPage)
 #. +> trunk
-#: bookmarks/bookmarkstreemodel.cpp:272 newtabpage.cpp:154 newtabpage.cpp:366
+#: bookmarks/bookmarkstreemodel.cpp:272 newtabpage.cpp:153 newtabpage.cpp:356
 #: settings/settings_tabs.ui:106
 msgid "Bookmarks"
 msgstr "Leestekens"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ClearDataWidget)
 #. +> trunk
-#: cleardata.ui:17 mainwindow.cpp:1110 newtabpage.cpp:402 newtabpage.cpp:549
+#: cleardata.ui:17 mainwindow.cpp:1098 newtabpage.cpp:391 newtabpage.cpp:536
 msgid "Clear Private Data"
 msgstr "Privaat Daten wegmaken"
 
@@ -317,17 +335,17 @@ msgid "&Highlight all"
 msgstr "All rut&heven"
 
 #. +> trunk
-#: findbar.cpp:80
+#: findbar.cpp:81
 msgid "Find:"
 msgstr "Söken:"
 
 #. +> trunk
-#: findbar.cpp:91
+#: findbar.cpp:92
 msgid "&Next"
 msgstr "&Nakamen"
 
 #. +> trunk
-#: findbar.cpp:92
+#: findbar.cpp:93
 msgid "&Previous"
 msgstr "&Verleden"
 
@@ -618,7 +636,7 @@ msgid "Loading..."
 msgstr "Bi to laden..."
 
 #. +> trunk
-#: mainview.cpp:567
+#: mainview.cpp:567 urlbar/bookmarkwidget.cpp:111
 msgid "Done"
 msgstr "Afslaten"
 
@@ -628,146 +646,146 @@ msgid "Location Bar"
 msgstr "Adressbalken"
 
 #. +> trunk
-#: mainwindow.cpp:288
+#: mainwindow.cpp:276
 msgid "&New Window"
 msgstr "&Nieg Finster"
 
 #. +> trunk
-#: mainwindow.cpp:319 mainwindow.cpp:922
+#: mainwindow.cpp:307 mainwindow.cpp:910
 msgid "Reload"
 msgstr "Nieg laden"
 
 #. +> trunk
-#: mainwindow.cpp:324
+#: mainwindow.cpp:312
 msgid "&Stop"
 msgstr "&Anhollen"
 
 #. +> trunk
-#: mainwindow.cpp:336
+#: mainwindow.cpp:324
 msgid "Open Location"
 msgstr "Adress opmaken"
 
 #. +> trunk
-#: mainwindow.cpp:347
+#: mainwindow.cpp:335
 msgid "Page S&ource"
 msgstr "Siet&born"
 
 #. +> trunk
-#: mainwindow.cpp:352
+#: mainwindow.cpp:340
 msgid "Private &Browsing"
 msgstr ""
 
 #. +> trunk
-#: mainwindow.cpp:357
+#: mainwindow.cpp:345
 msgid "Clear Private Data..."
 msgstr "Privaat Daten wegmaken..."
 
 #. +> trunk
-#: mainwindow.cpp:374
+#: mainwindow.cpp:362
 msgid "New &Tab"
 msgstr "Nieg &Paneel"
 
 #. +> trunk
-#: mainwindow.cpp:379
+#: mainwindow.cpp:367
 msgid "Reload All Tabs"
 msgstr "All Paneels nieg laden"
 
 #. +> trunk
-#: mainwindow.cpp:383
+#: mainwindow.cpp:371
 msgid "Show Next Tab"
 msgstr "Nakamen Paneel wiesen"
 
 #. +> trunk
-#: mainwindow.cpp:388
+#: mainwindow.cpp:376
 msgid "Show Previous Tab"
 msgstr "Verleden Paneel wiesen"
 
 #. +> trunk
-#: mainwindow.cpp:393
+#: mainwindow.cpp:381
 msgid "Open Closed Tabs"
 msgstr "Tomaakt Paneels opmaken"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_newTabStartPage)
 #. +> trunk
-#: mainwindow.cpp:399 newtabpage.cpp:144 newtabpage.cpp:359
+#: mainwindow.cpp:387 newtabpage.cpp:143 newtabpage.cpp:350
 #: settings/settings_tabs.ui:101
 msgid "Closed Tabs"
 msgstr "Tomaakt Paneels"
 
 #. +> trunk
-#: mainwindow.cpp:405
+#: mainwindow.cpp:393
 #, kde-format
 msgid "Switch to Tab %1"
 msgstr "Na Paneel %1 wesseln"
 
 #. +> trunk
-#: mainwindow.cpp:413
+#: mainwindow.cpp:401
 msgid "&Close Tab"
 msgstr "Paneel &tomaken"
 
 #. +> trunk
-#: mainwindow.cpp:418
+#: mainwindow.cpp:406
 msgid "Clone Tab"
 msgstr "Paneel klonen"
 
 #. +> trunk
-#: mainwindow.cpp:422
+#: mainwindow.cpp:410
 msgid "Close &Other Tabs"
 msgstr "&Anner Paneels tomaken"
 
 #. +> trunk
-#: mainwindow.cpp:426
+#: mainwindow.cpp:414
 msgid "Reload Tab"
 msgstr "Paneel nieg laden"
 
 #. +> trunk
-#: mainwindow.cpp:430
+#: mainwindow.cpp:418
 msgid "Detach Tab"
 msgstr "Paneel aflösen"
 
 #. +> trunk
-#: mainwindow.cpp:443
+#: mainwindow.cpp:431
 msgid "Set Encoding"
 msgstr "Koderen fastleggen"
 
 #. i18n: ectx: Menu (tools)
 #. +> trunk
-#: mainwindow.cpp:454 rekonqui.rc:62
+#: mainwindow.cpp:442 rekonqui.rc:62
 msgid "&Tools"
 msgstr "&Warktüüch"
 
 #. +> trunk
-#: mainwindow.cpp:478
+#: mainwindow.cpp:466
 msgid "Development"
 msgstr "Utwickeln"
 
 #. +> trunk
-#: mainwindow.cpp:508
+#: mainwindow.cpp:496
 msgid "History Panel"
 msgstr "Vörgeschicht-Paneel"
 
 #. +> trunk
-#: mainwindow.cpp:523
+#: mainwindow.cpp:511
 msgid "Bookmarks Panel"
 msgstr "Leesteken-Paneel"
 
 #. +> trunk
-#: mainwindow.cpp:540
+#: mainwindow.cpp:528
 msgid "Web Inspector"
 msgstr "Nettinspekter"
 
 #. +> trunk
-#: mainwindow.cpp:543
+#: mainwindow.cpp:531
 msgid "Web &Inspector"
 msgstr "Nett&inspekter"
 
 #. +> trunk
-#: mainwindow.cpp:553 mainwindow.cpp:556
+#: mainwindow.cpp:541 mainwindow.cpp:544
 msgid "Network Analyzer"
 msgstr "Nettwark ünnersöken"
 
 #. +> trunk
-#: mainwindow.cpp:643
+#: mainwindow.cpp:631
 #, fuzzy
 #| msgid "Tabbed Browsing"
 msgctxt "Window title when private browsing is activated"
@@ -775,7 +793,7 @@ msgid "rekonq (Private Browsing)"
 msgstr "Nettkieken mit Paneels"
 
 #. +> trunk
-#: mainwindow.cpp:654
+#: mainwindow.cpp:642
 #, fuzzy, kde-format
 #| msgid "Tabbed Browsing"
 msgctxt "window title, %1 = title of the active website"
@@ -783,14 +801,14 @@ msgid "%1 – rekonq (Private Browsing)"
 msgstr "Nettkieken mit Paneels"
 
 #. +> trunk
-#: mainwindow.cpp:658
+#: mainwindow.cpp:646
 #, kde-format
 msgctxt "window title, %1 = title of the active website"
 msgid "%1 – rekonq"
 msgstr "%1 – Rekonq"
 
 #. +> trunk
-#: mainwindow.cpp:667
+#: mainwindow.cpp:655
 msgid ""
 "*.html *.htm *.svg *.png *.gif *.svgz|Web Resources (*.html *.htm *.svg *.png *.gif *.svgz)\n"
 "*.*|All files (*.*)"
@@ -799,17 +817,17 @@ msgstr ""
 "*.*|All Dateien (*.*)"
 
 #. +> trunk
-#: mainwindow.cpp:670
+#: mainwindow.cpp:658
 msgid "Open Web Resource"
 msgstr "Nettborn opmaken"
 
 #. +> trunk
-#: mainwindow.cpp:708
+#: mainwindow.cpp:696
 msgid "Are you sure you want to turn on private browsing?"
 msgstr ""
 
 #. +> trunk
-#: mainwindow.cpp:709
+#: mainwindow.cpp:697
 #, kde-format
 msgid ""
 "<b>%1</b>"
@@ -817,38 +835,38 @@ msgid ""
 msgstr ""
 
 #. +> trunk
-#: mainwindow.cpp:913
+#: mainwindow.cpp:901
 msgid "Stop loading the current page"
 msgstr ""
 
 #. +> trunk
-#: mainwindow.cpp:914
+#: mainwindow.cpp:902
 msgid "Stop"
 msgstr "Ophollen"
 
 #. +> trunk
-#: mainwindow.cpp:921
+#: mainwindow.cpp:909
 msgid "Reload the current page"
 msgstr "Aktuell Siet nieg laden"
 
 #. +> trunk
-#: mainwindow.cpp:1114
+#: mainwindow.cpp:1102
 msgid "Clear"
 msgstr "Leddig maken"
 
 #. +> trunk
-#: mainwindow.cpp:1263
+#: mainwindow.cpp:1251
 msgid "Other"
 msgstr "Anner"
 
 #. +> trunk
-#: mainwindow.cpp:1290
+#: mainwindow.cpp:1278
 msgctxt "Default website encoding"
 msgid "Default"
 msgstr "Standard"
 
 #. +> trunk
-#: mainwindow.cpp:1320
+#: mainwindow.cpp:1308
 #, kde-format
 msgid ""
 "Are you sure you want to close the window?\n"
@@ -864,89 +882,89 @@ msgstr[1] ""
 "Du hest %1 Paneels apen."
 
 #. +> trunk
-#: mainwindow.cpp:1323
+#: mainwindow.cpp:1311
 msgid "Are you sure you want to close the window?"
 msgstr "Wullt Du redig dat Finster tomaken?"
 
 #. +> trunk
-#: mainwindow.cpp:1325
+#: mainwindow.cpp:1313
 msgid "C&lose Current Tab"
 msgstr "Aktuell Paneel &tomaken"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_newTabStartPage)
 #. +> trunk
-#: newtabpage.cpp:139 newtabpage.cpp:352 settings/settings_tabs.ui:96
+#: newtabpage.cpp:138 newtabpage.cpp:344 settings/settings_tabs.ui:96
 msgid "Favorites"
 msgstr "De Leefsten"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_newTabStartPage)
 #. +> trunk
-#: newtabpage.cpp:149 newtabpage.cpp:373 settings/settings_tabs.ui:111
+#: newtabpage.cpp:148 newtabpage.cpp:362 settings/settings_tabs.ui:111
 msgid "History"
 msgstr "Vörgeschicht"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_newTabStartPage)
 #. +> trunk
-#: newtabpage.cpp:159 newtabpage.cpp:380 settings/settings_tabs.ui:116
+#: newtabpage.cpp:158 newtabpage.cpp:368 settings/settings_tabs.ui:116
 msgid "Downloads"
 msgstr "Daalladen"
 
 #. +> trunk
-#: newtabpage.cpp:174
+#: newtabpage.cpp:169
 #, fuzzy
 #| msgid "Favorites"
 msgid "Add Favorite"
 msgstr "De Leefsten"
 
 #. +> trunk
-#: newtabpage.cpp:183
+#: newtabpage.cpp:181
 msgid "You can add a favorite by clicking the \"Add Favorite\" button in the top-right corner of this page"
 msgstr ""
 
 #. +> trunk
-#: newtabpage.cpp:212
+#: newtabpage.cpp:210
 msgid "Set a Preview..."
 msgstr "En Vöransicht fastleggen..."
 
 #. +> trunk
-#: newtabpage.cpp:228
+#: newtabpage.cpp:226
 msgid "Loading Preview..."
 msgstr "Vöransicht warrt laadt..."
 
 #. +> trunk
-#: newtabpage.cpp:410
+#: newtabpage.cpp:402
 #, fuzzy
 #| msgid "History"
 msgid "Your browsing history is empty"
 msgstr "Dien Vörgeschicht is leddig."
 
 #. +> trunk
-#: newtabpage.cpp:448
+#: newtabpage.cpp:436
 msgid "Edit Bookmarks"
 msgstr "Leestekens bewerken"
 
 #. +> trunk
-#: newtabpage.cpp:455
+#: newtabpage.cpp:446
 msgid "You have no bookmarks"
 msgstr "Du hest keen Leestekens."
 
 #. +> trunk
-#: newtabpage.cpp:506
+#: newtabpage.cpp:497
 msgid "There are no recently closed tabs"
 msgstr "Dat gifft keen tolest tomaakt Paneels."
 
 #. +> trunk
-#: newtabpage.cpp:557
+#: newtabpage.cpp:547
 msgid "There are no recently downloaded files to show"
 msgstr "Dat gifft keen tolest daallaadt Dateien to wiesen."
 
 #. +> trunk
-#: newtabpage.cpp:590
+#: newtabpage.cpp:580
 msgid "Open directory"
 msgstr ""
 
 #. +> trunk
-#: newtabpage.cpp:595
+#: newtabpage.cpp:585
 #, fuzzy
 #| msgid "Open"
 msgid "Open file"
@@ -1111,6 +1129,11 @@ msgstr ""
 "<li>heel reguleer Utdrück, de vun Dwarsstreek »<tt>/</tt>« inslaten wesen mööt, a.B. <tt>/\\/(ad|banner)\\./</tt></li>"
 "</ul>"
 "<p>Du kannst de Filtertekenkeed <tt>@@</tt> vöranstellen, denn kaamt passen Adressen op de Göödlist, de all blockeren Filtern vörgeiht."
+
+#. +> trunk
+#: settings/generalwidget.cpp:99
+msgid "Install KGet to enable rekonq to use KGet as download manager"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkEnableAdblock)
 #. +> trunk
@@ -1686,6 +1709,27 @@ msgid "Enables support for the HTML 5 local storage feature."
 msgstr "Maakt de Ünnerstütten för Java-Lüttprogrammen an."
 
 #. +> trunk
+#: urlbar/bookmarkwidget.cpp:69
+#, fuzzy
+#| msgid "Edit Bookmarks"
+msgid "Edit this Bookmark"
+msgstr "Leestekens bewerken"
+
+#. +> trunk
+#: urlbar/bookmarkwidget.cpp:77
+#, fuzzy
+#| msgid "Delete Bookmark"
+msgid "Remove this Bookmark"
+msgstr "Leesteken wegdoon"
+
+#. +> trunk
+#: urlbar/bookmarkwidget.cpp:86
+#, fuzzy
+#| msgid "Name"
+msgid "Name:"
+msgstr "Naam"
+
+#. +> trunk
 #: urlbar/listitem.cpp:290
 #, fuzzy
 #| msgid "Search: "
@@ -1741,22 +1785,36 @@ msgid "There was an error. Please verify Akregator is installed on your system."
 msgstr ""
 
 #. +> trunk
-#: urlbar/urlbar.cpp:94 urlbar/urlbar.cpp:210
+#: urlbar/urlbar.cpp:96 urlbar/urlbar.cpp:232
 msgid "Type here to search your bookmarks, history and the web..."
 msgstr ""
 
 #. +> trunk
-#: urlbar/urlbar.cpp:362
+#: urlbar/urlbar.cpp:315
+#, fuzzy
+#| msgid "Bookmarks Panel"
+msgid "Bookmark this page"
+msgstr "Leesteken-Paneel"
+
+#. +> trunk
+#: urlbar/urlbar.cpp:320
+#, fuzzy
+#| msgid "Edit Bookmarks"
+msgid "Edit this bookmark"
+msgstr "Leestekens bewerken"
+
+#. +> trunk
+#: urlbar/urlbar.cpp:425
 msgid "List all links with KGet"
 msgstr "All Links mit KGet oplisten"
 
 #. +> trunk
-#: urlbar/urlbar.cpp:366
+#: urlbar/urlbar.cpp:429
 msgid "List all available RSS feeds"
 msgstr "All verföögbor RSS-Strööm oplisten"
 
 #. +> trunk
-#: urlbar/urlbar.cpp:370
+#: urlbar/urlbar.cpp:433
 msgid "Show SSL Info"
 msgstr "SSL-Informatschonen wiesen"
 
