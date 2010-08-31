@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-08-28 09:23+0200\n"
+"POT-Creation-Date: 2010-08-30 09:30+0200\n"
 "PO-Revision-Date: 2010-08-30 09:44+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -136,7 +136,8 @@ msgstr "Deepmeer"
 
 #. i18n: ectx: property (text), widget (QRadioButton, defaultRadioButton)
 #. +> trunk stable
-#: i18ndata:20 image/kis_bookmarked_configuration_manager.cc:34
+#: i18ndata:20 image/kis_base_mask_generator.h:31
+#: image/kis_bookmarked_configuration_manager.cc:34
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:858
 msgid "Default"
 msgstr "Standard"
@@ -1012,10 +1013,8 @@ msgstr "Holt Nr.2"
 msgid "Wood"
 msgstr "Holt"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, comboBoxMaskType)
 #. +> trunk stable
 #: image/brushengine/kis_paintop_registry.cc:110
-#: plugins/paintops/libpaintop/wdgautobrush.ui:54
 msgid "default"
 msgstr "Standard"
 
@@ -1166,6 +1165,12 @@ msgstr "Opsteller"
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:765
 msgid "Filter"
 msgstr "Filter"
+
+#. +> trunk stable
+#: image/kis_base_mask_generator.h:32
+#: plugins/paintops/softbrush/soft_paintop_plugin.cpp:45
+msgid "Soft brush"
+msgstr "Week Pinsel"
 
 #. +> trunk stable
 #: image/kis_base_node.cpp:120 ui/kis_node_model.cpp:296
@@ -2133,7 +2138,7 @@ msgstr "HDR-Laag opstellen"
 #. +> trunk stable
 #: plugins/extensions/bracketing2hdr/wdgbracketing2hdr.ui:162
 #: plugins/extensions/tonemapping/wdgtonemappingdialog.ui:93
-#: ui/forms/wdgfilterdialog.ui:70 ui/kis_view2.cpp:369
+#: ui/forms/wdgfilterdialog.ui:70 ui/kis_view2.cpp:372
 msgid "Cancel"
 msgstr "Afbreken"
 
@@ -2549,7 +2554,6 @@ msgstr "Laag 2"
 
 #. +> trunk
 #: plugins/extensions/dockers/colorselectorng/kis_color_selector_ng_dock.cpp:41
-#| msgid "Small Color Selector"
 msgid "Advanced Color Selector"
 msgstr "Verwiedert Klöörköör"
 
@@ -2576,14 +2580,13 @@ msgstr "Verschuven:"
 #. i18n: ectx: property (windowTitle), widget (QWidget, KisColorSelectorSettings)
 #. +> trunk
 #: plugins/extensions/dockers/colorselectorng/wdg_color_selector_settings.ui:14
-#| msgid "Small Color Selector"
 msgid "Color Selector Settings"
 msgstr "Klöörköör instellen"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #. +> trunk stable
 #: plugins/extensions/dockers/colorselectorng/wdg_color_selector_settings.ui:24
-#: ui/dialogs/kis_dlg_preferences.cc:503 ui/dialogs/kis_dlg_preferences.cc:504
+#: ui/dialogs/kis_dlg_preferences.cc:505 ui/dialogs/kis_dlg_preferences.cc:506
 msgid "General"
 msgstr "Allgemeen"
 
@@ -2634,7 +2637,6 @@ msgstr "Bi't Anrögen mit de Muus."
 #. i18n: ectx: property (text), widget (QRadioButton, neverZoom)
 #. +> trunk
 #: plugins/extensions/dockers/colorselectorng/wdg_color_selector_settings.ui:91
-#| msgid "Invert"
 msgid "never"
 msgstr "nienich"
 
@@ -2689,7 +2691,6 @@ msgstr "Egen Bagen bruken"
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #. +> trunk
 #: plugins/extensions/dockers/colorselectorng/wdg_color_selector_settings.ui:190
-#| msgid "Small Color Selector"
 msgid "Color Selector"
 msgstr "Klöörköör"
 
@@ -2726,7 +2727,6 @@ msgstr "Typ"
 #. i18n: ectx: property (text), widget (QRadioButton, shadeSelectorTypeMyPaint)
 #. +> trunk
 #: plugins/extensions/dockers/colorselectorng/wdg_color_selector_settings.ui:241
-#| msgid "Paint"
 msgid "MyPaint"
 msgstr "MyPaint"
 
@@ -2832,7 +2832,6 @@ msgstr "Klöörplackens"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. +> trunk
 #: plugins/extensions/dockers/colorselectorng/wdg_color_selector_settings.ui:434
-#| msgid "Named Colors"
 msgid "Last Used Colors"
 msgstr "Tolest bruukt Klören"
 
@@ -5612,15 +5611,17 @@ msgstr "Halfmaat"
 #. +> trunk stable
 #: plugins/filters/blur/wdg_lens_blur.ui:89
 #: plugins/paintops/experiment/wdgshapeoptions.ui:226
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:40
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:41
 #: plugins/paintops/libpaintop/kis_pressure_rotation_option.cpp:27
 #: plugins/paintops/spray/wdgshapedynamicsoptions.ui:42
 msgid "Rotation"
 msgstr "Dreihen"
 
 #. i18n: ectx: property (label), widget (KIntNumInput, blurLength)
+#. i18n: ectx: property (text), widget (QLabel, Factor)
 #. +> trunk
 #: plugins/filters/blur/wdg_motion_blur.ui:39
+#: plugins/paintops/libpaintop/sensors/SensorFadeConfiguration.ui:35
 msgid "Length"
 msgstr "Längde"
 
@@ -5648,7 +5649,7 @@ msgstr "Stärk:"
 #. +> trunk stable
 #: plugins/filters/blur/wdgblur.ui:91
 #: plugins/paintops/hatching/wdghatchingoptions.ui:85
-#: plugins/paintops/libpaintop/wdgautobrush.ui:278
+#: plugins/paintops/libpaintop/wdgautobrush.ui:267
 msgid "Angle:"
 msgstr "Winkel:"
 
@@ -5658,7 +5659,7 @@ msgstr "Winkel:"
 #. +> trunk stable
 #: plugins/filters/blur/wdgblur.ui:125
 #: plugins/paintops/dynadraw/wdgdynaoptions.ui:211
-#: plugins/paintops/libpaintop/wdgautobrush.ui:71
+#: plugins/paintops/libpaintop/wdgautobrush.ui:60
 msgid "Circle"
 msgstr "Krink"
 
@@ -6188,7 +6189,6 @@ msgstr "&Phong-Bumpmap..."
 #. i18n: ectx: attribute (title), widget (QWidget, generalSettings)
 #. +> trunk
 #: plugins/filters/phongbumpmap/wdgphongbumpmap.ui:48
-#| msgid "Filter Settings"
 msgid "General settings"
 msgstr "Allgemeen Instellen"
 
@@ -6250,7 +6250,6 @@ msgstr ""
 #. i18n: ectx: attribute (title), widget (QWidget, lightSources)
 #. +> trunk
 #: plugins/filters/phongbumpmap/wdgphongbumpmap.ui:237
-#| msgid "Light source:"
 msgid "Light Sources"
 msgstr "Lichtborns"
 
@@ -6296,7 +6295,7 @@ msgstr "Azimut"
 #: plugins/filters/phongbumpmap/wdgphongbumpmap.ui:971
 #: plugins/generators/solid/colorgenerator.h:52
 #: plugins/paintops/libpaintop/kis_paintop_option.cpp:31
-#: ui/dialogs/kis_dlg_preferences.cc:520 ui/forms/wdgnewimage.ui:227
+#: ui/dialogs/kis_dlg_preferences.cc:522 ui/forms/wdgnewimage.ui:227
 msgid "Color"
 msgstr "Klöör"
 
@@ -6346,10 +6345,10 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, inclinationLabel4)
 #. +> trunk
 #: plugins/filters/phongbumpmap/wdgphongbumpmap.ui:361
-#, fuzzy
 #: plugins/filters/phongbumpmap/wdgphongbumpmap.ui:571
 #: plugins/filters/phongbumpmap/wdgphongbumpmap.ui:771
 #: plugins/filters/phongbumpmap/wdgphongbumpmap.ui:991
+#, fuzzy
 #| msgid "Interpolation:"
 msgid "Inclination"
 msgstr "Negenwinkel"
@@ -6591,7 +6590,7 @@ msgstr ""
 "Krita stellt man bloots Biller in »True Color« op. De Klören un (wenn vörhannen) Animeren warrt ännert."
 
 #. +> trunk stable
-#: plugins/formats/gif/gif_export.cpp:64 ui/dialogs/kis_dlg_preferences.cc:651
+#: plugins/formats/gif/gif_export.cpp:64 ui/dialogs/kis_dlg_preferences.cc:654
 #: ui/kis_aboutdata.h:31
 msgid "Krita"
 msgstr "Krita"
@@ -7655,7 +7654,7 @@ msgstr "Topassen:"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. +> trunk stable
 #: plugins/paintops/experiment/wdgexperimentoptions.ui:90
-#: plugins/paintops/libpaintop/wdgautobrush.ui:288
+#: plugins/paintops/libpaintop/wdgautobrush.ui:277
 #: plugins/paintops/libpaintop/wdgtextbrush.ui:77
 msgid "Spacing:"
 msgstr "Afstand:"
@@ -8042,7 +8041,6 @@ msgstr "Krüüzschrafferen"
 
 #. +> trunk
 #: plugins/paintops/hatching/kis_hatching_pressure_separation_option.cpp:30
-#| msgid "Saturation"
 msgid "Separation"
 msgstr "Trennen"
 
@@ -8054,7 +8052,6 @@ msgstr "Dickde"
 #. i18n: ectx: property (text), widget (QLabel, label_18)
 #. +> trunk
 #: plugins/paintops/hatching/wdghatchingoptions.ui:104
-#| msgid "Saturation"
 msgid "Separation:"
 msgstr "Trennen:"
 
@@ -8077,7 +8074,6 @@ msgstr "Y-Startpunkt:"
 #. i18n: ectx: property (text), widget (QLabel, label_20)
 #. +> trunk
 #: plugins/paintops/hatching/wdghatchingoptions.ui:262
-#| msgid "Sharpness:"
 msgid "Thickness:"
 msgstr "Dickde:"
 
@@ -8115,7 +8111,6 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QRadioButton, moirePatternRadioButton)
 #. +> trunk
 #: plugins/paintops/hatching/wdghatchingoptions.ui:419
-#| msgid "Use pattern"
 msgid "Moiré pattern"
 msgstr "Moiré-Muster"
 
@@ -8251,19 +8246,26 @@ msgstr "Twiefelhaftig"
 msgid "Speed"
 msgstr "Gauigkeit"
 
+#. i18n: ectx: property (title), widget (QGroupBox, grpFade_2)
 #. +> trunk stable
 #: plugins/paintops/libpaintop/kis_dynamic_sensor.h:37
+#: plugins/paintops/libpaintop/wdgautobrush.ui:167
+msgid "Fade"
+msgstr "Utblennen"
+
+#. +> trunk stable
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:38
 msgid "Distance"
 msgstr "Afstand"
 
 #. +> trunk stable
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:38
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:39
 msgid "Time"
 msgstr "Tiet"
 
 #. i18n: ectx: property (text), widget (QCheckBox, drawingAngle)
 #. +> trunk stable
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:39
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:40
 #: plugins/paintops/spray/wdgshapedynamicsoptions.ui:132
 msgid "Drawing angle"
 msgstr "Treckwinkel"
@@ -8274,7 +8276,7 @@ msgstr "Treckwinkel"
 #. i18n: ectx: property (text), item, widget (QComboBox, modeValueCBox)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox2)
 #. +> trunk stable
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:41
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:42
 #: plugins/paintops/libpaintop/wdgcustombrush.ui:74
 #: plugins/paintops/softbrush/wdgHsvOptions.ui:71
 #: plugins/paintops/softbrush/wdgHsvOptions.ui:192
@@ -8284,12 +8286,12 @@ msgid "Pressure"
 msgstr "Druck"
 
 #. +> trunk stable
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:42
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:43
 msgid "X-Tilt"
 msgstr "X-Negen"
 
 #. +> trunk stable
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:43
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:44
 msgid "Y-Tilt"
 msgstr "Y-Negen"
 
@@ -8324,13 +8326,11 @@ msgstr "Spegeln"
 
 #. +> trunk
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:35
-#| msgid "Horizontal:"
 msgid "Horizontally"
 msgstr "Kimmrecht"
 
 #. +> trunk
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:37
-#| msgid "Vertical:"
 msgid "Vertically"
 msgstr "Pielrecht"
 
@@ -8376,7 +8376,6 @@ msgstr "Streumengde"
 #. +> trunk
 #: plugins/paintops/libpaintop/kis_pressure_sharpness_option.cpp:32
 #: plugins/paintops/libpaintop/kis_pressure_sharpness_option_widget.cpp:39
-#| msgid "Sharpness:"
 msgid "Sharpness"
 msgstr "Scharpde"
 
@@ -8389,6 +8388,7 @@ msgstr "Weekheit"
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxRepeat)
 #. +> trunk stable
 #: plugins/paintops/libpaintop/sensors/SensorDistanceConfiguration.ui:26
+#: plugins/paintops/libpaintop/sensors/SensorFadeConfiguration.ui:26
 #: plugins/paintops/libpaintop/sensors/SensorTimeConfiguration.ui:26
 msgid "repeat"
 msgstr "wedderhaal"
@@ -8411,68 +8411,54 @@ msgstr "Duer:"
 msgid "s"
 msgstr "s"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, comboBoxMaskType)
-#. +> trunk
-#: plugins/paintops/libpaintop/wdgautobrush.ui:59
-#| msgid "Soft brush"
-msgid "soft brush"
-msgstr "Week Pinsel"
-
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBoxShape)
 #. +> trunk stable
-#: plugins/paintops/libpaintop/wdgautobrush.ui:76
+#: plugins/paintops/libpaintop/wdgautobrush.ui:65
 msgid "Square"
 msgstr "Quadraat"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. +> trunk stable
-#: plugins/paintops/libpaintop/wdgautobrush.ui:106
+#: plugins/paintops/libpaintop/wdgautobrush.ui:95
 msgid "Diameter:"
 msgstr "Dörmaat:"
 
 #. i18n: ectx: property (text), widget (QLabel)
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. +> trunk stable
-#: plugins/paintops/libpaintop/wdgautobrush.ui:126
+#: plugins/paintops/libpaintop/wdgautobrush.ui:115
 #: plugins/tools/tool_curves/wdg_tool_example.ui:73
 #: plugins/tools/tool_star/kis_tool_star.cc:237
 msgid "Ratio:"
 msgstr "Proportschoon:"
 
-#. i18n: ectx: property (title), widget (QGroupBox, grpFade_2)
-#. +> trunk stable
-#: plugins/paintops/libpaintop/wdgautobrush.ui:178
-msgid "Fade"
-msgstr "Utblennen"
-
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. +> trunk stable
-#: plugins/paintops/libpaintop/wdgautobrush.ui:189
+#: plugins/paintops/libpaintop/wdgautobrush.ui:178
 msgid "Horizontal:"
 msgstr "Kimmrecht:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. +> trunk stable
-#: plugins/paintops/libpaintop/wdgautobrush.ui:205
+#: plugins/paintops/libpaintop/wdgautobrush.ui:194
 msgid "Vertical:"
 msgstr "Pielrecht:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. +> trunk stable
-#: plugins/paintops/libpaintop/wdgautobrush.ui:258
+#: plugins/paintops/libpaintop/wdgautobrush.ui:247
 msgid "Spikes:"
 msgstr "Prickels:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_randomness)
 #. +> trunk
-#: plugins/paintops/libpaintop/wdgautobrush.ui:268
+#: plugins/paintops/libpaintop/wdgautobrush.ui:257
 msgid "Randomness:"
 msgstr "Tofälligkeit:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #. +> trunk
-#: plugins/paintops/libpaintop/wdgautobrush.ui:298
-#| msgid "Density"
+#: plugins/paintops/libpaintop/wdgautobrush.ui:287
 msgid "Density:"
 msgstr "Dicht:"
 
@@ -9270,7 +9256,6 @@ msgstr "Week Pinsel"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. +> trunk
 #: plugins/paintops/sketch/wdgsketchoptions.ui:35
-#| msgid "Pixel width"
 msgid "Line width"
 msgstr "Lienenbreed"
 
@@ -9285,7 +9270,6 @@ msgstr "Lienenbreed"
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:577
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:616
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:638
-#| msgid "px"
 msgid " px"
 msgstr " px"
 
@@ -9316,7 +9300,6 @@ msgstr "Verbinnen teken"
 #. i18n: ectx: property (text), widget (QCheckBox, randomRGBCHbox)
 #. +> trunk
 #: plugins/paintops/sketch/wdgsketchoptions.ui:160
-#| msgid "Random"
 msgid "Random RGB"
 msgstr "Tofällig RGB"
 
@@ -9342,11 +9325,6 @@ msgstr "Bagen"
 #: plugins/paintops/softbrush/kis_softbrush_selection_widget.cpp:48
 msgid "Gaussian"
 msgstr "Gauß'sch"
-
-#. +> trunk stable
-#: plugins/paintops/softbrush/soft_paintop_plugin.cpp:45
-msgid "Soft brush"
-msgstr "Week Pinsel"
 
 #. i18n: ectx: property (text), widget (QLabel, inkAmountLbl3)
 #. i18n: ectx: property (text), widget (QLabel, inkAmountLbl2)
@@ -10240,7 +10218,6 @@ msgstr "Bild is to groot!"
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:411
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:430
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:474
-#| msgid "°"
 msgid " °"
 msgstr " °"
 
@@ -10282,14 +10259,12 @@ msgstr "Y-Scheerwinkel"
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:688
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:710
 #, no-c-format
-#| msgid "%"
 msgid " %"
 msgstr " %"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. +> trunk
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:803
-#| msgid "Mixability"
 msgid "Flexibility"
 msgstr "Smeegsamkeit"
 
@@ -10304,7 +10279,6 @@ msgstr "Vertarr-Typ"
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. +> trunk
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:877
-#| msgid "Density"
 msgid "Density :"
 msgstr "Dicht:"
 
@@ -10319,13 +10293,12 @@ msgstr "Klööroptschonen"
 #. i18n: ectx: property (text), widget (QCheckBox, hideDecorationsBox)
 #. +> trunk
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:981
-#| msgid "Ruler decoration"
 msgid "Hide decorations"
 msgstr "Dekoratschonen versteken"
 
 #. +> trunk stable
-#: ui/canvas/kis_grid_manager.cpp:47 ui/dialogs/kis_dlg_preferences.cc:537
-#: ui/dialogs/kis_dlg_preferences.cc:538
+#: ui/canvas/kis_grid_manager.cpp:47 ui/dialogs/kis_dlg_preferences.cc:539
+#: ui/dialogs/kis_dlg_preferences.cc:540
 msgid "Grid"
 msgstr "Gadder"
 
@@ -10405,54 +10378,54 @@ msgid "Layer Properties"
 msgstr "Laag-Egenschappen"
 
 #. +> trunk stable
-#: ui/dialogs/kis_dlg_preferences.cc:185
+#: ui/dialogs/kis_dlg_preferences.cc:187
 msgid "Monitor profile: "
 msgstr "Monitorprofil: "
 
 #. +> trunk stable
-#: ui/dialogs/kis_dlg_preferences.cc:188
+#: ui/dialogs/kis_dlg_preferences.cc:190
 msgid "&Monitor profile: "
 msgstr "&Monitorprofil: "
 
 #. +> trunk stable
-#: ui/dialogs/kis_dlg_preferences.cc:495
+#: ui/dialogs/kis_dlg_preferences.cc:497
 msgid "Preferences"
 msgstr "Instellen"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgDisplaySettings)
 #. i18n: ectx: property (title), widget (QGroupBox, grpDisplay)
 #. +> trunk stable
-#: ui/dialogs/kis_dlg_preferences.cc:511 ui/dialogs/kis_dlg_preferences.cc:512
+#: ui/dialogs/kis_dlg_preferences.cc:513 ui/dialogs/kis_dlg_preferences.cc:514
 #: ui/forms/wdgcolorsettings.ui:59 ui/forms/wdgdisplaysettings.ui:14
 msgid "Display"
 msgstr "Dorstellen"
 
 #. +> trunk stable
-#: ui/dialogs/kis_dlg_preferences.cc:519
+#: ui/dialogs/kis_dlg_preferences.cc:521
 msgid "Color Management"
 msgstr "Klöörpleeg"
 
 #. +> trunk stable
-#: ui/dialogs/kis_dlg_preferences.cc:528 ui/dialogs/kis_dlg_preferences.cc:529
+#: ui/dialogs/kis_dlg_preferences.cc:530 ui/dialogs/kis_dlg_preferences.cc:531
 msgid "Performance"
 msgstr "Leisten"
 
 #. +> trunk
-#: ui/dialogs/kis_dlg_preferences.cc:545
+#: ui/dialogs/kis_dlg_preferences.cc:547
 #, fuzzy
 #| msgid "Filter Settings"
 msgid "Tablet settings"
 msgstr "Filterinstellen"
 
 #. +> trunk
-#: ui/dialogs/kis_dlg_preferences.cc:546
+#: ui/dialogs/kis_dlg_preferences.cc:548
 #, fuzzy
 #| msgid "Palette"
 msgid "Tablet"
 msgstr "Klörensett"
 
 #. +> trunk stable
-#: ui/dialogs/kis_dlg_preferences.cc:648
+#: ui/dialogs/kis_dlg_preferences.cc:651
 msgid ""
 "You are trying to enable OpenGL\n"
 "\n"
@@ -10963,7 +10936,6 @@ msgstr "Bagen-Kantstreken anmaken"
 #. i18n: ectx: property (title), widget (QGroupBox, grpCanvasBorder)
 #. +> trunk
 #: ui/forms/wdgdisplaysettings.ui:178
-#| msgid "Canvas color:"
 msgid "Canvas border"
 msgstr "Lienwandrand"
 
@@ -11066,7 +11038,6 @@ msgstr "Torüchnehmdeepde:"
 #. i18n: ectx: property (text), widget (QCheckBox, m_backupFileCheckBox)
 #. +> trunk
 #: ui/forms/wdggeneralsettings.ui:150
-#| msgid "Create Mask Effect"
 msgid "Create backup file "
 msgstr "Sekerheitkopie opstellen "
 
@@ -11075,6 +11046,12 @@ msgstr "Sekerheitkopie opstellen "
 #: ui/forms/wdggeneralsettings.ui:157
 msgid "Show outline while painting"
 msgstr "Bi't Malen Ümreet wiesen"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkZoomWithWheel)
+#. +> trunk
+#: ui/forms/wdggeneralsettings.ui:164
+msgid "Zoom with mouse wheel"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3_2)
 #. +> trunk stable
@@ -11835,13 +11812,11 @@ msgstr "Pinsels"
 
 #. +> trunk
 #: ui/kis_brushengine_selector.cpp:110
-#| msgid "Brush Tip"
 msgid "Brush Editor"
 msgstr "Pinsel-Editor"
 
 #. +> trunk
 #: ui/kis_brushengine_selector.cpp:113
-#| msgid "Presets:"
 msgid "Presets"
 msgstr "Vorinstellen"
 
@@ -12209,7 +12184,6 @@ msgstr "Pinselvörinstellen utsöken"
 
 #. +> trunk
 #: ui/kis_paintop_box.cc:115
-#| msgid "Choose brush preset"
 msgid "Choose and edit brush"
 msgstr "Pinsel utsöken un bewerken"
 
@@ -12371,7 +12345,7 @@ msgid "No profile"
 msgstr "Keen Profil"
 
 #. +> trunk stable
-#: ui/kis_view2.cpp:189
+#: ui/kis_view2.cpp:190
 msgid "Total Refresh"
 msgstr "All opfrischen"
 
@@ -12381,65 +12355,64 @@ msgid "Show Dockers"
 msgstr "Andockers wiesen"
 
 #. +> trunk
-#: ui/kis_view2.cpp:194
+#: ui/kis_view2.cpp:195
 msgid "&Create Template From Image..."
 msgstr "Vörlaag ut Bild &opstellen..."
 
 #. +> trunk
-#: ui/kis_view2.cpp:238
+#: ui/kis_view2.cpp:241
 msgid "Mirror Image"
 msgstr "Bild spegeln"
 
 #. +> trunk
-#: ui/kis_view2.cpp:245
+#: ui/kis_view2.cpp:248
 msgid "Rotate Canvas Right"
 msgstr "Lienwand na rechts dreihen"
 
 #. +> trunk
-#: ui/kis_view2.cpp:250
-#| msgid "Rotate Image"
+#: ui/kis_view2.cpp:253
 msgid "Rotate Canvas Left"
 msgstr "Lienwand na links dreihen"
 
 #. +> trunk
-#: ui/kis_view2.cpp:255
+#: ui/kis_view2.cpp:258
 #, fuzzy
 #| msgid "Perspective Transformation"
 msgid "Reset Canvas Transformations"
 msgstr "Kiekwinkel-Ümwanneln"
 
 #. +> trunk stable
-#: ui/kis_view2.cpp:262
+#: ui/kis_view2.cpp:265
 msgid "Tools"
 msgstr "Warktüüch"
 
 #. +> trunk stable
-#: ui/kis_view2.cpp:363
+#: ui/kis_view2.cpp:366
 msgid "Insert as New Layer"
 msgstr "As nieg Laag infögen"
 
 #. +> trunk stable
-#: ui/kis_view2.cpp:364
+#: ui/kis_view2.cpp:367
 msgid "Insert as New Layers"
 msgstr "As niege Lagen infögen"
 
 #. +> trunk stable
-#: ui/kis_view2.cpp:366
+#: ui/kis_view2.cpp:369
 msgid "Open in New Document"
 msgstr "In'n nieg Dokment opmaken"
 
 #. +> trunk stable
-#: ui/kis_view2.cpp:367
+#: ui/kis_view2.cpp:370
 msgid "Open in New Documents"
 msgstr "In nieg Dokmenten opmaken"
 
 #. +> trunk stable
-#: ui/kis_view2.cpp:571
+#: ui/kis_view2.cpp:574
 msgid "Edit Palette..."
 msgstr "Klörensett bewerken..."
 
 #. +> trunk stable
-#: ui/kis_view2.cpp:692 ui/kis_view2.cpp:695
+#: ui/kis_view2.cpp:697 ui/kis_view2.cpp:700
 msgid "Edit Palette"
 msgstr "Klörensett bewerken"
 
@@ -12556,6 +12529,10 @@ msgstr "Metadaten-Tosamenföhrmetood kören"
 #: ui/widgets/kis_wdg_generator.cpp:149 ui/widgets/kis_wdg_generator.cpp:163
 msgid "No configuration options."
 msgstr "Keen Instellenoptschonen."
+
+#~| msgid "Soft brush"
+#~ msgid "soft brush"
+#~ msgstr "Week Pinsel"
 
 #~ msgid "Form"
 #~ msgstr "Form"
