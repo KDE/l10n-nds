@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmymoney\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-09-11 11:34+0200\n"
+"POT-Creation-Date: 2010-09-17 11:21+0200\n"
 "PO-Revision-Date: 2010-09-13 05:59+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -536,6 +536,8 @@ msgstr "QIF warrt importeert ..."
 #. +> trunk
 #: kmymoney/converter/mymoneyqifreader.cpp:412
 #: kmymoney/converter/mymoneytemplate.cpp:76
+#: kmymoney/plugins/csvimport/csvprocessing.cpp:106
+#: kmymoney/plugins/csvimport/investprocessing.cpp:119
 #: kmymoney/views/kmymoneyview.cpp:605
 #, fuzzy, kde-format
 msgid "Error while loading file '%1'."
@@ -545,6 +547,8 @@ msgstr "Fehler bi't Laden vun Datei \"%1\"."
 #: kmymoney/converter/mymoneyqifreader.cpp:414
 #: kmymoney/converter/mymoneyqifreader.cpp:980
 #: kmymoney/converter/mymoneytemplate.cpp:78
+#: kmymoney/plugins/csvimport/csvprocessing.cpp:108
+#: kmymoney/plugins/csvimport/investprocessing.cpp:120
 #: kmymoney/views/kmymoneyview.cpp:607
 msgid "File access error"
 msgstr "Dateitogriepfehler"
@@ -575,7 +579,7 @@ msgstr "Vörgäng laat sik nich tofögen."
 #: kmymoney/converter/mymoneystatementreader.cpp:929
 #: kmymoney/kmymoney.cpp:4657 kmymoney/kmymoney.cpp:4714
 #: kmymoney/views/kbudgetview.cpp:684 kmymoney/views/kbudgetview.cpp:782
-#: kmymoney/views/kbudgetview.cpp:796 kmymoney/views/kpayeesview.cpp:334
+#: kmymoney/views/kbudgetview.cpp:796 kmymoney/views/kpayeesview.cpp:333
 #: kmymoney/views/kpayeesview.cpp:630
 #, fuzzy
 msgid "thrown in"
@@ -678,6 +682,8 @@ msgstr "Datum Indrag Lesen vun Datei dör Aktuell Datum Profil vun Wiedermaken D
 #. +> trunk
 #: kmymoney/converter/mymoneyqifreader.cpp:1048
 #: kmymoney/converter/mymoneyqifreader.cpp:1281
+#: kmymoney/plugins/csvimport/csvprocessing.cpp:413
+#: kmymoney/plugins/csvimport/investprocessing.cpp:764
 msgid "Invalid date format"
 msgstr "Leeg Datumformaat"
 
@@ -1090,7 +1096,7 @@ msgstr "<p>Leeg Beteker <b>%1</b> in Vörlaagdatei <b>%2</b>.</p>"
 #: kmymoney/mymoney/mymoneyaccount.cpp:731 kmymoney/views/kmymoneyview.cpp:787
 #: kmymoney/widgets/kmymoneyaccountselector.cpp:155
 #: kmymoney/widgets/kmymoneyaccountselector.cpp:290
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:449
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:452
 #, fuzzy
 msgid "Asset"
 msgstr "Kapitaal"
@@ -1102,7 +1108,7 @@ msgstr "Kapitaal"
 #: kmymoney/mymoney/mymoneyaccount.cpp:734 kmymoney/views/kmymoneyview.cpp:788
 #: kmymoney/widgets/kmymoneyaccountselector.cpp:156
 #: kmymoney/widgets/kmymoneyaccountselector.cpp:298
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:450
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:453
 #, fuzzy
 msgid "Liability"
 msgstr "Last"
@@ -1138,7 +1144,7 @@ msgstr "Utgaven"
 #: kmymoney/mymoney/mymoneyaccount.cpp:752 kmymoney/views/kmymoneyview.cpp:791
 #: kmymoney/widgets/kmymoneyaccountselector.cpp:159
 #: kmymoney/widgets/kmymoneyaccountselector.cpp:328
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:452
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:455
 #, fuzzy
 msgid "Equity"
 msgstr "Egenkapitaal"
@@ -1277,7 +1283,7 @@ msgstr ""
 #: kmymoney/dialogs/investtransactioneditor.cpp:307
 #: kmymoney/reports/listtable.cpp:240 kmymoney/widgets/transaction.cpp:1477
 #: kmymoney/wizards/endingbalancedlg/interestchargecheckingswizardpagedecl.ui:98
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:294
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:296
 #: kmymoney/wizards/newloanwizard/interestwizardpagedecl.ui:6
 msgid "Interest"
 msgstr "Tinssatz"
@@ -1301,8 +1307,8 @@ msgstr "Tinssatz"
 #: kmymoney/views/kscheduledviewdecl.ui:97 kmymoney/widgets/register.cpp:69
 #: kmymoney/widgets/transaction.cpp:904 kmymoney/widgets/transaction.cpp:1458
 #: kmymoney/widgets/transaction.cpp:1490
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1653
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1659
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1651
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1657
 msgid "Amount"
 msgstr "Bedrag"
 
@@ -1403,6 +1409,7 @@ msgstr "Sekerheit"
 msgid "Asset account"
 msgstr "Konto"
 
+#. i18n: ectx: property (text), widget (QLabel, label_price)
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
 #. i18n: ectx: property (text), widget (QTreeWidget, m_priceList)
 #. i18n: ectx: property (text), widget (KMyMoneyRegister::Register, m_register)
@@ -1421,6 +1428,7 @@ msgstr "Konto"
 #: kmymoney/dialogs/kselecttransactionsdlgdecl.ui:84
 #: kmymoney/dialogs/mymoneyqifprofileeditordecl.ui:539
 #: kmymoney/dialogs/settings/ksettingsonlinequotesdecl.ui:105
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:502
 #: kmymoney/reports/listtable.cpp:228 kmymoney/reports/listtable.cpp:229
 #: kmymoney/reports/pivottable.cpp:2026
 #: kmymoney/widgets/kmymoneyreportconfigtab3decl.ui:188
@@ -1435,6 +1443,7 @@ msgstr "Pries"
 msgid "Activity"
 msgstr "Aktiviteet"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #. i18n: ectx: property (text), widget (QTreeWidget, m_priceList)
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
@@ -1452,6 +1461,7 @@ msgstr "Aktiviteet"
 #: kmymoney/dialogs/mymoneyqifprofileeditordecl.ui:273
 #: kmymoney/dialogs/settings/ksettingsonlinequotesdecl.ui:61
 #: kmymoney/dialogs/transactioneditor.cpp:839
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:403
 #: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:232
 #: kmymoney/reports/listtable.cpp:214 kmymoney/views/khomeview.cpp:406
 #: kmymoney/views/khomeview.cpp:461 kmymoney/views/khomeview.cpp:494
@@ -1461,12 +1471,16 @@ msgid "Date"
 msgstr "Datum"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#. i18n: ectx: property (text), widget (QLabel, label_Memo)
+#. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QCheckBox, m_checkMemo)
 #. +> trunk
 #: kmymoney/dialogs/investtransactioneditor.cpp:313
 #: kmymoney/dialogs/kmymoneysplittable.cpp:82
 #: kmymoney/dialogs/kmymoneysplittable.cpp:796
 #: kmymoney/dialogs/transactioneditor.cpp:833
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:417
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:429
 #: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:78
 #: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:235
 #: kmymoney/reports/listtable.cpp:220
@@ -1510,7 +1524,7 @@ msgstr "Bruken bet un mit nak. een."
 
 #. +> trunk
 #: kmymoney/dialogs/kaccountselectdlg.cpp:69
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1375
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1373
 #: kmymoney/wizards/newloanwizard/assetaccountwizardpage.cpp:46
 #: kmymoney/wizards/newloanwizard/interestcategorywizardpage.cpp:47
 msgid "&Create..."
@@ -2017,8 +2031,8 @@ msgstr "Fastleggen all in bet."
 
 #. +> trunk
 #: kmymoney/dialogs/kcurrencycalculator.cpp:291
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:343
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:348
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:346
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:351
 msgid "User"
 msgstr "Bruker"
 
@@ -2270,48 +2284,48 @@ msgstr "Wegmaken"
 
 #. +> trunk
 #: kmymoney/dialogs/keditscheduledlg.cpp:117
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:684
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:687
 #, fuzzy
 msgid "Direct deposit"
 msgstr "Direktemang"
 
 #. +> trunk
 #: kmymoney/dialogs/keditscheduledlg.cpp:118
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:683
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:686
 #, fuzzy
 msgid "Manual deposit"
 msgstr "Vun Hand"
 
 #. +> trunk
 #: kmymoney/dialogs/keditscheduledlg.cpp:119
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:679
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:682
 #, fuzzy
 msgid "Direct debit"
 msgstr "Direktemang"
 
 #. +> trunk
 #: kmymoney/dialogs/keditscheduledlg.cpp:120
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:682
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:685
 #, fuzzy
 msgid "Standing order"
 msgstr "Reeg"
 
 #. +> trunk
 #: kmymoney/dialogs/keditscheduledlg.cpp:121
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:680
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:683
 msgid "Bank transfer"
 msgstr "Banköverwiesen"
 
 #. +> trunk
 #: kmymoney/dialogs/keditscheduledlg.cpp:122
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:677
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:680
 #, fuzzy
 msgid "Write check"
 msgstr "Schrieven"
 
 #. +> trunk
 #: kmymoney/dialogs/keditscheduledlg.cpp:123
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:685
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:688
 msgctxt "Other payment method"
 msgid "Other"
 msgstr "Anner"
@@ -2332,8 +2346,8 @@ msgstr "Nakamen steiht an Datum"
 #: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:233
 #: kmymoney/widgets/kmymoneyreportconfigtab3decl.ui:233
 #: kmymoney/widgets/register.cpp:70 kmymoney/widgets/transaction.cpp:847
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1587
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1603
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1585
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1601
 #, fuzzy
 msgid "Number"
 msgstr "Tall"
@@ -2376,7 +2390,7 @@ msgstr "Betahlen"
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
 #. +> trunk
 #: kmymoney/dialogs/keditscheduledlgdecl.ui:92
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1655
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1653
 #: kmymoney/wizards/newaccountwizard/kschedulepagedecl.ui:143
 #, fuzzy
 msgid "Payment method"
@@ -2436,6 +2450,7 @@ msgstr "Betahlen"
 msgid "Deposit"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QLabel, label_quantity)
 #. i18n: ectx: property (text), widget (KMyMoneyRegister::Register, m_register)
 #. i18n: ectx: property (text), item, widget (QTreeWidget, m_editAmounts)
 #. +> trunk
@@ -2444,6 +2459,7 @@ msgstr ""
 #: kmymoney/dialogs/kfindtransactiondlgdecl.ui:788
 #: kmymoney/dialogs/kselecttransactionsdlgdecl.ui:79
 #: kmymoney/dialogs/mymoneyqifprofileeditordecl.ui:571
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:518
 #: kmymoney/widgets/register.cpp:502
 msgid "Quantity"
 msgstr "Mengde"
@@ -2547,6 +2563,7 @@ msgstr "Tall vun:"
 msgid "Date of final transaction:"
 msgstr "Datum vun:"
 
+#. i18n: ectx: property (text), widget (KPushButton, pushButton)
 #. i18n: ectx: property (text), widget (KPushButton, m_helpButton)
 #. i18n: ectx: property (text), widget (KPushButton, buttonHelp)
 #. i18n: ectx: property (text), widget (QPushButton, buttonHelp)
@@ -2559,6 +2576,8 @@ msgstr "Datum vun:"
 #: kmymoney/dialogs/kselecttransactionsdlgdecl.ui:104
 #: kmymoney/dialogs/ksortoptiondlg.ui:38
 #: kmymoney/dialogs/mymoneyqifprofileeditordecl.ui:698
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:273
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:319
 #: kmymoney/views/kpayeesviewdecl.ui:497
 msgid "Help"
 msgstr "Hülp"
@@ -3156,8 +3175,8 @@ msgstr "Gellen"
 #: kmymoney/plugins/ofximport/dialogs/konlinebankingsetupwizard.ui:271
 #: kmymoney/reports/listtable.cpp:243
 #: kmymoney/views/kinvestmentviewdecl.ui:170 kmymoney/widgets/register.cpp:72
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1570
 #: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1572
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1574
 msgid "Type"
 msgstr "Typ"
 
@@ -3205,7 +3224,7 @@ msgstr "All Typen"
 #: kmymoney/dialogs/kfindtransactiondlgdecl.ui:520
 #: kmymoney/kmymoneyutils.cpp:169 kmymoney/views/khomeview.cpp:393
 #: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:79
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:877
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:880
 #: kmymoney/wizards/newloanwizard/durationwizardpage.cpp:37
 #: kmymoney/wizards/newloanwizard/newpaymentswizardpagedecl.ui:6
 #, fuzzy
@@ -3321,14 +3340,14 @@ msgstr "Sekern as"
 
 #. +> trunk
 #: kmymoney/dialogs/kgeneratesqldlg.cpp:109
-#: kmymoney/dialogs/kselectdatabasedlg.cpp:95
+#: kmymoney/dialogs/kselectdatabasedlg.cpp:96
 #, fuzzy
 msgid "In order to use a database, you need to install some additional software. Click Help for more information"
 msgstr "In bet a Datenbank bet En poor Klick Hülp för mehr"
 
 #. +> trunk
 #: kmymoney/dialogs/kgeneratesqldlg.cpp:110
-#: kmymoney/dialogs/kselectdatabasedlg.cpp:96
+#: kmymoney/dialogs/kselectdatabasedlg.cpp:97
 #, fuzzy
 msgid "No Qt SQL Drivers"
 msgstr "Nee Qt SQL Drievers"
@@ -3363,7 +3382,7 @@ msgstr "Utgaavdatei utsöken"
 
 #. +> trunk
 #: kmymoney/dialogs/kgeneratesqldlg.cpp:198
-#: kmymoney/dialogs/kselectdatabasedlg.cpp:182
+#: kmymoney/dialogs/kselectdatabasedlg.cpp:183
 #, fuzzy, kde-format
 msgid ""
 "Database type %1 has not been fully tested in a KMyMoney environment.\n"
@@ -3975,8 +3994,8 @@ msgstr "Aktie"
 #: kmymoney/views/kinvestmentviewdecl.ui:214
 #: kmymoney/wizards/newaccountwizard/kaccounttypepagedecl.ui:104
 #: kmymoney/wizards/newaccountwizard/kbrokeragepagedecl.ui:61
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1576
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1601
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1574
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1599
 msgid "Currency"
 msgstr "Geldsort"
 
@@ -4276,7 +4295,7 @@ msgstr "Vörtrocken Konto"
 #: kmymoney/reports/listtable.cpp:248
 #: kmymoney/wizards/newaccountwizard/kinstitutionpagedecl.ui:44
 #: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:75
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1585
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1583
 #, fuzzy
 msgid "Institution"
 msgstr "Organisatschoon"
@@ -4312,8 +4331,8 @@ msgstr ""
 #: kmymoney/dialogs/knewaccountdlgdecl.ui:359
 #: kmymoney/wizards/newaccountwizard/kbrokeragepagedecl.ui:94
 #: kmymoney/wizards/newaccountwizard/kinstitutionpagedecl.ui:87
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1590
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1605
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1588
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1603
 #, fuzzy
 msgid "IBAN"
 msgstr "IBAN"
@@ -4869,45 +4888,7 @@ msgid "Week"
 msgstr "Week"
 
 #. +> trunk
-#: kmymoney/dialogs/kreportconfigurationfilterdlg.cpp:422
-#, fuzzy
-msgctxt "type of graphic chart"
-msgid "Line"
-msgstr "Reeg"
-
-#. +> trunk
-#: kmymoney/dialogs/kreportconfigurationfilterdlg.cpp:425
-#, fuzzy
-#| msgid "Bar"
-msgctxt "type of graphic chart"
-msgid "Bar"
-msgstr "Balken"
-
-#. +> trunk
-#: kmymoney/dialogs/kreportconfigurationfilterdlg.cpp:428
-#, fuzzy
-msgctxt "type of graphic chart"
-msgid "Stacked Bar"
-msgstr "Stapelt Balken"
-
-#. +> trunk
-#: kmymoney/dialogs/kreportconfigurationfilterdlg.cpp:431
-#, fuzzy
-#| msgid "Pie"
-msgctxt "type of graphic chart"
-msgid "Pie"
-msgstr "Koken"
-
-#. +> trunk
-#: kmymoney/dialogs/kreportconfigurationfilterdlg.cpp:434
-#, fuzzy
-#| msgid "Ring"
-msgctxt "type of graphic chart"
-msgid "Ring"
-msgstr "Ring"
-
-#. +> trunk
-#: kmymoney/dialogs/kselectdatabasedlg.cpp:87
+#: kmymoney/dialogs/kselectdatabasedlg.cpp:88
 #, fuzzy, kde-format
 msgid "Qt SQL driver %1 is no longer installed on your system"
 msgstr "Qt SQL is Nee installeert An"
@@ -9716,14 +9697,14 @@ msgstr "Hööft-Warktüüchbalken"
 #. +> trunk
 #: kmymoney/kmymoneyutils.cpp:70 kmymoney/mymoney/mymoneyaccount.cpp:707
 #: kmymoney/reports/querytabletest.cpp:415
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:443
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:446
 #, fuzzy
 msgid "Checking"
 msgstr "Bi to pröven"
 
 #. +> trunk
 #: kmymoney/kmymoneyutils.cpp:72 kmymoney/mymoney/mymoneyaccount.cpp:710
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:444
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:447
 #, fuzzy
 msgid "Savings"
 msgstr "Sparkonto"
@@ -9731,20 +9712,20 @@ msgstr "Sparkonto"
 #. +> trunk
 #: kmymoney/kmymoneyutils.cpp:74 kmymoney/mymoney/mymoneyaccount.cpp:713
 #: kmymoney/reports/querytabletest.cpp:416
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:445
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:448
 msgid "Credit Card"
 msgstr "Kreditkoort"
 
 #. +> trunk
 #: kmymoney/kmymoneyutils.cpp:76 kmymoney/mymoney/mymoneyaccount.cpp:716
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:446
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:449
 msgid "Cash"
 msgstr ""
 
 #. +> trunk
 #: kmymoney/kmymoneyutils.cpp:78 kmymoney/mymoney/mymoneyaccount.cpp:719
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:447
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1572
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:450
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1570
 msgid "Loan"
 msgstr ""
 
@@ -9756,7 +9737,7 @@ msgstr "Zertifikaat vun"
 
 #. +> trunk
 #: kmymoney/kmymoneyutils.cpp:82 kmymoney/mymoney/mymoneyaccount.cpp:725
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:448
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:451
 #, fuzzy
 msgid "Investment"
 msgstr "Geldanlaag"
@@ -9985,7 +9966,7 @@ msgid "Core engine, Release Manager, Project admin"
 msgstr "Karn Utgaav Pleger Projekt"
 
 #. +> trunk
-#: kmymoney/main.cpp:80
+#: kmymoney/main.cpp:80 kmymoney/plugins/csvimport/investmentdlg.cpp:206
 msgid "Ace Jones"
 msgstr "Ace Jones"
 
@@ -10936,6 +10917,1043 @@ msgstr "Berichten warrt sekert..."
 #, fuzzy
 msgid "Saving budgets..."
 msgstr "Sekern."
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlg.cpp:162
+msgid ""
+"That column, or an 'amount', is already selected!                             "
+"<center>Please select a different column.</center>"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlg.cpp:195
+msgid ""
+"That column, or the credit field, is selected already!    "
+"<center>Please select a different column or field.</center>"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlg.cpp:213
+msgid ""
+"That column, or the debit field, is selected already!    "
+"<center>Please select a different column or field.</center>"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlg.cpp:233
+msgid ""
+"That column, or the date field, is selected already!    "
+"<center>Please select a different column or field.</center>"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlg.cpp:249
+msgid ""
+"That column is selected already!    "
+"<center>Please select a different column or field.</center>"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlg.cpp:267
+msgid ""
+"That column, or the payee field, is selected already!    "
+"<center>Please select a different column or field. </center>"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlg.cpp:284
+msgid ""
+"That column, or the number field, is selected already!    "
+"<center>Please select a different column or field.</center>"
+msgstr ""
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, CsvImporterDlgDecl)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:20
+#: kmymoney/plugins/csvimport/investmentdlg.cpp:193
+#, fuzzy
+#| msgid "Imported"
+msgid "CSV Importer"
+msgstr "Importeert"
+
+#. i18n: ectx: property (text), widget (KPushButton, button_open)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:87
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:98
+#, fuzzy
+#| msgid "Open a file."
+msgctxt "to open a file"
+msgid "Open File"
+msgstr "En Datei opmaken"
+
+#. i18n: ectx: property (text), widget (QLabel, labelEncoding_3)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:100
+#, fuzzy
+msgctxt "codec for character-set encoding"
+msgid "Encoding"
+msgstr "Opmaken Datum"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_encoding)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:110
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:121
+msgctxt "verb, Select codec for character-set decoding"
+msgid "Select codec for character-set decoding"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, button_invest)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:135
+msgctxt "verb, Click to display investment window"
+msgid "Click to display investment window"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KPushButton, button_invest)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:138
+#, fuzzy
+msgctxt "select Investment window"
+msgid "Go to Investments"
+msgstr "Geldanlagen"
+
+#. i18n: ectx: property (text), widget (QLabel, label_DateFormat_2)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:158
+#, fuzzy
+#| msgid "Date Format"
+msgctxt "date format to use"
+msgid "Date format"
+msgstr "Datumformaat"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_dateFormat)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:168
+#, fuzzy
+#| msgid "Select templates"
+msgctxt "verb, Select date format"
+msgid "Select date format"
+msgstr "Vörlagen utsöken"
+
+#. i18n: ectx: property (accessibleName), widget (KComboBox, comboBox_dateFormat)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:171
+#, fuzzy
+#| msgid "Date Format"
+msgctxt "abbreviation for 'year', 'month', 'day'"
+msgid "Date format"
+msgstr "Datumformaat"
+
+#. i18n: ectx: property (text), widget (QLabel, label_fieldDelim_2)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:199
+#, fuzzy
+msgctxt "punctuation mark used as field delimiter"
+msgid "Field Delimiter character"
+msgstr "Fast Tins"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_fieldDelim)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:206
+msgctxt "verb, Select field delimiter/separator"
+msgid "Select field delimiter/separator character"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboBox_fieldDelim)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:210
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:254
+msgctxt "punctuation mark  used as field delimiter"
+msgid "Comma (,)"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboBox_fieldDelim)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:215
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:259
+msgctxt "punctuation mark  used as field delimiter"
+msgid "SemiColon (;)"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboBox_fieldDelim)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:220
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:264
+msgctxt "punctuation mark  used as field delimiter"
+msgid "Colon (:)"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboBox_fieldDelim)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:225
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:269
+msgctxt "punctuation mark  used as field delimiter"
+msgid "Tab (\\t)"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboBox_fieldDelim)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:230
+msgctxt "punctuation markcombination  used as field delimiter"
+msgid "Quote (\\\",\\\")"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:323
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:364
+msgid "Input Columns and Parameters to use"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:363
+#, fuzzy
+msgctxt "column containing number field"
+msgid "Number"
+msgstr "Tall"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:381
+#, fuzzy
+#| msgid "Columns"
+msgid "Date Column"
+msgstr "Striepen"
+
+#. i18n: ectx: property (text), widget (QLabel, label_Memo)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:399
+#, fuzzy
+#| msgid "Description"
+msgctxt "column containing payee or description field"
+msgid "Payee/Description"
+msgstr "Beschrieven"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_numberCol)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:445
+msgctxt "verb, Select column containing number field."
+msgid "Select column containing number field."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_dateCol)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:460
+msgctxt "verb, Select column containing number field."
+msgid "Select column containing date field."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_payeeCol)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:475
+msgctxt "verb, Select column containing payee or description field."
+msgid "Select column containing payee or description field."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_memoCol)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:491
+msgctxt "verb, Select column containing memo field. More than one column may be entered successively."
+msgid ""
+"Select column containing memo field.\n"
+" More than one column may be entered successively."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, radio_amount)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:510
+msgctxt "Select 'Amount' if only one value column, otherwise select 'Debit/credit'."
+msgid "Select 'Amount' if only one value column, otherwise select 'Debit/credit'."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, radio_amount)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:519
+#, fuzzy
+msgctxt "presence of amount column"
+msgid "Amount column"
+msgstr "Mengde"
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, radio_debCred)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:547
+msgctxt "verb, Select 'Debit/credit' if both columns exist,, otherwise select 'Amount'."
+msgid "Select 'Debit/credit' if both columns exist, otherwise select 'Amount'."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, radio_debCred)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:553
+msgctxt "presence of debit/credit columns"
+msgid "Debit / credit columns"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, button_clear)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:563
+#, fuzzy
+msgctxt "Clear selected column entries"
+msgid "Clear selected column entries"
+msgstr "Wegdoon Born Indrag"
+
+#. i18n: ectx: property (text), widget (KPushButton, button_clear)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:566
+#, fuzzy
+#| msgid "Category selection"
+msgctxt "verb, to clear selected columns"
+msgid "Clear selections"
+msgstr "Kategorieköör"
+
+#. i18n: ectx: property (text), widget (QLabel, label_amount)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:597
+#, fuzzy
+msgctxt "location of amount column"
+msgid "Amount in Col..."
+msgstr "Mengde is:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_debits)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:615
+msgctxt "location of debit column"
+msgid "Debits in Col..."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_credits)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:633
+msgctxt "location of credit column"
+msgid "Credits in Col..."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_amountCol)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:661
+msgid "Select column containing amount field."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_debitCol)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:676
+msgctxt "verb, Select column containing debit field."
+msgid "Select column containing debit field."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_creditCol)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:691
+msgctxt "verb, Select column containing credit field."
+msgid "Select column containing credit field."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_skip)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:721
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:758
+#, fuzzy
+msgid "Start line.."
+msgstr "Start An:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, spinBox_skip)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:739
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:771
+msgctxt "verb, Select first line to be imported"
+msgid "Select first line to be imported"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_skipTo)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:763
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:790
+#, fuzzy
+#| msgid "Loading prices..."
+msgid "End line.."
+msgstr "Priesen warrt laadt..."
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, spinBox_skipLast)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:782
+msgctxt "verb, Select last line to be imported.  Ensure no trailer lines are imported."
+msgid ""
+"Select last line to be imported.\n"
+"Ensure no trailer lines are imported."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, checkBox_qif)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:809
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:826
+msgctxt "verb, Click when ready to proceed."
+msgid "Click when ready to proceed."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox_qif)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:815
+#, fuzzy
+#| msgctxt "Accept 'imported' and 'matched' transaction"
+#| msgid "Accept"
+msgctxt "verb to accept"
+msgid "Accept"
+msgstr "Annehmen"
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, button_saveAs)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:822
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:839
+msgctxt "verb, Click if a QIF file is required, after clicking accept"
+msgid "Click if a QIF file is required, after clicking accept"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KPushButton, button_saveAs)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:825
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:842
+#, fuzzy
+#| msgid "Save As"
+msgctxt "verb to save QIF file"
+msgid "Save as QIF"
+msgstr "Sekern as"
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, button_close)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:832
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:849
+#, fuzzy
+msgctxt "verb, Click to close this window"
+msgid "Click to close this window"
+msgstr "Dit Finster tomaken"
+
+#. i18n: ectx: property (text), widget (KPushButton, button_close)
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterdlgdecl.ui:835
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:852
+#, fuzzy
+#| msgid "Quantity"
+msgctxt "verb to exit form"
+msgid "Quit"
+msgstr "Mengde"
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvimporterplugin.cpp:69
+#, fuzzy
+#| msgid "CSV"
+msgid "CSV..."
+msgstr "CSV"
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvprocessing.cpp:92
+#: kmymoney/plugins/csvimport/investprocessing.cpp:108
+#, fuzzy
+#| msgid ""
+#| "*.xml|XML files\n"
+#| " *.*|All files (*.*)"
+msgid ""
+"*.csv *.PRN *.txt | CSV Files\n"
+" *.*|All files (*.*)"
+msgstr ""
+"*.xml|XML-Dateien\n"
+" *.*|All Dateien (*.*)"
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvprocessing.cpp:409
+#, fuzzy, kde-format
+msgid ""
+"The date entry \"%1\" read from the file cannot be interpreted through the current date format setting of \"%2.\"\n"
+"\n"
+"Pressing 'Continue' will assign today's date to the transaction. Pressing 'Cancel'' will abort the import operation. You can then restart the import and select a different date format."
+msgstr "Datum Indrag Lesen vun Datei dör Aktuell Datum Profil vun Wiedermaken Datum bet Afbreken Importeren Du Büss restart Importeren un a QIF Profil oder a Nieg een."
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvprocessing.cpp:470
+msgid "date ERROR"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvprocessing.cpp:472
+#, kde-format
+msgid ""
+"<center>        An invalid date has been detected during import.</center>"
+"        "
+"<center><b>%1</b></center>"
+"        Please check that you have set the correct date format."
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvprocessing.cpp:476
+#: kmymoney/plugins/csvimport/investprocessing.cpp:522
+#: kmymoney/plugins/csvimport/investprocessing.cpp:537
+#: kmymoney/plugins/csvimport/investprocessing.cpp:701
+#: kmymoney/plugins/csvimport/redefinedlg.cpp:234
+#, fuzzy
+#| msgid "Import"
+msgid "CSV import"
+msgstr "Importeren"
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvprocessing.cpp:556
+msgid ""
+"<center>An amount-type column, and Date and        Payee columns are needed!</center>"
+"        "
+"<center>Please try again.</center>"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/csvprocessing.cpp:631
+#: kmymoney/plugins/csvimport/investprocessing.cpp:871
+#, fuzzy
+#| msgid "Save As"
+msgid "Save QIF"
+msgstr "Sekern as"
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlg.cpp:194
+msgid ""
+"A plugin to enable import of \n"
+"   CSV format files into KMyMoney."
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlg.cpp:195
+msgid "Copyright (c) 2010 Allan Anderson"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlg.cpp:198
+#, fuzzy
+#| msgid "Information"
+msgid "Information..."
+msgstr "Informatschonen"
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlg.cpp:205
+#, fuzzy
+msgid "Allan Anderson"
+msgstr "All Daten"
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlg.cpp:205
+#, fuzzy
+#| msgid "Import options"
+msgid "CSV Importer plugin"
+msgstr "Importoptschonen"
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlg.cpp:206
+msgid "Original OFX Importer plugin"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlg.cpp:207
+#, fuzzy
+msgid "The KMyMoney development team"
+msgstr "© 2000-2009: De Makers vun KMymoney"
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlg.cpp:207
+msgid "For help and guidance"
+msgstr ""
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, InvestmentDlgDecl)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:20
+#, fuzzy
+msgid "Investment Importer"
+msgstr "Geldanlaag Typ"
+
+#. i18n: ectx: property (text), widget (QLabel, labelEncoding)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:111
+msgctxt "codec for character-set encoding"
+msgid "Encoding  "
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, button_banking)
+#. i18n: ectx: property (accessibleName), widget (KPushButton, button_banking)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:146
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:149
+msgctxt "verb, Switch to Banking window"
+msgid "Switch to Banking window"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KPushButton, button_banking)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:152
+msgctxt "select banking window"
+msgid "Go to Banking"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_DateFormat)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:196
+#, fuzzy
+#| msgid "Date Format"
+msgid "Date format"
+msgstr "Datumformaat"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_dateFormat)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:206
+#, fuzzy
+#| msgid "Select templates"
+msgid "Select date format"
+msgstr "Vörlagen utsöken"
+
+#. i18n: ectx: property (accessibleName), widget (KComboBox, comboBox_dateFormat)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:209
+#, fuzzy
+#| msgid "Invalid date format"
+msgctxt "abbreviation for 'year', 'month', 'day'"
+msgid "adjective, date format"
+msgstr "Leeg Datumformaat"
+
+#. i18n: ectx: property (text), widget (QLabel, label_fieldDelim)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:237
+#, fuzzy
+msgid "Field Delimiter character"
+msgstr "Fast Tins"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_fieldDelim)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:250
+msgctxt "verb, Select field delimiter/separator character"
+msgid "Select field delimiter/separator character"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboBox_fieldDelim)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:274
+msgctxt "punctuation mark  combination used as field delimiter"
+msgid "Quote (\\\",\\\")"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label)
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_dateCol)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:397
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:442
+msgctxt "verb, Select column containing date field"
+msgid "Select column containing date field"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:416
+#, fuzzy
+#| msgid "Action"
+msgctxt "column containing investment type/action field"
+msgid "Type/Action"
+msgstr "Akschoon"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_typeCol)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:452
+msgctxt "verb, Select column containing investment type field"
+msgid "Select column containing investment type field"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_memoCol)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:465
+msgctxt "verb, Select column containing memo field. More than one column may be entered successively."
+msgid "Select column containing memo field. More than one column may be entered successively."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_amount)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:531
+#, fuzzy
+#| msgid "Amount"
+msgctxt "column for monetary value"
+msgid "Amount"
+msgstr "Bedrag"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_priceCol)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:544
+msgctxt "Select column containing price field"
+msgid "Select column containing price field"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_quantityCol)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:554
+msgctxt "Select column containing quantity field"
+msgid "Select column containing quantity field"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_amountCol)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:564
+msgctxt "Select column containing amount field"
+msgid "Select column containing amount field"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:604
+#, fuzzy
+#| msgid "Price precision"
+msgctxt "noun, fraction/multiplier to use"
+msgid "Price Fraction"
+msgstr "Priesnauigkeit"
+
+#. i18n: ectx: property (text), widget (QLabel, label_feeCol)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:620
+#, fuzzy
+#| msgid "Columns"
+msgctxt "column containing fee field"
+msgid "Fee Column"
+msgstr "Striepen"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, checkBox_feeType)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:633
+msgctxt "Check as in click"
+msgid "Check if any fee is a percentage figure rather than a value"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox_feeType)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:642
+msgctxt "select if fee is a percentage (not value)"
+msgid "Fee is  Percentage"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_priceFraction)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:655
+msgctxt "verb, If necessary, select fractio/multiplier for compatibility between imported and stored prices, for instance, if one is in dollars and the other in cents."
+msgid ""
+"If necessary, select fraction/multiplier for compatibility \n"
+"between imported and stored prices.  For instance, if \n"
+"the import price is in cents  but the file is priced in dollars,\n"
+"select 0.01."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, comboBox_feeCol)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:698
+msgctxt "verb, If necessary, select column containing fee.  Warning. This might already have been incorporated into the price"
+msgid ""
+"If necessary, select column containing fee.  \n"
+"Warning. This might already have been \n"
+"incorporated into the price"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_security)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:721
+#, fuzzy
+msgid "Security Name  "
+msgstr "Sekerheit"
+
+#. i18n: ectx: property (toolTip), widget (KLineEdit, lineEdit_securityName)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:731
+#, fuzzy
+msgctxt "verb, Enter name of security"
+msgid "Enter name of security"
+msgstr "Opstellen"
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, button_clear)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:738
+#, fuzzy
+msgctxt "verb, Clear selected column entries"
+msgid "Clear selected column entries"
+msgstr "Wegdoon Born Indrag"
+
+#. i18n: ectx: property (text), widget (KPushButton, button_clear)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:741
+#, fuzzy
+#| msgid "Category selection"
+msgctxt "verb, to clear selected columns"
+msgid "Clear Selections"
+msgstr "Kategorieköör"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, spinBox_skipLast)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:804
+msgctxt "verb, Select last line to be imported.  Ensure no trailer lines are imported."
+msgid ""
+"Select last line to be imported.  \n"
+"Ensure no trailer lines are included."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox_qif)
+#. +> trunk
+#: kmymoney/plugins/csvimport/investmentdlgdecl.ui:832
+#, fuzzy
+#| msgctxt "Accept 'imported' and 'matched' transaction"
+#| msgid "Accept"
+msgid "Accept"
+msgstr "Annehmen"
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:207
+msgid ""
+"That column, or the date field, is already selected!                                     "
+"<center>Please select a different column or field.</center>"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:268
+msgid ""
+"That column, or the fee field, is already selected!                                     "
+"<center>Please select a different column or field.</center>"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:286
+msgid ""
+"That column, or the type field, is already selected!                                     "
+"<center>Please select a different column or field.</center>"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:303
+msgid ""
+"That column is already selected!                                     "
+"<center>Please select a different column or field.</center>"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:320
+msgid ""
+"That column, or the quantity field, is already selected!                                     "
+"<center>Please select a different column or field.</center>"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:337
+msgid ""
+"That column, or the price field, is already selected!                                     "
+"<center>Please select a different column or field.</center>"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:355
+msgid ""
+"That column, or the amount field, is already selected!                                     "
+"<center>Please select a different column or field.</center>"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:518
+#, kde-format
+msgid ""
+"<center>                    An invalid date has been detected during import.</center>"
+"                    "
+"<center><b>%1</b></center>"
+"                    Please check that you have set the correct date format."
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:534
+#, kde-format
+msgid ""
+"<center>                          The type/action that has been detected during import is empty.</center>"
+"                          "
+"<center><b>%1</b></center>"
+"                          Check that you have selected the correct column."
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:612
+msgid ""
+"The quantity, Price and amount parameters in the\n"
+"    current transaction don't match with the action type.\n"
+" Please select another action type\n"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:625
+#, fuzzy
+msgid "   Brokerage or Chk. Account name:"
+msgstr "Konto"
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:659
+msgid ""
+"buyList of transaction types was not found!    "
+"<center>Check existence of correct resource file - 'csvimporterrc'.</center>"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:694
+#, fuzzy
+msgid " inv  Brokerage or Chk. Account name:"
+msgstr "Konto"
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:698
+msgid "Enter Payee or Detail Column:"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:700
+#, kde-format
+msgid ""
+"An invalid column was entered.\n"
+"  Must be between 1 and %1."
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:735
+msgid ""
+" The transaction below has an unrecognised type/action. \n"
+"     Please select an appropriate entry."
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:757
+#, fuzzy, kde-format
+msgid ""
+"The date entry \"%1\" read from the file                          cannot be interpreted through the current date format setting of \"%2.\"\n"
+"\n"
+"Pressing 'Continue' will assign today's date to the transaction. Pressing 'Cancel'' will abort the import operation. You can then restart the import and select a different date format."
+msgstr "Datum Indrag Lesen vun Datei dör Aktuell Datum Profil vun Wiedermaken Datum bet Afbreken Importeren Du Büss restart Importeren un a QIF Profil oder a Nieg een."
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:856
+msgid ""
+"The Security Name, and Date and Type columns are needed!                                       "
+"<center>Also, the Price, Quantity and Amount columns.</center>"
+"                                       "
+"<center>Please try again.</center>"
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:914
+#, fuzzy
+#| msgid "Account number"
+msgid "Enter column number"
+msgstr "Kontonummer"
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/investprocessing.cpp:924
+#, fuzzy
+msgid "Parameters"
+msgstr "Betahlen"
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/redefinedlg.cpp:231
+msgid ""
+" The values in the columns you have selected                                      \n"
+" do not match any expected investment type.                                      \n"
+" Please check the fields in the current transaction,                                      \n"
+"                   and also your selections."
+msgstr ""
+
+#. +> trunk
+#: kmymoney/plugins/csvimport/redefinedlg.cpp:242
+#, fuzzy
+#| msgid "Account name"
+msgid "Enter Account Name"
+msgstr "Kontonaam"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, RedefineDlgDecl)
+#. +> trunk
+#: kmymoney/plugins/csvimport/redefinedlgdecl.ui:20
+#, fuzzy
+msgid "Redefine Transaction Type"
+msgstr "Bi't Wegdoon"
+
+#. i18n: ectx: property (text), widget (QLabel, label_title)
+#. +> trunk
+#: kmymoney/plugins/csvimport/redefinedlgdecl.ui:36
+#, fuzzy
+#| msgid "Invalid transaction"
+msgid "Invalid Transaction Type"
+msgstr "Leeg Vörgang"
+
+#. i18n: ectx: property (text), widget (QLabel, label_info)
+#. +> trunk
+#: kmymoney/plugins/csvimport/redefinedlgdecl.ui:47
+msgid ""
+" The transaction below has an unrecognised type/action.\n"
+" Please select an appropriate entry."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_actionCol)
+#. +> trunk
+#: kmymoney/plugins/csvimport/redefinedlgdecl.ui:60
+msgctxt "the number of the column containing error"
+msgid "Type/action column"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. +> trunk
+#: kmymoney/plugins/csvimport/redefinedlgdecl.ui:103
+#, fuzzy
+msgid "Select Transaction Type"
+msgstr "Utsöken"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, kcombobox_Actions)
+#. +> trunk
+#: kmymoney/plugins/csvimport/redefinedlgdecl.ui:110
+#, fuzzy
+msgid "Select new investment type"
+msgstr "Wegdoon"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcombobox_Actions)
+#. +> trunk
+#: kmymoney/plugins/csvimport/redefinedlgdecl.ui:120
+#, fuzzy
+#| msgid "Shares"
+msgctxt "description of investment activity"
+msgid "Buy Shares-buy"
+msgstr "Aktien"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcombobox_Actions)
+#. +> trunk
+#: kmymoney/plugins/csvimport/redefinedlgdecl.ui:125
+#, fuzzy
+#| msgid "Sell shares"
+msgctxt "description of investment activity"
+msgid "Sell Shares-sell"
+msgstr "Aktien verköpen"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcombobox_Actions)
+#. +> trunk
+#: kmymoney/plugins/csvimport/redefinedlgdecl.ui:130
+#, fuzzy
+msgctxt "description of investment activity"
+msgid "Dividend-divx"
+msgstr "Dividenn"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcombobox_Actions)
+#. +> trunk
+#: kmymoney/plugins/csvimport/redefinedlgdecl.ui:135
+#, fuzzy
+msgctxt "description of investment activity"
+msgid "Reinvest Dividend-reinvdiv"
+msgstr "Utdruck"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcombobox_Actions)
+#. +> trunk
+#: kmymoney/plugins/csvimport/redefinedlgdecl.ui:140
+#, fuzzy
+msgctxt "description of investment activity"
+msgid "Add Shares-shrsin"
+msgstr "Tofögen"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcombobox_Actions)
+#. +> trunk
+#: kmymoney/plugins/csvimport/redefinedlgdecl.ui:145
+#, fuzzy
+msgctxt "description of investment activity"
+msgid "Remove Shares-shrsout"
+msgstr "Wegmaken"
 
 #. +> trunk
 #: kmymoney/plugins/icalendarexport/icalendarexport.cpp:66
@@ -12664,8 +13682,8 @@ msgstr "Ingaav An Geldanlaag"
 
 #. +> trunk
 #: kmymoney/reports/listtable.cpp:244
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1568
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1600
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1566
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1598
 msgctxt "Account name"
 msgid "Name"
 msgstr "Naam"
@@ -12679,7 +13697,7 @@ msgstr "Nakamen Steiht an Datum"
 
 #. +> trunk
 #: kmymoney/reports/listtable.cpp:246
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1658
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1656
 #, fuzzy
 msgid "Occurrence"
 msgstr "Tahlmiddeln"
@@ -13105,7 +14123,7 @@ msgid "Do you want to save the changes for <b>%1</b>"
 msgstr "bet för<b></b>"
 
 #. +> trunk
-#: kmymoney/views/kbudgetview.cpp:545 kmymoney/views/kpayeesview.cpp:377
+#: kmymoney/views/kbudgetview.cpp:545 kmymoney/views/kpayeesview.cpp:376
 msgid "Save changes"
 msgstr "Ännern sekern"
 
@@ -15243,19 +16261,19 @@ msgid "Update"
 msgstr "Opfrischen"
 
 #. +> trunk
-#: kmymoney/views/kpayeesview.cpp:307
+#: kmymoney/views/kpayeesview.cpp:306
 #, fuzzy, kde-format
 msgid "A payee with the name '%1' already exists. It is not advisable to have multiple payees with the same identification name. Are you sure you would like to rename the payee?"
 msgstr "A mit Naam is nich bet mehr as een Steern mit Naam liek as bet?"
 
 #. +> trunk
-#: kmymoney/views/kpayeesview.cpp:333 kmymoney/views/kpayeesview.cpp:629
+#: kmymoney/views/kpayeesview.cpp:332 kmymoney/views/kpayeesview.cpp:629
 #, fuzzy
 msgid "Unable to modify payee"
 msgstr "bet"
 
 #. +> trunk
-#: kmymoney/views/kpayeesview.cpp:376
+#: kmymoney/views/kpayeesview.cpp:375
 #, fuzzy, kde-format
 msgid "Do you want to save the changes for <b>%1</b>?"
 msgstr "bet för<b></b>?"
@@ -16923,127 +17941,125 @@ msgstr "Stüern"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, kMyMoneyReportConfigTabChartDecl)
 #. +> trunk
-#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:17
+#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:14
 #, fuzzy
 msgid "Chart Tab"
 msgstr "Diagramm Tabulator"
 
 #. i18n: ectx: property (whatsThis), widget (QWidget, kMyMoneyReportConfigTabChartDecl)
 #. +> trunk
-#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:23
+#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:20
 #, fuzzy
 msgid "<p>On this tab, you configure the chart drawn for this report.</p>"
 msgstr "<p> An Diagramm Bericht</p>"
 
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#. +> trunk
-#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:39
-#, fuzzy
-msgid "Chart Type"
-msgstr "Diagrammtyp"
-
 #. i18n: ectx: property (toolTip), widget (QLabel, textLabel1)
 #. +> trunk
-#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:42
+#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:34
 #, fuzzy
 msgid "<p>Select what form you would like the chart to be drawn as.</p>"
 msgstr "<p> Utsöken kiekwark liek as Diagramm bet as</p>"
 
-#. i18n: ectx: property (text), item, widget (KComboBox, m_comboType)
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #. +> trunk
-#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:53
+#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:37
 #, fuzzy
-msgctxt "@item type of chart"
-msgid "Line"
-msgstr "Reeg"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_comboType)
-#. +> trunk
-#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:58
-#, fuzzy
-#| msgid "Bar"
-msgctxt "@item type of chart"
-msgid "Bar"
-msgstr "Balken"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_comboType)
-#. +> trunk
-#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:63
-#, fuzzy
-msgctxt "@item type of chart"
-msgid "Stacked Bar"
-msgstr "Stapelt Balken"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_comboType)
-#. +> trunk
-#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:68
-#, fuzzy
-#| msgid "Pie"
-msgctxt "@item type of chart"
-msgid "Pie"
-msgstr "Koken"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_comboType)
-#. +> trunk
-#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:73
-msgid "Ring"
-msgstr "Ring"
-
-#. i18n: ectx: property (text), widget (QCheckBox, m_checkGridLines)
-#. +> trunk
-#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:99
-#, fuzzy
-msgid "Show grid lines"
-msgstr "Gadderlienen wiesen"
+msgid "Chart Type"
+msgstr "Diagrammtyp"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_checkGridLines)
 #. +> trunk
-#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:102
+#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:68
 #, fuzzy
 msgid "<p>Select this option to show horizontal and vertical grid lines on the chart.</p>"
 msgstr "<p> Utsöken bet un Regen An Diagramm</p>"
 
-#. i18n: ectx: property (text), widget (QCheckBox, m_checkValues)
+#. i18n: ectx: property (text), widget (QCheckBox, m_checkGridLines)
 #. +> trunk
-#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:109
+#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:71
 #, fuzzy
-msgid "Draw values on chart"
-msgstr "Teken An Diagramm"
+msgid "Show grid lines"
+msgstr "Gadderlienen wiesen"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_checkValues)
 #. +> trunk
-#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:112
+#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:78
 #, fuzzy
 msgid "<p>Select this option to draw the numeric values for data points next to their plot location.</p>"
 msgstr "<p> Utsöken bet för Pünkt nak. bet Teken Standoort</p>"
 
-#. i18n: ectx: property (text), widget (QCheckBox, m_checkShowChart)
+#. i18n: ectx: property (text), widget (QCheckBox, m_checkValues)
 #. +> trunk
-#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:119
+#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:81
 #, fuzzy
-msgid "Show as chart by default"
-msgstr "Wiesen as Diagramm to Standard"
+msgid "Draw values on chart"
+msgstr "Teken An Diagramm"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_checkShowChart)
 #. +> trunk
-#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:122
+#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:88
 #, fuzzy
 msgid "<p>Select this option to cause the report to be shown as a chart when you first open the report.  Otherwise, it will come up as a text report.</p>"
 msgstr "<p> Utsöken bet Bericht bet as a Diagramm Bericht as a Text Bericht</p>"
 
+#. i18n: ectx: property (text), widget (QCheckBox, m_checkShowChart)
+#. +> trunk
+#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:91
+#, fuzzy
+msgid "Show as chart by default"
+msgstr "Wiesen as Diagramm to Standard"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, textLabel6)
+#. +> trunk
+#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:106
+#, fuzzy
+msgid "<p>Select what width should be used to draw the line on the chart</p>"
+msgstr "<p> Utsöken Breed bet Reeg An Diagramm</p>"
+
 #. i18n: ectx: property (text), widget (QLabel, textLabel6)
 #. +> trunk
-#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:139
+#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:109
 #, fuzzy
 msgid "Line width"
 msgstr "Lienenbreed"
 
-#. i18n: ectx: property (toolTip), widget (QLabel, textLabel6)
 #. +> trunk
-#: kmymoney/widgets/kmymoneyreportconfigtabchartdecl.ui:142
+#: kmymoney/widgets/kmymoneyreportconfigtabimpl.cpp:57
 #, fuzzy
-msgid "<p>Select what width should be used to draw the line on the chart</p>"
-msgstr "<p> Utsöken Breed bet Reeg An Diagramm</p>"
+msgctxt "type of graphic chart"
+msgid "Line"
+msgstr "Reeg"
+
+#. +> trunk
+#: kmymoney/widgets/kmymoneyreportconfigtabimpl.cpp:58
+#, fuzzy
+#| msgid "Bar"
+msgctxt "type of graphic chart"
+msgid "Bar"
+msgstr "Balken"
+
+#. +> trunk
+#: kmymoney/widgets/kmymoneyreportconfigtabimpl.cpp:59
+#, fuzzy
+msgctxt "type of graphic chart"
+msgid "Stacked Bar"
+msgstr "Stapelt Balken"
+
+#. +> trunk
+#: kmymoney/widgets/kmymoneyreportconfigtabimpl.cpp:60
+#, fuzzy
+#| msgid "Pie"
+msgctxt "type of graphic chart"
+msgid "Pie"
+msgstr "Koken"
+
+#. +> trunk
+#: kmymoney/widgets/kmymoneyreportconfigtabimpl.cpp:61
+#, fuzzy
+#| msgid "Ring"
+msgctxt "type of graphic chart"
+msgid "Ring"
+msgstr "Ring"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, kMyMoneyReportControlDecl)
 #. +> trunk
@@ -17746,7 +18762,7 @@ msgstr "Utsöken in Konto is."
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #. +> trunk
 #: kmymoney/wizards/newaccountwizard/kaccounttypepagedecl.ui:143
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1577
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1575
 #: kmymoney/wizards/newuserwizard/kaccountpagedecl.ui:100
 #, fuzzy
 msgid "Opening date"
@@ -17770,7 +18786,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
 #. +> trunk
 #: kmymoney/wizards/newaccountwizard/kaccounttypepagedecl.ui:164
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1582
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1580
 #: kmymoney/wizards/newuserwizard/kaccountpagedecl.ui:157
 #, fuzzy
 msgid "Opening balance"
@@ -17789,7 +18805,7 @@ msgstr "An't opmaken is vun Konto Start mit Nieg is för Mai Konto bet Grafik Ut
 #. i18n: ectx: property (text), widget (QLabel, m_conversionLabel)
 #. +> trunk
 #: kmymoney/wizards/newaccountwizard/kaccounttypepagedecl.ui:194
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1579
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1577
 #, fuzzy
 msgid "Conversion rate"
 msgstr "Ümwanneln Tins"
@@ -18008,7 +19024,7 @@ msgstr "Du bet vun vun Johr nich bet vun An Januor 1. vun Johr."
 #. i18n: ectx: attribute (title), widget (QWizardPage, PaymentFrequencyWizardPageDecl)
 #. +> trunk
 #: kmymoney/wizards/newaccountwizard/kgeneralloaninfopagedecl.ui:161
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1623
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1621
 #: kmymoney/wizards/newloanwizard/paymentfrequencywizardpagedecl.ui:6
 #, fuzzy
 msgid "Payment frequency"
@@ -18247,7 +19263,7 @@ msgstr "Ingaav vun in Feld bet Feld Utgaav vun Anner Parameters leddig Feld is a
 #. i18n: ectx: property (text), widget (QLabel, TextLabel6_5)
 #. +> trunk
 #: kmymoney/wizards/newaccountwizard/kloandetailspagedecl.ui:97
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1619
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1617
 #: kmymoney/wizards/newloanwizard/interesteditwizardpagedecl.ui:103
 #: kmymoney/wizards/newloanwizard/interestwizardpagedecl.ui:56
 #, fuzzy
@@ -18350,7 +19366,7 @@ msgstr "+"
 #. i18n: ectx: property (text), widget (KPushButton, m_additionalFeesButton)
 #. +> trunk
 #: kmymoney/wizards/newaccountwizard/kloanpaymentpagedecl.ui:91
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1622
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1620
 #, fuzzy
 msgid "Additional fees"
 msgstr "Bito"
@@ -18449,7 +19465,7 @@ msgstr "Kategorie Deel vun bet bet Kategorie In Kategorie."
 #. i18n: ectx: property (text), widget (QLabel, textLabel8)
 #. +> trunk
 #: kmymoney/wizards/newaccountwizard/kloanschedulepagedecl.ui:55
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1624
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1622
 #, fuzzy
 msgid "Payment account"
 msgstr "Betahlen Konto"
@@ -18522,102 +19538,102 @@ msgid "Amortization"
 msgstr ""
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:548
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:551
 #, fuzzy
 msgid "Please make sure to enter the correct conversion for the selected opening date. If you requested an online quote it might be provided for a different date."
 msgstr "bet för An't opmaken Datum tokoppelt för a Datum."
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:548
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:551
 #, fuzzy
 msgid "Check date"
 msgstr "Pröven Datum"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:555
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:558
 #, fuzzy, kde-format
 msgid "1 %1 equals %2"
 msgstr "is liek to 2"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:568
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:571
 #, fuzzy
 msgid "Conversion rate is not positive"
 msgstr "Ümwanneln Tins is nich positiev"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:574
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:577
 #, fuzzy
 msgid "No account name supplied"
 msgstr "Nee Konto Naam"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:694
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:697
 #, fuzzy, kde-format
 msgid "Credit Card %1 monthly payment"
 msgstr "Kreditkoort"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:700
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:703
 #, fuzzy
 msgid "Finish entry and create account"
 msgstr "Afsluten Indrag un Konto"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:702
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:705
 #, fuzzy
 msgid "Finish entry and create account and schedule"
 msgstr "Afsluten Indrag un Konto un"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:705
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:708
 #, fuzzy
 msgid "Next due date is prior to opening date"
 msgstr "Nakamen steiht an Datum is bet An't opmaken Datum"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:709
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:712
 msgid "No account selected"
 msgstr "Keen Konto utsöcht"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:713
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:716
 #, fuzzy
 msgid "No amount for payment selected"
 msgstr "Nee för"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:717
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:720
 #, fuzzy
 msgid "No payee for payment selected"
 msgstr "Nee för"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:721
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:724
 #, fuzzy
 msgid "No name assigned for schedule"
 msgstr "Nee Naam för"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:802
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:805
 #, fuzzy
 msgid "No payee supplied"
 msgstr "Nee"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:816
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:819
 #, fuzzy
 msgid "No opening balance supplied"
 msgstr "Nee An't opmaken"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:823
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:826
 #, fuzzy
 msgid "An interest change can only happen after the first payment"
 msgstr "Büss"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:881
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:884
 #: kmymoney/wizards/newloanwizard/durationwizardpage.cpp:35
 #: kmymoney/wizards/newloanwizard/variableinterestdatewizardpage.cpp:38
 #, fuzzy
@@ -18625,8 +19641,8 @@ msgid "Months"
 msgstr "Maanden"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:882
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:886
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:885
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:889
 #: kmymoney/wizards/newloanwizard/durationwizardpage.cpp:36
 #: kmymoney/wizards/newloanwizard/variableinterestdatewizardpage.cpp:39
 #, fuzzy
@@ -18634,78 +19650,78 @@ msgid "Years"
 msgstr "Johren"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:958
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:961
 #: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:411
 #, fuzzy, kde-format
 msgid "KMyMoney has calculated the amount of the loan as %1."
 msgstr "vun as."
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:970
-#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:423
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:968
+#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:418
 #, fuzzy, kde-format
 msgid "KMyMoney has calculated the interest rate to %1%."
 msgstr "Tins bet."
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:982
-#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:435
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:980
+#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:430
 #, fuzzy, kde-format
 msgid "KMyMoney has calculated a periodic payment of %1 to cover principal and interest."
 msgstr "a vun bet un."
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:993
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:991
 #, fuzzy, kde-format
 msgid "The number of payments has been decremented and the balloon payment has been modified to %1."
 msgstr "Tall vun un ännert bet."
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1000
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1018
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:998
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1016
 #, fuzzy, kde-format
 msgid "The balloon payment has been modified to %1."
 msgstr "ännert bet."
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1011
-#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:465
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1009
+#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:460
 #, fuzzy, kde-format
 msgid "KMyMoney has calculated the term of your loan as %1. "
 msgstr "Utdruck vun as "
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1048
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1046
 #, fuzzy, kde-format
 msgid "KMyMoney has calculated a balloon payment of %1 for this loan."
 msgstr "a vun för."
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1054
-#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:510
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1052
+#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:505
 msgid "KMyMoney has successfully verified your loan information."
 msgstr ""
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1062
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1060
 #, fuzzy
 msgid "You have entered mis-matching information. Please modify your figures or leave one value empty to let KMyMoney calculate it for you"
 msgstr "Du passen oder een Weert leddig bet för"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1065
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1063
 #: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:289
 #: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:298
 #: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:307
 #: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:317
-#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:522
+#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:517
 #, fuzzy
 msgid "Calculation error"
 msgstr "Utreken Fehler"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1069
-#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:526
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1067
+#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:521
 #, fuzzy
 msgid ""
 "\n"
@@ -18714,14 +19730,14 @@ msgid ""
 msgstr "oder un."
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1071
-#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:528
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1069
+#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:523
 #, fuzzy
 msgid "Calculation successful"
 msgstr "Utreken"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1124
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1122
 #: kmymoney/wizards/newloanwizard/durationwizardpage.cpp:103
 #, kde-format
 msgid "one month"
@@ -18730,7 +19746,7 @@ msgstr[0] "een Maand"
 msgstr[1] "%1 Maanden"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1128
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1126
 #: kmymoney/wizards/newloanwizard/durationwizardpage.cpp:107
 #, kde-format
 msgid "one year"
@@ -18739,7 +19755,7 @@ msgstr[0] "een Johr"
 msgstr[1] "%1 Johren"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1132
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1130
 #: kmymoney/wizards/newloanwizard/durationwizardpage.cpp:111
 #, fuzzy, kde-format
 msgid "one payment"
@@ -18748,73 +19764,73 @@ msgstr[0] "een"
 msgstr[1] "een"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1185
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1183
 #, fuzzy
 msgid "Press Calculate to verify the values"
 msgstr "Drücken Utreken bet"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1189
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1187
 #, fuzzy
 msgid "Not all details supplied"
 msgstr "NOT all"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1377
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1375
 #: kmymoney/wizards/newloanwizard/assetaccountwizardpage.cpp:48
 #, fuzzy
 msgid "Create a new asset account"
 msgstr "Opstellen a Nieg Konto"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1378
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1376
 #, fuzzy
 msgid "If the asset account does not yet exist, press this button to create it."
 msgstr "Konto nich knoop bet."
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1566
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1564
 #, fuzzy
 msgid "Account information"
 msgstr "Konto-Informatschonen"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1570
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1568
 #, fuzzy, kde-format
 msgid "Subaccount of %1"
 msgstr "vun"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1597
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1595
 #, fuzzy
 msgid "Brokerage Account"
 msgstr "Konto"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1600
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1598
 #, fuzzy
 msgid "(Brokerage)"
 msgstr "%1 (Provischoon)"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1612
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1610
 msgid "Loan information"
 msgstr ""
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1615
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1613
 #, fuzzy
 msgid "Amount borrowed"
 msgstr "Mengde"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1617
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1615
 #, fuzzy
 msgid "Amount lent"
 msgstr "Mengde"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1620
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1618
 #, fuzzy, kde-format
 msgid "Interest rate is %1"
 msgstr "Tins is"
@@ -18822,7 +19838,7 @@ msgstr "Tins is"
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1_5)
 #. i18n: ectx: property (text), widget (QLabel, TextLabel1_4_2)
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1621
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1619
 #: kmymoney/wizards/newloanwizard/paymenteditwizardpagedecl.ui:103
 #: kmymoney/wizards/newloanwizard/paymentwizardpagedecl.ui:56
 #, fuzzy
@@ -18830,54 +19846,54 @@ msgid "Principal and interest"
 msgstr "Startbedrag un"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1628
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1626
 msgid "Payout information"
 msgstr ""
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1631
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1629
 msgid "Refinance"
 msgstr ""
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1634
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1632
 #, fuzzy, kde-format
 msgid "Transfer amount to %1"
 msgstr "Överdregen bet"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1636
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1634
 #, fuzzy, kde-format
 msgid "Transfer amount from %1"
 msgstr "Överdregen vun"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1638
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1636
 #, fuzzy
 msgid "Payment date"
 msgstr "Betahlen Datum"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1645
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1643
 #, fuzzy
 msgid "Schedule information"
 msgstr "Planen"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1647
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1645
 msgctxt "Schedule name"
 msgid "Name"
 msgstr "Naam"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1650
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1648
 #, fuzzy
 msgctxt "Schedule occurrence"
 msgid "Occurrence"
 msgstr "Tahlmiddeln"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1650
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1648
 #, fuzzy
 #| msgid "Monthly"
 msgctxt "Once per month schedule occurrence"
@@ -18885,20 +19901,20 @@ msgid "Monthly"
 msgstr "Elk Maand"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1651
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1649
 #, fuzzy, kde-format
 msgid "Paid from %1"
 msgstr "vun"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1652
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1650
 #, fuzzy, kde-format
 msgid "Pay to %1"
 msgstr "Betahlen bet 1"
 
 #. +> trunk
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1654
-#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1660
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1652
+#: kmymoney/wizards/newaccountwizard/knewaccountwizard.cpp:1658
 #, fuzzy, kde-format
 msgid "First payment due on %1"
 msgstr "Eerst steiht an An"
@@ -19624,26 +20640,26 @@ msgid "principal and interest"
 msgstr "un"
 
 #. +> trunk
-#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:447
+#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:442
 #, fuzzy, kde-format
 msgid "The number of payments has been decremented and the final payment has been modified to %1."
 msgstr "Tall vun un ännert bet."
 
 #. +> trunk
-#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:454
-#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:473
+#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:449
+#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:468
 #, fuzzy, kde-format
 msgid "The final payment has been modified to %1."
 msgstr "ännert bet."
 
 #. +> trunk
-#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:504
+#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:499
 #, fuzzy, kde-format
 msgid "KMyMoney has calculated a final payment of %1 for this loan."
 msgstr "a vun för."
 
 #. +> trunk
-#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:519
+#: kmymoney/wizards/newloanwizard/knewloanwizard.cpp:514
 #, fuzzy
 msgid "You have entered mis-matching information. Please backup to the appropriate page and update your figures or leave one value empty to let KMyMoney calculate it for you"
 msgstr "Du passen bet Siet un oder een Weert leddig bet för"
@@ -20668,6 +21684,31 @@ msgstr ""
 "\n"
 "<p> to</p>"
 
+#, fuzzy
+#~ msgctxt "@item type of chart"
+#~ msgid "Line"
+#~ msgstr "Reeg"
+
+#, fuzzy
+#~| msgid "Bar"
+#~ msgctxt "@item type of chart"
+#~ msgid "Bar"
+#~ msgstr "Balken"
+
+#, fuzzy
+#~ msgctxt "@item type of chart"
+#~ msgid "Stacked Bar"
+#~ msgstr "Stapelt Balken"
+
+#, fuzzy
+#~| msgid "Pie"
+#~ msgctxt "@item type of chart"
+#~ msgid "Pie"
+#~ msgstr "Koken"
+
+#~ msgid "Ring"
+#~ msgstr "Ring"
+
 #~ msgctxt "Occurs once"
 #~ msgid "Once"
 #~ msgstr "Eenmaal"
@@ -21094,9 +22135,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Start Dialog"
 #~ msgstr "Start Dialoog"
-
-#~ msgid "Select templates"
-#~ msgstr "Vörlagen utsöken"
 
 #~ msgid "Templates"
 #~ msgstr "Vörlagen"
