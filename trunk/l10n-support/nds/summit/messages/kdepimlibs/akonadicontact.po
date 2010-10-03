@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-09-07 10:18+0200\n"
+"POT-Creation-Date: 2010-10-02 11:14+0200\n"
 "PO-Revision-Date: 2010-08-31 08:53+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -121,30 +121,91 @@ msgstr ""
 "   %N: De Nummer, so as se in't Adressbook sekert is.\n"
 "   %n: De topasst Nummer, ahn Tekens, de keen Tallen sünd."
 
+#. i18n: ectx: whatsthis, entry (SendSmsAction), group (Send SMS Settings)
+#. +> trunk
+#: actions/contactactionssettings.kcfg:64
+#, fuzzy
+#| msgid "Defines which application shall be used to dial the phone number of a contact. If 'Skype' is selected the Skype application will be started (if installed on the computer) and the number is dialed. If 'External Application' is selected, a command with placeholders can be defined."
+msgid "Defines which application shall be used to send an SMS to the phone number of a contact. If 'Skype' is selected the Skype application will be started (if installed on the computer) and the SMS is sent via Skype. If 'External Application' is selected, a command with placeholders can be defined."
+msgstr "Fastleggen, mit wat för en Programm en Kontakt sien Telefoonnummer anropen warrt. Is »Skype« utsöcht, warrt Skype start (wenn dat op den Reekner installeert is), un de Nummer anwählt. Is »Extern Programm« utsöcht, lett sik en Befehl mit Platzhollers fastleggen."
+
+#. i18n: ectx: label, entry (SmsCommand), group (Send SMS Settings)
+#. +> trunk
+#: actions/contactactionssettings.kcfg:68
+#, fuzzy
+#| msgid "Phone Command"
+msgid "SMS Command"
+msgstr "Anroopbefehl"
+
+#. i18n: ectx: whatsthis, entry (SmsCommand), group (Send SMS Settings)
+#. +> trunk
+#: actions/contactactionssettings.kcfg:69
+#, fuzzy
+#| msgid "This command defines the application that shall be executed to dial a contact's phone number."
+msgid "This command defines the application that shall be executed to send an SMS to a contact's phone number."
+msgstr "Disse Befehl leggt dat Programm fast, mit dat en Kontakt sien Telefoonnummer anropen warrt."
+
+#. i18n: ectx: tooltip, entry (SmsCommand), group (Send SMS Settings)
+#. +> trunk
+#: actions/contactactionssettings.kcfg:73
+#, fuzzy, no-c-format
+#| msgid ""
+#| "The following placeholders can be used in the command:\n"
+#| "   %N: The raw number as stored in the address book.\n"
+#| "   %n: The normalized number with all non-digit characters removed.\n"
+#| "      "
+msgid ""
+"The following placeholders can be used in the command:\n"
+"   %N: The raw number as stored in the address book.\n"
+"   %n: The normalized number with all non-digit characters removed.\n"
+"   %t: The text"
+msgstr ""
+"De Befehl ünnerstütt disse Platzhollers:\n"
+"   %N: De Nummer, so as se in't Adressbook sekert is.\n"
+"   %n: De topasst Nummer, ahn Tekens, de keen Tallen sünd.\n"
+"      "
+
 #. +> trunk stable
-#: actions/dialphonenumberaction.cpp:66
+#: actions/dialphonenumberaction.cpp:66 actions/sendsmsaction.cpp:73
 msgid "There is no application set which could be executed. Please go to the settings dialog and configure one."
 msgstr "Dor is keen Programm utsöcht, dat utföhrt warrn kann. Bitte gah na den Instellendialog un söök een ut."
 
 #. +> trunk stable
-#: actions/qskypedialer.cpp:75
+#: actions/qskypedialer.cpp:83
 msgid "Unable to start skype process, check that skype executable is in your PATH variable."
 msgstr "Skype lett sik nich starten. Beseker bitte, dat utföhrbor Skype-Programm lett sik över Dien PATH-Ümgevenvariable finnen."
 
 #. +> trunk stable
-#: actions/qskypedialer.cpp:94
+#: actions/qskypedialer.cpp:103
 msgid "Skype Public API (D-Bus) seems to be disabled."
 msgstr "As't lett is de apen Programmkoppelsteed för Skype (DBus) utmaakt."
 
 #. +> trunk stable
-#: actions/qskypedialer.cpp:103
+#: actions/qskypedialer.cpp:113
 msgid "Skype registration failed."
 msgstr "Skype-Inmellen fehlslaan."
 
 #. +> trunk stable
-#: actions/qskypedialer.cpp:111
+#: actions/qskypedialer.cpp:122
 msgid "Protocol mismatch."
 msgstr "Protokoll passt nich"
+
+#. +> trunk
+#: actions/smsdialog.cpp:52
+msgid "SMS text"
+msgstr ""
+
+#. +> trunk
+#: actions/smsdialog.cpp:66
+#, kde-format
+msgid "Please insert SMS text for an SMS to the following number: %1"
+msgstr ""
+
+#. +> trunk
+#: actions/smsdialog.cpp:92
+#, kde-format
+msgid "%1/%2 (%3 SMS)"
+msgstr ""
 
 #. +> trunk stable
 #: contacteditor.cpp:158
@@ -268,7 +329,7 @@ msgid "Contact Group %1"
 msgstr "Kontaktkoppel %1"
 
 #. +> trunk stable
-#: contactgroupviewer.cpp:82 standardcontactformatter.cpp:154
+#: contactgroupviewer.cpp:82 standardcontactformatter.cpp:160
 msgid "Address Book"
 msgstr "Adressbook"
 
@@ -1457,7 +1518,7 @@ msgstr "Opstellen vun den Adressbook-Orner fehlslaan"
 #: standardcontactactionmanager.cpp:88
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete address book folder '%1' and all its sub-folders?"
-msgid "Do you really want to delete address book folder '%2' and all its sub-folders?"
+msgid "Do you really want to delete %1 address book folder, '%2', and all its sub-folders?"
 msgid_plural "Do you really want to delete %1 address book folders and all their sub-folders?"
 msgstr[0] "Wullt Du den Adressbook-Orner \"%1\" un all sien Ünnerornern redig wegdoon?"
 msgstr[1] "Wullt Du den Adressbook-Orner \"%1\" un all sien Ünnerornern redig wegdoon?"
@@ -1547,7 +1608,7 @@ msgstr "Dat Adressbook lett sik nich opstellen."
 #: standardcontactactionmanager.cpp:117
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete address book '%1'?"
-msgid "Do you really want to delete address book '%2'?"
+msgid "Do you really want to delete %1 address book, '%2'?"
 msgid_plural "Do you really want to delete %1 address books?"
 msgstr[0] "Wullt Du dat Adressbook \"%1\" redig wegmaken?"
 msgstr[1] "Wullt Du dat Adressbook \"%1\" redig wegmaken?"
@@ -1654,75 +1715,75 @@ msgstr[0] "(Een Johr oolt)"
 msgstr[1] "(%1 Johren oolt)"
 
 #. +> trunk stable
-#: standardcontactformatter.cpp:92
+#: standardcontactformatter.cpp:98
 msgctxt "a contact's email address"
 msgid "Email"
 msgstr "Nettpost"
 
 #. +> trunk stable
-#: standardcontactformatter.cpp:108
+#: standardcontactformatter.cpp:114
 msgid "Homepage"
 msgstr "Tohuussiet"
 
 #. +> trunk stable
-#: standardcontactformatter.cpp:114
+#: standardcontactformatter.cpp:120
 msgid "Blog Feed"
 msgstr "Blog-Stroom"
 
 #. +> trunk stable
-#: standardcontactformatter.cpp:140
+#: standardcontactformatter.cpp:146
 msgid "Notes"
 msgstr "Anmarken"
 
 #. +> trunk stable
-#: standardcontactformatter.cpp:146
+#: standardcontactformatter.cpp:152
 msgid "Department"
 msgstr "Afdelen"
 
 #. +> trunk stable
-#: standardcontactformatter.cpp:147
+#: standardcontactformatter.cpp:153
 msgid "Profession"
 msgstr "Beroop"
 
 #. +> trunk stable
-#: standardcontactformatter.cpp:148
+#: standardcontactformatter.cpp:154
 msgid "Assistant's Name"
 msgstr "Naam vun den Topleger"
 
 #. +> trunk stable
-#: standardcontactformatter.cpp:149
+#: standardcontactformatter.cpp:155
 msgid "Manager's Name"
 msgstr "Naam vun den Pleger"
 
 #. +> trunk stable
-#: standardcontactformatter.cpp:150
+#: standardcontactformatter.cpp:156
 msgctxt "Wife/Husband/..."
 msgid "Partner's Name"
 msgstr "Naam vun den Partner"
 
 #. +> trunk stable
-#: standardcontactformatter.cpp:151
+#: standardcontactformatter.cpp:157
 msgid "Office"
 msgstr "Kontoor"
 
 #. +> trunk stable
-#: standardcontactformatter.cpp:152
+#: standardcontactformatter.cpp:158
 msgid "IM Address"
 msgstr "KN-Adress"
 
 #. +> trunk stable
-#: standardcontactformatter.cpp:153
+#: standardcontactformatter.cpp:159
 msgid "Anniversary"
 msgstr "Johrdag"
 
 #. +> trunk stable
-#: standardcontactformatter.cpp:201
+#: standardcontactformatter.cpp:207
 msgctxt "Boolean value"
 msgid "yes"
 msgstr "Jo"
 
 #. +> trunk stable
-#: standardcontactformatter.cpp:203
+#: standardcontactformatter.cpp:209
 msgctxt "Boolean value"
 msgid "no"
 msgstr "Nee"
@@ -1769,17 +1830,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Disse Befehl leggt dat Programm fast, mit dat en Kontakt sien Telefoonnummer\n"
 #~ "                 anropen warrt."
-
-#~ msgid ""
-#~ "The following placeholders can be used in the command:\n"
-#~ "   %N: The raw number as stored in the address book.\n"
-#~ "   %n: The normalized number with all non-digit characters removed.\n"
-#~ "      "
-#~ msgstr ""
-#~ "De Befehl ünnerstütt disse Platzhollers:\n"
-#~ "   %N: De Nummer, so as se in't Adressbook sekert is.\n"
-#~ "   %n: De topasst Nummer, ahn Tekens, de keen Tallen sünd.\n"
-#~ "      "
 
 #~ msgid "Skype Public API (DBus) seems to be disabled."
 #~ msgstr "As't lett is \"Skype Public API (DBus)\" utmaakt."
