@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevcppdebugger\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-09-28 07:13+0200\n"
+"POT-Creation-Date: 2010-10-08 06:11+0200\n"
 "PO-Revision-Date: 2010-04-27 06:11+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -252,10 +252,6 @@ msgstr "Perzess griepen"
 msgid "Select Core File"
 msgstr "Karndatei utsöken"
 
-#: stty.cpp:333
-msgid "kdevelop: Debug application console"
-msgstr "KDevelop: Konsool för Programm-Fehlersöök"
-
 #: gdboutputwidget.cpp:67
 msgid "GDB Output"
 msgstr "GDB-Utgaav"
@@ -301,6 +297,50 @@ msgstr "GDB instellen"
 #: gdblaunchconfig.cpp:160
 msgid "Executes a Native application in GDB"
 msgstr "Föhrt en normaal Programm binnen GDB ut"
+
+#: gdb.cpp:94
+#, kde-format
+msgid "Could not locate the debugging shell '%1'."
+msgstr "Fehlersöök-Konsool \"%1\" lett sik nich finnen."
+
+#: gdb.cpp:95
+msgid "Debugging Shell Not Found"
+msgstr "Fehlersöök-Konsool lett sik nich finnen"
+
+#: gdb.cpp:326
+msgctxt "<b>Internal debugger error</b>"
+msgid ""
+"<p>The debugger component encountered internal error while processing reply "
+"from gdb. Please submit a bug report."
+msgstr ""
+"<p>Binnen de Fehlersöker-Komponent hett dat en Fehler geven, bides se en "
+"Antwoort vun \"gdb\" afarbeidt hett. Bericht dissen Fehler bitte."
+
+#: gdb.cpp:328
+#, kde-format
+msgid ""
+"The exception is: %1\n"
+"The MI response is: %2"
+msgstr ""
+"De Utnahm is: %1\n"
+"De MI-Antwoort is: %2"
+
+#: gdb.cpp:331
+msgid "Internal debugger error"
+msgstr "Intern Fehlersöök-Fehler"
+
+#: gdb.cpp:385
+#, kde-format
+msgid ""
+"<b>Could not start debugger.</b><p>Could not run '%1'. Make sure that the "
+"path name is specified correctly."
+msgstr ""
+"<b>De Fehlersöker lett sik nich starten.</b><p>\"%1\" lett sik nich starten. "
+"Kiek, wat de Paddnaam richtig angeven is."
+
+#: gdb.cpp:389
+msgid "Could not start debugger"
+msgstr "Fehlersöker lett sik nich opropen"
 
 #: debugsession.cpp:169
 msgid "Debugger stopped"
@@ -375,7 +415,7 @@ msgstr "Programm hett Signaal %1 (%2) kregen"
 msgid "Running program"
 msgstr "Programm warrt utföhrt"
 
-#: debugsession.cpp:1009
+#: debugsession.cpp:1005
 msgid ""
 "GDB cannot use the tty* or pty* devices.\n"
 "Check the settings on /dev/tty* and /dev/pty*\n"
@@ -388,28 +428,28 @@ msgstr ""
 "Reedschappen \"chmod ug+rw\" utföhren un / oder den Bruker mit \"usermod -G "
 "tty brukernaam\" na den \"tty\"-Koppel tofögen."
 
-#: debugsession.cpp:1013
+#: debugsession.cpp:1009
 msgid "Warning"
 msgstr "Wohrschoen"
 
-#: debugsession.cpp:1187
+#: debugsession.cpp:1183
 #, kde-format
 msgid "<b>Debugger error</b><p>Debugger reported the following error:<p><tt>%1"
 msgstr ""
 "<b>Fehlersöök-Fehler</b><p>De Fehlersöker hett dissen Fehler meldt:<p><tt>%1"
 
-#: debugsession.cpp:1190
+#: debugsession.cpp:1186
 msgid "Debugger error"
 msgstr "Fehlersöök-Fehler"
 
-#: debugsession.cpp:1289
+#: debugsession.cpp:1285
 #, kde-format
 msgid "1 command in queue\n"
 msgid_plural "%1 commands in queue\n"
 msgstr[0] "1 Befehl in de Reeg\n"
 msgstr[1] "%1 Befehlen in de Reeg\n"
 
-#: debugsession.cpp:1290
+#: debugsession.cpp:1286
 #, kde-format
 msgctxt "Only the 0 and 1 cases need to be translated"
 msgid "1 command being processed by gdb\n"
@@ -417,12 +457,12 @@ msgid_plural "%1 commands being processed by gdb\n"
 msgstr[0] "1 Befehl warrt vun \"gdb\" afarbeidt\n"
 msgstr[1] "%1 Befehlen warrt vun \"gdb\" afarbeidt\n"
 
-#: debugsession.cpp:1291
+#: debugsession.cpp:1287
 #, kde-format
 msgid "Debugger state: %1\n"
 msgstr "Fehlersöker-Status: %1\n"
 
-#: debugsession.cpp:1295
+#: debugsession.cpp:1291
 #, kde-format
 msgid ""
 "Current command class: '%1'\n"
@@ -433,75 +473,35 @@ msgstr ""
 "Aktuell Befehltext: \"%2\"\n"
 "Aktuell Befehl-Orginaaltext: \"%3\"\n"
 
-#: debugsession.cpp:1306
+#: debugsession.cpp:1302
 msgid "Debugger status"
 msgstr "Fehlersöker-Status"
 
-#: debugsession.cpp:1410
+#: debugsession.cpp:1406
 #, kde-format
 msgid "<b>You need gdb 7.0.0 or higher.</b><br />You are using: %1"
 msgstr ""
 "<b>\"gdb 7.0.0\" oder nieger deit noot.</b><br />Du bruukst opstunns: %1"
 
-#: debugsession.cpp:1412
+#: debugsession.cpp:1408
 msgid "gdb error"
 msgstr "\"gdb\"-Fehler"
 
-#: debugsession.cpp:1423
+#: debugsession.cpp:1419
 msgid "<b>Could not start debugger:</b><br />"
 msgstr "<b>Fehlersöker lett sik nich opropen:</b><br />"
 
-#: debugsession.cpp:1425 debugsession.cpp:1437
+#: debugsession.cpp:1421 debugsession.cpp:1433
 msgid "Startup error"
 msgstr "Fehler bi Programmstart"
 
-#: debugsession.cpp:1435
+#: debugsession.cpp:1431
 msgid "<b>Could not attach debugger:</b><br />"
 msgstr "<b>Fehlersöker lett sik nich griepen:</b><br />"
 
-#: gdb.cpp:94
-#, kde-format
-msgid "Could not locate the debugging shell '%1'."
-msgstr "Fehlersöök-Konsool \"%1\" lett sik nich finnen."
-
-#: gdb.cpp:95
-msgid "Debugging Shell Not Found"
-msgstr "Fehlersöök-Konsool lett sik nich finnen"
-
-#: gdb.cpp:326
-msgctxt "<b>Internal debugger error</b>"
-msgid ""
-"<p>The debugger component encountered internal error while processing reply "
-"from gdb. Please submit a bug report."
-msgstr ""
-"<p>Binnen de Fehlersöker-Komponent hett dat en Fehler geven, bides se en "
-"Antwoort vun \"gdb\" afarbeidt hett. Bericht dissen Fehler bitte."
-
-#: gdb.cpp:328
-#, kde-format
-msgid ""
-"The exception is: %1\n"
-"The MI response is: %2"
-msgstr ""
-"De Utnahm is: %1\n"
-"De MI-Antwoort is: %2"
-
-#: gdb.cpp:331
-msgid "Internal debugger error"
-msgstr "Intern Fehlersöök-Fehler"
-
-#: gdb.cpp:385
-#, kde-format
-msgid ""
-"<b>Could not start debugger.</b><p>Could not run '%1'. Make sure that the "
-"path name is specified correctly."
-msgstr ""
-"<b>De Fehlersöker lett sik nich starten.</b><p>\"%1\" lett sik nich starten. "
-"Kiek, wat de Paddnaam richtig angeven is."
-
-#: gdb.cpp:389
-msgid "Could not start debugger"
-msgstr "Fehlersöker lett sik nich opropen"
+#: stty.cpp:333
+msgid "kdevelop: Debug application console"
+msgstr "KDevelop: Konsool för Programm-Fehlersöök"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
