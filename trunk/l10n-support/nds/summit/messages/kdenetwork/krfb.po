@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krfb\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-08-18 11:24+0200\n"
+"POT-Creation-Date: 2010-10-24 11:06+0200\n"
 "PO-Revision-Date: 2010-01-18 15:28+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -25,6 +25,21 @@ msgstr "Sönke Dibbern"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s_dibbern@web.de"
+
+#. +> trunk stable
+#: abstractrfbserver.cpp:221
+msgid "Address already in use"
+msgstr "Adress al in Bruuk"
+
+#. +> trunk stable
+#: abstractrfbserver.cpp:306
+msgid "Your X11 Server does not support the required XTest extension version 2.2. Sharing your desktop is not possible."
+msgstr "Dien X11-Server ünnerstütt de nödige XTest-Verwiedern Verschoon 2.2 nich. Freegeven vun Dien Schriefdisch is nich mööglich."
+
+#. +> trunk stable
+#: abstractrfbserver.cpp:307
+msgid "Desktop Sharing Error"
+msgstr "Fehler bi de Schriefdisch-Freegaav"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_allowUninvitedConnections)
 #. +> trunk stable
@@ -68,30 +83,6 @@ msgstr "Standardport bruken"
 #: configtcp.ui:50
 msgid "Listening port:"
 msgstr "Luusterport:"
-
-#. +> trunk stable
-#: connectioncontroller.cpp:112
-#, kde-format
-msgid "Refused uninvited connection attempt from %1"
-msgstr "Verbinnenversöök ahn Inladen vun %1 afwiest"
-
-#. +> trunk stable
-#: connectioncontroller.cpp:123
-#, kde-format
-msgid "Accepted uninvited connection from %1"
-msgstr "Verbinnen ahn Inladen vun %1 annahmen"
-
-#. +> trunk stable
-#: connectioncontroller.cpp:131
-#, kde-format
-msgid "Received connection from %1, on hold (waiting for confirmation)"
-msgstr "Verbinnen-Anfraag vun %1 kregen, töövt op Beglöven"
-
-#. +> trunk stable
-#: connectioncontroller.cpp:174 connectioncontroller.cpp:178
-#, kde-format
-msgid "Failed login attempt from %1: wrong password"
-msgstr "Anmellen vun %1 fehlslaan: Leeg Passwoort"
 
 #. +> trunk stable
 #: connectiondialog.cpp:32
@@ -145,7 +136,7 @@ msgid "Allow remote user to &control keyboard and mouse"
 msgstr "Den feernen Bruker dat &Stüern över Tastatuur un Muus verlöven"
 
 #. +> trunk stable
-#: invitedialog.cpp:34 manageinvitationsdialog.cpp:57
+#: invitedialog.cpp:34 manageinvitationsdialog.cpp:55
 msgid "Invitation"
 msgstr "Inladen"
 
@@ -255,25 +246,34 @@ msgid "Preferred Frame Buffer Plugin"
 msgstr "Vörtrocken Bildpuffer-Moduul"
 
 #. +> trunk stable
-#: krfbserver.cpp:194 krfbserver.cpp:214
+#: krfbconnectioncontroller.cpp:97
+#, kde-format
+msgid "Refused uninvited connection attempt from %1"
+msgstr "Verbinnenversöök ahn Inladen vun %1 afwiest"
+
+#. +> trunk stable
+#: krfbconnectioncontroller.cpp:108
+#, kde-format
+msgid "Accepted uninvited connection from %1"
+msgstr "Verbinnen ahn Inladen vun %1 annahmen"
+
+#. +> trunk stable
+#: krfbconnectioncontroller.cpp:116
+#, kde-format
+msgid "Received connection from %1, on hold (waiting for confirmation)"
+msgstr "Verbinnen-Anfraag vun %1 kregen, töövt op Beglöven"
+
+#. +> trunk stable
+#: krfbconnectioncontroller.cpp:159 krfbconnectioncontroller.cpp:163
+#, kde-format
+msgid "Failed login attempt from %1: wrong password"
+msgstr "Anmellen vun %1 fehlslaan: Leeg Passwoort"
+
+#. +> trunk stable
+#: krfbserver.cpp:60 krfbserver.cpp:65
 #, kde-format
 msgid "%1@%2 (shared desktop)"
 msgstr "%1@%2 (freegeven Schriefdisch)"
-
-#. +> trunk stable
-#: krfbserver.cpp:207
-msgid "Address already in use"
-msgstr "Adress al in Bruuk"
-
-#. +> trunk stable
-#: krfbserver.cpp:302
-msgid "Your X11 Server does not support the required XTest extension version 2.2. Sharing your desktop is not possible."
-msgstr "Dien X11-Server ünnerstütt de nödige XTest-Verwiedern Verschoon 2.2 nich. Freegeven vun Dien Schriefdisch is nich mööglich."
-
-#. +> trunk stable
-#: krfbserver.cpp:303
-msgid "Desktop Sharing Error"
-msgstr "Fehler bi de Schriefdisch-Freegaav"
 
 #. +> trunk stable
 #: main.cpp:40
@@ -511,7 +511,7 @@ msgid "&Delete"
 msgstr "&Wegdoon"
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:95
+#: manageinvitationsdialog.cpp:93
 msgid ""
 "An invitation creates a one-time password that allows the receiver to connect to your desktop.\n"
 "It is valid for only one successful connection and will expire after an hour if it has not been used. \n"
@@ -531,7 +531,7 @@ msgstr ""
 "binnen de Instellen tolaten."
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:117
+#: manageinvitationsdialog.cpp:115
 msgid ""
 "When sending an invitation by email, note that everybody who reads this email will be able to connect to your computer for one hour, or until the first successful connection took place, whichever comes first. \n"
 "You should either encrypt the email or at least send it only in a secure network, but not over the Internet."
@@ -540,17 +540,17 @@ msgstr ""
 "Verslötel den Nettbreef beter oder senn em bloots över en seker (lokaal) Nettwark, nich över dat Internet."
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:122
+#: manageinvitationsdialog.cpp:120
 msgid "Send Invitation via Email"
 msgstr "Inladen mit Nettpost sennen"
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:143
+#: manageinvitationsdialog.cpp:141
 msgid "Desktop Sharing (VNC) invitation"
 msgstr "Schriefdischfreegaav-Inladen (VNC)"
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:144
+#: manageinvitationsdialog.cpp:142
 #, kde-format
 msgid ""
 "You have been invited to a VNC session. If you have the KDE Remote Desktop Connection installed, just click on the link below.\n"
@@ -576,27 +576,27 @@ msgstr ""
 "Vun wegen de Sekerheit löppt disse Inladen op den %5 (%6) af."
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:182
+#: manageinvitationsdialog.cpp:180
 msgid "Network"
 msgstr "Nettwark"
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:183
+#: manageinvitationsdialog.cpp:181
 msgid "Security"
 msgstr "Sekerheit"
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:192
+#: manageinvitationsdialog.cpp:190
 msgid "<qt>Are you sure you want to delete all invitations?</qt>"
 msgstr "<qt>Büst Du seker, Du wullt all Inladen wegdoon?</qt>"
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:193 manageinvitationsdialog.cpp:209
+#: manageinvitationsdialog.cpp:191 manageinvitationsdialog.cpp:207
 msgid "Confirm delete Invitations"
 msgstr "Inladen wegdoon beglöven"
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:208
+#: manageinvitationsdialog.cpp:206
 msgid "<qt>Are you sure you want to delete this invitation?</qt>"
 msgstr "<qt>Büst Du seker, Du wullt disse Inladen wegdoon?</qt>"
 
@@ -686,34 +686,34 @@ msgid "<b>Expiration time:</b>"
 msgstr "<b>Aflooptiet:</b>"
 
 #. +> trunk stable
-#: trayicon.cpp:39 trayicon.cpp:91
+#: trayicon.cpp:38 trayicon.cpp:90
 msgid "Desktop Sharing - disconnected"
 msgstr "Schriefdisch-Freegaav - afkoppelt"
 
 #. +> trunk stable
-#: trayicon.cpp:48
+#: trayicon.cpp:47
 msgid "Enable Remote Control"
 msgstr "Feernkuntrull anmaken"
 
 #. +> trunk stable
-#: trayicon.cpp:49
+#: trayicon.cpp:48
 msgid "Disable Remote Control"
 msgstr "Feernkuntrull utmaken"
 
 #. +> trunk stable
-#: trayicon.cpp:79
+#: trayicon.cpp:78
 #, kde-format
 msgid "The remote user %1 is now connected."
 msgstr "De feerne Bruker \"%1\" hett sik tokoppelt."
 
 #. +> trunk stable
-#: trayicon.cpp:81
+#: trayicon.cpp:80
 #, kde-format
 msgid "Desktop Sharing - connected with %1"
 msgstr "Schriefdisch-Freegaav - tokoppelt na %1"
 
 #. +> trunk stable
-#: trayicon.cpp:93
+#: trayicon.cpp:92
 msgid "The remote user has closed the connection."
 msgstr "De feerne Bruker hett sik afkoppelt."
 
