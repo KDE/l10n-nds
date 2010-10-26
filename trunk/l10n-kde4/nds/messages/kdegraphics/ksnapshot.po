@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksnapshot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-10-14 06:07+0200\n"
+"POT-Creation-Date: 2010-10-25 06:04+0200\n"
 "PO-Revision-Date: 2010-08-04 06:16+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -32,10 +32,22 @@ msgid "Captures a region"
 msgstr "Nimmt en Rebeet op"
 
 #: ksnapshot_options.h:33
+msgid "Captures a free region (not rectangular)"
+msgstr ""
+
+#: ksnapshot_options.h:34
 msgid "Captures a part of windows"
 msgstr "Nimmt en Rebeet binnen en Finster op"
 
-#: kbackgroundsnapshot.cpp:91 ksnapshot.cpp:218
+#: freeregiongrabber.cpp:120 regiongrabber.cpp:116
+msgid ""
+"Select a region using the mouse. To take the snapshot, press the Enter key "
+"or double click. Press Esc to quit."
+msgstr ""
+"Söök mit de Muus en Rebeet ut. För't Opnehmen drück de Ingaav-Tast, oder "
+"maak en Dubbelklick mit de Muus. Wullt Du afbreken, drück de Esc-Tast."
+
+#: kbackgroundsnapshot.cpp:91 ksnapshot.cpp:224
 msgid "snapshot"
 msgstr "Snappschööt"
 
@@ -51,74 +63,74 @@ msgstr "KBackgroundSnapshot"
 msgid "(c) 2007, Montel Laurent"
 msgstr "©  2007: Montel Laurent"
 
-#: ksnapshot.cpp:93
+#: ksnapshot.cpp:94
 msgid "Copy"
 msgstr "Koperen"
 
-#: ksnapshot.cpp:94
+#: ksnapshot.cpp:95
 msgid "Open With..."
 msgstr "Opmaken mit..."
 
-#: ksnapshot.cpp:123
+#: ksnapshot.cpp:124
 msgid " second"
 msgid_plural " seconds"
 msgstr[0] " Sekunn"
 msgstr[1] " Sekunnen"
 
-#: ksnapshot.cpp:227
+#: ksnapshot.cpp:233
 msgid "Quick Save Snapshot &As..."
 msgstr "Snappschööt fix sekern &as..."
 
-#: ksnapshot.cpp:228
+#: ksnapshot.cpp:234
 msgid ""
 "Save the snapshot to the file specified by the user without showing the file "
 "dialog."
 msgstr ""
 "Den Snappschööt ahn Dateidialoog na de vun den Bruker angeven Datei sekern."
 
-#: ksnapshot.cpp:230
+#: ksnapshot.cpp:236
 msgid "Save Snapshot &As..."
 msgstr "Snappschööt sekern &as..."
 
-#: ksnapshot.cpp:231
+#: ksnapshot.cpp:237
 msgid "Save the snapshot to the file specified by the user."
 msgstr "Den Snappschööt na de vun den Bruker angeven Datei sekern."
 
-#: ksnapshot.cpp:294
+#: ksnapshot.cpp:300
 msgid "Save As"
 msgstr "Sekern as"
 
-#: ksnapshot.cpp:462
+#: ksnapshot.cpp:471
 msgid "Other Application..."
 msgstr "Anner Programm..."
 
-#: ksnapshot.cpp:552
+#: ksnapshot.cpp:579
 msgid "The screen has been successfully grabbed."
 msgstr "Schirm wöör opnahmen."
 
-#: ksnapshot.cpp:725
+#: ksnapshot.cpp:752
 #, kde-format
 msgid "Preview of the snapshot image (%1 x %2)"
 msgstr "Vöransicht vun't Bildschirmfoto (%1 x %2)"
 
-#: ksnapshotobject.cpp:111
+#: ksnapshotobject.cpp:112
 msgid "File Exists"
 msgstr "Gifft Datei al"
 
-#: ksnapshotobject.cpp:112
+#: ksnapshotobject.cpp:113
 #, kde-format
 msgid "<qt>Do you really want to overwrite <b>%1</b>?</qt>"
 msgstr "<qt>Wullt Du <b>%1</b> redig överschrieven?</qt>"
 
-#: ksnapshotobject.cpp:113
+#: ksnapshotobject.cpp:114
 msgid "Overwrite"
 msgstr "Överschrieven"
 
-#: ksnapshotobject.cpp:149
+#: ksnapshotobject.cpp:150
 msgid "Unable to Save Image"
 msgstr "Bild lett sik nich sekern"
 
-#: ksnapshotobject.cpp:150
+#: ksnapshotobject.cpp:151
 #, kde-format
 msgid ""
 "KSnapshot was unable to save the image to\n"
@@ -127,11 +139,11 @@ msgstr ""
 "KSnapshot kann dit Bild nich sekern:\n"
 "%1."
 
-#: ksnapshotobject.cpp:172
+#: ksnapshotobject.cpp:173
 msgid "Title"
 msgstr "Titel"
 
-#: ksnapshotobject.cpp:174
+#: ksnapshotobject.cpp:175
 msgid "Window Class"
 msgstr "Finsterklass"
 
@@ -184,6 +196,14 @@ msgstr "Marcus Hufgard"
 #: main.cpp:46
 msgid "\"Open With\" function"
 msgstr "Funkschoon \"Opmaken mit\""
+
+#: main.cpp:48
+msgid "Pau Garcia i Quiles"
+msgstr ""
+
+#: main.cpp:48
+msgid "Free region grabbing"
+msgstr ""
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
@@ -287,30 +307,38 @@ msgstr "Schirmrebeet"
 #. i18n: file: ksnapshotwidget.ui:134
 #. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
 #: rc.cpp:40
-msgid "Section of Window"
-msgstr "Finsterrebeet"
+#, fuzzy
+#| msgid "Region"
+msgid "Free Region"
+msgstr "Schirmrebeet"
 
 #. i18n: file: ksnapshotwidget.ui:139
 #. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
 #: rc.cpp:43
+msgid "Section of Window"
+msgstr "Finsterrebeet"
+
+#. i18n: file: ksnapshotwidget.ui:144
+#. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
+#: rc.cpp:46
 msgid "Current Screen"
 msgstr "Aktuell Schirm"
 
-#. i18n: file: ksnapshotwidget.ui:147
+#. i18n: file: ksnapshotwidget.ui:152
 #. i18n: ectx: property (text), widget (QLabel, lblDelay)
-#: rc.cpp:46
+#: rc.cpp:49
 msgid "Snapshot &delay:"
 msgstr "Snappschööt-&Töövtiet:"
 
-#. i18n: file: ksnapshotwidget.ui:166
+#. i18n: file: ksnapshotwidget.ui:171
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, spinDelay)
-#: rc.cpp:49
+#: rc.cpp:52
 msgid "Snapshot delay in seconds"
 msgstr "Snappschööt-Töövtiet in Sekunnen"
 
-#. i18n: file: ksnapshotwidget.ui:176
+#. i18n: file: ksnapshotwidget.ui:181
 #. i18n: ectx: property (whatsThis), widget (KIntSpinBox, spinDelay)
-#: rc.cpp:52
+#: rc.cpp:55
 msgid ""
 "<qt><p>\n"
 "This is the number of seconds to wait after clicking the <i>New Snapshot</i> "
@@ -336,25 +364,19 @@ msgstr ""
 "</p>\n"
 "</qt>"
 
-#. i18n: file: ksnapshotwidget.ui:179
+#. i18n: file: ksnapshotwidget.ui:184
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, spinDelay)
-#: rc.cpp:62
+#: rc.cpp:65
 msgid "No delay"
 msgstr "Keen Töövtiet"
 
-#. i18n: file: ksnapshotwidget.ui:182
-#. i18n: ectx: property (suffix), widget (KIntSpinBox, spinDelay)
-#: rc.cpp:65
-msgid " "
-msgstr " "
-
-#. i18n: file: ksnapshotwidget.ui:189
+#. i18n: file: ksnapshotwidget.ui:194
 #. i18n: ectx: property (text), widget (QLabel, lblIncludeDecorations)
 #: rc.cpp:68
 msgid "Include &window decorations:"
 msgstr "Mit &Finsterdekoratschoon:"
 
-#. i18n: file: ksnapshotwidget.ui:202
+#. i18n: file: ksnapshotwidget.ui:207
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, cbIncludeDecorations)
 #: rc.cpp:71
 msgid ""
@@ -363,19 +385,11 @@ msgstr ""
 "Wenn disse Optschoon anmaakt is, bargt en Snappschööt vun en Finster ok de "
 "Finsterdekoratschonen"
 
-#. i18n: file: ksnapshotwidget.ui:215
+#. i18n: file: ksnapshotwidget.ui:220
 #. i18n: ectx: property (text), widget (QLabel, lblIncludePointer)
 #: rc.cpp:74
 msgid "Include mouse &pointer:"
 msgstr "Mit &Muuswieser:"
-
-#: regiongrabber.cpp:116
-msgid ""
-"Select a region using the mouse. To take the snapshot, press the Enter key "
-"or double click. Press Esc to quit."
-msgstr ""
-"Söök mit de Muus en Rebeet ut. För't Opnehmen drück de Ingaav-Tast, oder "
-"maak en Dubbelklick mit de Muus. Wullt Du afbreken, drück de Esc-Tast."
 
 #: snapshottimer.cpp:35 snapshottimer.cpp:89
 #, kde-format
@@ -383,6 +397,9 @@ msgid "Snapshot will be taken in 1 second"
 msgid_plural "Snapshot will be taken in %1 seconds"
 msgstr[0] "Snappschööt warrt in 1 Sekunn maakt"
 msgstr[1] "Snappschööt warrt in %1 Sekunnen maakt"
+
+#~ msgid " "
+#~ msgstr " "
 
 #~ msgid ""
 #~ "Click this button to save the current snapshot. To quickly save the "
