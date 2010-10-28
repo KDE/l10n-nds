@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate-ctags-plugin\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-09-07 02:35+0200\n"
+"POT-Creation-Date: 2010-10-28 06:12+0200\n"
 "PO-Revision-Date: 2010-09-20 05:36+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -237,12 +237,12 @@ msgstr "En Orner wegmaken"
 msgid "(Re-)generate the common CTags database."
 msgstr "De allgemeen CTags-Datenbank (nieg) opstellen"
 
-#: kate_ctags_plugin.cpp:216 kate_ctags_view.cpp:511
+#: kate_ctags_plugin.cpp:216 kate_ctags_view.cpp:523
 #, kde-format
 msgid "Failed to run \"%1\". exitStatus = %2"
 msgstr "\"%1\" lett sik nich utföhren. Utstiegstatus: %2"
 
-#: kate_ctags_plugin.cpp:227 kate_ctags_view.cpp:523
+#: kate_ctags_plugin.cpp:227 kate_ctags_view.cpp:536
 msgid "The CTags executable crashed."
 msgstr "Dat CTags-Programm is afstört."
 
@@ -267,30 +267,36 @@ msgstr "Na Definitschoon gahn"
 msgid "Lookup Current Text"
 msgstr "Aktuell Text nakieken"
 
-#: kate_ctags_view.cpp:73 kate_ctags_view.cpp:132
+#: kate_ctags_view.cpp:73 kate_ctags_view.cpp:138
 #, kde-format
 msgid "Go to Declaration: %1"
 msgstr "Na Deklaratschoon gahn: \"%1\""
 
-#: kate_ctags_view.cpp:74 kate_ctags_view.cpp:133
+#: kate_ctags_view.cpp:74 kate_ctags_view.cpp:139
 #, kde-format
 msgid "Go to Definition: %1"
 msgstr "Na Definitschoon gahn: \"%1\""
 
-#: kate_ctags_view.cpp:75 kate_ctags_view.cpp:134
+#: kate_ctags_view.cpp:75 kate_ctags_view.cpp:140
 #, kde-format
 msgid "Lookup: %1"
 msgstr "Nakieken: %1"
 
-#: kate_ctags_view.cpp:89
+#: kate_ctags_view.cpp:89 kate_ctags_view.cpp:92
 msgid "(Re-)generate the session specific CTags database."
 msgstr "De törnafhangig CTags-Datenbank (nieg) opstellen"
 
-#: kate_ctags_view.cpp:264
+#: kate_ctags_view.cpp:95
+#, fuzzy
+#| msgid "Select an existing CTags database."
+msgid "Select new or existing database file."
+msgstr "En vörhannen CTags-Datenbank utsöken."
+
+#: kate_ctags_view.cpp:276
 msgid "No hits found"
 msgstr "Keen Drepers"
 
-#: kate_ctags_view.cpp:528
+#: kate_ctags_view.cpp:541
 #, c-format
 msgid "The CTags program exited with code %d"
 msgstr "Dat CTags-Programm is mit Kode \"%d\" utstegen."
@@ -302,8 +308,10 @@ msgid "Lookup"
 msgstr "Nakieken"
 
 #. i18n: file: kate_ctags.ui:34
-#. i18n: ectx: property (text), widget (KPushButton, updateDB)
-#: rc.cpp:6
+#. i18n: ectx: property (text), widget (KPushButton, updateButton)
+#. i18n: file: kate_ctags.ui:100
+#. i18n: ectx: property (text), widget (QPushButton, updateButton2)
+#: rc.cpp:6 rc.cpp:27
 msgid "Update Index"
 msgstr "Index opfrischen"
 
@@ -331,39 +339,53 @@ msgstr "Datei"
 msgid "Index Targets"
 msgstr "Index-Telen"
 
-#. i18n: file: kate_ctags.ui:90
+#. i18n: file: kate_ctags.ui:73
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #. i18n: file: CTagsGlobalConfig.ui:41
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: rc.cpp:21 rc.cpp:33
+#: rc.cpp:21 rc.cpp:42
 msgid "Add"
 msgstr "Tofögen"
 
-#. i18n: file: kate_ctags.ui:97
+#. i18n: file: kate_ctags.ui:80
 #. i18n: ectx: property (text), widget (QPushButton, delButton)
 #. i18n: file: CTagsGlobalConfig.ui:48
 #. i18n: ectx: property (text), widget (QPushButton, delButton)
-#: rc.cpp:24 rc.cpp:36
+#: rc.cpp:24 rc.cpp:45
 msgid "Remove"
 msgstr "Wegmaken"
 
-#. i18n: file: kate_ctags.ui:113
+#. i18n: file: kate_ctags.ui:108
+#. i18n: ectx: attribute (title), widget (QWidget, database)
+#: rc.cpp:30
+msgid "Database"
+msgstr ""
+
+#. i18n: file: kate_ctags.ui:117
+#. i18n: ectx: property (text), widget (QLabel, fileLabel)
+#: rc.cpp:33
+#, fuzzy
+#| msgid "CTags database file:"
+msgid "CTags database file"
+msgstr "CTags-Datenbankdatei:"
+
+#. i18n: file: kate_ctags.ui:127
 #. i18n: ectx: property (text), widget (QLabel, cmdLabel)
 #. i18n: file: CTagsGlobalConfig.ui:74
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:27 rc.cpp:42
+#: rc.cpp:36 rc.cpp:51
 msgid "CTags command"
 msgstr "CTags-Befehl"
 
 #. i18n: file: CTagsGlobalConfig.ui:17
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:30
+#: rc.cpp:39
 msgid "Session-global index targets"
 msgstr ""
 
 #. i18n: file: CTagsGlobalConfig.ui:62
 #. i18n: ectx: property (text), widget (KPushButton, updateDB)
-#: rc.cpp:39
+#: rc.cpp:48
 msgid "Update"
 msgstr "Opfrischen"
 
@@ -404,9 +426,6 @@ msgstr "Opfrischen"
 #~ msgid "Load"
 #~ msgstr "Laden"
 
-#~ msgid "Select an existing CTags database."
-#~ msgstr "En vörhannen CTags-Datenbank utsöken."
-
 #~ msgid "No CTags database is loaded."
 #~ msgstr "Keen CTags-Datenbank laadt."
 
@@ -418,9 +437,6 @@ msgstr "Opfrischen"
 
 #~ msgid "Settings"
 #~ msgstr "Instellen"
-
-#~ msgid "CTags database file:"
-#~ msgstr "CTags-Datenbankdatei:"
 
 #, fuzzy
 #~ msgid "..."
