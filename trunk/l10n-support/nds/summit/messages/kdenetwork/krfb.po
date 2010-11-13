@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krfb\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-10-28 10:42+0200\n"
+"POT-Creation-Date: 2010-11-12 10:42+0100\n"
 "PO-Revision-Date: 2010-01-18 15:28+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -27,37 +27,65 @@ msgid "Your emails"
 msgstr "s_dibbern@web.de"
 
 #. +> trunk stable
-#: abstractrfbserver.cpp:227
-msgid "Address already in use"
-msgstr "Adress al in Bruuk"
-
-#. +> trunk stable
-#: abstractrfbserver.cpp:319
-msgid "Your X11 Server does not support the required XTest extension version 2.2. Sharing your desktop is not possible."
-msgstr "Dien X11-Server ünnerstütt de nödige XTest-Verwiedern Verschoon 2.2 nich. Freegeven vun Dien Schriefdisch is nich mööglich."
-
-#. +> trunk stable
-#: abstractrfbserver.cpp:320
-msgid "Desktop Sharing Error"
-msgstr "Fehler bi de Schriefdisch-Freegaav"
-
-#. +> trunk stable
-#: connectiondialog.cpp:32
+#: connectiondialog.cpp:35
 msgid "New Connection"
 msgstr "Nieg Verbinnen"
 
 #. +> trunk stable
-#: connectiondialog.cpp:45
+#: connectiondialog.cpp:48
 msgid "Accept Connection"
 msgstr "Verbinnen annehmen"
 
 #. +> trunk stable
-#: connectiondialog.cpp:49
+#: connectiondialog.cpp:52
 msgid "Refuse Connection"
 msgstr "Verbinnen afwiesen"
 
+#. +> trunk
+#: connectiondialog.cpp:79
+#, fuzzy, kde-format
+#| msgid "Somebody is requesting a connection to your computer. Granting this will allow the remote user to watch your desktop. "
+msgid "You have requested to share your desktop with %1. If you proceed, you will allow the remote user to watch your desktop."
+msgstr "Een will sik na Dien Reekner tokoppeln. Wenn Du dat verlöövst, kann disse Bruker Dien Schriefdisch beluern. "
+
 #. +> trunk stable
-#: invitedialog.cpp:34 manageinvitationsdialog.cpp:55
+#: invitationsrfbclient.cpp:60 invitationsrfbclient.cpp:63
+#, kde-format
+msgid "Failed login attempt from %1: wrong password"
+msgstr "Anmellen vun %1 fehlslaan: Leeg Passwoort"
+
+#. +> trunk stable
+#: invitationsrfbclient.cpp:80
+#, kde-format
+msgid "Refused uninvited connection attempt from %1"
+msgstr "Verbinnenversöök ahn Inladen vun %1 afwiest"
+
+#. +> trunk
+#: invitationsrfbclient.cpp:84 pendingrfbclient.cpp:57 tubesrfbclient.cpp:57
+#, fuzzy, kde-format
+#| msgid "Accepted uninvited connection from %1"
+msgid "Accepted connection from %1"
+msgstr "Verbinnen ahn Inladen vun %1 annahmen"
+
+#. +> trunk stable
+#: invitationsrfbclient.cpp:88 pendingrfbclient.cpp:61 tubesrfbclient.cpp:61
+#, kde-format
+msgid "Received connection from %1, on hold (waiting for confirmation)"
+msgstr "Verbinnen-Anfraag vun %1 kregen, töövt op Beglöven"
+
+#. +> trunk
+#: invitationsrfbserver.cpp:52
+msgid "Failed to start the krfb server. Invitation-based sharing will not work. Try setting another port in the settings and restart krfb."
+msgstr ""
+
+#. +> trunk stable
+#: invitationsrfbserver.cpp:58
+#, kde-format
+msgid "%1@%2 (shared desktop)"
+msgstr "%1@%2 (freegeven Schriefdisch)"
+
+#. +> trunk stable
+#: invitedialog.cpp:34
 msgid "Invitation"
 msgstr "Inladen"
 
@@ -138,46 +166,64 @@ msgid "Preferred Frame Buffer Plugin"
 msgstr "Vörtrocken Bildpuffer-Moduul"
 
 #. +> trunk stable
-#: krfbconnectioncontroller.cpp:99
-#, kde-format
-msgid "Refused uninvited connection attempt from %1"
-msgstr "Verbinnenversöök ahn Inladen vun %1 afwiest"
-
-#. +> trunk stable
-#: krfbconnectioncontroller.cpp:110
-#, kde-format
-msgid "Accepted uninvited connection from %1"
-msgstr "Verbinnen ahn Inladen vun %1 annahmen"
-
-#. +> trunk stable
-#: krfbconnectioncontroller.cpp:118
-#, kde-format
-msgid "Received connection from %1, on hold (waiting for confirmation)"
-msgstr "Verbinnen-Anfraag vun %1 kregen, töövt op Beglöven"
-
-#. +> trunk stable
-#: krfbconnectioncontroller.cpp:162 krfbconnectioncontroller.cpp:166
-#, kde-format
-msgid "Failed login attempt from %1: wrong password"
-msgstr "Anmellen vun %1 fehlslaan: Leeg Passwoort"
-
-#. +> trunk stable
-#: krfbserver.cpp:60 krfbserver.cpp:65
-#, kde-format
-msgid "%1@%2 (shared desktop)"
-msgstr "%1@%2 (freegeven Schriefdisch)"
-
-#. +> trunk stable
-#: main.cpp:40
+#: main.cpp:43
 msgid "VNC-compatible server to share KDE desktops"
 msgstr "VNC-kompatibel Server för't Freegeven vun KDE-Schriefdischen"
 
 #. +> trunk stable
-#: main.cpp:46
+#: main.cpp:54
+msgid "Your X11 Server does not support the required XTest extension version 2.2. Sharing your desktop is not possible."
+msgstr "Dien X11-Server ünnerstütt de nödige XTest-Verwiedern Verschoon 2.2 nich. Freegeven vun Dien Schriefdisch is nich mööglich."
+
+#. +> trunk stable
+#: main.cpp:56
+msgid "Desktop Sharing Error"
+msgstr "Fehler bi de Schriefdisch-Freegaav"
+
+#. +> stable
+#: main.cpp:57
+msgid "Ian Reinhart Geiser"
+msgstr "Ian Reinhart Geiser"
+
+#. +> stable
+#: main.cpp:57
+msgid "DCOP interface"
+msgstr "DCOP-Koppelsteed"
+
+#. +> trunk stable
+#: main.cpp:65
 msgid "Desktop Sharing"
 msgstr "Schriefdisch-Freegaav"
 
-#. +> trunk stable
+#. +> trunk
+#: main.cpp:67
+#, fuzzy
+#| msgid ""
+#| "(c) 2007, Alessandro Praduroux\n"
+#| "(c) 2001-2003, Tim Jansen\n"
+#| "(c) 2001, Johannes E. Schindelin\n"
+#| "(c) 2000, heXoNet Support GmbH, D-66424 Homburg\n"
+#| "(c) 2000-2001, Const Kaplinsky\n"
+#| "(c) 2000, Tridia Corporation\n"
+#| "(c) 1999, AT&T Laboratories Boston\n"
+msgid ""
+"(c) 2009-2010, Collabora Ltd.\n"
+"(c) 2007, Alessandro Praduroux\n"
+"(c) 2001-2003, Tim Jansen\n"
+"(c) 2001, Johannes E. Schindelin\n"
+"(c) 2000-2001, Const Kaplinsky\n"
+"(c) 2000, Tridia Corporation\n"
+"(c) 1999, AT&T Laboratories Boston\n"
+msgstr ""
+"(c) 2007, Alessandro Praduroux\n"
+"(c) 2001-2003, Tim Jansen\n"
+"(c) 2001, Johannes E. Schindelin\n"
+"(c) 2000, heXoNet Support GmbH, D-66424 Homburg\n"
+"(c) 2000-2001, Const Kaplinsky\n"
+"(c) 2000, Tridia Corporation\n"
+"(c) 1999, AT&T Laboratories Boston\n"
+
+#. +> stable
 #: main.cpp:48
 msgid ""
 "(c) 2007, Alessandro Praduroux\n"
@@ -196,108 +242,118 @@ msgstr ""
 "(c) 2000, Tridia Corporation\n"
 "(c) 1999, AT&T Laboratories Boston\n"
 
-#. +> trunk stable
-#: main.cpp:55
-msgid "Alessandro Praduroux"
-msgstr "Alessandro Praduroux"
-
-#. +> trunk stable
-#: main.cpp:55
-msgid "KDE4 porting"
-msgstr "Porteren na KDE4"
-
-#. +> trunk stable
-#: main.cpp:56
-msgid "Tim Jansen"
-msgstr "Tim Jansen"
-
-#. +> trunk stable
-#: main.cpp:57
-msgid "Ian Reinhart Geiser"
-msgstr "Ian Reinhart Geiser"
-
-#. +> trunk stable
-#: main.cpp:57
-msgid "DCOP interface"
-msgstr "DCOP-Koppelsteed"
-
-#. +> trunk stable
-#: main.cpp:58
-msgid "Johannes E. Schindelin"
-msgstr "Johannes E. Schindelin"
-
-#. +> trunk stable
-#: main.cpp:59
-msgid "libvncserver"
-msgstr "libvncserver"
-
-#. +> trunk stable
-#: main.cpp:60
-msgid "Const Kaplinsky"
-msgstr "Const Kaplinsky"
-
-#. +> trunk stable
-#: main.cpp:61
-msgid "TightVNC encoder"
-msgstr "TightVNC-Koderer"
-
-#. +> trunk stable
-#: main.cpp:62
-msgid "Tridia Corporation"
-msgstr "Tridia Corporation"
-
-#. +> trunk stable
-#: main.cpp:63
-msgid "ZLib encoder"
-msgstr "ZLib-Koderer"
-
-#. +> trunk stable
-#: main.cpp:64
-msgid "AT&T Laboratories Boston"
-msgstr "AT&T Laboratories Boston"
-
-#. +> trunk stable
-#: main.cpp:65
-msgid "original VNC encoders and protocol design"
-msgstr "Orginaal VNC-Koderers un Protokollopbu"
-
-#. +> trunk stable
+#. +> stable
 #: main.cpp:67
 msgid "Jens Wagner (heXoNet Support GmbH)"
 msgstr "Jens Wagner (heXoNet Support GmbH)"
 
-#. +> trunk stable
+#. +> stable
 #: main.cpp:68
 msgid "X11 update scanner, original code base"
 msgstr "X11-Opfrischer, orginaal Kodebasis"
 
-#. +> trunk stable
+#. +> stable
 #: main.cpp:70
 msgid "Jason Spisak"
 msgstr "Jason Spisak"
 
-#. +> trunk stable
+#. +> stable
 #: main.cpp:71
 msgid "Connection side image"
 msgstr "Verbinnen-Sietbild"
 
-#. +> trunk stable
+#. +> stable
 #: main.cpp:73
 msgid "Karl Vogel"
 msgstr "Karl Vogel"
 
-#. +> trunk stable
+#. +> trunk
+#: main.cpp:74
+msgid "George Goldberg"
+msgstr ""
+
+#. +> stable
 #: main.cpp:74
 msgid "KDesktop background deactivation"
 msgstr "Utmaken vun den Schriefdisch-Achtergrund"
 
+#. +> trunk
+#: main.cpp:75
+msgid "Telepathy tubes support"
+msgstr ""
+
+#. +> trunk
+#: main.cpp:77
+msgid "George Kiagiadakis"
+msgstr ""
+
 #. +> trunk stable
-#: main.cpp:78
+#: main.cpp:80
+msgid "Alessandro Praduroux"
+msgstr "Alessandro Praduroux"
+
+#. +> trunk stable
+#: main.cpp:80
+msgid "KDE4 porting"
+msgstr "Porteren na KDE4"
+
+#. +> trunk stable
+#: main.cpp:81
+msgid "Tim Jansen"
+msgstr "Tim Jansen"
+
+#. +> trunk
+#: main.cpp:81
+msgid "Original author"
+msgstr ""
+
+#. +> trunk stable
+#: main.cpp:82
+msgid "Johannes E. Schindelin"
+msgstr "Johannes E. Schindelin"
+
+#. +> trunk stable
+#: main.cpp:83
+msgid "libvncserver"
+msgstr "libvncserver"
+
+#. +> trunk stable
+#: main.cpp:84
+msgid "Const Kaplinsky"
+msgstr "Const Kaplinsky"
+
+#. +> trunk stable
+#: main.cpp:85
+msgid "TightVNC encoder"
+msgstr "TightVNC-Koderer"
+
+#. +> trunk stable
+#: main.cpp:86
+msgid "Tridia Corporation"
+msgstr "Tridia Corporation"
+
+#. +> trunk stable
+#: main.cpp:87
+msgid "ZLib encoder"
+msgstr "ZLib-Koderer"
+
+#. +> trunk stable
+#: main.cpp:88
+msgid "AT&T Laboratories Boston"
+msgstr "AT&T Laboratories Boston"
+
+#. +> trunk stable
+#: main.cpp:89
+msgid "original VNC encoders and protocol design"
+msgstr "Orginaal VNC-Koderers un Protokollopbu"
+
+#. +> trunk stable
+#: main.cpp:94
 msgid "Do not show the invitations management dialog at startup"
 msgstr "Inladenplegerdialoog bi't Starten nich wiesen"
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:93
+#: manageinvitationsdialog.cpp:86
 msgid ""
 "An invitation creates a one-time password that allows the receiver to connect to your desktop.\n"
 "It is valid for only one successful connection and will expire after an hour if it has not been used. \n"
@@ -317,7 +373,7 @@ msgstr ""
 "binnen de Instellen tolaten."
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:115
+#: manageinvitationsdialog.cpp:108
 msgid ""
 "When sending an invitation by email, note that everybody who reads this email will be able to connect to your computer for one hour, or until the first successful connection took place, whichever comes first. \n"
 "You should either encrypt the email or at least send it only in a secure network, but not over the Internet."
@@ -326,17 +382,17 @@ msgstr ""
 "Verslötel den Nettbreef beter oder senn em bloots över en seker (lokaal) Nettwark, nich över dat Internet."
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:120
+#: manageinvitationsdialog.cpp:113
 msgid "Send Invitation via Email"
 msgstr "Inladen mit Nettpost sennen"
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:147
+#: manageinvitationsdialog.cpp:140
 msgid "Desktop Sharing (VNC) invitation"
 msgstr "Schriefdischfreegaav-Inladen (VNC)"
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:148
+#: manageinvitationsdialog.cpp:141
 #, kde-format
 msgid ""
 "You have been invited to a VNC session. If you have the KDE Remote Desktop Connection installed, just click on the link below.\n"
@@ -362,27 +418,27 @@ msgstr ""
 "Vun wegen de Sekerheit löppt disse Inladen op den %5 (%6) af."
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:187
+#: manageinvitationsdialog.cpp:180
 msgid "Network"
 msgstr "Nettwark"
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:188
+#: manageinvitationsdialog.cpp:181
 msgid "Security"
 msgstr "Sekerheit"
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:197
+#: manageinvitationsdialog.cpp:189
 msgid "<qt>Are you sure you want to delete all invitations?</qt>"
 msgstr "<qt>Büst Du seker, Du wullt all Inladen wegdoon?</qt>"
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:198 manageinvitationsdialog.cpp:213
+#: manageinvitationsdialog.cpp:190 manageinvitationsdialog.cpp:205
 msgid "Confirm delete Invitations"
 msgstr "Inladen wegdoon beglöven"
 
 #. +> trunk stable
-#: manageinvitationsdialog.cpp:212
+#: manageinvitationsdialog.cpp:204
 msgid "<qt>Are you sure you want to delete this invitation?</qt>"
 msgstr "<qt>Büst Du seker, Du wullt disse Inladen wegdoon?</qt>"
 
@@ -418,54 +474,99 @@ msgstr ""
 "Adress hebben oder sik gor nich faatkriegen laten."
 
 #. +> trunk stable
-#: trayicon.cpp:38 trayicon.cpp:91
-msgid "Desktop Sharing - disconnected"
-msgstr "Schriefdisch-Freegaav - afkoppelt"
-
-#. +> trunk stable
-#: trayicon.cpp:47
-msgid "Enable Remote Control"
-msgstr "Feernkuntrull anmaken"
-
-#. +> trunk stable
-#: trayicon.cpp:48
-msgid "Disable Remote Control"
-msgstr "Feernkuntrull utmaken"
-
-#. +> trunk stable
-#: trayicon.cpp:78
+#: rfbservermanager.cpp:214
 #, kde-format
 msgid "The remote user %1 is now connected."
 msgstr "De feerne Bruker \"%1\" hett sik tokoppelt."
 
-#. +> trunk stable
-#: trayicon.cpp:80
-#, kde-format
-msgid "Desktop Sharing - connected with %1"
-msgstr "Schriefdisch-Freegaav - tokoppelt na %1"
+#. +> trunk
+#: rfbservermanager.cpp:228
+#, fuzzy, kde-format
+#| msgid "The remote user %1 is now connected."
+msgid "The remote user %1 disconnected."
+msgstr "De feerne Bruker \"%1\" hett sik tokoppelt."
+
+#. +> trunk
+#: trayicon.cpp:55
+msgid "Disconnect"
+msgstr ""
 
 #. +> trunk stable
+#: trayicon.cpp:61
+msgid "Enable Remote Control"
+msgstr "Feernkuntrull anmaken"
+
+#. +> stable
+#: trayicon.cpp:49
+msgid "Disable Remote Control"
+msgstr "Feernkuntrull utmaken"
+
+#. +> stable
 #: trayicon.cpp:93
 msgid "The remote user has closed the connection."
 msgstr "De feerne Bruker hett sik afkoppelt."
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_allowUninvitedConnections)
 #. +> trunk stable
-#: ui/configsecurity.ui:17
-msgid "Allow uninvited connections"
-msgstr "Verbinnen ahn Inladen tolaten"
+#: trayicon.cpp:102 trayicon.cpp:138
+msgid "Desktop Sharing - disconnected"
+msgstr "Schriefdisch-Freegaav - afkoppelt"
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_allowDesktopControl)
 #. +> trunk stable
-#: ui/configsecurity.ui:24
-msgid "Allow remote connections to control your desktop"
-msgstr "Feern Brukers dat Stüern över Tastatuur un Muus verlöven"
+#: trayicon.cpp:120 trayicon.cpp:142
+#, kde-format
+msgid "Desktop Sharing - connected with %1"
+msgstr "Schriefdisch-Freegaav - tokoppelt na %1"
+
+#. +> trunk
+#: trayicon.cpp:123
+#, fuzzy
+#| msgid "Desktop Sharing - disconnected"
+msgid "Desktop Sharing - connected"
+msgstr "Schriefdisch-Freegaav - afkoppelt"
+
+#. +> trunk
+#: tubesrfbserver.cpp:138
+msgid "An error occurred sharing your desktop."
+msgstr ""
+
+#. +> trunk
+#: tubesrfbserver.cpp:139 tubesrfbserver.cpp:152 tubesrfbserver.cpp:173
+#: tubesrfbserver.cpp:190 tubesrfbserver.cpp:248 tubesrfbserver.cpp:252
+msgid "Error"
+msgstr ""
+
+#. +> trunk
+#: tubesrfbserver.cpp:151 tubesrfbserver.cpp:172 tubesrfbserver.cpp:251
+msgid "An unknown error occurred sharing your desktop."
+msgstr ""
+
+#. +> trunk
+#: tubesrfbserver.cpp:189
+msgid "Failed to activate the rfb server."
+msgstr ""
+
+#. +> trunk
+#: tubesrfbserver.cpp:245
+msgid "An error occurred sharing your desktop. The person you are trying to share your desktop with does not have the required software installed to access it."
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_askOnConnect)
 #. +> trunk stable
-#: ui/configsecurity.ui:37
+#: ui/configsecurity.ui:20
 msgid "Ask before accepting connections"
 msgstr "Ehr't Annehmen vun Verbinnen nafragen"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_allowDesktopControl)
+#. +> trunk stable
+#: ui/configsecurity.ui:30
+msgid "Allow remote connections to control your desktop"
+msgstr "Feern Brukers dat Stüern över Tastatuur un Muus verlöven"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_allowUninvitedConnections)
+#. +> trunk stable
+#: ui/configsecurity.ui:40
+msgid "Allow uninvited connections"
+msgstr "Verbinnen ahn Inladen tolaten"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. +> trunk stable
@@ -511,13 +612,13 @@ msgstr "123.234.123.234"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, cbAllowRemoteControl)
 #. +> trunk stable
-#: ui/connectionwidget.ui:136
+#: ui/connectionwidget.ui:136 ui/tubesconnectionwidget.ui:101
 msgid "If you turn this option on, the remote user can enter keystrokes and use your mouse pointer. This gives them full control over your computer, so be careful. When the option is disabled the remote user can only watch your screen."
 msgstr "Wenn Du dit anmaakst, kann de feerne Bruker sien Tastatuur un Muus för Ingaven bruken. Dat gifft em de vulle Kuntrull över Dien Reekner, wees also man achtsom. Wenn de Optschoon nich aktiveert is, kann he \"bloots\" allens op Dien Schirm beluern."
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbAllowRemoteControl)
 #. +> trunk stable
-#: ui/connectionwidget.ui:139
+#: ui/connectionwidget.ui:139 ui/tubesconnectionwidget.ui:104
 msgid "Allow remote user to &control keyboard and mouse"
 msgstr "Den feernen Bruker dat &Stüern över Tastatuur un Muus verlöven"
 
@@ -716,6 +817,25 @@ msgstr "<b>Passwoort:</b>"
 #: ui/personalinvitewidget.ui:161
 msgid "<b>Expiration time:</b>"
 msgstr "<b>Aflooptiet:</b>"
+
+#. i18n: ectx: property (text), widget (QLabel, TextLabel5)
+#. +> trunk
+#: ui/tubesconnectionwidget.ui:48
+#, fuzzy
+#| msgid "Invitation"
+msgid "Confirmation"
+msgstr "Inladen"
+
+#. +> stable
+#: connectioncontroller.cpp:123
+#, kde-format
+msgid "Accepted uninvited connection from %1"
+msgstr "Verbinnen ahn Inladen vun %1 annahmen"
+
+#. +> stable
+#: krfbserver.cpp:207
+msgid "Address already in use"
+msgstr "Adress al in Bruuk"
 
 #~ msgid "Ask before accepting an uninvited connection"
 #~ msgstr "Verbinnen ahn Inladen beglöven laten"
