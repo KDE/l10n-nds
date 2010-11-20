@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-11-09 07:13+0100\n"
+"POT-Creation-Date: 2010-11-20 06:38+0100\n"
 "PO-Revision-Date: 2010-10-25 06:29+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -16,6 +16,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.0\n"
+
+#: examples/ktcli/main.cpp:46
+msgid "Torrent to open"
+msgstr "Torrent, den Du opmaken wullt"
+
+#: examples/ktcli/main.cpp:47 examples/ktcli/main.cpp:48
+msgid "Port to use"
+msgstr "Bruukt Port"
+
+#: examples/ktcli/main.cpp:49
+msgid "Whether or not to enable encryption"
+msgstr "Leggt fast, wat Verslöteln bruukt warrt."
+
+#: examples/ktcli/main.cpp:50
+msgid "Whether or not to enable peer exchange"
+msgstr "Leggt fast, wat Partnertuschen bruukt warrt"
+
+#: examples/ktcli/main.cpp:51
+#, fuzzy
+#| msgid "Whether or not to enable encryption"
+msgid "Whether or not to use utp"
+msgstr "Leggt fast, wat Verslöteln bruukt warrt."
+
+#: examples/ktcli/main.cpp:53
+msgid "ktcli"
+msgstr "ktcli"
 
 #: src/bcodec/bdecoder.cpp:62
 #, kde-format
@@ -38,6 +64,21 @@ msgstr "\"%1\" lett sik nich na en Heeltall ümwanneln"
 #: src/bcodec/bdecoder.cpp:252
 msgid "Torrent is incomplete."
 msgstr "Torrent is nich komplett."
+
+#: src/datachecker/datacheckerjob.cpp:68
+#: src/datachecker/datacheckerjob.cpp:120
+#, fuzzy
+#| msgid "Checking data"
+msgid "Checking Data"
+msgstr "Daten warrt pröövt"
+
+#: src/datachecker/multidatachecker.cpp:62
+#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:722
+#: src/diskio/multifilecache.cpp:761 src/torrent/torrentcreator.cpp:124
+#: src/torrent/torrentcreator.cpp:255 src/torrent/torrentcreator.cpp:292
+#, kde-format
+msgid "Cannot open file %1: %2"
+msgstr "Datei \"%1\" lett sik nich opmaken: %2"
 
 #: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:354
 #: src/util/fileops.cpp:396
@@ -99,16 +140,6 @@ msgstr "Plattenspieker lett sik nich vörweg towiesen: %1"
 msgid "Cannot open index file %1: %2"
 msgstr "Index-Datei \"%1\" lett sik nich opmaken: %2"
 
-#: src/diskio/singlefilecache.cpp:79 src/diskio/multifilecache.cpp:93
-#, kde-format
-msgid "Failed to open %1: %2"
-msgstr "\"%1\" lett sik nich opmaken: %2"
-
-#: src/diskio/singlefilecache.cpp:90 src/diskio/multifilecache.cpp:120
-#, kde-format
-msgid "Failed to create %1: %2"
-msgstr "\"%1\" lett sik nich opstellen: %2"
-
 #: src/diskio/dndfile.cpp:89
 #, kde-format
 msgid "Cannot create file %1: %2"
@@ -139,17 +170,86 @@ msgctxt "The destination of a file operation"
 msgid "Destination"
 msgstr ""
 
-#: src/diskio/multifilecache.cpp:722 src/diskio/multifilecache.cpp:761
-#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
-#: src/torrent/torrentcreator.cpp:292 src/datachecker/singledatachecker.cpp:49
-#: src/datachecker/multidatachecker.cpp:62
+#: src/diskio/multifilecache.cpp:93 src/diskio/singlefilecache.cpp:79
 #, kde-format
-msgid "Cannot open file %1: %2"
-msgstr "Datei \"%1\" lett sik nich opmaken: %2"
+msgid "Failed to open %1: %2"
+msgstr "\"%1\" lett sik nich opmaken: %2"
+
+#: src/diskio/multifilecache.cpp:120 src/diskio/singlefilecache.cpp:90
+#, kde-format
+msgid "Failed to create %1: %2"
+msgstr "\"%1\" lett sik nich opstellen: %2"
 
 #: src/diskio/piecedata.cpp:64 src/diskio/piecedata.cpp:103
 msgid "Unable to write to a piece mapped read only"
 msgstr ""
+
+#: src/download/chunkdownload.cpp:382
+#, kde-format
+msgid "1 peer"
+msgid_plural "%1 peers"
+msgstr[0] "1 Partner"
+msgstr[1] "%1 Partners"
+
+#: src/download/httpconnection.cpp:37 src/download/webseed.cpp:49
+#: src/download/webseed.cpp:93
+msgid "Not connected"
+msgstr "Nich tokoppelt"
+
+#: src/download/httpconnection.cpp:103
+#, kde-format
+msgid "Resolving proxy %1:%2"
+msgstr "Proxy \"%1\" warrt nakeken: %2"
+
+#: src/download/httpconnection.cpp:112
+#, kde-format
+msgid "Resolving hostname %1"
+msgstr "Reeknernaam \"%1\" warrt nakeken"
+
+#: src/download/httpconnection.cpp:125 src/download/webseed.cpp:321
+msgid "Connection closed"
+msgstr "Afkoppelt"
+
+#: src/download/httpconnection.cpp:132
+#, kde-format
+msgid "Error: request failed: %1"
+msgstr "Fehler: Anfraag fehlslaan: %1"
+
+#: src/download/httpconnection.cpp:149 src/download/httpconnection.cpp:213
+msgid "Connected"
+msgstr "Tokoppelt"
+
+#: src/download/httpconnection.cpp:155
+msgid "Error: Failed to connect to webseed"
+msgstr "Fehler: Tokoppeln na Nettverdelen fehlslaan"
+
+#: src/download/httpconnection.cpp:220
+msgid "Connecting"
+msgstr "An't Tokoppeln"
+
+#: src/download/httpconnection.cpp:231
+msgid "Failed to connect to webseed"
+msgstr "Tokoppeln na Nettverdelen fehlslaan"
+
+#: src/download/httpconnection.cpp:238
+msgid "Failed to resolve hostname of webseed"
+msgstr "Nakieken vun de Verdelen ehr Reeknernaam fehlslaan"
+
+#: src/download/httpconnection.cpp:318
+msgid "Error: failed to connect, server not responding"
+msgstr "Fehler: Tokoppeln fehlslaan, Server antert nich"
+
+#: src/download/httpconnection.cpp:327
+msgid "Error: request timed out"
+msgstr "Fehler: Anfraagtiet aflopen"
+
+#: src/download/httpconnection.cpp:391
+msgid "Redirected without a new location."
+msgstr "Ahn nieg Teel wiederleddt."
+
+#: src/download/webseed.cpp:303 src/download/webseed.cpp:517
+msgid "Not in use"
+msgstr "Nich bruukt"
 
 #: src/interfaces/trackerinterface.cpp:58
 msgid "OK"
@@ -178,33 +278,64 @@ msgstr "Dat gifft den Orner \"%1\" nich"
 msgid "Unknown client"
 msgstr "Nich begäng Client"
 
-#: src/tracker/httpannouncejob.cpp:142
-msgid "Redirect without a redirect location"
-msgstr "Ahn nieg Teel wiederledden"
+#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
+#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
+#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
+#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
+msgid "Corrupted torrent."
+msgstr "Torrent is schaadhaftig."
 
-#: src/tracker/udptracker.cpp:371 src/tracker/udptracker.cpp:381
-#: src/tracker/httptracker.cpp:557
+#: src/torrent/torrent.cpp:165
 #, kde-format
-msgid "Timeout contacting tracker %1"
-msgstr "Tiet för't Ansnacken vun Tracker aflopen %1"
+msgid "Unable to open torrent file %1: %2"
+msgstr "Torrent-Datei \"%1\" lett sik nich opmaken: %2"
 
-#: src/tracker/udptracker.cpp:408
+#: src/torrent/torrent.cpp:295
+msgid "Parse Error"
+msgstr "Inleesfehler"
+
+#: src/torrent/torrentcontrol.cpp:307
+msgid "Error writing to disk, do you have enough diskspace?"
+msgstr ""
+"Fehler bi't Schrieven na de Fastplaat. - Is dor noch noog free Ruum övrig?"
+
+#: src/torrent/torrentcontrol.cpp:545
 #, kde-format
-msgid "Unable to resolve hostname %1"
-msgstr "Reeknernaam \"%1\" lett sik nich oplösen"
+msgid ""
+"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
+"torrent is probably corrupt or is not a valid torrent file."
+msgstr ""
+"Bi't Laden vun den Torrent <b>%1</b> hett dat en Fehler geven.<br/><b>%2</"
+"b><br/>De Torrent is wull schaadhaftig, oder keen Torrent-Datei."
 
-#: src/tracker/httptracker.cpp:280 src/tracker/httptracker.cpp:300
-#: src/tracker/httptracker.cpp:462
-msgid "Invalid response from tracker"
-msgstr "Leeg Antwoort vun Tracker"
+#: src/torrent/torrentcontrol.cpp:575
+#, kde-format
+msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
+msgstr "Dat geev en Fehler bi't Laden vun <b>%1</b>:<br/><b>%2</b>"
 
-#: src/tracker/httptracker.cpp:293
-msgid "Invalid data from tracker"
-msgstr "Leeg Daten vun Tracker"
+#: src/torrent/torrentcontrol.cpp:585
+#, kde-format
+msgid "Unable to create %1: %2"
+msgstr "\"%1\" lett sik nich opstellen: %2"
 
-#: src/tracker/httptracker.cpp:479
-msgid "Invalid tracker URL"
-msgstr "Leeg Tracker-Adress"
+#: src/torrent/torrentcontrol.cpp:600
+#, kde-format
+msgid ""
+"You are already downloading the torrent <b>%1</b>. The tracker lists from "
+"both torrents have been merged."
+msgstr ""
+"Du laadst den Torrent <b>%1</b> al daal. De Tracker-List vun beed Torrents "
+"wöör tosamenföhrt."
+
+#: src/torrent/torrentcontrol.cpp:605
+#, kde-format
+msgid "You are already downloading the torrent <b>%1</b>."
+msgstr "Du laadst den Torrent <b>%1</b> al daal."
+
+#: src/torrent/torrentcreator.cpp:361
+#, kde-format
+msgid "Cannot create index file: %1"
+msgstr "Indexdatei \"%1\" lett sik nich opstellen."
 
 #: src/torrent/torrentstats.cpp:72
 msgid "Not started"
@@ -263,138 +394,64 @@ msgstr "Ophollen"
 msgid "Superseeding"
 msgstr "Plietsch Verdelen"
 
-#: src/torrent/torrentcreator.cpp:361
+#: src/tracker/httpannouncejob.cpp:142
+msgid "Redirect without a redirect location"
+msgstr "Ahn nieg Teel wiederledden"
+
+#: src/tracker/httptracker.cpp:280 src/tracker/httptracker.cpp:300
+#: src/tracker/httptracker.cpp:462
+msgid "Invalid response from tracker"
+msgstr "Leeg Antwoort vun Tracker"
+
+#: src/tracker/httptracker.cpp:293
+msgid "Invalid data from tracker"
+msgstr "Leeg Daten vun Tracker"
+
+#: src/tracker/httptracker.cpp:479
+msgid "Invalid tracker URL"
+msgstr "Leeg Tracker-Adress"
+
+#: src/tracker/httptracker.cpp:557 src/tracker/udptracker.cpp:371
+#: src/tracker/udptracker.cpp:381
 #, kde-format
-msgid "Cannot create index file: %1"
-msgstr "Indexdatei \"%1\" lett sik nich opstellen."
+msgid "Timeout contacting tracker %1"
+msgstr "Tiet för't Ansnacken vun Tracker aflopen %1"
 
-#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
-#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
-#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
-#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
-msgid "Corrupted torrent."
-msgstr "Torrent is schaadhaftig."
-
-#: src/torrent/torrent.cpp:165
+#: src/tracker/udptracker.cpp:408
 #, kde-format
-msgid "Unable to open torrent file %1: %2"
-msgstr "Torrent-Datei \"%1\" lett sik nich opmaken: %2"
+msgid "Unable to resolve hostname %1"
+msgstr "Reeknernaam \"%1\" lett sik nich oplösen"
 
-#: src/torrent/torrent.cpp:295
-msgid "Parse Error"
-msgstr "Inleesfehler"
+#: src/upnp/httprequest.cpp:96
+msgid "Connection closed unexpectedly"
+msgstr "Verbinnen unverwachtens tomaakt"
 
-#: src/torrent/torrentcontrol.cpp:307
-msgid "Error writing to disk, do you have enough diskspace?"
-msgstr ""
-"Fehler bi't Schrieven na de Fastplaat. - Is dor noch noog free Ruum övrig?"
+#: src/upnp/httprequest.cpp:155
+msgid "Operation timed out"
+msgstr "Akschoon hett to lang bruukt."
 
-#: src/torrent/torrentcontrol.cpp:545
+#: src/upnp/upnprouter.cpp:167
 #, kde-format
+msgid "Failed to download %1: %2"
+msgstr "\"%1\" lett sik nich daalladen: %2"
+
+#: src/upnp/upnprouter.cpp:178
+msgid "Error parsing router description."
+msgstr "Fehler bi't Inlesen vun de Nettweger-Beschrieven."
+
+#: src/upnp/upnprouter.cpp:216
 msgid ""
-"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
-"torrent is probably corrupt or is not a valid torrent file."
+"Forwarding failed:\n"
+"Device does not have a WANIPConnection or WANPPPConnection."
 msgstr ""
-"Bi't Laden vun den Torrent <b>%1</b> hett dat en Fehler geven.<br/><b>%2</"
-"b><br/>De Torrent is wull schaadhaftig, oder keen Torrent-Datei."
+"Wiederledden fehlslaan:\n"
+"De Reedschap hett keen WAN-IP- oder WAN-PPP-Verbinnen."
 
-#: src/torrent/torrentcontrol.cpp:575
-#, kde-format
-msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
-msgstr "Dat geev en Fehler bi't Laden vun <b>%1</b>:<br/><b>%2</b>"
-
-#: src/torrent/torrentcontrol.cpp:585
-#, kde-format
-msgid "Unable to create %1: %2"
-msgstr "\"%1\" lett sik nich opstellen: %2"
-
-#: src/torrent/torrentcontrol.cpp:600
-#, kde-format
-msgid ""
-"You are already downloading the torrent <b>%1</b>. The tracker lists from "
-"both torrents have been merged."
+#: src/upnp/upnprouter.cpp:314
+msgid "Cannot find port forwarding service in the device's description."
 msgstr ""
-"Du laadst den Torrent <b>%1</b> al daal. De Tracker-List vun beed Torrents "
-"wöör tosamenföhrt."
-
-#: src/torrent/torrentcontrol.cpp:605
-#, kde-format
-msgid "You are already downloading the torrent <b>%1</b>."
-msgstr "Du laadst den Torrent <b>%1</b> al daal."
-
-#: src/datachecker/datacheckerjob.cpp:68
-#: src/datachecker/datacheckerjob.cpp:120
-#, fuzzy
-#| msgid "Checking data"
-msgid "Checking Data"
-msgstr "Daten warrt pröövt"
-
-#: src/download/httpconnection.cpp:37 src/download/webseed.cpp:49
-#: src/download/webseed.cpp:93
-msgid "Not connected"
-msgstr "Nich tokoppelt"
-
-#: src/download/httpconnection.cpp:103
-#, kde-format
-msgid "Resolving proxy %1:%2"
-msgstr "Proxy \"%1\" warrt nakeken: %2"
-
-#: src/download/httpconnection.cpp:112
-#, kde-format
-msgid "Resolving hostname %1"
-msgstr "Reeknernaam \"%1\" warrt nakeken"
-
-#: src/download/httpconnection.cpp:125 src/download/webseed.cpp:321
-msgid "Connection closed"
-msgstr "Afkoppelt"
-
-#: src/download/httpconnection.cpp:132
-#, kde-format
-msgid "Error: request failed: %1"
-msgstr "Fehler: Anfraag fehlslaan: %1"
-
-#: src/download/httpconnection.cpp:149 src/download/httpconnection.cpp:213
-msgid "Connected"
-msgstr "Tokoppelt"
-
-#: src/download/httpconnection.cpp:155
-msgid "Error: Failed to connect to webseed"
-msgstr "Fehler: Tokoppeln na Nettverdelen fehlslaan"
-
-#: src/download/httpconnection.cpp:220
-msgid "Connecting"
-msgstr "An't Tokoppeln"
-
-#: src/download/httpconnection.cpp:231
-msgid "Failed to connect to webseed"
-msgstr "Tokoppeln na Nettverdelen fehlslaan"
-
-#: src/download/httpconnection.cpp:238
-msgid "Failed to resolve hostname of webseed"
-msgstr "Nakieken vun de Verdelen ehr Reeknernaam fehlslaan"
-
-#: src/download/httpconnection.cpp:318
-msgid "Error: failed to connect, server not responding"
-msgstr "Fehler: Tokoppeln fehlslaan, Server antert nich"
-
-#: src/download/httpconnection.cpp:327
-msgid "Error: request timed out"
-msgstr "Fehler: Anfraagtiet aflopen"
-
-#: src/download/httpconnection.cpp:391
-msgid "Redirected without a new location."
-msgstr "Ahn nieg Teel wiederleddt."
-
-#: src/download/chunkdownload.cpp:382
-#, kde-format
-msgid "1 peer"
-msgid_plural "%1 peers"
-msgstr[0] "1 Partner"
-msgstr[1] "%1 Partners"
-
-#: src/download/webseed.cpp:303 src/download/webseed.cpp:517
-msgid "Not in use"
-msgstr "Nich bruukt"
+"In de Reedschap-Beschrieven lett sik keen Deenst för't Port-Wiederledden "
+"finnen."
 
 #: src/util/file.cpp:84
 #, kde-format
@@ -500,63 +557,6 @@ msgstr "Fehler bi't Schrieven na Fastplaat"
 #: src/util/signalcatcher.cpp:57
 msgid "Error when reading from disk"
 msgstr "Fehler bi't Lesen vun Fastplaat"
-
-#: src/upnp/upnprouter.cpp:167
-#, kde-format
-msgid "Failed to download %1: %2"
-msgstr "\"%1\" lett sik nich daalladen: %2"
-
-#: src/upnp/upnprouter.cpp:178
-msgid "Error parsing router description."
-msgstr "Fehler bi't Inlesen vun de Nettweger-Beschrieven."
-
-#: src/upnp/upnprouter.cpp:216
-msgid ""
-"Forwarding failed:\n"
-"Device does not have a WANIPConnection or WANPPPConnection."
-msgstr ""
-"Wiederledden fehlslaan:\n"
-"De Reedschap hett keen WAN-IP- oder WAN-PPP-Verbinnen."
-
-#: src/upnp/upnprouter.cpp:314
-msgid "Cannot find port forwarding service in the device's description."
-msgstr ""
-"In de Reedschap-Beschrieven lett sik keen Deenst för't Port-Wiederledden "
-"finnen."
-
-#: src/upnp/httprequest.cpp:96
-msgid "Connection closed unexpectedly"
-msgstr "Verbinnen unverwachtens tomaakt"
-
-#: src/upnp/httprequest.cpp:155
-msgid "Operation timed out"
-msgstr "Akschoon hett to lang bruukt."
-
-#: examples/ktcli/main.cpp:46
-msgid "Torrent to open"
-msgstr "Torrent, den Du opmaken wullt"
-
-#: examples/ktcli/main.cpp:47 examples/ktcli/main.cpp:48
-msgid "Port to use"
-msgstr "Bruukt Port"
-
-#: examples/ktcli/main.cpp:49
-msgid "Whether or not to enable encryption"
-msgstr "Leggt fast, wat Verslöteln bruukt warrt."
-
-#: examples/ktcli/main.cpp:50
-msgid "Whether or not to enable peer exchange"
-msgstr "Leggt fast, wat Partnertuschen bruukt warrt"
-
-#: examples/ktcli/main.cpp:51
-#, fuzzy
-#| msgid "Whether or not to enable encryption"
-msgid "Whether or not to use utp"
-msgstr "Leggt fast, wat Verslöteln bruukt warrt."
-
-#: examples/ktcli/main.cpp:53
-msgid "ktcli"
-msgstr "ktcli"
 
 #~ msgid "Not enough diskspace"
 #~ msgstr "Nich noog free Ruum op de Fastplaat"
