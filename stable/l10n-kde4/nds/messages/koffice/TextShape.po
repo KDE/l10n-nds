@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TextShape\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-11-11 06:19+0100\n"
+"POT-Creation-Date: 2010-12-04 10:36+0100\n"
 "PO-Revision-Date: 2010-05-02 07:56+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -194,6 +194,10 @@ msgstr "Afsnittformaat"
 msgid "Paragraph Settings"
 msgstr "Afsnittinstellen"
 
+#: dialogs/TableDialog.cpp:27
+msgid "Insert Table"
+msgstr "Tabell infögen"
+
 #: dialogs/ChangeConfigureDialog.cpp:128
 msgid "This is a line of inserted text."
 msgstr "Dit is en Textreeg mit inföögt Text."
@@ -205,10 +209,6 @@ msgstr "Dit is en Textreeg mit wegdaan Text."
 #: dialogs/ChangeConfigureDialog.cpp:140
 msgid "This is a line of text whose format has been changed."
 msgstr "DisseTextreeg bargt Formaatännern."
-
-#: dialogs/TableDialog.cpp:27
-msgid "Insert Table"
-msgstr "Tabell infögen"
 
 #: commands/TextCutCommand.cpp:34
 msgid "Cut"
@@ -238,6 +238,10 @@ msgstr "Ännern övernehmen"
 msgid "Key Press"
 msgstr "Tastdruck"
 
+#: commands/ChangeListLevelCommand.cpp:42
+msgid "Change List Level"
+msgstr "Liststoop ännern"
+
 #: commands/ShowChangesCommand.cpp:53 TextTool.cpp:371
 msgid "Show Changes"
 msgstr "Ännern wiesen"
@@ -245,10 +249,6 @@ msgstr "Ännern wiesen"
 #: commands/ShowChangesCommand.cpp:55
 msgid "Hide Changes"
 msgstr "Ännern versteken"
-
-#: commands/ChangeListLevelCommand.cpp:42
-msgid "Change List Level"
-msgstr "Liststoop ännern"
 
 #: commands/ChangeListCommand.cpp:57 commands/ChangeListCommand.cpp:69
 msgid "Change List"
@@ -546,7 +546,7 @@ msgstr "Ännern opteken"
 
 #. i18n: file: dialogs/ChangeConfigureDialog.ui:17
 #. i18n: ectx: property (windowTitle), widget (QDialog, ChangeConfigureDialog)
-#: TextTool.cpp:381 rc.cpp:44
+#: TextTool.cpp:381 rc.cpp:65
 msgid "Configure Change Tracking"
 msgstr "Instellen för't Naspören vun Ännern"
 
@@ -722,21 +722,63 @@ msgstr ""
 "dit all vörhannen Text nieg formateren, de vördem mit en anner Stil "
 "formateert wöör. Stilen laat sik mit den Stildocker bruken.</p></body></html>"
 
+#. i18n: file: dialogs/TableDialog.ui:23
+#. i18n: ectx: property (title), widget (QGroupBox, groupLogical)
+#: rc.cpp:38
+msgid "Columns and rows"
+msgstr "Striepen un Regen"
+
+#. i18n: file: dialogs/TableDialog.ui:32
+#. i18n: ectx: property (text), widget (QLabel, labelColumns)
+#: rc.cpp:41
+msgid "Number of columns:"
+msgstr "Tall vun Striepen:"
+
+#. i18n: file: dialogs/TableDialog.ui:55
+#. i18n: ectx: property (text), widget (QLabel, labelRows)
+#: rc.cpp:44
+msgid "Number of rows:"
+msgstr "Tall vun Regen:"
+
+#. i18n: file: dialogs/TableDialog.ui:97
+#. i18n: ectx: property (title), widget (QGroupBox, groupPhysical)
+#: rc.cpp:47
+msgid "Width strategy"
+msgstr "Breed topassen"
+
+#. i18n: file: dialogs/TableDialog.ui:112
+#. i18n: ectx: property (text), widget (QRadioButton, radioFixed)
+#: rc.cpp:50
+msgid "Fixed column width:"
+msgstr "Fast Striepbreed:"
+
+#. i18n: file: dialogs/TableDialog.ui:125
+#. i18n: ectx: property (text), widget (QRadioButton, radioFitContents)
+#: rc.cpp:53
+msgid "Fit to contents"
+msgstr "Op Inholt topassen"
+
+#. i18n: file: dialogs/TableDialog.ui:138
+#. i18n: ectx: property (text), widget (QRadioButton, radioFitAvail)
+#: rc.cpp:56
+msgid "Fit to available surrounding"
+msgstr "Op verföögbor Rand topassen"
+
 #. i18n: file: dialogs/SimpleStyleWidget.ui:174
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:38
+#: rc.cpp:59
 msgid "List Style:"
 msgstr "List-Stil:"
 
 #. i18n: file: dialogs/SimpleStyleWidget.ui:193
 #. i18n: ectx: property (toolTip), widget (QToolButton, listStyleAgain)
-#: rc.cpp:41
+#: rc.cpp:62
 msgid "Apply again"
 msgstr "Nochmaal anwennen"
 
 #. i18n: file: dialogs/ChangeConfigureDialog.ui:52
 #. i18n: ectx: property (title), widget (QGroupBox, insertionGroupBox)
-#: rc.cpp:47
+#: rc.cpp:68
 msgid "Insertions"
 msgstr "Infögen"
 
@@ -746,7 +788,7 @@ msgstr "Infögen"
 #. i18n: ectx: property (text), widget (QLabel, deletionColorLabel)
 #. i18n: file: dialogs/ChangeConfigureDialog.ui:221
 #. i18n: ectx: property (text), widget (QLabel, formatColorLabel)
-#: rc.cpp:50 rc.cpp:59 rc.cpp:68
+#: rc.cpp:71 rc.cpp:80 rc.cpp:89
 msgid "Background Color"
 msgstr "Achtergrundklöör"
 
@@ -788,7 +830,7 @@ msgstr "Achtergrundklöör"
 #. i18n: ectx: property (text), widget (QToolButton, deleteStyle)
 #. i18n: file: dialogs/ParagraphBulletsNumbers.ui:138
 #. i18n: ectx: property (text), widget (QToolButton, customCharacter)
-#: rc.cpp:53 rc.cpp:62 rc.cpp:71 rc.cpp:162 rc.cpp:171 rc.cpp:177 rc.cpp:186
+#: rc.cpp:74 rc.cpp:83 rc.cpp:92 rc.cpp:162 rc.cpp:171 rc.cpp:177 rc.cpp:186
 #: rc.cpp:189 rc.cpp:192 rc.cpp:195 rc.cpp:198 rc.cpp:201 rc.cpp:204
 #: rc.cpp:207 rc.cpp:270 rc.cpp:276 rc.cpp:282 rc.cpp:285 rc.cpp:315
 msgid "..."
@@ -796,19 +838,19 @@ msgstr "..."
 
 #. i18n: file: dialogs/ChangeConfigureDialog.ui:127
 #. i18n: ectx: property (title), widget (QGroupBox, deletionGroupBox)
-#: rc.cpp:56
+#: rc.cpp:77
 msgid "Deletions"
 msgstr "Wegdaan"
 
 #. i18n: file: dialogs/ChangeConfigureDialog.ui:199
 #. i18n: ectx: property (title), widget (QGroupBox, formatGroupBox)
-#: rc.cpp:65
+#: rc.cpp:86
 msgid "Format Changes"
 msgstr "Formaatännern"
 
 #. i18n: file: dialogs/ChangeConfigureDialog.ui:283
 #. i18n: ectx: property (html), widget (QTextEdit, previewTextEdit)
-#: rc.cpp:74
+#: rc.cpp:95
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -907,48 +949,6 @@ msgstr ""
 "family:'MS Shell Dlg 2'; font-size:8pt;\">Dit is de Textreeg vör den "
 "formateerten Text. Disse Textreeg wöör formateert. Dit is de Textreeg na den "
 "formateerten Text.</span></p></body></html>"
-
-#. i18n: file: dialogs/TableDialog.ui:23
-#. i18n: ectx: property (title), widget (QGroupBox, groupLogical)
-#: rc.cpp:90
-msgid "Columns and rows"
-msgstr "Striepen un Regen"
-
-#. i18n: file: dialogs/TableDialog.ui:32
-#. i18n: ectx: property (text), widget (QLabel, labelColumns)
-#: rc.cpp:93
-msgid "Number of columns:"
-msgstr "Tall vun Striepen:"
-
-#. i18n: file: dialogs/TableDialog.ui:55
-#. i18n: ectx: property (text), widget (QLabel, labelRows)
-#: rc.cpp:96
-msgid "Number of rows:"
-msgstr "Tall vun Regen:"
-
-#. i18n: file: dialogs/TableDialog.ui:97
-#. i18n: ectx: property (title), widget (QGroupBox, groupPhysical)
-#: rc.cpp:99
-msgid "Width strategy"
-msgstr "Breed topassen"
-
-#. i18n: file: dialogs/TableDialog.ui:112
-#. i18n: ectx: property (text), widget (QRadioButton, radioFixed)
-#: rc.cpp:102
-msgid "Fixed column width:"
-msgstr "Fast Striepbreed:"
-
-#. i18n: file: dialogs/TableDialog.ui:125
-#. i18n: ectx: property (text), widget (QRadioButton, radioFitContents)
-#: rc.cpp:105
-msgid "Fit to contents"
-msgstr "Op Inholt topassen"
-
-#. i18n: file: dialogs/TableDialog.ui:138
-#. i18n: ectx: property (text), widget (QRadioButton, radioFitAvail)
-#: rc.cpp:108
-msgid "Fit to available surrounding"
-msgstr "Op verföögbor Rand topassen"
 
 #. i18n: file: dialogs/NewStyleWidget.ui:32
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
