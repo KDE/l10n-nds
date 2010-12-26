@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: knipptasch_qt\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-22 02:50+0100\n"
+"POT-Creation-Date: 2010-12-26 03:27+0100\n"
 "PO-Revision-Date: 2010-12-18 14:30+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -58,13 +58,9 @@ msgstr "Konto inrichten - %1"
 msgid "Password Protection"
 msgstr "Passwoortschuul"
 
-#: src/backend/storage.cpp:95 src/backend/storage.cpp:105
-#: src/backend/storage.cpp:113 src/backend/storage.cpp:319
-#: src/backend/storage.cpp:476 src/backend/storage.cpp:496
-msgid "An unknown error occurred."
-msgstr "Dat geev en nich begäng Fehler."
-
-#: src/backend/storage.cpp:124 src/backend/storage.cpp:139
+#: src/backend/storage.cpp:60 src/backend/storage.cpp:71
+#: src/backend/storage.cpp:107 src/backend/storage2.cpp:65
+#: src/backend/storage2.cpp:76 src/backend/storage2.cpp:114
 #: src/export/csv/csvexportdialog.cpp:348
 msgid ""
 "The file given could not be written; check whether it exists or is writeable "
@@ -73,7 +69,13 @@ msgstr ""
 "De angeven Datei lett sik nich schrieven, prööv wat dat ehr gifft un wat de "
 "aktuelle Bruker ehr schrieven dörv."
 
-#: src/backend/storage.cpp:165
+#: src/backend/storage.cpp:95 src/backend/storage.cpp:274
+#: src/backend/storage.cpp:283 src/backend/storage.cpp:293
+#: src/backend/storage.cpp:316 src/backend/storage.cpp:418
+msgid "An unknown error occurred."
+msgstr "Dat geev en nich begäng Fehler."
+
+#: src/backend/storage.cpp:127 src/backend/storage.cpp:138
 msgid ""
 "The file given could not be read; check whether it exists or is readable for "
 "the current user."
@@ -81,35 +83,36 @@ msgstr ""
 "De angeven Datei lett sik nich lesen, prööv wat dat ehr gifft un wat de "
 "aktuelle Bruker ehr lesen dörv."
 
-#: src/backend/storage.cpp:182
+#: src/backend/storage.cpp:152
 msgid "Unknown file format."
 msgstr "Dateiformaat nich begäng."
 
-#: src/backend/storage.cpp:192
+#: src/backend/storage.cpp:161
 msgid "Unknown file version."
 msgstr "Dateiverschoon nich begäng."
 
-#: src/backend/storage.cpp:201
-msgid "Metadata error."
+#: src/backend/storage.cpp:169
+#, fuzzy
+#| msgid "Metadata error."
+msgid "etadata error."
 msgstr "Metadaten-Fehler"
 
-#: src/backend/storage.cpp:402
+#: src/backend/storage.cpp:349
 msgid "AES data decryption error."
 msgstr ""
 
-#: src/backend/storage.cpp:445 src/backend/storage.cpp:456
-msgid "An error occurred during the decryption process."
-msgstr "Bi't Opslöteln geev dat en Fehler."
+#: src/backend/storage.cpp:353
+msgid "Please enter your current password."
+msgstr ""
 
-#: src/backend/storage.cpp:484
+#: src/backend/storage.cpp:375 src/backend/storage.cpp:401
+msgid "Incorrect password. Please try again."
+msgstr ""
+
+#: src/backend/storage.cpp:408
 #, qt-format
 msgid "This %1 version was build without support to read encrypted files."
 msgstr ""
-
-#: src/backend/storage.cpp:510 src/export/csv/csvexportdialog.cpp:355
-#, qt-format
-msgid "Error - %1"
-msgstr "Fehler - %1"
 
 #: src/compat/utils.cpp:63
 #, qt-format
@@ -408,8 +411,8 @@ msgid "Macintosh"
 msgstr "Macintosh"
 
 #: src/export/csv/csvexportdialog.cpp:333
-#: src/export/csv/csvexportdialog.cpp:337 src/accountwidget.cpp:349
-#: src/accountwidget.cpp:353 src/mainwindow.cpp:533 src/mainwindow.cpp:537
+#: src/export/csv/csvexportdialog.cpp:337 src/accountwidget.cpp:350
+#: src/accountwidget.cpp:354 src/mainwindow.cpp:535 src/mainwindow.cpp:539
 msgid "All Supported Files"
 msgstr "All ünnerstütt Dateien"
 
@@ -417,6 +420,12 @@ msgstr "All ünnerstütt Dateien"
 #, qt-format
 msgid "Export File - %1"
 msgstr "Datei exporteren - %1"
+
+#: src/export/csv/csvexportdialog.cpp:355 src/accountwidget.cpp:371
+#: src/mainwindow.cpp:580 src/mainwindow.cpp:641
+#, qt-format
+msgid "Error - %1"
+msgstr "Fehler - %1"
 
 #: src/export/csv/csvexportplugin.cpp:32
 msgid "Export &CSV File..."
@@ -575,7 +584,7 @@ msgstr "Reis"
 msgid "Dividend"
 msgstr ""
 
-#: src/savemodifieddialog.cpp:79 src/accountwidget.cpp:486
+#: src/savemodifieddialog.cpp:79 src/accountwidget.cpp:500
 msgid "Unnamed Account"
 msgstr "Konto ahn Naam"
 
@@ -629,13 +638,13 @@ msgstr ""
 "Daten, de Du sekern wullt, laat sik nich schrieven. Bitte söök ut, wodennig "
 "Du wiedermaken wullt."
 
-#: src/savemodifieddialog.cpp:245 src/mainwindow.cpp:813
+#: src/savemodifieddialog.cpp:245 src/mainwindow.cpp:878
 #, qt-format
 msgid "Sorry - %1"
 msgstr "Deit mi leed. - %1"
 
-#: src/savemodifieddialog.cpp:271 src/mainwindow.cpp:474
-#: src/mainwindow.cpp:488
+#: src/savemodifieddialog.cpp:271 src/mainwindow.cpp:476
+#: src/mainwindow.cpp:490
 msgid "Untitled"
 msgstr "Ahn Naam"
 
@@ -776,104 +785,108 @@ msgstr "List leddig maken"
 msgid "Configure Knipptasch - %1"
 msgstr "Knipptasch instellen - %1"
 
-#: src/accountwidget.cpp:352
+#: src/accountwidget.cpp:353
 #, qt-format
 msgid "Save File - %1"
 msgstr "Datei sekern - %1"
 
-#: src/accountwidget.cpp:590
+#: src/accountwidget.cpp:604
 msgid "Columns"
 msgstr "Striepen"
 
-#: src/accountwidget.cpp:611
+#: src/accountwidget.cpp:625
 #, qt-format
 msgid "Hide %1"
 msgstr "%1 versteken"
 
-#: src/accountwidget.cpp:627
+#: src/accountwidget.cpp:641
 msgid "Show Column"
 msgstr "Striep wiesen"
 
-#: src/accountwidget.cpp:646
+#: src/accountwidget.cpp:660
 msgid "Fit to Width"
 msgstr "Op Breed topassen"
 
-#: src/mainwindow.cpp:90 src/mainwindow.cpp:181
+#: src/mainwindow.cpp:92 src/mainwindow.cpp:183
 msgid "Open &Recent"
 msgstr "&Verleden opmaken"
 
-#: src/mainwindow.cpp:201
+#: src/mainwindow.cpp:203
 msgid "&Delete Posting"
 msgstr ""
 
-#: src/mainwindow.cpp:205
+#: src/mainwindow.cpp:207
 msgid "&Clone Posting"
 msgstr ""
 
-#: src/mainwindow.cpp:209
+#: src/mainwindow.cpp:211
 msgid "Set Value Date to Today"
 msgstr ""
 
-#: src/mainwindow.cpp:213
+#: src/mainwindow.cpp:215
 msgid "Set Value Date to Maturity"
 msgstr ""
 
-#: src/mainwindow.cpp:218
+#: src/mainwindow.cpp:220
 msgid "Configure &Account..."
 msgstr "&Konto inrichten..."
 
-#: src/mainwindow.cpp:233
+#: src/mainwindow.cpp:235
 msgid "Export..."
 msgstr "Exporteren..."
 
-#: src/mainwindow.cpp:234
+#: src/mainwindow.cpp:236
 msgid "Import..."
 msgstr "Importeren..."
 
-#: src/mainwindow.cpp:271
+#: src/mainwindow.cpp:273
 msgid "Main Toolbar"
 msgstr "Hööft-Warktüüchbalken"
 
-#: src/mainwindow.cpp:305
+#: src/mainwindow.cpp:307
 msgid "Close the current tab"
 msgstr "Dit Paneel tomaken"
 
-#: src/mainwindow.cpp:341
+#: src/mainwindow.cpp:343
 #, qt-format
 msgid "Untitled %1"
 msgstr "Ahn Naam %1"
 
-#: src/mainwindow.cpp:491
+#: src/mainwindow.cpp:493
 msgid "modified"
 msgstr "ännert"
 
-#: src/mainwindow.cpp:536
+#: src/mainwindow.cpp:538
 #, qt-format
 msgid "Open File - %1"
 msgstr "Datei opmaken - %1"
 
-#: src/mainwindow.cpp:553 src/mainwindow.cpp:577
+#: src/mainwindow.cpp:555 src/mainwindow.cpp:570 src/mainwindow.cpp:608
+#: src/mainwindow.cpp:627
 #, qt-format
 msgid "File '%1' loaded"
 msgstr "Datei \"%1\" laadt"
 
-#: src/mainwindow.cpp:598
+#: src/mainwindow.cpp:663
 msgid "File saved"
 msgstr "Datei sekert"
 
-#: src/mainwindow.cpp:613
+#: src/mainwindow.cpp:678
 #, qt-format
 msgid "File '%1' saved"
 msgstr "Datei \"%1\" sekert"
 
-#: src/mainwindow.cpp:771
+#: src/mainwindow.cpp:836
 #, qt-format
 msgid "Account with %1 postings successfully imported."
 msgstr ""
 
-#: src/mainwindow.cpp:814
+#: src/mainwindow.cpp:879
 msgid "<qt><b>Sorry!</b><br/>No help content available!</qt>"
 msgstr "<qt><b>Deit mi leed!</b><br/>Keen Hülp vörhannen!</qt>"
+
+#~ msgid "An error occurred during the decryption process."
+#~ msgstr "Bi't Opslöteln geev dat en Fehler."
 
 #~ msgid "Type"
 #~ msgstr "Typ"
