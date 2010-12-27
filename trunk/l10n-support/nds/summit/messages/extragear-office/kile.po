@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kile\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-12-13 09:23+0100\n"
+"POT-Creation-Date: 2010-12-27 10:21+0100\n"
 "PO-Revision-Date: 2010-10-26 08:31+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -298,11 +298,6 @@ msgstr "Allgemeen Instellen"
 msgid "Build"
 msgstr "Buen"
 
-#. +> trunk
-#: dialogs/configurationdialog.cpp:184
-msgid "Scripting"
-msgstr "Skripten"
-
 #. i18n: ectx: property (windowTitle), widget (QWidget, KileWidgetScriptingConfig)
 #. +> trunk
 #: dialogs/configurationdialog.cpp:184 widgets/scriptingconfigwidget.ui:20
@@ -310,8 +305,13 @@ msgid "Scripting Support"
 msgstr "Skript-Ünnerstütten"
 
 #. +> trunk
+#: dialogs/configurationdialog.cpp:184
+msgid "Scripting"
+msgstr "Skripten"
+
+#. +> trunk
 #: dialogs/configurationdialog.cpp:196
-#: widgets/codecompletionconfigwidget.cpp:463
+#: widgets/codecompletionconfigwidget.cpp:369
 msgid "Complete"
 msgstr "Kompletteren"
 
@@ -3409,9 +3409,10 @@ msgstr "Steernverschoon bruken"
 msgid "Use booktabs package"
 msgstr "Paket \"booktabs\" bruken"
 
+#. i18n: ectx: property (text), widget (QCheckBox, cb_setbullets)
 #. +> trunk
 #: dialogs/tabular/newtabulardialog.cpp:157
-#: widgets/codecompletionconfigwidget.cpp:91
+#: widgets/codecompletionconfigwidget.ui:235
 msgid "Insert bullets"
 msgstr "Markpünkt infögen"
 
@@ -3811,8 +3812,9 @@ msgstr "Infögen"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_pshbRemoveTool)
 #. i18n: ectx: property (text), widget (KPushButton, m_pshbRemoveConfig)
+#. i18n: ectx: property (text), widget (KPushButton, m_removeFileButton)
 #. +> trunk
-#: dialogs/usertagsdialog.cpp:66 widgets/codecompletionconfigwidget.cpp:75
+#: dialogs/usertagsdialog.cpp:66 widgets/codecompletionconfigwidget.ui:124
 #: widgets/maintoolconfigwidget.ui:101 widgets/maintoolconfigwidget.ui:222
 msgid "Remove"
 msgstr "Wegmaken"
@@ -4084,7 +4086,7 @@ msgstr ""
 "Mit en Klick op en Lüttbild kannst Du den Befehl infögen. Höllst Du dor de Ümschalt-Tast bi daal, warrt he in Mathe-Bedrief inföögt, mit daalhollen Strg-Tast binnen Klampen.</p>"
 
 #. +> trunk
-#: kile.cpp:544 widgets/codecompletionconfigwidget.cpp:71
+#: kile.cpp:544 widgets/codecompletionconfigwidget.cpp:54
 msgid "Abbreviation"
 msgstr "Afkörten"
 
@@ -9104,172 +9106,187 @@ msgid "Delete Abbreviation"
 msgstr "Afkörten wegdoon"
 
 #. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:58
-msgid "Complete Modes"
-msgstr "Kompletteer-Metoden"
-
-#. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:69
+#: widgets/codecompletionconfigwidget.cpp:52
 msgid "TeX/LaTeX"
 msgstr "TeX/LaTeX"
 
 #. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:70
+#: widgets/codecompletionconfigwidget.cpp:53
 msgid "Dictionary"
 msgstr "Wöörbook"
 
 #. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:74
-msgid "Add..."
-msgstr "Tofögen..."
-
-#. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:90
-msgid "Place cursor"
-msgstr "Blinker insetten"
-
-#. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:92
-msgid "Close environments"
-msgstr "Ümgeven tomaken"
-
-#. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:93
-msgid "Auto completion (LaTeX)"
-msgstr "Automaatsch kompletteren (LaTeX)"
-
-#. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:94
-msgid "Threshold:"
-msgstr "Grenz:"
-
-#. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:99
-msgid "letters"
-msgstr "Bookstaven"
-
-#. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:100
-#, fuzzy
-msgid "Maximum:"
-msgstr "Tohööchst:"
-
-#. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:105
-msgid "files"
-msgstr "Dateien"
-
-#. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:106
-msgid "Show abbreviations"
-msgstr "Afkörten wiesen"
-
-#. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:107
-msgid "Show LaTeX commands"
-msgstr "LaTeX-Befehlen wiesen:"
-
-#. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:108
-msgid "Auto completion (abbreviations)"
-msgstr "Automaatsch kompletteren (Afkörten)"
-
-#. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:109
-msgid "Move out of braces (citation keylists)"
-msgstr "Ut Klampen halen (Zitaat-Slötellisten)"
-
-#. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:132
+#: widgets/codecompletionconfigwidget.cpp:56
 msgid "Try to place the cursor."
 msgstr "Kieken, wat sik de Blinker na en nütten Steed setten lett"
 
 #. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:133
+#: widgets/codecompletionconfigwidget.cpp:57
 msgid "Insert bullets where the user must input data."
 msgstr "Föögt Markpünkt dor in, woneem Du noch Daten ingeven muttst."
 
 #. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:134
+#: widgets/codecompletionconfigwidget.cpp:58
 msgid "Also close an environment when an opening command is inserted."
 msgstr "Maakt en Ümgeven to, wenn Du en Opmaakbefehl ingiffst."
 
 #. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:135
+#: widgets/codecompletionconfigwidget.cpp:59
 msgid "Directional or popup-based completion of the TeX/LaTeX commands that are contained in the selected completion files."
 msgstr "Richt- oder opdukerbaseert Kompletteren vun TeX/LaTeX-Befehlen, de binnen de utsöchten Woort-Kompletteerlisten angeven sünd."
 
 #. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:136
+#: widgets/codecompletionconfigwidget.cpp:60
 msgid "Automatically show a completion list of TeX/LaTeX commands when the word has this length."
 msgstr "Automaatsch en Kompletteerlist för TeX/LaTeX-Befehlen wiesen, wenn dat Woort disse Längde hett."
 
 #. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:137
+#: widgets/codecompletionconfigwidget.cpp:61
 msgid "Move cursor out of braces after selecting from a citation keylist."
 msgstr "Den Blinker buten de Klampen setten, na dat Du en Zitaatslötel op de List utsöcht hest"
 
 #. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:139
+#: widgets/codecompletionconfigwidget.cpp:63
 #, fuzzy
 #| msgid "Show preview of selected text in bottom bar."
 msgid "Show abbreviations of the selected completion files in the sidebar"
 msgstr "Vöransichten vun utsöcht Text in't Footpaneel wiesen"
 
 #. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:140
+#: widgets/codecompletionconfigwidget.cpp:64
 #, fuzzy
 #| msgid "Directional or popup-based completion of the TeX/LaTeX commands that are contained in the selected completion files."
 msgid "Directional or popup-based completion of abbreviations that are contained in the selected completion files."
 msgstr "Richt- oder opdukerbaseert Kompletteren vun TeX/LaTeX-Befehlen, de binnen de utsöchten Woort-Kompletteerlisten angeven sünd."
 
 #. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:141
+#: widgets/codecompletionconfigwidget.cpp:65
 #, fuzzy
 msgid "Show LaTeX commands of the selected completion files in the sidebar"
 msgstr "LaTeX-Befehlen wiesen"
 
 #. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:142
+#: widgets/codecompletionconfigwidget.cpp:66
 #, fuzzy
 msgid "Maximum number of completion files, which can be shown in the sidebar."
 msgstr "Gröttste Tall vun Dateien"
 
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:154
-msgid "Test"
-msgstr "Test"
-
-#. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:175
+#: widgets/codecompletionconfigwidget.cpp:85
+#: widgets/codecompletionconfigwidget.ui:90
 msgid "Completion Files"
 msgstr "Kompletteer-Dateien"
 
 #. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:176
+#: widgets/codecompletionconfigwidget.cpp:86
 msgid "Local File"
 msgstr "Lokaal Datei"
 
 #. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:297
+#: widgets/codecompletionconfigwidget.cpp:203
 msgid "File not found"
 msgstr "Datei nich funnen"
 
 #. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:449
+#: widgets/codecompletionconfigwidget.cpp:355
 msgid "Complete Files"
 msgstr "Dateien kompletteren"
 
 #. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:449
+#: widgets/codecompletionconfigwidget.cpp:355
 msgid "Select Files"
 msgstr "Dateien utsöken"
 
 #. +> trunk
-#: widgets/codecompletionconfigwidget.cpp:463
+#: widgets/codecompletionconfigwidget.cpp:369
 #, kde-format
 msgid "Wordlist '%1' is already used."
 msgstr "De Woortlist \"%1\" is al in Bruuk."
+
+#. i18n: ectx: property (title), widget (QGroupBox, cb_autocomplete)
+#. +> trunk
+#: widgets/codecompletionconfigwidget.ui:17
+#, fuzzy
+#| msgid "Auto completion (LaTeX)"
+msgid "Auto completion for LaTeX markup"
+msgstr "Automaatsch kompletteren (LaTeX)"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. +> trunk
+#: widgets/codecompletionconfigwidget.ui:31
+msgid "Threshold:"
+msgstr "Grenz:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. +> trunk
+#: widgets/codecompletionconfigwidget.ui:51
+msgid "letters"
+msgstr "Bookstaven"
+
+#. i18n: ectx: property (title), widget (QGroupBox, cb_autocompleteabbrev)
+#. +> trunk
+#: widgets/codecompletionconfigwidget.ui:76
+#, fuzzy
+#| msgid "Auto completion (abbreviations)"
+msgid "Auto completion for abbreviations"
+msgstr "Automaatsch kompletteren (Afkörten)"
+
+#. i18n: ectx: property (text), widget (KPushButton, m_addFileButton)
+#. +> trunk
+#: widgets/codecompletionconfigwidget.ui:117
+msgid "Add..."
+msgstr "Tofögen..."
+
+#. i18n: ectx: property (text), widget (QCheckBox, cb_showcwlview)
+#. +> trunk
+#: widgets/codecompletionconfigwidget.ui:146
+msgid "Show LaTeX commands"
+msgstr "LaTeX-Befehlen wiesen:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. +> trunk
+#: widgets/codecompletionconfigwidget.ui:161
+msgid "Show a maximum of"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#. +> trunk
+#: widgets/codecompletionconfigwidget.ui:187
+msgid "files"
+msgstr "Dateien"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cb_showabbrevview)
+#. +> trunk
+#: widgets/codecompletionconfigwidget.ui:209
+msgid "Show abbreviations"
+msgstr "Afkörten wiesen"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#. +> trunk
+#: widgets/codecompletionconfigwidget.ui:219
+#, fuzzy
+#| msgid "Completion Files"
+msgid "Completion Properties"
+msgstr "Kompletteer-Dateien"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cb_setcursor)
+#. +> trunk
+#: widgets/codecompletionconfigwidget.ui:228
+msgid "Place cursor"
+msgstr "Blinker insetten"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cb_closeenv)
+#. +> trunk
+#: widgets/codecompletionconfigwidget.ui:242
+msgid "Close environments"
+msgstr "Ümgeven tomaken"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cb_citeoutofbraces)
+#. +> trunk
+#: widgets/codecompletionconfigwidget.ui:249
+msgid "Move out of braces (citation keylists)"
+msgstr "Ut Klampen halen (Zitaat-Slötellisten)"
 
 #. +> trunk
 #: widgets/commandview.cpp:99
@@ -10647,6 +10664,16 @@ msgstr "Du bruukst för elk Warktüüch tominnst een Instellen."
 #: widgets/toolconfigwidget.cpp:520
 msgid "Cannot Remove Configuration"
 msgstr "Instellen lett sik nich wegmaken"
+
+#~ msgid "Complete Modes"
+#~ msgstr "Kompletteer-Metoden"
+
+#, fuzzy
+#~ msgid "Maximum:"
+#~ msgstr "Tohööchst:"
+
+#~ msgid "Test"
+#~ msgstr "Test"
 
 #~ msgid "Empty Document"
 #~ msgstr "Leddig Dokment"
