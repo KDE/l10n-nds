@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-12-26 03:00+0100\n"
+"POT-Creation-Date: 2010-12-29 02:30+0100\n"
 "PO-Revision-Date: 2010-11-25 17:47+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -697,44 +697,6 @@ msgstr ""
 "Wiest Elementen (Dateien, Nettbreven, usw.), de Du dit Begeefnis oder disse "
 "Opgaav bileggt hest"
 
-#: incidenceattendee.cpp:181
-#, kde-format
-msgctxt "@info"
-msgid ""
-"%1 does not look like a valid email address. Are you sure you want to invite "
-"this participant?"
-msgstr ""
-"As't lett is \"%1\" as Nettpostadress leeg. Büst Du seker, dat Du dissen "
-"Deelnehmer inladen wullt?"
-
-#: incidenceattendee.cpp:184
-msgctxt "@title:window"
-msgid "Invalid Email Address"
-msgstr "Leeg Nettpostadress"
-
-#: incidenceattendee.cpp:411
-#, kde-format
-msgctxt "@label Shows the number of scheduling conflicts"
-msgid "%1 scheduling conflict"
-msgid_plural "%1 scheduling conflicts"
-msgstr[0] "%1 Planenkonflikt"
-msgstr[1] "%1 Planenkonflikten"
-
-#: incidenceattendee.cpp:417
-msgctxt "@label There are no scheduling conflicts."
-msgid "No scheduling conflicts"
-msgstr "Keen Planenkonflikten"
-
-#: incidenceattendee.cpp:501
-msgctxt "@option"
-msgid ""
-"You are changing the organizer of this event. Since the organizer is also "
-"attending this event, would you like to change the corresponding attendee as "
-"well?"
-msgstr ""
-"Du wullt den Utrichter vun dit Begeefnis ännern. He nimmt dor ok an deel. "
-"Wullt Du ok den tohören Deelnehmer ännern?"
-
 #: incidencecategories.cpp:57
 msgctxt "@item:inlistbox"
 msgid "Select Categories"
@@ -1034,7 +996,7 @@ msgstr "Vörlaag wegmaken"
 #. i18n: ectx: property (text), widget (QPushButton, mExceptionRemoveButton)
 #. i18n: file: eventortodomoremobile.ui:768
 #. i18n: ectx: property (text), widget (QPushButton, mRemoveButton)
-#: templatemanagementdialog.cpp:141 rc.cpp:923 rc.cpp:971 rc.cpp:989
+#: templatemanagementdialog.cpp:141 rc.cpp:833 rc.cpp:881 rc.cpp:899
 msgid "Remove"
 msgstr "Wegmaken"
 
@@ -1160,6 +1122,44 @@ msgstr ""
 "Wiest de Free-/Bunnen-Informatschonen vun all Deelnehmers. Wenn Du op den "
 "Listindrag vun en Deelnehmer dubbelklickst, kannst Du de Steed vun sien "
 "Free-/Bunnen-Informatschonen angeven."
+
+#: incidenceattendee.cpp:181
+#, kde-format
+msgctxt "@info"
+msgid ""
+"%1 does not look like a valid email address. Are you sure you want to invite "
+"this participant?"
+msgstr ""
+"As't lett is \"%1\" as Nettpostadress leeg. Büst Du seker, dat Du dissen "
+"Deelnehmer inladen wullt?"
+
+#: incidenceattendee.cpp:184
+msgctxt "@title:window"
+msgid "Invalid Email Address"
+msgstr "Leeg Nettpostadress"
+
+#: incidenceattendee.cpp:410
+#, kde-format
+msgctxt "@label Shows the number of scheduling conflicts"
+msgid "%1 scheduling conflict"
+msgid_plural "%1 scheduling conflicts"
+msgstr[0] "%1 Planenkonflikt"
+msgstr[1] "%1 Planenkonflikten"
+
+#: incidenceattendee.cpp:416
+msgctxt "@label There are no scheduling conflicts."
+msgid "No scheduling conflicts"
+msgstr "Keen Planenkonflikten"
+
+#: incidenceattendee.cpp:500
+msgctxt "@option"
+msgid ""
+"You are changing the organizer of this event. Since the organizer is also "
+"attending this event, would you like to change the corresponding attendee as "
+"well?"
+msgstr ""
+"Du wullt den Utrichter vun dit Begeefnis ännern. He nimmt dor ok an deel. "
+"Wullt Du ok den tohören Deelnehmer ännern?"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
@@ -1607,7 +1607,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, mIcon)
 #. i18n: file: eventortodomoremobile.ui:184
 #. i18n: ectx: property (text), widget (QLabel, mOrganizerLabel)
-#: rc.cpp:152 rc.cpp:899
+#: rc.cpp:152 rc.cpp:809
 msgid "TextLabel"
 msgstr "Textfeld"
 
@@ -1813,7 +1813,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, mRemoveButton)
 #. i18n: file: template_management_dialog_base.ui:88
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonRemove)
-#: rc.cpp:233 rc.cpp:446 rc.cpp:1122
+#: rc.cpp:233 rc.cpp:446 rc.cpp:1032
 msgid "&Remove"
 msgstr "&Wegmaken"
 
@@ -2084,35 +2084,45 @@ msgstr "Kalenner:"
 
 #. i18n: file: eventortododesktop.ui:48
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:485
+#. i18n: file: eventortodomobile.ui:23
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: rc.cpp:485 rc.cpp:1044
 msgctxt "@info"
 msgid "You are Invited, what do you want to do?"
 msgstr "Du büst inlaadt. Wat wullt Du doon?"
 
 #. i18n: file: eventortododesktop.ui:55
 #. i18n: ectx: property (toolTip), widget (QPushButton, mAcceptInvitationButton)
-#: rc.cpp:488
+#. i18n: file: eventortodomobile.ui:30
+#. i18n: ectx: property (toolTip), widget (QPushButton, mAcceptInvitationButton)
+#: rc.cpp:488 rc.cpp:1047
 msgctxt "@info:tooltip"
 msgid "Accept the invitation"
 msgstr "Inladen annehmen"
 
 #. i18n: file: eventortododesktop.ui:58
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mAcceptInvitationButton)
-#: rc.cpp:491
+#. i18n: file: eventortodomobile.ui:33
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mAcceptInvitationButton)
+#: rc.cpp:491 rc.cpp:1050
 msgctxt "@info:whatsthis"
 msgid "Click this button to accept the invitation."
 msgstr "Klick op dissen Knoop, wenn Du de Inladen annehmen wullt"
 
 #. i18n: file: eventortododesktop.ui:61
 #. i18n: ectx: property (text), widget (QPushButton, mAcceptInvitationButton)
-#: rc.cpp:494
+#. i18n: file: eventortodomobile.ui:36
+#. i18n: ectx: property (text), widget (QPushButton, mAcceptInvitationButton)
+#: rc.cpp:494 rc.cpp:1053
 msgctxt "@action:button Accept an invitation"
 msgid "Accept"
 msgstr "Annehmen"
 
 #. i18n: file: eventortododesktop.ui:68
 #. i18n: ectx: property (text), widget (QPushButton, mDeclineInvitationButton)
-#: rc.cpp:497
+#. i18n: file: eventortodomobile.ui:43
+#. i18n: ectx: property (text), widget (QPushButton, mDeclineInvitationButton)
+#: rc.cpp:497 rc.cpp:1056
 msgctxt "@action:button decline an invitation"
 msgid "Decline"
 msgstr "Afwiesen"
@@ -2121,11 +2131,11 @@ msgstr "Afwiesen"
 #. i18n: ectx: property (toolTip), widget (QLabel, label_2)
 #. i18n: file: eventortododesktop.ui:131
 #. i18n: ectx: property (toolTip), widget (KLineEdit, mSummaryEdit)
-#. i18n: file: eventortodomobile.ui:29
+#. i18n: file: eventortodomobile.ui:78
 #. i18n: ectx: property (toolTip), widget (QLabel, label_3)
-#. i18n: file: eventortodomobile.ui:60
+#. i18n: file: eventortodomobile.ui:109
 #. i18n: ectx: property (toolTip), widget (KLineEdit, mSummaryEdit)
-#: rc.cpp:500 rc.cpp:509 rc.cpp:767 rc.cpp:776
+#: rc.cpp:500 rc.cpp:509 rc.cpp:1059 rc.cpp:1068
 msgctxt "@info:tooltip"
 msgid "Set the title"
 msgstr "Den Titel fastleggen"
@@ -2134,47 +2144,47 @@ msgstr "Den Titel fastleggen"
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
 #. i18n: file: eventortododesktop.ui:134
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, mSummaryEdit)
-#. i18n: file: eventortodomobile.ui:32
+#. i18n: file: eventortodomobile.ui:81
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
-#. i18n: file: eventortodomobile.ui:63
+#. i18n: file: eventortodomobile.ui:112
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, mSummaryEdit)
-#: rc.cpp:503 rc.cpp:512 rc.cpp:770 rc.cpp:779
+#: rc.cpp:503 rc.cpp:512 rc.cpp:1062 rc.cpp:1071
 msgctxt "@info:whatsthis"
 msgid "Sets the Title of this event or to-do."
 msgstr "Leggt den Titel vun de Opgaav / dat Begeefnis fast."
 
 #. i18n: file: eventortododesktop.ui:112
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: file: eventortodomobile.ui:35
+#. i18n: file: eventortodomobile.ui:84
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:506 rc.cpp:773
+#: rc.cpp:506 rc.cpp:1065
 msgctxt "@label"
 msgid "T&itle:"
 msgstr "T&itel:"
 
 #. i18n: file: eventortododesktop.ui:150
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#. i18n: file: eventortodomobile.ui:76
+#. i18n: file: eventortodomobile.ui:125
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:515 rc.cpp:782
+#: rc.cpp:515 rc.cpp:1074
 msgctxt "@label"
 msgid "&Location:"
 msgstr "&Steed:"
 
 #. i18n: file: eventortododesktop.ui:169
 #. i18n: ectx: property (toolTip), widget (KLineEdit, mLocationEdit)
-#. i18n: file: eventortodomobile.ui:101
+#. i18n: file: eventortodomobile.ui:150
 #. i18n: ectx: property (toolTip), widget (KLineEdit, mLocationEdit)
-#: rc.cpp:518 rc.cpp:785
+#: rc.cpp:518 rc.cpp:1077
 msgctxt "@info:tooltip"
 msgid "Set the location"
 msgstr "De Steed fastleggen"
 
 #. i18n: file: eventortododesktop.ui:172
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, mLocationEdit)
-#. i18n: file: eventortodomobile.ui:104
+#. i18n: file: eventortodomobile.ui:153
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, mLocationEdit)
-#: rc.cpp:521 rc.cpp:788
+#: rc.cpp:521 rc.cpp:1080
 msgctxt "@info:whatsthis"
 msgid "Sets where the event or to-do will take place."
 msgstr "Leggt den Oort för de Opgaav / dat Begeefnis fast."
@@ -2272,9 +2282,9 @@ msgstr "9 (sietst)"
 
 #. i18n: file: eventortododesktop.ui:312
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mWholeDayCheck)
-#. i18n: file: eventortodomobile.ui:195
+#. i18n: file: eventortodomobile.ui:244
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mWholeDayCheck)
-#: rc.cpp:563 rc.cpp:809
+#: rc.cpp:563 rc.cpp:1101
 msgctxt "@info:whatsthis"
 msgid ""
 "Set if this to-do's start and due dates have times associated with them."
@@ -2290,9 +2300,9 @@ msgstr ""
 
 #. i18n: file: eventortododesktop.ui:341
 #. i18n: ectx: property (text), widget (QCheckBox, mFreeBusyCheck)
-#. i18n: file: eventortodomobile.ui:349
+#. i18n: file: eventortodomobile.ui:398
 #. i18n: ectx: property (text), widget (QCheckBox, mFreeBusyCheck)
-#: rc.cpp:569 rc.cpp:854
+#: rc.cpp:569 rc.cpp:1146
 #, fuzzy
 #| msgid "before the event ends"
 msgctxt "@option:check"
@@ -2315,9 +2325,9 @@ msgstr "Dat Anfangdatum fastleggen"
 
 #. i18n: file: eventortododesktop.ui:403
 #. i18n: ectx: property (whatsThis), widget (KPIM::KDateEdit, mStartDateEdit)
-#. i18n: file: eventortodomobile.ui:127
+#. i18n: file: eventortodomobile.ui:176
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mStartCheck)
-#: rc.cpp:578 rc.cpp:794
+#: rc.cpp:578 rc.cpp:1086
 msgctxt "@info:whatsthis"
 msgid "Sets the start date for this to-do"
 msgstr "Leggt dat Anfangdatum för disse Opgaav fast."
@@ -2333,11 +2343,11 @@ msgstr "Leggt de Anfangtiet för disse Opgaav fast."
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboStart)
 #. i18n: file: eventortododesktop.ui:550
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboEnd)
-#. i18n: file: eventortodomobile.ui:146
+#. i18n: file: eventortodomobile.ui:195
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboStart)
-#. i18n: file: eventortodomobile.ui:188
+#. i18n: file: eventortodomobile.ui:237
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboEnd)
-#: rc.cpp:584 rc.cpp:599 rc.cpp:797 rc.cpp:806
+#: rc.cpp:584 rc.cpp:599 rc.cpp:1089 rc.cpp:1098
 msgctxt "@info:whatsthis"
 msgid "Select the timezone for this event. It will also affect recurrences"
 msgstr ""
@@ -2360,9 +2370,9 @@ msgstr "&Enn:"
 
 #. i18n: file: eventortododesktop.ui:518
 #. i18n: ectx: property (whatsThis), widget (KPIM::KDateEdit, mEndDateEdit)
-#. i18n: file: eventortodomobile.ui:169
+#. i18n: file: eventortodomobile.ui:218
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mEndCheck)
-#: rc.cpp:593 rc.cpp:803
+#: rc.cpp:593 rc.cpp:1095
 msgctxt "@info:whatsthis"
 msgid "Sets the due date for this to-do."
 msgstr "Leggt dat Afloopdatum för disse Opgaav fast."
@@ -2393,7 +2403,7 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (KRichTextWidget, mDescriptionEdit)
 #. i18n: file: eventortodomoremobile.ui:60
 #. i18n: ectx: property (toolTip), widget (KRichTextWidget, mDescriptionEdit)
-#: rc.cpp:608 rc.cpp:863
+#: rc.cpp:608 rc.cpp:773
 msgctxt "@info:tooltip"
 msgid "Set the description in plain text or rich text."
 msgstr "De Beschrieven as eenfach oder formateert Text fastleggen."
@@ -2402,7 +2412,7 @@ msgstr "De Beschrieven as eenfach oder formateert Text fastleggen."
 #. i18n: ectx: property (whatsThis), widget (KRichTextWidget, mDescriptionEdit)
 #. i18n: file: eventortodomoremobile.ui:63
 #. i18n: ectx: property (whatsThis), widget (KRichTextWidget, mDescriptionEdit)
-#: rc.cpp:611 rc.cpp:866
+#: rc.cpp:611 rc.cpp:776
 msgctxt "@info:whatsthis"
 msgid ""
 "Sets the description for this event, to-do or journal. This will be "
@@ -2418,7 +2428,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, mCategoryLabel)
 #. i18n: file: eventortodomoremobile.ui:79
 #. i18n: ectx: property (text), widget (QLabel, mCategoryLabel)
-#: rc.cpp:614 rc.cpp:869
+#: rc.cpp:614 rc.cpp:779
 msgctxt "@label"
 msgid "Categories:"
 msgstr "Kategorien:"
@@ -2431,7 +2441,7 @@ msgstr "Kategorien:"
 #. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
 #. i18n: file: eventortodomoremobile.ui:118
 #. i18n: ectx: property (toolTip), widget (KComboBox, mSecrecyCombo)
-#: rc.cpp:617 rc.cpp:626 rc.cpp:875 rc.cpp:884
+#: rc.cpp:617 rc.cpp:626 rc.cpp:785 rc.cpp:794
 msgctxt "@info:tooltip"
 msgid "Set the secrecy level"
 msgstr "De Vertrolichkeit-Stoop"
@@ -2444,7 +2454,7 @@ msgstr "De Vertrolichkeit-Stoop"
 #. i18n: ectx: property (whatsThis), widget (QLabel, mSecrecyLabel)
 #. i18n: file: eventortodomoremobile.ui:121
 #. i18n: ectx: property (whatsThis), widget (KComboBox, mSecrecyCombo)
-#: rc.cpp:620 rc.cpp:629 rc.cpp:878 rc.cpp:887
+#: rc.cpp:620 rc.cpp:629 rc.cpp:788 rc.cpp:797
 msgctxt "@info:whatsthis"
 msgid ""
 "Sets whether the access to this event or to-do is restricted. Please note "
@@ -2538,7 +2548,7 @@ msgstr "Deelnehmers utsöken…"
 #. i18n: ectx: property (toolTip), widget (KComboBox, mOrganizerCombo)
 #. i18n: file: eventortodomoremobile.ui:164
 #. i18n: ectx: property (toolTip), widget (KComboBox, mOrganizerCombo)
-#: rc.cpp:659 rc.cpp:893
+#: rc.cpp:659 rc.cpp:803
 msgctxt "@info:tooltip"
 msgid "Set the organizer identity"
 msgstr "Den Utrichter sien Identiteet fastleggen"
@@ -2547,7 +2557,7 @@ msgstr "Den Utrichter sien Identiteet fastleggen"
 #. i18n: ectx: property (whatsThis), widget (KComboBox, mOrganizerCombo)
 #. i18n: file: eventortodomoremobile.ui:167
 #. i18n: ectx: property (whatsThis), widget (KComboBox, mOrganizerCombo)
-#: rc.cpp:662 rc.cpp:896
+#: rc.cpp:662 rc.cpp:806
 msgctxt "@info:whatsthis"
 msgid ""
 "Sets the identity corresponding to the organizer of this to-do or event. "
@@ -2599,7 +2609,7 @@ msgstr "Tofögen"
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmNewButton)
 #. i18n: file: eventortodomoremobile.ui:290
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmNewButton)
-#: rc.cpp:677 rc.cpp:917
+#: rc.cpp:677 rc.cpp:827
 msgctxt "@action:button Create a new reminder"
 msgid "New"
 msgstr "Nieg"
@@ -2730,7 +2740,7 @@ msgstr "Datum, na dat de Opgaav / dat Begeefnis nich mehr wedderhaalt warrt"
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceOccurrencesLabel)
 #. i18n: file: eventortodomoremobile.ui:620
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceOccurrencesLabel)
-#: rc.cpp:731 rc.cpp:959
+#: rc.cpp:731 rc.cpp:869
 msgctxt "@label"
 msgid "occurrence(s)"
 msgstr "Wedderhalen"
@@ -2777,7 +2787,7 @@ msgstr "Bilagen"
 #. i18n: ectx: property (toolTip), widget (QPushButton, mAddButton)
 #. i18n: file: eventortodomoremobile.ui:740
 #. i18n: ectx: property (toolTip), widget (QPushButton, mAddButton)
-#: rc.cpp:749 rc.cpp:974
+#: rc.cpp:749 rc.cpp:884
 msgctxt "@info:tooltip"
 msgid "Add an attachment"
 msgstr "En Bilaag tofögen"
@@ -2786,7 +2796,7 @@ msgstr "En Bilaag tofögen"
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mAddButton)
 #. i18n: file: eventortodomoremobile.ui:743
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mAddButton)
-#: rc.cpp:752 rc.cpp:977
+#: rc.cpp:752 rc.cpp:887
 msgctxt "@info:whatsthis"
 msgid ""
 "Shows a dialog used to select an attachment to add to this event or to-do as "
@@ -2806,7 +2816,7 @@ msgstr "Tofögen"
 #. i18n: ectx: property (toolTip), widget (QPushButton, mRemoveButton)
 #. i18n: file: eventortodomoremobile.ui:762
 #. i18n: ectx: property (toolTip), widget (QPushButton, mRemoveButton)
-#: rc.cpp:758 rc.cpp:983
+#: rc.cpp:758 rc.cpp:893
 msgctxt "@info:tooltip"
 msgid "Remove the selected attachment"
 msgstr "De utsöchte Bilaag wegmaken"
@@ -2815,7 +2825,7 @@ msgstr "De utsöchte Bilaag wegmaken"
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mRemoveButton)
 #. i18n: file: eventortodomoremobile.ui:765
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mRemoveButton)
-#: rc.cpp:761 rc.cpp:986
+#: rc.cpp:761 rc.cpp:896
 msgctxt "@info:whatsthis"
 msgid ""
 "Removes the attachment selected in the list above from this event or to-do."
@@ -2828,172 +2838,59 @@ msgctxt "@action:button remove an attachment"
 msgid "Remove"
 msgstr "Wegmaken"
 
-#. i18n: file: eventortodomobile.ui:117
-#. i18n: ectx: property (text), widget (QLabel, mStartLabel)
-#: rc.cpp:791
-msgctxt "@label Start date/time of the event or task"
-msgid "Start:"
-msgstr "Start:"
-
-#. i18n: file: eventortodomobile.ui:159
-#. i18n: ectx: property (text), widget (QLabel, mEndLabel)
-#: rc.cpp:800
-msgctxt "@label End date/time of the task or event"
-msgid "End:"
-msgstr "Enn:"
-
-#. i18n: file: eventortodomobile.ui:198
-#. i18n: ectx: property (text), widget (QCheckBox, mWholeDayCheck)
-#: rc.cpp:812
-msgctxt "@option:check The event or task takes the whole day"
-msgid "Whole day"
-msgstr "Heel Dag"
-
-#. i18n: file: eventortodomobile.ui:236
-#. i18n: ectx: property (text), widget (QLabel, mCompletedLabel)
-#: rc.cpp:815
-msgctxt "@label:slider completed percentage of a task"
-msgid "completed"
-msgstr "afslaten"
-
-#. i18n: file: eventortodomobile.ui:259
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:818
-msgctxt "@label:listbox Priority of the task"
-msgid "Priority:"
-msgstr "Prioriteet:"
-
-#. i18n: file: eventortodomobile.ui:270
-#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
-#: rc.cpp:821
-msgctxt "@item:inlistbox No priority specified for a task"
-msgid "unspecified"
-msgstr "nich fastleggt"
-
-#. i18n: file: eventortodomobile.ui:275
-#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
-#: rc.cpp:824
-msgctxt "@item:inlistbox highest priority for a task"
-msgid "1 (highest)"
-msgstr "1 (hööchst)"
-
-#. i18n: file: eventortodomobile.ui:280
-#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
-#: rc.cpp:827
-msgctxt "@item:inlistbox"
-msgid "2"
-msgstr "2"
-
-#. i18n: file: eventortodomobile.ui:285
-#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
-#: rc.cpp:830
-msgctxt "@item:inlistbox"
-msgid "3"
-msgstr "3"
-
-#. i18n: file: eventortodomobile.ui:290
-#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
-#: rc.cpp:833
-msgctxt "@item:inlistbox"
-msgid "4"
-msgstr "4"
-
-#. i18n: file: eventortodomobile.ui:295
-#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
-#: rc.cpp:836
-msgctxt "@item:inlistbox medium priority for a task"
-msgid "5 (medium)"
-msgstr "5 (middelhooch)"
-
-#. i18n: file: eventortodomobile.ui:300
-#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
-#: rc.cpp:839
-msgctxt "@item:inlistbox"
-msgid "6"
-msgstr "6"
-
-#. i18n: file: eventortodomobile.ui:305
-#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
-#: rc.cpp:842
-msgctxt "@item:inlistbox"
-msgid "7"
-msgstr "7"
-
-#. i18n: file: eventortodomobile.ui:310
-#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
-#: rc.cpp:845
-msgctxt "@item:inlistbox"
-msgid "8"
-msgstr "8"
-
-#. i18n: file: eventortodomobile.ui:315
-#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
-#: rc.cpp:848
-msgctxt "@item:inlistbox lowest priority for a task"
-msgid "9 (lowest)"
-msgstr "9 (sietst)"
-
-#. i18n: file: eventortodomobile.ui:339
-#. i18n: ectx: property (text), widget (QLabel, mTaskLabel)
-#: rc.cpp:851
-msgctxt ""
-"@label Task specific line in the dialog containing progress and priority"
-msgid "Progress:"
-msgstr "Vörankamen:"
-
 #. i18n: file: eventortodomoremobile.ui:14
 #. i18n: ectx: property (windowTitle), widget (QStackedWidget, EventOrTodoMore)
-#: rc.cpp:857
+#: rc.cpp:767
 msgid "StackedWidget"
 msgstr ""
 
 #. i18n: file: eventortodomoremobile.ui:35
 #. i18n: ectx: property (text), widget (QLabel, mRichTextLabel)
-#: rc.cpp:860
+#: rc.cpp:770
 msgid "<a href=\\\"hide\\\"><font color='blue'>Rich text &gt;&gt;</font></a>"
 msgstr ""
 "<a href=\\\"hide\\\"><font color='blue'>Formaattext &gt;&gt;</font></a>"
 
 #. i18n: file: eventortodomoremobile.ui:89
 #. i18n: ectx: property (text), widget (QPushButton, mSelectCategoriesButton)
-#: rc.cpp:872
+#: rc.cpp:782
 msgctxt "Opens a selection dialog for selecting categories of an event or task"
 msgid "Select"
 msgstr "Köör"
 
 #. i18n: file: eventortodomoremobile.ui:108
 #. i18n: ectx: property (text), widget (QLabel, mSecrecyLabel)
-#: rc.cpp:881
+#: rc.cpp:791
 msgid "Access:"
 msgstr "Togriep:"
 
 #. i18n: file: eventortodomoremobile.ui:132
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:890
+#: rc.cpp:800
 msgid "Organizer:"
 msgstr "Utrichter:"
 
 #. i18n: file: eventortodomoremobile.ui:195
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:902
+#: rc.cpp:812
 msgid "Participants:"
 msgstr "Deelnehmers:"
 
 #. i18n: file: eventortodomoremobile.ui:207
 #. i18n: ectx: property (text), widget (QLabel, mConflictsLabel)
-#: rc.cpp:905
+#: rc.cpp:815
 msgid "X time conflicts"
 msgstr "X Tietkonflikten"
 
 #. i18n: file: eventortodomoremobile.ui:214
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
-#: rc.cpp:908
+#: rc.cpp:818
 msgid "Solve..."
 msgstr "Lösen..."
 
 #. i18n: file: eventortodomoremobile.ui:221
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
-#: rc.cpp:911
+#: rc.cpp:821
 msgctxt "Select attendees from addressbook"
 msgid "Select..."
 msgstr "Köör..."
@@ -3004,68 +2901,68 @@ msgstr "Köör..."
 #. i18n: ectx: property (text), widget (QPushButton, mExceptionAddButton)
 #. i18n: file: eventortodomoremobile.ui:746
 #. i18n: ectx: property (text), widget (QPushButton, mAddButton)
-#: rc.cpp:914 rc.cpp:968 rc.cpp:980
+#: rc.cpp:824 rc.cpp:878 rc.cpp:890
 msgid "Add"
 msgstr "Tofögen"
 
 #. i18n: file: eventortodomoremobile.ui:297
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmConfigureButton)
-#: rc.cpp:920
+#: rc.cpp:830
 msgid "Configure"
 msgstr "Instellen"
 
 #. i18n: file: eventortodomoremobile.ui:324
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmToggleButton)
-#: rc.cpp:926
+#: rc.cpp:836
 msgid "Disable"
 msgstr "Utmaken"
 
 #. i18n: file: eventortodomoremobile.ui:344
 #. i18n: ectx: property (text), item, widget (KComboBox, mRecurrenceTypeCombo)
-#: rc.cpp:929
+#: rc.cpp:839
 msgid "Repeat never"
 msgstr "Nienich wedderhalen"
 
 #. i18n: file: eventortodomoremobile.ui:349
 #. i18n: ectx: property (text), item, widget (KComboBox, mRecurrenceTypeCombo)
-#: rc.cpp:932
+#: rc.cpp:842
 msgid "Repeat daily"
 msgstr "Elk Dag wedderhalen"
 
 #. i18n: file: eventortodomoremobile.ui:354
 #. i18n: ectx: property (text), item, widget (KComboBox, mRecurrenceTypeCombo)
-#: rc.cpp:935
+#: rc.cpp:845
 msgid "Repeat weekly"
 msgstr "Elk Week wedderhalen"
 
 #. i18n: file: eventortodomoremobile.ui:359
 #. i18n: ectx: property (text), item, widget (KComboBox, mRecurrenceTypeCombo)
-#: rc.cpp:938
+#: rc.cpp:848
 msgid "Repeat monthly"
 msgstr "Elk Maand wedderhalen"
 
 #. i18n: file: eventortodomoremobile.ui:364
 #. i18n: ectx: property (text), item, widget (KComboBox, mRecurrenceTypeCombo)
-#: rc.cpp:941
+#: rc.cpp:851
 msgid "Repeat yearly"
 msgstr "Elk Johr wedderhalen"
 
 #. i18n: file: eventortodomoremobile.ui:378
 #. i18n: ectx: property (text), widget (QLabel, mFrequencyLabel)
-#: rc.cpp:944
+#: rc.cpp:854
 msgctxt "@label Frequency of recurrence: every x [days|weeks|months|years]"
 msgid "every"
 msgstr "elk"
 
 #. i18n: file: eventortodomoremobile.ui:533
 #. i18n: ectx: property (text), item, widget (KComboBox, mRecurrenceEndCombo)
-#: rc.cpp:947
+#: rc.cpp:857
 msgid "Ends never"
 msgstr ""
 
 #. i18n: file: eventortodomoremobile.ui:538
 #. i18n: ectx: property (text), item, widget (KComboBox, mRecurrenceEndCombo)
-#: rc.cpp:950
+#: rc.cpp:860
 #, fuzzy
 #| msgctxt "@option:radio"
 #| msgid "End &on:"
@@ -3074,25 +2971,25 @@ msgstr "Enn &an den:"
 
 #. i18n: file: eventortodomoremobile.ui:543
 #. i18n: ectx: property (text), item, widget (KComboBox, mRecurrenceEndCombo)
-#: rc.cpp:953
+#: rc.cpp:863
 msgid "Ends after"
 msgstr "Endt na"
 
 #. i18n: file: eventortodomoremobile.ui:574
 #. i18n: ectx: property (displayFormat), widget (QDateEdit, mRecurrenceEndDate)
-#: rc.cpp:956
+#: rc.cpp:866
 msgid "MM.dd.yyyy"
 msgstr "MM.dd.jjjj"
 
 #. i18n: file: eventortodomoremobile.ui:639
 #. i18n: ectx: property (text), widget (QLabel, mExceptionsLabel)
-#: rc.cpp:962
+#: rc.cpp:872
 msgid "Exceptions:"
 msgstr "Utnahmen:"
 
 #. i18n: file: eventortodomoremobile.ui:648
 #. i18n: ectx: property (displayFormat), widget (QDateEdit, mExceptionDateEdit)
-#: rc.cpp:965
+#: rc.cpp:875
 msgid "dd.MM.yyyy"
 msgstr "dd.MM.jjjj"
 
@@ -3100,7 +2997,7 @@ msgstr "dd.MM.jjjj"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: schedulingdialog.ui:27
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:992 rc.cpp:1040
+#: rc.cpp:902 rc.cpp:950
 msgid "Earliest time to start:"
 msgstr "Fröhst Starttiet:"
 
@@ -3108,7 +3005,7 @@ msgstr "Fröhst Starttiet:"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: file: schedulingdialog.ui:47
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:995 rc.cpp:1043
+#: rc.cpp:905 rc.cpp:953
 msgid "Latest time to end:"
 msgstr "Laatst Enntiet:"
 
@@ -3120,7 +3017,7 @@ msgstr "Laatst Enntiet:"
 #. i18n: ectx: property (toolTip), widget (QLabel, label_3)
 #. i18n: file: schedulingdialog.ui:96
 #. i18n: ectx: property (toolTip), widget (KPIM::KWeekdayCheckCombo, mWeekdayCombo)
-#: rc.cpp:998 rc.cpp:1007 rc.cpp:1046 rc.cpp:1055
+#: rc.cpp:908 rc.cpp:917 rc.cpp:956 rc.cpp:965
 msgid "Check the weekdays to include in the search."
 msgstr ""
 
@@ -3132,7 +3029,7 @@ msgstr ""
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
 #. i18n: file: schedulingdialog.ui:99
 #. i18n: ectx: property (whatsThis), widget (KPIM::KWeekdayCheckCombo, mWeekdayCombo)
-#: rc.cpp:1001 rc.cpp:1010 rc.cpp:1049 rc.cpp:1058
+#: rc.cpp:911 rc.cpp:920 rc.cpp:959 rc.cpp:968
 msgid ""
 "Only the checked weekdays will be included in the free time slot search."
 msgstr ""
@@ -3141,7 +3038,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: file: schedulingdialog.ui:80
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:1004 rc.cpp:1052
+#: rc.cpp:914 rc.cpp:962
 msgid "Allowed weekdays:"
 msgstr "Tolaten Wekendaag:"
 
@@ -3153,7 +3050,7 @@ msgstr "Tolaten Wekendaag:"
 #. i18n: ectx: property (toolTip), widget (QLabel, label_5)
 #. i18n: file: schedulingdialog.ui:128
 #. i18n: ectx: property (toolTip), widget (KPIM::KCheckComboBox, mRolesCombo)
-#: rc.cpp:1013 rc.cpp:1022 rc.cpp:1061 rc.cpp:1070
+#: rc.cpp:923 rc.cpp:932 rc.cpp:971 rc.cpp:980
 msgid "Check the roles to include in the search."
 msgstr ""
 
@@ -3165,7 +3062,7 @@ msgstr ""
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_5)
 #. i18n: file: schedulingdialog.ui:131
 #. i18n: ectx: property (whatsThis), widget (KPIM::KCheckComboBox, mRolesCombo)
-#: rc.cpp:1016 rc.cpp:1025 rc.cpp:1064 rc.cpp:1073
+#: rc.cpp:926 rc.cpp:935 rc.cpp:974 rc.cpp:983
 msgid ""
 "Only the participants with the checked roles will be considered in the free "
 "time slot search."
@@ -3175,7 +3072,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: file: schedulingdialog.ui:112
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:1019 rc.cpp:1067
+#: rc.cpp:929 rc.cpp:977
 msgid "Mandatory roles:"
 msgstr "Nödig Opgaven:"
 
@@ -3183,7 +3080,7 @@ msgstr "Nödig Opgaven:"
 #. i18n: ectx: property (title), widget (QGroupBox, mMoveApptGroupBox)
 #. i18n: file: schedulingdialog.ui:189
 #. i18n: ectx: property (title), widget (QGroupBox, mMoveApptGroupBox)
-#: rc.cpp:1028 rc.cpp:1082
+#: rc.cpp:938 rc.cpp:992
 msgid "Move your appointment to:"
 msgstr "Termin verschuven na:"
 
@@ -3191,7 +3088,7 @@ msgstr "Termin verschuven na:"
 #. i18n: ectx: property (text), widget (QLabel, mMoveDayLabel)
 #. i18n: file: schedulingdialog.ui:210
 #. i18n: ectx: property (text), widget (QLabel, mMoveDayLabel)
-#: rc.cpp:1031 rc.cpp:1085
+#: rc.cpp:941 rc.cpp:995
 msgid "Monday, 12th June"
 msgstr "Maandag, de 12. Juni"
 
@@ -3199,13 +3096,13 @@ msgstr "Maandag, de 12. Juni"
 #. i18n: ectx: property (text), widget (QLabel, mMoveEndTimeLabel)
 #. i18n: file: schedulingdialog.ui:223
 #. i18n: ectx: property (text), widget (QLabel, mMoveEndTimeLabel)
-#: rc.cpp:1034 rc.cpp:1088
+#: rc.cpp:944 rc.cpp:998
 msgid "to 10:00am"
 msgstr ""
 
 #. i18n: file: schedulingdialog.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, Dialog)
-#: rc.cpp:1037
+#: rc.cpp:947
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Set the start time"
@@ -3214,25 +3111,25 @@ msgstr "De Anfangtiet fastleggen"
 
 #. i18n: file: schedulingdialog.ui:146
 #. i18n: ectx: attribute (title), widget (QWidget, mTextTab)
-#: rc.cpp:1076
+#: rc.cpp:986
 msgid "Automatic Search"
 msgstr "Automaatsch söken"
 
 #. i18n: file: schedulingdialog.ui:181
 #. i18n: ectx: attribute (title), widget (QWidget, mGanttTab)
-#: rc.cpp:1079
+#: rc.cpp:989
 msgid "Visual Search"
 msgstr ""
 
 #. i18n: file: template_management_dialog_base.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, TemplateManagementDialog_base)
-#: rc.cpp:1091
+#: rc.cpp:1001
 msgid "Template Management"
 msgstr "Vörlagenpleger"
 
 #. i18n: file: template_management_dialog_base.ui:27
 #. i18n: ectx: property (text), widget (QLabel, m_introLabel)
-#: rc.cpp:1094
+#: rc.cpp:1004
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -3263,13 +3160,13 @@ msgstr ""
 
 #. i18n: file: template_management_dialog_base.ui:52
 #. i18n: ectx: property (toolTip), widget (QListWidget, m_listBox)
-#: rc.cpp:1101
+#: rc.cpp:1011
 msgid "The list of managed templates"
 msgstr "De List vun pleegt Vörlagen"
 
 #. i18n: file: template_management_dialog_base.ui:55
 #. i18n: ectx: property (whatsThis), widget (QListWidget, m_listBox)
-#: rc.cpp:1104
+#: rc.cpp:1014
 msgid ""
 "This is a list of all the templates you have currently accessible for "
 "creating new calendar items."
@@ -3279,13 +3176,13 @@ msgstr ""
 
 #. i18n: file: template_management_dialog_base.ui:66
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonAdd)
-#: rc.cpp:1107
+#: rc.cpp:1017
 msgid "Create a new template from the current settings"
 msgstr "En nieg Vörlaag mit de aktuelle Instellen opstellen"
 
 #. i18n: file: template_management_dialog_base.ui:69
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonAdd)
-#: rc.cpp:1110
+#: rc.cpp:1020
 msgid ""
 "Click on this button to create a new template based on the current settings "
 "in the editor. You can use this template to quickly add new items in the "
@@ -3297,19 +3194,19 @@ msgstr ""
 
 #. i18n: file: template_management_dialog_base.ui:72
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
-#: rc.cpp:1113
+#: rc.cpp:1023
 msgid "&New..."
 msgstr "&Nieg..."
 
 #. i18n: file: template_management_dialog_base.ui:82
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
-#: rc.cpp:1116
+#: rc.cpp:1026
 msgid "Remove the currently selected template"
 msgstr "De opstunns utsöcht Vörlaag wegmaken"
 
 #. i18n: file: template_management_dialog_base.ui:85
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonRemove)
-#: rc.cpp:1119
+#: rc.cpp:1029
 msgid ""
 "Clicking this button will permanently remove the selected template from your "
 "list of managed templates."
@@ -3319,13 +3216,13 @@ msgstr ""
 
 #. i18n: file: template_management_dialog_base.ui:95
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonApply)
-#: rc.cpp:1125
+#: rc.cpp:1035
 msgid "Apply the selected template settings"
 msgstr "Utsöchte Vörlageninstellen anwennen"
 
 #. i18n: file: template_management_dialog_base.ui:98
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonApply)
-#: rc.cpp:1128
+#: rc.cpp:1038
 msgid ""
 "Clicking this button will apply the settings from the selected template to "
 "the item you are currently editing."
@@ -3335,9 +3232,122 @@ msgstr ""
 
 #. i18n: file: template_management_dialog_base.ui:101
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonApply)
-#: rc.cpp:1131
+#: rc.cpp:1041
 msgid "Apply"
 msgstr "Bruken"
+
+#. i18n: file: eventortodomobile.ui:166
+#. i18n: ectx: property (text), widget (QLabel, mStartLabel)
+#: rc.cpp:1083
+msgctxt "@label Start date/time of the event or task"
+msgid "Start:"
+msgstr "Start:"
+
+#. i18n: file: eventortodomobile.ui:208
+#. i18n: ectx: property (text), widget (QLabel, mEndLabel)
+#: rc.cpp:1092
+msgctxt "@label End date/time of the task or event"
+msgid "End:"
+msgstr "Enn:"
+
+#. i18n: file: eventortodomobile.ui:247
+#. i18n: ectx: property (text), widget (QCheckBox, mWholeDayCheck)
+#: rc.cpp:1104
+msgctxt "@option:check The event or task takes the whole day"
+msgid "Whole day"
+msgstr "Heel Dag"
+
+#. i18n: file: eventortodomobile.ui:285
+#. i18n: ectx: property (text), widget (QLabel, mCompletedLabel)
+#: rc.cpp:1107
+msgctxt "@label:slider completed percentage of a task"
+msgid "completed"
+msgstr "afslaten"
+
+#. i18n: file: eventortodomobile.ui:308
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:1110
+msgctxt "@label:listbox Priority of the task"
+msgid "Priority:"
+msgstr "Prioriteet:"
+
+#. i18n: file: eventortodomobile.ui:319
+#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
+#: rc.cpp:1113
+msgctxt "@item:inlistbox No priority specified for a task"
+msgid "unspecified"
+msgstr "nich fastleggt"
+
+#. i18n: file: eventortodomobile.ui:324
+#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
+#: rc.cpp:1116
+msgctxt "@item:inlistbox highest priority for a task"
+msgid "1 (highest)"
+msgstr "1 (hööchst)"
+
+#. i18n: file: eventortodomobile.ui:329
+#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
+#: rc.cpp:1119
+msgctxt "@item:inlistbox"
+msgid "2"
+msgstr "2"
+
+#. i18n: file: eventortodomobile.ui:334
+#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
+#: rc.cpp:1122
+msgctxt "@item:inlistbox"
+msgid "3"
+msgstr "3"
+
+#. i18n: file: eventortodomobile.ui:339
+#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
+#: rc.cpp:1125
+msgctxt "@item:inlistbox"
+msgid "4"
+msgstr "4"
+
+#. i18n: file: eventortodomobile.ui:344
+#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
+#: rc.cpp:1128
+msgctxt "@item:inlistbox medium priority for a task"
+msgid "5 (medium)"
+msgstr "5 (middelhooch)"
+
+#. i18n: file: eventortodomobile.ui:349
+#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
+#: rc.cpp:1131
+msgctxt "@item:inlistbox"
+msgid "6"
+msgstr "6"
+
+#. i18n: file: eventortodomobile.ui:354
+#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
+#: rc.cpp:1134
+msgctxt "@item:inlistbox"
+msgid "7"
+msgstr "7"
+
+#. i18n: file: eventortodomobile.ui:359
+#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
+#: rc.cpp:1137
+msgctxt "@item:inlistbox"
+msgid "8"
+msgstr "8"
+
+#. i18n: file: eventortodomobile.ui:364
+#. i18n: ectx: property (text), item, widget (KComboBox, mPriorityCombo)
+#: rc.cpp:1140
+msgctxt "@item:inlistbox lowest priority for a task"
+msgid "9 (lowest)"
+msgstr "9 (sietst)"
+
+#. i18n: file: eventortodomobile.ui:388
+#. i18n: ectx: property (text), widget (QLabel, mTaskLabel)
+#: rc.cpp:1143
+msgctxt ""
+"@label Task specific line in the dialog containing progress and priority"
+msgid "Progress:"
+msgstr "Vörankamen:"
 
 #~ msgctxt "incidence category: appointment"
 #~ msgid "Appointment"
