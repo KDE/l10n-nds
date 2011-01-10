@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-01-06 09:00+0100\n"
+"POT-Creation-Date: 2011-01-09 09:58+0100\n"
 "PO-Revision-Date: 2010-12-17 09:14+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -2424,6 +2424,10 @@ msgid "Proportion:"
 msgstr "Deel:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_Strictness)
+#. i18n: ectx: property (text), widget (QLabel, label_StrictnessInt)
+#. i18n: ectx: property (text), widget (QLabel, label_strictnessDate)
+#. i18n: ectx: property (text), widget (QLabel, label_StrictnessTime)
+#. i18n: ectx: property (text), widget (QLabel, label_StrictnessRating)
 #. +> trunk
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:194
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:263
@@ -2431,7 +2435,10 @@ msgstr "Deel:"
 #: playlistgenerator/constraints/CheckpointEditWidget.ui:110
 #: playlistgenerator/constraints/PlaylistDurationEditWidget.ui:97
 #: playlistgenerator/constraints/PlaylistLengthEditWidget.ui:93
-#: playlistgenerator/constraints/TagMatchEditWidget.ui:60
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:161
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:340
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:532
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:655
 msgid "Match:"
 msgstr "Passt:"
 
@@ -2952,15 +2959,15 @@ msgstr "Togriepverlöven:"
 msgid "General Options"
 msgstr "Allgemeen Optschonen"
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_ShowSplashscreen)
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_ShowSplashscreen)
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_ShowSplashScreen)
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_ShowSplashScreen)
 #. +> trunk
 #: configdialog/dialogs/GeneralConfig.ui:29
 #: configdialog/dialogs/GeneralConfig.ui:32
 msgid "Check to enable the splashscreen during Amarok startup."
 msgstr "Wenn anmaakt, wiest Amarok bi't Starten dat Startfinster."
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowSplashscreen)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowSplashScreen)
 #. +> trunk
 #: configdialog/dialogs/GeneralConfig.ui:35
 msgid "Sho&w splash-screen on startup"
@@ -6188,46 +6195,55 @@ msgstr "Dateinaam"
 
 #. +> trunk
 #: core/meta/support/MetaConstants.cpp:105
+#: playlistgenerator/constraints/TagMatchSupport.cpp:87
 msgid "title"
 msgstr "Titel"
 
 #. +> trunk
 #: core/meta/support/MetaConstants.cpp:106
+#: playlistgenerator/constraints/TagMatchSupport.cpp:88
 msgid "artist name"
 msgstr "Künstlernaam"
 
 #. +> trunk
 #: core/meta/support/MetaConstants.cpp:107
+#: playlistgenerator/constraints/TagMatchSupport.cpp:89
 msgid "album name"
 msgstr "Albumnaam"
 
 #. +> trunk
 #: core/meta/support/MetaConstants.cpp:108
+#: playlistgenerator/constraints/TagMatchSupport.cpp:90
 msgid "genre"
 msgstr "Musikoort"
 
 #. +> trunk
 #: core/meta/support/MetaConstants.cpp:109
+#: playlistgenerator/constraints/TagMatchSupport.cpp:91
 msgid "composer"
 msgstr "Komponist"
 
 #. +> trunk
 #: core/meta/support/MetaConstants.cpp:110
+#: playlistgenerator/constraints/TagMatchSupport.cpp:92
 msgid "year"
 msgstr "Johr"
 
 #. +> trunk
 #: core/meta/support/MetaConstants.cpp:111
+#: playlistgenerator/constraints/TagMatchSupport.cpp:93
 msgid "comment"
 msgstr "Kommentar"
 
 #. +> trunk
 #: core/meta/support/MetaConstants.cpp:112
+#: playlistgenerator/constraints/TagMatchSupport.cpp:94
 msgid "track number"
 msgstr "Stücknummer"
 
 #. +> trunk
 #: core/meta/support/MetaConstants.cpp:113
+#: playlistgenerator/constraints/TagMatchSupport.cpp:95
 msgid "disc number"
 msgstr "Schievnummer"
 
@@ -6238,6 +6254,7 @@ msgstr "BPM"
 
 #. +> trunk
 #: core/meta/support/MetaConstants.cpp:115
+#: playlistgenerator/constraints/TagMatchSupport.cpp:96
 msgid "length"
 msgstr "Längde"
 
@@ -6269,6 +6286,7 @@ msgstr "Formaat:"
 
 #. +> trunk
 #: core/meta/support/MetaConstants.cpp:120
+#: playlistgenerator/constraints/TagMatchSupport.cpp:97
 #, fuzzy
 #| msgid "Move to Collection"
 msgid "added to collection"
@@ -6276,21 +6294,25 @@ msgstr "Na Sammeln toföögt"
 
 #. +> trunk
 #: core/meta/support/MetaConstants.cpp:121
+#: playlistgenerator/constraints/TagMatchSupport.cpp:98
 msgid "score"
 msgstr "Pünkt"
 
 #. +> trunk
 #: core/meta/support/MetaConstants.cpp:122
+#: playlistgenerator/constraints/TagMatchSupport.cpp:99
 msgid "rating"
 msgstr "Beweerten"
 
 #. +> trunk
 #: core/meta/support/MetaConstants.cpp:123
+#: playlistgenerator/constraints/TagMatchSupport.cpp:100
 msgid "first played"
 msgstr "Toeerst speelt"
 
 #. +> trunk
 #: core/meta/support/MetaConstants.cpp:124
+#: playlistgenerator/constraints/TagMatchSupport.cpp:101
 msgid "last played"
 msgstr "Tolest speelt"
 
@@ -6340,6 +6362,7 @@ msgstr "Album-Künstler"
 
 #. +> trunk
 #: core/meta/support/MetaConstants.cpp:134
+#: playlistgenerator/constraints/TagMatchSupport.cpp:103
 #, fuzzy
 #| msgid "Label"
 msgid "label"
@@ -7090,36 +7113,36 @@ msgid ""
 msgstr ""
 
 #. +> trunk
-#: covermanager/CoverFetcher.cpp:169
+#: covermanager/CoverFetcher.cpp:172 covermanager/CoverFetcher.cpp:339
 msgid "Fetching Cover"
 msgstr "Titelbild warrt haalt"
 
 #. +> trunk
-#: covermanager/CoverFetcher.cpp:191
+#: covermanager/CoverFetcher.cpp:194
 #, kde-format
 msgid "There was an error communicating with cover provider: %1"
 msgstr "Dat geev en Fehler bi't Snacken mit Titelbild-Anbeder: %1"
 
 #. +> trunk
-#: covermanager/CoverFetcher.cpp:379
+#: covermanager/CoverFetcher.cpp:408
 #, kde-format
 msgid "Retrieved cover successfully for '%1'."
 msgstr "Titelbild för \"%1\" mit Spood haalt."
 
 #. +> trunk
-#: covermanager/CoverFetcher.cpp:390
+#: covermanager/CoverFetcher.cpp:419
 #, kde-format
 msgid "Fetching cover for '%1' failed."
 msgstr "Titelbild för \"%1\" lett sik nich halen."
 
 #. +> trunk
-#: covermanager/CoverFetcher.cpp:403
+#: covermanager/CoverFetcher.cpp:432
 #, kde-format
 msgid "Canceled fetching cover for '%1'."
 msgstr "Halen vun Titelbild för \"%1\" warrt torüchtrocken..."
 
 #. +> trunk
-#: covermanager/CoverFetcher.cpp:412
+#: covermanager/CoverFetcher.cpp:441
 #, kde-format
 msgid "Unable to find a cover for '%1'."
 msgstr "För \"%1\" lett sik keen Titelbild finnen."
@@ -12258,9 +12281,11 @@ msgstr ""
 
 #. i18n: ectx: property (displayFormat), widget (QTimeEdit, timeEdit_Position)
 #. i18n: ectx: property (displayFormat), widget (QTimeEdit, timeEdit_Duration)
+#. i18n: ectx: property (displayFormat), widget (QTimeEdit, timeEdit_TimeValue)
 #. +> trunk
 #: playlistgenerator/constraints/CheckpointEditWidget.ui:72
 #: playlistgenerator/constraints/PlaylistDurationEditWidget.ui:65
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:500
 msgid "h:mm:ss"
 msgstr "S:mm:ss"
 
@@ -12274,22 +12299,36 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_FuzzyPos)
 #. i18n: ectx: property (text), widget (QLabel, label_Fuzzy)
+#. i18n: ectx: property (text), widget (QLabel, label_FuzzyInt)
+#. i18n: ectx: property (text), widget (QLabel, label_FuzzyDate)
+#. i18n: ectx: property (text), widget (QLabel, label_FuzzyTime)
+#. i18n: ectx: property (text), widget (QLabel, label_FuzzyRating)
 #. +> trunk
 #: playlistgenerator/constraints/CheckpointEditWidget.ui:122
 #: playlistgenerator/constraints/PlaylistDurationEditWidget.ui:109
 #: playlistgenerator/constraints/PlaylistLengthEditWidget.ui:105
-#: playlistgenerator/constraints/TagMatchEditWidget.ui:73
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:173
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:352
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:544
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:667
 #, fuzzy
 msgid "fuzzy"
 msgstr "Üm-un-bi"
 
 #. i18n: ectx: property (text), widget (QLabel, label_ExactPos)
 #. i18n: ectx: property (text), widget (QLabel, label_Exact)
+#. i18n: ectx: property (text), widget (QLabel, label_ExactInt)
+#. i18n: ectx: property (text), widget (QLabel, label_ExactDate)
+#. i18n: ectx: property (text), widget (QLabel, label_ExactTime)
+#. i18n: ectx: property (text), widget (QLabel, label_ExactRating)
 #. +> trunk
 #: playlistgenerator/constraints/CheckpointEditWidget.ui:154
 #: playlistgenerator/constraints/PlaylistDurationEditWidget.ui:135
 #: playlistgenerator/constraints/PlaylistLengthEditWidget.ui:131
-#: playlistgenerator/constraints/TagMatchEditWidget.ui:99
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:196
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:375
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:567
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:690
 msgid "exact"
 msgstr "nau"
 
@@ -12308,14 +12347,14 @@ msgid "Sets the preferred duration of the playlist"
 msgstr "Sülven opstellt un importeert Afspeellisten"
 
 #. +> trunk
-#: playlistgenerator/constraints/PlaylistDuration.cpp:123
+#: playlistgenerator/constraints/PlaylistDuration.cpp:125
 #, fuzzy, kde-format
 #| msgid "Playlist_%1"
 msgid "Playlist duration: %1 %2"
 msgstr "Afspeellist_%1"
 
 #. +> trunk
-#: playlistgenerator/constraints/PlaylistDuration.cpp:265
+#: playlistgenerator/constraints/PlaylistDuration.cpp:267
 #, fuzzy
 #| msgid "equal to"
 msgctxt "duration of playlist equals some time"
@@ -12324,7 +12363,7 @@ msgstr "is liek to"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox_Comparison)
 #. +> trunk
-#: playlistgenerator/constraints/PlaylistDuration.cpp:267
+#: playlistgenerator/constraints/PlaylistDuration.cpp:269
 #: playlistgenerator/constraints/PlaylistDurationEditWidget.ui:49
 #, fuzzy
 #| msgid "less than"
@@ -12333,7 +12372,7 @@ msgstr "länger as"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox_Comparison)
 #. +> trunk
-#: playlistgenerator/constraints/PlaylistDuration.cpp:269
+#: playlistgenerator/constraints/PlaylistDuration.cpp:271
 #: playlistgenerator/constraints/PlaylistDurationEditWidget.ui:39
 #, fuzzy
 #| msgid "greater than"
@@ -12341,9 +12380,10 @@ msgid "shorter than"
 msgstr "grötter as"
 
 #. +> trunk
-#: playlistgenerator/constraints/PlaylistDuration.cpp:271
+#: playlistgenerator/constraints/PlaylistDuration.cpp:273
 #: playlistgenerator/constraints/PlaylistLength.cpp:210
-#: widgets/MetaQueryWidget.cpp:922
+#: playlistgenerator/constraints/TagMatch.cpp:472
+#: widgets/MetaQueryWidget.cpp:921
 #, fuzzy
 #| msgid "Unknown Artist"
 msgid "unknown comparison"
@@ -12370,9 +12410,15 @@ msgid "Whether the duration of the generated playlist should be shorter than, eq
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox_Comparison)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonInt)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonTime)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonRating)
 #. +> trunk
 #: playlistgenerator/constraints/PlaylistDurationEditWidget.ui:44
 #: playlistgenerator/constraints/PlaylistLengthEditWidget.ui:44
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:118
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:472
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:609
 msgid "equal to"
 msgstr "liek as"
 
@@ -12388,8 +12434,6 @@ msgstr ""
 #: playlistgenerator/constraints/PlaylistDurationEditWidget.ui:94
 #: playlistgenerator/constraints/PlaylistDurationEditWidget.ui:119
 #: playlistgenerator/constraints/PlaylistLengthEditWidget.ui:90
-#: playlistgenerator/constraints/TagMatchEditWidget.ui:57
-#: playlistgenerator/constraints/TagMatchEditWidget.ui:83
 msgid "How strict the APG should be about matching the playlist duration to the specified time."
 msgstr ""
 
@@ -12434,9 +12478,16 @@ msgstr "is liek to"
 msgid "more than"
 msgstr "mehr as"
 
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonInt)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonTime)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonRating)
 #. +> trunk
 #: playlistgenerator/constraints/PlaylistLength.cpp:208
-#: widgets/MetaQueryWidget.cpp:903
+#: playlistgenerator/constraints/TagMatch.cpp:447
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:113
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:467
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:604
+#: widgets/MetaQueryWidget.cpp:902
 msgid "less than"
 msgstr "minn as"
 
@@ -12549,39 +12600,32 @@ msgid "Prevent duplicate"
 msgstr "Dubbels verhöden"
 
 #. +> trunk
-#: playlistgenerator/constraints/TagMatch.cpp:55
+#: playlistgenerator/constraints/TagMatch.cpp:56
 #, fuzzy
 #| msgid "My Tags"
 msgid "Match Tags"
 msgstr "Mien Slötelwöör"
 
 #. +> trunk
-#: playlistgenerator/constraints/TagMatch.cpp:56
+#: playlistgenerator/constraints/TagMatch.cpp:57
 #, fuzzy
 #| msgid "Number of tracks to load into the playlist after the active track."
 msgid "Make all tracks in the playlist match the specified characteristic"
 msgstr "Tall vun Stücken, de na dat aktuelle Stück na de Afspeellist laadt warrt"
 
 #. +> trunk
-#: playlistgenerator/constraints/TagMatch.cpp:241
-#, kde-format
-msgid "Match tag:%2 %3 %4 anywhere"
-msgstr ""
-
-#. +> trunk
-#: playlistgenerator/constraints/TagMatch.cpp:244
-#: playlistgenerator/constraints/TagMatch.cpp:253
-msgid " not"
-msgstr " nich"
-
-#. +> trunk
-#: playlistgenerator/constraints/TagMatch.cpp:249
+#: playlistgenerator/constraints/TagMatch.cpp:179
 #, kde-format
 msgid "Match tag:%1 %2 %3 %4"
 msgstr ""
 
 #. +> trunk
-#: playlistgenerator/constraints/TagMatch.cpp:529
+#: playlistgenerator/constraints/TagMatch.cpp:180
+msgid " not"
+msgstr " nich"
+
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:183
 #, fuzzy, kde-format
 #| msgid "%1 track"
 #| msgid_plural "%1 tracks"
@@ -12592,11 +12636,133 @@ msgstr[0] "%1 Stück"
 msgstr[1] "%1 Stück"
 
 #. +> trunk
-#: playlistgenerator/constraints/TagMatch.cpp:558
+#: playlistgenerator/constraints/TagMatch.cpp:189
 #, kde-format
 msgctxt "an arbitrary string surrounded by quotes"
 msgid "\"%1\""
 msgstr "\"%1\""
+
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:443
+#: widgets/MetaQueryWidget.cpp:904
+#, fuzzy
+#| msgid "equal to"
+msgctxt "a numerical tag (like year or track number) equals a value"
+msgid "equals"
+msgstr "is liek to"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonInt)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonTime)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonRating)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:445
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:123
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:477
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:614
+#: widgets/MetaQueryWidget.cpp:906
+msgid "greater than"
+msgstr "grötter as"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonDate)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:451
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:233
+#, fuzzy
+#| msgid "before"
+msgid "before"
+msgstr "vör"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonDate)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:453
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:238
+#, fuzzy
+#| msgid "on"
+msgid "on"
+msgstr "op"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonDate)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:455
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:243
+#, fuzzy
+#| msgid "is after"
+msgid "after"
+msgstr "achter"
+
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:457
+#, fuzzy
+#| msgid "within"
+msgid "within"
+msgstr "binnen"
+
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:461
+#, fuzzy
+#| msgid "equal to"
+msgctxt "an alphabetical tag (like title or artist name) equals some string"
+msgid "equals"
+msgstr "is liek to"
+
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:463
+#: widgets/MetaQueryWidget.cpp:914
+#, fuzzy
+#| msgid "starts with"
+msgctxt "an alphabetical tag (like title or artist name) starts with some string"
+msgid "starts with"
+msgstr "fangt an mit"
+
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:465
+#: widgets/MetaQueryWidget.cpp:916
+msgctxt "an alphabetical tag (like title or artist name) ends with some string"
+msgid "ends with"
+msgstr "endt mit"
+
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:467
+#: widgets/MetaQueryWidget.cpp:910
+msgctxt "an alphabetical tag (like title or artist name) contains some string"
+msgid "contains"
+msgstr "bargt"
+
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:469
+msgid "regexp"
+msgstr "RegUtdr"
+
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:642
+#: playlistgenerator/constraints/TagMatch.cpp:859
+msgctxt "within the last %1 days"
+msgid "day"
+msgid_plural "days"
+msgstr[0] "Dag"
+msgstr[1] "Daag"
+
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:643
+#: playlistgenerator/constraints/TagMatch.cpp:860
+#, fuzzy
+#| msgid "Months"
+msgctxt "within the last %1 months"
+msgid "month"
+msgid_plural "months"
+msgstr[0] "Maanden"
+msgstr[1] "Maanden"
+
+#. +> trunk
+#: playlistgenerator/constraints/TagMatch.cpp:644
+#: playlistgenerator/constraints/TagMatch.cpp:861
+#, fuzzy
+#| msgid "year"
+msgctxt "within the last %1 years"
+msgid "year"
+msgid_plural "years"
+msgstr[0] "Johr"
+msgstr[1] "Johr"
 
 #. i18n: ectx: property (whatsThis), widget (QWidget, TagMatchEditWidget)
 #. +> trunk
@@ -12612,21 +12778,201 @@ msgstr ""
 msgid "Match Tag Constraint Settings"
 msgstr "Verbinnen instellen"
 
-#. i18n: ectx: property (whatsThis), widget (QLabel, label_Invert)
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, checkBox_Invert)
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_Match)
+#. i18n: ectx: property (whatsThis), widget (QComboBox, comboBox_Field)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:29
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:44
+msgid "Selects which track characteristic you want to match."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_Match)
 #. +> trunk
 #: playlistgenerator/constraints/TagMatchEditWidget.ui:32
-#: playlistgenerator/constraints/TagMatchEditWidget.ui:46
+msgid "Field:"
+msgstr "Feld:"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, checkBox_Invert)
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_Invert)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:70
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:84
 #, fuzzy
-#| msgid "Number of tracks to load into the playlist after the active track."
-msgid "The APG will choose all tracks that do not match the specified characteristics."
-msgstr "Tall vun Stücken, de na dat aktuelle Stück na de Afspeellist laadt warrt"
+#| msgid ""
+#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+#| "p, li { white-space: pre-wrap; }\n"
+#| "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"https://shop.mp3tunes.com/myaccount/registration/\"><span style=\" text-decoration: underline; color:#0057ae;\">Get an Mp3tunes locker</span></a></p>"
+#| "</body></html>"
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Calibri'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">The APG will choose all tracks that do <span style=\" font-weight:600;\">not</span> match the specified characteristics.</p>"
+"</body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"https://shop.mp3tunes.com/myaccount/registration/\"><span style=\" text-decoration: underline; color:#0057ae;\">En Mp3tunes-Schapp kriegen</span></a></p>"
+"</body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_Invert)
 #. +> trunk
-#: playlistgenerator/constraints/TagMatchEditWidget.ui:35
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:87
 msgid "Invert:"
 msgstr "Ümdreihen:"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, comboBox_ComparisonInt)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:106
+msgid "Whether the APG should choose tracks that are less than, equal to, or greater than the specified value."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, spinBox_ValueInt)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:133
+msgid "The numerical value that the track characteristic should match."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_StrictnessInt)
+#. i18n: ectx: property (whatsThis), widget (QSlider, slider_StrictnessInt)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:158
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:180
+msgid "How strict the APG should be about matching tracks to the specified value."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, comboBox_ComparisonDate)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:226
+msgid "Whether the APG should choose tracks that are before, on, or after a specific date; or whether it should choose tracks that are within a certain time range."
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonDate)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:248
+#, fuzzy
+#| msgid "is in the last"
+msgid "within the last"
+msgstr "is binnen de lesten"
+
+#. i18n: ectx: property (whatsThis), widget (QWidget, page_DateSpecific)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:266
+msgid "The specific date that the APG should use for matching."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QWidget, page_DateRange)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:300
+msgid "The relative time period that the APG should try to match."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_strictnessDate)
+#. i18n: ectx: property (whatsThis), widget (QSlider, slider_StrictnessDate)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:337
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:359
+msgid "How strict the APG should be about matching tracks to the specified date."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, comboBox_ComparisonString)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:405
+msgid "Whether the APG should match tracks that equal, start with, end with, or contain the specified string."
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonString)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:409
+#, fuzzy
+#| msgid "equal to"
+msgid "equals"
+msgstr "is liek to"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonString)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:414
+#: widgets/SmartPlaylistEditor.cpp:737 widgets/SmartPlaylistEditor.cpp:1034
+msgid "starts with"
+msgstr "fangt an mit"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonString)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:419
+#: widgets/SmartPlaylistEditor.cpp:759 widgets/SmartPlaylistEditor.cpp:1035
+msgid "ends with"
+msgstr "endt mit"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox_ComparisonString)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:424
+#: widgets/SmartPlaylistEditor.cpp:715 widgets/SmartPlaylistEditor.cpp:1033
+msgid "contains"
+msgstr "bargt"
+
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, lineEdit_StringValue)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:432
+msgid "The string that the APG should use when matching tracks."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, comboBox_ComparisonTime)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:460
+msgid "Whether the APG should choose tracks that are less than, equal to, or greater than the specified time."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QTimeEdit, timeEdit_TimeValue)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:487
+msgid "The time that the APG should try to match."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_StrictnessTime)
+#. i18n: ectx: property (whatsThis), widget (QSlider, slider_StrictnessTime)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:529
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:551
+msgid "How strict the APG should be about matching tracks to the specified time."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, comboBox_ComparisonRating)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:597
+#, fuzzy
+#| msgid "Number of tracks to load into the playlist after the active track."
+msgid "Whether the APG should choose tracks that are less than, equal to, or greater than the specified rating."
+msgstr "Tall vun Stücken, de na dat aktuelle Stück na de Afspeellist laadt warrt"
+
+#. i18n: ectx: property (whatsThis), widget (Amarok::KRatingWidget, rating_RatingValue)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:624
+msgid "The rating that the APG should try to match."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_StrictnessRating)
+#. i18n: ectx: property (whatsThis), widget (QSlider, slider_StrictnessRating)
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:652
+#: playlistgenerator/constraints/TagMatchEditWidget.ui:674
+msgid "How strict the APG should be about matching tracks to the specified rating."
+msgstr ""
+
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchSupport.cpp:86
+#, fuzzy
+msgid "url"
+msgstr "URL:"
+
+#. +> trunk
+#: playlistgenerator/constraints/TagMatchSupport.cpp:102
+msgid "play count"
+msgstr "Afspeelklock"
 
 #. +> trunk
 #: playlistgenerator/ConstraintSolver.cpp:239
@@ -14466,35 +14812,35 @@ msgid "Copy Current View Bookmark to Clipboard"
 msgstr ""
 
 #. +> trunk
-#: widgets/MetaQueryWidget.cpp:58 widgets/MetaQueryWidget.cpp:125
+#: widgets/MetaQueryWidget.cpp:124
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] "Sekunn"
 msgstr[1] "Sekunnen"
 
 #. +> trunk
-#: widgets/MetaQueryWidget.cpp:59 widgets/MetaQueryWidget.cpp:126
+#: widgets/MetaQueryWidget.cpp:125
 msgid "minute"
 msgid_plural "minutes"
 msgstr[0] "Minuut"
 msgstr[1] "Minuten"
 
 #. +> trunk
-#: widgets/MetaQueryWidget.cpp:60 widgets/MetaQueryWidget.cpp:127
+#: widgets/MetaQueryWidget.cpp:126
 msgid "hour"
 msgid_plural "hours"
 msgstr[0] "Stünn"
 msgstr[1] "Stünnen"
 
 #. +> trunk
-#: widgets/MetaQueryWidget.cpp:61 widgets/MetaQueryWidget.cpp:128
+#: widgets/MetaQueryWidget.cpp:127
 msgid "day"
 msgid_plural "days"
 msgstr[0] "Dag"
 msgstr[1] "Daag"
 
 #. +> trunk
-#: widgets/MetaQueryWidget.cpp:62 widgets/MetaQueryWidget.cpp:129
+#: widgets/MetaQueryWidget.cpp:128
 #, fuzzy
 #| msgid "Months"
 msgid "month"
@@ -14503,37 +14849,37 @@ msgstr[0] "Maanden"
 msgstr[1] "Maanden"
 
 #. +> trunk
-#: widgets/MetaQueryWidget.cpp:230
+#: widgets/MetaQueryWidget.cpp:229
 msgid "Simple Search"
 msgstr "Eenfachsöök"
 
 #. +> trunk
-#: widgets/MetaQueryWidget.cpp:446 widgets/SmartPlaylistEditor.cpp:934
+#: widgets/MetaQueryWidget.cpp:445 widgets/SmartPlaylistEditor.cpp:934
 #: widgets/SmartPlaylistEditor.cpp:956 widgets/SmartPlaylistEditor.cpp:984
 #: widgets/SmartPlaylistEditor.cpp:1003
 msgid "and"
 msgstr "un"
 
 #. +> trunk
-#: widgets/MetaQueryWidget.cpp:555
+#: widgets/MetaQueryWidget.cpp:554
 msgctxt "Unit for data rate kilo bit per seconds"
 msgid "kbps"
 msgstr ""
 
 #. +> trunk
-#: widgets/MetaQueryWidget.cpp:557
+#: widgets/MetaQueryWidget.cpp:556
 msgctxt "Unit for sample rate"
 msgid "Hz"
 msgstr "Hz"
 
 #. +> trunk
-#: widgets/MetaQueryWidget.cpp:559
+#: widgets/MetaQueryWidget.cpp:558
 msgctxt "Unit for file size in mega byte"
 msgid "MiB"
 msgstr "MiB"
 
 #. +> trunk
-#: widgets/MetaQueryWidget.cpp:883
+#: widgets/MetaQueryWidget.cpp:882
 #, fuzzy
 #| msgid "before"
 msgctxt "The date lies before the given fixed date"
@@ -14541,7 +14887,7 @@ msgid "before"
 msgstr "vör"
 
 #. +> trunk
-#: widgets/MetaQueryWidget.cpp:885
+#: widgets/MetaQueryWidget.cpp:884
 #, fuzzy
 #| msgid "on"
 msgctxt "The date is the same as the given fixed date"
@@ -14549,7 +14895,7 @@ msgid "on"
 msgstr "op"
 
 #. +> trunk
-#: widgets/MetaQueryWidget.cpp:887
+#: widgets/MetaQueryWidget.cpp:886
 #, fuzzy
 #| msgid "is after"
 msgctxt "The date is after the given fixed date"
@@ -14557,7 +14903,7 @@ msgid "after"
 msgstr "achter"
 
 #. +> trunk
-#: widgets/MetaQueryWidget.cpp:889
+#: widgets/MetaQueryWidget.cpp:888
 #, fuzzy
 #| msgid "Between"
 msgctxt "The date is between the given fixed dates"
@@ -14565,7 +14911,7 @@ msgid "between"
 msgstr "Twischen"
 
 #. +> trunk
-#: widgets/MetaQueryWidget.cpp:891
+#: widgets/MetaQueryWidget.cpp:890
 #, fuzzy
 #| msgctxt "The date lies before the given one"
 #| msgid "Older Than"
@@ -14574,7 +14920,7 @@ msgid "older than"
 msgstr "Öller as"
 
 #. +> trunk
-#: widgets/MetaQueryWidget.cpp:893
+#: widgets/MetaQueryWidget.cpp:892
 #, fuzzy
 #| msgid "within"
 msgctxt "The date lies after the given time interval"
@@ -14582,20 +14928,7 @@ msgid "within"
 msgstr "binnen"
 
 #. +> trunk
-#: widgets/MetaQueryWidget.cpp:905
-#, fuzzy
-#| msgid "equal to"
-msgctxt "a numerical tag (like year or track number) equals a value"
-msgid "equals"
-msgstr "is liek to"
-
-#. +> trunk
-#: widgets/MetaQueryWidget.cpp:907
-msgid "greater than"
-msgstr "grötter as"
-
-#. +> trunk
-#: widgets/MetaQueryWidget.cpp:909
+#: widgets/MetaQueryWidget.cpp:908
 #, fuzzy
 #| msgid "Between"
 msgctxt "a numerical tag (like year or track number) is between two values"
@@ -14603,32 +14936,12 @@ msgid "between"
 msgstr "Twischen"
 
 #. +> trunk
-#: widgets/MetaQueryWidget.cpp:911
-msgctxt "an alphabetical tag (like title or artist name) contains some string"
-msgid "contains"
-msgstr "bargt"
-
-#. +> trunk
-#: widgets/MetaQueryWidget.cpp:913
+#: widgets/MetaQueryWidget.cpp:912
 #, fuzzy
 #| msgid "Patches"
 msgctxt "an alphabetical tag (like title or artist name) equals some string"
 msgid "matches"
 msgstr "Kodeplasters"
-
-#. +> trunk
-#: widgets/MetaQueryWidget.cpp:915
-#, fuzzy
-#| msgid "starts with"
-msgctxt "an alphabetical tag (like title or artist name) starts with some string"
-msgid "starts with"
-msgstr "fangt an mit"
-
-#. +> trunk
-#: widgets/MetaQueryWidget.cpp:917
-msgctxt "an alphabetical tag (like title or artist name) ends with some string"
-msgid "ends with"
-msgstr "endt mit"
 
 #. +> trunk
 #: widgets/Osd.cpp:138
@@ -14865,11 +15178,6 @@ msgid "is not in the last"
 msgstr "is nich binnen de lesten"
 
 #. +> trunk
-#: widgets/SmartPlaylistEditor.cpp:715 widgets/SmartPlaylistEditor.cpp:1033
-msgid "contains"
-msgstr "bargt"
-
-#. +> trunk
 #: widgets/SmartPlaylistEditor.cpp:717 widgets/SmartPlaylistEditor.cpp:1033
 msgid "does not contain"
 msgstr "bargt nich"
@@ -14887,19 +15195,9 @@ msgid "is not"
 msgstr "is nich"
 
 #. +> trunk
-#: widgets/SmartPlaylistEditor.cpp:737 widgets/SmartPlaylistEditor.cpp:1034
-msgid "starts with"
-msgstr "fangt an mit"
-
-#. +> trunk
 #: widgets/SmartPlaylistEditor.cpp:748 widgets/SmartPlaylistEditor.cpp:1034
 msgid "does not start with"
 msgstr "fangt nich an mit"
-
-#. +> trunk
-#: widgets/SmartPlaylistEditor.cpp:759 widgets/SmartPlaylistEditor.cpp:1035
-msgid "ends with"
-msgstr "endt mit"
 
 #. +> trunk
 #: widgets/SmartPlaylistEditor.cpp:761 widgets/SmartPlaylistEditor.cpp:1035
@@ -15179,72 +15477,6 @@ msgstr "Luutstärk: <i>Stillmaakt</i>"
 #~ msgctxt "The quality of music"
 #~ msgid "Not rated"
 #~ msgstr "Nich beweert"
-
-#, fuzzy
-#~| msgid "equal to"
-#~ msgctxt "an alphabetical tag (like title or artist name) equals some string"
-#~ msgid "equals"
-#~ msgstr "is liek to"
-
-#~ msgid "regexp"
-#~ msgstr "RegUtdr"
-
-#~ msgctxt "within the last %1 days"
-#~ msgid "day"
-#~ msgid_plural "days"
-#~ msgstr[0] "Dag"
-#~ msgstr[1] "Daag"
-
-#, fuzzy
-#~| msgid "year"
-#~ msgctxt "within the last %1 years"
-#~ msgid "year"
-#~ msgid_plural "years"
-#~ msgstr[0] "Johr"
-#~ msgstr[1] "Johr"
-
-#~ msgid "Field:"
-#~ msgstr "Feld:"
-
-#, fuzzy
-#~| msgid ""
-#~| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-#~| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-#~| "p, li { white-space: pre-wrap; }\n"
-#~| "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-#~| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"https://shop.mp3tunes.com/myaccount/registration/\"><span style=\" text-decoration: underline; color:#0057ae;\">Get an Mp3tunes locker</span></a></p>"
-#~| "</body></html>"
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'Calibri'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">The APG will choose all tracks that do <span style=\" font-weight:600;\">not</span> match the specified characteristics.</p>"
-#~ "</body></html>"
-#~ msgstr ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"https://shop.mp3tunes.com/myaccount/registration/\"><span style=\" text-decoration: underline; color:#0057ae;\">En Mp3tunes-Schapp kriegen</span></a></p>"
-#~ "</body></html>"
-
-#, fuzzy
-#~| msgid "is in the last"
-#~ msgid "within the last"
-#~ msgstr "is binnen de lesten"
-
-#, fuzzy
-#~| msgid "equal to"
-#~ msgid "equals"
-#~ msgstr "is liek to"
-
-#, fuzzy
-#~ msgid "url"
-#~ msgstr "URL:"
-
-#~ msgid "play count"
-#~ msgstr "Afspeelklock"
 
 #~ msgctxt "The name of the file this track is stored in"
 #~ msgid "File Name"
