@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rocs\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-12-09 09:56+0100\n"
+"POT-Creation-Date: 2011-01-11 10:26+0100\n"
 "PO-Revision-Date: 2010-12-28 14:12+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -29,27 +29,27 @@ msgid "Your emails"
 msgstr "m.j.wiese@web.de"
 
 #. +> trunk stable
-#: Actions/AddEdge.cpp:34
+#: Actions/AddConnection.cpp:36
 msgid "Add Edge"
 msgstr "Kant tofögen"
 
 #. +> trunk stable
-#: Actions/AddEdge.cpp:35
+#: Actions/AddConnection.cpp:37
 msgid "Creates a new edge between 2 nodes"
 msgstr "Stellt en nieg Kant twischen twee Knütten op"
 
 #. +> trunk stable
-#: Actions/AddNode.cpp:32
+#: Actions/AddData.cpp:33 Actions/AddNode.cpp:32
 msgid "Add Node"
 msgstr "Knütt tofögen"
 
 #. +> trunk stable
-#: Actions/AddNode.cpp:33
+#: Actions/AddData.cpp:34 Actions/AddNode.cpp:33
 msgid "Creates a new node at the click position on the drawing area."
 msgstr "Stellt en nieg Knütt an de anklickt Steed binnen dat Tekenrebeet op."
 
 #. +> trunk stable
-#: Actions/AddNode.cpp:54
+#: Actions/AddData.cpp:54 Actions/AddNode.cpp:54
 msgid "untitled"
 msgstr "ahn Titel"
 
@@ -64,24 +64,36 @@ msgid "Delete items by clicking on them."
 msgstr "Indrääg dör Anklicken wegdoon"
 
 #. +> trunk stable
-#: Actions/MoveNode.cpp:35
+#: Actions/MoveData.cpp:36
 msgid "Move Node"
 msgstr "Knütt verschuven"
 
 #. +> trunk stable
-#: Actions/MoveNode.cpp:36
+#: Actions/MoveData.cpp:37
 msgid "Moves a node around the drawing area."
 msgstr "Verschufft en Knütt op dat Tekenrebeet"
 
 #. +> trunk stable
-#: Actions/Select.cpp:36
+#: Actions/Select.cpp:38
 msgid "Select"
 msgstr "Köör"
 
 #. +> trunk stable
-#: Actions/Select.cpp:37
+#: Actions/Select.cpp:39
 msgid "Select Items by clicking on them."
 msgstr "Indrääg dör Anklicken utsöken"
+
+#. +> trunk stable
+#: Core/DocumentManager.cpp:153 UndoRedo/URAddNode.cpp:38
+msgid "Untitled"
+msgstr "Ahn Titel"
+
+#. +> trunk stable
+#: Core/DocumentManager.cpp:166 Core/DocumentManager.cpp:169
+#: Core/threadDocument.cpp:105 Core/threadDocument.cpp:108
+#: Interface/GraphPropertiesWidget.cpp:132
+msgid "Untitled0"
+msgstr "Ahn Titel 0"
 
 #. +> trunk stable
 #: Core/DynamicPropertiesList.cpp:156
@@ -106,33 +118,27 @@ msgstr "Globaal"
 msgid "None"
 msgstr "Keen"
 
-#. +> trunk
+#. +> trunk stable
 #: Core/threadDocument.cpp:104
 msgid "UntitledDoc"
 msgstr "Dokment ahn Titel"
 
 #. +> trunk stable
-#: Core/threadDocument.cpp:105 Core/threadDocument.cpp:108
-#: Interface/GraphPropertiesWidget.cpp:137
-msgid "Untitled0"
-msgstr "Ahn Titel 0"
-
-#. +> trunk stable
-#: GraphicsItem/NodeItem.cpp:93 GraphicsItem/NodeItem.cpp:96
-#: Plugins/DSPlugins/Graph/NodeItem.cpp:92
-#: Plugins/DSPlugins/Graph/NodeItem.cpp:95
-#: Plugins/DSPlugins/LinkedList/NodeListItem.cpp:93
-#: Plugins/DSPlugins/LinkedList/NodeListItem.cpp:96
+#: GraphicsItem/DataItem.cpp:90 GraphicsItem/DataItem.cpp:93
+#: Plugins/DataStructure/Graph/NodeItem.cpp:92
+#: Plugins/DataStructure/Graph/NodeItem.cpp:95
+#: Plugins/DataStructure/LinkedList/NodeListItem.cpp:93
+#: Plugins/DataStructure/LinkedList/NodeListItem.cpp:96
 #, kde-format
 msgid "Name: %1"
 msgstr "Naam: %1"
 
 #. +> trunk stable
-#: GraphicsItem/NodeItem.cpp:105 GraphicsItem/NodeItem.cpp:108
-#: Plugins/DSPlugins/Graph/NodeItem.cpp:104
-#: Plugins/DSPlugins/Graph/NodeItem.cpp:107
-#: Plugins/DSPlugins/LinkedList/NodeListItem.cpp:105
-#: Plugins/DSPlugins/LinkedList/NodeListItem.cpp:108
+#: GraphicsItem/DataItem.cpp:102 GraphicsItem/DataItem.cpp:105
+#: Plugins/DataStructure/Graph/NodeItem.cpp:104
+#: Plugins/DataStructure/Graph/NodeItem.cpp:107
+#: Plugins/DataStructure/LinkedList/NodeListItem.cpp:105
+#: Plugins/DataStructure/LinkedList/NodeListItem.cpp:108
 #, kde-format
 msgid "Value: %1"
 msgstr "Weert: %1"
@@ -321,7 +327,7 @@ msgid "add"
 msgstr "tofögen"
 
 #. +> trunk stable
-#: Interface/GraphLayers.cpp:18
+#: Interface/GraphLayers.cpp:19
 msgid "Add"
 msgstr "Tofögen"
 
@@ -332,17 +338,11 @@ msgid "Untitled%1"
 msgstr "Ahn Titel %1"
 
 #. i18n: ectx: property (text), widget (QRadioButton, _activateGraph)
-#. +> trunk
+#. +> trunk stable
 #: Interface/GraphPropertiesWidget.ui:52
 #, fuzzy
 msgid "Name of Data Structure Here"
 msgstr "Datenstruktuur"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _activateGraph)
-#. +> stable
-#: Interface/GraphPropertiesWidget.ui:52
-msgid "graph name here"
-msgstr "Hier den Graph sien Naam"
 
 #. i18n: ectx: property (text), widget (QToolButton, _graphVisible)
 #. +> trunk stable
@@ -370,16 +370,10 @@ msgid "x"
 msgstr "x"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#. +> trunk
+#. +> trunk stable
 #: Interface/GraphPropertiesWidget.ui:115
 msgid "Data Color:"
 msgstr "Datenklöör:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#. +> stable
-#: Interface/GraphPropertiesWidget.ui:151
-msgid "Edge Color:"
-msgstr "Kantklöör:"
 
 #. i18n: ectx: property (toolTip), widget (KColorCombo, _graphNodeColor)
 #. +> trunk stable
@@ -408,16 +402,10 @@ msgid "All"
 msgstr "All"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#. +> trunk
+#. +> trunk stable
 #: Interface/GraphPropertiesWidget.ui:151
 msgid "Pointer Color:"
 msgstr "Wieserklöör:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#. +> stable
-#: Interface/GraphPropertiesWidget.ui:115
-msgid "Node Color:"
-msgstr "Knüttklöör:"
 
 #. i18n: ectx: property (toolTip), widget (KColorCombo, _graphEdgeColor)
 #. +> trunk stable
@@ -444,13 +432,13 @@ msgid "Show names in:"
 msgstr "Naams wiesen in:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#. +> trunk
+#. +> trunk stable
 #: Interface/GraphPropertiesWidget.ui:199
 msgid "Data"
 msgstr "Daten"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#. +> trunk
+#. +> trunk stable
 #: Interface/GraphPropertiesWidget.ui:206
 msgid "Pointers"
 msgstr "Wiesers"
@@ -460,12 +448,6 @@ msgstr "Wiesers"
 #: Interface/GraphPropertiesWidget.ui:213
 msgid "Nodes"
 msgstr "Knütten"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#. +> stable
-#: Interface/GraphPropertiesWidget.ui:217
-msgid "Graph is Automate"
-msgstr "Automatengraph"
 
 #. i18n: ectx: property (text), widget (QLabel, label_12)
 #. +> trunk stable
@@ -480,138 +462,124 @@ msgid "Edges"
 msgstr "Kanten"
 
 #. +> trunk stable
-#: Interface/ImporterExporterManager.cpp:50
-#: Interface/ImporterExporterManager.cpp:100
+#: Interface/ImporterExporterManager.cpp:46
+#: Interface/ImporterExporterManager.cpp:89
 msgid "*|All files"
 msgstr "*|All Dateien"
 
 #. +> trunk stable
-#: Interface/ImporterExporterManager.cpp:54 Interface/MainWindow.cpp:321
+#: Interface/ImporterExporterManager.cpp:50 Interface/MainWindow.cpp:251
 msgid "Export"
 msgstr "Exporteren"
 
 #. +> trunk stable
-#: Interface/ImporterExporterManager.cpp:55
+#: Interface/ImporterExporterManager.cpp:51
 msgid "Export graphs to file"
 msgstr "Graphen as Datei exporteren"
 
 #. +> trunk stable
-#: Interface/ImporterExporterManager.cpp:103 Interface/MainWindow.cpp:515
+#: Interface/ImporterExporterManager.cpp:92 Interface/MainWindow.cpp:401
 msgid "Graph Files"
 msgstr "Graphendateien"
 
-#. +> trunk
-#: Interface/MainWindow.cpp:117
-msgid "No Data Structure plugins found in the system. Exiting."
-msgstr "Op den Reekner laat sik keen Datenstruktuur.Modulen finnen. An't Utstiegen."
-
-#. +> trunk
-#: Interface/MainWindow.cpp:118
-msgid ""
-"Rocs need at least one data structure plugin to continue.\n"
-"Try running kbuildsycoca4 from a console and after execute Rocs again."
-msgstr ""
-"Rocs bruukt tominnst een Datenstruktuur-Moduul, dormit dat wiedergahn kann.\n"
-"Roop op de Konsool  man kbuildsycoca4 un start Rocs dorna nieg."
-
 #. +> trunk stable
-#: Interface/MainWindow.cpp:209
+#: Interface/MainWindow.cpp:139
 msgid "Editor"
 msgstr "Editor"
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:210
+#: Interface/MainWindow.cpp:140
 msgid "Debugger"
 msgstr "Fehlersöker"
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:211
+#: Interface/MainWindow.cpp:141
 msgid "Output"
 msgstr "Utgaav"
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:213 Interface/TabWidget.cpp:111
+#: Interface/MainWindow.cpp:143 Interface/TabWidget.cpp:111
 msgid "Run"
 msgstr "Utföhren"
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:252
+#: Interface/MainWindow.cpp:182
 msgid "Align on the base"
 msgstr "Nerrn utrichten"
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:253 Interface/MainWindow.cpp:256
+#: Interface/MainWindow.cpp:183 Interface/MainWindow.cpp:186
 msgid "Align on the center"
 msgstr "Na de Merrn utrichten"
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:254
+#: Interface/MainWindow.cpp:184
 msgid "Align on the top"
 msgstr "Baven utrichten"
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:255
+#: Interface/MainWindow.cpp:185
 msgid "Align on the left"
 msgstr "Linkerhand utrichten"
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:257
+#: Interface/MainWindow.cpp:187
 msgid "Align on the right"
 msgstr "Rechterhand utrichten"
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:259
+#: Interface/MainWindow.cpp:189
 msgid "New Graph"
 msgstr "Nieg Graph"
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:269
+#: Interface/MainWindow.cpp:199
 msgid "Open Graph..."
 msgstr "Graph opmaken..."
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:275
+#: Interface/MainWindow.cpp:205
 msgid "Save Graph"
 msgstr "Graph sekern"
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:281
+#: Interface/MainWindow.cpp:211
 msgid "Save Graph As..."
 msgstr "Graph sekern as..."
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:287
+#: Interface/MainWindow.cpp:217
 msgid "New Script"
 msgstr "Nieg Skript"
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:293
+#: Interface/MainWindow.cpp:223
 msgid "Open Script..."
 msgstr "Skript opmaken..."
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:299
+#: Interface/MainWindow.cpp:229
 msgid "Save Script"
 msgstr "Skript sekern"
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:305
+#: Interface/MainWindow.cpp:235
 msgid "Save Script As..."
 msgstr "Skript sekern as..."
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:315
+#: Interface/MainWindow.cpp:245
 msgid "Import"
 msgstr "Importeren"
 
-#. +> trunk
-#: Interface/MainWindow.cpp:331
+#. +> trunk stable
+#: Interface/MainWindow.cpp:261
 #, fuzzy
 msgid "Possible Includes"
 msgstr "Mööglich"
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:515
+#: Interface/MainWindow.cpp:401
 msgid ""
 "*.graph|Graph files\n"
 "*|All files"
@@ -620,17 +588,17 @@ msgstr ""
 "*.*|All Dateien"
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:526
+#: Interface/MainWindow.cpp:412
 msgid "This does not seem to be a graph file."
 msgstr "As't lett is dit keen Graphendatei."
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:526
+#: Interface/MainWindow.cpp:412
 msgid "Invalid file"
 msgstr "Leeg Datei"
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:567
+#: Interface/MainWindow.cpp:451
 msgid "Do you want to save your unsaved document?"
 msgstr "Wullt Du Dien noch nich sekert Dokment nu sekern?"
 
@@ -640,32 +608,6 @@ msgstr "Wullt Du Dien noch nich sekert Dokment nu sekern?"
 msgid "Node Properties"
 msgstr "Knüttegenschappen"
 
-#. i18n: ectx: property (toolTip), widget (QLabel, label_3)
-#. +> stable
-#: Interface/NodePropertiesWidget.ui:68
-msgid "X-coordinate "
-msgstr "x-Koordinaat "
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#. +> stable
-#: Interface/NodePropertiesWidget.ui:71
-msgctxt "X-coordinate "
-msgid "x"
-msgstr "x"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, label_4)
-#. +> stable
-#: Interface/NodePropertiesWidget.ui:129
-msgid "Y-coordinate "
-msgstr "y-Koordinaat "
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#. +> stable
-#: Interface/NodePropertiesWidget.ui:132
-msgctxt "Y-coordinate "
-msgid "y"
-msgstr "y"
-
 #. i18n: ectx: property (toolTip), widget (KColorCombo, _color)
 #. i18n: ectx: property (toolTip), widget (QLabel, label_6)
 #. +> trunk stable
@@ -673,36 +615,11 @@ msgstr "y"
 msgid "Node color"
 msgstr "Knüttklöör"
 
-#. i18n: ectx: property (toolTip), widget (QLabel, label_5)
-#. i18n: ectx: property (toolTip), widget (KDoubleNumInput, _width)
-#. +> stable
-#: Interface/NodePropertiesWidget.ui:175 Interface/NodePropertiesWidget.ui:188
-msgid "Node size"
-msgstr "Knüttgrött"
-
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #. +> trunk stable
 #: Interface/NodePropertiesWidget.ui:155
 msgid "Image"
 msgstr "Bild"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#. +> stable
-#: Interface/NodePropertiesWidget.ui:178
-msgid "Size:"
-msgstr "Grött:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _begin)
-#. +> stable
-#: Interface/NodePropertiesWidget.ui:255
-msgid "Begin"
-msgstr "Anfang"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _end)
-#. +> stable
-#: Interface/NodePropertiesWidget.ui:268
-msgid "End"
-msgstr "Enn"
 
 #. i18n: ectx: property (text), widget (KPushButton, _btnNewFile)
 #. +> trunk stable
@@ -730,7 +647,13 @@ msgstr "Graphentheorie"
 msgid "(c) 2009"
 msgstr "© 2009"
 
-#. +> trunk stable
+#. +> trunk
+#: Main.cpp:41
+#, fuzzy
+msgid "Rocs - Data Structure Training"
+msgstr "Datenstruktuur"
+
+#. +> stable
 #: Main.cpp:41
 msgid "Thanks to Ugo Sangiori"
 msgstr "Dank an Ugo Sangiori"
@@ -751,6 +674,20 @@ msgid "Wagner Reck"
 msgstr "Wagner Reck"
 
 #. +> trunk stable
+#: Main.cpp:53
+msgid "No Data Structure plugins found in the system. Exiting."
+msgstr "Op den Reekner laat sik keen Datenstruktuur.Modulen finnen. An't Utstiegen."
+
+#. +> trunk stable
+#: Main.cpp:54
+msgid ""
+"Rocs need at least one data structure plugin to continue.\n"
+"Try running kbuildsycoca4 from a console and after execute Rocs again."
+msgstr ""
+"Rocs bruukt tominnst een Datenstruktuur-Moduul, dormit dat wiedergahn kann.\n"
+"Roop op de Konsool  man kbuildsycoca4 un start Rocs dorna nieg."
+
+#. +> trunk stable
 #: Models/model_GraphProperties.cpp:69
 msgid "Property"
 msgstr "Egenschap"
@@ -760,24 +697,61 @@ msgstr "Egenschap"
 msgid "Type"
 msgstr "Typ"
 
-#. +> trunk
+#. +> trunk stable
+#: Plugins/DataStructure/Graph/GraphPlugin.cpp:32
+msgid "Graph Structure"
+msgstr "Diagrammstruktuur"
+
+#. +> trunk stable
+#: Plugins/DataStructure/Graph/GraphPlugin.cpp:93
+msgid "x"
+msgstr "x"
+
+#. +> trunk stable
+#: Plugins/DataStructure/Graph/GraphPlugin.cpp:94
+msgid "y"
+msgstr "y"
+
+#. +> trunk stable
+#: Plugins/DataStructure/Graph/GraphPlugin.cpp:95
+msgid "Size"
+msgstr "Grött"
+
+#. +> trunk stable
+#: Plugins/DataStructure/Graph/GraphPlugin.cpp:112
+msgid "Graph is oriented"
+msgstr "Graph is utricht."
+
+#. +> trunk stable
+#: Plugins/DataStructure/LinkedList/ListPlugin.cpp:35
+#, fuzzy
+msgid "Linked List Structure"
+msgstr "Struktuur"
+
+#. +> trunk stable
+#: Plugins/DataStructure/LinkedList/ListPlugin.cpp:77
+#, fuzzy
+msgid "Front value"
+msgstr "Weert"
+
+#. +> trunk stable
 #: Plugins/dotParser/DotParser.cpp:30
 msgid "Open and Save Graphviz files"
 msgstr "Graphviz-Dateien opmaken un sekern"
 
-#. +> trunk
+#. +> trunk stable
 #: Plugins/dotParser/DotParser.cpp:50
 msgid "*.dot|Graphviz Files"
 msgstr "*.dot|Graphviz-Dateien"
 
-#. +> trunk
+#. +> trunk stable
 #: Plugins/dotParser/DotParser.cpp:60 Plugins/GMLParser/GMLParser.cpp:61
 #: Plugins/importPlainTXT/PlainTxtFilePlugin.cpp:57
 #, kde-format
 msgid "Cannot open the file: %1. Error %2"
 msgstr "De Datei \"%1\" lett sik nich opmaken. Fehler %2"
 
-#. +> trunk
+#. +> trunk stable
 #: Plugins/dotParser/DotParser.cpp:66 Plugins/GMLParser/GMLParser.cpp:67
 #, kde-format
 msgid "cannot parse the file %1."
@@ -785,60 +759,23 @@ msgstr "Datei \"%1\" lett sik nich inlesen."
 
 #. +> trunk stable
 #: Plugins/dotParser/DotParser.cpp:112
-#: Plugins/importPlainTXT/PlainTxtFilePlugin.cpp:107
+#: Plugins/importPlainTXT/PlainTxtFilePlugin.cpp:108
 msgid "No active graph in this document."
 msgstr "Dit Dokment bargt keen aktiev Grafik."
 
-#. +> trunk
+#. +> trunk stable
 #: Plugins/dotParser/DotParser.cpp:114 Plugins/GMLParser/GMLParser.cpp:111
-#: Plugins/importPlainTXT/PlainTxtFilePlugin.cpp:109
+#: Plugins/importPlainTXT/PlainTxtFilePlugin.cpp:110
 #, kde-format
 msgid "Cannot open file %1 to write document. Error: %2"
 msgstr "Dokment lett sik nich na Datei \"%1\" schrieven. Fehler: %2"
 
-#. +> trunk
-#: Plugins/DSPlugins/Graph/GraphPlugin.cpp:32
-msgid "Graph Structure"
-msgstr "Diagrammstruktuur"
-
-#. +> trunk
-#: Plugins/DSPlugins/Graph/GraphPlugin.cpp:92
-msgid "x"
-msgstr "x"
-
-#. +> trunk
-#: Plugins/DSPlugins/Graph/GraphPlugin.cpp:93
-msgid "y"
-msgstr "y"
-
-#. +> trunk
-#: Plugins/DSPlugins/Graph/GraphPlugin.cpp:94
-msgid "Size"
-msgstr "Grött"
-
 #. +> trunk stable
-#: Plugins/DSPlugins/Graph/GraphPlugin.cpp:111
-msgid "Graph is oriented"
-msgstr "Graph is utricht."
-
-#. +> trunk
-#: Plugins/DSPlugins/LinkedList/ListPlugin.cpp:35
-#, fuzzy
-msgid "Linked List Structure"
-msgstr "Struktuur"
-
-#. +> trunk
-#: Plugins/DSPlugins/LinkedList/ListPlugin.cpp:73
-#, fuzzy
-msgid "Front value"
-msgstr "Weert"
-
-#. +> trunk
 #: Plugins/GMLParser/GMLParser.cpp:31
 msgid "Open and Save GML files"
 msgstr "GML-Dateien opmaken un sekern"
 
-#. +> trunk
+#. +> trunk stable
 #: Plugins/GMLParser/GMLParser.cpp:51
 msgid "*.gml|Graph Markup Language Files"
 msgstr "*.gml|\"Graph Markup Language\"-Dateien"
@@ -853,36 +790,24 @@ msgstr "Eenfach TXT-Dateien opmaken un sekern"
 msgid "*.txt|Plain TXT Files"
 msgstr "*.txt|Eenfach TXT-Dateien"
 
-#. +> stable
-#: Plugins/importPlainTXT/PlainTxtFilePlugin.cpp:54
-#, kde-format
-msgid "Cannot open the file %1. Error: %2"
-msgstr "De Datei \"%1\" lett sik nich opmaken. Fehler %2"
-
 #. +> trunk stable
-#: Plugins/importPlainTXT/PlainTxtFilePlugin.cpp:76
+#: Plugins/importPlainTXT/PlainTxtFilePlugin.cpp:77
 #, kde-format
 msgid "Ignoring line: %1"
 msgstr "Reeg \"%1\" warrt övergahn."
 
-#. +> stable
-#: Plugins/importPlainTXT/PlainTxtFilePlugin.cpp:106
-#, kde-format
-msgid "Cannot open file %1 to write the document. Error: %2"
-msgstr "Dokment lett sik nich na Datei \"%1\" schrieven. Fehler: %2"
-
-#. +> trunk
+#. +> trunk stable
 #: Plugins/kmlParser/KMLParser.cpp:32
 msgid "Open and Save Keyhole Markup Language files"
 msgstr "KML-Dateien opmaken un sekern"
 
-#. +> trunk
+#. +> trunk stable
 #: Plugins/kmlParser/KMLParser.cpp:51
 #, kde-format
 msgid "Cannot open file %1: %2"
 msgstr "De Datei \"%1\" lett sik nich opmaken: %2"
 
-#. +> trunk
+#. +> trunk stable
 #: Plugins/kmlParser/KMLParser.cpp:141
 msgid "*.kml|Keyhole Markup Language Files"
 msgstr "*.kml|KML-Dateien (Keyhole Markup Language)"
@@ -900,7 +825,7 @@ msgid "Show text beside icon"
 msgstr "Text blang dat Lüttbild wiesen"
 
 #. i18n: ectx: label, entry (includePath), group (IncludeManager)
-#. +> trunk
+#. +> trunk stable
 #: rocs.kcfg:35
 #, fuzzy
 msgid "Path where include manager seek for includes."
@@ -919,26 +844,26 @@ msgid "Script"
 msgstr "Skript"
 
 #. i18n: ectx: Menu (Includes)
-#. +> trunk
+#. +> trunk stable
 #: rocsui.rc:30
 #, fuzzy
 msgid "Includes"
 msgstr "Koppdateien"
 
 #. i18n: ectx: Menu (tools)
-#. +> trunk
+#. +> trunk stable
 #: rocsui.rc:34
 msgid " Tools "
 msgstr " Warktüüch "
 
 #. i18n: ectx: Menu (Conversions)
-#. +> trunk
+#. +> trunk stable
 #: rocsui.rc:40
 msgid " Conversions "
 msgstr " Ümreken "
 
 #. i18n: ectx: Menu (Documents)
-#. +> trunk
+#. +> trunk stable
 #: rocsui.rc:46
 msgid " Documents "
 msgstr " Dokmenten "
@@ -955,34 +880,70 @@ msgstr "Hööft-Warktüüchbalken"
 msgid "Layout Toolbar"
 msgstr "Anorn-Warktüüchbalken"
 
-#. +> trunk
+#. +> trunk stable
 #: Scripts/IncludeManager.cpp:113
 #, kde-format
 msgid "debug(\"Cannot open file %1.\")"
 msgstr "Fehlersöök (De Datei \"%1\" lett sik nich opmaken.)"
 
-#. +> trunk
+#. +> trunk stable
 #: Scripts/IncludeManager.cpp:139
 #, fuzzy, kde-format
 msgid "debug(\"Invalid include directive: %1. Cannot find file in directive.\")"
 msgstr "Leeg Koppdatei-Anwiesen: %1"
 
-#. +> trunk
+#. +> trunk stable
 #: Tests/TestIncludeManager.cpp:86
 #, kde-format
 msgid "debug(\"Cannot open file %1.\")\n"
 msgstr "Fehlersöök (De Datei \"%1\" lett sik nich opmaken.)\n"
 
-#. +> trunk stable
-#: UndoRedo/URAddNode.cpp:38
-msgid "Untitled"
-msgstr "Ahn Titel"
+#~ msgid "graph name here"
+#~ msgstr "Hier den Graph sien Naam"
 
-#. i18n: ectx: Menu (tools)
-#. +> stable
-#: rocs.rc:5
-msgid "&Tools"
-msgstr "&Warktüüch"
+#~ msgid "Edge Color:"
+#~ msgstr "Kantklöör:"
+
+#~ msgid "Node Color:"
+#~ msgstr "Knüttklöör:"
+
+#~ msgid "Graph is Automate"
+#~ msgstr "Automatengraph"
+
+#~ msgid "X-coordinate "
+#~ msgstr "x-Koordinaat "
+
+#~ msgctxt "X-coordinate "
+#~ msgid "x"
+#~ msgstr "x"
+
+#~ msgid "Y-coordinate "
+#~ msgstr "y-Koordinaat "
+
+#~ msgctxt "Y-coordinate "
+#~ msgid "y"
+#~ msgstr "y"
+
+#~ msgid "Node size"
+#~ msgstr "Knüttgrött"
+
+#~ msgid "Size:"
+#~ msgstr "Grött:"
+
+#~ msgid "Begin"
+#~ msgstr "Anfang"
+
+#~ msgid "End"
+#~ msgstr "Enn"
+
+#~ msgid "Cannot open the file %1. Error: %2"
+#~ msgstr "De Datei \"%1\" lett sik nich opmaken. Fehler %2"
+
+#~ msgid "Cannot open file %1 to write the document. Error: %2"
+#~ msgstr "Dokment lett sik nich na Datei \"%1\" schrieven. Fehler: %2"
+
+#~ msgid "&Tools"
+#~ msgstr "&Warktüüch"
 
 #, fuzzy
 #~| msgid "Creates a new node at the click position on the drawing area."

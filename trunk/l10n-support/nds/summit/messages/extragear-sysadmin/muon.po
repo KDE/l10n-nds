@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: muon\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-12-30 09:42+0100\n"
+"POT-Creation-Date: 2011-01-11 15:00+0100\n"
 "PO-Revision-Date: 2010-11-24 06:40+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -107,18 +107,24 @@ msgstr "Paketpleger \"Muon\""
 msgid "© 2009, 2010 Jonathan Thomas"
 msgstr "© 2009, 2010: Jonathan Thomas"
 
-#. +> trunk
+#. +> trunk stable
 #: muon/main.cpp:38
 msgid "Jonathan Thomas"
 msgstr "Jonathan Thomas"
 
-#. +> trunk
+#. +> trunk stable
 #: muon/MainWindow.cpp:156
 msgctxt "@action"
 msgid "Read Markings..."
 msgstr "Markeren lesen..."
 
-#. +> trunk
+#. +> stable
+#: src/MainWindow.cpp:159
+msgctxt "@action Checks the Internet for updates"
+msgid "Check for Updates"
+msgstr "Na Opfrischen kieken"
+
+#. +> trunk stable
 #: muon/MainWindow.cpp:161
 msgctxt "@action"
 msgid "Save Markings As..."
@@ -154,11 +160,23 @@ msgctxt "@action Takes the user to the preview page"
 msgid "Preview Changes"
 msgstr "Ännern vörankieken"
 
+#. +> stable
+#: src/MainWindow.cpp:192
+msgctxt "@action Reverts all potential changes to the cache"
+msgid "Unmark All"
+msgstr "All afkören"
+
 #. +> trunk stable
 #: muon/MainWindow.cpp:193
 msgctxt "@action Applys the changes a user has made"
 msgid "Apply Changes"
 msgstr "Ännern bruken"
+
+#. +> stable
+#: src/MainWindow.cpp:197
+msgctxt "@action Opens the software sources configuration dialog"
+msgid "Configure Software Sources"
+msgstr "Programm-Borns instellen"
 
 #. +> trunk stable
 #: muon/MainWindow.cpp:214
@@ -178,13 +196,13 @@ msgctxt "@label"
 msgid "Unable to mark upgrades. Some upgrades may have unsatisfiable dependencies at the moment, or may have been manually held back."
 msgstr "Opgraderen laat sik nich markeren. Villicht sünd en poor Afhangigkeiten nich oplööst oder warrt vun Hand torüchhollen."
 
-#. +> trunk
+#. +> trunk stable
 #: muon/MainWindow.cpp:277
 msgctxt "@info"
 msgid "<title>Updating software sources</title>"
 msgstr "<title>Programm-Borns warrt opfrischt.</title>"
 
-#. +> trunk
+#. +> trunk stable
 #: muon/MainWindow.cpp:297
 msgctxt "@info"
 msgid "<title>Downloading Packages</title>"
@@ -196,7 +214,7 @@ msgctxt "@info:status"
 msgid "Muon is downloading packages"
 msgstr "Paketen warrt daallaadt."
 
-#. +> trunk
+#. +> trunk stable
 #: muon/MainWindow.cpp:304
 msgctxt "@info"
 msgid "<title>Committing Changes</title>"
@@ -236,10 +254,341 @@ msgid "Your emails"
 msgstr "m.j.wiese@web.de"
 
 #. +> stable
+#: src/DetailsTabs/ChangelogTab.cpp:70
+#, kde-format
+msgctxt "@info/rich"
+msgid "The list of changes is not available yet. Please use <link url='%1'>Launchpad</link> instead."
+msgstr "De Ännernlist is noch nich verföögbor. Bitte bruuk <link url='%1'>Launchpad</link> ansteed."
+
+#. +> stable
+#: src/DetailsTabs/DependsTab.cpp:42
+msgctxt "@item:inlistbox"
+msgid "Dependencies of the Current Version"
+msgstr "Afhangigkeiten vun de aktuelle Verschoon"
+
+#. +> stable
+#: src/DetailsTabs/DependsTab.cpp:43
+msgctxt "@item:inlistbox"
+msgid "Dependencies of the Latest Version"
+msgstr "Afhangigkeiten vun de verleden Verschoon"
+
+#. +> stable
+#: src/DetailsTabs/DependsTab.cpp:44
+msgctxt "@item:inlistbox"
+msgid "Dependants (Reverse Dependencies)"
+msgstr "Hangt af vun (Gegendeel vun Afhangigkeiten)"
+
+#. +> stable
+#: src/DetailsTabs/DependsTab.cpp:45
+msgctxt "@item:inlistbox"
+msgid "Virtual Packages Provided"
+msgstr "Praatstellt virtuell Paketen"
+
+#. +> stable
+#: src/DetailsTabs/DependsTab.cpp:83 src/DetailsTabs/DependsTab.cpp:93
+msgctxt "@label"
+msgid "This package does not have any dependencies"
+msgstr "Dit Paket hett keen Afhangigkeiten"
+
+#. +> stable
 #: src/DetailsTabs/DependsTab.cpp:103
 msgctxt "@label"
 msgid "This package has no dependants. (Nothing depends on it.)"
 msgstr "Vun dit Paket hangt keen anner Paketen af."
+
+#. +> stable
+#: src/DetailsTabs/DependsTab.cpp:113
+msgctxt "@label"
+msgid "This package does not provide any virtual packages"
+msgstr "Dit Paket stellt keen virtuell Paketen praat."
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:72 src/DetailsTabs/MainTab.cpp:203
+msgctxt "@action:button"
+msgid "Get Screenshot..."
+msgstr "Schirmfoto halen..."
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:78
+msgctxt "@label"
+msgid "Mark for:"
+msgstr "Markeren för't:"
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:82
+msgctxt "@action:button"
+msgid "Installation"
+msgstr "Installeren"
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:89
+msgctxt "@action:button"
+msgid "Removal"
+msgstr "Wegmaken"
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:94
+msgctxt "@action:button"
+msgid "Upgrade"
+msgstr "Opgraderen"
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:99
+msgctxt "@action:button"
+msgid "Reinstallation"
+msgstr "Nieg installeren"
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:105
+msgctxt "@action:button"
+msgid "Purge"
+msgstr "Oprümen"
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:117
+msgctxt "@action:button"
+msgid "Unmark"
+msgstr "Afkören"
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:210
+#, kde-format
+msgctxt "@info Tells how long Canonical, Ltd. will support a package"
+msgid "Canonical provides critical updates for %1 until %2"
+msgstr "Canonical stellt kritisch Opfrischen för %1 bet %2 praat."
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:214
+#, kde-format
+msgctxt "@info Tells how long Canonical, Ltd. will support a package"
+msgid "Canonical does not provide updates for %1. Some updates may be provided by the Ubuntu community"
+msgstr "Canonical stellt keen Opfrischen för %1 praat, man villicht de Ubuntu-Meenschap."
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:243
+msgctxt "@info:status"
+msgid "No Screenshot Available"
+msgstr "Keen Schirmfoto to finnen"
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:253
+msgctxt "@title:window"
+msgid "Screenshot"
+msgstr "Schirmfoto"
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:262
+msgctxt "@label"
+msgid "Removing this package may break your system. Are you sure you want to remove it?"
+msgstr "Deist Du dit Paket weg, löppt villicht Dien Systeem nich mehr. Wullt Du dat redig wegmaken?"
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:263
+msgctxt "@label"
+msgid "Warning - Removing Important Package"
+msgstr "Wohrschoen - Wichtig Paket warrt wegdaan"
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:371
+#, kde-format
+msgctxt "@label"
+msgid "The \"%1\" package could not be marked for installation or upgrade:"
+msgstr "Markeren vun Paket \"%1\" för't Installeren oder Opgraderen nich mööglich:"
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:374
+msgctxt "@title:window"
+msgid "Unable to Mark Package"
+msgstr "Paket lett sik nich markeren."
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:398
+#, kde-format
+msgctxt "@label"
+msgid ""
+"The \"%1\" package has no available version, but exists in the database.\n"
+"\tThis typically means that the package was mentioned in a dependency and never uploaded, has been obsoleted, or is not available from the currently-enabled repositories."
+msgstr ""
+"Paket \"%1\" is twaars in de Datenbank vörhannen, man dor gifft dat keen Verschoon för.\n"
+"\tDat heet normalerwies, en Afhangigkeit hett dat Paket maal bruukt, man nienich hoochlaadt, dat is överhaalt, oder de anmaakt Archiven stellt dat nich praat."
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:415
+#, kde-format
+msgctxt "@label Example: Depends: libqapt 0.1, but 0.2 is to be installed"
+msgid "%1: %2 %3, but %4 is to be installed"
+msgstr "%1: %2 %3, man %4 warrt installeert."
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:421
+#, kde-format
+msgctxt "@label Example: or libqapt 0.1, but 0.2 is to be installed"
+msgid "or %1 %2, but %3 is to be installed"
+msgstr "oder %1 %2, man %3 warrt installeert."
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:440
+#, kde-format
+msgctxt "@label Example: Depends: libqapt, but is not installable"
+msgid "%1: %2, but it is not installable"
+msgstr "%1: %2, man lett sik nich installeren."
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:446
+#, kde-format
+msgctxt "@label Example: or libqapt, but is not installable"
+msgid "or %1, but is not installable"
+msgstr "oder %1, man lett sik nich installeren."
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:465
+#, kde-format
+msgctxt "@label Example: Depends: libqapt, but it is a virtual package"
+msgid "%1: %2, but it is a virtual package"
+msgstr "%1: %2, man dat is en virtuell Paket."
+
+#. +> stable
+#: src/DetailsTabs/MainTab.cpp:471
+#, kde-format
+msgctxt "@label Example: or libqapt, but it is a virtual package"
+msgid "or %1, but it is a virtual package"
+msgstr "oder %1, man dat is en virtuell Paket."
+
+#. +> stable
+#: src/DetailsTabs/TechnicalDetailsTab.cpp:57
+msgctxt "@label Label preceding the package maintainer"
+msgid "Maintainer:"
+msgstr "Pleger:"
+
+#. +> stable
+#: src/DetailsTabs/TechnicalDetailsTab.cpp:64
+msgctxt "@label Label preceding the package category"
+msgid "Category:"
+msgstr "Kategorie:"
+
+#. +> stable
+#: src/DetailsTabs/TechnicalDetailsTab.cpp:72
+msgctxt "@label The parent package that this package comes from"
+msgid "Source Package:"
+msgstr "Bornpaket:"
+
+#. +> stable
+#: src/DetailsTabs/TechnicalDetailsTab.cpp:82
+msgctxt "@title:group"
+msgid "Installed Version"
+msgstr "Installeert Verschoon"
+
+#. +> stable
+#: src/DetailsTabs/TechnicalDetailsTab.cpp:88
+#: src/DetailsTabs/TechnicalDetailsTab.cpp:110
+msgctxt "@label Label preceding the package version"
+msgid "Version:"
+msgstr "Verschoon:"
+
+#. +> stable
+#: src/DetailsTabs/TechnicalDetailsTab.cpp:94
+#: src/DetailsTabs/TechnicalDetailsTab.cpp:116
+msgctxt "@label Label preceding the package size"
+msgid "Installed Size:"
+msgstr "Installeert Grött:"
+
+#. +> stable
+#: src/DetailsTabs/TechnicalDetailsTab.cpp:104
+msgctxt "@title:group"
+msgid "Available Version"
+msgstr "Verföögbor Verschoon"
+
+#. +> stable
+#: src/DetailsTabs/TechnicalDetailsTab.cpp:122
+msgctxt "@label Label preceding the package's download size"
+msgid "Download Size:"
+msgstr "Daalladengrött:"
+
+#. +> stable
+#: src/DetailsTabs/VersionTab.cpp:44
+msgctxt "@label"
+msgid "Available versions:"
+msgstr "Verföögbor Verschonen:"
+
+#. +> stable
+#: src/DetailsTabs/VersionTab.cpp:56
+msgctxt "@label"
+msgid "Muon always selects the most applicable version available. If you force a different version from the default one, errors in the dependency handling can occur."
+msgstr "Moun söökt jümmers de op't best passen Verschoon ut. Wullt Du en anner Verschoon verdwingen, kann laat sik villicht de Afhangigkeiten nich propper oplösen."
+
+#. +> stable
+#: src/DetailsTabs/VersionTab.cpp:62
+msgctxt "@action:button"
+msgid "Force Version"
+msgstr "Verschoon verdwingen"
+
+#. +> stable
+#: src/DetailsWidget.cpp:57
+msgctxt "@title:tab"
+msgid "Details"
+msgstr "Enkelheiten"
+
+#. +> stable
+#: src/DetailsWidget.cpp:58
+msgctxt "@title:tab"
+msgid "Technical Details"
+msgstr "Technisch Enkelheiten"
+
+#. +> stable
+#: src/DetailsWidget.cpp:59
+msgctxt "@title:tab"
+msgid "Dependencies"
+msgstr "Afhangigkeiten"
+
+#. +> stable
+#: src/DetailsWidget.cpp:60
+msgctxt "@title:tab"
+msgid "Changes List"
+msgstr "List mit de Ännern"
+
+#. +> stable
+#: src/DetailsWidget.cpp:85
+msgctxt "@title:tab"
+msgid "Versions"
+msgstr "Verschonen"
+
+#. +> stable
+#: src/DetailsWidget.cpp:95
+msgctxt "@title:tab"
+msgid "Installed Files"
+msgstr "Installeert Dateien"
+
+#. +> stable
+#: src/DownloadWidget.cpp:64
+msgctxt "@action:button Cancels the download"
+msgid "Cancel"
+msgstr "Afbreken"
+
+#. +> stable
+#: src/DownloadWidget.cpp:99
+msgctxt "@label Label for when the download speed is unknown"
+msgid "Unknown speed"
+msgstr "Nich begäng Gauheit"
+
+#. +> stable
+#: src/DownloadWidget.cpp:101
+#, kde-format
+msgctxt "@label Download rate"
+msgid "Download rate: %1/s"
+msgstr "Daalladengauigkeit: %1/s"
+
+#. +> stable
+#: src/DownloadWidget.cpp:111
+msgctxt "@item:intext Label for when the remaining time is unknown"
+msgid " - Unknown time remaining"
+msgstr " - Nablieven Tiet nich begäng"
+
+#. +> stable
+#: src/DownloadWidget.cpp:113
+#, kde-format
+msgctxt "@item:intext Remaining time"
+msgid " - %1 remaining"
+msgstr " - %1 nablieven"
 
 #. +> stable
 #: src/DownloadWidget.cpp:125
@@ -261,6 +610,606 @@ msgstr "%1 warrt pröövt"
 msgctxt "@info:status"
 msgid "Ignored: %1"
 msgstr "%1 warrt övergahn"
+
+#. +> stable
+#: src/ManagerWidget.cpp:69
+msgctxt "@label Line edit click message"
+msgid "Search"
+msgstr "Söök"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:83
+msgctxt "@label"
+msgid "There are marked changes that have not yet been applied. Do you want to save your changes or discard them?"
+msgstr "En Reeg vun markeert Ännern wöör noch nich anwendt. Wullt Du de Ännern sekern oder wegsmieten?"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:128
+msgctxt "@label"
+msgid "The package system could not be initialized, your configuration may be broken."
+msgstr "Dat Paketsysteem lett sik nich torechtmaken. Villicht sünd Dien Instellen leeg."
+
+#. +> stable
+#: src/MuonMainWindow.cpp:130
+msgctxt "@title:window"
+msgid "Initialization error"
+msgstr "Fehler bi't Torechtmaken"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:138
+msgctxt "@label"
+msgid "Another application seems to be using the package system at this time. You must close all other package managers before you will be able to install or remove any packages."
+msgstr "As't lett warrt dat Paketsystem jüst vun en anner Programm bruukt. Du muttst toeerst all anner Paketplegers tomaken, ehr Du Paketen installeren oder wegmaken kannst."
+
+#. +> stable
+#: src/MuonMainWindow.cpp:142
+msgctxt "@title:window"
+msgid "Unable to obtain package system lock"
+msgstr "Dat Paketsystem lett sik nich afsluten."
+
+#. +> stable
+#: src/MuonMainWindow.cpp:148
+#, kde-format
+msgctxt "@label"
+msgid "You do not have enough disk space in the directory at %1 to continue with this operation."
+msgstr "Binnen Orner \"%1\" gifft dat nich noog free Ruum för't Wiedermaken."
+
+#. +> stable
+#: src/MuonMainWindow.cpp:150
+msgctxt "@title:window"
+msgid "Low disk space"
+msgstr "To minn free Ruum op de Fastplaat"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:155
+msgctxt "@label"
+msgid "Could not download packages"
+msgstr "Paketen laat sik nich daalladen."
+
+#. +> stable
+#: src/MuonMainWindow.cpp:156
+msgctxt "@title:window"
+msgid "Download failed"
+msgstr "Daalladen fehlslaan"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:166
+msgctxt "@label"
+msgid "This operation cannot continue since proper authorization was not provided"
+msgstr "Wiedermaken nich mööglich, wiel keen propper Identiteetprööv anbaden warrt."
+
+#. +> stable
+#: src/MuonMainWindow.cpp:168
+msgctxt "@title:window"
+msgid "Authentication error"
+msgstr "Identiteetprööv fehlslaan"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:172
+msgctxt "@label"
+msgid "It appears that the QApt worker has either crashed or disappeared. Please report a bug to the QApt maintainers"
+msgstr "As't lett is dat QApt-Arbeitprogramm afstört oder wegkamen. Bitte stüer de QApt-Plegers en Fehlerbericht to."
+
+#. +> stable
+#: src/MuonMainWindow.cpp:174
+msgctxt "@title:window"
+msgid "Unexpected Error"
+msgstr "Nich verwacht Fehler"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:182
+msgctxt "@label"
+msgid "The following package has not been verified by its author. Downloading untrusted packages has been disallowed by your current configuration."
+msgid_plural "The following packages have not been verified by their authors. Downloading untrusted packages has been disallowed by your current configuration."
+msgstr[0] "De Schriever hett dit Paket nich beglöövt. Dat Daalladen vun nich beglöövt Paketen is op Dien Systeem nich tolaten."
+msgstr[1] "De Schriever hett disse Paketen nich beglöövt. Dat Daalladen vun nich beglöövt Paketen is op Dien Systeem nich tolaten."
+
+#. +> stable
+#: src/MuonMainWindow.cpp:191
+msgctxt "@title:window"
+msgid "Untrusted Packages"
+msgstr "Nich troot Paketen"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:208
+msgctxt "@label"
+msgid "The size of the downloaded items did not equal the expected size."
+msgstr "De Grött vun de daallaadt Objekten is nich de sülvige as verwacht."
+
+#. +> stable
+#: src/MuonMainWindow.cpp:209
+msgctxt "@title:window"
+msgid "Size Mismatch"
+msgstr "Grött passt nich"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:232
+msgctxt "@title:window"
+msgid "Media Change Required"
+msgstr "En Medienwessel deit noot"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:233
+#, kde-format
+msgctxt "@label Asks for a CD change"
+msgid "Please insert %1 into <filename>%2</filename>"
+msgstr "Bitte %1 na <filename>%2</filename> inleggen."
+
+#. +> stable
+#: src/MuonMainWindow.cpp:242
+msgctxt "@title:window"
+msgid "Warning - Unverified Software"
+msgstr "Wohrschoen: Programmen nich beglöövt"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:244
+msgctxt "@label"
+msgid "The following piece of software cannot be verified. <warning>Installing unverified software represents a security risk, as the presence of unverifiable software can be a sign of tampering.</warning> Do you wish to continue?"
+msgid_plural "The following pieces of software cannot be authenticated. <warning>Installing unverified software represents a security risk, as the presence of unverifiable software can be a sign of tampering.</warning> Do you wish to continue?"
+msgstr[0] "Dit Programm is nich beglöövt. <warning>Dat Installeren vun nich beglöövt Programmen kann en Riskanz för de Sekerheit wesen, wiel de Programmen villicht vermurkst wesen köönt.</warning> Wullt Du wiedermaken?"
+msgstr[1] "Disse Programmen sünd nich beglöövt. <warning>Dat Installeren vun nich beglöövt Programmen kann en Riskanz för de Sekerheit wesen, wiel de Programmen villicht vermurkst wesen köönt.</warning> Wullt Du wiedermaken?"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:280
+msgctxt "@label"
+msgid "Unable to download the following packages:"
+msgstr "Disse Paketen laat sik nich daalladen:"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:285
+#, kde-format
+msgctxt "@label"
+msgid ""
+"Failed to download %1\n"
+"%2\n"
+"\n"
+msgstr ""
+"\"%1\" lett sik nich daalladen.\n"
+"%2\n"
+"\n"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:288
+msgctxt "@title:window"
+msgid "Some Packages Could not be Downloaded"
+msgstr "En poor Paketen laat sik nich daalladen."
+
+#. +> stable
+#: src/MuonMainWindow.cpp:295
+msgctxt "@label"
+msgid "An error occurred while applying changes:"
+msgid_plural "The following errors occurred while applying changes:"
+msgstr[0] "Bi't Övernehmen vun Ännern geev dat en Fehler:"
+msgstr[1] "Bi't Övernehmen vun Ännern geev dat disse Fehlers:"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:299
+#, kde-format
+msgctxt "@label Shows which package failed"
+msgid "Package: %1"
+msgstr "Paket: %1"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:300
+#, kde-format
+msgctxt "@label Shows the error"
+msgid "Error: %1"
+msgstr "Fehler: %1"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:304
+msgctxt "@title:window"
+msgid "Commit error"
+msgstr "Inspelen fehlslaan"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:317
+msgctxt "@title:window"
+msgid "Save Markings As"
+msgstr "Markeren sekern as"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:324
+#, kde-format
+msgctxt "@label"
+msgid ""
+"The document could not be saved, as it was not possible to write to <filename>%1</filename>\n"
+"\n"
+"Check that you have write access to this file or that enough disk space is available."
+msgstr ""
+"Dat Dokment lett sik nich sekern, dat is nich mööglich, na <filename>%1</filename> to schrieven.\n"
+"\n"
+"Bitte prööv, wat Du Schriefverlöven för de Datei hest un wat dat noog fre'en Platz op de Fastplaat gifft."
+
+#. +> stable
+#: src/MuonMainWindow.cpp:340
+msgctxt "@title:window"
+msgid "Open File"
+msgstr "Datei opmaken"
+
+#. +> stable
+#: src/MuonMainWindow.cpp:347
+msgctxt "@label"
+msgid "Could not mark changes. Please make sure that the file is a markings file created by either the Muon Package Manager or the Synaptic Package Manager."
+msgstr "Ännern laat sik nich markeren. Beseker, de Datei is een vun de Paketplegers  Moun oder Synaptics praatstellt Markeren-Datei."
+
+#. +> stable
+#: src/MuonStrings.cpp:42
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"admin\""
+msgid "System Administration"
+msgstr "Systeempleeg"
+
+#. +> stable
+#: src/MuonStrings.cpp:44
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"base\""
+msgid "Base System"
+msgstr "Grundsysteem"
+
+#. +> stable
+#: src/MuonStrings.cpp:46
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"cli-mono\""
+msgid "Mono/CLI Infrastructure"
+msgstr "Mono- oder CLI-Ünnerbuu"
+
+#. +> stable
+#: src/MuonStrings.cpp:48
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"comm\""
+msgid "Communication"
+msgstr "Snacken"
+
+#. +> stable
+#: src/MuonStrings.cpp:50
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"database\""
+msgid "Databases"
+msgstr "Datenbanken"
+
+#. +> stable
+#: src/MuonStrings.cpp:52
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"devel\""
+msgid "Development"
+msgstr "Utwickeln"
+
+#. +> stable
+#: src/MuonStrings.cpp:54
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"doc\""
+msgid "Documentation"
+msgstr "Dokmentatschoon"
+
+#. +> stable
+#: src/MuonStrings.cpp:56
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"debug\""
+msgid "Debug"
+msgstr "Fehlersöök"
+
+#. +> stable
+#: src/MuonStrings.cpp:58
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"editors\""
+msgid "Editors"
+msgstr "Editoren"
+
+#. +> stable
+#: src/MuonStrings.cpp:60
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"electronics\""
+msgid "Electronics"
+msgstr "Elektronik"
+
+#. +> stable
+#: src/MuonStrings.cpp:62
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"embedded\""
+msgid "Embedded Devices"
+msgstr "Inbett Reedschappen"
+
+#. +> stable
+#: src/MuonStrings.cpp:64
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"fonts\""
+msgid "Fonts"
+msgstr "Schriftoorden"
+
+#. +> stable
+#: src/MuonStrings.cpp:66
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"games\""
+msgid "Games and Amusement"
+msgstr "Spelen un Tietverdrief"
+
+#. +> stable
+#: src/MuonStrings.cpp:68
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"gnome\""
+msgid "GNOME Desktop Environment"
+msgstr "GNOME-Schriefdisch-Ümgeven"
+
+#. +> stable
+#: src/MuonStrings.cpp:70
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"graphics\""
+msgid "Graphics"
+msgstr "Grafikprogrammen"
+
+#. +> stable
+#: src/MuonStrings.cpp:72
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"gnu-r\""
+msgid "GNU R Statistical System"
+msgstr "\"GNU R\"-Statistiksysteem"
+
+#. +> stable
+#: src/MuonStrings.cpp:74
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"gnustep\""
+msgid "Gnustep Desktop Environment"
+msgstr "Gnustep-Schriefdischümgeven"
+
+#. +> stable
+#: src/MuonStrings.cpp:76
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"hamradio\""
+msgid "Amateur Radio"
+msgstr "Amateurfunk"
+
+#. +> stable
+#: src/MuonStrings.cpp:78
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"haskell\""
+msgid "Haskell Programming Language"
+msgstr "Programmspraak \"Haskell\""
+
+#. +> stable
+#: src/MuonStrings.cpp:80
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"httpd\""
+msgid "Web Servers"
+msgstr "Nettservers"
+
+#. +> stable
+#: src/MuonStrings.cpp:82
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"interpreters\""
+msgid "Interpreted Computer Languages"
+msgstr "Interpreters för Programmspraken"
+
+#. +> stable
+#: src/MuonStrings.cpp:84
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"java\""
+msgid "Java Programming Language"
+msgstr "Programmspraak \"Java\""
+
+#. +> stable
+#: src/MuonStrings.cpp:86
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"kde\""
+msgid "KDE Software Compilation"
+msgstr "KDE-Programmsammeln"
+
+#. +> stable
+#: src/MuonStrings.cpp:88
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"kernel\""
+msgid "Kernel and Modules"
+msgstr "Kernel un Modulen"
+
+#. +> stable
+#: src/MuonStrings.cpp:90
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"libdevel\""
+msgid "Libraries - Development"
+msgstr "Bibliotheken - Utwickeln"
+
+#. +> stable
+#: src/MuonStrings.cpp:92
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"libs\""
+msgid "Libraries"
+msgstr "Bibliotheken"
+
+#. +> stable
+#: src/MuonStrings.cpp:94
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"lisp\""
+msgid "Lisp Programming Language"
+msgstr "Programmspraak \"Lisp\""
+
+#. +> stable
+#: src/MuonStrings.cpp:96
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"localization\""
+msgid "Localization"
+msgstr "Översetten"
+
+#. +> stable
+#: src/MuonStrings.cpp:98
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"mail\""
+msgid "Email"
+msgstr "Nettpost"
+
+#. +> stable
+#: src/MuonStrings.cpp:100
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"math\""
+msgid "Mathematics"
+msgstr "Mathematik"
+
+#. +> stable
+#: src/MuonStrings.cpp:102
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"misc\""
+msgid "Miscellaneous - Text-based"
+msgstr "Anner Saken - Textbaseert"
+
+#. +> stable
+#: src/MuonStrings.cpp:104
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"net\""
+msgid "Networking"
+msgstr "Nettwark"
+
+#. +> stable
+#: src/MuonStrings.cpp:106
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"news\""
+msgid "Newsgroups"
+msgstr "Narichtenkrinken"
+
+#. +> stable
+#: src/MuonStrings.cpp:108
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"ocaml\""
+msgid "OCaml Programming Language"
+msgstr "Programmspraak \"OCaml\""
+
+#. +> stable
+#: src/MuonStrings.cpp:110
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"oldlibs\""
+msgid "Libraries - Old"
+msgstr "Bibliotheken - Oolt"
+
+#. +> stable
+#: src/MuonStrings.cpp:112
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"otherosfs\""
+msgid "Cross Platform"
+msgstr "Anner Systeemümgeven"
+
+#. +> stable
+#: src/MuonStrings.cpp:114
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"perl\""
+msgid "Perl Programming Language"
+msgstr "Programmspraak \"Perl\""
+
+#. +> stable
+#: src/MuonStrings.cpp:116
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"php\""
+msgid "PHP Programming Language"
+msgstr "Programmspraak \"PHP\""
+
+#. +> stable
+#: src/MuonStrings.cpp:118
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"python\""
+msgid "Python Programming Language"
+msgstr "Programmspraak \"Python\""
+
+#. +> stable
+#: src/MuonStrings.cpp:120
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"ruby\""
+msgid "Ruby Programming Language"
+msgstr "Programmspraak \"Ruby\""
+
+#. +> stable
+#: src/MuonStrings.cpp:122
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"science\""
+msgid "Science"
+msgstr "Wetenschap"
+
+#. +> stable
+#: src/MuonStrings.cpp:124
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"shells\""
+msgid "Shells"
+msgstr "Konsolen"
+
+#. +> stable
+#: src/MuonStrings.cpp:126
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"sound\""
+msgid "Multimedia"
+msgstr "Multimedia"
+
+#. +> stable
+#: src/MuonStrings.cpp:128
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"tex\""
+msgid "TeX Authoring"
+msgstr "Textsatzsysteem \"TeX\""
+
+#. +> stable
+#: src/MuonStrings.cpp:130
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"text\""
+msgid "Word Processing"
+msgstr "Textverarbeiden"
+
+#. +> stable
+#: src/MuonStrings.cpp:132
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"utils\""
+msgid "Utilities"
+msgstr "Warktüüch"
+
+#. +> stable
+#: src/MuonStrings.cpp:134
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"vcs\""
+msgid "Version Control Systems"
+msgstr "Verschoonkuntrull-Systemen"
+
+#. +> stable
+#: src/MuonStrings.cpp:136
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"video\""
+msgid "Video Software"
+msgstr "Video-Programmen"
+
+#. +> stable
+#: src/MuonStrings.cpp:138
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"web\""
+msgid "Internet"
+msgstr "Internet"
+
+#. +> stable
+#: src/MuonStrings.cpp:140
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"x11\""
+msgid "Miscellaneous - Graphical"
+msgstr "Anner Saken - Grafik"
+
+#. +> stable
+#: src/MuonStrings.cpp:142
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"xfce\""
+msgid "Xfce Desktop Environment"
+msgstr "Xfce-Schriefdisch-Ümgeven"
+
+#. +> stable
+#: src/MuonStrings.cpp:144
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"zope\""
+msgid "Zope/Plone Environment"
+msgstr "Zope-/Plone-Ümgeven"
+
+#. +> stable
+#: src/MuonStrings.cpp:146
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"unknown\""
+msgid "Unknown"
+msgstr "Nich begäng"
+
+#. +> stable
+#: src/MuonStrings.cpp:148
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"alien\""
+msgid "Converted from RPM by Alien"
+msgstr "Vun \"Alien\" ut en RPM wannelt"
+
+#. +> stable
+#: src/MuonStrings.cpp:150
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"translations\""
+msgid "Internationalization and Localization"
+msgstr "Översetten"
+
+#. +> stable
+#: src/MuonStrings.cpp:152
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"metapackages\""
+msgid "Meta Packages"
+msgstr "Meta-Paketen"
+
+#. +> stable
+#: src/MuonStrings.cpp:154
+msgctxt "@item:inlistbox Debian package section \"non-US\", for packages that cannot be shipped in the US"
+msgid "Restricted On Export"
+msgstr "Bloots för Export"
+
+#. +> stable
+#: src/MuonStrings.cpp:156
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"non-free\""
+msgid "Non-free"
+msgstr "Nich-fre'e Programmen"
+
+#. +> stable
+#: src/MuonStrings.cpp:158
+msgctxt "@item:inlistbox Human-readable name for the Debian package section \"contrib\""
+msgid "Contrib"
+msgstr "Vun Bidregers opstellt"
+
+#. +> stable
+#: src/MuonStrings.cpp:184
+msgctxt "@info:status Package state"
+msgid "Not Installed"
+msgstr "Nich installeert"
+
+#. +> stable
+#: src/MuonStrings.cpp:185
+msgctxt "@info:status Package state"
+msgid "Installed"
+msgstr "Installeert"
+
+#. +> stable
+#: src/MuonStrings.cpp:186
+msgctxt "@info:status Package state"
+msgid "Upgradeable"
+msgstr "Opgradeerbor"
+
+#. +> stable
+#: src/MuonStrings.cpp:187
+msgctxt "@info:status Package state"
+msgid "Broken"
+msgstr "Schaadhaftig"
 
 #. +> stable
 #: src/PackageModel/PackageDelegate.cpp:161
@@ -288,9 +1237,19 @@ msgid "No change"
 msgstr "Keen Ännern"
 
 #. +> stable
+#: src/PackageModel/PackageDelegate.cpp:190
+msgid "Install"
+msgstr "Installeren"
+
+#. +> stable
 #: src/PackageModel/PackageDelegate.cpp:195
 msgid "Upgrade"
 msgstr "Opgraderen"
+
+#. +> stable
+#: src/PackageModel/PackageDelegate.cpp:201
+msgid "Remove"
+msgstr "Wegmaken"
 
 #. +> stable
 #: src/PackageModel/PackageDelegate.cpp:206
@@ -306,6 +1265,21 @@ msgstr "Nochmaal installeren"
 #: src/PackageModel/PackageDelegate.cpp:218
 msgid "Downgrade"
 msgstr "Daalgraderen"
+
+#. +> stable
+#: src/PackageModel/PackageModel.cpp:74
+msgid "Package"
+msgstr "Paket"
+
+#. +> stable
+#: src/PackageModel/PackageModel.cpp:76
+msgid "Status"
+msgstr "Tostand"
+
+#. +> stable
+#: src/PackageModel/PackageModel.cpp:78
+msgid "Requested"
+msgstr "Anföddert"
 
 #. +> stable
 #: src/StatusWidget.cpp:62
@@ -352,15 +1326,19 @@ msgctxt "Label for the number of packages pending removal when there are only re
 msgid " %1 to remove"
 msgstr " %1 warrt wegmaakt"
 
-#~ msgctxt "@action Opens the software sources configuration dialog"
-#~ msgid "Configure Software Sources"
-#~ msgstr "Programm-Borns instellen"
+#. +> stable
+#: src/StatusWidget.cpp:98
+#, kde-format
+msgctxt "@label showing download and install size"
+msgid "%1 to download, %2 of space to be freed"
+msgstr "%1 warrt daallaadt, %2 op de Fastplaat warrt free"
 
-#~ msgid "Install"
-#~ msgstr "Installeren"
-
-#~ msgid "Remove"
-#~ msgstr "Wegmaken"
+#. +> stable
+#: src/StatusWidget.cpp:102
+#, kde-format
+msgctxt "@label showing download and install size"
+msgid "%1 to download, %2 of space to be used"
+msgstr "%1 warrt daallaadt, %2 op de Fastplaat warrt bruukt"
 
 #~ msgid "More Info"
 #~ msgstr "Mehr Informatschonen"
@@ -444,205 +1422,13 @@ msgstr " %1 warrt wegmaakt"
 #~ msgid "Update"
 #~ msgstr "Opfrischen"
 
-#~ msgctxt "@info/rich"
-#~ msgid "The list of changes is not available yet. Please use <link url='%1'>Launchpad</link> instead."
-#~ msgstr "De Ännernlist is noch nich verföögbor. Bitte bruuk <link url='%1'>Launchpad</link> ansteed."
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Dependencies of the Current Version"
-#~ msgstr "Afhangigkeiten vun de aktuelle Verschoon"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Dependencies of the Latest Version"
-#~ msgstr "Afhangigkeiten vun de verleden Verschoon"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Dependants (Reverse Dependencies)"
-#~ msgstr "Hangt af vun (Gegendeel vun Afhangigkeiten)"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Virtual Packages Provided"
-#~ msgstr "Praatstellt virtuell Paketen"
-
-#~ msgctxt "@label"
-#~ msgid "This package does not have any dependencies"
-#~ msgstr "Dit Paket hett keen Afhangigkeiten"
-
 #~ msgctxt "@label"
 #~ msgid "This package has no dependents. (Nothing depends on it.)"
 #~ msgstr "Vun dit Paket hangt keen anner Paketen af."
 
-#~ msgctxt "@label"
-#~ msgid "This package does not provide any virtual packages"
-#~ msgstr "Dit Paket stellt keen virtuell Paketen praat."
-
-#~ msgctxt "@action:button"
-#~ msgid "Get Screenshot..."
-#~ msgstr "Schirmfoto halen..."
-
-#~ msgctxt "@label"
-#~ msgid "Mark for:"
-#~ msgstr "Markeren för't:"
-
-#~ msgctxt "@action:button"
-#~ msgid "Installation"
-#~ msgstr "Installeren"
-
-#~ msgctxt "@action:button"
-#~ msgid "Removal"
-#~ msgstr "Wegmaken"
-
-#~ msgctxt "@action:button"
-#~ msgid "Upgrade"
-#~ msgstr "Opgraderen"
-
-#~ msgctxt "@action:button"
-#~ msgid "Reinstallation"
-#~ msgstr "Nieg installeren"
-
-#~ msgctxt "@action:button"
-#~ msgid "Purge"
-#~ msgstr "Oprümen"
-
-#~ msgctxt "@action:button"
-#~ msgid "Unmark"
-#~ msgstr "Afkören"
-
-#~ msgctxt "@info Tells how long Canonical, Ltd. will support a package"
-#~ msgid "Canonical provides critical updates for %1 until %2"
-#~ msgstr "Canonical stellt kritisch Opfrischen för %1 bet %2 praat."
-
-#~ msgctxt "@info Tells how long Canonical, Ltd. will support a package"
-#~ msgid "Canonical does not provide updates for %1. Some updates may be provided by the Ubuntu community"
-#~ msgstr "Canonical stellt keen Opfrischen för %1 praat, man villicht de Ubuntu-Meenschap."
-
-#~ msgctxt "@info:status"
-#~ msgid "No Screenshot Available"
-#~ msgstr "Keen Schirmfoto to finnen"
-
-#~ msgctxt "@title:window"
-#~ msgid "Screenshot"
-#~ msgstr "Schirmfoto"
-
-#~ msgctxt "@label"
-#~ msgid "Removing this package may break your system. Are you sure you want to remove it?"
-#~ msgstr "Deist Du dit Paket weg, löppt villicht Dien Systeem nich mehr. Wullt Du dat redig wegmaken?"
-
-#~ msgctxt "@label"
-#~ msgid "Warning - Removing Important Package"
-#~ msgstr "Wohrschoen - Wichtig Paket warrt wegdaan"
-
-#~ msgctxt "@label"
-#~ msgid "The \"%1\" package could not be marked for installation or upgrade:"
-#~ msgstr "Markeren vun Paket \"%1\" för't Installeren oder Opgraderen nich mööglich:"
-
-#~ msgctxt "@title:window"
-#~ msgid "Unable to Mark Package"
-#~ msgstr "Paket lett sik nich markeren."
-
-#~ msgctxt "@label"
-#~ msgid ""
-#~ "The \"%1\" package has no available version, but exists in the database.\n"
-#~ "\tThis typically means that the package was mentioned in a dependency and never uploaded, has been obsoleted, or is not available from the currently-enabled repositories."
-#~ msgstr ""
-#~ "Paket \"%1\" is twaars in de Datenbank vörhannen, man dor gifft dat keen Verschoon för.\n"
-#~ "\tDat heet normalerwies, en Afhangigkeit hett dat Paket maal bruukt, man nienich hoochlaadt, dat is överhaalt, oder de anmaakt Archiven stellt dat nich praat."
-
-#~ msgctxt "@label Example: Depends: libqapt 0.1, but 0.2 is to be installed"
-#~ msgid "%1: %2 %3, but %4 is to be installed"
-#~ msgstr "%1: %2 %3, man %4 warrt installeert."
-
-#~ msgctxt "@label Example: or libqapt 0.1, but 0.2 is to be installed"
-#~ msgid "or %1 %2, but %3 is to be installed"
-#~ msgstr "oder %1 %2, man %3 warrt installeert."
-
-#~ msgctxt "@label Example: Depends: libqapt, but is not installable"
-#~ msgid "%1: %2, but it is not installable"
-#~ msgstr "%1: %2, man lett sik nich installeren."
-
-#~ msgctxt "@label Example: or libqapt, but is not installable"
-#~ msgid "or %1, but is not installable"
-#~ msgstr "oder %1, man lett sik nich installeren."
-
-#~ msgctxt "@label Example: Depends: libqapt, but it is a virtual package"
-#~ msgid "%1: %2, but it is a virtual package"
-#~ msgstr "%1: %2, man dat is en virtuell Paket."
-
-#~ msgctxt "@label Example: or libqapt, but it is a virtual package"
-#~ msgid "or %1, but it is a virtual package"
-#~ msgstr "oder %1, man dat is en virtuell Paket."
-
-#~ msgctxt "@label Label preceding the package maintainer"
-#~ msgid "Maintainer:"
-#~ msgstr "Pleger:"
-
-#~ msgctxt "@label Label preceding the package category"
-#~ msgid "Category:"
-#~ msgstr "Kategorie:"
-
-#~ msgctxt "@label The parent package that this package comes from"
-#~ msgid "Source Package:"
-#~ msgstr "Bornpaket:"
-
 #~ msgctxt "@label The software source that this package comes from"
 #~ msgid "Origin:"
 #~ msgstr "Born:"
-
-#~ msgctxt "@title:group"
-#~ msgid "Installed Version"
-#~ msgstr "Installeert Verschoon"
-
-#~ msgctxt "@label Label preceding the package version"
-#~ msgid "Version:"
-#~ msgstr "Verschoon:"
-
-#~ msgctxt "@label Label preceding the package size"
-#~ msgid "Installed Size:"
-#~ msgstr "Installeert Grött:"
-
-#~ msgctxt "@title:group"
-#~ msgid "Available Version"
-#~ msgstr "Verföögbor Verschoon"
-
-#~ msgctxt "@label Label preceding the package's download size"
-#~ msgid "Download Size:"
-#~ msgstr "Daalladengrött:"
-
-#~ msgctxt "@label"
-#~ msgid "Available versions:"
-#~ msgstr "Verföögbor Verschonen:"
-
-#~ msgctxt "@label"
-#~ msgid "Muon always selects the most applicable version available. If you force a different version from the default one, errors in the dependency handling can occur."
-#~ msgstr "Moun söökt jümmers de op't best passen Verschoon ut. Wullt Du en anner Verschoon verdwingen, kann laat sik villicht de Afhangigkeiten nich propper oplösen."
-
-#~ msgctxt "@action:button"
-#~ msgid "Force Version"
-#~ msgstr "Verschoon verdwingen"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Details"
-#~ msgstr "Enkelheiten"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Technical Details"
-#~ msgstr "Technisch Enkelheiten"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Dependencies"
-#~ msgstr "Afhangigkeiten"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Changes List"
-#~ msgstr "List mit de Ännern"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Versions"
-#~ msgstr "Verschonen"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Installed Files"
-#~ msgstr "Installeert Dateien"
 
 #~ msgctxt "@info:status"
 #~ msgid "Done"
@@ -651,9 +1437,6 @@ msgstr " %1 warrt wegmaakt"
 #~ msgctxt "@info:status"
 #~ msgid "Ignored"
 #~ msgstr "Övergahn"
-
-#~ msgid "Package"
-#~ msgstr "Paket"
 
 #~ msgid "Location"
 #~ msgstr "Steed"
@@ -664,432 +1447,6 @@ msgstr " %1 warrt wegmaakt"
 #~ msgid "Progress"
 #~ msgstr "Vörankamen"
 
-#~ msgctxt "@action:button Cancels the download"
-#~ msgid "Cancel"
-#~ msgstr "Afbreken"
-
-#~ msgctxt "@label Label for when the download speed is unknown"
-#~ msgid "Unknown speed"
-#~ msgstr "Nich begäng Gauheit"
-
-#~ msgctxt "@label Download rate"
-#~ msgid "Download rate: %1/s"
-#~ msgstr "Daalladengauigkeit: %1/s"
-
-#~ msgctxt "@item:intext Label for when the remaining time is unknown"
-#~ msgid " - Unknown time remaining"
-#~ msgstr " - Nablieven Tiet nich begäng"
-
-#~ msgctxt "@item:intext Remaining time"
-#~ msgid " - %1 remaining"
-#~ msgstr " - %1 nablieven"
-
-#~ msgctxt "@label"
-#~ msgid "There are marked changes that have not yet been applied. Do you want to save your changes or discard them?"
-#~ msgstr "En Reeg vun markeert Ännern wöör noch nich anwendt. Wullt Du de Ännern sekern oder wegsmieten?"
-
-#~ msgctxt "@action Checks the Internet for updates"
-#~ msgid "Check for Updates"
-#~ msgstr "Na Opfrischen kieken"
-
-#~ msgctxt "@action Reverts all potential changes to the cache"
-#~ msgid "Unmark All"
-#~ msgstr "All afkören"
-
-#~ msgctxt "@label"
-#~ msgid "The package system could not be initialized, your configuration may be broken."
-#~ msgstr "Dat Paketsysteem lett sik nich torechtmaken. Villicht sünd Dien Instellen leeg."
-
-#~ msgctxt "@title:window"
-#~ msgid "Initialization error"
-#~ msgstr "Fehler bi't Torechtmaken"
-
-#~ msgctxt "@label"
-#~ msgid "Another application seems to be using the package system at this time. You must close all other package managers before you will be able to install or remove any packages."
-#~ msgstr "As't lett warrt dat Paketsystem jüst vun en anner Programm bruukt. Du muttst toeerst all anner Paketplegers tomaken, ehr Du Paketen installeren oder wegmaken kannst."
-
-#~ msgctxt "@title:window"
-#~ msgid "Unable to obtain package system lock"
-#~ msgstr "Dat Paketsystem lett sik nich afsluten."
-
-#~ msgctxt "@label"
-#~ msgid "You do not have enough disk space in the directory at %1 to continue with this operation."
-#~ msgstr "Binnen Orner \"%1\" gifft dat nich noog free Ruum för't Wiedermaken."
-
-#~ msgctxt "@title:window"
-#~ msgid "Low disk space"
-#~ msgstr "To minn free Ruum op de Fastplaat"
-
-#~ msgctxt "@label"
-#~ msgid "Could not download packages"
-#~ msgstr "Paketen laat sik nich daalladen."
-
-#~ msgctxt "@title:window"
-#~ msgid "Download failed"
-#~ msgstr "Daalladen fehlslaan"
-
-#~ msgctxt "@label"
-#~ msgid "This operation cannot continue since proper authorization was not provided"
-#~ msgstr "Wiedermaken nich mööglich, wiel keen propper Identiteetprööv anbaden warrt."
-
-#~ msgctxt "@title:window"
-#~ msgid "Authentication error"
-#~ msgstr "Identiteetprööv fehlslaan"
-
-#~ msgctxt "@label"
-#~ msgid "It appears that the QApt worker has either crashed or disappeared. Please report a bug to the QApt maintainers"
-#~ msgstr "As't lett is dat QApt-Arbeitprogramm afstört oder wegkamen. Bitte stüer de QApt-Plegers en Fehlerbericht to."
-
-#~ msgctxt "@title:window"
-#~ msgid "Unexpected Error"
-#~ msgstr "Nich verwacht Fehler"
-
-#~ msgctxt "@label"
-#~ msgid "The following package has not been verified by its author. Downloading untrusted packages has been disallowed by your current configuration."
-#~ msgid_plural "The following packages have not been verified by their authors. Downloading untrusted packages has been disallowed by your current configuration."
-#~ msgstr[0] "De Schriever hett dit Paket nich beglöövt. Dat Daalladen vun nich beglöövt Paketen is op Dien Systeem nich tolaten."
-#~ msgstr[1] "De Schriever hett disse Paketen nich beglöövt. Dat Daalladen vun nich beglöövt Paketen is op Dien Systeem nich tolaten."
-
-#~ msgctxt "@title:window"
-#~ msgid "Untrusted Packages"
-#~ msgstr "Nich troot Paketen"
-
-#~ msgctxt "@label"
-#~ msgid "The size of the downloaded items did not equal the expected size."
-#~ msgstr "De Grött vun de daallaadt Objekten is nich de sülvige as verwacht."
-
-#~ msgctxt "@title:window"
-#~ msgid "Size Mismatch"
-#~ msgstr "Grött passt nich"
-
-#~ msgctxt "@title:window"
-#~ msgid "Media Change Required"
-#~ msgstr "En Medienwessel deit noot"
-
-#~ msgctxt "@label Asks for a CD change"
-#~ msgid "Please insert %1 into <filename>%2</filename>"
-#~ msgstr "Bitte %1 na <filename>%2</filename> inleggen."
-
-#~ msgctxt "@title:window"
-#~ msgid "Warning - Unverified Software"
-#~ msgstr "Wohrschoen: Programmen nich beglöövt"
-
-#~ msgctxt "@label"
-#~ msgid "The following piece of software cannot be verified. <warning>Installing unverified software represents a security risk, as the presence of unverifiable software can be a sign of tampering.</warning> Do you wish to continue?"
-#~ msgid_plural "The following pieces of software cannot be authenticated. <warning>Installing unverified software represents a security risk, as the presence of unverifiable software can be a sign of tampering.</warning> Do you wish to continue?"
-#~ msgstr[0] "Dit Programm is nich beglöövt. <warning>Dat Installeren vun nich beglöövt Programmen kann en Riskanz för de Sekerheit wesen, wiel de Programmen villicht vermurkst wesen köönt.</warning> Wullt Du wiedermaken?"
-#~ msgstr[1] "Disse Programmen sünd nich beglöövt. <warning>Dat Installeren vun nich beglöövt Programmen kann en Riskanz för de Sekerheit wesen, wiel de Programmen villicht vermurkst wesen köönt.</warning> Wullt Du wiedermaken?"
-
-#~ msgctxt "@label"
-#~ msgid "Unable to download the following packages:"
-#~ msgstr "Disse Paketen laat sik nich daalladen:"
-
-#~ msgctxt "@label"
-#~ msgid ""
-#~ "Failed to download %1\n"
-#~ "%2\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\"%1\" lett sik nich daalladen.\n"
-#~ "%2\n"
-#~ "\n"
-
-#~ msgctxt "@title:window"
-#~ msgid "Some Packages Could not be Downloaded"
-#~ msgstr "En poor Paketen laat sik nich daalladen."
-
-#~ msgctxt "@label"
-#~ msgid "An error occurred while applying changes:"
-#~ msgid_plural "The following errors occurred while applying changes:"
-#~ msgstr[0] "Bi't Övernehmen vun Ännern geev dat en Fehler:"
-#~ msgstr[1] "Bi't Övernehmen vun Ännern geev dat disse Fehlers:"
-
-#~ msgctxt "@label Shows which package failed"
-#~ msgid "Package: %1"
-#~ msgstr "Paket: %1"
-
-#~ msgctxt "@label Shows the error"
-#~ msgid "Error: %1"
-#~ msgstr "Fehler: %1"
-
-#~ msgctxt "@title:window"
-#~ msgid "Commit error"
-#~ msgstr "Inspelen fehlslaan"
-
-#~ msgctxt "@title:window"
-#~ msgid "Save Markings As"
-#~ msgstr "Markeren sekern as"
-
-#~ msgctxt "@label"
-#~ msgid ""
-#~ "The document could not be saved, as it was not possible to write to <filename>%1</filename>\n"
-#~ "\n"
-#~ "Check that you have write access to this file or that enough disk space is available."
-#~ msgstr ""
-#~ "Dat Dokment lett sik nich sekern, dat is nich mööglich, na <filename>%1</filename> to schrieven.\n"
-#~ "\n"
-#~ "Bitte prööv, wat Du Schriefverlöven för de Datei hest un wat dat noog fre'en Platz op de Fastplaat gifft."
-
-#~ msgctxt "@title:window"
-#~ msgid "Open File"
-#~ msgstr "Datei opmaken"
-
-#~ msgctxt "@label"
-#~ msgid "Could not mark changes. Please make sure that the file is a markings file created by either the Muon Package Manager or the Synaptic Package Manager."
-#~ msgstr "Ännern laat sik nich markeren. Beseker, de Datei is een vun de Paketplegers  Moun oder Synaptics praatstellt Markeren-Datei."
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"admin\""
-#~ msgid "System Administration"
-#~ msgstr "Systeempleeg"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"base\""
-#~ msgid "Base System"
-#~ msgstr "Grundsysteem"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"cli-mono\""
-#~ msgid "Mono/CLI Infrastructure"
-#~ msgstr "Mono- oder CLI-Ünnerbuu"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"comm\""
-#~ msgid "Communication"
-#~ msgstr "Snacken"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"database\""
-#~ msgid "Databases"
-#~ msgstr "Datenbanken"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"devel\""
-#~ msgid "Development"
-#~ msgstr "Utwickeln"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"doc\""
-#~ msgid "Documentation"
-#~ msgstr "Dokmentatschoon"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"debug\""
-#~ msgid "Debug"
-#~ msgstr "Fehlersöök"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"editors\""
-#~ msgid "Editors"
-#~ msgstr "Editoren"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"electronics\""
-#~ msgid "Electronics"
-#~ msgstr "Elektronik"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"embedded\""
-#~ msgid "Embedded Devices"
-#~ msgstr "Inbett Reedschappen"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"fonts\""
-#~ msgid "Fonts"
-#~ msgstr "Schriftoorden"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"games\""
-#~ msgid "Games and Amusement"
-#~ msgstr "Spelen un Tietverdrief"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"gnome\""
-#~ msgid "GNOME Desktop Environment"
-#~ msgstr "GNOME-Schriefdisch-Ümgeven"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"graphics\""
-#~ msgid "Graphics"
-#~ msgstr "Grafikprogrammen"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"gnu-r\""
-#~ msgid "GNU R Statistical System"
-#~ msgstr "\"GNU R\"-Statistiksysteem"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"gnustep\""
-#~ msgid "Gnustep Desktop Environment"
-#~ msgstr "Gnustep-Schriefdischümgeven"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"hamradio\""
-#~ msgid "Amateur Radio"
-#~ msgstr "Amateurfunk"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"haskell\""
-#~ msgid "Haskell Programming Language"
-#~ msgstr "Programmspraak \"Haskell\""
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"httpd\""
-#~ msgid "Web Servers"
-#~ msgstr "Nettservers"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"interpreters\""
-#~ msgid "Interpreted Computer Languages"
-#~ msgstr "Interpreters för Programmspraken"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"java\""
-#~ msgid "Java Programming Language"
-#~ msgstr "Programmspraak \"Java\""
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"kde\""
-#~ msgid "KDE Software Compilation"
-#~ msgstr "KDE-Programmsammeln"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"kernel\""
-#~ msgid "Kernel and Modules"
-#~ msgstr "Kernel un Modulen"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"libdevel\""
-#~ msgid "Libraries - Development"
-#~ msgstr "Bibliotheken - Utwickeln"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"libs\""
-#~ msgid "Libraries"
-#~ msgstr "Bibliotheken"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"lisp\""
-#~ msgid "Lisp Programming Language"
-#~ msgstr "Programmspraak \"Lisp\""
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"localization\""
-#~ msgid "Localization"
-#~ msgstr "Översetten"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"mail\""
-#~ msgid "Email"
-#~ msgstr "Nettpost"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"math\""
-#~ msgid "Mathematics"
-#~ msgstr "Mathematik"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"misc\""
-#~ msgid "Miscellaneous - Text-based"
-#~ msgstr "Anner Saken - Textbaseert"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"net\""
-#~ msgid "Networking"
-#~ msgstr "Nettwark"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"news\""
-#~ msgid "Newsgroups"
-#~ msgstr "Narichtenkrinken"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"ocaml\""
-#~ msgid "OCaml Programming Language"
-#~ msgstr "Programmspraak \"OCaml\""
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"oldlibs\""
-#~ msgid "Libraries - Old"
-#~ msgstr "Bibliotheken - Oolt"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"otherosfs\""
-#~ msgid "Cross Platform"
-#~ msgstr "Anner Systeemümgeven"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"perl\""
-#~ msgid "Perl Programming Language"
-#~ msgstr "Programmspraak \"Perl\""
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"php\""
-#~ msgid "PHP Programming Language"
-#~ msgstr "Programmspraak \"PHP\""
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"python\""
-#~ msgid "Python Programming Language"
-#~ msgstr "Programmspraak \"Python\""
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"ruby\""
-#~ msgid "Ruby Programming Language"
-#~ msgstr "Programmspraak \"Ruby\""
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"science\""
-#~ msgid "Science"
-#~ msgstr "Wetenschap"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"shells\""
-#~ msgid "Shells"
-#~ msgstr "Konsolen"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"sound\""
-#~ msgid "Multimedia"
-#~ msgstr "Multimedia"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"tex\""
-#~ msgid "TeX Authoring"
-#~ msgstr "Textsatzsysteem \"TeX\""
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"text\""
-#~ msgid "Word Processing"
-#~ msgstr "Textverarbeiden"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"utils\""
-#~ msgid "Utilities"
-#~ msgstr "Warktüüch"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"vcs\""
-#~ msgid "Version Control Systems"
-#~ msgstr "Verschoonkuntrull-Systemen"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"video\""
-#~ msgid "Video Software"
-#~ msgstr "Video-Programmen"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"web\""
-#~ msgid "Internet"
-#~ msgstr "Internet"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"x11\""
-#~ msgid "Miscellaneous - Graphical"
-#~ msgstr "Anner Saken - Grafik"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"xfce\""
-#~ msgid "Xfce Desktop Environment"
-#~ msgstr "Xfce-Schriefdisch-Ümgeven"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"zope\""
-#~ msgid "Zope/Plone Environment"
-#~ msgstr "Zope-/Plone-Ümgeven"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"unknown\""
-#~ msgid "Unknown"
-#~ msgstr "Nich begäng"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"alien\""
-#~ msgid "Converted from RPM by Alien"
-#~ msgstr "Vun \"Alien\" ut en RPM wannelt"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"translations\""
-#~ msgid "Internationalization and Localization"
-#~ msgstr "Översetten"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"metapackages\""
-#~ msgid "Meta Packages"
-#~ msgstr "Meta-Paketen"
-
-#~ msgctxt "@item:inlistbox Debian package section \"non-US\", for packages that cannot be shipped in the US"
-#~ msgid "Restricted On Export"
-#~ msgstr "Bloots för Export"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"non-free\""
-#~ msgid "Non-free"
-#~ msgstr "Nich-fre'e Programmen"
-
-#~ msgctxt "@item:inlistbox Human-readable name for the Debian package section \"contrib\""
-#~ msgid "Contrib"
-#~ msgstr "Vun Bidregers opstellt"
-
-#~ msgctxt "@info:status Package state"
-#~ msgid "Not Installed"
-#~ msgstr "Nich installeert"
-
-#~ msgctxt "@info:status Package state"
-#~ msgid "Installed"
-#~ msgstr "Installeert"
-
-#~ msgctxt "@info:status Package state"
-#~ msgid "Upgradeable"
-#~ msgstr "Opgradeerbor"
-
-#~ msgctxt "@info:status Package state"
-#~ msgid "Broken"
-#~ msgstr "Schaadhaftig"
-
 #, fuzzy
 #~ msgctxt "@info:status Package state"
 #~ msgid "Residual Configuration"
@@ -1099,16 +1456,6 @@ msgstr " %1 warrt wegmaakt"
 #~ msgctxt "@info:status Package state"
 #~ msgid "Installed (auto-removable)"
 #~ msgstr "Installeert (automaatsch wegmaakbor)"
-
-#~ msgid "Status"
-#~ msgstr "Tostand"
-
-#~ msgid "Requested"
-#~ msgstr "Anföddert"
-
-#~ msgctxt "@label Line edit click message"
-#~ msgid "Search"
-#~ msgstr "Söök"
 
 #, fuzzy
 #~| msgid "Muon Notification Daemon"
@@ -1139,14 +1486,6 @@ msgstr " %1 warrt wegmaakt"
 #~ msgid_plural "%1 packages available, "
 #~ msgstr[0] "1 Paket verföögbor, "
 #~ msgstr[1] "%1 Paketen verföögbor, "
-
-#~ msgctxt "@label showing download and install size"
-#~ msgid "%1 to download, %2 of space to be freed"
-#~ msgstr "%1 warrt daallaadt, %2 op de Fastplaat warrt free"
-
-#~ msgctxt "@label showing download and install size"
-#~ msgid "%1 to download, %2 of space to be used"
-#~ msgstr "%1 warrt daallaadt, %2 op de Fastplaat warrt bruukt"
 
 #~ msgid "An update manager"
 #~ msgstr "En Opfrischen-Pleger"
