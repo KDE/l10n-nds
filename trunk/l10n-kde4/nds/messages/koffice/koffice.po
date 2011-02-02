@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: koffice\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-01-26 03:29+0100\n"
+"POT-Creation-Date: 2011-02-02 03:38+0100\n"
 "PO-Revision-Date: 2011-01-04 06:21+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -50,10 +50,6 @@ msgstr "Eenfach Bagenbahnform"
 msgid "A simple path shape"
 msgstr "En eenfach Bagenbahnform"
 
-#: flake/KoToolBase.cpp:172 flake/KoToolManager.cpp:351
-msgid "Tool Options"
-msgstr "Warktüüch-Optschonen"
-
 #: flake/KoShapeController.cpp:64 kotext/InsertTextReferenceAction.cpp:63
 #: kotext/InsertVariableAction.cpp:51
 #: main/rdf/InsertSemanticObjectCreateAction.cpp:59
@@ -62,14 +58,26 @@ msgstr "Warktüüch-Optschonen"
 msgid "%1 Options"
 msgstr "%1-Optschonen"
 
+#: flake/KoShapePaste.cpp:100
+msgid "Paste Shapes"
+msgstr "Formen infögen"
+
+#: flake/KoToolBase.cpp:172 flake/KoToolManager.cpp:351
+msgid "Tool Options"
+msgstr "Warktüüch-Optschonen"
+
 #: flake/KoToolManager.cpp:350
 #, kde-format
 msgid "Active tool: %1"
 msgstr "Aktiv Warktüüch: %1"
 
-#: flake/KoShapePaste.cpp:100
-msgid "Paste Shapes"
-msgstr "Formen infögen"
+#: flake/commands/KoConnectionShapeTypeCommand.cpp:31
+msgid "Change Connection"
+msgstr "Verbinnen ännern"
+
+#: flake/commands/KoParameterHandleMoveCommand.cpp:34
+msgid "Change Parameter"
+msgstr "Parameter ännern"
 
 #: flake/commands/KoParameterToPathCommand.cpp:43
 #: flake/commands/KoParameterToPathCommand.cpp:52
@@ -222,13 +230,29 @@ msgstr "Ünnerlienen verbinnen"
 msgid "Remove Subpath"
 msgstr "Ünnerlien wegmaken"
 
-#: flake/commands/KoConnectionShapeTypeCommand.cpp:31
-msgid "Change Connection"
-msgstr "Verbinnen ännern"
+#: flake/tools/KoCreatePathTool.cpp:369 flake/tools/KoPathTool.cpp:181
+msgid "Snapping"
+msgstr "Andocken"
 
-#: flake/commands/KoParameterHandleMoveCommand.cpp:34
-msgid "Change Parameter"
-msgstr "Parameter ännern"
+#: flake/tools/KoCreatePathTool.cpp:374
+msgid "Angle snapping delta"
+msgstr "Winkelandockverscheel"
+
+#: flake/tools/KoCreatePathTool.cpp:379
+msgid "Angle Constraints"
+msgstr "Winkelbedingen"
+
+#: flake/tools/KoCreatePathToolFactory.cpp:33
+msgid "Create Path"
+msgstr "Lienenkeed opstellen"
+
+#: flake/tools/KoCreateShapesToolFactory.cpp:33
+msgid "Create object"
+msgstr "Objekt opstellen"
+
+#: flake/tools/KoPanToolFactory.cpp:29
+msgid "Pan"
+msgstr "Verschuven"
 
 #: flake/tools/KoPathSegmentChangeStrategy.cpp:145
 msgid "Change Segment"
@@ -294,10 +318,6 @@ msgstr "Na Lienenkeed"
 msgid "Line/Curve"
 msgstr "Lien/Bagen"
 
-#: flake/tools/KoPathTool.cpp:181 flake/tools/KoCreatePathTool.cpp:369
-msgid "Snapping"
-msgstr "Andocken"
-
 #: flake/tools/KoPathTool.cpp:515
 msgid "Drag to move handle."
 msgstr "Treck, wenn Du den Greep verschuven wullt."
@@ -326,26 +346,6 @@ msgstr ""
 #: flake/tools/KoPathToolFactory.cpp:29
 msgid "Path editing tool"
 msgstr "Lienenkeden-Bewerkwarktüüch"
-
-#: flake/tools/KoCreatePathTool.cpp:374
-msgid "Angle snapping delta"
-msgstr "Winkelandockverscheel"
-
-#: flake/tools/KoCreatePathTool.cpp:379
-msgid "Angle Constraints"
-msgstr "Winkelbedingen"
-
-#: flake/tools/KoCreatePathToolFactory.cpp:33
-msgid "Create Path"
-msgstr "Lienenkeed opstellen"
-
-#: flake/tools/KoCreateShapesToolFactory.cpp:33
-msgid "Create object"
-msgstr "Objekt opstellen"
-
-#: flake/tools/KoPanToolFactory.cpp:29
-msgid "Pan"
-msgstr "Verschuven"
 
 #: flake/tools/KoZoomToolFactory.cpp:29 widgets/KoZoomAction.cpp:248
 #: widgets/KoZoomController.cpp:38 widgets/KoZoomInput.cpp:52
@@ -875,6 +875,28 @@ msgstr[1] "%1 Övereenstimmen funnen"
 msgid "Found no match"
 msgstr "Keen Övereenstimmen funnen"
 
+#: kotext/KoReplaceStrategy.cpp:58
+msgid ""
+"Found no match\n"
+"\n"
+"No text was replaced"
+msgstr ""
+"Keen Övereenstimmen funnen.\n"
+"\n"
+"Keen Text utwesselt."
+
+#: kotext/KoReplaceStrategy.cpp:61
+#, kde-format
+msgid "1 replacement made"
+msgid_plural "%1 replacements made"
+msgstr[0] "1 Saak utwesselt"
+msgstr[1] "%1 Saken utwesselt"
+
+#: kotext/KoReplaceStrategy.cpp:74
+#, kde-format
+msgid "Replace %1 with %2?"
+msgstr "%1 mit %2 utwesseln?"
+
 #: kotext/KoText.cpp:29
 msgctxt "Underline Style"
 msgid "None"
@@ -1002,28 +1024,6 @@ msgstr "Reegümbrook"
 #: kotext/KoTextEditor_p.h:83 kotext/KoTextEditor_p.h:120 rc.cpp:348
 msgid "Format"
 msgstr "Formaat"
-
-#: kotext/KoReplaceStrategy.cpp:58
-msgid ""
-"Found no match\n"
-"\n"
-"No text was replaced"
-msgstr ""
-"Keen Övereenstimmen funnen.\n"
-"\n"
-"Keen Text utwesselt."
-
-#: kotext/KoReplaceStrategy.cpp:61
-#, kde-format
-msgid "1 replacement made"
-msgid_plural "%1 replacements made"
-msgstr[0] "1 Saak utwesselt"
-msgstr[1] "%1 Saken utwesselt"
-
-#: kotext/KoReplaceStrategy.cpp:74
-#, kde-format
-msgid "Replace %1 with %2?"
-msgstr "%1 mit %2 utwesseln?"
 
 #: main/KoApplication.cpp:77
 msgid "Only print and exit"
@@ -1959,6 +1959,20 @@ msgstr "Söök dat Objekt ut, op dat Du henwiesen wullt."
 msgid "Reference"
 msgstr "Betog"
 
+#: main/rdf/KoDocumentRdfEditWidget.cpp:270
+#, kde-format
+msgctxt "statement is an Rdf related term"
+msgid "<qt>Edits will be lost.<p>There is %1 invalid statement left.</qt>"
+msgid_plural ""
+"<qt>Edits will be lost.<p>There are %1 invalid statements left.</qt>"
+msgstr[0] "<qt>De Ännern kaamt Di weg.<p>Noch %1 leeg Anwiesen.</qt>"
+msgstr[1] "<qt>De Ännern kaamt Di weg.<p>Noch %1 leeg Anwiesen.</qt>"
+
+#: main/rdf/KoDocumentRdfEditWidget.cpp:273
+msgctxt "statement is an Rdf related term"
+msgid "Discard invalid statements?"
+msgstr "Leeg Anwiesen wegmaken?"
+
 #: main/rdf/KoRdfCalendarEvent.cpp:201
 msgid "Area"
 msgstr "Rebeet"
@@ -2107,20 +2121,6 @@ msgstr "Datentyp"
 #: main/rdf/KoSopranoTableModel.cpp:140
 msgid "Stored In"
 msgstr "Sekert binnen"
-
-#: main/rdf/KoDocumentRdfEditWidget.cpp:270
-#, kde-format
-msgctxt "statement is an Rdf related term"
-msgid "<qt>Edits will be lost.<p>There is %1 invalid statement left.</qt>"
-msgid_plural ""
-"<qt>Edits will be lost.<p>There are %1 invalid statements left.</qt>"
-msgstr[0] "<qt>De Ännern kaamt Di weg.<p>Noch %1 leeg Anwiesen.</qt>"
-msgstr[1] "<qt>De Ännern kaamt Di weg.<p>Noch %1 leeg Anwiesen.</qt>"
-
-#: main/rdf/KoDocumentRdfEditWidget.cpp:273
-msgctxt "statement is an Rdf related term"
-msgid "Discard invalid statements?"
-msgstr "Leeg Anwiesen wegmaken?"
 
 #: main/config/KoConfigDocumentPage.cpp:75
 msgid "Auto save (min):"
