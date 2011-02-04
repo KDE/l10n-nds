@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: koffice\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-02-02 03:38+0100\n"
+"POT-Creation-Date: 2011-02-04 02:57+0100\n"
 "PO-Revision-Date: 2011-01-04 06:21+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -84,10 +84,6 @@ msgstr "Parameter ännern"
 msgid "Convert to Path"
 msgstr "Na Bagenbahn ümwanneln"
 
-#: flake/commands/KoPathBreakAtPointCommand.cpp:38
-msgid "Break Subpath at Points"
-msgstr "Ünnerlien an Pünkt opbreken"
-
 #: flake/commands/KoPathCombineCommand.cpp:58
 msgid "Combine paths"
 msgstr "Bagenbahnen tosamensetten"
@@ -99,6 +95,14 @@ msgstr "Kuntrullpunkt verschuven"
 #: flake/commands/KoPathFillRuleCommand.cpp:44
 msgid "Set Fill Rule"
 msgstr "Füllregel fastleggen"
+
+#: flake/commands/KoShapeGroupCommand.cpp:93
+msgid "Group Shapes"
+msgstr "Formen tosamenkoppeln"
+
+#: flake/commands/KoShapeGroupCommand.cpp:95
+msgid "Add Shapes to Group"
+msgstr "Formen na Koppel tofögen"
 
 #: flake/commands/KoPathPointMergeCommand.cpp:152
 msgid "Merge Points"
@@ -170,14 +174,6 @@ msgstr "Formen wegdoon"
 msgid "Distribute Shapes"
 msgstr "Formen verdelen"
 
-#: flake/commands/KoShapeGroupCommand.cpp:93
-msgid "Group Shapes"
-msgstr "Formen tosamenkoppeln"
-
-#: flake/commands/KoShapeGroupCommand.cpp:95
-msgid "Add Shapes to Group"
-msgstr "Formen na Koppel tofögen"
-
 #: flake/commands/KoShapeKeepAspectRatioCommand.cpp:40
 msgid "Keep Aspect Ratio"
 msgstr "Bildproportschoon wohren"
@@ -230,6 +226,10 @@ msgstr "Ünnerlienen verbinnen"
 msgid "Remove Subpath"
 msgstr "Ünnerlien wegmaken"
 
+#: flake/commands/KoPathBreakAtPointCommand.cpp:38
+msgid "Break Subpath at Points"
+msgstr "Ünnerlien an Pünkt opbreken"
+
 #: flake/tools/KoCreatePathTool.cpp:369 flake/tools/KoPathTool.cpp:181
 msgid "Snapping"
 msgstr "Andocken"
@@ -253,10 +253,6 @@ msgstr "Objekt opstellen"
 #: flake/tools/KoPanToolFactory.cpp:29
 msgid "Pan"
 msgstr "Verschuven"
-
-#: flake/tools/KoPathSegmentChangeStrategy.cpp:145
-msgid "Change Segment"
-msgstr "Streek ännern"
 
 #: flake/tools/KoPathTool.cpp:87
 msgid "Corner point"
@@ -351,6 +347,10 @@ msgstr "Lienenkeden-Bewerkwarktüüch"
 #: widgets/KoZoomController.cpp:38 widgets/KoZoomInput.cpp:52
 msgid "Zoom"
 msgstr "Ansichtgrött"
+
+#: flake/tools/KoPathSegmentChangeStrategy.cpp:145
+msgid "Change Segment"
+msgstr "Streek ännern"
 
 #: kokross/KoScriptManager.cpp:177
 msgid "Install Script Package"
@@ -614,11 +614,6 @@ msgstr "Koperen"
 msgid "Paste"
 msgstr "Infögen"
 
-#: kopageapp/KoPAPageThumbnailModel.cpp:69
-#, kde-format
-msgid "Page %1"
-msgstr "Siet %1"
-
 #: kopageapp/KoPAPastePage.cpp:132
 msgid "Paste Slide"
 msgid_plural "Paste Slides"
@@ -847,6 +842,11 @@ msgstr "Achtergrund-Bewerkenwarktüüch"
 msgid "Change background image"
 msgstr "Achtergrund ännern"
 
+#: kopageapp/KoPAPageThumbnailModel.cpp:69
+#, kde-format
+msgid "Page %1"
+msgstr "Siet %1"
+
 #: kotext/InsertTextLocator.cpp:29
 msgid "Index Reference"
 msgstr "Indexbetog"
@@ -896,21 +896,6 @@ msgstr[1] "%1 Saken utwesselt"
 #, kde-format
 msgid "Replace %1 with %2?"
 msgstr "%1 mit %2 utwesseln?"
-
-#: kotext/KoText.cpp:29
-msgctxt "Underline Style"
-msgid "None"
-msgstr "Keen"
-
-#: kotext/KoText.cpp:30
-msgctxt "Underline Style"
-msgid "Single"
-msgstr "Eenfach"
-
-#: kotext/KoText.cpp:31
-msgctxt "Underline Style"
-msgid "Double"
-msgstr "Dubbelt"
 
 #: kotext/KoTextEditor.cpp:105 kotext/KoTextEditor.cpp:161
 #: kotext/KoTextEditor.cpp:319 widgets/KoCsvImportDialog.cpp:216
@@ -1024,6 +1009,21 @@ msgstr "Reegümbrook"
 #: kotext/KoTextEditor_p.h:83 kotext/KoTextEditor_p.h:120 rc.cpp:348
 msgid "Format"
 msgstr "Formaat"
+
+#: kotext/KoText.cpp:47
+msgctxt "Underline Style"
+msgid "None"
+msgstr "Keen"
+
+#: kotext/KoText.cpp:48
+msgctxt "Underline Style"
+msgid "Single"
+msgstr "Eenfach"
+
+#: kotext/KoText.cpp:49
+msgctxt "Underline Style"
+msgid "Double"
+msgstr "Dubbelt"
 
 #: main/KoApplication.cpp:77
 msgid "Only print and exit"
@@ -1357,7 +1357,7 @@ msgstr "Diagramm"
 msgid "a drawing"
 msgstr "Teken"
 
-#: main/KoDocument.cpp:2504
+#: main/KoDocument.cpp:2499
 msgid "Embedding Object"
 msgstr "Objekt warrt inbett"
 
@@ -2487,10 +2487,6 @@ msgstr "a*"
 msgid "b*"
 msgstr "b*"
 
-#: pigment/KoBasicHistogramProducers.h:231
-msgid "Generic L*a*b* Histogram"
-msgstr "Allgemeen \"L*a*b*\"-Histogramm"
-
 #: pigment/KoColorModelStandardIds.cpp:25
 #: pigment/colorspaces/KoAlphaColorSpace.cpp:261
 #: pigment/colorspaces/KoLabColorSpace.cpp:44
@@ -2642,10 +2638,6 @@ msgstr "Nich fastleggt Akschoon binnen %1-Klörenruum"
 msgid "Simple Color Conversion Engine"
 msgstr "Eenfach Klöörwannelnkarn"
 
-#: pigment/compositeops/KoCompositeOpAlphaDarken.h:42
-msgid "Alpha darken"
-msgstr "Alpha-Afdüüstern"
-
 #: pigment/compositeops/KoCompositeOpBurn.h:36
 msgid "Burn"
 msgstr "Brennen"
@@ -2686,9 +2678,17 @@ msgstr "Schirm"
 msgid "Soft light"
 msgstr "Week Licht"
 
+#: pigment/compositeops/KoCompositeOpAlphaDarken.h:42
+msgid "Alpha darken"
+msgstr "Alpha-Afdüüstern"
+
 #: pigment/resources/KoStopGradient.cpp:421
 msgid "SVG Gradient"
 msgstr "SVG-Övergang"
+
+#: pigment/KoBasicHistogramProducers.h:231
+msgid "Generic L*a*b* Histogram"
+msgstr "Allgemeen \"L*a*b*\"-Histogramm"
 
 #: widgets/KoColorPopupAction.cpp:85 widgets/KoUniColorChooser.cpp:418
 msgid "Opacity"
