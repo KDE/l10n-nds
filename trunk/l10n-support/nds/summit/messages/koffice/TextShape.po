@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TextShape\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-01-27 09:17+0100\n"
+"POT-Creation-Date: 2011-02-10 09:08+0100\n"
 "PO-Revision-Date: 2011-01-13 07:30+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -92,12 +92,12 @@ msgstr "Liststoop ännern"
 #. +> trunk stable
 #: commands/ChangeTrackedDeleteCommand.cpp:76
 #: commands/ChangeTrackedDeleteCommand.cpp:288 commands/DeleteCommand.cpp:43
-#: dialogs/StyleManager.ui:57 TextTool.cpp:2006
+#: dialogs/StyleManager.ui:57 TextTool.cpp:2002
 msgid "Delete"
 msgstr "Wegdoon"
 
 #. +> trunk stable
-#: commands/ChangeTrackedDeleteCommand.cpp:182 TextTool.cpp:2001
+#: commands/ChangeTrackedDeleteCommand.cpp:182 TextTool.cpp:1997
 msgid "Key Press"
 msgstr "Tastdruck"
 
@@ -188,15 +188,11 @@ msgstr "Achtergrundklöör"
 #. i18n: ectx: property (text), widget (QToolButton, toolButton_2)
 #. i18n: ectx: property (text), widget (QToolButton, customCharacter)
 #. i18n: ectx: property (text), widget (QToolButton, resetBackgroundColor)
-#. i18n: ectx: property (text), widget (QToolButton, applyStyle)
-#. i18n: ectx: property (text), widget (QToolButton, modifyStyle)
-#. i18n: ectx: property (text), widget (QToolButton, newStyle)
-#. i18n: ectx: property (text), widget (QToolButton, deleteStyle)
-#. i18n: ectx: property (text), widget (QToolButton, mergeCells)
-#. i18n: ectx: property (text), widget (QToolButton, splitCells)
 #. i18n: ectx: property (text), widget (FormattingButton, bulletListButton)
 #. i18n: ectx: property (text), widget (FormattingButton, numberedListButton)
 #. i18n: ectx: property (text), widget (QuickTableButton, quickTable)
+#. i18n: ectx: property (text), widget (QToolButton, mergeCells)
+#. i18n: ectx: property (text), widget (QToolButton, splitCells)
 #. +> trunk stable
 #: dialogs/ChangeConfigureDialog.ui:106 dialogs/ChangeConfigureDialog.ui:178
 #: dialogs/ChangeConfigureDialog.ui:250 dialogs/FontDecorations.ui:47
@@ -208,8 +204,6 @@ msgstr "Achtergrundklöör"
 #: dialogs/ParagraphDecorations.ui:55 dialogs/SimpleParagraphWidget.ui:37
 #: dialogs/SimpleParagraphWidget.ui:44 dialogs/SimpleParagraphWidget.ui:68
 #: dialogs/SimpleTableWidget.ui:55 dialogs/SimpleTableWidget.ui:62
-#: dialogs/StylesWidget.ui:23 dialogs/StylesWidget.ui:33
-#: dialogs/StylesWidget.ui:56 dialogs/StylesWidget.ui:66
 msgid "..."
 msgstr "..."
 
@@ -317,7 +311,7 @@ msgstr "<b>Tekenstil-Egenschappen</b>"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. +> trunk stable
 #: dialogs/CharacterGeneral.ui:46 dialogs/NewStyleWidget.ui:38
-#: dialogs/ParagraphGeneral.ui:46 dialogs/StylesWidget.cpp:153
+#: dialogs/ParagraphGeneral.ui:46
 msgid "Name:"
 msgstr "Naam:"
 
@@ -471,19 +465,19 @@ msgstr "Fixsöök:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. +> trunk stable
-#: dialogs/NewStyleWidget.ui:51 dialogs/StylesWidget.cpp:156
+#: dialogs/NewStyleWidget.ui:51
 msgid "Type:"
 msgstr "Typ:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, paragraph)
 #. +> trunk stable
-#: dialogs/NewStyleWidget.ui:61 dialogs/StylesWidget.cpp:154
+#: dialogs/NewStyleWidget.ui:61
 msgid "Paragraph style"
 msgstr "Afsnittstil"
 
 #. i18n: ectx: property (text), widget (QRadioButton, character)
 #. +> trunk stable
-#: dialogs/NewStyleWidget.ui:71 dialogs/StylesWidget.cpp:157
+#: dialogs/NewStyleWidget.ui:71
 msgid "Character style"
 msgstr "Tekenstil"
 
@@ -557,10 +551,32 @@ msgstr "Utrichten:"
 msgid "Depth:"
 msgstr "Deepde:"
 
+#. i18n: ectx: property (title), widget (QGroupBox, countersGroupbox)
+#. +> trunk
+#: dialogs/ParagraphBulletsNumbers.ui:100
+msgid "Counters format"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. +> trunk
+#: dialogs/ParagraphBulletsNumbers.ui:106
+#, fuzzy
+#| msgid "List Style:"
+msgid "List depth:"
+msgstr "List-Stil:"
+
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. +> trunk stable
 #: dialogs/ParagraphBulletsNumbers.ui:109
 msgid "Display Levels:"
+msgstr "Dorstellstopen:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#. +> trunk
+#: dialogs/ParagraphBulletsNumbers.ui:26
+#, fuzzy
+#| msgid "Display Levels:"
+msgid "Display"
 msgstr "Dorstellstopen:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
@@ -607,6 +623,12 @@ msgstr "Allgemeen Utsehn"
 #: dialogs/ParagraphGeneral.cpp:64
 msgid "Bullets/Numbers"
 msgstr "Optellpünkt/Tallen"
+
+#. +> trunk
+#: dialogs/ParagraphGeneral.cpp:117
+msgctxt "Inherit style"
+msgid "None"
+msgstr "Keen"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. +> trunk stable
@@ -729,6 +751,14 @@ msgstr "Eerst Reeg:"
 msgid "Auto-infer from text size"
 msgstr "Automaatsch ut de Textgrött raden"
 
+#. i18n: ectx: property (text), widget (QCheckBox, autoTextIndent)
+#. +> trunk
+#: dialogs/ParagraphIndentSpacing.ui:78
+#, fuzzy
+#| msgid "Increase Font Size"
+msgid "Base on text size"
+msgstr "Schriftoort grötter maken"
+
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. +> trunk stable
 #: dialogs/ParagraphIndentSpacing.ui:90
@@ -746,6 +776,14 @@ msgstr " %"
 #. +> trunk stable
 #: dialogs/ParagraphIndentSpacing.ui:151
 msgid "Use Font Metrics:"
+msgstr "Schriftoort-Egenschappen bruken:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, useFont)
+#. +> trunk
+#: dialogs/ParagraphIndentSpacing.ui:243
+#, fuzzy
+#| msgid "Use Font Metrics:"
+msgid "Use Font Metrics"
 msgstr "Schriftoort-Egenschappen bruken:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
@@ -859,6 +897,18 @@ msgctxt "Automatic direction detection"
 msgid "Auto"
 msgstr "Automaatsch"
 
+#. i18n: ectx: property (text), widget (QToolButton, paragButton)
+#. +> trunk
+#: dialogs/StyleManager.ui:29
+msgid "P"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, charButton)
+#. +> trunk
+#: dialogs/StyleManager.ui:45
+msgid "C"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QPushButton, bNew)
 #. +> trunk stable
 #: dialogs/StyleManager.ui:50
@@ -891,44 +941,6 @@ msgstr ""
 "\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Warrt en Stil ännert, deit dit all vörhannen Text nieg formateren, de vördem mit en anner Stil formateert wöör. Stilen laat sik mit den Stildocker bruken.</p>"
 "</body></html>"
-
-#. +> trunk stable
-#: dialogs/StylesWidget.cpp:152 dialogs/StylesWidget.cpp:166
-msgid "new style"
-msgstr "Nieg Stil"
-
-#. +> trunk stable
-#: dialogs/StylesWidget.cpp:161
-msgid "Create New Style"
-msgstr "Nieg Stil opstellen"
-
-#. +> trunk stable
-#: dialogs/StylesWidget.cpp:229
-msgid "Edit Paragraph Style"
-msgstr "Afsnittstil bewerken"
-
-#. +> trunk stable
-#: dialogs/StylesWidget.cpp:229
-msgid "Edit Character Style"
-msgstr "Tekenstil bewerken"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, applyStyle)
-#. +> trunk stable
-#: dialogs/StylesWidget.ui:20
-msgid "Apply selected style to text"
-msgstr "Köört Stil för Text bruken"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, modifyStyle)
-#. +> trunk stable
-#: dialogs/StylesWidget.ui:30
-msgid "Show properties"
-msgstr "Egenschappen wiesen"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, newStyle)
-#. +> trunk stable
-#: dialogs/StylesWidget.ui:53
-msgid "Add a new style"
-msgstr "Nieg Stil tofögen"
 
 #. +> trunk stable
 #: dialogs/TableDialog.cpp:27
@@ -1117,6 +1129,11 @@ msgstr "AbjadMinor"
 #: ListItemsHelper.cpp:212
 msgid "ArabicAlphabet"
 msgstr "Araabsch Alfabeet"
+
+#. +> trunk
+#: ReferencesToolFactory.cpp:31
+msgid "References tool"
+msgstr ""
 
 #. +> trunk stable
 #: TextShapeFactory.cpp:43
@@ -1446,37 +1463,37 @@ msgid "Formatting"
 msgstr "Formateren"
 
 #. +> trunk stable
-#: TextTool.cpp:1484
+#: TextTool.cpp:1489
 msgid "Abc"
 msgstr "Abc"
 
 #. +> trunk
-#: TextTool.cpp:1636
+#: TextTool.cpp:1632
 msgid "Character"
 msgstr "Teken"
 
 #. +> trunk
-#: TextTool.cpp:1637
+#: TextTool.cpp:1633
 msgid "Paragraph"
 msgstr "Afsnitt"
 
 #. +> trunk stable
-#: TextTool.cpp:1638
+#: TextTool.cpp:1634
 msgid "Styles"
 msgstr "Stilen"
 
 #. +> trunk
-#: TextTool.cpp:1639
+#: TextTool.cpp:1635
 msgid "Table"
 msgstr "Tabell"
 
 #. +> trunk stable
-#: TextTool.cpp:2001 TextTool.cpp:2006
+#: TextTool.cpp:1997 TextTool.cpp:2002
 msgid "Autocorrection"
 msgstr "Autom. Korrektuur"
 
 #. +> trunk stable
-#: TextTool.cpp:2280
+#: TextTool.cpp:2276
 #, kde-format
 msgid ""
 "This link points to the program or script '%1'.\n"
@@ -1486,7 +1503,7 @@ msgstr ""
 "Bööshaftig Programmen köönt Dien Reekner schaden. Wullt Du dit Programm redig utföhren?"
 
 #. +> trunk stable
-#: TextTool.cpp:2285
+#: TextTool.cpp:2281
 msgid "Open Link?"
 msgstr "Link opmaken?"
 
@@ -1506,6 +1523,49 @@ msgstr "List-Stil:"
 #: dialogs/SimpleStyleWidget.ui:193
 msgid "Apply again"
 msgstr "Nochmaal anwennen"
+
+#. +> trunk
+#: dialogs/StyleManager.cpp:102
+msgid "Document defaults"
+msgstr ""
+
+#. +> trunk stable
+#: dialogs/StylesWidget.cpp:187 dialogs/StylesWidget.cpp:201
+msgid "new style"
+msgstr "Nieg Stil"
+
+#. +> trunk stable
+#: dialogs/StylesWidget.cpp:196
+msgid "Create New Style"
+msgstr "Nieg Stil opstellen"
+
+#. +> trunk stable
+#: dialogs/StylesWidget.cpp:267
+msgid "Edit Paragraph Style"
+msgstr "Afsnittstil bewerken"
+
+#. +> trunk stable
+#: dialogs/StylesWidget.cpp:267
+msgid "Edit Character Style"
+msgstr "Tekenstil bewerken"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, applyStyle)
+#. +> trunk stable
+#: dialogs/StylesWidget.ui:23
+msgid "Apply selected style to text"
+msgstr "Köört Stil för Text bruken"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, modifyStyle)
+#. +> trunk stable
+#: dialogs/StylesWidget.ui:33
+msgid "Show properties"
+msgstr "Egenschappen wiesen"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, newStyle)
+#. +> trunk stable
+#: dialogs/StylesWidget.ui:56
+msgid "Add a new style"
+msgstr "Nieg Stil tofögen"
 
 #~ msgid "Paragraph Settings\n"
 #~ msgstr "Afsnittinstellen\n"
@@ -1530,10 +1590,6 @@ msgstr "Nochmaal anwennen"
 
 #~ msgid "Language"
 #~ msgstr "Spraak"
-
-#~ msgctxt "Inherit style"
-#~ msgid "None"
-#~ msgstr "Keen"
 
 #~ msgid "Indent:"
 #~ msgstr "Inrücken:"
