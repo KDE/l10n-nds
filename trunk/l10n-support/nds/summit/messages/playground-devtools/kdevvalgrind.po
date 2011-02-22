@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevvalgrind\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-12-13 09:29+0100\n"
+"POT-Creation-Date: 2011-02-22 10:12+0100\n"
 "PO-Revision-Date: 2009-07-23 01:46+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -42,74 +42,48 @@ msgctxt "@title:menu"
 msgid "Profile Launch (Valgrind)"
 msgstr "Start profileren (Valgrind)"
 
-#. +> trunk
-#: valgrindconfig.cpp:98
-#, fuzzy
-#| msgid "Profile application with valgrind"
-msgid "Profile application with Valgrind"
-msgstr "Programm mit Valgrind profileren"
-
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. +> trunk
-#: valgrindconfig.cpp:108 valgrindconfig.cpp:181 valgrindconfig.ui:17
-#: valgrindplugin.cpp:65 valgrindplugin.cpp:100
+#: valgrindconfig.ui:17 valgrindconfigpage.cpp:97 valgrindgenericconfig.ui:17
+#: valgrindlauncher.cpp:109 valgrindplugin.cpp:67 valgrindplugin.cpp:102
 msgid "Valgrind"
 msgstr "Valgrind"
 
-#. +> trunk
-#: valgrindconfig.cpp:212 valgrindplugin.cpp:113
-msgid "Cache Simulator"
-msgstr "Twischenspiekersimuleren"
-
-#. +> trunk
-#: valgrindconfig.cpp:240 valgrindplugin.cpp:107
-msgid "Call Tracing"
-msgstr "Oprööpbeluern"
-
-#. +> trunk
-#: valgrindconfig.cpp:267 valgrindplugin.cpp:110
-msgid "Race Conditions"
-msgstr "Gauigkeitskonkurrangs"
-
-#. +> trunk
-#: valgrindconfig.cpp:294 valgrindplugin.cpp:104
-msgid "Memory Check"
-msgstr "Spiekerprööv"
-
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. +> trunk
-#: valgrindconfig.ui:23
+#: valgrindconfig.ui:23 valgrindgenericconfig.ui:23
 msgid "Extra &Parameters:"
 msgstr "&Parameters bito:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. +> trunk
-#: valgrindconfig.ui:36
+#: valgrindconfig.ui:36 valgrindgenericconfig.ui:36
 msgid "Display stack to &depth:"
 msgstr "Stapel wiesen bet op &Deepde:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. +> trunk
-#: valgrindconfig.ui:56
+#: valgrindconfig.ui:56 valgrindgenericconfig.ui:56
 msgid "Maximum &frame stack size:"
 msgstr "Hööchst &Rahmenstapel-Grött:"
 
 #. i18n: ectx: property (suffix), widget (KIntNumInput, maxStackFrame)
 #. i18n: ectx: property (suffix), widget (KIntSpinBox, freeBlockList)
+#. i18n: ectx: property (suffix), widget (KIntNumInput, maxStackSize)
 #. +> trunk
-#: valgrindconfig.ui:75 valgrindconfig.ui:184
+#: valgrindconfig.ui:75 valgrindconfig.ui:184 valgrindgenericconfig.ui:75
 msgid " bytes"
 msgstr " Bytes"
 
 #. i18n: ectx: property (text), widget (QCheckBox, limitErrors)
 #. +> trunk
-#: valgrindconfig.ui:82
+#: valgrindconfig.ui:82 valgrindgenericconfig.ui:131
 msgid "Limit &identical error display"
 msgstr "Wiesen vun &liek Fehlers ingrenzen"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #. +> trunk
-#: valgrindconfig.ui:89
+#: valgrindconfig.ui:89 valgrindgenericconfig.ui:82
 msgid "Valgrind Executable:"
 msgstr "Utföhrbor Valgrind-Programm:"
 
@@ -245,145 +219,159 @@ msgstr "Utföhrsträng"
 msgid "All"
 msgstr "All"
 
+#. i18n: ectx: property (text), widget (QLabel, label_4)
 #. +> trunk
-#: valgrindjob.cpp:96
+#: valgrindgenericconfig.ui:124
+#, fuzzy
+#| msgid "Valgrind"
+msgid "Valgrind tool:"
+msgstr "Valgrind"
+
+#. +> trunk
+#: valgrindgenericconfigpage.cpp:88
+msgid "Global settings"
+msgstr ""
+
+#. +> trunk
+#: valgrindjob.cpp:107
 #, kde-format
 msgid "No environment group specified, looks like a broken configuration, please check run configuration '%1'. Using default environment group."
 msgstr "Keen Ümgevenkoppel angeven, lett as en schaadhaftig Instellen. Prööv bitte de Utföhr-Instellen \"%1\". De Standard-Ümgevenkoppel warrt ansteed bruukt."
 
 #. +> trunk
-#: valgrindjob.cpp:211
+#: valgrindjob.cpp:227
 #, kde-format
 msgid "Socket error while communicating with valgrind: \"%1\""
 msgstr "Socket-Fehler bi't Snacken mit Valgrind: \"%1\""
 
 #. +> trunk
-#: valgrindjob.cpp:212
+#: valgrindjob.cpp:228
 msgid "Valgrind communication error"
 msgstr "Valgrind-Kommunikatschoonfehler"
 
 #. +> trunk
-#: valgrindjob.cpp:224
+#: valgrindjob.cpp:240
 #, fuzzy, kde-format
 #| msgid "Failed to start valgrind from \"%1.\""
 msgid "Failed to start valgrind from \"%1\"."
 msgstr "\"valgrind\" lett sik nich vun \"%1\" opropen."
 
 #. +> trunk
-#: valgrindjob.cpp:224
+#: valgrindjob.cpp:240
 msgid "Failed to start Valgrind"
 msgstr "Valgrind lett sik nich opropen"
 
 #. +> trunk
-#: valgrindjob.cpp:227
+#: valgrindjob.cpp:243
 msgid "Valgrind crashed."
 msgstr "Valgrind is afstört."
 
 #. +> trunk
-#: valgrindjob.cpp:227 valgrindjob.cpp:230 valgrindjob.cpp:233
-#: valgrindjob.cpp:236 valgrindjob.cpp:239 valgrindmodel.cpp:554
+#: valgrindjob.cpp:243 valgrindjob.cpp:246 valgrindjob.cpp:249
+#: valgrindjob.cpp:252 valgrindjob.cpp:255 valgrindparser.cpp:157
 msgid "Valgrind Error"
 msgstr "Valgrind-Fehler"
 
 #. +> trunk
-#: valgrindjob.cpp:230
+#: valgrindjob.cpp:246
 msgid "Valgrind process timed out."
 msgstr "De Tiet för den Valgrind-Perzess is aflopen."
 
 #. +> trunk
-#: valgrindjob.cpp:233
+#: valgrindjob.cpp:249
 msgid "Write to Valgrind process failed."
 msgstr "Schrieven na den Valgrind-Perzess is fehlslaan."
 
 #. +> trunk
-#: valgrindjob.cpp:236
+#: valgrindjob.cpp:252
 msgid "Read from Valgrind process failed."
 msgstr "Lesen vun den Valgrind-Perzess is fehlslaan."
 
 #. +> trunk
-#: valgrindjob.cpp:239
+#: valgrindjob.cpp:255
 msgid "Unknown Valgrind process error."
 msgstr "Nich begäng Valgrind-Perzessfehler"
 
 #. +> trunk
-#: valgrindmodel.cpp:286
+#: valgrindlauncher.cpp:99
+#, fuzzy
+#| msgid "Profile application with valgrind"
+msgid "Profile application with Valgrind"
+msgstr "Programm mit Valgrind profileren"
+
+#. +> trunk
+#: valgrindmodel.cpp:72
 #, kde-format
 msgid "at: %1"
 msgstr "bi: %1"
 
 #. +> trunk
-#: valgrindmodel.cpp:288
+#: valgrindmodel.cpp:74
 #, kde-format
 msgid "by: %1"
 msgstr "vun: %1"
 
 #. +> trunk
-#: valgrindmodel.cpp:350
+#: valgrindmodel.cpp:136
 msgid "Function"
 msgstr "Funkschoon"
 
 #. +> trunk
-#: valgrindmodel.cpp:352
+#: valgrindmodel.cpp:138
 msgid "Source"
 msgstr "Born"
 
 #. +> trunk
-#: valgrindmodel.cpp:354
+#: valgrindmodel.cpp:140
 msgid "Object"
 msgstr "Objekt"
 
 #. +> trunk
-#: valgrindmodel.cpp:554
+#: valgrindparser.cpp:157
 #, kde-format
 msgid "Valgrind XML Parsing: error at line %1, column %2: %3"
 msgstr "Valgrind: XML-Inleesfehler op Reeg %1, Striep %2: %3"
 
 #. +> trunk
-#: valgrindplugin.cpp:65
+#: valgrindplugin.cpp:67
 #, fuzzy
 #| msgid "Support for running valgrind"
 msgid "Support for running Valgrind"
 msgstr "Ünnerstütten för't Utföhren vun Valgrind"
 
 #. +> trunk
-#: valgrindplugin.cpp:105
-msgid "Launches the currently selected launch configuration with the Valgrind Memory Checker (memcheck)."
-msgstr "Den opstunns utsöchten Oproop-Instellensett mit de Valgrind-Spiekerprööv (memcheck) opropen"
+#: valgrindplugin.cpp:107
+#, fuzzy
+#| msgid "Valgrind (Callgrind)"
+msgid "Valgrind ($CurrentTool?)"
+msgstr "Valgrind (Callgrind)"
 
 #. +> trunk
 #: valgrindplugin.cpp:108
-msgid "Launches the currently selected launch configuration with the Valgrind Call Tracing (callgrind)."
-msgstr "Den opstunns utsöchten Oproop-Instellensett mit de Valgrind-Oproopbeluern (callgrind) opropen"
+#, fuzzy
+#| msgid "Launches the currently selected launch configuration with the Valgrind Memory Checker (memcheck)."
+msgid "Launches the currently selected launch configuration with the Valgrind presets"
+msgstr "Den opstunns utsöchten Oproop-Instellensett mit de Valgrind-Spiekerprööv (memcheck) opropen"
 
 #. +> trunk
-#: valgrindplugin.cpp:111
-msgid "Launches the currently selected launch configuration with the Valgrind Race Conditions Checker (helgrind)."
-msgstr "Den opstunns utsöchten Oproop-Instellensett mit de Valgrind-Gauigkeitskonkurrangsprööv (helgrind) opropen"
-
-#. +> trunk
-#: valgrindplugin.cpp:114
-msgid "Launches the currently selected launch configuration with the Valgrind Cache Simulator (cachegrind)."
-msgstr "Den opstunns utsöchten Oproop-Instellensett mit de Valgrind-Twischenspiekersimuleren (cachegrind) opropen"
-
-#. +> trunk
-#: valgrindplugin.cpp:176
+#: valgrindplugin.cpp:149
 msgid "Open Valgrind Output"
 msgstr "Valgrind-Utgaav opmaken"
 
 #. +> trunk
-#: valgrindplugin.cpp:182
+#: valgrindplugin.cpp:155
 #, fuzzy, kde-format
 #| msgid "Could not open valgrind output: %1"
 msgid "Could not open Valgrind output: %1"
 msgstr "Valgrind-Utgaav lett sik nich opmaken: %1"
 
 #. +> trunk
-#: valgrindwidget.cpp:35
+#: valgrindwidget.cpp:36
 msgid "Valgrind Output"
 msgstr "Valgrind-Mellen"
 
 #. +> trunk
-#: valgrindwidget.cpp:37
+#: valgrindwidget.cpp:38
 msgid ""
 "<b>Valgrind</b>"
 "<p>Shows the output of valgrind. Valgrind detects:<br/>"
@@ -406,6 +394,27 @@ msgstr ""
 "Övergaav vun nich torechtmaakt un/oder nich adresseerbor Spieker na Systeem-Oprööp<br/>"
 "nich tosamenhören Bruuk vun malloc/new/new [] un free/delete/delete [];<br/>"
 "en Reeg Verstööt gegen de Posix-pthread-API.</p>"
+
+#~ msgid "Cache Simulator"
+#~ msgstr "Twischenspiekersimuleren"
+
+#~ msgid "Call Tracing"
+#~ msgstr "Oprööpbeluern"
+
+#~ msgid "Race Conditions"
+#~ msgstr "Gauigkeitskonkurrangs"
+
+#~ msgid "Memory Check"
+#~ msgstr "Spiekerprööv"
+
+#~ msgid "Launches the currently selected launch configuration with the Valgrind Call Tracing (callgrind)."
+#~ msgstr "Den opstunns utsöchten Oproop-Instellensett mit de Valgrind-Oproopbeluern (callgrind) opropen"
+
+#~ msgid "Launches the currently selected launch configuration with the Valgrind Race Conditions Checker (helgrind)."
+#~ msgstr "Den opstunns utsöchten Oproop-Instellensett mit de Valgrind-Gauigkeitskonkurrangsprööv (helgrind) opropen"
+
+#~ msgid "Launches the currently selected launch configuration with the Valgrind Cache Simulator (cachegrind)."
+#~ msgstr "Den opstunns utsöchten Oproop-Instellensett mit de Valgrind-Twischenspiekersimuleren (cachegrind) opropen"
 
 #~ msgid "&Valgrind Memory Leak Check"
 #~ msgstr "&Valgrind-Spiekerleckprööv"
@@ -446,9 +455,6 @@ msgstr ""
 
 #~ msgid "Valgrind (Memcheck)"
 #~ msgstr "Valgrind (Spiekerprööv)"
-
-#~ msgid "Valgrind (Callgrind)"
-#~ msgstr "Valgrind (Callgrind)"
 
 #~ msgid "Valgrind (Cachegrind)"
 #~ msgstr "Valgrind (Cachegrind)"
