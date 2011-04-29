@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_comic\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-04-28 04:12+0200\n"
+"POT-Creation-Date: 2011-04-29 04:11+0200\n"
 "PO-Revision-Date: 2011-01-02 08:32+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -19,53 +19,96 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Language: nds\n"
 
-#: comic.cpp:80
+#: comicarchivedialog.cpp:32
+#, kde-format
+msgid "Create %1 Comic Book Archive"
+msgstr ""
+
+#: comicarchivejob.cpp:145
+msgid "No zip file is existing, aborting."
+msgstr ""
+
+#: comicarchivejob.cpp:172
+#, kde-format
+msgid "An error happened for identifier %1."
+msgstr ""
+
+#: comicarchivejob.cpp:245
+#, kde-format
+msgid "Failed creating the file with identifier %1."
+msgstr ""
+
+#: comicarchivejob.cpp:347
+msgid "Creating Comic Book Archive"
+msgstr ""
+
+#: comicarchivejob.cpp:375
+msgid "Failed adding a file to the archive."
+msgstr ""
+
+#: comicarchivejob.cpp:392
+msgid "Could not create the archive at the specified location."
+msgstr ""
+
+#. i18n: file: comicSettings.ui:32
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: comicarchivejob.cpp:403 comic.cpp:978 rc.cpp:102
+msgid "Comic"
+msgstr "Comic"
+
+#: comic.cpp:85 comic.cpp:751
 msgid "Go to Strip"
 msgstr "Na Reeg gahn"
 
-#: comic.cpp:95
+#: comic.cpp:100
 msgid "&Strip Number:"
 msgstr "&Reegnummer:"
 
-#: comic.cpp:185
+#: comic.cpp:190
 msgid "Jump to &first Strip"
 msgstr "Na &eerst Reeg jumpen"
 
-#: comic.cpp:189
+#: comic.cpp:194
 msgid "Jump to &current Strip"
 msgstr "Na &aktuell Reeg jumpen"
 
-#: comic.cpp:193 comic.cpp:274
+#: comic.cpp:198 comic.cpp:285
 msgid "Jump to Strip ..."
 msgstr "Jump na Reeg..."
 
-#: comic.cpp:198
+#: comic.cpp:203
 msgid "Visit the shop &website"
 msgstr "Na de Inkööp-&Nettsiet gahn"
 
-#: comic.cpp:205
+#: comic.cpp:210
 msgid "&Save Comic As..."
 msgstr "Comic &sekern as..."
 
-#: comic.cpp:210
+#: comic.cpp:216
+#, fuzzy
+#| msgid "&Save Comic As..."
+msgid "&Create Comic Book Archive..."
+msgstr "Comic &sekern as..."
+
+#: comic.cpp:221
 msgctxt "@option:check Context menu of comic image"
 msgid "&Actual Size"
 msgstr "&Orginaalgrött"
 
-#: comic.cpp:216
+#: comic.cpp:227
 msgctxt "@option:check Context menu of comic image"
 msgid "Store current &Position"
 msgstr "Aktuell &Positschoon sekern"
 
-#: comic.cpp:285
+#: comic.cpp:296
 msgid "Visit the comic website"
 msgstr "Na de Comic-Nettsiet gahn"
 
-#: comic.cpp:363
+#: comic.cpp:374
 msgid "Getting comic strip failed:"
 msgstr "Comic lett sik nich halen:"
 
-#: comic.cpp:365
+#: comic.cpp:376
 msgid ""
 "Maybe there is no Internet connection.\n"
 "Maybe the comic plugin is broken.\n"
@@ -77,7 +120,7 @@ msgstr ""
 "Oder för disse(n) Dag/Nummer/Tekenkeed gifft dat gor keen Comic, un en anner "
 "löppt villicht."
 
-#: comic.cpp:373
+#: comic.cpp:384
 msgid ""
 "\n"
 "\n"
@@ -88,31 +131,37 @@ msgstr ""
 "Söök den verleden Comic ut, wenn Du na den tolest twischenspiekert Comic "
 "gahn wullt."
 
-#: comic.cpp:419
+#: comic.cpp:438
 #, kde-format
 msgctxt "an abbreviation for Number"
 msgid "# %1"
 msgstr "Nr. %1"
 
-#: comic.cpp:506
+#: comic.cpp:527
 msgid "General"
 msgstr "Allgemeen"
 
-#: comic.cpp:507
+#: comic.cpp:528
 msgid "Appearance"
 msgstr "Utsehn"
 
-#: comic.cpp:508
+#: comic.cpp:529
 msgid "Advanced"
 msgstr "Verwiedert"
 
-#. i18n: file: comicSettings.ui:32
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: comic.cpp:921 rc.cpp:54
-msgid "Comic"
-msgstr "Comic"
+#: comic.cpp:751
+#, fuzzy
+#| msgid "Show comic &identifier:"
+msgid "Strip identifier:"
+msgstr "Comic-&Beteker wiesen:"
 
-#: comic.cpp:1049
+#: comic.cpp:855
+#, fuzzy
+#| msgid "Getting comic strip failed:"
+msgid "Archiving comic failed"
+msgstr "Comic lett sik nich halen:"
+
+#: comic.cpp:1106
 msgid ""
 "Show at actual size in a different view.  Alternatively, click with the "
 "middle mouse button on the comic."
@@ -230,33 +279,111 @@ msgctxt "Tabbar will show both text and icons"
 msgid "Text and Icons"
 msgstr "Text un Lüttbiller"
 
+#. i18n: file: comicarchivedialog.ui:23
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:54
+msgid "Destination:"
+msgstr ""
+
+#. i18n: file: comicarchivedialog.ui:30
+#. i18n: ectx: property (filter), widget (KUrlRequester, dest)
+#: rc.cpp:57
+msgid "*.cbz|Comic Book Archive (Zip)"
+msgstr ""
+
+#. i18n: file: comicarchivedialog.ui:56
+#. i18n: ectx: property (statusTip), widget (QLabel, label)
+#: rc.cpp:60
+msgid "The range of comic strips to archive."
+msgstr ""
+
+#. i18n: file: comicarchivedialog.ui:59
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:63
+msgid "Range:"
+msgstr ""
+
+#. i18n: file: comicarchivedialog.ui:67
+#. i18n: ectx: property (text), item, widget (KComboBox, archiveType)
+#: rc.cpp:66
+msgid "All"
+msgstr ""
+
+#. i18n: file: comicarchivedialog.ui:72
+#. i18n: ectx: property (text), item, widget (KComboBox, archiveType)
+#: rc.cpp:69
+msgid "From beginning to ..."
+msgstr ""
+
+#. i18n: file: comicarchivedialog.ui:77
+#. i18n: ectx: property (text), item, widget (KComboBox, archiveType)
+#: rc.cpp:72
+msgid "From end to ..."
+msgstr ""
+
+#. i18n: file: comicarchivedialog.ui:82
+#. i18n: ectx: property (text), item, widget (KComboBox, archiveType)
+#: rc.cpp:75
+msgid "Manual range"
+msgstr ""
+
+#. i18n: file: comicarchivedialog.ui:100
+#. i18n: ectx: property (text), widget (QLabel, fromDateLabel)
+#. i18n: file: comicarchivedialog.ui:141
+#. i18n: ectx: property (text), widget (QLabel, fromNumberLabel)
+#. i18n: file: comicarchivedialog.ui:176
+#. i18n: ectx: property (text), widget (QLabel, fromStringLabel)
+#: rc.cpp:78 rc.cpp:90 rc.cpp:96
+msgctxt "in a range: from to"
+msgid "From:"
+msgstr ""
+
+#. i18n: file: comicarchivedialog.ui:107
+#. i18n: ectx: property (text), widget (QLabel, toDateLabel)
+#. i18n: file: comicarchivedialog.ui:148
+#. i18n: ectx: property (text), widget (QLabel, toNumberLabel)
+#. i18n: file: comicarchivedialog.ui:183
+#. i18n: ectx: property (text), widget (QLabel, toStringLabel)
+#: rc.cpp:81 rc.cpp:93 rc.cpp:99
+msgctxt "in a range: from to"
+msgid "To:"
+msgstr ""
+
+#. i18n: file: comicarchivedialog.ui:114
+#. i18n: ectx: property (displayFormat), widget (QDateEdit, fromDate)
+#. i18n: file: comicarchivedialog.ui:124
+#. i18n: ectx: property (displayFormat), widget (QDateEdit, toDate)
+#: rc.cpp:84 rc.cpp:87
+msgid "dd.MM.yyyy"
+msgstr ""
+
 #. i18n: file: comicSettings.ui:97
 #. i18n: ectx: property (toolTip), widget (QPushButton, pushButton_GHNS)
-#: rc.cpp:57
+#: rc.cpp:105
 msgid "Download new comics"
 msgstr "Nieg Comics daalladen"
 
 #. i18n: file: comicSettings.ui:100
 #. i18n: ectx: property (text), widget (QPushButton, pushButton_GHNS)
-#: rc.cpp:60
+#: rc.cpp:108
 msgid "&Get New Comics..."
 msgstr "Nieg Comics &halen..."
 
 #. i18n: file: comicSettings.ui:128
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox_middle)
-#: rc.cpp:63
+#: rc.cpp:111
 msgid "&Middle-click on the comic to show it at its original size"
 msgstr "&Middelklick op den Comic, wenn Du em in Orginaalgrött ankieken wullt."
 
 #. i18n: file: comicSettings.ui:144
 #. i18n: ectx: property (text), widget (QLabel, label_13)
-#: rc.cpp:66
+#: rc.cpp:114
 msgid "Update"
 msgstr ""
 
 #. i18n: file: comicSettings.ui:156
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:69
+#: rc.cpp:117
 #, fuzzy
 #| msgid "Automatically &switch tabs:"
 msgid "Automatically update comic plugins:"
@@ -264,19 +391,19 @@ msgstr "Paneels automaatsch &wesseln:"
 
 #. i18n: file: comicSettings.ui:172
 #. i18n: ectx: property (suffix), widget (KIntNumInput, updateIntervall)
-#: rc.cpp:72
+#: rc.cpp:120
 msgid " days"
 msgstr ""
 
 #. i18n: file: comicSettings.ui:175
 #. i18n: ectx: property (prefix), widget (KIntNumInput, updateIntervall)
-#: rc.cpp:75
+#: rc.cpp:123
 msgid "every "
 msgstr ""
 
 #. i18n: file: comicSettings.ui:178
 #. i18n: ectx: property (specialValueText), widget (KIntNumInput, updateIntervall)
-#: rc.cpp:78
+#: rc.cpp:126
 msgid "never"
 msgstr ""
 
