@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: smb4k\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-04-05 10:52+0200\n"
+"POT-Creation-Date: 2011-04-27 10:58+0200\n"
 "PO-Revision-Date: 2010-11-02 05:44+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -2318,7 +2318,7 @@ msgid "Unmount all mounted shares when the user disconnects from the network or 
 msgstr "Afhangen all Bruker Afkoppelt oder steiht an bet a disse Toll mit Utsetten un bet Rin disse Utsetten."
 
 #. +> trunk
-#: core/smb4kbookmarkhandler.cpp:290
+#: core/smb4kbookmarkhandler.cpp:291
 #, kde-format
 msgid "%1 has an unsupported format version."
 msgstr ""
@@ -2379,8 +2379,8 @@ msgid "Login:"
 msgstr "Brukernaam:"
 
 #. +> trunk
-#: core/smb4kbookmarkhandler_p.cpp:513 core/smb4kprint_p.cpp:399
-#: smb4k/dialogs/smb4kmountdialog.cpp:105
+#: core/smb4kbookmarkhandler_p.cpp:513 core/smb4kmounter_p.cpp:1139
+#: core/smb4kprint_p.cpp:399
 msgid "IP Address:"
 msgstr "IP-Adress:"
 
@@ -2392,60 +2392,106 @@ msgid "Group name:"
 msgstr "Koppel-Nummer:"
 
 #. +> trunk
-#: core/smb4khomesshareshandler.cpp:120
+#: core/smb4khomesshareshandler.cpp:151 core/smb4ksambaoptionshandler.cpp:147
+#, fuzzy, kde-format
+msgid "%1 is not a version 1.0 file."
+msgstr "is nich a Verschoon Datei."
+
+#. +> trunk
+#: core/smb4khomesshareshandler_p.cpp:68
 msgid "Specify User"
 msgstr "Bruker angeven"
 
 #. +> trunk
-#: core/smb4khomesshareshandler.cpp:123
+#: core/smb4khomesshareshandler_p.cpp:71
 #: smb4k/configdlg/smb4kauthoptions.cpp:161
 #: smb4k/configdlg/smb4ksambaoptions.cpp:710
 msgid "Clear List"
 msgstr "List leddig maken"
 
 #. +> trunk
-#: core/smb4khomesshareshandler.cpp:139
+#: core/smb4khomesshareshandler_p.cpp:115
 msgid "Please specify a username."
 msgstr "Bitte en Brukernaam angeven."
 
 #. +> trunk
-#: core/smb4khomesshareshandler.cpp:141
+#: core/smb4khomesshareshandler_p.cpp:130
 msgid "User:"
 msgstr "Bruker:"
 
 #. +> trunk
-#: core/smb4khomesshareshandler.cpp:397 core/smb4ksambaoptionshandler.cpp:147
-#, fuzzy, kde-format
-msgid "%1 is not a version 1.0 file."
-msgstr "is nich a Verschoon Datei."
-
-#. +> trunk
-#: core/smb4kmounter.cpp:1662
+#: core/smb4kmounter_p.cpp:1069
 #, fuzzy
-msgid "<qt>Do you really want to force the unmounting of this share?</qt>"
-msgstr "<qt> bet Verdwingen vun disse</qt>"
+msgid "Mount Share"
+msgstr "Freegaven inhangen"
 
 #. +> trunk
-#: core/smb4knotification.cpp:70
+#: core/smb4kmounter_p.cpp:1114
+msgid "Enter the location (UNC address) and optionally the IP address and workgroup to mount a share."
+msgstr ""
+
+#. +> trunk
+#: core/smb4kmounter_p.cpp:1128 core/smb4kprint_p.cpp:397
+#: smb4k/dialogs/smb4kcustomoptionsdialog.cpp:137
+#: smb4k/dialogs/smb4kcustomoptionsdialog.cpp:521
+#, fuzzy
+#| msgid "IP Address:"
+msgid "UNC Address:"
+msgstr "UNC-Adress:"
+
+#. +> trunk
+#: core/smb4kmounter_p.cpp:1130
+#, fuzzy
+msgid "The Uniform Naming Convention (UNC) address describes the location of the share. It has the following syntax: //[USER@]HOST/SHARE. The username is optional."
+msgstr "vun is nich kiekwark."
+
+#. +> trunk
+#: core/smb4kmounter_p.cpp:1141
+msgid "The Internet Protocol (IP) address identifies the host in the network and indicates where it is. It has two valid formats, the one known as IP version 4 (e.g. 192.168.2.11) and the version 6 format (e.g. 2001:0db8:85a3:08d3:1319:8a2e:0370:7334)."
+msgstr ""
+
+#. +> trunk
+#: core/smb4kmounter_p.cpp:1150 core/smb4kprint_p.cpp:403
+msgid "Workgroup:"
+msgstr "Arbeidkoppel:"
+
+#. +> trunk
+#: core/smb4kmounter_p.cpp:1152
+msgid "The workgroup or domain identifies the peer-to-peer computer network the host is located in."
+msgstr ""
+
+#. +> trunk
+#: core/smb4kmounter_p.cpp:1166
+#, fuzzy
+msgid "Add this share to the bookmarks"
+msgstr "Tofögen disse bet Leestekens"
+
+#. +> trunk
+#: core/smb4kmounter_p.cpp:1167
+msgid "If you tick this checkbox, the share will be bookmarked and you can access it e.g. through the \"Bookmarks\" menu entry in the main window."
+msgstr ""
+
+#. +> trunk
+#: core/smb4knotification.cpp:71
 #, fuzzy, kde-format
 msgid "<p>The share <b>%1</b> has been mounted to <b>%2</b>.</p>"
 msgstr "nich."
 
 #. +> trunk
-#: core/smb4knotification.cpp:71
+#: core/smb4knotification.cpp:77
 #, fuzzy
 #| msgid "On"
 msgid "Open"
 msgstr "An"
 
 #. +> trunk
-#: core/smb4knotification.cpp:93
+#: core/smb4knotification.cpp:96
 #, fuzzy, kde-format
 msgid "<p>The share <b>%1</b> has been unmounted from <b>%2</b>.</p>"
 msgstr "nich."
 
 #. +> trunk
-#: core/smb4knotification.cpp:113
+#: core/smb4knotification.cpp:119
 #, fuzzy, kde-format
 msgid "<p>%1 share out of %2 has been mounted.</p>"
 msgid_plural "<p>%1 shares out of %2 have been mounted.</p>"
@@ -2453,13 +2499,13 @@ msgstr[0] "nich."
 msgstr[1] "nich."
 
 #. +> trunk
-#: core/smb4knotification.cpp:122
+#: core/smb4knotification.cpp:130
 #, fuzzy
 msgid "<p>All shares have been mounted.</p>"
 msgstr "nich."
 
 #. +> trunk
-#: core/smb4knotification.cpp:143
+#: core/smb4knotification.cpp:153
 #, fuzzy, kde-format
 msgid "<p>%1 share out of %2 has been unmounted.</p>"
 msgid_plural "<p>%1 shares out of %2 have been unmounted.</p>"
@@ -2467,43 +2513,43 @@ msgstr[0] "nich."
 msgstr[1] "nich."
 
 #. +> trunk
-#: core/smb4knotification.cpp:152
+#: core/smb4knotification.cpp:164
 #, fuzzy
 msgid "<p>All shares have been unmounted.</p>"
 msgstr "nich."
 
 #. +> trunk
-#: core/smb4knotification.cpp:174
+#: core/smb4knotification.cpp:188
 #, fuzzy, kde-format
 #| msgid "Mounting %1 failed."
 msgid "<p>Opening the wallet <b>%1</b> failed.</p>"
 msgstr "Inhangen vun \"%1\" fehlslaan."
 
 #. +> trunk
-#: core/smb4knotification.cpp:185
+#: core/smb4knotification.cpp:201
 msgid "<p>The logins stored in the wallet could not be accessed. There is either no wallet available or it could not be opened.</p>"
 msgstr ""
 
 #. +> trunk
-#: core/smb4knotification.cpp:197
+#: core/smb4knotification.cpp:215
 #, fuzzy, kde-format
 msgid "<p>The mimetype <b>%1</b> is not supported for printing. Please convert the file to PDF or Postscript and try again.</p>"
 msgstr "<qt> is nich Datei bet PostScript oder PDF</qt>"
 
 #. +> trunk
-#: core/smb4knotification.cpp:209
+#: core/smb4knotification.cpp:229
 #, kde-format
 msgid "<p>The bookmark for share <b>%1</b> already exists and will be skipped."
 msgstr ""
 
 #. +> trunk
-#: core/smb4knotification.cpp:220
+#: core/smb4knotification.cpp:242
 #, kde-format
 msgid "<p>The label <b>%1</b> of the bookmark for the share <b>%2</b> is already being used and will automatically be renamed.</p>"
 msgstr ""
 
 #. +> trunk
-#: core/smb4knotification.cpp:240
+#: core/smb4knotification.cpp:263
 #, fuzzy, kde-format
 #| msgid "Retrieving preview from %1..."
 msgid ""
@@ -2512,14 +2558,14 @@ msgid ""
 msgstr "Vöransicht vun %1 warrt haalt..."
 
 #. +> trunk
-#: core/smb4knotification.cpp:244
+#: core/smb4knotification.cpp:267
 #, fuzzy
 #| msgid "Retrieving preview from %1..."
 msgid "<p>Retrieving the list of available domains failed.</p>"
 msgstr "Vöransicht vun %1 warrt haalt..."
 
 #. +> trunk
-#: core/smb4knotification.cpp:262
+#: core/smb4knotification.cpp:285
 #, fuzzy, kde-format
 msgid ""
 "<p>Scanning the defined broadcast area(s) failed:</p>"
@@ -2527,13 +2573,13 @@ msgid ""
 msgstr "Dörkieken:"
 
 #. +> trunk
-#: core/smb4knotification.cpp:266
+#: core/smb4knotification.cpp:289
 #, fuzzy
 msgid "<p>Scanning the defined broadcast area(s) failed.</p>"
 msgstr "Dörkieken:"
 
 #. +> trunk
-#: core/smb4knotification.cpp:284
+#: core/smb4knotification.cpp:307
 #, fuzzy, kde-format
 #| msgid "Retrieving preview from %1..."
 msgid ""
@@ -2542,14 +2588,14 @@ msgid ""
 msgstr "Vöransicht vun %1 warrt haalt..."
 
 #. +> trunk
-#: core/smb4knotification.cpp:288
+#: core/smb4knotification.cpp:311
 #, fuzzy, kde-format
 #| msgid "Retrieving preview from %1..."
 msgid "<p>Retrieving the list of servers belonging to domain <b>%1</b> failed.</p>"
 msgstr "Vöransicht vun %1 warrt haalt..."
 
 #. +> trunk
-#: core/smb4knotification.cpp:306
+#: core/smb4knotification.cpp:329
 #, fuzzy, kde-format
 #| msgid "Retrieving preview from %1..."
 msgid ""
@@ -2558,14 +2604,14 @@ msgid ""
 msgstr "Vöransicht vun %1 warrt haalt..."
 
 #. +> trunk
-#: core/smb4knotification.cpp:310
+#: core/smb4knotification.cpp:333
 #, fuzzy, kde-format
 #| msgid "Retrieving preview from %1..."
 msgid "<p>Retrieving the list of shares from <b>%1</b> failed.</p>"
 msgstr "Vöransicht vun %1 warrt haalt..."
 
 #. +> trunk
-#: core/smb4knotification.cpp:328
+#: core/smb4knotification.cpp:351
 #, fuzzy, kde-format
 #| msgid "Retrieving preview from %1..."
 msgid ""
@@ -2574,14 +2620,14 @@ msgid ""
 msgstr "Vöransicht vun %1 warrt haalt..."
 
 #. +> trunk
-#: core/smb4knotification.cpp:332
+#: core/smb4knotification.cpp:355
 #, fuzzy, kde-format
 #| msgid "Retrieving preview from %1..."
 msgid "<p>Retrieving the preview of <b>%1</b> failed.</p>"
 msgstr "Vöransicht vun %1 warrt haalt..."
 
 #. +> trunk
-#: core/smb4knotification.cpp:350
+#: core/smb4knotification.cpp:373
 #, fuzzy, kde-format
 #| msgid "Mounting %1 failed."
 msgid ""
@@ -2590,14 +2636,14 @@ msgid ""
 msgstr "Inhangen vun \"%1\" fehlslaan."
 
 #. +> trunk
-#: core/smb4knotification.cpp:354
+#: core/smb4knotification.cpp:377
 #, fuzzy, kde-format
 #| msgid "Mounting %1 failed."
 msgid "<p>Mounting the share <b>%1</b> failed.</p>"
 msgstr "Inhangen vun \"%1\" fehlslaan."
 
 #. +> trunk
-#: core/smb4knotification.cpp:372
+#: core/smb4knotification.cpp:395
 #, fuzzy, kde-format
 #| msgid "Mounting %1 failed."
 msgid ""
@@ -2606,20 +2652,20 @@ msgid ""
 msgstr "Inhangen vun \"%1\" fehlslaan."
 
 #. +> trunk
-#: core/smb4knotification.cpp:376
+#: core/smb4knotification.cpp:399
 #, fuzzy, kde-format
 #| msgid "Mounting %1 failed."
 msgid "<p>Unmounting the share <b>%1</b> from <b>%2</b> failed."
 msgstr "Inhangen vun \"%1\" fehlslaan."
 
 #. +> trunk
-#: core/smb4knotification.cpp:391
+#: core/smb4knotification.cpp:414
 #, fuzzy, kde-format
 msgid "<p>You are not allowed to unmount the share <b>%1</b> from <b>%2</b>. It is owned by the user <b>%3</b>.</p>"
 msgstr "<qt> Du nich bet disse is to Bruker</qt>"
 
 #. +> trunk
-#: core/smb4knotification.cpp:406
+#: core/smb4knotification.cpp:429
 #, fuzzy, kde-format
 #| msgid "Mounting %1 failed."
 msgid ""
@@ -2628,14 +2674,14 @@ msgid ""
 msgstr "Inhangen vun \"%1\" fehlslaan."
 
 #. +> trunk
-#: core/smb4knotification.cpp:410
+#: core/smb4knotification.cpp:433
 #, fuzzy, kde-format
 #| msgid "Mounting %1 failed."
 msgid "<p>Printing on printer <b>%1</b> failed.</p>"
 msgstr "Inhangen vun \"%1\" fehlslaan."
 
 #. +> trunk
-#: core/smb4knotification.cpp:428
+#: core/smb4knotification.cpp:451
 #, fuzzy, kde-format
 #| msgid "Mounting %1 failed."
 msgid ""
@@ -2644,14 +2690,14 @@ msgid ""
 msgstr "Inhangen vun \"%1\" fehlslaan."
 
 #. +> trunk
-#: core/smb4knotification.cpp:432
+#: core/smb4knotification.cpp:455
 #, fuzzy, kde-format
 #| msgid "Mounting %1 failed."
 msgid "<p>Synchronizing <b>%1</b> with <b>%2</b> failed.</p>"
 msgstr "Inhangen vun \"%1\" fehlslaan."
 
 #. +> trunk
-#: core/smb4knotification.cpp:450
+#: core/smb4knotification.cpp:473
 #, fuzzy, kde-format
 #| msgid "Retrieving preview from %1..."
 msgid ""
@@ -2660,32 +2706,32 @@ msgid ""
 msgstr "Vöransicht vun %1 warrt haalt..."
 
 #. +> trunk
-#: core/smb4knotification.cpp:454
+#: core/smb4knotification.cpp:477
 #, fuzzy, kde-format
 #| msgid "Retrieving preview from %1..."
 msgid "<p>Searching the network neighborhood for the search item <b>%1</b> failed.</p>"
 msgstr "Vöransicht vun %1 warrt haalt..."
 
 #. +> trunk
-#: core/smb4knotification.cpp:469
+#: core/smb4knotification.cpp:492
 #, fuzzy, kde-format
 msgid "<p>The command <b>%1</b> could not be found.</p>"
 msgstr "<qt> Befehl nich Opdeckt</qt>"
 
 #. +> trunk
-#: core/smb4knotification.cpp:482
+#: core/smb4knotification.cpp:505
 #, fuzzy, kde-format
 msgid "<p>The share <b>%1</b> is a printer and cannot be bookmarked.</p>"
 msgstr "<qt> Druckers</qt>"
 
 #. +> trunk
-#: core/smb4knotification.cpp:498
+#: core/smb4knotification.cpp:521
 #, fuzzy, kde-format
 msgid "<p>The file <b>%1</b> could not be found.</p>"
 msgstr "<qt> Befehl nich Opdeckt</qt>"
 
 #. +> trunk
-#: core/smb4knotification.cpp:512
+#: core/smb4knotification.cpp:535
 #, fuzzy, kde-format
 #| msgid "Mounting %1 failed."
 msgid ""
@@ -2694,14 +2740,14 @@ msgid ""
 msgstr "Inhangen vun \"%1\" fehlslaan."
 
 #. +> trunk
-#: core/smb4knotification.cpp:516
+#: core/smb4knotification.cpp:539
 #, fuzzy, kde-format
 #| msgid "Mounting %1 failed."
 msgid "<p>Opening the file <b>%1</b> failed.</p>"
 msgstr "Inhangen vun \"%1\" fehlslaan."
 
 #. +> trunk
-#: core/smb4knotification.cpp:534 core/smb4knotification.cpp:540
+#: core/smb4knotification.cpp:557 core/smb4knotification.cpp:563
 #, fuzzy, kde-format
 #| msgid "Mounting %1 failed."
 msgid ""
@@ -2710,14 +2756,14 @@ msgid ""
 msgstr "Inhangen vun \"%1\" fehlslaan."
 
 #. +> trunk
-#: core/smb4knotification.cpp:544
+#: core/smb4knotification.cpp:567
 #, fuzzy, kde-format
 #| msgid "Mounting %1 failed."
 msgid "<p>Reading from file <b>%1</b> failed.</p>"
 msgstr "Inhangen vun \"%1\" fehlslaan."
 
 #. +> trunk
-#: core/smb4knotification.cpp:561
+#: core/smb4knotification.cpp:584
 #, kde-format
 msgid ""
 "<p>The following directory could not be created:</p>"
@@ -2725,7 +2771,7 @@ msgid ""
 msgstr ""
 
 #. +> trunk
-#: core/smb4knotification.cpp:572
+#: core/smb4knotification.cpp:595
 #, fuzzy, kde-format
 #| msgid "One or more utility programs could not be found."
 msgid ""
@@ -2734,44 +2780,44 @@ msgid ""
 msgstr "Een oder mehr Hülpprogrammen nich opdeckt."
 
 #. +> trunk
-#: core/smb4knotification.cpp:588
+#: core/smb4knotification.cpp:611
 #, fuzzy, kde-format
 msgid "<p>The process failed to start (error code: <tt>%1</tt>).</p>"
 msgstr "<qt> fehlslaan bet Start Fehler Kode</qt>"
 
 #. +> trunk
-#: core/smb4knotification.cpp:593
+#: core/smb4knotification.cpp:616
 #, fuzzy, kde-format
 msgid "<p>The process crashed (error code: <tt>%1</tt>).</p>"
 msgstr "<qt> afstört Fehler Kode</qt>"
 
 #. +> trunk
-#: core/smb4knotification.cpp:598
+#: core/smb4knotification.cpp:621
 #, fuzzy, kde-format
 msgid "<p>The process timed out (error code: <tt>%1</tt>).</p>"
 msgstr "<qt> Utgaav Fehler Kode</qt>"
 
 #. +> trunk
-#: core/smb4knotification.cpp:603
+#: core/smb4knotification.cpp:626
 #, fuzzy, kde-format
 msgid "<p>Could not write to the process (error code: <tt>%1</tt>).</p>"
 msgstr "<qt> nich Schrieven bet Fehler Kode</qt>"
 
 #. +> trunk
-#: core/smb4knotification.cpp:608
+#: core/smb4knotification.cpp:631
 #, fuzzy, kde-format
 msgid "<p>Could not read from the process (error code: <tt>%1</tt>).</p>"
 msgstr "<qt> nich Lesen vun Fehler Kode</qt>"
 
 #. +> trunk
-#: core/smb4knotification.cpp:614
+#: core/smb4knotification.cpp:637
 #, fuzzy
 msgid "<p>The process reported an unknown error.</p>"
 msgstr "<qt> nich begäng Fehler</qt>"
 
 #. +> trunk
-#: core/smb4knotification.cpp:644 core/smb4knotification.cpp:648
-#: core/smb4knotification.cpp:653
+#: core/smb4knotification.cpp:667 core/smb4knotification.cpp:671
+#: core/smb4knotification.cpp:676
 #, fuzzy, kde-format
 #| msgid "Mounting %1 failed."
 msgid ""
@@ -2780,17 +2826,22 @@ msgid ""
 msgstr "Inhangen vun \"%1\" fehlslaan."
 
 #. +> trunk
-#: core/smb4knotification.cpp:719
+#: core/smb4knotification.cpp:742
 #, fuzzy, kde-format
 msgid "<p>Executing an action with root privileges failed (error code:<tt>%1</tt>).</p>"
 msgstr "<qt> Utgaav Fehler Kode</qt>"
 
 #. +> trunk
-#: core/smb4knotification.cpp:723
+#: core/smb4knotification.cpp:746
 #, fuzzy
 #| msgid "Retrieving preview from %1..."
 msgid "<p>Executing an action with root privileges failed.</p>"
 msgstr "Vöransicht vun %1 warrt haalt..."
+
+#. +> trunk
+#: core/smb4knotification.cpp:762
+msgid "<p>The URL that was passed is invalid.</p>"
+msgstr ""
 
 #. +> trunk
 #: core/smb4kpreviewer_p.cpp:510
@@ -2843,18 +2894,9 @@ msgid "Options"
 msgstr "Optschonen"
 
 #. +> trunk
-#: core/smb4kprint_p.cpp:383 core/smb4kshare.cpp:271
+#: core/smb4kprint_p.cpp:383 core/smb4kshare.cpp:331
 msgid "Printer"
 msgstr "Drucker"
-
-#. +> trunk
-#: core/smb4kprint_p.cpp:397 smb4k/dialogs/smb4kcustomoptionsdialog.cpp:137
-#: smb4k/dialogs/smb4kcustomoptionsdialog.cpp:521
-#: smb4k/dialogs/smb4kmountdialog.cpp:94
-#, fuzzy
-#| msgid "IP Address:"
-msgid "UNC Address:"
-msgstr "UNC-Adress:"
 
 #. +> trunk
 #: core/smb4kprint_p.cpp:401 smb4k/sharesview/smb4kshareslistviewitem.cpp:69
@@ -2863,11 +2905,6 @@ msgstr "UNC-Adress:"
 #: smb4k/tooltips/smb4ktooltip.cpp:772 smb4k/tooltips/smb4ktooltip.cpp:795
 msgid "unknown"
 msgstr "nich begäng"
-
-#. +> trunk
-#: core/smb4kprint_p.cpp:403 smb4k/dialogs/smb4kmountdialog.cpp:116
-msgid "Workgroup:"
-msgstr "Arbeidkoppel:"
 
 #. +> trunk
 #: core/smb4kprint_p.cpp:421
@@ -2895,7 +2932,7 @@ msgid "This is the number of copies you want to print."
 msgstr ""
 
 #. +> trunk
-#: core/smb4kshare.cpp:266
+#: core/smb4kshare.cpp:326
 msgid "Disk"
 msgstr "Fastplaat"
 
@@ -2976,19 +3013,19 @@ msgid "This is the destination directory. It will be updated with the data from 
 msgstr "Opfrischen Dateien Toll Toll Born u."
 
 #. +> trunk
-#: core/smb4kwalletmanager.cpp:564
+#: core/smb4kwalletmanager.cpp:561
 #, fuzzy, kde-format
 msgid "<qt>Please enter a username and a password for the host %1.</qt>"
 msgstr "<qt> a Bruker Naam un a Passwoort för Reekner</qt>"
 
 #. +> trunk
-#: core/smb4kwalletmanager.cpp:569
+#: core/smb4kwalletmanager.cpp:566
 #, fuzzy, kde-format
 msgid "<qt>Please enter a username and a password for the share %1.</qt>"
 msgstr "<qt> a Bruker Naam un a Passwoort för</qt>"
 
 #. +> trunk
-#: core/smb4kwalletmanager.cpp:574
+#: core/smb4kwalletmanager.cpp:571
 #, fuzzy
 msgid "<qt>Please enter a username and a password.</qt>"
 msgstr "<qt> a Bruker Naam un a Passwoort</qt>"
@@ -3033,8 +3070,8 @@ msgstr "Nettwark Naverschap"
 
 #. +> trunk
 #: smb4k/browser/smb4knetworkbrowser.cpp:64
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:282
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:430
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:281
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:429
 #: smb4k/configdlg/smb4kconfigdialog.cpp:148
 msgid "Network"
 msgstr "Nettwark"
@@ -3059,66 +3096,66 @@ msgid "Comment"
 msgstr "Kommentar"
 
 #. +> trunk
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:204
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:530
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:203
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:529
 msgid "Scan Netwo&rk"
 msgstr "&Nettwark dörkieken"
 
 #. +> trunk
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:212
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:211
 msgid "&Abort"
 msgstr "&Afbreken"
 
 #. +> trunk
 #: smb4k/browser/smb4knetworkbrowser_part.cpp:217 smb4k/smb4ksystemtray.cpp:82
-msgid "M&ount Manually"
-msgstr "Vun Hand inhangen"
+msgid "&Open Mount Dialog"
+msgstr ""
 
 #. +> trunk
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:222
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:221
 msgid "Au&thentication"
 msgstr "&Identiteetprööv"
 
 #. +> trunk
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:227
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:226
 msgid "&Custom Options"
 msgstr "Egen Opts&chonen"
 
 #. +> trunk
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:232
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:231
 #: smb4k/sharesview/smb4ksharesview_part.cpp:358
 #: smb4k/smb4kbookmarkmenu.cpp:108
 msgid "Add &Bookmark"
 msgstr "&Leesteken tofögen"
 
 #. +> trunk
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:244
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:243
 msgid "Pre&view"
 msgstr "&Vöransicht"
 
 #. +> trunk
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:249
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:248
 msgid "&Print File"
 msgstr "&Datei drucken"
 
 #. +> trunk
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:254
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:253
 msgid "&Mount"
 msgstr "&Inhangen"
 
 #. +> trunk
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:357
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:356
 msgid "Smb4KNetworkBrowserPart"
 msgstr "Smb4KNetworkBrowserPart"
 
 #. +> trunk
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:359
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:358
 #, fuzzy
 msgid "The network browser KPart of Smb4K"
 msgstr "Dat Nettwarkkieker-Moduul"
 
 #. +> trunk
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:361
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:360
 #: smb4k/search/smb4knetworksearch_part.cpp:200
 #: smb4k/sharesview/smb4ksharesview_part.cpp:551
 #, fuzzy
@@ -3127,46 +3164,46 @@ msgid "\\u00A9 2007-2010, Alexander Reinholdt"
 msgstr "\\u00A9 2007-2009: Alexander Reinholdt"
 
 #. +> trunk
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:454
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:469
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:453
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:468
 msgid "Scan Compute&r"
 msgstr "Reekner dö&rkieken"
 
 #. +> trunk
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:498
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:497
 msgid "Scan Wo&rkgroup"
 msgstr "Arbeidkoppel dö&rkieken"
 
 #. +> trunk
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:1847
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:1832
 #: smb4k/smb4kmainwindow.cpp:761
 #, fuzzy
 msgid "Looking for workgroups and domains..."
 msgstr "Nakieken för un."
 
 #. +> trunk
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:1860
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:1845
 #: smb4k/smb4kmainwindow.cpp:767
 #, fuzzy, kde-format
 msgid "Looking for hosts in domain %1..."
 msgstr "Nakieken för Toll."
 
 #. +> trunk
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:1873
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:1858
 #: smb4k/smb4kmainwindow.cpp:773
 #, fuzzy, kde-format
 msgid "Looking for shares provided by host %1..."
 msgstr "Nakieken för to Reekner."
 
 #. +> trunk
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:1886
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:1871
 #: smb4k/smb4kmainwindow.cpp:779
 #, fuzzy, kde-format
 msgid "Looking for more information about host %1..."
 msgstr "Nakieken för to Reekner."
 
 #. +> trunk
-#: smb4k/browser/smb4knetworkbrowser_part.cpp:1909
+#: smb4k/browser/smb4knetworkbrowser_part.cpp:1894
 #: smb4k/search/smb4knetworksearch_part.cpp:592
 #: smb4k/sharesview/smb4ksharesview_part.cpp:1621
 #: smb4k/smb4kmainwindow.cpp:805 smb4k/smb4kmainwindow.cpp:990
@@ -3732,7 +3769,7 @@ msgstr "Instellen för list:"
 #. +> trunk
 #: smb4k/configdlg/smb4kuserinterfaceoptions.cpp:249
 #: smb4k/configdlg/smb4kuserinterfaceoptions.cpp:284
-#: smb4k/smb4kmainwindow.cpp:337 smb4k/smb4ksystemtray.cpp:81
+#: smb4k/smb4kmainwindow.cpp:337 smb4k/smb4ksystemtray.cpp:80
 msgid "Mounted Shares"
 msgstr "Inhangt Freegaven"
 
@@ -3769,50 +3806,6 @@ msgid "The Uniform Naming Convention (UNC) address describes the location of the
 msgstr ""
 
 #. +> trunk
-#: smb4k/dialogs/smb4kmountdialog.cpp:52
-#, fuzzy
-msgid "Mount Share"
-msgstr "Freegaven inhangen"
-
-#. +> trunk
-#: smb4k/dialogs/smb4kmountdialog.cpp:96
-#, fuzzy
-msgid "The Uniform Naming Convention (UNC) address describes the location of the share. It has the following syntax: //[USER@]HOST/SHARE. The username is optional."
-msgstr "vun is nich kiekwark."
-
-#. +> trunk
-#: smb4k/dialogs/smb4kmountdialog.cpp:107
-msgid "The Internet Protocol (IP) address identifies the host in the network and indicates where it is. It has two valid formats, the one known as IP version 4 (e.g. 192.168.2.11) and the version 6 format (e.g. 2001:0db8:85a3:08d3:1319:8a2e:0370:7334)."
-msgstr ""
-
-#. +> trunk
-#: smb4k/dialogs/smb4kmountdialog.cpp:118
-msgid "The workgroup or domain identifies the peer-to-peer computer network the host is located in."
-msgstr ""
-
-#. +> trunk
-#: smb4k/dialogs/smb4kmountdialog.cpp:125
-#, fuzzy
-msgid "Add this share to the bookmarks"
-msgstr "Tofögen disse bet Leestekens"
-
-#. +> trunk
-#: smb4k/dialogs/smb4kmountdialog.cpp:126
-msgid "If you tick this checkbox, the share will be bookmarked and you can access it e.g. through the \"Bookmarks\" menu entry in the main window."
-msgstr ""
-
-#. +> trunk
-#: smb4k/dialogs/smb4kmountdialog.cpp:221
-msgid "<qt>The UNC address you entered is invalid.</qt>"
-msgstr ""
-
-#. +> trunk
-#: smb4k/dialogs/smb4kmountdialog.cpp:225
-#, fuzzy
-msgid "<qt>The format of the UNC address you entered is not correct. It must have the form //[USER@]HOST/SHARE."
-msgstr "vun is nich kiekwark."
-
-#. +> trunk
 #: smb4k/main.cpp:54
 msgid "The advanced network neighborhood browser for KDE."
 msgstr "Verwiedert Nettwarkkieker för KDE"
@@ -3831,7 +3824,7 @@ msgstr ""
 "\\u00A9 2004-2007: Massimo Callegari"
 
 #. +> trunk
-#: smb4k/main.cpp:65 smb4k/smb4ksystemtray.cpp:67
+#: smb4k/main.cpp:65 smb4k/smb4ksystemtray.cpp:66
 msgid "Smb4K"
 msgstr "Smb4K"
 
@@ -3958,32 +3951,32 @@ msgid "Usage"
 msgstr "Bruuk"
 
 #. +> trunk
-#: smb4k/sharesview/smb4ksharesview_part.cpp:323 smb4k/smb4ksystemtray.cpp:445
+#: smb4k/sharesview/smb4ksharesview_part.cpp:323 smb4k/smb4ksystemtray.cpp:435
 msgid "&Unmount"
 msgstr "&Afhangen"
 
 #. +> trunk
-#: smb4k/sharesview/smb4ksharesview_part.cpp:329 smb4k/smb4ksystemtray.cpp:452
+#: smb4k/sharesview/smb4ksharesview_part.cpp:329 smb4k/smb4ksystemtray.cpp:442
 msgid "&Force Unmounting"
 msgstr "&Afhangen verdwingen"
 
 #. +> trunk
-#: smb4k/sharesview/smb4ksharesview_part.cpp:335 smb4k/smb4ksystemtray.cpp:155
+#: smb4k/sharesview/smb4ksharesview_part.cpp:335 smb4k/smb4ksystemtray.cpp:145
 msgid "U&nmount All"
 msgstr "All afha&ngen"
 
 #. +> trunk
-#: smb4k/sharesview/smb4ksharesview_part.cpp:340 smb4k/smb4ksystemtray.cpp:458
+#: smb4k/sharesview/smb4ksharesview_part.cpp:340 smb4k/smb4ksystemtray.cpp:448
 msgid "S&ynchronize"
 msgstr "S&ynkroniseren"
 
 #. +> trunk
-#: smb4k/sharesview/smb4ksharesview_part.cpp:345 smb4k/smb4ksystemtray.cpp:464
+#: smb4k/sharesview/smb4ksharesview_part.cpp:345 smb4k/smb4ksystemtray.cpp:454
 msgid "Open with Konso&le"
 msgstr "Mit Konsoo&l opmaken"
 
 #. +> trunk
-#: smb4k/sharesview/smb4ksharesview_part.cpp:350 smb4k/smb4ksystemtray.cpp:470
+#: smb4k/sharesview/smb4ksharesview_part.cpp:350 smb4k/smb4ksystemtray.cpp:460
 msgid "Open with F&ile Manager"
 msgstr "Mit Date&ipleger opmaken"
 
@@ -4217,7 +4210,7 @@ msgid "Retrieving preview from %1..."
 msgstr "Vöransicht vun %1 warrt haalt..."
 
 #. +> trunk
-#: smb4k/smb4ksystemtray.cpp:67
+#: smb4k/smb4ksystemtray.cpp:66
 #, fuzzy
 #| msgid "The advanced network neighborhood browser for KDE."
 msgid "Advanced Network Neighborhood Browser"
@@ -4292,6 +4285,17 @@ msgstr ""
 #, kde-format
 msgid "%1 free of %2 (%3 used)"
 msgstr ""
+
+#, fuzzy
+#~ msgid "<qt>Do you really want to force the unmounting of this share?</qt>"
+#~ msgstr "<qt> bet Verdwingen vun disse</qt>"
+
+#~ msgid "M&ount Manually"
+#~ msgstr "Vun Hand inhangen"
+
+#, fuzzy
+#~ msgid "<qt>The format of the UNC address you entered is not correct. It must have the form //[USER@]HOST/SHARE."
+#~ msgstr "vun is nich kiekwark."
 
 #, fuzzy
 #~| msgid "Print File"

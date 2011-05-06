@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tellico\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-04-11 12:04+0200\n"
+"POT-Creation-Date: 2011-04-30 11:38+0200\n"
 "PO-Revision-Date: 2011-01-09 07:01+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -1094,6 +1094,8 @@ msgstr "Ünnertitel"
 
 #. +> trunk
 #: src/collections/bookcollection.cpp:71 src/fetch/freebasefetcher.cpp:401
+#: src/tests/bibliosharefetchertest.cpp:71
+#: src/tests/bibliosharefetchertest.cpp:96
 #: src/translators/alexandriaimporter.cpp:158
 msgid "Hardback"
 msgstr "Fastinband"
@@ -1543,17 +1545,17 @@ msgstr "Album"
 
 #. +> trunk
 #: src/collections/musiccollection.cpp:54
-#: src/collections/videocollection.cpp:54 src/fetch/amazonfetcher.cpp:835
-msgid "DVD"
-msgstr "DVD"
-
-#. +> trunk
-#: src/collections/musiccollection.cpp:54
 #: src/translators/freedbimporter.cpp:264
 #: src/translators/freedbimporter.cpp:378
 #: src/translators/freedbimporter.cpp:444
 msgid "Compact Disc"
 msgstr "CD"
+
+#. +> trunk
+#: src/collections/musiccollection.cpp:54
+#: src/collections/videocollection.cpp:54 src/fetch/amazonfetcher.cpp:835
+msgid "DVD"
+msgstr "DVD"
 
 #. +> trunk
 #: src/collections/musiccollection.cpp:54
@@ -3078,19 +3080,20 @@ msgid "Amazon.com Web Services"
 msgstr "\"Amazon.com\"-Nettdeensten"
 
 #. +> trunk
-#: src/fetch/amazonfetcher.cpp:885 src/fetch/crossreffetcher.cpp:311
-#: src/fetch/discogsfetcher.cpp:231 src/fetch/doubanfetcher.cpp:222
-#: src/fetch/giantbombfetcher.cpp:204 src/fetch/isbndbfetcher.cpp:355
-#: src/fetch/themoviedbfetcher.cpp:237 src/fetch/winecomfetcher.cpp:291
+#: src/fetch/amazonfetcher.cpp:885 src/fetch/bibliosharefetcher.cpp:160
+#: src/fetch/crossreffetcher.cpp:311 src/fetch/discogsfetcher.cpp:231
+#: src/fetch/doubanfetcher.cpp:222 src/fetch/giantbombfetcher.cpp:204
+#: src/fetch/isbndbfetcher.cpp:355 src/fetch/themoviedbfetcher.cpp:237
+#: src/fetch/winecomfetcher.cpp:291
 #, kde-format
 msgid "Registration is required for accessing the %1 data source. If you agree to the terms and conditions, <a href='%2'>sign up for an account</a>, and enter your information below."
 msgstr "För Togriep op Datenborn \"%1\" deit Inmellen noot. Wenn Du mit de Regeln un Bedingen inverstahn büst, <a href='%2'>maak dor en Konto op</a>, un giff nerrn Dien Daten in."
 
 #. +> trunk
-#: src/fetch/amazonfetcher.cpp:898 src/fetch/discogsfetcher.cpp:244
-#: src/fetch/doubanfetcher.cpp:235 src/fetch/giantbombfetcher.cpp:217
-#: src/fetch/isbndbfetcher.cpp:368 src/fetch/themoviedbfetcher.cpp:250
-#: src/fetch/winecomfetcher.cpp:304
+#: src/fetch/amazonfetcher.cpp:898 src/fetch/bibliosharefetcher.cpp:173
+#: src/fetch/discogsfetcher.cpp:244 src/fetch/doubanfetcher.cpp:235
+#: src/fetch/giantbombfetcher.cpp:217 src/fetch/isbndbfetcher.cpp:368
+#: src/fetch/themoviedbfetcher.cpp:250 src/fetch/winecomfetcher.cpp:304
 msgid "Access key: "
 msgstr "Togriepslötel: "
 
@@ -3228,6 +3231,13 @@ msgid "This source has no options."
 msgstr "Disse Born bargt keen Optschonen."
 
 #. +> trunk
+#: src/fetch/bibliosharefetcher.cpp:179 src/fetch/discogsfetcher.cpp:250
+#: src/fetch/giantbombfetcher.cpp:223 src/fetch/isbndbfetcher.cpp:374
+#: src/fetch/themoviedbfetcher.cpp:256
+msgid "The default Tellico key may be used, but searching may fail due to reaching access limits."
+msgstr "Du kannst den Tellico-Standardslötel bruken, man de Söök mag fehlslaan, dat gifft dor Togriep-Grenzen för."
+
+#. +> trunk
 #: src/fetch/configwidget.cpp:41
 msgid "Source Options"
 msgstr "Born-Optschonen"
@@ -3277,12 +3287,6 @@ msgstr "Discogs-Audiosöök"
 #: src/fetch/discogsfetcher.cpp:219
 msgid "Discogs Link"
 msgstr "Discogs-Link"
-
-#. +> trunk
-#: src/fetch/discogsfetcher.cpp:250 src/fetch/giantbombfetcher.cpp:223
-#: src/fetch/isbndbfetcher.cpp:374 src/fetch/themoviedbfetcher.cpp:256
-msgid "The default Tellico key may be used, but searching may fail due to reaching access limits."
-msgstr "Du kannst den Tellico-Standardslötel bruken, man de Söök mag fehlslaan, dat gifft dor Togriep-Grenzen för."
 
 #. +> trunk
 #: src/fetch/doubanfetcher.cpp:210
@@ -4371,7 +4375,7 @@ msgid "Modify Loan..."
 msgstr "Utlehnen ännern..."
 
 #. +> trunk
-#: src/loanview.cpp:223 xslt.cpp:19
+#: src/loanview.cpp:223 xslt.cpp:33
 msgid "Borrower"
 msgstr "Utlehner"
 
@@ -5803,7 +5807,7 @@ msgid "Use a tab as the delimiter."
 msgstr "Tabulator as Trennteken bruken"
 
 #. +> trunk
-#: src/translators/csvexporter.cpp:162 xslt.cpp:46
+#: src/translators/csvexporter.cpp:162 xslt.cpp:19
 msgid "Other"
 msgstr "Anner"
 
@@ -6220,8 +6224,8 @@ msgstr "Tosamen:"
 
 #. +> trunk
 #: xslt.cpp:7
-msgid "Fancy XSL Template"
-msgstr "Smuck XSL-Vörlaag"
+msgid "Compact XSL Template"
+msgstr "Drang XSL-Vörlaag"
 
 #. +> trunk
 #: xslt.cpp:9
@@ -6230,8 +6234,8 @@ msgstr "Standard-XSL-Vörlaag"
 
 #. +> trunk
 #: xslt.cpp:11
-msgid "Compact XSL Template"
-msgstr "Drang XSL-Vörlaag"
+msgid "Fancy XSL Template"
+msgstr "Smuck XSL-Vörlaag"
 
 #. +> trunk
 #: xslt.cpp:13
@@ -6239,34 +6243,39 @@ msgid "Video XSL Template"
 msgstr "Video-XSL-Vörlaag"
 
 #. +> trunk
-#: xslt.cpp:14 xslt.cpp:43
+#: xslt.cpp:14 xslt.cpp:46
 msgid "This template is meant for video collections only."
 msgstr "Disse Vörlaag is bloots för Videosammeln maakt."
 
 #. +> trunk
 #: xslt.cpp:16
-msgid "Image List XSL Template"
-msgstr "Bildlist-XSL-Vörlaag"
+msgid "Column View XSL Template"
+msgstr "Striepenansicht-XSL-Vörlaag"
 
 #. +> trunk
 #: xslt.cpp:18
-msgid "Loan View XSL Template"
-msgstr "Utlehnansicht-XSL-Vörlaag"
+msgid "Group Statistics XSL Template"
+msgstr "Koppelstatistik-XSL-Vörlaag"
 
 #. +> trunk
-#: xslt.cpp:20 xslt.cpp:22
-msgid "Loan Date"
-msgstr "Utlehndatum"
+#: xslt.cpp:21
+msgid "Group Summary XSL Template"
+msgstr "Koppeltosamenfaten-XSL-Vörlaag"
 
 #. +> trunk
-#: xslt.cpp:21 xslt.cpp:24
-msgid "Note"
-msgstr "Henwies"
+#: xslt.cpp:22
+msgid ": Group Summary"
+msgstr ": Koppel-Tosamenfaten"
 
 #. +> trunk
 #: xslt.cpp:23
-msgid "Due Date"
-msgstr "Torüchgaavdatum"
+msgid "Total number of fields:"
+msgstr "Hele Tall vun Feller:"
+
+#. +> trunk
+#: xslt.cpp:24
+msgid "Total number of entries:"
+msgstr "Hele Tall vun Indrääg:"
 
 #. +> trunk
 #: xslt.cpp:25 xslt.cpp:39 xslt.cpp:49
@@ -6274,59 +6283,54 @@ msgid "Generated by Tellico"
 msgstr "Vun Tellico opstellt"
 
 #. +> trunk
-#: xslt.cpp:27
-msgid "Title Listing (Horizontal) XSL Template"
-msgstr "Titellist-XSL-Vörlaag (kimmrecht)"
-
-#. +> trunk
-#: xslt.cpp:29
-msgid "Title Listing (Vertical) XSL Template"
-msgstr "Titellist-XSL-Vörlaag (pielrecht)"
-
-#. +> trunk
-#: xslt.cpp:31
-msgid "Group View XSL Template"
-msgstr "Koppelansicht-XSL-Vörlaag"
-
-#. +> trunk
-#: xslt.cpp:33
-msgid "Column View XSL Template"
-msgstr "Striepenansicht-XSL-Vörlaag"
-
-#. +> trunk
-#: xslt.cpp:35
-msgid "Group Summary XSL Template"
-msgstr "Koppeltosamenfaten-XSL-Vörlaag"
-
-#. +> trunk
-#: xslt.cpp:36
-msgid ": Group Summary"
-msgstr ": Koppel-Tosamenfaten"
-
-#. +> trunk
-#: xslt.cpp:37
-msgid "Total number of fields:"
-msgstr "Hele Tall vun Feller:"
-
-#. +> trunk
-#: xslt.cpp:38
-msgid "Total number of entries:"
-msgstr "Hele Tall vun Indrääg:"
-
-#. +> trunk
-#: xslt.cpp:40
+#: xslt.cpp:26
 msgid "Distinct values: "
 msgstr "Verscheden Weerten: "
 
 #. +> trunk
-#: xslt.cpp:42
-msgid "Tri-Column XSL Template"
-msgstr "Dreestriepen-XSL-Vörlaag"
+#: xslt.cpp:28
+msgid "Group View XSL Template"
+msgstr "Koppelansicht-XSL-Vörlaag"
+
+#. +> trunk
+#: xslt.cpp:30
+msgid "Image List XSL Template"
+msgstr "Bildlist-XSL-Vörlaag"
+
+#. +> trunk
+#: xslt.cpp:32
+msgid "Loan View XSL Template"
+msgstr "Utlehnansicht-XSL-Vörlaag"
+
+#. +> trunk
+#: xslt.cpp:34 xslt.cpp:36
+msgid "Loan Date"
+msgstr "Utlehndatum"
+
+#. +> trunk
+#: xslt.cpp:35 xslt.cpp:38
+msgid "Note"
+msgstr "Henwies"
+
+#. +> trunk
+#: xslt.cpp:37
+msgid "Due Date"
+msgstr "Torüchgaavdatum"
+
+#. +> trunk
+#: xslt.cpp:41
+msgid "Title Listing (Horizontal) XSL Template"
+msgstr "Titellist-XSL-Vörlaag (kimmrecht)"
+
+#. +> trunk
+#: xslt.cpp:43
+msgid "Title Listing (Vertical) XSL Template"
+msgstr "Titellist-XSL-Vörlaag (pielrecht)"
 
 #. +> trunk
 #: xslt.cpp:45
-msgid "Group Statistics XSL Template"
-msgstr "Koppelstatistik-XSL-Vörlaag"
+msgid "Tri-Column XSL Template"
+msgstr "Dreestriepen-XSL-Vörlaag"
 
 #. +> trunk
 #: xslt.cpp:48
