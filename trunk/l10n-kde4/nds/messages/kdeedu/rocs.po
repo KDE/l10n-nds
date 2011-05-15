@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rocs\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-05-12 04:19+0200\n"
+"POT-Creation-Date: 2011-05-15 04:13+0200\n"
 "PO-Revision-Date: 2011-05-08 07:01+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -18,14 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Language: nds\n"
 
-#: Actions/Select.cpp:39
-msgid "Select"
-msgstr "Köör"
-
-#: Actions/Select.cpp:40
-msgid "Select Items by clicking on them."
-msgstr "Indrääg dör Anklicken utsöken"
-
 #: Actions/AddConnection.cpp:36
 msgid "Add Edge"
 msgstr "Kant tofögen"
@@ -33,14 +25,6 @@ msgstr "Kant tofögen"
 #: Actions/AddConnection.cpp:37
 msgid "Creates a new edge between 2 nodes"
 msgstr "Stellt en nieg Kant twischen twee Knütten op"
-
-#: Actions/DeleteAction.cpp:34
-msgid "Delete"
-msgstr "Wegdoon"
-
-#: Actions/DeleteAction.cpp:35
-msgid "Delete items by clicking on them."
-msgstr "Indrääg dör Anklicken wegdoon"
 
 #: Actions/AddData.cpp:33
 msgid "Add Node"
@@ -54,6 +38,14 @@ msgstr "Stellt en nieg Knütt an de anklickt Steed binnen dat Tekenrebeet op."
 msgid "untitled"
 msgstr "ahn Titel"
 
+#: Actions/DeleteAction.cpp:34
+msgid "Delete"
+msgstr "Wegdoon"
+
+#: Actions/DeleteAction.cpp:35
+msgid "Delete items by clicking on them."
+msgstr "Indrääg dör Anklicken wegdoon"
+
 #: Actions/MoveData.cpp:36
 msgid "Move Node"
 msgstr "Knütt verschuven"
@@ -62,6 +54,14 @@ msgstr "Knütt verschuven"
 msgid "Moves a node around the drawing area."
 msgstr "Verschufft en Knütt op dat Tekenrebeet"
 
+#: Actions/Select.cpp:39
+msgid "Select"
+msgstr "Köör"
+
+#: Actions/Select.cpp:40
+msgid "Select Items by clicking on them."
+msgstr "Indrääg dör Anklicken utsöken"
+
 #: Actions/zoom.cpp:35
 msgid "Zoom"
 msgstr "Ansichtgrött"
@@ -69,6 +69,15 @@ msgstr "Ansichtgrött"
 #: Actions/zoom.cpp:36
 msgid "Zoom the canvas by the wheel, or by dragging."
 msgstr ""
+
+#: Core/DocumentManager.cpp:131 UndoRedo/URAddNode.cpp:38
+msgid "Untitled"
+msgstr "Ahn Titel"
+
+#: Core/DocumentManager.cpp:143 Core/DocumentManager.cpp:145
+#: Interface/GraphPropertiesWidget.cpp:122
+msgid "Untitled0"
+msgstr "Ahn Titel 0"
 
 #: Core/DynamicPropertiesList.cpp:156
 msgid "Unique"
@@ -80,7 +89,7 @@ msgstr "Mehrfach"
 
 #. i18n: file: Interface/EdgePropertiesWidget.ui:213
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: Core/DynamicPropertiesList.cpp:158 rc.cpp:95
+#: Core/DynamicPropertiesList.cpp:158 rc.cpp:125
 msgid "Global"
 msgstr "Globaal"
 
@@ -89,15 +98,6 @@ msgstr "Globaal"
 #: Core/DynamicPropertiesList.cpp:161 rc.cpp:20
 msgid "None"
 msgstr "Keen"
-
-#: Core/DocumentManager.cpp:131 UndoRedo/URAddNode.cpp:38
-msgid "Untitled"
-msgstr "Ahn Titel"
-
-#: Core/DocumentManager.cpp:143 Core/DocumentManager.cpp:145
-#: Interface/GraphPropertiesWidget.cpp:122
-msgid "Untitled0"
-msgstr "Ahn Titel 0"
 
 #: GraphicsItem/DataItem.cpp:124 GraphicsItem/DataItem.cpp:129
 #, kde-format
@@ -143,14 +143,6 @@ msgstr "Graphen as Datei exporteren"
 msgid "Graph Files"
 msgstr "Graphendateien"
 
-#: Interface/TabWidget.cpp:107 Interface/MainWindow.cpp:217
-msgid "Run"
-msgstr "Utföhren"
-
-#: Interface/TabWidget.cpp:111
-msgid "Stop"
-msgstr "Anhollen"
-
 #: Interface/MainWindow.cpp:177
 msgid "*.js|Script files"
 msgstr "*.js|Skriptdateien"
@@ -170,6 +162,10 @@ msgstr "Fehlersöker"
 #: Interface/MainWindow.cpp:215
 msgid "Output"
 msgstr "Utgaav"
+
+#: Interface/MainWindow.cpp:217 Interface/TabWidget.cpp:107
+msgid "Run"
+msgstr "Utföhren"
 
 #: Interface/MainWindow.cpp:261
 msgid "Align on the base"
@@ -259,6 +255,10 @@ msgstr "Leeg Datei"
 msgid "Do you want to save your unsaved document?"
 msgstr "Wullt Du Dien noch nich sekert Dokment nu sekern?"
 
+#: Interface/TabWidget.cpp:111
+msgid "Stop"
+msgstr "Anhollen"
+
 #: Main.cpp:37
 msgid "Rocs"
 msgstr "Rocs"
@@ -314,7 +314,7 @@ msgstr "Egenschap"
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: file: Interface/NodePropertiesWidget.ui:164
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: Models/model_GraphProperties.cpp:70 rc.cpp:86 rc.cpp:92 rc.cpp:198
+#: Models/model_GraphProperties.cpp:70 rc.cpp:116 rc.cpp:122 rc.cpp:225
 msgid "Value"
 msgstr "Weert"
 
@@ -322,14 +322,17 @@ msgstr "Weert"
 msgid "Type"
 msgstr "Typ"
 
+#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, AssignValuesWidget)
+#: Plugins/AssignValues/assignvaluestoolsplugin.cpp:43 rc.cpp:240
+msgid "Assign Values"
+msgstr "Weerten towiesen"
+
 #: Plugins/DataStructure/Graph/GraphPlugin.cpp:34
 msgid "Graph Structure"
 msgstr "Diagrammstruktuur"
 
-#. i18n: Do not translate, X is for delete
-#. i18n: file: Interface/GraphPropertiesWidget.ui:78
-#. i18n: ectx: property (text), widget (KPushButton, _graphDelete)
-#: Plugins/DataStructure/Graph/GraphPlugin.cpp:96 rc.cpp:114
+#: Plugins/DataStructure/Graph/GraphPlugin.cpp:96
 msgid "x"
 msgstr "x"
 
@@ -343,7 +346,7 @@ msgstr "Grött"
 
 #. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:61
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: Plugins/DataStructure/Graph/GraphPlugin.cpp:115 rc.cpp:258
+#: Plugins/DataStructure/Graph/GraphPlugin.cpp:115 rc.cpp:316
 msgid "Graph Type:"
 msgstr "Diagrammtyp:"
 
@@ -410,38 +413,44 @@ msgstr "Dokment lett sik nich na Datei \"%1\" schrieven. Fehler: %2"
 
 #. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, GenerateGraphWidget)
-#: Plugins/GenerateGraph/generategraphtoolsplugin.cpp:42 rc.cpp:240
+#: Plugins/GenerateGraph/generategraphtoolsplugin.cpp:42 rc.cpp:298
 msgid "Generate Graph"
 msgstr "Diagramm opstellen"
 
 #. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:27
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
-#: Plugins/GenerateGraph/generategraphwidget.cpp:141 rc.cpp:243
+#: Plugins/GenerateGraph/generategraphwidget.cpp:141 rc.cpp:301
 msgid "Mesh Graph"
 msgstr "Gadderdiagramm"
 
 #. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:32
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
-#: Plugins/GenerateGraph/generategraphwidget.cpp:180 rc.cpp:246
+#: Plugins/GenerateGraph/generategraphwidget.cpp:180 rc.cpp:304
 msgid "Star Graph"
 msgstr "Steerndiagramm"
 
 #. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:37
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
-#: Plugins/GenerateGraph/generategraphwidget.cpp:216 rc.cpp:249
+#: Plugins/GenerateGraph/generategraphwidget.cpp:216 rc.cpp:307
 msgid "Circle Graph"
 msgstr "Krinkdiagramm"
 
 #. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:42
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
 #: Plugins/GenerateGraph/generategraphwidget.cpp:262
-#: Plugins/GenerateGraph/generategraphwidget.cpp:304 rc.cpp:252
+#: Plugins/GenerateGraph/generategraphwidget.cpp:304 rc.cpp:310
 msgid "Random Graph"
 msgstr "Tofällig Diagramm"
 
 #: Plugins/MakeComplete/makecompletetoolsplugin.cpp:31
 msgid "Make Complete"
 msgstr "Afsluten"
+
+#. i18n: file: Plugins/TransformEdges/transformedgeswidget.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, TransformEdgesWidget)
+#: Plugins/TransformEdges/transformedgestoolsplugin.cpp:43 rc.cpp:361
+msgid "Transform Edges"
+msgstr ""
 
 #: Plugins/dotParser/DotParser.cpp:30
 msgid "Open and Save Graphviz files"
@@ -482,18 +491,6 @@ msgstr "De Datei \"%1\" lett sik nich opmaken: %2"
 msgid "*.kml|Keyhole Markup Language Files"
 msgstr "*.kml|KML-Dateien (Keyhole Markup Language)"
 
-#. i18n: file: Plugins/TransformEdges/transformedgeswidget.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, TransformEdgesWidget)
-#: Plugins/TransformEdges/transformedgestoolsplugin.cpp:43 rc.cpp:303
-msgid "Transform Edges"
-msgstr ""
-
-#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, AssignValuesWidget)
-#: Plugins/AssignValues/assignvaluestoolsplugin.cpp:43 rc.cpp:350
-msgid "Assign Values"
-msgstr "Weerten towiesen"
-
 #: Scripts/IncludeManager.cpp:113
 #, kde-format
 msgid "debug(\"Cannot open file %1.\")"
@@ -532,7 +529,7 @@ msgstr "Dialoog"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:219
 #. i18n: ectx: property (text), widget (QLabel, label_randomNodes)
-#: rc.cpp:8 rc.cpp:273
+#: rc.cpp:8 rc.cpp:331
 msgid "Nodes:"
 msgstr "Knütten:"
 
@@ -566,319 +563,21 @@ msgstr "Rund"
 msgid "Complete"
 msgstr "Afslaten"
 
-#. i18n: file: Interface/EdgePropertiesWidget.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, EdgePropertiesWidget)
-#: rc.cpp:29
-msgid "Edge Properties"
-msgstr "Kantegenschappen"
-
-#. i18n: file: Interface/EdgePropertiesWidget.ui:20
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: Interface/GraphPropertiesWidget.ui:96
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: Interface/NodePropertiesWidget.ui:32
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:32 rc.cpp:117 rc.cpp:171
-msgid "Name:"
-msgstr "Naam:"
-
-#. i18n: file: Interface/EdgePropertiesWidget.ui:30
-#. i18n: ectx: property (toolTip), widget (KLineEdit, _name)
-#: rc.cpp:35
-msgid "Edge name"
-msgstr "Kantnaam"
-
-#. i18n: file: Interface/EdgePropertiesWidget.ui:44
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#. i18n: file: Interface/NodePropertiesWidget.ui:65
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:38 rc.cpp:177
-msgid "Color:"
-msgstr "Klöör:"
-
-#. i18n: file: Interface/EdgePropertiesWidget.ui:54
-#. i18n: ectx: property (toolTip), widget (KColorCombo, _color)
-#: rc.cpp:41
-msgid "Edge color"
-msgstr "Kantklöör"
-
-#. i18n: file: Interface/EdgePropertiesWidget.ui:61
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: file: Interface/NodePropertiesWidget.ui:88
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:44 rc.cpp:183
-msgid "Value:"
-msgstr "Weert:"
-
-#. i18n: file: Interface/EdgePropertiesWidget.ui:71
-#. i18n: ectx: property (toolTip), widget (KLineEdit, _value)
-#: rc.cpp:47
-msgid "Edge value"
-msgstr "Kantweert"
-
-#. i18n: file: Interface/EdgePropertiesWidget.ui:78
-#. i18n: ectx: property (toolTip), widget (QLabel, label_4)
-#: rc.cpp:50
-msgid "Edge width"
-msgstr "Kantbreed"
-
-#. i18n: file: Interface/EdgePropertiesWidget.ui:81
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:53
-msgid "Width:"
-msgstr "Breed:"
-
-#. i18n: file: Interface/EdgePropertiesWidget.ui:94
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:56
-msgid "Style:"
-msgstr "Stil:"
-
-#. i18n: file: Interface/EdgePropertiesWidget.ui:104
-#. i18n: ectx: property (toolTip), widget (KComboBox, _style)
-#: rc.cpp:59
-msgid "Edge style"
-msgstr "Kantstil"
-
-#. i18n: file: Interface/EdgePropertiesWidget.ui:108
-#. i18n: ectx: property (text), item, widget (KComboBox, _style)
-#: rc.cpp:62
-msgid "solid"
-msgstr "Vull"
-
-#. i18n: file: Interface/EdgePropertiesWidget.ui:113
-#. i18n: ectx: property (text), item, widget (KComboBox, _style)
-#: rc.cpp:65
-msgid "dash"
-msgstr "Streek"
-
-#. i18n: file: Interface/EdgePropertiesWidget.ui:118
-#. i18n: ectx: property (text), item, widget (KComboBox, _style)
-#: rc.cpp:68
-msgid "dot"
-msgstr "Punkt"
-
-#. i18n: file: Interface/EdgePropertiesWidget.ui:123
-#. i18n: ectx: property (text), item, widget (KComboBox, _style)
-#: rc.cpp:71
-msgid "dash dot"
-msgstr "Streek Punkt"
-
-#. i18n: file: Interface/EdgePropertiesWidget.ui:133
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:74
-msgid "Show"
-msgstr "Wiesen"
-
-#. i18n: file: Interface/EdgePropertiesWidget.ui:143
-#. i18n: ectx: property (toolTip), widget (KPushButton, _showName)
-#: rc.cpp:77
-msgid "Show/hide edge name"
-msgstr "Kantnaam wiesen oder versteken"
-
-#. i18n: file: Interface/EdgePropertiesWidget.ui:146
-#. i18n: ectx: property (text), widget (KPushButton, _showName)
-#. i18n: file: Interface/EdgePropertiesWidget.ui:192
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#. i18n: file: Interface/NodePropertiesWidget.ui:154
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:80 rc.cpp:89 rc.cpp:195
-msgid "Name"
-msgstr "Naam"
-
-#. i18n: file: Interface/EdgePropertiesWidget.ui:156
-#. i18n: ectx: property (toolTip), widget (KPushButton, _showValue)
-#: rc.cpp:83
-msgid "Show/add edge value"
-msgstr "Kantweert wiesen oder tofögen"
-
-#. i18n: file: Interface/EdgePropertiesWidget.ui:220
-#. i18n: ectx: property (text), widget (KPushButton, _addProperty)
-#. i18n: file: Interface/NodePropertiesWidget.ui:194
-#. i18n: ectx: property (text), widget (KPushButton, _addProperty)
-#: rc.cpp:98 rc.cpp:204
-msgid "add"
-msgstr "tofögen"
-
-#. i18n: file: Interface/OpenedFilesWidget.ui:22
-#. i18n: ectx: property (text), widget (KPushButton, _btnNewFile)
-#: rc.cpp:101
-msgid "New File"
-msgstr "Nieg Datei"
-
-#. i18n: file: Interface/GraphPropertiesWidget.ui:59
-#. i18n: ectx: property (text), widget (QToolButton, _graphVisible)
-#: rc.cpp:104
-msgid "..."
-msgstr "..."
-
-#. i18n: file: Interface/GraphPropertiesWidget.ui:72
-#. i18n: ectx: property (toolTip), widget (KPushButton, _graphDelete)
-#: rc.cpp:107
-msgid "Delete the active graph"
-msgstr "Aktiv Graph wegdoon"
-
-#. i18n: file: Interface/GraphPropertiesWidget.ui:75
-#. i18n: ectx: property (whatsThis), widget (KPushButton, _graphDelete)
-#: rc.cpp:110
-msgid "Delete the current active graph: delete all nodes and edges"
-msgstr "Den opstunns aktiven Graph wegdoon: All Knütten un Kanten wegdoon"
-
-#. i18n: file: Interface/GraphPropertiesWidget.ui:109
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:120
-msgid "Data Color:"
-msgstr "Datenklöör:"
-
-#. i18n: file: Interface/GraphPropertiesWidget.ui:125
-#. i18n: ectx: property (toolTip), widget (KColorCombo, _graphNodeColor)
-#: rc.cpp:123
-msgid "Color for new nodes"
-msgstr "Klöör för nieg Knütten"
-
-#. i18n: file: Interface/GraphPropertiesWidget.ui:132
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:126
-msgid "Pointer Color:"
-msgstr "Wieserklöör:"
-
-#. i18n: file: Interface/GraphPropertiesWidget.ui:148
-#. i18n: ectx: property (toolTip), widget (KColorCombo, _graphEdgeColor)
-#: rc.cpp:129
-msgid "Color for new edges"
-msgstr "Klöör för nieg Kanten"
-
-#. i18n: file: Interface/GraphPropertiesWidget.ui:158
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:132
-msgid "Show names in:"
-msgstr "Naams wiesen in:"
-
-#. i18n: file: Interface/GraphPropertiesWidget.ui:165
-#. i18n: ectx: property (text), widget (QLabel, label_12)
-#: rc.cpp:135
-msgid "Show values in:"
-msgstr "Weerten wiesen in:"
-
-#. i18n: file: Interface/GraphPropertiesWidget.ui:172
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:138
-msgid "Data"
-msgstr "Daten"
-
-#. i18n: file: Interface/GraphPropertiesWidget.ui:186
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:51
-#. i18n: ectx: property (text), widget (QCheckBox, checkBoxAssignNodes)
-#: rc.cpp:141 rc.cpp:363
-msgid "Nodes"
-msgstr "Knütten"
-
-#. i18n: file: Interface/GraphPropertiesWidget.ui:200
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:144
-msgid "Pointers"
-msgstr "Wiesers"
-
-#. i18n: file: Interface/GraphPropertiesWidget.ui:214
-#. i18n: ectx: property (text), widget (QLabel, label_13)
-#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:61
-#. i18n: ectx: property (text), widget (QCheckBox, checkBoxAssignEdges)
-#: rc.cpp:147 rc.cpp:366
-msgid "Edges"
-msgstr "Kanten"
-
-#. i18n: file: Interface/GraphPropertiesWidget.ui:241
-#. i18n: ectx: property (toolTip), widget (KPushButton, _graphDatumColorApplyNow)
-#: rc.cpp:150
-msgid "Apply the current color to all nodes"
-msgstr "Aktuell Klöör för all Knütten bruken"
-
-#. i18n: file: Interface/GraphPropertiesWidget.ui:244
-#. i18n: ectx: property (whatsThis), widget (KPushButton, _graphDatumColorApplyNow)
-#: rc.cpp:153
-msgid "Apply the current color to all nodes on the drawing area"
-msgstr "Aktuell Klöör för all Knütten binnen dat Tekenrebeet bruken"
-
-#. i18n: file: Interface/GraphPropertiesWidget.ui:247
-#. i18n: ectx: property (text), widget (KPushButton, _graphDatumColorApplyNow)
-#. i18n: file: Interface/GraphPropertiesWidget.ui:260
-#. i18n: ectx: property (text), widget (KPushButton, _graphPointerColorApplyNow)
-#: rc.cpp:156 rc.cpp:165
-msgid "All"
-msgstr "All"
-
-#. i18n: file: Interface/GraphPropertiesWidget.ui:254
-#. i18n: ectx: property (toolTip), widget (KPushButton, _graphPointerColorApplyNow)
-#: rc.cpp:159
-msgid "Apply the current color to all edges"
-msgstr "Aktuell Klöör för all Kanten bruken"
-
-#. i18n: file: Interface/GraphPropertiesWidget.ui:257
-#. i18n: ectx: property (whatsThis), widget (KPushButton, _graphPointerColorApplyNow)
-#: rc.cpp:162
-msgid "Apply the current color to all edges on the drawing area"
-msgstr "Aktuell Klöör för all Kanten binnen dat Tekenrebeet bruken"
-
-#. i18n: file: Interface/NodePropertiesWidget.ui:20
-#. i18n: ectx: property (windowTitle), widget (QWidget, NodePropertiesWidget)
-#: rc.cpp:168
-msgid "Node Properties"
-msgstr "Knüttegenschappen"
-
-#. i18n: file: Interface/NodePropertiesWidget.ui:62
-#. i18n: ectx: property (toolTip), widget (QLabel, label_6)
-#. i18n: file: Interface/NodePropertiesWidget.ui:75
-#. i18n: ectx: property (toolTip), widget (KColorCombo, _color)
-#: rc.cpp:174 rc.cpp:180
-msgid "Node color"
-msgstr "Knüttklöör"
-
-#. i18n: file: Interface/NodePropertiesWidget.ui:111
-#. i18n: ectx: property (text), widget (QCheckBox, _disableColor)
-#: rc.cpp:186
-msgid "Disable Color"
-msgstr "Klören utmaken"
-
-#. i18n: file: Interface/NodePropertiesWidget.ui:118
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:189
-msgid "Image"
-msgstr "Bild"
-
-#. i18n: file: Interface/NodePropertiesWidget.ui:148
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:192
-msgid "Add Property"
-msgstr "Egenschap tofögen"
-
-#. i18n: file: Interface/NodePropertiesWidget.ui:174
-#. i18n: ectx: property (text), widget (QCheckBox, _isPropertyGlobal)
-#: rc.cpp:201
-msgid "Apply to all nodes"
-msgstr "För all Knütten bruken"
-
-#. i18n: file: Interface/NodePropertiesWidget.ui:232
-#. i18n: ectx: property (text), widget (QPushButton, _btnClose)
-#: rc.cpp:207
-msgid "Close"
-msgstr "Tomaken"
-
 #. i18n: file: Interface/ConfigureDefaultProperties.ui:23
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:210
+#: rc.cpp:29
 msgid "Default Information Display"
 msgstr ""
 
 #. i18n: file: Interface/ConfigureDefaultProperties.ui:44
 #. i18n: ectx: property (text), widget (QLabel, labelNodePosition)
-#: rc.cpp:213
+#: rc.cpp:32
 msgid "Node Information"
 msgstr ""
 
 #. i18n: file: Interface/ConfigureDefaultProperties.ui:51
 #. i18n: ectx: property (text), widget (QLabel, labelEdgePosition)
-#: rc.cpp:216
+#: rc.cpp:35
 msgid "Edge Information"
 msgstr ""
 
@@ -886,7 +585,7 @@ msgstr ""
 #. i18n: ectx: property (text), item, widget (QComboBox, comboDefaultEdge)
 #. i18n: file: Interface/ConfigureDefaultProperties.ui:93
 #. i18n: ectx: property (text), item, widget (QComboBox, comboDefaultNode)
-#: rc.cpp:219 rc.cpp:228
+#: rc.cpp:38 rc.cpp:47
 #, fuzzy
 #| msgid "generate"
 msgid "centered"
@@ -896,7 +595,7 @@ msgstr "opstellen"
 #. i18n: ectx: property (text), item, widget (QComboBox, comboDefaultEdge)
 #. i18n: file: Interface/ConfigureDefaultProperties.ui:98
 #. i18n: ectx: property (text), item, widget (QComboBox, comboDefaultNode)
-#: rc.cpp:222 rc.cpp:231
+#: rc.cpp:41 rc.cpp:50
 msgid "below"
 msgstr ""
 
@@ -904,105 +603,335 @@ msgstr ""
 #. i18n: ectx: property (text), item, widget (QComboBox, comboDefaultEdge)
 #. i18n: file: Interface/ConfigureDefaultProperties.ui:103
 #. i18n: ectx: property (text), item, widget (QComboBox, comboDefaultNode)
-#: rc.cpp:225 rc.cpp:234
+#: rc.cpp:44 rc.cpp:53
 msgid "above"
 msgstr ""
 
 #. i18n: file: Interface/ConfigureDefaultProperties.ui:121
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:237
+#: rc.cpp:56
 msgid "Execution Options"
 msgstr "Utföhroptschonen"
 
-#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:47
-#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
-#: rc.cpp:255
-msgid "Erdös-Renyi Graph"
-msgstr ""
+#. i18n: file: Interface/EdgePropertiesWidget.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, EdgePropertiesWidget)
+#: rc.cpp:59
+msgid "Edge Properties"
+msgstr "Kantegenschappen"
 
-#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:103
-#. i18n: ectx: property (text), widget (QLabel, label_columns)
-#: rc.cpp:261
-msgid "Number of Columns:"
-msgstr "Tall vun Striepen:"
+#. i18n: file: Interface/EdgePropertiesWidget.ui:20
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: file: Interface/GraphPropertiesWidget.ui:96
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: file: Interface/NodePropertiesWidget.ui:32
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:62 rc.cpp:144 rc.cpp:198
+msgid "Name:"
+msgstr "Naam:"
 
-#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:113
-#. i18n: ectx: property (text), widget (QLabel, label_rows)
-#: rc.cpp:264
-msgid "Number of Rows:"
-msgstr "Tall vun Regen:"
+#. i18n: file: Interface/EdgePropertiesWidget.ui:30
+#. i18n: ectx: property (toolTip), widget (KLineEdit, _name)
+#: rc.cpp:65
+msgid "Edge name"
+msgstr "Kantnaam"
 
-#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:157
-#. i18n: ectx: property (text), widget (QLabel, label_numberSatellite)
-#: rc.cpp:267
-msgid "Satellite Nodes:"
-msgstr ""
+#. i18n: file: Interface/EdgePropertiesWidget.ui:44
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: file: Interface/NodePropertiesWidget.ui:65
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: rc.cpp:68 rc.cpp:204
+msgid "Color:"
+msgstr "Klöör:"
 
-#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:188
-#. i18n: ectx: property (text), widget (QLabel, label_numberCircle)
-#: rc.cpp:270
-msgid "Number of Nodes:"
-msgstr "Tall vun Knütten:"
+#. i18n: file: Interface/EdgePropertiesWidget.ui:54
+#. i18n: ectx: property (toolTip), widget (KColorCombo, _color)
+#: rc.cpp:71
+msgid "Edge color"
+msgstr "Kantklöör"
 
-#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:236
-#. i18n: ectx: property (text), widget (QLabel, label_randomEdges)
-#: rc.cpp:276
-msgid "Edges:"
-msgstr "Kanten:"
+#. i18n: file: Interface/EdgePropertiesWidget.ui:61
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: file: Interface/NodePropertiesWidget.ui:88
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:74 rc.cpp:210
+msgid "Value:"
+msgstr "Weert:"
 
-#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:250
-#. i18n: ectx: property (text), widget (QLabel, label_randomSelfEdges)
-#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:302
-#. i18n: ectx: property (text), widget (QLabel, label_GNPSelfEdges)
-#: rc.cpp:279 rc.cpp:288
-msgid "Allow self-edges:"
-msgstr ""
+#. i18n: file: Interface/EdgePropertiesWidget.ui:71
+#. i18n: ectx: property (toolTip), widget (KLineEdit, _value)
+#: rc.cpp:77
+msgid "Edge value"
+msgstr "Kantweert"
 
-#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:257
-#. i18n: ectx: property (text), widget (QLabel, label_randomGeneratorSeed)
-#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:326
-#. i18n: ectx: property (text), widget (QLabel, label_GNPGeneratorSeed)
-#: rc.cpp:282 rc.cpp:294
+#. i18n: file: Interface/EdgePropertiesWidget.ui:78
+#. i18n: ectx: property (toolTip), widget (QLabel, label_4)
+#: rc.cpp:80
+msgid "Edge width"
+msgstr "Kantbreed"
+
+#. i18n: file: Interface/EdgePropertiesWidget.ui:81
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:83
+msgid "Width:"
+msgstr "Breed:"
+
+#. i18n: file: Interface/EdgePropertiesWidget.ui:94
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:86
+msgid "Style:"
+msgstr "Stil:"
+
+#. i18n: file: Interface/EdgePropertiesWidget.ui:104
+#. i18n: ectx: property (toolTip), widget (KComboBox, _style)
+#: rc.cpp:89
+msgid "Edge style"
+msgstr "Kantstil"
+
+#. i18n: file: Interface/EdgePropertiesWidget.ui:108
+#. i18n: ectx: property (text), item, widget (KComboBox, _style)
+#: rc.cpp:92
+msgid "solid"
+msgstr "Vull"
+
+#. i18n: file: Interface/EdgePropertiesWidget.ui:113
+#. i18n: ectx: property (text), item, widget (KComboBox, _style)
+#: rc.cpp:95
+msgid "dash"
+msgstr "Streek"
+
+#. i18n: file: Interface/EdgePropertiesWidget.ui:118
+#. i18n: ectx: property (text), item, widget (KComboBox, _style)
+#: rc.cpp:98
+msgid "dot"
+msgstr "Punkt"
+
+#. i18n: file: Interface/EdgePropertiesWidget.ui:123
+#. i18n: ectx: property (text), item, widget (KComboBox, _style)
+#: rc.cpp:101
+msgid "dash dot"
+msgstr "Streek Punkt"
+
+#. i18n: file: Interface/EdgePropertiesWidget.ui:133
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: rc.cpp:104
+msgid "Show"
+msgstr "Wiesen"
+
+#. i18n: file: Interface/EdgePropertiesWidget.ui:143
+#. i18n: ectx: property (toolTip), widget (KPushButton, _showName)
+#: rc.cpp:107
+msgid "Show/hide edge name"
+msgstr "Kantnaam wiesen oder versteken"
+
+#. i18n: file: Interface/EdgePropertiesWidget.ui:146
+#. i18n: ectx: property (text), widget (KPushButton, _showName)
+#. i18n: file: Interface/EdgePropertiesWidget.ui:192
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#. i18n: file: Interface/NodePropertiesWidget.ui:154
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: rc.cpp:110 rc.cpp:119 rc.cpp:222
+msgid "Name"
+msgstr "Naam"
+
+#. i18n: file: Interface/EdgePropertiesWidget.ui:156
+#. i18n: ectx: property (toolTip), widget (KPushButton, _showValue)
+#: rc.cpp:113
+msgid "Show/add edge value"
+msgstr "Kantweert wiesen oder tofögen"
+
+#. i18n: file: Interface/EdgePropertiesWidget.ui:220
+#. i18n: ectx: property (text), widget (KPushButton, _addProperty)
+#. i18n: file: Interface/NodePropertiesWidget.ui:194
+#. i18n: ectx: property (text), widget (KPushButton, _addProperty)
+#: rc.cpp:128 rc.cpp:231
+msgid "add"
+msgstr "tofögen"
+
+#. i18n: file: Interface/GraphPropertiesWidget.ui:59
+#. i18n: ectx: property (text), widget (QToolButton, _graphVisible)
+#: rc.cpp:131
+msgid "..."
+msgstr "..."
+
+#. i18n: file: Interface/GraphPropertiesWidget.ui:72
+#. i18n: ectx: property (toolTip), widget (KPushButton, _graphDelete)
+#: rc.cpp:134
+msgid "Delete the active graph"
+msgstr "Aktiv Graph wegdoon"
+
+#. i18n: file: Interface/GraphPropertiesWidget.ui:75
+#. i18n: ectx: property (whatsThis), widget (KPushButton, _graphDelete)
+#: rc.cpp:137
+msgid "Delete the current active graph: delete all nodes and edges"
+msgstr "Den opstunns aktiven Graph wegdoon: All Knütten un Kanten wegdoon"
+
+#. i18n: Do not translate, X is for delete
+#. i18n: file: Interface/GraphPropertiesWidget.ui:78
+#. i18n: ectx: property (text), widget (KPushButton, _graphDelete)
+#: rc.cpp:141
 #, fuzzy
-#| msgid "Save Graph"
-msgid "Generator Seed:"
-msgstr "Graph sekern"
+#| msgid "x"
+msgctxt "@action:button"
+msgid "x"
+msgstr "x"
 
-#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:295
-#. i18n: ectx: property (text), widget (QLabel, label_GNPNodes)
-#: rc.cpp:285
-#, fuzzy
-#| msgid "Nodes:"
-msgid "Nodes (n):"
-msgstr "Knütten:"
+#. i18n: file: Interface/GraphPropertiesWidget.ui:109
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:147
+msgid "Data Color:"
+msgstr "Datenklöör:"
 
-#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:319
-#. i18n: ectx: property (text), widget (QLabel, label_GNPEdgeProbability)
-#: rc.cpp:291
-msgid "Edge Probability (p):"
-msgstr ""
+#. i18n: file: Interface/GraphPropertiesWidget.ui:125
+#. i18n: ectx: property (toolTip), widget (KColorCombo, _graphNodeColor)
+#: rc.cpp:150
+msgid "Color for new nodes"
+msgstr "Klöör för nieg Knütten"
 
-#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:377
-#. i18n: ectx: property (text), widget (QPushButton, pushButton)
-#: rc.cpp:297
-msgid "generate"
-msgstr "opstellen"
+#. i18n: file: Interface/GraphPropertiesWidget.ui:132
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:153
+msgid "Pointer Color:"
+msgstr "Wieserklöör:"
 
-#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:390
-#. i18n: ectx: property (text), widget (QPushButton, pushButton_2)
-#. i18n: file: Plugins/TransformEdges/transformedgeswidget.ui:82
-#. i18n: ectx: property (text), widget (QPushButton, pushButtonCancel)
-#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:264
-#. i18n: ectx: property (text), widget (QPushButton, buttonCancel)
-#: rc.cpp:300 rc.cpp:319 rc.cpp:390
-msgid "cancel"
-msgstr "afbreken"
+#. i18n: file: Interface/GraphPropertiesWidget.ui:148
+#. i18n: ectx: property (toolTip), widget (KColorCombo, _graphEdgeColor)
+#: rc.cpp:156
+msgid "Color for new edges"
+msgstr "Klöör för nieg Kanten"
 
-#. i18n: file: Plugins/TransformEdges/transformedgeswidget.ui:30
-#. i18n: ectx: property (toolTip), widget (QComboBox, dataStructuresCombo)
+#. i18n: file: Interface/GraphPropertiesWidget.ui:158
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: rc.cpp:159
+msgid "Show names in:"
+msgstr "Naams wiesen in:"
+
+#. i18n: file: Interface/GraphPropertiesWidget.ui:165
+#. i18n: ectx: property (text), widget (QLabel, label_12)
+#: rc.cpp:162
+msgid "Show values in:"
+msgstr "Weerten wiesen in:"
+
+#. i18n: file: Interface/GraphPropertiesWidget.ui:172
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:165
+msgid "Data"
+msgstr "Daten"
+
+#. i18n: file: Interface/GraphPropertiesWidget.ui:186
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:51
+#. i18n: ectx: property (text), widget (QCheckBox, checkBoxAssignNodes)
+#: rc.cpp:168 rc.cpp:253
+msgid "Nodes"
+msgstr "Knütten"
+
+#. i18n: file: Interface/GraphPropertiesWidget.ui:200
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:171
+msgid "Pointers"
+msgstr "Wiesers"
+
+#. i18n: file: Interface/GraphPropertiesWidget.ui:214
+#. i18n: ectx: property (text), widget (QLabel, label_13)
+#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:61
+#. i18n: ectx: property (text), widget (QCheckBox, checkBoxAssignEdges)
+#: rc.cpp:174 rc.cpp:256
+msgid "Edges"
+msgstr "Kanten"
+
+#. i18n: file: Interface/GraphPropertiesWidget.ui:241
+#. i18n: ectx: property (toolTip), widget (KPushButton, _graphDatumColorApplyNow)
+#: rc.cpp:177
+msgid "Apply the current color to all nodes"
+msgstr "Aktuell Klöör för all Knütten bruken"
+
+#. i18n: file: Interface/GraphPropertiesWidget.ui:244
+#. i18n: ectx: property (whatsThis), widget (KPushButton, _graphDatumColorApplyNow)
+#: rc.cpp:180
+msgid "Apply the current color to all nodes on the drawing area"
+msgstr "Aktuell Klöör för all Knütten binnen dat Tekenrebeet bruken"
+
+#. i18n: file: Interface/GraphPropertiesWidget.ui:247
+#. i18n: ectx: property (text), widget (KPushButton, _graphDatumColorApplyNow)
+#. i18n: file: Interface/GraphPropertiesWidget.ui:260
+#. i18n: ectx: property (text), widget (KPushButton, _graphPointerColorApplyNow)
+#: rc.cpp:183 rc.cpp:192
+msgid "All"
+msgstr "All"
+
+#. i18n: file: Interface/GraphPropertiesWidget.ui:254
+#. i18n: ectx: property (toolTip), widget (KPushButton, _graphPointerColorApplyNow)
+#: rc.cpp:186
+msgid "Apply the current color to all edges"
+msgstr "Aktuell Klöör för all Kanten bruken"
+
+#. i18n: file: Interface/GraphPropertiesWidget.ui:257
+#. i18n: ectx: property (whatsThis), widget (KPushButton, _graphPointerColorApplyNow)
+#: rc.cpp:189
+msgid "Apply the current color to all edges on the drawing area"
+msgstr "Aktuell Klöör för all Kanten binnen dat Tekenrebeet bruken"
+
+#. i18n: file: Interface/NodePropertiesWidget.ui:20
+#. i18n: ectx: property (windowTitle), widget (QWidget, NodePropertiesWidget)
+#: rc.cpp:195
+msgid "Node Properties"
+msgstr "Knüttegenschappen"
+
+#. i18n: file: Interface/NodePropertiesWidget.ui:62
+#. i18n: ectx: property (toolTip), widget (QLabel, label_6)
+#. i18n: file: Interface/NodePropertiesWidget.ui:75
+#. i18n: ectx: property (toolTip), widget (KColorCombo, _color)
+#: rc.cpp:201 rc.cpp:207
+msgid "Node color"
+msgstr "Knüttklöör"
+
+#. i18n: file: Interface/NodePropertiesWidget.ui:111
+#. i18n: ectx: property (text), widget (QCheckBox, _disableColor)
+#: rc.cpp:213
+msgid "Disable Color"
+msgstr "Klören utmaken"
+
+#. i18n: file: Interface/NodePropertiesWidget.ui:118
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:216
+msgid "Image"
+msgstr "Bild"
+
+#. i18n: file: Interface/NodePropertiesWidget.ui:148
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:219
+msgid "Add Property"
+msgstr "Egenschap tofögen"
+
+#. i18n: file: Interface/NodePropertiesWidget.ui:174
+#. i18n: ectx: property (text), widget (QCheckBox, _isPropertyGlobal)
+#: rc.cpp:228
+msgid "Apply to all nodes"
+msgstr "För all Knütten bruken"
+
+#. i18n: file: Interface/NodePropertiesWidget.ui:232
+#. i18n: ectx: property (text), widget (QPushButton, _btnClose)
+#: rc.cpp:234
+msgid "Close"
+msgstr "Tomaken"
+
+#. i18n: file: Interface/OpenedFilesWidget.ui:22
+#. i18n: ectx: property (text), widget (KPushButton, _btnNewFile)
+#: rc.cpp:237
+msgid "New File"
+msgstr "Nieg Datei"
+
+#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:22
+#. i18n: ectx: property (text), widget (QLabel, dataStructuresComboLabel)
+#: rc.cpp:243
+msgid "Data Structure"
+msgstr "Datenstruktuur"
+
 #. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:33
 #. i18n: ectx: property (toolTip), widget (QComboBox, dataStructuresCombo)
-#: rc.cpp:306 rc.cpp:356
+#. i18n: file: Plugins/TransformEdges/transformedgeswidget.ui:30
+#. i18n: ectx: property (toolTip), widget (QComboBox, dataStructuresCombo)
+#: rc.cpp:246 rc.cpp:364
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -1017,21 +946,167 @@ msgid ""
 "</p></body></html>"
 msgstr ""
 
+#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:89
+#. i18n: ectx: property (text), widget (QLabel, IDlabelStartValue)
+#: rc.cpp:259
+msgid "Start ID"
+msgstr "Start-ID"
+
+#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:120
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:194
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:262 rc.cpp:271
+msgid "Lower Limit"
+msgstr "Neddergrenz"
+
+#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:127
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:201
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: rc.cpp:265 rc.cpp:274
+msgid "Upper Limit"
+msgstr "Bövergrenz"
+
+#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:134
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:208
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: rc.cpp:268 rc.cpp:277
+#, fuzzy
+#| msgid "Save Graph"
+msgid "Generator Seed"
+msgstr "Graph sekern"
+
+#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:264
+#. i18n: ectx: property (text), widget (QPushButton, buttonCancel)
+#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:390
+#. i18n: ectx: property (text), widget (QPushButton, pushButton_2)
+#. i18n: file: Plugins/TransformEdges/transformedgeswidget.ui:82
+#. i18n: ectx: property (text), widget (QPushButton, pushButtonCancel)
+#: rc.cpp:280 rc.cpp:358 rc.cpp:377
+msgid "cancel"
+msgstr "afbreken"
+
+#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:271
+#. i18n: ectx: property (text), widget (QPushButton, buttonStart)
+#: rc.cpp:283
+msgid "assign values"
+msgstr "Weerten towiesen"
+
+#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:281
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBoxMethod)
+#: rc.cpp:286
+msgid "Add Unique Identifier"
+msgstr "Eenkennig Beteker tofögen"
+
+#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:286
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBoxMethod)
+#: rc.cpp:289
+msgid "Add Random Integer Values"
+msgstr ""
+
+#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:291
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBoxMethod)
+#: rc.cpp:292
+msgid "Add Random Float Values"
+msgstr ""
+
+#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:306
+#. i18n: ectx: property (text), widget (QCheckBox, checkBoxOverwriteValues)
+#: rc.cpp:295
+msgid "Overwrite existing values"
+msgstr "Vörhannen Weerten överschrieven"
+
+#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:47
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: rc.cpp:313
+msgid "Erdös-Renyi Graph"
+msgstr ""
+
+#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:103
+#. i18n: ectx: property (text), widget (QLabel, label_columns)
+#: rc.cpp:319
+msgid "Number of Columns:"
+msgstr "Tall vun Striepen:"
+
+#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:113
+#. i18n: ectx: property (text), widget (QLabel, label_rows)
+#: rc.cpp:322
+msgid "Number of Rows:"
+msgstr "Tall vun Regen:"
+
+#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:157
+#. i18n: ectx: property (text), widget (QLabel, label_numberSatellite)
+#: rc.cpp:325
+msgid "Satellite Nodes:"
+msgstr ""
+
+#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:188
+#. i18n: ectx: property (text), widget (QLabel, label_numberCircle)
+#: rc.cpp:328
+msgid "Number of Nodes:"
+msgstr "Tall vun Knütten:"
+
+#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:236
+#. i18n: ectx: property (text), widget (QLabel, label_randomEdges)
+#: rc.cpp:334
+msgid "Edges:"
+msgstr "Kanten:"
+
+#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:250
+#. i18n: ectx: property (text), widget (QLabel, label_randomSelfEdges)
+#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:302
+#. i18n: ectx: property (text), widget (QLabel, label_GNPSelfEdges)
+#: rc.cpp:337 rc.cpp:346
+msgid "Allow self-edges:"
+msgstr ""
+
+#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:257
+#. i18n: ectx: property (text), widget (QLabel, label_randomGeneratorSeed)
+#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:326
+#. i18n: ectx: property (text), widget (QLabel, label_GNPGeneratorSeed)
+#: rc.cpp:340 rc.cpp:352
+#, fuzzy
+#| msgid "Save Graph"
+msgid "Generator Seed:"
+msgstr "Graph sekern"
+
+#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:295
+#. i18n: ectx: property (text), widget (QLabel, label_GNPNodes)
+#: rc.cpp:343
+#, fuzzy
+#| msgid "Nodes:"
+msgid "Nodes (n):"
+msgstr "Knütten:"
+
+#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:319
+#. i18n: ectx: property (text), widget (QLabel, label_GNPEdgeProbability)
+#: rc.cpp:349
+msgid "Edge Probability (p):"
+msgstr ""
+
+#. i18n: file: Plugins/GenerateGraph/generategraphwidget.ui:377
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: rc.cpp:355
+msgid "generate"
+msgstr "opstellen"
+
 #. i18n: file: Plugins/TransformEdges/transformedgeswidget.ui:43
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:313
+#: rc.cpp:371
 msgid "Data Structure:"
 msgstr "Datenstruktuur:"
 
 #. i18n: file: Plugins/TransformEdges/transformedgeswidget.ui:69
 #. i18n: ectx: property (text), widget (QPushButton, pushButtonStart)
-#: rc.cpp:316
+#: rc.cpp:374
 msgid "start transform"
 msgstr ""
 
 #. i18n: file: Plugins/TransformEdges/transformedgeswidget.ui:98
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioButtonMakeComplete)
-#: rc.cpp:322
+#: rc.cpp:380
 msgid ""
 "This option connects all nodes of the given graph. The new edges do not have "
 "any preset weights."
@@ -1039,7 +1114,7 @@ msgstr ""
 
 #. i18n: file: Plugins/TransformEdges/transformedgeswidget.ui:101
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonMakeComplete)
-#: rc.cpp:325
+#: rc.cpp:383
 #, fuzzy
 #| msgid "Complete"
 msgid "Complete Graph"
@@ -1047,19 +1122,19 @@ msgstr "Afslaten"
 
 #. i18n: file: Plugins/TransformEdges/transformedgeswidget.ui:111
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioButtonEraseEdges)
-#: rc.cpp:328
+#: rc.cpp:386
 msgid "This option removes all edges from the given graph."
 msgstr ""
 
 #. i18n: file: Plugins/TransformEdges/transformedgeswidget.ui:114
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonEraseEdges)
-#: rc.cpp:331
+#: rc.cpp:389
 msgid "Remove Edges"
 msgstr ""
 
 #. i18n: file: Plugins/TransformEdges/transformedgeswidget.ui:121
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioButtonReverseEdges)
-#: rc.cpp:334
+#: rc.cpp:392
 msgid ""
 "This option reverses all edges of a directed graph. Note that this does not "
 "apply to undirected graphs."
@@ -1067,13 +1142,13 @@ msgstr ""
 
 #. i18n: file: Plugins/TransformEdges/transformedgeswidget.ui:124
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonReverseEdges)
-#: rc.cpp:337
+#: rc.cpp:395
 msgid "Reverse Edges"
 msgstr ""
 
 #. i18n: file: Plugins/TransformEdges/transformedgeswidget.ui:135
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioButtonMakeSpanningtree)
-#: rc.cpp:340
+#: rc.cpp:398
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -1092,77 +1167,9 @@ msgstr ""
 
 #. i18n: file: Plugins/TransformEdges/transformedgeswidget.ui:138
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonMakeSpanningtree)
-#: rc.cpp:347
+#: rc.cpp:405
 msgid "Spanning Tree Transformation"
 msgstr ""
-
-#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:22
-#. i18n: ectx: property (text), widget (QLabel, dataStructuresComboLabel)
-#: rc.cpp:353
-msgid "Data Structure"
-msgstr "Datenstruktuur"
-
-#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:89
-#. i18n: ectx: property (text), widget (QLabel, IDlabelStartValue)
-#: rc.cpp:369
-msgid "Start ID"
-msgstr "Start-ID"
-
-#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:120
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:194
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:372 rc.cpp:381
-msgid "Lower Limit"
-msgstr "Neddergrenz"
-
-#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:127
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:201
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:375 rc.cpp:384
-msgid "Upper Limit"
-msgstr "Bövergrenz"
-
-#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:134
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:208
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:378 rc.cpp:387
-#, fuzzy
-#| msgid "Save Graph"
-msgid "Generator Seed"
-msgstr "Graph sekern"
-
-#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:271
-#. i18n: ectx: property (text), widget (QPushButton, buttonStart)
-#: rc.cpp:393
-msgid "assign values"
-msgstr "Weerten towiesen"
-
-#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:281
-#. i18n: ectx: property (text), item, widget (QComboBox, comboBoxMethod)
-#: rc.cpp:396
-msgid "Add Unique Identifier"
-msgstr "Eenkennig Beteker tofögen"
-
-#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:286
-#. i18n: ectx: property (text), item, widget (QComboBox, comboBoxMethod)
-#: rc.cpp:399
-msgid "Add Random Integer Values"
-msgstr ""
-
-#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:291
-#. i18n: ectx: property (text), item, widget (QComboBox, comboBoxMethod)
-#: rc.cpp:402
-msgid "Add Random Float Values"
-msgstr ""
-
-#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:306
-#. i18n: ectx: property (text), widget (QCheckBox, checkBoxOverwriteValues)
-#: rc.cpp:405
-msgid "Overwrite existing values"
-msgstr "Vörhannen Weerten överschrieven"
 
 #. i18n: file: rocs.kcfg:9
 #. i18n: ectx: label, entry (showButtonText), group (ItemPalette)
