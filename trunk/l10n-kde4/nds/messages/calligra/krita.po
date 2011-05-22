@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-05-21 03:33+0200\n"
+"POT-Creation-Date: 2011-05-22 03:34+0200\n"
 "PO-Revision-Date: 2011-01-13 07:29+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -1375,7 +1375,7 @@ msgstr "Laagprofil:"
 
 #. i18n: file: plugins/extensions/compose/wdg_compose.ui:52
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:207 ui/tool/kis_tool_paint.cc:247
+#: rc.cpp:207 ui/kis_paintop_box.cc:154
 msgid "Opacity: "
 msgstr "Dörsichtigkeit: "
 
@@ -4128,7 +4128,7 @@ msgstr "Achteck (8)"
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: rc.cpp:1418 rc.cpp:3094
 #: plugins/filters/roundcorners/kis_round_corners_filter.cpp:136
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:965
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:954
 msgid "Radius"
 msgstr "Halfmaat"
 
@@ -7233,7 +7233,7 @@ msgstr "Bloots aktuell Laag"
 #. i18n: file: plugins/tools/tool_crop/wdg_tool_crop.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgToolCrop)
 #: rc.cpp:3127 image/kis_crop_visitor.h:121
-#: plugins/tools/tool_crop/kis_tool_crop.cc:442
+#: plugins/tools/tool_crop/kis_tool_crop.cc:451
 msgid "Crop"
 msgstr "Tosnieden"
 
@@ -7508,8 +7508,8 @@ msgstr "Vertarren-Typ"
 
 #. i18n: file: plugins/tools/tool_transform2/wdg_tool_transform.ui:1062
 #. i18n: ectx: property (text), widget (QPushButton, lockUnlockPointsButton)
-#: rc.cpp:3303 plugins/tools/tool_transform2/kis_tool_transform.cc:2502
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2893
+#: rc.cpp:3303 plugins/tools/tool_transform2/kis_tool_transform.cc:2509
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2900
 msgid "Lock Points"
 msgstr "Pünkt afsluten"
 
@@ -9309,17 +9309,17 @@ msgstr "Vullmaken"
 msgid "Gradient Fill"
 msgstr "Mit Klöörövergang vullmaken"
 
-#: image/brushengine/kis_paintop_factory.cpp:45
+#: image/brushengine/kis_paintop_factory.cpp:61
 msgctxt "Category of brush engines"
 msgid "Experimental"
 msgstr "Testwies"
 
-#: image/brushengine/kis_paintop_factory.cpp:50
+#: image/brushengine/kis_paintop_factory.cpp:66
 msgctxt "Category of brush engines"
 msgid "Stable"
 msgstr "Stevig"
 
-#: image/brushengine/kis_paintop_registry.cc:113
+#: image/brushengine/kis_paintop_registry.cc:117
 msgid "default"
 msgstr "Standard"
 
@@ -9864,30 +9864,17 @@ msgstr "Laag tosamensetten..."
 msgid "Compose Layer"
 msgstr "Laag tosamensetten"
 
-#: plugins/extensions/dockers/channeldocker/channeldocker_dock.cpp:33
-#, fuzzy
-#| msgid "Channel"
-msgid "Channels"
-msgstr "Kanaal"
-
 #: plugins/extensions/dockers/channeldocker/channelmodel.cpp:61
 #, fuzzy
 #| msgid "enabled"
 msgid "Enabled"
 msgstr "anmaakt"
 
-#: plugins/extensions/dockers/defaultdockers/histogramdock.cpp:44
-#: plugins/extensions/dockers/defaultdockers/histogramdock.cpp:102
-#: plugins/extensions/histogram/dlg_histogram.cc:47
-#: plugins/extensions/histogram/dlg_histogram.cc:54
-msgid "Histogram"
-msgstr "Histogramm"
-
-#: plugins/extensions/dockers/defaultdockers/histogramdock.cpp:115
-#, kde-format
-msgid "Histograms are not supported for images in the %1 colorspace."
-msgstr ""
-"Histogrammen warrt för Biller binnen den %1-Klörenruum nich ünnerstütt."
+#: plugins/extensions/dockers/channeldocker/channeldocker_dock.cpp:33
+#, fuzzy
+#| msgid "Channel"
+msgid "Channels"
+msgstr "Kanaal"
 
 #: plugins/extensions/dockers/defaultdockers/kis_birdeye_box.cc:62
 msgid "Select the exposure (stops) for HDR images"
@@ -9896,6 +9883,19 @@ msgstr "Belichten (Blennen) för HDR-Biller utsöken"
 #: plugins/extensions/dockers/defaultdockers/kis_palette_docker.cc:32
 msgid "Palettes"
 msgstr "Klörensetten"
+
+#: plugins/extensions/dockers/defaultdockers/histogramdock.cpp:44
+#: plugins/extensions/dockers/defaultdockers/histogramdock.cpp:106
+#: plugins/extensions/histogram/dlg_histogram.cc:47
+#: plugins/extensions/histogram/dlg_histogram.cc:54
+msgid "Histogram"
+msgstr "Histogramm"
+
+#: plugins/extensions/dockers/defaultdockers/histogramdock.cpp:119
+#, kde-format
+msgid "Histograms are not supported for images in the %1 colorspace."
+msgstr ""
+"Histogrammen warrt för Biller binnen den %1-Klörenruum nich ünnerstütt."
 
 #: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:76
 msgid "Layers"
@@ -9980,7 +9980,7 @@ msgstr "Laag oder Mask ver&dubbeln"
 msgid "&Effect Mask..."
 msgstr "&Effektmask..."
 
-#: plugins/extensions/dockers/digitalmixer/digitalmixer_dock.cc:42
+#: plugins/extensions/dockers/digitalmixer/digitalmixer_dock.cc:43
 msgid "Digital Colors Mixer"
 msgstr "Digitaal Klörenmischer"
 
@@ -9997,10 +9997,6 @@ msgstr "Torüchnehmlist"
 msgid "Small Color Selector"
 msgstr "Lütt Klöörköör"
 
-#: plugins/extensions/dockers/specificcolorselector/specificcolorselector_dock.cc:30
-msgid "Specific Color Selector"
-msgstr "Besünner Klöörköör"
-
 #: plugins/extensions/dockers/specificcolorselector/kis_color_input.cc:47
 #, kde-format
 msgid "%1:"
@@ -10012,7 +10008,11 @@ msgstr "%1:"
 msgid "Color name:"
 msgstr "Klöörruum:"
 
-#: plugins/extensions/dockers/trianglecolorselector/kis_triangle_color_selector_dock.cc:28
+#: plugins/extensions/dockers/specificcolorselector/specificcolorselector_dock.cc:31
+msgid "Specific Color Selector"
+msgstr "Besünner Klöörköör"
+
+#: plugins/extensions/dockers/trianglecolorselector/kis_triangle_color_selector_dock.cc:29
 msgid "Triangle Color Selector"
 msgstr "Dre'eck-Klöörköör"
 
@@ -10219,10 +10219,6 @@ msgstr "Köör afswachen"
 msgid "KS%1 Engine"
 msgstr "KS%1-Karn"
 
-#: plugins/extensions/painterlyframework/kis_painterlymixerdocker.cpp:36
-msgid "Painterly Color Mixer"
-msgstr "Malerisch Klörenmischer"
-
 #: plugins/extensions/painterlyframework/kis_ks_colorspace.h:77
 #, kde-format
 msgid "Painterly Color Space, %1 wavelengths"
@@ -10243,6 +10239,10 @@ msgstr "Absorptschoon"
 #: plugins/extensions/painterlyframework/kis_ks_colorspace.h:135
 msgid "Scattering"
 msgstr "Streuen"
+
+#: plugins/extensions/painterlyframework/kis_painterlymixerdocker.cpp:36
+msgid "Painterly Color Mixer"
+msgstr "Malerisch Klörenmischer"
 
 #: plugins/extensions/rotateimage/rotateimage.cc:67
 msgid "&Rotate Image..."
@@ -10807,7 +10807,7 @@ msgstr ""
 "Krita stellt man bloots Biller in »True Color« op. De Klören un (wenn "
 "vörhannen) Animeren warrt ännert."
 
-#: plugins/formats/gif/gif_export.cpp:64 ui/dialogs/kis_dlg_preferences.cc:657
+#: plugins/formats/gif/gif_export.cpp:64 ui/dialogs/kis_dlg_preferences.cc:654
 #: ui/kis_aboutdata.h:31 ui/kis_clipboard.cc:154
 msgid "Krita"
 msgstr "Krita"
@@ -11088,7 +11088,7 @@ msgid "Darken"
 msgstr "Afdüüstern"
 
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option.cpp:31
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:925
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:914
 msgid "Mirror"
 msgstr "Spegeln"
 
@@ -11101,12 +11101,12 @@ msgid "Mirrored"
 msgstr "Spegelt"
 
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:35
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:945
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:934
 msgid "Horizontally"
 msgstr "Kimmrecht"
 
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:37
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:947
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:936
 msgid "Vertically"
 msgstr "Pielrecht"
 
@@ -11917,24 +11917,24 @@ msgid "Color Rate"
 msgstr "Klöör-Rebeet"
 
 #: plugins/tools/defaulttools/kis_tool_brush.cc:137
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:889
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:878
 msgctxt "smooth out the curves while drawing"
 msgid "Smoothness:"
 msgstr "Weekheit:"
 
 #: plugins/tools/defaulttools/kis_tool_brush.cc:152
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:904
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:893
 msgid "Assistant:"
 msgstr "Hölper:"
 
 #: plugins/tools/defaulttools/kis_tool_brush.cc:153
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:905
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:894
 msgid "You need to add Ruler Assistants before this tool will work."
 msgstr ""
 "Du muttst de Linealenhölpers tofögen, dormit dit Warktüüch funkscheneert."
 
 #: plugins/tools/defaulttools/kis_tool_brush.cc:156
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:908
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:897
 msgid "Assistant Magnetism"
 msgstr "Den Hölper sien Magnetismus"
 
@@ -12142,23 +12142,23 @@ msgstr "Pinsel grötter maken"
 msgid "Decrease Brush Size"
 msgstr "Pinsel lütter maken"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:917
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:906
 #, fuzzy
 #| msgid "Axis X"
 msgid "Axis point"
 msgstr "X-Ass"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:924
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:913
 msgid "Symmetry"
 msgstr ""
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:926
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:915
 #, fuzzy
 #| msgid "Triangle"
 msgid "Translate"
 msgstr "Dre'eck"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:930
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:919
 #, fuzzy
 #| msgid "Brush tip"
 msgid "Brush count"
@@ -12258,7 +12258,7 @@ msgstr "Wo akraat: "
 msgid "Similar Selection"
 msgstr "Liekheit-Köör"
 
-#: plugins/tools/tool_crop/kis_tool_crop.h:147
+#: plugins/tools/tool_crop/kis_tool_crop.h:148
 msgid "Crop the image to an area"
 msgstr "Dat Bild op en Rebeet tosnieden"
 
@@ -12418,30 +12418,30 @@ msgstr "Ümwanneln bruken"
 msgid "Transform"
 msgstr "Ümwanneln"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2099
-msgid "Apply Transformation"
-msgstr "Ümwanneln bruken"
-
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2356
-msgid "Affine"
-msgstr "Mit Liekheit"
-
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2357
-msgid "Similitude"
-msgstr "Afbillen"
-
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2358
-msgid "Rigid"
-msgstr "Fast"
-
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2504
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2889
-msgid "Unlock Points"
-msgstr "Pünkt opsluten"
-
 #: plugins/tools/tool_transform2/kis_tool_transform.h:435
 msgid "Transform a layer or a selection"
 msgstr "En Laag oder Köör ümwanneln"
+
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2106
+msgid "Apply Transformation"
+msgstr "Ümwanneln bruken"
+
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2363
+msgid "Affine"
+msgstr "Mit Liekheit"
+
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2364
+msgid "Similitude"
+msgstr "Afbillen"
+
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2365
+msgid "Rigid"
+msgstr "Fast"
+
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2511
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2896
+msgid "Unlock Points"
+msgstr "Pünkt opsluten"
 
 #: ui/kis_filter_handler.cc:110
 #, kde-format
@@ -12523,6 +12523,10 @@ msgstr "Bildegenschappen"
 msgid "Layer Properties"
 msgstr "Laag-Egenschappen"
 
+#: ui/dialogs/kis_dlg_transformation_effect.cpp:38
+msgid "New Transformation Mask"
+msgstr "Nieg Ümform-Mask"
+
 #: ui/dialogs/kis_dlg_preferences.cc:190
 msgid "Monitor profile: "
 msgstr "Monitorprofil: "
@@ -12551,7 +12555,7 @@ msgstr "Tablett instellen"
 msgid "Tablet"
 msgstr "Tablett"
 
-#: ui/dialogs/kis_dlg_preferences.cc:654
+#: ui/dialogs/kis_dlg_preferences.cc:651
 msgid ""
 "You are trying to enable OpenGL\n"
 "\n"
@@ -12566,10 +12570,6 @@ msgstr ""
 "Dat kann en Driever- oder Finstereffektenproblem wesen.\n"
 "\n"
 "Wullt Du OpenGL redig anmaken?\n"
-
-#: ui/dialogs/kis_dlg_transformation_effect.cpp:38
-msgid "New Transformation Mask"
-msgstr "Nieg Ümform-Mask"
 
 #: ui/flake/kis_shape_controller.cpp:229
 #, kde-format
@@ -12793,43 +12793,43 @@ msgstr "Andreas Lundin"
 msgid "New configuration %1"
 msgstr "Nieg Instellen %1"
 
-#: ui/kis_paintop_box.cc:98
+#: ui/kis_paintop_box.cc:99
 msgid "Painter's Toolchest"
 msgstr "Den Maler sien Warktüüchkist"
 
-#: ui/kis_paintop_box.cc:102
+#: ui/kis_paintop_box.cc:103
 msgid "Edit brush settings"
 msgstr "Pinselinstellen bewerken"
 
-#: ui/kis_paintop_box.cc:108
+#: ui/kis_paintop_box.cc:109
 msgid "Choose brush preset"
 msgstr "Pinselvörinstellen utsöken"
 
-#: ui/kis_paintop_box.cc:115
+#: ui/kis_paintop_box.cc:116
 msgid "Set eraser mode"
 msgstr "Radeergummibedrief anmaken"
 
-#: ui/kis_paintop_box.cc:125
+#: ui/kis_paintop_box.cc:126
 #, fuzzy
 #| msgid "Horizontal border"
 msgid "Set horizontal mirror mode"
 msgstr "Kimmrecht Rand"
 
-#: ui/kis_paintop_box.cc:135
+#: ui/kis_paintop_box.cc:136
 #, fuzzy
 #| msgid "Set eraser mode"
 msgid "Set vertical mirror mode"
 msgstr "Radeergummibedrief anmaken"
 
-#: ui/kis_paintop_box.cc:146
+#: ui/kis_paintop_box.cc:147
 msgid "Mode: "
 msgstr "Bedriefoort: "
 
-#: ui/kis_paintop_box.cc:157
+#: ui/kis_paintop_box.cc:166
 msgid "Save to Palette"
 msgstr "Na  Klörensett sekern"
 
-#: ui/kis_paintop_box.cc:165
+#: ui/kis_paintop_box.cc:174
 #, fuzzy
 #| msgid "Colorspace"
 msgid "Choose workspace"
@@ -13363,14 +13363,6 @@ msgstr "Metadaten-Tosamenföhrmetood kören"
 msgid "x%1"
 msgstr "x%1"
 
-#: ui/widgets/kis_paintop_presets_chooser_popup.cpp:46
-msgid "Thumbnails"
-msgstr "Vöransichten"
-
-#: ui/widgets/kis_paintop_presets_chooser_popup.cpp:51
-msgid "Details"
-msgstr "Enkelheiten"
-
 #: ui/widgets/kis_wdg_generator.cpp:150 ui/widgets/kis_wdg_generator.cpp:164
 msgid "No configuration options."
 msgstr "Keen Instellenoptschonen."
@@ -13414,6 +13406,14 @@ msgstr "Na Warktüüchbalken tofögen"
 #: ui/widgets/kis_paintop_presets_popup.cpp:233
 msgid "Detach from Toolbar"
 msgstr "Ut Warktüüchbalken wegmaken"
+
+#: ui/widgets/kis_paintop_presets_chooser_popup.cpp:47
+msgid "Thumbnails"
+msgstr "Vöransichten"
+
+#: ui/widgets/kis_paintop_presets_chooser_popup.cpp:52
+msgid "Details"
+msgstr "Enkelheiten"
 
 #, fuzzy
 #~| msgid "Image Size"
