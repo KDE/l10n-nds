@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-05-13 05:49+0200\n"
+"POT-Creation-Date: 2011-05-23 09:06+0200\n"
 "PO-Revision-Date: 2011-04-11 05:24+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -384,6 +384,11 @@ msgstr "Vörgeschicht vun all tolest bruukt Daallaad-Steden"
 #. i18n: ectx: property (text), widget (QToolButton, m_move_up)
 #. i18n: ectx: property (text), widget (QToolButton, m_move_down)
 #. i18n: ectx: property (text), widget (QToolButton, m_move_bottom)
+#. i18n: ectx: property (text), widget (QToolButton, prev)
+#. i18n: ectx: property (text), widget (QToolButton, play)
+#. i18n: ectx: property (text), widget (QToolButton, pause)
+#. i18n: ectx: property (text), widget (QToolButton, stop)
+#. i18n: ectx: property (text), widget (QToolButton, next)
 #. +> trunk stable
 #: ktorrent/dialogs/fileselectdlg.ui:41 ktorrent/dialogs/fileselectdlg.ui:68
 #: ktorrent/dialogs/fileselectdlg.ui:79 ktorrent/dialogs/fileselectdlg.ui:86
@@ -392,6 +397,11 @@ msgstr "Vörgeschicht vun all tolest bruukt Daallaad-Steden"
 #: ktorrent/tools/queuemanagerwidget.ui:42
 #: ktorrent/tools/queuemanagerwidget.ui:49
 #: ktorrent/tools/queuemanagerwidget.ui:56
+#: plugins/mediaplayer/mediacontroller.ui:35
+#: plugins/mediaplayer/mediacontroller.ui:48
+#: plugins/mediaplayer/mediacontroller.ui:61
+#: plugins/mediaplayer/mediacontroller.ui:74
+#: plugins/mediaplayer/mediacontroller.ui:87
 msgid "..."
 msgstr "..."
 
@@ -1050,7 +1060,7 @@ msgstr "Trackers"
 #: ktorrent/dialogs/torrentcreatordlg.ui:181
 #: ktorrent/dialogs/torrentcreatordlg.ui:287
 #: ktorrent/dialogs/torrentcreatordlg.ui:331 ktorrent/ipfilterwidget.ui:65
-#: plugins/mediaplayer/playlistwidget.cpp:107
+#: plugins/mediaplayer/playlistwidget.cpp:50
 #: plugins/syndication/managefiltersdlg.ui:67
 msgid "Remove"
 msgstr "Wegmaken"
@@ -6781,23 +6791,82 @@ msgid "Media Player Menu"
 msgstr "Afspeler-Menü"
 
 #. i18n: ectx: ToolBar (MediaPlayerToolBar)
-#. +> trunk stable
+#. +> stable
 #: plugins/mediaplayer/ktmediaplayerpluginui.rc:11
 msgid "Media Player Toolbar"
 msgstr "Afspeler-Warktüüchbalken"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediamodel.cpp:88
+#: plugins/mediaplayer/mediacontroller.cpp:36
+#: plugins/mediaplayer/mediacontroller.cpp:80
+msgid "Ready to play"
+msgstr "Praat to spelen"
+
+#. +> trunk stable
+#: plugins/mediaplayer/mediacontroller.cpp:92
+#: plugins/mediaplayer/mediacontroller.cpp:99
+#, kde-format
+msgid "Playing: <b>%1</b>"
+msgstr "Bi to spelen: <b>%1</b>"
+
+#. +> trunk
+#: plugins/mediaplayer/mediacontroller.cpp:113
+#, fuzzy, kde-format
+#| msgid ""
+#| "Title: <b>%1</b><br/>"
+#| "Artist: <b>%2</b><br/>"
+#| "Album: <b>%3</b>"
+msgid "<b>%2</b> - <b>%1</b> (Album: <b>%3</b>)"
+msgstr ""
+"Title: <b>%1</b><br/>"
+"Künstler: <b>%2</b><br/>"
+"Album: <b>%3</b>"
+
+#. +> trunk
+#: plugins/mediaplayer/mediacontroller.cpp:118
+#, fuzzy, kde-format
+#| msgid ""
+#| "<b>%1</b><br/>"
+#| "<br/>"
+#| "%2"
+msgid "<b>%2</b> - <b>%1</b>"
+msgstr ""
+"<b>%1</b><br/>"
+"<br/>"
+"%2"
+
+#. +> trunk
+#: plugins/mediaplayer/mediacontroller.cpp:123
+#: plugins/mediaplayer/mediacontroller.cpp:128
+#, fuzzy, kde-format
+#| msgid "URL: <b>%1</b>"
+msgid "<b>%1</b>"
+msgstr "URL: <b>%1</b>"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, MediaController)
+#. +> trunk
+#: plugins/mediaplayer/mediacontroller.ui:14
+msgid "Form"
+msgstr "Form"
+
+#. i18n: ectx: property (text), widget (QLabel, info_label)
+#. +> trunk stable
+#: plugins/mediaplayer/mediacontroller.ui:129
+msgid "TextLabel"
+msgstr "Textbeteker"
+
+#. +> trunk stable
+#: plugins/mediaplayer/mediamodel.cpp:90
 msgid "Available"
 msgstr "Verföögbor"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediamodel.cpp:88
+#: plugins/mediaplayer/mediamodel.cpp:90
 msgid "Pending"
 msgstr "Utstahn"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediamodel.cpp:89
+#: plugins/mediaplayer/mediamodel.cpp:91
 #, kde-format
 msgid ""
 "<b>%1</b><br/>"
@@ -6809,140 +6878,141 @@ msgstr ""
 "Daallaadt: %3 %"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:48
-#: plugins/mediaplayer/mediaplayeractivity.cpp:157
-#: plugins/mediaplayer/mediaplayeractivity.cpp:369
+#: plugins/mediaplayer/mediaplayeractivity.cpp:51
+#: plugins/mediaplayer/mediaplayeractivity.cpp:68
+#: plugins/mediaplayer/mediaplayeractivity.cpp:163
+#: plugins/mediaplayer/mediaplayeractivity.cpp:367
 #: plugins/mediaplayer/mediaplayerplugin.cpp:49
-#: plugins/mediaplayer/mediaplayerplugin.cpp:61
+#: plugins/mediaplayer/mediaplayerplugin.cpp:60
 msgid "Media Player"
 msgstr "Afspeler"
 
 #. +> trunk stable
+#: plugins/mediaplayer/mediaplayeractivity.cpp:113
+#: plugins/mediaplayer/videowidget.cpp:68
+msgid "Play"
+msgstr "Afspelen"
+
+#. +> stable
 #: plugins/mediaplayer/mediaplayeractivity.cpp:75
 msgid "Play List"
 msgstr "Afspeellist"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:99
-#: plugins/mediaplayer/videowidget.cpp:68
-msgid "Play"
-msgstr "Afspelen"
-
-#. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:103
+#: plugins/mediaplayer/mediaplayeractivity.cpp:117
 msgid "Pause"
 msgstr "Ophollen"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:107
+#: plugins/mediaplayer/mediaplayeractivity.cpp:121
 #: plugins/mediaplayer/videowidget.cpp:71
 msgid "Stop"
 msgstr "Anhollen"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:111
+#: plugins/mediaplayer/mediaplayeractivity.cpp:125
 msgid "Previous"
 msgstr "Verleden"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:115
+#: plugins/mediaplayer/mediaplayeractivity.cpp:129
 msgid "Next"
 msgstr "Nakamen"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:119
+#: plugins/mediaplayer/mediaplayeractivity.cpp:133
 msgid "Show Video"
 msgstr "Video wiesen"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:123
-#: plugins/mediaplayer/playlistwidget.cpp:109
+#: plugins/mediaplayer/mediaplayeractivity.cpp:137
+#: plugins/mediaplayer/playlistwidget.cpp:52
 msgid "Add Media"
 msgstr "Medien tofögen"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:127
-#: plugins/mediaplayer/playlistwidget.cpp:110
+#: plugins/mediaplayer/mediaplayeractivity.cpp:141
+#: plugins/mediaplayer/playlistwidget.cpp:54
 msgid "Clear Playlist"
 msgstr "Afspeellist leddigmaken"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:131
+#: plugins/mediaplayer/mediaplayeractivity.cpp:149
 msgid "Toggle Fullscreen"
 msgstr "Heelschirm an- oder utmaken"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaplayeractivity.cpp:171
-#: plugins/mediaplayer/mediaplayeractivity.cpp:372
+#: plugins/mediaplayer/mediaplayeractivity.cpp:177
+#: plugins/mediaplayer/mediaplayeractivity.cpp:370
 msgid "Movie player"
 msgstr "Filmafspeler"
 
 #. +> trunk stable
-#: plugins/mediaplayer/mediaview.cpp:54
+#: plugins/mediaplayer/mediaview.cpp:87
 msgid "Search media files"
 msgstr "Mediendateien söken"
 
+#. +> trunk
+#: plugins/mediaplayer/mediaview.cpp:98
+#, fuzzy
+#| msgid "Skip incomplete files"
+msgid "Show incomplete files"
+msgstr "Nich afslaten utlaten"
+
 #. +> trunk stable
-#: plugins/mediaplayer/playlist.cpp:91
+#: plugins/mediaplayer/playlist.cpp:97
 #: plugins/syndication/feedwidgetmodel.cpp:82
 msgid "Title"
 msgstr "Titel"
 
 #. +> trunk stable
-#: plugins/mediaplayer/playlist.cpp:92
+#: plugins/mediaplayer/playlist.cpp:98
 msgid "Artist"
 msgstr "Künstler"
 
 #. +> trunk stable
-#: plugins/mediaplayer/playlist.cpp:93
+#: plugins/mediaplayer/playlist.cpp:99
 msgid "Album"
 msgstr "Album"
 
 #. +> trunk stable
-#: plugins/mediaplayer/playlist.cpp:94
+#: plugins/mediaplayer/playlist.cpp:100
 msgid "Length"
 msgstr "Duer"
 
 #. +> trunk stable
-#: plugins/mediaplayer/playlist.cpp:95
+#: plugins/mediaplayer/playlist.cpp:101
 msgid "Year"
 msgstr "Johr"
 
-#. +> trunk stable
-#: plugins/mediaplayer/playlistwidget.cpp:71
-#: plugins/mediaplayer/playlistwidget.cpp:164
-msgid "Ready to play"
-msgstr "Praat to spelen"
+#. +> trunk
+#: plugins/mediaplayer/playlistwidget.cpp:61
+#, fuzzy
+#| msgid "Random Files"
+msgid "Random play order"
+msgstr "Tofällig Dateien"
 
-#. +> trunk stable
+#. +> stable
 #: plugins/mediaplayer/playlistwidget.cpp:85
 msgid "Mode:"
 msgstr "Beriefoort:"
 
-#. +> trunk stable
+#. +> stable
 #: plugins/mediaplayer/playlistwidget.cpp:87
 msgid "Single File"
 msgstr "Enkel Datei"
 
-#. +> trunk stable
+#. +> stable
 #: plugins/mediaplayer/playlistwidget.cpp:88
 msgid "Playlist"
 msgstr "Afspeellist"
 
-#. +> trunk stable
+#. +> stable
 #: plugins/mediaplayer/playlistwidget.cpp:89
 msgid "Random"
 msgstr "Tofällig"
 
-#. +> trunk stable
-#: plugins/mediaplayer/playlistwidget.cpp:175
-#: plugins/mediaplayer/playlistwidget.cpp:182
-#: plugins/mediaplayer/playlistwidget.cpp:211
-#, kde-format
-msgid "Playing: <b>%1</b>"
-msgstr "Bi to spelen: <b>%1</b>"
-
-#. +> trunk stable
+#. +> stable
 #: plugins/mediaplayer/playlistwidget.cpp:196
 #, kde-format
 msgid ""
@@ -6954,7 +7024,7 @@ msgstr ""
 "Künstler: <b>%2</b><br/>"
 "Album: <b>%3</b>"
 
-#. +> trunk stable
+#. +> stable
 #: plugins/mediaplayer/playlistwidget.cpp:197
 #: plugins/mediaplayer/playlistwidget.cpp:202
 #: plugins/mediaplayer/playlistwidget.cpp:207
@@ -6968,7 +7038,7 @@ msgstr ""
 "\n"
 "%2"
 
-#. +> trunk stable
+#. +> stable
 #: plugins/mediaplayer/playlistwidget.cpp:201
 #, kde-format
 msgid ""
@@ -6978,7 +7048,7 @@ msgstr ""
 "Titel: <b>%1</b><br/>"
 "Künstler: <b>%2</b>"
 
-#. +> trunk stable
+#. +> stable
 #: plugins/mediaplayer/playlistwidget.cpp:206
 #, kde-format
 msgid "Title: <b>%1</b>"
@@ -9184,18 +9254,6 @@ msgstr " s"
 msgid "ZeroConf"
 msgstr "ZeroConf"
 
-#. i18n: ectx: property (text), widget (QLabel, job_title)
-#. i18n: ectx: property (text), widget (QLabel, job_description)
-#. i18n: ectx: property (text), widget (QLabel, job_speed)
-#. i18n: ectx: property (text), widget (QLabel, msg)
-#. +> stable
-#: libktcore/torrent/basicjobprogresswidget.ui:24
-#: libktcore/torrent/basicjobprogresswidget.ui:31
-#: libktcore/torrent/basicjobprogresswidget.ui:47
-#: libktcore/torrent/basicjobprogresswidget.ui:59
-msgid "TextLabel"
-msgstr "Textbeteker"
-
 #. +> stable
 #: plugins/bwscheduler/additemdlg.cpp:78
 msgid "No day has been selected."
@@ -9490,9 +9548,6 @@ msgstr "Wekenenn"
 #~| msgid "Show list of chunks currently downloading"
 #~ msgid "List of hosts which are directly accepted on loading"
 #~ msgstr "List mit opstunns daallaadt Blöck wiesen"
-
-#~ msgid "Form"
-#~ msgstr "Form"
 
 #~ msgid "Cannot verify data: %1"
 #~ msgstr "Daten laat sik nich pröven: \"%1\""
@@ -10366,12 +10421,6 @@ msgstr "Wekenenn"
 
 #~ msgid "The media player allows you to play music and movies inside KTorrent"
 #~ msgstr "Mit den Medien-Afspeler laat sik binnen KTorrent Musik un Filmen afspelen."
-
-#~ msgid "Skip incomplete files"
-#~ msgstr "Nich afslaten utlaten"
-
-#~ msgid "Random Files"
-#~ msgstr "Tofällig Dateien"
 
 #~ msgid "The URL %1, does not contain {searchTerms}."
 #~ msgstr "De URL \"%1\" bargt nich \"{searchTerms}\"."
