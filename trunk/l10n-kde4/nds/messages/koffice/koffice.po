@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: koffice\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-06-18 04:35+0200\n"
+"POT-Creation-Date: 2011-06-19 04:29+0200\n"
 "PO-Revision-Date: 2011-01-13 07:20+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -18,10 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Language: nds\n"
 
-#: flake/KoToolBase.cpp:173 flake/KoToolManager.cpp:352
-msgid "Tool Options"
-msgstr "Warktüüch-Optschonen"
-
 #: flake/KPathShapeFactory.cpp:32
 msgid "Simple path shape"
 msgstr "Eenfach Bagenbahnform"
@@ -30,14 +26,18 @@ msgstr "Eenfach Bagenbahnform"
 msgid "A simple path shape"
 msgstr "En eenfach Bagenbahnform"
 
-#: flake/KShapePaste.cpp:100
-msgid "Paste Shapes"
-msgstr "Formen infögen"
+#: flake/KToolBase.cpp:173 flake/KToolManager.cpp:352
+msgid "Tool Options"
+msgstr "Warktüüch-Optschonen"
 
-#: flake/KoToolManager.cpp:351
+#: flake/KToolManager.cpp:351
 #, kde-format
 msgid "Active tool: %1"
 msgstr "Aktiv Warktüüch: %1"
+
+#: flake/KShapePaste.cpp:100
+msgid "Paste Shapes"
+msgstr "Formen infögen"
 
 #: flake/commands/KPathSegmentBreakCommand.cpp:40
 msgid "Break Subpath"
@@ -95,6 +95,10 @@ msgstr "Formen nieg anornen"
 msgid "Resize Shapes"
 msgstr "Formengrött ännern"
 
+#: flake/commands/KSubpathRemoveCommand.cpp:30
+msgid "Remove Subpath"
+msgstr "Ünnerlien wegmaken"
+
 #: flake/commands/KParameterHandleMoveCommand.cpp:34
 msgid "Change Parameter"
 msgstr "Parameter ännern"
@@ -128,11 +132,6 @@ msgstr "Pünkt tosamenföhren"
 #: flake/commands/KPathPointMoveCommand.cpp:58
 msgid "Move points"
 msgstr "Pünkt verschuven"
-
-#: flake/commands/KPathPointRemoveCommand.cpp:104
-#: flake/commands/KPathPointRemoveCommand.cpp:133
-msgid "Remove Points"
-msgstr "Pünkt wegdoon"
 
 #: flake/commands/KPathPointTypeCommand.cpp:46
 msgid "Set Point Type"
@@ -168,47 +167,32 @@ msgstr "Formen fastsetten"
 msgid "Set Shadow"
 msgstr "Schadden fastleggen"
 
-#: flake/commands/KoShapeTransparencyCommand.cpp:49
-#: flake/commands/KoShapeTransparencyCommand.cpp:60
-#: flake/commands/KoShapeTransparencyCommand.cpp:73
+#: flake/commands/KPathPointRemoveCommand.cpp:104
+#: flake/commands/KPathPointRemoveCommand.cpp:133
+msgid "Remove Points"
+msgstr "Pünkt wegdoon"
+
+#: flake/commands/KShapeTransparencyCommand.cpp:49
+#: flake/commands/KShapeTransparencyCommand.cpp:60
+#: flake/commands/KShapeTransparencyCommand.cpp:73
 msgid "Set Opacity"
 msgstr "Deckstärk fastleggen"
 
-#: flake/commands/KoShapeUngroupCommand.cpp:57
+#: flake/commands/KShapeUngroupCommand.cpp:57
 msgid "Ungroup Shapes"
 msgstr "Formenkoppel opheven"
 
-#: flake/commands/KoSubpathJoinCommand.cpp:51
+#: flake/commands/KSubpathJoinCommand.cpp:51
 msgid "Close Subpath"
 msgstr "Ünnerlien afsluten"
 
-#: flake/commands/KoSubpathJoinCommand.cpp:53
+#: flake/commands/KSubpathJoinCommand.cpp:53
 msgid "Join Subpaths"
 msgstr "Ünnerlienen verbinnen"
-
-#: flake/commands/KoSubpathRemoveCommand.cpp:30
-msgid "Remove Subpath"
-msgstr "Ünnerlien wegmaken"
 
 #: flake/commands/KShapeShearCommand.cpp:51
 msgid "Shear Shapes"
 msgstr "Formen scheren"
-
-#: flake/tools/KCreatePathTool.cpp:369 flake/tools/KPathTool.cpp:180
-msgid "Snapping"
-msgstr "Andocken"
-
-#: flake/tools/KCreatePathTool.cpp:374
-msgid "Angle snapping delta"
-msgstr "Winkelandockverscheel"
-
-#: flake/tools/KCreatePathTool.cpp:379
-msgid "Angle Constraints"
-msgstr "Winkelbedingen"
-
-#: flake/tools/KCreatePathToolFactory.cpp:33
-msgid "Create Path"
-msgstr "Lienenkeed opstellen"
 
 #: flake/tools/KCreateShapesToolFactory.cpp:33
 msgid "Create object"
@@ -217,10 +201,6 @@ msgstr "Objekt opstellen"
 #: flake/tools/KPanToolFactory.cpp:29
 msgid "Pan"
 msgstr "Verschuven"
-
-#: flake/tools/KPathSegmentChangeStrategy.cpp:140
-msgid "Change Segment"
-msgstr "Streek ännern"
 
 #: flake/tools/KPathTool.cpp:87
 msgid "Corner point"
@@ -282,6 +262,10 @@ msgstr "Na Lienenkeed"
 msgid "Line/Curve"
 msgstr "Lien/Bagen"
 
+#: flake/tools/KPathTool.cpp:180 flake/tools/KCreatePathTool.cpp:369
+msgid "Snapping"
+msgstr "Andocken"
+
 #: flake/tools/KPathTool.cpp:514
 msgid "Drag to move handle."
 msgstr "Treck, wenn Du den Greep verschuven wullt."
@@ -307,14 +291,30 @@ msgstr ""
 "Drück de Tast \"B\", wenn Du en Bagen an de markeerten Streken opbreken "
 "wullt."
 
-#: flake/tools/KoZoomToolFactory.cpp:29 widgets/KoZoomAction.cpp:248
+#: flake/tools/KPathToolFactory.cpp:29
+msgid "Path editing tool"
+msgstr "Lienenkeden-Bewerkwarktüüch"
+
+#: flake/tools/KZoomToolFactory.cpp:29 widgets/KoZoomAction.cpp:248
 #: widgets/KoZoomController.cpp:38 widgets/KoZoomInput.cpp:52
 msgid "Zoom"
 msgstr "Ansichtgrött"
 
-#: flake/tools/KPathToolFactory.cpp:29
-msgid "Path editing tool"
-msgstr "Lienenkeden-Bewerkwarktüüch"
+#: flake/tools/KCreatePathTool.cpp:374
+msgid "Angle snapping delta"
+msgstr "Winkelandockverscheel"
+
+#: flake/tools/KCreatePathTool.cpp:379
+msgid "Angle Constraints"
+msgstr "Winkelbedingen"
+
+#: flake/tools/KCreatePathToolFactory.cpp:33
+msgid "Create Path"
+msgstr "Lienenkeed opstellen"
+
+#: flake/tools/KPathSegmentChangeStrategy.cpp:140
+msgid "Change Segment"
+msgstr "Streek ännern"
 
 #: kokross/KoScriptManager.cpp:177
 msgid "Install Script Package"
@@ -692,6 +692,10 @@ msgstr "Hööftsiet-Utsehn kören:"
 msgid "Master Page"
 msgstr "Hööftsiet"
 
+#: kopageapp/tools/backgroundTool/KoPABackgroundToolWidget.cpp:93
+msgid "Change background image"
+msgstr "Achtergrund ännern"
+
 #: kopageapp/tools/backgroundTool/KoPABackgroundTool.cpp:105
 msgid "Background Tool"
 msgstr "Achtergrundwarktüüch"
@@ -703,10 +707,6 @@ msgstr "Stil-Andocker för Ännern an'n Achtergrund bruken"
 #: kopageapp/tools/backgroundTool/KoPABackgroundToolFactory.cpp:30
 msgid "Background editing tool"
 msgstr "Achtergrund-Bewerkenwarktüüch"
-
-#: kopageapp/tools/backgroundTool/KoPABackgroundToolWidget.cpp:93
-msgid "Change background image"
-msgstr "Achtergrund ännern"
 
 #: kopageapp/KoPAPastePage.cpp:132
 msgid "Paste Slide"
@@ -828,45 +828,6 @@ msgstr[1] "%1 Övereenstimmen funnen"
 msgid "Found no match"
 msgstr "Keen Övereenstimmen funnen"
 
-#: kotext/InsertTextLocator.cpp:29
-msgid "Index Reference"
-msgstr "Indexbetog"
-
-#: kotext/InsertTextReferenceAction.cpp:35
-#: kotext/InsertTextReferenceAction.cpp:63
-msgid "Text Reference"
-msgstr "Textbetog"
-
-#: kotext/InsertTextReferenceAction.cpp:44
-msgid "Please create an index to reference first."
-msgstr "Bitte toeerst en Index as Betog opstellen."
-
-#: kotext/InsertTextReferenceAction.cpp:53
-msgid "Select the index you want to reference"
-msgstr "Index kören, op den Du henwiesen wullt"
-
-#: kotext/InsertTextReferenceAction.cpp:63 kotext/InsertVariableAction.cpp:51
-#: main/rdf/InsertSemanticObjectCreateAction.cpp:59
-#: main/rdf/InsertSemanticObjectReferenceAction.cpp:63
-#, kde-format
-msgid "%1 Options"
-msgstr "%1-Optschonen"
-
-#: kotext/KoText.cpp:47
-msgctxt "Underline Style"
-msgid "None"
-msgstr "Keen"
-
-#: kotext/KoText.cpp:48
-msgctxt "Underline Style"
-msgid "Single"
-msgstr "Eenfach"
-
-#: kotext/KoText.cpp:49
-msgctxt "Underline Style"
-msgid "Double"
-msgstr "Dubbelt"
-
 #: kotext/commands/DeleteTableColumnCommand.cpp:40
 #: kotext/KoTextEditor.cpp:1058
 msgid "Delete Column"
@@ -894,6 +855,69 @@ msgstr "Reeg nerrn infögen"
 #: kotext/KoTextEditor.cpp:1016
 msgid "Insert Row Above"
 msgstr "Reeg baven infögen"
+
+#: kotext/KoText.cpp:47
+msgctxt "Underline Style"
+msgid "None"
+msgstr "Keen"
+
+#: kotext/KoText.cpp:48
+msgctxt "Underline Style"
+msgid "Single"
+msgstr "Eenfach"
+
+#: kotext/KoText.cpp:49
+msgctxt "Underline Style"
+msgid "Double"
+msgstr "Dubbelt"
+
+#: kotext/KReplaceStrategy.cpp:58
+msgid ""
+"Found no match\n"
+"\n"
+"No text was replaced"
+msgstr ""
+"Keen Övereenstimmen funnen.\n"
+"\n"
+"Keen Text utwesselt."
+
+#: kotext/KReplaceStrategy.cpp:61
+#, kde-format
+msgid "1 replacement made"
+msgid_plural "%1 replacements made"
+msgstr[0] "1 Saak utwesselt"
+msgstr[1] "%1 Saken utwesselt"
+
+#: kotext/KReplaceStrategy.cpp:74
+#, kde-format
+msgid "Replace %1 with %2?"
+msgstr "%1 mit %2 utwesseln?"
+
+#. i18n: file: widgets/KoCsvImportDialog.ui:147
+#. i18n: ectx: attribute (title), widget (QWidget, m_formatTab)
+#: kotext/KoTextEditor_p.h:93 kotext/KoTextEditor_p.h:130 rc.cpp:344
+msgid "Format"
+msgstr "Formaat"
+
+#: kotext/InsertTextReferenceAction.cpp:35
+#: kotext/InsertTextReferenceAction.cpp:63
+msgid "Text Reference"
+msgstr "Textbetog"
+
+#: kotext/InsertTextReferenceAction.cpp:44
+msgid "Please create an index to reference first."
+msgstr "Bitte toeerst en Index as Betog opstellen."
+
+#: kotext/InsertTextReferenceAction.cpp:53
+msgid "Select the index you want to reference"
+msgstr "Index kören, op den Du henwiesen wullt"
+
+#: kotext/InsertTextReferenceAction.cpp:63 kotext/InsertVariableAction.cpp:51
+#: main/rdf/InsertSemanticObjectReferenceAction.cpp:63
+#: main/rdf/InsertSemanticObjectCreateAction.cpp:59
+#, kde-format
+msgid "%1 Options"
+msgstr "%1-Optschonen"
 
 #: kotext/KoTextEditor.cpp:111 kotext/KoTextEditor.cpp:167
 #: kotext/KoTextEditor.cpp:325 widgets/KoCsvImportDialog.cpp:216
@@ -1012,33 +1036,9 @@ msgstr "Zellen delen"
 msgid "Line Break"
 msgstr "Reegümbrook"
 
-#: kotext/KReplaceStrategy.cpp:58
-msgid ""
-"Found no match\n"
-"\n"
-"No text was replaced"
-msgstr ""
-"Keen Övereenstimmen funnen.\n"
-"\n"
-"Keen Text utwesselt."
-
-#: kotext/KReplaceStrategy.cpp:61
-#, kde-format
-msgid "1 replacement made"
-msgid_plural "%1 replacements made"
-msgstr[0] "1 Saak utwesselt"
-msgstr[1] "%1 Saken utwesselt"
-
-#: kotext/KReplaceStrategy.cpp:74
-#, kde-format
-msgid "Replace %1 with %2?"
-msgstr "%1 mit %2 utwesseln?"
-
-#. i18n: file: widgets/KoCsvImportDialog.ui:147
-#. i18n: ectx: attribute (title), widget (QWidget, m_formatTab)
-#: kotext/KoTextEditor_p.h:93 kotext/KoTextEditor_p.h:130 rc.cpp:344
-msgid "Format"
-msgstr "Formaat"
+#: kotext/InsertTextLocator.cpp:29
+msgid "Index Reference"
+msgstr "Indexbetog"
 
 #: main/KoApplication.cpp:77
 msgid "Only print and exit"
@@ -2084,6 +2084,10 @@ msgstr "Begeefnissen"
 msgid "Locations"
 msgstr "Steden"
 
+#: main/rdf/KoDocumentRdf.cpp:851
+msgid "Reference"
+msgstr "Betog"
+
 #: main/rdf/KoSopranoTableModel.cpp:80
 msgid "Empty"
 msgstr "Leddig"
@@ -2134,10 +2138,6 @@ msgstr "Sekert binnen"
 #: main/rdf/InsertSemanticObjectReferenceAction.cpp:55
 msgid "Select the object you want to reference"
 msgstr "Söök dat Objekt ut, op dat Du henwiesen wullt."
-
-#: main/rdf/KoDocumentRdf.cpp:851
-msgid "Reference"
-msgstr "Betog"
 
 #: main/config/KoConfigDocumentPage.cpp:75
 msgid "Auto save (min):"
@@ -2982,13 +2982,13 @@ msgstr "Krüzen Lienen"
 msgid "Guide lines"
 msgstr "Hülplienen"
 
-#. i18n: file: flake/tools/KoZoomToolWidget.ui:20
+#. i18n: file: flake/tools/KZoomToolWidget.ui:20
 #. i18n: ectx: property (text), widget (QRadioButton, zoomInButton)
 #: rc.cpp:27
 msgid "Zoom In"
 msgstr "Grötter maken"
 
-#. i18n: file: flake/tools/KoZoomToolWidget.ui:30
+#. i18n: file: flake/tools/KZoomToolWidget.ui:30
 #. i18n: ectx: property (text), widget (QRadioButton, zoomOutButton)
 #: rc.cpp:30
 msgid "Zoom Out"
