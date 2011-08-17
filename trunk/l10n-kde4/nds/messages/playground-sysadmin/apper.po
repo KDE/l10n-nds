@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kpackagekit\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-16 06:59+0200\n"
+"POT-Creation-Date: 2011-08-17 04:14+0200\n"
 "PO-Revision-Date: 2011-06-15 10:41+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid "Backend Details"
 msgstr "Hülpprogramm-Enkelheiten wiesen"
 
-#: Apper/main.cpp:54 Sentinel/main.cpp:34
+#: Apper/main.cpp:54 Sentinel/UpdateIcon.cpp:171 Sentinel/main.cpp:34
 msgid "Apper"
 msgstr "Apper"
 
@@ -87,13 +87,7 @@ msgstr "Enkel Paket wegmaken"
 msgid "Package file to install"
 msgstr "Paketdatei, de Du installeren wullt"
 
-#: ApperKCM/ScreenShotViewer.cpp:90
-#, fuzzy
-#| msgid "Failed to install package"
-msgid "Could not find screen shot."
-msgstr "Paket lett sik nich installeren"
-
-#: ApperKCM/Settings/OriginModel.cpp:40 ApperKCM/Settings/OriginModel.cpp:53
+#: ApperKCM/Settings/OriginModel.cpp:39 ApperKCM/Settings/OriginModel.cpp:52
 #, fuzzy
 #| msgid "Origin of Packages"
 msgid "Origin of Packages"
@@ -153,7 +147,7 @@ msgctxt "No updates will be automatically installed"
 msgid "None"
 msgstr "Keen"
 
-#: ApperKCM/Settings/Settings.cpp:261 libapper/KpkStrings.cpp:962
+#: ApperKCM/Settings/Settings.cpp:261 libapper/PkStrings.cpp:962
 msgid "You do not have the necessary privileges to perform this action."
 msgstr "Du hest nich noog Verlöven för disse Akschoon."
 
@@ -163,7 +157,7 @@ msgstr "Du hest nich noog Verlöven för disse Akschoon."
 msgid "Failed to set origin data"
 msgstr "Herkomstdaten laat sik nich fastleggen"
 
-#: ApperKCM/Updater/DistroUpgrade.cpp:39 Sentinel/KpkDistroUpgrade.cpp:63
+#: ApperKCM/Updater/DistroUpgrade.cpp:39 Sentinel/DistroUpgrade.cpp:63
 msgid "Distribution upgrade available"
 msgstr "Distributschoon-Opfrischen verföögbor"
 
@@ -206,22 +200,22 @@ msgstr ""
 msgid "Distribution upgrade complete."
 msgstr "Distributschoon-Opfrischen afslaten"
 
-#: ApperKCM/Updater/DistroUpgrade.cpp:100 Sentinel/KpkDistroUpgrade.cpp:117
+#: ApperKCM/Updater/DistroUpgrade.cpp:100 Sentinel/DistroUpgrade.cpp:117
 #, kde-format
 msgid "Distribution upgrade process exited with code %1."
 msgstr "Distributschoon-Opfrischen mit Kode %1 beendt."
 
-#: ApperKCM/Updater/DistroUpgrade.cpp:115 Sentinel/KpkDistroUpgrade.cpp:134
+#: ApperKCM/Updater/DistroUpgrade.cpp:115 Sentinel/DistroUpgrade.cpp:134
 msgid "The distribution upgrade process failed to start."
 msgstr "Distributschoon-Opfrischen lett sik nich starten."
 
-#: ApperKCM/Updater/DistroUpgrade.cpp:119 Sentinel/KpkDistroUpgrade.cpp:137
+#: ApperKCM/Updater/DistroUpgrade.cpp:119 Sentinel/DistroUpgrade.cpp:137
 msgid ""
 "The distribution upgrade process crashed some time after starting "
 "successfully."
 msgstr "Distributschoon-Opfrischen is kort na en normaal Start afstört."
 
-#: ApperKCM/Updater/DistroUpgrade.cpp:123 Sentinel/KpkDistroUpgrade.cpp:140
+#: ApperKCM/Updater/DistroUpgrade.cpp:123 Sentinel/DistroUpgrade.cpp:140
 msgid "The distribution upgrade process failed with an unknown error."
 msgstr "Distributschoon-Opfrischen is mit en nich begäng Fehler fehlslaan."
 
@@ -344,56 +338,101 @@ msgstr "Archiv"
 msgid "No update description was found."
 msgstr "Leider keen Opfrischen-Beschrieven funnen."
 
-#: ApperKCM/Updater/Updater.cpp:104 ApperKCM/BrowseView.cpp:89
+#: ApperKCM/Updater/Updater.cpp:101 ApperKCM/BrowseView.cpp:89
 msgid "Show Versions"
 msgstr "Verschonen wiesen"
 
-#: ApperKCM/Updater/Updater.cpp:112 ApperKCM/BrowseView.cpp:97
+#: ApperKCM/Updater/Updater.cpp:109 ApperKCM/BrowseView.cpp:97
 #, fuzzy
 msgid "Show Architectures"
 msgstr "Architekturen"
 
 #. i18n: file: ApperKCM/ApperKCM.ui:230
 #. i18n: ectx: property (text), widget (QPushButton, checkUpdatesPB)
-#: ApperKCM/Updater/Updater.cpp:276 rc.cpp:200
+#: ApperKCM/Updater/Updater.cpp:273 rc.cpp:200
 msgid "Check for new Updates"
 msgstr "Na niege Opfrischen kieken"
 
-#: ApperKCM/TransactionHistory.cpp:66
-#, fuzzy
-#| msgid "Refresh Packages List"
-msgid "Refresh transactions list"
-msgstr "Paketlist opfrischen"
+#: ApperKCM/ApperKCM.cpp:77
+msgid "Application Manager"
+msgstr "Programmpleger"
 
-#: ApperKCM/TransactionHistory.cpp:87
-#, kde-format
-msgid "Time since last cache refresh: %1"
+#: ApperKCM/ApperKCM.cpp:79
+msgid "KDE interface for managing software"
+msgstr "KDE-Koppelsteed för de Software-Pleeg"
+
+#: ApperKCM/ApperKCM.cpp:81
+msgid "(C) 2008-2010 Daniel Nicoletti"
+msgstr "© 2008-2010 Daniel Nicoletti"
+
+#: ApperKCM/ApperKCM.cpp:109 ApperKCM/ApperKCM.cpp:291
+msgid "Find"
+msgstr "Söken"
+
+#: ApperKCM/ApperKCM.cpp:205
+msgid "History"
+msgstr "Vörgeschicht"
+
+#. i18n: file: ApperKCM/Settings/Settings.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, Settings)
+#: ApperKCM/ApperKCM.cpp:211 rc.cpp:140
+msgid "Settings"
+msgstr "Instellen"
+
+#: ApperKCM/ApperKCM.cpp:268 ApperKCM/ApperKCM.cpp:269
+#: ApperKCM/ApperKCM.cpp:270 ApperKCM/ApperKCM.cpp:271
+msgid "&Cancel"
+msgstr "&Afbreken"
+
+#. i18n: file: ApperKCM/ApperKCM.ui:284
+#. i18n: ectx: property (text), widget (QToolButton, backTB)
+#: ApperKCM/ApperKCM.cpp:278 rc.cpp:206
+msgid "Find by &name"
+msgstr "Na &Naam söken"
+
+#. i18n: file: ApperKCM/ApperKCM.ui:294
+#. i18n: ectx: property (text), widget (QToolButton, backTB)
+#: ApperKCM/ApperKCM.cpp:279 rc.cpp:212
+msgid "Find by f&ile name"
+msgstr "Na &Dateinaam söken"
+
+#. i18n: file: ApperKCM/ApperKCM.ui:289
+#. i18n: ectx: property (text), widget (QToolButton, backTB)
+#: ApperKCM/ApperKCM.cpp:280 rc.cpp:209
+msgid "Find by &description"
+msgstr "Na &Beschrieven söken"
+
+#: ApperKCM/ApperKCM.cpp:414
+msgid ""
+"The settings of the current module have changed.\n"
+"Do you want to apply the changes or discard them?"
 msgstr ""
+"De Instellen binnen dat aktive Moduul wöörn ännert.\n"
+"Wullt Du de Ännern bruken oder wegsmieten?"
 
-#: ApperKCM/TransactionModel.cpp:46
-#, fuzzy
-#| msgid "State"
-msgid "Date"
-msgstr "Status"
+#: ApperKCM/ApperKCM.cpp:416
+msgid "Apply Settings"
+msgstr "Instellen bruken"
 
-#: ApperKCM/TransactionModel.cpp:47 libapper/PackageModel.cpp:174
-msgid "Action"
-msgstr "Akschoon"
+#: ApperKCM/CategoryModel.cpp:47
+msgid "Installed Software"
+msgstr "Installeert Programmen"
 
-#: ApperKCM/TransactionModel.cpp:48 Sentinel/TransactionWatcher.cpp:293
-msgid "Details"
-msgstr "Enkelheiten"
+#: ApperKCM/CategoryModel.cpp:50 ApperKCM/CategoryModel.cpp:58
+msgid "Lists"
+msgstr "Listen"
 
-#: ApperKCM/TransactionModel.cpp:49
-msgctxt "Machine user who issued the transaction"
-msgid "Username"
-msgstr ""
+#: ApperKCM/CategoryModel.cpp:55
+msgid "Updates"
+msgstr "Opfrischen"
 
-#: ApperKCM/TransactionModel.cpp:50
-#, fuzzy
-#| msgid "Localization"
-msgid "Application"
-msgstr "Översetten"
+#: ApperKCM/CategoryModel.cpp:155 ApperKCM/CategoryModel.cpp:339
+msgid "Categories"
+msgstr "Kategorien"
+
+#: ApperKCM/CategoryModel.cpp:208
+msgid "Groups"
+msgstr "Koppeln"
 
 #: ApperKCM/FiltersMenu.cpp:37
 msgid "Collections"
@@ -409,7 +448,7 @@ msgstr "Sammeln utsluten"
 
 #. i18n: file: Apper/BackendDetails.ui:100
 #. i18n: ectx: property (text), widget (QCheckBox, installedCB)
-#: ApperKCM/FiltersMenu.cpp:60 libapper/KpkStrings.cpp:362 rc.cpp:23
+#: ApperKCM/FiltersMenu.cpp:60 libapper/PkStrings.cpp:362 rc.cpp:23
 msgid "Installed"
 msgstr "Installeert"
 
@@ -556,155 +595,114 @@ msgstr ""
 msgid "Applications"
 msgstr "Översetten"
 
-#: ApperKCM/ApperKCM.cpp:77
-msgid "Application Manager"
-msgstr "Programmpleger"
-
-#: ApperKCM/ApperKCM.cpp:79
-msgid "KDE interface for managing software"
-msgstr "KDE-Koppelsteed för de Software-Pleeg"
-
-#: ApperKCM/ApperKCM.cpp:81
-msgid "(C) 2008-2010 Daniel Nicoletti"
-msgstr "© 2008-2010 Daniel Nicoletti"
-
-#: ApperKCM/ApperKCM.cpp:109 ApperKCM/ApperKCM.cpp:291
-msgid "Find"
-msgstr "Söken"
-
-#: ApperKCM/ApperKCM.cpp:205
-msgid "History"
-msgstr "Vörgeschicht"
-
-#. i18n: file: ApperKCM/Settings/Settings.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, Settings)
-#: ApperKCM/ApperKCM.cpp:211 rc.cpp:140
-msgid "Settings"
-msgstr "Instellen"
-
-#: ApperKCM/ApperKCM.cpp:268 ApperKCM/ApperKCM.cpp:269
-#: ApperKCM/ApperKCM.cpp:270 ApperKCM/ApperKCM.cpp:271
-msgid "&Cancel"
-msgstr "&Afbreken"
-
-#. i18n: file: ApperKCM/ApperKCM.ui:284
-#. i18n: ectx: property (text), widget (QToolButton, backTB)
-#: ApperKCM/ApperKCM.cpp:278 rc.cpp:206
-msgid "Find by &name"
-msgstr "Na &Naam söken"
-
-#. i18n: file: ApperKCM/ApperKCM.ui:294
-#. i18n: ectx: property (text), widget (QToolButton, backTB)
-#: ApperKCM/ApperKCM.cpp:279 rc.cpp:212
-msgid "Find by f&ile name"
-msgstr "Na &Dateinaam söken"
-
-#. i18n: file: ApperKCM/ApperKCM.ui:289
-#. i18n: ectx: property (text), widget (QToolButton, backTB)
-#: ApperKCM/ApperKCM.cpp:280 rc.cpp:209
-msgid "Find by &description"
-msgstr "Na &Beschrieven söken"
-
-#: ApperKCM/ApperKCM.cpp:414
-msgid ""
-"The settings of the current module have changed.\n"
-"Do you want to apply the changes or discard them?"
-msgstr ""
-"De Instellen binnen dat aktive Moduul wöörn ännert.\n"
-"Wullt Du de Ännern bruken oder wegsmieten?"
-
-#: ApperKCM/ApperKCM.cpp:416
-msgid "Apply Settings"
-msgstr "Instellen bruken"
-
-#: ApperKCM/CategoryModel.cpp:47
-msgid "Installed Software"
-msgstr "Installeert Programmen"
-
-#: ApperKCM/CategoryModel.cpp:50 ApperKCM/CategoryModel.cpp:58
-msgid "Lists"
-msgstr "Listen"
-
-#: ApperKCM/CategoryModel.cpp:55
-msgid "Updates"
-msgstr "Opfrischen"
-
-#: ApperKCM/CategoryModel.cpp:155 ApperKCM/CategoryModel.cpp:339
-msgid "Categories"
-msgstr "Kategorien"
-
-#: ApperKCM/CategoryModel.cpp:208
-msgid "Groups"
-msgstr "Koppeln"
-
-#: Sentinel/PkInstallPackageNames.cpp:42
-#, fuzzy
-#| msgid "Install Packages"
-msgid "Install Packages by Name"
-msgstr "Paketen installeren"
-
-#: Sentinel/PkInstallPackageNames.cpp:58
-msgid "Do you want to search for and install this package now?"
-msgid_plural "Do you want to search for and install these packages now?"
-msgstr[0] "Wullt Du dit Paket nu söken un installeren?"
-msgstr[1] "Wullt Du disse Paketen nu söken un installeren?"
-
-#: Sentinel/PkInstallPackageNames.cpp:66 Sentinel/PkInstallPackageFiles.cpp:90
-#, fuzzy
-#| msgid "A program wants to install a package"
-#| msgid_plural "A program wants to install packages"
-msgid "An application wants to install a package"
-msgid_plural "An application wants to install packages"
-msgstr[0] "En Programm will en Paket installeren"
-msgstr[1] "En Programm will Paketen installeren"
-
-#: Sentinel/PkInstallPackageNames.cpp:70 Sentinel/PkInstallPackageFiles.cpp:94
-#, fuzzy, kde-format
-#| msgid "%2 wants to install a package"
-#| msgid_plural "%2 wants to install packages"
-msgid "The application <i>%2</i> wants to install a package"
-msgid_plural "The application <i>%2</i> wants to install packages"
-msgstr[0] "\"%2\" will en Paket installeren"
-msgstr[1] "\"%2\" will Paketen installeren"
-
-#: Sentinel/PkInstallPackageNames.cpp:92 Sentinel/PkInstallCatalogs.cpp:292
-#: Sentinel/PkIsInstalled.cpp:46
-msgid "Failed to start resolve transaction"
-msgstr "De Oplöös-Vörgang lett sik nich starten"
-
-#: Sentinel/PkInstallPackageNames.cpp:104
+#: ApperKCM/ScreenShotViewer.cpp:90
 #, fuzzy
 #| msgid "Failed to install package"
-msgid "Failed to install packages"
+msgid "Could not find screen shot."
 msgstr "Paket lett sik nich installeren"
 
-#: Sentinel/PkInstallPackageNames.cpp:105
-#, fuzzy, kde-format
-#| msgid "The package is already installed"
-msgid "The package %2 is already installed"
-msgid_plural "The packages %2 are already installed"
-msgstr[0] "Dat Paket is al installeert."
-msgstr[1] "Dat Paket is al installeert."
+#: ApperKCM/TransactionHistory.cpp:66
+#, fuzzy
+#| msgid "Refresh Packages List"
+msgid "Refresh transactions list"
+msgstr "Paketlist opfrischen"
 
-#: Sentinel/PkInstallPackageNames.cpp:113 Sentinel/PkSearchFile.cpp:81
-#: Sentinel/PkRemovePackageByFiles.cpp:132
+#: ApperKCM/TransactionHistory.cpp:87
 #, kde-format
-msgid "Could not find %1"
-msgstr "\"%1\" lett sik nich finnen"
+msgid "Time since last cache refresh: %1"
+msgstr ""
 
-#: Sentinel/PkInstallPackageNames.cpp:114
-msgid "The package could not be found in any software source"
-msgid_plural "The packages could not be found in any software source"
-msgstr[0] "Dat Paket lett sik binnen keen Software-Born finnen."
-msgstr[1] "De Paketen laat sik binnen keen Software-Born finnen."
+#: ApperKCM/TransactionModel.cpp:46
+#, fuzzy
+#| msgid "State"
+msgid "Date"
+msgstr "Status"
 
-#: Sentinel/KpkDistroUpgrade.cpp:69
+#: ApperKCM/TransactionModel.cpp:47 libapper/PackageModel.cpp:175
+msgid "Action"
+msgstr "Akschoon"
+
+#: ApperKCM/TransactionModel.cpp:48 Sentinel/TransactionWatcher.cpp:292
+msgid "Details"
+msgstr "Enkelheiten"
+
+#: ApperKCM/TransactionModel.cpp:49
+msgctxt "Machine user who issued the transaction"
+msgid "Username"
+msgstr ""
+
+#: ApperKCM/TransactionModel.cpp:50
+#, fuzzy
+#| msgid "Localization"
+msgid "Application"
+msgstr "Översetten"
+
+#: Sentinel/DistroUpgrade.cpp:69
 msgid "Start upgrade now"
 msgstr "Nu Opfrischen"
 
-#: Sentinel/KpkDistroUpgrade.cpp:114
+#: Sentinel/DistroUpgrade.cpp:114
 msgid "Distribution upgrade finished. "
 msgstr "Distributschoon-Opfrischen afslaten. "
+
+#: Sentinel/PkInstallPlasmaResources.cpp:40
+#, fuzzy
+#| msgid "Install Packages"
+msgid "Install Plasma Resources"
+msgstr "Paketen installeren"
+
+#: Sentinel/PkInstallPlasmaResources.cpp:53
+#, fuzzy, kde-format
+#| msgctxt "Type of update, in the case it's just an update"
+#| msgid "1 update"
+#| msgid_plural "%1 updates"
+msgid "%1 data engine"
+msgstr "1 Opfrischen"
+
+#: Sentinel/PkInstallPlasmaResources.cpp:55
+#, kde-format
+msgid "%1 script engine"
+msgstr ""
+
+#: Sentinel/PkInstallPlasmaResources.cpp:65
+#, fuzzy
+#| msgid "Do you want to search for this now?"
+#| msgid_plural "Do you want to search for these now?"
+msgid "The following service is required. Do you want to search for this now?"
+msgid_plural ""
+"The following services are required. Do you want to search for these now?"
+msgstr[0] "Wullt Du dor nu na söken?"
+msgstr[1] "Wullt Du dor nu na söken?"
+
+#: Sentinel/PkInstallPlasmaResources.cpp:72
+#, fuzzy
+#| msgid "A program requires a new mime type"
+#| msgid_plural "A program requires new mime types"
+msgid "Plasma requires an additional service for this operation"
+msgid_plural "Plasma requires additional services for this operation"
+msgstr[0] "En Programm bruukt en nieg MIME-Typ"
+msgstr[1] "En Programm bruukt nieg MIME-Typen"
+
+#: Sentinel/PkInstallPlasmaResources.cpp:95 Sentinel/PkInstallMimeTypes.cpp:91
+#: Sentinel/PkInstallGStreamerResources.cpp:134
+#: Sentinel/PkInstallPrinterDrivers.cpp:74
+#: Sentinel/PkInstallFontconfigResources.cpp:143
+#: Sentinel/PkInstallFontconfigResources.cpp:164
+msgid "Failed to search for provides"
+msgstr "Praatstellen laat sik nich söken"
+
+#: Sentinel/PkInstallPlasmaResources.cpp:106
+#, fuzzy
+#| msgid "Failed to search for provides"
+msgid "Failed to search for Plasma service"
+msgstr "Praatstellen laat sik nich söken"
+
+#: Sentinel/PkInstallPlasmaResources.cpp:109
+#, fuzzy
+#| msgid "The package could not be found in any software source"
+#| msgid_plural "The packages could not be found in any software source"
+msgid "Could not find service in any configured software source"
+msgstr "Dat Paket lett sik binnen keen Software-Born finnen."
 
 #: Sentinel/PkInstallMimeTypes.cpp:39
 #, fuzzy
@@ -750,15 +748,6 @@ msgid_plural ""
 msgstr[0] "En Programm bruukt en nieg MIME-Typ"
 msgstr[1] "En Programm bruukt nieg MIME-Typen"
 
-#: Sentinel/PkInstallMimeTypes.cpp:91
-#: Sentinel/PkInstallGStreamerResources.cpp:134
-#: Sentinel/PkInstallPlasmaResources.cpp:95
-#: Sentinel/PkInstallPrinterDrivers.cpp:74
-#: Sentinel/PkInstallFontconfigResources.cpp:143
-#: Sentinel/PkInstallFontconfigResources.cpp:164
-msgid "Failed to search for provides"
-msgstr "Praatstellen laat sik nich söken"
-
 #: Sentinel/PkInstallMimeTypes.cpp:100
 #, fuzzy
 #| msgid "Failed to find software"
@@ -769,23 +758,84 @@ msgstr "Söök na Software fehlslaan"
 msgid "No new applications can be found to handle this type of file"
 msgstr "Keen Programmen to finnen, de dissen Dateityp opmaken köönt"
 
-#: Sentinel/PkInstallCatalogs.cpp:48
+#: Sentinel/PkInstallPackageNames.cpp:41
+#, fuzzy
+#| msgid "Install Packages"
+msgid "Install Packages by Name"
+msgstr "Paketen installeren"
+
+#: Sentinel/PkInstallPackageNames.cpp:57
+msgid "Do you want to search for and install this package now?"
+msgid_plural "Do you want to search for and install these packages now?"
+msgstr[0] "Wullt Du dit Paket nu söken un installeren?"
+msgstr[1] "Wullt Du disse Paketen nu söken un installeren?"
+
+#: Sentinel/PkInstallPackageNames.cpp:65 Sentinel/PkInstallPackageFiles.cpp:79
+#, fuzzy
+#| msgid "A program wants to install a package"
+#| msgid_plural "A program wants to install packages"
+msgid "An application wants to install a package"
+msgid_plural "An application wants to install packages"
+msgstr[0] "En Programm will en Paket installeren"
+msgstr[1] "En Programm will Paketen installeren"
+
+#: Sentinel/PkInstallPackageNames.cpp:69 Sentinel/PkInstallPackageFiles.cpp:83
+#, fuzzy, kde-format
+#| msgid "%2 wants to install a package"
+#| msgid_plural "%2 wants to install packages"
+msgid "The application <i>%2</i> wants to install a package"
+msgid_plural "The application <i>%2</i> wants to install packages"
+msgstr[0] "\"%2\" will en Paket installeren"
+msgstr[1] "\"%2\" will Paketen installeren"
+
+#: Sentinel/PkInstallPackageNames.cpp:91 Sentinel/PkInstallCatalogs.cpp:290
+#: Sentinel/PkIsInstalled.cpp:46
+msgid "Failed to start resolve transaction"
+msgstr "De Oplöös-Vörgang lett sik nich starten"
+
+#: Sentinel/PkInstallPackageNames.cpp:103
+#, fuzzy
+#| msgid "Failed to install package"
+msgid "Failed to install packages"
+msgstr "Paket lett sik nich installeren"
+
+#: Sentinel/PkInstallPackageNames.cpp:104
+#, fuzzy, kde-format
+#| msgid "The package is already installed"
+msgid "The package %2 is already installed"
+msgid_plural "The packages %2 are already installed"
+msgstr[0] "Dat Paket is al installeert."
+msgstr[1] "Dat Paket is al installeert."
+
+#: Sentinel/PkInstallPackageNames.cpp:112 Sentinel/PkSearchFile.cpp:81
+#: Sentinel/PkRemovePackageByFiles.cpp:131
+#, kde-format
+msgid "Could not find %1"
+msgstr "\"%1\" lett sik nich finnen"
+
+#: Sentinel/PkInstallPackageNames.cpp:113
+msgid "The package could not be found in any software source"
+msgid_plural "The packages could not be found in any software source"
+msgstr[0] "Dat Paket lett sik binnen keen Software-Born finnen."
+msgstr[1] "De Paketen laat sik binnen keen Software-Born finnen."
+
+#: Sentinel/PkInstallCatalogs.cpp:46
 #, fuzzy
 #| msgid "Install Packages"
 msgid "Install Packages Catalogs"
 msgstr "Paketen installeren"
 
-#: Sentinel/PkInstallCatalogs.cpp:67
+#: Sentinel/PkInstallCatalogs.cpp:65
 msgid "You can drop more catalogs in here"
 msgstr ""
 
-#: Sentinel/PkInstallCatalogs.cpp:87
+#: Sentinel/PkInstallCatalogs.cpp:85
 #, fuzzy
 #| msgid "Sorry, no update description was found."
 msgid "No supported catalog was found"
 msgstr "Leider keen Opfrischen-Beschrieven funnen."
 
-#: Sentinel/PkInstallCatalogs.cpp:89
+#: Sentinel/PkInstallCatalogs.cpp:87
 #, fuzzy
 #| msgid "Do you want to install this file?"
 #| msgid_plural "Do you want to install these files?"
@@ -794,7 +844,7 @@ msgid_plural "Do you want to install these catalogs?"
 msgstr[0] "Wullt Du disse Datei installeren?"
 msgstr[1] "Wullt Du disse Dateien installeren?"
 
-#: Sentinel/PkInstallCatalogs.cpp:98
+#: Sentinel/PkInstallCatalogs.cpp:96
 #, fuzzy
 #| msgid "A program wants to install a package"
 #| msgid_plural "A program wants to install packages"
@@ -803,7 +853,7 @@ msgid_plural "An application wants to install catalogs"
 msgstr[0] "En Programm will en Paket installeren"
 msgstr[1] "En Programm will Paketen installeren"
 
-#: Sentinel/PkInstallCatalogs.cpp:102
+#: Sentinel/PkInstallCatalogs.cpp:100
 #, fuzzy, kde-format
 #| msgid "%2 wants to install a package"
 #| msgid_plural "%2 wants to install packages"
@@ -812,32 +862,32 @@ msgid_plural "The application <i>%2</i> wants to install catalogs"
 msgstr[0] "\"%2\" will en Paket installeren"
 msgstr[1] "\"%2\" will Paketen installeren"
 
-#: Sentinel/PkInstallCatalogs.cpp:139
+#: Sentinel/PkInstallCatalogs.cpp:137
 #, fuzzy
 #| msgid "Supported"
 msgid "Not supported"
 msgstr "Ünnerstütt"
 
-#: Sentinel/PkInstallCatalogs.cpp:140
+#: Sentinel/PkInstallCatalogs.cpp:138
 #, fuzzy
 #| msgid "Current backend does not support installing packages."
 msgid ""
 "Your backend does not support any of the needed methods to install a catalog"
 msgstr "Dat aktuelle Hülpprogramm ünnerstütt dat Installeren vun Paketen nich."
 
-#: Sentinel/PkInstallCatalogs.cpp:179
+#: Sentinel/PkInstallCatalogs.cpp:177
 #, fuzzy
 #| msgid "Update not found"
 msgid "Catalog not found"
 msgstr "Opfrischen lett sik nich finnen"
 
-#: Sentinel/PkInstallCatalogs.cpp:180
+#: Sentinel/PkInstallCatalogs.cpp:178
 #, fuzzy
 #| msgid "Failed to install package"
 msgid "Could not find a catalog to install"
 msgstr "Paket lett sik nich installeren"
 
-#: Sentinel/PkInstallCatalogs.cpp:187
+#: Sentinel/PkInstallCatalogs.cpp:185
 #, fuzzy, kde-format
 #| msgid "Package failed to configure"
 msgid "Catalog %2 failed to open"
@@ -845,81 +895,32 @@ msgid_plural "Catalogs %2 failed to open"
 msgstr[0] "Paket lett sik nich inrichten"
 msgstr[1] "Paket lett sik nich inrichten"
 
-#: Sentinel/PkInstallCatalogs.cpp:191
+#: Sentinel/PkInstallCatalogs.cpp:189
 #, fuzzy
 #| msgid "Failed to finalize"
 msgid "Failed to open"
 msgstr "Afsluten fehlslaan"
 
-#: Sentinel/PkInstallCatalogs.cpp:197
+#: Sentinel/PkInstallCatalogs.cpp:195
 #, fuzzy
 #| msgid "Package name installer"
 msgid "Catalog is Empty"
 msgstr "Paket na Naam installeren"
 
-#: Sentinel/PkInstallCatalogs.cpp:198
+#: Sentinel/PkInstallCatalogs.cpp:196
 #, fuzzy
 #| msgid "Do you want to install this file?"
 #| msgid_plural "Do you want to install these files?"
 msgid "Could not find any package to install in this catalog"
 msgstr "Wullt Du disse Datei installeren?"
 
-#: Sentinel/TransactionWatcher.cpp:65 Sentinel/TransactionWatcher.cpp:250
-msgid "Hide this icon"
-msgstr ""
-
-#: Sentinel/TransactionWatcher.cpp:167
-#, fuzzy
-#| msgid "<b>The update has completed</b>"
-msgid "The system update has completed"
-msgstr "<b>Opfrischen afslaten</b>"
-
-#: Sentinel/TransactionWatcher.cpp:173
-#, fuzzy, kde-format
-#| msgid "Package Name"
-msgid "Packages: %1"
-msgstr "Paketnaam"
-
-#: Sentinel/TransactionWatcher.cpp:185
-#, fuzzy, kde-format
-#| msgid "Package Name"
-msgid "Package: %2"
-msgid_plural "Packages: %2"
-msgstr[0] "Paketnaam"
-msgstr[1] "Paketnaam"
-
-#: Sentinel/TransactionWatcher.cpp:232 Sentinel/TransactionWatcher.cpp:272
-msgid "Software Manager Messages"
-msgstr ""
-
-#: Sentinel/TransactionWatcher.cpp:233
-#, kde-format
-msgid "One message from the software manager"
-msgid_plural "%1 messages from the software manager"
-msgstr[0] ""
-msgstr[1] ""
-
-#: Sentinel/TransactionWatcher.cpp:241
-#, fuzzy
-#| msgid "Updates"
-msgid "Show messages"
-msgstr "Opfrischen"
-
-#: Sentinel/TransactionWatcher.cpp:293
-msgid "Ignore"
-msgstr "Övergahn"
-
-#: Sentinel/KpkUpdateIcon.cpp:171
-msgid "KPackageKit"
-msgstr "KPackageKit"
-
-#: Sentinel/KpkUpdateIcon.cpp:173
+#: Sentinel/UpdateIcon.cpp:173
 #, fuzzy
 #| msgid "Review and update"
 msgid "Review Updates"
 msgstr "Bekieken un opfrischen"
 
-#: Sentinel/KpkUpdateIcon.cpp:176
+#: Sentinel/UpdateIcon.cpp:176
 #, fuzzy
 #| msgid "Confirm"
 msgid "Configure"
@@ -929,12 +930,12 @@ msgstr "Beglöven"
 #. i18n: ectx: property (text), widget (QToolButton, hideTB)
 #. i18n: file: ApperKCM/Updater/UpdateDetails.ui:20
 #. i18n: ectx: property (text), widget (QToolButton, hideTB)
-#: Sentinel/KpkUpdateIcon.cpp:180 libapper/PkTransactionDialog.cpp:95
-#: rc.cpp:137 rc.cpp:179
+#: Sentinel/UpdateIcon.cpp:180 libapper/PkTransactionDialog.cpp:85 rc.cpp:137
+#: rc.cpp:179
 msgid "Hide"
 msgstr "Versteken"
 
-#: Sentinel/KpkUpdateIcon.cpp:190
+#: Sentinel/UpdateIcon.cpp:190
 #, fuzzy, kde-format
 #| msgid "No packages to update"
 msgid "You have one update"
@@ -942,100 +943,25 @@ msgid_plural "You have %1 updates"
 msgstr[0] "Keen Paketen för't Opfrischen"
 msgstr[1] "Keen Paketen för't Opfrischen"
 
-#: Sentinel/KpkUpdateIcon.cpp:243
+#: Sentinel/UpdateIcon.cpp:243
 msgid "Updates are being automatically installed."
 msgstr "Opfrischen warrt automaatsch installeert"
 
-#: Sentinel/KpkUpdateIcon.cpp:264
+#: Sentinel/UpdateIcon.cpp:264
 msgid "Security updates are being automatically installed."
 msgstr "Sekerheit-Opfrischen warrt automaatsch installeert"
 
-#: Sentinel/KpkUpdateIcon.cpp:291
+#: Sentinel/UpdateIcon.cpp:291
 #, fuzzy
 #| msgid "System update was successful!"
 msgid "System update was successful."
 msgstr "Systeem mit Spood opfrischt!"
 
-#: Sentinel/KpkUpdateIcon.cpp:300
+#: Sentinel/UpdateIcon.cpp:300
 #, fuzzy
 #| msgid "The software update failed."
 msgid "The automated software update failed."
 msgstr "Dat Opfrischen vun de Software is fehlslaan."
-
-#: Sentinel/SessionTask.cpp:62 libapper/KpkRequirements.cpp:229
-msgid "Continue"
-msgstr "Wiedermaken"
-
-#: Sentinel/SessionTask.cpp:305
-#, fuzzy
-#| msgid "The package is not installed"
-msgid "There are no packages to Install or Remove"
-msgstr "Dat Paket is nich installeert."
-
-#: Sentinel/SessionTask.cpp:306
-msgid "This action should not happen"
-msgstr ""
-
-#: Sentinel/SessionTask.cpp:335
-#, fuzzy
-#| msgid "Could not find %1"
-msgid "Could not find"
-msgstr "\"%1\" lett sik nich finnen"
-
-#: Sentinel/SessionTask.cpp:336 Sentinel/SessionTask.cpp:345
-#, fuzzy
-#| msgid "Source packages cannot be installed"
-msgid "No packages were found that meet the request"
-msgstr "Bornpaketen laat sik nich installeren."
-
-#: Sentinel/SessionTask.cpp:344
-#, fuzzy
-#| msgid "Failed to find software"
-msgid "Failed to find"
-msgstr "Söök na Software fehlslaan"
-
-#: Sentinel/SessionTask.cpp:363
-#, fuzzy
-#| msgid "Failed to start resolve transaction"
-msgid "Failed to commit transaction"
-msgstr "De Oplöös-Vörgang lett sik nich starten"
-
-#: Sentinel/SessionTask.cpp:365
-msgid "Transaction did not finish with success"
-msgstr ""
-
-#: Sentinel/SessionTask.cpp:371
-#, fuzzy
-#| msgctxt "The action of the package, in past tense"
-#| msgid "Obsoleted"
-msgid "Task completed"
-msgstr "Överhaalt"
-
-#: Sentinel/SessionTask.cpp:371
-#, fuzzy
-#| msgid "File was installed successfully"
-#| msgid_plural "Files were installed successfully"
-msgid "All operations were committed successfully"
-msgstr "Datei wöör mit Spood installeert"
-
-#: Sentinel/PkIsInstalled.cpp:36
-#, fuzzy
-#| msgid "The package is not installed"
-msgid "Querying if a Package is Installed"
-msgstr "Dat Paket is nich installeert."
-
-#: Sentinel/PkIsInstalled.cpp:67
-#, fuzzy
-#| msgctxt "The role of the transaction, in past tense"
-#| msgid "Got old transactions"
-msgid "User canceled the transaction"
-msgstr "Ole Vörgäng funnen"
-
-#: Sentinel/PkIsInstalled.cpp:69
-#, fuzzy
-#| msgid "Unknown error"
-msgid "An unknown error happened"
-msgstr "Nich begäng Fehler"
 
 #: Sentinel/PkInstallGStreamerResources.cpp:39
 msgid "Install GStreamer Resources"
@@ -1112,6 +1038,265 @@ msgstr "Keen Dateien funnen"
 msgid "Could not find plugin in any configured software source"
 msgstr "Dat Paket lett sik binnen keen Software-Born finnen."
 
+#: Sentinel/PkInstallPackageFiles.cpp:38
+#, fuzzy
+#| msgid "Install Packages"
+msgid "Install Packages Files"
+msgstr "Paketen installeren"
+
+#: Sentinel/PkInstallPackageFiles.cpp:42
+#: Sentinel/PkRemovePackageByFiles.cpp:44
+msgid "You can drop more files in here"
+msgstr ""
+
+#: Sentinel/PkInstallPackageFiles.cpp:52
+#, fuzzy
+#| msgid "Supported"
+msgid "Not Supported"
+msgstr "Ünnerstütt"
+
+#: Sentinel/PkInstallPackageFiles.cpp:53
+#, fuzzy
+#| msgid "Current backend does not support installing packages."
+msgid "Your current backend does not support installing files"
+msgstr "Dat aktuelle Hülpprogramm ünnerstütt dat Installeren vun Paketen nich."
+
+#: Sentinel/PkInstallPackageFiles.cpp:68
+#: Sentinel/PkRemovePackageByFiles.cpp:65
+#, fuzzy
+#| msgid "No files were found."
+msgid "No supported files were provided"
+msgstr "Keen Dateien funnen"
+
+#: Sentinel/PkInstallPackageFiles.cpp:70
+#, fuzzy
+#| msgid "Do you want to install this file?"
+#| msgid_plural "Do you want to install these files?"
+msgid "Press <i>Continue</i> if you want to install this file"
+msgid_plural "Press <i>Continue</i> if you want to install these files"
+msgstr[0] "Wullt Du disse Datei installeren?"
+msgstr[1] "Wullt Du disse Dateien installeren?"
+
+#: Sentinel/PkInstallPackageFiles.cpp:106
+#, fuzzy
+#| msgctxt "The role of the transaction, in present tense"
+#| msgid "Installing file"
+msgid "Installation Complete"
+msgstr "Datei warrt installeert"
+
+#: Sentinel/PkInstallPackageFiles.cpp:107
+msgid "File was installed successfully"
+msgid_plural "Files were installed successfully"
+msgstr[0] "Datei wöör mit Spood installeert"
+msgstr[1] "Dateien wören mit Spood installeert"
+
+#: Sentinel/PkInstallPackageFiles.cpp:118
+#, fuzzy
+#| msgid "Failed to install file"
+#| msgid_plural "Failed to install files"
+msgid "Failed to install files"
+msgstr "Datei lett sik nich installeren"
+
+#: Sentinel/PkInstallPackageFiles.cpp:119
+#: Sentinel/PkInstallPackageFiles.cpp:121
+#, fuzzy
+#| msgid "Failed to install file"
+#| msgid_plural "Failed to install files"
+msgid "Could not install files"
+msgstr "Datei lett sik nich installeren"
+
+#: Sentinel/TransactionWatcher.cpp:64 Sentinel/TransactionWatcher.cpp:249
+msgid "Hide this icon"
+msgstr ""
+
+#: Sentinel/TransactionWatcher.cpp:166
+#, fuzzy
+#| msgid "<b>The update has completed</b>"
+msgid "The system update has completed"
+msgstr "<b>Opfrischen afslaten</b>"
+
+#: Sentinel/TransactionWatcher.cpp:172
+#, fuzzy, kde-format
+#| msgid "Package Name"
+msgid "Packages: %1"
+msgstr "Paketnaam"
+
+#: Sentinel/TransactionWatcher.cpp:184
+#, fuzzy, kde-format
+#| msgid "Package Name"
+msgid "Package: %2"
+msgid_plural "Packages: %2"
+msgstr[0] "Paketnaam"
+msgstr[1] "Paketnaam"
+
+#: Sentinel/TransactionWatcher.cpp:231 Sentinel/TransactionWatcher.cpp:271
+msgid "Software Manager Messages"
+msgstr ""
+
+#: Sentinel/TransactionWatcher.cpp:232
+#, kde-format
+msgid "One message from the software manager"
+msgid_plural "%1 messages from the software manager"
+msgstr[0] ""
+msgstr[1] ""
+
+#: Sentinel/TransactionWatcher.cpp:240
+#, fuzzy
+#| msgid "Updates"
+msgid "Show messages"
+msgstr "Opfrischen"
+
+#: Sentinel/TransactionWatcher.cpp:292
+msgid "Ignore"
+msgstr "Övergahn"
+
+#: Sentinel/PkInstallPrinterDrivers.cpp:39
+#, fuzzy
+#| msgctxt "The role of the transaction, in present tense"
+#| msgid "Installing file"
+msgid "Install Printer Drivers"
+msgstr "Datei warrt installeert"
+
+#: Sentinel/PkInstallPrinterDrivers.cpp:87
+#, fuzzy
+#| msgid "Failed to search for provides"
+msgid "Failed to search for printer driver"
+msgstr "Praatstellen laat sik nich söken"
+
+#: Sentinel/PkInstallPrinterDrivers.cpp:88
+#, fuzzy
+#| msgid "The package could not be found in any software source"
+#| msgid_plural "The packages could not be found in any software source"
+msgid "Could not find printer driver in any configured software source"
+msgstr "Dat Paket lett sik binnen keen Software-Born finnen."
+
+#: Sentinel/PkIsInstalled.cpp:36
+#, fuzzy
+#| msgid "The package is not installed"
+msgid "Querying if a Package is Installed"
+msgstr "Dat Paket is nich installeert."
+
+#: Sentinel/PkIsInstalled.cpp:67
+#, fuzzy
+#| msgctxt "The role of the transaction, in past tense"
+#| msgid "Got old transactions"
+msgid "User canceled the transaction"
+msgstr "Ole Vörgäng funnen"
+
+#: Sentinel/PkIsInstalled.cpp:69
+#, fuzzy
+#| msgid "Unknown error"
+msgid "An unknown error happened"
+msgstr "Nich begäng Fehler"
+
+#: Sentinel/PkSearchFile.cpp:37
+#, fuzzy
+#| msgctxt "The role of the transaction, in past tense"
+#| msgid "Searched for package details"
+msgid "Search Packages that Provides Files"
+msgstr "Na Paket-Enkelheiten söcht"
+
+#: Sentinel/PkSearchFile.cpp:54 Sentinel/PkInstallProvideFiles.cpp:83
+#: Sentinel/PkRemovePackageByFiles.cpp:119
+msgid "Failed to start search file transaction"
+msgstr "De Dateisöök-Vörgang lett sik nich starten"
+
+#: Sentinel/PkSearchFile.cpp:80
+#, fuzzy
+#| msgid "The package could not be found in any software source"
+#| msgid_plural "The packages could not be found in any software source"
+msgid "The file name could not be found in any software source"
+msgstr "Dat Paket lett sik binnen keen Software-Born finnen."
+
+#: Sentinel/SessionTask.cpp:62 libapper/Requirements.cpp:229
+msgid "Continue"
+msgstr "Wiedermaken"
+
+#: Sentinel/SessionTask.cpp:305
+#, fuzzy
+#| msgid "The package is not installed"
+msgid "There are no packages to Install or Remove"
+msgstr "Dat Paket is nich installeert."
+
+#: Sentinel/SessionTask.cpp:306
+msgid "This action should not happen"
+msgstr ""
+
+#: Sentinel/SessionTask.cpp:335
+#, fuzzy
+#| msgid "Could not find %1"
+msgid "Could not find"
+msgstr "\"%1\" lett sik nich finnen"
+
+#: Sentinel/SessionTask.cpp:336 Sentinel/SessionTask.cpp:345
+#, fuzzy
+#| msgid "Source packages cannot be installed"
+msgid "No packages were found that meet the request"
+msgstr "Bornpaketen laat sik nich installeren."
+
+#: Sentinel/SessionTask.cpp:344
+#, fuzzy
+#| msgid "Failed to find software"
+msgid "Failed to find"
+msgstr "Söök na Software fehlslaan"
+
+#: Sentinel/SessionTask.cpp:363
+#, fuzzy
+#| msgid "Failed to start resolve transaction"
+msgid "Failed to commit transaction"
+msgstr "De Oplöös-Vörgang lett sik nich starten"
+
+#: Sentinel/SessionTask.cpp:365
+msgid "Transaction did not finish with success"
+msgstr ""
+
+#: Sentinel/SessionTask.cpp:371
+#, fuzzy
+#| msgctxt "The action of the package, in past tense"
+#| msgid "Obsoleted"
+msgid "Task completed"
+msgstr "Överhaalt"
+
+#: Sentinel/SessionTask.cpp:371
+#, fuzzy
+#| msgid "File was installed successfully"
+#| msgid_plural "Files were installed successfully"
+msgid "All operations were committed successfully"
+msgstr "Datei wöör mit Spood installeert"
+
+#: Sentinel/TransactionTrayIcon.cpp:45
+msgid "Transactions"
+msgstr "Vörgäng"
+
+#: Sentinel/TransactionTrayIcon.cpp:90
+#, kde-format
+msgid "%1% - %2"
+msgstr "%1% - %2"
+
+#: Sentinel/TransactionTrayIcon.cpp:92
+#, kde-format
+msgid "%1"
+msgstr "%1"
+
+#: Sentinel/ReviewChanges.cpp:67
+#, fuzzy
+#| msgid "The following package will be removed"
+#| msgid_plural "The following packages will be removed"
+msgid "The following package was found"
+msgid_plural "The following packages were found"
+msgstr[0] "Dit Paket warrt wegmaakt:"
+msgstr[1] "Disse Paketen warrt wegmaakt:"
+
+#: Sentinel/main.cpp:36
+#, fuzzy
+#| msgid "Apply Settings"
+msgid "Apper Sentinel"
+msgstr "Instellen bruken"
+
+#: Sentinel/main.cpp:41
+msgid "Trever Fischer"
+msgstr "Trever Fischer"
+
 #: Sentinel/PkInstallProvideFiles.cpp:39
 #, fuzzy
 #| msgctxt "The role of the transaction, in past tense"
@@ -1143,11 +1328,6 @@ msgid_plural "The application %2 is asking to install files"
 msgstr[0] "\"%2\" will en Paket installeren"
 msgstr[1] "\"%2\" will Paketen installeren"
 
-#: Sentinel/PkInstallProvideFiles.cpp:83 Sentinel/PkSearchFile.cpp:54
-#: Sentinel/PkRemovePackageByFiles.cpp:120
-msgid "Failed to start search file transaction"
-msgstr "De Dateisöök-Vörgang lett sik nich starten"
-
 #: Sentinel/PkInstallProvideFiles.cpp:96 libapper/PkTransaction.cpp:304
 msgid "Failed to install file"
 msgid_plural "Failed to install files"
@@ -1169,179 +1349,13 @@ msgid_plural "The files could not be found in any packages"
 msgstr[0] "De Datei lett sik binnen keen Paket finnen."
 msgstr[1] "De Dateien laat sik binnen keen Paketen finnen."
 
-#: Sentinel/PkInstallPackageFiles.cpp:50
-#, fuzzy
-#| msgid "Install Packages"
-msgid "Install Packages Files"
-msgstr "Paketen installeren"
-
-#: Sentinel/PkInstallPackageFiles.cpp:54
-#: Sentinel/PkRemovePackageByFiles.cpp:45
-msgid "You can drop more files in here"
-msgstr ""
-
-#: Sentinel/PkInstallPackageFiles.cpp:64
-#, fuzzy
-#| msgid "Supported"
-msgid "Not Supported"
-msgstr "Ünnerstütt"
-
-#: Sentinel/PkInstallPackageFiles.cpp:65
-#, fuzzy
-#| msgid "Current backend does not support installing packages."
-msgid "Your current backend does not support installing files"
-msgstr "Dat aktuelle Hülpprogramm ünnerstütt dat Installeren vun Paketen nich."
-
-#: Sentinel/PkInstallPackageFiles.cpp:79
-#: Sentinel/PkRemovePackageByFiles.cpp:66
-#, fuzzy
-#| msgid "No files were found."
-msgid "No supported files were provided"
-msgstr "Keen Dateien funnen"
-
-#: Sentinel/PkInstallPackageFiles.cpp:81
-#, fuzzy
-#| msgid "Do you want to install this file?"
-#| msgid_plural "Do you want to install these files?"
-msgid "Press <i>Continue</i> if you want to install this file"
-msgid_plural "Press <i>Continue</i> if you want to install these files"
-msgstr[0] "Wullt Du disse Datei installeren?"
-msgstr[1] "Wullt Du disse Dateien installeren?"
-
-#: Sentinel/PkInstallPackageFiles.cpp:117
-#, fuzzy
-#| msgctxt "The role of the transaction, in present tense"
-#| msgid "Installing file"
-msgid "Installation Complete"
-msgstr "Datei warrt installeert"
-
-#: Sentinel/PkInstallPackageFiles.cpp:118
-msgid "File was installed successfully"
-msgid_plural "Files were installed successfully"
-msgstr[0] "Datei wöör mit Spood installeert"
-msgstr[1] "Dateien wören mit Spood installeert"
-
-#: Sentinel/PkInstallPackageFiles.cpp:129
-#, fuzzy
-#| msgid "Failed to install file"
-#| msgid_plural "Failed to install files"
-msgid "Failed to install files"
-msgstr "Datei lett sik nich installeren"
-
-#: Sentinel/PkInstallPackageFiles.cpp:130
-#: Sentinel/PkInstallPackageFiles.cpp:132
-#, fuzzy
-#| msgid "Failed to install file"
-#| msgid_plural "Failed to install files"
-msgid "Could not install files"
-msgstr "Datei lett sik nich installeren"
-
-#: Sentinel/TransactionTrayIcon.cpp:45
-msgid "Transactions"
-msgstr "Vörgäng"
-
-#: Sentinel/TransactionTrayIcon.cpp:90
-#, kde-format
-msgid "%1% - %2"
-msgstr "%1% - %2"
-
-#: Sentinel/TransactionTrayIcon.cpp:92
-#, kde-format
-msgid "%1"
-msgstr "%1"
-
-#: Sentinel/PkInstallPlasmaResources.cpp:40
-#, fuzzy
-#| msgid "Install Packages"
-msgid "Install Plasma Resources"
-msgstr "Paketen installeren"
-
-#: Sentinel/PkInstallPlasmaResources.cpp:53
-#, fuzzy, kde-format
-#| msgctxt "Type of update, in the case it's just an update"
-#| msgid "1 update"
-#| msgid_plural "%1 updates"
-msgid "%1 data engine"
-msgstr "1 Opfrischen"
-
-#: Sentinel/PkInstallPlasmaResources.cpp:55
-#, kde-format
-msgid "%1 script engine"
-msgstr ""
-
-#: Sentinel/PkInstallPlasmaResources.cpp:65
-#, fuzzy
-#| msgid "Do you want to search for this now?"
-#| msgid_plural "Do you want to search for these now?"
-msgid "The following service is required. Do you want to search for this now?"
-msgid_plural ""
-"The following services are required. Do you want to search for these now?"
-msgstr[0] "Wullt Du dor nu na söken?"
-msgstr[1] "Wullt Du dor nu na söken?"
-
-#: Sentinel/PkInstallPlasmaResources.cpp:72
-#, fuzzy
-#| msgid "A program requires a new mime type"
-#| msgid_plural "A program requires new mime types"
-msgid "Plasma requires an additional service for this operation"
-msgid_plural "Plasma requires additional services for this operation"
-msgstr[0] "En Programm bruukt en nieg MIME-Typ"
-msgstr[1] "En Programm bruukt nieg MIME-Typen"
-
-#: Sentinel/PkInstallPlasmaResources.cpp:106
-#, fuzzy
-#| msgid "Failed to search for provides"
-msgid "Failed to search for Plasma service"
-msgstr "Praatstellen laat sik nich söken"
-
-#: Sentinel/PkInstallPlasmaResources.cpp:109
-#, fuzzy
-#| msgid "The package could not be found in any software source"
-#| msgid_plural "The packages could not be found in any software source"
-msgid "Could not find service in any configured software source"
-msgstr "Dat Paket lett sik binnen keen Software-Born finnen."
-
-#: Sentinel/PkInstallPrinterDrivers.cpp:39
-#, fuzzy
-#| msgctxt "The role of the transaction, in present tense"
-#| msgid "Installing file"
-msgid "Install Printer Drivers"
-msgstr "Datei warrt installeert"
-
-#: Sentinel/PkInstallPrinterDrivers.cpp:87
-#, fuzzy
-#| msgid "Failed to search for provides"
-msgid "Failed to search for printer driver"
-msgstr "Praatstellen laat sik nich söken"
-
-#: Sentinel/PkInstallPrinterDrivers.cpp:88
-#, fuzzy
-#| msgid "The package could not be found in any software source"
-#| msgid_plural "The packages could not be found in any software source"
-msgid "Could not find printer driver in any configured software source"
-msgstr "Dat Paket lett sik binnen keen Software-Born finnen."
-
-#: Sentinel/PkSearchFile.cpp:37
-#, fuzzy
-#| msgctxt "The role of the transaction, in past tense"
-#| msgid "Searched for package details"
-msgid "Search Packages that Provides Files"
-msgstr "Na Paket-Enkelheiten söcht"
-
-#: Sentinel/PkSearchFile.cpp:80
-#, fuzzy
-#| msgid "The package could not be found in any software source"
-#| msgid_plural "The packages could not be found in any software source"
-msgid "The file name could not be found in any software source"
-msgstr "Dat Paket lett sik binnen keen Software-Born finnen."
-
-#: Sentinel/PkRemovePackageByFiles.cpp:42
+#: Sentinel/PkRemovePackageByFiles.cpp:41
 #, fuzzy
 #| msgid "Remove Packages"
 msgid "Remove Packages that Provides Files"
 msgstr "Paket wegmaken"
 
-#: Sentinel/PkRemovePackageByFiles.cpp:69
+#: Sentinel/PkRemovePackageByFiles.cpp:68
 #, fuzzy
 #| msgid "You need to restart the application"
 msgid "Do you want to remove the following application?"
@@ -1349,7 +1363,7 @@ msgid_plural "Do you want to remove the following applications?"
 msgstr[0] "Du muttst dat Programm nieg starten."
 msgstr[1] "Du muttst dat Programm nieg starten."
 
-#: Sentinel/PkRemovePackageByFiles.cpp:73
+#: Sentinel/PkRemovePackageByFiles.cpp:72
 #, fuzzy
 #| msgid ""
 #| "Do you want to search for packages containing this file and remove it now?"
@@ -1361,7 +1375,7 @@ msgid_plural "Do you want to search for a package providing these files?"
 msgstr[0] "Wullt Du nu Paketen söken un wegmaken, de disse Datei bargt?"
 msgstr[1] "Wullt Du nu Paketen söken un wegmaken, de disse Datei bargt?"
 
-#: Sentinel/PkRemovePackageByFiles.cpp:84
+#: Sentinel/PkRemovePackageByFiles.cpp:83
 #, fuzzy
 #| msgid "%2 wants to install a package"
 #| msgid_plural "%2 wants to install packages"
@@ -1370,7 +1384,7 @@ msgid_plural "An application is asking to remove applications"
 msgstr[0] "\"%2\" will en Paket installeren"
 msgstr[1] "\"%2\" will Paketen installeren"
 
-#: Sentinel/PkRemovePackageByFiles.cpp:88
+#: Sentinel/PkRemovePackageByFiles.cpp:87
 #, fuzzy
 #| msgid "%2 wants to install a package"
 #| msgid_plural "%2 wants to install packages"
@@ -1379,7 +1393,7 @@ msgid_plural "An application is asking to remove files"
 msgstr[0] "\"%2\" will en Paket installeren"
 msgstr[1] "\"%2\" will Paketen installeren"
 
-#: Sentinel/PkRemovePackageByFiles.cpp:94
+#: Sentinel/PkRemovePackageByFiles.cpp:93
 #, fuzzy, kde-format
 #| msgid "%2 wants to install a package"
 #| msgid_plural "%2 wants to install packages"
@@ -1388,7 +1402,7 @@ msgid_plural "The application <i>%2</i> is asking to remove applications"
 msgstr[0] "\"%2\" will en Paket installeren"
 msgstr[1] "\"%2\" will Paketen installeren"
 
-#: Sentinel/PkRemovePackageByFiles.cpp:99
+#: Sentinel/PkRemovePackageByFiles.cpp:98
 #, fuzzy, kde-format
 #| msgid "%2 wants to install a package"
 #| msgid_plural "%2 wants to install packages"
@@ -1397,36 +1411,17 @@ msgid_plural "The application <i>%2</i> is asking to remove files"
 msgstr[0] "\"%2\" will en Paket installeren"
 msgstr[1] "\"%2\" will Paketen installeren"
 
-#: Sentinel/PkRemovePackageByFiles.cpp:105
+#: Sentinel/PkRemovePackageByFiles.cpp:104
 #, fuzzy
 #| msgid "Sorry, no update description was found."
 msgid "No application was found"
 msgstr "Leider keen Opfrischen-Beschrieven funnen."
 
-#: Sentinel/PkRemovePackageByFiles.cpp:133
+#: Sentinel/PkRemovePackageByFiles.cpp:132
 msgid "The file could not be found in any installed package"
 msgid_plural "The files could not be found in any installed package"
 msgstr[0] "De Datei lett sik binnen keen installeert Paket finnen."
 msgstr[1] "De Dateien laat sik binnen keen installeert Paket finnen."
-
-#: Sentinel/ReviewChanges.cpp:67
-#, fuzzy
-#| msgid "The following package will be removed"
-#| msgid_plural "The following packages will be removed"
-msgid "The following package was found"
-msgid_plural "The following packages were found"
-msgstr[0] "Dit Paket warrt wegmaakt:"
-msgstr[1] "Disse Paketen warrt wegmaakt:"
-
-#: Sentinel/main.cpp:36
-#, fuzzy
-#| msgid "Apply Settings"
-msgid "Apper Sentinel"
-msgstr "Instellen bruken"
-
-#: Sentinel/main.cpp:41
-msgid "Trever Fischer"
-msgstr "Trever Fischer"
 
 #: Sentinel/PkInstallFontconfigResources.cpp:41
 #, fuzzy
@@ -1500,41 +1495,69 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: libapper/KpkLicenseAgreement.cpp:34
-msgid "Accept Agreement"
-msgstr "Övereenkamen annehmen"
+#: libapper/ChangesDelegate.cpp:45
+#, fuzzy
+#| msgid "Installed"
+msgid "Do not Install"
+msgstr "Installeert"
 
-#. i18n: file: libapper/KpkLicenseAgreement.ui:13
-#. i18n: ectx: property (windowTitle), widget (QWidget, KpkLicenseAgreement)
-#: libapper/KpkLicenseAgreement.cpp:35 rc.cpp:221
-msgid "License Agreement Required"
-msgstr "Lizenzövereenkamen deit noot"
+#: libapper/ChangesDelegate.cpp:47
+#, fuzzy
+#| msgctxt "The action of the package, in past tense"
+#| msgid "Removed"
+msgid "Do not Remove"
+msgstr "Wegmaakt"
 
-#: libapper/KpkLicenseAgreement.cpp:36
-#, kde-format
-msgid "License required for %1 by %2"
-msgstr "Lizenz för %1 warrt vun %2 bruukt"
+#: libapper/ChangesDelegate.cpp:49 libapper/ApplicationsDelegate.cpp:44
+#, fuzzy
+#| msgid "Development"
+msgid "Deselect"
+msgstr "Utwickeln"
 
-#: libapper/KpkProgressBar.cpp:38
+#: libapper/CustomProgressBar.cpp:38
 #, kde-format
 msgid "%1 remaining"
 msgstr "%1 nableven"
 
-#. i18n: file: libapper/KpkRepoSig.ui:6
-#. i18n: ectx: property (windowTitle), widget (QWidget, KpkRepoSig)
-#: libapper/KpkRepoSig.cpp:38 rc.cpp:227
-msgid "Software signature is required"
-msgstr "Programmsignatuur deit noot"
+#: libapper/PackageModel.cpp:167
+#, fuzzy
+#| msgid "name"
+msgid "Name"
+msgstr "Naam"
 
-#: libapper/KpkSimulateModel.cpp:132
-msgid "Package"
-msgstr "Paket"
-
-#: libapper/KpkSimulateModel.cpp:134 libapper/PackageModel.cpp:168
+#: libapper/PackageModel.cpp:169 libapper/SimulateModel.cpp:134
 msgid "Version"
 msgstr "Verschoon"
 
-#: libapper/KpkStrings.cpp:32
+#: libapper/PackageModel.cpp:171
+msgid "Arch"
+msgstr ""
+
+#: libapper/PackageModel.cpp:173
+msgid "Size"
+msgstr "Grött"
+
+#: libapper/PackageModel.cpp:261
+#, fuzzy, kde-format
+msgid ""
+"Version: %1\n"
+"Architecture: %2"
+msgstr "Architekturen"
+
+#: libapper/PackageModel.cpp:302
+#, fuzzy
+#| msgctxt "The action of the package, in past tense"
+#| msgid "Removed"
+msgid "To be Removed"
+msgstr "Wegmaakt"
+
+#: libapper/PackageModel.cpp:304
+#, fuzzy
+#| msgid "Installed"
+msgid "To be Installed"
+msgstr "Installeert"
+
+#: libapper/PkStrings.cpp:32
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Unknown state"
@@ -1542,7 +1565,7 @@ msgctxt "This is when the transaction status is not known"
 msgid "Unknown state"
 msgstr "Nich begäng Status"
 
-#: libapper/KpkStrings.cpp:35
+#: libapper/PkStrings.cpp:35
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Waiting for service to start"
@@ -1550,7 +1573,7 @@ msgctxt "transaction state, the daemon is in the process of starting"
 msgid "Waiting for service to start"
 msgstr "An't Töven, dat de Deenst starten deit"
 
-#: libapper/KpkStrings.cpp:38
+#: libapper/PkStrings.cpp:38
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Waiting for other tasks"
@@ -1558,7 +1581,7 @@ msgctxt "transaction state, the transaction is waiting for another to complete"
 msgid "Waiting for other tasks"
 msgstr "An't Töven op anner Opgaven"
 
-#: libapper/KpkStrings.cpp:41
+#: libapper/PkStrings.cpp:41
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Running task"
@@ -1566,7 +1589,7 @@ msgctxt "transaction state, just started"
 msgid "Running task"
 msgstr "Opgaav warrt utföhrt"
 
-#: libapper/KpkStrings.cpp:44
+#: libapper/PkStrings.cpp:44
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Querying"
@@ -1574,7 +1597,7 @@ msgctxt "transaction state, is querying data"
 msgid "Querying"
 msgstr "Bi to anfragen"
 
-#: libapper/KpkStrings.cpp:47
+#: libapper/PkStrings.cpp:47
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Getting information"
@@ -1582,7 +1605,7 @@ msgctxt "transaction state, getting data from a server"
 msgid "Getting information"
 msgstr "Informatschonen warrt haalt"
 
-#: libapper/KpkStrings.cpp:50
+#: libapper/PkStrings.cpp:50
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Removing packages"
@@ -1590,7 +1613,7 @@ msgctxt "transaction state, removing packages"
 msgid "Removing packages"
 msgstr "Paketen warrt wegmaakt"
 
-#: libapper/KpkStrings.cpp:53
+#: libapper/PkStrings.cpp:53
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Downloading packages"
@@ -1598,7 +1621,7 @@ msgctxt "transaction state, downloading package files"
 msgid "Downloading packages"
 msgstr "Paketen warrt daallaadt"
 
-#: libapper/KpkStrings.cpp:56
+#: libapper/PkStrings.cpp:56
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Installing packages"
@@ -1606,7 +1629,7 @@ msgctxt "transaction state, installing packages"
 msgid "Installing packages"
 msgstr "Paketen warrt installeert"
 
-#: libapper/KpkStrings.cpp:59
+#: libapper/PkStrings.cpp:59
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Refreshing software list"
@@ -1614,7 +1637,7 @@ msgctxt "transaction state, refreshing internal lists"
 msgid "Refreshing software list"
 msgstr "Software-List warrt opfrischt"
 
-#: libapper/KpkStrings.cpp:62
+#: libapper/PkStrings.cpp:62
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Updating packages"
@@ -1622,7 +1645,7 @@ msgctxt "transaction state, installing updates"
 msgid "Updating packages"
 msgstr "Paketen warrt opfrischt"
 
-#: libapper/KpkStrings.cpp:65
+#: libapper/PkStrings.cpp:65
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Cleaning up packages"
@@ -1630,7 +1653,7 @@ msgctxt "transaction state, removing old packages, and cleaning config files"
 msgid "Cleaning up packages"
 msgstr "Paketen warrt oprüümt"
 
-#: libapper/KpkStrings.cpp:68
+#: libapper/PkStrings.cpp:68
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Obsoleting packages"
@@ -1638,7 +1661,7 @@ msgctxt "transaction state, obsoleting old packages"
 msgid "Obsoleting packages"
 msgstr "An't Pröven op överhaalt Paketen"
 
-#: libapper/KpkStrings.cpp:71
+#: libapper/PkStrings.cpp:71
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Resolving dependencies"
@@ -1646,7 +1669,7 @@ msgctxt "transaction state, checking the transaction before we do it"
 msgid "Resolving dependencies"
 msgstr "Afhangigkeiten warrt oplööst"
 
-#: libapper/KpkStrings.cpp:74
+#: libapper/PkStrings.cpp:74
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Checking signatures"
@@ -1656,7 +1679,7 @@ msgctxt ""
 msgid "Checking signatures"
 msgstr "Ünnerschriften warrt pröövt"
 
-#: libapper/KpkStrings.cpp:77
+#: libapper/PkStrings.cpp:77
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Rolling back"
@@ -1664,7 +1687,7 @@ msgctxt "transaction state, when we return to a previous system state"
 msgid "Rolling back"
 msgstr "An't Torüchdreihen"
 
-#: libapper/KpkStrings.cpp:80
+#: libapper/PkStrings.cpp:80
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Testing changes"
@@ -1672,7 +1695,7 @@ msgctxt "transaction state, when we're doing a test transaction"
 msgid "Testing changes"
 msgstr "Ännern warrt utprobeert"
 
-#: libapper/KpkStrings.cpp:83
+#: libapper/PkStrings.cpp:83
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Committing changes"
@@ -1680,7 +1703,7 @@ msgctxt "transaction state, when we're writing to the system package database"
 msgid "Committing changes"
 msgstr "Ännern warrt inspeelt"
 
-#: libapper/KpkStrings.cpp:86
+#: libapper/PkStrings.cpp:86
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Requesting data"
@@ -1688,7 +1711,7 @@ msgctxt "transaction state, requesting data from a server"
 msgid "Requesting data"
 msgstr "Daten warrt anfraagt"
 
-#: libapper/KpkStrings.cpp:89
+#: libapper/PkStrings.cpp:89
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Finished"
@@ -1696,7 +1719,7 @@ msgctxt "transaction state, all done!"
 msgid "Finished"
 msgstr "Afslaten"
 
-#: libapper/KpkStrings.cpp:92
+#: libapper/PkStrings.cpp:92
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Cancelling"
@@ -1704,7 +1727,7 @@ msgctxt "transaction state, in the process of cancelling"
 msgid "Cancelling"
 msgstr "Bi to afbreken"
 
-#: libapper/KpkStrings.cpp:95
+#: libapper/PkStrings.cpp:95
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Downloading repository information"
@@ -1712,7 +1735,7 @@ msgctxt "transaction state, downloading metadata"
 msgid "Downloading repository information"
 msgstr "Archiev-Informatschonen warrt daallaadt"
 
-#: libapper/KpkStrings.cpp:98
+#: libapper/PkStrings.cpp:98
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Downloading list of packages"
@@ -1720,7 +1743,7 @@ msgctxt "transaction state, downloading metadata"
 msgid "Downloading list of packages"
 msgstr "Paketlist warrt daallaadt"
 
-#: libapper/KpkStrings.cpp:101
+#: libapper/PkStrings.cpp:101
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Downloading file lists"
@@ -1728,7 +1751,7 @@ msgctxt "transaction state, downloading metadata"
 msgid "Downloading file lists"
 msgstr "Dateilisten warrt daallaadt"
 
-#: libapper/KpkStrings.cpp:104
+#: libapper/PkStrings.cpp:104
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Downloading lists of changes"
@@ -1736,7 +1759,7 @@ msgctxt "transaction state, downloading metadata"
 msgid "Downloading lists of changes"
 msgstr "Ännernlist warrt daallaadt"
 
-#: libapper/KpkStrings.cpp:107
+#: libapper/PkStrings.cpp:107
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Downloading groups"
@@ -1744,7 +1767,7 @@ msgctxt "transaction state, downloading metadata"
 msgid "Downloading groups"
 msgstr "Koppeln warrt daallaadt"
 
-#: libapper/KpkStrings.cpp:110
+#: libapper/PkStrings.cpp:110
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Downloading update information"
@@ -1752,7 +1775,7 @@ msgctxt "transaction state, downloading metadata"
 msgid "Downloading update information"
 msgstr "Opfrisch-Informatschonen warrt daallaadt"
 
-#: libapper/KpkStrings.cpp:113
+#: libapper/PkStrings.cpp:113
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Repackaging files"
@@ -1760,7 +1783,7 @@ msgctxt "transaction state, repackaging delta files"
 msgid "Repackaging files"
 msgstr "Dateien warrt nieg inpackt"
 
-#: libapper/KpkStrings.cpp:116
+#: libapper/PkStrings.cpp:116
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Loading cache"
@@ -1768,7 +1791,7 @@ msgctxt "transaction state, loading databases"
 msgid "Loading cache"
 msgstr "Twischenspieker warrt laadt"
 
-#: libapper/KpkStrings.cpp:119
+#: libapper/PkStrings.cpp:119
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Scanning installed applications"
@@ -1776,7 +1799,7 @@ msgctxt "transaction state, scanning for running processes"
 msgid "Scanning installed applications"
 msgstr "Installeert Programmen warrt dörkeken"
 
-#: libapper/KpkStrings.cpp:122
+#: libapper/PkStrings.cpp:122
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Generating package lists"
@@ -1785,7 +1808,7 @@ msgctxt ""
 msgid "Generating package lists"
 msgstr "Paketlisten warrt opstellt"
 
-#: libapper/KpkStrings.cpp:125
+#: libapper/PkStrings.cpp:125
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Waiting for package manager lock"
@@ -1793,7 +1816,7 @@ msgctxt "transaction state, when we're waiting for the native tools to exit"
 msgid "Waiting for package manager lock"
 msgstr "An't Töven op Paketpleger-Slott"
 
-#: libapper/KpkStrings.cpp:128
+#: libapper/PkStrings.cpp:128
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Waiting for authentication"
@@ -1801,7 +1824,7 @@ msgctxt "waiting for user to type in a password"
 msgid "Waiting for authentication"
 msgstr "An't Töven op Identiteetprööv"
 
-#: libapper/KpkStrings.cpp:131
+#: libapper/PkStrings.cpp:131
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Updating the list of running applications"
@@ -1809,7 +1832,7 @@ msgctxt "we are updating the list of processes"
 msgid "Updating the list of running applications"
 msgstr "De List mit lopen Programmen warrt opfrischt"
 
-#: libapper/KpkStrings.cpp:134
+#: libapper/PkStrings.cpp:134
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Checking for applications currently in use"
@@ -1817,7 +1840,7 @@ msgctxt "we are checking executable files in use"
 msgid "Checking for applications currently in use"
 msgstr "An't Kieken na Programmen, de opstunns in Bruuk sünd"
 
-#: libapper/KpkStrings.cpp:137
+#: libapper/PkStrings.cpp:137
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Checking for libraries currently in use"
@@ -1825,7 +1848,7 @@ msgctxt "we are checking for libraries in use"
 msgid "Checking for libraries currently in use"
 msgstr "An't Kieken na Bibliotheken, de opstunns in Bruuk sünd"
 
-#: libapper/KpkStrings.cpp:140
+#: libapper/PkStrings.cpp:140
 #, fuzzy
 #| msgctxt "The transaction state"
 #| msgid "Repackaging files"
@@ -1833,212 +1856,212 @@ msgctxt "we are copying package files to prepare to install"
 msgid "Copying files"
 msgstr "Dateien warrt nieg inpackt"
 
-#: libapper/KpkStrings.cpp:150
+#: libapper/PkStrings.cpp:150
 msgctxt "The action of the package, in past tense"
 msgid "Downloaded"
 msgstr "Daallaadt"
 
-#: libapper/KpkStrings.cpp:152
+#: libapper/PkStrings.cpp:152
 msgctxt "The action of the package, in past tense"
 msgid "Updated"
 msgstr "Opfrischt"
 
-#: libapper/KpkStrings.cpp:154
+#: libapper/PkStrings.cpp:154
 msgctxt "The action of the package, in past tense"
 msgid "Installed"
 msgstr "Installeert"
 
-#: libapper/KpkStrings.cpp:156
+#: libapper/PkStrings.cpp:156
 msgctxt "The action of the package, in past tense"
 msgid "Removed"
 msgstr "Wegmaakt"
 
-#: libapper/KpkStrings.cpp:158
+#: libapper/PkStrings.cpp:158
 msgctxt "The action of the package, in past tense"
 msgid "Cleaned Up"
 msgstr "Oprüümt"
 
-#: libapper/KpkStrings.cpp:160
+#: libapper/PkStrings.cpp:160
 msgctxt "The action of the package, in past tense"
 msgid "Obsoleted"
 msgstr "Överhaalt"
 
-#: libapper/KpkStrings.cpp:171
+#: libapper/PkStrings.cpp:171
 msgctxt "The role of the transaction, in present tense"
 msgid "Unknown role type"
 msgstr "Nich begäng Rull"
 
-#: libapper/KpkStrings.cpp:173
+#: libapper/PkStrings.cpp:173
 msgctxt "The role of the transaction, in present tense"
 msgid "Getting dependencies"
 msgstr "Afhangigkeiten warrt haalt"
 
-#: libapper/KpkStrings.cpp:175
+#: libapper/PkStrings.cpp:175
 msgctxt "The role of the transaction, in present tense"
 msgid "Getting update detail"
 msgstr "Opfrisch-Enkelheiten warrt haalt"
 
-#: libapper/KpkStrings.cpp:177
+#: libapper/PkStrings.cpp:177
 msgctxt "The role of the transaction, in present tense"
 msgid "Getting details"
 msgstr "Enkelheiten warrt haalt"
 
-#: libapper/KpkStrings.cpp:179
+#: libapper/PkStrings.cpp:179
 msgctxt "The role of the transaction, in present tense"
 msgid "Getting requires"
 msgstr "Vörutsetten warrt haalt"
 
-#: libapper/KpkStrings.cpp:181
+#: libapper/PkStrings.cpp:181
 msgctxt "The role of the transaction, in present tense"
 msgid "Getting updates"
 msgstr "Opfrischen warrt haalt"
 
-#: libapper/KpkStrings.cpp:183
+#: libapper/PkStrings.cpp:183
 msgctxt "The role of the transaction, in present tense"
 msgid "Searching details"
 msgstr "Enkelheiten warrt söcht"
 
-#: libapper/KpkStrings.cpp:185
+#: libapper/PkStrings.cpp:185
 msgctxt "The role of the transaction, in present tense"
 msgid "Searching for file"
 msgstr "Datei warrt söcht"
 
-#: libapper/KpkStrings.cpp:187
+#: libapper/PkStrings.cpp:187
 msgctxt "The role of the transaction, in present tense"
 msgid "Searching groups"
 msgstr "Koppeln warrt söcht"
 
-#: libapper/KpkStrings.cpp:189
+#: libapper/PkStrings.cpp:189
 msgctxt "The role of the transaction, in present tense"
 msgid "Searching by package name"
 msgstr "An't Söken na Paketnaam"
 
-#: libapper/KpkStrings.cpp:191
+#: libapper/PkStrings.cpp:191
 msgctxt "The role of the transaction, in present tense"
 msgid "Removing"
 msgstr "An't Wegmaken"
 
-#: libapper/KpkStrings.cpp:193
+#: libapper/PkStrings.cpp:193
 msgctxt "The role of the transaction, in present tense"
 msgid "Installing"
 msgstr "Bi to installeren"
 
-#: libapper/KpkStrings.cpp:195
+#: libapper/PkStrings.cpp:195
 msgctxt "The role of the transaction, in present tense"
 msgid "Installing file"
 msgstr "Datei warrt installeert"
 
-#: libapper/KpkStrings.cpp:197
+#: libapper/PkStrings.cpp:197
 msgctxt "The role of the transaction, in present tense"
 msgid "Refreshing package cache"
 msgstr "Paket-Twischenspieker warrt opfrischt"
 
-#: libapper/KpkStrings.cpp:199
+#: libapper/PkStrings.cpp:199
 msgctxt "The role of the transaction, in present tense"
 msgid "Updating packages"
 msgstr "Paketen warrt opfrischt"
 
-#: libapper/KpkStrings.cpp:201
+#: libapper/PkStrings.cpp:201
 msgctxt "The role of the transaction, in present tense"
 msgid "Updating system"
 msgstr "Systeem warrt opfrischt"
 
-#: libapper/KpkStrings.cpp:203
+#: libapper/PkStrings.cpp:203
 msgctxt "The role of the transaction, in present tense"
 msgid "Canceling"
 msgstr "Bi to afbreken"
 
-#: libapper/KpkStrings.cpp:205
+#: libapper/PkStrings.cpp:205
 msgctxt "The role of the transaction, in present tense"
 msgid "Rolling back"
 msgstr "An't Torüchdreihen"
 
-#: libapper/KpkStrings.cpp:207
+#: libapper/PkStrings.cpp:207
 msgctxt "The role of the transaction, in present tense"
 msgid "Getting list of repositories"
 msgstr "List vun Archiven warrt haalt"
 
-#: libapper/KpkStrings.cpp:209
+#: libapper/PkStrings.cpp:209
 msgctxt "The role of the transaction, in present tense"
 msgid "Enabling repository"
 msgstr "Archiev warrt anmaakt"
 
-#: libapper/KpkStrings.cpp:211
+#: libapper/PkStrings.cpp:211
 msgctxt "The role of the transaction, in present tense"
 msgid "Setting repository data"
 msgstr "Archievdaten warrt fastleggt"
 
-#: libapper/KpkStrings.cpp:213
+#: libapper/PkStrings.cpp:213
 msgctxt "The role of the transaction, in present tense"
 msgid "Resolving"
 msgstr "An't Oplösen"
 
-#: libapper/KpkStrings.cpp:215
+#: libapper/PkStrings.cpp:215
 msgctxt "The role of the transaction, in present tense"
 msgid "Getting file list"
 msgstr "Dateilist warrt haalt"
 
-#: libapper/KpkStrings.cpp:217
+#: libapper/PkStrings.cpp:217
 msgctxt "The role of the transaction, in present tense"
 msgid "Getting what provides"
 msgstr "Praatstellen warrt haalt"
 
-#: libapper/KpkStrings.cpp:219
+#: libapper/PkStrings.cpp:219
 msgctxt "The role of the transaction, in present tense"
 msgid "Installing signature"
 msgstr "Ünnerschrift warrt installeert"
 
-#: libapper/KpkStrings.cpp:221
+#: libapper/PkStrings.cpp:221
 msgctxt "The role of the transaction, in present tense"
 msgid "Getting package lists"
 msgstr "Paketlisten warrt haalt"
 
-#: libapper/KpkStrings.cpp:223
+#: libapper/PkStrings.cpp:223
 msgctxt "The role of the transaction, in present tense"
 msgid "Accepting EULA"
 msgstr "EULA annehmen"
 
-#: libapper/KpkStrings.cpp:225
+#: libapper/PkStrings.cpp:225
 msgctxt "The role of the transaction, in present tense"
 msgid "Downloading packages"
 msgstr "Paketen warrt daallaadt"
 
-#: libapper/KpkStrings.cpp:227
+#: libapper/PkStrings.cpp:227
 msgctxt "The role of the transaction, in present tense"
 msgid "Getting distribution upgrade information"
 msgstr "Distributschoon-Opfrischinformatschonen warrt haalt"
 
-#: libapper/KpkStrings.cpp:229
+#: libapper/PkStrings.cpp:229
 msgctxt "The role of the transaction, in present tense"
 msgid "Getting categories"
 msgstr "Kategorien warrt haalt"
 
-#: libapper/KpkStrings.cpp:231
+#: libapper/PkStrings.cpp:231
 msgctxt "The role of the transaction, in present tense"
 msgid "Getting old transactions"
 msgstr "Ole Vörgäng warrt haalt"
 
-#: libapper/KpkStrings.cpp:233
+#: libapper/PkStrings.cpp:233
 msgctxt "The role of the transaction, in present tense"
 msgid "Simulating the install of files"
 msgstr "Installeren vun Dateien warrt simuleert"
 
-#: libapper/KpkStrings.cpp:235
+#: libapper/PkStrings.cpp:235
 msgctxt "The role of the transaction, in present tense"
 msgid "Simulating the install"
 msgstr "Installeren warrt simuleert"
 
-#: libapper/KpkStrings.cpp:237
+#: libapper/PkStrings.cpp:237
 msgctxt "The role of the transaction, in present tense"
 msgid "Simulating the remove"
 msgstr "Wegmaken warrt simuleert"
 
-#: libapper/KpkStrings.cpp:239
+#: libapper/PkStrings.cpp:239
 msgctxt "The role of the transaction, in present tense"
 msgid "Simulating the update"
 msgstr "Opfrischen warrt simuleert"
 
-#: libapper/KpkStrings.cpp:241
+#: libapper/PkStrings.cpp:241
 #, fuzzy
 #| msgctxt "The role of the transaction, in present tense"
 #| msgid "Updating system"
@@ -2046,182 +2069,182 @@ msgctxt "The role of the transaction, in present tense"
 msgid "Upgrading system"
 msgstr "Systeem warrt opfrischt"
 
-#: libapper/KpkStrings.cpp:251
+#: libapper/PkStrings.cpp:251
 msgctxt "The role of the transaction, in past tense"
 msgid "Unknown role type"
 msgstr "Nich begäng Rull-Typ"
 
-#: libapper/KpkStrings.cpp:253
+#: libapper/PkStrings.cpp:253
 msgctxt "The role of the transaction, in past tense"
 msgid "Got dependencies"
 msgstr "Afhangigkeiten funnen"
 
-#: libapper/KpkStrings.cpp:255
+#: libapper/PkStrings.cpp:255
 msgctxt "The role of the transaction, in past tense"
 msgid "Got update detail"
 msgstr "Opfrisch-Enkelheiten funnen"
 
-#: libapper/KpkStrings.cpp:257
+#: libapper/PkStrings.cpp:257
 msgctxt "The role of the transaction, in past tense"
 msgid "Got details"
 msgstr "Enkelheiten funnen"
 
-#: libapper/KpkStrings.cpp:259
+#: libapper/PkStrings.cpp:259
 msgctxt "The role of the transaction, in past tense"
 msgid "Got requires"
 msgstr "Vörutsetten funnen"
 
-#: libapper/KpkStrings.cpp:261
+#: libapper/PkStrings.cpp:261
 msgctxt "The role of the transaction, in past tense"
 msgid "Got updates"
 msgstr "Opfrischen funnen"
 
-#: libapper/KpkStrings.cpp:263
+#: libapper/PkStrings.cpp:263
 msgctxt "The role of the transaction, in past tense"
 msgid "Searched for package details"
 msgstr "Na Paket-Enkelheiten söcht"
 
-#: libapper/KpkStrings.cpp:265
+#: libapper/PkStrings.cpp:265
 msgctxt "The role of the transaction, in past tense"
 msgid "Searched for file"
 msgstr "Na Datei söcht"
 
-#: libapper/KpkStrings.cpp:267
+#: libapper/PkStrings.cpp:267
 msgctxt "The role of the transaction, in past tense"
 msgid "Searched groups"
 msgstr "Na Koppeln söcht"
 
-#: libapper/KpkStrings.cpp:269
+#: libapper/PkStrings.cpp:269
 msgctxt "The role of the transaction, in past tense"
 msgid "Searched for package name"
 msgstr "Paketnaam söcht"
 
-#: libapper/KpkStrings.cpp:271
+#: libapper/PkStrings.cpp:271
 msgctxt "The role of the transaction, in past tense"
 msgid "Removed packages"
 msgstr "Paketen wegmaakt"
 
-#: libapper/KpkStrings.cpp:273
+#: libapper/PkStrings.cpp:273
 msgctxt "The role of the transaction, in past tense"
 msgid "Installed packages"
 msgstr "Paketen installeert"
 
-#: libapper/KpkStrings.cpp:275
+#: libapper/PkStrings.cpp:275
 msgctxt "The role of the transaction, in past tense"
 msgid "Installed local files"
 msgstr "Lokaal Dateien installeert"
 
-#: libapper/KpkStrings.cpp:277
+#: libapper/PkStrings.cpp:277
 msgctxt "The role of the transaction, in past tense"
 msgid "Refreshed package cache"
 msgstr "Paket-Twischenspieker opfrischt"
 
-#: libapper/KpkStrings.cpp:279
+#: libapper/PkStrings.cpp:279
 msgctxt "The role of the transaction, in past tense"
 msgid "Updated packages"
 msgstr "Paketen opfrischt"
 
-#: libapper/KpkStrings.cpp:281
+#: libapper/PkStrings.cpp:281
 msgctxt "The role of the transaction, in past tense"
 msgid "Updated system"
 msgstr "Systeem opfrischt"
 
-#: libapper/KpkStrings.cpp:283
+#: libapper/PkStrings.cpp:283
 msgctxt "The role of the transaction, in past tense"
 msgid "Canceled"
 msgstr "Afbraken"
 
-#: libapper/KpkStrings.cpp:285
+#: libapper/PkStrings.cpp:285
 msgctxt "The role of the transaction, in past tense"
 msgid "Rolled back"
 msgstr "Torüchdreiht"
 
-#: libapper/KpkStrings.cpp:287
+#: libapper/PkStrings.cpp:287
 msgctxt "The role of the transaction, in past tense"
 msgid "Got list of repositories"
 msgstr "List vun Archiven funnen"
 
-#: libapper/KpkStrings.cpp:289
+#: libapper/PkStrings.cpp:289
 msgctxt "The role of the transaction, in past tense"
 msgid "Enabled repository"
 msgstr "Archiev anmaakt"
 
-#: libapper/KpkStrings.cpp:291
+#: libapper/PkStrings.cpp:291
 msgctxt "The role of the transaction, in past tense"
 msgid "Set repository data"
 msgstr "Archievdaten fastleggt"
 
-#: libapper/KpkStrings.cpp:293
+#: libapper/PkStrings.cpp:293
 msgctxt "The role of the transaction, in past tense"
 msgid "Resolved"
 msgstr "Oplööst"
 
-#: libapper/KpkStrings.cpp:295
+#: libapper/PkStrings.cpp:295
 msgctxt "The role of the transaction, in past tense"
 msgid "Got file list"
 msgstr "Dateilist funnen"
 
-#: libapper/KpkStrings.cpp:297
+#: libapper/PkStrings.cpp:297
 msgctxt "The role of the transaction, in past tense"
 msgid "Got what provides"
 msgstr "Praatstellen funnen"
 
-#: libapper/KpkStrings.cpp:299
+#: libapper/PkStrings.cpp:299
 msgctxt "The role of the transaction, in past tense"
 msgid "Installed signature"
 msgstr "Ünnerschrift installeert"
 
-#: libapper/KpkStrings.cpp:301
+#: libapper/PkStrings.cpp:301
 msgctxt "The role of the transaction, in past tense"
 msgid "Got package lists"
 msgstr "Paketlist funnen"
 
-#: libapper/KpkStrings.cpp:303
+#: libapper/PkStrings.cpp:303
 msgctxt "The role of the transaction, in past tense"
 msgid "Accepted EULA"
 msgstr "EULA annahmen"
 
-#: libapper/KpkStrings.cpp:305
+#: libapper/PkStrings.cpp:305
 msgctxt "The role of the transaction, in past tense"
 msgid "Downloaded packages"
 msgstr "Paketen daallaadt"
 
-#: libapper/KpkStrings.cpp:307
+#: libapper/PkStrings.cpp:307
 msgctxt "The role of the transaction, in past tense"
 msgid "Got distribution upgrades"
 msgstr "Distributschoon-Opfrischen funnen "
 
-#: libapper/KpkStrings.cpp:309
+#: libapper/PkStrings.cpp:309
 msgctxt "The role of the transaction, in past tense"
 msgid "Got categories"
 msgstr "Kategorien funnen"
 
-#: libapper/KpkStrings.cpp:311
+#: libapper/PkStrings.cpp:311
 msgctxt "The role of the transaction, in past tense"
 msgid "Got old transactions"
 msgstr "Ole Vörgäng funnen"
 
-#: libapper/KpkStrings.cpp:313
+#: libapper/PkStrings.cpp:313
 msgctxt "The role of the transaction, in past tense"
 msgid "Simulated the install of files"
 msgstr "Installeren vun Dateien simuleert"
 
-#: libapper/KpkStrings.cpp:315
+#: libapper/PkStrings.cpp:315
 msgctxt "The role of the transaction, in past tense"
 msgid "Simulated the install"
 msgstr "Installeren simuleert"
 
-#: libapper/KpkStrings.cpp:317
+#: libapper/PkStrings.cpp:317
 msgctxt "The role of the transaction, in past tense"
 msgid "Simulated the remove"
 msgstr "Wegmaken simuleert"
 
-#: libapper/KpkStrings.cpp:319
+#: libapper/PkStrings.cpp:319
 msgctxt "The role of the transaction, in past tense"
 msgid "Simulated the update"
 msgstr "Opfrischen simuleert"
 
-#: libapper/KpkStrings.cpp:321
+#: libapper/PkStrings.cpp:321
 #, fuzzy
 #| msgctxt "The role of the transaction, in past tense"
 #| msgid "Updated system"
@@ -2229,378 +2252,378 @@ msgctxt "The role of the transaction, in past tense"
 msgid "Upgraded system"
 msgstr "Systeem opfrischt"
 
-#: libapper/KpkStrings.cpp:331
+#: libapper/PkStrings.cpp:331
 msgid "Downloading"
 msgstr "An't Daalladen"
 
-#: libapper/KpkStrings.cpp:333
+#: libapper/PkStrings.cpp:333
 #, fuzzy
 #| msgid "Update"
 msgid "Updating"
 msgstr "Opfrischen"
 
-#: libapper/KpkStrings.cpp:335
+#: libapper/PkStrings.cpp:335
 #, fuzzy
 #| msgctxt "The role of the transaction, in present tense"
 #| msgid "Installing"
 msgid "Installing"
 msgstr "Bi to installeren"
 
-#: libapper/KpkStrings.cpp:337
+#: libapper/PkStrings.cpp:337
 #, fuzzy
 #| msgctxt "The role of the transaction, in present tense"
 #| msgid "Removing"
 msgid "Removing"
 msgstr "An't Wegmaken"
 
-#: libapper/KpkStrings.cpp:339
+#: libapper/PkStrings.cpp:339
 #, fuzzy
 #| msgid "Cleaning Up"
 msgid "Cleaning up"
 msgstr "An't Oprümen"
 
-#: libapper/KpkStrings.cpp:341
+#: libapper/PkStrings.cpp:341
 msgid "Obsoleting"
 msgstr "An't utschutern"
 
-#: libapper/KpkStrings.cpp:343
+#: libapper/PkStrings.cpp:343
 #, fuzzy
 #| msgctxt "The role of the transaction, in present tense"
 #| msgid "Installing"
 msgid "Reinstalling"
 msgstr "Bi to installeren"
 
-#: libapper/KpkStrings.cpp:345
+#: libapper/PkStrings.cpp:345
 msgid "Preparing"
 msgstr ""
 
-#: libapper/KpkStrings.cpp:347
+#: libapper/PkStrings.cpp:347
 msgid "Decompressing"
 msgstr ""
 
-#: libapper/KpkStrings.cpp:358
+#: libapper/PkStrings.cpp:358
 #, fuzzy
 #| msgctxt "The action of the package, in past tense"
 #| msgid "Downloaded"
 msgid "Downloaded"
 msgstr "Daallaadt"
 
-#: libapper/KpkStrings.cpp:360
+#: libapper/PkStrings.cpp:360
 msgid "Updated"
 msgstr "Opfrischt"
 
-#: libapper/KpkStrings.cpp:364
+#: libapper/PkStrings.cpp:364
 #, fuzzy
 #| msgctxt "The action of the package, in past tense"
 #| msgid "Removed"
 msgid "Removed"
 msgstr "Wegmaakt"
 
-#: libapper/KpkStrings.cpp:366
+#: libapper/PkStrings.cpp:366
 #, fuzzy
 #| msgctxt "The action of the package, in past tense"
 #| msgid "Cleaned Up"
 msgid "Cleaned up"
 msgstr "Oprüümt"
 
-#: libapper/KpkStrings.cpp:368
+#: libapper/PkStrings.cpp:368
 #, fuzzy
 #| msgctxt "The action of the package, in past tense"
 #| msgid "Obsoleted"
 msgid "Obsoleted"
 msgstr "Överhaalt"
 
-#: libapper/KpkStrings.cpp:370
+#: libapper/PkStrings.cpp:370
 #, fuzzy
 #| msgid "Installed"
 msgid "Reinstalled"
 msgstr "Installeert"
 
-#: libapper/KpkStrings.cpp:372
+#: libapper/PkStrings.cpp:372
 msgid "Prepared"
 msgstr ""
 
-#: libapper/KpkStrings.cpp:374
+#: libapper/PkStrings.cpp:374
 msgid "Decompressed"
 msgstr ""
 
-#: libapper/KpkStrings.cpp:385
+#: libapper/PkStrings.cpp:385
 msgid "No network connection available"
 msgstr "Keen Nettwarkverbinnen verföögbor"
 
-#: libapper/KpkStrings.cpp:387
+#: libapper/PkStrings.cpp:387
 msgid "No package cache is available"
 msgstr "Keen Paket-Twischenspieker verföögbor."
 
-#: libapper/KpkStrings.cpp:389
+#: libapper/PkStrings.cpp:389
 msgid "Out of memory"
 msgstr "Nich noog Spieker"
 
-#: libapper/KpkStrings.cpp:391
+#: libapper/PkStrings.cpp:391
 msgid "Failed to create a thread"
 msgstr "Strang lett sik nich opstellen"
 
-#: libapper/KpkStrings.cpp:393
+#: libapper/PkStrings.cpp:393
 msgid "Not supported by this backend"
 msgstr "Vun dissen Hülpprogramm nich ünnerstütt"
 
-#: libapper/KpkStrings.cpp:395
+#: libapper/PkStrings.cpp:395
 msgid "An internal system error has occurred"
 msgstr "Dat geev en intern Systeemfehler."
 
-#: libapper/KpkStrings.cpp:397
+#: libapper/PkStrings.cpp:397
 msgid "A security trust relationship is not present"
 msgstr "Keen Sekerheit-Vertroenbetog vörwiest"
 
-#: libapper/KpkStrings.cpp:399
+#: libapper/PkStrings.cpp:399
 msgid "The package is not installed"
 msgstr "Dat Paket is nich installeert."
 
-#: libapper/KpkStrings.cpp:401
+#: libapper/PkStrings.cpp:401
 msgid "The package was not found"
 msgstr "Dat Paket lett sik nich finnen."
 
-#: libapper/KpkStrings.cpp:403
+#: libapper/PkStrings.cpp:403
 msgid "The package is already installed"
 msgstr "Dat Paket is al installeert."
 
-#: libapper/KpkStrings.cpp:405
+#: libapper/PkStrings.cpp:405
 msgid "The package download failed"
 msgstr "Dat Paket lett sik nich daalladen."
 
-#: libapper/KpkStrings.cpp:407
+#: libapper/PkStrings.cpp:407
 msgid "The group was not found"
 msgstr "De Koppel lett sik nich finnen."
 
-#: libapper/KpkStrings.cpp:409
+#: libapper/PkStrings.cpp:409
 msgid "The group list was invalid"
 msgstr "De Koppel-List is leeg."
 
-#: libapper/KpkStrings.cpp:411
+#: libapper/PkStrings.cpp:411
 msgid "Dependency resolution failed"
 msgstr "Afhangigkeiten leet sik nich oplösen."
 
-#: libapper/KpkStrings.cpp:413
+#: libapper/PkStrings.cpp:413
 msgid "Search filter was invalid"
 msgstr "Söökfilter wöör leeg."
 
-#: libapper/KpkStrings.cpp:415
+#: libapper/PkStrings.cpp:415
 msgid "The package identifier was not well formed"
 msgstr "De Paketkennen wöör leeg"
 
-#: libapper/KpkStrings.cpp:417
+#: libapper/PkStrings.cpp:417
 msgid "Transaction error"
 msgstr "Vörgang - Fehler"
 
-#: libapper/KpkStrings.cpp:419
+#: libapper/PkStrings.cpp:419
 msgid "Repository name was not found"
 msgstr "Programmarchivnaam lett sik nich finnen"
 
-#: libapper/KpkStrings.cpp:421
+#: libapper/PkStrings.cpp:421
 msgid "Could not remove a protected system package"
 msgstr "En schuult Systeempaket lett sik nich wegdoon."
 
-#: libapper/KpkStrings.cpp:423
+#: libapper/PkStrings.cpp:423
 msgid "The task was canceled"
 msgstr "De Opgaav wöör afbraken"
 
-#: libapper/KpkStrings.cpp:425
+#: libapper/PkStrings.cpp:425
 msgid "The task was forcibly canceled"
 msgstr "De Opgaav wöör mit Willen afbraken"
 
-#: libapper/KpkStrings.cpp:427
+#: libapper/PkStrings.cpp:427
 msgid "Reading the config file failed"
 msgstr "Instellendatei lett sik nich lesen."
 
-#: libapper/KpkStrings.cpp:429
+#: libapper/PkStrings.cpp:429
 msgid "The task cannot be cancelled"
 msgstr "Disse Opgaav lett sik nich afbreken."
 
-#: libapper/KpkStrings.cpp:431
+#: libapper/PkStrings.cpp:431
 msgid "Source packages cannot be installed"
 msgstr "Bornpaketen laat sik nich installeren."
 
-#: libapper/KpkStrings.cpp:433
+#: libapper/PkStrings.cpp:433
 msgid "The license agreement failed"
 msgstr "Lizenzövereenkamen fehlslaan"
 
-#: libapper/KpkStrings.cpp:435
+#: libapper/PkStrings.cpp:435
 msgid "Local file conflict between packages"
 msgstr "Lokaal Dateikonflikt twischen Paketen"
 
-#: libapper/KpkStrings.cpp:437
+#: libapper/PkStrings.cpp:437
 msgid "Packages are not compatible"
 msgstr "Paketen sünd nich kompatibel."
 
-#: libapper/KpkStrings.cpp:439
+#: libapper/PkStrings.cpp:439
 #, fuzzy
 #| msgid "Problem connecting to a software orign"
 msgid "Problem connecting to a software origin"
 msgstr "Problem bi't Tokoppeln na en Software-Born"
 
-#: libapper/KpkStrings.cpp:441
+#: libapper/PkStrings.cpp:441
 msgid "Failed to initialize"
 msgstr "Torechtmaken fehlslaan"
 
-#: libapper/KpkStrings.cpp:443
+#: libapper/PkStrings.cpp:443
 msgid "Failed to finalize"
 msgstr "Afsluten fehlslaan"
 
-#: libapper/KpkStrings.cpp:445
+#: libapper/PkStrings.cpp:445
 msgid "Cannot get lock"
 msgstr "Slott lett sik nich fastsetten"
 
-#: libapper/KpkStrings.cpp:447
+#: libapper/PkStrings.cpp:447
 msgid "No packages to update"
 msgstr "Keen Paketen för't Opfrischen"
 
-#: libapper/KpkStrings.cpp:449
+#: libapper/PkStrings.cpp:449
 msgid "Cannot write repository configuration"
 msgstr "Programmarchiv-Instellen laat sik nich schrieven"
 
-#: libapper/KpkStrings.cpp:451
+#: libapper/PkStrings.cpp:451
 msgid "Local install failed"
 msgstr "Lokaal Installatschoon fehlslaan"
 
-#: libapper/KpkStrings.cpp:453
+#: libapper/PkStrings.cpp:453
 msgid "Bad GPG signature"
 msgstr "Leeg GPG-Signatuur"
 
-#: libapper/KpkStrings.cpp:455
+#: libapper/PkStrings.cpp:455
 msgid "Missing GPG signature"
 msgstr "GPG-Signatuur fehlt"
 
-#: libapper/KpkStrings.cpp:457
+#: libapper/PkStrings.cpp:457
 msgid "Repository configuration invalid"
 msgstr "Leeg Programmarchiv-Instellen"
 
-#: libapper/KpkStrings.cpp:459
+#: libapper/PkStrings.cpp:459
 msgid "Invalid package file"
 msgstr "Leeg Paketdatei"
 
-#: libapper/KpkStrings.cpp:461
+#: libapper/PkStrings.cpp:461
 msgid "Package install blocked"
 msgstr "Paket-Installatschoon blockeert"
 
-#: libapper/KpkStrings.cpp:463
+#: libapper/PkStrings.cpp:463
 msgid "Package is corrupt"
 msgstr "Paket is leeg"
 
-#: libapper/KpkStrings.cpp:465
+#: libapper/PkStrings.cpp:465
 msgid "All packages are already installed"
 msgstr "All Paketen sünd al installeert"
 
-#: libapper/KpkStrings.cpp:467
+#: libapper/PkStrings.cpp:467
 msgid "The specified file could not be found"
 msgstr "De angeven Datei lett sik nich finnen."
 
-#: libapper/KpkStrings.cpp:469
+#: libapper/PkStrings.cpp:469
 msgid "No more mirrors are available"
 msgstr "Keen anner Spegelservers verföögbor"
 
-#: libapper/KpkStrings.cpp:471
+#: libapper/PkStrings.cpp:471
 msgid "No distribution upgrade data is available"
 msgstr "Keen Distributschoon-Opfrischendaten verföögbor"
 
-#: libapper/KpkStrings.cpp:473
+#: libapper/PkStrings.cpp:473
 msgid "Package is incompatible with this system"
 msgstr "Paket is mit dit Systeem nich kompatibel"
 
-#: libapper/KpkStrings.cpp:475
+#: libapper/PkStrings.cpp:475
 msgid "No space is left on the disk"
 msgstr "Keen Platz mehr na op de Plaat"
 
-#: libapper/KpkStrings.cpp:477 libapper/PkTransaction.cpp:671
+#: libapper/PkStrings.cpp:477 libapper/PkTransaction.cpp:671
 msgid "A media change is required"
 msgstr "En Medienwessel deit noot"
 
-#: libapper/KpkStrings.cpp:479
+#: libapper/PkStrings.cpp:479
 msgid "Authorization failed"
 msgstr "Verlövenprööv fehlslaan"
 
-#: libapper/KpkStrings.cpp:481
+#: libapper/PkStrings.cpp:481
 msgid "Update not found"
 msgstr "Opfrischen lett sik nich finnen"
 
-#: libapper/KpkStrings.cpp:483
+#: libapper/PkStrings.cpp:483
 #, fuzzy
 #| msgid "Cannot install from untrusted orign"
 msgid "Cannot install from untrusted origin"
 msgstr "Installeren vun nich vertroot Born nich mööglich"
 
-#: libapper/KpkStrings.cpp:485
+#: libapper/PkStrings.cpp:485
 #, fuzzy
 #| msgid "Cannot update from untrusted orign"
 msgid "Cannot update from untrusted origin"
 msgstr "Opfrischen vun nich vertroot Born nich mööglich"
 
-#: libapper/KpkStrings.cpp:487
+#: libapper/PkStrings.cpp:487
 msgid "Cannot get the file list"
 msgstr "Dateilist lett sik nich halen"
 
-#: libapper/KpkStrings.cpp:489
+#: libapper/PkStrings.cpp:489
 msgid "Cannot get package requires"
 msgstr "Paket-Afhangigkeiten laat sik nich halen"
 
-#: libapper/KpkStrings.cpp:491
+#: libapper/PkStrings.cpp:491
 #, fuzzy
 #| msgid "Cannot disable orign"
 msgid "Cannot disable origin"
 msgstr "Born lett sik nich utmaken"
 
-#: libapper/KpkStrings.cpp:493
+#: libapper/PkStrings.cpp:493
 msgid "The download failed"
 msgstr "Daalladen is fehlslaan"
 
-#: libapper/KpkStrings.cpp:495
+#: libapper/PkStrings.cpp:495
 msgid "Package failed to configure"
 msgstr "Paket lett sik nich inrichten"
 
-#: libapper/KpkStrings.cpp:497
+#: libapper/PkStrings.cpp:497
 msgid "Package failed to build"
 msgstr "Paket lett sik nich buen"
 
-#: libapper/KpkStrings.cpp:499
+#: libapper/PkStrings.cpp:499
 msgid "Package failed to install"
 msgstr "Paket lett sik nich installeren"
 
-#: libapper/KpkStrings.cpp:501
+#: libapper/PkStrings.cpp:501
 msgid "Package failed to be removed"
 msgstr "Paket lett sik nich wegmaken"
 
-#: libapper/KpkStrings.cpp:503
+#: libapper/PkStrings.cpp:503
 msgid "Update failed due to running process"
 msgstr ""
 
-#: libapper/KpkStrings.cpp:505
+#: libapper/PkStrings.cpp:505
 #, fuzzy
 #| msgid "The package download failed"
 msgid "The package database was changed"
 msgstr "Dat Paket lett sik nich daalladen."
 
-#: libapper/KpkStrings.cpp:507
+#: libapper/PkStrings.cpp:507
 msgid "Virtual provide type is not supported"
 msgstr ""
 
-#: libapper/KpkStrings.cpp:509
+#: libapper/PkStrings.cpp:509
 msgid "Install root is invalid"
 msgstr ""
 
-#: libapper/KpkStrings.cpp:511
+#: libapper/PkStrings.cpp:511
 #, fuzzy
 #| msgid "Cannot get lock"
 msgid "Cannot fetch install sources"
 msgstr "Slott lett sik nich fastsetten"
 
-#: libapper/KpkStrings.cpp:513
+#: libapper/PkStrings.cpp:513
 msgid "Rescheduled due to priority"
 msgstr ""
 
-#: libapper/KpkStrings.cpp:515
+#: libapper/PkStrings.cpp:515
 msgid "Unknown error"
 msgstr "Nich begäng Fehler"
 
-#: libapper/KpkStrings.cpp:525
+#: libapper/PkStrings.cpp:525
 msgid ""
 "There is no network connection available.\n"
 "Please check your connection settings and try again"
@@ -2608,7 +2631,7 @@ msgstr ""
 "Keen Nettwarkverbinnen verföögbor.\n"
 "Bitte prööv Dien Verbinnen-Instellen un versöök dat denn wedder."
 
-#: libapper/KpkStrings.cpp:528
+#: libapper/PkStrings.cpp:528
 msgid ""
 "The package list needs to be rebuilt.\n"
 "This should have been done by the backend automatically."
@@ -2616,7 +2639,7 @@ msgstr ""
 "De Paketlist mutt nieg opstellt warrn.\n"
 "Normalerwies schull dat Hülpprogramm dat automaatsch doon."
 
-#: libapper/KpkStrings.cpp:531
+#: libapper/PkStrings.cpp:531
 msgid ""
 "The service that is responsible for handling user requests is out of "
 "memory.\n"
@@ -2625,11 +2648,11 @@ msgstr ""
 "De Deenst för Brukeranfragen hett nich noog Spieker.\n"
 "Maak bitte anner Programmen to oder start Dien Reekner nieg."
 
-#: libapper/KpkStrings.cpp:534
+#: libapper/PkStrings.cpp:534
 msgid "A thread could not be created to service the user request."
 msgstr "En Strang för de Brukeranfraag lett sik nich opstellen."
 
-#: libapper/KpkStrings.cpp:536
+#: libapper/PkStrings.cpp:536
 msgid ""
 "The action is not supported by this backend.\n"
 "Please report a bug as this should not have happened."
@@ -2637,7 +2660,7 @@ msgstr ""
 "Dat Hülpprogramm ünnerstütt disse Akschoon nich.\n"
 "Bitte maak en Fehler künnig, dit schull nich vörkamen."
 
-#: libapper/KpkStrings.cpp:539
+#: libapper/PkStrings.cpp:539
 msgid ""
 "A problem that we were not expecting has occurred.\n"
 "Please report this bug with the error description."
@@ -2645,7 +2668,7 @@ msgstr ""
 "Dat hett en nich verwacht Problem geven.\n"
 "Bitte maak dissen Fehler künnig un föög en Fehlerbeschrieven bi."
 
-#: libapper/KpkStrings.cpp:542
+#: libapper/PkStrings.cpp:542
 #, fuzzy
 #| msgid ""
 #| "A security trust relationship could not be made with the software orign.\n"
@@ -2657,13 +2680,13 @@ msgstr ""
 "För den Software-Born lett sik keen Sekerheit-Vertroenbetog opstellen.\n"
 "Prööv bitte Dien Software ehr Ünnerschrift-Instellen."
 
-#: libapper/KpkStrings.cpp:545
+#: libapper/PkStrings.cpp:545
 msgid ""
 "The package that is trying to be removed or updated is not already installed."
 msgstr ""
 "Dat Paket, dat Du wegdoon oder opfrischen wullt, is noch nich installeert."
 
-#: libapper/KpkStrings.cpp:547
+#: libapper/PkStrings.cpp:547
 #, fuzzy
 #| msgid ""
 #| "The package that is being modified was not found on your system or in any "
@@ -2675,11 +2698,11 @@ msgstr ""
 "Dat Paket, dat Du ännern wullt, lett sik nich op Dien Systeem oder binnen "
 "jichtenseen Software-Born finnen."
 
-#: libapper/KpkStrings.cpp:549
+#: libapper/PkStrings.cpp:549
 msgid "The package that is trying to be installed is already installed."
 msgstr "Dat Paket, dat Du installeren wullt, is al installeert."
 
-#: libapper/KpkStrings.cpp:551
+#: libapper/PkStrings.cpp:551
 msgid ""
 "The package download failed.\n"
 "Please check your network connectivity."
@@ -2687,7 +2710,7 @@ msgstr ""
 "Dat Paket lett sik nich daalladen\n"
 "Bitte prööv Dien Nettwarkverbinnen."
 
-#: libapper/KpkStrings.cpp:554
+#: libapper/PkStrings.cpp:554
 msgid ""
 "The group type was not found.\n"
 "Please check your group list and try again."
@@ -2695,7 +2718,7 @@ msgstr ""
 "De Koppeltyp lett sik nich finnen.\n"
 "Bitte prööv Dien Koppeln-List, un versöök dat denn nochmaal."
 
-#: libapper/KpkStrings.cpp:557
+#: libapper/PkStrings.cpp:557
 #, fuzzy
 #| msgid ""
 #| "The group list could not be loaded.\n"
@@ -2710,7 +2733,7 @@ msgstr ""
 "Villicht hölpt en Opfrischen vun den Twischenspieker, man normalerwies is "
 "dat en Fehler binnen den Software-Born."
 
-#: libapper/KpkStrings.cpp:561
+#: libapper/PkStrings.cpp:561
 msgid ""
 "A package dependency could not be found.\n"
 "More information is available in the detailed report."
@@ -2718,11 +2741,11 @@ msgstr ""
 "En Paket-Afhangigkeit lett sik nich finnen.\n"
 "Mehr Informatschonen laat sik binnen den utföhrlichen Bericht finnen."
 
-#: libapper/KpkStrings.cpp:564
+#: libapper/PkStrings.cpp:564
 msgid "The search filter was not correctly formed."
 msgstr "De Söökfilter wöör leeg."
 
-#: libapper/KpkStrings.cpp:566
+#: libapper/PkStrings.cpp:566
 msgid ""
 "The package identifier was not well formed when sent to the system daemon.\n"
 "This normally indicates an internal bug and should be reported."
@@ -2730,7 +2753,7 @@ msgstr ""
 "De Paketkennen weer bi't Loosstüern na den Server leeg.\n"
 "Normalerwies wiest dat op en intern Fehler, maak em bitte künnig."
 
-#: libapper/KpkStrings.cpp:569
+#: libapper/PkStrings.cpp:569
 msgid ""
 "An error occurred while running the transaction.\n"
 "More information is available in the detailed report."
@@ -2738,7 +2761,7 @@ msgstr ""
 "Dat geev en Fehler bi't Utföhren vun de Akschoon.\n"
 "Mehr Informatschonen laat sik binnen den utföhrlichen Bericht finnen."
 
-#: libapper/KpkStrings.cpp:572
+#: libapper/PkStrings.cpp:572
 #, fuzzy
 #| msgid ""
 #| "The remote software orign name was not found.\n"
@@ -2750,15 +2773,15 @@ msgstr ""
 "De feern Software-Bornnaam lett sik nich finnen.\n"
 "Villicht muttst Du en Indrag binnen de Software-Borns anmaken."
 
-#: libapper/KpkStrings.cpp:575
+#: libapper/PkStrings.cpp:575
 msgid "Removing a protected system package is not allowed."
 msgstr "Dat Wegdoon vun en schuult Systeempaket is nich tolaten."
 
-#: libapper/KpkStrings.cpp:577
+#: libapper/PkStrings.cpp:577
 msgid "The task was canceled successfully and no packages were changed."
 msgstr "De Opgaav wöör ahn Paketinstallatschoon afbraken."
 
-#: libapper/KpkStrings.cpp:579
+#: libapper/PkStrings.cpp:579
 msgid ""
 "The task was canceled successfully and no packages were changed.\n"
 "The backend did not exit cleanly."
@@ -2766,7 +2789,7 @@ msgstr ""
 "De Opgaav wöör ahn Paketinstallatschoon afbraken.\n"
 "Dat Hülpprogramm wöör nich püük beendt."
 
-#: libapper/KpkStrings.cpp:582
+#: libapper/PkStrings.cpp:582
 msgid ""
 "The native package configuration file could not be opened.\n"
 "Please make sure your system's configuration is valid."
@@ -2774,11 +2797,11 @@ msgstr ""
 "De normaal Paket-Instellendatei lett sik nich opmaken.\n"
 "Kiek bitte, wat Dien Systeeminstellen gellt."
 
-#: libapper/KpkStrings.cpp:585
+#: libapper/PkStrings.cpp:585
 msgid "The task is not safe to be cancelled at this time."
 msgstr "Nu lett sik de Opgaav nich seker afbreken."
 
-#: libapper/KpkStrings.cpp:587
+#: libapper/PkStrings.cpp:587
 msgid ""
 "Source packages are not normally installed this way.\n"
 "Check the extension of the file you are trying to install."
@@ -2786,7 +2809,7 @@ msgstr ""
 "Bornpaketen warrt normalerwies nich op disse Oort installeert.\n"
 "Prööv bitte de Verwiedern vun de Datei, de Du installeren wullt."
 
-#: libapper/KpkStrings.cpp:590
+#: libapper/PkStrings.cpp:590
 msgid ""
 "The license agreement was not agreed to.\n"
 "To use this software you have to accept the license."
@@ -2794,7 +2817,7 @@ msgstr ""
 "Du hest dat Bruukverlööfnis-Övereenkamen nich tostimmt.\n"
 "Du muttst dat Övereenkamen tostimmen, wenn Du disse Software bruken wullt."
 
-#: libapper/KpkStrings.cpp:593
+#: libapper/PkStrings.cpp:593
 #, fuzzy
 #| msgid ""
 #| "Two packages provide the same file.\n"
@@ -2807,7 +2830,7 @@ msgstr ""
 "Normalerwies kummt dat vör, wenn Paketen ut verscheden Software-Borns mischt "
 "warrt."
 
-#: libapper/KpkStrings.cpp:596
+#: libapper/PkStrings.cpp:596
 #, fuzzy
 #| msgid ""
 #| "Multiple packages exist that are not compatible with each other.\n"
@@ -2820,7 +2843,7 @@ msgstr ""
 "Normalerwies kummt dat vör, wenn Paketen ut verscheden Software-Borns mischt "
 "warrt."
 
-#: libapper/KpkStrings.cpp:599
+#: libapper/PkStrings.cpp:599
 #, fuzzy
 #| msgid ""
 #| "There was a (possibly temporary) problem connecting to a software "
@@ -2834,7 +2857,7 @@ msgstr ""
 "Born.\n"
 "Kiek Di bitte den utföhrlichen Fehler an, dor staht mehr Enkelheiten."
 
-#: libapper/KpkStrings.cpp:602
+#: libapper/PkStrings.cpp:602
 msgid ""
 "Failed to initialize packaging backend.\n"
 "This may occur if other packaging tools are being used simultaneously."
@@ -2842,7 +2865,7 @@ msgstr ""
 "Dat Paketpleeg-Hülpprogramm lett sik nich torechtmaken.\n"
 "Dat kaamt vör, wenn to de sülve Tiet anner Paketpleeg-Warktüüch bruukt warrt."
 
-#: libapper/KpkStrings.cpp:605
+#: libapper/PkStrings.cpp:605
 msgid ""
 "Failed to close down the backend instance.\n"
 "This error can normally be ignored."
@@ -2850,7 +2873,7 @@ msgstr ""
 "De Hülpprogramm-Utgaav lett sik nich utmaken.\n"
 "Dissen Fehler kann Een normalerwies övergahn."
 
-#: libapper/KpkStrings.cpp:608
+#: libapper/PkStrings.cpp:608
 msgid ""
 "Cannot get the exclusive lock on the packaging backend.\n"
 "Please close any other legacy packaging tools that may be open."
@@ -2859,15 +2882,15 @@ msgstr ""
 "Maak bitte all anner, öller Paketpleeg-Warktüüch to, de Du villicht opmaakt "
 "hest."
 
-#: libapper/KpkStrings.cpp:611
+#: libapper/PkStrings.cpp:611
 msgid "None of the selected packages could be updated."
 msgstr "Keen vun de utsöchten Paketen lett sik opfrischen."
 
-#: libapper/KpkStrings.cpp:613
+#: libapper/PkStrings.cpp:613
 msgid "The repository configuration could not be modified."
 msgstr "De Programmarchiv-Instellen laat sik nich ännern."
 
-#: libapper/KpkStrings.cpp:615
+#: libapper/PkStrings.cpp:615
 msgid ""
 "Installing the local file failed.\n"
 "More information is available in the detailed report."
@@ -2875,11 +2898,11 @@ msgstr ""
 "Lokaal Datei lett sik nich installeren.\n"
 "Mehr Informatschonen laat sik binnen den utföhrlichen Bericht finnen."
 
-#: libapper/KpkStrings.cpp:618
+#: libapper/PkStrings.cpp:618
 msgid "The package signature could not be verified."
 msgstr "De Paketsignatuur lett sik nich pröven."
 
-#: libapper/KpkStrings.cpp:620
+#: libapper/PkStrings.cpp:620
 msgid ""
 "The package signature was missing and this package is untrusted.\n"
 "This package was not signed with a GPG key when created."
@@ -2887,11 +2910,11 @@ msgstr ""
 "De Paketsignatuur fehlt, un dissen Paket warrt nich troot\n"
 "Dit Paket wöör ahn ünnerschreven GPG-Slötel opstellt."
 
-#: libapper/KpkStrings.cpp:623
+#: libapper/PkStrings.cpp:623
 msgid "Repository configuration was invalid and could not be read."
 msgstr "De Programmarchiv-Instellen wöör leeg un leet sik nich lesen."
 
-#: libapper/KpkStrings.cpp:625
+#: libapper/PkStrings.cpp:625
 msgid ""
 "The package you are attempting to install is not valid.\n"
 "The package file could be corrupt, or not a proper package."
@@ -2899,26 +2922,26 @@ msgstr ""
 "Dat Paket, dat Du installeren wullt, is leeg.\n"
 "Villicht is de Paketdatei schaadhaftig, oder keen propper Paketdatei."
 
-#: libapper/KpkStrings.cpp:628
+#: libapper/PkStrings.cpp:628
 msgid ""
 "Installation of this package was prevented by your packaging system's "
 "configuration."
 msgstr ""
 "Dien Paketpleegsysteem hett dat Installeren vun dit Paket nich tolaten."
 
-#: libapper/KpkStrings.cpp:630
+#: libapper/PkStrings.cpp:630
 msgid ""
 "The package that was downloaded is corrupt and needs to be downloaded again."
 msgstr "Dat daallaadt Paket is leeg un mutt nochmaal daallaadt warrn."
 
-#: libapper/KpkStrings.cpp:632
+#: libapper/PkStrings.cpp:632
 msgid ""
 "All of the packages selected for install are already installed on the system."
 msgstr ""
 "All för de Installatschoon utsöcht Paketen sünd al op den Reekner "
 "installeert."
 
-#: libapper/KpkStrings.cpp:634
+#: libapper/PkStrings.cpp:634
 msgid ""
 "The specified file could not be found on the system.\n"
 "Check that the file still exists and has not been deleted."
@@ -2926,7 +2949,7 @@ msgstr ""
 "De angeven Datei lett sik op Dien Systeem nich finnen.\n"
 "Prööv bitte, dat gifft de Datei noch un se wöör nich wegdaan."
 
-#: libapper/KpkStrings.cpp:637
+#: libapper/PkStrings.cpp:637
 #, fuzzy
 #| msgid ""
 #| "Required data could not be found on any of the configured software "
@@ -2939,7 +2962,7 @@ msgstr ""
 "Nödig Daten laat sik binnen keen vun de instellten Software-Borns finnen.\n"
 "Dat gifft keen anner Daallaad-Spegelservers, de utprobeert warrn köönt."
 
-#: libapper/KpkStrings.cpp:640
+#: libapper/PkStrings.cpp:640
 #, fuzzy
 #| msgid ""
 #| "Required upgrade data could not be found in any of the configured "
@@ -2954,13 +2977,13 @@ msgstr ""
 "finnen.\n"
 "De List mit Distributschoon-Opgraderen is nich verföögbor."
 
-#: libapper/KpkStrings.cpp:643
+#: libapper/PkStrings.cpp:643
 msgid ""
 "The package that is trying to be installed is incompatible with this system."
 msgstr ""
 "Dat Paket, dat Du installeren wullt, is to dit Systeem nich kompatibel."
 
-#: libapper/KpkStrings.cpp:645
+#: libapper/PkStrings.cpp:645
 msgid ""
 "There is insufficient space on the device.\n"
 "Free some space on the system disk to perform this operation."
@@ -2969,11 +2992,11 @@ msgstr ""
 "Maak op de Systeemplaat wat Platz free, wenn Du dissen Akschoon utföhren "
 "wullt."
 
-#: libapper/KpkStrings.cpp:648
+#: libapper/PkStrings.cpp:648
 msgid "Additional media is required to complete the transaction."
 msgstr "En anner Medium deit noot, wenn Du de Akschoon afsluten wullt."
 
-#: libapper/KpkStrings.cpp:650
+#: libapper/PkStrings.cpp:650
 msgid ""
 "You have failed to provide correct authentication.\n"
 "Please check any passwords or account settings."
@@ -2981,7 +3004,7 @@ msgstr ""
 "Du hest de Identiteetprööv nich mit Spood afslaten.\n"
 "Prööv bitte de Passwoort- un Konto-Instellen."
 
-#: libapper/KpkStrings.cpp:653
+#: libapper/PkStrings.cpp:653
 msgid ""
 "The specified update could not be found.\n"
 "It could have already been installed or no longer available on the remote "
@@ -2990,35 +3013,35 @@ msgstr ""
 "De angeven Opfrischen lett sik nich finnen.\n"
 "Se is villicht al installeert oder nich mehr op den Server verföögbor."
 
-#: libapper/KpkStrings.cpp:656
+#: libapper/PkStrings.cpp:656
 #, fuzzy
 #| msgid "The package could not be installed from untrusted orign."
 msgid "The package could not be installed from untrusted origin."
 msgstr "Dat Paket lett sik nich vun en nich vertroot Born installeren."
 
-#: libapper/KpkStrings.cpp:658
+#: libapper/PkStrings.cpp:658
 #, fuzzy
 #| msgid "The package could not be updated from untrusted orign."
 msgid "The package could not be updated from untrusted origin."
 msgstr "Dat Paket lett sik nich vun en nich vertroot Born opfrischen."
 
-#: libapper/KpkStrings.cpp:660
+#: libapper/PkStrings.cpp:660
 msgid "The file list is not available for this package."
 msgstr "De Dateilist för dit Paket is nich verföögbor."
 
-#: libapper/KpkStrings.cpp:662
+#: libapper/PkStrings.cpp:662
 msgid "The information about what requires this package could not be obtained."
 msgstr ""
 "De Informatschonen dor över, wat vun dit Paketen afhangen deit, laat sik "
 "nich halen."
 
-#: libapper/KpkStrings.cpp:664
+#: libapper/PkStrings.cpp:664
 #, fuzzy
 #| msgid "The specified software orign could not be disabled."
 msgid "The specified software origin could not be disabled."
 msgstr "De angeven Software-Born lett sik nich utmaken."
 
-#: libapper/KpkStrings.cpp:666
+#: libapper/PkStrings.cpp:666
 msgid ""
 "The download could not be done automatically and should be done manually.\n"
 "More information is available in the detailed report."
@@ -3026,7 +3049,7 @@ msgstr ""
 "De Daalladen lett sik nich automaatsch utföhren, versöök dat vun Hand.\n"
 "Mehr Informatschonen gifft dat binnen den utföhrlichen Bericht."
 
-#: libapper/KpkStrings.cpp:669
+#: libapper/PkStrings.cpp:669
 msgid ""
 "One of the selected packages failed to configure correctly.\n"
 "More information is available in the detailed report."
@@ -3034,7 +3057,7 @@ msgstr ""
 "Een vun de utsöchten Paketen lett sik nich mit Spood inrichten.\n"
 "Mehr Informatschonen gifft dat binnen den utföhrlichen Bericht."
 
-#: libapper/KpkStrings.cpp:672
+#: libapper/PkStrings.cpp:672
 msgid ""
 "One of the selected packages failed to build correctly.\n"
 "More information is available in the detailed report."
@@ -3042,7 +3065,7 @@ msgstr ""
 "Een vun de utsöchten Paketen lett sik nich mit Spood buen.\n"
 "Mehr Informatschonen gifft dat binnen den utföhrlichen Bericht."
 
-#: libapper/KpkStrings.cpp:675
+#: libapper/PkStrings.cpp:675
 msgid ""
 "One of the selected packages failed to install correctly.\n"
 "More information is available in the detailed report."
@@ -3050,7 +3073,7 @@ msgstr ""
 "Een vun de utsöchten Paketen lett sik nich mit Spood installeren.\n"
 "Mehr Informatschonen gifft dat binnen den utföhrlichen Bericht."
 
-#: libapper/KpkStrings.cpp:678
+#: libapper/PkStrings.cpp:678
 msgid ""
 "One of the selected packages failed to be removed correctly.\n"
 "More information is available in the detailed report."
@@ -3058,7 +3081,7 @@ msgstr ""
 "Een vun de utsöchten Paketen lett sik nich mit Spood wegmaken.\n"
 "Mehr Informatschonen gifft dat binnen den utföhrlichen Bericht."
 
-#: libapper/KpkStrings.cpp:681
+#: libapper/PkStrings.cpp:681
 #, fuzzy
 #| msgid ""
 #| "An error occurred while running the transaction.\n"
@@ -3070,31 +3093,31 @@ msgstr ""
 "Dat geev en Fehler bi't Utföhren vun de Akschoon.\n"
 "Mehr Informatschonen laat sik binnen den utföhrlichen Bericht finnen."
 
-#: libapper/KpkStrings.cpp:684
+#: libapper/PkStrings.cpp:684
 msgid "The package database was changed while the request was running."
 msgstr ""
 
-#: libapper/KpkStrings.cpp:686
+#: libapper/PkStrings.cpp:686
 msgid "The virtual provide type is not supported by this system."
 msgstr ""
 
-#: libapper/KpkStrings.cpp:688
+#: libapper/PkStrings.cpp:688
 msgid "The install root is invalid. Please contact your administrator."
 msgstr ""
 
-#: libapper/KpkStrings.cpp:690
+#: libapper/PkStrings.cpp:690
 #, fuzzy
 #| msgid "The specified software orign could not be disabled."
 msgid "The list of software could not be downloaded."
 msgstr "De angeven Software-Born lett sik nich utmaken."
 
-#: libapper/KpkStrings.cpp:692
+#: libapper/PkStrings.cpp:692
 msgid ""
 "The transaction has been cancelled and will be retried when the system is "
 "idle."
 msgstr ""
 
-#: libapper/KpkStrings.cpp:694
+#: libapper/PkStrings.cpp:694
 msgid ""
 "Unknown error, please report a bug.\n"
 "More information is available in the detailed report."
@@ -3102,42 +3125,42 @@ msgstr ""
 "Nich begäng Fehler, bitte maak em künnig.\n"
 "Mehr Informatschonen laat sik binnen den utföhrlichen Bericht finnen."
 
-#: libapper/KpkStrings.cpp:705
+#: libapper/PkStrings.cpp:705
 msgctxt "The group type"
 msgid "Accessibility"
 msgstr "Toganghülp"
 
-#: libapper/KpkStrings.cpp:707
+#: libapper/PkStrings.cpp:707
 msgctxt "The group type"
 msgid "Accessories"
 msgstr "Bito"
 
-#: libapper/KpkStrings.cpp:709
+#: libapper/PkStrings.cpp:709
 msgctxt "The group type"
 msgid "Education"
 msgstr "Lehren"
 
-#: libapper/KpkStrings.cpp:711
+#: libapper/PkStrings.cpp:711
 msgctxt "The group type"
 msgid "Games"
 msgstr "Spelen"
 
-#: libapper/KpkStrings.cpp:713
+#: libapper/PkStrings.cpp:713
 msgctxt "The group type"
 msgid "Graphics"
 msgstr "Grafik"
 
-#: libapper/KpkStrings.cpp:715
+#: libapper/PkStrings.cpp:715
 msgctxt "The group type"
 msgid "Internet"
 msgstr "Internet"
 
-#: libapper/KpkStrings.cpp:717
+#: libapper/PkStrings.cpp:717
 msgctxt "The group type"
 msgid "Office"
 msgstr "Kontoor"
 
-#: libapper/KpkStrings.cpp:719
+#: libapper/PkStrings.cpp:719
 #, fuzzy
 #| msgctxt "The group type"
 #| msgid "Other"
@@ -3145,199 +3168,199 @@ msgctxt "The group type"
 msgid "Others"
 msgstr "Anner"
 
-#: libapper/KpkStrings.cpp:721
+#: libapper/PkStrings.cpp:721
 msgctxt "The group type"
 msgid "Development"
 msgstr "Utwickeln"
 
-#: libapper/KpkStrings.cpp:723
+#: libapper/PkStrings.cpp:723
 msgctxt "The group type"
 msgid "Multimedia"
 msgstr "Multimedia"
 
-#: libapper/KpkStrings.cpp:725
+#: libapper/PkStrings.cpp:725
 msgctxt "The group type"
 msgid "System"
 msgstr "Systeem"
 
-#: libapper/KpkStrings.cpp:727
+#: libapper/PkStrings.cpp:727
 msgctxt "The group type"
 msgid "GNOME desktop"
 msgstr "GNOME-Schriefdisch"
 
-#: libapper/KpkStrings.cpp:729
+#: libapper/PkStrings.cpp:729
 msgctxt "The group type"
 msgid "KDE desktop"
 msgstr "KDE-Schriefdisch"
 
-#: libapper/KpkStrings.cpp:731
+#: libapper/PkStrings.cpp:731
 msgctxt "The group type"
 msgid "XFCE desktop"
 msgstr "XFCE-Schriefdisch"
 
-#: libapper/KpkStrings.cpp:733
+#: libapper/PkStrings.cpp:733
 msgctxt "The group type"
 msgid "Other desktops"
 msgstr "Anner Schriefdischen"
 
-#: libapper/KpkStrings.cpp:735
+#: libapper/PkStrings.cpp:735
 msgctxt "The group type"
 msgid "Publishing"
 msgstr "Apenmaken"
 
-#: libapper/KpkStrings.cpp:737
+#: libapper/PkStrings.cpp:737
 msgctxt "The group type"
 msgid "Servers"
 msgstr "Servers"
 
-#: libapper/KpkStrings.cpp:739
+#: libapper/PkStrings.cpp:739
 msgctxt "The group type"
 msgid "Fonts"
 msgstr "Schriftoorden"
 
-#: libapper/KpkStrings.cpp:741
+#: libapper/PkStrings.cpp:741
 msgctxt "The group type"
 msgid "Admin tools"
 msgstr "Systeemwarktüüch"
 
-#: libapper/KpkStrings.cpp:743
+#: libapper/PkStrings.cpp:743
 msgctxt "The group type"
 msgid "Legacy"
 msgstr "Oolt"
 
-#: libapper/KpkStrings.cpp:745
+#: libapper/PkStrings.cpp:745
 msgctxt "The group type"
 msgid "Localization"
 msgstr "Översetten"
 
-#: libapper/KpkStrings.cpp:747
+#: libapper/PkStrings.cpp:747
 msgctxt "The group type"
 msgid "Virtualization"
 msgstr "Virtualiseren"
 
-#: libapper/KpkStrings.cpp:749
+#: libapper/PkStrings.cpp:749
 msgctxt "The group type"
 msgid "Security"
 msgstr "Sekerheit"
 
-#: libapper/KpkStrings.cpp:751
+#: libapper/PkStrings.cpp:751
 msgctxt "The group type"
 msgid "Power management"
 msgstr "Stroomkuntrull"
 
-#: libapper/KpkStrings.cpp:753
+#: libapper/PkStrings.cpp:753
 msgctxt "The group type"
 msgid "Communication"
 msgstr "Kommunikatschoon"
 
-#: libapper/KpkStrings.cpp:755
+#: libapper/PkStrings.cpp:755
 msgctxt "The group type"
 msgid "Network"
 msgstr "Nettwark"
 
-#: libapper/KpkStrings.cpp:757
+#: libapper/PkStrings.cpp:757
 msgctxt "The group type"
 msgid "Maps"
 msgstr "Koorten"
 
-#: libapper/KpkStrings.cpp:759
+#: libapper/PkStrings.cpp:759
 msgctxt "The group type"
 msgid "Software sources"
 msgstr "Programm-Borns"
 
-#: libapper/KpkStrings.cpp:761
+#: libapper/PkStrings.cpp:761
 msgctxt "The group type"
 msgid "Science"
 msgstr "Wetenschap"
 
-#: libapper/KpkStrings.cpp:763
+#: libapper/PkStrings.cpp:763
 msgctxt "The group type"
 msgid "Documentation"
 msgstr "Dokmentatschoon"
 
-#: libapper/KpkStrings.cpp:765
+#: libapper/PkStrings.cpp:765
 msgctxt "The group type"
 msgid "Electronics"
 msgstr "Elektronik"
 
-#: libapper/KpkStrings.cpp:767
+#: libapper/PkStrings.cpp:767
 msgctxt "The group type"
 msgid "Package collections"
 msgstr "Paketsammeln"
 
-#: libapper/KpkStrings.cpp:769
+#: libapper/PkStrings.cpp:769
 msgctxt "The group type"
 msgid "Vendor"
 msgstr "Maker"
 
-#: libapper/KpkStrings.cpp:771
+#: libapper/PkStrings.cpp:771
 msgctxt "The group type"
 msgid "Newest packages"
 msgstr "Niegst Paketen"
 
-#: libapper/KpkStrings.cpp:773
+#: libapper/PkStrings.cpp:773
 msgctxt "The group type"
 msgid "Unknown group"
 msgstr "Nich begäng Koppel"
 
-#: libapper/KpkStrings.cpp:783
+#: libapper/PkStrings.cpp:783
 msgctxt "The type of update"
 msgid "Trivial update"
 msgstr "Eenfach Opfrischen"
 
-#: libapper/KpkStrings.cpp:785
+#: libapper/PkStrings.cpp:785
 msgctxt "The type of update"
 msgid "Normal update"
 msgstr "Normaal Opfrischen"
 
-#: libapper/KpkStrings.cpp:787
+#: libapper/PkStrings.cpp:787
 msgctxt "The type of update"
 msgid "Important update"
 msgstr "Wichtig Opfrischen"
 
-#: libapper/KpkStrings.cpp:789
+#: libapper/PkStrings.cpp:789
 msgctxt "The type of update"
 msgid "Security update"
 msgstr "Sekerheit-Opfrischen"
 
-#: libapper/KpkStrings.cpp:791
+#: libapper/PkStrings.cpp:791
 msgctxt "The type of update"
 msgid "Bug fix update"
 msgstr "Fehlerricht-Opfrischen"
 
-#: libapper/KpkStrings.cpp:793
+#: libapper/PkStrings.cpp:793
 msgctxt "The type of update"
 msgid "Enhancement update"
 msgstr "Verbeter-Opfrischen"
 
-#: libapper/KpkStrings.cpp:795
+#: libapper/PkStrings.cpp:795
 msgctxt "The type of update"
 msgid "Blocked update"
 msgstr "Blockeert Opfrischen"
 
-#: libapper/KpkStrings.cpp:798
+#: libapper/PkStrings.cpp:798
 msgctxt "The type of update"
 msgid "Installed"
 msgstr "Installeert"
 
-#: libapper/KpkStrings.cpp:801
+#: libapper/PkStrings.cpp:801
 msgctxt "The type of update"
 msgid "Available"
 msgstr "Verföögbor"
 
-#: libapper/KpkStrings.cpp:803
+#: libapper/PkStrings.cpp:803
 msgctxt "The type of update"
 msgid "Unknown update"
 msgstr "Nich begäng Opfrischen"
 
-#: libapper/KpkStrings.cpp:814
+#: libapper/PkStrings.cpp:814
 #, fuzzy
 #| msgid "%1 update available"
 #| msgid_plural "%1 updates available"
 msgid "No Updates Available"
 msgstr "%1 Opfrischen verföögbor"
 
-#: libapper/KpkStrings.cpp:817
+#: libapper/PkStrings.cpp:817
 #, fuzzy, kde-format
 #| msgctxt "Type of update, in the case it's just an update"
 #| msgid "1 update selected"
@@ -3348,7 +3371,7 @@ msgid_plural "%1 Updates Selected"
 msgstr[0] "1 Opfrischen utsöcht"
 msgstr[1] "%1 Opfrischen utsöcht"
 
-#: libapper/KpkStrings.cpp:821
+#: libapper/PkStrings.cpp:821
 #, fuzzy, kde-format
 #| msgctxt "Type of update, in the case it's just an update"
 #| msgid "1 update"
@@ -3359,7 +3382,7 @@ msgid_plural "%1 Updates"
 msgstr[0] "1 Opfrischen"
 msgstr[1] "%1 Opfrischen"
 
-#: libapper/KpkStrings.cpp:825
+#: libapper/PkStrings.cpp:825
 #, fuzzy, kde-format
 #| msgctxt "Type of update, in the case it's just an update"
 #| msgid "1 update"
@@ -3370,7 +3393,7 @@ msgid_plural "%1 Updates"
 msgstr[0] "1 Opfrischen"
 msgstr[1] "%1 Opfrischen"
 
-#: libapper/KpkStrings.cpp:826
+#: libapper/PkStrings.cpp:826
 #, fuzzy, kde-format
 #| msgctxt "Type of update, in the case it's just an update"
 #| msgid "1 update selected"
@@ -3381,20 +3404,20 @@ msgid_plural "%1 Selected"
 msgstr[0] "1 Opfrischen utsöcht"
 msgstr[1] "%1 Opfrischen utsöcht"
 
-#: libapper/KpkStrings.cpp:824
+#: libapper/PkStrings.cpp:824
 #, fuzzy, kde-format
 #| msgid "%1% - %2"
 msgctxt "Type of update, in the case it's just an update"
 msgid "%1, %2"
 msgstr "%1% - %2"
 
-#: libapper/KpkStrings.cpp:830
+#: libapper/PkStrings.cpp:830
 #, fuzzy
 #| msgid "Package"
 msgid "No Packages"
 msgstr "Paket"
 
-#: libapper/KpkStrings.cpp:832
+#: libapper/PkStrings.cpp:832
 #, fuzzy, kde-format
 #| msgid "Package"
 msgid "1 Package"
@@ -3402,328 +3425,228 @@ msgid_plural "%1 Packages"
 msgstr[0] "Paket"
 msgstr[1] "Paket"
 
-#: libapper/KpkStrings.cpp:840
+#: libapper/PkStrings.cpp:840
 msgid "No restart is necessary"
 msgstr "En Niegstart deit nich noot"
 
-#: libapper/KpkStrings.cpp:842
+#: libapper/PkStrings.cpp:842
 msgid "You will be required to restart this application"
 msgstr "Du muttst dat Programm nieg starten"
 
-#: libapper/KpkStrings.cpp:844
+#: libapper/PkStrings.cpp:844
 msgid "You will be required to log out and back in"
 msgstr "Du muttst Di af- un wedder anmellen"
 
-#: libapper/KpkStrings.cpp:846
+#: libapper/PkStrings.cpp:846
 msgid "A restart will be required"
 msgstr "En Niegstart is nödig"
 
-#: libapper/KpkStrings.cpp:848
+#: libapper/PkStrings.cpp:848
 msgid "You will be required to log out and back in due to a security update."
 msgstr "Na disse Sekerheit-Opfrischen muttst Du Di af- un wedder anmellen"
 
-#: libapper/KpkStrings.cpp:850
+#: libapper/PkStrings.cpp:850
 msgid "A restart will be required due to a security update."
 msgstr "Na disse Sekerheit-Opfrischen muttst en Niegstart utföhren"
 
-#: libapper/KpkStrings.cpp:863
+#: libapper/PkStrings.cpp:863
 msgid "No restart is required"
 msgstr "Keen Niegstart nödig"
 
-#: libapper/KpkStrings.cpp:865
+#: libapper/PkStrings.cpp:865
 msgid "A restart is required"
 msgstr "En Niegstart deit noot"
 
-#: libapper/KpkStrings.cpp:867
+#: libapper/PkStrings.cpp:867
 msgid "You need to log out and log back in"
 msgstr "Du muttst Di af- un wedder anmellen."
 
-#: libapper/KpkStrings.cpp:869
+#: libapper/PkStrings.cpp:869
 msgid "You need to restart the application"
 msgstr "Du muttst dat Programm nieg starten."
 
-#: libapper/KpkStrings.cpp:871
+#: libapper/PkStrings.cpp:871
 #, fuzzy
 #| msgid "You will need to log off and log back on"
 msgid "You need to log out and log back in to remain secure."
 msgstr "Du muttst Di af- un wedder anmellen."
 
-#: libapper/KpkStrings.cpp:873
+#: libapper/PkStrings.cpp:873
 #, fuzzy
 #| msgid "No restart is required"
 msgid "A restart is required to remain secure."
 msgstr "Keen Niegstart nödig"
 
-#: libapper/KpkStrings.cpp:886
+#: libapper/PkStrings.cpp:886
 msgid "Stable"
 msgstr "Stevig"
 
-#: libapper/KpkStrings.cpp:888
+#: libapper/PkStrings.cpp:888
 msgid "Unstable"
 msgstr "Jackelig"
 
-#: libapper/KpkStrings.cpp:890
+#: libapper/PkStrings.cpp:890
 msgid "Testing"
 msgstr "Utproberen"
 
-#: libapper/KpkStrings.cpp:903
+#: libapper/PkStrings.cpp:903
 #, kde-format
 msgid "Please insert the CD labeled '%1', and press continue."
 msgstr ""
 
-#: libapper/KpkStrings.cpp:905
+#: libapper/PkStrings.cpp:905
 #, kde-format
 msgid "Please insert the DVD labeled '%1', and press continue."
 msgstr ""
 
-#: libapper/KpkStrings.cpp:907
+#: libapper/PkStrings.cpp:907
 #, kde-format
 msgid "Please insert the disc labeled '%1', and press continue."
 msgstr ""
 
-#: libapper/KpkStrings.cpp:909 libapper/KpkStrings.cpp:912
+#: libapper/PkStrings.cpp:909 libapper/PkStrings.cpp:912
 #, kde-format
 msgid "Please insert the medium labeled '%1', and press continue."
 msgstr ""
 
-#: libapper/KpkStrings.cpp:919
+#: libapper/PkStrings.cpp:919
 msgid "A mirror is possibly broken"
 msgstr ""
 
-#: libapper/KpkStrings.cpp:921
+#: libapper/PkStrings.cpp:921
 msgid "The connection was refused"
 msgstr ""
 
-#: libapper/KpkStrings.cpp:923
+#: libapper/PkStrings.cpp:923
 #, fuzzy
 #| msgid "Search filter was invalid"
 msgid "The parameter was invalid"
 msgstr "Söökfilter wöör leeg."
 
-#: libapper/KpkStrings.cpp:925
+#: libapper/PkStrings.cpp:925
 #, fuzzy
 #| msgid "The group list was invalid"
 msgid "The priority was invalid"
 msgstr "De Koppel-List is leeg."
 
-#: libapper/KpkStrings.cpp:927
+#: libapper/PkStrings.cpp:927
 msgid "Backend warning"
 msgstr "Hülpprogramm-Wohrschoen"
 
-#: libapper/KpkStrings.cpp:929
+#: libapper/PkStrings.cpp:929
 msgid "Daemon warning"
 msgstr "Dämoon-Wohrschoen"
 
-#: libapper/KpkStrings.cpp:931
+#: libapper/PkStrings.cpp:931
 #, fuzzy
 #| msgid "No package cache is available"
 msgid "The package list cache is being rebuilt"
 msgstr "Keen Paket-Twischenspieker verföögbor."
 
-#: libapper/KpkStrings.cpp:933
+#: libapper/PkStrings.cpp:933
 #, fuzzy
 #| msgid "The package is not installed"
 msgid "An untrusted package was installed"
 msgstr "Dat Paket is nich installeert."
 
-#: libapper/KpkStrings.cpp:935
+#: libapper/PkStrings.cpp:935
 #, fuzzy
 #| msgid "Generating package lists"
 msgid "A newer package exists"
 msgstr "Paketlisten warrt opstellt"
 
-#: libapper/KpkStrings.cpp:937
+#: libapper/PkStrings.cpp:937
 #, fuzzy
 #| msgid "Failed to install package"
 msgid "Could not find package"
 msgstr "Paket lett sik nich installeren"
 
-#: libapper/KpkStrings.cpp:939
+#: libapper/PkStrings.cpp:939
 msgid "Configuration files were changed"
 msgstr ""
 
-#: libapper/KpkStrings.cpp:941
+#: libapper/PkStrings.cpp:941
 #, fuzzy
 #| msgid "The package is already installed"
 msgid "Package is already installed"
 msgstr "Dat Paket is al installeert."
 
-#: libapper/KpkStrings.cpp:943
+#: libapper/PkStrings.cpp:943
 msgid "Automatic cleanup is being ignored"
 msgstr ""
 
-#: libapper/KpkStrings.cpp:945
+#: libapper/PkStrings.cpp:945
 #, fuzzy
 #| msgid "The package download failed"
 msgid "Software source download failed"
 msgstr "Dat Paket lett sik nich daalladen."
 
-#: libapper/KpkStrings.cpp:947
+#: libapper/PkStrings.cpp:947
 msgid "This software source is for developers only"
 msgstr ""
 
-#: libapper/KpkStrings.cpp:949
+#: libapper/PkStrings.cpp:949
 msgid "Other updates have been held back"
 msgstr ""
 
-#: libapper/KpkStrings.cpp:964
+#: libapper/PkStrings.cpp:964
 #, fuzzy
 #| msgid "Could not remove a protected system package"
 msgid "Could not get a transaction id from packagekitd."
 msgstr "En schuult Systeempaket lett sik nich wegdoon."
 
-#: libapper/KpkStrings.cpp:966
+#: libapper/PkStrings.cpp:966
 msgid "Cannot connect to this transaction id."
 msgstr ""
 
-#: libapper/KpkStrings.cpp:968
+#: libapper/PkStrings.cpp:968
 msgid "This action is unknown."
 msgstr ""
 
-#: libapper/KpkStrings.cpp:970
+#: libapper/PkStrings.cpp:970
 #, fuzzy
 #| msgid "The package signature could not be verified."
 msgid "The packagekitd service could not be started."
 msgstr "De Paketsignatuur lett sik nich pröven."
 
-#: libapper/KpkStrings.cpp:972
+#: libapper/PkStrings.cpp:972
 #, fuzzy
 #| msgid "The group list was invalid"
 msgid "The query is not valid."
 msgstr "De Koppel-List is leeg."
 
-#: libapper/KpkStrings.cpp:974
+#: libapper/PkStrings.cpp:974
 #, fuzzy
 #| msgid "The file was not installed"
 #| msgid_plural "The files were not installed"
 msgid "The file is not valid."
 msgstr "De Datei wöör nich installeert."
 
-#: libapper/KpkStrings.cpp:976
+#: libapper/PkStrings.cpp:976
 msgid "This function is not yet supported."
 msgstr ""
 
-#: libapper/KpkStrings.cpp:978
+#: libapper/PkStrings.cpp:978
 #, fuzzy
 #| msgid "Failed to install package"
 msgid "Could not talk to packagekitd."
 msgstr "Paket lett sik nich installeren"
 
-#: libapper/KpkStrings.cpp:982 libapper/KpkStrings.cpp:985
+#: libapper/PkStrings.cpp:982 libapper/PkStrings.cpp:985
 #, fuzzy
 #| msgid "Unknown error"
 msgid "An unknown error happened."
 msgstr "Nich begäng Fehler"
 
-#: libapper/PkTransactionDialog.cpp:97
-#, fuzzy
-#| msgid "Allows you to hide the window but keeps running transaction task"
-msgid ""
-"Allows you to hide the window whilst keeping the transaction task running."
-msgstr "Lett Di dat Finster versteken bides de Transakschoon wiederlöppt"
+#. i18n: file: libapper/RepoSig.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, RepoSig)
+#: libapper/RepoSig.cpp:38 rc.cpp:221
+msgid "Software signature is required"
+msgstr "Programmsignatuur deit noot"
 
-#: libapper/ApplicationsDelegate.cpp:40
-msgid "Install"
-msgstr "Installeren"
-
-#: libapper/ApplicationsDelegate.cpp:42
-#, fuzzy
-#| msgctxt "The action of the package, in past tense"
-#| msgid "Removed"
-msgid "Remove"
-msgstr "Wegmaakt"
-
-#: libapper/ApplicationsDelegate.cpp:44 libapper/KpkDelegate.cpp:49
-#, fuzzy
-#| msgid "Development"
-msgid "Deselect"
-msgstr "Utwickeln"
-
-#: libapper/PackageModel.cpp:166
-#, fuzzy
-#| msgid "name"
-msgid "Name"
-msgstr "Naam"
-
-#: libapper/PackageModel.cpp:170
-msgid "Arch"
-msgstr ""
-
-#: libapper/PackageModel.cpp:172
-msgid "Size"
-msgstr "Grött"
-
-#: libapper/PackageModel.cpp:260
-#, fuzzy, kde-format
-msgid ""
-"Version: %1\n"
-"Architecture: %2"
-msgstr "Architekturen"
-
-#: libapper/PackageModel.cpp:301
-#, fuzzy
-#| msgctxt "The action of the package, in past tense"
-#| msgid "Removed"
-msgid "To be Removed"
-msgstr "Wegmaakt"
-
-#: libapper/PackageModel.cpp:303
-#, fuzzy
-#| msgid "Installed"
-msgid "To be Installed"
-msgstr "Installeert"
-
-#: libapper/KpkDelegate.cpp:45
-#, fuzzy
-#| msgid "Installed"
-msgid "Do not Install"
-msgstr "Installeert"
-
-#: libapper/KpkDelegate.cpp:47
-#, fuzzy
-#| msgctxt "The action of the package, in past tense"
-#| msgid "Removed"
-msgid "Do not Remove"
-msgstr "Wegmaakt"
-
-#: libapper/KpkRequirements.cpp:227
-msgid "Additional changes"
-msgstr "Ännern bito"
-
-#: libapper/KpkRequirements.cpp:257
-#, kde-format
-msgid "1 package to remove"
-msgid_plural "%1 packages to remove"
-msgstr[0] "1 Paket warrt wegmaakt"
-msgstr[1] "%1 Paketen warrt wegmaakt"
-
-#: libapper/KpkRequirements.cpp:267
-#, kde-format
-msgid "1 package to downgrade"
-msgid_plural "%1 packages to downgrade"
-msgstr[0] "Een Paket warrt daalgradeert"
-msgstr[1] "%1 Paketen warrt daalgradeert"
-
-#: libapper/KpkRequirements.cpp:279
-#, kde-format
-msgid "1 package to reinstall"
-msgid_plural "%1 packages to reinstall"
-msgstr[0] "1 Paket warrt nochmaal installeert"
-msgstr[1] "%1 Paketen warrt nochmaal installeert"
-
-#: libapper/KpkRequirements.cpp:291
-#, kde-format
-msgid "1 package to install"
-msgid_plural "%1 packages to install"
-msgstr[0] "1 Paket warrt installeert"
-msgstr[1] "%1 Paketen warrt installeert"
-
-#: libapper/KpkRequirements.cpp:303
-#, kde-format
-msgid "1 package to update"
-msgid_plural "%1 packages to update"
-msgstr[0] "1 Paket warrt opfrischt"
-msgstr[1] "%1 Paketen warrt opfrischt"
+#: libapper/SimulateModel.cpp:132
+msgid "Package"
+msgstr "Paket"
 
 #: libapper/PkTransaction.cpp:154
 #, fuzzy
@@ -3834,6 +3757,78 @@ msgstr "Afsluten fehlslaan"
 #| msgid_plural "Failed to install files"
 msgid "Failed to install signature"
 msgstr "Datei lett sik nich installeren"
+
+#: libapper/PkTransactionDialog.cpp:87
+#, fuzzy
+#| msgid "Allows you to hide the window but keeps running transaction task"
+msgid ""
+"Allows you to hide the window whilst keeping the transaction task running."
+msgstr "Lett Di dat Finster versteken bides de Transakschoon wiederlöppt"
+
+#: libapper/Requirements.cpp:227
+msgid "Additional changes"
+msgstr "Ännern bito"
+
+#: libapper/Requirements.cpp:257
+#, kde-format
+msgid "1 package to remove"
+msgid_plural "%1 packages to remove"
+msgstr[0] "1 Paket warrt wegmaakt"
+msgstr[1] "%1 Paketen warrt wegmaakt"
+
+#: libapper/Requirements.cpp:267
+#, kde-format
+msgid "1 package to downgrade"
+msgid_plural "%1 packages to downgrade"
+msgstr[0] "Een Paket warrt daalgradeert"
+msgstr[1] "%1 Paketen warrt daalgradeert"
+
+#: libapper/Requirements.cpp:279
+#, kde-format
+msgid "1 package to reinstall"
+msgid_plural "%1 packages to reinstall"
+msgstr[0] "1 Paket warrt nochmaal installeert"
+msgstr[1] "%1 Paketen warrt nochmaal installeert"
+
+#: libapper/Requirements.cpp:291
+#, kde-format
+msgid "1 package to install"
+msgid_plural "%1 packages to install"
+msgstr[0] "1 Paket warrt installeert"
+msgstr[1] "%1 Paketen warrt installeert"
+
+#: libapper/Requirements.cpp:303
+#, kde-format
+msgid "1 package to update"
+msgid_plural "%1 packages to update"
+msgstr[0] "1 Paket warrt opfrischt"
+msgstr[1] "%1 Paketen warrt opfrischt"
+
+#: libapper/ApplicationsDelegate.cpp:40
+msgid "Install"
+msgstr "Installeren"
+
+#: libapper/ApplicationsDelegate.cpp:42
+#, fuzzy
+#| msgctxt "The action of the package, in past tense"
+#| msgid "Removed"
+msgid "Remove"
+msgstr "Wegmaakt"
+
+#: libapper/LicenseAgreement.cpp:34
+msgid "Accept Agreement"
+msgstr "Övereenkamen annehmen"
+
+#. i18n: file: libapper/LicenseAgreement.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, LicenseAgreement)
+#: libapper/LicenseAgreement.cpp:35 rc.cpp:254
+msgid "License Agreement Required"
+msgstr "Lizenzövereenkamen deit noot"
+
+#: libapper/LicenseAgreement.cpp:36
+#, kde-format
+msgid "License required for %1 by %2"
+msgstr "Lizenz för %1 warrt vun %2 bruukt"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
@@ -4244,64 +4239,39 @@ msgstr "Textbeteker"
 msgid "Do not show this dialog again"
 msgstr "Nienich wedder Bescheed geven"
 
-#. i18n: file: libapper/KpkLicenseAgreement.ui:33
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:224
-msgid "Please read the following important information before continuing:"
-msgstr "Bitte lees disse wichtigen Informatschonen, ehr Du wiedermaakst:"
-
-#. i18n: file: libapper/KpkRepoSig.ui:21
+#. i18n: file: libapper/RepoSig.ui:29
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:230
+#: rc.cpp:224
 msgid "Do you trust the origin of packages?"
 msgstr "Troost Du de Herkomst vun Paketen?"
 
-#. i18n: file: libapper/KpkRepoSig.ui:39
+#. i18n: file: libapper/RepoSig.ui:47
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:233
+#: rc.cpp:227
 msgid "Repository name:"
 msgstr "Archivnaam:"
 
-#. i18n: file: libapper/KpkRepoSig.ui:62
+#. i18n: file: libapper/RepoSig.ui:70
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:236
+#: rc.cpp:230
 msgid "Signature URL:"
 msgstr "Signatuur-URL:"
 
-#. i18n: file: libapper/KpkRepoSig.ui:85
+#. i18n: file: libapper/RepoSig.ui:93
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:239
+#: rc.cpp:233
 msgid "Signature user identifier:"
 msgstr "Signatuur-Brukerkennen:"
 
-#. i18n: file: libapper/KpkRepoSig.ui:108
+#. i18n: file: libapper/RepoSig.ui:116
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:242
+#: rc.cpp:236
 msgid "Signature identifier:"
 msgstr "Signatuur-Kennen:"
 
-#. i18n: file: libapper/KpkRequirements.ui:31
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:245
-msgid "Additional changes are required to complete the task"
-msgstr "Dor sünd noch anner Ännern nödig för't Afsluten vun de Opgaav"
-
-#. i18n: file: libapper/KpkRequirements.ui:57
-#. i18n: ectx: property (windowTitle), widget (QDockWidget, dockWidget)
-#: rc.cpp:248
-msgid "Actions"
-msgstr "Akschonen"
-
-#. i18n: file: libapper/KpkRequirements.ui:144
-#. i18n: ectx: property (text), widget (QCheckBox, confirmCB)
-#: rc.cpp:251
-msgid ""
-"Do not show this confirmation when installing or updating additional packages"
-msgstr ""
-
 #. i18n: file: libapper/PkTransaction.ui:38
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:254
+#: rc.cpp:239
 #, fuzzy
 #| msgid "Action"
 msgid "icon"
@@ -4309,9 +4279,37 @@ msgstr "Akschoon"
 
 #. i18n: file: libapper/PkTransaction.ui:64
 #. i18n: ectx: property (text), widget (QLabel, currentL)
-#: rc.cpp:257
+#: rc.cpp:242
 msgid "Downloading Packages"
 msgstr "Paketen warrt daallaadt"
+
+#. i18n: file: libapper/Requirements.ui:31
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:245
+msgid "Additional changes are required to complete the task"
+msgstr "Dor sünd noch anner Ännern nödig för't Afsluten vun de Opgaav"
+
+#. i18n: file: libapper/Requirements.ui:57
+#. i18n: ectx: property (windowTitle), widget (QDockWidget, dockWidget)
+#: rc.cpp:248
+msgid "Actions"
+msgstr "Akschonen"
+
+#. i18n: file: libapper/Requirements.ui:144
+#. i18n: ectx: property (text), widget (QCheckBox, confirmCB)
+#: rc.cpp:251
+msgid ""
+"Do not show this confirmation when installing or updating additional packages"
+msgstr ""
+
+#. i18n: file: libapper/LicenseAgreement.ui:34
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:257
+msgid "Please read the following important information before continuing:"
+msgstr "Bitte lees disse wichtigen Informatschonen, ehr Du wiedermaakst:"
+
+#~ msgid "KPackageKit"
+#~ msgstr "KPackageKit"
 
 #, fuzzy
 #~| msgid "Do you want to install this file?"
