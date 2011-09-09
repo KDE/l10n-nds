@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevcoverage\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-09-05 03:50+0200\n"
+"POT-Creation-Date: 2011-09-08 04:12+0200\n"
 "PO-Revision-Date: 2009-09-09 23:26+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -32,14 +32,14 @@ msgstr "Ünnerstütten för lopen Afdecken-Warktüüch"
 msgid "Coverage"
 msgstr "Afdecken"
 
-#: reportwidget.cpp:400
+#: reportwidget.cpp:414
 #, fuzzy
 #| msgid "Start coverage analysis"
 msgctxt "@info:tooltip"
 msgid "Start coverage analysis"
 msgstr "Afdecken-Bericht utklamüstern"
 
-#: reportwidget.cpp:401
+#: reportwidget.cpp:415
 #, fuzzy
 #| msgid ""
 #| "Start coverage analysis in the specified path.\n"
@@ -56,18 +56,69 @@ msgstr ""
 "\n"
 "De Orner un sien Ünnerornern warrt na .gcda-Dateien dörkeken."
 
-#: reportwidget.cpp:408
+#: reportwidget.cpp:422
 #, fuzzy
 #| msgid "Start coverage analysis"
 msgctxt "@info:tooltip"
 msgid "Stop coverage analysis"
 msgstr "Afdecken-Bericht utklamüstern"
 
-#: reportwidget.cpp:409
+#: reportwidget.cpp:423
 msgctxt "@info:whatsthis"
 msgid ""
 "<para>Stop coverage analysis killing <command>geninfo</command> process.</"
 "para>"
+msgstr ""
+
+#: reportwidget.cpp:430
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Remove all the .gcda files in <filename>%1</filename> directory and, "
+"recursively, in its subdirectories?"
+msgstr ""
+
+#: reportwidget.cpp:431
+#, fuzzy
+#| msgid "The directory to scan for .gcda files."
+msgctxt "@title:window"
+msgid "Remove .gcda files"
+msgstr "De Orner, binnen den Du na .gcda-Dateien kieken wullt"
+
+#: reportwidget.cpp:462
+#, fuzzy
+#| msgid "Start coverage analysis"
+msgctxt "@info:tooltip"
+msgid "Remove coverage data"
+msgstr "Afdecken-Bericht utklamüstern"
+
+#: reportwidget.cpp:463
+#, fuzzy
+#| msgid ""
+#| "Start coverage analysis in the specified path.\n"
+#| "\n"
+#| "The directory and, recursively, its subdirectories are scanned for .gcda "
+#| "files."
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>Remove coverage data from the specified path.</para>\n"
+"<para>The .gcda files are removed in the given directory and, recursively, "
+"its subdirectories.</para>"
+msgstr ""
+"Den Afdecken-Bericht för den angeven Padd utklamüstern.\n"
+"\n"
+"De Orner un sien Ünnerornern warrt na .gcda-Dateien dörkeken."
+
+#: reportwidget.cpp:470
+#, fuzzy
+#| msgid "Start coverage analysis"
+msgctxt "@info:tooltip"
+msgid "Stop removing coverage data"
+msgstr "Afdecken-Bericht utklamüstern"
+
+#: reportwidget.cpp:471
+msgctxt "@info:whatsthis"
+msgid "<para>Stop removing coverage data from the specified path.</para>"
 msgstr ""
 
 #: buildpathselection.cpp:40
@@ -82,7 +133,7 @@ msgctxt "@info:progress"
 msgid "Running <command>geninfo</command>"
 msgstr ""
 
-#: lcovjobprogress.cpp:51
+#: lcovjobprogress.cpp:51 removegcdafilesjobprogress.cpp:39
 #, fuzzy
 #| msgid "The directory to scan for .gcda files."
 msgctxt "@info:progress"
@@ -122,20 +173,20 @@ msgctxt "@title:column Coverage report column"
 msgid "SLOC"
 msgstr "Bornkoderegen"
 
-#: lcovjob.cpp:74
+#: lcovjob.cpp:75
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Run <command>geninfo</command> on <filename>%1</filename> directory"
 msgstr ""
 
-#: lcovjob.cpp:134
+#: lcovjob.cpp:139
 msgid "Cov verbose output"
 msgstr "Snackhaftig Cov-Utgaav"
 
 #. i18nc can't be used. It seems that at this moment (2009-09-04) only
 #. plain text can be used in the outputview
 #. errorList << i18nc("@info", "Failed to start <filename>%1</filename>. Make sure that the path to <command>geninfo</command> is specified correctly in <interface>Settings->Configure KDevelop...->Lcov Preferences->geninfo Executable</interface>.", m_lcov->program().first());
-#: lcovjob.cpp:173
+#: lcovjob.cpp:178
 #, kde-format
 msgid ""
 "Failed to start '%1'. Make sure that the path to geninfo is specified "
@@ -146,27 +197,27 @@ msgstr ""
 "akraat binnen de Instellen ünner KDevelop instellen... -> LCov-Instellen -> "
 "Programm geninfo angeven."
 
-#: lcovjob.cpp:175
+#: lcovjob.cpp:180
 msgid "geninfo process crashed."
 msgstr "De Perzess \"geninfo\" is afstört."
 
-#: lcovjob.cpp:177
+#: lcovjob.cpp:182
 msgid "geninfo process timed out."
 msgstr "Perzess \"geninfo\" hett to lang bruukt."
 
-#: lcovjob.cpp:179
+#: lcovjob.cpp:184
 msgid "Failed to write to geninfo process."
 msgstr "Schrieven na den Perzess \"geninfo\" nich mööglich."
 
-#: lcovjob.cpp:181
+#: lcovjob.cpp:186
 msgid "Failed to read from geninfo process."
 msgstr "Lesen vun den Perzess \"geninfo\" nich mööglich."
 
-#: lcovjob.cpp:183
+#: lcovjob.cpp:188
 msgid "Unknown geninfo process error."
 msgstr "Nich begäng Fehler bi den Perzess \"geninfo\"."
 
-#: lcovjob.cpp:203
+#: lcovjob.cpp:208
 #, fuzzy
 #| msgid "geninfo process crashed."
 msgid "geninfo process was killed"
@@ -189,6 +240,24 @@ msgstr "Enkelweert"
 msgctxt "@item:inlistbox Gradient color range type"
 msgid "Gradient"
 msgstr "Övergang"
+
+#: removegcdafilesjob.cpp:44
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove coverage data from <filename>%1</filename> directory"
+msgstr ""
+
+#: removegcdafilesjobprogress.cpp:34
+msgctxt "@info:progress"
+msgid "Removing coverage data"
+msgstr ""
+
+#: removegcdafilesjobprogress.cpp:49
+#, fuzzy
+#| msgid "The directory to scan for .gcda files."
+msgctxt "@info:progress"
+msgid "Removing .gcda files"
+msgstr "De Orner, binnen den Du na .gcda-Dateien kieken wullt"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
@@ -305,14 +374,14 @@ msgstr "De Orner, binnen den Du na .gcda-Dateien kieken wullt"
 msgid "Build Path: "
 msgstr "Buupadd: "
 
-#. i18n: file: reportwidget.ui:59
+#. i18n: file: reportwidget.ui:66
 #. i18n: ectx: property (toolTip), widget (QLabel, getFromProjectTextLabel)
 #: rc.cpp:48
 msgctxt "@info:tooltip"
 msgid "Use the build path from the selected project"
 msgstr ""
 
-#. i18n: file: reportwidget.ui:62
+#. i18n: file: reportwidget.ui:69
 #. i18n: ectx: property (whatsThis), widget (QLabel, getFromProjectTextLabel)
 #: rc.cpp:51
 msgctxt "@info:whatsthis"
@@ -322,20 +391,20 @@ msgid ""
 "project."
 msgstr ""
 
-#. i18n: file: reportwidget.ui:65
+#. i18n: file: reportwidget.ui:72
 #. i18n: ectx: property (text), widget (QLabel, getFromProjectTextLabel)
 #: rc.cpp:54
 msgctxt "@label:listbox"
 msgid "Get from project:"
 msgstr ""
 
-#. i18n: file: reportwidget.ui:114
+#. i18n: file: reportwidget.ui:121
 #. i18n: ectx: property (toolTip), widget (KLineEdit, filterBox)
 #: rc.cpp:57
 msgid "Filter directories by name"
 msgstr "Ornen na Naam filtern"
 
-#. i18n: file: reportwidget.ui:119
+#. i18n: file: reportwidget.ui:126
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, filterBox)
 #: rc.cpp:60
 msgid ""
@@ -349,33 +418,33 @@ msgstr ""
 "\n"
 "In den Datei-Bedrief deit de Filter nix."
 
-#. i18n: file: reportwidget.ui:143
+#. i18n: file: reportwidget.ui:150
 #. i18n: ectx: property (whatsThis), widget (QLabel, coverageRatioTextLabel)
-#. i18n: file: reportwidget.ui:153
+#. i18n: file: reportwidget.ui:160
 #. i18n: ectx: property (whatsThis), widget (QLabel, coverageRatio)
 #: rc.cpp:65 rc.cpp:71
 msgid "Percentage of covered lines in the selected directories."
 msgstr "Perzenttall vun afdeckt Regen binnen de utsöchten Ornern."
 
-#. i18n: file: reportwidget.ui:146
+#. i18n: file: reportwidget.ui:153
 #. i18n: ectx: property (text), widget (QLabel, coverageRatioTextLabel)
 #: rc.cpp:68
 msgid "Line Coverage:"
 msgstr "Reegafdecken:"
 
-#. i18n: file: reportwidget.ui:156
+#. i18n: file: reportwidget.ui:163
 #. i18n: ectx: property (text), widget (QLabel, coverageRatio)
-#. i18n: file: reportwidget.ui:180
+#. i18n: file: reportwidget.ui:187
 #. i18n: ectx: property (text), widget (QLabel, nrofCoveredLines)
-#. i18n: file: reportwidget.ui:204
+#. i18n: file: reportwidget.ui:211
 #. i18n: ectx: property (text), widget (QLabel, sloc)
 #: rc.cpp:74 rc.cpp:90 rc.cpp:106
 msgid "-"
 msgstr "-"
 
-#. i18n: file: reportwidget.ui:165
+#. i18n: file: reportwidget.ui:172
 #. i18n: ectx: property (whatsThis), widget (QLabel, nrofCoveredLinesTextLabel)
-#. i18n: file: reportwidget.ui:177
+#. i18n: file: reportwidget.ui:184
 #. i18n: ectx: property (whatsThis), widget (QLabel, nrofCoveredLines)
 #: rc.cpp:77 rc.cpp:85
 msgid ""
@@ -387,15 +456,15 @@ msgstr ""
 "\n"
 "Afdeckt Regen sünd de, de tominnst eenmaal utföhrt worrn."
 
-#. i18n: file: reportwidget.ui:168
+#. i18n: file: reportwidget.ui:175
 #. i18n: ectx: property (text), widget (QLabel, nrofCoveredLinesTextLabel)
 #: rc.cpp:82
 msgid "Covered Lines:"
 msgstr "Afdeckt Regen:"
 
-#. i18n: file: reportwidget.ui:189
+#. i18n: file: reportwidget.ui:196
 #. i18n: ectx: property (whatsThis), widget (QLabel, slocTextLabel)
-#. i18n: file: reportwidget.ui:201
+#. i18n: file: reportwidget.ui:208
 #. i18n: ectx: property (whatsThis), widget (QLabel, sloc)
 #: rc.cpp:93 rc.cpp:101
 msgid ""
@@ -409,13 +478,13 @@ msgstr ""
 "Beacht bitte, dit deit bloots utföhrbor Regen insluten. Dat heet, Saken as "
 "Kommentaren, Makros, Vörutverkloren usw. sünd nich mit op de Tell."
 
-#. i18n: file: reportwidget.ui:192
+#. i18n: file: reportwidget.ui:199
 #. i18n: ectx: property (text), widget (QLabel, slocTextLabel)
 #: rc.cpp:98
 msgid "Total SLOC:"
 msgstr "Bornkoderegen tosamen:"
 
-#. i18n: file: reportwidget.ui:252
+#. i18n: file: reportwidget.ui:259
 #. i18n: ectx: property (whatsThis), widget (Veritas::DrillDownView, table)
 #: rc.cpp:109
 msgid ""
