@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-09-23 09:42+0200\n"
+"POT-Creation-Date: 2011-09-24 08:44+0200\n"
 "PO-Revision-Date: 2011-06-09 07:38+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1144,14 +1144,6 @@ msgid "Raise"
 msgstr "Na vörn"
 
 #. +> trunk
-#: image/commands/kis_image_resize_command.cpp:28
-#, fuzzy
-#| msgid "Resize Image"
-msgctxt "(qtundo-format)"
-msgid "Resize Image"
-msgstr "Bildgrött ännern"
-
-#. +> trunk
 #: image/commands/kis_image_set_projection_color_space_command.cpp:29
 #, fuzzy
 #| msgid "Convert Image Type"
@@ -1194,6 +1186,7 @@ msgstr "Knütt-Tosamensettenbedrief"
 
 #. +> trunk
 #: image/commands/kis_node_move_command.cpp:30
+#: image/commands_new/kis_node_move_command2.cpp:33
 #, fuzzy
 #| msgid "Move"
 msgctxt "(qtundo-format)"
@@ -1225,6 +1218,22 @@ msgstr "Nieg Köör"
 #: image/commands/kis_reselect_global_selection_command.cpp:30
 msgid "Reselect"
 msgstr "Nieg Köör"
+
+#. +> trunk
+#: image/commands_new/kis_image_resize_command.cpp:28
+#, fuzzy
+#| msgid "Resize Image"
+msgctxt "(qtundo-format)"
+msgid "Resize Image"
+msgstr "Bildgrött ännern"
+
+#. +> trunk
+#: image/commands_new/kis_image_set_resolution_command.cpp:26
+#, fuzzy
+#| msgid "Image Resolution"
+msgctxt "(qtundo-format)"
+msgid "Set Image Resolution"
+msgstr "Bildoplösen"
 
 #. i18n: ectx: property (text), widget (QPushButton, bnZoomAdjust)
 #. +> trunk stable
@@ -1282,13 +1291,13 @@ msgid "Other"
 msgstr "Anner"
 
 #. +> trunk stable
-#: image/generator/kis_generator_layer.cpp:112
+#: image/generator/kis_generator_layer.cpp:118
 msgid "Generator"
 msgstr "Opsteller"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #. +> trunk stable
-#: image/kis_adjustment_layer.cc:127
+#: image/kis_adjustment_layer.cc:133
 #: plugins/paintops/libpaintop/kis_filter_option.cpp:51
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:844
 #: ui/recorder/kis_recorded_filter_action_creator.cpp:59
@@ -1301,14 +1310,14 @@ msgid "Soft brush"
 msgstr "Week Pinsel"
 
 #. +> trunk stable
-#: image/kis_base_node.cpp:131 ui/kis_node_model.cpp:313
+#: image/kis_base_node.cpp:131 ui/kis_node_model.cpp:341
 msgid "Visible"
 msgstr "Sichtbor"
 
 #. +> trunk stable
 #: image/kis_base_node.cpp:132
 #: plugins/extensions/dockers/channeldocker/channelmodel.cpp:67
-#: ui/kis_node_model.cpp:314
+#: ui/kis_node_model.cpp:342
 msgid "Locked"
 msgstr "Afslaten"
 
@@ -1318,16 +1327,9 @@ msgid "Last used"
 msgstr "Tolest bruukt"
 
 #. +> trunk stable
-#: image/kis_clone_layer.cpp:206
+#: image/kis_clone_layer.cpp:211
 msgid "Copy From"
 msgstr "Koperen vun"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, WdgToolCrop)
-#. +> trunk stable
-#: image/kis_crop_visitor.h:138 plugins/tools/tool_crop/kis_tool_crop.cc:454
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:14
-msgid "Crop"
-msgstr "Tosnieden"
 
 #. +> trunk stable
 #: image/kis_filter_strategy.h:66
@@ -1370,34 +1372,36 @@ msgid "Mitchell"
 msgstr "Mitchell"
 
 #. +> trunk stable
-#: image/kis_image.cc:281
+#: image/kis_image.cc:260
 msgid "background"
 msgstr "Achtergrund"
 
 #. +> trunk stable
-#: image/kis_image.cc:284
+#: image/kis_image.cc:263
 #, kde-format
 msgid "Layer %1"
 msgstr "Laag %1"
 
 #. +> trunk stable
-#: image/kis_image.cc:385
+#: image/kis_image.cc:421
 msgid "Crop Image"
 msgstr "Bild tosnieden"
 
 #. +> trunk stable
-#: image/kis_image.cc:385
+#: image/kis_image.cc:421
 msgid "Resize Image"
 msgstr "Bildgrött ännern"
 
-#. +> trunk stable
-#: image/kis_image.cc:431 plugins/extensions/imagesize/imagesize.cc:125
-msgid "Scale Image"
-msgstr "Bild topassen"
+#. +> trunk
+#: image/kis_image.cc:449
+#, fuzzy
+#| msgid "Crop Image"
+msgid "Crop Node"
+msgstr "Bild tosnieden"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgRotateImage)
 #. +> trunk stable
-#: image/kis_image.cc:458 plugins/extensions/rotateimage/dlg_rotateimage.cc:31
+#: image/kis_image.cc:532 plugins/extensions/rotateimage/dlg_rotateimage.cc:31
 #: plugins/extensions/rotateimage/rotateimage.cc:117
 #: plugins/extensions/rotateimage/wdg_rotateimage.ui:16
 msgid "Rotate Image"
@@ -1405,44 +1409,49 @@ msgstr "Bild dreihen"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgShearImage)
 #. +> trunk stable
-#: image/kis_image.cc:500 plugins/extensions/shearimage/dlg_shearimage.cc:32
+#: image/kis_image.cc:574 plugins/extensions/shearimage/dlg_shearimage.cc:32
 #: plugins/extensions/shearimage/shearimage.cc:90
 #: plugins/extensions/shearimage/wdg_shearimage.ui:16
 msgid "Shear Image"
 msgstr "Bild scheren"
 
+#. +> stable
+#: image/kis_image.cc:416 plugins/extensions/imagesize/imagesize.cc:123
+msgid "Scale Image"
+msgstr "Bild topassen"
+
 #. +> trunk stable
-#: image/kis_image.cc:518
+#: image/kis_image.cc:592
 msgid "Convert Image Color Space"
 msgstr "Bildklörenruum ümwanneln"
 
 #. +> trunk stable
-#: image/kis_image.cc:535
+#: image/kis_image.cc:609
 msgid "Assign Profile"
 msgstr "Profil towiesen"
 
 #. +> trunk stable
-#: image/kis_image.cc:556
+#: image/kis_image.cc:630
 msgid "Convert Projection Color Space"
 msgstr "Projizerenklörenruum ümwanneln"
 
 #. +> trunk stable
-#: image/kis_image.cc:730 ui/kis_layer_manager.cc:743
+#: image/kis_image.cc:804 ui/kis_layer_manager.cc:740
 msgid "Flatten Image"
 msgstr "Bild glattmaken"
 
 #. +> trunk stable
-#: image/kis_image.cc:788
+#: image/kis_image.cc:862
 msgid "Merge with Layer Below"
 msgstr "Mit nerrn Laag tosamenföhren"
 
 #. +> trunk stable
-#: image/kis_image.cc:813
+#: image/kis_image.cc:887
 msgid "Flatten Layer"
 msgstr "Laag glattmaken"
 
 #. +> trunk stable
-#: image/kis_layer.cc:133
+#: image/kis_layer.cc:137
 #, kde-format
 msgid "Duplicate of '%1'"
 msgstr "Kopie vun \"%1\""
@@ -1450,7 +1459,7 @@ msgstr "Kopie vun \"%1\""
 #. i18n: ectx: property (text), widget (QCheckBox, opacityCBox)
 #. i18n: ectx: property (text), widget (QLabel, opacityLabel)
 #. +> trunk stable
-#: image/kis_layer.cc:170 plugins/paintops/hairy/wdghairyeoptions.ui:278
+#: image/kis_layer.cc:174 plugins/paintops/hairy/wdghairyeoptions.ui:278
 #: plugins/paintops/hairy/wdgInkOptions.ui:55
 #: plugins/paintops/libpaintop/forms/wdgflowopacityoption.ui:26
 #: plugins/paintops/libpaintop/kis_pressure_flow_opacity_option.cpp:30
@@ -1459,33 +1468,33 @@ msgid "Opacity"
 msgstr "Deckstärk"
 
 #. +> trunk stable
-#: image/kis_layer.cc:170
+#: image/kis_layer.cc:174
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
 #. +> trunk stable
-#: image/kis_layer.cc:172
+#: image/kis_layer.cc:176
 msgid "Composite Mode"
 msgstr "Tosamensetten-Bedrief"
 
 #. +> trunk
-#: image/kis_paint_layer.cc:150 image/kis_paint_layer.cc:159
+#: image/kis_paint_layer.cc:157 image/kis_paint_layer.cc:166
 msgid "Alpha Channel Locked"
 msgstr "Alphakanaal afslaten"
 
 #. +> trunk
-#: image/kis_paint_layer.cc:151 image/kis_paint_layer.cc:162
+#: image/kis_paint_layer.cc:158 image/kis_paint_layer.cc:169
 msgid "Alpha Channel Disabled"
 msgstr ""
 
 #. +> trunk stable
-#: image/kis_selection_mask.cpp:104 ui/kis_node_model.cpp:315
+#: image/kis_selection_mask.cpp:110 ui/kis_node_model.cpp:343
 msgid "Active"
 msgstr "Aktiv"
 
 #. +> trunk stable
-#: image/kis_transform_visitor.h:153
+#: image/kis_transform_visitor.h:158
 msgid "Rotate Node"
 msgstr "Knütt dreihen"
 
@@ -1567,6 +1576,20 @@ msgstr "Disse Tosamenföhrmetood söcht de best Lösen för't Tosamenföhren, a.
 #: image/metadata/kis_meta_data_value.cc:462
 msgid "Invalid value."
 msgstr "Leeg Weert."
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, WdgToolCrop)
+#. +> trunk stable
+#: image/processing/kis_crop_processing_visitor.cpp:114
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:14
+msgid "Crop"
+msgstr "Tosnieden"
+
+#. +> trunk
+#: image/processing/kis_transform_processing_visitor.cpp:159
+#, fuzzy
+#| msgid "Transform"
+msgid "Transform Node"
+msgstr "Ümwanneln"
 
 #. +> trunk stable
 #: image/recorder/kis_macro_player.cc:71
@@ -2176,7 +2199,7 @@ msgstr "Laag-Opstellfehler"
 
 #. +> trunk stable
 #: plugins/extensions/bracketing2hdr/bracketing2hdr.cc:183
-#: plugins/formats/exr/exr_converter.cc:315
+#: plugins/formats/exr/exr_converter.cc:313
 msgid "HDR Layer"
 msgstr "HDR-Laag"
 
@@ -3576,7 +3599,7 @@ msgstr "Masknaam:"
 #. +> trunk stable
 #: plugins/extensions/dockers/tasksetdocker/tasksetdocker_dock.cpp:176
 #: plugins/extensions/extensionsmanager/ExtensionInformationWidget.ui:20
-#: ui/forms/wdgfilternodecreation.ui:16 ui/forms/wdgpaintopsettings.ui:153
+#: ui/forms/wdgfilternodecreation.ui:16 ui/forms/wdgpaintopsettings.ui:160
 msgid "Name:"
 msgstr "Naam:"
 
@@ -3620,7 +3643,7 @@ msgid "Layer Effects"
 msgstr "Laag-Effekten"
 
 #. +> trunk stable
-#: plugins/extensions/dropshadow/kis_dropshadow.cc:93
+#: plugins/extensions/dropshadow/kis_dropshadow.cc:125
 msgid "Add Drop Shadow"
 msgstr "Schadden tofögen"
 
@@ -3905,13 +3928,13 @@ msgid "&Scale..."
 msgstr "&Topassen..."
 
 #. +> trunk stable
-#: plugins/extensions/imagesize/imagesize.cc:172
+#: plugins/extensions/imagesize/imagesize.cc:160
 msgid "Layer Size"
 msgstr "Laag-Grött"
 
 #. +> trunk stable
-#: plugins/extensions/imagesize/imagesize.cc:211
-#: plugins/extensions/imagesize/imagesize.cc:225
+#: plugins/extensions/imagesize/imagesize.cc:199
+#: plugins/extensions/imagesize/imagesize.cc:213
 msgid "Scale Selection"
 msgstr "Köör topassen"
 
@@ -4968,28 +4991,28 @@ msgstr "Metadaten &bewerken..."
 #. +> trunk stable
 #: plugins/extensions/modify_selection/dlg_border_selection.cc:31
 #: plugins/extensions/modify_selection/modify_selection.cc:176
-#: ui/kis_selection_manager_p.h:218
+#: ui/kis_selection_manager_p.h:237
 msgid "Border Selection"
 msgstr "Köör ümrannen"
 
 #. +> trunk stable
 #: plugins/extensions/modify_selection/dlg_feather_selection.cc:32
 #: plugins/extensions/modify_selection/modify_selection.cc:199
-#: ui/kis_selection_manager_p.h:439
+#: ui/kis_selection_manager_p.h:458
 msgid "Feather Selection"
 msgstr "Köör afswachen"
 
 #. +> trunk stable
 #: plugins/extensions/modify_selection/dlg_grow_selection.cc:30
 #: plugins/extensions/modify_selection/modify_selection.cc:128
-#: ui/kis_selection_manager_p.h:488
+#: ui/kis_selection_manager_p.h:507
 msgid "Grow Selection"
 msgstr "Köör utdehnen"
 
 #. +> trunk stable
 #: plugins/extensions/modify_selection/dlg_shrink_selection.cc:30
 #: plugins/extensions/modify_selection/modify_selection.cc:151
-#: ui/kis_selection_manager_p.h:617
+#: ui/kis_selection_manager_p.h:636
 msgid "Shrink Selection"
 msgstr "Köör schrimpen"
 
@@ -5144,7 +5167,7 @@ msgstr "Laag 90° na links dreihen"
 
 #. +> trunk stable
 #: plugins/extensions/rotateimage/rotateimage.cc:151
-#: ui/kis_layer_manager.cc:681
+#: ui/kis_layer_manager.cc:678
 msgid "Rotate Layer"
 msgstr "Laag dreihen"
 
@@ -5576,7 +5599,7 @@ msgstr "Bild aftrennen"
 
 #. +> trunk stable
 #: plugins/extensions/separate_channels/kis_channel_separator.cc:242
-#: ui/kis_layer_manager.cc:835
+#: ui/kis_layer_manager.cc:832
 msgid "Export Layer"
 msgstr "Laag exporteren"
 
@@ -6064,7 +6087,7 @@ msgstr "Achteck (8)"
 #. +> trunk stable
 #: plugins/filters/blur/wdg_lens_blur.ui:73
 #: plugins/filters/roundcorners/kis_round_corners_filter.cpp:134
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:971
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:236
 #: plugins/tools/selectiontools/kis_tool_select_magnetic_option_widget.ui:31
 msgid "Radius"
 msgstr "Halfmaat"
@@ -7036,8 +7059,8 @@ msgid "Flatten the &image"
 msgstr "Dat Bild &glattmaken"
 
 #. +> trunk stable
-#: plugins/formats/jp2/jp2_converter.cc:344
-#: plugins/formats/jp2/jp2_converter.cc:355
+#: plugins/formats/jp2/jp2_converter.cc:342
+#: plugins/formats/jp2/jp2_converter.cc:353
 #: plugins/formats/jpeg/kis_jpeg_converter.cc:101
 #: plugins/formats/ppm/kis_ppm_export.cpp:176
 #: plugins/formats/tiff/kis_tiff_writer_visitor.cpp:65
@@ -7494,12 +7517,12 @@ msgid "Ascii"
 msgstr "ASCII"
 
 #. +> trunk stable
-#: plugins/formats/psd/psd_loader.cpp:137
+#: plugins/formats/psd/psd_loader.cpp:135
 msgid "Duotone Colormode Block"
 msgstr "Block in Duplexdruck-Klöörbedrief"
 
 #. +> trunk stable
-#: plugins/formats/psd/psd_loader.cpp:146
+#: plugins/formats/psd/psd_loader.cpp:144
 #: plugins/paintops/libpaintop/kis_pressure_mix_option.cpp:29
 msgid "Background"
 msgstr "Achtergrund"
@@ -8026,7 +8049,6 @@ msgstr "Na rechts küseln"
 #. i18n: ectx: property (text), widget (QRadioButton, moveBtn)
 #. +> trunk stable
 #: plugins/paintops/deform/wdgdeformoptions.ui:75
-#: plugins/tools/defaulttools/kis_tool_move.cc:161
 msgid "Move"
 msgstr "Verschuven"
 
@@ -9234,7 +9256,7 @@ msgstr "Decken"
 
 #. +> trunk stable
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option.cpp:31
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:931
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:194
 #: ui/kis_paintop_box.cc:200
 msgid "Mirror"
 msgstr "Spegeln"
@@ -9251,13 +9273,13 @@ msgstr "Spegelt"
 
 #. +> trunk stable
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:35
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:951
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:214
 msgid "Horizontally"
 msgstr "Kimmrecht"
 
 #. +> trunk stable
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:37
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:953
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:216
 msgid "Vertically"
 msgstr "Pielrecht"
 
@@ -10153,7 +10175,7 @@ msgid "EMPTY, TO BE FILLED WITH A GREAT GUI"
 msgstr "Leddig. Hier schall en groot Böversiet rin."
 
 #. +> trunk
-#: plugins/tools/defaulttools/kis_tool_brush.cc:57
+#: plugins/tools/defaulttools/kis_tool_brush.cc:36
 #, fuzzy
 #| msgid "Brush"
 msgctxt "(qtundo-format)"
@@ -10161,32 +10183,28 @@ msgid "Brush"
 msgstr "Pinsel"
 
 #. +> trunk stable
-#: plugins/tools/defaulttools/kis_tool_brush.cc:135
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:895
+#: plugins/tools/defaulttools/kis_tool_brush.cc:61
 msgctxt "smooth out the curves while drawing"
 msgid "Smoothness:"
 msgstr "Weekheit:"
 
 #. +> trunk stable
-#: plugins/tools/defaulttools/kis_tool_brush.cc:150
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:910
+#: plugins/tools/defaulttools/kis_tool_brush.cc:76
 msgid "Assistant:"
 msgstr "Hölper:"
 
 #. +> trunk stable
-#: plugins/tools/defaulttools/kis_tool_brush.cc:151
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:911
+#: plugins/tools/defaulttools/kis_tool_brush.cc:77
 msgid "You need to add Ruler Assistants before this tool will work."
 msgstr "Du muttst de Linealenhölpers tofögen, dormit dit Warktüüch funkscheneert."
 
 #. +> trunk stable
-#: plugins/tools/defaulttools/kis_tool_brush.cc:154
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:914
+#: plugins/tools/defaulttools/kis_tool_brush.cc:80
 msgid "Assistant Magnetism"
 msgstr "Den Hölper sien Magnetismus"
 
 #. +> trunk stable
-#: plugins/tools/defaulttools/kis_tool_brush.h:79
+#: plugins/tools/defaulttools/kis_tool_brush.h:65
 msgid "Paint with brushes"
 msgstr "Mit Pinsels malen"
 
@@ -10393,61 +10411,42 @@ msgid "Measure the distance between two points"
 msgstr "Den Afstand twischen twee Pünkt meten"
 
 #. +> trunk stable
-#: plugins/tools/defaulttools/kis_tool_move.h:91
+#: plugins/tools/defaulttools/kis_tool_move.h:88
 msgid "Move a layer"
 msgstr "En Laag verschuven"
 
-#. +> trunk stable
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:109
-#: ui/tool/kis_tool_freehand.cc:90
-msgid "Increase Brush Size"
-msgstr "Pinsel grötter maken"
-
-#. +> trunk stable
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:114
-#: ui/tool/kis_tool_freehand.cc:95
-msgid "Decrease Brush Size"
-msgstr "Pinsel lütter maken"
-
 #. +> trunk
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:923
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:187
 #, fuzzy
 #| msgid "Axis X"
 msgid "Axis point"
 msgstr "X-Ass"
 
 #. +> trunk
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:930
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:193
 msgid "Symmetry"
 msgstr ""
 
 #. +> trunk
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:932
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:195
 #, fuzzy
 #| msgid "Triangle"
 msgid "Translate"
 msgstr "Dre'eck"
 
 #. +> trunk
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:936
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:201
 #, fuzzy
 #| msgid "Brush tip"
 msgid "Brush count"
 msgstr "Pinselspitz"
 
 #. +> trunk
-#: plugins/tools/defaulttools/kis_tool_multihand.h:221
+#: plugins/tools/defaulttools/kis_tool_multihand.h:90
 #, fuzzy
 #| msgid "Paint with brushes"
 msgid "Paint with multibrushes"
 msgstr "Mit Pinsels malen"
-
-#. +> trunk
-#: plugins/tools/defaulttools/kis_tool_multihand.h:235
-#, fuzzy
-#| msgid "Brush"
-msgid "MultiBrush"
-msgstr "Pinsel"
 
 #. +> trunk stable
 #: plugins/tools/defaulttools/kis_tool_pan.h:74
@@ -10879,7 +10878,7 @@ msgid "Vertices:"
 msgstr "Höörns:"
 
 #. +> trunk
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:57
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:37
 #, fuzzy
 #| msgid "Dyna"
 msgctxt "(qtundo-format)"
@@ -10892,42 +10891,42 @@ msgid "Dyna"
 msgstr "Dünaamsch"
 
 #. +> trunk stable
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:336
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:273
 msgid "Initial width:"
 msgstr "Startbreed:"
 
 #. +> trunk stable
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:337
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:274
 msgid "Mass:"
 msgstr "Mass:"
 
 #. +> trunk stable
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:338
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:275
 msgid "Drag:"
 msgstr "Dregen:"
 
 #. +> trunk stable
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:339
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:276
 msgid "X angle:"
 msgstr "X-Winkel:"
 
 #. +> trunk stable
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:340
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:277
 msgid "Y angle:"
 msgstr "Y-Winkel:"
 
 #. +> trunk stable
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:341
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:278
 msgid "Width range:"
 msgstr "Breedrebeet:"
 
 #. +> trunk stable
-#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:343
+#: plugins/tools/tool_dyna/kis_tool_dyna.cpp:280
 msgid "Fixed angle:"
 msgstr "Fast Winkel:"
 
 #. +> trunk stable
-#: plugins/tools/tool_dyna/kis_tool_dyna.h:167
+#: plugins/tools/tool_dyna/kis_tool_dyna.h:160
 msgid "Paint with brushes using dynamic movements"
 msgstr "Dünaamsch Verschuven bi't Malen mit Pinsels bruken"
 
@@ -12439,7 +12438,7 @@ msgstr "All wiesen"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, txtPreset)
 #. +> trunk
-#: ui/forms/wdgpaintopsettings.ui:160
+#: ui/forms/wdgpaintopsettings.ui:167
 #, fuzzy
 #| msgid "Current preset"
 msgid "Current brush preset"
@@ -12453,7 +12452,7 @@ msgstr "Aktuell Pinseldefinitschoon"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, bnSave)
 #. +> trunk
-#: ui/forms/wdgpaintopsettings.ui:167
+#: ui/forms/wdgpaintopsettings.ui:174
 #, fuzzy
 #| msgid "save the current brush definition under this name"
 msgid "Save the current brush settings under this name"
@@ -12467,13 +12466,13 @@ msgstr "Aktuell Pinseldefinitschoon mit dissen Naam sekern"
 
 #. i18n: ectx: property (text), widget (QPushButton, bnSave)
 #. +> trunk stable
-#: ui/forms/wdgpaintopsettings.ui:170
+#: ui/forms/wdgpaintopsettings.ui:177
 msgid "&Save to Presets"
 msgstr "Na Vörinstellen &sekern"
 
 #. i18n: ectx: property (text), widget (QPushButton, bnDefaultPreset)
 #. +> trunk stable
-#: ui/forms/wdgpaintopsettings.ui:187
+#: ui/forms/wdgpaintopsettings.ui:194
 msgid "Default preset"
 msgstr "Standard-Vörinstellen"
 
@@ -12970,7 +12969,7 @@ msgid "The current image is too big to create a pattern. The pattern will be sca
 msgstr ""
 
 #. +> trunk
-#: ui/kis_doc2.cc:440
+#: ui/kis_doc2.cc:432
 msgid "The Calligra LittleCMS color management plugin is not installed. Krita will quit now."
 msgstr "Dat Calligra-Klöörpleegmoduul \"LittleCMS\" is nich installeert. Krita warrt nu utmaakt."
 
@@ -12980,13 +12979,13 @@ msgid "The KOffice LittleCMS color management plugin is not installed. Krita wil
 msgstr "Dat KOffice-Klöörpleegmoduul \"LittleCMS\" is nich installeert. Krita warrt nu utmaakt."
 
 #. +> trunk stable
-#: ui/kis_doc2.cc:451
+#: ui/kis_doc2.cc:443
 #, kde-format
 msgid "Krita needs at least Qt 4.6.3 to work correctly. Your Qt version is %1. If you have a graphics tablet it will not work correctly!"
 msgstr "Krita bruukt tominnst Qt 4.6.3, dormit dat propper löppt. Du hest man Qt %1. Hest Du en Grafiktablett, denn warrt dat nich propper funkscheneren."
 
 #. +> trunk stable
-#: ui/kis_doc2.cc:464
+#: ui/kis_doc2.cc:456
 msgid "Installation error"
 msgstr "Installatschoonfehler"
 
@@ -13044,7 +13043,7 @@ msgid "&Flatten Layer"
 msgstr "Laag &glattmaken"
 
 #. +> trunk
-#: ui/kis_layer_manager.cc:147 ui/kis_layer_manager.cc:807
+#: ui/kis_layer_manager.cc:147 ui/kis_layer_manager.cc:804
 msgid "Rasterize Layer"
 msgstr "Laag rastern"
 
@@ -13058,68 +13057,68 @@ msgstr "Laag as Bild sekern..."
 msgid "Size Canvas to Size of Current Layer"
 msgstr "Lienwandgrött na aktuell Laaggrött ännern"
 
-#. +> trunk stable
-#: ui/kis_layer_manager.cc:203
+#. +> stable
+#: ui/kis_layer_manager.cc:199
 msgid "Resize Image to Size of Current Layer"
 msgstr "Bildgrött na aktuell Laaggrött ännern"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:226
+#: ui/kis_layer_manager.cc:223
 msgid "Filter Layer Properties"
 msgstr "Filterlaag-Egenschappen"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:255
+#: ui/kis_layer_manager.cc:252
 msgid "Generator Layer Properties"
 msgstr "Makerlaag-Egenschappen"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:308 ui/kis_layer_manager.cc:324
-#: ui/kis_layer_manager.cc:368 ui/kis_layer_manager.cc:401
-#: ui/kis_layer_manager.cc:539
+#: ui/kis_layer_manager.cc:305 ui/kis_layer_manager.cc:321
+#: ui/kis_layer_manager.cc:365 ui/kis_layer_manager.cc:398
+#: ui/kis_layer_manager.cc:536
 msgid "Could not add layer to image."
 msgstr "Laag lett sik nich dat Bild tofögen."
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:308 ui/kis_layer_manager.cc:324
-#: ui/kis_layer_manager.cc:368 ui/kis_layer_manager.cc:401
-#: ui/kis_layer_manager.cc:539
+#: ui/kis_layer_manager.cc:305 ui/kis_layer_manager.cc:321
+#: ui/kis_layer_manager.cc:365 ui/kis_layer_manager.cc:398
+#: ui/kis_layer_manager.cc:536
 msgid "Layer Error"
 msgstr "Laag-Fehler"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:431
+#: ui/kis_layer_manager.cc:428
 msgid "New Filter Layer"
 msgstr "Nieg Filterlaag"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:601 ui/kis_layer_manager.cc:611
+#: ui/kis_layer_manager.cc:598 ui/kis_layer_manager.cc:608
 msgid "Mirror Layer X"
 msgstr "Laag X spegeln"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:628 ui/kis_layer_manager.cc:638
+#: ui/kis_layer_manager.cc:625 ui/kis_layer_manager.cc:635
 #: ui/kis_mask_manager.cc:313
 msgid "Mirror Layer Y"
 msgstr "Laag Y spegeln"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:660
+#: ui/kis_layer_manager.cc:657
 msgid "Scale Layer"
 msgstr "Laag topassen"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:713 ui/kis_layer_manager.cc:716
+#: ui/kis_layer_manager.cc:710 ui/kis_layer_manager.cc:713
 msgid "Shear layer"
 msgstr "Laag scheren"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:742
+#: ui/kis_layer_manager.cc:739
 msgid "The image contains hidden layers that will be lost."
 msgstr "Dat Bild bargt versteken Lagen, de verloren geiht."
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:744
+#: ui/kis_layer_manager.cc:741
 msgid "&Flatten Image"
 msgstr "Bild &glattmaken"
 
@@ -13189,7 +13188,7 @@ msgid "Mirror Vertically"
 msgstr "Pielrecht spegeln"
 
 #. +> trunk stable
-#: ui/kis_node_model.cpp:322
+#: ui/kis_node_model.cpp:350
 msgid "Alpha Locked"
 msgstr "Alpha afslaten"
 
@@ -13419,17 +13418,17 @@ msgid "Cut Selection to New Layer"
 msgstr "Köör na niege Laag knippen"
 
 #. +> trunk stable
-#: ui/kis_selection_manager.cc:176 ui/kis_selection_manager.cc:575
+#: ui/kis_selection_manager.cc:176 ui/kis_selection_manager.cc:572
 msgid "Fill with Foreground Color"
 msgstr "Mit Vörgrundklöör infarven"
 
 #. +> trunk stable
-#: ui/kis_selection_manager.cc:181 ui/kis_selection_manager.cc:580
+#: ui/kis_selection_manager.cc:181 ui/kis_selection_manager.cc:577
 msgid "Fill with Background Color"
 msgstr "Mit Achtergrundklöör infarven"
 
 #. +> trunk stable
-#: ui/kis_selection_manager.cc:186 ui/kis_selection_manager.cc:585
+#: ui/kis_selection_manager.cc:186 ui/kis_selection_manager.cc:582
 msgid "Fill with Pattern"
 msgstr "Mit Muster infarven"
 
@@ -13453,6 +13452,11 @@ msgstr "Week..."
 msgid "Size Canvas to Size of Selection"
 msgstr "Lienwand na Köörgrött ännern"
 
+#. +> stable
+#: ui/kis_selection_manager.cc:1574
+msgid "Resize Image to Size of Selection"
+msgstr "Bild na Köörgrött ännern"
+
 #. +> trunk stable
 #: ui/kis_selection_manager.cc:365
 msgid "Cut"
@@ -13464,63 +13468,58 @@ msgid "(pasted)"
 msgstr "(inföögt)"
 
 #. +> trunk
-#: ui/kis_selection_manager.cc:468
+#: ui/kis_selection_manager.cc:465
 #, fuzzy
 #| msgid "Pastels"
 msgid "Pasted"
 msgstr "Harvstbruun-Töön"
 
 #. +> trunk stable
-#: ui/kis_selection_manager.cc:492
+#: ui/kis_selection_manager.cc:489
 msgid "Select All"
 msgstr "All kören"
 
-#. +> trunk stable
-#: ui/kis_selection_manager.cc:695
-msgid "Resize Image to Size of Selection"
-msgstr "Bild na Köörgrött ännern"
-
 #. +> trunk
-#: ui/kis_selection_manager_p.h:88
+#: ui/kis_selection_manager_p.h:107
 #, fuzzy
 #| msgid "Border Selection"
 msgid "Erode Selection"
 msgstr "Köör ümrannen"
 
 #. +> trunk
-#: ui/kis_selection_manager_p.h:150
+#: ui/kis_selection_manager_p.h:169
 #, fuzzy
 #| msgid "Display Selection"
 msgid "Dilate Selection"
 msgstr "Köör wiesen"
 
 #. +> trunk
-#: ui/kis_selection_manager_p.h:763
+#: ui/kis_selection_manager_p.h:782
 #, fuzzy
 #| msgid "Path Selection"
 msgid "Smooth Selection"
 msgstr "Bagenbahn-Köör"
 
 #. +> trunk
-#: ui/kis_selection_manager_p.h:821
+#: ui/kis_selection_manager_p.h:840
 #, fuzzy
 #| msgid "&Invert Selection"
 msgid "Invert Selection"
 msgstr "Köör üm&dreihen"
 
 #. +> trunk stable
-#: ui/kis_statusbar.cc:136
+#: ui/kis_statusbar.cc:132
 #, kde-format
 msgid "Selection Active: x = %1 y = %2 width = %3 height = %4"
 msgstr "Aktiv Köör: x = %1, y = %2, Breed = %3, Hööchde = %4"
 
 #. +> trunk stable
-#: ui/kis_statusbar.cc:140
+#: ui/kis_statusbar.cc:136
 msgid "No Selection"
 msgstr "Keen Köör"
 
 #. +> trunk stable
-#: ui/kis_statusbar.cc:152
+#: ui/kis_statusbar.cc:148
 msgid "No profile"
 msgstr "Keen Profil"
 
@@ -13631,28 +13630,35 @@ msgid "Open in New Documents"
 msgstr "In nieg Dokmenten opmaken"
 
 #. +> trunk stable
-#: ui/kis_view2.cpp:679
+#: ui/kis_view2.cpp:682
 msgid "Edit Palette..."
 msgstr "Klörensett bewerken..."
 
 #. +> trunk stable
-#: ui/kis_view2.cpp:794 ui/kis_view2.cpp:797
+#: ui/kis_view2.cpp:810 ui/kis_view2.cpp:813
 msgid "Edit Palette"
 msgstr "Klörensett bewerken"
 
 #. +> trunk stable
-#: ui/kis_zoom_manager.cc:93
+#: ui/kis_zoom_manager.cc:89
 msgid "Show Rulers"
 msgstr "Linealen wiesen"
 
 #. +> trunk stable
-#: ui/kis_zoom_manager.cc:95
+#: ui/kis_zoom_manager.cc:91
 msgid ""
 "The rulers show the horizontal and vertical positions of the mouse on the image and can be used to position your mouse at the right place on the canvas. "
 "<p>Uncheck this to hide the rulers."
 msgstr ""
 "De Linealen geevt de Muus ehr Positschoon binnen dat Bild an un laat sik för ehr richtig Platzeren op de Lienwand bruken."
 "<p>Maak dit ut, wenn de Linealen nich wiest warrn schöölt."
+
+#. +> trunk
+#: ui/kis_zoom_manager.cc:95
+#, fuzzy
+#| msgid "Zoom In"
+msgid "Zoom 100"
+msgstr "Grötter maken"
 
 #. +> trunk stable
 #: ui/kisexiv2/kis_iptc_io.h:36
@@ -13681,24 +13687,34 @@ msgid ""
 msgstr ""
 
 #. +> trunk stable
-#: ui/tool/kis_tool.cc:115
+#: ui/tool/kis_tool.cc:114
 msgid "Swap Foreground and Background Color"
 msgstr "Vör- un Achtergrundklöör tuschen"
 
 #. +> trunk stable
-#: ui/tool/kis_tool.cc:120
+#: ui/tool/kis_tool.cc:119
 msgid "Reset Foreground and Background Color"
 msgstr "Vör- un Achtergrundklöör torüchsetten"
 
 #. +> trunk stable
-#: ui/tool/kis_tool.cc:569
+#: ui/tool/kis_tool.cc:568
 msgid "Clear"
 msgstr "Leddig maken"
 
 #. +> trunk stable
-#: ui/tool/kis_tool.cc:614
+#: ui/tool/kis_tool.cc:613
 msgid "No options"
 msgstr "Keen Optschonen"
+
+#. +> trunk stable
+#: ui/tool/kis_tool_freehand.cc:85
+msgid "Increase Brush Size"
+msgstr "Pinsel grötter maken"
+
+#. +> trunk stable
+#: ui/tool/kis_tool_freehand.cc:90
+msgid "Decrease Brush Size"
+msgstr "Pinsel lütter maken"
 
 #. +> trunk
 #: ui/tool/kis_tool_paint.cc:88
@@ -13762,22 +13778,22 @@ msgid "x%1"
 msgstr "x%1"
 
 #. +> trunk
-#: ui/widgets/kis_paintop_presets_popup.cpp:206
+#: ui/widgets/kis_paintop_presets_popup.cpp:202
 msgid "Overwrite Preset"
 msgstr "Vörinstellen överschrieven"
 
 #. +> trunk
-#: ui/widgets/kis_paintop_presets_popup.cpp:210
+#: ui/widgets/kis_paintop_presets_popup.cpp:206
 msgid "Save to Presets"
 msgstr "Na Vörinstellen sekern"
 
 #. +> trunk stable
-#: ui/widgets/kis_paintop_presets_popup.cpp:249
+#: ui/widgets/kis_paintop_presets_popup.cpp:225
 msgid "Attach to Toolbar"
 msgstr "Na Warktüüchbalken tofögen"
 
 #. +> trunk stable
-#: ui/widgets/kis_paintop_presets_popup.cpp:249
+#: ui/widgets/kis_paintop_presets_popup.cpp:225
 msgid "Detach from Toolbar"
 msgstr "Ut Warktüüchbalken wegmaken"
 
@@ -13933,6 +13949,11 @@ msgstr "Pinsel-Editor"
 #: ui/kis_brushengine_selector.cpp:113
 msgid "Presets"
 msgstr "Vorinstellen"
+
+#, fuzzy
+#~| msgid "Brush"
+#~ msgid "MultiBrush"
+#~ msgstr "Pinsel"
 
 #, fuzzy
 #~| msgid "&Paint Layer"
