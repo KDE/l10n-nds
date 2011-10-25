@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rocs\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-10-13 19:10+0200\n"
+"POT-Creation-Date: 2011-10-25 11:25+0200\n"
 "PO-Revision-Date: 2011-09-13 06:16+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -540,7 +540,7 @@ msgid "*|All files"
 msgstr "*|All Dateien"
 
 #. +> trunk stable
-#: Interface/ImporterExporterManager.cpp:50 Interface/MainWindow.cpp:341
+#: Interface/ImporterExporterManager.cpp:50
 msgid "Export"
 msgstr "Exporteren"
 
@@ -550,7 +550,7 @@ msgid "Export graphs to file"
 msgstr "Graphen as Datei exporteren"
 
 #. +> trunk stable
-#: Interface/ImporterExporterManager.cpp:92 Interface/MainWindow.cpp:499
+#: Interface/ImporterExporterManager.cpp:92 Interface/MainWindow.cpp:500
 msgid "Graph Files"
 msgstr "Graphendateien"
 
@@ -696,10 +696,24 @@ msgstr "Skript sekern"
 msgid "Save Script as"
 msgstr "Skript sekern as"
 
-#. +> trunk stable
-#: Interface/MainWindow.cpp:340
+#. +> trunk
+#: Interface/MainWindow.cpp:341
+#, fuzzy
+#| msgid "Complete Graph"
+msgid "Import Graph"
+msgstr "Graph afsluten"
+
+#. +> stable
+#: Interface/MainWindow.cpp:284
 msgid "Import"
 msgstr "Importeren"
+
+#. +> trunk
+#: Interface/MainWindow.cpp:342
+#, fuzzy
+#| msgid "Export"
+msgid "Export Graph"
+msgstr "Exporteren"
 
 #. +> stable
 #: Interface/MainWindow.cpp:476
@@ -707,7 +721,7 @@ msgid "Do you want to save your unsaved document?"
 msgstr "Wullt Du Dien noch nich sekert Dokment nu sekern?"
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:499
+#: Interface/MainWindow.cpp:500
 msgid ""
 "*.graph|Graph files\n"
 "*|All files"
@@ -716,27 +730,27 @@ msgstr ""
 "*.*|All Dateien"
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:509
+#: Interface/MainWindow.cpp:510
 msgid "This does not seem to be a graph file."
 msgstr "As't lett is dit keen Graphendatei."
 
 #. +> trunk stable
-#: Interface/MainWindow.cpp:509
+#: Interface/MainWindow.cpp:510
 msgid "Invalid file"
 msgstr "Leeg Datei"
 
 #. +> trunk
-#: Interface/MainWindow.cpp:538
+#: Interface/MainWindow.cpp:539
 msgid "Changes on your graph document are unsaved. Do you want to save your changes?"
 msgstr ""
 
 #. +> trunk
-#: Interface/MainWindow.cpp:546
+#: Interface/MainWindow.cpp:547
 msgid "Changes on your script files are unsaved. Do you want to save all unsaved scripts?"
 msgstr ""
 
 #. +> trunk
-#: Interface/MainWindow.cpp:554
+#: Interface/MainWindow.cpp:555
 msgid "Changes on your script files and on your graph document are unsaved. Do you want to save your graph document and all unsaved scripts?"
 msgstr ""
 
@@ -1005,7 +1019,7 @@ msgid "Multigraph"
 msgstr "Mehrfachgraph"
 
 #. +> trunk stable
-#: Plugins/DataStructure/Graph/GraphStructure.cpp:207
+#: Plugins/DataStructure/Graph/GraphStructure.cpp:219
 msgid "This action will probably remove some edges. Do you want to continue?"
 msgstr "Dit deit villicht en poor Kanten weg. Wullt Du wiedermaken?"
 
@@ -1032,40 +1046,106 @@ msgid "Cannot convert document '%1'"
 msgstr "Dokment \"%1\" lett sik nich wanneln."
 
 #. +> trunk stable
-#: Plugins/dotParser/DotParser.cpp:30
+#: Plugins/FilePlugins/DotFilePlugin/DotFilePlugin.cpp:38
+#: Plugins/FilePlugins/dotParser/DotParser.cpp:30
 msgid "Open and Save Graphviz files"
 msgstr "Graphviz-Dateien opmaken un sekern"
 
 #. +> trunk stable
-#: Plugins/dotParser/DotParser.cpp:50
+#: Plugins/FilePlugins/DotFilePlugin/DotFilePlugin.cpp:56
+#: Plugins/FilePlugins/dotParser/DotParser.cpp:50
 msgid "*.dot|Graphviz Files"
 msgstr "*.dot|Graphviz-Dateien"
 
 #. +> trunk stable
-#: Plugins/dotParser/DotParser.cpp:60 Plugins/GMLParser/GMLParser.cpp:61
-#: Plugins/importPlainTXT/PlainTxtFilePlugin.cpp:57
+#: Plugins/FilePlugins/DotFilePlugin/DotFilePlugin.cpp:93
+#: Plugins/FilePlugins/dotParser/DotParser.cpp:60
+#: Plugins/FilePlugins/GMLParser/GMLParser.cpp:63
+#: Plugins/FilePlugins/TXTParser/PlainTxtFilePlugin.cpp:57
 #, kde-format
 msgid "Cannot open the file: %1. Error %2"
 msgstr "De Datei \"%1\" lett sik nich opmaken. Fehler %2"
 
+#. +> trunk
+#: Plugins/FilePlugins/DotFilePlugin/DotFilePlugin.cpp:107
+#, kde-format
+msgid "Graphviz parser returned unsuccessfully for file %1."
+msgstr ""
+
+#. +> trunk
+#: Plugins/FilePlugins/DotFilePlugin/DotFilePlugin.cpp:113
+msgid "Could not parse Graphviz file due to syntax errors."
+msgstr ""
+
+#. +> trunk
+#: Plugins/FilePlugins/DotFilePlugin/DotFilePlugin.cpp:139
+#, fuzzy
+#| msgid "Import"
+msgid "dotImport"
+msgstr "Importeren"
+
 #. +> trunk stable
-#: Plugins/dotParser/DotParser.cpp:66 Plugins/GMLParser/GMLParser.cpp:67
+#: Plugins/FilePlugins/dotParser/DotParser.cpp:66
+#: Plugins/FilePlugins/GMLParser/GMLParser.cpp:69
 #, kde-format
 msgid "cannot parse the file %1."
 msgstr "Datei \"%1\" lett sik nich inlesen."
 
 #. +> trunk stable
-#: Plugins/dotParser/DotParser.cpp:112
-#: Plugins/importPlainTXT/PlainTxtFilePlugin.cpp:108
+#: Plugins/FilePlugins/dotParser/DotParser.cpp:112
+#: Plugins/FilePlugins/TXTParser/PlainTxtFilePlugin.cpp:108
 msgid "No active graph in this document."
 msgstr "Dit Dokment bargt keen aktiev Grafik."
 
 #. +> trunk stable
-#: Plugins/dotParser/DotParser.cpp:114 Plugins/GMLParser/GMLParser.cpp:111
-#: Plugins/importPlainTXT/PlainTxtFilePlugin.cpp:110
+#: Plugins/FilePlugins/dotParser/DotParser.cpp:114
+#: Plugins/FilePlugins/GMLParser/GMLParser.cpp:115
+#: Plugins/FilePlugins/TXTParser/PlainTxtFilePlugin.cpp:110
 #, kde-format
 msgid "Cannot open file %1 to write document. Error: %2"
 msgstr "Dokment lett sik nich na Datei \"%1\" schrieven. Fehler: %2"
+
+#. +> trunk stable
+#: Plugins/FilePlugins/GMLParser/GMLParser.cpp:33
+msgid "Open and Save GML files"
+msgstr "GML-Dateien opmaken un sekern"
+
+#. +> trunk stable
+#: Plugins/FilePlugins/GMLParser/GMLParser.cpp:53
+msgid "*.gml|Graph Markup Language Files"
+msgstr "*.gml|\"Graph Markup Language\"-Dateien"
+
+#. +> trunk stable
+#: Plugins/FilePlugins/kmlParser/KMLParser.cpp:32
+msgid "Open and Save Keyhole Markup Language files"
+msgstr "KML-Dateien opmaken un sekern"
+
+#. +> trunk stable
+#: Plugins/FilePlugins/kmlParser/KMLParser.cpp:51
+#, kde-format
+msgid "Cannot open file %1: %2"
+msgstr "De Datei \"%1\" lett sik nich opmaken: %2"
+
+#. +> trunk stable
+#: Plugins/FilePlugins/kmlParser/KMLParser.cpp:141
+msgid "*.kml|Keyhole Markup Language Files"
+msgstr "*.kml|KML-Dateien (Keyhole Markup Language)"
+
+#. +> trunk stable
+#: Plugins/FilePlugins/TXTParser/PlainTxtFilePlugin.cpp:30
+msgid "Open and Save Plain TXT files"
+msgstr "Eenfach TXT-Dateien opmaken un sekern"
+
+#. +> trunk stable
+#: Plugins/FilePlugins/TXTParser/PlainTxtFilePlugin.cpp:47
+msgid "*.txt|Plain TXT Files"
+msgstr "*.txt|Eenfach TXT-Dateien"
+
+#. +> trunk stable
+#: Plugins/FilePlugins/TXTParser/PlainTxtFilePlugin.cpp:77
+#, kde-format
+msgid "Ignoring line: %1"
+msgstr "Reeg \"%1\" warrt övergahn."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, GenerateGraphWidget)
 #. +> trunk stable
@@ -1185,48 +1265,6 @@ msgstr "Knütten (n):"
 #: Plugins/GenerateGraph/generategraphwidget.ui:328
 msgid "Edge Probability (p):"
 msgstr "Kanten-Wohrschienlichkeit (p):"
-
-#. +> trunk stable
-#: Plugins/GMLParser/GMLParser.cpp:31
-msgid "Open and Save GML files"
-msgstr "GML-Dateien opmaken un sekern"
-
-#. +> trunk stable
-#: Plugins/GMLParser/GMLParser.cpp:51
-msgid "*.gml|Graph Markup Language Files"
-msgstr "*.gml|\"Graph Markup Language\"-Dateien"
-
-#. +> trunk stable
-#: Plugins/importPlainTXT/PlainTxtFilePlugin.cpp:30
-msgid "Open and Save Plain TXT files"
-msgstr "Eenfach TXT-Dateien opmaken un sekern"
-
-#. +> trunk stable
-#: Plugins/importPlainTXT/PlainTxtFilePlugin.cpp:47
-msgid "*.txt|Plain TXT Files"
-msgstr "*.txt|Eenfach TXT-Dateien"
-
-#. +> trunk stable
-#: Plugins/importPlainTXT/PlainTxtFilePlugin.cpp:77
-#, kde-format
-msgid "Ignoring line: %1"
-msgstr "Reeg \"%1\" warrt övergahn."
-
-#. +> trunk stable
-#: Plugins/kmlParser/KMLParser.cpp:32
-msgid "Open and Save Keyhole Markup Language files"
-msgstr "KML-Dateien opmaken un sekern"
-
-#. +> trunk stable
-#: Plugins/kmlParser/KMLParser.cpp:51
-#, kde-format
-msgid "Cannot open file %1: %2"
-msgstr "De Datei \"%1\" lett sik nich opmaken: %2"
-
-#. +> trunk stable
-#: Plugins/kmlParser/KMLParser.cpp:141
-msgid "*.kml|Keyhole Markup Language Files"
-msgstr "*.kml|KML-Dateien (Keyhole Markup Language)"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, TransformEdgesWidget)
 #. +> trunk stable
