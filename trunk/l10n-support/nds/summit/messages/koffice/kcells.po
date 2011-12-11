@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kspread\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-11-01 10:16+0100\n"
+"POT-Creation-Date: 2011-12-10 10:27+0100\n"
 "PO-Revision-Date: 2011-10-04 14:04+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -6768,6 +6768,13 @@ msgstr "FV(1000;0,08;2) gifft \"1166,40\" torüch"
 msgid "Payment per period"
 msgstr "Utbetahlen per Periood"
 
+#. +> trunk
+#: functions/financial.xml:1151 xml_doc.cpp:2002
+#, fuzzy
+#| msgid "Payment per period"
+msgid "Payment period"
+msgstr "Utbetahlen per Periood"
+
 #. +> trunk stable
 #: functions/financial.xml:593
 #, no-c-format
@@ -7049,10 +7056,24 @@ msgstr "Gifft de Tall vun Perioden vun en Geldanlaag torüch."
 msgid "NPER(rate;payment;pv;fv;type)"
 msgstr "NPER(Tins;Utbetahlen;PV;FV;Typ)"
 
+#. +> trunk
+#: functions/financial.xml:1176 xml_doc.cpp:2016
+#, fuzzy
+#| msgid "NPER(rate;payment;pv;fv;type)"
+msgid "RATE(nper;pmt;pv;fv;type;guess)"
+msgstr "NPER(Tins;Utbetahlen;PV;FV;Typ)"
+
 #. +> trunk stable
 #: functions/financial.xml:860
 msgid "NPER(0.1; -100; 1000) equals 11"
 msgstr "NPER(0.1; -100; 1000) gifft \"11\" torüch"
+
+#. +> trunk
+#: functions/financial.xml:1177 xml_doc.cpp:2018
+#, fuzzy
+#| msgid "ATAN(0.8) equals 0.67474094"
+msgid "RATE(4*12;-200;8000) equals 0.007701472"
+msgstr "ATAN(0,8) is 0,67474094"
 
 #. +> trunk stable
 #: functions/financial.xml:861
@@ -7285,6 +7306,13 @@ msgstr "PV_ANNUITY(Bedrag; Tins; Perioden)"
 msgid "PV_ANNUITY(1000;0.05;5) equals 4329.48"
 msgstr "PV_ANNUITY(1000;0,05;5) maakt 4329,48"
 
+#. +> trunk
+#: functions/financial.xml:1155 xml_doc.cpp:2004
+#, fuzzy
+#| msgid "Regular expression"
+msgid "Regular payments"
+msgstr "Reguleer Utdruck"
+
 #. +> trunk stable
 #: functions/financial.xml:1169
 msgid "The RECEIVED function returns the amount received at the maturity date for a invested security. Basis is the type of day counting you want to use: 0: US 30/360 (default), 1: real days, 2: real days/360, 3: real days/365 or 4: European 30/365. The settlement date must be before maturity date."
@@ -7303,6 +7331,13 @@ msgstr "RECEIVED(\"2/28/2001\"; \"8/31/2001\"; 1000; 0.05; 0) maakt 1,025.787"
 #. +> trunk stable
 #: functions/financial.xml:1191
 msgid "The RRI function calculates the interest rate resulting from the profit (return) of an investment."
+msgstr "De Funkschoon PRI reekt den Tinssatz vun den Winnst vun en Geldanlaag ut."
+
+#. +> trunk
+#: functions/financial.xml:1175 xml_doc.cpp:2014
+#, fuzzy
+#| msgid "The RRI function calculates the interest rate resulting from the profit (return) of an investment."
+msgid "The RATE() function computes the constant interest rate per period of an investment."
 msgstr "De Funkschoon PRI reekt den Tinssatz vun den Winnst vun en Geldanlaag ut."
 
 #. +> trunk stable
@@ -7567,7 +7602,7 @@ msgid "The INFO() function returns information about the current operating envir
 msgstr "De Funkschoon INFO() gifft Informatschonen över de aktuell Bedriefümgeven torüch. De Parameter \"Typ\" leggt de Oort vun torüchgeven Informatschonen fast. Mööglich Weerten sünd: \"directory\" gifft den aktuellen Orner sien Padd torüch, \"numfile\" gifft de Tall vun aktiv Dokmenten torüch, \"release\" gifft de Verschoon vun KCells as Text ut, \"recalc\" gifft de aktuell Niegutrekenmetood torüch: \"Automaatsch\" oder \"vun Hand\", \"system\" gifft den Bedriefümgeven-Naam torüch un \"osversion\" dat aktuelle Bedriefsysteem."
 
 #. +> trunk stable
-#: functions/information.xml:59 xml_doc.cpp:2213
+#: functions/information.xml:59 xml_doc.cpp:2231
 msgid "The INFO() function returns information about the current operating environment. Parameter type specifies what type of information you want to return. It is one of the following: \"directory\" returns the path of the current directory, \"numfile\" returns the number of active documents, \"release\" returns the version of KSpread as text, \"recalc\" returns the current recalculation mode: \"Automatic\" or \"Manual\", \"system\" returns the name of the operating environment, \"osversion\" returns the current operating system."
 msgstr "De Funkschoon INFO() gifft Informatschonen över de aktuell Bedriefümgeven torüch. De Parameter \"Typ\" leggt de Oort vun torüchgeven Informatschonen fast. Mööglich Weerten sünd: \"directory\" gifft den aktuellen Orner sien Padd torüch, \"numfile\" gifft de Tall vun aktiv Dokmenten torüch, \"release\" gifft de Verschoon vun KSpread as Text ut, \"recalc\" gifft de aktuell Niegutrekenmetood torüch: \"Automaatsch\" oder \"vun Hand\", \"system\" gifft den Bedriefümgeven-Naam torüch un \"osversion\" dat aktuelle Bedriefsysteem."
 
@@ -8262,7 +8297,7 @@ msgid "EPS() is so small that KCells displays 1+eps() as 1"
 msgstr "EPS() is so lütt, dat KCells 1+eps() as 1 dorstellt"
 
 #. +> trunk stable
-#: functions/math.xml:121 xml_doc.cpp:2573
+#: functions/math.xml:121 xml_doc.cpp:2591
 msgid "EPS() is so small that KSpread displays 1+eps() as 1"
 msgstr "EPS() is so lütt, dat KSpread 1+eps() as 1 dorstellt"
 
@@ -8484,7 +8519,7 @@ msgid "COUNT(-5;\"KCells\";2) returns 2"
 msgstr "COUNT(-5;\"KSpread\";2) gifft \"2\" torüch"
 
 #. +> trunk stable
-#: functions/math.xml:298 xml_doc.cpp:2685
+#: functions/math.xml:298 xml_doc.cpp:2703
 msgid "COUNT(-5;\"KSpread\";2) returns 2"
 msgstr "COUNT(-5;\"KSpread\";2) gifft \"2\" torüch"
 
@@ -8511,7 +8546,7 @@ msgid "COUNTA(-5;\"KCells\";2) returns 3"
 msgstr "COUNTA(-5;\"KSpread\";2) gifft \"3\" torüch"
 
 #. +> trunk stable
-#: functions/math.xml:316 xml_doc.cpp:2695
+#: functions/math.xml:316 xml_doc.cpp:2713
 msgid "COUNTA(-5;\"KSpread\";2) returns 3"
 msgstr "COUNTA(-5;\"KSpread\";2) gifft \"3\" torüch"
 
@@ -8528,7 +8563,7 @@ msgid "KCCell range"
 msgstr "Zellrebeet"
 
 #. +> trunk stable
-#: functions/math.xml:327 xml_doc.cpp:2699
+#: functions/math.xml:327 xml_doc.cpp:2717
 msgid "Cell range"
 msgstr "Zellrebeet"
 
@@ -9143,7 +9178,7 @@ msgid "The CEILING() function rounds x up (away from zero) to the nearest multip
 msgstr "De Funkschoon CEILING() rundt x (vun Null af) na dat dichtst bi liggen Veelfach vun de Signifikanz op. De Standardweert för Signifikanz is 1 (oder -1, wenn de Weert negativ is), wat en Runnen na de dichtst bi liggen Heeltall bedüüdt. Beacht, dat dit nich de mathemaatsch normaal Definitschoon för't Oprunnen is."
 
 #. +> trunk
-#: functions/math.xml:861 xml_doc.cpp:2999
+#: functions/math.xml:861 xml_doc.cpp:3017
 #, fuzzy
 #| msgid "The CEILING() function rounds x up (away from zero) to the nearest multiple of Significance. The default value for Significance is 1 (or -1 if the value is negative), which means rounding up to the nearest integer. Note that this does not match the normal mathematical definition of a ceiling function."
 msgid "The CEILING() function rounds x up (away from zero) to the nearest multiple of Significance. The default value for Significance is 1 (or -1 if the value is negative), which means rounding up to the nearest integer. If the Mode parameter is non-zero, the function rounds away from zero, instead of up towards the positive infinity."
@@ -9170,14 +9205,14 @@ msgid "CEILING(-6.43; -4) equals -8"
 msgstr "CEILING(-6.43; -4) gifft \"-8\" torüch"
 
 #. +> trunk
-#: functions/math.xml:865 xml_doc.cpp:3007
+#: functions/math.xml:865 xml_doc.cpp:3025
 #, fuzzy
 #| msgid "CEILING(-6.43; -4) equals -8"
 msgid "CEILING(-6.43; -4; 1) equals -8"
 msgstr "CEILING(-6.43; -4) gifft \"-8\" torüch"
 
 #. +> trunk
-#: functions/math.xml:866 xml_doc.cpp:3009
+#: functions/math.xml:866 xml_doc.cpp:3027
 #, fuzzy
 #| msgid "CEILING(-6.43; -4) equals -8"
 msgid "CEILING(-6.43; -4; 0) equals -4"
@@ -9211,7 +9246,7 @@ msgstr ""
 "\tWenn jichtenseen vun de twee Parameters x oder de Signifikanz Null is, denn is dat Resultaat Null."
 
 #. +> trunk
-#: functions/math.xml:894 xml_doc.cpp:3019
+#: functions/math.xml:894 xml_doc.cpp:3037
 #, fuzzy
 #| msgid ""
 #| "The FLOOR() function rounds x down (towards zero) to the nearest multiple of Significance.\n"
@@ -9790,7 +9825,7 @@ msgid "A1 KCStyle specifies the style of the address to return. If A1 is set to 
 msgstr "A1 Stil leggt de Adress ehr Stil fast, de torüchgeven warrn schall. Wenn A1 wohr is (Standard) warrt de Adress in'n A1-Stil torüchgeven, un in R1C1-Stil, wenn för A1 \"falsch\" fastleggt is."
 
 #. +> trunk stable
-#: functions/reference.xml:33 xml_doc.cpp:3274
+#: functions/reference.xml:33 xml_doc.cpp:3292
 msgid "A1 Style specifies the style of the address to return. If A1 is set to TRUE (default) the address is returned in A1 style if it is set to FALSE in R1C1 style."
 msgstr "A1 Stil leggt de Adress ehr Stil fast, de torüchgeven warrn schall. Wenn A1 wohr is (Standard) warrt de Adress in'n A1-Stil torüchgeven, un in R1C1-Stil, wenn för A1 \"falsch\" fastleggt is."
 
@@ -9802,7 +9837,7 @@ msgid "KCSheet name is the text specifying the name of the sheet."
 msgstr "De Tabellnaam is de Text, de de Tabell ehr Naam angifft."
 
 #. +> trunk stable
-#: functions/reference.xml:34 xml_doc.cpp:3276
+#: functions/reference.xml:34 xml_doc.cpp:3294
 msgid "Sheet name is the text specifying the name of the sheet."
 msgstr "De Tabellnaam is de Text, de de Tabell ehr Naam angifft."
 
@@ -10384,7 +10419,7 @@ msgid "COMBIN(total;chosen)"
 msgstr "COMBIN(tosamen;utsöcht)"
 
 #. +> trunk
-#: functions/statistical.xml:959 xml_doc.cpp:4006
+#: functions/statistical.xml:959 xml_doc.cpp:4024
 #, fuzzy
 #| msgid "COMBIN(total;chosen)"
 msgid "PERMUTATIONA(total;chosen)"
@@ -10401,7 +10436,7 @@ msgid "COMBIN(5;5) returns 1"
 msgstr "COMBIN(5;5) gifft \"1\" torüch"
 
 #. +> trunk
-#: functions/statistical.xml:961 xml_doc.cpp:4010
+#: functions/statistical.xml:961 xml_doc.cpp:4028
 #, fuzzy
 #| msgid "FACT(0) returns 1"
 msgid "PERMUTATIONA(0,0) returns 1"
@@ -10459,8 +10494,8 @@ msgstr "Zellrebeet vun Weerten"
 #. +> trunk stable
 #: functions/statistical.xml:240 functions/statistical.xml:259
 #: functions/statistical.xml:667 functions/statistical.xml:912
-#: functions/statistical.xml:1143 xml_doc.cpp:3584 xml_doc.cpp:3594
-#: xml_doc.cpp:3834 xml_doc.cpp:3978 xml_doc.cpp:4115
+#: functions/statistical.xml:1143 xml_doc.cpp:3602 xml_doc.cpp:3612
+#: xml_doc.cpp:3852 xml_doc.cpp:3996 xml_doc.cpp:4133
 msgid "Cell range of values"
 msgstr "Zellrebeet vun Weerten"
 
@@ -10683,7 +10718,7 @@ msgstr ""
 "                Wenn de twete Parameter leddig is, warrt all Weerten vun den eersten Parameter tellt."
 
 #. +> trunk
-#: functions/statistical.xml:420 xml_doc.cpp:3690
+#: functions/statistical.xml:420 xml_doc.cpp:3708
 #, fuzzy
 #| msgid ""
 #| "The values in the second parameter determine the upper boundaries of the intervals.\n"
@@ -11234,7 +11269,7 @@ msgid "The PERMUT() function returns the number of permutations. The first param
 msgstr "De Funkschoon PERMUT() gifft de Tall vun Permutatschonen (Ännern) torüch. De eerste Parameter is de Tall vun Elementen, de twete de Tall vun Elementen för de Permutatschoon."
 
 #. +> trunk
-#: functions/statistical.xml:958 xml_doc.cpp:4004
+#: functions/statistical.xml:958 xml_doc.cpp:4022
 #, fuzzy
 #| msgid "The PERMUT() function returns the number of permutations. The first parameter is the number of elements, and the second parameter is the number of elements used in the permutation."
 msgid "The PERMUTATIONA() function returns the number of ordered permutations when allowing repetition. The first parameter is the number of elements, and the second parameter is the number of elements to choose. Both parameters must be positive."
@@ -11924,7 +11959,7 @@ msgstr ""
 "        "
 
 #. +> trunk
-#: functions/statistical.xml:1714 xml_doc.cpp:4423
+#: functions/statistical.xml:1714 xml_doc.cpp:4441
 #, fuzzy
 #| msgid ""
 #| "Performs a test of the null hypothesis, that sample is a sample\n"
@@ -12022,7 +12057,7 @@ msgid "GAMMALN(2) returns 0"
 msgstr "GAMMALN(2) gifft \"0\" torüch"
 
 #. +> trunk
-#: functions/statistical.xml:960 xml_doc.cpp:4008
+#: functions/statistical.xml:960 xml_doc.cpp:4026
 #, fuzzy
 #| msgid "MINA(12;5; 7) returns 5"
 msgid "PERMUTATIONA(2,3) returns 8"
@@ -12144,7 +12179,7 @@ msgid "Specified index to start the search"
 msgstr "Angeven Index för den Söökanfang"
 
 #. +> trunk
-#: functions/text.xml:122 xml_doc.cpp:4545
+#: functions/text.xml:122 xml_doc.cpp:4563
 #, fuzzy
 #| msgid "Specified index to start the search"
 msgid "Specified byte position to start the search"
@@ -12156,7 +12191,7 @@ msgid "The SEARCH() function finds one text string (find_text) within another te
 msgstr "De Funkschoon SEARCH() söökt en Text \"Sööktext\" binnen de Tekenkeed \"binnen_dissen_Text\" un gifft \"Sööktext\" sien Startpositschoon af dat eerste linke Teken binnen \"binnen_dissen_Text\" ut."
 
 #. +> trunk
-#: functions/text.xml:126 xml_doc.cpp:4547
+#: functions/text.xml:126 xml_doc.cpp:4565
 #, fuzzy
 #| msgid "The SEARCH() function finds one text string (find_text) within another text string (within_text) and returns the number of the starting point of find_text, from the leftmost character of within_text."
 msgid "The SEARCHB() function finds one text string (find_text) within another text string (within_text) and returns the number of the starting point of find_text, from the leftmost character of within_text using byte positions."
@@ -12173,7 +12208,7 @@ msgid "Parameter start_num specifies the character at which to start the search.
 msgstr "De Parameter \"Startnummer\" gifft dat Teken an, af dat de Söök start. Dat eerste Teken is Teken Nr. 1. Ahn \"Startnummer\" warrt \"1\" annahmen. SEARCH ünnerscheedt nich twischen Groot- un Lüttschrieven."
 
 #. +> trunk
-#: functions/text.xml:128 xml_doc.cpp:4551
+#: functions/text.xml:128 xml_doc.cpp:4569
 #, fuzzy
 #| msgid "Parameter start_num specifies the character at which to start the search. The first character is character number 1. If start_num is omitted, it is assumed to be 1. SEARCH does not distinguish between uppercase and lowercase letters."
 msgid "Parameter BytePosition specifies the character at which to start the search. The first character is character number 2. If BytePosition is omitted, it is assumed to be 2. SEARCHB does not distinguish between uppercase and lowercase letters."
@@ -12185,7 +12220,7 @@ msgid "SEARCH(find_text;within_text;start_num)"
 msgstr "SEARCH(Sööktext;binnen_dissen_Text;Startnummer)"
 
 #. +> trunk
-#: functions/text.xml:129 xml_doc.cpp:4553
+#: functions/text.xml:129 xml_doc.cpp:4571
 #, fuzzy
 #| msgid "SEARCH(find_text;within_text;start_num)"
 msgid "SEARCHB(find_text;within_text;BytePosition Start)"
@@ -12244,14 +12279,14 @@ msgid "TEXT(\"KCells\") returns \"KCells\""
 msgstr "LOWER(\"moin\") gifft \"moin\" torüch"
 
 #. +> trunk
-#: functions/text.xml:146 xml_doc.cpp:4561
+#: functions/text.xml:146 xml_doc.cpp:4579
 #, fuzzy
 #| msgid "LOWER(\"hello\") returns \"hello\""
 msgid "T(\"Calligra\") returns \"Calligra\""
 msgstr "LOWER(\"moin\") gifft \"moin\" torüch"
 
 #. +> trunk stable
-#: functions/text.xml:162 xml_doc.cpp:4573
+#: functions/text.xml:162 xml_doc.cpp:4591
 msgid "TEXT(\"KSpread\") returns \"KSpread\""
 msgstr "TEXT(\"KSpread\") gifft \"KSpread\" torüch"
 
@@ -12307,7 +12342,7 @@ msgid "COMPARE(\"KOffice\"; \"KOffice\"; true) returns 0"
 msgstr "COMPARE(\"KOffice\"; \"KOffice\"; wohr) gifft \"0\" torüch"
 
 #. +> trunk
-#: functions/text.xml:198 xml_doc.cpp:4593
+#: functions/text.xml:198 xml_doc.cpp:4611
 #, fuzzy
 #| msgid "COMPARE(\"KOffice\"; \"KOffice\"; true) returns 0"
 msgid "COMPARE(\"Calligra\"; \"Calligra\"; true) returns 0"
@@ -12319,7 +12354,7 @@ msgid "COMPARE(\"koffice\"; \"KOffice\"; true) returns 1"
 msgstr "COMPARE(\"koffice\"; \"KOffice\"; wohr) gifft \"1\" torüch"
 
 #. +> trunk
-#: functions/text.xml:199 xml_doc.cpp:4595
+#: functions/text.xml:199 xml_doc.cpp:4613
 #, fuzzy
 #| msgid "COMPARE(\"koffice\"; \"KOffice\"; true) returns 1"
 msgid "COMPARE(\"calligra\"; \"Calligra\"; true) returns 1"
@@ -12338,7 +12373,7 @@ msgid "COMPARE(\"kspread\"; \"KOffice\"; false) returns 1"
 msgstr "COMPARE(\"kspread\"; \"KOffice\"; falsch) gifft \"1\" torüch"
 
 #. +> trunk
-#: functions/text.xml:200 xml_doc.cpp:4597
+#: functions/text.xml:200 xml_doc.cpp:4615
 #, fuzzy
 #| msgid "COMPARE(\"kspread\"; \"KOffice\"; false) returns 1"
 msgid "COMPARE(\"kspread\"; \"Calligra\"; false) returns 1"
@@ -12360,7 +12395,7 @@ msgid "EXACT(\"KOffice\";\"KOffice\") returns True"
 msgstr "EXACT(\"KOffice\";\"KOffice\") gifft \"wohr\" torüch"
 
 #. +> trunk
-#: functions/text.xml:219 xml_doc.cpp:4607
+#: functions/text.xml:219 xml_doc.cpp:4625
 #, fuzzy
 #| msgid "EXACT(\"KOffice\";\"KOffice\") returns True"
 msgid "EXACT(\"Calligra\";\"Calligra\") returns True"
@@ -12379,7 +12414,7 @@ msgid "EXACT(\"KSpread\";\"KOffice\") returns False"
 msgstr "EXACT(\"KSpread\";\"KOffice\") gifft \"falsch\" torüch"
 
 #. +> trunk
-#: functions/text.xml:220 xml_doc.cpp:4609
+#: functions/text.xml:220 xml_doc.cpp:4627
 #, fuzzy
 #| msgid "EXACT(\"KSpread\";\"KOffice\") returns False"
 msgid "EXACT(\"KSpread\";\"Calligra\") returns False"
@@ -12391,7 +12426,7 @@ msgid "Text which you want to replace some characters"
 msgstr "Text, binnen den en poor Tekens utwesselt warrn schöölt"
 
 #. +> trunk
-#: functions/text.xml:260 xml_doc.cpp:4627
+#: functions/text.xml:260 xml_doc.cpp:4645
 #, fuzzy
 #| msgid "Text which you want to replace some characters"
 msgid "Text which you want to replace some characters using byte position"
@@ -12403,7 +12438,7 @@ msgid "Position of the characters to replace"
 msgstr "Positschoon vun de Tekens, de utwesselt warrn schöölt"
 
 #. +> trunk
-#: functions/text.xml:264 xml_doc.cpp:4629
+#: functions/text.xml:264 xml_doc.cpp:4647
 #, fuzzy
 #| msgid "Position of the characters to replace"
 msgid "Byte position of the characters to replace"
@@ -12415,7 +12450,7 @@ msgid "Number of characters to replace"
 msgstr "Tall vun Tekens, de utwesselt warrn schöölt"
 
 #. +> trunk
-#: functions/text.xml:268 xml_doc.cpp:4631
+#: functions/text.xml:268 xml_doc.cpp:4649
 #, fuzzy
 #| msgid "Number of characters to replace"
 msgid "The byte length of characters to replace"
@@ -12432,7 +12467,7 @@ msgid "The REPLACE() function replaces part of a text string with a different te
 msgstr "De Funkschoon REPLACE() wesselt en Deel vun en Tekenkeed dör en anner Text-Tekenkeed ut."
 
 #. +> trunk
-#: functions/text.xml:276 xml_doc.cpp:4635
+#: functions/text.xml:276 xml_doc.cpp:4653
 #, fuzzy
 #| msgid "The REPLACE() function replaces part of a text string with a different text string."
 msgid "The REPLACEB() function replaces part of a text string with a different text string using byte positions."
@@ -12444,7 +12479,7 @@ msgid "REPLACE(text;position;length;new_text)"
 msgstr "REPLACE(Text;Positschoon;Längde;Nieg_Text)"
 
 #. +> trunk
-#: functions/text.xml:277 xml_doc.cpp:4637
+#: functions/text.xml:277 xml_doc.cpp:4655
 #, fuzzy
 #| msgid "REPLACE(text;position;length;new_text)"
 msgid "REPLACEB(text;BytePosition;ByteLength Len;new_text)"
@@ -12466,7 +12501,7 @@ msgid "Specifies index to start the search"
 msgstr "Leggt den Index för den Söökanfang fast"
 
 #. +> trunk
-#: functions/text.xml:328 xml_doc.cpp:4663
+#: functions/text.xml:328 xml_doc.cpp:4681
 #, fuzzy
 #| msgid "Specifies index to start the search"
 msgid "Specifies byte position to start the search"
@@ -12478,7 +12513,7 @@ msgid "The FIND() function finds one text string (find_text) within another text
 msgstr "De Funkschoon FIND() söcht en Tekenkeed (Sööktext) binnen en anner Tekenkeed (binnen_dissen_Text) un gifft de Nummer vun de Startpositschoon vun \"Sööktext\" vun dat sietste Teken vun \"binnen_dissen_Text\" ut."
 
 #. +> trunk
-#: functions/text.xml:332 xml_doc.cpp:4665
+#: functions/text.xml:332 xml_doc.cpp:4683
 #, fuzzy
 #| msgid "The FIND() function finds one text string (find_text) within another text string (within_text) and returns the number of the starting point of find_text, from the leftmost character of within_text."
 msgid "The FINDB() function finds one text string (find_text) within another text string (within_text) and returns the number of the starting point of find_text, from the leftmost character of within_text using byte positions."
@@ -12490,7 +12525,7 @@ msgid "Parameter start_num specifies the character at which to start the search.
 msgstr "De Parameter \"Startnummer\" leggt dat Startteken för de Söök fast. Dat eerste Teken is Teken Nummer 1. Wenn \"Startnummer\" weglaten is, warrt \"1\" vermoodt."
 
 #. +> trunk
-#: functions/text.xml:333 xml_doc.cpp:4667
+#: functions/text.xml:333 xml_doc.cpp:4685
 #, fuzzy
 #| msgid "Parameter start_num specifies the character at which to start the search. The first character is character number 1. If start_num is omitted, it is assumed to be 1."
 msgid "Parameter BytePosition specifies the character at which to start the search. The first character is character number 2. If start_num is omitted, it is assumed to be 2."
@@ -12507,7 +12542,7 @@ msgid "FIND(find_text;within_text;start_num)"
 msgstr "FIND(Sööktext;binnen_dissen_Text;Startnummer)"
 
 #. +> trunk
-#: functions/text.xml:334 xml_doc.cpp:4669
+#: functions/text.xml:334 xml_doc.cpp:4687
 #, fuzzy
 #| msgid "FIND(find_text;within_text;start_num)"
 msgid "FINDB(find_text;within_text;BytePosition Start)"
@@ -12519,7 +12554,7 @@ msgid "FIND(\"KOf\";\"KOffice\") returns 1"
 msgstr "FIND(\"KOf\";\"KOffice\") gifft \"1\" torüch"
 
 #. +> trunk
-#: functions/text.xml:305 xml_doc.cpp:4653
+#: functions/text.xml:305 xml_doc.cpp:4671
 #, fuzzy
 #| msgid "FIND(\"KOf\";\"KOffice\") returns 1"
 msgid "FIND(\"Cal\";\"Calligra\") returns 1"
@@ -12531,7 +12566,7 @@ msgid "FIND(\"i\";\"KOffice\") returns 5"
 msgstr "FIND(\"i\";\"KOffice\") gifft \"5\" torüch"
 
 #. +> trunk
-#: functions/text.xml:306 xml_doc.cpp:4655
+#: functions/text.xml:306 xml_doc.cpp:4673
 #, fuzzy
 #| msgid "FIND(\"i\";\"KOffice\") returns 5"
 msgid "FIND(\"i\";\"Calligra\") returns 5"
@@ -12550,7 +12585,7 @@ msgid "FIND(\"K\";\"KSpread in KOffice\";4) returns 12"
 msgstr "FIND(\"K\";\"KSpread in KOffice\";4) gifft \"12\" torüch"
 
 #. +> trunk
-#: functions/text.xml:307 xml_doc.cpp:4657
+#: functions/text.xml:307 xml_doc.cpp:4675
 #, fuzzy
 #| msgid "FIND(\"K\";\"KSpread in KOffice\";4) returns 12"
 msgid "FIND(\"a\";\"Tables in Calligra\";4) returns 12"
@@ -12569,7 +12604,7 @@ msgid "Position"
 msgstr "Positschoon"
 
 #. +> trunk
-#: functions/text.xml:380 xml_doc.cpp:4689
+#: functions/text.xml:380 xml_doc.cpp:4707
 #, fuzzy
 #| msgid "Position"
 msgid "Byte Position"
@@ -12582,7 +12617,7 @@ msgstr "Längde"
 
 #. +> trunk
 #: functions/text.xml:384 functions/text.xml:504 functions/text.xml:549
-#: xml_doc.cpp:4691 xml_doc.cpp:4755 xml_doc.cpp:4777
+#: xml_doc.cpp:4709 xml_doc.cpp:4773 xml_doc.cpp:4795
 #, fuzzy
 #| msgid "Text Length"
 msgid "Byte Length"
@@ -12594,7 +12629,7 @@ msgid "The MID() function returns a substring that contains 'length' characters 
 msgstr "De Funkschoon MID() gifft en Deeltekenkeed torüch, de \"Längde\" Tekens ut de Tekenkeed bargt un an Positschoon \"Index\" start."
 
 #. +> trunk
-#: functions/text.xml:388 xml_doc.cpp:4693
+#: functions/text.xml:388 xml_doc.cpp:4711
 #, fuzzy
 #| msgid "The MID() function returns a substring that contains 'length' characters of the string, starting at 'position' index."
 msgid "The MIDB() function returns a substring that contains 'length' characters of the string, starting at 'position' index using byte positions."
@@ -12606,7 +12641,7 @@ msgid "MID(text;position;length)"
 msgstr "MID(Text;Positschoon;Längde)"
 
 #. +> trunk
-#: functions/text.xml:389 xml_doc.cpp:4695
+#: functions/text.xml:389 xml_doc.cpp:4713
 #, fuzzy
 #| msgid "MID(text;position;length)"
 msgid "MIDB(text;BytePosition Start;ByteLength)"
@@ -12618,7 +12653,7 @@ msgid "MID(text;position)"
 msgstr "MID(Text;Positschoon)"
 
 #. +> trunk
-#: functions/text.xml:390 xml_doc.cpp:4697
+#: functions/text.xml:390 xml_doc.cpp:4715
 #, fuzzy
 #| msgid "MID(text;position)"
 msgid "MIDB(text;BytePosition Start)"
@@ -12630,7 +12665,7 @@ msgid "MID(\"KOffice\";2;3) returns \"Off\""
 msgstr "MID(\"KOffice\";2;3) gifft \"Off\" torüch"
 
 #. +> trunk
-#: functions/text.xml:362 xml_doc.cpp:4683
+#: functions/text.xml:362 xml_doc.cpp:4701
 #, fuzzy
 #| msgid "MID(\"KOffice\";2;3) returns \"Off\""
 msgid "MID(\"Calligra\";2;3) returns \"all\""
@@ -12647,7 +12682,7 @@ msgid "The LEN() function returns the length of the string."
 msgstr "De Funkschoon LEN() gifft en Tekenkeed ehr Längde torüch."
 
 #. +> trunk
-#: functions/text.xml:423 xml_doc.cpp:4711
+#: functions/text.xml:423 xml_doc.cpp:4729
 #, fuzzy
 #| msgid "The LEN() function returns the length of the string."
 msgid "The LENB() function returns the length of the string using byte positions."
@@ -12659,7 +12694,7 @@ msgid "LEN(text)"
 msgstr "LEN(Text)"
 
 #. +> trunk
-#: functions/text.xml:424 xml_doc.cpp:4713
+#: functions/text.xml:424 xml_doc.cpp:4731
 #, fuzzy
 #| msgid "LEN(text)"
 msgid "LENB(text)"
@@ -12676,7 +12711,7 @@ msgid "LEN(\"KCells\") returns 7"
 msgstr "LEN(\"KCells\") gifft \"7\" torüch"
 
 #. +> trunk stable
-#: functions/text.xml:410 xml_doc.cpp:4707
+#: functions/text.xml:410 xml_doc.cpp:4725
 msgid "LEN(\"KSpread\") returns 7"
 msgstr "LEN(\"KSpread\") gifft \"7\" torüch"
 
@@ -12696,7 +12731,7 @@ msgid "TRIM(\" hello    KCells   \") returns \"hello KCells\""
 msgstr "TRIM(\" Moin    KCells   \") gifft \"Moin KCells\" torüch"
 
 #. +> trunk stable
-#: functions/text.xml:438 xml_doc.cpp:4721
+#: functions/text.xml:438 xml_doc.cpp:4739
 msgid "TRIM(\" hello    KSpread   \") returns \"hello KSpread\""
 msgstr "TRIM(\" Moin    KSpread   \") gifft \"Moin KSpread\" torüch"
 
@@ -12721,7 +12756,7 @@ msgid "CONCATENATE(\"KSpread\";\"KOffice\";\"KDE\") returns \"KSpreadKOfficeKDE\
 msgstr "CONCATENATE(\"KSpread\";\"KOffice\";\"KDE\") gifft \"KSpreadKOfficeKDE\" torüch"
 
 #. +> trunk
-#: functions/text.xml:468 xml_doc.cpp:4737
+#: functions/text.xml:468 xml_doc.cpp:4755
 msgid "CONCATENATE(\"Tables\";\"Calligra\";\"KDE\") returns \"TablesCalligraKDE\""
 msgstr "CONCATENATE(\"Tables\";\"Calligra\";\"KDE\") gifft \"ablesCalligraKDE\" ut"
 
@@ -12736,7 +12771,7 @@ msgid "The RIGHT() function returns a substring that contains the 'length' right
 msgstr "De Funkschoon RIGHT() gifft en Ünner-Tekenkeed torüch, de so veel vun de Tekens heel rechts bargt, as dör \"Längde\" fastleggt is. Wenn \"Längde\" grötter is as de Tekenkeedlängde, warrt de heel Tekenkeed torüchgeven."
 
 #. +> trunk
-#: functions/text.xml:508 xml_doc.cpp:4757
+#: functions/text.xml:508 xml_doc.cpp:4775
 #, fuzzy
 #| msgid "The RIGHT() function returns a substring that contains the 'length' rightmost characters of the string. The whole string is returned if 'length' exceeds the length of the string."
 msgid "The RIGHTB() function returns a substring that contains the 'length' rightmost characters of the string using byte positions. The whole string is returned if 'length' exceeds the length of the string."
@@ -12748,7 +12783,7 @@ msgid "RIGHT(text;length)"
 msgstr "RIGHT(Text;Längde)"
 
 #. +> trunk
-#: functions/text.xml:509 xml_doc.cpp:4759
+#: functions/text.xml:509 xml_doc.cpp:4777
 msgid "RIGHTB(text;ByteLength)"
 msgstr "RIGHTB(Text;ByteLängde)"
 
@@ -12758,7 +12793,7 @@ msgid "RIGHT(\"hello\";2) returns \"lo\""
 msgstr "RIGHT(\"Moin\";2) gifft \"in\" torüch"
 
 #. +> trunk
-#: functions/text.xml:363 xml_doc.cpp:4685
+#: functions/text.xml:363 xml_doc.cpp:4703
 msgid "MID(\"Calligra\";2) returns \"alligra\""
 msgstr "MID(\"Calligra\";2) gifft \"alligra\" torüch"
 
@@ -12768,7 +12803,7 @@ msgid "RIGHT(\"KCells\";10) returns \"KCells\""
 msgstr "RIGHT(\"KCells\";10) gifft \"KCells\" torüch"
 
 #. +> trunk stable
-#: functions/text.xml:487 xml_doc.cpp:4749
+#: functions/text.xml:487 xml_doc.cpp:4767
 msgid "RIGHT(\"KSpread\";10) returns \"KSpread\""
 msgstr "RIGHT(\"KSpread\";10) gifft \"KSpread\" torüch"
 
@@ -12778,7 +12813,7 @@ msgid "RIGHT(\"KCells\") returns \"s\""
 msgstr "RIGHT(\"KCells\") gifft \"s\" torüch"
 
 #. +> trunk stable
-#: functions/text.xml:488 xml_doc.cpp:4751
+#: functions/text.xml:488 xml_doc.cpp:4769
 msgid "RIGHT(\"KSpread\") returns \"d\""
 msgstr "RIGHT(\"KSpread\") gifft \"d\" torüch"
 
@@ -12788,7 +12823,7 @@ msgid "The LEFT() function returns a substring that contains the 'length' leftmo
 msgstr "De Funkschoon LEFT() gifft en Ünner-Tekenkeed torüch, de so veel vun de Tekens heel links bargt, as dör \"Längde\" fastleggt is. Wenn \"Längde\" grötter is as de Tekenkeedlängde, warrt de heel Tekenkeed torüchgeven. De Tall vun Tekens mutt nich lütter as \"0\" wesen."
 
 #. +> trunk
-#: functions/text.xml:553 xml_doc.cpp:4779
+#: functions/text.xml:553 xml_doc.cpp:4797
 #, fuzzy
 #| msgid "The LEFT() function returns a substring that contains the 'length' leftmost characters of the string. The whole string is returned if 'length' exceeds the length of the string. It is an error for the number of characters to be less than 0."
 msgid "The LEFTB() function returns a substring that contains the 'length' leftmost characters of the string using byte positions. The whole string is returned if 'length' exceeds the length of the string. It is an error for the number of characters to be less than 0."
@@ -12800,7 +12835,7 @@ msgid "LEFT(text;length)"
 msgstr "LEFT(Text;Längde)"
 
 #. +> trunk
-#: functions/text.xml:554 xml_doc.cpp:4781
+#: functions/text.xml:554 xml_doc.cpp:4799
 msgid "LEFTB(text;ByteLength)"
 msgstr "LEFTB(Text;ByteLängde)"
 
@@ -12815,7 +12850,7 @@ msgid "LEFT(\"KCells\";10) returns \"KCells\""
 msgstr "LEFT(\"KCells\";10) gifft \"KCells\" torüch"
 
 #. +> trunk stable
-#: functions/text.xml:532 xml_doc.cpp:4771
+#: functions/text.xml:532 xml_doc.cpp:4789
 msgid "LEFT(\"KSpread\";10) returns \"KSpread\""
 msgstr "LEFT(\"KSpread\";10) gifft \"KSpread\" torüch"
 
@@ -12825,7 +12860,7 @@ msgid "LEFT(\"KCells\") returns \"K\""
 msgstr "LEFT(\"KCells\") gifft \"K\" torüch"
 
 #. +> trunk stable
-#: functions/text.xml:533 xml_doc.cpp:4773
+#: functions/text.xml:533 xml_doc.cpp:4791
 msgid "LEFT(\"KSpread\") returns \"K\""
 msgstr "LEFT(\"KSpread\") gifft \"K\" torüch"
 
@@ -12850,7 +12885,7 @@ msgid "REPT(\"KCells\";3) returns \"KCellsKCellsKCells\""
 msgstr "REPT(\"KCells\";3) gifft \"KCellsKCellsKCells\" torüch."
 
 #. +> trunk stable
-#: functions/text.xml:576 xml_doc.cpp:4791
+#: functions/text.xml:576 xml_doc.cpp:4809
 msgid "REPT(\"KSpread\";3) returns \"KSpreadKSpreadKSpread\""
 msgstr "REPT(\"KSpread\";3) gifft \"KSpreadKSpreadKSpread\" torüch"
 
@@ -12860,7 +12895,7 @@ msgid "REPT(\"KCells\";0) returns \"\""
 msgstr "REPT(\"KCells\";0) gifft \"\" torüch"
 
 #. +> trunk stable
-#: functions/text.xml:577 xml_doc.cpp:4793
+#: functions/text.xml:577 xml_doc.cpp:4811
 msgid "REPT(\"KSpread\";0) returns \"\""
 msgstr "REPT(\"KSpread\";0) gifft \"\" torüch"
 
@@ -12885,7 +12920,7 @@ msgid "ROT13(\"KCells\") returns \"XPryyf\""
 msgstr "ROT13(\"KCells\") gifft \"XPryyf\" torüch."
 
 #. +> trunk stable
-#: functions/text.xml:592 xml_doc.cpp:4803
+#: functions/text.xml:592 xml_doc.cpp:4821
 msgid "ROT13(\"KSpread\") returns \"XFcernq\""
 msgstr "ROT13(\"KSpread\") gifft \"XFcernq\" torüch."
 
@@ -12895,7 +12930,7 @@ msgid "ROT13(\"XPryyf\") returns \"KCells\""
 msgstr "ROT13(\"XPryyf\") gifft \"KCells\" torüch."
 
 #. +> trunk stable
-#: functions/text.xml:593 xml_doc.cpp:4805
+#: functions/text.xml:593 xml_doc.cpp:4823
 msgid "ROT13(\"XFcernq\") returns \"KSpread\""
 msgstr "ROT13(\"XFcernq\") gifft \"KSpread\" torüch."
 
@@ -13200,14 +13235,14 @@ msgid "The COS() function returns the cosine of x, where x is given in radians."
 msgstr "De Funkschoon COS() gifft den Kosinus vun x torüch, x is in Bagenmaat angeven."
 
 #. +> trunk
-#: functions/trig.xml:286 xml_doc.cpp:5117
+#: functions/trig.xml:286 xml_doc.cpp:5135
 #, fuzzy
 #| msgid "The COS() function returns the cosine of x, where x is given in radians."
 msgid "The CSC() function returns the cosecant of x, where x is given in radians."
 msgstr "De Funkschoon COS() gifft den Kosinus vun x torüch, x is in Bagenmaat angeven."
 
 #. +> trunk
-#: functions/trig.xml:300 xml_doc.cpp:5125
+#: functions/trig.xml:300 xml_doc.cpp:5143
 #, fuzzy
 #| msgid "The COS() function returns the cosine of x, where x is given in radians."
 msgid "The CSCH() function returns the hyperbolic cosecant of x, where x is given in radians."
@@ -13219,7 +13254,7 @@ msgid "COS(Float)"
 msgstr "COS(Fleetkommatall)"
 
 #. +> trunk
-#: functions/trig.xml:287 xml_doc.cpp:5119
+#: functions/trig.xml:287 xml_doc.cpp:5137
 msgid "CSC(Float)"
 msgstr "CSC(Fleetkommatall)"
 
@@ -13234,7 +13269,7 @@ msgid "COS(PI()/2) equals 0"
 msgstr "COS(PI/2) is 0,0"
 
 #. +> trunk
-#: functions/trig.xml:302 xml_doc.cpp:5129
+#: functions/trig.xml:302 xml_doc.cpp:5147
 msgid "CSCH(PI()/2) equals 0.434537208..."
 msgstr "CSCH(PI()/2) is 0,434537208..."
 
@@ -13259,14 +13294,14 @@ msgid "The SIN() function returns the sine of x, where x is given in radians."
 msgstr "De Funkschoon SIN() gifft den Sinus vun x torüch, x is in Bagenmaat angeven."
 
 #. +> trunk
-#: functions/trig.xml:314 xml_doc.cpp:5133
+#: functions/trig.xml:314 xml_doc.cpp:5151
 #, fuzzy
 #| msgid "The SIN() function returns the sine of x, where x is given in radians."
 msgid "The SEC() function returns the secant of x, where x is given in radians."
 msgstr "De Funkschoon SIN() gifft den Sinus vun x torüch, x is in Bagenmaat angeven."
 
 #. +> trunk
-#: functions/trig.xml:328 xml_doc.cpp:5141
+#: functions/trig.xml:328 xml_doc.cpp:5159
 #, fuzzy
 #| msgid "The COS() function returns the cosine of x, where x is given in radians."
 msgid "The SECH() function returns the hyperbolic secant of x, where x is given in radians."
@@ -13278,7 +13313,7 @@ msgid "SIN(Float)"
 msgstr "SIN(Fleetkommatall)"
 
 #. +> trunk
-#: functions/trig.xml:315 xml_doc.cpp:5135
+#: functions/trig.xml:315 xml_doc.cpp:5153
 msgid "SEC(Float)"
 msgstr "SEC(Fleetkommatall)"
 
@@ -13293,7 +13328,7 @@ msgid "SIN(PI()/2) equals 1"
 msgstr "SIN(PI/2) is 1"
 
 #. +> trunk
-#: functions/trig.xml:288 xml_doc.cpp:5121
+#: functions/trig.xml:288 xml_doc.cpp:5139
 msgid "CSC(PI()/2) equals 1"
 msgstr "CSC(PI()/2) is 1"
 
@@ -13388,7 +13423,7 @@ msgid "COSH(Float)"
 msgstr "COSH(Fleetkommatall)"
 
 #. +> trunk
-#: functions/trig.xml:301 xml_doc.cpp:5127
+#: functions/trig.xml:301 xml_doc.cpp:5145
 msgid "CSCH(Float)"
 msgstr "CSCH(Fleetkommatall)"
 
@@ -13403,12 +13438,12 @@ msgid "COSH(0) equals 1"
 msgstr "COSH(0) is 1"
 
 #. +> trunk
-#: functions/trig.xml:316 xml_doc.cpp:5137
+#: functions/trig.xml:316 xml_doc.cpp:5155
 msgid "SEC(0) equals 1"
 msgstr "SEC(0) is 1"
 
 #. +> trunk
-#: functions/trig.xml:330 xml_doc.cpp:5145
+#: functions/trig.xml:330 xml_doc.cpp:5163
 msgid "SECH(0) equals 1"
 msgstr "SECH(0) is 1"
 
@@ -13423,7 +13458,7 @@ msgid "SINH(Float)"
 msgstr "SINH(Fleetkommatall)"
 
 #. +> trunk
-#: functions/trig.xml:329 xml_doc.cpp:5143
+#: functions/trig.xml:329 xml_doc.cpp:5161
 msgid "SECH(Float)"
 msgstr "SECH(Fleetkommatall)"
 
