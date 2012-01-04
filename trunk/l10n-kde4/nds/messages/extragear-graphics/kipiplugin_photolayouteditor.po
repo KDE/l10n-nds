@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kipiplugin_photolayouteditor\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-11-30 03:39+0100\n"
+"POT-Creation-Date: 2012-01-03 03:59+0100\n"
 "PO-Revision-Date: 2011-10-13 08:17+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -24,6 +24,7 @@ msgstr ""
 
 #: borderplugins/polaroid/PolaroidBorderDrawer.cpp:59
 #: borderplugins/solid/SolidBorderDrawer.cpp:71
+#: widgets/dialogs/CanvasSizeDialog.cpp:352
 #: widgets/tools/CanvasEditTool.cpp:502
 msgid "Width"
 msgstr "Breed"
@@ -65,8 +66,11 @@ msgstr "Afstänn"
 msgid "Solid border"
 msgstr ""
 
+#: borders/BorderChangeListener.cpp:48
+msgid "Border Change"
+msgstr ""
+
 #: effectplugins/blur/BlurPhotoEffect.cpp:53
-#: effectplugins/blur/BlurPhotoEffect.cpp:58
 #: effectplugins/StandardEffectsFactory.cpp:42
 #: effectplugins/StandardEffectsFactory.cpp:57
 #: effects/temp/BlurPhotoEffect.cpp:122
@@ -74,21 +78,18 @@ msgid "Blur effect"
 msgstr "Verwischen-Effekt"
 
 #: effectplugins/colorize/ColorizePhotoEffect.cpp:55
-#: effectplugins/colorize/ColorizePhotoEffect.cpp:60
 #: effectplugins/StandardEffectsFactory.cpp:44
 #: effectplugins/StandardEffectsFactory.cpp:58
 msgid "Colorize effect"
 msgstr ""
 
 #: effectplugins/grayscale/GrayscalePhotoEffect.cpp:51
-#: effectplugins/grayscale/GrayscalePhotoEffect.cpp:56
 #: effectplugins/StandardEffectsFactory.cpp:46
 #: effectplugins/StandardEffectsFactory.cpp:59
 msgid "Grayscale effect"
 msgstr ""
 
 #: effectplugins/sepia/SepiaPhotoEffect.cpp:51
-#: effectplugins/sepia/SepiaPhotoEffect.cpp:56
 #: effectplugins/StandardEffectsFactory.cpp:48
 #: effectplugins/StandardEffectsFactory.cpp:60
 msgid "Sepia effect"
@@ -97,7 +98,6 @@ msgstr ""
 #: effectplugins/StandardEffectsFactory.cpp:50
 #: effectplugins/StandardEffectsFactory.cpp:61
 #: effectplugins/negative/NegativePhotoEffect.cpp:49
-#: effectplugins/negative/NegativePhotoEffect.cpp:54
 #, fuzzy
 #| msgid "Remove effect"
 msgid "Negative effect"
@@ -160,36 +160,59 @@ msgid "Canvas size change"
 msgstr "Lienwandgrött ännern"
 
 #: plugin/photolayoutseditor.cpp:256
-msgctxt "Export current frame layout to image file"
-msgid "Export"
+#, fuzzy
+#| msgctxt "Export current frame layout to image file"
+#| msgid "Export"
+msgctxt "Export current frame layout to image file..."
+msgid "Export..."
 msgstr "Exporteren"
 
 #: plugin/photolayoutseditor.cpp:288
-msgctxt "Adds new image(s) from file"
+#, fuzzy
+#| msgctxt "Adds new image(s) from file"
+#| msgid "Add image(s)..."
+msgctxt "Adds new image(s) from file..."
 msgid "Add image(s)..."
 msgstr "Biller tofögen…"
 
 #: plugin/photolayoutseditor.cpp:292
-msgctxt "View grid lines"
-msgid "Show"
+#, fuzzy
+#| msgctxt "View grid lines"
+#| msgid "Show"
+msgctxt "View grid lines..."
+msgid "Show..."
 msgstr "Wiesen"
 
 #: plugin/photolayoutseditor.cpp:298
-msgctxt "Configure grid lines visibility"
-msgid "Setup grid"
+#, fuzzy
+#| msgctxt "Configure grid lines visibility"
+#| msgid "Setup grid"
+msgctxt "Configure grid lines visibility..."
+msgid "Setup grid..."
 msgstr "Gadder instellen"
 
 #: plugin/photolayoutseditor.cpp:302
-msgctxt "Configure canvas size"
-msgid "Change canvas size"
+#, fuzzy
+#| msgctxt "Configure canvas size"
+#| msgid "Change canvas size"
+msgctxt "Configure canvas size..."
+msgid "Change canvas size..."
 msgstr "Lienwandgrött ännern"
 
+#: plugin/photolayoutseditor.cpp:361 widgets/layers/LayersTreeTitleWidget.h:51
+msgid "Layers"
+msgstr "Lagen"
+
 #: plugin/photolayoutseditor.cpp:423
-msgid "Can't read image file."
+#, fuzzy
+#| msgid "Can't read image file."
+msgid "Cannot read image file."
 msgstr "Bilddatei lett siknich lesen."
 
 #: plugin/photolayoutseditor.cpp:539
-msgid "There is nothing to save!"
+#, fuzzy
+#| msgid "There is nothing to save!"
+msgid "There is nothing to save."
 msgstr "Dat gifft nix, dat sekert warrn kunn!"
 
 #: plugin/photolayoutseditor.cpp:562
@@ -197,15 +220,19 @@ msgid "Image can't be saved in selected file."
 msgstr "Bild lett sik nich na utsöcht Datei sekern."
 
 #: plugin/photolayoutseditor.cpp:567
-msgid "Unexpected error while saving an image!"
+#, fuzzy
+#| msgid "Unexpected error while saving an image!"
+msgid "Unexpected error while saving an image."
 msgstr "Bi't Sekern vun en Bild geev dat en nich verwacht Fehler."
 
 #: plugin/photolayoutseditor.cpp:610
 msgid "Save changes to current frame?"
 msgstr ""
 
-#: plugin/photolayoutseditor.cpp:705 widgets/canvas/Canvas.cpp:884
-msgid "Invalid image size!"
+#: plugin/photolayoutseditor.cpp:705
+#, fuzzy
+#| msgid "Invalid image size!"
+msgid "Invalid image size."
 msgstr "Leeg Bildgrött!"
 
 #: settings/PLEConfigDialog.cpp:46 settings/PLEConfigDialog.cpp:47
@@ -249,6 +276,54 @@ msgstr "Achtergrund warrt laadt..."
 msgid "Loading item no. %1..."
 msgstr "Elementen Nr. %1 warrt laadt…"
 
+#: threads/AbstractPhotoItemLoader.cpp:75
+#, fuzzy
+#| msgid "Reading properties"
+msgid "Reading properties..."
+msgstr "Dateiegenschappen warrt leest"
+
+#: threads/AbstractPhotoItemLoader.cpp:136
+#, fuzzy
+#| msgid "Reading properties"
+msgid "Reading borders..."
+msgstr "Dateiegenschappen warrt leest"
+
+#: threads/AbstractPhotoItemLoader.cpp:162
+#, fuzzy
+#| msgid "Reading effects"
+msgid "Reading effects..."
+msgstr "Effekten warrt leest"
+
+#: threads/AbstractPhotoItemLoader.cpp:179
+#, fuzzy
+#| msgid "Reading properties"
+msgid "Reading cropping shape..."
+msgstr "Dateiegenschappen warrt leest"
+
+#: threads/CanvasSavingThread.cpp:75
+#, fuzzy
+#| msgid "Creating canvas"
+msgid "Creating canvas..."
+msgstr "Lienwand warrt opstellt..."
+
+#: threads/CanvasSavingThread.cpp:125
+#, fuzzy
+#| msgid "Saving scene"
+msgid "Saving scene..."
+msgstr "Opbuu warrt sekert"
+
+#: threads/CanvasSavingThread.cpp:144
+#, fuzzy
+#| msgid "Encoding data"
+msgid "Encoding data..."
+msgstr "Daten warrt kodeert"
+
+#: threads/CanvasSavingThread.cpp:155
+#, fuzzy
+#| msgid "Writing data to file"
+msgid "Writing data to file..."
+msgstr "Daten warrt na Datei schreven"
+
 #: threads/ImageLoadingThread.cpp:171 threads/ImageLoadingThread.cpp:247
 msgid "Loading "
 msgstr "Bi to laden "
@@ -258,112 +333,63 @@ msgid "Decoding image"
 msgstr "Bild warrt dekodeert"
 
 #: threads/ImageLoadingThread.cpp:235 threads/ImageLoadingThread.cpp:282
+#: threads/PhotoItemLoader.cpp:102 threads/TextItemLoader.cpp:97
 msgid "Finishing..."
 msgstr "Fardig maken..."
 
 #: threads/PhotoItemLoader.cpp:64
-msgid "Loading shape"
+#, fuzzy
+#| msgid "Loading shape"
+msgid "Loading shape..."
 msgstr "Element warrt laadt"
 
 #: threads/PhotoItemLoader.cpp:77
-msgid "Loading image"
+#, fuzzy
+#| msgid "Loading image"
+msgid "Loading image..."
 msgstr "Bild warrt laadt"
 
-#: threads/PhotoItemLoader.cpp:102 threads/TextItemLoader.cpp:97
-msgid "Finishing"
-msgstr "Fardig maken"
-
 #: threads/TextItemLoader.cpp:60
-msgid "Reading text"
+#, fuzzy
+#| msgid "Reading text"
+msgid "Reading text..."
 msgstr "Text warrt leest"
 
 #: threads/TextItemLoader.cpp:76
-msgid "Reading color"
+#, fuzzy
+#| msgid "Reading color"
+msgid "Reading color..."
 msgstr "Klören warrt leest"
 
 #: threads/TextItemLoader.cpp:87
-msgid "Reading fonts"
+#, fuzzy
+#| msgid "Reading fonts"
+msgid "Reading fonts..."
 msgstr "Schriftoorden warrt leest"
-
-#: threads/AbstractPhotoItemLoader.cpp:75
-msgid "Reading properties"
-msgstr "Dateiegenschappen warrt leest"
-
-#: threads/AbstractPhotoItemLoader.cpp:136
-msgid "Reading borders"
-msgstr ""
-
-#: threads/AbstractPhotoItemLoader.cpp:162
-msgid "Reading effects"
-msgstr "Effekten warrt leest"
-
-#: threads/AbstractPhotoItemLoader.cpp:179
-msgid "Reading cropping shape"
-msgstr ""
-
-#: threads/CanvasSavingThread.cpp:75
-msgid "Creating canvas"
-msgstr "Lienwand warrt opstellt..."
-
-#: threads/CanvasSavingThread.cpp:125
-msgid "Saving scene"
-msgstr "Opbuu warrt sekert"
-
-#: threads/CanvasSavingThread.cpp:144
-msgid "Encoding data"
-msgstr "Daten warrt kodeert"
-
-#: threads/CanvasSavingThread.cpp:155
-msgid "Writing data to file"
-msgstr "Daten warrt na Datei schreven"
 
 #: undo/UndoBorderChangeCommand.cpp:36
 msgid "Border changed"
 msgstr ""
 
-#: widgets/canvas/CropWidgetItem.cpp:248 widgets/canvas/Scene.cpp:471
-msgid "Crop items"
-msgstr "Elementen tosnieden"
+#: undo/UndoMoveRowsCommand.cpp:45
+#, fuzzy
+#| msgid "New layer"
+msgid "Move layers up"
+msgstr "Nieg Laag"
 
-#: widgets/canvas/CropWidgetItem.cpp:262
-#, no-c-format, kde-format
-msgid ""
-"Bounding rectangle of the crop shape has size [%1px x %2px] and it's less "
-"than 1px x 1px"
+#: undo/UndoMoveRowsCommand.cpp:47
+msgid "Move layers down"
 msgstr ""
 
-#: widgets/canvas/ScalingWidgetItem.cpp:51
-msgid "Move item"
-msgstr "Element verschuven"
+#: undo/UndoMoveRowsCommand.cpp:50
+#, fuzzy
+#| msgid "Change text color"
+msgid "Change parent layer"
+msgstr "Textklöör ännern"
 
-#: widgets/canvas/ScalingWidgetItem.cpp:96
-msgid "Scale item"
-msgstr "Element topassen"
-
-#: widgets/canvas/ScalingWidgetItem.cpp:482
-msgid "Scale items"
-msgstr "Elementen topassen"
-
-#: widgets/canvas/ScalingWidgetItem.cpp:497 widgets/canvas/Scene.cpp:332
-msgid "Move items"
-msgstr "Elementen verschuven"
-
-#: widgets/canvas/SceneBackground.cpp:58 widgets/canvas/SceneBackground.cpp:69
-#: widgets/canvas/SceneBackground.cpp:119
-#: widgets/canvas/SceneBackground.cpp:147
-#: widgets/canvas/SceneBackground.cpp:207
-#: widgets/canvas/SceneBackground.cpp:253
-#: widgets/canvas/SceneBackground.cpp:279
-msgid "Background changed"
-msgstr "Achtergrund wöör ännert"
-
-#: widgets/canvas/RotationWidgetItem.cpp:45
-msgid "Rotate item"
-msgstr "Element dreihen"
-
-#: widgets/canvas/RotationWidgetItem.cpp:275
-msgid "Rotate items"
-msgstr "Elementen dreihen"
+#: widgets/canvas/Canvas.cpp:884
+msgid "Invalid image size!"
+msgstr "Leeg Bildgrött!"
 
 #: widgets/canvas/Canvas.cpp:961
 msgid "Can't save canvas!"
@@ -377,20 +403,67 @@ msgstr "Leeg Dateipadd"
 msgid "Remove items"
 msgstr "Elementen wegmaken"
 
-#: widgets/canvas/Scene.cpp:281 widgets/canvas/Scene.cpp:289
+#: widgets/canvas/CropWidgetItem.cpp:248
+msgid "Crop items"
+msgstr "Elementen tosnieden"
+
+#: widgets/canvas/CropWidgetItem.cpp:262
+#, no-c-format, kde-format
+msgid ""
+"Bounding rectangle of the crop shape has size [%1px x %2px] and it's less "
+"than 1px x 1px"
+msgstr ""
+
+#: widgets/canvas/RotationWidgetItem.cpp:45
+msgid "Rotate item"
+msgstr "Element dreihen"
+
+#: widgets/canvas/RotationWidgetItem.cpp:275
+#, fuzzy
+#| msgid "Rotate items"
+msgid "Rotate item(s)"
+msgstr "Elementen dreihen"
+
+#: widgets/canvas/ScalingWidgetItem.cpp:51
+msgid "Move item"
+msgstr "Element verschuven"
+
+#: widgets/canvas/ScalingWidgetItem.cpp:96
+msgid "Scale item"
+msgstr "Element topassen"
+
+#: widgets/canvas/ScalingWidgetItem.cpp:482
+#, fuzzy
+#| msgid "Scale items"
+msgid "Scale item(s)"
+msgstr "Elementen topassen"
+
+#: widgets/canvas/ScalingWidgetItem.cpp:497 widgets/canvas/Scene.cpp:332
+#, fuzzy
+#| msgid "Move items"
+msgid "Move item(s)"
+msgstr "Elementen verschuven"
+
+#: widgets/canvas/Scene.cpp:281
 msgid "Add item"
 msgstr "Element tofögen"
 
 #: widgets/canvas/Scene.cpp:289 widgets/canvas/Scene.cpp:610
-msgid "Add items"
+#, fuzzy
+#| msgid "Add items"
+msgid "Add item(s)"
 msgstr "Elementen tofögen"
 
 #: widgets/canvas/Scene.cpp:471
-msgid "Crop item"
-msgstr "Element tosnieden"
+#, fuzzy
+#| msgid "Crop items"
+msgid "Crop item(s)"
+msgstr "Elementen tosnieden"
 
 #: widgets/canvas/Scene.cpp:662
-msgid "Delete items"
+#, fuzzy
+#| msgid "Delete items"
+msgid "Delete selected item(s)"
 msgstr "Elementen wegdoon"
 
 #: widgets/canvas/Scene.cpp:668
@@ -398,12 +471,15 @@ msgid "Canvas background"
 msgstr "Achtergrund vun de Lienwand"
 
 #: widgets/canvas/Scene.cpp:1299
-msgid "Saving background"
+#, fuzzy
+#| msgid "Saving background"
+msgid "Saving background..."
 msgstr "Achtergrund warrt sekert"
 
 #: widgets/canvas/Scene.cpp:1314
-#, kde-format
-msgid "Saving %1"
+#, fuzzy, kde-format
+#| msgid "Saving %1"
+msgid "Saving %1..."
 msgstr "\"%1\" warrt sekert"
 
 #: widgets/canvas/Scene.cpp:1385
@@ -411,14 +487,25 @@ msgstr "\"%1\" warrt sekert"
 msgid "Unable to create %1 element(s)!"
 msgstr "%1 Elementen laat sik nich opstellen."
 
-#: widgets/canvas/Scene.cpp:1492
+#: widgets/canvas/Scene.cpp:1491
 #, kde-format
-msgid "Are you sure you want to delete %1 selected item%2?"
+msgid "Are you sure you want to delete %1 selected item(s)?"
 msgstr ""
 
-#: widgets/canvas/Scene.cpp:1492
+#: widgets/canvas/Scene.cpp:1491
 msgid "Items deleting"
 msgstr "Elementen warrt wegdaan."
+
+#: widgets/canvas/SceneBackground.cpp:58 widgets/canvas/SceneBackground.cpp:69
+#: widgets/canvas/SceneBackground.cpp:119
+#: widgets/canvas/SceneBackground.cpp:147
+#: widgets/canvas/SceneBackground.cpp:207
+#: widgets/canvas/SceneBackground.cpp:253
+#: widgets/canvas/SceneBackground.cpp:279
+#, fuzzy
+#| msgid "Background changed"
+msgid "Background Change"
+msgstr "Achtergrund wöör ännert"
 
 #: widgets/dialogs/GridSetupDialog.cpp:40
 msgid "Setup grid lines"
@@ -441,21 +528,117 @@ msgstr "Dat Bild lett sik nich sekern!"
 msgid "Canvas size"
 msgstr "Lienwandgrött"
 
+#: widgets/dialogs/CanvasSizeDialog.cpp:328
+msgid "Custom"
+msgstr ""
+
+#: widgets/dialogs/CanvasSizeDialog.cpp:332
+msgid "Template"
+msgstr ""
+
+#: widgets/dialogs/CanvasSizeDialog.cpp:364
+#: widgets/tools/CanvasEditTool.cpp:507
+msgid "Height"
+msgstr "Hööchde"
+
+#: widgets/dialogs/CanvasSizeDialog.cpp:386
+msgid "Orientation"
+msgstr ""
+
 #: widgets/dialogs/CanvasSizeDialog.cpp:392
 msgid "Advanced"
 msgstr "Verwiedert"
+
+#: widgets/dialogs/CanvasSizeDialog.cpp:404
+msgid "Resolution X"
+msgstr ""
+
+#: widgets/dialogs/CanvasSizeDialog.cpp:414
+msgid "Resolution Y"
+msgstr ""
+
+#: widgets/items/AbstractPhoto.cpp:54
+#, fuzzy
+#| msgid "Image shape change"
+msgid "Crop shape change"
+msgstr "Bildelement ännern"
+
+#: widgets/items/AbstractPhoto.cpp:79
+#, fuzzy
+#| msgid "Name change"
+msgid "Name Change"
+msgstr "Naam ännern"
+
+#: widgets/items/AbstractPhoto.cpp:109
+msgid "New layer"
+msgstr "Nieg Laag"
+
+#: widgets/items/PhotoItem.cpp:58 widgets/items/PhotoItem.cpp:63
+#: widgets/items/PhotoItem.cpp:437 widgets/items/PhotoItem.cpp:450
+#, fuzzy
+#| msgid "Image change"
+msgid "Image Change"
+msgstr "Bild ännern"
+
+#: widgets/items/PhotoItem.cpp:87
+#, fuzzy
+#| msgid "Image path change"
+msgid "Image Path Change"
+msgstr "Bildpadd ännern"
+
+#: widgets/items/PhotoItem.cpp:113
+#, fuzzy
+#| msgid "Image shape change"
+msgid "Image Shape Change"
+msgstr "Bildelement ännern"
+
+#: widgets/items/PhotoItem.cpp:141
+#, kde-format
+msgid ""
+"Can't find image file in this location:\n"
+"%1\n"
+"\n"
+"Would you like to set new location of this file?\n"
+"If not this image will be removed from the composition."
+msgstr ""
+
+#: widgets/items/PhotoItem.cpp:146
+msgid "File reading error"
+msgstr ""
+
+#: widgets/items/PhotoItem.cpp:183 widgets/items/PhotoItem.cpp:191
+msgid "New image"
+msgstr "Nieg Bild"
+
+#: widgets/items/PhotoItem.cpp:235
+#, kde-format
+msgid ""
+"Do you want to embed images data?\n"
+"Remember that when you move or rename image files on your disk or the "
+"storage device become unavailable, those images become unavailable for %1 "
+"and this layout might become broken."
+msgstr ""
+
+#: widgets/items/PhotoItem.cpp:238
+#, kde-format
+msgid "Saving: %1"
+msgstr "\"%1\" warrt sekert"
 
 #: widgets/items/TextItem.cpp:52
 msgid "Text change"
 msgstr "Text ännern"
 
 #: widgets/items/TextItem.cpp:75
-msgid "Change text color"
-msgstr "Textklöör ännern"
+#, fuzzy
+#| msgid "Text change"
+msgid "Text color change"
+msgstr "Text ännern"
 
 #: widgets/items/TextItem.cpp:101
-msgid "Change text font"
-msgstr "Schriftoort ännern"
+#, fuzzy
+#| msgid "Text change"
+msgid "Text font change"
+msgstr "Text ännern"
 
 #: widgets/items/TextItem.cpp:129 widgets/items/TextItem.cpp:157
 #: widgets/items/TextItem.cpp:192 widgets/items/TextItem.cpp:226
@@ -470,63 +653,6 @@ msgstr "Textelement"
 msgid "Text color"
 msgstr "Textklöör"
 
-#: widgets/items/PhotoItem.cpp:58 widgets/items/PhotoItem.cpp:63
-#: widgets/items/PhotoItem.cpp:435 widgets/items/PhotoItem.cpp:448
-msgid "Image change"
-msgstr "Bild ännern"
-
-#: widgets/items/PhotoItem.cpp:87
-msgid "Image path change"
-msgstr "Bildpadd ännern"
-
-#: widgets/items/PhotoItem.cpp:113
-msgid "Image shape change"
-msgstr "Bildelement ännern"
-
-#: widgets/items/PhotoItem.cpp:141
-#, c-format
-msgid ""
-"Can't find image file in this location:\n"
-" %s\n"
-"\n"
-"Would you like to set new location of this file?\n"
-"If not this image will be removed from the composition."
-msgstr ""
-
-#: widgets/items/PhotoItem.cpp:144
-msgid "File reading error"
-msgstr ""
-
-#: widgets/items/PhotoItem.cpp:181 widgets/items/PhotoItem.cpp:189
-msgid "New image"
-msgstr "Nieg Bild"
-
-#: widgets/items/PhotoItem.cpp:233
-#, kde-format
-msgid ""
-"Do you want to embed images data?\n"
-"Remember that when you move or rename image files on your disk or the "
-"storage device become unavailable, those images become unavailable for %1 "
-"and this layout might become broken."
-msgstr ""
-
-#: widgets/items/PhotoItem.cpp:236
-#, kde-format
-msgid "Saving: %1"
-msgstr "\"%1\" warrt sekert"
-
-#: widgets/items/AbstractPhoto.cpp:79
-msgid "Name change"
-msgstr "Naam ännern"
-
-#: widgets/items/AbstractPhoto.cpp:109
-msgid "New layer"
-msgstr "Nieg Laag"
-
-#: widgets/layers/LayersTreeTitleWidget.h:51
-msgid "Layers"
-msgstr "Lagen"
-
 #: widgets/tools/BorderEditTool.cpp:49
 msgid "Borders editor"
 msgstr "Ränners bewerken"
@@ -535,13 +661,9 @@ msgstr "Ränners bewerken"
 msgid "Create text item"
 msgstr "Textelement opstellen"
 
-#: widgets/tools/ZoomTool.cpp:56
-msgid "Zoom out"
-msgstr "Lütter maken"
-
-#: widgets/tools/ZoomTool.cpp:59
-msgid "Zoom in"
-msgstr "Grötter maken"
+#: widgets/tools/EffectsEditorTool.cpp:45
+msgid "Effects"
+msgstr "Effekten"
 
 #: widgets/tools/CanvasEditTool.cpp:89
 msgid "Expanded"
@@ -580,7 +702,9 @@ msgid "Click here to set an image"
 msgstr ""
 
 #: widgets/tools/CanvasEditTool.cpp:341
-msgid "Invalid or unsupported image file!"
+#, fuzzy
+#| msgid "Invalid or unsupported image file!"
+msgid "Invalid or unsupported image file."
 msgstr "Dateiformaat leeg oder nich ünnerstütt"
 
 #: widgets/tools/CanvasEditTool.cpp:436
@@ -615,10 +739,6 @@ msgstr "Pielrecht"
 msgid "Size"
 msgstr "Grött"
 
-#: widgets/tools/CanvasEditTool.cpp:507
-msgid "Height"
-msgstr "Hööchde"
-
 #: widgets/tools/CanvasEditTool.cpp:521
 msgid "Color 1"
 msgstr "Klöör 1"
@@ -631,9 +751,9 @@ msgstr "Klöör 2"
 msgid "Pattern"
 msgstr "Muster"
 
-#: widgets/tools/EffectsEditorTool.cpp:45
-msgid "Effects"
-msgstr "Effekten"
+#: widgets/tools/ToolsDockWidget.cpp:93
+msgid "Tools"
+msgstr ""
 
 #: widgets/tools/ToolsDockWidget.cpp:124
 msgid "Allows to select and move images on canvas"
@@ -718,6 +838,14 @@ msgid ""
 "some new one."
 msgstr ""
 
+#: widgets/tools/ZoomTool.cpp:56
+msgid "Zoom out"
+msgstr "Lütter maken"
+
+#: widgets/tools/ZoomTool.cpp:59
+msgid "Zoom in"
+msgstr "Grötter maken"
+
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
@@ -769,6 +897,15 @@ msgstr ""
 #: rc.cpp:23
 msgid "Embed full-sized images"
 msgstr ""
+
+#~ msgid "Finishing"
+#~ msgstr "Fardig maken"
+
+#~ msgid "Crop item"
+#~ msgstr "Element tosnieden"
+
+#~ msgid "Change text font"
+#~ msgstr "Schriftoort ännern"
 
 #~ msgid "Add effect"
 #~ msgstr "Effekt tofögen"
