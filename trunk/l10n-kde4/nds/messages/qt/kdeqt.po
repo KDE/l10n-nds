@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeqt\n"
 "Report-Msgid-Bugs-To: qt-bugs@trolltech.com\n"
-"POT-Creation-Date: 2012-01-06 04:16+0100\n"
+"POT-Creation-Date: 2012-01-12 04:27+0100\n"
 "PO-Revision-Date: 2011-10-12 20:29+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1569,8 +1569,8 @@ msgctxt "QIODevice"
 msgid "No space left on device"
 msgstr "Keen Platz mehr op de Reedschap na"
 
-#: corelib/io/qiodevice.cpp:1629 corelib/plugin/qpluginloader.cpp:367
-#: corelib/plugin/qlibrary.cpp:1233
+#: corelib/io/qiodevice.cpp:1629 corelib/plugin/qlibrary.cpp:1233
+#: corelib/plugin/qpluginloader.cpp:367
 #: corelib/statemachine/qstatemachine.cpp:1046
 #: network/kernel/qhostinfo_unix.cpp:300 network/kernel/qhostinfo_win.cpp:209
 #: network/kernel/qhostinfo_win.cpp:236
@@ -1578,6 +1578,24 @@ msgstr "Keen Platz mehr op de Reedschap na"
 #: network/socket/qsymbiansocketengine.cpp:1435 network/ssl/qsslerror.cpp:289
 msgid "Unknown error"
 msgstr "Nich begäng Fehler"
+
+#: corelib/io/qprocess.cpp:887 corelib/io/qprocess.cpp:939
+#: corelib/io/qprocess_win.cpp:601 corelib/io/qprocess_win.cpp:651
+msgid "Error reading from process"
+msgstr "Fehler bi't Lesen vun den Perzess"
+
+#: corelib/io/qprocess.cpp:986 corelib/io/qprocess.cpp:1854
+#: corelib/io/qprocess_win.cpp:791
+msgid "Error writing to process"
+msgstr "Fehler bi't Schrieven na den Perzess"
+
+#: corelib/io/qprocess.cpp:1055
+msgid "Process crashed"
+msgstr "Perzess is afstört"
+
+#: corelib/io/qprocess.cpp:2056
+msgid "No program defined"
+msgstr "Keen Programm angeven"
 
 #: corelib/io/qprocess_unix.cpp:401 corelib/io/qprocess_win.cpp:138
 msgid "Could not open input redirection for reading"
@@ -1604,24 +1622,6 @@ msgstr "Perzess-Akschoon hett to lang bruukt"
 #, qt-format
 msgid "Process failed to start: %1"
 msgstr "Perzess lett sik nich starten: %1"
-
-#: corelib/io/qprocess_win.cpp:601 corelib/io/qprocess_win.cpp:651
-#: corelib/io/qprocess.cpp:887 corelib/io/qprocess.cpp:939
-msgid "Error reading from process"
-msgstr "Fehler bi't Lesen vun den Perzess"
-
-#: corelib/io/qprocess_win.cpp:791 corelib/io/qprocess.cpp:986
-#: corelib/io/qprocess.cpp:1854
-msgid "Error writing to process"
-msgstr "Fehler bi't Schrieven na den Perzess"
-
-#: corelib/io/qprocess.cpp:1055
-msgid "Process crashed"
-msgstr "Perzess is afstört"
-
-#: corelib/io/qprocess.cpp:2056
-msgid "No program defined"
-msgstr "Keen Programm angeven"
 
 #: corelib/io/qfile.cpp:736 corelib/io/qfile.cpp:890
 msgid "Destination file exists"
@@ -1851,34 +1851,15 @@ msgstr "\"%1\" is keen ELF-Objekt"
 msgid "'%1' is an invalid ELF object (%2)"
 msgstr "\"%1\" is as ELF-Objekt leeg %2"
 
-#: corelib/plugin/qlibrary_unix.cpp:244 corelib/plugin/qlibrary_win.cpp:87
-#, qt-format
-msgid "Cannot load library %1: %2"
-msgstr "Bibliotheek \"%1\" lett sik nich laden: %2"
-
-#: corelib/plugin/qlibrary_unix.cpp:261 corelib/plugin/qlibrary_win.cpp:109
-#, qt-format
-msgid "Cannot unload library %1: %2"
-msgstr "Bibliotheek \"%1\" lett sik nich afladen: %2"
-
-#: corelib/plugin/qlibrary_unix.cpp:295 corelib/plugin/qlibrary_win.cpp:124
-#, qt-format
-msgid "Cannot resolve symbol \"%1\" in %2: %3"
-msgstr "Symbool \"%1\" binnen \"%2\" lett sik nich oplösen: %3"
-
-#: corelib/plugin/qpluginloader.cpp:254
-msgid "The plugin was not loaded."
-msgstr "Dat Moduul wöör nich laadt."
-
-#: corelib/plugin/qpluginloader.cpp:343 corelib/plugin/qlibrary.cpp:679
-#: corelib/plugin/qlibrary.cpp:825
-msgid "The shared library was not found."
-msgstr "De deelte Bibliotheek lett sik nich finnen."
-
 #: corelib/plugin/qlibrary.cpp:402
 #, qt-format
 msgid "Plugin verification data mismatch in '%1'"
 msgstr "Moduul-Pröövdaten passt in \"%1\" nich"
+
+#: corelib/plugin/qlibrary.cpp:679 corelib/plugin/qlibrary.cpp:825
+#: corelib/plugin/qpluginloader.cpp:343
+msgid "The shared library was not found."
+msgstr "De deelte Bibliotheek lett sik nich finnen."
 
 #: corelib/plugin/qlibrary.cpp:827
 #, qt-format
@@ -1908,6 +1889,25 @@ msgid ""
 msgstr ""
 "Dat Moduul \"%1\" bruukt en nich kompatibel Qt-Bibliotheek (Fehlersöök- un "
 "Utgaav-Bibliotheken laat sik nich mischen)."
+
+#: corelib/plugin/qlibrary_unix.cpp:244 corelib/plugin/qlibrary_win.cpp:87
+#, qt-format
+msgid "Cannot load library %1: %2"
+msgstr "Bibliotheek \"%1\" lett sik nich laden: %2"
+
+#: corelib/plugin/qlibrary_unix.cpp:261 corelib/plugin/qlibrary_win.cpp:109
+#, qt-format
+msgid "Cannot unload library %1: %2"
+msgstr "Bibliotheek \"%1\" lett sik nich afladen: %2"
+
+#: corelib/plugin/qlibrary_unix.cpp:295 corelib/plugin/qlibrary_win.cpp:124
+#, qt-format
+msgid "Cannot resolve symbol \"%1\" in %2: %3"
+msgstr "Symbool \"%1\" binnen \"%2\" lett sik nich oplösen: %3"
+
+#: corelib/plugin/qpluginloader.cpp:254
+msgid "The plugin was not loaded."
+msgstr "Dat Moduul wöör nich laadt."
 
 #: corelib/statemachine/qstatemachine.cpp:1028
 #, qt-format
@@ -2088,6 +2088,49 @@ msgctxt "Debugger::JSAgentWatchData"
 msgid "<undefined>"
 msgstr "<nich fastleggt>"
 
+#: declarative/graphicsitems/qdeclarativeitem.cpp:814
+msgid "LayoutDirection attached property only works with Items"
+msgstr ""
+
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:103
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:206
+msgctxt "QDeclarativeAnimatedImage"
+msgid "Qt was built without support for QMovie"
+msgstr "Qt wöör ahn Ünnerstütten för \"QMovie\" kompileert."
+
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:175
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:258
+msgid "KeyNavigation is only available via attached properties"
+msgstr "Tastenstüern bloots över towiest Egenschappen verföögbor"
+
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:176
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:259
+msgid "Keys is only available via attached properties"
+msgstr "Tasten bloots över towiest Egenschappen verföögbor"
+
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:201
+#, fuzzy
+#| msgid "KeyNavigation is only available via attached properties"
+msgid "LayoutMirroring is only available via attached properties"
+msgstr "Tastenstüern bloots över towiest Egenschappen verföögbor"
+
+#: declarative/graphicsitems/qdeclarativeloader.cpp:407
+msgid "Loader does not support loading non-visual elements."
+msgstr "Lader ünnerstütt dat Laden vun nich-sichtbor Elementen nich."
+
+#: declarative/graphicsitems/qdeclarativetextinput.cpp:962
+#: declarative/graphicsitems/qdeclarativetextinput.cpp:970
+msgid "Could not load cursor delegate"
+msgstr "Blinker-Delegat lett sik nich laden."
+
+#: declarative/graphicsitems/qdeclarativetextinput.cpp:981
+msgid "Could not instantiate cursor delegate"
+msgstr "För Blinker-Delegat lett sik keen Utgaav opstellen."
+
+#: declarative/graphicsitems/qdeclarativevisualitemmodel.cpp:1099
+msgid "Delegate component must be Item type."
+msgstr "Delegat-Komponent mutt Element-Typ wesen."
+
 #: declarative/graphicsitems/qdeclarativeanchors.cpp:198
 msgid "Possible anchor loop detected on fill."
 msgstr "Mööglich Ankerwedderhalen bi't Vullmaken opdeckt"
@@ -2144,49 +2187,6 @@ msgstr ""
 #: declarative/graphicsitems/qdeclarativeanchors.cpp:1149
 msgid "Cannot anchor a vertical edge to a horizontal edge."
 msgstr "Anker vun pielrecht Kant na kimmrecht Kant nich mööglich"
-
-#: declarative/graphicsitems/qdeclarativeitem.cpp:814
-msgid "LayoutDirection attached property only works with Items"
-msgstr ""
-
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:103
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:206
-msgctxt "QDeclarativeAnimatedImage"
-msgid "Qt was built without support for QMovie"
-msgstr "Qt wöör ahn Ünnerstütten för \"QMovie\" kompileert."
-
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:175
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:258
-msgid "KeyNavigation is only available via attached properties"
-msgstr "Tastenstüern bloots över towiest Egenschappen verföögbor"
-
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:176
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:259
-msgid "Keys is only available via attached properties"
-msgstr "Tasten bloots över towiest Egenschappen verföögbor"
-
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:201
-#, fuzzy
-#| msgid "KeyNavigation is only available via attached properties"
-msgid "LayoutMirroring is only available via attached properties"
-msgstr "Tastenstüern bloots över towiest Egenschappen verföögbor"
-
-#: declarative/graphicsitems/qdeclarativeloader.cpp:407
-msgid "Loader does not support loading non-visual elements."
-msgstr "Lader ünnerstütt dat Laden vun nich-sichtbor Elementen nich."
-
-#: declarative/graphicsitems/qdeclarativetextinput.cpp:962
-#: declarative/graphicsitems/qdeclarativetextinput.cpp:970
-msgid "Could not load cursor delegate"
-msgstr "Blinker-Delegat lett sik nich laden."
-
-#: declarative/graphicsitems/qdeclarativetextinput.cpp:981
-msgid "Could not instantiate cursor delegate"
-msgstr "För Blinker-Delegat lett sik keen Utgaav opstellen."
-
-#: declarative/graphicsitems/qdeclarativevisualitemmodel.cpp:1099
-msgid "Delegate component must be Item type."
-msgstr "Delegat-Komponent mutt Element-Typ wesen."
 
 #: declarative/graphicsitems/qdeclarativeflipable.cpp:138
 msgid "front is a write-once property"
@@ -2879,10 +2879,6 @@ msgstr "Naamruum \"%1\" lett sik nich as Typ bruken."
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: declarative/util/qdeclarativebehavior.cpp:127
-msgid "Cannot change the animation assigned to a Behavior."
-msgstr "Na en Bedregen towiest Animeren lett sik nich ännern."
-
 #: declarative/util/qdeclarativeconnections.cpp:217
 msgid "Connections: nested objects not allowed"
 msgstr "Verbinnen: Inbett Objekten nich tolaten"
@@ -2945,83 +2941,6 @@ msgstr "ListElement: Skript lett sik för Egenschapweert nich bruken."
 msgid "ListModel: undefined property '%1'"
 msgstr "ListModel: Egenschap \"%1\" nich fastleggt"
 
-#: declarative/util/qdeclarativeutilmodule.cpp:79
-msgid "Application is an abstract class"
-msgstr "Programm is en afstrakt Klass"
-
-#: declarative/util/qdeclarativeutilmodule.cpp:111
-#: declarative/util/qdeclarativeutilmodule.cpp:113
-#: declarative/util/qdeclarativeutilmodule.cpp:160
-#: declarative/util/qdeclarativeutilmodule.cpp:162
-msgctxt "QDeclarativeXmlListModel"
-msgid "Qt was built without support for xmlpatterns"
-msgstr "Qt wöör ahn Ünnerstütten för \"xmlpatterns\" kompileert."
-
-#: declarative/util/qdeclarativeutilmodule.cpp:123
-#: declarative/util/qdeclarativeutilmodule.cpp:168
-msgid "Animation is an abstract class"
-msgstr "Animeren is en afstrakt Klass"
-
-#: declarative/util/qdeclarativeanimation.cpp:172
-#, qt-format
-msgid "Cannot animate non-existent property \"%1\""
-msgstr "Nich vörhannen Egenschap \"%1\" lett sik nich animeren."
-
-#: declarative/util/qdeclarativeanimation.cpp:175
-#, qt-format
-msgid "Cannot animate read-only property \"%1\""
-msgstr "Bloots leesbor Egenschap \"%1\" lett sik nich animeren."
-
-#: declarative/util/qdeclarativeanimation.cpp:609
-#: declarative/util/qdeclarativeanimation.cpp:1847
-#: declarative/util/qdeclarativeanimation.cpp:2867
-msgid "Cannot set a duration of < 0"
-msgstr "En Duer < 0 lett sik nich fastleggen"
-
-#: declarative/util/qdeclarativeanimation.cpp:2699
-#: declarative/util/qdeclarativestateoperations.cpp:103
-msgid "Unable to preserve appearance under complex transform"
-msgstr "Utsehn lett sik ünner vigeliensch Ümwanneln nich wohren."
-
-#: declarative/util/qdeclarativeanimation.cpp:2710
-#: declarative/util/qdeclarativeanimation.cpp:2717
-#: declarative/util/qdeclarativestateoperations.cpp:114
-#: declarative/util/qdeclarativestateoperations.cpp:121
-msgid "Unable to preserve appearance under non-uniform scale"
-msgstr "Utsehn lett sik ünner nich-eenheitlich Skala nich wohren."
-
-#: declarative/util/qdeclarativeanimation.cpp:2724
-#: declarative/util/qdeclarativestateoperations.cpp:128
-msgid "Unable to preserve appearance under scale of 0"
-msgstr "Utsehn lett sik ünner Skala 0 nich wohren."
-
-#: declarative/util/qdeclarativexmllistmodel.cpp:581
-#, qt-format
-msgid "\"%1\" duplicates a previous role name and will be disabled."
-msgstr "\"%1\" verdubbelt en verleden Rullnaam un warrt utmaakt."
-
-#: declarative/util/qdeclarativexmllistmodel.cpp:826
-msgctxt "QDeclarativeXmlRoleList"
-msgid "An XmlListModel query must start with '/' or \"//\""
-msgstr "En XmlListModel-Anfraag mutt mit  \"/\" oder \"//\" anfangen"
-
-#: declarative/util/qdeclarativexmllistmodel.cpp:1105
-#: declarative/util/qdeclarativexmllistmodel.cpp:1109
-#, qt-format
-msgid "invalid query: \"%1\""
-msgstr "Leeg Anfraag: %1"
-
-#: declarative/util/qdeclarativepropertychanges.cpp:256
-msgid "PropertyChanges does not support creating state-specific objects."
-msgstr ""
-"\"PropertyChanges\" ünnerstütt dat Opstellen vun tostandafhangen Objekten "
-"nich."
-
-#: declarative/util/qdeclarativepropertychanges.cpp:427
-#, qt-format
-msgid "Cannot assign to read-only property \"%1\""
-msgstr "Towiesen na bloots leesbor Egenschap \"%1\" nich mööglich."
-
 #: declarative/util/qdeclarativepixmapcache.cpp:311
 #, qt-format
 msgid "Error decoding: %1: %2"
@@ -3039,6 +2958,87 @@ msgstr "Bild lett sik nich vun Anbeder halen: %1"
 msgid "Cannot open: %1"
 msgstr "\"%1\" lett sik nich opmaken."
 
+#: declarative/util/qdeclarativepropertychanges.cpp:256
+msgid "PropertyChanges does not support creating state-specific objects."
+msgstr ""
+"\"PropertyChanges\" ünnerstütt dat Opstellen vun tostandafhangen Objekten "
+"nich."
+
+#: declarative/util/qdeclarativepropertychanges.cpp:427
+#, qt-format
+msgid "Cannot assign to read-only property \"%1\""
+msgstr "Towiesen na bloots leesbor Egenschap \"%1\" nich mööglich."
+
+#: declarative/util/qdeclarativestateoperations.cpp:103
+#: declarative/util/qdeclarativeanimation.cpp:2699
+msgid "Unable to preserve appearance under complex transform"
+msgstr "Utsehn lett sik ünner vigeliensch Ümwanneln nich wohren."
+
+#: declarative/util/qdeclarativestateoperations.cpp:114
+#: declarative/util/qdeclarativestateoperations.cpp:121
+#: declarative/util/qdeclarativeanimation.cpp:2710
+#: declarative/util/qdeclarativeanimation.cpp:2717
+msgid "Unable to preserve appearance under non-uniform scale"
+msgstr "Utsehn lett sik ünner nich-eenheitlich Skala nich wohren."
+
+#: declarative/util/qdeclarativestateoperations.cpp:128
+#: declarative/util/qdeclarativeanimation.cpp:2724
+msgid "Unable to preserve appearance under scale of 0"
+msgstr "Utsehn lett sik ünner Skala 0 nich wohren."
+
+#: declarative/util/qdeclarativeutilmodule.cpp:79
+msgid "Application is an abstract class"
+msgstr "Programm is en afstrakt Klass"
+
+#: declarative/util/qdeclarativeutilmodule.cpp:111
+#: declarative/util/qdeclarativeutilmodule.cpp:113
+#: declarative/util/qdeclarativeutilmodule.cpp:160
+#: declarative/util/qdeclarativeutilmodule.cpp:162
+msgctxt "QDeclarativeXmlListModel"
+msgid "Qt was built without support for xmlpatterns"
+msgstr "Qt wöör ahn Ünnerstütten för \"xmlpatterns\" kompileert."
+
+#: declarative/util/qdeclarativeutilmodule.cpp:123
+#: declarative/util/qdeclarativeutilmodule.cpp:168
+msgid "Animation is an abstract class"
+msgstr "Animeren is en afstrakt Klass"
+
+#: declarative/util/qdeclarativexmllistmodel.cpp:581
+#, qt-format
+msgid "\"%1\" duplicates a previous role name and will be disabled."
+msgstr "\"%1\" verdubbelt en verleden Rullnaam un warrt utmaakt."
+
+#: declarative/util/qdeclarativexmllistmodel.cpp:826
+msgctxt "QDeclarativeXmlRoleList"
+msgid "An XmlListModel query must start with '/' or \"//\""
+msgstr "En XmlListModel-Anfraag mutt mit  \"/\" oder \"//\" anfangen"
+
+#: declarative/util/qdeclarativexmllistmodel.cpp:1105
+#: declarative/util/qdeclarativexmllistmodel.cpp:1109
+#, qt-format
+msgid "invalid query: \"%1\""
+msgstr "Leeg Anfraag: %1"
+
+#: declarative/util/qdeclarativeanimation.cpp:172
+#, qt-format
+msgid "Cannot animate non-existent property \"%1\""
+msgstr "Nich vörhannen Egenschap \"%1\" lett sik nich animeren."
+
+#: declarative/util/qdeclarativeanimation.cpp:175
+#, qt-format
+msgid "Cannot animate read-only property \"%1\""
+msgstr "Bloots leesbor Egenschap \"%1\" lett sik nich animeren."
+
+#: declarative/util/qdeclarativeanimation.cpp:609
+#: declarative/util/qdeclarativeanimation.cpp:1847
+#: declarative/util/qdeclarativeanimation.cpp:2867
+msgid "Cannot set a duration of < 0"
+msgstr "En Duer < 0 lett sik nich fastleggen"
+
+#: declarative/util/qdeclarativebehavior.cpp:127
+msgid "Cannot change the animation assigned to a Behavior."
+msgstr "Na en Bedregen towiest Animeren lett sik nich ännern."
+
 #: gui/accessible/qaccessibleobject.cpp:374
 msgid "Activate"
 msgstr "Aktiveren"
@@ -3047,17 +3047,14 @@ msgstr "Aktiveren"
 msgid "Activates the program's main window"
 msgstr "Maakt dat Programm sien Hööftfinster aktiv"
 
-#: gui/dialogs/qabstractpagesetupdialog.cpp:68
-#: gui/dialogs/qabstractpagesetupdialog.cpp:80
-msgctxt "QPrintPreviewDialog"
-msgid "Page Setup"
-msgstr "Siet inrichten"
+#: gui/dialogs/qdialog.cpp:524 gui/dialogs/qwizard.cpp:698
+#: gui/kernel/qsoftkeymanager.cpp:70
+msgid "Done"
+msgstr "Fardig"
 
-#: gui/dialogs/qabstractprintdialog.cpp:116
-#: gui/dialogs/qabstractprintdialog.cpp:129
-msgctxt "QPrintDialog"
-msgid "Print"
-msgstr "Drucken"
+#: gui/dialogs/qdialog.cpp:651 gui/kernel/qwhatsthis.cpp:527
+msgid "What's This?"
+msgstr "Wat is dat?"
 
 #: gui/dialogs/qfilesystemmodel.cpp:763 gui/itemviews/qdirmodel.cpp:1334
 #, qt-format
@@ -3159,6 +3156,109 @@ msgstr "Schriefs&ysteem"
 #: gui/dialogs/qinputdialog.cpp:223
 msgid "Enter a value:"
 msgstr "Giff en Weert in:"
+
+#: gui/dialogs/qmessagebox.cpp:139
+msgid "Show Details..."
+msgstr "Enkelheiten wiesen..."
+
+#: gui/dialogs/qmessagebox.cpp:139
+msgid "Hide Details..."
+msgstr "Enkelheiten versteken..."
+
+#: gui/dialogs/qmessagebox.cpp:427 gui/dialogs/qmessagebox.cpp:1272
+msgctxt "QMessageBox"
+msgid "OK"
+msgstr "OK"
+
+#: gui/dialogs/qmessagebox.cpp:1273
+msgctxt "QMessageBox"
+msgid "Help"
+msgstr "Hülp"
+
+#: gui/dialogs/qmessagebox.cpp:1762
+#, qt-format
+msgid "<h3>About Qt</h3><p>This program uses Qt version %1.</p>"
+msgstr "<h3>Över Qt</h3><p>Dit Programm bruukt Qt in de Verschoon %1.</p>"
+
+#: gui/dialogs/qmessagebox.cpp:1767
+#, fuzzy
+#| msgid ""
+#| "<p>Qt is a C++ toolkit for cross-platform application development.</"
+#| "p><p>Qt provides single-source portability across MS&nbsp;Windows, "
+#| "Mac&nbsp;OS&nbsp;X, Linux, and all major commercial Unix variants. Qt is "
+#| "also available for embedded devices as Qt for Embedded Linux and Qt for "
+#| "Windows CE.</p><p>Qt is available under three different licensing options "
+#| "designed to accommodate the needs of our various users.</p><p>Qt licensed "
+#| "under our commercial license agreement is appropriate for development of "
+#| "proprietary/commercial software where you do not want to share any source "
+#| "code with third parties or otherwise cannot comply with the terms of the "
+#| "GNU LGPL version 2.1 or GNU GPL version 3.0.</p><p>Qt licensed under the "
+#| "GNU LGPL version 2.1 is appropriate for the development of Qt "
+#| "applications (proprietary or open source) provided you can comply with "
+#| "the terms and conditions of the GNU LGPL version 2.1.</p><p>Qt licensed "
+#| "under the GNU General Public License version 3.0 is appropriate for the "
+#| "development of Qt applications where you wish to use such applications in "
+#| "combination with software subject to the terms of the GNU GPL version 3.0 "
+#| "or where you are otherwise willing to comply with the terms of the GNU "
+#| "GPL version 3.0.</p><p>Please see <a href=\"http://qt.nokia.com/products/"
+#| "licensing\">qt.nokia.com/products/licensing</a> for an overview of Qt "
+#| "licensing.</p><p>Copyright (C) 2011 Nokia Corporation and/or its "
+#| "subsidiary(-ies).</p><p>Qt is a Nokia product. See <a href=\"http://qt."
+#| "nokia.com/\">qt.nokia.com</a> for more information.</p>"
+msgid ""
+"<p>Qt is a C++ toolkit for cross-platform application development.</p><p>Qt "
+"provides single-source portability across MS&nbsp;Windows, Mac&nbsp;OS&nbsp;"
+"X, Linux, and all major commercial Unix variants. Qt is also available for "
+"embedded devices as Qt for Embedded Linux and Qt for Windows CE.</p><p>Qt is "
+"available under three different licensing options designed to accommodate "
+"the needs of our various users.</p><p>Qt licensed under our commercial "
+"license agreement is appropriate for development of proprietary/commercial "
+"software where you do not want to share any source code with third parties "
+"or otherwise cannot comply with the terms of the GNU LGPL version 2.1 or GNU "
+"GPL version 3.0.</p><p>Qt licensed under the GNU LGPL version 2.1 is "
+"appropriate for the development of Qt applications (proprietary or open "
+"source) provided you can comply with the terms and conditions of the GNU "
+"LGPL version 2.1.</p><p>Qt licensed under the GNU General Public License "
+"version 3.0 is appropriate for the development of Qt applications where you "
+"wish to use such applications in combination with software subject to the "
+"terms of the GNU GPL version 3.0 or where you are otherwise willing to "
+"comply with the terms of the GNU GPL version 3.0.</p><p>Please see <a href="
+"\"http://qt.nokia.com/products/licensing\">qt.nokia.com/products/licensing</"
+"a> for an overview of Qt licensing.</p><p>Copyright (C) 2012 Nokia "
+"Corporation and/or its subsidiary(-ies).</p><p>Qt is a Nokia product. See <a "
+"href=\"http://qt.nokia.com/\">qt.nokia.com</a> for more information.</p>"
+msgstr ""
+"<p>Qt is en C++-Warktüüchsett för't Utwickeln vun Programmen op verscheden "
+"Bedriefsystemen.</p><p>Mit Qt lett sik een Born na MS&nbsp;Windows, Mac&nbsp;"
+"OS&nbsp;X, Linux un all grötter warflich Unix-Sorten porteren. Qt gifft dat "
+"ok för inbett Reedschappen as \"Qt for embedded Linux\" un \"Qt for Windows "
+"CE\".</p><p>Qt gifft dat mit dree verscheden Verlööfnissen, dor is för "
+"elkeen een bi.</p><p>Uns warflich Verlööfnis passt för't Utwickeln vun egen/"
+"warflich Software, bi de Du keen Bornkode apenmaken oder mit anner Lüüd "
+"delen wullt oder Di op anner Oort nich to de Bedingen vun de GNU LGPL "
+"Verschoon 2.1 oder de GNU GPL Verschoon 3.0 hollen kannst oder wullt.</"
+"p><p>Qt mit GNU ehr LGPL-2.1-Verlööfnis passt, wenn Du (egen oder Apenborn-) "
+"Qt-Programmen utwickeln un Di to de Bedingen vun de GNU-LGPL-Verlööfnis in "
+"de Verschoon 2.1 hollen kannst.</p><p>Qt mit GNU ehr Allmeen apen Verlööfnis "
+"(GPL 3.0) passt för't Utwickeln vun Qt-Programmen, de Du mit Programmen "
+"bruken wullt, de sülven ünner de GPL-3.0-Verlööfnis staht, oder wenn Du Di "
+"so un so to de Bedingen vun de GNU GPL in de Verschoon 3.0 hollen wullt.</"
+"p><p>Ünner <a href=\"http://qt.nokia.com/products/licensing\">qt.nokia.com/"
+"products/licensing</a> gifft dat en Översicht to de Qt-Verlööfnissen.</"
+"p><p>Copyright © 2011 Nokia Corporation un/oder ehr Dochtersellschappen</"
+"p><p>Qt is en Produkt vun Nokia. Kiek Di man <a href=\"http://qt.nokia.com/"
+"\">qt.nokia.com</a> an, wenn du mehr weten wullt.</p>"
+
+#: gui/dialogs/qmessagebox.cpp:1797
+msgid "About Qt"
+msgstr "Vertell wat över Qt"
+
+#: gui/dialogs/qmessagebox.cpp:1937 gui/dialogs/qmessagebox.cpp:2383
+#: gui/dialogs/qprintdialog_win.cpp:272 gui/kernel/qsoftkeymanager.cpp:64
+#: qt3support/dialogs/q3tabdialog.cpp:190
+#: qt3support/dialogs/q3tabdialog.cpp:1014
+msgid "OK"
+msgstr "OK"
 
 #: gui/dialogs/qpagesetupdialog_unix.cpp:72
 msgid "A0"
@@ -3300,6 +3400,141 @@ msgstr "Toll (2,54cm)"
 msgid "Points (pt)"
 msgstr "Pünkt (pt)"
 
+#: gui/dialogs/qprintdialog_unix.cpp:396 gui/dialogs/qprintdialog_unix.cpp:464
+msgid "&Options >>"
+msgstr "&Optschonen >>"
+
+#: gui/dialogs/qprintdialog_unix.cpp:401
+msgid "&Print"
+msgstr "&Drucken"
+
+#: gui/dialogs/qprintdialog_unix.cpp:468
+msgid "&Options <<"
+msgstr "&Optschonen <<"
+
+#: gui/dialogs/qprintdialog_unix.cpp:728
+msgid "Print to File (PDF)"
+msgstr "As Datei utgeven (PDF)"
+
+#: gui/dialogs/qprintdialog_unix.cpp:729
+msgid "Print to File (Postscript)"
+msgstr "As Datei utgeven (Postscript)"
+
+#: gui/dialogs/qprintdialog_unix.cpp:776
+msgid "Local file"
+msgstr "Lokaal Datei"
+
+#: gui/dialogs/qprintdialog_unix.cpp:777
+#, qt-format
+msgid "Write %1 file"
+msgstr "%1-Datei schrieven"
+
+#: gui/dialogs/qprintdialog_unix.cpp:848
+msgid "Print To File ..."
+msgstr "As Datei utgeven..."
+
+#: gui/dialogs/qprintdialog_unix.cpp:926
+#, qt-format
+msgid ""
+"%1 is a directory.\n"
+"Please choose a different file name."
+msgstr ""
+"%1 is en Orner.\n"
+"Söök bitte en anner Dateinaam ut."
+
+#: gui/dialogs/qprintdialog_unix.cpp:930
+#, qt-format
+msgid ""
+"File %1 is not writable.\n"
+"Please choose a different file name."
+msgstr ""
+"De Datei \"%1\" lett sik nich schrieven.\n"
+"Söök bitte en anner Dateinaam ut."
+
+#: gui/dialogs/qprintdialog_unix.cpp:934
+#, qt-format
+msgid ""
+"%1 already exists.\n"
+"Do you want to overwrite it?"
+msgstr ""
+"\"%1\" gifft dat al.\n"
+"Wullt Du dat överschrieven?"
+
+#: gui/dialogs/qprintdialog_unix.cpp:1238
+msgctxt "QPPDOptionsModel"
+msgid "Name"
+msgstr "Naam"
+
+#: gui/dialogs/qprintdialog_unix.cpp:1240
+msgctxt "QPPDOptionsModel"
+msgid "Value"
+msgstr "Weert"
+
+#: gui/dialogs/qprintdialog_win.cpp:270
+msgid "Print"
+msgstr "Drucken"
+
+#: gui/dialogs/qprintdialog_win.cpp:271
+msgid "The 'From' value cannot be greater than the 'To' value."
+msgstr "De \"Vun\"-Weert mutt nich grötter wesen as de \"Bet\"-Weert."
+
+#: gui/dialogs/qprogressdialog.cpp:203 gui/dialogs/qwizard.cpp:700
+#: gui/kernel/qsoftkeymanager.cpp:76
+#: qt3support/dialogs/q3progressdialog.cpp:224
+#: qt3support/dialogs/q3progressdialog.cpp:285
+#: qt3support/dialogs/q3tabdialog.cpp:786
+msgid "Cancel"
+msgstr "Afbreken"
+
+#: gui/dialogs/qwizard.cpp:688
+msgid "Go Back"
+msgstr "Torüch gahn"
+
+#: gui/dialogs/qwizard.cpp:688 qt3support/dialogs/q3wizard.cpp:178
+msgid "< &Back"
+msgstr "< &Torüch"
+
+#: gui/dialogs/qwizard.cpp:691 scripttools/debugging/qscriptdebugger.cpp:1694
+msgid "Continue"
+msgstr "Wiedermaken"
+
+#: gui/dialogs/qwizard.cpp:694
+msgid "&Next"
+msgstr "&Nakamen"
+
+#: gui/dialogs/qwizard.cpp:694 qt3support/dialogs/q3wizard.cpp:179
+msgid "&Next >"
+msgstr "&Nakamen"
+
+#: gui/dialogs/qwizard.cpp:696
+msgid "Commit"
+msgstr "Inspelen"
+
+#: gui/dialogs/qwizard.cpp:698 qt3support/dialogs/q3wizard.cpp:180
+msgid "&Finish"
+msgstr "&Fardig maken"
+
+#: gui/dialogs/qwizard.cpp:702 gui/widgets/qmdisubwindow.cpp:355
+#: qt3support/dialogs/q3tabdialog.cpp:691
+msgid "Help"
+msgstr "Hülp"
+
+#: gui/dialogs/qwizard.cpp:702 qt3support/dialogs/q3wizard.cpp:181
+msgid "&Help"
+msgstr "&Hülp"
+
+#: gui/dialogs/qabstractpagesetupdialog.cpp:68
+#: gui/dialogs/qabstractpagesetupdialog.cpp:80
+msgctxt "QPrintPreviewDialog"
+msgid "Page Setup"
+msgstr "Siet inrichten"
+
+#: gui/dialogs/qabstractprintdialog.cpp:116
+#: gui/dialogs/qabstractprintdialog.cpp:129
+msgctxt "QPrintDialog"
+msgid "Print"
+msgstr "Drucken"
+
 #: gui/dialogs/qprintdialog_qws.cpp:148
 msgid "File exists"
 msgstr "Gifft Datei al"
@@ -3436,91 +3671,6 @@ msgstr "Köör drucken"
 msgid "Print current page"
 msgstr "Aktuell Rebeet drucken"
 
-#: gui/dialogs/qprintdialog_unix.cpp:396 gui/dialogs/qprintdialog_unix.cpp:464
-msgid "&Options >>"
-msgstr "&Optschonen >>"
-
-#: gui/dialogs/qprintdialog_unix.cpp:401
-msgid "&Print"
-msgstr "&Drucken"
-
-#: gui/dialogs/qprintdialog_unix.cpp:468
-msgid "&Options <<"
-msgstr "&Optschonen <<"
-
-#: gui/dialogs/qprintdialog_unix.cpp:728
-msgid "Print to File (PDF)"
-msgstr "As Datei utgeven (PDF)"
-
-#: gui/dialogs/qprintdialog_unix.cpp:729
-msgid "Print to File (Postscript)"
-msgstr "As Datei utgeven (Postscript)"
-
-#: gui/dialogs/qprintdialog_unix.cpp:776
-msgid "Local file"
-msgstr "Lokaal Datei"
-
-#: gui/dialogs/qprintdialog_unix.cpp:777
-#, qt-format
-msgid "Write %1 file"
-msgstr "%1-Datei schrieven"
-
-#: gui/dialogs/qprintdialog_unix.cpp:848
-msgid "Print To File ..."
-msgstr "As Datei utgeven..."
-
-#: gui/dialogs/qprintdialog_unix.cpp:926
-#, qt-format
-msgid ""
-"%1 is a directory.\n"
-"Please choose a different file name."
-msgstr ""
-"%1 is en Orner.\n"
-"Söök bitte en anner Dateinaam ut."
-
-#: gui/dialogs/qprintdialog_unix.cpp:930
-#, qt-format
-msgid ""
-"File %1 is not writable.\n"
-"Please choose a different file name."
-msgstr ""
-"De Datei \"%1\" lett sik nich schrieven.\n"
-"Söök bitte en anner Dateinaam ut."
-
-#: gui/dialogs/qprintdialog_unix.cpp:934
-#, qt-format
-msgid ""
-"%1 already exists.\n"
-"Do you want to overwrite it?"
-msgstr ""
-"\"%1\" gifft dat al.\n"
-"Wullt Du dat överschrieven?"
-
-#: gui/dialogs/qprintdialog_unix.cpp:1238
-msgctxt "QPPDOptionsModel"
-msgid "Name"
-msgstr "Naam"
-
-#: gui/dialogs/qprintdialog_unix.cpp:1240
-msgctxt "QPPDOptionsModel"
-msgid "Value"
-msgstr "Weert"
-
-#: gui/dialogs/qprintdialog_win.cpp:270
-msgid "Print"
-msgstr "Drucken"
-
-#: gui/dialogs/qprintdialog_win.cpp:271
-msgid "The 'From' value cannot be greater than the 'To' value."
-msgstr "De \"Vun\"-Weert mutt nich grötter wesen as de \"Bet\"-Weert."
-
-#: gui/dialogs/qprintdialog_win.cpp:272 gui/dialogs/qmessagebox.cpp:1937
-#: gui/dialogs/qmessagebox.cpp:2383 gui/kernel/qsoftkeymanager.cpp:64
-#: qt3support/dialogs/q3tabdialog.cpp:190
-#: qt3support/dialogs/q3tabdialog.cpp:1014
-msgid "OK"
-msgstr "OK"
-
 #: gui/dialogs/qprintpreviewdialog.cpp:249
 #, qt-format
 msgid "%1%"
@@ -3621,135 +3771,9 @@ msgctxt "QPrintPreviewDialog"
 msgid "Export to PostScript"
 msgstr "As PostScript exporteren"
 
-#: gui/dialogs/qprogressdialog.cpp:203 gui/dialogs/qwizard.cpp:700
-#: gui/kernel/qsoftkeymanager.cpp:76
-#: qt3support/dialogs/q3progressdialog.cpp:224
-#: qt3support/dialogs/q3progressdialog.cpp:285
-#: qt3support/dialogs/q3tabdialog.cpp:786
-msgid "Cancel"
-msgstr "Afbreken"
-
 #: gui/dialogs/qsidebar.cpp:442
 msgid "Remove"
 msgstr "Wegmaken"
-
-#: gui/dialogs/qwizard.cpp:688
-msgid "Go Back"
-msgstr "Torüch gahn"
-
-#: gui/dialogs/qwizard.cpp:688 qt3support/dialogs/q3wizard.cpp:178
-msgid "< &Back"
-msgstr "< &Torüch"
-
-#: gui/dialogs/qwizard.cpp:691 scripttools/debugging/qscriptdebugger.cpp:1694
-msgid "Continue"
-msgstr "Wiedermaken"
-
-#: gui/dialogs/qwizard.cpp:694
-msgid "&Next"
-msgstr "&Nakamen"
-
-#: gui/dialogs/qwizard.cpp:694 qt3support/dialogs/q3wizard.cpp:179
-msgid "&Next >"
-msgstr "&Nakamen"
-
-#: gui/dialogs/qwizard.cpp:696
-msgid "Commit"
-msgstr "Inspelen"
-
-#: gui/dialogs/qwizard.cpp:698 gui/dialogs/qdialog.cpp:524
-#: gui/kernel/qsoftkeymanager.cpp:70
-msgid "Done"
-msgstr "Fardig"
-
-#: gui/dialogs/qwizard.cpp:698 qt3support/dialogs/q3wizard.cpp:180
-msgid "&Finish"
-msgstr "&Fardig maken"
-
-#: gui/dialogs/qwizard.cpp:702 gui/widgets/qmdisubwindow.cpp:355
-#: qt3support/dialogs/q3tabdialog.cpp:691
-msgid "Help"
-msgstr "Hülp"
-
-#: gui/dialogs/qwizard.cpp:702 qt3support/dialogs/q3wizard.cpp:181
-msgid "&Help"
-msgstr "&Hülp"
-
-#: gui/dialogs/qdialog.cpp:651 gui/kernel/qwhatsthis.cpp:527
-msgid "What's This?"
-msgstr "Wat is dat?"
-
-#: gui/dialogs/qmessagebox.cpp:139
-msgid "Show Details..."
-msgstr "Enkelheiten wiesen..."
-
-#: gui/dialogs/qmessagebox.cpp:139
-msgid "Hide Details..."
-msgstr "Enkelheiten versteken..."
-
-#: gui/dialogs/qmessagebox.cpp:427 gui/dialogs/qmessagebox.cpp:1272
-msgctxt "QMessageBox"
-msgid "OK"
-msgstr "OK"
-
-#: gui/dialogs/qmessagebox.cpp:1273
-msgctxt "QMessageBox"
-msgid "Help"
-msgstr "Hülp"
-
-#: gui/dialogs/qmessagebox.cpp:1762
-#, qt-format
-msgid "<h3>About Qt</h3><p>This program uses Qt version %1.</p>"
-msgstr "<h3>Över Qt</h3><p>Dit Programm bruukt Qt in de Verschoon %1.</p>"
-
-#: gui/dialogs/qmessagebox.cpp:1767
-msgid ""
-"<p>Qt is a C++ toolkit for cross-platform application development.</p><p>Qt "
-"provides single-source portability across MS&nbsp;Windows, Mac&nbsp;OS&nbsp;"
-"X, Linux, and all major commercial Unix variants. Qt is also available for "
-"embedded devices as Qt for Embedded Linux and Qt for Windows CE.</p><p>Qt is "
-"available under three different licensing options designed to accommodate "
-"the needs of our various users.</p><p>Qt licensed under our commercial "
-"license agreement is appropriate for development of proprietary/commercial "
-"software where you do not want to share any source code with third parties "
-"or otherwise cannot comply with the terms of the GNU LGPL version 2.1 or GNU "
-"GPL version 3.0.</p><p>Qt licensed under the GNU LGPL version 2.1 is "
-"appropriate for the development of Qt applications (proprietary or open "
-"source) provided you can comply with the terms and conditions of the GNU "
-"LGPL version 2.1.</p><p>Qt licensed under the GNU General Public License "
-"version 3.0 is appropriate for the development of Qt applications where you "
-"wish to use such applications in combination with software subject to the "
-"terms of the GNU GPL version 3.0 or where you are otherwise willing to "
-"comply with the terms of the GNU GPL version 3.0.</p><p>Please see <a href="
-"\"http://qt.nokia.com/products/licensing\">qt.nokia.com/products/licensing</"
-"a> for an overview of Qt licensing.</p><p>Copyright (C) 2011 Nokia "
-"Corporation and/or its subsidiary(-ies).</p><p>Qt is a Nokia product. See <a "
-"href=\"http://qt.nokia.com/\">qt.nokia.com</a> for more information.</p>"
-msgstr ""
-"<p>Qt is en C++-Warktüüchsett för't Utwickeln vun Programmen op verscheden "
-"Bedriefsystemen.</p><p>Mit Qt lett sik een Born na MS&nbsp;Windows, Mac&nbsp;"
-"OS&nbsp;X, Linux un all grötter warflich Unix-Sorten porteren. Qt gifft dat "
-"ok för inbett Reedschappen as \"Qt for embedded Linux\" un \"Qt for Windows "
-"CE\".</p><p>Qt gifft dat mit dree verscheden Verlööfnissen, dor is för "
-"elkeen een bi.</p><p>Uns warflich Verlööfnis passt för't Utwickeln vun egen/"
-"warflich Software, bi de Du keen Bornkode apenmaken oder mit anner Lüüd "
-"delen wullt oder Di op anner Oort nich to de Bedingen vun de GNU LGPL "
-"Verschoon 2.1 oder de GNU GPL Verschoon 3.0 hollen kannst oder wullt.</"
-"p><p>Qt mit GNU ehr LGPL-2.1-Verlööfnis passt, wenn Du (egen oder Apenborn-) "
-"Qt-Programmen utwickeln un Di to de Bedingen vun de GNU-LGPL-Verlööfnis in "
-"de Verschoon 2.1 hollen kannst.</p><p>Qt mit GNU ehr Allmeen apen Verlööfnis "
-"(GPL 3.0) passt för't Utwickeln vun Qt-Programmen, de Du mit Programmen "
-"bruken wullt, de sülven ünner de GPL-3.0-Verlööfnis staht, oder wenn Du Di "
-"so un so to de Bedingen vun de GNU GPL in de Verschoon 3.0 hollen wullt.</"
-"p><p>Ünner <a href=\"http://qt.nokia.com/products/licensing\">qt.nokia.com/"
-"products/licensing</a> gifft dat en Översicht to de Qt-Verlööfnissen.</"
-"p><p>Copyright © 2011 Nokia Corporation un/oder ehr Dochtersellschappen</"
-"p><p>Qt is en Produkt vun Nokia. Kiek Di man <a href=\"http://qt.nokia.com/"
-"\">qt.nokia.com</a> an, wenn du mehr weten wullt.</p>"
-
-#: gui/dialogs/qmessagebox.cpp:1797
-msgid "About Qt"
-msgstr "Vertell wat över Qt"
 
 #: gui/inputmethod/qinputcontextfactory.cpp:301
 msgid "XIM"
@@ -4960,6 +4984,11 @@ msgstr "+"
 msgid "F%1"
 msgstr "F%1"
 
+#: gui/kernel/qsoftkeymanager.cpp:67
+#: plugins/qmltooling/qmldbg_inspector/editor/qmltoolbar.cpp:67
+msgid "Select"
+msgstr "Utsöken"
+
 #: gui/kernel/qsoftkeymanager_s60.cpp:373
 msgid "Exit"
 msgstr "Verlaten"
@@ -4967,11 +4996,6 @@ msgstr "Verlaten"
 #: gui/kernel/qwidget.cpp:6050
 msgid "*"
 msgstr "*"
-
-#: gui/kernel/qsoftkeymanager.cpp:67
-#: plugins/qmltooling/qmldbg_inspector/editor/qmltoolbar.cpp:67
-msgid "Select"
-msgstr "Utsöken"
 
 #: gui/painting/qprinterinfo_unix.cpp:135
 msgid "locally connected"
@@ -5514,9 +5538,9 @@ msgstr "Wedderherstellen"
 #: gui/widgets/qmdisubwindow.cpp:352 gui/widgets/qworkspace.cpp:113
 #: plugins/accessible/compat/q3complexwidgets.cpp:256
 #: plugins/accessible/widgets/complexwidgets.cpp:1847
-#: plugins/accessible/widgets/qaccessiblewidgets.cpp:1249
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:157
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:382
+#: plugins/accessible/widgets/qaccessiblewidgets.cpp:1249
 #: scripttools/debugging/qscriptbreakpointswidget.cpp:81
 #: scripttools/debugging/qscriptdebuggercodefinderwidget.cpp:141
 msgid "Close"
@@ -6231,14 +6255,20 @@ msgstr "Rechtsrullen"
 
 #: plugins/accessible/widgets/complexwidgets.cpp:1781
 #: plugins/accessible/widgets/complexwidgets.cpp:1847
-#: plugins/accessible/widgets/simplewidgets.cpp:117
-#: plugins/accessible/widgets/simplewidgets.cpp:452
-#: plugins/accessible/widgets/simplewidgets.cpp:460
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:158
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:383
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:437
+#: plugins/accessible/widgets/simplewidgets.cpp:117
+#: plugins/accessible/widgets/simplewidgets.cpp:452
+#: plugins/accessible/widgets/simplewidgets.cpp:460
 msgid "Open"
 msgstr "Opmaken"
+
+#: plugins/accessible/widgets/qaccessiblemenu.cpp:160
+#: plugins/accessible/widgets/qaccessiblemenu.cpp:385
+#: plugins/accessible/widgets/qaccessiblemenu.cpp:438
+msgid "Execute"
+msgstr "Utföhren"
 
 #: plugins/accessible/widgets/qaccessiblewidgets.cpp:1251
 msgid "Dock"
@@ -6305,12 +6335,6 @@ msgstr "An-/Utmaken"
 msgid "Press"
 msgstr "Drücken"
 
-#: plugins/accessible/widgets/qaccessiblemenu.cpp:160
-#: plugins/accessible/widgets/qaccessiblemenu.cpp:385
-#: plugins/accessible/widgets/qaccessiblemenu.cpp:438
-msgid "Execute"
-msgstr "Utföhren"
-
 #: plugins/bearer/icd/qnetworksession_impl.cpp:1030
 msgid "Roaming error"
 msgstr "Dörledden-Fehler"
@@ -6320,8 +6344,8 @@ msgid "Session aborted by user or system"
 msgstr "Törn vun Bruker oder Systeem afbraken"
 
 #: plugins/bearer/icd/qnetworksession_impl.cpp:1036
-#: plugins/bearer/qnetworksession_impl.cpp:260
 #: plugins/bearer/symbian/qnetworksession_impl.cpp:307
+#: plugins/bearer/qnetworksession_impl.cpp:260
 msgid "The specified configuration cannot be used."
 msgstr "De angeven Instellen laat sik nich bruken."
 
@@ -6329,23 +6353,23 @@ msgstr "De angeven Instellen laat sik nich bruken."
 msgid "Unidentified Error"
 msgstr "Nich begäng Fehler"
 
-#: plugins/bearer/qnetworksession_impl.cpp:254
 #: plugins/bearer/symbian/qnetworksession_impl.cpp:301
+#: plugins/bearer/qnetworksession_impl.cpp:254
 msgid "Unknown session error."
 msgstr "Nich begäng Törnfehler"
 
-#: plugins/bearer/qnetworksession_impl.cpp:256
 #: plugins/bearer/symbian/qnetworksession_impl.cpp:303
+#: plugins/bearer/qnetworksession_impl.cpp:256
 msgid "The session was aborted by the user or system."
 msgstr "De Törn wöör vun Bruker oder Systeem afbraken."
 
-#: plugins/bearer/qnetworksession_impl.cpp:258
 #: plugins/bearer/symbian/qnetworksession_impl.cpp:305
+#: plugins/bearer/qnetworksession_impl.cpp:258
 msgid "The requested operation is not supported by the system."
 msgstr "Dat Systeem ünnerstütt de anfraagte Akschoon nich."
 
-#: plugins/bearer/qnetworksession_impl.cpp:262
 #: plugins/bearer/symbian/qnetworksession_impl.cpp:309
+#: plugins/bearer/qnetworksession_impl.cpp:262
 msgid "Roaming was aborted or is not possible."
 msgstr "Dörledden wöör afbraken oder is nich mööglich"
 
@@ -6403,6 +6427,10 @@ msgstr ""
 msgid "Could not reset to read data"
 msgstr "Felddaten laat sik nich halen"
 
+#: plugins/inputmethods/imsw-multi/qmultiinputcontext.cpp:88
+msgid "Select IM"
+msgstr "IM utsöken"
+
 #: plugins/inputmethods/imsw-multi/qmultiinputcontextplugin.cpp:95
 msgid "Multiple input method switcher"
 msgstr "Ingaavmetood-Wesseln"
@@ -6411,10 +6439,6 @@ msgstr "Ingaavmetood-Wesseln"
 msgid ""
 "Multiple input method switcher that uses the context menu of the text widgets"
 msgstr "Ingaavmetood-Wesseln, de dat Rechtsklickmenü vun de Textfeller bruukt"
-
-#: plugins/inputmethods/imsw-multi/qmultiinputcontext.cpp:88
-msgid "Select IM"
-msgstr "IM utsöken"
 
 #: plugins/qmltooling/qmldbg_inspector/editor/liveselectiontool.cpp:143
 msgid "Items"
@@ -7487,6 +7511,23 @@ msgid ""
 "character."
 msgstr "De Kodepunkt %1, de in %2 mit Koderen %3 opdukt, is en leeg XML-Teken."
 
+#: xmlpatterns/api/qiodevicedelegate.cpp:84
+msgid "Network timeout."
+msgstr "Nettwark-Tietafloop"
+
+#: xmlpatterns/api/qxmlserializer.cpp:321
+#, qt-format
+msgid ""
+"Element %1 can't be serialized because it appears outside the document "
+"element."
+msgstr "Element %1 lett sik nich inregen, dat steiht buten dat Dokmentelement."
+
+#: xmlpatterns/api/qxmlserializer.cpp:381
+#, qt-format
+msgid "Attribute %1 can't be serialized because it appears at the top level."
+msgstr ""
+"Attribut \"%1\" lett sik nich inregen, dat steiht op de böverste Stoop."
+
 #: xmlpatterns/api/qcoloringmessagehandler.cpp:87
 #, qt-format
 msgid "Warning in %1, at line %2, column %3: %4"
@@ -7510,76 +7551,6 @@ msgstr "Fehler %1 in %2, bi Reeg %3, Striep %4: %5"
 #, qt-format
 msgid "Error %1 in %2: %3"
 msgstr "Fehler %1 in %2: %3"
-
-#: xmlpatterns/api/qiodevicedelegate.cpp:84
-msgid "Network timeout."
-msgstr "Nettwark-Tietafloop"
-
-#: xmlpatterns/api/qxmlserializer.cpp:321
-#, qt-format
-msgid ""
-"Element %1 can't be serialized because it appears outside the document "
-"element."
-msgstr "Element %1 lett sik nich inregen, dat steiht buten dat Dokmentelement."
-
-#: xmlpatterns/api/qxmlserializer.cpp:381
-#, qt-format
-msgid "Attribute %1 can't be serialized because it appears at the top level."
-msgstr ""
-"Attribut \"%1\" lett sik nich inregen, dat steiht op de böverste Stoop."
-
-#: xmlpatterns/data/qabstractdatetime.cpp:80
-#, qt-format
-msgid "Year %1 is invalid because it begins with %2."
-msgstr "Dat Johr %1 is leeg, dat fangt mit %2 an."
-
-#: xmlpatterns/data/qabstractdatetime.cpp:99
-#, qt-format
-msgid "Day %1 is outside the range %2..%3."
-msgstr "De Dag %1 is buten dat Rebeet %2...%3"
-
-#: xmlpatterns/data/qabstractdatetime.cpp:106
-#, qt-format
-msgid "Month %1 is outside the range %2..%3."
-msgstr "De Maand %1 is buten dat Rebeet %2...%3"
-
-#: xmlpatterns/data/qabstractdatetime.cpp:117
-#, qt-format
-msgid "Overflow: Can't represent date %1."
-msgstr "Överloop: Datum %1 lett sik nich weddergeven."
-
-#: xmlpatterns/data/qabstractdatetime.cpp:125
-#, qt-format
-msgid "Day %1 is invalid for month %2."
-msgstr "De Dag %1 gellt nich binnen Maand %2"
-
-#: xmlpatterns/data/qabstractdatetime.cpp:174
-#, qt-format
-msgid ""
-"Time 24:%1:%2.%3 is invalid. Hour is 24, but minutes, seconds, and "
-"milliseconds are not all 0; "
-msgstr ""
-"Tiet 24: %1:%2.%3 is leeg. De Stünn is 24, man Minuten, Sekunnen un "
-"Millisekunnen sünd nich all 0, "
-
-#: xmlpatterns/data/qabstractdatetime.cpp:187
-#, qt-format
-msgid "Time %1:%2:%3.%4 is invalid."
-msgstr "Tiet %1:%2:%3.%4 is leeg."
-
-#: xmlpatterns/data/qabstractdatetime.cpp:302
-msgid "Overflow: Date can't be represented."
-msgstr "Överloop: Daten laat sik nich weddergeven."
-
-#: xmlpatterns/data/qabstractduration.cpp:99
-#: xmlpatterns/data/qabstractduration.cpp:114
-msgid "At least one component must be present."
-msgstr "Tominnst een Deel mutt dor wesen."
-
-#: xmlpatterns/data/qabstractduration.cpp:107
-#, qt-format
-msgid "At least one time component must appear after the %1-delimiter."
-msgstr "Tominnst een Tietdeel mutt achter den Trenner \"%1\" stahn"
 
 #: xmlpatterns/data/qabstractfloatmathematician.cpp:64
 #, qt-format
@@ -7663,6 +7634,59 @@ msgstr ""
 #, qt-format
 msgid "%1 is not valid as a value of type %2."
 msgstr "%1 gellt nich as en Weert vun den Typ \"%2\""
+
+#: xmlpatterns/data/qabstractdatetime.cpp:80
+#, qt-format
+msgid "Year %1 is invalid because it begins with %2."
+msgstr "Dat Johr %1 is leeg, dat fangt mit %2 an."
+
+#: xmlpatterns/data/qabstractdatetime.cpp:99
+#, qt-format
+msgid "Day %1 is outside the range %2..%3."
+msgstr "De Dag %1 is buten dat Rebeet %2...%3"
+
+#: xmlpatterns/data/qabstractdatetime.cpp:106
+#, qt-format
+msgid "Month %1 is outside the range %2..%3."
+msgstr "De Maand %1 is buten dat Rebeet %2...%3"
+
+#: xmlpatterns/data/qabstractdatetime.cpp:117
+#, qt-format
+msgid "Overflow: Can't represent date %1."
+msgstr "Överloop: Datum %1 lett sik nich weddergeven."
+
+#: xmlpatterns/data/qabstractdatetime.cpp:125
+#, qt-format
+msgid "Day %1 is invalid for month %2."
+msgstr "De Dag %1 gellt nich binnen Maand %2"
+
+#: xmlpatterns/data/qabstractdatetime.cpp:174
+#, qt-format
+msgid ""
+"Time 24:%1:%2.%3 is invalid. Hour is 24, but minutes, seconds, and "
+"milliseconds are not all 0; "
+msgstr ""
+"Tiet 24: %1:%2.%3 is leeg. De Stünn is 24, man Minuten, Sekunnen un "
+"Millisekunnen sünd nich all 0, "
+
+#: xmlpatterns/data/qabstractdatetime.cpp:187
+#, qt-format
+msgid "Time %1:%2:%3.%4 is invalid."
+msgstr "Tiet %1:%2:%3.%4 is leeg."
+
+#: xmlpatterns/data/qabstractdatetime.cpp:302
+msgid "Overflow: Date can't be represented."
+msgstr "Överloop: Daten laat sik nich weddergeven."
+
+#: xmlpatterns/data/qabstractduration.cpp:99
+#: xmlpatterns/data/qabstractduration.cpp:114
+msgid "At least one component must be present."
+msgstr "Tominnst een Deel mutt dor wesen."
+
+#: xmlpatterns/data/qabstractduration.cpp:107
+#, qt-format
+msgid "At least one time component must appear after the %1-delimiter."
+msgstr "Tominnst een Tietdeel mutt achter den Trenner \"%1\" stahn"
 
 #: xmlpatterns/expr/qapplytemplate.cpp:119
 msgid "Ambiguous rule match."
@@ -7852,38 +7876,6 @@ msgstr "De Parameter \"%1\" wöör övergeven, man dat gifft keen tohören %2."
 msgid "The parameter %1 is required, but no corresponding %2 is supplied."
 msgstr "De Parameter \"%1\" deit noot, man en tohören %2 fehlt."
 
-#: xmlpatterns/functions/qaggregatefns.cpp:120
-#, qt-format
-msgid ""
-"The first argument to %1 cannot be of type %2. It must be a numeric type, xs:"
-"yearMonthDuration or xs:dayTimeDuration."
-msgstr ""
-"Dat eerste Argument för %1 mutt nich den Typ \"%2\" hebben. Dat mutt en "
-"numeersch Typ wesen, \"xs:yearMonthDuration\" oder \"xs:dayTimeDuration\"."
-
-#: xmlpatterns/functions/qaggregatefns.cpp:194
-#, qt-format
-msgid ""
-"The first argument to %1 cannot be of type %2. It must be of type %3, %4, or "
-"%5."
-msgstr ""
-"Dat eerste Argument för %1 mutt nich den Typ \"%2\" hebben. Dat mutt den Typ "
-"\"%3\", \"%4\" oder \"%5\" hebben."
-
-#: xmlpatterns/functions/qaggregatefns.cpp:285
-#, qt-format
-msgid ""
-"The second argument to %1 cannot be of type %2. It must be of type %3, %4, "
-"or %5."
-msgstr ""
-"Dat twete Argument för %1 mutt nich den Typ \"%2\" hebben. Dat mutt den Typ "
-"\"%3\", \"%4\" oder \"%5\" hebben."
-
-#: xmlpatterns/functions/qassemblestringfns.cpp:88
-#, qt-format
-msgid "%1 is not a valid XML 1.0 character."
-msgstr "\"%1\" is as XML 1.0-Teken leeg."
-
 #: xmlpatterns/functions/qcomparingaggregator.cpp:197
 #, qt-format
 msgid "The first argument to %1 cannot be of type %2."
@@ -7985,6 +7977,15 @@ msgstr ""
 msgid "It will not be possible to retrieve %1."
 msgstr "%1 warrt sik nich halen laten."
 
+#: xmlpatterns/functions/qsequencegeneratingfns.cpp:282
+msgid "The default collection is undefined"
+msgstr "De Standardsammeln is nich fastleggt"
+
+#: xmlpatterns/functions/qsequencegeneratingfns.cpp:295
+#, qt-format
+msgid "%1 cannot be retrieved"
+msgstr "%1 lett sik nich halen"
+
 #: xmlpatterns/functions/qstringvaluefns.cpp:252
 #, qt-format
 msgid ""
@@ -8011,14 +8012,37 @@ msgstr "%1 is keen heel Tall vun Minuten."
 msgid "The URI cannot have a fragment"
 msgstr "De URI mutt keen Brookdeel bargen."
 
-#: xmlpatterns/functions/qsequencegeneratingfns.cpp:282
-msgid "The default collection is undefined"
-msgstr "De Standardsammeln is nich fastleggt"
-
-#: xmlpatterns/functions/qsequencegeneratingfns.cpp:295
+#: xmlpatterns/functions/qaggregatefns.cpp:120
 #, qt-format
-msgid "%1 cannot be retrieved"
-msgstr "%1 lett sik nich halen"
+msgid ""
+"The first argument to %1 cannot be of type %2. It must be a numeric type, xs:"
+"yearMonthDuration or xs:dayTimeDuration."
+msgstr ""
+"Dat eerste Argument för %1 mutt nich den Typ \"%2\" hebben. Dat mutt en "
+"numeersch Typ wesen, \"xs:yearMonthDuration\" oder \"xs:dayTimeDuration\"."
+
+#: xmlpatterns/functions/qaggregatefns.cpp:194
+#, qt-format
+msgid ""
+"The first argument to %1 cannot be of type %2. It must be of type %3, %4, or "
+"%5."
+msgstr ""
+"Dat eerste Argument för %1 mutt nich den Typ \"%2\" hebben. Dat mutt den Typ "
+"\"%3\", \"%4\" oder \"%5\" hebben."
+
+#: xmlpatterns/functions/qaggregatefns.cpp:285
+#, qt-format
+msgid ""
+"The second argument to %1 cannot be of type %2. It must be of type %3, %4, "
+"or %5."
+msgstr ""
+"Dat twete Argument för %1 mutt nich den Typ \"%2\" hebben. Dat mutt den Typ "
+"\"%3\", \"%4\" oder \"%5\" hebben."
+
+#: xmlpatterns/functions/qassemblestringfns.cpp:88
+#, qt-format
+msgid "%1 is not a valid XML 1.0 character."
+msgstr "\"%1\" is as XML 1.0-Teken leeg."
 
 #: xmlpatterns/janitors/qcardinalityverifier.cpp:58
 #, qt-format
@@ -8089,166 +8113,6 @@ msgstr "Dat Element mit den lokalen Naam \"%1\" gifft dat nich in XSL-T."
 #, qt-format
 msgid "The variable %1 is unused"
 msgstr "De Variabel \"%1\" warrt nich bruukt"
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:519
-#, qt-format
-msgid "Element %1 is not allowed at this location."
-msgstr "Element %1 is hier nich tolaten."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:528
-msgid "Text nodes are not allowed at this location."
-msgstr "Textknütten sünd hier nich tolaten."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:548
-#, qt-format
-msgid "Parse error: %1"
-msgstr "Inleesfehler: %1"
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:610
-#, qt-format
-msgid ""
-"The value of the XSL-T version attribute must be a value of type %1, which "
-"%2 isn't."
-msgstr ""
-"De Weert vun dat \"XSL-T\"-Verschoonattribut mutt vun den Typ %1 wesen. "
-"\"%2\" is dat nich."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:630
-msgid "Running an XSL-T 1.0 stylesheet with a 2.0 processor."
-msgstr "En \"XSL-T 1.0\"-Vörlaagverschoon warrt mit en 2.0-Perzesser utföhrt."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:738
-#, qt-format
-msgid "Unknown XSL-T attribute %1."
-msgstr "Nich begäng \"XSL-T\"-Attribut %1"
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:761
-#, qt-format
-msgid "Attribute %1 and %2 are mutually exclusive."
-msgstr "Attribut \"%1\" un \"%2\" sluut eenanner ut."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:927
-#, qt-format
-msgid "In a simplified stylesheet module, attribute %1 must be present."
-msgstr ""
-"In en vereenfacht Stilvörlaagmoduul mutt Attribut \"%1\" vörhannen wesen."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:999
-#, qt-format
-msgid "If element %1 has no attribute %2, it cannot have attribute %3 or %4."
-msgstr ""
-"Wenn Element \"%1\" keen Attribut \"%2\" hett, kann dat nich Attribut \"%3\" "
-"oder \"%4\" hebben."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1008
-#, qt-format
-msgid "Element %1 must have at least one of the attributes %2 or %3."
-msgstr "Element \"%1\" mutt tominnst Attribut \"%2\" oder \"%3\" hebben."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1036
-#, qt-format
-msgid "At least one mode must be specified in the %1-attribute on element %2."
-msgstr ""
-"In't %1-Attribut vun't Element \"%2\" mutt tominnst een Metood angeven wesen."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1159
-#, qt-format
-msgid "Element %1 must come last."
-msgstr "Element \"%1\" mutt an't Enn kamen."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1183
-#, qt-format
-msgid "At least one %1-element must occur before %2."
-msgstr "Tominnst een %1-Element mutt vör %2 opduken."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1190
-#, qt-format
-msgid "Only one %1-element can appear."
-msgstr "Bloots een %1-Element kann opduken."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1221
-#, qt-format
-msgid "At least one %1-element must occur inside %2."
-msgstr "Tominnst een %1-Element mutt binnen %2 opduken."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1279
-#, qt-format
-msgid ""
-"When attribute %1 is present on %2, a sequence constructor cannot be used."
-msgstr ""
-"Wenn dat en \"%1\" -Attribut binnen \"%2\" gifft, mutt keen Reegkonstruktor "
-"bruukt warrn."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1292
-#, qt-format
-msgid "Element %1 must have either a %2-attribute or a sequence constructor."
-msgstr "Element \"%1\" mutt en \"%2\"-Attribut oder en Reegkonstruktor hebben."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1417
-#, qt-format
-msgid ""
-"When a parameter is required, a default value cannot be supplied through a "
-"%1-attribute or a sequence constructor."
-msgstr ""
-"Wenn en Parameter noot deit, kann en Standardweert nich mit en \"%1\"-"
-"Attribut oder en Reegkonstruktor praatstellt warrn."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1687
-#, qt-format
-msgid "Element %1 cannot have children."
-msgstr "Element %1 mutt keen Ünnerelementen hebben."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2121
-#, qt-format
-msgid "Element %1 cannot have a sequence constructor."
-msgstr "Element %1 mutt keen Regenkonstruktor hebben."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2207
-#: xmlpatterns/parser/qxslttokenizer.cpp:2216
-#, qt-format
-msgid "The attribute %1 cannot appear on %2, when it is a child of %3."
-msgstr ""
-"Dat Attribut %1 kann nich in %2 opduken, wenn dat en Ünnerelement vun %3 is."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2231
-msgid "A parameter in a function cannot be declared to be a tunnel."
-msgstr ""
-"En Parameter binnen en Funkschoon lett sik nich to en Tunnel verkloren."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2380
-#, qt-format
-msgid "This processor is not Schema-aware and therefore %1 cannot be used."
-msgstr "Disse Perzesser kennt keen Mustern, dorüm lett sik %1 nich bruken."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2437
-#, qt-format
-msgid ""
-"Top level stylesheet elements must be in a non-null namespace, which %1 "
-"isn't."
-msgstr ""
-"Stilvörlaag-Elementen in de böverste Evene mööt binnen en Null-Naamruum "
-"wesen. \"%1\" is dat nich."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2485
-#, qt-format
-msgid ""
-"The value for attribute %1 on element %2 must either be %3 or %4, not %5."
-msgstr "De Weert vun Attribut %1 in Element %2 mutt %3 oder %4 wesen, nich %5."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2505
-#, qt-format
-msgid "Attribute %1 cannot have the value %2."
-msgstr "De Weert vun Attribut %1 kann nich %2 wesen."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2563
-#, qt-format
-msgid "The attribute %1 can only appear on the first %2 element."
-msgstr "Dat Attribut \"%1\" kann bloots in't eerste \"%2\"-Element opduken."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2662
-#, qt-format
-msgid "At least one %1 element must appear as child of %2."
-msgstr "Tominnst een %1-Element mutt as Ünnerelement vun %2 opduken."
 
 #: querytransformparser.ypp:202
 msgid "W3C XML Schema identity constraint selector"
@@ -8653,6 +8517,166 @@ msgstr ""
 #: querytransformparser.ypp:4553
 msgid "The name of an extension expression must be in a namespace."
 msgstr "De Naam vun en Verwiedernutdruck mutt binnen en Naamruum liggen."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:519
+#, qt-format
+msgid "Element %1 is not allowed at this location."
+msgstr "Element %1 is hier nich tolaten."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:528
+msgid "Text nodes are not allowed at this location."
+msgstr "Textknütten sünd hier nich tolaten."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:548
+#, qt-format
+msgid "Parse error: %1"
+msgstr "Inleesfehler: %1"
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:610
+#, qt-format
+msgid ""
+"The value of the XSL-T version attribute must be a value of type %1, which "
+"%2 isn't."
+msgstr ""
+"De Weert vun dat \"XSL-T\"-Verschoonattribut mutt vun den Typ %1 wesen. "
+"\"%2\" is dat nich."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:630
+msgid "Running an XSL-T 1.0 stylesheet with a 2.0 processor."
+msgstr "En \"XSL-T 1.0\"-Vörlaagverschoon warrt mit en 2.0-Perzesser utföhrt."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:738
+#, qt-format
+msgid "Unknown XSL-T attribute %1."
+msgstr "Nich begäng \"XSL-T\"-Attribut %1"
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:761
+#, qt-format
+msgid "Attribute %1 and %2 are mutually exclusive."
+msgstr "Attribut \"%1\" un \"%2\" sluut eenanner ut."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:927
+#, qt-format
+msgid "In a simplified stylesheet module, attribute %1 must be present."
+msgstr ""
+"In en vereenfacht Stilvörlaagmoduul mutt Attribut \"%1\" vörhannen wesen."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:999
+#, qt-format
+msgid "If element %1 has no attribute %2, it cannot have attribute %3 or %4."
+msgstr ""
+"Wenn Element \"%1\" keen Attribut \"%2\" hett, kann dat nich Attribut \"%3\" "
+"oder \"%4\" hebben."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1008
+#, qt-format
+msgid "Element %1 must have at least one of the attributes %2 or %3."
+msgstr "Element \"%1\" mutt tominnst Attribut \"%2\" oder \"%3\" hebben."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1036
+#, qt-format
+msgid "At least one mode must be specified in the %1-attribute on element %2."
+msgstr ""
+"In't %1-Attribut vun't Element \"%2\" mutt tominnst een Metood angeven wesen."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1159
+#, qt-format
+msgid "Element %1 must come last."
+msgstr "Element \"%1\" mutt an't Enn kamen."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1183
+#, qt-format
+msgid "At least one %1-element must occur before %2."
+msgstr "Tominnst een %1-Element mutt vör %2 opduken."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1190
+#, qt-format
+msgid "Only one %1-element can appear."
+msgstr "Bloots een %1-Element kann opduken."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1221
+#, qt-format
+msgid "At least one %1-element must occur inside %2."
+msgstr "Tominnst een %1-Element mutt binnen %2 opduken."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1279
+#, qt-format
+msgid ""
+"When attribute %1 is present on %2, a sequence constructor cannot be used."
+msgstr ""
+"Wenn dat en \"%1\" -Attribut binnen \"%2\" gifft, mutt keen Reegkonstruktor "
+"bruukt warrn."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1292
+#, qt-format
+msgid "Element %1 must have either a %2-attribute or a sequence constructor."
+msgstr "Element \"%1\" mutt en \"%2\"-Attribut oder en Reegkonstruktor hebben."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1417
+#, qt-format
+msgid ""
+"When a parameter is required, a default value cannot be supplied through a "
+"%1-attribute or a sequence constructor."
+msgstr ""
+"Wenn en Parameter noot deit, kann en Standardweert nich mit en \"%1\"-"
+"Attribut oder en Reegkonstruktor praatstellt warrn."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1687
+#, qt-format
+msgid "Element %1 cannot have children."
+msgstr "Element %1 mutt keen Ünnerelementen hebben."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2121
+#, qt-format
+msgid "Element %1 cannot have a sequence constructor."
+msgstr "Element %1 mutt keen Regenkonstruktor hebben."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2207
+#: xmlpatterns/parser/qxslttokenizer.cpp:2216
+#, qt-format
+msgid "The attribute %1 cannot appear on %2, when it is a child of %3."
+msgstr ""
+"Dat Attribut %1 kann nich in %2 opduken, wenn dat en Ünnerelement vun %3 is."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2231
+msgid "A parameter in a function cannot be declared to be a tunnel."
+msgstr ""
+"En Parameter binnen en Funkschoon lett sik nich to en Tunnel verkloren."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2380
+#, qt-format
+msgid "This processor is not Schema-aware and therefore %1 cannot be used."
+msgstr "Disse Perzesser kennt keen Mustern, dorüm lett sik %1 nich bruken."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2437
+#, qt-format
+msgid ""
+"Top level stylesheet elements must be in a non-null namespace, which %1 "
+"isn't."
+msgstr ""
+"Stilvörlaag-Elementen in de böverste Evene mööt binnen en Null-Naamruum "
+"wesen. \"%1\" is dat nich."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2485
+#, qt-format
+msgid ""
+"The value for attribute %1 on element %2 must either be %3 or %4, not %5."
+msgstr "De Weert vun Attribut %1 in Element %2 mutt %3 oder %4 wesen, nich %5."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2505
+#, qt-format
+msgid "Attribute %1 cannot have the value %2."
+msgstr "De Weert vun Attribut %1 kann nich %2 wesen."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2563
+#, qt-format
+msgid "The attribute %1 can only appear on the first %2 element."
+msgstr "Dat Attribut \"%1\" kann bloots in't eerste \"%2\"-Element opduken."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2662
+#, qt-format
+msgid "At least one %1 element must appear as child of %2."
+msgstr "Tominnst een %1-Element mutt as Ünnerelement vun %2 opduken."
 
 #: xmlpatterns/schema/qxsdparticlechecker.cpp:165
 msgid "Empty particle cannot be derived from non-empty particle."
@@ -9584,6 +9608,251 @@ msgstr "Identiteet-Beding %1 wöör al verkloort."
 msgid "Duplicated facets in simple type %1."
 msgstr "Dubbelt Fassetten in Eenfachtyp %1."
 
+#: xmlpatterns/schema/qxsdtypechecker.cpp:235
+#: xmlpatterns/schema/qxsdtypechecker.cpp:242
+#: xmlpatterns/schema/qxsdtypechecker.cpp:263
+#, qt-format
+msgid "%1 is not valid according to %2."
+msgstr "%1 gellt na %2 nich."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:430
+msgid "String content does not match the length facet."
+msgstr "Tekenkeed-Inholt passt nich op de Längdenfassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:438
+msgid "String content does not match the minLength facet."
+msgstr "Tekenkeed-Inholt passt nich op de \"minLength\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:446
+msgid "String content does not match the maxLength facet."
+msgstr "Tekenkeed-Inholt passt nich op de \"maxLength\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:464
+msgid "String content does not match pattern facet."
+msgstr "Tekenkeed-Inholt passt nich op Musterfassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:482
+msgid "String content is not listed in the enumeration facet."
+msgstr "Tekenkeed-Inholt is nich binnen de Optellen-Fassette oplist."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:499
+msgid "Signed integer content does not match the maxInclusive facet."
+msgstr ""
+"Inholt mit Heeltall mit Vörteken passt nich op de \"maxInclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:507
+msgid "Signed integer content does not match the maxExclusive facet."
+msgstr ""
+"Inholt mit Heeltall mit Vörteken passt nich op de \"maxExclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:515
+msgid "Signed integer content does not match the minInclusive facet."
+msgstr ""
+"Inholt mit Heeltall mit Vörteken passt nich op de \"minInclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:523
+msgid "Signed integer content does not match the minExclusive facet."
+msgstr ""
+"Inholt mit Heeltall mit Vörteken passt nich op de \"minExclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:541
+msgid "Signed integer content is not listed in the enumeration facet."
+msgstr ""
+"Inholt mit Heeltall mit Vörteken is nich binnen de Optellen-Fassette oplist."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:559
+msgid "Signed integer content does not match pattern facet."
+msgstr "Inholt mit Heeltall mit Vörteken passt nich op Musterfassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:568
+msgid "Signed integer content does not match in the totalDigits facet."
+msgstr ""
+"Inholt mit Heeltall mit Vörteken passt nich op de \"totalDigits\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:585
+msgid "Unsigned integer content does not match the maxInclusive facet."
+msgstr ""
+"Inholt mit Heeltall ahn Vörteken passt nich op de \"maxInclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:593
+msgid "Unsigned integer content does not match the maxExclusive facet."
+msgstr ""
+"Inholt mit Heeltall ahn Vörteken passt nich op de \"maxExclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:601
+msgid "Unsigned integer content does not match the minInclusive facet."
+msgstr ""
+"Inholt mit Heeltall ahn Vörteken passt nich op de \"minInclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:609
+msgid "Unsigned integer content does not match the minExclusive facet."
+msgstr ""
+"Inholt mit Heeltall ahn Vörteken passt nich op de \"minExclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:627
+msgid "Unsigned integer content is not listed in the enumeration facet."
+msgstr ""
+"Inholt mit Heeltall ahn Vörteken is nich binnen de Optellen-Fassette oplist."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:645
+msgid "Unsigned integer content does not match pattern facet."
+msgstr "Inholt mit Heeltall ahn Vörteken passt nich op Musterfassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:654
+msgid "Unsigned integer content does not match in the totalDigits facet."
+msgstr ""
+"Inholt mit Heeltall ahn Vörteken passt nich op de \"totalDigits\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:671
+msgid "Double content does not match the maxInclusive facet."
+msgstr "Dubbelt Inholt passt nich op de \"maxInclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:679
+msgid "Double content does not match the maxExclusive facet."
+msgstr "Dubbelt Inholt passt nich op de \"maxExclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:687
+msgid "Double content does not match the minInclusive facet."
+msgstr "Dubbelt Inholt passt nich op de \"minInclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:695
+msgid "Double content does not match the minExclusive facet."
+msgstr "Dubbelt Inholt passt nich op de \"minExclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:721
+msgid "Double content is not listed in the enumeration facet."
+msgstr "Dubbelt Inholt is nich binnen de Optellen-Fassette oplist."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:739
+msgid "Double content does not match pattern facet."
+msgstr "Dubbelt Inholt passt nich op Musterfassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:757
+msgid "Decimal content does not match in the fractionDigits facet."
+msgstr "Dezimaal Inholt passt nich op de \"fractionDigits\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:766
+msgid "Decimal content does not match in the totalDigits facet."
+msgstr "Dezimaal Inholt passt nich op de \"totalDigits\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:780
+msgid "Date time content does not match the maxInclusive facet."
+msgstr "Inholt mit Datum un Tiet passt nich op de \"maxInclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:788
+msgid "Date time content does not match the maxExclusive facet."
+msgstr "Inholt mit Datum un Tiet passt nich op de \"maxExclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:796
+msgid "Date time content does not match the minInclusive facet."
+msgstr "Inholt mit Datum un Tiet passt nich op de \"minInclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:804
+msgid "Date time content does not match the minExclusive facet."
+msgstr "Inholt mit Datum un Tiet passt nich op de \"minExclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:822
+msgid "Date time content is not listed in the enumeration facet."
+msgstr "Inholt mit Datum un Tiet is nich binnen de Optellen-Fassette oplist."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:840
+msgid "Date time content does not match pattern facet."
+msgstr "Inholt mit Datum un Tiet passt nich op Musterfassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:855
+msgid "Duration content does not match the maxInclusive facet."
+msgstr "Inholt mit Duer passt nich op de \"maxInclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:864
+msgid "Duration content does not match the maxExclusive facet."
+msgstr "Inholt mit Duer passt nich op de \"maxExclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:873
+msgid "Duration content does not match the minInclusive facet."
+msgstr "Inholt mit Duer passt nich op de \"minInclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:882
+msgid "Duration content does not match the minExclusive facet."
+msgstr "Inholt mit Duer passt nich op de \"minExclusive\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:900
+msgid "Duration content is not listed in the enumeration facet."
+msgstr "Inholt mit Duer is nich binnen de Optellen-Fassette oplist."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:918
+msgid "Duration content does not match pattern facet."
+msgstr "Inholt mit Duer passt nich op Musterfassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:945
+msgid "Boolean content does not match pattern facet."
+msgstr "Boolsch Inholt passt nich op Musterfassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:962
+msgid "Binary content does not match the length facet."
+msgstr "Bineer Inholt passt nich op de Längdenfassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:970
+msgid "Binary content does not match the minLength facet."
+msgstr "Bineer Inholt passt nich op de \"minLength\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:978
+msgid "Binary content does not match the maxLength facet."
+msgstr "Bineer Inholt passt nich op de \"maxLength\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:996
+msgid "Binary content is not listed in the enumeration facet."
+msgstr "Bineer Inholt is nich binnen de Optellen-Fassette oplist."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1023
+#, qt-format
+msgid "Invalid QName content: %1."
+msgstr "Leeg QName-Inholt: %1"
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1040
+msgid "QName content is not listed in the enumeration facet."
+msgstr "QName-Inholt is nich binnen de Optellen-Fassette oplist."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1058
+msgid "QName content does not match pattern facet."
+msgstr "QName-Inholt passt nich op Musterfassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1094
+msgid "Notation content is not listed in the enumeration facet."
+msgstr "Inholt mit Anmarken is nich binnen de Optellen-Fassette oplist."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1113
+msgid "List content does not match length facet."
+msgstr "Inholt mit List passt nich op de Längdenfassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1120
+msgid "List content does not match minLength facet."
+msgstr "Inholt mit List passt nich op de \"minLength\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1127
+msgid "List content does not match maxLength facet."
+msgstr "Inholt mit List passt nich op de \"maxLength\"-Fassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1217
+msgid "List content is not listed in the enumeration facet."
+msgstr "Inholt mit List is nich binnen de Optellen-Fassette oplist."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1235
+msgid "List content does not match pattern facet."
+msgstr "Inholt mit List passt nich op Musterfassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1274
+msgid "Union content is not listed in the enumeration facet."
+msgstr "Inholt mit Vereenen is nich binnen de Optellen-Fassette oplist."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1292
+msgid "Union content does not match pattern facet."
+msgstr "Inholt mit Vereenen passt nich op Musterfassette."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1307
+#, qt-format
+msgid "Data of type %1 are not allowed to be empty."
+msgstr "För Typ %1 sünd leddig Daten nich tolaten."
+
 #: xmlpatterns/schema/qxsdschemaresolver.cpp:354
 #, qt-format
 msgid "%1 references unknown %2 or %3 element %4."
@@ -9982,251 +10251,6 @@ msgstr "ID-Weert \"%1\" is nich eenkennig."
 #, qt-format
 msgid "'%1' attribute contains invalid QName content: %2."
 msgstr "Attribut \"%1\" bargt leeg QName-Inholt: %2"
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:235
-#: xmlpatterns/schema/qxsdtypechecker.cpp:242
-#: xmlpatterns/schema/qxsdtypechecker.cpp:263
-#, qt-format
-msgid "%1 is not valid according to %2."
-msgstr "%1 gellt na %2 nich."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:430
-msgid "String content does not match the length facet."
-msgstr "Tekenkeed-Inholt passt nich op de Längdenfassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:438
-msgid "String content does not match the minLength facet."
-msgstr "Tekenkeed-Inholt passt nich op de \"minLength\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:446
-msgid "String content does not match the maxLength facet."
-msgstr "Tekenkeed-Inholt passt nich op de \"maxLength\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:464
-msgid "String content does not match pattern facet."
-msgstr "Tekenkeed-Inholt passt nich op Musterfassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:482
-msgid "String content is not listed in the enumeration facet."
-msgstr "Tekenkeed-Inholt is nich binnen de Optellen-Fassette oplist."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:499
-msgid "Signed integer content does not match the maxInclusive facet."
-msgstr ""
-"Inholt mit Heeltall mit Vörteken passt nich op de \"maxInclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:507
-msgid "Signed integer content does not match the maxExclusive facet."
-msgstr ""
-"Inholt mit Heeltall mit Vörteken passt nich op de \"maxExclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:515
-msgid "Signed integer content does not match the minInclusive facet."
-msgstr ""
-"Inholt mit Heeltall mit Vörteken passt nich op de \"minInclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:523
-msgid "Signed integer content does not match the minExclusive facet."
-msgstr ""
-"Inholt mit Heeltall mit Vörteken passt nich op de \"minExclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:541
-msgid "Signed integer content is not listed in the enumeration facet."
-msgstr ""
-"Inholt mit Heeltall mit Vörteken is nich binnen de Optellen-Fassette oplist."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:559
-msgid "Signed integer content does not match pattern facet."
-msgstr "Inholt mit Heeltall mit Vörteken passt nich op Musterfassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:568
-msgid "Signed integer content does not match in the totalDigits facet."
-msgstr ""
-"Inholt mit Heeltall mit Vörteken passt nich op de \"totalDigits\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:585
-msgid "Unsigned integer content does not match the maxInclusive facet."
-msgstr ""
-"Inholt mit Heeltall ahn Vörteken passt nich op de \"maxInclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:593
-msgid "Unsigned integer content does not match the maxExclusive facet."
-msgstr ""
-"Inholt mit Heeltall ahn Vörteken passt nich op de \"maxExclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:601
-msgid "Unsigned integer content does not match the minInclusive facet."
-msgstr ""
-"Inholt mit Heeltall ahn Vörteken passt nich op de \"minInclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:609
-msgid "Unsigned integer content does not match the minExclusive facet."
-msgstr ""
-"Inholt mit Heeltall ahn Vörteken passt nich op de \"minExclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:627
-msgid "Unsigned integer content is not listed in the enumeration facet."
-msgstr ""
-"Inholt mit Heeltall ahn Vörteken is nich binnen de Optellen-Fassette oplist."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:645
-msgid "Unsigned integer content does not match pattern facet."
-msgstr "Inholt mit Heeltall ahn Vörteken passt nich op Musterfassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:654
-msgid "Unsigned integer content does not match in the totalDigits facet."
-msgstr ""
-"Inholt mit Heeltall ahn Vörteken passt nich op de \"totalDigits\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:671
-msgid "Double content does not match the maxInclusive facet."
-msgstr "Dubbelt Inholt passt nich op de \"maxInclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:679
-msgid "Double content does not match the maxExclusive facet."
-msgstr "Dubbelt Inholt passt nich op de \"maxExclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:687
-msgid "Double content does not match the minInclusive facet."
-msgstr "Dubbelt Inholt passt nich op de \"minInclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:695
-msgid "Double content does not match the minExclusive facet."
-msgstr "Dubbelt Inholt passt nich op de \"minExclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:721
-msgid "Double content is not listed in the enumeration facet."
-msgstr "Dubbelt Inholt is nich binnen de Optellen-Fassette oplist."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:739
-msgid "Double content does not match pattern facet."
-msgstr "Dubbelt Inholt passt nich op Musterfassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:757
-msgid "Decimal content does not match in the fractionDigits facet."
-msgstr "Dezimaal Inholt passt nich op de \"fractionDigits\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:766
-msgid "Decimal content does not match in the totalDigits facet."
-msgstr "Dezimaal Inholt passt nich op de \"totalDigits\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:780
-msgid "Date time content does not match the maxInclusive facet."
-msgstr "Inholt mit Datum un Tiet passt nich op de \"maxInclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:788
-msgid "Date time content does not match the maxExclusive facet."
-msgstr "Inholt mit Datum un Tiet passt nich op de \"maxExclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:796
-msgid "Date time content does not match the minInclusive facet."
-msgstr "Inholt mit Datum un Tiet passt nich op de \"minInclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:804
-msgid "Date time content does not match the minExclusive facet."
-msgstr "Inholt mit Datum un Tiet passt nich op de \"minExclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:822
-msgid "Date time content is not listed in the enumeration facet."
-msgstr "Inholt mit Datum un Tiet is nich binnen de Optellen-Fassette oplist."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:840
-msgid "Date time content does not match pattern facet."
-msgstr "Inholt mit Datum un Tiet passt nich op Musterfassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:855
-msgid "Duration content does not match the maxInclusive facet."
-msgstr "Inholt mit Duer passt nich op de \"maxInclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:864
-msgid "Duration content does not match the maxExclusive facet."
-msgstr "Inholt mit Duer passt nich op de \"maxExclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:873
-msgid "Duration content does not match the minInclusive facet."
-msgstr "Inholt mit Duer passt nich op de \"minInclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:882
-msgid "Duration content does not match the minExclusive facet."
-msgstr "Inholt mit Duer passt nich op de \"minExclusive\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:900
-msgid "Duration content is not listed in the enumeration facet."
-msgstr "Inholt mit Duer is nich binnen de Optellen-Fassette oplist."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:918
-msgid "Duration content does not match pattern facet."
-msgstr "Inholt mit Duer passt nich op Musterfassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:945
-msgid "Boolean content does not match pattern facet."
-msgstr "Boolsch Inholt passt nich op Musterfassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:962
-msgid "Binary content does not match the length facet."
-msgstr "Bineer Inholt passt nich op de Längdenfassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:970
-msgid "Binary content does not match the minLength facet."
-msgstr "Bineer Inholt passt nich op de \"minLength\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:978
-msgid "Binary content does not match the maxLength facet."
-msgstr "Bineer Inholt passt nich op de \"maxLength\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:996
-msgid "Binary content is not listed in the enumeration facet."
-msgstr "Bineer Inholt is nich binnen de Optellen-Fassette oplist."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1023
-#, qt-format
-msgid "Invalid QName content: %1."
-msgstr "Leeg QName-Inholt: %1"
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1040
-msgid "QName content is not listed in the enumeration facet."
-msgstr "QName-Inholt is nich binnen de Optellen-Fassette oplist."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1058
-msgid "QName content does not match pattern facet."
-msgstr "QName-Inholt passt nich op Musterfassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1094
-msgid "Notation content is not listed in the enumeration facet."
-msgstr "Inholt mit Anmarken is nich binnen de Optellen-Fassette oplist."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1113
-msgid "List content does not match length facet."
-msgstr "Inholt mit List passt nich op de Längdenfassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1120
-msgid "List content does not match minLength facet."
-msgstr "Inholt mit List passt nich op de \"minLength\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1127
-msgid "List content does not match maxLength facet."
-msgstr "Inholt mit List passt nich op de \"maxLength\"-Fassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1217
-msgid "List content is not listed in the enumeration facet."
-msgstr "Inholt mit List is nich binnen de Optellen-Fassette oplist."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1235
-msgid "List content does not match pattern facet."
-msgstr "Inholt mit List passt nich op Musterfassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1274
-msgid "Union content is not listed in the enumeration facet."
-msgstr "Inholt mit Vereenen is nich binnen de Optellen-Fassette oplist."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1292
-msgid "Union content does not match pattern facet."
-msgstr "Inholt mit Vereenen passt nich op Musterfassette."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1307
-#, qt-format
-msgid "Data of type %1 are not allowed to be empty."
-msgstr "För Typ %1 sünd leddig Daten nich tolaten."
 
 #: xmlpatterns/type/qcardinality.cpp:55
 msgid "empty"
