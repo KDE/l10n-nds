@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TextShape\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-01-05 09:26+0100\n"
+"POT-Creation-Date: 2012-01-14 08:52+0100\n"
 "PO-Revision-Date: 2011-10-22 09:16+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -558,9 +558,11 @@ msgstr "Achtergrundklöör"
 #. i18n: ectx: property (text), widget (QToolButton, resetBackgroundColor)
 #. i18n: ectx: property (text), widget (FormattingButton, bulletListButton)
 #. i18n: ectx: property (text), widget (FormattingButton, numberedListButton)
-#. i18n: ectx: property (text), widget (QuickTableButton, quickTable)
 #. i18n: ectx: property (text), widget (QToolButton, mergeCells)
 #. i18n: ectx: property (text), widget (QToolButton, splitCells)
+#. i18n: ectx: property (text), widget (QuickTableButton, quickTable)
+#. i18n: ectx: property (text), widget (QToolButton, insertVariable)
+#. i18n: ectx: property (text), widget (QToolButton, insertSpecialChar)
 #. +> trunk stable
 #: dialogs/ChangeConfigureDialog.ui:127 dialogs/ChangeConfigureDialog.ui:207
 #: dialogs/ChangeConfigureDialog.ui:266 dialogs/FontDecorations.ui:47
@@ -569,8 +571,9 @@ msgstr "Achtergrundklöör"
 #: dialogs/FontDecorations.ui:165 dialogs/FontDecorations.ui:178
 #: dialogs/FontDecorations.ui:191 dialogs/FontDecorations.ui:204
 #: dialogs/FontDecorations.ui:217 dialogs/ParagraphBulletsNumbers.ui:194
-#: dialogs/ParagraphDecorations.ui:55 dialogs/SimpleParagraphWidget.ui:37
-#: dialogs/SimpleParagraphWidget.ui:44 dialogs/SimpleParagraphWidget.ui:68
+#: dialogs/ParagraphDecorations.ui:55 dialogs/SimpleInsertWidget.ui:40
+#: dialogs/SimpleInsertWidget.ui:63 dialogs/SimpleInsertWidget.ui:73
+#: dialogs/SimpleParagraphWidget.ui:48 dialogs/SimpleParagraphWidget.ui:55
 #: dialogs/SimpleTableWidget.ui:55 dialogs/SimpleTableWidget.ui:62
 msgid "..."
 msgstr "..."
@@ -737,13 +740,13 @@ msgstr "Instellen fastleggen"
 
 #. i18n: ectx: property (text), widget (QCheckBox, recordChangesCheckBox)
 #. +> trunk stable
-#: dialogs/ChangeTrackingOptionsWidget.ui:175 TextTool.cpp:468
+#: dialogs/ChangeTrackingOptionsWidget.ui:175 TextTool.cpp:472
 msgid "Record Changes"
 msgstr "Ännern opteken"
 
 #. i18n: ectx: property (text), widget (QCheckBox, showChangesCheckBox)
 #. +> trunk stable
-#: dialogs/ChangeTrackingOptionsWidget.ui:182 TextTool.cpp:463
+#: dialogs/ChangeTrackingOptionsWidget.ui:182 TextTool.cpp:467
 msgid "Show Changes"
 msgstr "Ännern wiesen"
 
@@ -1303,13 +1306,13 @@ msgstr "Egen"
 
 #. i18n: ectx: property (text), widget (QRadioButton, superscript)
 #. +> trunk stable
-#: dialogs/FontLayoutTab.ui:108 TextTool.cpp:263
+#: dialogs/FontLayoutTab.ui:108 TextTool.cpp:264
 msgid "Superscript"
 msgstr "Hoochstellt"
 
 #. i18n: ectx: property (text), widget (QRadioButton, subscript)
 #. +> trunk stable
-#: dialogs/FontLayoutTab.ui:115 TextTool.cpp:268
+#: dialogs/FontLayoutTab.ui:115 TextTool.cpp:269
 msgid "Subscript"
 msgstr "Daalstellt"
 
@@ -1404,7 +1407,7 @@ msgid "Special Characters"
 msgstr "Sünnertekens"
 
 #. +> trunk stable
-#: dialogs/InsertCharacter.cpp:39 ReferencesTool.cpp:89
+#: dialogs/InsertCharacter.cpp:39 ReferencesTool.cpp:89 TextTool.cpp:1634
 msgid "Insert"
 msgstr "Infögen"
 
@@ -1745,7 +1748,7 @@ msgstr "Bookstaven synkroniseren"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. +> trunk stable
-#: dialogs/ParagraphDecorations.ui:31 TextTool.cpp:352
+#: dialogs/ParagraphDecorations.ui:31 TextTool.cpp:356
 msgid "Background"
 msgstr "Achtergrund"
 
@@ -1983,7 +1986,7 @@ msgid "Paragraph Settings"
 msgstr "Afsnittinstellen"
 
 #. +> trunk
-#: dialogs/QuickTableButton.cpp:159
+#: dialogs/QuickTableButton.cpp:160
 msgid "Insert a table"
 msgstr "En Tabell infögen"
 
@@ -2047,6 +2050,12 @@ msgstr "Instellen"
 msgid "Footnote"
 msgstr "Footnotiz"
 
+#. i18n: ectx: property (toolTip), widget (QWidget, SimpleInsertWidget)
+#. +> trunk
+#: dialogs/SimpleInsertWidget.ui:20
+msgid "Other insertions from \"References\"  below and in \"Add Shape\" docker"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QToolButton, paragButton)
 #. +> trunk
 #: dialogs/StyleManager.ui:29
@@ -2067,7 +2076,7 @@ msgstr "&Nieg"
 
 #. i18n: ectx: property (text), widget (QPushButton, bDelete)
 #. +> trunk stable
-#: dialogs/StyleManager.ui:57 TextTool.cpp:1913
+#: dialogs/StyleManager.ui:57 TextTool.cpp:1944
 msgid "Delete"
 msgstr "Wegdoon"
 
@@ -2386,92 +2395,92 @@ msgid "Text Shape"
 msgstr "Form \"Text\""
 
 #. +> trunk
-#: TextTool.cpp:198
+#: TextTool.cpp:199
 msgid "Paste As Text"
 msgstr "As Text infögen"
 
 #. +> trunk stable
-#: TextTool.cpp:203
+#: TextTool.cpp:204
 msgid "Bold"
 msgstr "Fett"
 
 #. +> trunk stable
-#: TextTool.cpp:209
+#: TextTool.cpp:210
 msgid "Italic"
 msgstr "Kursiev"
 
 #. +> trunk stable
-#: TextTool.cpp:215
+#: TextTool.cpp:216
 msgctxt "Text formatting"
 msgid "Underline"
 msgstr "Ünnerstreken"
 
 #. +> trunk stable
-#: TextTool.cpp:221
+#: TextTool.cpp:222
 msgid "Strike Out"
 msgstr "Dörstreken"
 
 #. +> trunk stable
-#: TextTool.cpp:227
+#: TextTool.cpp:228
 msgid "Align Left"
 msgstr "Links utricht"
 
 #. +> trunk stable
-#: TextTool.cpp:234
+#: TextTool.cpp:235
 msgid "Align Right"
 msgstr "Rechts utricht"
 
 #. +> trunk stable
-#: TextTool.cpp:241
+#: TextTool.cpp:242
 msgid "Align Center"
 msgstr "Merrn utricht"
 
 #. +> trunk stable
-#: TextTool.cpp:248
+#: TextTool.cpp:249
 msgid "Align Block"
 msgstr "As Block utricht"
 
 #. +> trunk
-#: TextTool.cpp:255
+#: TextTool.cpp:256
 #, fuzzy
 #| msgid "Change Tracking"
 msgid "Change text direction"
 msgstr "Ännern naspören"
 
 #. +> trunk
-#: TextTool.cpp:257
+#: TextTool.cpp:258
 #, fuzzy
 #| msgid "Change Tracking tool"
 msgid "Change writing direction"
 msgstr "Ännern naspören"
 
 #. +> trunk stable
-#: TextTool.cpp:275
+#: TextTool.cpp:276
 msgid "Increase Indent"
 msgstr "Mehr inrücken"
 
 #. +> trunk stable
-#: TextTool.cpp:281
+#: TextTool.cpp:282
 msgid "Decrease Indent"
 msgstr "Weniger inrücken"
 
 #. +> trunk
-#: TextTool.cpp:285
+#: TextTool.cpp:286
 msgid "Bullet list"
 msgstr "Optellpünktlist"
 
 #. +> trunk
-#: TextTool.cpp:288
+#: TextTool.cpp:289
 msgid "Numbered list"
 msgstr "Optell-List"
 
 #. +> trunk stable
-#: TextTool.cpp:291
+#: TextTool.cpp:292
 msgid "Increase Font Size"
 msgstr "Schriftoort grötter maken"
 
 #. +> trunk stable
-#: TextTool.cpp:296
+#: TextTool.cpp:297
 msgid "Decrease Font Size"
 msgstr "Schriftoort lütter maken"
 
@@ -2480,80 +2489,89 @@ msgstr "Schriftoort lütter maken"
 msgid "Jump To..."
 msgstr "Jump na..."
 
-#. +> trunk stable
+#. +> trunk
 #: TextTool.cpp:307
+#, fuzzy
+#| msgid "Edit Variable..."
+msgid "Variable"
+msgstr "Variabel bewerken…"
+
+#. +> trunk
+#: TextTool.cpp:929
+msgid "Edit Variable..."
+msgstr "Variabel bewerken…"
+
+#. +> trunk
+#: TextTool.cpp:2082
+#, fuzzy
+#| msgid "List Options"
+msgid "Variable Options"
+msgstr "Listenoptschonen"
+
+#. +> trunk stable
+#: TextTool.cpp:311
 msgid "Insert Non-Breaking Space"
 msgstr "Schuult Freeteken infögen"
 
 #. +> trunk stable
-#: TextTool.cpp:312
+#: TextTool.cpp:316
 msgid "Insert Non-Breaking Hyphen"
 msgstr "Schuult Binnstreek infögen"
 
 #. +> trunk stable
-#: TextTool.cpp:317
+#: TextTool.cpp:321
 msgid "Insert Index"
 msgstr "Index infögen"
 
 #. +> trunk stable
-#: TextTool.cpp:322
+#: TextTool.cpp:326
 msgid "Insert Soft Hyphen"
 msgstr "Week Trennstreek bruken"
 
 #. +> trunk stable
-#: TextTool.cpp:327
+#: TextTool.cpp:331
 msgid "Line Break"
 msgstr "Reegümbrook"
 
 #. +> trunk stable
-#: TextTool.cpp:332
+#: TextTool.cpp:336
 msgid "Font..."
 msgstr "Schriftoort..."
 
 #. +> trunk stable
-#: TextTool.cpp:335
+#: TextTool.cpp:339
 msgid "Change character size, font, boldface, italics etc."
 msgstr "Tekengrött, Schriftoort, Fettschrift, kursiev, usw. ännern"
 
 #. +> trunk stable
-#: TextTool.cpp:336
+#: TextTool.cpp:340
 msgid "Change the attributes of the currently selected characters."
 msgstr "De Attributen vun de aktuell köört Tekens ännern"
 
 #. +> trunk stable
-#: TextTool.cpp:339
+#: TextTool.cpp:343
 msgid "Font Size"
 msgstr "Schriftgrött"
 
 #. +> trunk stable
-#: TextTool.cpp:345
+#: TextTool.cpp:349
 msgid "Text Color..."
 msgstr "Textklöör..."
 
-#. +> trunk
-#: TextTool.cpp:293
-msgid "Insert Bookmark..."
-msgstr "Leesteken infögen..."
-
 #. +> trunk stable
-#: TextTool.cpp:351
+#: TextTool.cpp:355
 msgid "Background Color..."
 msgstr "Achtergrundklöör..."
 
 #. +> trunk
-#: TextTool.cpp:356
+#: TextTool.cpp:360
 msgid "Grow To Fit Width"
 msgstr "Na Breed utwiedern"
 
 #. +> trunk
-#: TextTool.cpp:361
+#: TextTool.cpp:365
 msgid "Grow To Fit Height"
 msgstr "Na Hööchd utwiedern"
-
-#. +> trunk
-#: TextTool.cpp:366
-msgid "Shrink To Fit"
-msgstr "Passen schrimpen"
 
 #. +> trunk stable
 #: TextTool.cpp:367
@@ -2561,113 +2579,120 @@ msgstr "Passen schrimpen"
 msgid "Apply %1"
 msgstr "%1 anwennen"
 
+#. +> trunk
+#: TextTool.cpp:370
+msgid "Shrink To Fit"
+msgstr "Passen schrimpen"
+
 #. +> trunk stable
-#: TextTool.cpp:371
+#: TextTool.cpp:375
 msgid "Default Format"
 msgstr "Standardformaat"
 
 #. +> trunk stable
-#: TextTool.cpp:373
+#: TextTool.cpp:377
 msgid "Change text attributes to their default values"
 msgstr "Textattributen na ehr Standardweerten ännern"
 
-#. +> trunk stable
-#: TextTool.cpp:376
-msgid "Table..."
-msgstr "Tabell..."
+#. +> trunk
+#: TextTool.cpp:380
+#, fuzzy
+#| msgid "Insert Column Left"
+msgid "Insert Custom..."
+msgstr "Striep linkerhand infögen"
 
 #. +> trunk
-#: TextTool.cpp:929
-msgid "Edit Variable..."
-msgstr "Variabel bewerken…"
+#: TextTool.cpp:293
+msgid "Insert Bookmark..."
+msgstr "Leesteken infögen..."
 
 #. +> trunk stable
-#: TextTool.cpp:378
+#: TextTool.cpp:382
 msgid "Insert a table into the document."
 msgstr "En Tabell na't Dokment infögen"
 
 #. +> trunk
-#: TextTool.cpp:381 TextTool.cpp:418
+#: TextTool.cpp:385 TextTool.cpp:422
 msgid "Row Above"
 msgstr "Reeg baven"
 
 #. +> trunk
-#: TextTool.cpp:382 TextTool.cpp:419
+#: TextTool.cpp:386 TextTool.cpp:423
 msgid "Insert Row Above"
 msgstr "Reeg baven infögen"
 
 #. +> trunk
-#: TextTool.cpp:386 TextTool.cpp:423
+#: TextTool.cpp:390 TextTool.cpp:427
 msgid "Row Below"
 msgstr "Reeg nerrn"
 
 #. +> trunk
-#: TextTool.cpp:387 TextTool.cpp:424
+#: TextTool.cpp:391 TextTool.cpp:428
 msgid "Insert Row Below"
 msgstr "Reeg nerrn infögen"
 
 #. +> trunk
-#: TextTool.cpp:391 TextTool.cpp:428
+#: TextTool.cpp:395 TextTool.cpp:432
 msgid "Column Left"
 msgstr "Striep linkerhand"
 
 #. +> trunk
-#: TextTool.cpp:392 TextTool.cpp:429
+#: TextTool.cpp:396 TextTool.cpp:433
 msgid "Insert Column Left"
 msgstr "Striep linkerhand infögen"
 
 #. +> trunk
-#: TextTool.cpp:396 TextTool.cpp:433
+#: TextTool.cpp:400 TextTool.cpp:437
 msgid "Column Right"
 msgstr "Striep rechterhand"
 
 #. +> trunk
-#: TextTool.cpp:397 TextTool.cpp:434
+#: TextTool.cpp:401 TextTool.cpp:438
 msgid "Insert Column Right"
 msgstr "Striep rechterhand infögen"
 
 #. +> trunk
-#: TextTool.cpp:400 TextTool.cpp:438
+#: TextTool.cpp:404 TextTool.cpp:442
 msgid "Column"
 msgstr "Striep"
 
 #. +> trunk
-#: TextTool.cpp:401 TextTool.cpp:439
+#: TextTool.cpp:405 TextTool.cpp:443
 msgid "Delete Column"
 msgstr "Striep wegdoon"
 
 #. +> trunk
-#: TextTool.cpp:405 TextTool.cpp:443
+#: TextTool.cpp:409 TextTool.cpp:447
 msgid "Row"
 msgstr "Reeg"
 
 #. +> trunk
-#: TextTool.cpp:406 TextTool.cpp:444
+#: TextTool.cpp:410 TextTool.cpp:448
 msgid "Delete Row"
 msgstr "Reeg wegdoon"
 
 #. +> trunk
-#: TextTool.cpp:410 TextTool.cpp:448
+#: TextTool.cpp:414 TextTool.cpp:452
 msgid "Merge Cells"
 msgstr "Zellen tosamenföhren"
 
 #. +> trunk
-#: TextTool.cpp:414 TextTool.cpp:452
+#: TextTool.cpp:418 TextTool.cpp:456
 msgid "Split Cells"
 msgstr "Zellen delen"
 
 #. +> trunk stable
-#: TextTool.cpp:456
+#: TextTool.cpp:460
 msgid "Paragraph..."
 msgstr "Afsnitt..."
 
 #. +> trunk stable
-#: TextTool.cpp:459
+#: TextTool.cpp:463
 msgid "Change paragraph margins, text flow, borders, bullets, numbering etc."
 msgstr "Afsnittränners, Textfleten, Ränners, Optellpünkt, Nummereren usw. ännern"
 
 #. +> trunk stable
-#: TextTool.cpp:460
+#: TextTool.cpp:464
 msgid ""
 "Change paragraph margins, text flow, borders, bullets, numbering etc."
 "<p>Select text in multiple paragraphs to change the formatting of all selected paragraphs."
@@ -2678,7 +2703,7 @@ msgstr ""
 "<p>Is keen Text utsöcht, warrt de aktuell Afsnitt ännert.</p>"
 
 #. +> trunk
-#: TextTool.cpp:473
+#: TextTool.cpp:477
 msgid "Configure Change Tracking..."
 msgstr "Instellen för't Naspören vun Ännern..."
 
@@ -2688,17 +2713,17 @@ msgid "Change Tracking"
 msgstr "Ännern naspören"
 
 #. +> trunk
-#: TextTool.cpp:477
+#: TextTool.cpp:481
 msgid "Style Manager..."
 msgstr "Stilpleger..."
 
 #. +> trunk stable
-#: TextTool.cpp:479
+#: TextTool.cpp:483
 msgid "Change attributes of styles"
 msgstr "Stilattributen ännern"
 
 #. +> trunk stable
-#: TextTool.cpp:480
+#: TextTool.cpp:484
 msgid ""
 "Change font and paragraph attributes of styles."
 "<p>Multiple styles can be changed using the dialog box."
@@ -2707,37 +2732,37 @@ msgstr ""
 "<p>Mehr Stilen laat sik in't Dialoogfinster ännern."
 
 #. +> trunk stable
-#: TextTool.cpp:487
+#: TextTool.cpp:491
 msgid "Special Character..."
 msgstr "Sünnerteken..."
 
 #. +> trunk stable
-#: TextTool.cpp:491
+#: TextTool.cpp:495
 msgid "Insert one or more symbols or characters not found on the keyboard"
 msgstr "Een oder mehr Symbolen oder Tekens infögen, de dat nich op de Tastatuur gifft"
 
 #. +> trunk stable
-#: TextTool.cpp:492
+#: TextTool.cpp:496
 msgid "Insert one or more symbols or characters not found on the keyboard."
 msgstr "Een oder mehr Symbolen oder Tekens infögen, de dat nich op de Tastatuur gifft."
 
 #. +> trunk
-#: TextTool.cpp:495
+#: TextTool.cpp:499
 msgid "Repaint"
 msgstr "Nieg malen"
 
 #. +> trunk stable
-#: TextTool.cpp:571
+#: TextTool.cpp:576
 msgid "Insertion"
 msgstr "Infögen"
 
 #. +> trunk stable
-#: TextTool.cpp:573
+#: TextTool.cpp:578
 msgid "Deletion"
 msgstr "Wegdoon"
 
 #. +> trunk stable
-#: TextTool.cpp:575
+#: TextTool.cpp:580
 msgid "Formatting"
 msgstr "Formateren"
 
@@ -2747,19 +2772,24 @@ msgid "Abc"
 msgstr "Abc"
 
 #. +> trunk
-#: TextTool.cpp:1599
+#: TextTool.cpp:1628
 msgid "Character"
 msgstr "Teken"
 
 #. +> trunk
-#: TextTool.cpp:1601
+#: TextTool.cpp:1630
 msgid "Paragraph"
 msgstr "Afsnitt"
 
 #. +> trunk
-#: TextTool.cpp:1603
+#: TextTool.cpp:1632
 msgid "Table"
 msgstr "Tabell"
+
+#. +> trunk stable
+#: TextTool.cpp:376
+msgid "Table..."
+msgstr "Tabell..."
 
 #. +> trunk
 #: TextTool.cpp:1855
@@ -2769,24 +2799,17 @@ msgid ""
 msgstr ""
 
 #. +> trunk stable
-#: TextTool.cpp:1908
+#: TextTool.cpp:1939
 msgid "Key Press"
 msgstr "Tastdruck"
 
 #. +> trunk stable
-#: TextTool.cpp:1908 TextTool.cpp:1913
+#: TextTool.cpp:1939 TextTool.cpp:1944
 msgid "Autocorrection"
 msgstr "Autom. Korrektuur"
 
-#. +> trunk
-#: TextTool.cpp:2082
-#, fuzzy
-#| msgid "List Options"
-msgid "Variable Options"
-msgstr "Listenoptschonen"
-
 #. +> trunk stable
-#: TextTool.cpp:2191
+#: TextTool.cpp:2222
 #, kde-format
 msgid ""
 "This link points to the program or script '%1'.\n"
@@ -2796,7 +2819,7 @@ msgstr ""
 "Bööshaftig Programmen köönt Dien Reekner schaden. Wullt Du dit Programm redig utföhren?"
 
 #. +> trunk stable
-#: TextTool.cpp:2196
+#: TextTool.cpp:2227
 msgid "Open Link?"
 msgstr "Link opmaken?"
 
