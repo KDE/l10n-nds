@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kphotoalbum\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-03-03 03:26+0100\n"
+"POT-Creation-Date: 2012-03-04 03:11+0100\n"
 "PO-Revision-Date: 2011-10-13 07:56+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -3572,7 +3572,7 @@ msgstr "<b>Naam: </b> "
 msgid "<b>Description: </b> "
 msgstr "<b>Beschrieven: </b> "
 
-#: Utilities/Util.cpp:226
+#: Utilities/Util.cpp:230
 #, kde-format
 msgid ""
 "Backup file '%1' exists and is newer than '%2'. Should the backup file be "
@@ -3581,31 +3581,44 @@ msgstr ""
 "Dat gifft en Sekern mit Naam \"%1\", de nieger is as \"%2\".  Wullt Du disse "
 "Sekerheitkopie bruken?"
 
-#: Utilities/Util.cpp:229
+#: Utilities/Util.cpp:232
 msgid "Found Backup File"
 msgstr "Sekerndatei funnen"
 
-#: Utilities/Util.cpp:256
+#: Utilities/Util.cpp:234
+#, kde-format
+msgid ""
+"<p>Cannot use current database file '%1':</p><p>%2</p><p>Do you want to use "
+"a backup instead of exiting?</p>"
+msgstr ""
+
+#: Utilities/Util.cpp:236
+#, fuzzy
+#| msgid "Remove Images from Stack"
+msgid "Recover from backup?"
+msgstr "Biller ut den Stapel wegdoon"
+
+#: Utilities/Util.cpp:265
 #, kde-format
 msgid "Unable to copy '%1' to '%2'."
 msgstr "\"%1\" lett sik nich na \"%2\" koperen."
 
-#: Utilities/Util.cpp:256 Utilities/Util.cpp:270 Utilities/Util.cpp:288
-#: Utilities/Util.cpp:305 XMLDB/FileReader.cpp:361
+#: Utilities/Util.cpp:265 Utilities/Util.cpp:279 Utilities/Util.cpp:297
+#: Utilities/Util.cpp:314 XMLDB/FileReader.cpp:361
 msgid "Error Running Demo"
 msgstr "Fehler bi't Utföhren vun de Dorstellen"
 
-#: Utilities/Util.cpp:270 Utilities/Util.cpp:305
+#: Utilities/Util.cpp:279 Utilities/Util.cpp:314
 #, kde-format
 msgid "Unable to create directory '%1' needed for demo."
 msgstr "Orner \"%1\", de för de Dorstellen nödig is, lett sik nich opstellen."
 
-#: Utilities/Util.cpp:288
+#: Utilities/Util.cpp:297
 #, kde-format
 msgid "Unable to open '%1' for writing."
 msgstr "\"%1\" lett sik nich schrieven."
 
-#: Utilities/Util.cpp:376
+#: Utilities/Util.cpp:385
 #, kde-format
 msgid "<p>Unable to find file %1</p>"
 msgstr "<p>Datei \"%1\" lett sik nich finnen</p>"
@@ -3958,6 +3971,48 @@ msgstr ""
 "<p>Nich begäng Beteker \"%1\" bi't Lesen vun de Instellen-Datei funnen.</"
 "p><p>Verwacht weer \"Options\" oder \"Drawings\".</p>"
 
+#: XMLDB/FileWriter.cpp:67
+#, kde-format
+msgid ""
+"<p>Could not save the image database to XML.</p>File %1 could not be opened "
+"because of the following error: %2"
+msgstr ""
+
+#: XMLDB/FileWriter.cpp:78
+#, kde-format
+msgid ""
+"<p>Could not save the image database to XML.</p><p>File %1 could not be "
+"written because of the following error: %2</p><p>Your XML file still "
+"contains the previous version of the image database! To avoid losing your "
+"modifications to the image database, try to fix the mentioned error and then "
+"<b>save the file again.</b></p>"
+msgstr ""
+
+#: XMLDB/FileWriter.cpp:95
+#, kde-format
+msgid ""
+"<p>Failed to remove old version of image database.</p><p>Please try again or "
+"replace the file %1 with file %2 manually!</p>"
+msgstr ""
+
+#: XMLDB/FileWriter.cpp:105
+#, kde-format
+msgid ""
+"<p>Failed to move temporary XML file to permanent location.</p><p>Please try "
+"again or rename file %1 to %2 manually!</p>"
+msgstr ""
+
+#: XMLDB/NumberedBackup.cpp:44
+#, kde-format
+msgid "Error creating zip file %1"
+msgstr "Fehler bi't Opstellen vun de Zip-Datei \"%1\""
+
+#: XMLDB/NumberedBackup.cpp:50
+#, fuzzy, kde-format
+#| msgid "Error writing file %1"
+msgid "Error writing file %1 to zip file %2"
+msgstr "Datei \"%1\" lett sik nich schrieven."
+
 #: XMLDB/FileReader.cpp:81
 #, kde-format
 msgid "Error in file %1: unexpected element: '%2'"
@@ -4106,64 +4161,28 @@ msgstr "Standard-Instellendatei nich funnen"
 msgid "Unable to open '%1' for reading"
 msgstr "\"%1\" lett sik nich lesen"
 
-#: XMLDB/FileReader.cpp:370
-#, kde-format
-msgid "Error on line %1 column %2 in file %3: %4"
+#: XMLDB/FileReader.cpp:372
+#, fuzzy, kde-format
+#| msgid "Error on line %1 column %2 in file %3: %4"
+msgid "line %1 column %2 in file %3: %4"
 msgstr "Fehler bi Reeg %1, Striep %2 binnen Datei \"%3\": %4"
 
-#: XMLDB/FileReader.cpp:378
+#: XMLDB/FileReader.cpp:374
+#, kde-format
+msgid "Failed to recover the backup: %1"
+msgstr ""
+
+#: XMLDB/FileReader.cpp:383
 #, kde-format
 msgid "Error in file %1: No elements found"
 msgstr "Fehler binnen Datei \"%1\": Keen Elementen funnen"
 
-#: XMLDB/FileReader.cpp:384
+#: XMLDB/FileReader.cpp:389
 #, kde-format
 msgid "Error in file %1: expected 'KPhotoAlbum' as top element but found '%2'"
 msgstr ""
 "Fehler binnen Datei \"%1\": \"KPhotoAlbum\" wöör as böverst Element "
 "verwacht, man funnen wöör \"%2\""
-
-#: XMLDB/FileWriter.cpp:67
-#, kde-format
-msgid ""
-"<p>Could not save the image database to XML.</p>File %1 could not be opened "
-"because of the following error: %2"
-msgstr ""
-
-#: XMLDB/FileWriter.cpp:78
-#, kde-format
-msgid ""
-"<p>Could not save the image database to XML.</p><p>File %1 could not be "
-"written because of the following error: %2</p><p>Your XML file still "
-"contains the previous version of the image database! To avoid losing your "
-"modifications to the image database, try to fix the mentioned error and then "
-"<b>save the file again.</b></p>"
-msgstr ""
-
-#: XMLDB/FileWriter.cpp:95
-#, kde-format
-msgid ""
-"<p>Failed to remove old version of image database.</p><p>Please try again or "
-"replace the file %1 with file %2 manually!</p>"
-msgstr ""
-
-#: XMLDB/FileWriter.cpp:105
-#, kde-format
-msgid ""
-"<p>Failed to move temporary XML file to permanent location.</p><p>Please try "
-"again or rename file %1 to %2 manually!</p>"
-msgstr ""
-
-#: XMLDB/NumberedBackup.cpp:44
-#, kde-format
-msgid "Error creating zip file %1"
-msgstr "Fehler bi't Opstellen vun de Zip-Datei \"%1\""
-
-#: XMLDB/NumberedBackup.cpp:50
-#, fuzzy, kde-format
-#| msgid "Error writing file %1"
-msgid "Error writing file %1 to zip file %2"
-msgstr "Datei \"%1\" lett sik nich schrieven."
 
 #: main.cpp:40
 msgid "KPhotoAlbum"
