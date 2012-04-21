@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kexi\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-04-17 02:41+0200\n"
+"POT-Creation-Date: 2012-04-21 02:51+0200\n"
 "PO-Revision-Date: 2011-11-21 22:29+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -2858,21 +2858,6 @@ msgstr "Nich begäng Fehler."
 msgid "Could not compact database \"%1\"."
 msgstr "Datenbank \"%1\" lett sik nich komprimeren."
 
-#: kexidb/drivers/sqlite/sqlitevacuum.cpp:129
-msgid "Compacting database"
-msgstr "Datenbank warrt komprimeert"
-
-#: kexidb/drivers/sqlite/sqlitevacuum.cpp:130
-#, kde-format
-msgid "Compacting database \"%1\"..."
-msgstr "Datenbank \"%1\" warrt komprimeert..."
-
-#: kexidb/drivers/sqlite/sqlitevacuum.cpp:203
-#, kde-format
-msgid "The database has been compacted. Current size decreased by %1% to %2."
-msgstr ""
-"De Datenbank wöör komprimeert. De aktuell Grött wöör üm %1% op %2 minnert."
-
 #: kexidb/drivers/sqlite/sqliteconnection.cpp:242
 #, kde-format
 msgid "Do you want to open file \"%1\" as read-only?"
@@ -2907,6 +2892,21 @@ msgid ""
 msgstr ""
 "Prööv de Datei ehr Verlöven un wat se al vun en anner Programm opmaakt un "
 "afslaten is."
+
+#: kexidb/drivers/sqlite/sqlitevacuum.cpp:129
+msgid "Compacting database"
+msgstr "Datenbank warrt komprimeert"
+
+#: kexidb/drivers/sqlite/sqlitevacuum.cpp:130
+#, kde-format
+msgid "Compacting database \"%1\"..."
+msgstr "Datenbank \"%1\" warrt komprimeert..."
+
+#: kexidb/drivers/sqlite/sqlitevacuum.cpp:203
+#, kde-format
+msgid "The database has been compacted. Current size decreased by %1% to %2."
+msgstr ""
+"De Datenbank wöör komprimeert. De aktuell Grött wöör üm %1% op %2 minnert."
 
 #: kexidb/drivers/xbase/xbaseexport.cpp:263
 msgid "Data not set for migration"
@@ -3018,6 +3018,22 @@ msgstr "Mehr as een \"%1\"-Tabell oder Alias mit dat Feld \"%2\" fastleggt"
 msgid "Unspecified error encountered"
 msgstr "Nich angeven Fehler funnen"
 
+#: sqlscanner.l:98
+msgid "Invalid integer number"
+msgstr "Leeg Heeltall"
+
+#: sqlscanner.l:98
+msgid "This integer number may be too large."
+msgstr "Disse Heeltall is villicht to groot."
+
+#: sqlscanner.l:286
+msgid "Invalid identifier"
+msgstr "Leeg Beteker"
+
+#: sqlscanner.l:287 plugins/queries/kexiquerydesignerguieditor.cpp:1451
+msgid "Identifiers should start with a letter or '_' character"
+msgstr "Betekers schullen mit en Bookstaav oder dat Teken \"_\" anfangen"
+
 #: kexidb/parser/parser_p.cpp:137
 msgid "identifier was expected"
 msgstr "Beteker verwacht"
@@ -3076,22 +3092,6 @@ msgstr ""
 "Sorteren lett sik nich fastleggen - Striepnaam oder -alias \"%1\" gifft dat "
 "nich"
 
-#: sqlscanner.l:98
-msgid "Invalid integer number"
-msgstr "Leeg Heeltall"
-
-#: sqlscanner.l:98
-msgid "This integer number may be too large."
-msgstr "Disse Heeltall is villicht to groot."
-
-#: sqlscanner.l:286
-msgid "Invalid identifier"
-msgstr "Leeg Beteker"
-
-#: sqlscanner.l:287 plugins/queries/kexiquerydesignerguieditor.cpp:1451
-msgid "Identifiers should start with a letter or '_' character"
-msgstr "Betekers schullen mit en Bookstaav oder dat Teken \"_\" anfangen"
-
 #: kexidb/simplecommandlineapp.cpp:81
 msgid "Database driver name"
 msgstr "Naam vun den Datenbankdriever"
@@ -3120,6 +3120,149 @@ msgstr "Den Server sien lokaal Socket-Dateinaam"
 #, kde-format
 msgid "Enter password for %1: "
 msgstr "Passwoort för %1 ingeven: "
+
+#: kexidb/connectiondata.cpp:97
+msgid "file"
+msgstr "Datei"
+
+#: kexidb/drivermanager.cpp:171
+msgid "Could not find any database drivers."
+msgstr "Datenbankdrievers laat sik nich finnen."
+
+#: kexidb/drivermanager.cpp:181 kexidb/drivermanager.cpp:200
+#, kde-format
+msgid "Could not find database driver \"%1\"."
+msgstr "Datenbankdriever \"%1\" lett sik nich finnen."
+
+#: kexidb/drivermanager.cpp:231
+#, kde-format
+msgid "Could not load database driver \"%1\"."
+msgstr "Datenbankdriever \"%1\" lett sik nich laden."
+
+#: kexidb/drivermanager.cpp:374
+#, kde-format
+msgid "No such driver service: \"%1\"."
+msgstr "Drieverdeenst lett sik nich finnen: \"%1\"."
+
+#: kexidb/utils.cpp:131
+msgid "Message from server:"
+msgstr "Servermellen:"
+
+#: kexidb/utils.cpp:133
+msgid "SQL statement:"
+msgstr "SQL-Anwiesen:"
+
+#: kexidb/utils.cpp:150 kexidb/utils.cpp:157
+msgid "Server result:"
+msgstr "Serverresultaat:"
+
+#: kexidb/utils.cpp:394 kexidb/utils.cpp:457 kexidb/utils.cpp:462
+msgid "Test Connection"
+msgstr "Verbinnen utproberen"
+
+#: kexidb/utils.cpp:395
+#, kde-format
+msgid "<qt>Testing connection to <b>%1</b> database server...</qt>"
+msgstr "<qt>Verbinnen na Datenbankserver <b>%1</b> warrt utprobeert...</qt>"
+
+#: kexidb/utils.cpp:456
+#, kde-format
+msgid ""
+"<qt>Test connection to <b>%1</b> database server failed. The server is not "
+"responding.</qt>"
+msgstr ""
+"<qt>Testverbinnen na Datenbankserver <b>%1</b> fehlslaan: Keen "
+"Serverantwoort.</qt>"
+
+#: kexidb/utils.cpp:460
+#, kde-format
+msgid ""
+"<qt>Test connection to <b>%1</b> database server established successfully.</"
+"qt>"
+msgstr "<qt>Testverbinnen na Datenbankserver <b>%1</b> opstellt.</qt>"
+
+#: kexidb/utils.cpp:1248
+msgid "Number"
+msgstr "Tall"
+
+#: kexidb/utils.cpp:1251 plugins/forms/kexidbfactory.cpp:344
+#: widget/utils/kexicontextmenuutils.cpp:293
+msgid "Image"
+msgstr "Bild"
+
+#: kexidb/field.cpp:708
+msgid "Invalid Type"
+msgstr "Leeg Typ"
+
+#: kexidb/field.cpp:709
+msgid "Byte"
+msgstr "Bytes"
+
+#: kexidb/field.cpp:710
+msgid "Short Integer Number"
+msgstr "Kort Heeltall"
+
+#: kexidb/field.cpp:711 kexidb/field.cpp:741
+msgid "Integer Number"
+msgstr "Heeltall"
+
+#: kexidb/field.cpp:712
+msgid "Big Integer Number"
+msgstr "Groot Heeltall"
+
+#: kexidb/field.cpp:713
+msgid "Yes/No Value"
+msgstr "Jo-/Nee-Weert"
+
+#: kexidb/field.cpp:714
+msgid "Date"
+msgstr "Datum"
+
+#: kexidb/field.cpp:715
+msgid "Date and Time"
+msgstr "Datum un Tiet"
+
+#: kexidb/field.cpp:716
+msgid "Time"
+msgstr "Tiet"
+
+#: kexidb/field.cpp:717
+msgid "Single Precision Number"
+msgstr "Eenfach naue Tiet"
+
+#: kexidb/field.cpp:718
+msgid "Double Precision Number"
+msgstr "Dubbelt naue Tiet"
+
+#: kexidb/field.cpp:720
+msgid "Long Text"
+msgstr "Lang Text"
+
+#: kexidb/field.cpp:721 kexidb/field.cpp:745
+msgid "Object"
+msgstr "Objekt"
+
+#: kexidb/field.cpp:739
+msgid "Invalid Group"
+msgstr "Leeg Koppel"
+
+#: kexidb/field.cpp:742
+msgid "Floating Point Number"
+msgstr "Fleetkommatall"
+
+#: kexidb/field.cpp:743
+msgid "Yes/No"
+msgstr "Jo/Nee"
+
+#: kexidb/field.cpp:744
+msgid "Date/Time"
+msgstr "Datum/Tiet"
+
+# unreviewed-context
+#: kexidb/queryschema.cpp:266
+msgctxt "short for 'expression' word, e.g. 'expr' (only latin letters, please)"
+msgid "expr"
+msgstr "Utdr"
 
 #: kexidb/connection.cpp:114
 msgid "Invalid database contents. "
@@ -3459,149 +3602,6 @@ msgstr ""
 #: kexidb/connection.cpp:3543 kexidb/connection.cpp:3566
 msgid "Record deletion on the server failed."
 msgstr "Wegdoon vun Datensett op den Server fehlslaan."
-
-#: kexidb/connectiondata.cpp:97
-msgid "file"
-msgstr "Datei"
-
-#: kexidb/drivermanager.cpp:171
-msgid "Could not find any database drivers."
-msgstr "Datenbankdrievers laat sik nich finnen."
-
-#: kexidb/drivermanager.cpp:181 kexidb/drivermanager.cpp:200
-#, kde-format
-msgid "Could not find database driver \"%1\"."
-msgstr "Datenbankdriever \"%1\" lett sik nich finnen."
-
-#: kexidb/drivermanager.cpp:231
-#, kde-format
-msgid "Could not load database driver \"%1\"."
-msgstr "Datenbankdriever \"%1\" lett sik nich laden."
-
-#: kexidb/drivermanager.cpp:374
-#, kde-format
-msgid "No such driver service: \"%1\"."
-msgstr "Drieverdeenst lett sik nich finnen: \"%1\"."
-
-#: kexidb/utils.cpp:131
-msgid "Message from server:"
-msgstr "Servermellen:"
-
-#: kexidb/utils.cpp:133
-msgid "SQL statement:"
-msgstr "SQL-Anwiesen:"
-
-#: kexidb/utils.cpp:150 kexidb/utils.cpp:157
-msgid "Server result:"
-msgstr "Serverresultaat:"
-
-#: kexidb/utils.cpp:394 kexidb/utils.cpp:457 kexidb/utils.cpp:462
-msgid "Test Connection"
-msgstr "Verbinnen utproberen"
-
-#: kexidb/utils.cpp:395
-#, kde-format
-msgid "<qt>Testing connection to <b>%1</b> database server...</qt>"
-msgstr "<qt>Verbinnen na Datenbankserver <b>%1</b> warrt utprobeert...</qt>"
-
-#: kexidb/utils.cpp:456
-#, kde-format
-msgid ""
-"<qt>Test connection to <b>%1</b> database server failed. The server is not "
-"responding.</qt>"
-msgstr ""
-"<qt>Testverbinnen na Datenbankserver <b>%1</b> fehlslaan: Keen "
-"Serverantwoort.</qt>"
-
-#: kexidb/utils.cpp:460
-#, kde-format
-msgid ""
-"<qt>Test connection to <b>%1</b> database server established successfully.</"
-"qt>"
-msgstr "<qt>Testverbinnen na Datenbankserver <b>%1</b> opstellt.</qt>"
-
-#: kexidb/utils.cpp:1248
-msgid "Number"
-msgstr "Tall"
-
-#: kexidb/utils.cpp:1251 plugins/forms/kexidbfactory.cpp:344
-#: widget/utils/kexicontextmenuutils.cpp:293
-msgid "Image"
-msgstr "Bild"
-
-#: kexidb/field.cpp:708
-msgid "Invalid Type"
-msgstr "Leeg Typ"
-
-#: kexidb/field.cpp:709
-msgid "Byte"
-msgstr "Bytes"
-
-#: kexidb/field.cpp:710
-msgid "Short Integer Number"
-msgstr "Kort Heeltall"
-
-#: kexidb/field.cpp:711 kexidb/field.cpp:741
-msgid "Integer Number"
-msgstr "Heeltall"
-
-#: kexidb/field.cpp:712
-msgid "Big Integer Number"
-msgstr "Groot Heeltall"
-
-#: kexidb/field.cpp:713
-msgid "Yes/No Value"
-msgstr "Jo-/Nee-Weert"
-
-#: kexidb/field.cpp:714
-msgid "Date"
-msgstr "Datum"
-
-#: kexidb/field.cpp:715
-msgid "Date and Time"
-msgstr "Datum un Tiet"
-
-#: kexidb/field.cpp:716
-msgid "Time"
-msgstr "Tiet"
-
-#: kexidb/field.cpp:717
-msgid "Single Precision Number"
-msgstr "Eenfach naue Tiet"
-
-#: kexidb/field.cpp:718
-msgid "Double Precision Number"
-msgstr "Dubbelt naue Tiet"
-
-#: kexidb/field.cpp:720
-msgid "Long Text"
-msgstr "Lang Text"
-
-#: kexidb/field.cpp:721 kexidb/field.cpp:745
-msgid "Object"
-msgstr "Objekt"
-
-#: kexidb/field.cpp:739
-msgid "Invalid Group"
-msgstr "Leeg Koppel"
-
-#: kexidb/field.cpp:742
-msgid "Floating Point Number"
-msgstr "Fleetkommatall"
-
-#: kexidb/field.cpp:743
-msgid "Yes/No"
-msgstr "Jo/Nee"
-
-#: kexidb/field.cpp:744
-msgid "Date/Time"
-msgstr "Datum/Tiet"
-
-# unreviewed-context
-#: kexidb/queryschema.cpp:266
-msgctxt "short for 'expression' word, e.g. 'expr' (only latin letters, please)"
-msgid "expr"
-msgstr "Utdr"
 
 #: kexiutils/identifier.cpp:92
 #, kde-format
