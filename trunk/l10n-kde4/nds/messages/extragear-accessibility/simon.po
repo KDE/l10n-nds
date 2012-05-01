@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simon\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-04-06 02:52+0200\n"
+"POT-Creation-Date: 2012-05-01 03:30+0200\n"
 "PO-Revision-Date: 2012-03-17 07:06+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -22,12 +22,14 @@ msgstr ""
 msgid "Speech Model"
 msgstr ""
 
-#: firstrunscenariosconfig.cpp:30
+#. i18n: file: welcomepage.ui:20
+#. i18n: ectx: property (title), widget (QGroupBox, gbScenarios)
+#: firstrunscenariosconfig.cpp:30 rc.cpp:870
 msgid "Scenarios"
 msgstr ""
 
 #: firstrunscenariosconfig.cpp:42
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1220 simonview.cpp:465
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1196 welcomepage.cpp:292
 msgid "Could not re-initialize scenarios. Please restart simon!"
 msgstr ""
 
@@ -57,7 +59,7 @@ msgstr ""
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #. i18n: file: simonview.ui:23
 #. i18n: ectx: property (accessibleName), widget (QMainWindow, MainWindow)
-#: main.cpp:66 simonview.cpp:222 rc.cpp:870 rc.cpp:873
+#: main.cpp:66 rc.cpp:858 rc.cpp:861
 msgid "simon"
 msgstr ""
 
@@ -147,9 +149,7 @@ msgid ""
 "You can load some in the \"Manage plugins\" dialog."
 msgstr ""
 
-#. i18n: file: simonui.rc:23
-#. i18n: ectx: Menu (commands)
-#: simonactionsui/runcommandview.cpp:30 rc.cpp:864
+#: simonactionsui/runcommandview.cpp:30
 msgid "Commands"
 msgstr ""
 
@@ -291,7 +291,7 @@ msgstr ""
 msgid "Could not determine Condition Type"
 msgstr ""
 
-#: simoncontextui/newcondition.cpp:111
+#: simoncontextui/newcondition.cpp:110
 msgid "No condition plugins loaded that provide condition engines."
 msgstr ""
 
@@ -306,10 +306,12 @@ msgstr ""
 
 #. i18n: file: simonmodelmanagementui/trainmain.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, TrainMain)
+#. i18n: file: welcomepage.ui:66
+#. i18n: ectx: property (title), widget (QGroupBox, gbTraining)
 #: simonmodelmanagementui/AddWord/addwordrecordpage.cpp:106
 #: simonmodelmanagementui/TrainSamples/trainingswizard.cpp:60
 #: simonmodelmanagementui/TrainSamples/trainsampleintropage.cpp:33
-#: simonmodelmanagementui/trainingview.cpp:24 rc.cpp:588
+#: simonmodelmanagementui/trainingview.cpp:24 rc.cpp:588 rc.cpp:879
 msgid "Training"
 msgstr ""
 
@@ -349,9 +351,9 @@ msgid ""
 "Only the first 1000 are shown."
 msgstr ""
 
-#. i18n: file: simonmodelmanagementui/vocabulary.ui:145
+#. i18n: file: simonmodelmanagementui/vocabulary.ui:103
 #. i18n: ectx: property (text), widget (KPushButton, pbAddWord)
-#: simonmodelmanagementui/AddWord/addwordview.cpp:77 rc.cpp:648
+#: simonmodelmanagementui/AddWord/addwordview.cpp:77 rc.cpp:639
 msgid "Add Word"
 msgstr ""
 
@@ -493,9 +495,9 @@ msgctxt "Selection box for the encoding: Determine the encoding automatically"
 msgid "Automatic"
 msgstr ""
 
-#. i18n: file: simonmodelmanagementui/vocabulary.ui:111
+#. i18n: file: simonmodelmanagementui/vocabulary.ui:178
 #. i18n: ectx: property (text), widget (KPushButton, pbImport)
-#: simonmodelmanagementui/ImportDict/importdictintropage.cpp:34 rc.cpp:639
+#: simonmodelmanagementui/ImportDict/importdictintropage.cpp:34 rc.cpp:657
 msgid "Import Dictionary"
 msgstr ""
 
@@ -1011,51 +1013,6 @@ msgstr ""
 msgid "Could not delete the sentence."
 msgstr ""
 
-#: simonmodelmanagementui/modelmanageruiproxy.cpp:57
-#, kde-format
-msgctxt "%1 is path"
-msgid ""
-"Could not store the base model received from the server.\n"
-"\n"
-"Please check the permissions on the model folder: %1"
-msgstr ""
-
-#: simonmodelmanagementui/modelmanageruiproxy.cpp:70
-#, kde-format
-msgctxt "%1 is path"
-msgid ""
-"Could not store the language description received from the server.\n"
-"\n"
-"Please check the permissions on the model folder: %1"
-msgstr ""
-
-#: simonmodelmanagementui/modelmanageruiproxy.cpp:83
-#, kde-format
-msgctxt "%1 is path"
-msgid ""
-"Could not store the training corpus received from the server.\n"
-"\n"
-"Please check the permissions on the model folder: %1"
-msgstr ""
-
-#: simonmodelmanagementui/modelmanageruiproxy.cpp:96
-#, kde-format
-msgctxt "%1 is path"
-msgid ""
-"Could not store the active model received from the server.\n"
-"\n"
-"Please check the permissions on the model folder: %1"
-msgstr ""
-
-#: simonmodelmanagementui/modelmanageruiproxy.cpp:109
-#, kde-format
-msgctxt "%1 is sample path, %2 is training data folder"
-msgid ""
-"Could not store the sample %1 received from the server.\n"
-"\n"
-"Please check the permissions on the sample folder: %2"
-msgstr ""
-
 #: simonmodelmanagementui/trainingview.cpp:25
 msgid "Train the Acoustic Model"
 msgstr ""
@@ -1098,39 +1055,84 @@ msgstr ""
 msgid "View and modify the vocabulary."
 msgstr ""
 
-#: simonmodelmanagementui/vocabularyviewprivate.cpp:155
+#: simonmodelmanagementui/modelmanageruiproxy.cpp:55
+#, kde-format
+msgctxt "%1 is path"
+msgid ""
+"Could not store the base model received from the server.\n"
+"\n"
+"Please check the permissions on the model folder: %1"
+msgstr ""
+
+#: simonmodelmanagementui/modelmanageruiproxy.cpp:67
+#, kde-format
+msgctxt "%1 is path"
+msgid ""
+"Could not store the language description received from the server.\n"
+"\n"
+"Please check the permissions on the model folder: %1"
+msgstr ""
+
+#: simonmodelmanagementui/modelmanageruiproxy.cpp:79
+#, kde-format
+msgctxt "%1 is path"
+msgid ""
+"Could not store the training corpus received from the server.\n"
+"\n"
+"Please check the permissions on the model folder: %1"
+msgstr ""
+
+#: simonmodelmanagementui/modelmanageruiproxy.cpp:91
+#, kde-format
+msgctxt "%1 is path"
+msgid ""
+"Could not store the active model received from the server.\n"
+"\n"
+"Please check the permissions on the model folder: %1"
+msgstr ""
+
+#: simonmodelmanagementui/modelmanageruiproxy.cpp:104
+#, kde-format
+msgctxt "%1 is sample path, %2 is training data folder"
+msgid ""
+"Could not store the sample %1 received from the server.\n"
+"\n"
+"Please check the permissions on the sample folder: %2"
+msgstr ""
+
+#: simonmodelmanagementui/vocabularyviewprivate.cpp:157
 msgid "Could not add words to the list"
 msgstr ""
 
-#: simonmodelmanagementui/vocabularyviewprivate.cpp:176
+#: simonmodelmanagementui/vocabularyviewprivate.cpp:178
 msgid "Please select a word first"
 msgstr ""
 
-#: simonmodelmanagementui/vocabularyviewprivate.cpp:210
+#: simonmodelmanagementui/vocabularyviewprivate.cpp:212
 msgid "Failed to re-order the changed word."
 msgstr ""
 
-#: simonmodelmanagementui/vocabularyviewprivate.cpp:234
+#: simonmodelmanagementui/vocabularyviewprivate.cpp:236
 msgctxt "Standard name for terminals that are not used for the recognition"
 msgid "Unused"
 msgstr ""
 
-#: simonmodelmanagementui/vocabularyviewprivate.cpp:273
+#: simonmodelmanagementui/vocabularyviewprivate.cpp:275
 msgid "Do you really want to clear the whole vocabulary?"
 msgstr ""
 
-#: simonmodelmanagementui/vocabularyviewprivate.cpp:274
+#: simonmodelmanagementui/vocabularyviewprivate.cpp:276
 msgid ""
 "This will remove every word from the currently displayed vocabulary list.\n"
 "\n"
 "Are you absolutely sure you want to continue?"
 msgstr ""
 
-#: simonmodelmanagementui/vocabularyviewprivate.cpp:319
+#: simonmodelmanagementui/vocabularyviewprivate.cpp:321
 msgid "Please select a word scheduled for training first."
 msgstr ""
 
-#: simonmodelmanagementui/vocabularyviewprivate.cpp:337
+#: simonmodelmanagementui/vocabularyviewprivate.cpp:339
 msgid ""
 "Please select a few words for the special training by dragging them from the "
 "list on your left to the list above.\n"
@@ -1141,242 +1143,6 @@ msgstr ""
 
 #: simonrecognitioncontrol/plugin_exporter.cpp:34
 msgid "Synchronization"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:300
-msgid ""
-"The certificate of the remote host is self-signed and thus not "
-"trustworthy. \n"
-"\n"
-"Do you still want to continue?"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:301
-msgid "Self-Signed Certificate"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:339
-#, kde-format
-msgctxt "%1 is timeout length in ms"
-msgid "Request timed out (%1 ms)"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:431
-msgid "Please enter your Authentication Details for the simond below"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:478
-msgid "Could not create active model container"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:549
-msgid "Could not create base model container"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:800
-msgid ""
-"The speech model changed.\n"
-"\n"
-"Synchronize it now?"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:818
-#: simonrecognitioncontrol/recognitioncontrol.cpp:928
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1011
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1239
-msgid "Model synchronization"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:818
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1845
-msgid "Initializing..."
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:888
-msgid "Version not supported"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:895
-msgid "Wrong username or password."
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:903
-msgid "Access Denied."
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:913
-msgid ""
-"The synchronization is already running.\n"
-"\n"
-"If you are sure that this is a mistake, please disconnect from simond and re-"
-"connect."
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:921
-msgid "Could not abort synchronization."
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:928
-#: simonrecognitioncontrol/recognitioncontrol.cpp:932
-msgid "Synchronizing active model"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:990
-msgid "No speech model available: Recognition deactivated"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1002
-msgid "The server could not store the active model."
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1011
-msgid "Synchronizing base model"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1076
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1096
-msgid "Synchronizing scenarios"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1119
-msgid "The server could not store the scenario."
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1231
-msgid "The server could not store the list of selected scenarios."
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1239
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1243
-msgid "Synchronizing Training"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1252
-msgid "Sending Training-Corpus"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1263
-msgid "Loading Training"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1280
-msgid "Synchronizing Wordlist"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1301
-msgid "The server could not store the training corpus."
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1310
-msgid "Synchronizing Language Description"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1354
-msgid "There seems to be no language description available."
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1365
-msgid "The server could not store language description."
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1389
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1407
-msgid "Synchronizing Training Corpus"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1431
-msgid "The server could not store training sample."
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1439
-msgid "Could not complete Synchronization"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1469
-msgid "Could not restore old model"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1503
-#, kde-format
-msgctxt "Model compilation status message"
-msgid "Model: %1"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1599
-msgid "Could not retrieve model compilation protocol"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1757
-msgid ""
-"Failed to activate the recognition.\n"
-"\n"
-"Please check if you configured at least one recording to be used for "
-"recognition in the sound configuration."
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1761
-msgid "No details available."
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1779
-msgid "Protocol:"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1785
-#, kde-format
-msgctxt "%1 is sample path"
-msgid ""
-"The sample \"%1\" could neither be found on the local computer nor on the "
-"server.\n"
-"\n"
-"Do you want to remove it from the training database?"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1800
-msgid "Could not remove sample from the training corpus"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1807
-#, kde-format
-msgid ""
-"The word \"%1\" is used in your training samples but it is not contained in "
-"your wordlist.\n"
-"\n"
-"What do you want to do?"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1809
-msgid "Remove samples containing the word"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1810
-msgid "Add the word"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1819
-#, kde-format
-msgid "Failed to remove word \"%1\" from the training corpus"
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1833
-#, kde-format
-msgid ""
-"Your grammar uses the undefined terminal \"%1\".\n"
-"\n"
-"Please add a word that uses this terminal or remove the structure(s) "
-"containing the terminal from your grammar."
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1839
-#, kde-format
-msgid ""
-"The phoneme \"%1\" is undefined.\n"
-"\n"
-"Please train at least one word that uses it."
-msgstr ""
-
-#: simonrecognitioncontrol/recognitioncontrol.cpp:1845
-msgid "Compiling model"
 msgstr ""
 
 #: simonrecognitioncontrol/synchronisationsettings.cpp:71
@@ -1417,6 +1183,242 @@ msgid ""
 "The request has been send to the server.\n"
 "\n"
 "Please track the process of the synchronization in simon's main window."
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:296
+msgid ""
+"The certificate of the remote host is self-signed and thus not "
+"trustworthy. \n"
+"\n"
+"Do you still want to continue?"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:297
+msgid "Self-Signed Certificate"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:335
+#, kde-format
+msgctxt "%1 is timeout length in ms"
+msgid "Request timed out (%1 ms)"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:427
+msgid "Please enter your Authentication Details for the simond below"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:474
+msgid "Could not create active model container"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:542
+msgid "Could not create base model container"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:787
+msgid ""
+"The speech model changed.\n"
+"\n"
+"Synchronize it now?"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:805
+#: simonrecognitioncontrol/recognitioncontrol.cpp:915
+#: simonrecognitioncontrol/recognitioncontrol.cpp:993
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1215
+msgid "Model synchronization"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:805
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1819
+msgid "Initializing..."
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:875
+msgid "Version not supported"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:882
+msgid "Wrong username or password."
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:890
+msgid "Access Denied."
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:900
+msgid ""
+"The synchronization is already running.\n"
+"\n"
+"If you are sure that this is a mistake, please disconnect from simond and re-"
+"connect."
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:908
+msgid "Could not abort synchronization."
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:915
+#: simonrecognitioncontrol/recognitioncontrol.cpp:919
+msgid "Synchronizing active model"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:972
+msgid "No speech model available: Recognition deactivated"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:984
+msgid "The server could not store the active model."
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:993
+msgid "Synchronizing base model"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1052
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1072
+msgid "Synchronizing scenarios"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1095
+msgid "The server could not store the scenario."
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1207
+msgid "The server could not store the list of selected scenarios."
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1215
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1219
+msgid "Synchronizing Training"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1228
+msgid "Sending Training-Corpus"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1239
+msgid "Loading Training"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1255
+msgid "Synchronizing Wordlist"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1276
+msgid "The server could not store the training corpus."
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1285
+msgid "Synchronizing Language Description"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1328
+msgid "There seems to be no language description available."
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1339
+msgid "The server could not store language description."
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1363
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1381
+msgid "Synchronizing Training Corpus"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1405
+msgid "The server could not store training sample."
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1413
+msgid "Could not complete Synchronization"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1443
+msgid "Could not restore old model"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1477
+#, kde-format
+msgctxt "Model compilation status message"
+msgid "Model: %1"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1573
+msgid "Could not retrieve model compilation protocol"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1731
+msgid ""
+"Failed to activate the recognition.\n"
+"\n"
+"Please check if you configured at least one recording to be used for "
+"recognition in the sound configuration."
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1735
+msgid "No details available."
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1753
+msgid "Protocol:"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1759
+#, kde-format
+msgctxt "%1 is sample path"
+msgid ""
+"The sample \"%1\" could neither be found on the local computer nor on the "
+"server.\n"
+"\n"
+"Do you want to remove it from the training database?"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1774
+msgid "Could not remove sample from the training corpus"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1781
+#, kde-format
+msgid ""
+"The word \"%1\" is used in your training samples but it is not contained in "
+"your wordlist.\n"
+"\n"
+"What do you want to do?"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1783
+msgid "Remove samples containing the word"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1784
+msgid "Add the word"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1793
+#, kde-format
+msgid "Failed to remove word \"%1\" from the training corpus"
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1807
+#, kde-format
+msgid ""
+"Your grammar uses the undefined terminal \"%1\".\n"
+"\n"
+"Please add a word that uses this terminal or remove the structure(s) "
+"containing the terminal from your grammar."
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1813
+#, kde-format
+msgid ""
+"The phoneme \"%1\" is undefined.\n"
+"\n"
+"Please train at least one word that uses it."
+msgstr ""
+
+#: simonrecognitioncontrol/recognitioncontrol.cpp:1819
+msgid "Compiling model"
 msgstr ""
 
 #: simonsampleshare/sampleshare.cpp:59 simonsampleshare/sampleshare.cpp:150
@@ -1486,19 +1488,19 @@ msgstr ""
 msgid "Could not send sample"
 msgstr ""
 
-#: simonview.cpp:102
+#: simonview.cpp:100
 msgid "Starting simon..."
 msgstr ""
 
-#: simonview.cpp:110
+#: simonview.cpp:108
 msgid "Displaying Splashscreen..."
 msgstr ""
 
-#: simonview.cpp:112
+#: simonview.cpp:110
 msgid "Loading core..."
 msgstr ""
 
-#: simonview.cpp:124
+#: simonview.cpp:122
 msgid ""
 "You did not complete the initial configuration. simon will continue with "
 "default values.\n"
@@ -1506,133 +1508,59 @@ msgid ""
 "Do you want simon to display the wizard again on the next start?"
 msgstr ""
 
-#: simonview.cpp:130 simonview.cpp:633 simonview.cpp:707
+#: simonview.cpp:128 simonview.cpp:459 simonview.cpp:533
 msgid "simon - Deactivated"
 msgstr ""
 
-#: simonview.cpp:136
-msgid ""
-"The currently displayed scenario. Select \"Manage scenarios\" to edit the "
-"available options."
-msgstr ""
-
-#: simonview.cpp:138
+#: simonview.cpp:134
 msgid "Not connected"
 msgstr ""
 
-#: simonview.cpp:146
+#: simonview.cpp:142
 msgid "Loading training..."
 msgstr ""
 
-#: simonview.cpp:152
+#: simonview.cpp:147
 msgid "Loading vocabulary..."
 msgstr ""
 
-#: simonview.cpp:157
+#: simonview.cpp:152
 msgid "Loading grammar..."
 msgstr ""
 
-#: simonview.cpp:162
+#: simonview.cpp:157
 msgid "Loading context..."
 msgstr ""
 
-#: simonview.cpp:168
+#: simonview.cpp:163
 msgid "Loading run..."
 msgstr ""
 
-#: simonview.cpp:175
+#: simonview.cpp:170
 msgid "Loading interface..."
 msgstr ""
 
-#: simonview.cpp:214
-#, kde-format
-msgctxt "%1: simon version--- end of comment ---"
-msgid ""
-"<h2 style='margin-top: 0px;'>Welcome to simon %1</h2><p>simon is an open-"
-"source speech recognition program and replaces the mouse and keyboard. It is "
-"designed to be as flexible as possible and allows customization for any "
-"application where speech recognition is needed.</p>"
-msgstr ""
-
-#: simonview.cpp:223
-msgid "simon listens."
-msgstr ""
-
-#: simonview.cpp:225
-msgid "Open Source Speech Recognition Suite"
-msgstr ""
-
-#: simonview.cpp:249
-msgid "Community forums"
-msgstr ""
-
-#: simonview.cpp:249
-msgid "Get in touch with the simon community"
-msgstr ""
-
-#: simonview.cpp:254
-msgid "Mail support"
-msgstr ""
-
-#: simonview.cpp:254
-msgid "Get direct support from the developers"
-msgstr ""
-
-#: simonview.cpp:259
-msgid "simon WIKI"
-msgstr ""
-
-#: simonview.cpp:259
-msgid "The simon knowledge base"
-msgstr ""
-
-#: simonview.cpp:264
-msgid "simon Homepage"
-msgstr ""
-
-#: simonview.cpp:264
-msgid "Official simon homepage"
-msgstr ""
-
-#: simonview.cpp:268
-msgid "Welcome"
-msgstr ""
-
-#: simonview.cpp:338
-#, kde-format
-msgctxt "%1 is scenario id"
-msgid "Could not retrieve Scenario \"%1\""
-msgstr ""
-
-#: simonview.cpp:348 simonview.cpp:374 simonview.cpp:614 simonview.cpp:634
+#: simonview.cpp:220 simonview.cpp:246 simonview.cpp:440 simonview.cpp:460
 msgid "Connect"
 msgstr ""
 
-#: simonview.cpp:357 simonview.cpp:628 simonview.cpp:684 simonview.cpp:698
+#: simonview.cpp:229 simonview.cpp:454 simonview.cpp:510 simonview.cpp:524
 msgid "Activate"
 msgstr ""
 
-#: simonview.cpp:369
+#: simonview.cpp:241
 msgid "Disconnect"
 msgstr ""
 
-#: simonview.cpp:383 simonview.cpp:438
-msgid "Volume calibration"
-msgstr ""
-
-#: simonview.cpp:393 simonview.cpp:405
+#: simonview.cpp:258
 msgid "Synchronize"
 msgstr ""
 
-#: simonview.cpp:410
-msgid "Manage scenarios"
-msgstr ""
-
-#: simonview.cpp:417
+#: simonview.cpp:266
 msgid "Contribute samples"
 msgstr ""
 
-#: simonview.cpp:579
+#: simonview.cpp:405
 msgid ""
 "Could not start recognition because the system reports that the recognition "
 "is not ready.\n"
@@ -1644,61 +1572,61 @@ msgid ""
 "used for the recognition."
 msgstr ""
 
-#: simonview.cpp:611
+#: simonview.cpp:437
 msgctxt "Disconnected from the server"
 msgid "Disconnected"
 msgstr ""
 
-#: simonview.cpp:625
+#: simonview.cpp:451
 msgid "Connection to server lost"
 msgstr ""
 
-#: simonview.cpp:642
+#: simonview.cpp:468
 msgctxt "Connecting to the server"
 msgid "Connecting..."
 msgstr ""
 
-#: simonview.cpp:666
+#: simonview.cpp:492
 msgid "Connected: Deactivating..."
 msgstr ""
 
-#: simonview.cpp:668
+#: simonview.cpp:494
 msgid "Deactivating..."
 msgstr ""
 
-#: simonview.cpp:681
+#: simonview.cpp:507
 msgid "Connected but Deactivated"
 msgstr ""
 
-#: simonview.cpp:701
+#: simonview.cpp:527
 msgid "Connected"
 msgstr ""
 
-#: simonview.cpp:705
+#: simonview.cpp:531
 msgid "simon has been deactivated"
 msgstr ""
 
-#: simonview.cpp:715
+#: simonview.cpp:541
 msgid "Connected: Activating..."
 msgstr ""
 
-#: simonview.cpp:717 simonview.cpp:720
+#: simonview.cpp:543 simonview.cpp:546
 msgid "Activating..."
 msgstr ""
 
-#: simonview.cpp:726
+#: simonview.cpp:552
 msgid "Connected and Activated"
 msgstr ""
 
-#: simonview.cpp:729 simonview.cpp:741
+#: simonview.cpp:555 simonview.cpp:567
 msgid "Activated"
 msgstr ""
 
-#: simonview.cpp:747
+#: simonview.cpp:573
 msgid "simon has been activated"
 msgstr ""
 
-#: simonview.cpp:767
+#: simonview.cpp:593
 msgid ""
 "If you quit the application you will no longer be able to dictate texts or "
 "use commands.\n"
@@ -1706,8 +1634,81 @@ msgid ""
 "Do you want to quit?"
 msgstr ""
 
-#: simonview.cpp:801
+#: simonview.cpp:627
 msgid "Quitting..."
+msgstr ""
+
+#: welcomepage.cpp:44
+msgid "Welcome"
+msgstr ""
+
+#: welcomepage.cpp:44
+msgid "Welcome to Simon"
+msgstr ""
+
+#: welcomepage.cpp:51
+#, kde-format
+msgctxt "%1: Simon version"
+msgid "Welcome to Simon %1"
+msgstr ""
+
+#: welcomepage.cpp:91
+#, kde-format
+msgctxt "%1 is the result string"
+msgid "%1 (no applicable command)"
+msgstr ""
+
+#: welcomepage.cpp:117
+msgid ""
+"You are using a user generated acoustic model.\n"
+"Recognition rate can be improved with training."
+msgstr ""
+
+#: welcomepage.cpp:120
+msgid ""
+"You are using an adapted base model.\n"
+"Recognition rate depends on the base model but can be improved with training."
+msgstr ""
+
+#: welcomepage.cpp:123
+msgid ""
+"You are using a static base model.\n"
+"Recognition rate depends solely on the base model."
+msgstr ""
+
+#: welcomepage.cpp:129
+#, kde-format
+msgctxt "%1 is model name, %2 is creation date"
+msgid "Base model: %1 (Created: %2)"
+msgstr ""
+
+#: welcomepage.cpp:139
+#, kde-format
+msgctxt "%1 is model name, %2 is creation date"
+msgid "Active model: %1 (Created: %2)"
+msgstr ""
+
+#: welcomepage.cpp:201
+#, kde-format
+msgctxt "%1 is scenario id"
+msgid "Could not retrieve Scenario \"%1\""
+msgstr ""
+
+#: welcomepage.cpp:218
+#, kde-format
+msgctxt "%1 is the scenario to change"
+msgid "Open \"%1\""
+msgstr ""
+
+#: welcomepage.cpp:234
+msgid ""
+"Please select a text first.\n"
+"\n"
+"If there are no texts available, then none of your loaded Scenarios provide "
+"training texts.\n"
+"\n"
+"To add a new text, select the scenario to modify on the left, open it and "
+"add the training text in the \"Training\" menu."
 msgstr ""
 
 #: rc.cpp:1
@@ -1875,7 +1876,7 @@ msgstr ""
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:29
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: rc.cpp:73 rc.cpp:678
+#: rc.cpp:73 rc.cpp:705
 msgctxt "General settings"
 msgid "General"
 msgstr ""
@@ -1904,9 +1905,9 @@ msgstr "Tofögen"
 #. i18n: ectx: property (text), widget (KPushButton, pbRemove)
 #. i18n: file: simoncontextui/samplegroupcontext.ui:83
 #. i18n: ectx: property (text), widget (QPushButton, pbRemove)
-#. i18n: file: simonmodelmanagementui/vocabulary.ui:159
+#. i18n: file: simonmodelmanagementui/vocabulary.ui:117
 #. i18n: ectx: property (text), widget (KPushButton, pbRemoveWord)
-#: rc.cpp:85 rc.cpp:205 rc.cpp:654
+#: rc.cpp:85 rc.cpp:205 rc.cpp:645
 msgid "Remove"
 msgstr "Wegmaken"
 
@@ -1951,7 +1952,9 @@ msgstr ""
 
 #. i18n: file: simonactionsui/rundialog.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, RunDlg)
-#: rc.cpp:109
+#. i18n: file: simonui.rc:11
+#. i18n: ectx: Menu (commands)
+#: rc.cpp:109 rc.cpp:852
 msgid "Actions"
 msgstr "Akschonen"
 
@@ -1961,9 +1964,9 @@ msgstr "Akschonen"
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, leCommandsFilter)
 #. i18n: file: simoncontextui/contextdialog.ui:38
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, leConditionsFilter)
-#. i18n: file: simonmodelmanagementui/vocabulary.ui:40
+#. i18n: file: simonmodelmanagementui/vocabulary.ui:32
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, leActiveVocabSearch)
-#. i18n: file: simonmodelmanagementui/vocabulary.ui:76
+#. i18n: file: simonmodelmanagementui/vocabulary.ui:68
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, leShadowVocabSearch)
 #: rc.cpp:112 rc.cpp:115 rc.cpp:172 rc.cpp:630 rc.cpp:636
 msgid "Search"
@@ -1987,9 +1990,9 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, pbEditCondition)
 #. i18n: file: simoncontextui/samplegroupcontext.ui:76
 #. i18n: ectx: property (text), widget (QPushButton, pbEdit)
-#. i18n: file: simonmodelmanagementui/vocabulary.ui:152
+#. i18n: file: simonmodelmanagementui/vocabulary.ui:110
 #. i18n: ectx: property (text), widget (KPushButton, pbEditWord)
-#: rc.cpp:127 rc.cpp:178 rc.cpp:202 rc.cpp:651
+#: rc.cpp:127 rc.cpp:178 rc.cpp:202 rc.cpp:642
 msgid "Edit"
 msgstr ""
 
@@ -2830,7 +2833,9 @@ msgstr ""
 
 #. i18n: file: simonmodelmanagementui/trainmain.ui:63
 #. i18n: ectx: property (text), widget (KPushButton, pbTrainText)
-#: rc.cpp:597
+#. i18n: file: welcomepage.ui:104
+#. i18n: ectx: property (text), widget (KPushButton, pbStartTraining)
+#: rc.cpp:597 rc.cpp:885
 msgid "Start Training"
 msgstr ""
 
@@ -2888,297 +2893,283 @@ msgstr ""
 msgid "Vocabulary"
 msgstr ""
 
-#. i18n: file: simonmodelmanagementui/vocabulary.ui:34
+#. i18n: file: simonmodelmanagementui/vocabulary.ui:26
 #. i18n: ectx: attribute (title), widget (QWidget, tpActive)
 #: rc.cpp:627
 msgid "Active Vocabulary"
 msgstr ""
 
-#. i18n: file: simonmodelmanagementui/vocabulary.ui:70
+#. i18n: file: simonmodelmanagementui/vocabulary.ui:62
 #. i18n: ectx: attribute (title), widget (QWidget, pgShadow)
 #: rc.cpp:633
 msgid "Shadow Vocabulary"
 msgstr ""
 
-#. i18n: file: simonmodelmanagementui/vocabulary.ui:118
+#. i18n: file: simonmodelmanagementui/vocabulary.ui:137
+#. i18n: ectx: property (text), widget (KPushButton, pbTrainWords)
+#: rc.cpp:648
+msgid "Train Individual Words"
+msgstr ""
+
+#. i18n: file: simonmodelmanagementui/vocabulary.ui:151
 #. i18n: ectx: property (text), widget (QPushButton, pbCreateLanguageProfile)
-#: rc.cpp:642
+#: rc.cpp:651
 msgid "Create Language Profile"
 msgstr ""
 
-#. i18n: file: simonmodelmanagementui/vocabulary.ui:125
+#. i18n: file: simonmodelmanagementui/vocabulary.ui:171
 #. i18n: ectx: property (text), widget (KPushButton, pbClear)
-#: rc.cpp:645
+#: rc.cpp:654
 msgctxt "Remove every entry"
-msgid "Clear"
+msgid "Clear Vocabulary"
 msgstr ""
 
-#. i18n: file: simonmodelmanagementui/vocabulary.ui:193
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:657
-msgid "Train Words:"
-msgstr ""
-
-#. i18n: file: simonmodelmanagementui/vocabulary.ui:222
-#. i18n: ectx: property (text), widget (QCheckBox, cbBuildSentences)
+#. i18n: file: simonmodelmanagementui/vocabulary.ui:189
+#. i18n: ectx: property (title), widget (QGroupBox, gbTrainWords)
 #: rc.cpp:660
+msgid "Train Words"
+msgstr ""
+
+#. i18n: file: simonmodelmanagementui/vocabulary.ui:217
+#. i18n: ectx: property (text), widget (QCheckBox, cbBuildSentences)
+#: rc.cpp:663
 msgid "Build sentences"
 msgstr ""
 
-#. i18n: file: simonmodelmanagementui/vocabulary.ui:229
+#. i18n: file: simonmodelmanagementui/vocabulary.ui:224
 #. i18n: ectx: property (text), widget (KPushButton, pbAddToTraining)
-#: rc.cpp:663
+#: rc.cpp:666
 msgid "Add to Training"
 msgstr ""
 
-#. i18n: file: simonmodelmanagementui/vocabulary.ui:236
+#. i18n: file: simonmodelmanagementui/vocabulary.ui:231
 #. i18n: ectx: property (text), widget (KPushButton, pbDeleteTrainingWord)
-#: rc.cpp:666
+#: rc.cpp:669
 msgid "Remove Word from Training"
 msgstr ""
 
-#. i18n: file: simonmodelmanagementui/vocabulary.ui:243
+#. i18n: file: simonmodelmanagementui/vocabulary.ui:238
 #. i18n: ectx: property (toolTip), widget (KPushButton, pbTrainList)
-#: rc.cpp:669
+#: rc.cpp:672
 msgid "Starts the Training of the selected Words"
 msgstr ""
 
-#. i18n: file: simonmodelmanagementui/vocabulary.ui:246
+#. i18n: file: simonmodelmanagementui/vocabulary.ui:241
 #. i18n: ectx: property (text), widget (KPushButton, pbTrainList)
-#: rc.cpp:672
+#: rc.cpp:675
 msgid "Train selected Words"
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, NetworkSettingsDlg)
-#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:144
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: rc.cpp:675 rc.cpp:702
-msgid "Network"
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:35
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_StartLocalSimond)
-#: rc.cpp:681
-msgid "Start server when simon starts"
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:45
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_StopLocalSimond)
-#: rc.cpp:684
-msgid "Stop server when simon stops"
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:55
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_JuliusdAutoConnect)
-#: rc.cpp:687
-msgid "Connect to server on startup"
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:65
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomaticallyEnableRecognition)
-#: rc.cpp:690
-msgid "Activate speech recognition on startup"
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:74
-#. i18n: ectx: property (text), widget (QLabel, lbUsername)
-#: rc.cpp:693
-msgctxt "User name for the connection"
-msgid "Username:"
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:87
-#. i18n: ectx: property (text), widget (QLabel, lbPassword)
-#: rc.cpp:696
-msgid "Password:"
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:108
-#. i18n: ectx: property (text), widget (KPushButton, pbConfigureSimond)
-#: rc.cpp:699
-msgid "&Configure server"
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:153
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_JuliusdEncrypted)
-#: rc.cpp:705
-msgid "Use Encryption"
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:162
-#. i18n: ectx: property (text), widget (QLabel, lbTimeout)
-#: rc.cpp:708
-msgid "Timeout (Milliseconds):"
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:184
-#. i18n: ectx: property (title), widget (KEditListBox, kcfg_JuliusdServers)
-#: rc.cpp:711
-msgid "Hosts"
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:11
-#. i18n: ectx: label, entry (StartLocalSimond), group (Recognition)
-#: rc.cpp:714
-msgid "If we should automatically start a local simond server."
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:13
-#. i18n: ectx: tooltip, entry (StartLocalSimond), group (Recognition)
-#: rc.cpp:717
-msgid "If a local simond server should be started when simon starts."
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:16
-#. i18n: ectx: label, entry (StopLocalSimond), group (Recognition)
-#: rc.cpp:720
-msgid ""
-"If we should automatically stop the local simond server when simon exits."
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:18
-#. i18n: ectx: tooltip, entry (StopLocalSimond), group (Recognition)
-#: rc.cpp:723
-msgid ""
-"If the locally started simond server should be stopped when simon stops."
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:21
-#. i18n: ectx: label, entry (JuliusdAutoConnect), group (Recognition)
-#: rc.cpp:726
-msgid "If we should automatically connect to the simond."
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:23
-#. i18n: ectx: tooltip, entry (JuliusdAutoConnect), group (Recognition)
-#: rc.cpp:729
-msgid "Automatically connect to the simond server."
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:26
-#. i18n: ectx: label, entry (AutomaticallyEnableRecognition), group (Recognition)
-#: rc.cpp:732
-msgid ""
-"If we should automatically activate the recognition once we get the ready-"
-"signal"
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:28
-#. i18n: ectx: tooltip, entry (AutomaticallyEnableRecognition), group (Recognition)
-#: rc.cpp:735
-msgid "Automatically enable the recognition once it is available."
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:31
-#. i18n: ectx: label, entry (JuliusdUsername), group (Recognition)
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:33
-#. i18n: ectx: tooltip, entry (JuliusdUsername), group (Recognition)
-#: rc.cpp:738 rc.cpp:741
-msgid "The username for simond."
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:36
-#. i18n: ectx: label, entry (JuliusdPassword), group (Recognition)
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:38
-#. i18n: ectx: tooltip, entry (JuliusdPassword), group (Recognition)
-#: rc.cpp:744 rc.cpp:747
-msgid "The password for simond."
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:41
-#. i18n: ectx: label, entry (JuliusdEncrypted), group (Recognition)
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:43
-#. i18n: ectx: tooltip, entry (JuliusdEncrypted), group (Recognition)
-#: rc.cpp:750 rc.cpp:753
-msgid "If the connection to the simond should be encrypted."
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:46
-#. i18n: ectx: label, entry (JuliusdConnectionTimeout), group (Recognition)
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:48
-#. i18n: ectx: tooltip, entry (JuliusdConnectionTimeout), group (Recognition)
-#: rc.cpp:756 rc.cpp:759
-msgid "The timeout for the connection to the simond."
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:51
-#. i18n: ectx: label, entry (JuliusdServers), group (Recognition)
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:53
-#. i18n: ectx: tooltip, entry (JuliusdServers), group (Recognition)
-#: rc.cpp:762 rc.cpp:765
-msgid "The addresses to all known simond servers in order of preference."
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:59
-#. i18n: ectx: label, entry (SynchronizationMode), group (Synchronization)
-#: rc.cpp:768
-msgid "If and how we should start the synchronization when the model changed."
-msgstr ""
-
-#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:61
-#. i18n: ectx: tooltip, entry (SynchronizationMode), group (Synchronization)
-#: rc.cpp:771
-msgid "If and how we should start the synchronization when the model changes."
 msgstr ""
 
 #. i18n: file: simonrecognitioncontrol/synchronisationsettings.ui:21
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:774
+#: rc.cpp:678
 msgid "Synchronization mode:"
 msgstr ""
 
 #. i18n: file: simonrecognitioncontrol/synchronisationsettings.ui:35
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SynchronizationMode)
-#: rc.cpp:777
+#: rc.cpp:681
 msgid "Automatic Synchronization"
 msgstr ""
 
 #. i18n: file: simonrecognitioncontrol/synchronisationsettings.ui:40
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SynchronizationMode)
-#: rc.cpp:780
+#: rc.cpp:684
 msgid "Ask for Synchronization"
 msgstr ""
 
 #. i18n: file: simonrecognitioncontrol/synchronisationsettings.ui:45
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SynchronizationMode)
-#: rc.cpp:783
+#: rc.cpp:687
 msgid "Manual Synchronization only"
 msgstr ""
 
 #. i18n: file: simonrecognitioncontrol/synchronisationsettings.ui:58
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:786
+#: rc.cpp:690
 msgid "Available Speech Models"
 msgstr ""
 
 #. i18n: file: simonrecognitioncontrol/synchronisationsettings.ui:64
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:789
+#: rc.cpp:693
 msgid "Here you can revert back to old model versions."
 msgstr ""
 
 #. i18n: file: simonrecognitioncontrol/synchronisationsettings.ui:83
 #. i18n: ectx: property (text), widget (KPushButton, pbLoadList)
-#: rc.cpp:792
+#: rc.cpp:696
 msgid "List available Models"
 msgstr ""
 
 #. i18n: file: simonrecognitioncontrol/synchronisationsettings.ui:106
 #. i18n: ectx: property (text), widget (KPushButton, pbSelectModel)
-#: rc.cpp:795
+#: rc.cpp:699
 msgid "Choose Model"
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, NetworkSettingsDlg)
+#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:134
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: rc.cpp:702 rc.cpp:726
+msgid "Network"
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:35
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_StartLocalSimond)
+#: rc.cpp:708
+msgid "Start / stop server with Simon"
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:45
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_JuliusdAutoConnect)
+#: rc.cpp:711
+msgid "Connect to server on startup"
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:55
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomaticallyEnableRecognition)
+#: rc.cpp:714
+msgid "Activate speech recognition on startup"
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:64
+#. i18n: ectx: property (text), widget (QLabel, lbUsername)
+#: rc.cpp:717
+msgctxt "User name for the connection"
+msgid "Username:"
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:77
+#. i18n: ectx: property (text), widget (QLabel, lbPassword)
+#: rc.cpp:720
+msgid "Password:"
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:98
+#. i18n: ectx: property (text), widget (KPushButton, pbConfigureSimond)
+#: rc.cpp:723
+msgid "&Configure server"
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:143
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_JuliusdEncrypted)
+#: rc.cpp:729
+msgid "Use Encryption"
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:152
+#. i18n: ectx: property (text), widget (QLabel, lbTimeout)
+#: rc.cpp:732
+msgid "Timeout (Milliseconds):"
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/networksettingsdlg.ui:174
+#. i18n: ectx: property (title), widget (KEditListBox, kcfg_JuliusdServers)
+#: rc.cpp:735
+msgid "Hosts"
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:11
+#. i18n: ectx: label, entry (StartLocalSimond), group (Recognition)
+#: rc.cpp:738
+msgid "If we should automatically start a local simond server."
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:13
+#. i18n: ectx: tooltip, entry (StartLocalSimond), group (Recognition)
+#: rc.cpp:741
+msgid "If a local simond server should be started when simon starts."
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:16
+#. i18n: ectx: label, entry (JuliusdAutoConnect), group (Recognition)
+#: rc.cpp:744
+msgid "If we should automatically connect to the simond."
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:18
+#. i18n: ectx: tooltip, entry (JuliusdAutoConnect), group (Recognition)
+#: rc.cpp:747
+msgid "Automatically connect to the simond server."
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:21
+#. i18n: ectx: label, entry (AutomaticallyEnableRecognition), group (Recognition)
+#: rc.cpp:750
+msgid ""
+"If we should automatically activate the recognition once we get the ready-"
+"signal"
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:23
+#. i18n: ectx: tooltip, entry (AutomaticallyEnableRecognition), group (Recognition)
+#: rc.cpp:753
+msgid "Automatically enable the recognition once it is available."
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:26
+#. i18n: ectx: label, entry (JuliusdUsername), group (Recognition)
+#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:28
+#. i18n: ectx: tooltip, entry (JuliusdUsername), group (Recognition)
+#: rc.cpp:756 rc.cpp:759
+msgid "The username for simond."
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:31
+#. i18n: ectx: label, entry (JuliusdPassword), group (Recognition)
+#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:33
+#. i18n: ectx: tooltip, entry (JuliusdPassword), group (Recognition)
+#: rc.cpp:762 rc.cpp:765
+msgid "The password for simond."
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:36
+#. i18n: ectx: label, entry (JuliusdEncrypted), group (Recognition)
+#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:38
+#. i18n: ectx: tooltip, entry (JuliusdEncrypted), group (Recognition)
+#: rc.cpp:768 rc.cpp:771
+msgid "If the connection to the simond should be encrypted."
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:41
+#. i18n: ectx: label, entry (JuliusdConnectionTimeout), group (Recognition)
+#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:43
+#. i18n: ectx: tooltip, entry (JuliusdConnectionTimeout), group (Recognition)
+#: rc.cpp:774 rc.cpp:777
+msgid "The timeout for the connection to the simond."
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:46
+#. i18n: ectx: label, entry (JuliusdServers), group (Recognition)
+#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:48
+#. i18n: ectx: tooltip, entry (JuliusdServers), group (Recognition)
+#: rc.cpp:780 rc.cpp:783
+msgid "The addresses to all known simond servers in order of preference."
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:54
+#. i18n: ectx: label, entry (SynchronizationMode), group (Synchronization)
+#: rc.cpp:786
+msgid "If and how we should start the synchronization when the model changed."
+msgstr ""
+
+#. i18n: file: simonrecognitioncontrol/recognitionconfiguration.kcfg:56
+#. i18n: ectx: tooltip, entry (SynchronizationMode), group (Synchronization)
+#: rc.cpp:789
+msgid "If and how we should start the synchronization when the model changes."
 msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, SampleShareDlg)
-#: rc.cpp:798
+#: rc.cpp:792
 msgid "Contribute to Voxforge"
 msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:43
 #. i18n: ectx: property (text), widget (QLabel, coreLb)
-#: rc.cpp:801
+#: rc.cpp:795
 msgid ""
 "<html><body><p>This assistant allows you to submit your collected training "
 "data to a central online repository where it will improve a speaker-"
@@ -3189,31 +3180,31 @@ msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:69
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:804
+#: rc.cpp:798
 msgid "Server to use:"
 msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:83
 #. i18n: ectx: property (text), widget (KLineEdit, leRemoteHost)
-#: rc.cpp:807
+#: rc.cpp:801
 msgid "voxforge.org:4440"
 msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:93
 #. i18n: ectx: property (text), widget (QCheckBox, cbUseEncryption)
-#: rc.cpp:810
+#: rc.cpp:804
 msgid "Use encryption"
 msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:102
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
-#: rc.cpp:813
+#: rc.cpp:807
 msgid "Edit host"
 msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:121
 #. i18n: ectx: property (text), widget (QLabel, coreLb_2)
-#: rc.cpp:816
+#: rc.cpp:810
 msgid ""
 "To ensure high recognition rates, the gathered samples are split into "
 "different groups depending on language, dialect, etc. Please fill out the "
@@ -3224,73 +3215,73 @@ msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:153
 #. i18n: ectx: property (text), widget (QLabel, lbGender)
-#: rc.cpp:819
+#: rc.cpp:813
 msgid "Gender:"
 msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:161
 #. i18n: ectx: property (text), item, widget (KComboBox, cbGender)
-#: rc.cpp:822
+#: rc.cpp:816
 msgid "Male"
 msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:166
 #. i18n: ectx: property (text), item, widget (KComboBox, cbGender)
-#: rc.cpp:825
+#: rc.cpp:819
 msgid "Female"
 msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:174
 #. i18n: ectx: property (text), widget (QLabel, lbAgeRange)
-#: rc.cpp:828
+#: rc.cpp:822
 msgid "Age range:"
 msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:181
 #. i18n: ectx: property (text), widget (QLabel, lbLanguage)
-#: rc.cpp:831
+#: rc.cpp:825
 msgid "Language:"
 msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:194
 #. i18n: ectx: property (text), widget (QLabel, lbDialect)
-#: rc.cpp:834
+#: rc.cpp:828
 msgid "Dialect:"
 msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:236
 #. i18n: ectx: property (text), widget (QCheckBox, cbLicense)
-#: rc.cpp:837
+#: rc.cpp:831
 msgid "Accept license (mandatory)"
 msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:253
 #. i18n: ectx: property (text), widget (QLabel, lbMicrophone)
-#: rc.cpp:840
+#: rc.cpp:834
 msgid "Microphone:"
 msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:261
 #. i18n: ectx: property (text), item, widget (KComboBox, cbAgeRange)
-#: rc.cpp:843
+#: rc.cpp:837
 msgid "Youth"
 msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:266
 #. i18n: ectx: property (text), item, widget (KComboBox, cbAgeRange)
-#: rc.cpp:846
+#: rc.cpp:840
 msgid "Adult"
 msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:271
 #. i18n: ectx: property (text), item, widget (KComboBox, cbAgeRange)
-#: rc.cpp:849
+#: rc.cpp:843
 msgid "Senior"
 msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:279
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:852
+#: rc.cpp:846
 msgid ""
 "<html><body><p>I agree to assign the Copyright to your recorded speech to "
 "the Free Software Foundation and to license your submission under the <a "
@@ -3300,32 +3291,74 @@ msgstr ""
 
 #. i18n: file: simonsampleshare/sampleshare.ui:296
 #. i18n: ectx: property (text), widget (QLabel, coreLb_3)
-#: rc.cpp:855
+#: rc.cpp:849
 msgid ""
 "Thank you for sharing your training data and improving the speaker "
 "independent acoustic model!"
 msgstr ""
 
-#. i18n: file: simonui.rc:5
-#. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:858
-msgid "Main actions"
-msgstr ""
-
-#. i18n: file: simonui.rc:11
-#. i18n: ectx: ToolBar (scenario)
-#: rc.cpp:861
-msgid "Scenario selection"
-msgstr ""
-
-#. i18n: file: simonui.rc:29
+#. i18n: file: simonui.rc:17
 #. i18n: ectx: Menu (settings)
-#: rc.cpp:867
+#: rc.cpp:855
 msgid "Preferences"
 msgstr ""
 
 #. i18n: file: simonview.ui:26
 #. i18n: ectx: property (accessibleDescription), widget (QMainWindow, MainWindow)
-#: rc.cpp:876
+#: rc.cpp:864
 msgid "simon Main Window"
+msgstr ""
+
+#. i18n: file: simonview.ui:79
+#. i18n: ectx: property (text), widget (KPushButton, pbBackToOverview)
+#: rc.cpp:867
+msgid "Back to overview"
+msgstr ""
+
+#. i18n: file: welcomepage.ui:26
+#. i18n: ectx: property (text), widget (QLabel, lbScenarioDescription)
+#: rc.cpp:873
+msgid "You are currently using the following scenarios:"
+msgstr ""
+
+#. i18n: file: welcomepage.ui:54
+#. i18n: ectx: property (text), widget (KPushButton, pbScenarioConfiguration)
+#: rc.cpp:876
+msgid "Manage scenarios"
+msgstr ""
+
+#. i18n: file: welcomepage.ui:72
+#. i18n: ectx: property (text), widget (QLabel, lbTrainingDescription)
+#: rc.cpp:882
+msgid "Your scenarios provide the following training texts:"
+msgstr ""
+
+#. i18n: file: welcomepage.ui:116
+#. i18n: ectx: property (title), widget (QGroupBox, gbAcousticModel)
+#: rc.cpp:888
+msgid "Acoustic model"
+msgstr ""
+
+#. i18n: file: welcomepage.ui:150
+#. i18n: ectx: property (text), widget (KPushButton, pbAcousticConfiguration)
+#: rc.cpp:891
+msgid "Acoustic model configuration"
+msgstr ""
+
+#. i18n: file: welcomepage.ui:162
+#. i18n: ectx: property (title), widget (QGroupBox, gbRecognition)
+#: rc.cpp:894
+msgid "Recognition"
+msgstr ""
+
+#. i18n: file: welcomepage.ui:170
+#. i18n: ectx: property (text), widget (QLabel, lbRecognitionDesc)
+#: rc.cpp:897
+msgid "Last recognition result:"
+msgstr ""
+
+#. i18n: file: welcomepage.ui:221
+#. i18n: ectx: property (text), widget (KPushButton, pbAudioConfiguration)
+#: rc.cpp:900
+msgid "Audio configuration"
 msgstr ""
