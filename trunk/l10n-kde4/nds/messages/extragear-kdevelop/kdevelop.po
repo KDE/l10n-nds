@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevelop\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-05-08 03:58+0200\n"
+"POT-Creation-Date: 2012-05-09 03:42+0200\n"
 "PO-Revision-Date: 2012-01-05 10:23+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -443,7 +443,7 @@ msgstr "Yann Hodique"
 #: main.cpp:148
 #, fuzzy
 #| msgid "Tobias Gläßer"
-msgid "Tobias GlÃ¤Ãer"
+msgid "Tobias Gläßer"
 msgstr "Tobias Gläßer"
 
 #: main.cpp:148
@@ -483,10 +483,12 @@ msgid "Open KDevelop with a new session using the given name."
 msgstr "KDevelop as nieg Törn mit angeven Naam opmaken."
 
 #: main.cpp:183
-#, fuzzy
-#| msgid "Open KDevelop and load the given project."
-msgid "Open KDevelop with the given session.\n"
-msgstr "KDevelop opmaken un angeven Projekt laden"
+msgid ""
+"Open KDevelop with the given session.\n"
+"You can pass either hash or the name of the session."
+msgstr ""
+"KDevelop mit den angeven Törn opmaken\n"
+"Bitte Pröövsumm oder Törnnaam ingeven."
 
 #: main.cpp:185
 msgid "Shows all available sessions and lets you select one to open."
@@ -501,8 +503,14 @@ msgid "Open KDevelop and load the given project."
 msgstr "KDevelop opmaken un angeven Projekt laden"
 
 #: main.cpp:192
-msgid "Start debugging an application in KDevelop with the given debugger.\n"
+msgid ""
+"Start debugging an application in KDevelop with the given debugger.\n"
+"The binary that should be debugged must follow - including arguments.\n"
+"Example: kdevelop --debug gdb myapp --foo bar"
 msgstr ""
+"De Fehlersöök mit den angeven Fehlersöker in KDevelop starten.\n"
+"Dat Programm, dat Du ünnersöken wullt, mutt (mit Argumenten) dorna stahn.\n"
+"Bispill: kdevelop --debug gdb mienprog --bla blubb"
 
 #: main.cpp:198
 msgid "Files to load"
@@ -547,6 +555,7 @@ msgid "Debug"
 msgstr "Fehlersöök"
 
 #: main.cpp:260
+#, kde-format
 msgid ""
 "A session with the name %1 exists already. Use the -s switch to open it."
 msgstr ""
@@ -554,6 +563,7 @@ msgstr ""
 "wullt."
 
 #: main.cpp:277
+#, kde-format
 msgid ""
 "Cannot open unknown session %1. See --sessions switch for available sessions "
 "or use -cs to create a new one."
@@ -562,14 +572,25 @@ msgstr ""
 "verföögbor Törns, oder stell mit \"-cs\" en niegen Törn op."
 
 #: main.cpp:315
+#, kde-format
 msgid "made running kdevelop instance (PID: %1) visible"
 msgstr "Lopen Utgaav vun KDevelop (PID: %1) sichtbor maakt"
 
 #: main.cpp:320
-#, fuzzy
-#| msgid "Failed to Lock Session %1"
-msgid "<p>Failed to lock the session <em>%1</em>, "
-msgstr "Törn %1 lett sik nich afsluten."
+#, kde-format
+msgid ""
+"<p>Failed to lock the session <em>%1</em>, already locked by %2 (PID %4) on "
+"%3.<br>The given application did not respond to a DBUS call, it may have "
+"crashed or is hanging.</p><p>Do you want to remove the lock file and force a "
+"new KDevelop instance?<br/><strong>Beware:</strong> Only do this if you are "
+"sure there is no running KDevelop process using this session.</p>"
+msgstr ""
+"<p>Törn <em>%1</em> lett sik nich afsluten, wöör al vun %2 (PID %4) op %3 "
+"afslaten.<br>Dat angeven Programm antert op keen D-Bus-Oproop. Villicht is "
+"dat afstört oder hett sik ophungen.</p><p>Wullt Du de Slottdatei wegmaken un "
+"en nieg Utgaav vun KDevelop verdwingen?<br/><strong>Beacht:</strong> Do dat "
+"man bloots, wenn Du seker büst, dor löppt keen anner KDevelop-Perzess, de "
+"dissen Törn bruken deit.</p>"
 
 #: main.cpp:330
 #, fuzzy
@@ -578,10 +599,12 @@ msgid "Remove lock file"
 msgstr "Slottdatei wegdoon"
 
 #: main.cpp:332
+#, kde-format
 msgid "Failed to Lock Session %1"
 msgstr "Törn %1 lett sik nich afsluten."
 
 #: main.cpp:336
+#, kde-format
 msgid "Failed to remove lock file %1."
 msgstr "Slottdatei %1 lett sik nich wegdoon."
 
@@ -590,10 +613,12 @@ msgid "Cannot find native launch configuration type"
 msgstr "Normaal Instellen-Typ för Programmstart lett sik nich finnen."
 
 #: main.cpp:438
+#, kde-format
 msgid "Cannot find launcher %1"
 msgstr "Programmstarter \"%1\" lett sik nich finnen."
 
 #: main.cpp:475
+#, kde-format
 msgid "Could not open %1"
 msgstr "\"%1\" lett sik nich opmaken"
 
@@ -859,7 +884,7 @@ msgstr "Fehlersöök binnen Programm"
 msgid ""
 "On the <em>Debug</em> area you will be able to see and analyze how your "
 "program works on execution. On the <em>Run</em> menu you will find all the "
-"possible options.<p/><p/>As you can see, here you can just execute your "
+"possible options.<br/><br/>As you can see, here you can just execute your "
 "application or debug it if you need further runtime information. You can "
 "select what is going to be run by configuring the launches and selecting the "
 "one you want to use in the <em>Current Launch Configuration</em> sub-menu."
@@ -874,42 +899,20 @@ msgstr "Reaal Padd"
 msgid ""
 "On the <em>Review</em> area you will be able to find the tools you need to "
 "review changes in your projects, either the ones you made or some external "
-"patch.<p/> Also it will help you send the changes to the community you're "
+"patch.<br/> Also it will help you send the changes to the community you're "
 "contributing to, either by committing the changes, sending them by e-mail or "
 "putting them on a ReviewBoard service."
 msgstr ""
 
-#~ msgid ""
-#~ "Open KDevelop with the given session.\n"
-#~ "You can pass either hash or the name of the session."
-#~ msgstr ""
-#~ "KDevelop mit den angeven Törn opmaken\n"
-#~ "Bitte Pröövsumm oder Törnnaam ingeven."
+#, fuzzy
+#~| msgid "Open KDevelop and load the given project."
+#~ msgid "Open KDevelop with the given session.\n"
+#~ msgstr "KDevelop opmaken un angeven Projekt laden"
 
-#~ msgid ""
-#~ "Start debugging an application in KDevelop with the given debugger.\n"
-#~ "The binary that should be debugged must follow - including arguments.\n"
-#~ "Example: kdevelop --debug gdb myapp --foo bar"
-#~ msgstr ""
-#~ "De Fehlersöök mit den angeven Fehlersöker in KDevelop starten.\n"
-#~ "Dat Programm, dat Du ünnersöken wullt, mutt (mit Argumenten) dorna "
-#~ "stahn.\n"
-#~ "Bispill: kdevelop --debug gdb mienprog --bla blubb"
-
-#~ msgid ""
-#~ "<p>Failed to lock the session <em>%1</em>, already locked by %2 (PID %4) "
-#~ "on %3.<br>The given application did not respond to a DBUS call, it may "
-#~ "have crashed or is hanging.</p><p>Do you want to remove the lock file and "
-#~ "force a new KDevelop instance?<br/><strong>Beware:</strong> Only do this "
-#~ "if you are sure there is no running KDevelop process using this session.</"
-#~ "p>"
-#~ msgstr ""
-#~ "<p>Törn <em>%1</em> lett sik nich afsluten, wöör al vun %2 (PID %4) op %3 "
-#~ "afslaten.<br>Dat angeven Programm antert op keen D-Bus-Oproop. Villicht "
-#~ "is dat afstört oder hett sik ophungen.</p><p>Wullt Du de Slottdatei "
-#~ "wegmaken un en nieg Utgaav vun KDevelop verdwingen?<br/><strong>Beacht:</"
-#~ "strong> Do dat man bloots, wenn Du seker büst, dor löppt keen anner "
-#~ "KDevelop-Perzess, de dissen Törn bruken deit.</p>"
+#, fuzzy
+#~| msgid "Failed to Lock Session %1"
+#~ msgid "<p>Failed to lock the session <em>%1</em>, "
+#~ msgstr "Törn %1 lett sik nich afsluten."
 
 #~ msgid "%1"
 #~ msgstr "%1"
