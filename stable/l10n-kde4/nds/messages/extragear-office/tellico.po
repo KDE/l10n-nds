@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tellico\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-05-13 12:20+0200\n"
+"POT-Creation-Date: 2012-05-31 14:02+0200\n"
 "PO-Revision-Date: 2011-12-11 07:08+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -97,7 +97,7 @@ msgstr "Titel"
 #: src/configdialog.cpp:182 src/configdialog.cpp:209 src/configdialog.cpp:227
 #: src/fetch/animenfofetcher.cpp:294 src/fetch/animenfofetcher.cpp:298
 #: src/fetch/freebasefetcher.cpp:367 src/fetch/googlebookfetcher.cpp:249
-#: src/fetch/imdbfetcher.cpp:753 src/fetch/imdbfetcher.cpp:1071
+#: src/fetch/imdbfetcher.cpp:946 src/fetch/imdbfetcher.cpp:1277
 #: src/fetch/filmasterfetcher.cpp:233 src/fetch/moviemeterfetcher.cpp:247
 #: src/fetch/openlibraryfetcher.cpp:283 src/field.cpp:37 src/field.cpp:78
 #: src/translators/gcstarimporter.cpp:89
@@ -1107,7 +1107,7 @@ msgid "Issue Year"
 msgstr "Utgaavjohr"
 
 #: src/collections/stampcollection.cpp:76
-#: src/collections/videocollection.cpp:180
+#: src/collections/videocollection.cpp:180 src/fetch/imdbfetcher.cpp:1389
 msgid "Color"
 msgstr "Klöör"
 
@@ -2194,8 +2194,8 @@ msgid "Original Title"
 msgstr "Orginaaltitel"
 
 #: src/fetch/animenfofetcher.cpp:279 src/fetch/animenfofetcher.cpp:479
-#: src/fetch/doubanfetcher.cpp:211 src/fetch/imdbfetcher.cpp:823
-#: src/fetch/imdbfetcher.cpp:1268 src/fetch/dvdfrfetcher.cpp:167
+#: src/fetch/doubanfetcher.cpp:211 src/fetch/imdbfetcher.cpp:1016
+#: src/fetch/imdbfetcher.cpp:1550 src/fetch/dvdfrfetcher.cpp:167
 #: src/fetch/themoviedbfetcher.cpp:252 src/fetch/moviemeterfetcher.cpp:253
 #: src/fetch/moviemeterfetcher.cpp:360
 msgid "Alternative Titles"
@@ -2385,8 +2385,8 @@ msgstr "%1 lett för dissen Sammeln-Typ keen Söök to."
 msgid "Douban Link"
 msgstr "Douban-Link"
 
-#: src/fetch/doubanfetcher.cpp:213 src/fetch/imdbfetcher.cpp:752
-#: src/fetch/imdbfetcher.cpp:1266 src/fetch/themoviedbfetcher.cpp:251
+#: src/fetch/doubanfetcher.cpp:213 src/fetch/imdbfetcher.cpp:945
+#: src/fetch/imdbfetcher.cpp:1548 src/fetch/themoviedbfetcher.cpp:251
 msgid "IMDb Link"
 msgstr "IMDB-Link"
 
@@ -2451,62 +2451,120 @@ msgstr "\"Google-Böker\"-Link"
 msgid "Google Book Search"
 msgstr "Google sien Böker-Söök"
 
-#: src/fetch/imdbfetcher.cpp:615
+#: src/fetch/imdbfetcher.cpp:96 src/fetch/imdbfetcher.cpp:1538
+msgid "Internet Movie Database"
+msgstr "Internet-Filmdatenbank"
+
+#: src/fetch/imdbfetcher.cpp:123
+#, fuzzy
+#| msgid "Internet Movie Database"
+msgid "Internet Movie Database (French)"
+msgstr "Internet-Filmdatenbank"
+
+#: src/fetch/imdbfetcher.cpp:150
+#, fuzzy
+#| msgid "Internet Movie Database"
+msgid "Internet Movie Database (Spanish)"
+msgstr "Internet-Filmdatenbank"
+
+#: src/fetch/imdbfetcher.cpp:177
+#, fuzzy
+#| msgid "Internet Movie Database"
+msgid "Internet Movie Database (German)"
+msgstr "Internet-Filmdatenbank"
+
+#: src/fetch/imdbfetcher.cpp:204
+#, fuzzy
+#| msgid "Internet Movie Database"
+msgid "Internet Movie Database (Italian)"
+msgstr "Internet-Filmdatenbank"
+
+#: src/fetch/imdbfetcher.cpp:231
+#, fuzzy
+#| msgid "Internet Movie Database"
+msgid "Internet Movie Database (Portuguese)"
+msgstr "Internet-Filmdatenbank"
+
+#: src/fetch/imdbfetcher.cpp:804
 msgid "Select IMDb Result"
 msgstr "IMDB-Resultaat utsöken"
 
-#: src/fetch/imdbfetcher.cpp:621
+#: src/fetch/imdbfetcher.cpp:810
 msgid ""
 "<qt>Your search returned multiple matches. Please select one below.</qt>"
 msgstr ""
 "<qt>Dien Söök hett en Reeg Övereenstimmen funnen. Bitte söök nerrn een ut.</"
 "qt>"
 
-#: src/fetch/imdbfetcher.cpp:638
+#: src/fetch/imdbfetcher.cpp:827
 msgid "<qt>Select a search result.</qt>"
 msgstr "<qt>Söökresultaat kören.</qt>"
 
-#: src/fetch/imdbfetcher.cpp:1070 src/fetch/imdbfetcher.cpp:1267
+#: src/fetch/imdbfetcher.cpp:1276 src/fetch/imdbfetcher.cpp:1549
 msgid "IMDb Rating"
 msgstr "IMDB-Beweerten"
 
-#: src/fetch/imdbfetcher.cpp:1227 src/fetch/imdbfetcher.cpp:1269
+#: src/fetch/imdbfetcher.cpp:1421 src/fetch/imdbfetcher.cpp:1509
+#: src/fetch/imdbfetcher.cpp:1551
 msgid "Certifications"
 msgstr "Beglöven"
 
-#: src/fetch/imdbfetcher.cpp:1256
-msgid "Internet Movie Database"
-msgstr "Internet-Filmdatenbank"
+#: src/fetch/imdbfetcher.cpp:1566 src/fetch/amazonfetcher.cpp:962
+msgid "Country: "
+msgstr "Land: "
 
-#: src/fetch/imdbfetcher.cpp:1284 src/fetch/srufetcher.cpp:469
-#: src/fetch/z3950fetcher.cpp:591
-msgid "Hos&t: "
-msgstr "&Reekner: "
+#: src/fetch/imdbfetcher.cpp:1569 src/fetch/amazonfetcher.cpp:965
+msgid "United States"
+msgstr "Vereent Staten vun Amerika"
 
-#: src/fetch/imdbfetcher.cpp:1289
-msgid ""
-"The Internet Movie Database uses several different servers. Choose the one "
-"you wish to use."
+#: src/fetch/imdbfetcher.cpp:1570 src/fetch/amazonfetcher.cpp:969
+msgid "France"
+msgstr "Frankriek"
+
+#: src/fetch/imdbfetcher.cpp:1571 src/fetch/amazonfetcher.cpp:972
+msgid "Spain"
+msgstr "Spanien"
+
+#: src/fetch/imdbfetcher.cpp:1572 src/fetch/amazonfetcher.cpp:967
+msgid "Germany"
+msgstr "Düütschland"
+
+#: src/fetch/imdbfetcher.cpp:1573 src/fetch/amazonfetcher.cpp:973
+msgid "Italy"
+msgstr "Italien"
+
+#: src/fetch/imdbfetcher.cpp:1574
+msgid "Portugal"
 msgstr ""
-"De Internet-Filmdatenbank (IMDB) bruukt verscheden Servers. Söök een ut, den "
-"Du bruken wullt."
 
-#: src/fetch/imdbfetcher.cpp:1295 src/fetch/allocinefetcher.cpp:181
+#: src/fetch/imdbfetcher.cpp:1578
+#, fuzzy
+#| msgid ""
+#| "Amazon.com provides data from several different localized sites. Choose "
+#| "the one you wish to use for this data source."
+msgid ""
+"The Internet Movie Database provides data from several different localized "
+"sites. Choose the one you wish to use for this data source."
+msgstr ""
+"Amazon.com stellt Daten op en Reeg spraaktopasst Sieden praat. Söök de Siet "
+"ut, de Du för dissen Datenborn bruken wullt."
+
+#: src/fetch/imdbfetcher.cpp:1584 src/fetch/allocinefetcher.cpp:181
 msgid "&Maximum cast: "
 msgstr "&Hööchsttall vun Dorstellers: "
 
-#: src/fetch/imdbfetcher.cpp:1300 src/fetch/allocinefetcher.cpp:186
+#: src/fetch/imdbfetcher.cpp:1589 src/fetch/allocinefetcher.cpp:186
 msgid ""
 "The list of cast members may include many people. Set the maximum number "
 "returned from the search."
 msgstr ""
 "De Dorstellerlist kann vele Lüü bargen. Legg de Hööchsttall för de Söök fast."
 
-#: src/fetch/imdbfetcher.cpp:1305
+#: src/fetch/imdbfetcher.cpp:1594
 msgid "Download cover &image"
 msgstr "&Titelbild daalladen"
 
-#: src/fetch/imdbfetcher.cpp:1309 src/fetch/amazonfetcher.cpp:992
+#: src/fetch/imdbfetcher.cpp:1598 src/fetch/amazonfetcher.cpp:992
 msgid ""
 "The cover image may be downloaded as well. However, too many large images in "
 "the collection may degrade performance."
@@ -2539,6 +2597,10 @@ msgstr "Kongressbibliotheek (USA)"
 #: src/fetch/srufetcher.cpp:443
 msgid "SRU Server"
 msgstr "SRU-Server"
+
+#: src/fetch/srufetcher.cpp:469 src/fetch/z3950fetcher.cpp:591
+msgid "Hos&t: "
+msgstr "&Reekner: "
 
 #: src/fetch/srufetcher.cpp:476 src/fetch/z3950fetcher.cpp:597
 msgid "Enter the host name of the server."
@@ -2689,29 +2751,13 @@ msgstr "\"Amazon.com\"-Nettdeensten"
 msgid "Secret key: "
 msgstr "Privaatslötel: "
 
-#: src/fetch/amazonfetcher.cpp:962
-msgid "Country: "
-msgstr "Land: "
-
-#: src/fetch/amazonfetcher.cpp:965
-msgid "United States"
-msgstr "Vereent Staten vun Amerika"
-
 #: src/fetch/amazonfetcher.cpp:966
 msgid "United Kingdom"
 msgstr "Grootbritannien"
 
-#: src/fetch/amazonfetcher.cpp:967
-msgid "Germany"
-msgstr "Düütschland"
-
 #: src/fetch/amazonfetcher.cpp:968
 msgid "Japan"
 msgstr "Japan"
-
-#: src/fetch/amazonfetcher.cpp:969
-msgid "France"
-msgstr "Frankriek"
 
 #: src/fetch/amazonfetcher.cpp:970
 msgid "Canada"
@@ -2720,14 +2766,6 @@ msgstr "Kanada"
 #: src/fetch/amazonfetcher.cpp:971
 msgid "China"
 msgstr "China"
-
-#: src/fetch/amazonfetcher.cpp:972
-msgid "Spain"
-msgstr "Spanien"
-
-#: src/fetch/amazonfetcher.cpp:973
-msgid "Italy"
-msgstr "Italien"
 
 #: src/fetch/amazonfetcher.cpp:977
 msgid ""
@@ -5859,6 +5897,13 @@ msgstr "Allocine.fr"
 #: scripts.cpp:10
 msgid "Spanish Ministry of Culture"
 msgstr "Spaansch Kultuurministerium"
+
+#~ msgid ""
+#~ "The Internet Movie Database uses several different servers. Choose the "
+#~ "one you wish to use."
+#~ msgstr ""
+#~ "De Internet-Filmdatenbank (IMDB) bruukt verscheden Servers. Söök een ut, "
+#~ "den Du bruken wullt."
 
 #~ msgid "Edit List..."
 #~ msgstr "List bewerken..."
