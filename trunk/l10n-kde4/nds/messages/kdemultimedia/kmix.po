@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmix\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-05 04:26+0200\n"
+"POT-Creation-Date: 2012-08-07 08:23+0200\n"
 "PO-Revision-Date: 2011-12-17 09:27+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -41,19 +41,6 @@ msgstr "Aktuell Luutstärk as Standard sekern"
 #: apps/kmixctrl.cpp:53
 msgid "Restore default volumes"
 msgstr "Standardluutstärken wedderherstellen"
-
-#: apps/kmixd.cpp:303 apps/kmix.cpp:899
-#, kde-format
-msgid ""
-"The soundcard containing the master device was unplugged. Changing to "
-"control %1 on card %2."
-msgstr ""
-"De Klangkoort mit de Hööftreedschap dor op wöör afkoppelt. De %1-Kuntrull op "
-"de Koort \"%2\" kriggt nu dat Leid."
-
-#: apps/kmixd.cpp:313 apps/kmix.cpp:909
-msgid "The last soundcard was unplugged."
-msgstr "De leste Klangkoort wöör afkoppelt."
 
 #: apps/main.cpp:33
 msgid "KMix - KDE's full featured mini mixer"
@@ -216,27 +203,40 @@ msgstr "Lieser maken"
 msgid "Mute"
 msgstr "Stumm"
 
-#: apps/kmix.cpp:758
+#: apps/kmix.cpp:761
 msgid "Cannot add view - GUIProfile is invalid."
 msgstr "Ansicht lett sik nich tofögen, dat Böversietprofil is leeg."
 
-#: apps/kmix.cpp:764
+#: apps/kmix.cpp:767
 msgid "View already exists. Cannot add View."
 msgstr "Ansicht al vörhannen, Tofögen nich mööglich."
 
-#: apps/kmix.cpp:1199
+#: apps/kmix.cpp:902 apps/kmixd.cpp:301
+#, kde-format
+msgid ""
+"The soundcard containing the master device was unplugged. Changing to "
+"control %1 on card %2."
+msgstr ""
+"De Klangkoort mit de Hööftreedschap dor op wöör afkoppelt. De %1-Kuntrull op "
+"de Koort \"%2\" kriggt nu dat Leid."
+
+#: apps/kmix.cpp:912 apps/kmixd.cpp:311
+msgid "The last soundcard was unplugged."
+msgstr "De leste Klangkoort wöör afkoppelt."
+
+#: apps/kmix.cpp:1204
 msgid "Mixer Hardware Information"
 msgstr "Informatschonen över de Mischer-Hardware"
 
-#: apps/kmix.cpp:1213
+#: apps/kmix.cpp:1218
 msgid "The helper application is either not installed or not working."
 msgstr "Dat Hülpprogramm is nich installeert oder dat löppt nich."
 
-#: apps/kmix.cpp:1228
+#: apps/kmix.cpp:1233
 msgid "Error"
 msgstr "Fehler"
 
-#: apps/kmix.cpp:1256 gui/dialogaddview.cpp:128 gui/dialogselectmaster.cpp:112
+#: apps/kmix.cpp:1261 gui/dialogaddview.cpp:128 gui/dialogselectmaster.cpp:112
 msgid "No sound card is installed or currently plugged in."
 msgstr "Opstunns is keen Klangkoort installeert oder tokoppelt"
 
@@ -594,26 +594,6 @@ msgstr "Aktuell Mischer:"
 msgid "Select the channel representing the master volume:"
 msgstr "Söök den Kanaal för de Hööftluutstärk ut:"
 
-#: gui/dialogviewconfiguration.cpp:153 gui/kmixprefdlg.cpp:40
-msgid "Configure"
-msgstr "Instellen"
-
-#: gui/dialogviewconfiguration.cpp:168
-msgid "Configuration of the channels."
-msgstr "De Kanaals instellen"
-
-#: gui/dialogviewconfiguration.cpp:229
-msgid "Available channels"
-msgstr "Verföögbor Kanaals"
-
-#: gui/dialogviewconfiguration.cpp:233
-msgid "Visible channels"
-msgstr "Sichtbor Kanaals"
-
-#: gui/kmixerwidget.cpp:75
-msgid "Invalid mixer"
-msgstr "Leeg Mischer"
-
 #: gui/mdwenum.cpp:60 gui/mdwslider.cpp:114
 msgid "&Hide"
 msgstr "&Versteken"
@@ -701,6 +681,49 @@ msgstr "Opnehmreedschappen"
 msgid "No playback devices."
 msgstr "Afspeelreedschappen"
 
+#: gui/kmixdockwidget.cpp:68
+msgid "Volume Control"
+msgstr "Luutstärk"
+
+#: gui/kmixdockwidget.cpp:137
+msgid "M&ute"
+msgstr "&Stumm"
+
+#: gui/kmixdockwidget.cpp:225
+msgid "Mixer cannot be found"
+msgstr "Mischer lett sik nich finnen"
+
+#: gui/kmixdockwidget.cpp:239
+#, kde-format
+msgid "Volume at %1%"
+msgstr "Luutstärk op %1%"
+
+#: gui/kmixdockwidget.cpp:241
+msgid " (Muted)"
+msgstr " (stumm)"
+
+#: gui/dialogviewconfiguration.cpp:153 gui/kmixprefdlg.cpp:40
+msgid "Configure"
+msgstr "Instellen"
+
+#: gui/dialogviewconfiguration.cpp:168
+#, fuzzy
+#| msgid "Configuration of the channels."
+msgid "Configuration of the channels. Drag icon to update."
+msgstr "De Kanaals instellen"
+
+#: gui/dialogviewconfiguration.cpp:229
+msgid "Available channels"
+msgstr "Verföögbor Kanaals"
+
+#: gui/dialogviewconfiguration.cpp:233
+msgid "Visible channels"
+msgstr "Sichtbor Kanaals"
+
+#: gui/kmixerwidget.cpp:75
+msgid "Invalid mixer"
+msgstr "Leeg Mischer"
+
 #: gui/kmixprefdlg.cpp:55
 msgid "Behavior"
 msgstr "Bedregen"
@@ -722,67 +745,72 @@ msgid "Allows to control the volume from the system tray"
 msgstr "De Luutstärk över den Systeemafsnitt instellen"
 
 #: gui/kmixprefdlg.cpp:77
-msgid "Restore volumes on login"
-msgstr "Luutstärken bi't Anmellen wedder herstellen"
-
-#: gui/kmixprefdlg.cpp:83
 #, fuzzy
 #| msgid "Volume Control"
 msgid "Volume Feedback"
 msgstr "Luutstärk"
 
-#: gui/kmixprefdlg.cpp:90
+#: gui/kmixprefdlg.cpp:83
+msgid "Volume feedback is only available for Pulseaudio."
+msgstr ""
+
+#: gui/kmixprefdlg.cpp:88
+msgid "Startup"
+msgstr ""
+
+#: gui/kmixprefdlg.cpp:94
+msgid "Restore volumes on login"
+msgstr "Luutstärken bi't Anmellen wedder herstellen"
+
+#: gui/kmixprefdlg.cpp:95
+#, fuzzy
+#| msgid "Restore volumes on login"
+msgid "Restore all volume levels and switches."
+msgstr "Luutstärken bi't Anmellen wedder herstellen"
+
+#: gui/kmixprefdlg.cpp:102
+msgid "Dynamic controls from Pulseaudio and MPRIS2 will not be restored."
+msgstr ""
+
+#: gui/kmixprefdlg.cpp:114
+msgid "Supress KMix Autostart"
+msgstr ""
+
+#: gui/kmixprefdlg.cpp:115
+msgid "Disables the KMix autostart service (kmix_autostart.desktop)"
+msgstr ""
+
+#: gui/kmixprefdlg.cpp:121
 msgid "Visual"
 msgstr "Sichtbor"
 
-#: gui/kmixprefdlg.cpp:96
+#: gui/kmixprefdlg.cpp:127
 msgid "Show &tickmarks"
 msgstr "&Skalastreken wiesen"
 
-#: gui/kmixprefdlg.cpp:98
+#: gui/kmixprefdlg.cpp:129
 msgid "Enable/disable tickmark scales on the sliders"
 msgstr "An-/Utmaken vun de Schuvers ehr Skala-Streken"
 
-#: gui/kmixprefdlg.cpp:103
+#: gui/kmixprefdlg.cpp:134
 msgid "Show &labels"
 msgstr "&Beschriften wiesen"
 
-#: gui/kmixprefdlg.cpp:105
+#: gui/kmixprefdlg.cpp:136
 msgid "Enables/disables description labels above the sliders"
 msgstr "Maakt de Beschrieven över de Schuvers an/ut"
 
-#: gui/kmixprefdlg.cpp:112
+#: gui/kmixprefdlg.cpp:143
 msgid "Slider orientation: "
 msgstr "Schuver-Utrichten: "
 
-#: gui/kmixprefdlg.cpp:113
+#: gui/kmixprefdlg.cpp:144
 msgid "&Horizontal"
 msgstr "&Kimmrecht"
 
-#: gui/kmixprefdlg.cpp:114
+#: gui/kmixprefdlg.cpp:145
 msgid "&Vertical"
 msgstr "&Pielrecht"
-
-#: gui/kmixdockwidget.cpp:68
-msgid "Volume Control"
-msgstr "Luutstärk"
-
-#: gui/kmixdockwidget.cpp:137
-msgid "M&ute"
-msgstr "&Stumm"
-
-#: gui/kmixdockwidget.cpp:225
-msgid "Mixer cannot be found"
-msgstr "Mischer lett sik nich finnen"
-
-#: gui/kmixdockwidget.cpp:239
-#, kde-format
-msgid "Volume at %1%"
-msgstr "Luutstärk op %1%"
-
-#: gui/kmixdockwidget.cpp:241
-msgid " (Muted)"
-msgstr " (stumm)"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
