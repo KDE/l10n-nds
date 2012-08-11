@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krecipes\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-10 04:52+0200\n"
+"POT-Creation-Date: 2012-08-11 06:02+0200\n"
 "PO-Revision-Date: 2011-01-04 08:29+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -20,10 +20,12 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 
 #: actionshandlers/authoractionshandler.cpp:38
+#: actionshandlers/kreauthoractionshandler.cpp:32
 msgid "New Author"
 msgstr "Nieg Autor"
 
 #: actionshandlers/authoractionshandler.cpp:63
+#: actionshandlers/kreauthoractionshandler.cpp:61
 msgid "Are you sure you want to delete this author?"
 msgstr "Büst Du seker, Du wullt dissen Autor wegdoon?"
 
@@ -34,11 +36,13 @@ msgstr "Büst Du seker, Du wullt dissen Autor wegdoon?"
 #: actionshandlers/prepmethodactionshandler.cpp:65
 #: actionshandlers/unitactionshandler.cpp:133
 #: actionshandlers/recipeactionshandler.cpp:250
-#: actionshandlers/recipeactionshandler.cpp:261 krecipesview.cpp:694
+#: actionshandlers/recipeactionshandler.cpp:261
+#: actionshandlers/kreauthoractionshandler.cpp:70 krecipesview.cpp:696
 msgid "Recipes"
 msgstr "Rezepten"
 
 #: actionshandlers/authoractionshandler.cpp:91
+#: actionshandlers/kreauthoractionshandler.cpp:85
 #, kde-format
 msgid "Author name cannot be longer than 1 character."
 msgid_plural "Author name cannot be longer than %1 characters."
@@ -46,6 +50,7 @@ msgstr[0] "Den Autor sien Naam mutt nich mehr as een Bookstaav hebben."
 msgstr[1] "Den Autor sien Naam mutt nich mehr as %1 Bookstaven hebben."
 
 #: actionshandlers/authoractionshandler.cpp:112
+#: actionshandlers/kreauthoractionshandler.cpp:116
 msgid ""
 "This author already exists. Continuing will merge these two authors into "
 "one. Are you sure?"
@@ -157,7 +162,7 @@ msgstr "Eenheit Ü&mnömen"
 
 #: actionshandlers/unitactionshandler.cpp:139 dialogs/setupdisplay.cpp:128
 #: exporters/htmlexporter.cpp:391 exporters/xsltexporter.cpp:57
-#: krecipesview.cpp:374 krecipesview.cpp:477
+#: krecipesview.cpp:376 krecipesview.cpp:479
 msgid "Properties"
 msgstr "Egenschappen"
 
@@ -186,7 +191,7 @@ msgid "Please select only one recipe."
 msgstr "Söök bitte bloots een Rezept ut."
 
 #: actionshandlers/recipeactionshandler.cpp:229
-#: actionshandlers/recipeactionshandler.cpp:235 krecipesview.cpp:515
+#: actionshandlers/recipeactionshandler.cpp:235 krecipesview.cpp:517
 msgid "Edit Recipe"
 msgstr "Rezept bewerken"
 
@@ -196,8 +201,8 @@ msgstr "Rezept bewerken"
 msgid "No recipes selected."
 msgstr "Keen Rezepten utsöcht"
 
-#: actionshandlers/recipeactionshandler.cpp:252 krecipesview.cpp:692
-#: krecipesview.cpp:694
+#: actionshandlers/recipeactionshandler.cpp:252 krecipesview.cpp:694
+#: krecipesview.cpp:696
 msgid "Export Recipe"
 msgstr "Rezept exporteren"
 
@@ -705,22 +710,6 @@ msgctxt "@item:inlistbox"
 msgid "No matching recipes found"
 msgstr "Keen passen Rezepten funnen"
 
-#: dialogs/authorsdialog.cpp:45 dialogs/categorieseditordialog.cpp:44
-#: dialogs/ingredientgroupsdialog.cpp:40 dialogs/ingredientsdialog.cpp:64
-#: dialogs/prepmethodsdialog.cpp:44 dialogs/propertiesdialog.cpp:54
-#: dialogs/unitsdialog.cpp:54
-msgctxt "@action:button"
-msgid "Create..."
-msgstr "Opstellen..."
-
-#: dialogs/authorsdialog.cpp:50 dialogs/categorieseditordialog.cpp:49
-#: dialogs/ingredientgroupsdialog.cpp:45 dialogs/ingredientsdialog.cpp:69
-#: dialogs/prepmethodsdialog.cpp:49 dialogs/propertiesdialog.cpp:58
-#: dialogs/selectrecipedialog.cpp:108 dialogs/unitsdialog.cpp:59
-msgctxt "@action:button"
-msgid "Delete"
-msgstr "Wegdoon"
-
 #: dialogs/borderdialog.cpp:35
 msgctxt "@title:window"
 msgid "Choose Border"
@@ -810,6 +799,22 @@ msgstr "Rutsett"
 #: dialogs/borderdialog.cpp:229
 msgid "Border Preview"
 msgstr "Rand-Vöransicht"
+
+#: dialogs/categorieseditordialog.cpp:44 dialogs/ingredientgroupsdialog.cpp:40
+#: dialogs/ingredientsdialog.cpp:64 dialogs/prepmethodsdialog.cpp:44
+#: dialogs/propertiesdialog.cpp:54 dialogs/unitsdialog.cpp:54
+#: dialogs/authorsdialog.cpp:45
+msgctxt "@action:button"
+msgid "Create..."
+msgstr "Opstellen..."
+
+#: dialogs/categorieseditordialog.cpp:49 dialogs/ingredientgroupsdialog.cpp:45
+#: dialogs/ingredientsdialog.cpp:69 dialogs/prepmethodsdialog.cpp:49
+#: dialogs/propertiesdialog.cpp:58 dialogs/selectrecipedialog.cpp:108
+#: dialogs/unitsdialog.cpp:59 dialogs/authorsdialog.cpp:50
+msgctxt "@action:button"
+msgid "Delete"
+msgstr "Wegdoon"
 
 #: dialogs/conversiondialog.cpp:34
 msgctxt "@title:window"
@@ -1084,32 +1089,6 @@ msgstr "Port:"
 msgctxt "@label:textbox Default port"
 msgid "Default"
 msgstr "Standard"
-
-#: dialogs/dependanciesdialog.cpp:48
-msgctxt "@title:window"
-msgid "Element with Dependencies"
-msgstr "Element mit Afhangigkeiten"
-
-#: dialogs/dependanciesdialog.cpp:60
-msgctxt "@info"
-msgid ""
-"<warning>The following will have to be removed also, since currently they "
-"use the element you have chosen to be removed.</warning>"
-msgstr ""
-"<warning>Disse Elementen warrt ok wegdaan, se bruukt dat Element, dat Du "
-"wegdoon wullt.</warning>"
-
-#: dialogs/dependanciesdialog.cpp:63
-msgctxt "@info"
-msgid ""
-"<warning>The following currently use the element you have chosen to be "
-"removed.</warning>"
-msgstr "<warning>Disse Elementen bruukt dat, wat Du wegdoon wullt.</warning>"
-
-#: dialogs/dependanciesdialog.cpp:95
-msgctxt "@info"
-msgid "Are you sure you wish to proceed?"
-msgstr "Wullt Du redig wiedermaken?"
 
 #: dialogs/dietviewdialog.cpp:24
 msgctxt "@title:window"
@@ -2060,24 +2039,6 @@ msgctxt "@info"
 msgid "Invalid input"
 msgstr "Leeg Ingaav"
 
-#: dialogs/selectauthorsdialog.cpp:32
-msgctxt "@title:window"
-msgid "Authors"
-msgstr "Autoren"
-
-#: dialogs/selectauthorsdialog.cpp:68
-msgctxt "@title:column"
-msgid "Author"
-msgstr "Autor"
-
-#: dialogs/selectauthorsdialog.cpp:118
-#, kde-format
-msgctxt "@info"
-msgid "Author name cannot be longer than 1 character."
-msgid_plural "Author name cannot be longer than %1 characters."
-msgstr[0] "Den Autor sien Naam mutt nich mehr as een Bookstaav hebben."
-msgstr[1] "Den Autor sien Naam mutt nich mehr as %1 Bookstaven hebben."
-
 #: dialogs/selectcategoriesdialog.cpp:32
 msgctxt "@title:window"
 msgid "Categories"
@@ -2227,18 +2188,18 @@ msgstr "Foto"
 
 #: dialogs/setupdisplay.cpp:125 exporters/htmlexporter.cpp:235
 #: exporters/plaintextexporter.cpp:76 exporters/xsltexporter.cpp:52
-#: krecipesview.cpp:378 krecipesview.cpp:509
+#: krecipesview.cpp:380 krecipesview.cpp:511
 msgid "Authors"
 msgstr "Autoren"
 
 #: dialogs/setupdisplay.cpp:126 exporters/htmlexporter.cpp:249
 #: exporters/plaintextexporter.cpp:82 exporters/xsltexporter.cpp:49
-#: krecipesview.cpp:377 krecipesview.cpp:501
+#: krecipesview.cpp:379 krecipesview.cpp:503
 msgid "Categories"
 msgstr "Kategorien"
 
 #: dialogs/setupdisplay.cpp:127 exporters/htmlexporter.cpp:344
-#: exporters/xsltexporter.cpp:55 krecipesview.cpp:373 krecipesview.cpp:469
+#: exporters/xsltexporter.cpp:55 krecipesview.cpp:375 krecipesview.cpp:471
 msgid "Ingredients"
 msgstr "Rindoels"
 
@@ -2335,7 +2296,7 @@ msgid "Shopping List"
 msgstr "Inkööplist"
 
 #: dialogs/shoppinglistviewdialog.cpp:67 dialogs/shoppinglistviewdialog.cpp:69
-#: krecipesview.cpp:372 krecipesview.cpp:444
+#: krecipesview.cpp:374 krecipesview.cpp:446
 msgid "Shopping List"
 msgstr "Inkööplist"
 
@@ -2424,6 +2385,50 @@ msgstr "Ruummaat-Ümreken"
 msgctxt "@title:window"
 msgid "Finding Unit Ratios"
 msgstr "Eenheiten-Proportschonen söken"
+
+#: dialogs/dependanciesdialog.cpp:53
+msgctxt "@title:window"
+msgid "Element with Dependencies"
+msgstr "Element mit Afhangigkeiten"
+
+#: dialogs/dependanciesdialog.cpp:65
+msgctxt "@info"
+msgid ""
+"<warning>The following will have to be removed also, since currently they "
+"use the element you have chosen to be removed.</warning>"
+msgstr ""
+"<warning>Disse Elementen warrt ok wegdaan, se bruukt dat Element, dat Du "
+"wegdoon wullt.</warning>"
+
+#: dialogs/dependanciesdialog.cpp:68
+msgctxt "@info"
+msgid ""
+"<warning>The following currently use the element you have chosen to be "
+"removed.</warning>"
+msgstr "<warning>Disse Elementen bruukt dat, wat Du wegdoon wullt.</warning>"
+
+#: dialogs/dependanciesdialog.cpp:104
+msgctxt "@info"
+msgid "Are you sure you wish to proceed?"
+msgstr "Wullt Du redig wiedermaken?"
+
+#: dialogs/selectauthorsdialog.cpp:36
+msgctxt "@title:window"
+msgid "Authors"
+msgstr "Autoren"
+
+#: dialogs/selectauthorsdialog.cpp:74 widgets/kreauthorlistwidget.cpp:28
+msgctxt "@title:column"
+msgid "Author"
+msgstr "Autor"
+
+#: dialogs/selectauthorsdialog.cpp:143
+#, kde-format
+msgctxt "@info"
+msgid "Author name cannot be longer than 1 character."
+msgid_plural "Author name cannot be longer than %1 characters."
+msgstr[0] "Den Autor sien Naam mutt nich mehr as een Bookstaav hebben."
+msgstr[1] "Den Autor sien Naam mutt nich mehr as %1 Bookstaven hebben."
 
 #: exporters/htmlexporter.cpp:134
 msgid "Krecipes Recipes"
@@ -2862,157 +2867,6 @@ msgstr ""
 #: krecipes.cpp:788
 msgid "Unsaved Changes"
 msgstr "Nich sekerte Ännern"
-
-#: krecipesview.cpp:99 krecipesview.cpp:371 krecipesview.cpp:438
-msgid "Find/Edit Recipes"
-msgstr "Rezepten söken/bewerken"
-
-#: krecipesview.cpp:124
-msgid "Data..."
-msgstr "Daten..."
-
-#: krecipesview.cpp:330
-msgid ""
-"\n"
-"You are using SQLite; this error is often caused by using an SQLite 2 "
-"database with Krecipes supporting SQLite 3, if this is the case you could "
-"run the SQLite converter.\n"
-"What do you want to do?"
-msgstr ""
-"\n"
-"Du bruukst SQLite. De Oorsaak för dissen Fehler is faken de Bruuk vun en "
-"SQLite-2-Datenbank mit KRecipes, wat man SQLite-3 ünnerstütten deit. Op't "
-"best wannelst Du de Datenbank üm.\n"
-"Wat wullt Du doon?"
-
-#: krecipesview.cpp:335
-msgid "Run the setup assistant"
-msgstr "Den Hölper anmaken"
-
-#: krecipesview.cpp:336
-msgid "Run the SQLite converter"
-msgstr "SQLite ümwanneln"
-
-#: krecipesview.cpp:345 krecipesview.cpp:360
-msgctxt "Exiting Krecipes"
-msgid "Exiting"
-msgstr "Programm warrt utmaakt"
-
-#: krecipesview.cpp:352
-msgid ""
-"\n"
-"Would you like to run the setup wizard again? Otherwise, the application "
-"will be closed."
-msgstr ""
-"\n"
-"Wullt Du den Inrichthölper nochmaal utföhren? Wenn nich, warrt dat Programm "
-"utmaakt."
-
-#: krecipesview.cpp:375 krecipesview.cpp:485 pref.cpp:419
-#: widgets/propertylistview.cpp:131
-msgid "Units"
-msgstr "Eenheiten"
-
-#: krecipesview.cpp:376 krecipesview.cpp:493
-msgid "Preparation Methods"
-msgstr "Torechtmaak-Metoden"
-
-#: krecipesview.cpp:379 krecipesview.cpp:452
-msgid "Diet Helper"
-msgstr "Etenplaan-Hölper"
-
-#: krecipesview.cpp:380 krecipesview.cpp:460
-msgid "Ingredient Matcher"
-msgstr "Rindoels söken"
-
-#: krecipesview.cpp:520
-msgid "View Recipe"
-msgstr "Rezept ankieken"
-
-#: krecipesview.cpp:766
-msgid ""
-"A recipe contains unsaved changes.\n"
-"Do you want to save changes made to this recipe before editing another "
-"recipe?"
-msgstr ""
-"En Rezept bargt nich sekert Ännern.\n"
-"Wullt Du de Ännern to dit Rezept sekern, ehr Du en anner Rezept bewerken "
-"deist?"
-
-#: krecipesview.cpp:768 krecipesview.cpp:855
-msgid "Unsaved changes"
-msgstr "Ännern nich sekert"
-
-#: krecipesview.cpp:786
-#, kde-format
-msgid "Are you sure you want to permanently remove the recipe, %1?"
-msgstr "Wullt Du dat Rezept \"%1\" redig duerhaftig wegmaken?"
-
-#: krecipesview.cpp:787 krecipesview.cpp:835
-msgid "Confirm remove"
-msgstr "Wegmaken beglöven"
-
-#: krecipesview.cpp:813 widgets/recipelistview.cpp:149
-msgctxt "Recipe created"
-msgid "Created:"
-msgstr "Opstellt:"
-
-#: krecipesview.cpp:814 widgets/recipelistview.cpp:150
-msgctxt "Recipe modified"
-msgid "Modified:"
-msgstr "Ännert:"
-
-#: krecipesview.cpp:815 widgets/recipelistview.cpp:151
-msgctxt "Recipe last accessed"
-msgid "Last Accessed:"
-msgstr "Verleden Togriep:"
-
-#: krecipesview.cpp:834
-msgid "Are you sure you want to permanently remove the selected recipes?"
-msgstr "Wullt Du de utsöchten Rezepten redig duerhaftig wegmaken?"
-
-#: krecipesview.cpp:853
-msgid ""
-"A recipe contains unsaved changes.\n"
-"Do you want to save changes made to this recipe before creating a new recipe?"
-msgstr ""
-"En Rezept bargt nich sekert Ännern.\n"
-"Wullt Du de Ännern to dit Rezept sekern, ehr Du en nieg  Rezept opstellst?"
-
-#: krecipesview.cpp:999
-msgid "Unable to setup database"
-msgstr "Datenbank lett sik nich inrichten"
-
-#: krecipesview.cpp:1011
-msgid "Code error. No DB support has been included. Exiting"
-msgstr ""
-"Kode-Fehler. Keen Datenbank-Ünnerstütten inslaten. Programm warrt utmaakt"
-
-#: krecipesview.cpp:1173 krecipesview.cpp:1199
-msgid "Code error. No DB support was built in. Exiting"
-msgstr ""
-"Kode-Fehler. Keen Datenbank-Ünnerstütten inbuut. Programm warrt utmaakt"
-
-#: krecipesview.cpp:1182
-msgid "Unable to open database"
-msgstr "Datenbank lett sik nich opmaken"
-
-#: krecipesview.cpp:1204
-msgid "DB started correctly\n"
-msgstr "Datenbank akraat start\n"
-
-#: krecipesview.cpp:1212
-#, kde-format
-msgid "The configured database type (%1) is unsupported."
-msgstr "De instellte Datenbanktyp (%1) warrt nich ünnerstütt."
-
-#: krecipesview.cpp:1212
-msgid ""
-"Unsupported database type. Database must be either MySQL, SQLite, or "
-"PostgreSQL."
-msgstr ""
-"Nich ünnerstütt Datenbanktyp. De Datenbank mutt MySQL, SQLite oder "
-"PostgreSQL wesen."
 
 #: krepagelayout.cpp:114
 msgid "ISO A3"
@@ -3641,6 +3495,11 @@ msgstr ""
 "Beacht: Bi de mehrsten Server-Optschonen muttst Du KRecipes nieg starten, "
 "ehr Ännern dor an övernahmen warrt."
 
+#: pref.cpp:419 widgets/propertylistview.cpp:131 krecipesview.cpp:377
+#: krecipesview.cpp:487
+msgid "Units"
+msgstr "Eenheiten"
+
 #: pref.cpp:420
 msgid "Use abbreviations"
 msgstr "Afkörten bruken"
@@ -4080,6 +3939,21 @@ msgstr "Keen Kategorie"
 msgid "Recipe"
 msgstr "Rezept"
 
+#: widgets/recipelistview.cpp:149 krecipesview.cpp:815
+msgctxt "Recipe created"
+msgid "Created:"
+msgstr "Opstellt:"
+
+#: widgets/recipelistview.cpp:150 krecipesview.cpp:816
+msgctxt "Recipe modified"
+msgid "Modified:"
+msgstr "Ännert:"
+
+#: widgets/recipelistview.cpp:151 krecipesview.cpp:817
+msgctxt "Recipe last accessed"
+msgid "Last Accessed:"
+msgstr "Verleden Togriep:"
+
 #: widgets/recipelistview.cpp:236
 msgid "Loading recipes"
 msgstr "Rezepten warrt laadt"
@@ -4127,6 +4001,147 @@ msgstr "Ruuminholt"
 #: widgets/weightinput.cpp:23
 msgid "-No Preparation-"
 msgstr "-Torechtmaken deit nich noot-"
+
+#: widgets/kregenericlistwidget.cpp:88
+msgctxt "@label:textbox"
+msgid "Type here the text to search"
+msgstr ""
+
+#: widgets/kregenericlistwidget.cpp:92
+msgctxt "@label:textbox"
+msgid "Type here the text to search in the current page"
+msgstr ""
+
+#: krecipesview.cpp:101 krecipesview.cpp:373 krecipesview.cpp:440
+msgid "Find/Edit Recipes"
+msgstr "Rezepten söken/bewerken"
+
+#: krecipesview.cpp:126
+msgid "Data..."
+msgstr "Daten..."
+
+#: krecipesview.cpp:332
+msgid ""
+"\n"
+"You are using SQLite; this error is often caused by using an SQLite 2 "
+"database with Krecipes supporting SQLite 3, if this is the case you could "
+"run the SQLite converter.\n"
+"What do you want to do?"
+msgstr ""
+"\n"
+"Du bruukst SQLite. De Oorsaak för dissen Fehler is faken de Bruuk vun en "
+"SQLite-2-Datenbank mit KRecipes, wat man SQLite-3 ünnerstütten deit. Op't "
+"best wannelst Du de Datenbank üm.\n"
+"Wat wullt Du doon?"
+
+#: krecipesview.cpp:337
+msgid "Run the setup assistant"
+msgstr "Den Hölper anmaken"
+
+#: krecipesview.cpp:338
+msgid "Run the SQLite converter"
+msgstr "SQLite ümwanneln"
+
+#: krecipesview.cpp:347 krecipesview.cpp:362
+msgctxt "Exiting Krecipes"
+msgid "Exiting"
+msgstr "Programm warrt utmaakt"
+
+#: krecipesview.cpp:354
+msgid ""
+"\n"
+"Would you like to run the setup wizard again? Otherwise, the application "
+"will be closed."
+msgstr ""
+"\n"
+"Wullt Du den Inrichthölper nochmaal utföhren? Wenn nich, warrt dat Programm "
+"utmaakt."
+
+#: krecipesview.cpp:378 krecipesview.cpp:495
+msgid "Preparation Methods"
+msgstr "Torechtmaak-Metoden"
+
+#: krecipesview.cpp:381 krecipesview.cpp:454
+msgid "Diet Helper"
+msgstr "Etenplaan-Hölper"
+
+#: krecipesview.cpp:382 krecipesview.cpp:462
+msgid "Ingredient Matcher"
+msgstr "Rindoels söken"
+
+#: krecipesview.cpp:522
+msgid "View Recipe"
+msgstr "Rezept ankieken"
+
+#: krecipesview.cpp:768
+msgid ""
+"A recipe contains unsaved changes.\n"
+"Do you want to save changes made to this recipe before editing another "
+"recipe?"
+msgstr ""
+"En Rezept bargt nich sekert Ännern.\n"
+"Wullt Du de Ännern to dit Rezept sekern, ehr Du en anner Rezept bewerken "
+"deist?"
+
+#: krecipesview.cpp:770 krecipesview.cpp:857
+msgid "Unsaved changes"
+msgstr "Ännern nich sekert"
+
+#: krecipesview.cpp:788
+#, kde-format
+msgid "Are you sure you want to permanently remove the recipe, %1?"
+msgstr "Wullt Du dat Rezept \"%1\" redig duerhaftig wegmaken?"
+
+#: krecipesview.cpp:789 krecipesview.cpp:837
+msgid "Confirm remove"
+msgstr "Wegmaken beglöven"
+
+#: krecipesview.cpp:836
+msgid "Are you sure you want to permanently remove the selected recipes?"
+msgstr "Wullt Du de utsöchten Rezepten redig duerhaftig wegmaken?"
+
+#: krecipesview.cpp:855
+msgid ""
+"A recipe contains unsaved changes.\n"
+"Do you want to save changes made to this recipe before creating a new recipe?"
+msgstr ""
+"En Rezept bargt nich sekert Ännern.\n"
+"Wullt Du de Ännern to dit Rezept sekern, ehr Du en nieg  Rezept opstellst?"
+
+#: krecipesview.cpp:1001
+msgid "Unable to setup database"
+msgstr "Datenbank lett sik nich inrichten"
+
+#: krecipesview.cpp:1013
+msgid "Code error. No DB support has been included. Exiting"
+msgstr ""
+"Kode-Fehler. Keen Datenbank-Ünnerstütten inslaten. Programm warrt utmaakt"
+
+#: krecipesview.cpp:1175 krecipesview.cpp:1201
+msgid "Code error. No DB support was built in. Exiting"
+msgstr ""
+"Kode-Fehler. Keen Datenbank-Ünnerstütten inbuut. Programm warrt utmaakt"
+
+#: krecipesview.cpp:1184
+msgid "Unable to open database"
+msgstr "Datenbank lett sik nich opmaken"
+
+#: krecipesview.cpp:1206
+msgid "DB started correctly\n"
+msgstr "Datenbank akraat start\n"
+
+#: krecipesview.cpp:1214
+#, kde-format
+msgid "The configured database type (%1) is unsupported."
+msgstr "De instellte Datenbanktyp (%1) warrt nich ünnerstütt."
+
+#: krecipesview.cpp:1214
+msgid ""
+"Unsupported database type. Database must be either MySQL, SQLite, or "
+"PostgreSQL."
+msgstr ""
+"Nich ünnerstütt Datenbanktyp. De Datenbank mutt MySQL, SQLite oder "
+"PostgreSQL wesen."
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
@@ -4185,6 +4200,30 @@ msgstr "Wegmaken"
 #: rc.cpp:29
 msgid "Edit..."
 msgstr "Bewerken..."
+
+#. i18n: file: widgets/kregenericlistwidget.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, KreGenericListWidget)
+#: rc.cpp:32
+msgid "Form"
+msgstr ""
+
+#. i18n: file: widgets/kregenericlistwidget.ui:46
+#. i18n: ectx: property (toolTip), widget (KPushButton, m_previousButton)
+#: rc.cpp:35
+#, fuzzy
+#| msgctxt "Previous item"
+#| msgid "Previous"
+msgid "Previous Page"
+msgstr "Verleden"
+
+#. i18n: file: widgets/kregenericlistwidget.ui:62
+#. i18n: ectx: property (toolTip), widget (KPushButton, m_nextButton)
+#: rc.cpp:38
+#, fuzzy
+#| msgctxt "@option next week"
+#| msgid "Next &Week"
+msgid "Next Page"
+msgstr "Nakamen &Week"
 
 #~ msgid "Rezkonvtest"
 #~ msgstr "Rezkonvtest"
