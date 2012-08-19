@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blogilo\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-02-04 04:46+0100\n"
+"POT-Creation-Date: 2012-08-19 15:40+0200\n"
 "PO-Revision-Date: 2011-05-05 07:05+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -19,53 +19,469 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: src/composer/dialogs/addeditimage.cpp:51
-msgid "Add Image"
-msgstr "Bild tofögen"
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/addcategorybase.ui:16
+msgid "Category name:"
+msgstr "Kategorienaam:"
 
-#: src/composer/dialogs/addeditimage.cpp:55 src/composer/texteditor.cpp:108
-msgid "Edit Image"
-msgstr "Bild bewerken"
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: src/addcategorybase.ui:29
+msgid "Category slug:"
+msgstr "Kategorie-Klümp:"
 
-#: src/composer/dialogs/addeditimage.cpp:92
-#: src/composer/dialogs/addeditimage.cpp:94
-#: src/composer/dialogs/addmediadialog.cpp:68
-#: src/composer/dialogs/addmediadialog.cpp:72
-msgid "Choose a file"
-msgstr "Datei utsöken"
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: src/addcategorybase.ui:42
+msgid "Parent category:"
+msgstr "Överornt Kategorie:"
 
-#: src/composer/dialogs/addeditimage.cpp:92
-msgid "Images (*.png *.gif *.jpg)"
-msgstr "Biller (*.png *.gif *.jpg)"
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: src/addcategorybase.ui:55
+msgid "Description:"
+msgstr "Beschrieven:"
 
-#: src/composer/dialogs/addeditlink.cpp:43
-#: src/composer/dialogs/addeditlink.cpp:53
-msgctxt "verb, to insert a link into the text"
-msgid "Add Link"
-msgstr "Link tofögen"
+#: src/addeditblog.cpp:72
+msgid "Add a new blog"
+msgstr "Nieg Nettdaagbook tofögen"
 
-#: src/composer/dialogs/addeditlink.cpp:56
-msgctxt "verb, to modify an existing link"
-msgid "Edit Link"
-msgstr "Link bewerken"
+#: src/addeditblog.cpp:89
+msgid "Edit blog settings"
+msgstr "Nettdaagbook-Instellen bewerken"
 
-#: src/composer/dialogs/addmediadialog.cpp:49
-msgid "Attach media"
-msgstr "Mediendatei bileggen"
+#: src/addeditblog.cpp:130
+msgid "You have to set the username, password and URL of your blog or website."
+msgstr ""
+"Du muttst Brukernaam, Passwoort un URL vun Dien Nettdaagbooksiet ingeven."
 
-#: src/composer/dialogs/addmediadialog.cpp:55
-msgid "Type media path here."
-msgstr "Medienpadd hier ingeven."
+#: src/addeditblog.cpp:131
+msgid "Incomplete fields"
+msgstr "Nich afslaten Ingaav"
 
-#. i18n: file: src/uploadmediabase.ui:61
-#. i18n: ectx: property (toolTip), widget (KPushButton, kcfg_urlBrowser)
-#: src/composer/dialogs/addmediadialog.cpp:56 rc.cpp:345
-msgid "Browse"
-msgstr "Utsöken"
+#: src/addeditblog.cpp:134
+msgid "Trying to guess blog and API type..."
+msgstr "Daagbook- un API-Typ warrt söcht..."
 
-#: src/composer/dialogs/addmediadialog.cpp:117
-msgid "The selected media address is an invalid URL."
-msgstr "Utsöcht Medienadress is keen gellen URL."
+#: src/addeditblog.cpp:182 src/addeditblog.cpp:245
+msgid ""
+"Auto configuration failed. You have to set Blog API on Advanced tab manually."
+msgstr ""
+"Automaatsch Inrichten is fehlslaan.  Du muttst de Daagbook-API vun Hand in't "
+"Paneel \"Verwiedert\" angeven."
+
+#: src/addeditblog.cpp:248
+msgid ""
+"The program could not guess the API of your blog, but has found an XMLRPC "
+"interface and is trying to use it.\n"
+"The MovableType API is assumed for now; choose another API if you know the "
+"server supports it."
+msgstr ""
+"Dat Programm kunn de API vun Dien Nettdaagbook nich rutfinnen, man hett en "
+"XMLRPC-Koppelsteed opdeckt un kiekt nu, wat sik de bruken lett.\n"
+"Eerstmaal warrt för de API nu \"MoveableType\" annahmen, söök en anner ut, "
+"wenn Du weetst, de Server deit ehr ünnerstütten."
+
+#. i18n: ectx: property (text), widget (QLabel, operationNameLabel)
+#: src/addeditblog.cpp:300 src/waitwidgetbase.ui:19
+msgid "Please wait..."
+msgstr "Bitte töven..."
+
+#: src/addeditblog.cpp:302
+msgid "Fetching Blog Id..."
+msgstr "Nettdaagbook-ID warrt haalt..."
+
+#: src/addeditblog.cpp:317
+msgid ""
+"Fetching the blog id timed out. Check your Internet connection,and your "
+"homepage URL, username or password.\n"
+"Note that the URL has to contain \"http://\"\n"
+"If you are using a self-hosted Wordpress blog, you have to enable Remote "
+"Publishing in its configuration."
+msgstr ""
+"Dat Halen vun de Daagbook-ID hett to lang duert. Prööv bitte Dien Internet-"
+"Verbinnen, de URL, Dien Brukernaam un dat Passwoort.\n"
+"Bitte beacht: De URL mutt \"http://\" bargen.\n"
+"Bruukst Du en sülven praatstellt Wordpress-Daagbook, muttst Du binnen de "
+"Instellen \"Remote Publishing\" anmaken."
+
+#: src/addeditblog.cpp:330
+msgid ""
+"The API guess function has failed, please check your Internet connection. "
+"Otherwise, you have to set the API type manually on the Advanced tab."
+msgstr ""
+"Dat Opdecken vun de API hett leider nich funkscheneert. Prööv bitte Dien "
+"Internet-Verbinnen. Liggt dat dor nich an, muttst Du den Typ vun de API op "
+"dat Paneel \"Verwiedert\" vun Hand instellen."
+
+#: src/addeditblog.cpp:332
+msgid "Auto Configuration Failed"
+msgstr "Automaatsch Inrichten fehlslaan"
+
+#: src/addeditblog.cpp:341
+msgid ""
+"Fetching BlogID Failed.\n"
+"Please check your Internet connection."
+msgstr ""
+"Halen vun de Daagbook-ID is fehlslaan.\n"
+"Prööv bitte Dien Internet-Verbinnen."
+
+#: src/addeditblog.cpp:377
+msgid "Which blog?"
+msgstr "Welk Daagbook?"
+
+#: src/addeditblog.cpp:394
+msgid "Sorry, No blog found with the specified account info."
+msgstr "Leider keen Nettdaagbook mit de angeven Konto-Informatschoon funnen."
+
+#: src/addeditblog.cpp:473
+msgctxt "Supported feature or Not"
+msgid "Yes"
+msgstr "Jo"
+
+#: src/addeditblog.cpp:475
+msgctxt "Supported feature or Not"
+msgid "No, API does not support it"
+msgstr "Nee, API ünnerstütt dat nich."
+
+#: src/addeditblog.cpp:476
+msgctxt "Supported feature or Not"
+msgid "No, Blogilo does not yet support it"
+msgstr "Nee, Blogilo ünnerstütt dat noch nich."
+
+#: src/addeditblog.cpp:557
+msgid ""
+"Blog ID has not yet been retrieved.\n"
+"You can fetch the blog ID by clicking on \"Auto Configure\" or the \"Fetch ID"
+"\" button; otherwise, you have to insert your blog ID manually."
+msgstr ""
+"Daagbook-ID noch nich haalt.\n"
+"Du kannst de ID mit de Knööp \"Autom. Inrichten\" oder \"ID halen\" halen "
+"oder ehr vun Hand infögen."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabBasic)
+#: src/addeditblogbase.ui:18
+msgctxt "Basic configurations"
+msgid "Basic"
+msgstr "Eenfach"
+
+#. i18n: ectx: property (text), widget (QLabel, label_18)
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/addeditblogbase.ui:30 src/addeditblogbase.ui:222
+msgid "Blog Account Configuration"
+msgstr "Daagbook-Konto instellen"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: src/addeditblogbase.ui:47
+msgid ""
+"Please fill in these fields and click on the \"Auto-Configure\" button to "
+"let Blogilo configure your blog account.\n"
+"You can set more options in the Advanced tab."
+msgstr ""
+"Bitte giff de nödig Daten in un klick op \"Automaatsch instellen\", wenn dat "
+"Programm Dien Nettdaagbook-Konto instellen schall.\n"
+"Op de Koort \"Verwiedert\" laat sik mehr Optschonen instellen."
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: src/addeditblogbase.ui:66
+msgctxt "Blog Title"
+msgid "Title:"
+msgstr "Titel:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/addeditblogbase.ui:79
+msgid "Blog/Homepage URL:"
+msgstr "Nettdaagbook-/Tohuussiet-URL:"
+
+#. i18n: ectx: property (text), widget (KLineEdit, txtUrl)
+#. i18n: ectx: property (text), widget (KLineEdit, kcfg_httpUrl)
+#: src/addeditblogbase.ui:92 src/uploadmediabase.ui:132
+msgid "http://"
+msgstr "http://"
+
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, txtUrl)
+#: src/addeditblogbase.ui:95
+msgid "http://YourHomePage.com"
+msgstr "http://DienTohuussiet.de"
+
+#. i18n: ectx: property (text), widget (QLabel, label_17)
+#: src/addeditblogbase.ui:112
+msgid "e.g.: http://domain.com/blog/"
+msgstr "a.B.: http://domain.com/blog/"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: src/addeditblogbase.ui:119
+msgctxt "Blog account Username"
+msgid "Username:"
+msgstr "Brukernaam:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: src/addeditblogbase.ui:135
+msgid "Password:"
+msgstr "Passwoort:"
+
+#. i18n: ectx: property (text), widget (KPushButton, btnAutoConf)
+#: src/addeditblogbase.ui:180
+msgid "Auto-Configure"
+msgstr "Automaatsch instellen"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
+#: src/addeditblogbase.ui:210
+msgctxt "Advanced configurations"
+msgid "Advanced"
+msgstr "Verwiedert"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/addeditblogbase.ui:232
+msgctxt "Name of the API which is used to communicate with Blog"
+msgid "API:"
+msgstr "API:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboApi)
+#: src/addeditblogbase.ui:246
+msgid "Blogger 1.0 API"
+msgstr "\"Blogger 1.0\"-API"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboApi)
+#: src/addeditblogbase.ui:251
+msgid "MetaWeblog API"
+msgstr "MetaWeblog-API"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboApi)
+#: src/addeditblogbase.ui:256
+msgid "MovableType API"
+msgstr "MovableType-API"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboApi)
+#: src/addeditblogbase.ui:261
+msgid "Wordpress"
+msgstr "Wordpress"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboApi)
+#: src/addeditblogbase.ui:266
+msgid "Blogspot.com"
+msgstr "Blogspot.com"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/addeditblogbase.ui:290
+msgid "Blog ID:"
+msgstr "Nettdaagbook-ID:"
+
+#. i18n: ectx: property (text), widget (KPushButton, btnFetch)
+#: src/addeditblogbase.ui:318
+msgctxt "verb, fetch the blog ID from the web"
+msgid "Fetch ID"
+msgstr "ID halen"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/addeditblogbase.ui:341
+msgctxt "Default direction of text in the blog"
+msgid "Default text direction:"
+msgstr "Standardtextricht:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboDir)
+#: src/addeditblogbase.ui:355
+msgid "Left to Right"
+msgstr "Vun links na rechts"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboDir)
+#: src/addeditblogbase.ui:360
+msgid "Right to Left"
+msgstr "Vun rechts na links"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: src/addeditblogbase.ui:372
+msgid "Supported Features"
+msgstr "Ünnerstütt Markmalen"
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: src/addeditblogbase.ui:378
+msgid "Create/Modify posts:"
+msgstr "Bidrääg opstellen oder ännern:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_14)
+#: src/addeditblogbase.ui:407
+msgid "Support for categories:"
+msgstr "Ünnerstütten för Kategorien:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_16)
+#: src/addeditblogbase.ui:417
+msgid "Support for tags:"
+msgstr "Ünnerstütten för Slötelwöör:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_22)
+#: src/addeditblogbase.ui:433
+msgid "Remove posts:"
+msgstr "Bidrääg wegmaken:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_12)
+#: src/addeditblogbase.ui:446
+msgid "Fetch recent posts:"
+msgstr "Verleden Bidrääg halen:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_20)
+#: src/addeditblogbase.ui:459
+msgid "Multipaged posts:"
+msgstr "Bidrääg mit mehr Sieden:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: src/addeditblogbase.ui:472
+msgid ""
+"Note: You can see a list of supported features for your blog after "
+"configuring it."
+msgstr ""
+"Beacht: Hest Du Dien Daagbook instellt, kannst Du en List vun ünnerstütt "
+"Markmalen ankieken."
+
+#. i18n: ectx: property (text), widget (QLabel, label_13)
+#: src/addeditblogbase.ui:482
+msgid "Upload media:"
+msgstr "Medien hoochladen:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_15)
+#: src/addeditblogbase.ui:495
+msgid "Create new categories:"
+msgstr "Nieg Kategorien opstellen:"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_changeNToBreak)
+#: src/advancedsettingsbase.ui:16
+msgid ""
+"This can be useful for some blogs, like Wordpress, that do not store posts "
+"as HTML"
+msgstr ""
+"Dit kann för en poor Daagböker wat bringen, a.B. för \"Wordpress\", de "
+"Bidrääg nich as HTML wohren deit."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_changeNToBreak)
+#: src/advancedsettingsbase.ui:19
+msgid "Change \\n to <br/> on posts retrieved from server"
+msgstr "Ännern \\n na <br/> bi Bidrääg, de vun den Server haalt sünd."
+
+#: src/backend.cpp:175
+#, kde-format
+msgid "Publishing/Modifying post failed: %1"
+msgstr "Bidrag lett sik nich apenmaken oder ännern: %1"
+
+#: src/backend.cpp:200
+msgid ""
+"Uploading media failed: Your Blog API does not support uploading media "
+"objects."
+msgstr ""
+"Medium lett sik nich hoochladen. De Daagbook-API ünnerstütt dat Hoochladen "
+"vun Medienobjekten nich."
+
+#: src/backend.cpp:217 src/backend.cpp:225
+#, kde-format
+msgid ""
+"Uploading media failed: Cannot read the media file, please check if it "
+"exists. Path: %1"
+msgstr ""
+"Medium lett sik nich hoochladen: De Mediendatei lett sik nich lesen Bitte "
+"prööv, wat dat ehr gifft. Padd: %1"
+
+#: src/backend.cpp:239
+#, kde-format
+msgid ""
+"Uploading media failed: Media file checksum is zero, please check file path. "
+"Path: %1"
+msgstr ""
+"Medium lett sik nich hoochladen: De Mediendatei-Pröövsumm is Null Bitte "
+"prööv den Dateipadd. Padd: %1"
+
+#: src/backend.cpp:248
+msgid ""
+"INTERNAL ERROR: MWBlog is NULL: casting has not worked, this should NEVER "
+"happen."
+msgstr ""
+"Intern Fehler: MWBlog is Null: Typwanneln is fehlslaan, dit schull nienich "
+"vörkamen."
+
+#: src/backend.cpp:262
+msgid "API type is not set correctly."
+msgstr "API-Typ is nich propper instellt."
+
+#: src/backend.cpp:282
+#, kde-format
+msgid "Uploading media failed: %1"
+msgstr "Medium lett sik nich hoochladen: %1"
+
+#: src/backend.cpp:291
+#, kde-format
+msgid "Uploading media failed: Checksum error. Returned error: %1"
+msgstr "Medium lett sik nich hoochladen. - Pröövsummfehler. Fehlermellen: %1"
+
+#: src/backend.cpp:376
+msgid "Server (XMLRPC) error: "
+msgstr "Serverfehler (XMLRPC): "
+
+#: src/backend.cpp:379
+msgid "Server (Atom) error: "
+msgstr "Serverfehler (Atom): "
+
+#: src/backend.cpp:382
+msgid "Parsing error: "
+msgstr "Inleesfehler: "
+
+#: src/backend.cpp:385
+msgid "Authentication error: "
+msgstr "Identiteetprööv fehlslaan: "
+
+#: src/backend.cpp:388
+msgid "Not supported error: "
+msgstr "Nich ünnerstütt Fehler: "
+
+#: src/backend.cpp:391
+msgid "Unknown error: "
+msgstr "Nich begäng Fehler: "
+
+#. i18n: ectx: Menu (blog)
+#. i18n: ectx: property (text), widget (QTableWidget, localEntriesTable)
+#: src/blogiloui.rc:4 src/toolboxbase.ui:546
+msgid "Blog"
+msgstr "Nettdaagbook"
+
+#. i18n: ectx: Menu (post)
+#: src/blogiloui.rc:8
+msgid "Post"
+msgstr "Bidrag"
+
+#. i18n: ectx: Menu (settings)
+#: src/blogiloui.rc:13
+msgid "Settings"
+msgstr "Instellen"
+
+#. i18n: ectx: Menu (settings)
+#: src/blogiloui.rc:18
+msgid "Toolbar"
+msgstr "Warktüüchbalken"
+
+#: src/blogsettings.cpp:101
+msgid "Are you sure you want to remove the selected blog?"
+msgstr "Wullt Du dat utsöchte Daagbook redig wegdoon?"
+
+#. i18n: ectx: property (text), widget (QTableWidget, blogsTable)
+#: src/blogsettingsbase.ui:45
+msgctxt "Blog Title"
+msgid "Title"
+msgstr "Titel"
+
+#. i18n: ectx: property (text), widget (QTableWidget, blogsTable)
+#: src/blogsettingsbase.ui:50
+msgctxt "Blog URL"
+msgid "URL"
+msgstr "URL"
+
+#. i18n: ectx: property (text), widget (KPushButton, btnAdd)
+#: src/blogsettingsbase.ui:76
+msgid "&Add..."
+msgstr "&Tofögen..."
+
+#. i18n: ectx: property (text), widget (KPushButton, btnEdit)
+#: src/blogsettingsbase.ui:86
+msgid "&Modify..."
+msgstr "Ä&nnern..."
+
+#. i18n: ectx: property (text), widget (KPushButton, btnRemove)
+#: src/blogsettingsbase.ui:96
+msgid "&Remove"
+msgstr "&Wegmaken"
 
 #: src/composer/bilbobrowser.cpp:82 src/composer/bilbobrowser_win.cpp:66
 msgid "Get blog style"
@@ -103,6 +519,178 @@ msgstr "Bi de leste Akschoon geev dat en Fehler."
 #: src/composer/bilbobrowser.cpp:191
 msgid "Operation canceled."
 msgstr "Akschoon afbraken."
+
+#: src/composer/dialogs/addeditimage.cpp:51
+msgid "Add Image"
+msgstr "Bild tofögen"
+
+#: src/composer/dialogs/addeditimage.cpp:55 src/composer/texteditor.cpp:108
+msgid "Edit Image"
+msgstr "Bild bewerken"
+
+#: src/composer/dialogs/addeditimage.cpp:92
+#: src/composer/dialogs/addeditimage.cpp:94
+#: src/composer/dialogs/addmediadialog.cpp:68
+#: src/composer/dialogs/addmediadialog.cpp:72
+msgid "Choose a file"
+msgstr "Datei utsöken"
+
+#: src/composer/dialogs/addeditimage.cpp:92
+msgid "Images (*.png *.gif *.jpg)"
+msgstr "Biller (*.png *.gif *.jpg)"
+
+#: src/composer/dialogs/addeditlink.cpp:43
+#: src/composer/dialogs/addeditlink.cpp:53
+msgctxt "verb, to insert a link into the text"
+msgid "Add Link"
+msgstr "Link tofögen"
+
+#: src/composer/dialogs/addeditlink.cpp:56
+msgctxt "verb, to modify an existing link"
+msgid "Edit Link"
+msgstr "Link bewerken"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/composer/dialogs/addeditlinkbase.ui:29
+msgctxt "the web address of the link"
+msgid "Link &address:"
+msgstr "Link&adress:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: src/composer/dialogs/addeditlinkbase.ui:48
+msgctxt "the word which is showed as a link"
+msgid "Link &title:"
+msgstr "Link&titel:"
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, btnClear)
+#: src/composer/dialogs/addeditlinkbase.ui:105
+msgid "Clear link cache"
+msgstr "Link-Twischenspieker leddig maken"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboTarget)
+#: src/composer/dialogs/addeditlinkbase.ui:113
+msgid "Not Set"
+msgstr "Nich fastleggt"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboTarget)
+#: src/composer/dialogs/addeditlinkbase.ui:118
+msgid "Current Window"
+msgstr "Aktuell Finster"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboTarget)
+#: src/composer/dialogs/addeditlinkbase.ui:123
+msgid "New Window"
+msgstr "Nieg Finster"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: src/composer/dialogs/addeditlinkbase.ui:137
+msgid "&Target:"
+msgstr "&Teel:"
+
+#: src/composer/dialogs/addmediadialog.cpp:49
+msgid "Attach media"
+msgstr "Mediendatei bileggen"
+
+#: src/composer/dialogs/addmediadialog.cpp:55
+msgid "Type media path here."
+msgstr "Medienpadd hier ingeven."
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, kcfg_urlBrowser)
+#: src/composer/dialogs/addmediadialog.cpp:56 src/uploadmediabase.ui:61
+msgid "Browse"
+msgstr "Utsöken"
+
+#: src/composer/dialogs/addmediadialog.cpp:117
+msgid "The selected media address is an invalid URL."
+msgstr "Utsöcht Medienadress is keen gellen URL."
+
+#. i18n: ectx: property (text), widget (QRadioButton, radiobtnLocalUrl)
+#: src/composer/dialogs/addmediadialogbase.ui:34
+msgid "From your computer"
+msgstr "Vun Dien Reekner"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radiobtnRemoteUrl)
+#: src/composer/dialogs/addmediadialogbase.ui:47
+msgid "From the web"
+msgstr "Ut dat Internet"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, EditImageBase)
+#: src/composer/dialogs/editimagebase.ui:14
+msgctxt "verb, to modify selected image attributes"
+msgid "Edit Image Properties"
+msgstr "Bildegenschappen bewerken"
+
+#. i18n: ectx: property (text), widget (QLabel, labelWidth)
+#: src/composer/dialogs/editimagebase.ui:20
+msgctxt "noun, width of the image in pixels"
+msgid "Width:"
+msgstr "Breed:"
+
+#. i18n: ectx: property (suffix), widget (KIntSpinBox, spinboxWidth)
+#. i18n: ectx: property (suffix), widget (KIntSpinBox, spinboxHeight)
+#: src/composer/dialogs/editimagebase.ui:36
+#: src/composer/dialogs/editimagebase.ui:46
+msgid " pixel"
+msgstr " Pixel"
+
+#. i18n: ectx: property (text), widget (QLabel, labelTitle)
+#: src/composer/dialogs/editimagebase.ui:62
+msgid "Image Title:"
+msgstr "Bildtitel:"
+
+#. i18n: ectx: property (text), widget (QLabel, labelHeight)
+#: src/composer/dialogs/editimagebase.ui:75
+msgctxt "noun, height of the image in pixels"
+msgid "Height:"
+msgstr "Hööchde:"
+
+#. i18n: ectx: property (text), widget (QLabel, labelAltText)
+#: src/composer/dialogs/editimagebase.ui:95
+#, fuzzy
+#| msgctxt ""
+#| "the alternative text which is displayed to the user, if the image can not "
+#| "be loaded."
+#| msgid "Alternative text:"
+msgctxt ""
+"the alternative text which is displayed to the user, if the image cannot be "
+"loaded."
+msgid "Alternative text:"
+msgstr "Utwiektext:"
+
+#. i18n: ectx: property (text), widget (QLabel, labelLink)
+#: src/composer/dialogs/editimagebase.ui:115
+msgid "Image links to:"
+msgstr "Bildlink na:"
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, btnKeepRatio)
+#: src/composer/dialogs/editimagebase.ui:144
+msgctxt "Image aspect ratio"
+msgid "Keep Ratio"
+msgstr "Proportschoon wohren"
+
+#. i18n: ectx: property (text), widget (QLabel, labelTitle_2)
+#: src/composer/dialogs/editimagebase.ui:157
+msgctxt "Image Alignment"
+msgid "Alignment:"
+msgstr "Utrichten:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, alignment)
+#: src/composer/dialogs/editimagebase.ui:174
+msgctxt "Alignment"
+msgid "Not Set"
+msgstr "Nich fastleggt"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, alignment)
+#: src/composer/dialogs/editimagebase.ui:179
+msgctxt "Alignment"
+msgid "Right"
+msgstr "Rechts"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, alignment)
+#: src/composer/dialogs/editimagebase.ui:184
+msgctxt "Alignment"
+msgid "Left"
+msgstr "Links"
 
 #: src/composer/htmleditor.cpp:84
 msgid "Dynamic Word Wrap"
@@ -300,6 +888,52 @@ msgstr "Dat gifft keen Bidrag mit de angeven ID."
 msgid "There is no local post with the requested ID "
 msgstr "Dat gifft keen lokaal Bidrag mit de angeven ID "
 
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/editorsettingsbase.ui:17
+msgid "Editor auto save interval:"
+msgstr "Editorindrääg automaatsch sekern all:"
+
+#. i18n: ectx: property (specialValueText), widget (KIntSpinBox, kcfg_autosaveInterval)
+#: src/editorsettingsbase.ui:30
+msgctxt "Auto save interval disabled"
+msgid "Disabled"
+msgstr "Utmaakt"
+
+#. i18n: ectx: property (suffix), widget (KIntSpinBox, kcfg_autosaveInterval)
+#: src/editorsettingsbase.ui:33
+msgid " minutes"
+msgstr " Minuten"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_addPoweredBy)
+#: src/editorsettingsbase.ui:46
+msgid "Automatically add \"Powered by Blogilo\" to every post"
+msgstr "Elk Bidrag automaatsch  \"Powered by Blogilo\" tofögen"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_previewInBlogStyle)
+#: src/editorsettingsbase.ui:66
+msgid "Enable post preview in blog style, if available"
+msgstr "Bidrag-Vöransicht in Nettdaagbook-Stil anmaken, wenn verföögbor"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_urlCachingEnabled)
+#: src/editorsettingsbase.ui:73
+msgid "Enable URL caching in the \"Add Link\" dialog"
+msgstr "URLs binnen den Dialoog \"Link tofögen\" twischenspiekern"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableCheckSpelling)
+#: src/editorsettingsbase.ui:83
+msgid "Enable spell checking"
+msgstr "Klookschriever bruken"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/entriescountdialogbase.ui:17
+msgid "Number of entries to fetch:"
+msgstr "Tall vun Indrääg, de haalt warrt:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_remember)
+#: src/entriescountdialogbase.ui:40
+msgid "Do not ask again"
+msgstr "Nienich nochmaal fragen"
+
 #: src/main.cpp:34 src/mainwindow.cpp:393
 msgid "A KDE Blogging Client"
 msgstr "KDE-Programm för Nettdaagböker"
@@ -332,218 +966,15 @@ msgstr "Lüttbild-Maker"
 msgid "Sajjad Baroodkoo"
 msgstr "Sajjad Baroodkoo"
 
-#: src/main.cpp:47 rc.cpp:1
+#: src/main.cpp:47
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Sönke Dibbern, Manfred Wiese"
 
-#: src/main.cpp:48 rc.cpp:2
+#: src/main.cpp:48
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s_dibbern@web.de, m.j.wiese@web.de"
-
-#: src/sendtoblogdialog.cpp:44
-msgid "Submitting as..."
-msgstr "Loosstüern as..."
-
-#: src/addeditblog.cpp:72
-msgid "Add a new blog"
-msgstr "Nieg Nettdaagbook tofögen"
-
-#: src/addeditblog.cpp:89
-msgid "Edit blog settings"
-msgstr "Nettdaagbook-Instellen bewerken"
-
-#: src/addeditblog.cpp:130
-msgid "You have to set the username, password and URL of your blog or website."
-msgstr ""
-"Du muttst Brukernaam, Passwoort un URL vun Dien Nettdaagbooksiet ingeven."
-
-#: src/addeditblog.cpp:131
-msgid "Incomplete fields"
-msgstr "Nich afslaten Ingaav"
-
-#: src/addeditblog.cpp:134
-msgid "Trying to guess blog and API type..."
-msgstr "Daagbook- un API-Typ warrt söcht..."
-
-#: src/addeditblog.cpp:182 src/addeditblog.cpp:245
-msgid ""
-"Auto configuration failed. You have to set Blog API on Advanced tab manually."
-msgstr ""
-"Automaatsch Inrichten is fehlslaan.  Du muttst de Daagbook-API vun Hand in't "
-"Paneel \"Verwiedert\" angeven."
-
-#: src/addeditblog.cpp:248
-msgid ""
-"The program could not guess the API of your blog, but has found an XMLRPC "
-"interface and is trying to use it.\n"
-"The MovableType API is assumed for now; choose another API if you know the "
-"server supports it."
-msgstr ""
-"Dat Programm kunn de API vun Dien Nettdaagbook nich rutfinnen, man hett en "
-"XMLRPC-Koppelsteed opdeckt un kiekt nu, wat sik de bruken lett.\n"
-"Eerstmaal warrt för de API nu \"MoveableType\" annahmen, söök en anner ut, "
-"wenn Du weetst, de Server deit ehr ünnerstütten."
-
-#. i18n: file: src/waitwidgetbase.ui:19
-#. i18n: ectx: property (text), widget (QLabel, operationNameLabel)
-#: src/addeditblog.cpp:300 rc.cpp:378
-msgid "Please wait..."
-msgstr "Bitte töven..."
-
-#: src/addeditblog.cpp:302
-msgid "Fetching Blog Id..."
-msgstr "Nettdaagbook-ID warrt haalt..."
-
-#: src/addeditblog.cpp:317
-msgid ""
-"Fetching the blog id timed out. Check your Internet connection,and your "
-"homepage URL, username or password.\n"
-"Note that the URL has to contain \"http://\"\n"
-"If you are using a self-hosted Wordpress blog, you have to enable Remote "
-"Publishing in its configuration."
-msgstr ""
-"Dat Halen vun de Daagbook-ID hett to lang duert. Prööv bitte Dien Internet-"
-"Verbinnen, de URL, Dien Brukernaam un dat Passwoort.\n"
-"Bitte beacht: De URL mutt \"http://\" bargen.\n"
-"Bruukst Du en sülven praatstellt Wordpress-Daagbook, muttst Du binnen de "
-"Instellen \"Remote Publishing\" anmaken."
-
-#: src/addeditblog.cpp:330
-msgid ""
-"The API guess function has failed, please check your Internet connection. "
-"Otherwise, you have to set the API type manually on the Advanced tab."
-msgstr ""
-"Dat Opdecken vun de API hett leider nich funkscheneert. Prööv bitte Dien "
-"Internet-Verbinnen. Liggt dat dor nich an, muttst Du den Typ vun de API op "
-"dat Paneel \"Verwiedert\" vun Hand instellen."
-
-#: src/addeditblog.cpp:332
-msgid "Auto Configuration Failed"
-msgstr "Automaatsch Inrichten fehlslaan"
-
-#: src/addeditblog.cpp:341
-msgid ""
-"Fetching BlogID Failed.\n"
-"Please check your Internet connection."
-msgstr ""
-"Halen vun de Daagbook-ID is fehlslaan.\n"
-"Prööv bitte Dien Internet-Verbinnen."
-
-#: src/addeditblog.cpp:377
-msgid "Which blog?"
-msgstr "Welk Daagbook?"
-
-#: src/addeditblog.cpp:394
-msgid "Sorry, No blog found with the specified account info."
-msgstr "Leider keen Nettdaagbook mit de angeven Konto-Informatschoon funnen."
-
-#: src/addeditblog.cpp:473
-msgctxt "Supported feature or Not"
-msgid "Yes"
-msgstr "Jo"
-
-#: src/addeditblog.cpp:475
-msgctxt "Supported feature or Not"
-msgid "No, API does not support it"
-msgstr "Nee, API ünnerstütt dat nich."
-
-#: src/addeditblog.cpp:476
-msgctxt "Supported feature or Not"
-msgid "No, Blogilo does not yet support it"
-msgstr "Nee, Blogilo ünnerstütt dat noch nich."
-
-#: src/addeditblog.cpp:557
-msgid ""
-"Blog ID has not yet been retrieved.\n"
-"You can fetch the blog ID by clicking on \"Auto Configure\" or the \"Fetch ID"
-"\" button; otherwise, you have to insert your blog ID manually."
-msgstr ""
-"Daagbook-ID noch nich haalt.\n"
-"Du kannst de ID mit de Knööp \"Autom. Inrichten\" oder \"ID halen\" halen "
-"oder ehr vun Hand infögen."
-
-#: src/backend.cpp:175
-#, kde-format
-msgid "Publishing/Modifying post failed: %1"
-msgstr "Bidrag lett sik nich apenmaken oder ännern: %1"
-
-#: src/backend.cpp:200
-msgid ""
-"Uploading media failed: Your Blog API does not support uploading media "
-"objects."
-msgstr ""
-"Medium lett sik nich hoochladen. De Daagbook-API ünnerstütt dat Hoochladen "
-"vun Medienobjekten nich."
-
-#: src/backend.cpp:217 src/backend.cpp:225
-#, kde-format
-msgid ""
-"Uploading media failed: Cannot read the media file, please check if it "
-"exists. Path: %1"
-msgstr ""
-"Medium lett sik nich hoochladen: De Mediendatei lett sik nich lesen Bitte "
-"prööv, wat dat ehr gifft. Padd: %1"
-
-#: src/backend.cpp:239
-#, kde-format
-msgid ""
-"Uploading media failed: Media file checksum is zero, please check file path. "
-"Path: %1"
-msgstr ""
-"Medium lett sik nich hoochladen: De Mediendatei-Pröövsumm is Null Bitte "
-"prööv den Dateipadd. Padd: %1"
-
-#: src/backend.cpp:248
-msgid ""
-"INTERNAL ERROR: MWBlog is NULL: casting has not worked, this should NEVER "
-"happen."
-msgstr ""
-"Intern Fehler: MWBlog is Null: Typwanneln is fehlslaan, dit schull nienich "
-"vörkamen."
-
-#: src/backend.cpp:262
-msgid "API type is not set correctly."
-msgstr "API-Typ is nich propper instellt."
-
-#: src/backend.cpp:282
-#, kde-format
-msgid "Uploading media failed: %1"
-msgstr "Medium lett sik nich hoochladen: %1"
-
-#: src/backend.cpp:291
-#, kde-format
-msgid "Uploading media failed: Checksum error. Returned error: %1"
-msgstr "Medium lett sik nich hoochladen. - Pröövsummfehler. Fehlermellen: %1"
-
-#: src/backend.cpp:376
-msgid "Server (XMLRPC) error: "
-msgstr "Serverfehler (XMLRPC): "
-
-#: src/backend.cpp:379
-msgid "Server (Atom) error: "
-msgstr "Serverfehler (Atom): "
-
-#: src/backend.cpp:382
-msgid "Parsing error: "
-msgstr "Inleesfehler: "
-
-#: src/backend.cpp:385
-msgid "Authentication error: "
-msgstr "Identiteetprööv fehlslaan: "
-
-#: src/backend.cpp:388
-msgid "Not supported error: "
-msgstr "Nich ünnerstütt Fehler: "
-
-#: src/backend.cpp:391
-msgid "Unknown error: "
-msgstr "Nich begäng Fehler: "
-
-#: src/blogsettings.cpp:101
-msgid "Are you sure you want to remove the selected blog?"
-msgstr "Wullt Du dat utsöchte Daagbook redig wegdoon?"
 
 #: src/mainwindow.cpp:70 src/mainwindow.cpp:393
 msgid "Blogilo"
@@ -729,6 +1160,35 @@ msgstr "Bidrag lett sik nich lokaal sekern."
 msgid "Post saved locally."
 msgstr "Bidrag lokaal sekert"
 
+#. i18n: ectx: property (text), widget (QRadioButton, pubAsModify)
+#: src/sendtoblogbase.ui:16
+msgid "Publish as an edit of the original entry"
+msgstr "As bewerkt Orginaalindrag apenmaken"
+
+#. i18n: ectx: property (text), widget (QRadioButton, pubAsNewPost)
+#: src/sendtoblogbase.ui:23
+msgid "Publish as a new post"
+msgstr "As nieg Bidrag apenmaken"
+
+#. i18n: ectx: property (text), widget (QCheckBox, saveDraft)
+#: src/sendtoblogbase.ui:36
+msgid "Save entry in drafts"
+msgstr "Indrag as Vörverschoon sekern"
+
+#: src/sendtoblogdialog.cpp:44
+msgid "Submitting as..."
+msgstr "Loosstüern as..."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableSysTrayIcon)
+#: src/settingsbase.ui:16
+msgid "Enable system tray icon"
+msgstr "Systeemafsnitt-Lüttbild anmaken"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_CopyMediaUrl)
+#: src/settingsbase.ui:23
+msgid "Copy media URL to clipboard after upload"
+msgstr "Medienadress na't Hoochladen na de Twischenaflaag koperen"
+
 #: src/toolbox.cpp:127
 msgid ""
 "No blog has been selected: you have to select a blog from the Blogs page "
@@ -822,6 +1282,188 @@ msgstr "URL koperen"
 msgid "Copy title"
 msgstr "Titel koperen"
 
+#. i18n: ectx: attribute (label), widget (QWidget, pgEntries)
+#: src/toolboxbase.ui:34
+msgid "Blog Posts"
+msgstr "Nettdaagbook-Bidrääg"
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, btnEntriesUpdate)
+#: src/toolboxbase.ui:80
+msgid "Update list of entries"
+msgstr "List vun Indrääg opfrischen"
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, btnEntriesClear)
+#: src/toolboxbase.ui:87
+msgid "Clear list of entries"
+msgstr "List vun Indrääg leddig maken"
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, btnEntriesRemove)
+#: src/toolboxbase.ui:101
+msgid "Remove selected entry from server"
+msgstr "Markeert Indrag vun den Server wegmaken"
+
+#. i18n: ectx: attribute (label), widget (QWidget, pgCat)
+#: src/toolboxbase.ui:134
+msgid "Post &Categories"
+msgstr "Bidrag-&Kategorien"
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, btnCatReload)
+#: src/toolboxbase.ui:188
+msgid "Reload list of categories"
+msgstr "List vun Kategorien nieg laden"
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, btnCatAdd)
+#: src/toolboxbase.ui:195
+msgid "Add a new category to the selected blog"
+msgstr "Dat utsöcht Nettdaagbook en nieg Kategorie tofögen"
+
+#. i18n: ectx: property (text), widget (QLabel, lblCatTags)
+#: src/toolboxbase.ui:219
+msgid "&Tags:"
+msgstr "&Slötelwöör:"
+
+#. i18n: ectx: attribute (label), widget (QWidget, pgOptions)
+#: src/toolboxbase.ui:245
+msgid "Post &Options"
+msgstr "Bidrag-&Optschonen"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: src/toolboxbase.ui:262
+msgctxt "Status of the current post"
+msgid "Status:"
+msgstr "Status:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboOptionsStatus)
+#: src/toolboxbase.ui:279
+msgid "Published"
+msgstr "Apenmaakt"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboOptionsStatus)
+#: src/toolboxbase.ui:284
+msgid "Draft"
+msgstr "Vörverschoon"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboOptionsStatus)
+#: src/toolboxbase.ui:289
+msgid "Local Draft"
+msgstr "Lokaal Vörverschoon"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/toolboxbase.ui:327
+msgid "Feedback:"
+msgstr "Torüchmellen:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkOptionsComments)
+#: src/toolboxbase.ui:336
+msgid "Comments"
+msgstr "Kommentaren"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkOptionsTrackback)
+#: src/toolboxbase.ui:346
+msgid "Trackback"
+msgstr "Nagahn"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkOptionsTime)
+#: src/toolboxbase.ui:363
+msgid "Modify time&stamp"
+msgstr "&Tietmark ännern"
+
+#. i18n: ectx: property (text), widget (KPushButton, btnOptionsNow)
+#: src/toolboxbase.ui:445
+msgid "Now"
+msgstr "Nu"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: src/toolboxbase.ui:457
+msgid "Permalink (Wordpress):"
+msgstr "Permalink (Wordpress):"
+
+#. i18n: ectx: property (text), widget (QLabel, lblOptionsTrackBack)
+#: src/toolboxbase.ui:467
+msgid "&Trackback URLs:"
+msgstr "URLs för't &Nagahn:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: src/toolboxbase.ui:480
+msgid "Summary:"
+msgstr "Tosamenfaten:"
+
+#. i18n: ectx: attribute (label), widget (QWidget, pgNotes)
+#: src/toolboxbase.ui:519
+msgid "&Local Entries"
+msgstr "&Lokaal Indrääg"
+
+#. i18n: ectx: property (text), widget (QTableWidget, localEntriesTable)
+#: src/toolboxbase.ui:541
+msgctxt "Post title"
+msgid "Title"
+msgstr "Titel"
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, btnLocalRemove)
+#: src/toolboxbase.ui:572
+msgid "Remove selected entry"
+msgstr "Markeert Indrag wegmaken"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/uploadmediabase.ui:17
+msgid "Select media to upload"
+msgstr "Medium för't Hoochladen utsöken"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/uploadmediabase.ui:26
+msgid "File:"
+msgstr "Datei:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/uploadmediabase.ui:39
+msgid "Name on server:"
+msgstr "Naam op den Server:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/uploadmediabase.ui:89
+msgid "Upload via:"
+msgstr "Hoochladen över:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_ftpBox)
+#: src/uploadmediabase.ui:120
+msgid "FTP Configurations"
+msgstr "FTP-Instellen"
+
+#. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_httpUrl)
+#: src/uploadmediabase.ui:129
+msgid "This is going to be used for the direct link generation."
+msgstr "Dit warrt för't Opstellen vun Direktlinks bruukt."
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: src/uploadmediabase.ui:139
+msgid "URL to path:"
+msgstr "URL na Padd:"
+
+#. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_FtpPath)
+#: src/uploadmediabase.ui:152
+msgid "This is going to be used for the upload."
+msgstr "Dit warrt för't Hoochladen bruukt."
+
+#. i18n: ectx: property (text), widget (KLineEdit, kcfg_FtpPath)
+#: src/uploadmediabase.ui:155
+msgid "ftp://"
+msgstr "ftp://"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: src/uploadmediabase.ui:162
+msgid "(S)FTP path:"
+msgstr "(S)FTP-Padd:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: src/uploadmediabase.ui:180
+msgid "e.g. sftp://domain.com/user/images/"
+msgstr "a.B. sftp://nettsiet.com/bruker/biller/"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/uploadmediabase.ui:192
+msgid "e.g. http://domain.com/images/"
+msgstr "a.B. http://nettsiet.com/biller/"
+
 #: src/uploadmediadialog.cpp:51
 msgid "Upload"
 msgstr "Hoochladen"
@@ -888,788 +1530,6 @@ msgstr ""
 "Mediumlett sik nich hoochladen. Resultaat:\n"
 "%1\n"
 "Nochmaal versöken?"
-
-#. i18n: file: src/blogiloui.rc:4
-#. i18n: ectx: Menu (blog)
-#. i18n: file: src/toolboxbase.ui:546
-#. i18n: ectx: property (text), widget (QTableWidget, localEntriesTable)
-#. i18n: file: src/blogiloui.rc:4
-#. i18n: ectx: Menu (blog)
-#. i18n: file: src/toolboxbase.ui:546
-#. i18n: ectx: property (text), widget (QTableWidget, localEntriesTable)
-#: rc.cpp:5 rc.cpp:330
-msgid "Blog"
-msgstr "Nettdaagbook"
-
-#. i18n: file: src/blogiloui.rc:8
-#. i18n: ectx: Menu (post)
-#: rc.cpp:8
-msgid "Post"
-msgstr "Bidrag"
-
-#. i18n: file: src/blogiloui.rc:13
-#. i18n: ectx: Menu (settings)
-#: rc.cpp:11
-msgid "Settings"
-msgstr "Instellen"
-
-#. i18n: file: src/blogiloui.rc:18
-#. i18n: ectx: Menu (settings)
-#: rc.cpp:14
-msgid "Toolbar"
-msgstr "Warktüüchbalken"
-
-#. i18n: file: src/addcategorybase.ui:16
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:17
-msgid "Category name:"
-msgstr "Kategorienaam:"
-
-#. i18n: file: src/addcategorybase.ui:29
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:20
-msgid "Category slug:"
-msgstr "Kategorie-Klümp:"
-
-#. i18n: file: src/addcategorybase.ui:42
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:23
-msgid "Parent category:"
-msgstr "Överornt Kategorie:"
-
-#. i18n: file: src/addcategorybase.ui:55
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:26
-msgid "Description:"
-msgstr "Beschrieven:"
-
-#. i18n: file: src/addeditblogbase.ui:18
-#. i18n: ectx: attribute (title), widget (QWidget, tabBasic)
-#: rc.cpp:29
-msgctxt "Basic configurations"
-msgid "Basic"
-msgstr "Eenfach"
-
-#. i18n: file: src/addeditblogbase.ui:30
-#. i18n: ectx: property (text), widget (QLabel, label_18)
-#. i18n: file: src/addeditblogbase.ui:222
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#. i18n: file: src/addeditblogbase.ui:30
-#. i18n: ectx: property (text), widget (QLabel, label_18)
-#. i18n: file: src/addeditblogbase.ui:222
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:32 rc.cpp:66
-msgid "Blog Account Configuration"
-msgstr "Daagbook-Konto instellen"
-
-#. i18n: file: src/addeditblogbase.ui:47
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:35
-msgid ""
-"Please fill in these fields and click on the \"Auto-Configure\" button to "
-"let Blogilo configure your blog account.\n"
-"You can set more options in the Advanced tab."
-msgstr ""
-"Bitte giff de nödig Daten in un klick op \"Automaatsch instellen\", wenn dat "
-"Programm Dien Nettdaagbook-Konto instellen schall.\n"
-"Op de Koort \"Verwiedert\" laat sik mehr Optschonen instellen."
-
-#. i18n: file: src/addeditblogbase.ui:66
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:39
-msgctxt "Blog Title"
-msgid "Title:"
-msgstr "Titel:"
-
-#. i18n: file: src/addeditblogbase.ui:79
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:42
-msgid "Blog/Homepage URL:"
-msgstr "Nettdaagbook-/Tohuussiet-URL:"
-
-#. i18n: file: src/addeditblogbase.ui:92
-#. i18n: ectx: property (text), widget (KLineEdit, txtUrl)
-#. i18n: file: src/uploadmediabase.ui:132
-#. i18n: ectx: property (text), widget (KLineEdit, kcfg_httpUrl)
-#. i18n: file: src/addeditblogbase.ui:92
-#. i18n: ectx: property (text), widget (KLineEdit, txtUrl)
-#. i18n: file: src/uploadmediabase.ui:132
-#. i18n: ectx: property (text), widget (KLineEdit, kcfg_httpUrl)
-#: rc.cpp:45 rc.cpp:357
-msgid "http://"
-msgstr "http://"
-
-#. i18n: file: src/addeditblogbase.ui:95
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, txtUrl)
-#: rc.cpp:48
-msgid "http://YourHomePage.com"
-msgstr "http://DienTohuussiet.de"
-
-#. i18n: file: src/addeditblogbase.ui:112
-#. i18n: ectx: property (text), widget (QLabel, label_17)
-#: rc.cpp:51
-msgid "e.g.: http://domain.com/blog/"
-msgstr "a.B.: http://domain.com/blog/"
-
-#. i18n: file: src/addeditblogbase.ui:119
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:54
-msgctxt "Blog account Username"
-msgid "Username:"
-msgstr "Brukernaam:"
-
-#. i18n: file: src/addeditblogbase.ui:135
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:57
-msgid "Password:"
-msgstr "Passwoort:"
-
-#. i18n: file: src/addeditblogbase.ui:180
-#. i18n: ectx: property (text), widget (KPushButton, btnAutoConf)
-#: rc.cpp:60
-msgid "Auto-Configure"
-msgstr "Automaatsch instellen"
-
-#. i18n: file: src/addeditblogbase.ui:210
-#. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
-#: rc.cpp:63
-msgctxt "Advanced configurations"
-msgid "Advanced"
-msgstr "Verwiedert"
-
-#. i18n: file: src/addeditblogbase.ui:232
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:69
-msgctxt "Name of the API which is used to communicate with Blog"
-msgid "API:"
-msgstr "API:"
-
-#. i18n: file: src/addeditblogbase.ui:246
-#. i18n: ectx: property (text), item, widget (KComboBox, comboApi)
-#: rc.cpp:72
-msgid "Blogger 1.0 API"
-msgstr "\"Blogger 1.0\"-API"
-
-#. i18n: file: src/addeditblogbase.ui:251
-#. i18n: ectx: property (text), item, widget (KComboBox, comboApi)
-#: rc.cpp:75
-msgid "MetaWeblog API"
-msgstr "MetaWeblog-API"
-
-#. i18n: file: src/addeditblogbase.ui:256
-#. i18n: ectx: property (text), item, widget (KComboBox, comboApi)
-#: rc.cpp:78
-msgid "MovableType API"
-msgstr "MovableType-API"
-
-#. i18n: file: src/addeditblogbase.ui:261
-#. i18n: ectx: property (text), item, widget (KComboBox, comboApi)
-#: rc.cpp:81
-msgid "Wordpress"
-msgstr "Wordpress"
-
-#. i18n: file: src/addeditblogbase.ui:266
-#. i18n: ectx: property (text), item, widget (KComboBox, comboApi)
-#: rc.cpp:84
-msgid "Blogspot.com"
-msgstr "Blogspot.com"
-
-#. i18n: file: src/addeditblogbase.ui:290
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:87
-msgid "Blog ID:"
-msgstr "Nettdaagbook-ID:"
-
-#. i18n: file: src/addeditblogbase.ui:318
-#. i18n: ectx: property (text), widget (KPushButton, btnFetch)
-#: rc.cpp:90
-msgctxt "verb, fetch the blog ID from the web"
-msgid "Fetch ID"
-msgstr "ID halen"
-
-#. i18n: file: src/addeditblogbase.ui:341
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:93
-msgctxt "Default direction of text in the blog"
-msgid "Default text direction:"
-msgstr "Standardtextricht:"
-
-#. i18n: file: src/addeditblogbase.ui:355
-#. i18n: ectx: property (text), item, widget (KComboBox, comboDir)
-#: rc.cpp:96
-msgid "Left to Right"
-msgstr "Vun links na rechts"
-
-#. i18n: file: src/addeditblogbase.ui:360
-#. i18n: ectx: property (text), item, widget (KComboBox, comboDir)
-#: rc.cpp:99
-msgid "Right to Left"
-msgstr "Vun rechts na links"
-
-#. i18n: file: src/addeditblogbase.ui:372
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: rc.cpp:102
-msgid "Supported Features"
-msgstr "Ünnerstütt Markmalen"
-
-#. i18n: file: src/addeditblogbase.ui:378
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: rc.cpp:105
-msgid "Create/Modify posts:"
-msgstr "Bidrääg opstellen oder ännern:"
-
-#. i18n: file: src/addeditblogbase.ui:407
-#. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:108
-msgid "Support for categories:"
-msgstr "Ünnerstütten för Kategorien:"
-
-#. i18n: file: src/addeditblogbase.ui:417
-#. i18n: ectx: property (text), widget (QLabel, label_16)
-#: rc.cpp:111
-msgid "Support for tags:"
-msgstr "Ünnerstütten för Slötelwöör:"
-
-#. i18n: file: src/addeditblogbase.ui:433
-#. i18n: ectx: property (text), widget (QLabel, label_22)
-#: rc.cpp:114
-msgid "Remove posts:"
-msgstr "Bidrääg wegmaken:"
-
-#. i18n: file: src/addeditblogbase.ui:446
-#. i18n: ectx: property (text), widget (QLabel, label_12)
-#: rc.cpp:117
-msgid "Fetch recent posts:"
-msgstr "Verleden Bidrääg halen:"
-
-#. i18n: file: src/addeditblogbase.ui:459
-#. i18n: ectx: property (text), widget (QLabel, label_20)
-#: rc.cpp:120
-msgid "Multipaged posts:"
-msgstr "Bidrääg mit mehr Sieden:"
-
-#. i18n: file: src/addeditblogbase.ui:472
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:123
-msgid ""
-"Note: You can see a list of supported features for your blog after "
-"configuring it."
-msgstr ""
-"Beacht: Hest Du Dien Daagbook instellt, kannst Du en List vun ünnerstütt "
-"Markmalen ankieken."
-
-#. i18n: file: src/addeditblogbase.ui:482
-#. i18n: ectx: property (text), widget (QLabel, label_13)
-#: rc.cpp:126
-msgid "Upload media:"
-msgstr "Medien hoochladen:"
-
-#. i18n: file: src/addeditblogbase.ui:495
-#. i18n: ectx: property (text), widget (QLabel, label_15)
-#: rc.cpp:129
-msgid "Create new categories:"
-msgstr "Nieg Kategorien opstellen:"
-
-#. i18n: file: src/advancedsettingsbase.ui:16
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_changeNToBreak)
-#: rc.cpp:132
-msgid ""
-"This can be useful for some blogs, like Wordpress, that do not store posts "
-"as HTML"
-msgstr ""
-"Dit kann för en poor Daagböker wat bringen, a.B. för \"Wordpress\", de "
-"Bidrääg nich as HTML wohren deit."
-
-#. i18n: file: src/advancedsettingsbase.ui:19
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_changeNToBreak)
-#: rc.cpp:135
-msgid "Change \\n to <br/> on posts retrieved from server"
-msgstr "Ännern \\n na <br/> bi Bidrääg, de vun den Server haalt sünd."
-
-#. i18n: file: src/blogsettingsbase.ui:45
-#. i18n: ectx: property (text), widget (QTableWidget, blogsTable)
-#: rc.cpp:138
-msgctxt "Blog Title"
-msgid "Title"
-msgstr "Titel"
-
-#. i18n: file: src/blogsettingsbase.ui:50
-#. i18n: ectx: property (text), widget (QTableWidget, blogsTable)
-#: rc.cpp:141
-msgctxt "Blog URL"
-msgid "URL"
-msgstr "URL"
-
-#. i18n: file: src/blogsettingsbase.ui:76
-#. i18n: ectx: property (text), widget (KPushButton, btnAdd)
-#: rc.cpp:144
-msgid "&Add..."
-msgstr "&Tofögen..."
-
-#. i18n: file: src/blogsettingsbase.ui:86
-#. i18n: ectx: property (text), widget (KPushButton, btnEdit)
-#: rc.cpp:147
-msgid "&Modify..."
-msgstr "Ä&nnern..."
-
-#. i18n: file: src/blogsettingsbase.ui:96
-#. i18n: ectx: property (text), widget (KPushButton, btnRemove)
-#: rc.cpp:150
-msgid "&Remove"
-msgstr "&Wegmaken"
-
-#. i18n: file: src/composer/dialogs/addeditlinkbase.ui:29
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:153
-msgctxt "the web address of the link"
-msgid "Link &address:"
-msgstr "Link&adress:"
-
-#. i18n: file: src/composer/dialogs/addeditlinkbase.ui:48
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:156
-msgctxt "the word which is showed as a link"
-msgid "Link &title:"
-msgstr "Link&titel:"
-
-#. i18n: file: src/composer/dialogs/addeditlinkbase.ui:105
-#. i18n: ectx: property (toolTip), widget (KPushButton, btnClear)
-#: rc.cpp:159
-msgid "Clear link cache"
-msgstr "Link-Twischenspieker leddig maken"
-
-#. i18n: file: src/composer/dialogs/addeditlinkbase.ui:113
-#. i18n: ectx: property (text), item, widget (KComboBox, comboTarget)
-#: rc.cpp:162
-msgid "Not Set"
-msgstr "Nich fastleggt"
-
-#. i18n: file: src/composer/dialogs/addeditlinkbase.ui:118
-#. i18n: ectx: property (text), item, widget (KComboBox, comboTarget)
-#: rc.cpp:165
-msgid "Current Window"
-msgstr "Aktuell Finster"
-
-#. i18n: file: src/composer/dialogs/addeditlinkbase.ui:123
-#. i18n: ectx: property (text), item, widget (KComboBox, comboTarget)
-#: rc.cpp:168
-msgid "New Window"
-msgstr "Nieg Finster"
-
-#. i18n: file: src/composer/dialogs/addeditlinkbase.ui:137
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:171
-msgid "&Target:"
-msgstr "&Teel:"
-
-#. i18n: file: src/composer/dialogs/addmediadialogbase.ui:34
-#. i18n: ectx: property (text), widget (QRadioButton, radiobtnLocalUrl)
-#: rc.cpp:174
-msgid "From your computer"
-msgstr "Vun Dien Reekner"
-
-#. i18n: file: src/composer/dialogs/addmediadialogbase.ui:47
-#. i18n: ectx: property (text), widget (QRadioButton, radiobtnRemoteUrl)
-#: rc.cpp:177
-msgid "From the web"
-msgstr "Ut dat Internet"
-
-#. i18n: file: src/composer/dialogs/editimagebase.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, EditImageBase)
-#: rc.cpp:180
-msgctxt "verb, to modify selected image attributes"
-msgid "Edit Image Properties"
-msgstr "Bildegenschappen bewerken"
-
-#. i18n: file: src/composer/dialogs/editimagebase.ui:20
-#. i18n: ectx: property (text), widget (QLabel, labelWidth)
-#: rc.cpp:183
-msgctxt "noun, width of the image in pixels"
-msgid "Width:"
-msgstr "Breed:"
-
-#. i18n: file: src/composer/dialogs/editimagebase.ui:36
-#. i18n: ectx: property (suffix), widget (KIntSpinBox, spinboxWidth)
-#. i18n: file: src/composer/dialogs/editimagebase.ui:46
-#. i18n: ectx: property (suffix), widget (KIntSpinBox, spinboxHeight)
-#. i18n: file: src/composer/dialogs/editimagebase.ui:36
-#. i18n: ectx: property (suffix), widget (KIntSpinBox, spinboxWidth)
-#. i18n: file: src/composer/dialogs/editimagebase.ui:46
-#. i18n: ectx: property (suffix), widget (KIntSpinBox, spinboxHeight)
-#: rc.cpp:186 rc.cpp:189
-msgid " pixel"
-msgstr " Pixel"
-
-#. i18n: file: src/composer/dialogs/editimagebase.ui:62
-#. i18n: ectx: property (text), widget (QLabel, labelTitle)
-#: rc.cpp:192
-msgid "Image Title:"
-msgstr "Bildtitel:"
-
-#. i18n: file: src/composer/dialogs/editimagebase.ui:75
-#. i18n: ectx: property (text), widget (QLabel, labelHeight)
-#: rc.cpp:195
-msgctxt "noun, height of the image in pixels"
-msgid "Height:"
-msgstr "Hööchde:"
-
-#. i18n: file: src/composer/dialogs/editimagebase.ui:95
-#. i18n: ectx: property (text), widget (QLabel, labelAltText)
-#: rc.cpp:198
-#, fuzzy
-#| msgctxt ""
-#| "the alternative text which is displayed to the user, if the image can not "
-#| "be loaded."
-#| msgid "Alternative text:"
-msgctxt ""
-"the alternative text which is displayed to the user, if the image cannot be "
-"loaded."
-msgid "Alternative text:"
-msgstr "Utwiektext:"
-
-#. i18n: file: src/composer/dialogs/editimagebase.ui:115
-#. i18n: ectx: property (text), widget (QLabel, labelLink)
-#: rc.cpp:201
-msgid "Image links to:"
-msgstr "Bildlink na:"
-
-#. i18n: file: src/composer/dialogs/editimagebase.ui:144
-#. i18n: ectx: property (toolTip), widget (KPushButton, btnKeepRatio)
-#: rc.cpp:204
-msgctxt "Image aspect ratio"
-msgid "Keep Ratio"
-msgstr "Proportschoon wohren"
-
-#. i18n: file: src/composer/dialogs/editimagebase.ui:157
-#. i18n: ectx: property (text), widget (QLabel, labelTitle_2)
-#: rc.cpp:207
-msgctxt "Image Alignment"
-msgid "Alignment:"
-msgstr "Utrichten:"
-
-#. i18n: file: src/composer/dialogs/editimagebase.ui:174
-#. i18n: ectx: property (text), item, widget (KComboBox, alignment)
-#: rc.cpp:210
-msgctxt "Alignment"
-msgid "Not Set"
-msgstr "Nich fastleggt"
-
-#. i18n: file: src/composer/dialogs/editimagebase.ui:179
-#. i18n: ectx: property (text), item, widget (KComboBox, alignment)
-#: rc.cpp:213
-msgctxt "Alignment"
-msgid "Right"
-msgstr "Rechts"
-
-#. i18n: file: src/composer/dialogs/editimagebase.ui:184
-#. i18n: ectx: property (text), item, widget (KComboBox, alignment)
-#: rc.cpp:216
-msgctxt "Alignment"
-msgid "Left"
-msgstr "Links"
-
-#. i18n: file: src/editorsettingsbase.ui:17
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:219
-msgid "Editor auto save interval:"
-msgstr "Editorindrääg automaatsch sekern all:"
-
-#. i18n: file: src/editorsettingsbase.ui:30
-#. i18n: ectx: property (specialValueText), widget (KIntSpinBox, kcfg_autosaveInterval)
-#: rc.cpp:222
-msgctxt "Auto save interval disabled"
-msgid "Disabled"
-msgstr "Utmaakt"
-
-#. i18n: file: src/editorsettingsbase.ui:33
-#. i18n: ectx: property (suffix), widget (KIntSpinBox, kcfg_autosaveInterval)
-#: rc.cpp:225
-msgid " minutes"
-msgstr " Minuten"
-
-#. i18n: file: src/editorsettingsbase.ui:46
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_addPoweredBy)
-#: rc.cpp:228
-msgid "Automatically add \"Powered by Blogilo\" to every post"
-msgstr "Elk Bidrag automaatsch  \"Powered by Blogilo\" tofögen"
-
-#. i18n: file: src/editorsettingsbase.ui:66
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_previewInBlogStyle)
-#: rc.cpp:231
-msgid "Enable post preview in blog style, if available"
-msgstr "Bidrag-Vöransicht in Nettdaagbook-Stil anmaken, wenn verföögbor"
-
-#. i18n: file: src/editorsettingsbase.ui:73
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_urlCachingEnabled)
-#: rc.cpp:234
-msgid "Enable URL caching in the \"Add Link\" dialog"
-msgstr "URLs binnen den Dialoog \"Link tofögen\" twischenspiekern"
-
-#. i18n: file: src/editorsettingsbase.ui:83
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableCheckSpelling)
-#: rc.cpp:237
-msgid "Enable spell checking"
-msgstr "Klookschriever bruken"
-
-#. i18n: file: src/entriescountdialogbase.ui:17
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:240
-msgid "Number of entries to fetch:"
-msgstr "Tall vun Indrääg, de haalt warrt:"
-
-#. i18n: file: src/entriescountdialogbase.ui:40
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_remember)
-#: rc.cpp:243
-msgid "Do not ask again"
-msgstr "Nienich nochmaal fragen"
-
-#. i18n: file: src/sendtoblogbase.ui:16
-#. i18n: ectx: property (text), widget (QRadioButton, pubAsModify)
-#: rc.cpp:246
-msgid "Publish as an edit of the original entry"
-msgstr "As bewerkt Orginaalindrag apenmaken"
-
-#. i18n: file: src/sendtoblogbase.ui:23
-#. i18n: ectx: property (text), widget (QRadioButton, pubAsNewPost)
-#: rc.cpp:249
-msgid "Publish as a new post"
-msgstr "As nieg Bidrag apenmaken"
-
-#. i18n: file: src/sendtoblogbase.ui:36
-#. i18n: ectx: property (text), widget (QCheckBox, saveDraft)
-#: rc.cpp:252
-msgid "Save entry in drafts"
-msgstr "Indrag as Vörverschoon sekern"
-
-#. i18n: file: src/settingsbase.ui:16
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableSysTrayIcon)
-#: rc.cpp:255
-msgid "Enable system tray icon"
-msgstr "Systeemafsnitt-Lüttbild anmaken"
-
-#. i18n: file: src/settingsbase.ui:23
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_CopyMediaUrl)
-#: rc.cpp:258
-msgid "Copy media URL to clipboard after upload"
-msgstr "Medienadress na't Hoochladen na de Twischenaflaag koperen"
-
-#. i18n: file: src/toolboxbase.ui:34
-#. i18n: ectx: attribute (label), widget (QWidget, pgEntries)
-#: rc.cpp:261
-msgid "Blog Posts"
-msgstr "Nettdaagbook-Bidrääg"
-
-#. i18n: file: src/toolboxbase.ui:80
-#. i18n: ectx: property (toolTip), widget (KPushButton, btnEntriesUpdate)
-#: rc.cpp:264
-msgid "Update list of entries"
-msgstr "List vun Indrääg opfrischen"
-
-#. i18n: file: src/toolboxbase.ui:87
-#. i18n: ectx: property (toolTip), widget (KPushButton, btnEntriesClear)
-#: rc.cpp:267
-msgid "Clear list of entries"
-msgstr "List vun Indrääg leddig maken"
-
-#. i18n: file: src/toolboxbase.ui:101
-#. i18n: ectx: property (toolTip), widget (KPushButton, btnEntriesRemove)
-#: rc.cpp:270
-msgid "Remove selected entry from server"
-msgstr "Markeert Indrag vun den Server wegmaken"
-
-#. i18n: file: src/toolboxbase.ui:134
-#. i18n: ectx: attribute (label), widget (QWidget, pgCat)
-#: rc.cpp:273
-msgid "Post &Categories"
-msgstr "Bidrag-&Kategorien"
-
-#. i18n: file: src/toolboxbase.ui:188
-#. i18n: ectx: property (toolTip), widget (KPushButton, btnCatReload)
-#: rc.cpp:276
-msgid "Reload list of categories"
-msgstr "List vun Kategorien nieg laden"
-
-#. i18n: file: src/toolboxbase.ui:195
-#. i18n: ectx: property (toolTip), widget (KPushButton, btnCatAdd)
-#: rc.cpp:279
-msgid "Add a new category to the selected blog"
-msgstr "Dat utsöcht Nettdaagbook en nieg Kategorie tofögen"
-
-#. i18n: file: src/toolboxbase.ui:219
-#. i18n: ectx: property (text), widget (QLabel, lblCatTags)
-#: rc.cpp:282
-msgid "&Tags:"
-msgstr "&Slötelwöör:"
-
-#. i18n: file: src/toolboxbase.ui:245
-#. i18n: ectx: attribute (label), widget (QWidget, pgOptions)
-#: rc.cpp:285
-msgid "Post &Options"
-msgstr "Bidrag-&Optschonen"
-
-#. i18n: file: src/toolboxbase.ui:262
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:288
-msgctxt "Status of the current post"
-msgid "Status:"
-msgstr "Status:"
-
-#. i18n: file: src/toolboxbase.ui:279
-#. i18n: ectx: property (text), item, widget (KComboBox, comboOptionsStatus)
-#: rc.cpp:291
-msgid "Published"
-msgstr "Apenmaakt"
-
-#. i18n: file: src/toolboxbase.ui:284
-#. i18n: ectx: property (text), item, widget (KComboBox, comboOptionsStatus)
-#: rc.cpp:294
-msgid "Draft"
-msgstr "Vörverschoon"
-
-#. i18n: file: src/toolboxbase.ui:289
-#. i18n: ectx: property (text), item, widget (KComboBox, comboOptionsStatus)
-#: rc.cpp:297
-msgid "Local Draft"
-msgstr "Lokaal Vörverschoon"
-
-#. i18n: file: src/toolboxbase.ui:327
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:300
-msgid "Feedback:"
-msgstr "Torüchmellen:"
-
-#. i18n: file: src/toolboxbase.ui:336
-#. i18n: ectx: property (text), widget (QCheckBox, chkOptionsComments)
-#: rc.cpp:303
-msgid "Comments"
-msgstr "Kommentaren"
-
-#. i18n: file: src/toolboxbase.ui:346
-#. i18n: ectx: property (text), widget (QCheckBox, chkOptionsTrackback)
-#: rc.cpp:306
-msgid "Trackback"
-msgstr "Nagahn"
-
-#. i18n: file: src/toolboxbase.ui:363
-#. i18n: ectx: property (text), widget (QCheckBox, chkOptionsTime)
-#: rc.cpp:309
-msgid "Modify time&stamp"
-msgstr "&Tietmark ännern"
-
-#. i18n: file: src/toolboxbase.ui:445
-#. i18n: ectx: property (text), widget (KPushButton, btnOptionsNow)
-#: rc.cpp:312
-msgid "Now"
-msgstr "Nu"
-
-#. i18n: file: src/toolboxbase.ui:457
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:315
-msgid "Permalink (Wordpress):"
-msgstr "Permalink (Wordpress):"
-
-#. i18n: file: src/toolboxbase.ui:467
-#. i18n: ectx: property (text), widget (QLabel, lblOptionsTrackBack)
-#: rc.cpp:318
-msgid "&Trackback URLs:"
-msgstr "URLs för't &Nagahn:"
-
-#. i18n: file: src/toolboxbase.ui:480
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:321
-msgid "Summary:"
-msgstr "Tosamenfaten:"
-
-#. i18n: file: src/toolboxbase.ui:519
-#. i18n: ectx: attribute (label), widget (QWidget, pgNotes)
-#: rc.cpp:324
-msgid "&Local Entries"
-msgstr "&Lokaal Indrääg"
-
-#. i18n: file: src/toolboxbase.ui:541
-#. i18n: ectx: property (text), widget (QTableWidget, localEntriesTable)
-#: rc.cpp:327
-msgctxt "Post title"
-msgid "Title"
-msgstr "Titel"
-
-#. i18n: file: src/toolboxbase.ui:572
-#. i18n: ectx: property (toolTip), widget (KPushButton, btnLocalRemove)
-#: rc.cpp:333
-msgid "Remove selected entry"
-msgstr "Markeert Indrag wegmaken"
-
-#. i18n: file: src/uploadmediabase.ui:17
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:336
-msgid "Select media to upload"
-msgstr "Medium för't Hoochladen utsöken"
-
-#. i18n: file: src/uploadmediabase.ui:26
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:339
-msgid "File:"
-msgstr "Datei:"
-
-#. i18n: file: src/uploadmediabase.ui:39
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:342
-msgid "Name on server:"
-msgstr "Naam op den Server:"
-
-#. i18n: file: src/uploadmediabase.ui:89
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:348
-msgid "Upload via:"
-msgstr "Hoochladen över:"
-
-#. i18n: file: src/uploadmediabase.ui:120
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_ftpBox)
-#: rc.cpp:351
-msgid "FTP Configurations"
-msgstr "FTP-Instellen"
-
-#. i18n: file: src/uploadmediabase.ui:129
-#. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_httpUrl)
-#: rc.cpp:354
-msgid "This is going to be used for the direct link generation."
-msgstr "Dit warrt för't Opstellen vun Direktlinks bruukt."
-
-#. i18n: file: src/uploadmediabase.ui:139
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:360
-msgid "URL to path:"
-msgstr "URL na Padd:"
-
-#. i18n: file: src/uploadmediabase.ui:152
-#. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_FtpPath)
-#: rc.cpp:363
-msgid "This is going to be used for the upload."
-msgstr "Dit warrt för't Hoochladen bruukt."
-
-#. i18n: file: src/uploadmediabase.ui:155
-#. i18n: ectx: property (text), widget (KLineEdit, kcfg_FtpPath)
-#: rc.cpp:366
-msgid "ftp://"
-msgstr "ftp://"
-
-#. i18n: file: src/uploadmediabase.ui:162
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:369
-msgid "(S)FTP path:"
-msgstr "(S)FTP-Padd:"
-
-#. i18n: file: src/uploadmediabase.ui:180
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:372
-msgid "e.g. sftp://domain.com/user/images/"
-msgstr "a.B. sftp://nettsiet.com/bruker/biller/"
-
-#. i18n: file: src/uploadmediabase.ui:192
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:375
-msgid "e.g. http://domain.com/images/"
-msgstr "a.B. http://nettsiet.com/biller/"
 
 #~ msgid "Close tab"
 #~ msgstr "Paneel tomaken"
