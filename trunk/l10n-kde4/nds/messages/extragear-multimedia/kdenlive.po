@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdenlive\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-09-22 04:07+0200\n"
+"POT-Creation-Date: 2012-09-23 03:50+0200\n"
 "PO-Revision-Date: 2011-11-16 15:57+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -402,7 +402,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, button_start)
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: effects/fade_from_black.xml:13 effects/fade_to_black.xml:13
-#: src/mainwindow.cpp:4062 src/titlewidget.cpp:2146
+#: src/mainwindow.cpp:4065 src/titlewidget.cpp:2146
 #: src/widgets/cliptranscode_ui.ui:87 src/widgets/wipeval_ui.ui:22
 msgid "Start"
 msgstr ""
@@ -2267,10 +2267,10 @@ msgstr ""
 msgid "Grain over the image"
 msgstr ""
 
-#: effects/grain.xml:7 plugins/sampleplugin/sampleplugin.cpp:37
-#: plugins/sampleplugin/sampleplugin.cpp:45
-#: plugins/sampleplugin/sampleplugin.cpp:57
-#: plugins/sampleplugin/sampleplugin.cpp:75
+#: effects/grain.xml:7 plugins/sampleplugin/sampleplugin.cpp:39
+#: plugins/sampleplugin/sampleplugin.cpp:47
+#: plugins/sampleplugin/sampleplugin.cpp:59
+#: plugins/sampleplugin/sampleplugin.cpp:89
 msgid "Noise"
 msgstr ""
 
@@ -2722,7 +2722,7 @@ msgid "Alpha Operation"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, clip_filesize_3)
-#: effects/rotoscoping.xml:22 src/customtrackview.cpp:3092
+#: effects/rotoscoping.xml:22 src/customtrackview.cpp:3093
 #: src/widgets/spacerdialog_ui.ui:37
 msgid "Track"
 msgstr ""
@@ -3071,23 +3071,24 @@ msgstr ""
 msgid "Font"
 msgstr "Schriftoort"
 
-#: plugins/sampleplugin/sampleplugin.cpp:36
+#: plugins/sampleplugin/sampleplugin.cpp:38
 msgid "Countdown"
 msgstr ""
 
-#: plugins/sampleplugin/sampleplugin.cpp:101
-#: plugins/sampleplugin/sampleplugin.cpp:108 src/archivewidget.cpp:789
-#: src/archivewidget.cpp:795 src/dvdwizard.cpp:783 src/dvdwizard.cpp:789
-#: src/kdenlivedoc.cpp:758 src/kdenlivedoc.cpp:764 src/mainwindow.cpp:4149
-#: src/mainwindow.cpp:4154 src/profilesdialog.cpp:219
-#: src/profilesdialog.cpp:225 src/profilesdialog.cpp:551
-#: src/profilesdialog.cpp:557 src/renderwidget.cpp:561
-#: src/renderwidget.cpp:700 src/renderwidget.cpp:706 src/renderwidget.cpp:766
-#: src/renderwidget.cpp:992 src/renderwidget.cpp:1004
-#: src/renderwidget.cpp:2077 src/renderwidget.cpp:2100
-#: src/titlewidget.cpp:1868
+#: plugins/sampleplugin/sampleplugin.cpp:108
+#: plugins/sampleplugin/sampleplugin.cpp:116
+#, fuzzy
+#| msgctxt "general keyboard shortcuts"
+#| msgid "General"
+msgid "Generator Failed"
+msgstr "Allmeen"
+
+#: plugins/sampleplugin/sampleplugin.cpp:108
+#: plugins/sampleplugin/sampleplugin.cpp:116
 #, kde-format
-msgid "Cannot write to file %1"
+msgid ""
+"Failed to generate clip:\n"
+"%1"
 msgstr ""
 
 #: src/abstractclipitem.cpp:354
@@ -3249,6 +3250,19 @@ msgstr ""
 
 #: src/archivewidget.cpp:778
 msgid "Cannot create temporary file"
+msgstr ""
+
+#: src/archivewidget.cpp:789 src/archivewidget.cpp:795 src/dvdwizard.cpp:783
+#: src/dvdwizard.cpp:789 src/kdenlivedoc.cpp:758 src/kdenlivedoc.cpp:764
+#: src/mainwindow.cpp:4152 src/mainwindow.cpp:4157 src/profilesdialog.cpp:219
+#: src/profilesdialog.cpp:225 src/profilesdialog.cpp:551
+#: src/profilesdialog.cpp:557 src/renderwidget.cpp:561
+#: src/renderwidget.cpp:700 src/renderwidget.cpp:706 src/renderwidget.cpp:766
+#: src/renderwidget.cpp:992 src/renderwidget.cpp:1004
+#: src/renderwidget.cpp:2077 src/renderwidget.cpp:2100
+#: src/titlewidget.cpp:1868
+#, kde-format
+msgid "Cannot write to file %1"
 msgstr ""
 
 #: src/archivewidget.cpp:868
@@ -3448,12 +3462,20 @@ msgstr ""
 msgid "Delete marker"
 msgstr ""
 
-#: src/clipproperties.cpp:479
+#: src/clipproperties.cpp:470 src/customtrackview.cpp:5244
+msgid "Save markers"
+msgstr ""
+
+#: src/clipproperties.cpp:472
+msgid "Load markers"
+msgstr ""
+
+#: src/clipproperties.cpp:483
 #, kde-format
 msgid "License: %1"
 msgstr ""
 
-#: src/clipproperties.cpp:521 src/projectlist.cpp:2847
+#: src/clipproperties.cpp:527 src/projectlist.cpp:2847
 #, kde-format
 msgid "(%1 clip)"
 msgid_plural "(%1 clips)"
@@ -3461,27 +3483,28 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, MarkerDialog_UI)
-#: src/clipproperties.cpp:720 src/definitions.h:270 src/docclipbase.cpp:327
-#: src/mainwindow.cpp:2836 src/widgets/markerdialog_ui.ui:14
+#: src/clipproperties.cpp:727 src/customtrackview.cpp:5287
+#: src/definitions.h:270 src/docclipbase.cpp:327 src/mainwindow.cpp:2836
+#: src/widgets/markerdialog_ui.ui:14
 msgid "Marker"
 msgstr ""
 
-#: src/clipproperties.cpp:722 src/mainwindow.cpp:1482 src/mainwindow.cpp:2838
+#: src/clipproperties.cpp:729 src/mainwindow.cpp:1482 src/mainwindow.cpp:2838
 msgid "Add Marker"
 msgstr ""
 
-#: src/clipproperties.cpp:735 src/mainwindow.cpp:1494 src/mainwindow.cpp:2924
+#: src/clipproperties.cpp:751 src/mainwindow.cpp:1494 src/mainwindow.cpp:2924
 msgid "Edit Marker"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_info)
 #. i18n: ectx: property (text), widget (QLabel, slide_info)
-#: src/clipproperties.cpp:1021 src/widgets/clipproperties_ui.ui:330
+#: src/clipproperties.cpp:1034 src/widgets/clipproperties_ui.ui:330
 #: src/widgets/slideshowclip_ui.ui:276
 msgid "No image found"
 msgstr ""
 
-#: src/clipproperties.cpp:1026 src/projectsettings.cpp:512
+#: src/clipproperties.cpp:1039 src/projectsettings.cpp:512
 #: src/projectsettings.cpp:525 src/slideshowclip.cpp:247
 #, kde-format
 msgid "1 image found"
@@ -3519,7 +3542,7 @@ msgstr ""
 
 #: src/cliptranscode.cpp:141 src/effectstack/collapsibleeffect.cpp:291
 #: src/effectstack/collapsiblegroup.cpp:174 src/mainwindow.cpp:2020
-#: src/mainwindow.cpp:3697
+#: src/mainwindow.cpp:3700
 #, kde-format
 msgid ""
 "File %1 already exists.\n"
@@ -3646,19 +3669,19 @@ msgid "Add clip cut"
 msgstr ""
 
 #: src/commands/addeffectcommand.cpp:37 src/commands/editeffectcommand.cpp:40
-#: src/commands/edittransitioncommand.cpp:35 src/customtrackview.cpp:1754
-#: src/customtrackview.cpp:1804 src/customtrackview.cpp:1923
-#: src/customtrackview.cpp:7033
+#: src/commands/edittransitioncommand.cpp:35 src/customtrackview.cpp:1755
+#: src/customtrackview.cpp:1805 src/customtrackview.cpp:1924
+#: src/customtrackview.cpp:7113
 msgid "effect"
 msgstr ""
 
-#: src/commands/addeffectcommand.cpp:38 src/customtrackview.cpp:1755
-#: src/customtrackview.cpp:1806 src/customtrackview.cpp:7035
+#: src/commands/addeffectcommand.cpp:38 src/customtrackview.cpp:1756
+#: src/customtrackview.cpp:1807 src/customtrackview.cpp:7115
 #, kde-format
 msgid "Add %1"
 msgstr ""
 
-#: src/commands/addeffectcommand.cpp:39 src/customtrackview.cpp:1924
+#: src/commands/addeffectcommand.cpp:39 src/customtrackview.cpp:1925
 #, kde-format
 msgid "Delete %1"
 msgstr ""
@@ -3671,11 +3694,11 @@ msgstr ""
 msgid "Delete folder"
 msgstr ""
 
-#: src/commands/addtimelineclipcommand.cpp:38 src/customtrackview.cpp:2547
+#: src/commands/addtimelineclipcommand.cpp:38 src/customtrackview.cpp:2548
 msgid "Add timeline clip"
 msgstr ""
 
-#: src/commands/addtimelineclipcommand.cpp:39 src/customtrackview.cpp:3341
+#: src/commands/addtimelineclipcommand.cpp:39 src/customtrackview.cpp:3342
 msgid "Delete timeline clip"
 msgid_plural "Delete timeline clips"
 msgstr[0] ""
@@ -3685,7 +3708,7 @@ msgstr[1] ""
 msgid "Add track"
 msgstr ""
 
-#: src/commands/addtrackcommand.cpp:34 src/customtrackview.cpp:6050
+#: src/commands/addtrackcommand.cpp:34 src/customtrackview.cpp:6130
 msgid "Delete track"
 msgstr ""
 
@@ -3727,7 +3750,7 @@ msgstr ""
 msgid "Configure Tracks"
 msgstr ""
 
-#: src/commands/editclipcommand.cpp:33 src/customtrackview.cpp:1381
+#: src/commands/editclipcommand.cpp:33 src/customtrackview.cpp:1382
 msgid "Edit clip"
 msgstr ""
 
@@ -3806,7 +3829,7 @@ msgstr ""
 msgid "Unlock track"
 msgstr ""
 
-#: src/commands/moveclipcommand.cpp:35 src/customtrackview.cpp:3528
+#: src/commands/moveclipcommand.cpp:35 src/customtrackview.cpp:3529
 msgid "Move clip"
 msgstr ""
 
@@ -3814,11 +3837,11 @@ msgstr ""
 msgid "Move effect"
 msgstr ""
 
-#: src/commands/movegroupcommand.cpp:35 src/customtrackview.cpp:3683
+#: src/commands/movegroupcommand.cpp:35 src/customtrackview.cpp:3684
 msgid "Move group"
 msgstr ""
 
-#: src/commands/movetransitioncommand.cpp:30 src/customtrackview.cpp:3657
+#: src/commands/movetransitioncommand.cpp:30 src/customtrackview.cpp:3658
 msgid "Move transition"
 msgstr ""
 
@@ -3838,7 +3861,7 @@ msgstr ""
 msgid "Resize clip"
 msgstr ""
 
-#: src/commands/splitaudiocommand.cpp:33 src/customtrackview.cpp:6205
+#: src/commands/splitaudiocommand.cpp:33 src/customtrackview.cpp:6285
 msgid "Split audio"
 msgstr ""
 
@@ -3866,17 +3889,17 @@ msgstr ""
 msgid "Show/Hide the lines connecting the corners"
 msgstr ""
 
-#: src/customruler.cpp:81 src/customtrackview.cpp:5310 src/mainwindow.cpp:1569
+#: src/customruler.cpp:81 src/customtrackview.cpp:5390 src/mainwindow.cpp:1569
 msgid "Add Guide"
 msgstr ""
 
-#: src/customruler.cpp:83 src/customtrackview.cpp:251
-#: src/customtrackview.cpp:5344 src/customtrackview.cpp:5358
+#: src/customruler.cpp:83 src/customtrackview.cpp:252
+#: src/customtrackview.cpp:5424 src/customtrackview.cpp:5438
 #: src/mainwindow.cpp:1577
 msgid "Edit Guide"
 msgstr ""
 
-#: src/customruler.cpp:85 src/customtrackview.cpp:247 src/mainwindow.cpp:1573
+#: src/customruler.cpp:85 src/customtrackview.cpp:248 src/mainwindow.cpp:1573
 msgid "Delete Guide"
 msgstr ""
 
@@ -3889,500 +3912,510 @@ msgstr ""
 msgid "Go To"
 msgstr ""
 
-#: src/customruler.cpp:223 src/customruler.cpp:224 src/smallruler.cpp:146
+#: src/customruler.cpp:223 src/customruler.cpp:224 src/smallruler.cpp:150
 #, kde-format
 msgid "Zone start: %1"
 msgstr ""
 
-#: src/customruler.cpp:227 src/customruler.cpp:228 src/smallruler.cpp:148
+#: src/customruler.cpp:227 src/customruler.cpp:228 src/smallruler.cpp:152
 #, kde-format
 msgid "Zone end: %1"
 msgstr ""
 
-#: src/customruler.cpp:231 src/customruler.cpp:232 src/smallruler.cpp:150
+#: src/customruler.cpp:231 src/customruler.cpp:232 src/smallruler.cpp:154
 #, kde-format
 msgid "Zone duration: %1"
 msgstr ""
 
-#: src/customruler.cpp:235 src/customruler.cpp:236 src/smallruler.cpp:151
+#: src/customruler.cpp:235 src/customruler.cpp:236 src/smallruler.cpp:155
 #, kde-format
 msgid "Position: %1"
 msgstr ""
 
-#: src/customtrackview.cpp:227 src/monitor.cpp:115
+#: src/customtrackview.cpp:228 src/monitor.cpp:115
 msgid "Go to marker..."
 msgstr ""
 
-#: src/customtrackview.cpp:450
+#: src/customtrackview.cpp:451
 msgid "Crop from start:"
 msgstr ""
 
-#: src/customtrackview.cpp:450 src/customtrackview.cpp:462
+#: src/customtrackview.cpp:451 src/customtrackview.cpp:463
 msgid "Duration:"
 msgstr ""
 
-#: src/customtrackview.cpp:450 src/customtrackview.cpp:462
+#: src/customtrackview.cpp:451 src/customtrackview.cpp:463
 msgid "Offset:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: src/customtrackview.cpp:651 src/widgets/clipproperties_ui.ui:713
+#: src/customtrackview.cpp:652 src/widgets/clipproperties_ui.ui:740
 msgid ":"
 msgstr ""
 
-#: src/customtrackview.cpp:652
+#: src/customtrackview.cpp:653
 msgid " Position:"
 msgstr ""
 
-#: src/customtrackview.cpp:653
+#: src/customtrackview.cpp:654
 msgid " Duration:"
 msgstr ""
 
-#: src/customtrackview.cpp:657 src/customtrackview.cpp:663
+#: src/customtrackview.cpp:658 src/customtrackview.cpp:664
 msgid " Selection duration:"
 msgstr ""
 
-#: src/customtrackview.cpp:659
+#: src/customtrackview.cpp:660
 msgid " Group duration:"
 msgstr ""
 
-#: src/customtrackview.cpp:670
+#: src/customtrackview.cpp:671
 msgid "Crop from start: "
 msgstr ""
 
-#: src/customtrackview.cpp:672 src/customtrackview.cpp:678
+#: src/customtrackview.cpp:673 src/customtrackview.cpp:679
 msgid ""
 "Use Ctrl to resize only current item, otherwise all items in this group will "
 "be resized at once."
 msgstr ""
 
-#: src/customtrackview.cpp:676
+#: src/customtrackview.cpp:677
 msgid "Duration: "
 msgstr ""
 
-#: src/customtrackview.cpp:682
+#: src/customtrackview.cpp:683
 msgid "Fade in duration: "
 msgstr ""
 
-#: src/customtrackview.cpp:685
+#: src/customtrackview.cpp:686
 msgid "Fade out duration: "
 msgstr ""
 
-#: src/customtrackview.cpp:688
+#: src/customtrackview.cpp:689
 msgid "Drag to add or resize a fade effect."
 msgstr ""
 
-#: src/customtrackview.cpp:692
+#: src/customtrackview.cpp:693
 msgid "Click to add a transition."
 msgstr ""
 
-#: src/customtrackview.cpp:695
+#: src/customtrackview.cpp:696
 msgid ""
 "Move keyframe above or below clip to remove it, double click to add a new "
 "one."
 msgstr ""
 
-#: src/customtrackview.cpp:880
+#: src/customtrackview.cpp:881
 msgid "Cannot use spacer in a locked track"
 msgstr ""
 
-#: src/customtrackview.cpp:890
+#: src/customtrackview.cpp:891
 msgid "Cannot use spacer in a track with a group"
 msgstr ""
 
-#: src/customtrackview.cpp:957
+#: src/customtrackview.cpp:958
 msgid "Cannot cut a transition"
 msgstr ""
 
-#: src/customtrackview.cpp:1097 src/customtrackview.cpp:1130
-#: src/customtrackview.cpp:2364 src/customtrackview.cpp:2390
-#: src/customtrackview.cpp:2416 src/customtrackview.cpp:2440
+#: src/customtrackview.cpp:1098 src/customtrackview.cpp:1131
+#: src/customtrackview.cpp:2365 src/customtrackview.cpp:2391
+#: src/customtrackview.cpp:2417 src/customtrackview.cpp:2441
 msgid "Cannot add transition"
 msgstr ""
 
-#: src/customtrackview.cpp:1339 src/customtrackview.cpp:1347
+#: src/customtrackview.cpp:1340 src/customtrackview.cpp:1348
 msgid "Cannot find clip to edit"
 msgstr ""
 
-#: src/customtrackview.cpp:1341
+#: src/customtrackview.cpp:1342
 msgid "Cannot edit the duration of multiple items"
 msgstr ""
 
-#: src/customtrackview.cpp:1352
+#: src/customtrackview.cpp:1353
 msgid "Cannot edit an item in a group"
 msgstr ""
 
-#: src/customtrackview.cpp:1417
+#: src/customtrackview.cpp:1418
 msgid "Item is locked"
 msgstr ""
 
-#: src/customtrackview.cpp:1492 src/customtrackview.cpp:2573
+#: src/customtrackview.cpp:1493 src/customtrackview.cpp:2574
 msgid "Cannot insert clip in timeline"
 msgstr ""
 
-#: src/customtrackview.cpp:1519 src/customtrackview.cpp:1574
+#: src/customtrackview.cpp:1520 src/customtrackview.cpp:1575
 msgid "Clip not ready"
 msgstr ""
 
-#: src/customtrackview.cpp:1658 src/customtrackview.cpp:1718
-#: src/customtrackview.cpp:1736
+#: src/customtrackview.cpp:1659 src/customtrackview.cpp:1719
+#: src/customtrackview.cpp:1737
 msgid "Problem deleting effect"
 msgstr ""
 
-#: src/customtrackview.cpp:1665 src/customtrackview.cpp:1689
-#: src/customtrackview.cpp:1704
+#: src/customtrackview.cpp:1666 src/customtrackview.cpp:1690
+#: src/customtrackview.cpp:1705
 msgid "Problem adding effect to clip"
 msgstr ""
 
-#: src/customtrackview.cpp:1674
+#: src/customtrackview.cpp:1675
 msgid "Cannot add speed effect to track"
 msgstr ""
 
-#: src/customtrackview.cpp:1707
+#: src/customtrackview.cpp:1708
 msgid "Cannot find clip to add effect"
 msgstr ""
 
-#: src/customtrackview.cpp:1812
+#: src/customtrackview.cpp:1813
 msgid "Select a clip if you want to apply an effect"
 msgstr ""
 
-#: src/customtrackview.cpp:1878
+#: src/customtrackview.cpp:1879
 msgid "Cannot add an audio effect to this clip"
 msgstr ""
 
-#: src/customtrackview.cpp:1887
+#: src/customtrackview.cpp:1888
 msgid "Cannot add a video effect to this clip"
 msgstr ""
 
-#: src/customtrackview.cpp:1892
+#: src/customtrackview.cpp:1893
 msgid "Effect already present in clip"
 msgstr ""
 
-#: src/customtrackview.cpp:1962 src/customtrackview.cpp:1977
-#: src/customtrackview.cpp:2038 src/customtrackview.cpp:2049
-#: src/customtrackview.cpp:2071 src/customtrackview.cpp:4990
-#: src/customtrackview.cpp:5011 src/customtrackview.cpp:5037
-#: src/customtrackview.cpp:5058
+#: src/customtrackview.cpp:1963 src/customtrackview.cpp:1978
+#: src/customtrackview.cpp:2039 src/customtrackview.cpp:2050
+#: src/customtrackview.cpp:2072 src/customtrackview.cpp:4991
+#: src/customtrackview.cpp:5012 src/customtrackview.cpp:5038
+#: src/customtrackview.cpp:5059
 msgid "Problem editing effect"
 msgstr ""
 
-#: src/customtrackview.cpp:2040 src/customtrackview.cpp:2073
+#: src/customtrackview.cpp:2041 src/customtrackview.cpp:2074
 msgid "Cannot find clip to update effect"
 msgstr ""
 
-#: src/customtrackview.cpp:2098 src/customtrackview.cpp:2119
-#: src/customtrackview.cpp:2133
+#: src/customtrackview.cpp:2099 src/customtrackview.cpp:2120
+#: src/customtrackview.cpp:2134
 msgid "Cannot move effect"
 msgstr ""
 
-#: src/customtrackview.cpp:2199
+#: src/customtrackview.cpp:2200
 msgid "Cannot find clip to cut"
 msgstr ""
 
-#: src/customtrackview.cpp:2273
+#: src/customtrackview.cpp:2274
 msgid "Cannot find clip to uncut"
 msgstr ""
 
-#: src/customtrackview.cpp:2278 src/customtrackview.cpp:3702
-#: src/customtrackview.cpp:3983
+#: src/customtrackview.cpp:2279 src/customtrackview.cpp:3703
+#: src/customtrackview.cpp:3984
 #, kde-format
 msgid "Error removing clip at %1 on track %2"
 msgstr ""
 
-#: src/customtrackview.cpp:2317 src/customtrackview.cpp:4752
-#: src/customtrackview.cpp:4760 src/customtrackview.cpp:4845
-#: src/customtrackview.cpp:4939
+#: src/customtrackview.cpp:2318 src/customtrackview.cpp:4753
+#: src/customtrackview.cpp:4761 src/customtrackview.cpp:4846
+#: src/customtrackview.cpp:4940
 msgid "Error when resizing clip"
 msgstr ""
 
-#: src/customtrackview.cpp:2424 src/customtrackview.cpp:5730
+#: src/customtrackview.cpp:2425 src/customtrackview.cpp:5810
 msgid "Invalid transition"
 msgstr ""
 
-#: src/customtrackview.cpp:2449 src/customtrackview.cpp:4030
+#: src/customtrackview.cpp:2450 src/customtrackview.cpp:4031
 msgid "Select clip to delete"
 msgstr ""
 
-#: src/customtrackview.cpp:2470
+#: src/customtrackview.cpp:2471
 msgid "Cannot update transition"
 msgstr ""
 
-#: src/customtrackview.cpp:2839 src/customtrackview.cpp:2922
-#: src/customtrackview.cpp:4376 src/customtrackview.cpp:6403
-#: src/customtrackview.cpp:6406 src/customtrackview.cpp:6453
-#: src/customtrackview.cpp:6563 src/customtrackview.cpp:6570
-#: src/customtrackview.cpp:6577
+#: src/customtrackview.cpp:2840 src/customtrackview.cpp:2923
+#: src/customtrackview.cpp:4377 src/customtrackview.cpp:6483
+#: src/customtrackview.cpp:6486 src/customtrackview.cpp:6533
+#: src/customtrackview.cpp:6643 src/customtrackview.cpp:6650
+#: src/customtrackview.cpp:6657
 #, kde-format
 msgid "Cannot update clip (time: %1, track: %2)"
 msgstr ""
 
-#: src/customtrackview.cpp:3094 src/mainwindow.cpp:1542
+#: src/customtrackview.cpp:3095 src/mainwindow.cpp:1542
 msgid "Remove Space"
 msgstr ""
 
-#: src/customtrackview.cpp:3109
+#: src/customtrackview.cpp:3110
 msgid "Cannot remove space in a locked track"
 msgstr ""
 
-#: src/customtrackview.cpp:3115 src/customtrackview.cpp:3120
+#: src/customtrackview.cpp:3116 src/customtrackview.cpp:3121
 #, kde-format
 msgid "You must be in an empty space to remove space (time: %1, track: %2)"
 msgstr ""
 
-#: src/customtrackview.cpp:3131
+#: src/customtrackview.cpp:3132
 msgid "Cannot remove space in a track with a group"
 msgstr ""
 
-#: src/customtrackview.cpp:3210
+#: src/customtrackview.cpp:3211
 msgid "Cannot insert space in a locked track"
 msgstr ""
 
-#: src/customtrackview.cpp:3223
+#: src/customtrackview.cpp:3224
 msgid "Cannot insert space in a track with a group"
 msgstr ""
 
-#: src/customtrackview.cpp:3283
+#: src/customtrackview.cpp:3284
 #, kde-format
 msgid "Cannot move clip at position %1, track %2"
 msgstr ""
 
-#: src/customtrackview.cpp:3298
+#: src/customtrackview.cpp:3299
 #, kde-format
 msgid "Cannot move transition at position %1, track %2"
 msgstr ""
 
-#: src/customtrackview.cpp:3645 src/customtrackview.cpp:4545
+#: src/customtrackview.cpp:3646 src/customtrackview.cpp:4546
 #, kde-format
 msgid "Cannot move clip to position %1"
 msgstr ""
 
-#: src/customtrackview.cpp:3653
+#: src/customtrackview.cpp:3654
 msgid "Cannot move transition"
 msgstr ""
 
-#: src/customtrackview.cpp:3794 src/customtrackview.cpp:3818
-#: src/customtrackview.cpp:5888 src/customtrackview.cpp:5920
+#: src/customtrackview.cpp:3795 src/customtrackview.cpp:3819
+#: src/customtrackview.cpp:5968 src/customtrackview.cpp:6000
 msgid "Resize group"
 msgstr ""
 
-#: src/customtrackview.cpp:4083
+#: src/customtrackview.cpp:4084
 msgid "Delete selected group"
 msgid_plural "Delete selected groups"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/customtrackview.cpp:4085
+#: src/customtrackview.cpp:4086
 msgid "Delete selected clip"
 msgid_plural "Delete selected clips"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/customtrackview.cpp:4087
+#: src/customtrackview.cpp:4088
 msgid "Delete selected transition"
 msgid_plural "Delete selected transitions"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/customtrackview.cpp:4088
+#: src/customtrackview.cpp:4089
 msgid "Delete selected items"
 msgstr ""
 
-#: src/customtrackview.cpp:4102
+#: src/customtrackview.cpp:4103
 msgid "Cannot find clip for speed change"
 msgstr ""
 
-#: src/customtrackview.cpp:4115 src/projectlist.cpp:1791
+#: src/customtrackview.cpp:4116 src/projectlist.cpp:1791
 #: src/projectlist.cpp:1793
 msgid "Invalid clip"
 msgstr ""
 
-#: src/customtrackview.cpp:4304 src/customtrackview.cpp:5664
+#: src/customtrackview.cpp:4305 src/customtrackview.cpp:5744
 msgid "No clip copied"
 msgstr ""
 
-#: src/customtrackview.cpp:4311
+#: src/customtrackview.cpp:4312
 msgid "Waiting for clip..."
 msgstr ""
 
-#: src/customtrackview.cpp:4321
+#: src/customtrackview.cpp:4322
 msgid "Cannot insert clip..."
 msgstr ""
 
-#: src/customtrackview.cpp:4504 src/customtrackview.cpp:4733
+#: src/customtrackview.cpp:4505 src/customtrackview.cpp:4734
 #, kde-format
 msgid "Cannot move clip at time: %1 on track %2"
 msgstr ""
 
-#: src/customtrackview.cpp:4683
+#: src/customtrackview.cpp:4684
 #, kde-format
 msgid "Cannot move transition at time: %1 on track %2"
 msgstr ""
 
-#: src/customtrackview.cpp:4787 src/customtrackview.cpp:4879
+#: src/customtrackview.cpp:4788 src/customtrackview.cpp:4880
 msgid "Not possible to resize"
 msgstr ""
 
-#: src/customtrackview.cpp:4799
+#: src/customtrackview.cpp:4800
 msgid "Resize clip start"
 msgstr ""
 
-#: src/customtrackview.cpp:4854 src/customtrackview.cpp:4949
+#: src/customtrackview.cpp:4855 src/customtrackview.cpp:4950
 msgid "Cannot resize transition"
 msgstr ""
 
-#: src/customtrackview.cpp:4899
+#: src/customtrackview.cpp:4900
 msgid "Resize clip end"
 msgstr ""
 
-#: src/customtrackview.cpp:4942
+#: src/customtrackview.cpp:4943
 msgid "Resize transition end"
 msgstr ""
 
-#: src/customtrackview.cpp:5217
+#: src/customtrackview.cpp:5218
 msgid "Clip has no markers"
 msgstr ""
 
-#: src/customtrackview.cpp:5283 src/customtrackview.cpp:5339
-#: src/customtrackview.cpp:5380
+#: src/customtrackview.cpp:5248 src/customtrackview.cpp:5262
+#, fuzzy, kde-format
+#| msgid "Opening file %1"
+msgid "Cannot open file %1"
+msgstr "Datei \"%1\" warrt opmaakt"
+
+#: src/customtrackview.cpp:5258
+msgid "Load marker file"
+msgstr ""
+
+#: src/customtrackview.cpp:5363 src/customtrackview.cpp:5419
+#: src/customtrackview.cpp:5460
 msgid "No guide at cursor time"
 msgstr ""
 
-#: src/customtrackview.cpp:5293
+#: src/customtrackview.cpp:5373
 #, kde-format
 msgid "A guide already exists at position %1"
 msgstr ""
 
-#: src/customtrackview.cpp:5307
+#: src/customtrackview.cpp:5387
 msgid "Guide"
 msgstr ""
 
-#: src/customtrackview.cpp:5566
+#: src/customtrackview.cpp:5646
 msgid "Select a clip before copying"
 msgstr ""
 
-#: src/customtrackview.cpp:5702
+#: src/customtrackview.cpp:5782
 msgid "Cannot paste selected clips"
 msgstr ""
 
-#: src/customtrackview.cpp:5718
+#: src/customtrackview.cpp:5798
 msgid "Cannot paste clip to selected place"
 msgstr ""
 
-#: src/customtrackview.cpp:5732
+#: src/customtrackview.cpp:5812
 msgid "Cannot paste transition to selected place"
 msgstr ""
 
-#: src/customtrackview.cpp:5742
+#: src/customtrackview.cpp:5822
 msgid "You must copy exactly one clip before pasting effects"
 msgstr ""
 
-#: src/customtrackview.cpp:5879 src/customtrackview.cpp:5912
-#: src/customtrackview.cpp:6480 src/customtrackview.cpp:6505
-#: src/customtrackview.cpp:6530
+#: src/customtrackview.cpp:5959 src/customtrackview.cpp:5992
+#: src/customtrackview.cpp:6560 src/customtrackview.cpp:6585
+#: src/customtrackview.cpp:6610
 msgid "You must select one clip for this action"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: src/customtrackview.cpp:6019 src/widgets/addtrack_ui.ui:20
+#: src/customtrackview.cpp:6099 src/widgets/addtrack_ui.ui:20
 msgid "Insert track"
 msgstr ""
 
-#: src/customtrackview.cpp:6020
+#: src/customtrackview.cpp:6100
 msgid "Insert New Track"
 msgstr ""
 
-#: src/customtrackview.cpp:6052 src/mainwindow.cpp:1553
+#: src/customtrackview.cpp:6132 src/mainwindow.cpp:1553
 #: src/tracksconfigdialog.cpp:90
 msgid "Delete Track"
 msgstr ""
 
-#: src/customtrackview.cpp:6118
+#: src/customtrackview.cpp:6198
 msgid "You must select one transition for this action"
 msgstr ""
 
-#: src/customtrackview.cpp:6201
+#: src/customtrackview.cpp:6281
 msgid "You must select at least one clip for this action"
 msgstr ""
 
-#: src/customtrackview.cpp:6211
+#: src/customtrackview.cpp:6291
 msgid "Cannot split audio of grouped clips"
 msgstr ""
 
-#: src/customtrackview.cpp:6230
+#: src/customtrackview.cpp:6310
 msgid "You must select exactly one clip for the audio reference."
 msgstr ""
 
-#: src/customtrackview.cpp:6251
+#: src/customtrackview.cpp:6331
 msgid "Audio align reference set."
 msgstr ""
 
-#: src/customtrackview.cpp:6255
+#: src/customtrackview.cpp:6335
 msgid "Reference for audio alignment must contain audio data."
 msgstr ""
 
-#: src/customtrackview.cpp:6271
+#: src/customtrackview.cpp:6351
 msgid "Audio alignment reference not yet set."
 msgstr ""
 
-#: src/customtrackview.cpp:6344
+#: src/customtrackview.cpp:6424
 msgid "Unable to move clip due to collision."
 msgstr ""
 
-#: src/customtrackview.cpp:6348
+#: src/customtrackview.cpp:6428
 #, fuzzy
 #| msgid "Edit profile"
 msgid "Auto-align clip"
 msgstr "Profil bewerken"
 
-#: src/customtrackview.cpp:6358
+#: src/customtrackview.cpp:6438
 msgid "No audio clips selected."
 msgstr ""
 
-#: src/customtrackview.cpp:6360
+#: src/customtrackview.cpp:6440
 #, kde-format
 msgid "Auto-aligned %1 clips."
 msgstr ""
 
-#: src/customtrackview.cpp:6391
+#: src/customtrackview.cpp:6471
 msgid "No empty space to put clip audio"
 msgstr ""
 
-#: src/customtrackview.cpp:6484
+#: src/customtrackview.cpp:6564
 msgid "Video only"
 msgstr ""
 
-#: src/customtrackview.cpp:6490 src/customtrackview.cpp:6515
-#: src/customtrackview.cpp:6540
+#: src/customtrackview.cpp:6570 src/customtrackview.cpp:6595
+#: src/customtrackview.cpp:6620
 msgid "Cannot change grouped clips"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, profile_audioonly)
-#: src/customtrackview.cpp:6509 src/renderwidget.cpp:1483
+#: src/customtrackview.cpp:6589 src/renderwidget.cpp:1483
 #: src/widgets/configtranscode_ui.ui:100
 msgid "Audio only"
 msgstr "Bloots Klang"
 
-#: src/customtrackview.cpp:6534 src/mainwindow.cpp:1526
+#: src/customtrackview.cpp:6614 src/mainwindow.cpp:1526
 msgid "Audio and Video"
 msgstr ""
 
-#: src/customtrackview.cpp:6876
+#: src/customtrackview.cpp:6956
 msgid "error"
 msgstr ""
 
-#: src/customtrackview.cpp:6876
+#: src/customtrackview.cpp:6956
 msgid "TRACTOR"
 msgstr ""
 
-#: src/customtrackview.cpp:6890
+#: src/customtrackview.cpp:6970
 msgid "Insert clip"
 msgstr ""
 
-#: src/customtrackview.cpp:7041 src/customtrackview.cpp:7049
+#: src/customtrackview.cpp:7121 src/customtrackview.cpp:7129
 msgid "Effect already present in track"
 msgstr ""
 
-#: src/customtrackview.cpp:7262
+#: src/customtrackview.cpp:7342
 #, kde-format
 msgid "Cannot find clip for effect update %1."
 msgstr ""
@@ -6431,93 +6464,93 @@ msgstr ""
 msgid "Save in project only"
 msgstr ""
 
-#: src/mainwindow.cpp:3339
+#: src/mainwindow.cpp:3342
 msgid "Edit clips"
 msgstr ""
 
-#: src/mainwindow.cpp:3468
+#: src/mainwindow.cpp:3471
 msgid "Ctrl + click to use spacer on current track only"
 msgstr ""
 
-#: src/mainwindow.cpp:3471
+#: src/mainwindow.cpp:3474
 msgid "Click on a clip to cut it"
 msgstr ""
 
-#: src/mainwindow.cpp:3474
+#: src/mainwindow.cpp:3477
 msgid ""
 "Shift + click to create a selection rectangle, Ctrl + click to add an item "
 "to selection"
 msgstr ""
 
-#: src/mainwindow.cpp:3507
+#: src/mainwindow.cpp:3510
 msgid "Starting -- find text as you type"
 msgstr ""
 
-#: src/mainwindow.cpp:3515 src/mainwindow.cpp:3525
+#: src/mainwindow.cpp:3518 src/mainwindow.cpp:3528
 #, kde-format
 msgid "Found: %1"
 msgstr ""
 
-#: src/mainwindow.cpp:3517
+#: src/mainwindow.cpp:3520
 msgid "Reached end of project"
 msgstr ""
 
-#: src/mainwindow.cpp:3528
+#: src/mainwindow.cpp:3531
 #, kde-format
 msgid "Not found: %1"
 msgstr ""
 
-#: src/mainwindow.cpp:3537
+#: src/mainwindow.cpp:3540
 msgid "Find stopped"
 msgstr ""
 
-#: src/mainwindow.cpp:3678
+#: src/mainwindow.cpp:3681
 msgid "Save clip zone as:"
 msgstr ""
 
-#: src/mainwindow.cpp:3689
+#: src/mainwindow.cpp:3692
 msgid "Description:"
 msgstr "Beschrieven:"
 
-#: src/mainwindow.cpp:3716
+#: src/mainwindow.cpp:3719
 #, kde-format
 msgid ""
 "Cannot start MLT's renderer:\n"
 "%1"
 msgstr ""
 
-#: src/mainwindow.cpp:3719
+#: src/mainwindow.cpp:3722
 msgid "Timeout while creating xml output"
 msgstr ""
 
-#: src/mainwindow.cpp:3975
+#: src/mainwindow.cpp:3978
 msgid "No clip to transcode"
 msgstr ""
 
-#: src/mainwindow.cpp:4011
+#: src/mainwindow.cpp:4014
 msgid "Create Render Script"
 msgstr ""
 
-#: src/mainwindow.cpp:4011
+#: src/mainwindow.cpp:4014
 #, kde-format
 msgid "Script name (will be saved in: %1)"
 msgstr ""
 
-#: src/mainwindow.cpp:4016
+#: src/mainwindow.cpp:4019
 msgid "Script file already exists. Do you want to overwrite it?"
 msgstr ""
 
-#: src/mainwindow.cpp:4181
+#: src/mainwindow.cpp:4184
 msgid ""
 "This will delete all changes made since you last saved your project. Are you "
 "sure you want to continue?"
 msgstr ""
 
-#: src/mainwindow.cpp:4181
+#: src/mainwindow.cpp:4184
 msgid "Revert to last saved version"
 msgstr ""
 
-#: src/mainwindow.cpp:4525
+#: src/mainwindow.cpp:4528
 msgid "Select a clip to save"
 msgstr ""
 
@@ -6549,39 +6582,39 @@ msgstr "Grött ännern (50%)"
 msgid "Audio volume"
 msgstr ""
 
-#: src/monitor.cpp:269
+#: src/monitor.cpp:268
 msgid "Save zone"
 msgstr ""
 
-#: src/monitor.cpp:270
+#: src/monitor.cpp:269
 msgid "Extract Zone"
 msgstr ""
 
-#: src/monitor.cpp:273
+#: src/monitor.cpp:272
 msgid "Extract frame"
 msgstr ""
 
-#: src/monitor.cpp:277
+#: src/monitor.cpp:276
 msgid "Split view"
 msgstr ""
 
-#: src/monitor.cpp:281
+#: src/monitor.cpp:280
 msgid "Set current image as thumbnail"
 msgstr ""
 
-#: src/monitor.cpp:285
+#: src/monitor.cpp:284
 msgid "Monitor overlay infos"
 msgstr ""
 
-#: src/monitor.cpp:290
+#: src/monitor.cpp:289
 msgid "Real time (drop frames)"
 msgstr ""
 
-#: src/monitor.cpp:627
+#: src/monitor.cpp:626
 msgid "In Point"
 msgstr ""
 
-#: src/monitor.cpp:629
+#: src/monitor.cpp:628
 msgid "Out Point"
 msgstr ""
 
@@ -7013,7 +7046,7 @@ msgstr ""
 msgid "Cannot create consumer %1."
 msgstr ""
 
-#: src/projecttree/meltjob.cpp:193
+#: src/projecttree/meltjob.cpp:195
 #, fuzzy
 #| msgid "Transcode"
 msgid "Waiting to process clip"
@@ -7215,40 +7248,40 @@ msgid ""
 "Please see supported profiles below. Switching to normal video display."
 msgstr ""
 
-#: src/renderer.cpp:1125
+#: src/renderer.cpp:1133
 msgid ""
 "Could not create the video preview window.\n"
 "There is something wrong with your Kdenlive install or your driver settings, "
 "please fix it."
 msgstr ""
 
-#: src/renderer.cpp:1704
+#: src/renderer.cpp:1712
 msgid ""
 "Firewire is not enabled on your system.\n"
 " Please install Libiec61883 and recompile Kdenlive"
 msgstr ""
 
-#: src/renderer.cpp:1710
+#: src/renderer.cpp:1718
 msgid "There is no clip, cannot extract frame."
 msgstr ""
 
-#: src/renderer.cpp:4537
+#: src/renderer.cpp:4545
 msgid "Import selected clips"
 msgstr ""
 
-#: src/renderer.cpp:4541
+#: src/renderer.cpp:4549
 #, kde-format
 msgid ""
 "Additional streams for clip\n"
 " %1"
 msgstr ""
 
-#: src/renderer.cpp:4550
+#: src/renderer.cpp:4558
 #, kde-format
 msgid "Video stream %1"
 msgstr ""
 
-#: src/renderer.cpp:4562
+#: src/renderer.cpp:4570
 #, kde-format
 msgid "Audio stream %1"
 msgstr ""
@@ -8508,6 +8541,8 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QToolButton, v4l_showprofileinfo)
 #. i18n: ectx: property (text), widget (QToolButton, decklink_manageprofile)
 #. i18n: ectx: property (text), widget (QToolButton, decklink_showprofileinfo)
+#. i18n: ectx: property (text), widget (QToolButton, marker_save)
+#. i18n: ectx: property (text), widget (QToolButton, marker_load)
 #. i18n: ectx: property (text), widget (QToolButton, button_more)
 #. i18n: ectx: property (text), widget (QToolButton, buttonFavorite)
 #. i18n: ectx: property (text), widget (QToolButton, rescale_keep)
@@ -8515,7 +8550,8 @@ msgstr ""
 #: src/widgets/bezierspline_ui.ui:92 src/widgets/bezierspline_ui.ui:130
 #: src/widgets/bezierspline_ui.ui:146 src/widgets/bezierspline_ui.ui:156
 #: src/widgets/bezierspline_ui.ui:169 src/widgets/bezierspline_ui.ui:195
-#: src/widgets/bezierspline_ui.ui:208 src/widgets/collapsiblewidget_ui.ui:68
+#: src/widgets/bezierspline_ui.ui:208 src/widgets/clipproperties_ui.ui:498
+#: src/widgets/clipproperties_ui.ui:508 src/widgets/collapsiblewidget_ui.ui:68
 #: src/widgets/collapsiblewidget_ui.ui:87
 #: src/widgets/collapsiblewidget_ui.ui:119
 #: src/widgets/collapsiblewidget_ui.ui:138
@@ -8623,7 +8659,7 @@ msgstr ""
 #. i18n: ectx: property (inputMask), widget (KRestrictedLine, slide_duration)
 #. i18n: ectx: property (inputMask), widget (KRestrictedLine, clip_out)
 #: src/widgets/clipproperties_ui.ui:61 src/widgets/clipproperties_ui.ui:234
-#: src/widgets/clipproperties_ui.ui:278 src/widgets/clipproperties_ui.ui:667
+#: src/widgets/clipproperties_ui.ui:278 src/widgets/clipproperties_ui.ui:694
 #: src/widgets/configmisc_ui.ui:43 src/widgets/configmisc_ui.ui:57
 #: src/widgets/configmisc_ui.ui:71 src/widgets/configmisc_ui.ui:85
 #: src/widgets/keyframedialog_ui.ui:26 src/widgets/slideshowclip_ui.ui:136
@@ -8644,7 +8680,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QTreeWidget, clip_aproperties)
 #. i18n: ectx: property (text), widget (QTreeWidget, metadata_list)
 #: src/widgets/clipproperties_ui.ui:120 src/widgets/clipproperties_ui.ui:165
-#: src/widgets/clipproperties_ui.ui:523 src/widgets/projectsettings_ui.ui:371
+#: src/widgets/clipproperties_ui.ui:550 src/widgets/projectsettings_ui.ui:371
 #: src/widgets/wizardmltcheck_ui.ui:49
 msgid "1"
 msgstr ""
@@ -8653,7 +8689,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QTreeWidget, clip_aproperties)
 #. i18n: ectx: property (text), widget (QTreeWidget, metadata_list)
 #: src/widgets/clipproperties_ui.ui:125 src/widgets/clipproperties_ui.ui:170
-#: src/widgets/clipproperties_ui.ui:528 src/widgets/projectsettings_ui.ui:376
+#: src/widgets/clipproperties_ui.ui:555 src/widgets/projectsettings_ui.ui:376
 msgid "2"
 msgstr ""
 
@@ -8741,77 +8777,77 @@ msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_5)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: src/widgets/clipproperties_ui.ui:492 src/widgets/projectsettings_ui.ui:349
+#: src/widgets/clipproperties_ui.ui:519 src/widgets/projectsettings_ui.ui:349
 msgid "Metadata"
 msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_advanced)
-#: src/widgets/clipproperties_ui.ui:537
+#: src/widgets/clipproperties_ui.ui:564
 msgid "Advanced"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, clip_force_ar)
-#: src/widgets/clipproperties_ui.ui:556
+#: src/widgets/clipproperties_ui.ui:583
 msgid "Force aspect ratio"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, clip_force_threads)
-#: src/widgets/clipproperties_ui.ui:589
+#: src/widgets/clipproperties_ui.ui:616
 msgid "Decoding threads"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, clip_force_vindex)
-#: src/widgets/clipproperties_ui.ui:596
+#: src/widgets/clipproperties_ui.ui:623
 msgid "Video index"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, clip_force_aindex)
-#: src/widgets/clipproperties_ui.ui:603
+#: src/widgets/clipproperties_ui.ui:630
 msgid "Audio index"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, clip_force_progressive)
-#: src/widgets/clipproperties_ui.ui:623
+#: src/widgets/clipproperties_ui.ui:650
 msgid "Force progressive"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, clip_force_framerate)
-#: src/widgets/clipproperties_ui.ui:643
+#: src/widgets/clipproperties_ui.ui:670
 msgid "Force frame rate"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, clip_force_out)
-#: src/widgets/clipproperties_ui.ui:657
+#: src/widgets/clipproperties_ui.ui:684
 msgid "Force duration"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, clip_force_colorspace)
-#: src/widgets/clipproperties_ui.ui:674
+#: src/widgets/clipproperties_ui.ui:701
 msgid "Force colorspace"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, clip_full_luma)
-#: src/widgets/clipproperties_ui.ui:688
+#: src/widgets/clipproperties_ui.ui:715
 msgid "Full luma range"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, clip_force_fieldorder)
-#: src/widgets/clipproperties_ui.ui:738
+#: src/widgets/clipproperties_ui.ui:765
 msgid "Force field order"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, clip_force_transparency)
-#: src/widgets/clipproperties_ui.ui:752
+#: src/widgets/clipproperties_ui.ui:779
 msgid "Image background"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (KComboBox, clip_transparency)
-#: src/widgets/clipproperties_ui.ui:760
+#: src/widgets/clipproperties_ui.ui:787
 msgid "Normal"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (KComboBox, clip_transparency)
-#: src/widgets/clipproperties_ui.ui:765
+#: src/widgets/clipproperties_ui.ui:792
 msgid "Transparent"
 msgstr ""
 
