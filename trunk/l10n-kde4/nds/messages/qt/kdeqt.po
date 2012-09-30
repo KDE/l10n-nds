@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeqt\n"
 "Report-Msgid-Bugs-To: qt-bugs@trolltech.com\n"
-"POT-Creation-Date: 2012-09-28 02:38+0200\n"
+"POT-Creation-Date: 2012-09-30 04:49+0200\n"
 "PO-Revision-Date: 2012-02-08 22:09+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1569,6 +1569,15 @@ msgctxt "QIODevice"
 msgid "No space left on device"
 msgstr "Keen Platz mehr op de Reedschap na"
 
+#: corelib/io/qiodevice.cpp:1630 corelib/plugin/qpluginloader.cpp:367
+#: corelib/plugin/qlibrary.cpp:1236
+#: corelib/statemachine/qstatemachine.cpp:1046
+#: network/kernel/qhostinfo_unix.cpp:301
+#: network/socket/qnativesocketengine.cpp:276
+#: network/socket/qsymbiansocketengine.cpp:1435 network/ssl/qsslerror.cpp:289
+msgid "Unknown error"
+msgstr "Nich begäng Fehler"
+
 #: corelib/io/qprocess.cpp:884 corelib/io/qprocess.cpp:936
 #: corelib/io/qprocess_win.cpp:601 corelib/io/qprocess_win.cpp:651
 msgid "Error reading from process"
@@ -1586,15 +1595,6 @@ msgstr "Perzess is afstört"
 #: corelib/io/qprocess.cpp:2054
 msgid "No program defined"
 msgstr "Keen Programm angeven"
-
-#: corelib/io/qiodevice.cpp:1630 corelib/plugin/qlibrary.cpp:1236
-#: corelib/plugin/qpluginloader.cpp:367
-#: corelib/statemachine/qstatemachine.cpp:1046
-#: network/kernel/qhostinfo_unix.cpp:301
-#: network/socket/qnativesocketengine.cpp:276
-#: network/socket/qsymbiansocketengine.cpp:1435 network/ssl/qsslerror.cpp:289
-msgid "Unknown error"
-msgstr "Nich begäng Fehler"
 
 #: corelib/io/qprocess_win.cpp:138 corelib/io/qprocess_unix.cpp:402
 msgid "Could not open input redirection for reading"
@@ -1830,6 +1830,30 @@ msgctxt "QSystemSemaphore"
 msgid "%1: ftok failed"
 msgstr "%1: ftok fehlslaan"
 
+#: corelib/plugin/qlibrary_unix.cpp:261 corelib/plugin/qlibrary_win.cpp:136
+#, qt-format
+msgid "Cannot load library %1: %2"
+msgstr "Bibliotheek \"%1\" lett sik nich laden: %2"
+
+#: corelib/plugin/qlibrary_unix.cpp:278 corelib/plugin/qlibrary_win.cpp:158
+#, qt-format
+msgid "Cannot unload library %1: %2"
+msgstr "Bibliotheek \"%1\" lett sik nich afladen: %2"
+
+#: corelib/plugin/qlibrary_unix.cpp:312 corelib/plugin/qlibrary_win.cpp:173
+#, qt-format
+msgid "Cannot resolve symbol \"%1\" in %2: %3"
+msgstr "Symbool \"%1\" binnen \"%2\" lett sik nich oplösen: %3"
+
+#: corelib/plugin/qpluginloader.cpp:254
+msgid "The plugin was not loaded."
+msgstr "Dat Moduul wöör nich laadt."
+
+#: corelib/plugin/qpluginloader.cpp:343 corelib/plugin/qlibrary.cpp:682
+#: corelib/plugin/qlibrary.cpp:828
+msgid "The shared library was not found."
+msgstr "De deelte Bibliotheek lett sik nich finnen."
+
 #: corelib/plugin/qelfparser_p.cpp:77
 #, qt-format
 msgid "'%1' is not an ELF object (%2)"
@@ -1854,11 +1878,6 @@ msgstr "\"%1\" is as ELF-Objekt leeg %2"
 #, qt-format
 msgid "Plugin verification data mismatch in '%1'"
 msgstr "Moduul-Pröövdaten passt in \"%1\" nich"
-
-#: corelib/plugin/qlibrary.cpp:682 corelib/plugin/qlibrary.cpp:828
-#: corelib/plugin/qpluginloader.cpp:343
-msgid "The shared library was not found."
-msgstr "De deelte Bibliotheek lett sik nich finnen."
 
 #: corelib/plugin/qlibrary.cpp:830
 #, qt-format
@@ -1888,25 +1907,6 @@ msgid ""
 msgstr ""
 "Dat Moduul \"%1\" bruukt en nich kompatibel Qt-Bibliotheek (Fehlersöök- un "
 "Utgaav-Bibliotheken laat sik nich mischen)."
-
-#: corelib/plugin/qlibrary_unix.cpp:261 corelib/plugin/qlibrary_win.cpp:136
-#, qt-format
-msgid "Cannot load library %1: %2"
-msgstr "Bibliotheek \"%1\" lett sik nich laden: %2"
-
-#: corelib/plugin/qlibrary_unix.cpp:278 corelib/plugin/qlibrary_win.cpp:158
-#, qt-format
-msgid "Cannot unload library %1: %2"
-msgstr "Bibliotheek \"%1\" lett sik nich afladen: %2"
-
-#: corelib/plugin/qlibrary_unix.cpp:312 corelib/plugin/qlibrary_win.cpp:173
-#, qt-format
-msgid "Cannot resolve symbol \"%1\" in %2: %3"
-msgstr "Symbool \"%1\" binnen \"%2\" lett sik nich oplösen: %3"
-
-#: corelib/plugin/qpluginloader.cpp:254
-msgid "The plugin was not loaded."
-msgstr "Dat Moduul wöör nich laadt."
 
 #: corelib/statemachine/qstatemachine.cpp:1028
 #, qt-format
@@ -2117,12 +2117,12 @@ msgstr "Tastenstüern bloots över towiest Egenschappen verföögbor"
 msgid "Loader does not support loading non-visual elements."
 msgstr "Lader ünnerstütt dat Laden vun nich-sichtbor Elementen nich."
 
-#: declarative/graphicsitems/qdeclarativetextinput.cpp:962
-#: declarative/graphicsitems/qdeclarativetextinput.cpp:970
+#: declarative/graphicsitems/qdeclarativetextinput.cpp:961
+#: declarative/graphicsitems/qdeclarativetextinput.cpp:969
 msgid "Could not load cursor delegate"
 msgstr "Blinker-Delegat lett sik nich laden."
 
-#: declarative/graphicsitems/qdeclarativetextinput.cpp:981
+#: declarative/graphicsitems/qdeclarativetextinput.cpp:980
 msgid "Could not instantiate cursor delegate"
 msgstr "För Blinker-Delegat lett sik keen Utgaav opstellen."
 
@@ -2972,22 +2972,6 @@ msgstr "Utsehn lett sik ünner nich-eenheitlich Skala nich wohren."
 msgid "Unable to preserve appearance under scale of 0"
 msgstr "Utsehn lett sik ünner Skala 0 nich wohren."
 
-#: declarative/util/qdeclarativexmllistmodel.cpp:581
-#, qt-format
-msgid "\"%1\" duplicates a previous role name and will be disabled."
-msgstr "\"%1\" verdubbelt en verleden Rullnaam un warrt utmaakt."
-
-#: declarative/util/qdeclarativexmllistmodel.cpp:826
-msgctxt "QDeclarativeXmlRoleList"
-msgid "An XmlListModel query must start with '/' or \"//\""
-msgstr "En XmlListModel-Anfraag mutt mit  \"/\" oder \"//\" anfangen"
-
-#: declarative/util/qdeclarativexmllistmodel.cpp:1105
-#: declarative/util/qdeclarativexmllistmodel.cpp:1109
-#, qt-format
-msgid "invalid query: \"%1\""
-msgstr "Leeg Anfraag: %1"
-
 #: declarative/util/qdeclarativeutilmodule.cpp:80
 msgid "Application is an abstract class"
 msgstr "Programm is en afstrakt Klass"
@@ -3005,6 +2989,22 @@ msgctxt "QDeclarativeXmlListModel"
 msgid "Qt was built without support for xmlpatterns"
 msgstr "Qt wöör ahn Ünnerstütten för \"xmlpatterns\" kompileert."
 
+#: declarative/util/qdeclarativexmllistmodel.cpp:581
+#, qt-format
+msgid "\"%1\" duplicates a previous role name and will be disabled."
+msgstr "\"%1\" verdubbelt en verleden Rullnaam un warrt utmaakt."
+
+#: declarative/util/qdeclarativexmllistmodel.cpp:826
+msgctxt "QDeclarativeXmlRoleList"
+msgid "An XmlListModel query must start with '/' or \"//\""
+msgstr "En XmlListModel-Anfraag mutt mit  \"/\" oder \"//\" anfangen"
+
+#: declarative/util/qdeclarativexmllistmodel.cpp:1105
+#: declarative/util/qdeclarativexmllistmodel.cpp:1109
+#, qt-format
+msgid "invalid query: \"%1\""
+msgstr "Leeg Anfraag: %1"
+
 #: declarative/util/qdeclarativeconnections.cpp:217
 msgid "Connections: nested objects not allowed"
 msgstr "Verbinnen: Inbett Objekten nich tolaten"
@@ -3016,6 +3016,10 @@ msgstr "Verbinnen: Syntaxfehler"
 #: declarative/util/qdeclarativeconnections.cpp:228
 msgid "Connections: script expected"
 msgstr "Verbinnen: Skript verwacht"
+
+#: declarative/util/qdeclarativebehavior.cpp:127
+msgid "Cannot change the animation assigned to a Behavior."
+msgstr "Na en Bedregen towiest Animeren lett sik nich ännern."
 
 #: declarative/util/qdeclarativeanimation.cpp:172
 #, qt-format
@@ -3032,10 +3036,6 @@ msgstr "Bloots leesbor Egenschap \"%1\" lett sik nich animeren."
 #: declarative/util/qdeclarativeanimation.cpp:2867
 msgid "Cannot set a duration of < 0"
 msgstr "En Duer < 0 lett sik nich fastleggen"
-
-#: declarative/util/qdeclarativebehavior.cpp:127
-msgid "Cannot change the animation assigned to a Behavior."
-msgstr "Na en Bedregen towiest Animeren lett sik nich ännern."
 
 #: gui/accessible/qaccessibleobject.cpp:374
 #: plugins/accessible/widgets/complexwidgets.cpp:1617
@@ -3214,9 +3214,9 @@ msgid ""
 "terms of the GNU GPL version 3.0 or where you are otherwise willing to "
 "comply with the terms of the GNU GPL version 3.0.</p><p>Please see <a href="
 "\"http://qt.nokia.com/products/licensing\">qt.nokia.com/products/licensing</"
-"a> for an overview of Qt licensing.</p><p>Copyright (C) 2012 Nokia "
-"Corporation and/or its subsidiary(-ies).</p><p>Qt is a Nokia product. See <a "
-"href=\"http://qt.nokia.com/\">qt.nokia.com</a> for more information.</p>"
+"a> for an overview of Qt licensing.</p><p>Copyright (C) 2012 Digia Plc and/"
+"or its subsidiary(-ies).</p><p>Qt is a Nokia product. See <a href=\"http://"
+"qt.nokia.com/\">qt.nokia.com</a> for more information.</p>"
 msgstr ""
 "<p>Qt is en C++-Warktüüchsett för't Utwickeln vun Programmen op verscheden "
 "Bedriefsystemen.</p><p>Mit Qt lett sik een Born na MS&nbsp;Windows, Mac&nbsp;"
@@ -3468,16 +3468,6 @@ msgstr "Weert"
 msgid "Cancel"
 msgstr "Afbreken"
 
-#: gui/dialogs/qabstractpagesetupdialog.cpp:68
-#: gui/dialogs/qabstractpagesetupdialog.cpp:80
-msgctxt "QPrintPreviewDialog"
-msgid "Page Setup"
-msgstr "Siet inrichten"
-
-#: gui/dialogs/qsidebar.cpp:442
-msgid "Remove"
-msgstr "Wegmaken"
-
 #: gui/dialogs/qwizard.cpp:688
 msgid "Go Back"
 msgstr "Torüch gahn"
@@ -3520,15 +3510,25 @@ msgstr "Hülp"
 msgid "&Help"
 msgstr "&Hülp"
 
-#: gui/dialogs/qdialog.cpp:653 gui/kernel/qwhatsthis.cpp:527
-msgid "What's This?"
-msgstr "Wat is dat?"
+#: gui/dialogs/qabstractpagesetupdialog.cpp:68
+#: gui/dialogs/qabstractpagesetupdialog.cpp:80
+msgctxt "QPrintPreviewDialog"
+msgid "Page Setup"
+msgstr "Siet inrichten"
 
 #: gui/dialogs/qabstractprintdialog.cpp:116
 #: gui/dialogs/qabstractprintdialog.cpp:129
 msgctxt "QPrintDialog"
 msgid "Print"
 msgstr "Drucken"
+
+#: gui/dialogs/qsidebar.cpp:442
+msgid "Remove"
+msgstr "Wegmaken"
+
+#: gui/dialogs/qdialog.cpp:653 gui/kernel/qwhatsthis.cpp:527
+msgid "What's This?"
+msgstr "Wat is dat?"
 
 #: gui/dialogs/qprintdialog_qws.cpp:148
 msgid "File exists"
@@ -3798,14 +3798,6 @@ msgstr "Mac-OS-X-Ingaavmetood"
 msgid "S60 FEP input method"
 msgstr "S60-FEP-Ingaavmetood"
 
-#: gui/itemviews/qitemeditorfactory.cpp:556 qt3support/sql/q3datatable.cpp:286
-msgid "False"
-msgstr "Falsch"
-
-#: gui/itemviews/qitemeditorfactory.cpp:557 qt3support/sql/q3datatable.cpp:285
-msgid "True"
-msgstr "Wohr"
-
 #: gui/itemviews/qdirmodel.cpp:852
 msgctxt "QFileDialog"
 msgid "My Computer"
@@ -3851,6 +3843,14 @@ msgstr "Tastkombinatschoon"
 msgctxt "QFileDialog"
 msgid "Unknown"
 msgstr "Nich begäng"
+
+#: gui/itemviews/qitemeditorfactory.cpp:556 qt3support/sql/q3datatable.cpp:286
+msgid "False"
+msgstr "Falsch"
+
+#: gui/itemviews/qitemeditorfactory.cpp:557 qt3support/sql/q3datatable.cpp:285
+msgid "True"
+msgstr "Wohr"
 
 #: gui/kernel/qapplication.cpp:2428
 msgctxt ""
@@ -5537,7 +5537,7 @@ msgstr "Wedderherstellen"
 #: gui/widgets/qmdisubwindow.cpp:352 gui/widgets/qworkspace.cpp:113
 #: plugins/accessible/compat/q3complexwidgets.cpp:256
 #: plugins/accessible/widgets/complexwidgets.cpp:1614
-#: plugins/accessible/widgets/complexwidgets.cpp:1910
+#: plugins/accessible/widgets/complexwidgets.cpp:1912
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:157
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:382
 #: plugins/accessible/widgets/qaccessiblewidgets.cpp:1329
@@ -5827,6 +5827,103 @@ msgstr "Keen Reeknernaam angeven"
 msgid "Invalid hostname"
 msgstr "Leeg Reeknernaam"
 
+#: network/socket/qsocks5socketengine.cpp:623
+msgid "Connection to proxy refused"
+msgstr "Tokoppeln na Proxy torüchwiest"
+
+#: network/socket/qsocks5socketengine.cpp:627
+msgid "Connection to proxy closed prematurely"
+msgstr "Verbinnen na Proxy unverwachtens afbraken"
+
+#: network/socket/qsocks5socketengine.cpp:631
+msgid "Proxy host not found"
+msgstr "Proxyreekner lett sik nich finnen"
+
+#: network/socket/qsocks5socketengine.cpp:636
+msgid "Connection to proxy timed out"
+msgstr "Tiet för Verbinnen na Proxy is aflopen"
+
+#: network/socket/qsocks5socketengine.cpp:653
+msgid "Proxy authentication failed"
+msgstr "Proxy-Identiteetprööv fehlslaan"
+
+#: network/socket/qsocks5socketengine.cpp:654
+#, qt-format
+msgid "Proxy authentication failed: %1"
+msgstr "Proxy-Identiteetprööv fehlslaan: %1"
+
+#: network/socket/qsocks5socketengine.cpp:663
+msgid "SOCKS version 5 protocol error"
+msgstr "SOCKSv5-Protokollfehler"
+
+#: network/socket/qsocks5socketengine.cpp:682
+msgid "General SOCKSv5 server failure"
+msgstr "Allmeen SOCKSv5-Serverfehler"
+
+#: network/socket/qsocks5socketengine.cpp:686
+msgid "Connection not allowed by SOCKSv5 server"
+msgstr "Tokoppeln vun SOCKSv5-Server nich tolaten"
+
+#: network/socket/qsocks5socketengine.cpp:690
+#: network/socket/qnativesocketengine.cpp:231
+#: network/socket/qsymbiansocketengine.cpp:1384
+msgid "Network unreachable"
+msgstr "Nettwark lett sik nich faatkriegen"
+
+#: network/socket/qsocks5socketengine.cpp:698
+#: network/socket/qabstractsocket.cpp:968
+#: network/socket/qnativesocketengine.cpp:240
+#: network/socket/qsymbiansocketengine.cpp:1393
+msgid "Connection refused"
+msgstr "Tokoppeln torüchwiest"
+
+#: network/socket/qsocks5socketengine.cpp:702
+msgid "TTL expired"
+msgstr "TTL aflopen"
+
+#: network/socket/qsocks5socketengine.cpp:706
+msgid "SOCKSv5 command not supported"
+msgstr "SOCKSv5-Befehl nich ünnerstütt"
+
+#: network/socket/qsocks5socketengine.cpp:710
+msgid "Address type not supported"
+msgstr "Adresstyp nich ünnerstütt"
+
+#: network/socket/qsocks5socketengine.cpp:715
+#, qt-format
+msgid "Unknown SOCKSv5 proxy error code 0x%1"
+msgstr "Nich begäng SOCKSv5-Proxy-Fehlerkode 0x%1"
+
+#: network/socket/qsocks5socketengine.cpp:1409
+msgctxt "QSocks5SocketEngine"
+msgid "Network operation timed out"
+msgstr "Nettwark-Akschoon hett to lang bruukt"
+
+#: network/socket/qudpsocket.cpp:199
+msgid "This platform does not support IPv6"
+msgstr "Dat Systeem ünnerstütt IPv6 nich"
+
+#: network/socket/qabstractsocket.cpp:555
+#: network/socket/qabstractsocket.cpp:1382
+#: network/socket/qabstractsocket.cpp:1607 network/socket/qtcpserver.cpp:292
+#: network/socket/qtcpserver.cpp:421
+msgid "Operation on socket is not supported"
+msgstr "Akschoon mit Socket warrt nich ünnerstütt"
+
+#: network/socket/qabstractsocket.cpp:1110
+#: network/socket/qnativesocketengine.cpp:237
+#: network/socket/qsymbiansocketengine.cpp:1390
+msgid "Connection timed out"
+msgstr "Tiet för Verbinnen is aflopen"
+
+#: network/socket/qabstractsocket.cpp:1826
+msgid "Socket operation timed out"
+msgstr "Socket-Akschoon hett to lang bruukt"
+
+#: network/socket/qabstractsocket.cpp:2263
+msgid "Socket is not connected"
+msgstr "Socket is nich tokoppelt"
+
 #: network/socket/qnativesocketengine.cpp:201
 #: network/socket/qsymbiansocketengine.cpp:1354
 msgid "Unable to initialize non-blocking socket"
@@ -5877,25 +5974,6 @@ msgstr "Leeg Socket-Beteker"
 #: network/socket/qsymbiansocketengine.cpp:1381
 msgid "Host unreachable"
 msgstr "Reekner lett sik nich faatkriegen"
-
-#: network/socket/qnativesocketengine.cpp:231
-#: network/socket/qsocks5socketengine.cpp:690
-#: network/socket/qsymbiansocketengine.cpp:1384
-msgid "Network unreachable"
-msgstr "Nettwark lett sik nich faatkriegen"
-
-#: network/socket/qnativesocketengine.cpp:237
-#: network/socket/qsymbiansocketengine.cpp:1390
-#: network/socket/qabstractsocket.cpp:1110
-msgid "Connection timed out"
-msgstr "Tiet för Verbinnen is aflopen"
-
-#: network/socket/qnativesocketengine.cpp:240
-#: network/socket/qsocks5socketengine.cpp:698
-#: network/socket/qsymbiansocketengine.cpp:1393
-#: network/socket/qabstractsocket.cpp:968
-msgid "Connection refused"
-msgstr "Tokoppeln torüchwiest"
 
 #: network/socket/qnativesocketengine.cpp:243
 #: network/socket/qsymbiansocketengine.cpp:1396
@@ -5952,65 +6030,6 @@ msgstr "Akschoon op en Nich-Socket"
 msgid "The proxy type is invalid for this operation"
 msgstr "De Proxytyp is för disse Akschoon leeg"
 
-#: network/socket/qsocks5socketengine.cpp:623
-msgid "Connection to proxy refused"
-msgstr "Tokoppeln na Proxy torüchwiest"
-
-#: network/socket/qsocks5socketengine.cpp:627
-msgid "Connection to proxy closed prematurely"
-msgstr "Verbinnen na Proxy unverwachtens afbraken"
-
-#: network/socket/qsocks5socketengine.cpp:631
-msgid "Proxy host not found"
-msgstr "Proxyreekner lett sik nich finnen"
-
-#: network/socket/qsocks5socketengine.cpp:636
-msgid "Connection to proxy timed out"
-msgstr "Tiet för Verbinnen na Proxy is aflopen"
-
-#: network/socket/qsocks5socketengine.cpp:653
-msgid "Proxy authentication failed"
-msgstr "Proxy-Identiteetprööv fehlslaan"
-
-#: network/socket/qsocks5socketengine.cpp:654
-#, qt-format
-msgid "Proxy authentication failed: %1"
-msgstr "Proxy-Identiteetprööv fehlslaan: %1"
-
-#: network/socket/qsocks5socketengine.cpp:663
-msgid "SOCKS version 5 protocol error"
-msgstr "SOCKSv5-Protokollfehler"
-
-#: network/socket/qsocks5socketengine.cpp:682
-msgid "General SOCKSv5 server failure"
-msgstr "Allmeen SOCKSv5-Serverfehler"
-
-#: network/socket/qsocks5socketengine.cpp:686
-msgid "Connection not allowed by SOCKSv5 server"
-msgstr "Tokoppeln vun SOCKSv5-Server nich tolaten"
-
-#: network/socket/qsocks5socketengine.cpp:702
-msgid "TTL expired"
-msgstr "TTL aflopen"
-
-#: network/socket/qsocks5socketengine.cpp:706
-msgid "SOCKSv5 command not supported"
-msgstr "SOCKSv5-Befehl nich ünnerstütt"
-
-#: network/socket/qsocks5socketengine.cpp:710
-msgid "Address type not supported"
-msgstr "Adresstyp nich ünnerstütt"
-
-#: network/socket/qsocks5socketengine.cpp:715
-#, qt-format
-msgid "Unknown SOCKSv5 proxy error code 0x%1"
-msgstr "Nich begäng SOCKSv5-Proxy-Fehlerkode 0x%1"
-
-#: network/socket/qsocks5socketengine.cpp:1409
-msgctxt "QSocks5SocketEngine"
-msgid "Network operation timed out"
-msgstr "Nettwark-Akschoon hett to lang bruukt"
-
 #: network/socket/qsymbiansocketengine.cpp:1429
 msgid "The address is invalid for this operation"
 msgstr "De Adress is för disse Akschoon leeg"
@@ -6018,86 +6037,6 @@ msgstr "De Adress is för disse Akschoon leeg"
 #: network/socket/qsymbiansocketengine.cpp:1432
 msgid "The specified network session is not opened"
 msgstr "De angeven Nettwarktörn wöör nich opmaakt."
-
-#: network/socket/qtcpserver.cpp:292 network/socket/qtcpserver.cpp:421
-#: network/socket/qabstractsocket.cpp:555
-#: network/socket/qabstractsocket.cpp:1382
-#: network/socket/qabstractsocket.cpp:1607
-msgid "Operation on socket is not supported"
-msgstr "Akschoon mit Socket warrt nich ünnerstütt"
-
-#: network/socket/qudpsocket.cpp:199
-msgid "This platform does not support IPv6"
-msgstr "Dat Systeem ünnerstütt IPv6 nich"
-
-#: network/socket/qabstractsocket.cpp:1826
-msgid "Socket operation timed out"
-msgstr "Socket-Akschoon hett to lang bruukt"
-
-#: network/socket/qabstractsocket.cpp:2263
-msgid "Socket is not connected"
-msgstr "Socket is nich tokoppelt"
-
-#: network/ssl/qsslsocket_openssl.cpp:287
-#, qt-format
-msgid "Error creating SSL context (%1)"
-msgstr "Fehler bi't Opstellen vun SSL-Kontext (%1)"
-
-#: network/ssl/qsslsocket_openssl.cpp:341
-#, qt-format
-msgid "Invalid or empty cipher list (%1)"
-msgstr "Leeg oder leddig List mit Verslöteln (%1)"
-
-#: network/ssl/qsslsocket_openssl.cpp:385
-#, qt-format
-msgid "Cannot provide a certificate with no key, %1"
-msgstr "Zertifikaat lett sik nich ahn Slötel praatstellen, %1"
-
-#: network/ssl/qsslsocket_openssl.cpp:392
-#, qt-format
-msgid "Error loading local certificate, %1"
-msgstr "Fehler bi't Laden vun lokaal Zertifikaat, %1"
-
-#: network/ssl/qsslsocket_openssl.cpp:407
-#, qt-format
-msgid "Error loading private key, %1"
-msgstr "Fehler bi't Laden vun Privaatslötel, %1"
-
-#: network/ssl/qsslsocket_openssl.cpp:414
-#, qt-format
-msgid "Private key does not certify public key, %1"
-msgstr "Privaatslötel beglöövt apen Slötel nich, %1"
-
-#: network/ssl/qsslsocket_openssl.cpp:434
-#, qt-format
-msgid "Error creating SSL session, %1"
-msgstr "Fehler bi't Opstellen vun SSL-Törn, %1"
-
-#: network/ssl/qsslsocket_openssl.cpp:470
-#, qt-format
-msgid "Error creating SSL session: %1"
-msgstr "Fehler bi't Opstellen vun SSL-Törn: %1"
-
-#: network/ssl/qsslsocket_openssl.cpp:1023
-#, qt-format
-msgid "Unable to write data: %1"
-msgstr "Daten laat sik nich schrieven: %1"
-
-#: network/ssl/qsslsocket_openssl.cpp:1093
-#, qt-format
-msgid "Unable to decrypt data: %1"
-msgstr "Daten laat sik nich opslöteln: %1"
-
-#: network/ssl/qsslsocket_openssl.cpp:1171
-#: network/ssl/qsslsocket_openssl.cpp:1181
-#, qt-format
-msgid "Error while reading: %1"
-msgstr "Fehler bi't Lesen: %1"
-
-#: network/ssl/qsslsocket_openssl.cpp:1276
-#, qt-format
-msgid "Error during SSL handshake: %1"
-msgstr "Fehler bi Tokoppeln vun SSL: %1"
 
 #: network/ssl/qsslerror.cpp:217
 msgid "The issuer certificate could not be found"
@@ -6204,6 +6143,67 @@ msgstr "De Reeknernaam passt nich to de gellen Reekners för dit Zertifikaat."
 msgid "The peer certificate is blacklisted"
 msgstr "Den Partner sien Zertifikaat is op de Leeglist."
 
+#: network/ssl/qsslsocket_openssl.cpp:287
+#, qt-format
+msgid "Error creating SSL context (%1)"
+msgstr "Fehler bi't Opstellen vun SSL-Kontext (%1)"
+
+#: network/ssl/qsslsocket_openssl.cpp:341
+#, qt-format
+msgid "Invalid or empty cipher list (%1)"
+msgstr "Leeg oder leddig List mit Verslöteln (%1)"
+
+#: network/ssl/qsslsocket_openssl.cpp:385
+#, qt-format
+msgid "Cannot provide a certificate with no key, %1"
+msgstr "Zertifikaat lett sik nich ahn Slötel praatstellen, %1"
+
+#: network/ssl/qsslsocket_openssl.cpp:392
+#, qt-format
+msgid "Error loading local certificate, %1"
+msgstr "Fehler bi't Laden vun lokaal Zertifikaat, %1"
+
+#: network/ssl/qsslsocket_openssl.cpp:407
+#, qt-format
+msgid "Error loading private key, %1"
+msgstr "Fehler bi't Laden vun Privaatslötel, %1"
+
+#: network/ssl/qsslsocket_openssl.cpp:414
+#, qt-format
+msgid "Private key does not certify public key, %1"
+msgstr "Privaatslötel beglöövt apen Slötel nich, %1"
+
+#: network/ssl/qsslsocket_openssl.cpp:434
+#, qt-format
+msgid "Error creating SSL session, %1"
+msgstr "Fehler bi't Opstellen vun SSL-Törn, %1"
+
+#: network/ssl/qsslsocket_openssl.cpp:470
+#, qt-format
+msgid "Error creating SSL session: %1"
+msgstr "Fehler bi't Opstellen vun SSL-Törn: %1"
+
+#: network/ssl/qsslsocket_openssl.cpp:1023
+#, qt-format
+msgid "Unable to write data: %1"
+msgstr "Daten laat sik nich schrieven: %1"
+
+#: network/ssl/qsslsocket_openssl.cpp:1093
+#, qt-format
+msgid "Unable to decrypt data: %1"
+msgstr "Daten laat sik nich opslöteln: %1"
+
+#: network/ssl/qsslsocket_openssl.cpp:1171
+#: network/ssl/qsslsocket_openssl.cpp:1181
+#, qt-format
+msgid "Error while reading: %1"
+msgstr "Fehler bi't Lesen: %1"
+
+#: network/ssl/qsslsocket_openssl.cpp:1276
+#, qt-format
+msgid "Error during SSL handshake: %1"
+msgstr "Fehler bi Tokoppeln vun SSL: %1"
+
 #: plugins/accessible/compat/q3complexwidgets.cpp:246
 msgid "System"
 msgstr "Systeem"
@@ -6268,8 +6268,8 @@ msgstr "Dat Paneel tomaken"
 msgid "Activate the tab"
 msgstr "Dat Paneel anmaken"
 
-#: plugins/accessible/widgets/complexwidgets.cpp:1844
-#: plugins/accessible/widgets/complexwidgets.cpp:1910
+#: plugins/accessible/widgets/complexwidgets.cpp:1846
+#: plugins/accessible/widgets/complexwidgets.cpp:1912
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:158
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:383
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:437
@@ -6284,6 +6284,14 @@ msgstr "Opmaken"
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:438
 msgid "Execute"
 msgstr "Utföhren"
+
+#: plugins/accessible/widgets/qaccessiblewidgets.cpp:1331
+msgid "Dock"
+msgstr "Dock"
+
+#: plugins/accessible/widgets/qaccessiblewidgets.cpp:1332
+msgid "Float"
+msgstr "Swever"
 
 #: plugins/accessible/widgets/rangecontrols.cpp:149
 #: plugins/accessible/widgets/rangecontrols.cpp:412
@@ -6320,14 +6328,6 @@ msgstr "Gauigkeit-Meter"
 #: plugins/accessible/widgets/rangecontrols.cpp:937
 msgid "SliderHandle"
 msgstr "Schuvergreep"
-
-#: plugins/accessible/widgets/qaccessiblewidgets.cpp:1331
-msgid "Dock"
-msgstr "Dock"
-
-#: plugins/accessible/widgets/qaccessiblewidgets.cpp:1332
-msgid "Float"
-msgstr "Swever"
 
 #: plugins/accessible/widgets/simplewidgets.cpp:123
 #: plugins/accessible/widgets/simplewidgets.cpp:268
@@ -6442,9 +6442,29 @@ msgid ""
 "Multiple input method switcher that uses the context menu of the text widgets"
 msgstr "Ingaavmetood-Wesseln, de dat Rechtsklickmenü vun de Textfeller bruukt"
 
-#: plugins/platforms/blackberry/qbbinputcontext_imf.cpp:889
+#: plugins/platforms/blackberry/qbbinputcontext_imf.cpp:893
 msgid "PlayBook IMF"
 msgstr ""
+
+#: plugins/qmltooling/qmldbg_inspector/editor/liveselectiontool.cpp:143
+msgid "Items"
+msgstr "Indrääg"
+
+#: plugins/qmltooling/qmldbg_inspector/editor/toolbarcolorbox.cpp:65
+msgid "Copy Color"
+msgstr "Klöör koperen"
+
+#: plugins/qmltooling/qmldbg_inspector/editor/zoomtool.cpp:63
+msgid "Zoom to &100%"
+msgstr "Grött op &100%"
+
+#: plugins/qmltooling/qmldbg_inspector/editor/zoomtool.cpp:64
+msgid "Zoom In"
+msgstr "Grötter"
+
+#: plugins/qmltooling/qmldbg_inspector/editor/zoomtool.cpp:65
+msgid "Zoom Out"
+msgstr "Lütter"
 
 #: plugins/qmltooling/qmldbg_inspector/editor/qmltoolbar.cpp:65
 msgid "Inspector Mode"
@@ -6500,26 +6520,6 @@ msgstr "0,125x"
 msgid "0.1x"
 msgstr "0,1x"
 
-#: plugins/qmltooling/qmldbg_inspector/editor/toolbarcolorbox.cpp:65
-msgid "Copy Color"
-msgstr "Klöör koperen"
-
-#: plugins/qmltooling/qmldbg_inspector/editor/zoomtool.cpp:63
-msgid "Zoom to &100%"
-msgstr "Grött op &100%"
-
-#: plugins/qmltooling/qmldbg_inspector/editor/zoomtool.cpp:64
-msgid "Zoom In"
-msgstr "Grötter"
-
-#: plugins/qmltooling/qmldbg_inspector/editor/zoomtool.cpp:65
-msgid "Zoom Out"
-msgstr "Lütter"
-
-#: plugins/qmltooling/qmldbg_inspector/editor/liveselectiontool.cpp:143
-msgid "Items"
-msgstr "Indrääg"
-
 #: qt3support/dialogs/q3tabdialog.cpp:648
 msgid "Apply"
 msgstr "Bruken"
@@ -6545,14 +6545,6 @@ msgstr "%1, %2 nich fastleggt"
 #, qt-format
 msgid "Ambiguous %1 not handled"
 msgstr "Mit en mehrdüden \"%1\" lett sik nich hanteren"
-
-#: qt3support/sql/q3datatable.cpp:791
-msgid "Insert"
-msgstr "Infögen"
-
-#: qt3support/sql/q3datatable.cpp:792
-msgid "Update"
-msgstr "Opfrischen"
 
 #: qt3support/sql/q3sqlmanager_p.cpp:890
 msgctxt "QSql"
@@ -6606,17 +6598,25 @@ msgctxt "QSql"
 msgid "Cancel your edits?"
 msgstr "Dien Ännern wegsmieten?"
 
+#: qt3support/sql/q3datatable.cpp:791
+msgid "Insert"
+msgstr "Infögen"
+
+#: qt3support/sql/q3datatable.cpp:792
+msgid "Update"
+msgstr "Opfrischen"
+
 #: qt3support/text/q3textedit.cpp:5441
 msgid "Clear"
 msgstr "Leddig maken"
 
-#: qt3support/widgets/q3toolbar.cpp:692
-msgid "More..."
-msgstr "Mehr..."
-
 #: qt3support/widgets/q3mainwindow.cpp:2053
 msgid "Customize..."
 msgstr "Topassen..."
+
+#: qt3support/widgets/q3toolbar.cpp:692
+msgid "More..."
+msgstr "Mehr..."
 
 #: scripttools/debugging/qscriptbreakpointsmodel.cpp:455
 msgctxt "QScriptBreakpointsModel"
@@ -7879,15 +7879,6 @@ msgstr "De Parameter \"%1\" wöör övergeven, man dat gifft keen tohören %2."
 msgid "The parameter %1 is required, but no corresponding %2 is supplied."
 msgstr "De Parameter \"%1\" deit noot, man en tohören %2 fehlt."
 
-#: xmlpatterns/functions/qcontextnodechecker.cpp:54
-#, qt-format
-msgid ""
-"The root node of the second argument to function %1 must be a document node. "
-"%2 is not a document node."
-msgstr ""
-"De Wörtelknütt vun de Funkschoon \"%1\" ehr tweet Argument mutt en "
-"Dokmentknütt wesen. \"%2\" is keen Dokmentknütt."
-
 #: xmlpatterns/functions/qdatetimefn.cpp:86
 #, qt-format
 msgid ""
@@ -8046,6 +8037,15 @@ msgstr "\"%1\" is as XML 1.0-Teken leeg."
 #, qt-format
 msgid "The first argument to %1 cannot be of type %2."
 msgstr "Dat eerste Argument för %1 mutt nich den Typ \"%2\" hebben."
+
+#: xmlpatterns/functions/qcontextnodechecker.cpp:54
+#, qt-format
+msgid ""
+"The root node of the second argument to function %1 must be a document node. "
+"%2 is not a document node."
+msgstr ""
+"De Wörtelknütt vun de Funkschoon \"%1\" ehr tweet Argument mutt en "
+"Dokmentknütt wesen. \"%2\" is keen Dokmentknütt."
 
 #: xmlpatterns/janitors/qcardinalityverifier.cpp:58
 #, qt-format
@@ -9435,76 +9435,76 @@ msgstr "Element %1 is binnen Element %2 bi vörhannen Attribut %3 nich tolaten."
 
 #: xmlpatterns/schema/qxsdschemaparser.cpp:1584
 #: xmlpatterns/schema/qxsdschemaparser.cpp:1703
-#: xmlpatterns/schema/qxsdschemaparser.cpp:1795
+#: xmlpatterns/schema/qxsdschemaparser.cpp:1792
 #, qt-format
 msgid "%1 element has neither %2 attribute nor %3 child element."
 msgstr "Element %1  hett keen Attribut %2 oder Ünnerelement %3."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:2630
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4104
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4336
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4343
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4603
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4620
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4878
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4884
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4901
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4907
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4924
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4935
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4946
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4957
+#: xmlpatterns/schema/qxsdschemaparser.cpp:2627
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4101
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4333
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4340
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4600
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4617
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4875
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4881
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4898
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4904
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4921
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4932
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4943
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4954
 #, qt-format
 msgid "%1 element with %2 child element must not have a %3 attribute."
 msgstr "Element %1 mit Ünnerelement %2 mutt Attribut %3 hebben."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:3632
+#: xmlpatterns/schema/qxsdschemaparser.cpp:3629
 #, qt-format
 msgid "%1 attribute of %2 element must be %3 or %4."
 msgstr "Attribut %1 vun Element %2 mutt %3 oder %4 wesen."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:3668
+#: xmlpatterns/schema/qxsdschemaparser.cpp:3665
 #, qt-format
 msgid "%1 attribute of %2 element must have a value of %3."
 msgstr "Attribut %1 vun Element %2 mutt en Weert vun %3 hebben."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:3675
-#: xmlpatterns/schema/qxsdschemaparser.cpp:3709
+#: xmlpatterns/schema/qxsdschemaparser.cpp:3672
+#: xmlpatterns/schema/qxsdschemaparser.cpp:3706
 #, qt-format
 msgid "%1 attribute of %2 element must have a value of %3 or %4."
 msgstr "Attribut %1 vun Element %2 mutt en Weert vun %3 oder %4 hebben."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4028
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4157
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4166
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4173
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4180
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4507
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4710
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4716
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4722
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4728
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4734
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4740
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4746
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4823
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4025
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4154
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4163
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4170
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4177
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4504
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4707
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4713
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4719
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4725
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4731
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4737
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4743
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4820
 #, qt-format
 msgid "%1 element must not have %2 and %3 attribute together."
 msgstr "Element %1 dörv nich Attribut %2 un %3 togliek hebben."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4055
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4277
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4052
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4274
 #, qt-format
 msgid "Content of %1 attribute of %2 element must not be from namespace %3."
 msgstr "Inholt vun Attribut %1 vun Element %2 mutt nich ut Naamruum %3 wesen."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4062
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4284
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4059
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4281
 #, qt-format
 msgid "%1 attribute of %2 element must not be %3."
 msgstr "Attribut %1 vun Element %2 mutt nich %3 wesen."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4220
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4217
 #, qt-format
 msgid ""
 "%1 attribute of %2 element must have the value %3 because the %4 attribute "
@@ -9513,100 +9513,100 @@ msgstr ""
 "Attribut %1 vun Element %2 mutt Weert %3 hebben, wiel Attribut %4 fastleggt "
 "is."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4407
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4404
 msgid "Specifying use='prohibited' inside an attribute group has no effect."
 msgstr ""
 "De Angaav vun <i>use='prohibited'</i> binnen en Attributkoppel hett keen "
 "Utwarken."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4760
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4757
 #, qt-format
 msgid "%1 element must have either %2 or %3 attribute."
 msgstr "Element %1 mutt Attribut %2 oder %3 hebben."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5314
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5311
 #, qt-format
 msgid "%1 element must have either %2 attribute or %3 or %4 as child element."
 msgstr "Element %1 mutt Attribut %2 oder %3 oder %4 as Ünnerelement hebben."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5369
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5366
 #, qt-format
 msgid "%1 element requires either %2 or %3 attribute."
 msgstr "Element %1 bruukt Attribut %2 oder %3."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5388
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5385
 #, qt-format
 msgid "Text or entity references not allowed inside %1 element"
 msgstr "Text oder Entiteet-Betog is binnen Element %1 nich tolaten."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5429
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5541
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5426
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5538
 #, qt-format
 msgid "%1 attribute of %2 element must contain %3, %4 or a list of URIs."
 msgstr "Attribut %1 vun Element %2 mutt %3, %4 oder en Adresslist bargen."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5667
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5664
 #, qt-format
 msgid "%1 element is not allowed in this context."
 msgstr "Element %1 is hier nich tolaten."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5720
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5717
 #, qt-format
 msgid "%1 attribute of %2 element has larger value than %3 attribute."
 msgstr "Attribut %1 vun Element %2 hett en grötter Weert as Attribut %3."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5745
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5742
 #, qt-format
 msgid "Prefix of qualified name %1 is not defined."
 msgstr "Göödpröövt Naam %1 sien Prefix wöör nich verkloort."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5810
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5871
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5807
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5868
 #, qt-format
 msgid "%1 attribute of %2 element must either contain %3 or the other values."
 msgstr "Attribut %1 vun Element %2 mutt %3 oder de anner Weerten bargen."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:6002
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5999
 #, qt-format
 msgid "Component with ID %1 has been defined previously."
 msgstr "Komponent mit de ID \"%1\" wöör al verkloort."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:6019
+#: xmlpatterns/schema/qxsdschemaparser.cpp:6016
 #, qt-format
 msgid "Element %1 already defined."
 msgstr "Element %1 wöör al verkloort."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:6030
+#: xmlpatterns/schema/qxsdschemaparser.cpp:6027
 #, qt-format
 msgid "Attribute %1 already defined."
 msgstr "Attribut %1 wöör al verkloort."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:6045
+#: xmlpatterns/schema/qxsdschemaparser.cpp:6042
 #, qt-format
 msgid "Type %1 already defined."
 msgstr "Typ %1 wöör al verkloort."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:6068
+#: xmlpatterns/schema/qxsdschemaparser.cpp:6065
 #, qt-format
 msgid "Attribute group %1 already defined."
 msgstr "Attributkoppel %1 wöör al verkloort."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:6079
+#: xmlpatterns/schema/qxsdschemaparser.cpp:6076
 #, qt-format
 msgid "Element group %1 already defined."
 msgstr "Elementkoppel %1 wöör al verkloort."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:6090
+#: xmlpatterns/schema/qxsdschemaparser.cpp:6087
 #, qt-format
 msgid "Notation %1 already defined."
 msgstr "Anmarken %1 wöör al verkloort."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:6101
+#: xmlpatterns/schema/qxsdschemaparser.cpp:6098
 #, qt-format
 msgid "Identity constraint %1 already defined."
 msgstr "Identiteet-Beding %1 wöör al verkloort."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:6112
+#: xmlpatterns/schema/qxsdschemaparser.cpp:6109
 #, qt-format
 msgid "Duplicated facets in simple type %1."
 msgstr "Dubbelt Fassetten in Eenfachtyp %1."
