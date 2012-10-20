@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdenlive\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-10-16 04:37+0200\n"
+"POT-Creation-Date: 2012-10-20 03:41+0200\n"
 "PO-Revision-Date: 2011-11-16 15:57+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -402,7 +402,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, button_start)
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: effects/fade_from_black.xml:13 effects/fade_to_black.xml:13
-#: src/mainwindow.cpp:4072 src/titlewidget.cpp:2146
+#: src/mainwindow.cpp:4082 src/titlewidget.cpp:2146
 #: src/widgets/cliptranscode_ui.ui:87 src/widgets/wipeval_ui.ui:22
 msgid "Start"
 msgstr ""
@@ -3254,7 +3254,7 @@ msgstr ""
 
 #: src/archivewidget.cpp:789 src/archivewidget.cpp:795 src/dvdwizard.cpp:795
 #: src/dvdwizard.cpp:801 src/kdenlivedoc.cpp:758 src/kdenlivedoc.cpp:764
-#: src/mainwindow.cpp:4159 src/mainwindow.cpp:4164 src/profilesdialog.cpp:219
+#: src/mainwindow.cpp:4169 src/mainwindow.cpp:4174 src/profilesdialog.cpp:219
 #: src/profilesdialog.cpp:225 src/profilesdialog.cpp:551
 #: src/profilesdialog.cpp:557 src/renderwidget.cpp:562
 #: src/renderwidget.cpp:701 src/renderwidget.cpp:707 src/renderwidget.cpp:767
@@ -5599,9 +5599,9 @@ msgstr "Projekt"
 msgid "Extract Audio"
 msgstr ""
 
-#. i18n: ectx: Menu (stabilize)
+#. i18n: ectx: Menu (clip_actions)
 #: src/kdenliveui.rc:31
-msgid "Stabilize"
+msgid "Clip Jobs"
 msgstr ""
 
 #. i18n: ectx: Menu (generators)
@@ -6529,34 +6529,48 @@ msgstr ""
 msgid "Timeout while creating xml output"
 msgstr ""
 
-#: src/mainwindow.cpp:3985
+#: src/mainwindow.cpp:3899
+msgid "Stabilize (vstab)"
+msgstr ""
+
+#: src/mainwindow.cpp:3906
+msgid "Stabilize (transcode)"
+msgstr ""
+
+#: src/mainwindow.cpp:3913
+#, fuzzy
+#| msgid "Automatic"
+msgid "Automatic scene split"
+msgstr "Automaatsch"
+
+#: src/mainwindow.cpp:3995
 msgid "No clip to transcode"
 msgstr ""
 
-#: src/mainwindow.cpp:4021
+#: src/mainwindow.cpp:4031
 msgid "Create Render Script"
 msgstr ""
 
-#: src/mainwindow.cpp:4021
+#: src/mainwindow.cpp:4031
 #, kde-format
 msgid "Script name (will be saved in: %1)"
 msgstr ""
 
-#: src/mainwindow.cpp:4026
+#: src/mainwindow.cpp:4036
 msgid "Script file already exists. Do you want to overwrite it?"
 msgstr ""
 
-#: src/mainwindow.cpp:4191
+#: src/mainwindow.cpp:4201
 msgid ""
 "This will delete all changes made since you last saved your project. Are you "
 "sure you want to continue?"
 msgstr ""
 
-#: src/mainwindow.cpp:4191
+#: src/mainwindow.cpp:4201
 msgid "Revert to last saved version"
 msgstr ""
 
-#: src/mainwindow.cpp:4535
+#: src/mainwindow.cpp:4545
 msgid "Select a clip to save"
 msgstr ""
 
@@ -6868,46 +6882,56 @@ msgstr "Ümkoderen"
 msgid "Cannot write to path: %1"
 msgstr ""
 
-#: src/projectlist.cpp:3020
+#: src/projectlist.cpp:3023
 msgid "Update proxy settings"
 msgstr ""
 
-#: src/projectlist.cpp:3122
+#: src/projectlist.cpp:3125
 msgid "Add proxy clip"
 msgid_plural "Add proxy clips"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/projectlist.cpp:3123
+#: src/projectlist.cpp:3126
 msgid "Remove proxy clip"
 msgid_plural "Remove proxy clips"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/projectlist.cpp:3175
+#: src/projectlist.cpp:3178
 msgid "Remove Proxy"
 msgstr ""
 
-#: src/projectlist.cpp:3257
+#: src/projectlist.cpp:3260
 msgctxt "The first letter of Proxy, used as abbreviation"
 msgid "P"
 msgstr ""
 
-#: src/projectlist.cpp:3270
+#: src/projectlist.cpp:3273
 msgid "Cancel job"
 msgid_plural "Cancel jobs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/projectlist.cpp:3433
+#: src/projectlist.cpp:3436
 #, kde-format
 msgid "Filter %1"
 msgstr ""
 
-#: src/projectlist.cpp:3445
+#: src/projectlist.cpp:3448
 #, kde-format
 msgid "Cannot find clip to process filter %1"
 msgstr ""
+
+#: src/projectlist.cpp:3470
+msgid "Auto split"
+msgstr ""
+
+#: src/projectlist.cpp:3582
+#, fuzzy
+#| msgid "Edit profile"
+msgid "Auto Split Clip"
+msgstr "Profil bewerken"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QLabel, label_description)
@@ -7032,27 +7056,27 @@ msgstr ""
 msgid "Waiting - cut clip"
 msgstr ""
 
-#: src/projecttree/meltjob.cpp:48
+#: src/projecttree/meltjob.cpp:49
 #, fuzzy
 #| msgid "Transcode"
 msgid "Process clip"
 msgstr "Ümkoderen"
 
-#: src/projecttree/meltjob.cpp:64
+#: src/projecttree/meltjob.cpp:65
 msgid "No producer for this clip."
 msgstr ""
 
-#: src/projecttree/meltjob.cpp:90
+#: src/projecttree/meltjob.cpp:91
 #, kde-format
 msgid "Clip zone undefined (%1 - %2)."
 msgstr ""
 
-#: src/projecttree/meltjob.cpp:120
+#: src/projecttree/meltjob.cpp:128
 #, kde-format
 msgid "Cannot create consumer %1."
 msgstr ""
 
-#: src/projecttree/meltjob.cpp:198
+#: src/projecttree/meltjob.cpp:207
 #, fuzzy
 #| msgid "Transcode"
 msgid "Waiting to process clip"
