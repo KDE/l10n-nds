@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate_advanced\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-10-29 03:58+0000\n"
+"POT-Creation-Date: 2012-10-31 02:44+0000\n"
 "PO-Revision-Date: 2011-10-12 20:33+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1696,7 +1696,7 @@ msgid ""
 "The following sections describe step by step how to create the skeleton for "
 "a simple indenter. As first step, create a new <filename>*.js</filename> "
 "file called e.g. <filename>javascript.js</filename> in the local home folder "
-"<filename>$KDEHOME/share/apps/katepart/script</filename>."
+"<filename>$KDEHOME/share/apps/katepart/script/indentation</filename>."
 msgstr ""
 
 #. Tag: title
@@ -1717,7 +1717,6 @@ msgid ""
 " * license: BSD\n"
 " * revision: 1\n"
 " * kate-version: 3.4\n"
-" * type: indentation\n"
 " * required-syntax-style: javascript\n"
 " * indent-languages: javascript\n"
 " * priority: 0\n"
@@ -1731,7 +1730,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:943 advanced.docbook:1080
+#: advanced.docbook:943 advanced.docbook:1077
 #, no-c-format
 msgid ""
 "<literal>kate-script</literal> [required]: This text string has to appear in "
@@ -1749,7 +1748,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:951 advanced.docbook:1081
+#: advanced.docbook:951 advanced.docbook:1078
 #, no-c-format
 msgid ""
 "<literal>author</literal> [optional]: The author's name and contact "
@@ -1757,7 +1756,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:954 advanced.docbook:1082
+#: advanced.docbook:954 advanced.docbook:1079
 #, no-c-format
 msgid ""
 "<literal>license</literal> [optional]: Short form of the license, such as "
@@ -1765,7 +1764,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:957 advanced.docbook:1083
+#: advanced.docbook:957 advanced.docbook:1080
 #, no-c-format
 msgid ""
 "<literal>revision</literal> [required]: The revision of the script. This "
@@ -1773,7 +1772,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:960 advanced.docbook:1084
+#: advanced.docbook:960 advanced.docbook:1081
 #, no-c-format
 msgid ""
 "<literal>kate-version</literal> [required]: Minimal required &kappname; "
@@ -1782,15 +1781,6 @@ msgstr ""
 
 #. Tag: para
 #: advanced.docbook:963
-#, no-c-format
-msgid ""
-"<literal>type</literal> [required]: The type must be "
-"<quote><literal>indentation</literal></quote>, otherwise &kappname; skips "
-"this script."
-msgstr ""
-
-#. Tag: para
-#: advanced.docbook:966
 #, no-c-format
 msgid ""
 "<literal>required-syntax-style</literal> [optional]: Comma separated list of "
@@ -1804,7 +1794,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:969
+#: advanced.docbook:966
 #, no-c-format
 msgid ""
 "<literal>indent-languages</literal> [optional]: Comma separated list of "
@@ -1812,7 +1802,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:972
+#: advanced.docbook:969
 #, no-c-format
 msgid ""
 "<literal>priority</literal> [optional]: If several indenters are suited for "
@@ -1821,7 +1811,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:975
+#: advanced.docbook:972
 #, no-c-format
 msgid ""
 "<literal>i18n-catalog</literal> [optional]: Additional message catalog "
@@ -1829,7 +1819,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:979
+#: advanced.docbook:976
 #, no-c-format
 msgid ""
 "&kappname; reads all pairs of the form <quote><replaceable>key</replaceable>:"
@@ -1839,18 +1829,21 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: advanced.docbook:989
+#: advanced.docbook:986
 #, no-c-format
 msgid "The Indenter Source Code"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:990
+#: advanced.docbook:987
 #, no-c-format
 msgid ""
 "Having specified the header this section explains how the indentation "
 "scripting itself works. The basic skeleton of the body looks like this: "
 "<programlisting>\n"
+"// required katepart js libraries, e.g. range.js if you use Range\n"
+"require (\"range.js\");\n"
+"  \n"
 "triggerCharacters = \"{}/:;\";\n"
 "function indent(line, indentWidth, ch)\n"
 "{\n"
@@ -1893,7 +1886,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1022
+#: advanced.docbook:1019
 #, no-c-format
 msgid ""
 "Consider the following example: Assume using tabs to indent, and tab width "
@@ -1909,16 +1902,16 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1032
+#: advanced.docbook:1029
 #, no-c-format
 msgid ""
 "A default KDE installation ships &kappname; with several indenters. The "
 "corresponding JavaScript source code can be found in <filename>$KDEDIR/share/"
-"apps/katepart/script</filename>."
+"apps/katepart/script/indentation</filename>."
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1037
+#: advanced.docbook:1034
 #, no-c-format
 msgid ""
 "Developing an indenter requires to reload the scripts to see whether the "
@@ -1928,7 +1921,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1043 advanced.docbook:1154
+#: advanced.docbook:1040 advanced.docbook:1150
 #, no-c-format
 msgid ""
 "If you develop useful scripts please consider contributing to the &kappname; "
@@ -1937,13 +1930,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: advanced.docbook:1052
+#: advanced.docbook:1049
 #, no-c-format
 msgid "Command Line Scripts"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1054
+#: advanced.docbook:1051
 #, no-c-format
 msgid ""
 "As it is hard to satisfy everyone's needs, &kappname; supports little helper "
@@ -1955,23 +1948,23 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1063
+#: advanced.docbook:1060
 #, no-c-format
 msgid ""
 "Command line scripts are located in the same folder as indentation scripts. "
 "So as first step, create a new <filename>*.js</filename> file called "
 "<filename>myutils.js</filename> in the local home folder <filename>$KDEHOME/"
-"share/apps/katepart/script</filename>."
+"share/apps/katepart/script/commands</filename>."
 msgstr ""
 
 #. Tag: title
-#: advanced.docbook:1071
+#: advanced.docbook:1068
 #, no-c-format
 msgid "The Command Line Script Header"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1072
+#: advanced.docbook:1069
 #, no-c-format
 msgid ""
 "The header of each command line script is embedded in a comment and is of "
@@ -1981,7 +1974,6 @@ msgid ""
 " * license: BSD\n"
 " * revision: 1\n"
 " * kate-version: 3.4\n"
-" * type: commands\n"
 " * functions: sort, format-paragraph\n"
 " * i18n-catalog: mycatalog\n"
 " *\n"
@@ -1993,16 +1985,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1085
-#, no-c-format
-msgid ""
-"<literal>type</literal> [required]: The type must be "
-"<quote><literal>commands</literal></quote>, otherwise &kappname; skips this "
-"script."
-msgstr ""
-
-#. Tag: para
-#: advanced.docbook:1086
+#: advanced.docbook:1082
 #, no-c-format
 msgid ""
 "<literal>functions</literal> [required]: Comma separated list of commands in "
@@ -2010,7 +1993,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1087
+#: advanced.docbook:1083
 #, no-c-format
 msgid ""
 "<literal>i18n-catalog</literal> [optional]: Additional message catalog "
@@ -2018,7 +2001,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1091
+#: advanced.docbook:1087
 #, no-c-format
 msgid ""
 "&kappname; reads all pairs of the form <quote><replaceable>key</replaceable>:"
@@ -2032,13 +2015,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: advanced.docbook:1104
+#: advanced.docbook:1100
 #, no-c-format
 msgid "The Script Source Code"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1106
+#: advanced.docbook:1102
 #, no-c-format
 msgid ""
 "All functions specified in the header have to be implemented in the script. "
@@ -2048,9 +2031,12 @@ msgid ""
 msgstr ""
 
 #. Tag: programlisting
-#: advanced.docbook:1112
+#: advanced.docbook:1108
 #, no-c-format
 msgid ""
+"// required katepart js libraries, e.g. range.js if you use Range\n"
+"require (\"range.js\");\n"
+"\n"
 "function &lt;name&gt;(arg1, arg2, ...)\n"
 "{\n"
 "    // ... implementation, see also: Scripting API\n"
@@ -2058,7 +2044,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1115
+#: advanced.docbook:1111
 #, no-c-format
 msgid ""
 "Arguments in the command line are passed to the function as <parameter>arg1</"
@@ -2082,13 +2068,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: advanced.docbook:1131
+#: advanced.docbook:1127
 #, no-c-format
 msgid "Binding Shortcuts"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1132
+#: advanced.docbook:1128
 #, no-c-format
 msgid ""
 "In order to be able to assign shortcuts, the script needs to provide a "
@@ -2113,7 +2099,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1139
+#: advanced.docbook:1135
 #, no-c-format
 msgid ""
 "<literal>a.text</literal> [required]: The text appears in the menu "
@@ -2122,7 +2108,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1140
+#: advanced.docbook:1136
 #, no-c-format
 msgid ""
 "<literal>a.icon</literal> [optional]: The icon appears next to the text in "
@@ -2130,7 +2116,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1141
+#: advanced.docbook:1137
 #, no-c-format
 msgid ""
 "<literal>a.category</literal> [optional]: If a category is specified, the "
@@ -2139,7 +2125,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1142
+#: advanced.docbook:1138
 #, no-c-format
 msgid ""
 "<literal>a.interactive</literal> [optional]: If the script needs user input, "
@@ -2147,7 +2133,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1143
+#: advanced.docbook:1139
 #, no-c-format
 msgid ""
 "<literal>a.shortcut</literal> [optional]: The shortcut given here is the "
@@ -2157,7 +2143,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1148
+#: advanced.docbook:1144
 #, no-c-format
 msgid ""
 "Developing a command line script requires to reload the scripts to see "
@@ -2167,64 +2153,68 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: advanced.docbook:1164
+#: advanced.docbook:1160
 #, no-c-format
 msgid "Scripting API"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1166
+#: advanced.docbook:1162
 #, no-c-format
 msgid ""
 "The scripting API presented here is available in all scripts, i.e. "
-"indentation scripts and command line commands. Before the contents of a "
-"script is loaded, &kappname; first adds several prototypes and functions to "
-"the scripting context. This convenience API contains prototypes like text "
-"cursors and text ranges and is located in the folder <filename>$KDEDIR/share/"
-"apps/katepart/api</filename>. There, the file names of each JavaScript file "
-"conforms with the following naming scheme: <programlisting>\n"
-"&lt;number&gt;_&lt;name&gt;.js\n"
-"</programlisting> The number has two digits and the name is an arbitrary "
-"name such as <quote><filename>myutils</filename></quote>. Through the number "
-"&kappname; controls the execution order of the API. I.e., the file called "
-"<filename>05_cursor.js</filename> is called before the file "
-"<filename>10_range.js</filename>. (This is similar to the start order of the "
-"runlevel/init system in Linux)."
+"indentation scripts and command line commands. The <classname>Cursor</"
+"classname> and <classname>Range</classname> are provided by library files in "
+"<filename>$KDEDIR/share/apps/katepart/libraries</filename>. If you want to "
+"use them in your script, which is required to use some of the "
+"<classname>Document</classname> or <classname>View</classname> functions, "
+"please include the needed library by using:"
+msgstr ""
+
+#. Tag: programlisting
+#: advanced.docbook:1168
+#, no-c-format
+msgid ""
+"// required katepart js libraries, e.g. range.js if you use Range\n"
+"require (\"range.js\");"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1184
+#: advanced.docbook:1171
 #, no-c-format
 msgid ""
 "To extend the standard scripting API with own functions and prototypes "
 "simply create a new file in the KDE's local configuration folder <filename>"
-"$KDEHOME/share/apps/katepart/api</filename> and make sure it has a greater "
-"number (execution order) than the other <filename>*.js</filename> files in "
-"the global folder <filename>$KDEDIR/share/apps/katepart/api</filename>. "
-"&kappname; automatically searches in both folders for <filename>*.js</"
-"filename> files and executes them in the correct order."
+"$KDEHOME/share/apps/katepart/libraries</filename> and include it into your "
+"script using:"
+msgstr ""
+
+#. Tag: programlisting
+#: advanced.docbook:1176
+#, no-c-format
+msgid "require (\"myscriptnamehere.js\");"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1194
+#: advanced.docbook:1180
 #, no-c-format
 msgid ""
 "To extend existing prototypes like <classname>Cursor</classname> or "
 "<classname>Range</classname>, the recommended way is to <emphasis>not</"
-"emphasis> modify the global <filename>*.js</filename> files. Instead, create "
-"a <filename>*.js</filename> file in the local folder that is being executed "
-"later than the <filename>05_cursor.js</filename> and then change the "
-"<classname>Cursor</classname> prototype in JavaScript."
+"emphasis> modify the global <filename>*.js</filename> files. Instead, change "
+"the <classname>Cursor</classname> prototype in JavaScript after the "
+"<filename>cursor.js</filename> is included into your script via "
+"<literal>require</literal>."
 msgstr ""
 
 #. Tag: title
-#: advanced.docbook:1204
+#: advanced.docbook:1189
 #, no-c-format
 msgid "Cursors and Ranges"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1206
+#: advanced.docbook:1191
 #, no-c-format
 msgid ""
 "As &kappname; is a text editor, all the scripting API is based on cursors "
@@ -2235,31 +2225,31 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: advanced.docbook:1215
+#: advanced.docbook:1200
 #, no-c-format
 msgid "The Cursor Prototype"
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1218
+#: advanced.docbook:1203
 #, no-c-format
 msgid "Cursor();"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1219
+#: advanced.docbook:1204
 #, no-c-format
 msgid "Constructor. Returns a Cursor at position <literal>(0, 0)</literal>."
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1221
+#: advanced.docbook:1206
 #, no-c-format
 msgid "Example: <function>var cursor = new Cursor();</function>"
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1227
+#: advanced.docbook:1212
 #, no-c-format
 msgid ""
 "Cursor(<parameter>int <replaceable>line</replaceable></parameter>, "
@@ -2267,25 +2257,25 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1228
+#: advanced.docbook:1213
 #, no-c-format
 msgid "Constructor. Returns a Cursor at position (line, column)."
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1231
+#: advanced.docbook:1216
 #, no-c-format
 msgid "Example: <function>var cursor = new Cursor(3, 42);</function>"
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1237
+#: advanced.docbook:1222
 #, no-c-format
 msgid "Cursor(<parameter>Cursor <replaceable>other</replaceable></parameter>);"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1238
+#: advanced.docbook:1223
 #, no-c-format
 msgid ""
 "Copy constructor. Returns a copy of the cursor <replaceable>other</"
@@ -2293,37 +2283,37 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1241
+#: advanced.docbook:1226
 #, no-c-format
 msgid "Example: <function>var copy = new Cursor(other);</function>"
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1247
+#: advanced.docbook:1232
 #, no-c-format
 msgid "Cursor Cursor.clone();"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1248
+#: advanced.docbook:1233
 #, no-c-format
 msgid "Returns a clone of the cursor."
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1250
+#: advanced.docbook:1235
 #, no-c-format
 msgid "Example: <function>var clone = cursor.clone();</function>"
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1256
+#: advanced.docbook:1241
 #, no-c-format
 msgid "bool Cursor.isValid();"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1257
+#: advanced.docbook:1242
 #, no-c-format
 msgid ""
 "Check whether the cursor is valid. The cursor is invalid, if line and/or "
@@ -2331,31 +2321,31 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1261
+#: advanced.docbook:1246
 #, no-c-format
 msgid "Example: <function>var valid = cursor.isValid();</function>"
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1268
+#: advanced.docbook:1253
 #, no-c-format
 msgid "Cursor Cursor.invalid();"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1269
+#: advanced.docbook:1254
 #, no-c-format
 msgid "Returns an new invalid cursor located at <literal>(-1, -1)</literal>."
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1272
+#: advanced.docbook:1257
 #, no-c-format
 msgid "Example: <function>var invalidCursor = cursor.invalid();</function>"
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1277
+#: advanced.docbook:1262
 #, no-c-format
 msgid ""
 "int Cursor.compareTo(<parameter>Cursor <replaceable>other</replaceable></"
@@ -2363,14 +2353,14 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1278
+#: advanced.docbook:1263
 #, no-c-format
 msgid ""
 "Compares this cursor to the cursor <replaceable>other</replaceable>. Returns"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1281
+#: advanced.docbook:1266
 #, no-c-format
 msgid ""
 "<literal>-1</literal>, if this cursor is located before the cursor "
@@ -2378,13 +2368,13 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1282
+#: advanced.docbook:1267
 #, no-c-format
 msgid "<literal>0</literal>, if both cursors equal and"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1283
+#: advanced.docbook:1268
 #, no-c-format
 msgid ""
 "<literal>+1</literal>, if this cursor is located after the cursor "
@@ -2392,7 +2382,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1290
+#: advanced.docbook:1275
 #, no-c-format
 msgid ""
 "bool Cursor.equals(<parameter>Cursor <replaceable>other</replaceable></"
@@ -2400,7 +2390,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1291
+#: advanced.docbook:1276
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if this cursor and the cursor "
@@ -2409,13 +2399,13 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1299
+#: advanced.docbook:1284
 #, no-c-format
 msgid "String Cursor.toString();"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1300
+#: advanced.docbook:1285
 #, no-c-format
 msgid ""
 "Returns the cursor as a string of the form <quote><literal>Cursor(line, "
@@ -2423,19 +2413,19 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: advanced.docbook:1309
+#: advanced.docbook:1294
 #, no-c-format
 msgid "The Range Prototype"
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1312
+#: advanced.docbook:1297
 #, no-c-format
 msgid "Range();"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1313
+#: advanced.docbook:1298
 #, no-c-format
 msgid ""
 "Constructor. Calling <literal>new Range()</literal> returns a Range at (0, "
@@ -2443,7 +2433,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1320
+#: advanced.docbook:1305
 #, no-c-format
 msgid ""
 "Range(<parameter>Cursor <replaceable>start</replaceable></parameter>, "
@@ -2451,7 +2441,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1321
+#: advanced.docbook:1306
 #, no-c-format
 msgid ""
 "Constructor. Calling <literal>new Range(<replaceable>start</replaceable>, "
@@ -2460,7 +2450,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1328
+#: advanced.docbook:1313
 #, no-c-format
 msgid ""
 "Range(<parameter>int <replaceable>startLine</replaceable></parameter>, "
@@ -2470,7 +2460,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1329
+#: advanced.docbook:1314
 #, no-c-format
 msgid ""
 "Constructor. Calling <literal>new Range(<replaceable>startLine</"
@@ -2482,44 +2472,44 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1337
+#: advanced.docbook:1322
 #, no-c-format
 msgid "Range(<parameter>Range <replaceable>other</replaceable></parameter>);"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1338
+#: advanced.docbook:1323
 #, no-c-format
 msgid ""
 "Copy constructor. Returns a copy of Range <replaceable>other</replaceable>."
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1345
+#: advanced.docbook:1330
 #, no-c-format
 msgid "Range Range.clone();"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1346
+#: advanced.docbook:1331
 #, no-c-format
 msgid "Returns a clone of the range."
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1349
+#: advanced.docbook:1334
 #, no-c-format
 msgid "Example: <function>var clone = range.clone();</function>"
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1355
+#: advanced.docbook:1340
 #, no-c-format
 msgid "bool Range.isValid();"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1356
+#: advanced.docbook:1341
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if both start and end cursor are valid, "
@@ -2527,25 +2517,25 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1359
+#: advanced.docbook:1344
 #, no-c-format
 msgid "Example: <function>var valid = range.isValid();</function>"
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1365
+#: advanced.docbook:1350
 #, no-c-format
 msgid "bool Range.invalid();"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1366
+#: advanced.docbook:1351
 #, no-c-format
 msgid "Returns the Range from (-1, -1) to (-1, -1)."
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1373
+#: advanced.docbook:1358
 #, no-c-format
 msgid ""
 "bool Range.contains(<parameter>Cursor <replaceable>cursor</replaceable></"
@@ -2553,7 +2543,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1374
+#: advanced.docbook:1359
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if this range contains the cursor position, "
@@ -2561,7 +2551,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1381
+#: advanced.docbook:1366
 #, no-c-format
 msgid ""
 "bool Range.contains(<parameter>Range <replaceable>other</replaceable></"
@@ -2569,7 +2559,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1382
+#: advanced.docbook:1367
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if this range contains the Range "
@@ -2577,7 +2567,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1390
+#: advanced.docbook:1375
 #, no-c-format
 msgid ""
 "bool Range.containsColumn(<parameter>int <replaceable>column</replaceable></"
@@ -2585,7 +2575,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1391
+#: advanced.docbook:1376
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if <replaceable>column</replaceable> is in "
@@ -2594,7 +2584,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1399
+#: advanced.docbook:1384
 #, no-c-format
 msgid ""
 "bool Range.containsLine(<parameter>int <replaceable>line</replaceable></"
@@ -2602,7 +2592,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1400
+#: advanced.docbook:1385
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if <replaceable>line</replaceable> is in "
@@ -2611,7 +2601,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1408
+#: advanced.docbook:1393
 #, no-c-format
 msgid ""
 "bool Range.overlaps(<parameter>Range <replaceable>other</replaceable></"
@@ -2619,7 +2609,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1409
+#: advanced.docbook:1394
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if this range and the range "
@@ -2628,7 +2618,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1417
+#: advanced.docbook:1402
 #, no-c-format
 msgid ""
 "bool Range.overlapsLine(<parameter>int <replaceable>line</replaceable></"
@@ -2636,7 +2626,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1418
+#: advanced.docbook:1403
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if <replaceable>line</replaceable> is in "
@@ -2645,7 +2635,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1426
+#: advanced.docbook:1411
 #, no-c-format
 msgid ""
 "bool Range.overlapsColumn(<parameter>int <replaceable>column</replaceable></"
@@ -2653,7 +2643,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1427
+#: advanced.docbook:1412
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if <replaceable>column</replaceable> is in "
@@ -2662,13 +2652,13 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1435
+#: advanced.docbook:1420
 #, no-c-format
 msgid "bool Range.onSingleLine();"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1436
+#: advanced.docbook:1421
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if the range starts and ends at the same "
@@ -2676,13 +2666,13 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1440 advanced.docbook:1753 advanced.docbook:1892
+#: advanced.docbook:1425 advanced.docbook:1753 advanced.docbook:1892
 #, no-c-format
 msgid "Since: KDE 4.9"
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1447
+#: advanced.docbook:1432
 #, no-c-format
 msgid ""
 "bool Range.equals(<parameter>Range <replaceable>other</replaceable></"
@@ -2690,7 +2680,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1448
+#: advanced.docbook:1433
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if this range and the Range "
@@ -2699,13 +2689,13 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1456
+#: advanced.docbook:1441
 #, no-c-format
 msgid "String Range.toString();"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1457
+#: advanced.docbook:1442
 #, no-c-format
 msgid ""
 "Returns the range as a string of the form <quote><literal>Range(Cursor(line, "
@@ -2713,32 +2703,55 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: advanced.docbook:1466
+#: advanced.docbook:1451
 #, no-c-format
 msgid "Global Functions"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1467
+#: advanced.docbook:1452
 #, no-c-format
 msgid "This section lists all global functions."
 msgstr ""
 
 #. Tag: title
-#: advanced.docbook:1470
+#: advanced.docbook:1456
+#, no-c-format
+msgid "Including Scripts"
+msgstr ""
+
+#. Tag: synopsis
+#: advanced.docbook:1459
+#, no-c-format
+msgid ""
+"void require(<parameter>String <replaceable>file</replaceable></parameter>);"
+msgstr ""
+
+#. Tag: para
+#: advanced.docbook:1460
+#, no-c-format
+msgid ""
+"Will search the given <replaceable>file</replaceable> relative to the "
+"<literal>katepart/script/libraries</literal> directory and evaluate it. "
+"<literal>require</literal> is internally guarded against multiple inclusions "
+"of the same <replaceable>file</replaceable>."
+msgstr ""
+
+#. Tag: title
+#: advanced.docbook:1469
 #, no-c-format
 msgid "Debugging"
 msgstr ""
 
 #. Tag: synopsis
-#: advanced.docbook:1473
+#: advanced.docbook:1472
 #, no-c-format
 msgid ""
 "void debug(<parameter>String <replaceable>text</replaceable></parameter>);"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:1474
+#: advanced.docbook:1473
 #, no-c-format
 msgid ""
 "Prints <replaceable>text</replaceable> to <literal>stdout</literal> in the "
