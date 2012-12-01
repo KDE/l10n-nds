@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timetablemate\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-11-24 03:01+0100\n"
+"POT-Creation-Date: 2012-12-01 03:12+0100\n"
 "PO-Revision-Date: 2011-03-04 01:34+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -99,7 +99,7 @@ msgstr ""
 msgctxt "@info The description for the 'getTimetable' function"
 msgid ""
 "Requests and parses departure/arrival documents. The argument has the "
-"following properties: stop, dateTime (Date object), maxCount, dataType "
+"following properties: stop, dateTime (Date object), count, dataType "
 "('departures' or 'arrivals'), city.<nl/>This function is called by the data "
 "engine. Found departures/arrivals can be handed over to the data engine like "
 "this:<nl/><icode>  // Add timetable data to the result set</icode><nl/"
@@ -120,14 +120,14 @@ msgstr ""
 msgctxt "@info The description for the 'getJourneys' function"
 msgid ""
 "Requests and parses journey documents. The argument has the following "
-"properties: originStop, targetStop, dateTime (Date object), maxCount, "
-"dataType, city.<nl/>This function is called by the data engine. Found "
-"journeys can be handed over to the data engine like this:<nl/><icode>  // "
-"Add timetable data to the result set</icode><nl/><icode>  result.addData"
-"( {StartStopName: 'A',</icode><nl/><icode>                   TargetStopName: "
-"'B',</icode><nl/><icode>                   Target: 'Samplestreet',</"
-"icode><nl/><icode>                   DepartureDateTime: new Date(),</"
-"icode><nl/><icode>                   ArrivalDateTime: new Date(),</icode><nl/"
+"properties: originStop, targetStop, dateTime (Date object), count, dataType, "
+"city.<nl/>This function is called by the data engine. Found journeys can be "
+"handed over to the data engine like this:<nl/><icode>  // Add timetable data "
+"to the result set</icode><nl/><icode>  result.addData( {StartStopName: 'A',</"
+"icode><nl/><icode>                   TargetStopName: 'B',</icode><nl/"
+"><icode>                   Target: 'Samplestreet',</icode><nl/"
+"><icode>                   DepartureDateTime: new Date(),</icode><nl/"
+"><icode>                   ArrivalDateTime: new Date(),</icode><nl/"
 "><icode>                   Changes: 3,</icode><nl/><icode>                   "
 "Pricing: '2,30 €'} );</icode><nl/><nl/>"
 msgstr ""
@@ -136,11 +136,11 @@ msgstr ""
 msgctxt "@info The description for the 'getStopSuggestions' function"
 msgid ""
 "Requests and parses stop suggestion documents. The argument has the "
-"following properties: stop, maxCount, city.<nl/>This function is called by "
-"the data engine. The parameter contains the contents of the document body. "
-"Found stop data can be handed over to the data engine like this:<nl/"
-"><icode>  // Add timetable data to the result set</icode><nl/><icode>  "
-"result.addData( {StopName: 'TestName', StopID: 100} );</icode>"
+"following properties: stop, count, city.<nl/>This function is called by the "
+"data engine. The parameter contains the contents of the document body. Found "
+"stop data can be handed over to the data engine like this:<nl/><icode>  // "
+"Add timetable data to the result set</icode><nl/><icode>  result.addData"
+"( {StopName: 'TestName', StopID: 100} );</icode>"
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:351
@@ -750,61 +750,61 @@ msgctxt "@info/plain"
 msgid "Unknown"
 msgstr ""
 
-#: project.cpp:448
+#: project.cpp:570
 #, kde-format
 msgctxt "@info"
 msgid "The project file <filename>%1</filename> could not be found."
 msgstr ""
 
-#: project.cpp:487
+#: project.cpp:609
 #, kde-format
 msgctxt "@info"
 msgid "Could not open project source document <filename>%1</filename>."
 msgstr ""
 
-#: project.cpp:573
+#: project.cpp:695
 msgctxt "@info/plain"
 msgid "New Project"
 msgstr ""
 
-#: project.cpp:657
+#: project.cpp:779
 msgctxt "@info:tooltip"
 msgid "also installed globally"
 msgstr ""
 
-#: project.cpp:662
+#: project.cpp:784
 msgctxt "@info:tooltip"
 msgid "also installed locally"
 msgstr ""
 
-#: project.cpp:668
+#: project.cpp:790
 msgctxt "@info:tooltip"
 msgid "installed locally and globally"
 msgstr ""
 
-#: project.cpp:670
+#: project.cpp:792
 msgctxt "@info:tooltip"
 msgid "installed locally"
 msgstr ""
 
-#: project.cpp:672
+#: project.cpp:794
 msgctxt "@info:tooltip"
 msgid "installed globally"
 msgstr ""
 
-#: project.cpp:792
+#: project.cpp:922
 #, kde-format
 msgctxt "@info"
 msgid "The script file <filename>%1</filename> could not be found."
 msgstr ""
 
-#: project.cpp:819
+#: project.cpp:949
 #, kde-format
 msgctxt "@info"
 msgid "Syntax error at line %1: <message>%2</message>"
 msgstr ""
 
-#: project.cpp:851
+#: project.cpp:981
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -812,14 +812,14 @@ msgid ""
 "found."
 msgstr ""
 
-#: project.cpp:1176
+#: project.cpp:1306
 msgctxt "@info"
 msgid ""
 "Test results cannot be seen for non-active projects.<nl />Do you want to "
 "make this project active now?"
 msgstr ""
 
-#: project.cpp:1181
+#: project.cpp:1311
 msgctxt "@info"
 msgid ""
 "Docks like <interface>Variables</interface>, <interface>Backtrace</"
@@ -829,70 +829,70 @@ msgid ""
 "project.<nl />Do you want to make this project active now?"
 msgstr ""
 
-#: project.cpp:1195
+#: project.cpp:1325
 msgctxt "@title:window"
 msgid "Activate Project?"
 msgstr ""
 
-#: project.cpp:1289
+#: project.cpp:1419
 msgctxt "@info"
 msgid "Test started"
 msgstr ""
 
-#: project.cpp:1317
+#: project.cpp:1447
 #, kde-format
 msgctxt "@info"
 msgid "Test of %1 finished successfully"
 msgstr ""
 
-#: project.cpp:1323
+#: project.cpp:1453
 #, kde-format
 msgctxt "@info"
 msgid "Test of %1 finished with errors"
 msgstr ""
 
-#: project.cpp:1328
+#: project.cpp:1458
 #, kde-format
 msgctxt "@info"
 msgid "Test of %1 finished with warnings"
 msgstr ""
 
-#: project.cpp:1333
+#: project.cpp:1463
 #, kde-format
 msgctxt "@info"
 msgid "Test of %1 could not be started"
 msgstr ""
 
-#: project.cpp:1338
+#: project.cpp:1468
 #, kde-format
 msgctxt "@info"
 msgid "Test of %1 was aborted"
 msgstr ""
 
-#: project.cpp:1342
+#: project.cpp:1472
 #, kde-format
 msgctxt "@info"
 msgid "Test of %1 case not finished"
 msgstr ""
 
-#: project.cpp:1383
+#: project.cpp:1513
 msgctxt "@info/plain"
 msgid "Test was aborted"
 msgstr ""
 
-#: project.cpp:1384
+#: project.cpp:1514
 msgctxt "@info"
 msgid ""
 "<title>Test was aborted</title> <para>The test was aborted while it was "
 "running, no results available.</para>"
 msgstr ""
 
-#: project.cpp:1402
+#: project.cpp:1532
 msgctxt "@info/plain"
 msgid "Missing sample coordinates"
 msgstr ""
 
-#: project.cpp:1403
+#: project.cpp:1533
 msgctxt "@info"
 msgid ""
 "<title>Missing sample stop coordinates</title> <para>Cannot run script "
@@ -900,12 +900,12 @@ msgid ""
 "one or more <interface>Sample Stop Coordinates</interface></para>"
 msgstr ""
 
-#: project.cpp:1426
+#: project.cpp:1556
 msgctxt "@info/plain"
 msgid "Missing sample stop name"
 msgstr ""
 
-#: project.cpp:1427
+#: project.cpp:1557
 msgctxt "@info"
 msgid ""
 "<title>Missing sample stop name</title> <para>Cannot run the test without "
@@ -913,12 +913,12 @@ msgid ""
 "Stop Names</interface></para>"
 msgstr ""
 
-#: project.cpp:1437
+#: project.cpp:1567
 msgctxt "@info/plain"
 msgid "Missing sample city"
 msgstr ""
 
-#: project.cpp:1438
+#: project.cpp:1568
 msgctxt "@info"
 msgid ""
 "<title>Missing sample city</title> <para>Cannot run the test without sample "
@@ -926,12 +926,12 @@ msgid ""
 "interface></para>"
 msgstr ""
 
-#: project.cpp:1457
+#: project.cpp:1587
 msgctxt "@info/plain"
 msgid "To test journeys at least two sample stop names are needed"
 msgstr ""
 
-#: project.cpp:1458
+#: project.cpp:1588
 msgctxt "@info"
 msgid ""
 "<title>To test journeys at least two sample stop names are needed</title> "
@@ -939,19 +939,19 @@ msgid ""
 "stop name to the <interface>Sample Stop Names</interface></para>"
 msgstr ""
 
-#: project.cpp:1498
+#: project.cpp:1628
 #, kde-format
 msgctxt "@info/plain"
 msgid "Waiting for required test \"%1\""
 msgstr ""
 
-#: project.cpp:1517
+#: project.cpp:1647
 #, kde-format
 msgctxt "@info/plain"
 msgid "Required test \"%1\" was not successful"
 msgstr ""
 
-#: project.cpp:1519
+#: project.cpp:1649
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -959,13 +959,13 @@ msgid ""
 "test, but it was not successful.</para>"
 msgstr ""
 
-#: project.cpp:1548 project.cpp:1591
+#: project.cpp:1678 project.cpp:1721
 #, kde-format
 msgctxt "@info/plain"
 msgid "You need to implement a '%1' script function"
 msgstr ""
 
-#: project.cpp:1549
+#: project.cpp:1679
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -974,18 +974,18 @@ msgid ""
 "the data engine, but that may change.</para>"
 msgstr ""
 
-#: project.cpp:1564
+#: project.cpp:1694
 msgctxt "@info/plain"
 msgid "No results in departure test"
 msgstr ""
 
-#: project.cpp:1571
+#: project.cpp:1701
 #, kde-format
 msgctxt "@info/plain"
 msgid "'%1' script function not implemented"
 msgstr ""
 
-#: project.cpp:1572
+#: project.cpp:1702
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -993,7 +993,7 @@ msgid ""
 "used to load additional data for single departures or arrivals.</para>"
 msgstr ""
 
-#: project.cpp:1592
+#: project.cpp:1722
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1002,13 +1002,13 @@ msgid ""
 "Therefore this function is needed.</para>"
 msgstr ""
 
-#: project.cpp:1599
+#: project.cpp:1729
 #, kde-format
 msgctxt "@info/plain"
 msgid "For journeys, you need to implement a '%1' script function"
 msgstr ""
 
-#: project.cpp:1600
+#: project.cpp:1730
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1017,13 +1017,13 @@ msgid ""
 "plugin.</para>"
 msgstr ""
 
-#: project.cpp:1606
+#: project.cpp:1736
 #, kde-format
 msgctxt "@info/plain"
 msgid "You should implement a '%1' script function"
 msgstr ""
 
-#: project.cpp:1607
+#: project.cpp:1737
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1037,40 +1037,40 @@ msgid ""
 "value, etc.</para>"
 msgstr ""
 
-#: project.cpp:1673
+#: project.cpp:1803
 msgctxt "@info/plain"
 msgid "Script successfully loaded"
 msgstr ""
 
-#: project.cpp:1810
+#: project.cpp:1940
 msgctxt "@info/plain"
 msgid "No GTFS feed URL given"
 msgstr ""
 
-#: project.cpp:1817
+#: project.cpp:1947
 msgctxt "@info/plain"
 msgid "Not used"
 msgstr ""
 
-#: project.cpp:1837
+#: project.cpp:1967
 #, kde-format
 msgctxt "@info/plain"
 msgid "Redirected to: <link>%1</link>"
 msgstr ""
 
-#: project.cpp:1841
+#: project.cpp:1971
 #, kde-format
 msgctxt "@info/plain"
 msgid "Size: %1"
 msgstr ""
 
-#: project.cpp:1845
+#: project.cpp:1975
 #, kde-format
 msgctxt "@info/plain"
 msgid "Modified: %1"
 msgstr ""
 
-#: project.cpp:1951
+#: project.cpp:2081
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1078,39 +1078,39 @@ msgid ""
 "message>"
 msgstr ""
 
-#: project.cpp:2010
+#: project.cpp:2140
 msgctxt "@title:window"
 msgid "Save Project"
 msgstr ""
 
-#: project.cpp:2036
+#: project.cpp:2166
 msgctxt "@info"
 msgid "Project successfully installed locally"
 msgstr ""
 
-#: project.cpp:2042
+#: project.cpp:2172
 #, kde-format
 msgctxt "@info"
 msgid "Project could not be installed locally as <filename>%1</filename>"
 msgstr ""
 
-#: project.cpp:2052 project.cpp:2058
+#: project.cpp:2182 project.cpp:2188
 #, kde-format
 msgctxt "@info"
 msgid "Project could not be uninstalled locally, file <filename>%1</filename>"
 msgstr ""
 
-#: project.cpp:2064
+#: project.cpp:2194
 msgctxt "@info"
 msgid "Project successfully uninstalled locally"
 msgstr ""
 
-#: project.cpp:2075
+#: project.cpp:2205
 msgctxt "@info"
 msgid "Project is not installed locally"
 msgstr ""
 
-#: project.cpp:2116
+#: project.cpp:2246
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1118,7 +1118,7 @@ msgid ""
 "filename>: %2 <message>%3</message>"
 msgstr ""
 
-#: project.cpp:2119
+#: project.cpp:2249
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1126,40 +1126,40 @@ msgid ""
 "filename>: %2 <message>%3</message>"
 msgstr ""
 
-#: project.cpp:2130
+#: project.cpp:2260
 msgctxt "@info"
 msgid ""
 "Could not find the authentication action. If you just installed "
 "TimetableMate, you might need to restart D-Bus."
 msgstr ""
 
-#: project.cpp:2136
+#: project.cpp:2266
 msgctxt "@info"
 msgid "The action is currently being performed. Please try again later."
 msgstr ""
 
-#: project.cpp:2141
+#: project.cpp:2271
 #, kde-format
 msgctxt "@info"
 msgid "Unable to authenticate the action: %1 <message>%2</message>"
 msgstr ""
 
-#: project.cpp:2149
+#: project.cpp:2279
 msgctxt "@info"
 msgid "Service provider plugin successfully installed globally"
 msgstr ""
 
-#: project.cpp:2155
+#: project.cpp:2285
 msgctxt "@info"
 msgid "Service provider plugin successfully uninstalled globally"
 msgstr ""
 
-#: project.cpp:2213
+#: project.cpp:2343
 msgctxt "@info/plain"
 msgid "Feature function needed"
 msgstr ""
 
-#: project.cpp:2214
+#: project.cpp:2344
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1168,13 +1168,13 @@ msgid ""
 "least these features for this test to run: %1.</para>"
 msgstr ""
 
-#: project.cpp:2239
+#: project.cpp:2369
 #, kde-format
 msgctxt "@info/plain"
 msgid "Feature \"%1\" not supported"
 msgstr ""
 
-#: project.cpp:2240
+#: project.cpp:2370
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1182,34 +1182,34 @@ msgid ""
 "icode> function did not return <icode>PublicTransport.%1</icode>.</para>"
 msgstr ""
 
-#: project.cpp:2493
+#: project.cpp:2623
 #, kde-format
 msgctxt "@info %2 is the script file name"
 msgid "<emphasis strong='1'>Line %1 (%2):</emphasis> <message>%3</message>"
 msgstr ""
 
-#: project.cpp:2498
+#: project.cpp:2628
 #, kde-format
 msgctxt "@info"
 msgid "<emphasis strong='1'>Line %1:</emphasis> <message>%2</message>"
 msgstr ""
 
-#: project.cpp:2515
+#: project.cpp:2645
 msgctxt "@info/plain"
 msgid "Warning"
 msgstr ""
 
-#: project.cpp:2519
+#: project.cpp:2649
 msgctxt "@info/plain"
 msgid "Error"
 msgstr ""
 
-#: project.cpp:2523
+#: project.cpp:2653
 msgctxt "@info/plain"
 msgid "Information"
 msgstr ""
 
-#: project.cpp:2533
+#: project.cpp:2663
 #, kde-format
 msgctxt ""
 "@info %1 is the translation of 'Error'/'Warning'/'Information', %3 is the "
@@ -1218,33 +1218,33 @@ msgid ""
 "<emphasis strong='1'>%1 in line %2 (%3):</emphasis> <message>%4</message>"
 msgstr ""
 
-#: project.cpp:2538
+#: project.cpp:2668
 #, kde-format
 msgctxt "@info %1 is the translation of 'Error'/'Warning'/'Information'"
 msgid "<emphasis strong='1'>%1 in line %2:</emphasis> <message>%3</message>"
 msgstr ""
 
-#: project.cpp:2914
+#: project.cpp:3044
 msgctxt "@action"
 msgid "Run"
 msgstr ""
 
-#: project.cpp:2939
+#: project.cpp:3069
 msgctxt "@action"
 msgid "GTFS"
 msgstr ""
 
-#: project.cpp:2957
+#: project.cpp:3087
 msgctxt "@action"
 msgid "Test"
 msgstr ""
 
-#: project.cpp:2983
+#: project.cpp:3113
 msgctxt "@action"
 msgid "Project"
 msgstr ""
 
-#: project.cpp:3276
+#: project.cpp:3406
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Open &Page"
@@ -1252,17 +1252,17 @@ msgctxt "@action"
 msgid "Save Project"
 msgstr "&Siet opmaken"
 
-#: project.cpp:3278
+#: project.cpp:3408
 msgctxt "@action"
 msgid "Save Project As..."
 msgstr ""
 
-#: project.cpp:3280
+#: project.cpp:3410
 msgctxt "@action"
 msgid "&Install"
 msgstr "&Installeren"
 
-#: project.cpp:3282
+#: project.cpp:3412
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "&Install"
@@ -1270,17 +1270,17 @@ msgctxt "@action"
 msgid "&Uninstall"
 msgstr "&Installeren"
 
-#: project.cpp:3284
+#: project.cpp:3414
 msgctxt "@action"
 msgid "Install &Globally"
 msgstr ""
 
-#: project.cpp:3286
+#: project.cpp:3416
 msgctxt "@action"
 msgid "Uninstall &Globally"
 msgstr ""
 
-#: project.cpp:3288
+#: project.cpp:3418
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Close Document"
@@ -1288,22 +1288,22 @@ msgctxt "@action"
 msgid "Close Project"
 msgstr "Dokment tomaken"
 
-#: project.cpp:3290
+#: project.cpp:3420
 msgctxt "@action"
 msgid "Project Settings..."
 msgstr ""
 
-#: project.cpp:3292
+#: project.cpp:3422
 msgctxt "@action"
 msgid "Show &Dashboard"
 msgstr ""
 
-#: project.cpp:3294
+#: project.cpp:3424
 msgctxt "@action"
 msgid "Show &Web Page"
 msgstr ""
 
-#: project.cpp:3297
+#: project.cpp:3427
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "&Run Script"
@@ -1311,7 +1311,7 @@ msgctxt "@action"
 msgid "Open &Script"
 msgstr "Skript &utföhren"
 
-#: project.cpp:3300
+#: project.cpp:3430
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "&Script"
@@ -1319,33 +1319,33 @@ msgctxt "@action"
 msgid "Open External Script..."
 msgstr "&Skript"
 
-#: project.cpp:3301
+#: project.cpp:3431
 #, kde-format
 msgctxt "@action"
 msgid "Open External Script <filename>%1</filename>"
 msgstr ""
 
-#: project.cpp:3307
+#: project.cpp:3437
 msgctxt "@action"
 msgid "Open GTFS &Database"
 msgstr ""
 
-#: project.cpp:3309
+#: project.cpp:3439
 msgctxt "@action"
 msgid "&Import GTFS Feed"
 msgstr ""
 
-#: project.cpp:3311
+#: project.cpp:3441
 msgctxt "@action"
 msgid "&Update GTFS Database"
 msgstr ""
 
-#: project.cpp:3313
+#: project.cpp:3443
 msgctxt "@action"
 msgid "&Delete GTFS Database"
 msgstr ""
 
-#: project.cpp:3316
+#: project.cpp:3446
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Open &Page"
@@ -1353,366 +1353,366 @@ msgctxt "@action"
 msgid "Open Project &Source"
 msgstr "&Siet opmaken"
 
-#: project.cpp:3318
+#: project.cpp:3448
 msgctxt "@action"
 msgid "Show &Plasma Preview"
 msgstr ""
 
-#: project.cpp:3321
+#: project.cpp:3451
 msgctxt "@action"
 msgid "&Run All Tests"
 msgstr ""
 
-#: project.cpp:3323
+#: project.cpp:3453
 msgctxt "@action"
 msgid "&Abort Running Tests"
 msgstr ""
 
-#: project.cpp:3325
+#: project.cpp:3455
 msgctxt "@action"
 msgid "&Clear All Test Results"
 msgstr ""
 
-#: project.cpp:3332
+#: project.cpp:3462
 #, kde-format
 msgctxt "@action"
 msgid "Run %1"
 msgstr ""
 
-#: project.cpp:3335
+#: project.cpp:3465
 msgctxt "@action"
 msgid "&Run Complete Test Case"
 msgstr ""
 
-#: project.cpp:3347
+#: project.cpp:3477
 msgctxt "@action"
 msgid "Set as Active Project"
 msgstr ""
 
-#: project.cpp:3351
+#: project.cpp:3481
 msgctxt "@action"
 msgid "Step &Into"
 msgstr ""
 
-#: project.cpp:3353
+#: project.cpp:3483
 msgctxt "@action"
 msgid "Step &Over"
 msgstr ""
 
-#: project.cpp:3355
+#: project.cpp:3485
 msgctxt "@action"
 msgid "Step Ou&t"
 msgstr ""
 
-#: project.cpp:3357
+#: project.cpp:3487
 msgctxt "@action"
 msgid "&Interrupt"
 msgstr ""
 
-#: project.cpp:3359
+#: project.cpp:3489
 msgctxt "@action"
 msgid "Run to &Cursor"
 msgstr ""
 
-#: project.cpp:3361
+#: project.cpp:3491
 msgctxt "@action"
 msgid "&Continue"
 msgstr ""
 
-#: project.cpp:3363
+#: project.cpp:3493
 msgctxt "@action"
 msgid "&Abort Debugger"
 msgstr ""
 
-#: project.cpp:3365
+#: project.cpp:3495
 msgctxt "@action"
 msgid "Toggle &Breakpoint"
 msgstr ""
 
-#: project.cpp:3367
+#: project.cpp:3497
 msgctxt "@action"
 msgid "&Remove all Breakpoints"
 msgstr ""
 
-#: project.cpp:3370
+#: project.cpp:3500
 msgctxt "@action"
 msgid "&Run"
 msgstr ""
 
-#: project.cpp:3372
+#: project.cpp:3502
 msgctxt "@action"
 msgid "Run get&Timetable()"
 msgstr ""
 
-#: project.cpp:3374
+#: project.cpp:3504
 msgctxt "@action"
 msgid "Run get&StopSuggestions()"
 msgstr ""
 
-#: project.cpp:3376
+#: project.cpp:3506
 msgctxt "@action"
 msgid "Run get&StopSuggestions(), Geo Position"
 msgstr ""
 
-#: project.cpp:3378
+#: project.cpp:3508
 msgctxt "@action"
 msgid "Run get&Journeys()"
 msgstr ""
 
-#: project.cpp:3381
+#: project.cpp:3511
 msgctxt "@action"
 msgid "&Debug"
 msgstr ""
 
-#: project.cpp:3383
+#: project.cpp:3513
 msgctxt "@action"
 msgid "Debug get&Timetable()"
 msgstr ""
 
-#: project.cpp:3385
+#: project.cpp:3515
 msgctxt "@action"
 msgid "Debug get&StopSuggestions()"
 msgstr ""
 
-#: project.cpp:3387
+#: project.cpp:3517
 msgctxt "@action"
 msgid "Debug get&StopSuggestions(), Geo Position"
 msgstr ""
 
-#: project.cpp:3389
+#: project.cpp:3519
 msgctxt "@action"
 msgid "Debug get&Journeys()"
 msgstr ""
 
-#: project.cpp:3406
+#: project.cpp:3536
 msgctxt "@info:tooltip"
 msgid "Save changes in the project"
 msgstr ""
 
-#: project.cpp:3412
+#: project.cpp:3542
 msgctxt "@info:tooltip"
 msgid "Save changes in the project under a new file name"
 msgstr ""
 
-#: project.cpp:3416
+#: project.cpp:3546
 msgctxt "@info:tooltip"
 msgid "Install the project locally"
 msgstr ""
 
-#: project.cpp:3421
+#: project.cpp:3551
 msgctxt "@info:tooltip"
 msgid "Uninstall a locally installed version of the project"
 msgstr ""
 
-#: project.cpp:3425
+#: project.cpp:3555
 msgctxt "@info:tooltip"
 msgid "Install the project globally"
 msgstr ""
 
-#: project.cpp:3430
+#: project.cpp:3560
 msgctxt "@info:tooltip"
 msgid "Uninstall a globally installed version of the project"
 msgstr ""
 
-#: project.cpp:3434
+#: project.cpp:3564
 msgctxt "@info:tooltip"
 msgid "Close this project"
 msgstr ""
 
-#: project.cpp:3439
+#: project.cpp:3569
 msgctxt "@info:tooltip"
 msgid "Opens a dialog to modify the projects settings"
 msgstr ""
 
-#: project.cpp:3443
+#: project.cpp:3573
 msgctxt "@info:tooltip"
 msgid "Shows the dashboard tab of the project."
 msgstr ""
 
-#: project.cpp:3448
+#: project.cpp:3578
 msgctxt "@info:tooltip"
 msgid ""
 "Opens the <emphasis>home page</emphasis> of the service provider in a tab."
 msgstr ""
 
-#: project.cpp:3453
+#: project.cpp:3583
 msgctxt "@info:tooltip"
 msgid "Opens the main <emphasis>script</emphasis> in a tab."
 msgstr ""
 
-#: project.cpp:3457
+#: project.cpp:3587
 msgctxt "@info:tooltip"
 msgid "Opens an external <emphasis>script</emphasis> in a tab."
 msgstr ""
 
-#: project.cpp:3463
+#: project.cpp:3593
 msgctxt "@info:tooltip"
 msgid "Opens the <emphasis>GTFS database</emphasis> in a tab."
 msgstr ""
 
-#: project.cpp:3467
+#: project.cpp:3597
 msgctxt "@info:tooltip"
 msgid "Downloads the GTFS feed and imports it into the GTFS database."
 msgstr ""
 
-#: project.cpp:3471
+#: project.cpp:3601
 msgctxt "@info:tooltip"
 msgid ""
 "Updates the GTFS database by downloading and importing a new version of the "
 "GTFS feed."
 msgstr ""
 
-#: project.cpp:3476
+#: project.cpp:3606
 msgctxt "@info:tooltip"
 msgid "Deletes the GTFS database."
 msgstr ""
 
-#: project.cpp:3481
+#: project.cpp:3611
 msgctxt "@info:tooltip"
 msgid "Opens the <emphasis>project source</emphasis> document in a tab."
 msgstr ""
 
-#: project.cpp:3486
+#: project.cpp:3616
 msgctxt "@info:tooltip"
 msgid ""
 "Opens the project in a PublicTransport applet in a <emphasis>Plasma preview</"
 "emphasis> tab."
 msgstr ""
 
-#: project.cpp:3493
+#: project.cpp:3623
 msgctxt "@info:tooltip"
 msgid ""
 "Runs all tests for the active project, eg. syntax errors, correct results."
 msgstr ""
 
-#: project.cpp:3497
+#: project.cpp:3627
 msgctxt "@info:tooltip"
 msgid "Aborts all currently running tests."
 msgstr ""
 
-#: project.cpp:3501
+#: project.cpp:3631
 msgctxt "@info:tooltip"
 msgid "Clears all results of a previous test run."
 msgstr ""
 
-#: project.cpp:3509
+#: project.cpp:3639
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Run %1"
 msgstr ""
 
-#: project.cpp:3520
+#: project.cpp:3650
 msgctxt "@action:inmenu"
 msgid "&Run Complete Test Case"
 msgstr ""
 
-#: project.cpp:3548
+#: project.cpp:3678
 msgctxt "@info:tooltip"
 msgid "Use this project as the active project"
 msgstr ""
 
-#: project.cpp:3557
+#: project.cpp:3687
 msgctxt "@info:tooltip"
 msgid "Continue script execution until the next statement"
 msgstr ""
 
-#: project.cpp:3564
+#: project.cpp:3694
 msgctxt "@info:tooltip"
 msgid "Continue script execution until the next statement in the same context."
 msgstr ""
 
-#: project.cpp:3571
+#: project.cpp:3701
 msgctxt "@info:tooltip"
 msgid "Continue script execution until the current function gets left."
 msgstr ""
 
-#: project.cpp:3577
+#: project.cpp:3707
 msgctxt "@info:tooltip"
 msgid "Interrupt script execution."
 msgstr ""
 
-#: project.cpp:3585
+#: project.cpp:3715
 msgctxt "@info:tooltip"
 msgid "Continue script execution until the current cursor position is reached"
 msgstr ""
 
-#: project.cpp:3592
+#: project.cpp:3722
 msgctxt "@info:tooltip"
 msgid ""
 "Continue script execution, only interrupt on breakpoints or uncaught "
 "exceptions."
 msgstr ""
 
-#: project.cpp:3598
+#: project.cpp:3728
 msgctxt "@info:tooltip"
 msgid "Abort script execution"
 msgstr ""
 
-#: project.cpp:3604
+#: project.cpp:3734
 msgctxt "@info:tooltip"
 msgid "Toggle breakpoint for the current line"
 msgstr ""
 
-#: project.cpp:3609
+#: project.cpp:3739
 msgctxt "@info:tooltip"
 msgid "Removes all breakpoints"
 msgstr ""
 
-#: project.cpp:3615
+#: project.cpp:3745
 msgctxt "@info:tooltip"
 msgid "Runs a function of the script."
 msgstr ""
 
-#: project.cpp:3625
+#: project.cpp:3755
 msgctxt "@info:tooltip"
 msgid "Runs the script function 'getTimetable()'"
 msgstr ""
 
-#: project.cpp:3630
+#: project.cpp:3760
 msgctxt "@info:tooltip"
 msgid "Runs the script function 'getStopSuggestions()'"
 msgstr ""
 
-#: project.cpp:3635
+#: project.cpp:3765
 msgctxt "@info:tooltip"
 msgid ""
 "Runs the script function 'getStopSuggestions()' with a geo position as "
 "argument"
 msgstr ""
 
-#: project.cpp:3641
+#: project.cpp:3771
 msgctxt "@info:tooltip"
 msgid "Runs the script function 'getJourneys()'"
 msgstr ""
 
-#: project.cpp:3647
+#: project.cpp:3777
 msgctxt "@info:tooltip"
 msgid "Runs a function of the script in a debugger."
 msgstr ""
 
-#: project.cpp:3657
+#: project.cpp:3787
 msgctxt "@info:tooltip"
 msgid "Runs the script function 'getTimetable()' in a debugger"
 msgstr ""
 
-#: project.cpp:3663
+#: project.cpp:3793
 msgctxt "@info:tooltip"
 msgid "Runs the script function 'getStopSuggestions()' in a debugger"
 msgstr ""
 
-#: project.cpp:3669
+#: project.cpp:3799
 msgctxt "@info:tooltip"
 msgid ""
 "Runs the script function 'getStopSuggestions()' in a debugger with a geo "
 "position as argument"
 msgstr ""
 
-#: project.cpp:3675
+#: project.cpp:3805
 msgctxt "@info:tooltip"
 msgid "Runs the script function 'getJourneys()' in a debugger"
 msgstr ""
 
-#: project.cpp:4175
+#: project.cpp:4305
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1722,79 +1722,79 @@ msgid ""
 "get freed.</para>"
 msgstr ""
 
-#: project.cpp:4441
+#: project.cpp:4571
 #, kde-format
 msgctxt "@info"
 msgid "Test \"%1\" was aborted for %2."
 msgstr ""
 
-#: project.cpp:4446
+#: project.cpp:4576
 #, kde-format
 msgctxt "@info"
 msgid "Test \"%1\" finished with warnings for %2."
 msgstr ""
 
-#: project.cpp:4450
+#: project.cpp:4580
 #, kde-format
 msgctxt "@info"
 msgid "Test \"%1\" was successful for %2."
 msgstr ""
 
-#: project.cpp:4455
+#: project.cpp:4585
 #, kde-format
 msgctxt "@info"
 msgid "Test \"%1\" failed for %2."
 msgstr ""
 
-#: project.cpp:4476
+#: project.cpp:4606
 #, kde-format
 msgctxt "@info"
 msgid "<para><emphasis>Begin child job:</emphasis> %1 (%2)</para>"
 msgstr ""
 
-#: project.cpp:4480
+#: project.cpp:4610
 #, kde-format
 msgctxt "@info"
 msgid "<para><emphasis strong='1'>Begin:</emphasis> %1 (%2)</para>"
 msgstr ""
 
-#: project.cpp:4511
+#: project.cpp:4641
 #, kde-format
 msgctxt "@info"
 msgid "<para><emphasis>End child job:</emphasis> %1, result: %2 (%3)</para>"
 msgstr ""
 
-#: project.cpp:4515
+#: project.cpp:4645
 #, kde-format
 msgctxt "@info"
 msgid "<para><emphasis strong='1'>End:</emphasis> %1, result: %2 (%3)</para>"
 msgstr ""
 
-#: project.cpp:4524
+#: project.cpp:4654
 #, kde-format
 msgctxt "@info"
 msgid "Error: <message>%1</message>"
 msgstr ""
 
-#: project.cpp:4526
+#: project.cpp:4656
 #, kde-format
 msgctxt "@info"
 msgid "Error: <message>%1</message><nl />Backtrace: <message>%2</message>"
 msgstr ""
 
-#: project.cpp:4550
+#: project.cpp:4680
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Script execution has finished without results and returned <icode>%1</icode>."
 msgstr ""
 
-#: project.cpp:4554
+#: project.cpp:4684
 msgctxt "@info"
 msgid "Script execution has finished without results."
 msgstr ""
 
-#: project.cpp:4559
+#: project.cpp:4689
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1804,7 +1804,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: project.cpp:4565
+#: project.cpp:4695
 #, kde-format
 msgctxt "@info"
 msgid "Script execution has finished with %1 result."
@@ -1812,140 +1812,140 @@ msgid_plural "Script execution has finished with %1 results."
 msgstr[0] ""
 msgstr[1] ""
 
-#: project.cpp:4693
+#: project.cpp:4823
 msgctxt "@info/plain"
 msgid "Departures"
 msgstr "Affohrten"
 
-#: project.cpp:4694
+#: project.cpp:4824
 msgctxt "@info/plain"
 msgid "Arrivals"
 msgstr ""
 
-#: project.cpp:4697 project.cpp:4744 project.cpp:4826
+#: project.cpp:4827 project.cpp:4874 project.cpp:4956
 msgctxt "@info"
 msgid "City:"
 msgstr "Oort:"
 
-#: project.cpp:4699
+#: project.cpp:4829
 msgctxt "@info"
 msgid "Stop Name:"
 msgstr ""
 
-#: project.cpp:4700
+#: project.cpp:4830
 msgctxt "@info"
 msgid "Data Type:"
 msgstr "Datentyp:"
 
-#: project.cpp:4701 project.cpp:4830
+#: project.cpp:4831 project.cpp:4960
 msgctxt "@info"
 msgid "Time:"
 msgstr "Tiet:"
 
-#: project.cpp:4746
+#: project.cpp:4876
 msgctxt "@info"
 msgid "Partial Stop Name:"
 msgstr ""
 
-#: project.cpp:4781
+#: project.cpp:4911
 msgctxt "@info"
 msgid "Longitude:"
 msgstr ""
 
-#: project.cpp:4782
+#: project.cpp:4912
 msgctxt "@info"
 msgid "Latitude:"
 msgstr ""
 
-#: project.cpp:4783
+#: project.cpp:4913
 msgctxt "@info"
 msgid "Distance:"
 msgstr ""
 
-#: project.cpp:4802
+#: project.cpp:4932
 msgctxt "@info"
 msgid "Cannot use Marble widgets for latitude/longitude input."
 msgstr ""
 
-#: project.cpp:4822
+#: project.cpp:4952
 msgctxt "@info/plain"
 msgid "Departing at Given Time"
 msgstr ""
 
-#: project.cpp:4823
+#: project.cpp:4953
 msgctxt "@info/plain"
 msgid "Arriving at Given Time"
 msgstr ""
 
-#: project.cpp:4828
+#: project.cpp:4958
 msgctxt "@info"
 msgid "Start Stop Name:"
 msgstr ""
 
-#: project.cpp:4829
+#: project.cpp:4959
 msgctxt "@info"
 msgid "Target Stop Name:"
 msgstr ""
 
-#: project.cpp:4831
+#: project.cpp:4961
 msgctxt "@info"
 msgid "Meaning of Time:"
 msgstr ""
 
-#: project.cpp:4961
+#: project.cpp:5091
 msgctxt "@info Shown in project output, %1: Current time"
 msgid "<emphasis>Statistics:</emphasis>"
 msgstr ""
 
-#: project.cpp:4964
+#: project.cpp:5094
 #, kde-format
 msgctxt "@info %1 is a formatted duration string"
 msgid "- %1 spent for script execution"
 msgstr ""
 
-#: project.cpp:4969
+#: project.cpp:5099
 #, kde-format
 msgctxt "@info %1 is a formatted duration string"
 msgid "- %1 interrupted"
 msgstr ""
 
-#: project.cpp:4975
+#: project.cpp:5105
 #, kde-format
 msgctxt "@info %1 is a formatted duration string"
 msgid "- %1 spent waiting for signals (eg. asynchronous network requests)"
 msgstr ""
 
-#: project.cpp:4981
+#: project.cpp:5111
 #, kde-format
 msgctxt "@info %1 is a formatted duration string"
 msgid "- %1 spent for synchronous downloads"
 msgstr ""
 
-#: project.cpp:4990
+#: project.cpp:5120
 #, kde-format
 msgctxt "@info %1 is a formatted byte size string"
 msgid "- %1 downloaded in asynchronous requests"
 msgstr ""
 
-#: project.cpp:4994
+#: project.cpp:5124
 #, kde-format
 msgctxt "@info %1 is a formatted byte size string"
 msgid "- %1 downloaded in synchronous requests"
 msgstr ""
 
-#: project.cpp:5000
+#: project.cpp:5130
 #, kde-format
 msgctxt "@info %1 is a formatted byte size string"
 msgid "%1 in asynchronous requests"
 msgstr ""
 
-#: project.cpp:5008
+#: project.cpp:5138
 #, kde-format
 msgctxt "@info 1 is a formatted byte size string"
 msgid "%1 in synchronous requests"
 msgstr ""
 
-#: project.cpp:5013
+#: project.cpp:5143
 #, kde-format
 msgctxt ""
 "@info %1 is a formatted byte size string, %2 a translated details string "
@@ -1953,24 +1953,24 @@ msgctxt ""
 msgid "- %1 downloaded (%2)"
 msgstr ""
 
-#: project.cpp:5030
+#: project.cpp:5160
 msgctxt "@info"
 msgid "(Debugger aborted)"
 msgstr ""
 
-#: project.cpp:5036
+#: project.cpp:5166
 #, kde-format
 msgctxt "@info"
 msgid "Waiting for a signal (%1)"
 msgstr ""
 
-#: project.cpp:5042
+#: project.cpp:5172
 #, kde-format
 msgctxt "@info"
 msgid "Signal received, waiting time: %1 (%2)"
 msgstr ""
 
-#: project.cpp:5053
+#: project.cpp:5183
 #, kde-format
 msgctxt "@info For the script output dock"
 msgid ""
@@ -1978,7 +1978,7 @@ msgid ""
 "message>"
 msgstr ""
 
-#: project.cpp:5059
+#: project.cpp:5189
 #, kde-format
 msgctxt "@info For the script output dock"
 msgid ""
@@ -1986,74 +1986,82 @@ msgid ""
 "%2:</emphasis> <message>%3</message>"
 msgstr ""
 
-#: project.cpp:5260
+#: project.cpp:5391
 msgctxt "@info"
 msgid "Cannot create Plasma preview"
 msgstr ""
 
-#: project.cpp:5284
+#: project.cpp:5415
 msgctxt "@info"
 msgid "Cannot create web widget"
 msgstr ""
 
-#: project.cpp:5305
+#: project.cpp:5436
 msgctxt "@info"
 msgid "Cannot create dashboard widget"
 msgstr ""
 
-#: project.cpp:5327 project.cpp:5406 project.cpp:5450
+#: project.cpp:5458 project.cpp:5537 project.cpp:5581
 msgctxt "@info"
 msgid "Service katepart.desktop not found"
 msgstr ""
 
-#: project.cpp:5371
+#: project.cpp:5502
 msgctxt "@info"
 msgid "Could not create GTFS database tab"
 msgstr ""
 
-#: project.cpp:5454
+#: project.cpp:5585
 #, kde-format
 msgctxt "@info"
 msgid "The external script file <filename>%1</filename> could not be found."
 msgstr ""
 
-#: project.cpp:5460
+#: project.cpp:5591
 #, kde-format
 msgctxt "@info"
 msgid "The external script file <filename>%1</filename> could not be opened."
 msgstr ""
 
-#: project.cpp:5758
+#: project.cpp:5889
+#, fuzzy
+#| msgctxt "@info Label for the description of a changelog entry"
+#| msgid "Description:"
 msgctxt "@info/plain"
-msgid "Complete JavaScript Template"
+msgid "JavaScript Template"
+msgstr "Beschrieven:"
+
+#: project.cpp:5890
+msgctxt "@info/plain"
+msgid "JavaScript HAFAS Template"
 msgstr ""
 
-#: project.cpp:5759
+#: project.cpp:5891
 msgctxt "@info/plain"
 msgid "Simple Ruby Template"
 msgstr ""
 
-#: project.cpp:5760
+#: project.cpp:5892
 msgctxt "@info/plain"
 msgid "Simple Python Template"
 msgstr ""
 
-#: project.cpp:5762
+#: project.cpp:5894
 msgctxt "@title:window"
 msgid "Script Template"
 msgstr ""
 
-#: project.cpp:5763
+#: project.cpp:5895
 msgctxt "@info"
 msgid "Choose a template for the new script"
 msgstr ""
 
-#: project.cpp:5915
+#: project.cpp:6049
 msgctxt "@info:tooltip"
 msgid "Project not saved"
 msgstr ""
 
-#: project.cpp:5921
+#: project.cpp:6055
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -2061,7 +2069,7 @@ msgid ""
 "filename>"
 msgstr ""
 
-#: project.cpp:5924
+#: project.cpp:6058
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -2069,7 +2077,7 @@ msgid ""
 "filename>"
 msgstr ""
 
-#: project.cpp:5928
+#: project.cpp:6062
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Project saved at <filename>%1</filename>"
@@ -2172,97 +2180,97 @@ msgctxt "@info"
 msgid "Replace with:"
 msgstr ""
 
-#: projectsettingsdialog.cpp:232
+#: projectsettingsdialog.cpp:230
 msgctxt "@item:listbox"
 msgid "Unknown"
 msgstr ""
 
-#: projectsettingsdialog.cpp:234
+#: projectsettingsdialog.cpp:232
 msgctxt "@item:listbox"
 msgid "Tram"
 msgstr ""
 
-#: projectsettingsdialog.cpp:236
+#: projectsettingsdialog.cpp:234
 msgctxt "@item:listbox"
 msgid "Bus"
 msgstr ""
 
-#: projectsettingsdialog.cpp:238
+#: projectsettingsdialog.cpp:236
 msgctxt "@item:listbox"
 msgid "Subway"
 msgstr ""
 
-#: projectsettingsdialog.cpp:240
+#: projectsettingsdialog.cpp:238
 msgctxt "@item:listbox"
 msgid "Interurban Train"
 msgstr ""
 
-#: projectsettingsdialog.cpp:242
+#: projectsettingsdialog.cpp:240
 msgctxt "@item:listbox"
 msgid "Metro"
 msgstr ""
 
-#: projectsettingsdialog.cpp:244
+#: projectsettingsdialog.cpp:242
 msgctxt "@item:listbox"
 msgid "Trolley Bus"
 msgstr ""
 
-#: projectsettingsdialog.cpp:246
+#: projectsettingsdialog.cpp:244
 msgctxt "@item:listbox"
 msgid "Regional Train"
 msgstr ""
 
-#: projectsettingsdialog.cpp:248
+#: projectsettingsdialog.cpp:246
 msgctxt "@item:listbox"
 msgid "Regional Express Train"
 msgstr ""
 
-#: projectsettingsdialog.cpp:251
+#: projectsettingsdialog.cpp:249
 msgctxt "@item:listbox"
 msgid "Interregional Train"
 msgstr ""
 
-#: projectsettingsdialog.cpp:254
+#: projectsettingsdialog.cpp:252
 msgctxt "@item:listbox"
 msgid "Intercity/Eurocity Train"
 msgstr ""
 
-#: projectsettingsdialog.cpp:257
+#: projectsettingsdialog.cpp:255
 msgctxt "@item:listbox"
 msgid "Intercity Express Train"
 msgstr ""
 
-#: projectsettingsdialog.cpp:260
+#: projectsettingsdialog.cpp:258
 msgctxt "@item:listbox"
 msgid "Ferry"
 msgstr ""
 
-#: projectsettingsdialog.cpp:262
+#: projectsettingsdialog.cpp:260
 msgctxt "@item:listbox"
 msgid "Ship"
 msgstr ""
 
-#: projectsettingsdialog.cpp:264
+#: projectsettingsdialog.cpp:262
 msgctxt "@item:listbox"
 msgid "Plane"
 msgstr ""
 
-#: projectsettingsdialog.cpp:271
+#: projectsettingsdialog.cpp:269
 msgctxt "@info"
 msgid "Sample &Longitude:"
 msgstr ""
 
-#: projectsettingsdialog.cpp:272
+#: projectsettingsdialog.cpp:270
 msgctxt "@info"
 msgid "Sample &Latitude:"
 msgstr ""
 
-#: projectsettingsdialog.cpp:400
+#: projectsettingsdialog.cpp:395
 msgctxt "@info"
 msgid "All settings are valid"
 msgstr ""
 
-#: projectsettingsdialog.cpp:657
+#: projectsettingsdialog.cpp:662
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -2270,14 +2278,14 @@ msgid ""
 "version. Do you want to update the project version to %1?"
 msgstr ""
 
-#: projectsettingsdialog.cpp:763 projectsettingsdialog.cpp:828
+#: projectsettingsdialog.cpp:768 projectsettingsdialog.cpp:833
 msgctxt "@info/plain"
 msgid ""
 "Please save the XML file first. The script file needs to be in the same "
 "folder."
 msgstr ""
 
-#: projectsettingsdialog.cpp:779
+#: projectsettingsdialog.cpp:784
 #, kde-format
 msgctxt "@info/plain"
 msgid ""
@@ -2285,48 +2293,60 @@ msgid ""
 "overwrite it or open and use it as script file?"
 msgstr ""
 
-#: projectsettingsdialog.cpp:781
+#: projectsettingsdialog.cpp:786
 msgctxt "@title:window"
 msgid "File Already Exists"
 msgstr ""
 
-#: projectsettingsdialog.cpp:793
+#: projectsettingsdialog.cpp:798
 #, kde-format
 msgctxt "@info/plain"
 msgid ""
 "A new script file with the name <filename>%1</filename> could not be created."
 msgstr ""
 
-#: projectsettingsdialog.cpp:801
+#: projectsettingsdialog.cpp:806
 msgctxt "@title:window"
 msgid "Choose Script Type"
 msgstr ""
 
-#: projectsettingsdialog.cpp:801
+#: projectsettingsdialog.cpp:806
 msgctxt "@info"
 msgid "Script Type"
 msgstr ""
 
-#: projectsettingsdialog.cpp:855
+#: projectsettingsdialog.cpp:860
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr ""
 
-#: projectsettingsdialog.cpp:856
+#: projectsettingsdialog.cpp:861
 msgctxt "@info"
 msgid "Script File for Parsing Documents"
 msgstr ""
 
-#: projectsettingsdialog.cpp:949
+#: projectsettingsdialog.cpp:894
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<title>Invalid Provider Plugin Format Version</title><para>The provider "
+"plugin format version has been set to <emphasize strong='1'>1.1</emphasize>, "
+"because the specified version <emphasize strong='1'>%1</emphasize> is not "
+"supported.</para><para>Please make sure that the plugin complies with that "
+"version and update it if neccessary.</para><para><note>You can cancel the "
+"settings dialog to not change anything.</note></para>"
+msgstr ""
+
+#: projectsettingsdialog.cpp:977
 msgid "Settings changed"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:132
+#: serviceproviderdatatester.cpp:137
 msgctxt "@info/plain"
 msgid "You need to specify a name for your project"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:136
+#: serviceproviderdatatester.cpp:141
 msgctxt "@info"
 msgid ""
 "<title>You need to specify a name for your project in the project settings</"
@@ -2334,12 +2354,12 @@ msgid ""
 "para>"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:154
+#: serviceproviderdatatester.cpp:159
 msgctxt "@info/plain"
 msgid "You should specify a version of your project"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:157
+#: serviceproviderdatatester.cpp:162
 msgctxt "@info"
 msgid ""
 "<title>Project Version Missing</title><para>This helps to distinguish "
@@ -2349,35 +2369,34 @@ msgid ""
 "</para>"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:172 serviceproviderdatatester.cpp:210
+#: serviceproviderdatatester.cpp:177 serviceproviderdatatester.cpp:216
 msgctxt "@info/plain"
 msgid "The version string is invalid"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:175 serviceproviderdatatester.cpp:213
+#: serviceproviderdatatester.cpp:180 serviceproviderdatatester.cpp:219
 msgctxt "@info"
 msgid "<title>The version string is invalid</title>"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:192
+#: serviceproviderdatatester.cpp:199
 msgctxt "@info/plain"
-msgid "The PublicTransport data engine currently only supports version '1.0'"
+msgid "Only provider plugin format version 1.1 is currently supported."
 msgstr ""
 
-#: serviceproviderdatatester.cpp:197
+#: serviceproviderdatatester.cpp:203
 msgctxt "@info"
 msgid ""
-"<title>The PublicTransport data engine currently only supports version "
-"'1.0'</title><para>Specify version '1.0' as <interface>File Type Version</"
-"interface> in the project settings.</para>"
+"<title>Unsupported Plugin Format Version</title><para>The only currently "
+"supported provider plugin format version is 1.1.</para>"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:230
+#: serviceproviderdatatester.cpp:236
 msgctxt "@info/plain"
 msgid "You should provide your email address as author of the project"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:235
+#: serviceproviderdatatester.cpp:241
 msgctxt "@info"
 msgid ""
 "<title>You should provide your email address as author of the project</"
@@ -2387,22 +2406,22 @@ msgid ""
 "<interface>E-Mail</interface> address.</para>"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:251
+#: serviceproviderdatatester.cpp:257
 msgctxt "@info/plain"
 msgid "The email address is invalid"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:254
+#: serviceproviderdatatester.cpp:260
 msgctxt "@info"
 msgid "<title>The email address is invalid</title>"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:271
+#: serviceproviderdatatester.cpp:277
 msgctxt "@info/plain"
 msgid "You should provide your name as author of the project"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:276
+#: serviceproviderdatatester.cpp:282
 msgctxt "@info"
 msgid ""
 "<title>You should provide your name as author of the project</title> "
@@ -2410,13 +2429,13 @@ msgid ""
 "</para>"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:295
+#: serviceproviderdatatester.cpp:301
 msgctxt "@info/plain"
 msgid ""
 "You should provide a short version of your name as author of the project"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:300
+#: serviceproviderdatatester.cpp:306
 msgctxt "@info"
 msgid ""
 "<title>You should provide a short version of your name as author of the "
@@ -2424,12 +2443,12 @@ msgid ""
 "<interface>Short Author Name</interface>.</para>"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:318
+#: serviceproviderdatatester.cpp:324
 msgctxt "@info/plain"
 msgid "You should provide the URL to the home page of the service provider"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:323
+#: serviceproviderdatatester.cpp:329
 msgctxt "@info"
 msgid ""
 "<title>You should provide the URL to the home page of the service provider</"
@@ -2439,14 +2458,14 @@ msgid ""
 "Page URL</interface>.</para>"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:342
+#: serviceproviderdatatester.cpp:348
 msgctxt "@info/plain"
 msgid ""
 "You should provide a short version of the URL to the home page of the "
 "service provider"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:347
+#: serviceproviderdatatester.cpp:353
 msgctxt "@info"
 msgid ""
 "<title>You should provide a short version of the URL to the home page of the "
@@ -2456,12 +2475,12 @@ msgid ""
 "interface>.</para>"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:367
+#: serviceproviderdatatester.cpp:373
 msgctxt "@info/plain"
 msgid "You should give a description for your project"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:371
+#: serviceproviderdatatester.cpp:377
 msgctxt "@info/plain"
 msgid ""
 "<title>You should give a description for your project</title> <para>Describe "
@@ -2470,12 +2489,12 @@ msgid ""
 "add a <interface>Description</interface>.</para>"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:389
+#: serviceproviderdatatester.cpp:395
 msgctxt "@info/plain"
 msgid "No script file created for the project"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:393
+#: serviceproviderdatatester.cpp:399
 msgctxt "@info/plain"
 msgid ""
 "<title>No script file created for the project</title> <para>The script does "
@@ -2484,25 +2503,31 @@ msgid ""
 "template, implement the functions and save it.</para>"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:404
+#: serviceproviderdatatester.cpp:410
 #, kde-format
 msgctxt "@info/plain"
 msgid "Script file does not exist: <filename>%1</filename>"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:421
+#: serviceproviderdatatester.cpp:427
 msgctxt "@info/plain"
 msgid "No GTFS feed URL set for the project"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:429
+#: serviceproviderdatatester.cpp:435
 msgctxt "@info/plain"
 msgid "GTFS feed URL is invalid"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:451
+#: serviceproviderdatatester.cpp:457
 msgctxt "@info/plain"
 msgid "GTFS-realtime URL is invalid"
+msgstr ""
+
+#: serviceproviderdatatester.cpp:477
+#, kde-format
+msgctxt "@info/plain"
+msgid "No such time zone found: %1"
 msgstr ""
 
 #: testmodel.cpp:330
@@ -2584,86 +2609,91 @@ msgctxt "@title:column"
 msgid "Explanation"
 msgstr ""
 
-#: testmodel.cpp:906
+#: testmodel.cpp:907
 msgctxt "@info/plain"
 msgid "Only for scripted providers"
 msgstr ""
 
-#: testmodel.cpp:909
+#: testmodel.cpp:910
 msgctxt "@info"
 msgid ""
 "<title>Test not Applicable</title> <para>This test is only applicable for "
 "scripted provider plugins.</para>"
 msgstr ""
 
-#: testmodel.cpp:924
+#: testmodel.cpp:925
 msgctxt "@info/plain"
 msgid "Only for GTFS providers"
 msgstr ""
 
-#: testmodel.cpp:927
+#: testmodel.cpp:928
 msgctxt "@info"
 msgid ""
 "<title>Test not Applicable</title> <para>This test is only applicable for "
 "GTFS provider plugins.</para>"
 msgstr ""
 
-#: testmodel.cpp:1073
+#: testmodel.cpp:1077
 msgctxt "@info/plain"
 msgid "Project Settings Test Case"
 msgstr ""
 
-#: testmodel.cpp:1075
+#: testmodel.cpp:1079
 msgctxt "@info/plain"
 msgid "Script Execution Test Case"
 msgstr ""
 
-#: testmodel.cpp:1077
+#: testmodel.cpp:1081
 msgctxt "@info/plain"
 msgid "GTFS Test Case"
 msgstr ""
 
-#: testmodel.cpp:1088
+#: testmodel.cpp:1092
 msgctxt "@info/plain"
 msgid "Name Test"
 msgstr ""
 
-#: testmodel.cpp:1090
+#: testmodel.cpp:1094
 msgctxt "@info/plain"
 msgid "Version Test"
 msgstr ""
 
-#: testmodel.cpp:1092
+#: testmodel.cpp:1096
 msgctxt "@info/plain"
 msgid "File Version Test"
 msgstr ""
 
-#: testmodel.cpp:1094
+#: testmodel.cpp:1098
 msgctxt "@info/plain"
 msgid "Author Name Test"
 msgstr ""
 
-#: testmodel.cpp:1096
+#: testmodel.cpp:1100
 msgctxt "@info/plain"
 msgid "Short Author Name Test"
 msgstr ""
 
-#: testmodel.cpp:1098
+#: testmodel.cpp:1102
 msgctxt "@info/plain"
 msgid "Email Test"
 msgstr ""
 
-#: testmodel.cpp:1100
+#: testmodel.cpp:1104
 msgctxt "@info/plain"
 msgid "URL Test"
 msgstr ""
 
-#: testmodel.cpp:1102
+#: testmodel.cpp:1106
 msgctxt "@info/plain"
 msgid "Short URL Test"
 msgstr ""
 
-#: testmodel.cpp:1104
+#: testmodel.cpp:1108
+msgctxt "@info/plain"
+msgid "Time Zone Test"
+msgstr ""
+
+#: testmodel.cpp:1110
 #, fuzzy
 #| msgctxt "@info Label for the description of a changelog entry"
 #| msgid "Description:"
@@ -2671,27 +2701,27 @@ msgctxt "@info/plain"
 msgid "Description Test"
 msgstr "Beschrieven:"
 
-#: testmodel.cpp:1106
+#: testmodel.cpp:1112
 msgctxt "@info/plain"
 msgid "Script File Test"
 msgstr ""
 
-#: testmodel.cpp:1108
+#: testmodel.cpp:1114
 msgctxt "@info/plain"
 msgid "GTFS Feed URL Test"
 msgstr ""
 
-#: testmodel.cpp:1110
+#: testmodel.cpp:1116
 msgctxt "@info/plain"
 msgid "GTFS-realtime Updates URL Test"
 msgstr ""
 
-#: testmodel.cpp:1112
+#: testmodel.cpp:1118
 msgctxt "@info/plain"
 msgid "GTFS-realtime Alerts URL Test"
 msgstr ""
 
-#: testmodel.cpp:1115
+#: testmodel.cpp:1121
 #, fuzzy
 #| msgctxt "@info Label for the description of a changelog entry"
 #| msgid "Description:"
@@ -2699,7 +2729,7 @@ msgctxt "@info/plain"
 msgid "Load Script Test"
 msgstr "Beschrieven:"
 
-#: testmodel.cpp:1117
+#: testmodel.cpp:1123
 #, fuzzy
 #| msgctxt "@info/plain"
 #| msgid "Departures"
@@ -2707,32 +2737,32 @@ msgctxt "@info/plain"
 msgid "Departure Test"
 msgstr "Affohrten"
 
-#: testmodel.cpp:1119
+#: testmodel.cpp:1125
 msgctxt "@info/plain"
 msgid "Arrival Test"
 msgstr ""
 
-#: testmodel.cpp:1121
+#: testmodel.cpp:1127
 msgctxt "@info/plain"
 msgid "Additional Data Test"
 msgstr ""
 
-#: testmodel.cpp:1123
+#: testmodel.cpp:1129
 msgctxt "@info/plain"
 msgid "Stop Suggestion Test"
 msgstr ""
 
-#: testmodel.cpp:1125
+#: testmodel.cpp:1131
 msgctxt "@info/plain"
 msgid "Stops by Geo Position Test"
 msgstr ""
 
-#: testmodel.cpp:1127
+#: testmodel.cpp:1133
 msgctxt "@info/plain"
 msgid "Journey Test"
 msgstr ""
 
-#: testmodel.cpp:1129
+#: testmodel.cpp:1135
 #, fuzzy
 #| msgctxt "@info/plain"
 #| msgid "Departures"
@@ -2740,125 +2770,130 @@ msgctxt "@info/plain"
 msgid "Features Test"
 msgstr "Affohrten"
 
-#: testmodel.cpp:1132
+#: testmodel.cpp:1138
 msgctxt "@info/plain"
 msgid "GTFS Feed Exists Test"
 msgstr ""
 
-#: testmodel.cpp:1134
+#: testmodel.cpp:1140
 msgctxt "@info/plain"
 msgid "GTFS-realtime Updates Test"
 msgstr ""
 
-#: testmodel.cpp:1136
+#: testmodel.cpp:1142
 msgctxt "@info/plain"
 msgid "GTFS-realtime Alerts Test"
 msgstr ""
 
-#: testmodel.cpp:1148
+#: testmodel.cpp:1154
 msgctxt "@info/plain"
 msgid "Tests project settings for validity"
 msgstr ""
 
-#: testmodel.cpp:1150
+#: testmodel.cpp:1156
 msgctxt "@info/plain"
 msgid "Runs script functions and tests collected data"
 msgstr ""
 
-#: testmodel.cpp:1152
+#: testmodel.cpp:1158
 msgctxt "@info/plain"
 msgid "Test GTFS feeds"
 msgstr ""
 
-#: testmodel.cpp:1163
+#: testmodel.cpp:1169
 msgctxt "@info/plain"
 msgid "Tests for a valid name"
 msgstr ""
 
-#: testmodel.cpp:1165
+#: testmodel.cpp:1171
 msgctxt "@info/plain"
 msgid "Tests for a valid version string"
 msgstr ""
 
-#: testmodel.cpp:1167
+#: testmodel.cpp:1173
 msgctxt "@info/plain"
 msgid "Tests for a valid engine plugin format version string"
 msgstr ""
 
-#: testmodel.cpp:1169
+#: testmodel.cpp:1175
 msgctxt "@info/plain"
 msgid "Tests for a valid author name"
 msgstr ""
 
-#: testmodel.cpp:1171
+#: testmodel.cpp:1177
 msgctxt "@info/plain"
 msgid "Tests for a valid short author name string"
 msgstr ""
 
-#: testmodel.cpp:1173
+#: testmodel.cpp:1179
 msgctxt "@info/plain"
 msgid "Tests for a valid email address"
 msgstr ""
 
-#: testmodel.cpp:1175
+#: testmodel.cpp:1181
 msgctxt "@info/plain"
 msgid "Tests for a valid URL to the homepage of the service provider"
 msgstr ""
 
-#: testmodel.cpp:1177
+#: testmodel.cpp:1183
 msgctxt "@info/plain"
 msgid "Tests for a valid short version of URL"
 msgstr ""
 
-#: testmodel.cpp:1179
+#: testmodel.cpp:1185
 msgctxt "@info/plain"
 msgid "Tests for a valid description"
 msgstr ""
 
-#: testmodel.cpp:1181
+#: testmodel.cpp:1187
+msgctxt "@info/plain"
+msgid "Tests for a valid or empty time zone"
+msgstr ""
+
+#: testmodel.cpp:1189
 msgctxt "@info/plain"
 msgid "Tests for a valid script file"
 msgstr ""
 
-#: testmodel.cpp:1183
+#: testmodel.cpp:1191
 msgctxt "@info/plain"
 msgid "Tests for a valid GTFS feed URL"
 msgstr ""
 
-#: testmodel.cpp:1185
+#: testmodel.cpp:1193
 msgctxt "@info/plain"
 msgid "Tests for a valid GTFS-realtime updates URL"
 msgstr ""
 
-#: testmodel.cpp:1187
+#: testmodel.cpp:1195
 msgctxt "@info/plain"
 msgid "Tests for a valid GTFS-realtime alerts URL"
 msgstr ""
 
-#: testmodel.cpp:1191
+#: testmodel.cpp:1199
 msgctxt "@info/plain"
 msgid "Tries to load the script, fails on syntax errors"
 msgstr ""
 
-#: testmodel.cpp:1193
+#: testmodel.cpp:1201
 #, kde-format
 msgctxt "@info/plain"
 msgid "Runs the %1() script function and tests collected departure data"
 msgstr ""
 
-#: testmodel.cpp:1196
+#: testmodel.cpp:1204
 #, kde-format
 msgctxt "@info/plain"
 msgid "Runs the %1() script function and tests collected arrival data"
 msgstr ""
 
-#: testmodel.cpp:1199
+#: testmodel.cpp:1207
 #, kde-format
 msgctxt "@info/plain"
 msgid "Runs the %1() script function and tests collected additional data"
 msgstr ""
 
-#: testmodel.cpp:1202
+#: testmodel.cpp:1210
 #, kde-format
 msgctxt "@info/plain"
 msgid ""
@@ -2866,7 +2901,7 @@ msgid ""
 "collected stop suggestions"
 msgstr ""
 
-#: testmodel.cpp:1206
+#: testmodel.cpp:1214
 #, kde-format
 msgctxt "@info/plain"
 msgid ""
@@ -2874,13 +2909,13 @@ msgid ""
 "collected stop suggestions"
 msgstr ""
 
-#: testmodel.cpp:1210
+#: testmodel.cpp:1218
 #, kde-format
 msgctxt "@info/plain"
 msgid "Runs the %1() script function and tests collected journey data"
 msgstr ""
 
-#: testmodel.cpp:1213
+#: testmodel.cpp:1221
 #, kde-format
 msgctxt "@info/plain"
 msgid ""
@@ -2888,17 +2923,17 @@ msgid ""
 "should name TimetableInformation enumerables"
 msgstr ""
 
-#: testmodel.cpp:1229
+#: testmodel.cpp:1237
 msgctxt "@info/plain"
 msgid "Checks if the feed at the given URL exists"
 msgstr ""
 
-#: testmodel.cpp:1231
+#: testmodel.cpp:1239
 msgctxt "@info/plain"
 msgid "Tests GTFS-realtime updates, if used"
 msgstr ""
 
-#: testmodel.cpp:1233
+#: testmodel.cpp:1241
 msgctxt "@info/plain"
 msgid "Tests GTFS-realtime alerts, if used"
 msgstr ""
@@ -3131,19 +3166,19 @@ msgid ""
 "Uncaught exception in <filename>%1</filename> at %2: <message>%3</message>"
 msgstr ""
 
-#: timetablemate.cpp:1851
+#: timetablemate.cpp:1858
 msgctxt "@title:window"
 msgid "Open Service Provider Plugin"
 msgstr ""
 
-#: timetablemate.cpp:1868
+#: timetablemate.cpp:1875
 msgctxt "@info/plain"
 msgid ""
 "There are no installed service provider plugins. You need to install the "
 "PublicTransport data engine."
 msgstr ""
 
-#: timetablemate.cpp:1885
+#: timetablemate.cpp:1892
 #, kde-format
 msgctxt ""
 "@info/plain This string is displayed instead of the full path for globally "
@@ -3151,21 +3186,21 @@ msgctxt ""
 msgid "Global: %1"
 msgstr ""
 
-#: timetablemate.cpp:1894
+#: timetablemate.cpp:1901
 msgctxt "@title:window"
 msgid "Open Installed Service Provider Plugin"
 msgstr ""
 
-#: timetablemate.cpp:1895
+#: timetablemate.cpp:1902
 msgctxt "@info"
 msgid "Installed service provider plugin"
 msgstr ""
 
-#: timetablemate.cpp:1923
+#: timetablemate.cpp:1930
 msgid "General"
 msgstr "Allgemeen"
 
-#: timetablemate.cpp:1942
+#: timetablemate.cpp:1949
 msgctxt "@info"
 msgid ""
 "The <interface>Home Page URL</interface> is empty.<nl/>Please set it in the "
