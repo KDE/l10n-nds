@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-01-17 02:42+0100\n"
+"POT-Creation-Date: 2013-01-20 02:27+0100\n"
 "PO-Revision-Date: 2012-01-02 09:32+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -238,7 +238,7 @@ msgstr "Na den Bidreger sien \"StackOverflow\"-Profil gahn"
 #. i18n: ectx: property (text), widget (QLabel, labelName)
 #. i18n: ectx: property (text), widget (QTableWidget, serverList)
 #: aboutdialog/OcsPersonItem.ui:137 amarokurls/BookmarkModel.cpp:265
-#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:410
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:415
 #: network/NetworkRequests.ui:89 network/NetworkRequests.ui:103
 #: playlistgenerator/TreeModel.cpp:64
 #: services/amazon/AmazonItemTreeModel.cpp:168
@@ -1502,7 +1502,7 @@ msgid "Add Position Marker"
 msgstr "Steedmark tofögen"
 
 #: amarokurls/BookmarkModel.cpp:86
-#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:411
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:416
 msgid "Group"
 msgstr "Koppel"
 
@@ -2317,7 +2317,7 @@ msgstr "Nieg Orner"
 msgid "Create empty playlist"
 msgstr "Plietsche Afspeellist opstellen"
 
-#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:143
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:144
 #, kde-format
 msgctxt "number of playlists from one source"
 msgid "One Playlist"
@@ -2325,7 +2325,14 @@ msgid_plural "%1 playlists"
 msgstr[0] "Een Afspeellist"
 msgstr[1] "%1 Afspeellisten"
 
-#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:185
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:149
+#, fuzzy
+#| msgid "Loading"
+msgctxt "normally number of playlists, but they are still loading"
+msgid "Loading..."
+msgstr "An't Laden"
+
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:190
 #, fuzzy, kde-format
 #| msgctxt "number of playlists from one source"
 #| msgid "One Playlist"
@@ -2336,7 +2343,7 @@ msgid_plural "%1 playlists"
 msgstr[0] "Een Afspeellist"
 msgstr[1] "%1 Afspeellisten"
 
-#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:412
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:417
 msgid "Source"
 msgstr "Born"
 
@@ -4518,56 +4525,46 @@ msgstr "Op Tour"
 msgid "dates"
 msgstr "Daten"
 
-#: context/engines/wikipedia/WikipediaEngine.cpp:195
-#: context/engines/wikipedia/WikipediaEngine.cpp:271
-#: context/engines/wikipedia/WikipediaEngine.cpp:404
+#: context/engines/wikipedia/WikipediaEngine.cpp:196
+#: context/engines/wikipedia/WikipediaEngine.cpp:272
+#: context/engines/wikipedia/WikipediaEngine.cpp:405
 #, kde-format
 msgid "Unable to retrieve Wikipedia information: %1"
 msgstr "Wikipedia-Informatschonen laat sik nich halen: %1"
 
-#: context/engines/wikipedia/WikipediaEngine.cpp:211
-#: context/engines/wikipedia/WikipediaEngine.cpp:380
-#: context/engines/wikipedia/WikipediaEngine.cpp:442
+#: context/engines/wikipedia/WikipediaEngine.cpp:212
+#: context/engines/wikipedia/WikipediaEngine.cpp:381
+#: context/engines/wikipedia/WikipediaEngine.cpp:443
 msgid "No information found..."
 msgstr "Keen Informatschonen funnen..."
 
-#: context/engines/wikipedia/WikipediaEngine.cpp:452
+#: context/engines/wikipedia/WikipediaEngine.cpp:453
 msgctxt "Search pattern for an artist or band"
 msgid ".*\\(.*(artist|band).*\\))"
 msgstr ""
 
-#: context/engines/wikipedia/WikipediaEngine.cpp:455
+#: context/engines/wikipedia/WikipediaEngine.cpp:456
 msgctxt "Search pattern for a composer"
 msgid ".*\\(.*(composer|musician).*\\))"
 msgstr ""
 
-#: context/engines/wikipedia/WikipediaEngine.cpp:458
+#: context/engines/wikipedia/WikipediaEngine.cpp:459
 msgctxt "Search pattern for an album"
 msgid ".*\\(.*(album|score|soundtrack).*\\)"
 msgstr ""
 
-#: context/engines/wikipedia/WikipediaEngine.cpp:462
+#: context/engines/wikipedia/WikipediaEngine.cpp:463
 msgctxt "Search pattern for a song"
 msgid ".*\\(.*(song|track).*\\)"
 msgstr ""
 
-#: context/engines/wikipedia/WikipediaEngine.cpp:630
-msgid "The name of the artist is required for searching Wikipedia..."
+#: context/engines/wikipedia/WikipediaEngine.cpp:631
+#, kde-format
+msgctxt "%1 is field name such as 'Artist Name'"
+msgid "%1 is needed for searching Wikipedia."
 msgstr ""
 
-#: context/engines/wikipedia/WikipediaEngine.cpp:650
-msgid "The name of the composer is needed before searching wikipedia"
-msgstr ""
-
-#: context/engines/wikipedia/WikipediaEngine.cpp:667
-msgid "The name of this songs album is needed before searching Wikipedia"
-msgstr ""
-
-#: context/engines/wikipedia/WikipediaEngine.cpp:684
-msgid "The name of this track is needed before searching Wikipedia"
-msgstr ""
-
-#: context/engines/wikipedia/WikipediaEngine.cpp:860
+#: context/engines/wikipedia/WikipediaEngine.cpp:873
 msgid "Choose Language"
 msgstr "Spraak utsöken"
 
@@ -4962,14 +4959,16 @@ msgstr ""
 msgid "Scanner aborted."
 msgstr ""
 
-#: core-impl/collections/db/ScanManager.cpp:717
-#, fuzzy
+#: core-impl/collections/db/ScanManager.cpp:722
+#, fuzzy, kde-format
 #| msgid ""
 #| "<p>Sorry, the collection scan had to be aborted.</p><p>Too many errors "
 #| "were encountered during the scan.</p>"
 msgid ""
-"The collection scan had to be aborted. Too many errors were encountered "
-"during the scan."
+"The collection scan had to be aborted. Too many crashes (%1) were "
+"encountered during the scan. Following files caused the crashes:\n"
+"\n"
+"%2"
 msgstr ""
 "<p>Dat Dörkieken vun de Sammeln muss afbraken warrn.</p><p>Dat geev dor to "
 "vele Fehlers bi.</p>"
@@ -5036,14 +5035,14 @@ msgid ""
 msgstr ""
 
 #: core-impl/collections/ipodcollection/IpodCollection.cpp:109
-#: core-impl/collections/umscollection/UmsCollection.cpp:241
+#: core-impl/collections/umscollection/UmsCollection.cpp:239
 #, fuzzy
 #| msgid "Configure Media Device"
 msgid "&Configure Device"
 msgstr "Medienreedschap instellen"
 
 #: core-impl/collections/ipodcollection/IpodCollection.cpp:113
-#: core-impl/collections/umscollection/UmsCollection.cpp:249
+#: core-impl/collections/umscollection/UmsCollection.cpp:247
 #, fuzzy
 #| msgid "Media Devices"
 msgid "&Eject Device"
@@ -5832,13 +5831,20 @@ msgstr "Jo, vun %1 wegdoon."
 msgid "&Delete Channel and Episodes"
 msgstr "Kanaal un Kapiteln &wegdoon"
 
-#: core-impl/collections/umscollection/UmsCollection.cpp:245
+#: core-impl/collections/umscollection/UmsCollection.cpp:243
 #, fuzzy
 #| msgid "&Use as Collection"
 msgid "&Activate This Collection"
 msgstr "As Sammeln &bruken"
 
-#: core-impl/collections/umscollection/UmsCollection.cpp:383
+#: core-impl/collections/umscollection/UmsCollection.cpp:279
+#, kde-format
+msgid ""
+"File <i>%1</i> suggests that we should use <i>%2</i> as music folder on the "
+"device, but it doesn't exist. Falling back to <i>%3</i> instead"
+msgstr ""
+
+#: core-impl/collections/umscollection/UmsCollection.cpp:384
 #, kde-format
 msgctxt ""
 "Name of the USB Mass Storage collection that has not yet been activated. See "
@@ -5846,7 +5852,7 @@ msgctxt ""
 msgid "%1 (not activated)"
 msgstr ""
 
-#: core-impl/collections/umscollection/UmsCollection.cpp:626
+#: core-impl/collections/umscollection/UmsCollection.cpp:627
 msgid "Configure USB Mass Storage Device"
 msgstr "USB-Bültspieker-Reedschap instellen"
 
@@ -7902,7 +7908,7 @@ msgstr "Datei lett sik nich opmaken."
 #: databaseimporter/sqlbatch/SqlBatchImporterConfig.cpp:37
 msgid ""
 "Input file produced by amarokcollectionscanner.<br>See <a href=\"http://"
-"amarok.kde.org/wiki/Batch_Mode\">Batch Mode</a>."
+"community.kde.org/Amarok/Development/BatchMode\">Batch Mode</a>."
 msgstr ""
 
 #: databaseimporter/sqlbatch/SqlBatchImporterConfig.cpp:43
@@ -11325,6 +11331,10 @@ msgstr "Last.fm: Dat aktuelle Stück mögen"
 msgid "Last.fm: Ban Current Track"
 msgstr "Last.fm: Dat aktuelle Stück utsluten"
 
+#: MainWindow.cpp:897
+msgid "Last.fm: Skip Current Track"
+msgstr "Last.fm: Dat aktuelle Stück övergahn"
+
 #: MainWindow.cpp:902 playlist/view/PlaylistViewCommon.cpp:114
 msgid "Queue Track"
 msgstr "Stück inregen"
@@ -12195,7 +12205,9 @@ msgid "Tracks Removed"
 msgstr "Stücken wegdaan"
 
 #: playlist/UndoCommands.cpp:76
-msgid "Track moved"
+#, fuzzy
+#| msgid "Track moved"
+msgid "Tracks moved"
 msgstr "Stück verschaven"
 
 #: playlist/view/listview/SourceSelectionPopup.cpp:35
@@ -14330,11 +14342,15 @@ msgstr "Mackers ehr Leefsten-Radio"
 msgid "Friends' Personal Radio"
 msgstr "Mackers ehr persöönlich Radio"
 
-#: services/lastfm/LastFmServiceConfig.cpp:236
+#: services/lastfm/LastFmServiceConfig.cpp:188
+msgid "Failed to open KDE Wallet to read Last.fm credentials"
+msgstr ""
+
+#: services/lastfm/LastFmServiceConfig.cpp:238
 msgid "Last.fm credentials"
 msgstr "Last.fm: Rechtenbeglöven"
 
-#: services/lastfm/LastFmServiceConfig.cpp:237
+#: services/lastfm/LastFmServiceConfig.cpp:239
 msgid ""
 "No running KWallet found. Would you like Amarok to save your Last.fm "
 "credentials in plaintext?"
@@ -14353,6 +14369,21 @@ msgstr "Anmellen utproberen"
 #: services/lastfm/LastFmServiceSettings.cpp:166
 msgid "Unable to connect to Last.fm service."
 msgstr "Tokoppeln na Last.fm nich mööglich."
+
+#: services/lastfm/LastFmTreeModel.cpp:173
+#, fuzzy, kde-format
+#| msgid "%1 (x%2)"
+msgctxt "%1 is Last.fm tag name, %2 is its usage count"
+msgid "%1 (%2)"
+msgstr "%1 (x%2)"
+
+#: services/lastfm/LastFmTreeModel.cpp:224
+#, kde-format
+msgctxt "%2 is artist name, %1 is number of plays"
+msgid "%2 (%1 play)"
+msgid_plural "%2 (%1 plays)"
+msgstr[0] ""
+msgstr[1] ""
 
 #: services/lastfm/LastFmTreeModel.cpp:241
 msgid "Personal Radio"
@@ -14405,6 +14436,18 @@ msgstr "Strg+U"
 #: services/lastfm/meta/LastFmMeta.cpp:83
 msgid "Ban this track"
 msgstr "Dit Stück utsluten"
+
+#: services/lastfm/meta/LastFmMeta.cpp:87
+msgid "Last.fm: &Skip"
+msgstr "Last.fm: Ö&vergahn"
+
+#: services/lastfm/meta/LastFmMeta.cpp:88
+msgid "Ctrl+S"
+msgstr "Strg+V"
+
+#: services/lastfm/meta/LastFmMeta.cpp:89
+msgid "Skip this track"
+msgstr "Dit Stück övergahn"
 
 #: services/lastfm/meta/LastFmMeta.cpp:135
 #: services/lastfm/meta/LastFmMeta.cpp:357
@@ -15379,9 +15422,9 @@ msgstr ""
 "Tall vun Schreed, de binnen dat Afspeellist-Finster torüchnahmen warrn köönt"
 
 #: services/scriptable/ScriptableServiceInfoParser.cpp:44
-#: services/scriptable/ScriptableServiceInfoParser.cpp:62
-#: services/scriptable/ScriptableServiceInfoParser.cpp:78
-#: services/scriptable/ScriptableServiceInfoParser.cpp:94
+#: services/scriptable/ScriptableServiceInfoParser.cpp:59
+#: services/scriptable/ScriptableServiceInfoParser.cpp:74
+#: services/scriptable/ScriptableServiceInfoParser.cpp:88
 msgid "Loading info..."
 msgstr "Infos warrt laadt..."
 
@@ -16389,9 +16432,6 @@ msgstr "Luutstärk: %1%"
 #~ msgid "Amount of Data (in %)"
 #~ msgstr "To betahlen Summ (USD):"
 
-#~ msgid "Ctrl+S"
-#~ msgstr "Strg+V"
-
 #~ msgctxt "As in, lastfm"
 #~ msgid "Loved Track: %1"
 #~ msgstr "Mucht Stück: %1"
@@ -16472,15 +16512,6 @@ msgstr "Luutstärk: %1%"
 
 #~ msgid "Ok"
 #~ msgstr "OK"
-
-#~ msgid "Last.fm: Skip Current Track"
-#~ msgstr "Last.fm: Dat aktuelle Stück övergahn"
-
-#~ msgid "Last.fm: &Skip"
-#~ msgstr "Last.fm: Ö&vergahn"
-
-#~ msgid "Skip this track"
-#~ msgstr "Dit Stück övergahn"
 
 #~ msgid "Form"
 #~ msgstr "Formulor"
