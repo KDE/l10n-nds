@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simon\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-12-29 02:03+0100\n"
+"POT-Creation-Date: 2013-02-05 02:36+0100\n"
 "PO-Revision-Date: 2012-03-17 07:06+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -600,19 +600,22 @@ msgid "The vocabulary already contains this word."
 msgstr ""
 
 #: simonmodelmanagementui/AddWord/addwordresolvepage.cpp:92
-msgid "Add Terminal"
+#: simonmodelmanagementui/editworddialog.cpp:85
+msgid "Add Category"
 msgstr ""
 
 #: simonmodelmanagementui/AddWord/addwordresolvepage.cpp:92
 msgid ""
-"You are about to add a new terminal.\n"
+"You are about to add a new category.\n"
 "\n"
-"Please enter the name of this new terminal:"
+"Please enter the name of this new category:"
 msgstr ""
 
 #: simonmodelmanagementui/AddWord/addwordresolvepage.cpp:130
 #: simonmodelmanagementui/AddWord/addwordresolvepage.cpp:131
-msgctxt "Standard terminal for unused words"
+#: simonmodelmanagementui/editworddialog.cpp:60
+#: simonmodelmanagementui/editworddialog.cpp:61
+msgctxt "Standard category for unused words"
 msgid "Unused"
 msgstr ""
 
@@ -692,7 +695,7 @@ msgctxt "Grammar category"
 msgid "Category:"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QToolButton, tbAddTerminal)
+#. i18n: ectx: property (text), widget (QToolButton, tbAddCategory)
 #: simonmodelmanagementui/AddWord/resolvewordpage.ui:61
 #: simonmodelmanagementui/editword.ui:58
 msgid "..."
@@ -840,16 +843,6 @@ msgstr ""
 msgid "Edit Word"
 msgstr ""
 
-#: simonmodelmanagementui/editworddialog.cpp:60
-#: simonmodelmanagementui/editworddialog.cpp:61
-msgctxt "Standard category for unused words"
-msgid "Unused"
-msgstr ""
-
-#: simonmodelmanagementui/editworddialog.cpp:85
-msgid "Add Category"
-msgstr ""
-
 #: simonmodelmanagementui/editworddialog.cpp:85
 msgid "Name of new category:"
 msgstr ""
@@ -901,12 +894,12 @@ msgstr ""
 #: simonmodelmanagementui/grammarview.ui:111
 msgid ""
 "Using this procedure you can keep your grammar structures to a minimum and "
-"improve the readability of grammar and wordlist."
+"improve the readability of grammar and vocabulary."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (KPushButton, pbMerge)
 #: simonmodelmanagementui/grammarview.ui:114
-#: simonmodelmanagementui/MergeTerminals/mergeterminalswizard.cpp:30
+#: simonmodelmanagementui/MergeCategories/mergecategorieswizard.cpp:30
 msgid "Merge Categories"
 msgstr ""
 
@@ -1113,7 +1106,7 @@ msgid ""
 "provide the file below.\n"
 "\n"
 "Please keep in mind that those dictionaries do not provide information about "
-"terminals of the words."
+"categories of the words."
 msgstr ""
 
 #: simonmodelmanagementui/ImportDict/importdictplspage.cpp:36
@@ -1127,7 +1120,7 @@ msgid ""
 "downloaded XML-file below.\n"
 "\n"
 "Please keep in mind that those dictionaries do not provide information about "
-"terminals of the words."
+"categories of the words."
 msgstr ""
 
 #. i18n: ectx: property (filter), widget (KUrlRequester, urPath)
@@ -1195,8 +1188,8 @@ msgid ""
 "<br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Please keep in mind that "
-"those dictionaries do not provide information about terminals of the words.</"
-"p></body></html>"
+"those dictionaries do not provide information about categories of the words."
+"</p></body></html>"
 msgstr ""
 
 #: simonmodelmanagementui/ImportDict/importdictview.cpp:59
@@ -1262,9 +1255,11 @@ msgstr ""
 #: simonmodelmanagementui/ImportDict/lexicondict.cpp:44
 #: simonmodelmanagementui/ImportDict/plsdict.cpp:96
 #: simonmodelmanagementui/ImportDict/sphinxdict.cpp:90
+#: simonmodelmanagementui/ImportGrammar/importgrammar.cpp:178
+#: simonmodelmanagementui/ImportGrammar/importgrammar.cpp:206
 msgctxt ""
-"Terminal name for words that are imported from a dictionary which does not "
-"provide terminal information"
+"Category name for words that are imported from a dictionary which does not "
+"provide category information"
 msgid "Unknown"
 msgstr ""
 
@@ -1278,14 +1273,6 @@ msgstr ""
 
 #: simonmodelmanagementui/ImportGrammar/importgrammar.cpp:134
 msgid "Processing..."
-msgstr ""
-
-#: simonmodelmanagementui/ImportGrammar/importgrammar.cpp:178
-#: simonmodelmanagementui/ImportGrammar/importgrammar.cpp:206
-msgctxt ""
-"Category name for words that are imported from a dictionary which does not "
-"provide category information"
-msgid "Unknown"
 msgstr ""
 
 #: simonmodelmanagementui/ImportGrammar/importgrammar.cpp:192
@@ -1312,15 +1299,15 @@ msgid ""
 "\n"
 "To do this each of the files / the input text will be read by a grammar "
 "parser which will look up every single word in your dictionary-corpus. If "
-"the word is found its terminal will be added to the sentence. This way the "
-"parsers will find valid grammatical sentences on terminal level.\n"
+"the word is found its category will be added to the sentence. This way the "
+"parsers will find valid grammatical sentences on category level.\n"
 "\n"
-"This process requires a large shadow-lexicon containing terminal information "
-"or targeted input material."
+"This process requires a large shadow dictionary containing category "
+"information or targeted input material."
 msgstr ""
 
 #: simonmodelmanagementui/ImportGrammar/importgrammarwizard.cpp:86
-#: simonmodelmanagementui/MergeTerminals/mergeterminalswizard.cpp:61
+#: simonmodelmanagementui/MergeCategories/mergecategorieswizard.cpp:61
 msgid "Import completed"
 msgstr ""
 
@@ -1365,7 +1352,7 @@ msgstr ""
 #: simonmodelmanagementui/ImportGrammar/selectinputpage.ui:20
 msgid ""
 "If you check the following field, sentences containing words with unknown "
-"terminals will also be imported (words with more than one terminal will "
+"categories will also be imported (words with more than one category will "
 "still cause the word to be marked \"Unknown\" and will only be included if "
 "this field is set)."
 msgstr ""
@@ -1603,58 +1590,58 @@ msgctxt "%1 is path"
 msgid "Loading list of training texts from %1"
 msgstr ""
 
-#: simonmodelmanagementui/MergeTerminals/mergeterminals.cpp:35
-#: simonmodelmanagementui/MergeTerminals/mergeterminals.cpp:47
+#: simonmodelmanagementui/MergeCategories/mergecategories.cpp:35
+#: simonmodelmanagementui/MergeCategories/mergecategories.cpp:47
 #, kde-format
-msgctxt "%1 is terminal"
+msgctxt "%1 is category"
 msgid "Processing Words of Category %1"
 msgstr ""
 
-#: simonmodelmanagementui/MergeTerminals/mergeterminals.cpp:54
+#: simonmodelmanagementui/MergeCategories/mergecategories.cpp:54
 msgctxt "The wizard has completed"
 msgid "Finished"
 msgstr ""
 
+#: simonmodelmanagementui/MergeCategories/mergecategoriesselectcategoriespage.cpp:27
+msgid "Choose Categories"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QLabel, lbDesc)
-#: simonmodelmanagementui/MergeTerminals/mergeterminalsselectpage.ui:20
+#: simonmodelmanagementui/MergeCategories/mergecategoriesselectpage.ui:20
 msgid ""
 "Select a category in each list and assign a name for the combined category."
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, lbNewTerminal)
+#. i18n: ectx: property (text), widget (QLabel, lbNewCategory)
 #. i18n: ectx: property (text), widget (QLabel, lbNewName)
-#: simonmodelmanagementui/MergeTerminals/mergeterminalsselectpage.ui:53
-#: simonmodelmanagementui/RenameTerminal/renameterminalselectparameterspage.ui:22
+#: simonmodelmanagementui/MergeCategories/mergecategoriesselectpage.ui:53
+#: simonmodelmanagementui/RenameCategory/renamecategoryselectparameterspage.ui:22
 msgid "New Name:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbIncludeShadow)
-#: simonmodelmanagementui/MergeTerminals/mergeterminalsselectpage.ui:65
+#: simonmodelmanagementui/MergeCategories/mergecategoriesselectpage.ui:65
 msgid "Update shadow vocabulary"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbIncludeGrammar)
-#: simonmodelmanagementui/MergeTerminals/mergeterminalsselectpage.ui:75
+#: simonmodelmanagementui/MergeCategories/mergecategoriesselectpage.ui:75
 msgid "Update grammar"
 msgstr ""
 
-#: simonmodelmanagementui/MergeTerminals/mergeterminalsselectterminalspage.cpp:27
-msgid "Choose Categories"
-msgstr ""
-
-#: simonmodelmanagementui/MergeTerminals/mergeterminalswizard.cpp:62
+#: simonmodelmanagementui/MergeCategories/mergecategorieswizard.cpp:62
 msgid ""
 "The categories have been merged.\n"
 "\n"
 "Thank you for improving Simon."
 msgstr ""
 
-#: simonmodelmanagementui/MergeTerminals/mergeterminalsworkingpage.cpp:32
+#: simonmodelmanagementui/MergeCategories/mergecategoriesworkingpage.cpp:32
 msgid "Merging..."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lbDesc)
-#: simonmodelmanagementui/MergeTerminals/mergeterminalsworkingpage.ui:22
+#: simonmodelmanagementui/MergeCategories/mergecategoriesworkingpage.ui:22
 msgid ""
 "The selected categories will be now merged to a new one.\n"
 "\n"
@@ -1725,10 +1712,10 @@ msgctxt "Name of the word"
 msgid "Name:"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, lbTerminalD)
+#. i18n: ectx: property (text), widget (QLabel, lbCategoryD)
 #: simonmodelmanagementui/removeword.ui:72
 msgctxt "Grammar category of the word"
-msgid "Terminal:"
+msgid "Category:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lbRecognitionRateD)
@@ -1736,12 +1723,12 @@ msgstr ""
 msgid "Recognition Rate:"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QRadioButton, rbTerminal)
+#. i18n: ectx: property (text), widget (QRadioButton, rbCategory)
 #: simonmodelmanagementui/removeword.ui:153
-msgid "Move the word to the \"Unused\" terminal"
+msgid "Move the word to the \"Unused\" category"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, lbTerminalDesc)
+#. i18n: ectx: property (text), widget (QLabel, lbCategoryDesc)
 #: simonmodelmanagementui/removeword.ui:181
 msgid ""
 "The word will stay in your active dictionary and all samples will be kept. "
@@ -1799,52 +1786,52 @@ msgid ""
 "with the same name - even across scenarios!</span></p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, lbTerminal)
-#: simonmodelmanagementui/RenameTerminal/renameterminalselectparameterspage.ui:37
-msgid "Old Terminal:"
+#. i18n: ectx: property (text), widget (QLabel, lbCategory)
+#: simonmodelmanagementui/RenameCategory/renamecategoryselectparameterspage.ui:37
+msgid "Old Category:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbIncludeShadow)
-#: simonmodelmanagementui/RenameTerminal/renameterminalselectparameterspage.ui:47
+#: simonmodelmanagementui/RenameCategory/renamecategoryselectparameterspage.ui:47
 msgid "Change shadow lexicon"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbIncludeGrammar)
-#: simonmodelmanagementui/RenameTerminal/renameterminalselectparameterspage.ui:57
+#: simonmodelmanagementui/RenameCategory/renamecategoryselectparameterspage.ui:57
 msgid "Adapt grammar"
 msgstr ""
 
-#: simonmodelmanagementui/RenameTerminal/renameterminalwizard.cpp:30
-msgid "Rename terminal"
+#: simonmodelmanagementui/RenameCategory/renamecategorywizard.cpp:30
+msgid "Rename category"
 msgstr ""
 
-#: simonmodelmanagementui/RenameTerminal/renameterminalwizard.cpp:62
-msgid "Welcome to the renaming of a terminal"
+#: simonmodelmanagementui/RenameCategory/renamecategorywizard.cpp:62
+msgid "Welcome to the renaming of a category"
 msgstr ""
 
-#: simonmodelmanagementui/RenameTerminal/renameterminalwizard.cpp:63
-msgid "This assistant will allow you to rename an existing terminal."
+#: simonmodelmanagementui/RenameCategory/renamecategorywizard.cpp:63
+msgid "This assistant will allow you to rename an existing category."
 msgstr ""
 
-#: simonmodelmanagementui/RenameTerminal/renameterminalwizard.cpp:78
+#: simonmodelmanagementui/RenameCategory/renamecategorywizard.cpp:78
 msgid "Renaming complete"
 msgstr ""
 
-#: simonmodelmanagementui/RenameTerminal/renameterminalwizard.cpp:79
+#: simonmodelmanagementui/RenameCategory/renamecategorywizard.cpp:79
 msgid ""
-"The terminal has been renamed.\n"
+"The category has been renamed.\n"
 "\n"
 "Thank you for improving Simon."
 msgstr ""
 
-#: simonmodelmanagementui/RenameTerminal/renameterminalworkingpage.cpp:31
-msgid "Renaming terminal..."
+#: simonmodelmanagementui/RenameCategory/renamecategoryworkingpage.cpp:31
+msgid "Renaming category..."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lbDesc)
-#: simonmodelmanagementui/RenameTerminal/renameterminalworkingpage.ui:21
+#: simonmodelmanagementui/RenameCategory/renamecategoryworkingpage.ui:21
 msgid ""
-"The terminal is now being renamed.\n"
+"The category is now being renamed.\n"
 "\n"
 "Depending on your parameters this could take a few minutes."
 msgstr ""
@@ -1994,6 +1981,7 @@ msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, VocabularyView)
 #: simonmodelmanagementui/vocabulary.ui:14
+#: simonmodelmanagementui/vocabularyview.cpp:25
 msgid "Vocabulary"
 msgstr ""
 
@@ -2053,11 +2041,7 @@ msgstr ""
 msgid "Train selected Words"
 msgstr ""
 
-#: simonmodelmanagementui/vocabularyview.cpp:33
-msgid "Word list"
-msgstr ""
-
-#: simonmodelmanagementui/vocabularyview.cpp:35
+#: simonmodelmanagementui/vocabularyview.cpp:27
 msgid "View and modify the vocabulary."
 msgstr ""
 
@@ -2074,7 +2058,7 @@ msgid "Failed to re-order the changed word."
 msgstr ""
 
 #: simonmodelmanagementui/vocabularyviewprivate.cpp:234
-msgctxt "Standard name for terminals that are not used for the recognition"
+msgctxt "Standard name for categories that are not used for the recognition"
 msgid "Unused"
 msgstr ""
 
@@ -2430,7 +2414,7 @@ msgstr ""
 #, kde-format
 msgid ""
 "The word \"%1\" is used in your training samples but it is not contained in "
-"your wordlist.\n"
+"your vocabulary.\n"
 "\n"
 "What do you want to do?"
 msgstr ""
@@ -2451,10 +2435,10 @@ msgstr ""
 #: simonrecognitioncontrol/recognitioncontrol.cpp:1616
 #, kde-format
 msgid ""
-"Your grammar uses the undefined terminal \"%1\".\n"
+"Your grammar uses the undefined category \"%1\".\n"
 "\n"
-"Please add a word that uses this terminal or remove the structure(s) "
-"containing the terminal from your grammar."
+"Please add a word that uses this category or remove the structure(s) "
+"containing the category from your grammar."
 msgstr ""
 
 #: simonrecognitioncontrol/recognitioncontrol.cpp:1622
@@ -2540,7 +2524,7 @@ msgid "Please select a Model from the list"
 msgstr ""
 
 #: simonrecognitioncontrol/synchronisationsettings.cpp:149
-msgid "Do you really want to revert all changes made since this Model?"
+msgid "Do you really want to revert all changes made after this model?"
 msgstr ""
 
 #: simonrecognitioncontrol/synchronisationsettings.cpp:154
