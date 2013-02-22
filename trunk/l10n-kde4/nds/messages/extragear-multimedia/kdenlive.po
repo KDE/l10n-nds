@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdenlive\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-02-17 02:48+0100\n"
+"POT-Creation-Date: 2013-02-22 12:35+0100\n"
 "PO-Revision-Date: 2011-11-16 15:57+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -3306,7 +3306,6 @@ msgstr "Pielrecht"
 #. i18n: ectx: property (windowTitle), widget (QDialog, AddTrack_UI)
 #. i18n: ectx: property (windowTitle), widget (QDialog, ArchiveWidget_UI)
 #. i18n: ectx: property (windowTitle), widget (QDialog, BackupDialog_UI)
-#. i18n: ectx: property (windowTitle), widget (QDialog, ClipStabilize_UI)
 #. i18n: ectx: property (windowTitle), widget (QDialog, ColorClip_UI)
 #. i18n: ectx: property (windowTitle), widget (QDialog, FreeSound_UI)
 #. i18n: ectx: property (windowTitle), widget (QDialog, ManageEncodingProfile_UI)
@@ -3314,6 +3313,7 @@ msgstr "Pielrecht"
 #. i18n: ectx: property (windowTitle), widget (QDialog, SmConfig_UI)
 #. i18n: ectx: property (windowTitle), widget (QDialog, Stopmotion_UI)
 #. i18n: ectx: property (windowTitle), widget (QDialog, ClipTranscode_UI)
+#. i18n: ectx: property (windowTitle), widget (QDialog, ClipStabilize_UI)
 #: plugins/sampleplugin/countdown_ui.ui:13 src/widgets/addtrack_ui.ui:14
 #: src/widgets/archivewidget_ui.ui:14 src/widgets/backupdialog_ui.ui:14
 #: src/widgets/clipstabilize_ui.ui:14 src/widgets/cliptranscode_ui.ui:14
@@ -3528,7 +3528,7 @@ msgstr ""
 
 #: src/archivewidget.cpp:797 src/archivewidget.cpp:803 src/dvdwizard.cpp:953
 #: src/dvdwizard.cpp:959 src/kdenlivedoc.cpp:765 src/kdenlivedoc.cpp:771
-#: src/mainwindow.cpp:4273 src/mainwindow.cpp:4278 src/profilesdialog.cpp:219
+#: src/mainwindow.cpp:4257 src/mainwindow.cpp:4262 src/profilesdialog.cpp:219
 #: src/profilesdialog.cpp:225 src/profilesdialog.cpp:551
 #: src/profilesdialog.cpp:557 src/renderwidget.cpp:562
 #: src/renderwidget.cpp:701 src/renderwidget.cpp:707 src/renderwidget.cpp:767
@@ -3831,8 +3831,8 @@ msgstr[1] ""
 msgid "Stabilize Clip"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, auto_add)
 #. i18n: ectx: property (text), widget (QCheckBox, add_clip)
+#. i18n: ectx: property (text), widget (QCheckBox, auto_add)
 #: src/clipstabilize.cpp:45 src/cliptranscode.cpp:48
 #: src/widgets/clipstabilize_ui.ui:57 src/widgets/cliptranscode_ui.ui:94
 #: src/widgets/cutjobdialog_ui.ui:61
@@ -3853,17 +3853,22 @@ msgstr ""
 msgid "Stabilize clip"
 msgstr ""
 
-#: src/cliptranscode.cpp:44
-msgid "Transcode Clip"
-msgstr ""
-
-#: src/cliptranscode.cpp:146 src/effectstack/collapsibleeffect.cpp:295
+#: src/clipstabilize.cpp:281 src/cliptranscode.cpp:146
+#: src/effectstack/collapsibleeffect.cpp:295
 #: src/effectstack/collapsiblegroup.cpp:174 src/mainwindow.cpp:2063
 #: src/mainwindow.cpp:3792
 #, kde-format
 msgid ""
 "File %1 already exists.\n"
 "Do you want to overwrite it?"
+msgstr ""
+
+#: src/clipstabilize.cpp:293
+msgid "The stabilize job will overwrite the following files:"
+msgstr ""
+
+#: src/cliptranscode.cpp:44
+msgid "Transcode Clip"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (KPushButton, buttonClose)
@@ -4240,22 +4245,22 @@ msgstr ""
 msgid "Go To"
 msgstr ""
 
-#: src/customruler.cpp:238 src/customruler.cpp:239 src/smallruler.cpp:180
+#: src/customruler.cpp:238 src/customruler.cpp:239 src/smallruler.cpp:181
 #, kde-format
 msgid "Zone start: %1"
 msgstr ""
 
-#: src/customruler.cpp:242 src/customruler.cpp:243 src/smallruler.cpp:182
+#: src/customruler.cpp:242 src/customruler.cpp:243 src/smallruler.cpp:183
 #, kde-format
 msgid "Zone end: %1"
 msgstr ""
 
-#: src/customruler.cpp:246 src/customruler.cpp:247 src/smallruler.cpp:199
+#: src/customruler.cpp:246 src/customruler.cpp:247 src/smallruler.cpp:200
 #, kde-format
 msgid "Zone duration: %1"
 msgstr ""
 
-#: src/customruler.cpp:250 src/customruler.cpp:251 src/smallruler.cpp:201
+#: src/customruler.cpp:250 src/customruler.cpp:251 src/smallruler.cpp:202
 #, kde-format
 msgid "Position: %1"
 msgstr ""
@@ -4599,7 +4604,7 @@ msgid "All categories"
 msgstr "All Dateien"
 
 #: src/customtrackview.cpp:5551 src/customtrackview.cpp:5593
-#: src/markerdialog.cpp:42 src/projectlist.cpp:3605
+#: src/markerdialog.cpp:42 src/projectlist.cpp:3613
 #, kde-format
 msgid "Category %1"
 msgstr ""
@@ -4840,7 +4845,7 @@ msgstr ""
 msgid "Unknown clip"
 msgstr ""
 
-#: src/docclipbase.cpp:573 src/docclipbase.cpp:831 src/renderer.cpp:330
+#: src/docclipbase.cpp:573 src/docclipbase.cpp:831 src/renderer.cpp:331
 msgid "Missing clip"
 msgstr ""
 
@@ -6995,36 +7000,36 @@ msgstr ""
 msgid "Automatic scene split"
 msgstr "Automaatsch"
 
-#: src/mainwindow.cpp:4094
+#: src/mainwindow.cpp:4078
 msgid "No clip to transcode"
 msgstr ""
 
-#: src/mainwindow.cpp:4129
+#: src/mainwindow.cpp:4113
 msgid "Create Render Script"
 msgstr ""
 
-#: src/mainwindow.cpp:4140
+#: src/mainwindow.cpp:4124
 msgid "Script file already exists. Do you want to overwrite it?"
 msgstr ""
 
-#: src/mainwindow.cpp:4186
+#: src/mainwindow.cpp:4170
 #, fuzzy
 #| msgid "Start at"
 msgctxt "the first in a list of chapters"
 msgid "Start"
 msgstr "Start bi"
 
-#: src/mainwindow.cpp:4305
+#: src/mainwindow.cpp:4289
 msgid ""
 "This will delete all changes made since you last saved your project. Are you "
 "sure you want to continue?"
 msgstr ""
 
-#: src/mainwindow.cpp:4305
+#: src/mainwindow.cpp:4289
 msgid "Revert to last saved version"
 msgstr ""
 
-#: src/mainwindow.cpp:4649
+#: src/mainwindow.cpp:4633
 msgid "Select a clip to save"
 msgstr ""
 
@@ -7084,11 +7089,11 @@ msgstr ""
 msgid "Real time (drop frames)"
 msgstr ""
 
-#: src/monitor.cpp:648
+#: src/monitor.cpp:649
 msgid "In Point"
 msgstr ""
 
-#: src/monitor.cpp:650
+#: src/monitor.cpp:651
 msgid "Out Point"
 msgstr ""
 
@@ -7307,78 +7312,78 @@ msgstr ""
 msgid "Transcoding"
 msgstr "Ümkoderen"
 
-#: src/projectlist.cpp:3124
+#: src/projectlist.cpp:3126
 #, kde-format
 msgid "Cannot write to path: %1"
 msgstr ""
 
-#: src/projectlist.cpp:3164
+#: src/projectlist.cpp:3166
 msgid "Update proxy settings"
 msgstr ""
 
-#: src/projectlist.cpp:3266
+#: src/projectlist.cpp:3268
 msgid "Add proxy clip"
 msgid_plural "Add proxy clips"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/projectlist.cpp:3267
+#: src/projectlist.cpp:3269
 msgid "Remove proxy clip"
 msgid_plural "Remove proxy clips"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/projectlist.cpp:3319
+#: src/projectlist.cpp:3321
 msgid "Remove Proxy"
 msgstr ""
 
-#: src/projectlist.cpp:3401
+#: src/projectlist.cpp:3403
 msgctxt "The first letter of Proxy, used as abbreviation"
 msgid "P"
 msgstr ""
 
-#: src/projectlist.cpp:3414
+#: src/projectlist.cpp:3416
 msgid "Cancel job"
 msgid_plural "Cancel jobs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/projectlist.cpp:3577
+#: src/projectlist.cpp:3579
 #, kde-format
 msgid "Filter %1"
 msgstr ""
 
-#: src/projectlist.cpp:3589
+#: src/projectlist.cpp:3591 src/projectlist.cpp:3596
 #, kde-format
 msgid "Cannot find clip to process filter %1"
 msgstr ""
 
-#: src/projectlist.cpp:3626
+#: src/projectlist.cpp:3634
 #, kde-format
 msgid "Found %1 scenes."
 msgstr ""
 
-#: src/projectlist.cpp:3645
+#: src/projectlist.cpp:3653
 msgid "Auto split"
 msgstr ""
 
-#: src/projectlist.cpp:3771
+#: src/projectlist.cpp:3779
 msgid "No data returned from clip analysis"
 msgstr ""
 
-#: src/projectlist.cpp:3784
+#: src/projectlist.cpp:3792
 #, fuzzy
 #| msgid "Transcode"
 msgid "Processing data analysis"
 msgstr "Ümkoderen"
 
-#: src/projectlist.cpp:3790
+#: src/projectlist.cpp:3798
 #, fuzzy
 #| msgid "Edit profile"
 msgid "Auto Split Clip"
 msgstr "Profil bewerken"
 
-#: src/projectlist.cpp:3808
+#: src/projectlist.cpp:3816
 msgid "Add Markers"
 msgstr ""
 
@@ -7733,47 +7738,47 @@ msgid ""
 "Press Esc to quit."
 msgstr ""
 
-#: src/renderer.cpp:249
+#: src/renderer.cpp:250
 #, kde-format
 msgid ""
 "Your project's profile %1 is not compatible with the blackmagic output card. "
 "Please see supported profiles below. Switching to normal video display."
 msgstr ""
 
-#: src/renderer.cpp:1241
+#: src/renderer.cpp:1242
 msgid ""
 "Could not create the video preview window.\n"
 "There is something wrong with your Kdenlive install or your driver settings, "
 "please fix it."
 msgstr ""
 
-#: src/renderer.cpp:1835
+#: src/renderer.cpp:1847
 msgid ""
 "Firewire is not enabled on your system.\n"
 " Please install Libiec61883 and recompile Kdenlive"
 msgstr ""
 
-#: src/renderer.cpp:1841
+#: src/renderer.cpp:1853
 msgid "There is no clip, cannot extract frame."
 msgstr ""
 
-#: src/renderer.cpp:4695
+#: src/renderer.cpp:4707
 msgid "Import selected clips"
 msgstr ""
 
-#: src/renderer.cpp:4699
+#: src/renderer.cpp:4711
 #, kde-format
 msgid ""
 "Additional streams for clip\n"
 " %1"
 msgstr ""
 
-#: src/renderer.cpp:4708
+#: src/renderer.cpp:4720
 #, kde-format
 msgid "Video stream %1"
 msgstr ""
 
-#: src/renderer.cpp:4720
+#: src/renderer.cpp:4732
 #, kde-format
 msgid "Audio stream %1"
 msgstr ""
@@ -9403,9 +9408,9 @@ msgstr "Normaal"
 msgid "Transparent"
 msgstr "Dörschienen"
 
-#. i18n: ectx: property (text), widget (QLabel, label_dest)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: ectx: property (text), widget (QLabel, label_dest)
 #: src/widgets/clipstabilize_ui.ui:20 src/widgets/cliptranscode_ui.ui:30
 #: src/widgets/renderwidget_ui.ui:36 src/widgets/saveprofile_ui.ui:20
 #, fuzzy
