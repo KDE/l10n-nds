@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qapt-batch\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-02-21 18:19+0100\n"
+"POT-Creation-Date: 2013-03-09 10:35+0100\n"
 "PO-Revision-Date: 2010-10-30 08:15+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -18,15 +18,26 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.0\n"
 
-#: utils/qapt-batch/detailswidget.cpp:44
+#: utils/qapt-batch/detailswidget.cpp:50
 msgctxt "@label Remaining time"
 msgid "Remaining Time:"
 msgstr "Nablieven Tiet:"
 
-#: utils/qapt-batch/detailswidget.cpp:48
+#: utils/qapt-batch/detailswidget.cpp:54
 msgctxt "@label Download Rate"
 msgid "Speed:"
 msgstr "Gauheit:"
+
+#: utils/qapt-batch/detailswidget.cpp:98
+msgctxt "@info:progress Remaining time"
+msgid "Unknown"
+msgstr "Nich begäng"
+
+#: utils/qapt-batch/detailswidget.cpp:107
+#, kde-format
+msgctxt "@info:progress Download rate"
+msgid "%1/s"
+msgstr "%1/s"
 
 #: utils/qapt-batch/main.cpp:28
 msgctxt "@info"
@@ -73,12 +84,12 @@ msgctxt "@info:shell"
 msgid "Packages to be operated upon"
 msgstr "Paketen, de Du ännern wullt"
 
-#: utils/qapt-batch/qaptbatch.cpp:70
+#: utils/qapt-batch/qaptbatch.cpp:49
 msgctxt "@label"
 msgid "Waiting for authorization"
 msgstr "An't Töven op Verlööf"
 
-#: utils/qapt-batch/qaptbatch.cpp:141
+#: utils/qapt-batch/qaptbatch.cpp:77 utils/qapt-batch/qaptbatch.cpp:158
 msgctxt "@label"
 msgid ""
 "The package system could not be initialized, your configuration may be "
@@ -87,12 +98,27 @@ msgstr ""
 "Dat Paketsysteem lett sik nich torechtmaken. Villicht sünd Dien Instellen "
 "leeg."
 
-#: utils/qapt-batch/qaptbatch.cpp:143
+#: utils/qapt-batch/qaptbatch.cpp:79 utils/qapt-batch/qaptbatch.cpp:160
 msgctxt "@title:window"
 msgid "Initialization error"
 msgstr "Fehler bi't Torechtmaken"
 
-#: utils/qapt-batch/qaptbatch.cpp:151
+#: utils/qapt-batch/qaptbatch.cpp:105 utils/qapt-batch/qaptbatch.cpp:227
+#, kde-format
+msgctxt "@label"
+msgid ""
+"The package \"%1\" has not been found among your software sources. "
+"Therefore, it cannot be installed. "
+msgstr ""
+"Dat Paket \"%1\" lett sik binnen Dien Programmborns nich finnen. Dorüm lett "
+"sik dat nich installeren. "
+
+#: utils/qapt-batch/qaptbatch.cpp:108 utils/qapt-batch/qaptbatch.cpp:230
+msgctxt "@title:window"
+msgid "Package Not Found"
+msgstr "Paket lett sik nich finnen."
+
+#: utils/qapt-batch/qaptbatch.cpp:167
 msgctxt "@label"
 msgid ""
 "Another application seems to be using the package system at this time. You "
@@ -103,12 +129,12 @@ msgstr ""
 "toeerst all anner Paketplegers tomaken, ehr Du Paketen installeren oder "
 "wegmaken kannst."
 
-#: utils/qapt-batch/qaptbatch.cpp:155
+#: utils/qapt-batch/qaptbatch.cpp:171
 msgctxt "@title:window"
 msgid "Unable to obtain package system lock"
 msgstr "Dat Paketsystem lett sik nich afsluten."
 
-#: utils/qapt-batch/qaptbatch.cpp:161
+#: utils/qapt-batch/qaptbatch.cpp:176
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -116,22 +142,36 @@ msgid ""
 "this operation."
 msgstr "Binnen Orner \"%1\" gifft dat nich noog free Ruum för't Wiedermaken."
 
-#: utils/qapt-batch/qaptbatch.cpp:163
+#: utils/qapt-batch/qaptbatch.cpp:178
 msgctxt "@title:window"
 msgid "Low disk space"
 msgstr "To minn free Ruum op de Fastplaat"
 
-#: utils/qapt-batch/qaptbatch.cpp:168
+#: utils/qapt-batch/qaptbatch.cpp:183
 msgctxt "@label"
 msgid "Could not download packages"
 msgstr "Paketen laat sik nich daalladen."
 
-#: utils/qapt-batch/qaptbatch.cpp:169
+#: utils/qapt-batch/qaptbatch.cpp:184
 msgctxt "@title:window"
 msgid "Download failed"
 msgstr "Daalladen fehlslaan"
 
-#: utils/qapt-batch/qaptbatch.cpp:177
+#: utils/qapt-batch/qaptbatch.cpp:188
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "An error occurred while applying changes:"
+#| msgid_plural "The following errors occurred while applying changes:"
+msgctxt "@label"
+msgid "An error occurred while applying changes:"
+msgstr "Bi't Övernehmen vun Ännern geev dat en Fehler:"
+
+#: utils/qapt-batch/qaptbatch.cpp:189
+msgctxt "@title:window"
+msgid "Commit error"
+msgstr "Inspelen fehlslaan"
+
+#: utils/qapt-batch/qaptbatch.cpp:195
 msgctxt "@label"
 msgid ""
 "This operation cannot continue since proper authorization was not provided"
@@ -139,12 +179,12 @@ msgstr ""
 "Wiedermaken nich mööglich, wiel keen propper Identiteetprööv praatstellt "
 "warrt."
 
-#: utils/qapt-batch/qaptbatch.cpp:179
+#: utils/qapt-batch/qaptbatch.cpp:197
 msgctxt "@title:window"
 msgid "Authentication error"
 msgstr "Identiteetprööv fehlslaan"
 
-#: utils/qapt-batch/qaptbatch.cpp:183 utils/qapt-batch/qaptbatch.cpp:414
+#: utils/qapt-batch/qaptbatch.cpp:201
 msgctxt "@label"
 msgid ""
 "It appears that the QApt worker has either crashed or disappeared. Please "
@@ -153,12 +193,12 @@ msgstr ""
 "As't lett is dat QApt-Arbeitprogramm afstört oder wegkamen. Bitte stüer de "
 "QApt-Plegers en Fehlerbericht to."
 
-#: utils/qapt-batch/qaptbatch.cpp:185 utils/qapt-batch/qaptbatch.cpp:416
+#: utils/qapt-batch/qaptbatch.cpp:203
 msgctxt "@title:window"
 msgid "Unexpected Error"
 msgstr "Nich verwacht Fehler"
 
-#: utils/qapt-batch/qaptbatch.cpp:193
+#: utils/qapt-batch/qaptbatch.cpp:211
 msgctxt "@label"
 msgid ""
 "The following package has not been verified by its author. Downloading "
@@ -173,53 +213,28 @@ msgstr[1] ""
 "De Schriever hett disse Paketen nich beglöövt. Dat Daalladen vun nich "
 "beglöövt Paketen is op Dien Systeem nich tolaten."
 
-#: utils/qapt-batch/qaptbatch.cpp:202
+#: utils/qapt-batch/qaptbatch.cpp:220
 msgctxt "@title:window"
 msgid "Untrusted Packages"
 msgstr "Nich troot Paketen"
 
-#: utils/qapt-batch/qaptbatch.cpp:210
-#, kde-format
-msgctxt "@label"
-msgid ""
-"The package \"%1\" has not been found among your software sources. "
-"Therefore, it cannot be installed. "
-msgstr ""
-"Dat Paket \"%1\" lett sik binnen Dien Programmborns nich finnen. Dorüm lett "
-"sik dat nich installeren. "
-
-#: utils/qapt-batch/qaptbatch.cpp:213
-msgctxt "@title:window"
-msgid "Package Not Found"
-msgstr "Paket lett sik nich finnen."
-
-#: utils/qapt-batch/qaptbatch.cpp:231
-msgctxt "@label"
-msgid "The size of the downloaded items did not equal the expected size."
-msgstr "De Grött vun de daallaadt Objekten is nich de sülvige as verwacht."
-
-#: utils/qapt-batch/qaptbatch.cpp:233
-msgctxt "@title:window"
-msgid "Size Mismatch"
-msgstr "Grött passt nich."
-
-#: utils/qapt-batch/qaptbatch.cpp:259
+#: utils/qapt-batch/qaptbatch.cpp:243
 msgctxt "@title:window"
 msgid "Media Change Required"
 msgstr "En Medienwessel deit noot"
 
-#: utils/qapt-batch/qaptbatch.cpp:260
+#: utils/qapt-batch/qaptbatch.cpp:244
 #, kde-format
 msgctxt "@label"
 msgid "Please insert %1 into <filename>%2</filename>"
 msgstr "Bitte %1 na <filename>%2</filename> inleggen."
 
-#: utils/qapt-batch/qaptbatch.cpp:269
+#: utils/qapt-batch/qaptbatch.cpp:253
 msgctxt "@title:window"
 msgid "Warning - Unverified Software"
 msgstr "Wohrschoen: Programmen nich beglöövt"
 
-#: utils/qapt-batch/qaptbatch.cpp:271
+#: utils/qapt-batch/qaptbatch.cpp:255
 msgctxt "@label"
 msgid ""
 "The following piece of software cannot be verified. <warning>Installing "
@@ -240,143 +255,181 @@ msgstr[1] ""
 "beglöövt Programmen kann en Riskanz för de Sekerheit wesen, wiel de "
 "Programmen villicht vermurkst wesen köönt.</warning> Wullt Du wiedermaken?"
 
-#: utils/qapt-batch/qaptbatch.cpp:306
+#: utils/qapt-batch/qaptbatch.cpp:290
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Waiting for authorization"
+msgctxt "@label Progress bar label when waiting to start"
+msgid "Waiting to start."
+msgstr "An't Töven op Verlööf"
+
+#: utils/qapt-batch/qaptbatch.cpp:295
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Waiting for authorization"
+msgctxt "@label Status label when waiting for a password"
+msgid "Waiting for authentication."
+msgstr "An't Töven op Verlööf"
+
+#: utils/qapt-batch/qaptbatch.cpp:300
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Waiting for authorization"
+msgctxt "@label Status label when waiting for a CD-ROM"
+msgid "Waiting for required media."
+msgstr "An't Töven op Verlööf"
+
+#: utils/qapt-batch/qaptbatch.cpp:305
+msgctxt "@label Status label"
+msgid "Waiting for other package managers to quit."
+msgstr ""
+
+#: utils/qapt-batch/qaptbatch.cpp:313
+#, fuzzy
+#| msgctxt "@info:status"
+#| msgid "Downloading package file"
+#| msgid_plural "Downloading package files"
+msgctxt "@label Status label"
+msgid "Loading package cache."
+msgstr "Paketdatei warrt daallaadt."
+
+#: utils/qapt-batch/qaptbatch.cpp:317
 msgctxt "@title:window"
 msgid "Refreshing Package Information"
 msgstr "Paketinformatschonen warrt opfrischt"
 
-#: utils/qapt-batch/qaptbatch.cpp:307
+#: utils/qapt-batch/qaptbatch.cpp:318
 msgctxt "@info:status"
 msgid "Checking for new, removed or upgradeable packages"
 msgstr "Bi't Kieken na nieg, wegdaan oder opgradeerbor Paketen"
 
-#: utils/qapt-batch/qaptbatch.cpp:313
-msgctxt "@title:window"
-msgid "Refresh Complete"
-msgstr "Opfrischen afslaten"
-
-#: utils/qapt-batch/qaptbatch.cpp:322
-msgctxt "@info:status"
-msgid "Refresh completed with errors"
-msgstr "Opfrischen mit Fehlers afslaten"
-
-#: utils/qapt-batch/qaptbatch.cpp:324
-msgctxt "@label"
-msgid "Package information successfully refreshed"
-msgstr "Paketinformatschonen mit Spood opfrischt"
-
-#: utils/qapt-batch/qaptbatch.cpp:334
+#: utils/qapt-batch/qaptbatch.cpp:320
 msgctxt "@title:window"
 msgid "Downloading"
 msgstr "Bi to daalladen..."
 
-#: utils/qapt-batch/qaptbatch.cpp:336
+#: utils/qapt-batch/qaptbatch.cpp:322
 msgctxt "@info:status"
 msgid "Downloading package file"
 msgid_plural "Downloading package files"
 msgstr[0] "Paketdatei warrt daallaadt."
 msgstr[1] "Paketdateien warrt daallaadt."
 
-#: utils/qapt-batch/qaptbatch.cpp:348
+#: utils/qapt-batch/qaptbatch.cpp:331
 msgctxt "@title:window"
 msgid "Installing Packages"
 msgstr "Paketen warrt installeert."
 
-#: utils/qapt-batch/qaptbatch.cpp:362
+#: utils/qapt-batch/qaptbatch.cpp:336
 msgctxt "@title:window"
 msgid "Installation Complete"
 msgstr "Installatschoon afslaten"
 
-#: utils/qapt-batch/qaptbatch.cpp:366
+#: utils/qapt-batch/qaptbatch.cpp:340
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Package installation finished with errors."
 msgctxt "@label"
-msgid "Package installation finished with errors."
+msgid "Package installation failed."
 msgstr "Paketinstallatschoon mit Fehlers afslaten"
 
-#: utils/qapt-batch/qaptbatch.cpp:369
+#: utils/qapt-batch/qaptbatch.cpp:343
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Package successfully installed"
+#| msgid_plural "Packages successfully installed"
 msgctxt "@label"
-msgid "Package successfully installed"
-msgid_plural "Packages successfully installed"
+msgid "Package successfully installed."
+msgid_plural "Packages successfully installed."
 msgstr[0] "Paket mit Spood installeert"
 msgstr[1] "Paketen mit Spood installeert"
 
-#: utils/qapt-batch/qaptbatch.cpp:373
+#: utils/qapt-batch/qaptbatch.cpp:347
 msgctxt "@title:window"
 msgid "Removal Complete"
 msgstr "Wegmaken afslaten"
 
-#: utils/qapt-batch/qaptbatch.cpp:377
+#: utils/qapt-batch/qaptbatch.cpp:351
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Package removal finished with errors."
 msgctxt "@label"
-msgid "Package removal finished with errors."
+msgid "Package removal failed."
 msgstr "Wegmaken vun Paket mit Fehlers afslaten"
 
-#: utils/qapt-batch/qaptbatch.cpp:380
+#: utils/qapt-batch/qaptbatch.cpp:355
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Package successfully uninstalled"
+#| msgid_plural "Packages successfully uninstalled"
 msgctxt "@label"
-msgid "Package successfully uninstalled"
-msgid_plural "Packages successfully uninstalled"
+msgid "Package successfully uninstalled."
+msgid_plural "Packages successfully uninstalled."
 msgstr[0] "Paket mit Spood wegmaakt"
 msgstr[1] "Paketen mit Spood wegmaakt"
 
-#: utils/qapt-batch/qaptbatch.cpp:431
-msgctxt "@info:progress Remaining time"
-msgid "Unknown"
-msgstr "Nich begäng"
-
-#: utils/qapt-batch/qaptbatch.cpp:436
-msgctxt "@info:progress Download rate"
-msgid "Unknown"
-msgstr "Nich begäng"
-
-#: utils/qapt-batch/qaptbatch.cpp:439
-#, kde-format
-msgctxt "@info:progress Download rate"
-msgid "%1/s"
-msgstr "%1/s"
-
-#: utils/qapt-batch/qaptbatch.cpp:462
-msgctxt "@label"
-msgid "Unable to download the following packages:"
-msgstr "Disse Paketen laat sik nich daalladen:"
-
-#: utils/qapt-batch/qaptbatch.cpp:467
-#, kde-format
-msgctxt "@label"
-msgid ""
-"Failed to download %1\n"
-"%2\n"
-"\n"
-msgstr ""
-"\"%1\" lett sik nich daalladen.\n"
-"%2\n"
-"\n"
-
-#: utils/qapt-batch/qaptbatch.cpp:470
+#: utils/qapt-batch/qaptbatch.cpp:359
 msgctxt "@title:window"
-msgid "Some Packages Could not be Downloaded"
-msgstr "En poor Paketen laat sik nich daalladen."
+msgid "Refresh Complete"
+msgstr "Opfrischen afslaten"
 
-#: utils/qapt-batch/qaptbatch.cpp:477
+#: utils/qapt-batch/qaptbatch.cpp:362
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Refresh Complete"
+msgctxt "@info:status"
+msgid "Refresh failed."
+msgstr "Opfrischen afslaten"
+
+#: utils/qapt-batch/qaptbatch.cpp:364
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Package information successfully refreshed"
 msgctxt "@label"
-msgid "An error occurred while applying changes:"
-msgid_plural "The following errors occurred while applying changes:"
-msgstr[0] "Bi't Övernehmen vun Ännern geev dat en Fehler:"
-msgstr[1] "Bi't Övernehmen vun Ännern geev dat disse Fehlers:"
+msgid "Package information successfully refreshed."
+msgstr "Paketinformatschonen mit Spood opfrischt"
 
-#: utils/qapt-batch/qaptbatch.cpp:481
-#, kde-format
-msgctxt "@label Shows which package failed"
-msgid "Package: %1"
-msgstr "Paket: %1"
+#~ msgctxt "@label"
+#~ msgid "The size of the downloaded items did not equal the expected size."
+#~ msgstr "De Grött vun de daallaadt Objekten is nich de sülvige as verwacht."
 
-#: utils/qapt-batch/qaptbatch.cpp:482
-#, kde-format
-msgctxt "@label Shows the error"
-msgid "Error: %1"
-msgstr "Fehler: %1"
+#~ msgctxt "@title:window"
+#~ msgid "Size Mismatch"
+#~ msgstr "Grött passt nich."
 
-#: utils/qapt-batch/qaptbatch.cpp:486
-msgctxt "@title:window"
-msgid "Commit error"
-msgstr "Inspelen fehlslaan"
+#~ msgctxt "@info:status"
+#~ msgid "Refresh completed with errors"
+#~ msgstr "Opfrischen mit Fehlers afslaten"
+
+#~ msgctxt "@info:progress Download rate"
+#~ msgid "Unknown"
+#~ msgstr "Nich begäng"
+
+#~ msgctxt "@label"
+#~ msgid "Unable to download the following packages:"
+#~ msgstr "Disse Paketen laat sik nich daalladen:"
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "Failed to download %1\n"
+#~ "%2\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\"%1\" lett sik nich daalladen.\n"
+#~ "%2\n"
+#~ "\n"
+
+#~ msgctxt "@title:window"
+#~ msgid "Some Packages Could not be Downloaded"
+#~ msgstr "En poor Paketen laat sik nich daalladen."
+
+#~ msgctxt "@label Shows which package failed"
+#~ msgid "Package: %1"
+#~ msgstr "Paket: %1"
+
+#~ msgctxt "@label Shows the error"
+#~ msgid "Error: %1"
+#~ msgstr "Fehler: %1"
 
 #~ msgid "File: %1"
 #~ msgstr "Datei: %1"
