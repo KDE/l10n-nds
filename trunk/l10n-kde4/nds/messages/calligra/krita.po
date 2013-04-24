@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-04-23 02:49+0200\n"
+"POT-Creation-Date: 2013-04-24 02:12+0200\n"
 "PO-Revision-Date: 2011-10-08 08:08+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1186,7 +1186,7 @@ msgstr "Bildklörenruum ümwanneln"
 msgid "Convert Projection Color Space"
 msgstr "Projizerenklörenruum ümwanneln"
 
-#: image/kis_image.cc:898 ui/kis_layer_manager.cc:767
+#: image/kis_image.cc:898 ui/kis_layer_manager.cc:775
 msgid "Flatten Image"
 msgstr "Bild glattmaken"
 
@@ -2510,29 +2510,35 @@ msgid "&Generated Layer..."
 msgstr "&Opstellt Laag..."
 
 #: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:238
+#, fuzzy
+#| msgid "&Filter Layer..."
+msgid "&File Layer"
+msgstr "&Filterlaag..."
+
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:242
 msgid "&Transparency Mask"
 msgstr "&Transparenzmask"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:243
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:247
 msgid "&Filter Mask..."
 msgstr "&Filtermask..."
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:248
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:252
 msgid "&Local Selection"
 msgstr "&Lokaal Köör"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:253
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:257
 #, fuzzy
 #| msgid "Select Opaque"
 msgid "&Select Opaque"
 msgstr "Deckstärk utsöken"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:272
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:277
 msgid "&Transformation Mask..."
 msgstr "&Ümform-Mask..."
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:479
-#: ui/kis_layer_manager.cc:282
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:484
+#: ui/kis_layer_manager.cc:290
 msgid "&Merge with Layer Below"
 msgstr "Mit nerrn Laag &tosamenföhren"
 
@@ -2586,6 +2592,7 @@ msgstr "Sett vun aktiv Kanaals kören"
 #. i18n: ectx: property (text), widget (KoGroupButton, add)
 #. i18n: ectx: property (text), widget (KoGroupButton, pixel)
 #. i18n: ectx: property (text), widget (KoGroupButton, subtract)
+#. i18n: ectx: property (text), widget (QToolButton, bnGetFileName)
 #: plugins/extensions/dockers/defaultdockers/wdglayerbox.ui:50
 #: plugins/extensions/dockers/defaultdockers/wdglayerbox.ui:99
 #: plugins/extensions/dockers/defaultdockers/wdglayerbox.ui:124
@@ -2607,12 +2614,13 @@ msgstr "Sett vun aktiv Kanaals kören"
 #: plugins/extensions/dockers/lut/wdglut.ui:144
 #: plugins/extensions/dockers/lut/wdglut.ui:172
 #: plugins/paintops/libpaintop/forms/wdgtextbrush.ui:104
-#: ui/forms/wdgcolorsettings.ui:319 ui/forms/wdgnewimage.ui:164
-#: ui/forms/wdgnewimage.ui:186 ui/forms/wdgpaintactioneditor.ui:46
-#: ui/forms/wdgpaintactioneditor.ui:69 ui/forms/wdgpaintoppresets.ui:61
-#: ui/forms/wdgselectionoptions.ui:31 ui/forms/wdgselectionoptions.ui:47
-#: ui/forms/wdgselectionoptions.ui:63 ui/forms/wdgselectionoptions.ui:82
-#: ui/forms/wdgselectionoptions.ui:118 ui/forms/wdgselectionoptions.ui:137
+#: ui/forms/wdgcolorsettings.ui:319 ui/forms/wdgdlgfilelayer.ui:54
+#: ui/forms/wdgnewimage.ui:164 ui/forms/wdgnewimage.ui:186
+#: ui/forms/wdgpaintactioneditor.ui:46 ui/forms/wdgpaintactioneditor.ui:69
+#: ui/forms/wdgpaintoppresets.ui:61 ui/forms/wdgselectionoptions.ui:31
+#: ui/forms/wdgselectionoptions.ui:47 ui/forms/wdgselectionoptions.ui:63
+#: ui/forms/wdgselectionoptions.ui:82 ui/forms/wdgselectionoptions.ui:118
+#: ui/forms/wdgselectionoptions.ui:137
 msgid "..."
 msgstr "..."
 
@@ -9310,6 +9318,10 @@ msgstr "För dissen Filter sünd keen Instell-Optschonen verföögbor"
 msgid "Cleanup resource files"
 msgstr "Borndateien:"
 
+#: ui/dialogs/kis_dlg_file_layer.cpp:89
+msgid "Select file to use as dynamic file layer."
+msgstr ""
+
 #: ui/dialogs/kis_dlg_image_properties.cc:52
 msgid "Image Properties"
 msgstr "Bildegenschappen"
@@ -10046,9 +10058,24 @@ msgid "Brushes"
 msgstr "Pinsel"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: ui/forms/wdgdlggeneratorlayer.ui:18
+#: ui/forms/wdgdlgfilelayer.ui:26 ui/forms/wdgdlggeneratorlayer.ui:18
 msgid "&Layer Name:"
 msgstr "&Laagnaam:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/forms/wdgdlgfilelayer.ui:39
+#, fuzzy
+#| msgid "&File"
+msgid "File:"
+msgstr "&Datei"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkScaleToImageResolution)
+#: ui/forms/wdgdlgfilelayer.ui:63
+#, fuzzy
+#| msgctxt "(qtundo-format)"
+#| msgid "Set Image Resolution"
+msgid "Scale To Image Resolution"
+msgstr "Bildoplösen fastleggen"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, FilterDialog)
 #: ui/forms/wdgfilterdialog.ui:14
@@ -11093,6 +11120,12 @@ msgstr ""
 msgid "unnamed"
 msgstr "Ahn Naam"
 
+#: ui/kis_file_layer.cpp:95
+#, fuzzy
+#| msgid "&File"
+msgid "File"
+msgstr "&Datei"
+
 #: ui/kis_filter_handler.cc:121
 #, kde-format
 msgid ""
@@ -11137,75 +11170,75 @@ msgstr "Egenschappen..."
 msgid "Import Image"
 msgstr "Bild importeren"
 
-#: ui/kis_layer_manager.cc:277
+#: ui/kis_layer_manager.cc:285
 msgid "&Flatten image"
 msgstr "Bild &glattmaken"
 
-#: ui/kis_layer_manager.cc:287
+#: ui/kis_layer_manager.cc:295
 msgid "&Flatten Layer"
 msgstr "Laag &glattmaken"
 
-#: ui/kis_layer_manager.cc:291 ui/kis_layer_manager.cc:836
+#: ui/kis_layer_manager.cc:299 ui/kis_layer_manager.cc:844
 msgid "Rasterize Layer"
 msgstr "Laag rastern"
 
-#: ui/kis_layer_manager.cc:297
+#: ui/kis_layer_manager.cc:305
 #, fuzzy
 #| msgid "&Group Layer"
 msgid "Save Group Layers..."
 msgstr "&Koppel-Laag"
 
-#: ui/kis_layer_manager.cc:301
+#: ui/kis_layer_manager.cc:309
 msgid "Size Canvas to Size of Current Layer"
 msgstr "Lienwandgrött na aktuell Laaggrött ännern"
 
-#: ui/kis_layer_manager.cc:306
+#: ui/kis_layer_manager.cc:314
 #, fuzzy
 #| msgid "&Paint Layer"
 msgid "Add new paint layer"
 msgstr "&Klöörlaag"
 
-#: ui/kis_layer_manager.cc:361
+#: ui/kis_layer_manager.cc:369
 msgid "Filter Layer Properties"
 msgstr "Filterlaag-Egenschappen"
 
-#: ui/kis_layer_manager.cc:406
+#: ui/kis_layer_manager.cc:414
 msgid "Generator Layer Properties"
 msgstr "Makerlaag-Egenschappen"
 
-#: ui/kis_layer_manager.cc:464 ui/kis_layer_manager.cc:478
-#: ui/kis_layer_manager.cc:519 ui/kis_layer_manager.cc:550
-#: ui/kis_layer_manager.cc:657
+#: ui/kis_layer_manager.cc:472 ui/kis_layer_manager.cc:486
+#: ui/kis_layer_manager.cc:527 ui/kis_layer_manager.cc:558
+#: ui/kis_layer_manager.cc:665 ui/kis_layer_manager.cc:961
 msgid "Could not add layer to image."
 msgstr "Laag lett sik nich dat Bild tofögen."
 
-#: ui/kis_layer_manager.cc:464 ui/kis_layer_manager.cc:478
-#: ui/kis_layer_manager.cc:519 ui/kis_layer_manager.cc:550
-#: ui/kis_layer_manager.cc:657
+#: ui/kis_layer_manager.cc:472 ui/kis_layer_manager.cc:486
+#: ui/kis_layer_manager.cc:527 ui/kis_layer_manager.cc:558
+#: ui/kis_layer_manager.cc:665 ui/kis_layer_manager.cc:961
 msgid "Layer Error"
 msgstr "Laag-Fehler"
 
-#: ui/kis_layer_manager.cc:575
+#: ui/kis_layer_manager.cc:583
 msgid "New Filter Layer"
 msgstr "Nieg Filterlaag"
 
-#: ui/kis_layer_manager.cc:724
+#: ui/kis_layer_manager.cc:732
 msgid "Scale Layer"
 msgstr "Laag topassen"
 
-#: ui/kis_layer_manager.cc:766
+#: ui/kis_layer_manager.cc:774
 msgid "The image contains hidden layers that will be lost."
 msgstr "Dat Bild bargt versteken Lagen, de verloren geiht."
 
-#: ui/kis_layer_manager.cc:768
+#: ui/kis_layer_manager.cc:776
 msgid "&Flatten Image"
 msgstr "Bild &glattmaken"
 
-#: ui/kis_layer_manager.cc:872
+#: ui/kis_layer_manager.cc:880
 msgid "Convert Invisible Groups"
 msgstr ""
 
-#: ui/kis_layer_manager.cc:875
+#: ui/kis_layer_manager.cc:883
 msgid "Export Only Toplevel Groups"
 msgstr ""
 
@@ -11250,19 +11283,19 @@ msgstr "Kopie vun "
 msgid "Effect Mask Properties"
 msgstr "Effektmask-Egenschappen"
 
-#: ui/kis_mirror_visitor.cpp:94 ui/kis_node_manager.cpp:553
+#: ui/kis_mirror_visitor.cpp:94 ui/kis_node_manager.cpp:555
 msgid "Mirror Layer X"
 msgstr "Laag X spegeln"
 
-#: ui/kis_mirror_visitor.cpp:96 ui/kis_node_manager.cpp:566
+#: ui/kis_mirror_visitor.cpp:96 ui/kis_node_manager.cpp:568
 msgid "Mirror Layer Y"
 msgstr "Laag Y spegeln"
 
-#: ui/kis_mirror_visitor.cpp:128 ui/kis_node_manager.cpp:555
+#: ui/kis_mirror_visitor.cpp:128 ui/kis_node_manager.cpp:557
 msgid "Mirror Mask X"
 msgstr "Mask X spegeln"
 
-#: ui/kis_mirror_visitor.cpp:130 ui/kis_node_manager.cpp:568
+#: ui/kis_mirror_visitor.cpp:130 ui/kis_node_manager.cpp:570
 #, fuzzy
 #| msgid "Mirror Mask X"
 msgid "Mirror Mask Y"
@@ -11310,14 +11343,14 @@ msgstr "Aktiv Laag"
 msgid "Save Layer/Mask..."
 msgstr "Laag as Bild sekern..."
 
-#: ui/kis_node_manager.cpp:537
+#: ui/kis_node_manager.cpp:539
 #, fuzzy
 #| msgctxt "(qtundo-format)"
 #| msgid "Remove Layer"
 msgid "Remove Last Layer"
 msgstr "Laag wegdoon"
 
-#: ui/kis_node_manager.cpp:659
+#: ui/kis_node_manager.cpp:661
 #, fuzzy
 #| msgid "Exposure mode:"
 msgid "Export Node"
