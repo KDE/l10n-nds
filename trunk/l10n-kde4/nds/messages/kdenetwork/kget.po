@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kget\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-06-07 01:35+0000\n"
+"POT-Creation-Date: 2013-06-09 01:37+0000\n"
 "PO-Revision-Date: 2011-12-05 18:43+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -414,6 +414,8 @@ msgstr "Slötelservers:"
 
 #: core/datasourcefactory.cpp:279 core/datasourcefactory.cpp:624
 #: core/kget.cpp:1393 transfer-plugins/metalink/metalink.cpp:202
+#: transfer-plugins/metalink/metalinkhttp.cpp:224
+#: transfer-plugins/metalink/metalinkxml.cpp:199
 #: ui/metalinkcreator/metalinkcreator.cpp:161
 #: ui/metalinkcreator/metalinkcreator.cpp:178
 msgid "Error"
@@ -645,7 +647,8 @@ msgid "You are already downloading the same file"
 msgstr "Du laadst de sülve Datei al daal"
 
 #: core/kget.cpp:1123 core/kget.cpp:1126 core/urlchecker.cpp:648
-#: core/urlchecker.cpp:744 transfer-plugins/metalink/metalink.cpp:720
+#: core/urlchecker.cpp:744 transfer-plugins/metalink/abstractmetalink.cpp:483
+#: transfer-plugins/metalink/metalink.cpp:720
 msgid "File already exists"
 msgstr "Gifft de Datei al"
 
@@ -1372,7 +1375,7 @@ msgstr "En verbetert Daallaad-Pleger för KDE"
 #| "(C) 2002, Carsten Pfeiffer\n"
 #| "(C) 1998 - 2000, Matej Koss"
 msgid ""
-"(C) 2005 - 2011, The KGet developers\n"
+"(C) 2005 - 2012, The KGet developers\n"
 "(C) 2001 - 2002, Patrick Charbonnier\n"
 "(C) 2002, Carsten Pfeiffer\n"
 "(C) 1998 - 2000, Matej Koss"
@@ -1427,62 +1430,70 @@ msgid "Developer"
 msgstr "Schriever"
 
 #: main.cpp:120
+msgid "Aish Raj Dahal"
+msgstr ""
+
+#: main.cpp:120
+msgid "Google Summer of Code Student"
+msgstr ""
+
+#: main.cpp:121
 msgid "Ernesto Rodriguez Ortiz"
 msgstr "Ernesto Rodriguez Ortiz"
 
-#: main.cpp:120
+#: main.cpp:121
 msgid "Mms Plugin Author"
 msgstr "Schriever vun dat MMS-Moduul"
 
-#: main.cpp:121
+#: main.cpp:122
 msgid "Patrick Charbonnier"
 msgstr "Patrick Charbonnier"
 
-#: main.cpp:121 main.cpp:122 main.cpp:123
+#: main.cpp:122 main.cpp:123 main.cpp:124
 msgid "Former Developer"
 msgstr "Verleden Schriever"
 
-#: main.cpp:122
+#: main.cpp:123
 msgid "Carsten Pfeiffer"
 msgstr "Carsten Pfeiffer"
 
-#: main.cpp:123
+#: main.cpp:124
 msgid "Matej Koss"
 msgstr "Matej Koss"
 
-#: main.cpp:124
+#: main.cpp:125
 msgid "Joris Guisson"
 msgstr "Joris Guisson"
 
-#: main.cpp:124
+#: main.cpp:125
 msgid "BTCore (KTorrent) Developer"
 msgstr "Schriever vun BTCore (KTorrent)"
 
-#: main.cpp:125
+#: main.cpp:126
 msgid "Mensur Zahirovic (Nookie)"
 msgstr "Mensur Zahirovic (Nookie)"
 
-#: main.cpp:125
+#: main.cpp:126
 msgid "Design of Web Interface"
 msgstr "Utsehn vun de Nettböversiet"
 
-#: main.cpp:130
+#: main.cpp:131
 msgid "Start KGet with drop target"
 msgstr "KGet mit Treckteel starten"
 
-#: main.cpp:131
+#: main.cpp:132
 msgid "Start KGet with hidden main window"
 msgstr "KGet mit versteken Hööftfinster starten"
 
-#: main.cpp:132
+#: main.cpp:133
 msgid "Start KGet without drop target animation"
 msgstr "KGet ahn Treckteel-Animeren starten"
 
-#: main.cpp:134
+#: main.cpp:135
 msgid "Execute Unit Testing"
 msgstr "Eenheitentest utföhren"
 
-#: main.cpp:136
+#: main.cpp:137
 msgid "URL(s) to download"
 msgstr "URL(s), de Du daalladen wullt"
 
@@ -2852,6 +2863,15 @@ msgstr "De Daalladen (%1) lett sik nich pröven. Wullt Du em nieg daalladen?"
 msgid "Verification failed."
 msgstr "Prööv fehlslaan"
 
+#: transfer-plugins/metalink/abstractmetalink.cpp:219
+#: transfer-plugins/metalink/metalink.cpp:493
+msgid ""
+"The download could not be verified, do you want to repair (if repairing does "
+"not work the download would be restarted) it?"
+msgstr ""
+"De Daalladen lett sik nich pröven. Wullt Du em richten? (Sleit dat Richten "
+"fehl, warrt de Datei nieg daallaadt.)"
+
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: transfer-plugins/metalink/dlgmetalink.ui:22
 msgid "Number of simultaneous file downloads:"
@@ -2880,29 +2900,30 @@ msgid "File Selection"
 msgstr "Dateiköör"
 
 #: transfer-plugins/metalink/metalink.cpp:83
+#: transfer-plugins/metalink/metalinkxml.cpp:79
 msgid "Downloading Metalink File...."
 msgstr "Metalink-Datei warrt daallaadt..."
 
 #: transfer-plugins/metalink/metalink.cpp:117
+#: transfer-plugins/metalink/metalinkxml.cpp:113
 msgid ""
 "A newer version of this Metalink might exist, do you want to download it?"
 msgstr "Villicht wöör disse Metalink opfrischt. Wullt Du em daalladen?"
 
 #: transfer-plugins/metalink/metalink.cpp:118
+#: transfer-plugins/metalink/metalinkxml.cpp:114
 msgid "Redownload Metalink"
 msgstr "Metalink nieg daalladen"
 
 #: transfer-plugins/metalink/metalink.cpp:202
+#: transfer-plugins/metalink/metalinkhttp.cpp:224
+#: transfer-plugins/metalink/metalinkxml.cpp:199
 msgid "Download failed, no working URLs were found."
 msgstr "Daalladen fehlslaan, keen funkscheneren URLs funnen."
 
-#: transfer-plugins/metalink/metalink.cpp:493
-msgid ""
-"The download could not be verified, do you want to repair (if repairing does "
-"not work the download would be restarted) it?"
-msgstr ""
-"De Daalladen lett sik nich pröven. Wullt Du em richten? (Sleit dat Richten "
-"fehl, warrt de Datei nieg daallaadt.)"
+#: transfer-plugins/metalink/metalinkhttp.cpp:143
+msgid "The download could not be verified, try to repair it?"
+msgstr "De Daalladen lett sik nich pröven Wullt Du em richten?"
 
 #. i18n: ectx: property (text), widget (QLabel, engineNameLabel)
 #: transfer-plugins/mirrorsearch/dlgengineediting.ui:16
@@ -4166,9 +4187,6 @@ msgstr "&Pröven"
 #: ui/verificationdialog.ui:71
 msgid "Verifying:"
 msgstr "Bi to pröven:"
-
-#~ msgid "The download could not be verified, try to repair it?"
-#~ msgstr "De Daalladen lett sik nich pröven Wullt Du em richten?"
 
 #~ msgctxt "on a question"
 #~ msgid "Yes all"
