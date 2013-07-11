@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi_imap_resource\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-07-09 21:20+0000\n"
+"POT-Creation-Date: 2013-07-11 01:37+0000\n"
 "PO-Revision-Date: 2011-12-05 18:50+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -298,6 +298,18 @@ msgstr "Anner URL fastleggen"
 msgid "Define default sieve vacation filename"
 msgstr "Standardnaam vun de Oorlööf-Datei för Sieve-Akschoon fastleggen"
 
+#. i18n: ectx: label, entry (SieveCustomUsername), group (siever)
+#: imapresource.kcfg:103
+msgid "Define username used from custum server sieve url"
+msgstr ""
+
+#. i18n: ectx: label, entry (SieveCustomAuthentification), group (siever)
+#: imapresource.kcfg:107
+#, fuzzy
+#| msgid "Defines the authentication type to use"
+msgid "Defines the type of indentification used by custom sieve server"
+msgstr "Gifft de Identiteetprööv-Metood an."
+
 #: movecollectiontask.cpp:44
 #, kde-format
 msgid "Cannot move IMAP folder '%1', it does not exist on the server."
@@ -411,7 +423,7 @@ msgstr "Keen Naricht kregen, de Server-Antwoort weer leddig."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ServerInfo)
 #. i18n: ectx: property (text), widget (QPushButton, showServerInfo)
-#: serverinfo.ui:14 setupserverview_desktop.ui:492
+#: serverinfo.ui:14 setupserverview_desktop.ui:557
 #: setupserverview_mobile.ui:440
 msgid "Server Info"
 msgstr ""
@@ -560,7 +572,7 @@ msgid_plural " minutes"
 msgstr[0] " Minuut"
 msgstr[1] " Minuten"
 
-#: setupserver.cpp:348
+#: setupserver.cpp:378
 msgid ""
 "Could not access KWallet. If you want to store the password permanently then "
 "you have to activate it. If you do not want to use KWallet, check the box "
@@ -571,24 +583,24 @@ msgstr ""
 "nerrn an, man beacht: Du warrst denn na't Passwoort fraagt, wenn dat bruukt "
 "warrt."
 
-#: setupserver.cpp:353
+#: setupserver.cpp:383
 msgid "Do not use KWallet"
 msgstr "Knipp nich bruken"
 
-#: setupserver.cpp:449
+#: setupserver.cpp:492
 msgid "Unable to connect to the server, please verify the server address."
 msgstr ""
 "Tokoppeln na den Server nich mööglich. Överprööv bitte de Serveradress."
 
-#: setupserver.cpp:460
+#: setupserver.cpp:503
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
 msgstr "<qt><b>TLS warrt ünnerstütt un anraadt.</b></qt>"
 
-#: setupserver.cpp:463
+#: setupserver.cpp:506
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
 msgstr "<qt><b>SSL warrt ünnerstütt un anraadt.</b></qt>"
 
-#: setupserver.cpp:466
+#: setupserver.cpp:509
 msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
 "server.</b></qt>"
@@ -596,11 +608,11 @@ msgstr ""
 "<qt><b>Keen Sekerheitünnerstütten. Dat Tokoppeln na dissen Server warrt nich "
 "anraadt.</b></qt>"
 
-#: setupserver.cpp:469
+#: setupserver.cpp:512
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<qt><b>Disse Server lett sik nich bruken.</b></qt>"
 
-#: setupserver.cpp:567
+#: setupserver.cpp:611
 #, fuzzy
 #| msgid "Serverside Subscription..."
 msgid "Serverside Subscription"
@@ -644,7 +656,9 @@ msgid "The username."
 msgstr "De Brukernaam"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: setupserverview_desktop.ui:62 setupserverview_mobile.ui:166
+#. i18n: ectx: property (text), widget (QLabel, label_12)
+#: setupserverview_desktop.ui:62 setupserverview_desktop.ui:237
+#: setupserverview_mobile.ui:166
 msgid "Username:"
 msgstr "Brukernaam:"
 
@@ -654,7 +668,9 @@ msgid "The password."
 msgstr "Dat Passwoort"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: setupserverview_desktop.ui:78 setupserverview_mobile.ui:182
+#. i18n: ectx: property (text), widget (QLabel, label_13)
+#: setupserverview_desktop.ui:78 setupserverview_desktop.ui:230
+#: setupserverview_mobile.ui:182
 msgid "Password:"
 msgstr "Passwoort:"
 
@@ -672,11 +688,6 @@ msgstr "T&ietgever för't Kieken na Nettpost bruken"
 #: setupserverview_desktop.ui:113
 msgid "Check mail interval:"
 msgstr "Tietafstand för't Kieken na Nettpost:"
-
-#. i18n: ectx: property (suffix), widget (KIntNumInput, checkInterval)
-#: setupserverview_desktop.ui:126
-msgid " "
-msgstr " "
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: setupserverview_desktop.ui:155
@@ -703,69 +714,93 @@ msgstr "Sieve-Pleegport:"
 msgid "Alternate URL:"
 msgstr "Anner URL:"
 
+#. i18n: ectx: property (title), widget (QGroupBox, authentification)
+#: setupserverview_desktop.ui:207
+#, fuzzy
+#| msgid "Authentication:"
+msgid "Authentification"
+msgstr "Anmellmetood:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, noAuthentification)
+#: setupserverview_desktop.ui:220
+#, fuzzy
+#| msgid "Authentication:"
+msgid "No authentifcation"
+msgstr "Anmellmetood:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, customUserPassword)
+#: setupserverview_desktop.ui:244
+msgid "UserName and Password"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, imapUserPassword)
+#: setupserverview_desktop.ui:257
+msgid "IMAP Username and Password"
+msgstr ""
+
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
-#: setupserverview_desktop.ui:221
+#: setupserverview_desktop.ui:287
 msgid "Advanced"
 msgstr "Verwiedert"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: setupserverview_desktop.ui:227
+#: setupserverview_desktop.ui:293
 msgid "IMAP Settings"
 msgstr "IMAP-Instellen"
 
 #. i18n: ectx: property (text), widget (QCheckBox, subscriptionEnabled)
-#: setupserverview_desktop.ui:235
+#: setupserverview_desktop.ui:301
 msgid "Enable server-side subscriptions"
 msgstr "Bestellen op Server-Siet anmaken"
 
 #. i18n: ectx: property (text), widget (KPushButton, subscriptionButton)
-#: setupserverview_desktop.ui:245 setupserverview_mobile.ui:328
+#: setupserverview_desktop.ui:311 setupserverview_mobile.ui:328
 msgid "Serverside Subscription..."
 msgstr "Bestellen op Server-Siet..."
 
 #. i18n: ectx: property (text), widget (QCheckBox, disconnectedModeEnabled)
-#: setupserverview_desktop.ui:254
+#: setupserverview_desktop.ui:320
 msgid "Enable disconnected mode"
 msgstr "Afkoppelbedrief anmaken"
 
 #. i18n: ectx: property (text), widget (QCheckBox, autoExpungeCheck)
-#: setupserverview_desktop.ui:261
+#: setupserverview_desktop.ui:327
 msgid "Automaticall&y compact folders (expunges deleted messages)"
 msgstr "Ornern a&utomaatsch lüttmaken (deit wegmaakte Narichten weg)"
 
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: setupserverview_desktop.ui:270 setupserverview_mobile.ui:344
+#: setupserverview_desktop.ui:336 setupserverview_mobile.ui:344
 msgid "Trash folder:"
 msgstr "Affallorner:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, identityBox)
-#: setupserverview_desktop.ui:283
+#: setupserverview_desktop.ui:348
 msgid "Identity Settings"
 msgstr "Identiteet instellen"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, useDefaultIdentityCheck)
-#: setupserverview_desktop.ui:289 setupserverview_mobile.ui:356
+#: setupserverview_desktop.ui:354 setupserverview_mobile.ui:356
 msgid "Use the default identity for this account"
 msgstr "De Standardidentiteet för dit Konto bruken"
 
 #. i18n: ectx: property (text), widget (QCheckBox, useDefaultIdentityCheck)
-#: setupserverview_desktop.ui:292 setupserverview_mobile.ui:359
+#: setupserverview_desktop.ui:357 setupserverview_mobile.ui:359
 msgid "Use &default identity"
 msgstr "Stan&dardidentiteet bruken"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, identityLabel)
-#: setupserverview_desktop.ui:301 setupserverview_mobile.ui:377
+#: setupserverview_desktop.ui:366 setupserverview_mobile.ui:377
 msgid "Select the KMail identity used for this account"
 msgstr "De KMail-Identiteet för dit Konto utsöken"
 
 #. i18n: ectx: property (text), widget (QLabel, identityLabel)
-#: setupserverview_desktop.ui:304 setupserverview_mobile.ui:380
+#: setupserverview_desktop.ui:369 setupserverview_mobile.ui:380
 msgid "Identity:"
 msgstr "Identiteet:"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, safeImap)
-#: setupserverview_desktop.ui:325
+#: setupserverview_desktop.ui:390
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -812,88 +847,88 @@ msgstr ""
 "Verbinnen. Disse Optschoon is nich anraadt.</span></p></body></html>"
 
 #. i18n: ectx: property (title), widget (QGroupBox, safeImap)
-#: setupserverview_desktop.ui:328
+#: setupserverview_desktop.ui:393
 msgid "Connection Settings"
 msgstr "Verbinnen instellen"
 
 #. i18n: ectx: property (text), widget (KPushButton, testButton)
-#: setupserverview_desktop.ui:334 setupserverview_mobile.ui:100
+#: setupserverview_desktop.ui:399 setupserverview_mobile.ui:100
 msgid "Auto Detect"
 msgstr "Autom. opdecken"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: setupserverview_desktop.ui:346
+#: setupserverview_desktop.ui:411
 msgid "Encryption:"
 msgstr "Verslöteln:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, noRadio)
-#: setupserverview_desktop.ui:355 setupserverview_mobile.ui:125
+#: setupserverview_desktop.ui:420 setupserverview_mobile.ui:125
 msgid "None"
 msgstr "Keen"
 
 #. i18n: ectx: property (text), widget (QRadioButton, sslRadio)
-#: setupserverview_desktop.ui:368
+#: setupserverview_desktop.ui:433
 msgid "SSL/TLS"
 msgstr "SSL/TLS"
 
 #. i18n: ectx: property (text), widget (QRadioButton, tlsRadio)
-#: setupserverview_desktop.ui:378
+#: setupserverview_desktop.ui:443
 msgid "STARTTLS"
 msgstr "STARTTLS"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: setupserverview_desktop.ui:390 setupserverview_mobile.ui:199
+#: setupserverview_desktop.ui:455 setupserverview_mobile.ui:199
 msgid "Port:"
 msgstr "Port:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: setupserverview_desktop.ui:410
+#: setupserverview_desktop.ui:475
 msgid "Authentication:"
 msgstr "Anmellmetood:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, authenticationCombo)
-#: setupserverview_desktop.ui:418 setupserverview_mobile.ui:231
+#: setupserverview_desktop.ui:483 setupserverview_mobile.ui:231
 msgid "Clear text"
 msgstr "Eenfach Text"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, authenticationCombo)
-#: setupserverview_desktop.ui:423 setupserverview_mobile.ui:236
+#: setupserverview_desktop.ui:488 setupserverview_mobile.ui:236
 msgid "LOGIN"
 msgstr "Anmellen"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, authenticationCombo)
-#: setupserverview_desktop.ui:428 setupserverview_mobile.ui:241
+#: setupserverview_desktop.ui:493 setupserverview_mobile.ui:241
 msgid "PLAIN"
 msgstr "Eenfach"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, authenticationCombo)
-#: setupserverview_desktop.ui:433 setupserverview_mobile.ui:246
+#: setupserverview_desktop.ui:498 setupserverview_mobile.ui:246
 msgid "CRAM-MD5"
 msgstr "Cram-MD5"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, authenticationCombo)
-#: setupserverview_desktop.ui:438 setupserverview_mobile.ui:251
+#: setupserverview_desktop.ui:503 setupserverview_mobile.ui:251
 msgid "DIGEST-MD5"
 msgstr "Digest-MD5"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, authenticationCombo)
-#: setupserverview_desktop.ui:443 setupserverview_mobile.ui:256
+#: setupserverview_desktop.ui:508 setupserverview_mobile.ui:256
 msgid "NTLM"
 msgstr "NTLM"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, authenticationCombo)
-#: setupserverview_desktop.ui:448 setupserverview_mobile.ui:261
+#: setupserverview_desktop.ui:513 setupserverview_mobile.ui:261
 msgid "GSSAPI"
 msgstr "GSSAPI"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, authenticationCombo)
-#: setupserverview_desktop.ui:453 setupserverview_mobile.ui:266
+#: setupserverview_desktop.ui:518 setupserverview_mobile.ui:266
 msgid "Anonymous"
 msgstr "Anonüm"
 
 #. i18n: ectx: property (text), widget (QLabel, testInfo)
-#: setupserverview_desktop.ui:472 setupserverview_mobile.ui:83
+#: setupserverview_desktop.ui:537 setupserverview_mobile.ui:83
 msgid "Empty"
 msgstr "Leddig"
 
@@ -1020,6 +1055,9 @@ msgstr "Söken:"
 msgctxt "@option:check"
 msgid "Subscribed only"
 msgstr "Bloots bestellte"
+
+#~ msgid " "
+#~ msgstr " "
 
 #~ msgid "Failed to connect to server"
 #~ msgstr "Tokoppeln na Server is fehlslaan"
