@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-07-13 01:32+0000\n"
+"POT-Creation-Date: 2013-07-17 01:33+0000\n"
 "PO-Revision-Date: 2012-02-02 07:34+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -147,8 +147,7 @@ msgstr "Beding"
 msgid "Active status"
 msgstr "Aktiev Status"
 
-#: debugger/breakpoint/breakpointmodel.cpp:176
-#: shell/sessioncontroller.cpp:1010
+#: debugger/breakpoint/breakpointmodel.cpp:176 shell/sessioncontroller.cpp:854
 msgid "State"
 msgstr "Status"
 
@@ -959,40 +958,37 @@ msgstr "All &utfoolden"
 msgid "Collapse all"
 msgstr "All &infoolden"
 
-#: language/duchain/repositories/itemrepository.cpp:265
+#: language/duchain/repositories/itemrepository.h:214
+#: language/duchain/repositories/itemrepository.h:2133
+#, kde-format
+msgid "Failed writing to %1, probably the disk is full"
+msgstr ""
+
+#: language/duchain/repositories/itemrepositoryregistry.cpp:262
 #, kde-format
 msgid "Session crashed %1 time in a row"
 msgid_plural "Session crashed %1 times in a row"
 msgstr[0] ""
 msgstr[1] ""
 
-#: language/duchain/repositories/itemrepository.cpp:270
-msgid "Clear cache: [Y/n] "
+#: language/duchain/repositories/itemrepositoryregistry.cpp:263
+msgctxt "@action"
+msgid "Clear cache"
 msgstr ""
 
-#: language/duchain/repositories/itemrepository.cpp:282
-#, kde-format
-msgid "The Session crashed once."
-msgid_plural "The Session crashed %1 times in a row."
-msgstr[0] "De Törn is eenmaal afstört."
-msgstr[1] "De Törn is %1 maal naenanner afstört."
+#: language/duchain/repositories/itemrepositoryregistry.cpp:264
+#, fuzzy
+#| msgid "Session crashed"
+msgctxt "@title"
+msgid "Session crashed"
+msgstr "Törn afstört"
 
-#: language/duchain/repositories/itemrepository.cpp:282
+#: language/duchain/repositories/itemrepositoryregistry.cpp:265
 msgid ""
 "The crash may be caused by a corruption of cached data.\n"
 "\n"
 "Press OK if you want KDevelop to clear the cache, otherwise press Cancel if "
 "you are sure the crash has another origin."
-msgstr ""
-
-#: language/duchain/repositories/itemrepository.cpp:283
-msgid "Session crashed"
-msgstr "Törn afstört"
-
-#: language/duchain/repositories/itemrepository.h:424
-#: language/duchain/repositories/itemrepository.h:2343
-#, kde-format
-msgid "Failed writing to %1, probably the disk is full"
 msgstr ""
 
 #: language/interfaces/iproblem.cpp:132
@@ -1321,10 +1317,11 @@ msgstr "Söök den Indrag ut, den Sien Padd Du hebben wullt."
 msgid "Select an item..."
 msgstr "En Indrag utsöken…"
 
-#: project/projectproxymodel.cpp:69
-#, kde-format
-msgid "%1 (%2 Filtered)"
-msgstr ""
+#: project/projectproxymodel.cpp:70
+#, fuzzy, kde-format
+#| msgid "<b>%1</b> (%2)"
+msgid "%1 (%2 hidden)"
+msgstr "<b>%1</b> (%2)"
 
 #: project/projectutils.cpp:87
 #, kde-format
@@ -3017,142 +3014,28 @@ msgstr "&Keeneen sekern"
 msgid "Discard all modifications"
 msgstr "All Ännern wegsmieten"
 
-#: shell/session.cpp:172
+#: shell/session.cpp:173
 msgid "(no projects)"
 msgstr "(keen Projekten)"
 
-#: shell/sessioncontroller.cpp:189
-msgid ""
-"The current session and all contained settings will be deleted. The projects "
-"will stay unaffected. Do you really want to continue?"
-msgstr ""
-"De aktuell Törn un all sien Instellen warrt wegdaan. De Projekten warrt nich "
-"anröögt. Wullt Du redig wiedermaken?"
-
-#: shell/sessioncontroller.cpp:201
-msgid "Rename Session"
-msgstr "Törn ümnömen"
-
-#: shell/sessioncontroller.cpp:205
-msgid "New Session Name"
-msgstr "Nieg Törnnaam"
-
-#: shell/sessioncontroller.cpp:415
-msgid "Recover"
-msgstr "Wedderherstellen"
-
-#: shell/sessioncontroller.cpp:419
-#, kde-format
-msgctxt "%1: date of the last snapshot"
-msgid ""
-"The session crashed the last time it was used. The following modified files "
-"can be recovered from a backup from %1."
-msgstr ""
-"De Törn is na den verleden Bruuk afstört. Disse ännerten Dateien laat sik ut "
-"en Sekerheitkopie vun'n %1 wedderherstellen:"
-
-#: shell/sessioncontroller.cpp:421
-msgid "Crash Recovery"
-msgstr "Wedderherstellen na Afstört"
-
-#: shell/sessioncontroller.cpp:441
-#, kde-format
-msgid "Could not recover %1, the recovery file is empty"
-msgstr ""
-"%1 lett sik nich wedderherstellen. De Datei för't Wedderherstellen is leddig."
-
-#: shell/sessioncontroller.cpp:441
-msgid "Recovery"
-msgstr "Wedderherstellen"
-
-#: shell/sessioncontroller.cpp:550
-#, kde-format
-msgid ""
-"Failed to write recovery copies to %1. Please make sure that your home "
-"directory is writable and not full. This application requires available "
-"space in the home directory to run stable. You may experience application "
-"crashes until you free up some space."
-msgstr ""
-"Schrieven vun Sekerheitkopien na %1 fehlslaan. Beseker, Du hest "
-"Schriefverlöven för Dien Tohuusorner. För dit Programm deit noog Platz "
-"binnen den Tohuusorner noot, dormit dat propper löppt. Ahn noog free Platz "
-"kann dat Programm afstörten."
-
-#: shell/sessioncontroller.cpp:551
-msgid "Recovery Error"
-msgstr "Fehler bi't Wedderherstellen"
-
-#: shell/sessioncontroller.cpp:596
-#, fuzzy
-#| msgid "Start New Session"
-msgctxt "@action:inmenu"
-msgid "Start New Session"
-msgstr "Nieg Törn starten"
-
-#: shell/sessioncontroller.cpp:597
-#, fuzzy
-#| msgid "Start a new KDevelop instance with an empty session"
-msgctxt "@info:tooltip"
-msgid "Start a new KDevelop instance with an empty session"
-msgstr "En Utgaav vun KDevelop mit en leddig Törn opmaken"
-
-#: shell/sessioncontroller.cpp:601
-#, fuzzy
-#| msgid "Rename Session..."
-msgid "Rename Current Session..."
-msgstr "Törn ümnömen…"
-
-#: shell/sessioncontroller.cpp:605
-#, fuzzy
-#| msgid "Delete Session..."
-msgid "Delete Current Session..."
-msgstr "Törns wegdoon…"
-
-#: shell/sessioncontroller.cpp:609
-msgid "Quit"
-msgstr "Utmaken"
-
-#: shell/sessioncontroller.cpp:615
-msgid "Configure Sessions..."
-msgstr "Törns instellen…"
-
-#: shell/sessioncontroller.cpp:616
-msgid "Create/Delete/Activate Sessions"
-msgstr "Törns opstellen/wegdoon/opropen"
-
-#: shell/sessioncontroller.cpp:617
-#, fuzzy
-#| msgid ""
-#| "<b>Configure Sessions</b><p>Shows a dialog to Create/Delete Sessions and "
-#| "set a new active session.</p>"
-msgid "Shows a dialog to Create/Delete Sessions and set a new active session."
-msgstr ""
-"<b>Törns instellen</b><p>Wiest en Dialoog, mit den Du Törns opstellen, "
-"wegdoon un opropen kannst.</p>"
-
-#: shell/sessioncontroller.cpp:786
-#, kde-format
-msgid "Copy of %1"
-msgstr "Kopie vun %1"
-
-#: shell/sessioncontroller.cpp:918
+#: shell/sessionchooserdialog.cpp:48
 #, fuzzy
 #| msgid "Delete Session..."
 msgctxt "@info"
 msgid "Delete session"
 msgstr "Törns wegdoon…"
 
-#: shell/sessioncontroller.cpp:931
+#: shell/sessionchooserdialog.cpp:61
 #, fuzzy
 #| msgid "Quit Session"
 msgid "Pick a Session"
 msgstr "Törn utmaken"
 
-#: shell/sessioncontroller.cpp:933
+#: shell/sessionchooserdialog.cpp:63
 msgid "Run"
 msgstr "Utföhren"
 
-#: shell/sessioncontroller.cpp:965
+#: shell/sessionchooserdialog.cpp:95
 #, fuzzy, kde-format
 #| msgid "[running, pid %1, app %2, host %3]"
 msgid ""
@@ -3160,150 +3043,29 @@ msgid ""
 "pid %1, app %2, host %3"
 msgstr "[löppt, PID %1, Prog. %2, Reekner %3]"
 
-#: shell/sessioncontroller.cpp:966
+#: shell/sessionchooserdialog.cpp:97
 msgid "Running"
 msgstr ""
 
-#: shell/sessioncontroller.cpp:985
-msgid "Search"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1008
-msgid "Identity"
-msgstr "Identiteet"
-
-#: shell/sessioncontroller.cpp:1009
-msgid "Contents"
-msgstr "Inholt"
-
-#: shell/sessioncontroller.cpp:1016
-msgid "Filter:"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1056
-msgid "Create New Session"
-msgstr "Nieg Törn opstellen"
-
-#: shell/sessioncontroller.cpp:1105
-msgctxt "@info"
-msgid "The session lock-file is stale."
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1109
-msgctxt "@info"
-msgid "Error while taking the session lock-file."
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1113
-#, fuzzy
-#| msgid "The Session crashed once."
-#| msgid_plural "The Session crashed %1 times in a row."
-msgctxt "@info"
-msgid "The session lock-file is owned."
-msgstr "De Törn is eenmaal afstört."
-
-#: shell/sessioncontroller.cpp:1135
-#, kde-format
-msgctxt "@info:shell"
-msgid "made running %1 instance (PID: %2) visible"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1138
-#, kde-format
-msgctxt "@info:shell"
-msgid "running %1 instance (PID: %2) is apparently hung"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1142
-msgctxt "@info"
-msgid ""
-"The given application did not respond to a DBUS call, it may have crashed or "
-"is hanging."
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1148
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Failed to lock the session <em>%1</em>, already locked by %2 on %3 (PID %4)."
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1152
-#, kde-format
-msgctxt "@info"
-msgid "Failed to lock the session <em>%1</em> (lock-file unavailable)."
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1159
-#, kde-format
-msgctxt "@info %1 is program name"
-msgid ""
-"<p>Do you want to remove the lock file and force a new %1 instance?<br/"
-"><strong>Beware:</strong> Only do this if you are sure there is no running "
-"process using this session.</p><p>Otherwise, close the offending application "
-"instance or choose another session to launch.</p>"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1167
-msgctxt "@info"
-msgid ""
-"<p>Please, close the offending application instance or choose another "
-"session to launch.</p>"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1180
-#, fuzzy
-#| msgid "Remove All"
-msgctxt "@action:button"
-msgid "Remove lock file"
-msgstr "All wegmaken"
-
-#: shell/sessioncontroller.cpp:1182
-#, fuzzy
-#| msgid "&Restart"
-msgctxt "@action:button"
-msgid "Retry startup"
-msgstr "&Nieg starten"
-
-#: shell/sessioncontroller.cpp:1185
-#, fuzzy
-#| msgid "Close Other Files"
-msgctxt "@action:button"
-msgid "Choose another session"
-msgstr "Anner Dateien tomaken"
-
-#: shell/sessioncontroller.cpp:1187
-#, kde-format
-msgctxt "@title:window"
-msgid "Failed to Lock Session %1"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1198
-#, fuzzy, kde-format
-#| msgid "The selected session is already active in another running instance"
-msgctxt "@info"
-msgid "The session %1 is already active in another running instance."
-msgstr "De köört Törn is al binnen en anner lopen Utgaav aktiev."
-
-#: shell/sessioncontroller.cpp:1285
+#: shell/sessionchooserdialog.cpp:182
 #, fuzzy
 #| msgid "Delete Session..."
 msgctxt "@title"
 msgid "Cannot Delete Session"
 msgstr "Törns wegdoon…"
 
-#: shell/sessioncontroller.cpp:1286
+#: shell/sessionchooserdialog.cpp:183
 msgctxt "@info"
 msgid "<p>Cannot delete a locked session."
 msgstr ""
 
-#: shell/sessioncontroller.cpp:1289
+#: shell/sessionchooserdialog.cpp:186
 #, kde-format
 msgctxt "@info"
 msgid "<p>The session is locked by %1 on %2 (PID %3)."
 msgstr ""
 
-#: shell/sessioncontroller.cpp:1298
+#: shell/sessionchooserdialog.cpp:194
 #, fuzzy
 #| msgid ""
 #| "The current session and all contained settings will be deleted. The "
@@ -3316,14 +3078,148 @@ msgstr ""
 "De aktuell Törn un all sien Instellen warrt wegdaan. De Projekten warrt nich "
 "anröögt. Wullt Du redig wiedermaken?"
 
-#: shell/sessioncontroller.cpp:1299
+#: shell/sessionchooserdialog.cpp:195
 #, fuzzy
 #| msgid "Delete Session..."
 msgctxt "@title"
 msgid "Delete Session"
 msgstr "Törns wegdoon…"
 
-#: shell/sessiondialog.cpp:183
+#: shell/sessioncontroller.cpp:187
+msgid ""
+"The current session and all contained settings will be deleted. The projects "
+"will stay unaffected. Do you really want to continue?"
+msgstr ""
+"De aktuell Törn un all sien Instellen warrt wegdaan. De Projekten warrt nich "
+"anröögt. Wullt Du redig wiedermaken?"
+
+#: shell/sessioncontroller.cpp:199
+msgid "Rename Session"
+msgstr "Törn ümnömen"
+
+#: shell/sessioncontroller.cpp:203
+msgid "New Session Name"
+msgstr "Nieg Törnnaam"
+
+#: shell/sessioncontroller.cpp:384
+msgid "Recover"
+msgstr "Wedderherstellen"
+
+#: shell/sessioncontroller.cpp:388
+#, kde-format
+msgctxt "%1: date of the last snapshot"
+msgid ""
+"The session crashed the last time it was used. The following modified files "
+"can be recovered from a backup from %1."
+msgstr ""
+"De Törn is na den verleden Bruuk afstört. Disse ännerten Dateien laat sik ut "
+"en Sekerheitkopie vun'n %1 wedderherstellen:"
+
+#: shell/sessioncontroller.cpp:390
+msgid "Crash Recovery"
+msgstr "Wedderherstellen na Afstört"
+
+#: shell/sessioncontroller.cpp:410
+#, kde-format
+msgid "Could not recover %1, the recovery file is empty"
+msgstr ""
+"%1 lett sik nich wedderherstellen. De Datei för't Wedderherstellen is leddig."
+
+#: shell/sessioncontroller.cpp:410
+msgid "Recovery"
+msgstr "Wedderherstellen"
+
+#: shell/sessioncontroller.cpp:519
+#, kde-format
+msgid ""
+"Failed to write recovery copies to %1. Please make sure that your home "
+"directory is writable and not full. This application requires available "
+"space in the home directory to run stable. You may experience application "
+"crashes until you free up some space."
+msgstr ""
+"Schrieven vun Sekerheitkopien na %1 fehlslaan. Beseker, Du hest "
+"Schriefverlöven för Dien Tohuusorner. För dit Programm deit noog Platz "
+"binnen den Tohuusorner noot, dormit dat propper löppt. Ahn noog free Platz "
+"kann dat Programm afstörten."
+
+#: shell/sessioncontroller.cpp:520
+msgid "Recovery Error"
+msgstr "Fehler bi't Wedderherstellen"
+
+#: shell/sessioncontroller.cpp:565
+#, fuzzy
+#| msgid "Start New Session"
+msgctxt "@action:inmenu"
+msgid "Start New Session"
+msgstr "Nieg Törn starten"
+
+#: shell/sessioncontroller.cpp:566
+#, fuzzy
+#| msgid "Start a new KDevelop instance with an empty session"
+msgctxt "@info:tooltip"
+msgid "Start a new KDevelop instance with an empty session"
+msgstr "En Utgaav vun KDevelop mit en leddig Törn opmaken"
+
+#: shell/sessioncontroller.cpp:570
+#, fuzzy
+#| msgid "Rename Session..."
+msgid "Rename Current Session..."
+msgstr "Törn ümnömen…"
+
+#: shell/sessioncontroller.cpp:574
+#, fuzzy
+#| msgid "Delete Session..."
+msgid "Delete Current Session..."
+msgstr "Törns wegdoon…"
+
+#: shell/sessioncontroller.cpp:578
+msgid "Quit"
+msgstr "Utmaken"
+
+#: shell/sessioncontroller.cpp:584
+msgid "Configure Sessions..."
+msgstr "Törns instellen…"
+
+#: shell/sessioncontroller.cpp:585
+msgid "Create/Delete/Activate Sessions"
+msgstr "Törns opstellen/wegdoon/opropen"
+
+#: shell/sessioncontroller.cpp:586
+#, fuzzy
+#| msgid ""
+#| "<b>Configure Sessions</b><p>Shows a dialog to Create/Delete Sessions and "
+#| "set a new active session.</p>"
+msgid "Shows a dialog to Create/Delete Sessions and set a new active session."
+msgstr ""
+"<b>Törns instellen</b><p>Wiest en Dialoog, mit den Du Törns opstellen, "
+"wegdoon un opropen kannst.</p>"
+
+#: shell/sessioncontroller.cpp:774
+#, kde-format
+msgid "Copy of %1"
+msgstr "Kopie vun %1"
+
+#: shell/sessioncontroller.cpp:829
+msgid "Search"
+msgstr ""
+
+#: shell/sessioncontroller.cpp:852
+msgid "Identity"
+msgstr "Identiteet"
+
+#: shell/sessioncontroller.cpp:853
+msgid "Contents"
+msgstr "Inholt"
+
+#: shell/sessioncontroller.cpp:860
+msgid "Filter:"
+msgstr ""
+
+#: shell/sessioncontroller.cpp:900
+msgid "Create New Session"
+msgstr "Nieg Törn opstellen"
+
+#: shell/sessiondialog.cpp:186
 msgid "Configure Sessions"
 msgstr "Törns instellen"
 
@@ -3343,6 +3239,72 @@ msgstr "Klonen"
 #: shell/sessiondialog.ui:59
 msgid "Make Active"
 msgstr "Anmaken"
+
+#: shell/sessionlock.cpp:167
+#, kde-format
+msgctxt "@info:shell"
+msgid "made running %1 instance (PID: %2) visible"
+msgstr ""
+
+#: shell/sessionlock.cpp:170
+#, kde-format
+msgctxt "@info:shell"
+msgid "running %1 instance (PID: %2) is apparently hung"
+msgstr ""
+
+#: shell/sessionlock.cpp:176
+msgctxt "@info"
+msgid ""
+"The given application did not respond to a DBUS call, it may have crashed or "
+"is hanging."
+msgstr ""
+
+#: shell/sessionlock.cpp:181
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to lock the session <em>%1</em>, already locked by %2 on %3 (PID %4)."
+msgstr ""
+
+#: shell/sessionlock.cpp:185
+#, kde-format
+msgctxt "@info"
+msgid "Failed to lock the session <em>%1</em> (lock-file unavailable)."
+msgstr ""
+
+#: shell/sessionlock.cpp:189
+msgctxt "@info"
+msgid ""
+"<p>Please, close the offending application instance or choose another "
+"session to launch.</p>"
+msgstr ""
+
+#: shell/sessionlock.cpp:195
+#, fuzzy
+#| msgid "&Restart"
+msgctxt "@action:button"
+msgid "Retry startup"
+msgstr "&Nieg starten"
+
+#: shell/sessionlock.cpp:198
+#, fuzzy
+#| msgid "Close Other Files"
+msgctxt "@action:button"
+msgid "Choose another session"
+msgstr "Anner Dateien tomaken"
+
+#: shell/sessionlock.cpp:201
+#, kde-format
+msgctxt "@title:window"
+msgid "Failed to Lock Session %1"
+msgstr ""
+
+#: shell/sessionlock.cpp:209
+#, fuzzy, kde-format
+#| msgid "The selected session is already active in another running instance"
+msgctxt "@info"
+msgid "The session %1 is already active in another running instance."
+msgstr "De köört Törn is al binnen en anner lopen Utgaav aktiev."
 
 #: shell/settings/bgpreferences.cpp:40
 msgid "Parser Background Settings"
@@ -4963,6 +4925,24 @@ msgstr "Begeefnis-Enkelheiten"
 #: vcs/widgets/vcseventwidget.ui:74
 msgid "Message:"
 msgstr "Naricht:"
+
+#~ msgid "The Session crashed once."
+#~ msgid_plural "The Session crashed %1 times in a row."
+#~ msgstr[0] "De Törn is eenmaal afstört."
+#~ msgstr[1] "De Törn is %1 maal naenanner afstört."
+
+#, fuzzy
+#~| msgid "The Session crashed once."
+#~| msgid_plural "The Session crashed %1 times in a row."
+#~ msgctxt "@info"
+#~ msgid "The session lock-file is owned."
+#~ msgstr "De Törn is eenmaal afstört."
+
+#, fuzzy
+#~| msgid "Remove All"
+#~ msgctxt "@action:button"
+#~ msgid "Remove lock file"
+#~ msgstr "All wegmaken"
 
 #~ msgid "Do not obtain"
 #~ msgstr "Nich halen"
