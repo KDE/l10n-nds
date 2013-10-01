@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-30 01:43+0000\n"
+"POT-Creation-Date: 2013-10-01 01:40+0000\n"
 "PO-Revision-Date: 2011-10-17 14:21+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -30,19 +30,45 @@ msgstr "Bestellen"
 msgid "Select List:"
 msgstr "Schriftoort utsöken"
 
-#: adblock/adblockblockableitemsdialog.cpp:30
+#: adblock/adblockblockableitemsdialog.cpp:33
 msgid "Blockable Items"
 msgstr ""
 
-#: adblock/adblockblockableitemsdialog.cpp:34 viewer/mimetreemodel.cpp:249
+#: adblock/adblockblockableitemswidget.cpp:56 viewer/mimetreemodel.cpp:249
 msgid "Type"
 msgstr "Typ"
 
-#: adblock/adblockblockableitemsdialog.cpp:34
+#: adblock/adblockblockableitemswidget.cpp:56
+#, fuzzy
+#| msgid "Filter %1"
+msgid "Filter"
+msgstr "Filter %1"
+
+#: adblock/adblockblockableitemswidget.cpp:56
 #, fuzzy
 #| msgid "&Address Book"
 msgid "Address"
 msgstr "&Adressbook"
+
+#: adblock/adblockblockableitemswidget.cpp:90
+msgid "Image"
+msgstr ""
+
+#: adblock/adblockblockableitemswidget.cpp:107
+#, fuzzy
+#| msgid "&Copy Here"
+msgid "Copy url"
+msgstr "Hierhen &koperen"
+
+#: adblock/adblockblockableitemswidget.cpp:108
+msgid "Block item..."
+msgstr ""
+
+#: adblock/adblockblockableitemswidget.cpp:111
+#, fuzzy
+#| msgid "Rename Filter"
+msgid "Remove filter"
+msgstr "Filter ümnömen"
 
 #: adblock/adblocklistwidget.cpp:61
 #, fuzzy
@@ -50,19 +76,19 @@ msgstr "&Adressbook"
 msgid "Not subscription added..."
 msgstr "Bestellen..."
 
-#: adblock/adblocksettingwidget.cpp:57
+#: adblock/adblocksettingwidget.cpp:59
 msgid ""
 "<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
 "\"filterhelp\">more information</a>):"
 msgstr ""
 
-#: adblock/adblocksettingwidget.cpp:72
+#: adblock/adblocksettingwidget.cpp:74
 msgid " day"
 msgid_plural " days"
 msgstr[0] " Dag"
 msgstr[1] " Daag"
 
-#: adblock/adblocksettingwidget.cpp:99
+#: adblock/adblocksettingwidget.cpp:103
 msgid ""
 "<qt><p>Enter an expression to filter. Filters can be defined as either:"
 "<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</tt>, "
@@ -73,16 +99,21 @@ msgid ""
 "filter."
 msgstr ""
 
-#: adblock/adblocksettingwidget.cpp:300
-msgid "Do you want to delete current list?"
+#: adblock/adblocksettingwidget.cpp:306
+#, kde-format
+msgid "Do you want to delete list \"%1\"?"
 msgstr ""
 
-#: adblock/adblocksettingwidget.cpp:300
+#: adblock/adblocksettingwidget.cpp:306
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Close the current tab"
 msgid "Delete current list"
 msgstr "Dit Paneel tomaken"
+
+#: adblock/adblocksettingwidget.cpp:331 adblock/adblocksettingwidget.cpp:356
+msgid "*|all files (*)"
+msgstr ""
 
 #: adblock/adblockshowlistdialog.cpp:37
 #, fuzzy
@@ -105,6 +136,44 @@ msgstr ""
 #: adblock/networkaccessmanager.cpp:52
 msgid "Blocked by ad filter"
 msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: adblock/ui/adblockcreatefilterwidget.ui:19
+#, fuzzy
+#| msgid "Filter %1"
+msgid "Filters:"
+msgstr "Filter %1"
+
+#. i18n: ectx: property (text), widget (QRadioButton, blockingFilter)
+#: adblock/ui/adblockcreatefilterwidget.ui:37
+#, fuzzy
+#| msgid "Removing folder"
+msgid "Blocking filter"
+msgstr "Orner warrt wegmaakt"
+
+#. i18n: ectx: property (text), widget (QRadioButton, exceptionFilter)
+#: adblock/ui/adblockcreatefilterwidget.ui:44
+#, fuzzy
+#| msgid "Export Filters"
+msgid "Exception Filter"
+msgstr "Filtern exporteren"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: adblock/ui/adblockcreatefilterwidget.ui:55
+msgid "Accept pattern only:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, atTheBeginning)
+#: adblock/ui/adblockcreatefilterwidget.ui:66
+msgid "At the beginning of the address"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, atTheEnd)
+#: adblock/ui/adblockcreatefilterwidget.ui:73
+#, fuzzy
+#| msgid "Send CC: to 'address'"
+msgid "At the end of address"
+msgstr "Kopie de \"Adress\" tostüern"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkEnableAdblock)
 #: adblock/ui/settings_adblock.ui:17
@@ -169,8 +238,22 @@ msgstr "KMail-Filter"
 msgid "Search:"
 msgstr "Söken:"
 
+#. i18n: ectx: property (text), widget (QPushButton, exportFilters)
+#: adblock/ui/settings_adblock.ui:149
+#, fuzzy
+#| msgid "Export Filters"
+msgid "Export filters..."
+msgstr "Filtern exporteren"
+
+#. i18n: ectx: property (text), widget (QPushButton, importFilters)
+#: adblock/ui/settings_adblock.ui:156
+#, fuzzy
+#| msgid "Import Filters"
+msgid "Import Filters..."
+msgstr "Filtern importeren"
+
 #. i18n: ectx: property (toolTip), widget (QToolButton, insertButton)
-#: adblock/ui/settings_adblock.ui:161
+#: adblock/ui/settings_adblock.ui:188
 #, fuzzy
 #| msgid "Add Permissions"
 msgid "Add filter expression"
@@ -178,12 +261,12 @@ msgstr "Verlöven tofögen"
 
 #. i18n: ectx: property (text), widget (QToolButton, insertButton)
 #. i18n: ectx: property (text), widget (QToolButton, removeButton)
-#: adblock/ui/settings_adblock.ui:164 adblock/ui/settings_adblock.ui:174
+#: adblock/ui/settings_adblock.ui:191 adblock/ui/settings_adblock.ui:201
 msgid "..."
 msgstr "..."
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, removeButton)
-#: adblock/ui/settings_adblock.ui:171
+#: adblock/ui/settings_adblock.ui:198
 msgid "Remove filter expression"
 msgstr ""
 
@@ -1520,7 +1603,7 @@ msgstr ""
 msgid "Show Raw Message"
 msgstr "Roh-Naricht wiesen"
 
-#: viewer/objecttreeparser.cpp:2067 viewer/viewer_p.cpp:2917
+#: viewer/objecttreeparser.cpp:2067 viewer/viewer_p.cpp:2921
 msgid ""
 "Chiasmus backend does not offer the \"x-obtain-keys\" function. Please "
 "report this bug."
@@ -1528,13 +1611,13 @@ msgstr ""
 "Dat Programm \"Chiasmus\" beedt de Funkschoon \"x-obtain-keys\" nich an. "
 "Bitte bericht dissen Fehler."
 
-#: viewer/objecttreeparser.cpp:2073 viewer/viewer_p.cpp:2919
-#: viewer/viewer_p.cpp:2924 viewer/viewer_p.cpp:2933 viewer/viewer_p.cpp:2942
-#: viewer/viewer_p.cpp:2960 viewer/viewer_p.cpp:2972 viewer/viewer_p.cpp:3012
+#: viewer/objecttreeparser.cpp:2073 viewer/viewer_p.cpp:2923
+#: viewer/viewer_p.cpp:2928 viewer/viewer_p.cpp:2937 viewer/viewer_p.cpp:2946
+#: viewer/viewer_p.cpp:2964 viewer/viewer_p.cpp:2976 viewer/viewer_p.cpp:3016
 msgid "Chiasmus Backend Error"
 msgstr "Chiasmus-Programmfehler"
 
-#: viewer/objecttreeparser.cpp:2079 viewer/viewer_p.cpp:2930
+#: viewer/objecttreeparser.cpp:2079 viewer/viewer_p.cpp:2934
 msgid ""
 "Unexpected return value from Chiasmus backend: The \"x-obtain-keys\" "
 "function did not return a string list. Please report this bug."
@@ -1543,7 +1626,7 @@ msgstr ""
 "\"x-obtain-keys\" hett keen Tekenkedenlist levert. Bitte bericht dissen "
 "Fehler."
 
-#: viewer/objecttreeparser.cpp:2087 viewer/viewer_p.cpp:2939
+#: viewer/objecttreeparser.cpp:2087 viewer/viewer_p.cpp:2943
 msgid ""
 "No keys have been found. Please check that a valid key path has been set in "
 "the Chiasmus configuration."
@@ -1551,11 +1634,11 @@ msgstr ""
 "Keen Slötels funnen. Prööv bitte, wat en gellen Padd na de Slötels binnen de "
 "Instellen vun Chiasmus fastleggt is."
 
-#: viewer/objecttreeparser.cpp:2093 viewer/viewer_p.cpp:2946
+#: viewer/objecttreeparser.cpp:2093 viewer/viewer_p.cpp:2950
 msgid "Chiasmus Decryption Key Selection"
 msgstr "Opslötelslötel vun Chaismus utsöken"
 
-#: viewer/objecttreeparser.cpp:2106 viewer/viewer_p.cpp:2958
+#: viewer/objecttreeparser.cpp:2106 viewer/viewer_p.cpp:2962
 msgid ""
 "Chiasmus backend does not offer the \"x-decrypt\" function. Please report "
 "this bug."
@@ -1563,7 +1646,7 @@ msgstr ""
 "Dat Programm \"Chiasmus\" beedt de Funkschoon \"x-decrypt\" nich an. Bitte "
 "bericht dissen Fehler."
 
-#: viewer/objecttreeparser.cpp:2114 viewer/viewer_p.cpp:2970
+#: viewer/objecttreeparser.cpp:2114 viewer/viewer_p.cpp:2974
 msgid ""
 "The \"x-decrypt\" function does not accept the expected parameters. Please "
 "report this bug."
@@ -1571,12 +1654,12 @@ msgstr ""
 "De Funkschoon \"x-decrypt\" nimmt anner Parameters an as verwacht wöör. "
 "Bitte bericht dissen Fehler."
 
-#: viewer/objecttreeparser.cpp:2120 viewer/viewer_p.cpp:2977
-#: viewer/viewer_p.cpp:3004
+#: viewer/objecttreeparser.cpp:2120 viewer/viewer_p.cpp:2981
+#: viewer/viewer_p.cpp:3008
 msgid "Chiasmus Decryption Error"
 msgstr "Chiasmus-Fehler bi't Opslöteln"
 
-#: viewer/objecttreeparser.cpp:2126 viewer/viewer_p.cpp:3009
+#: viewer/objecttreeparser.cpp:2126 viewer/viewer_p.cpp:3013
 msgid ""
 "Unexpected return value from Chiasmus backend: The \"x-decrypt\" function "
 "did not return a byte array. Please report this bug."
@@ -1946,7 +2029,7 @@ msgstr "In Adressbook &opmaken"
 msgid "&Copy Email Address"
 msgstr "Nettpostadress &koperen"
 
-#: viewer/urlhandlermanager.cpp:737 viewer/viewer_p.cpp:2774
+#: viewer/urlhandlermanager.cpp:737 viewer/viewer_p.cpp:2778
 msgid "Address copied to clipboard."
 msgstr "Adress na Twischenaflaag kopeert."
 
@@ -2003,7 +2086,7 @@ msgstr ""
 "warrt nich ünnerstütt."
 
 #: viewer/viewer_p.cpp:418 viewer/viewer_p.cpp:424 viewer/viewer_p.cpp:661
-#: viewer/viewer_p.cpp:1890
+#: viewer/viewer_p.cpp:1894
 msgid "Delete Attachment"
 msgstr "Bilaag wegdoon"
 
@@ -2023,7 +2106,7 @@ msgstr ""
 "Dat Ännern vun en Bilaag maakt en digitaal Ünnerschrift för disse Naricht "
 "leeg."
 
-#: viewer/viewer_p.cpp:489 viewer/viewer_p.cpp:655 viewer/viewer_p.cpp:1894
+#: viewer/viewer_p.cpp:489 viewer/viewer_p.cpp:655 viewer/viewer_p.cpp:1898
 msgid "Edit Attachment"
 msgstr "Bilaag bewerken"
 
@@ -2052,12 +2135,12 @@ msgctxt "@title:menu"
 msgid "&Open With..."
 msgstr "&Opmaken mit..."
 
-#: viewer/viewer_p.cpp:617 viewer/viewer_p.cpp:1867
+#: viewer/viewer_p.cpp:617 viewer/viewer_p.cpp:1871
 msgctxt "to open"
 msgid "Open"
 msgstr "Opmaken"
 
-#: viewer/viewer_p.cpp:625 viewer/viewer_p.cpp:1874
+#: viewer/viewer_p.cpp:625 viewer/viewer_p.cpp:1878
 msgctxt "to view something"
 msgid "View"
 msgstr "Ankieken"
@@ -2066,7 +2149,7 @@ msgstr "Ankieken"
 msgid "Scroll To"
 msgstr "Rullen"
 
-#: viewer/viewer_p.cpp:643 viewer/viewer_p.cpp:1886
+#: viewer/viewer_p.cpp:643 viewer/viewer_p.cpp:1890
 msgid "Copy"
 msgstr "Koperen"
 
@@ -2074,7 +2157,7 @@ msgstr "Koperen"
 msgid "Decrypt With Chiasmus..."
 msgstr "Mit Chiasmus opslöteln..."
 
-#: viewer/viewer_p.cpp:672 viewer/viewer_p.cpp:1899
+#: viewer/viewer_p.cpp:672 viewer/viewer_p.cpp:1903
 msgid "Properties"
 msgstr "Egenschappen"
 
@@ -2232,7 +2315,7 @@ msgstr "Automaatsch"
 msgid "Select All Text"
 msgstr "Heel Text utsöken"
 
-#: viewer/viewer_p.cpp:1695 viewer/viewer_p.cpp:2164
+#: viewer/viewer_p.cpp:1695 viewer/viewer_p.cpp:2168
 msgid "Copy Link Address"
 msgstr "Linkadress koperen"
 
@@ -2332,56 +2415,60 @@ msgstr ""
 msgid "Block image"
 msgstr ""
 
-#: viewer/viewer_p.cpp:1863
+#: viewer/viewer_p.cpp:1841
+msgid "Open Blockable Items..."
+msgstr ""
+
+#: viewer/viewer_p.cpp:1867
 msgid "Save &As..."
 msgstr "Sekern &as..."
 
-#: viewer/viewer_p.cpp:1873
+#: viewer/viewer_p.cpp:1877
 msgid "Open With..."
 msgstr "Opmaken mit..."
 
-#: viewer/viewer_p.cpp:1879
+#: viewer/viewer_p.cpp:1883
 msgid "Save All Attachments..."
 msgstr "All Bilagen sekern..."
 
-#: viewer/viewer_p.cpp:2162
+#: viewer/viewer_p.cpp:2166
 msgid "Copy Email Address"
 msgstr "Nettpostadress koperen"
 
-#: viewer/viewer_p.cpp:2228
+#: viewer/viewer_p.cpp:2232
 msgid "Message as Plain Text"
 msgstr "Naricht as Eenfachtext"
 
-#: viewer/viewer_p.cpp:2495
+#: viewer/viewer_p.cpp:2499
 msgid "Attachments:"
 msgstr "Bilagen:"
 
-#: viewer/viewer_p.cpp:2779
+#: viewer/viewer_p.cpp:2783
 msgid "URL copied to clipboard."
 msgstr "URL na Twischenaflaag kopeert."
 
-#: viewer/viewer_p.cpp:3071
+#: viewer/viewer_p.cpp:3075
 msgid "Hide full address list"
 msgstr "Heel Adresslist versteken"
 
-#: viewer/viewer_p.cpp:3075
+#: viewer/viewer_p.cpp:3079
 msgid "Show full address list"
 msgstr "Heel Adresslist wiesen"
 
-#: viewer/viewer_p.cpp:3098
+#: viewer/viewer_p.cpp:3102
 #, kde-format
 msgid "Message loading failed: %1."
 msgstr "Naricht lett sik nich laden: %1."
 
-#: viewer/viewer_p.cpp:3103
+#: viewer/viewer_p.cpp:3107
 msgid "Message not found."
 msgstr "Naricht lett sik nich finnen."
 
-#: viewer/viewer_p.cpp:3227
+#: viewer/viewer_p.cpp:3231
 msgid "Caret Browsing will be activated. Switch off with F7 shortcut."
 msgstr ""
 
-#: viewer/viewer_p.cpp:3228
+#: viewer/viewer_p.cpp:3232
 msgid "Activate Caret Browsing"
 msgstr ""
 
@@ -5311,9 +5398,6 @@ msgstr "&Verleden Koort"
 #~ msgid "No duplicate messages found."
 #~ msgstr "Keen dubbelte Narichten funnen."
 
-#~ msgid "Filter %1"
-#~ msgstr "Filter %1"
-
 #~ msgid "&Troubleshoot IMAP Cache..."
 #~ msgstr "Problemlösen för IMAP-&Twischenspieker..."
 
@@ -6935,9 +7019,6 @@ msgstr "&Verleden Koort"
 
 #~ msgid "&Move Here"
 #~ msgstr "&Hierhen verschuven"
-
-#~ msgid "&Copy Here"
-#~ msgstr "Hierhen &koperen"
 
 #~ msgid "C&ancel"
 #~ msgstr "&Afbreken"
@@ -11864,9 +11945,6 @@ msgstr "&Verleden Koort"
 #~ "De nakamen Filtern sünd leeg (se bargt t.B. keen Akschoon oder keen "
 #~ "Söökregel), se warrt nich sekert."
 
-#~ msgid "Rename Filter"
-#~ msgstr "Filter ümnömen"
-
 #~ msgid ""
 #~ "Rename filter \"%1\" to:\n"
 #~ "(leave the field empty for automatic naming)"
@@ -12530,18 +12608,12 @@ msgstr "&Verleden Koort"
 #~ msgid "Select Filters"
 #~ msgstr "Filtern utsöken"
 
-#~ msgid "Import Filters"
-#~ msgstr "Filtern importeren"
-
 #~ msgid ""
 #~ "The selected file is not readable. Your file access permissions might be "
 #~ "insufficient."
 #~ msgstr ""
 #~ "De utsöchte Datei lett sik nich lesen. Villicht hest Du keen propper "
 #~ "Leesverlöven."
-
-#~ msgid "Export Filters"
-#~ msgstr "Filtern exporteren"
 
 #~ msgctxt "calendar|tasks|contacts=%2 belonging to %1"
 #~ msgid "%1's %2"
@@ -12789,9 +12861,6 @@ msgstr "&Verleden Koort"
 #~ msgid "Set subject of message"
 #~ msgstr "Bedraap vun de Naricht fastleggen"
 
-#~ msgid "Send CC: to 'address'"
-#~ msgstr "Kopie de \"Adress\" tostüern"
-
 #~ msgid "Send BCC: to 'address'"
 #~ msgstr "Blindkopie de \"Adress\" tostüern"
 
@@ -12819,9 +12888,6 @@ msgstr "&Verleden Koort"
 #~ msgid "Send message to 'address' resp. attach the file the 'URL' points to"
 #~ msgstr ""
 #~ "Naricht de \"Adress\" tostüern un de Datei bileggen, op de \"URL\" wiest"
-
-#~ msgid "Removing folder"
-#~ msgstr "Orner warrt wegmaakt"
 
 #~ msgid "Error while removing a folder."
 #~ msgstr "Fehler bi't Wegdoon vun en Orner"
