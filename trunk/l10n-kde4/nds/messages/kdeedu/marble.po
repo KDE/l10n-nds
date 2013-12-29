@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: marble\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-28 01:27+0000\n"
+"POT-Creation-Date: 2013-12-29 01:32+0000\n"
 "PO-Revision-Date: 2011-10-08 06:36+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -127,10 +127,6 @@ msgstr "Wrack"
 msgid "Astronomical Observatory"
 msgstr "Astronoomsch Steernwacht"
 
-#. i18n: file ./data/maps/moon/clementine/clementine.dgml line 5
-msgid "Moon"
-msgstr "Maand"
-
 #. i18n: file ./data/maps/moon/clementine/clementine.dgml line 15
 msgid ""
 "<p>The moon.</p><p>The map is based on data from the Clementine Moon mission "
@@ -184,10 +180,6 @@ msgstr "Mons, Barg"
 #. i18n: file ./data/maps/moon/clementine/clementine.dgml line 151
 msgid "Vallis, valley"
 msgstr "Vallis, Daal"
-
-#. i18n: file ./data/maps/moon/clementine/clementine.dgml line 155
-msgid "Other"
-msgstr "Anner"
 
 #. i18n: file ./data/maps/moon/clementine/clementine.dgml line 165
 msgid "Selenographic Pole"
@@ -3108,7 +3100,9 @@ msgstr "Landschap"
 #. i18n: file ./data/maps/earth/schagen1689/schagen1689.dgml line 184
 #. i18n: file ./data/maps/earth/openstreetmap/openstreetmap.dgml line 106
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxCoord)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #: src/lib/marble/MapWizard.ui:516
+#: src/plugins/render/stars/StarsConfigWidget.ui:456
 msgid "Coordinate Grid"
 msgstr "Koordinatengadder"
 
@@ -5370,8 +5364,10 @@ msgstr "Ä&quater:"
 msgid "Color of the equator."
 msgstr "De Klöör vun den Äquater"
 
+#. i18n: ectx: property (text), widget (QCheckBox, m_viewConstellationLabelsCheckbox)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: src/plugins/render/graticule/GraticuleConfigWidget.ui:1392
+#: src/plugins/render/stars/StarsConfigWidget.ui:340
 #, fuzzy
 #| msgid "&Text Labels"
 msgid "Labels"
@@ -5425,9 +5421,23 @@ msgstr ""
 msgid "Marble - Measure Tool Configuration"
 msgstr "Marble - Schriefdischglobus"
 
-#. i18n: ectx: property (text), widget (QCheckBox, m_showSegLabelsCheckBox)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: src/plugins/render/measure/MeasureConfigWidget.ui:20
-msgid "Show distance labels for each section"
+#, fuzzy
+#| msgid "&Text Labels"
+msgid "Segment labels"
+msgstr "&Textfeld"
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_showDistanceLabelsCheckBox)
+#: src/plugins/render/measure/MeasureConfigWidget.ui:29
+#, fuzzy
+#| msgid "&Distance:"
+msgid "Distance "
+msgstr "&Afstand:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_showBearingLabelsCheckBox)
+#: src/plugins/render/measure/MeasureConfigWidget.ui:36
+msgid "Bearing"
 msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabGeneral)
@@ -5837,107 +5847,178 @@ msgstr ""
 msgid "Configure Stars Plugin"
 msgstr "Maatbalkenmoduul instellen"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: src/plugins/render/stars/StarsConfigWidget.ui:20
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: src/plugins/render/stars/StarsConfigWidget.ui:24
 #, fuzzy
 #| msgid "&Celestial Body"
-msgid "Celestial objects"
+msgid "Celestial Objects"
 msgstr "&Hevenkörper"
 
-#. i18n: ectx: property (text), widget (QCheckBox, m_viewDsosCheckbox)
-#: src/plugins/render/stars/StarsConfigWidget.ui:26
-msgid "Deep Sky Objects"
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/plugins/render/stars/StarsConfigWidget.ui:30
+msgid "Star Magnitude Limit"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, m_viewDsoLabelCheckbox)
-#: src/plugins/render/stars/StarsConfigWidget.ui:49
-msgid "Deep Sky Object Labels"
+#. i18n: ectx: property (suffix), widget (QSpinBox, spinBox)
+#: src/plugins/render/stars/StarsConfigWidget.ui:58
+msgid " mag"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, m_viewSunCheckbox)
-#: src/plugins/render/stars/StarsConfigWidget.ui:91
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/plugins/render/stars/StarsConfigWidget.ui:74
+msgid "Solar System"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QListWidget, m_solarSystemListWidget)
+#: src/plugins/render/stars/StarsConfigWidget.ui:81
 #, fuzzy
 #| msgid "S&un"
 msgid "Sun"
 msgstr "&Sünn"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: src/plugins/render/stars/StarsConfigWidget.ui:117
-msgid "Star Magnitude Limit"
+#. i18n: file ./data/maps/moon/clementine/clementine.dgml line 5
+#. i18n: ectx: property (text), item, widget (QListWidget, m_solarSystemListWidget)
+#: src/plugins/render/stars/StarsConfigWidget.ui:89
+msgid "Moon"
+msgstr "Maand"
+
+#. i18n: ectx: property (text), item, widget (QListWidget, m_solarSystemListWidget)
+#: src/plugins/render/stars/StarsConfigWidget.ui:97
+#, fuzzy
+#| msgid "Mercator"
+msgid "Mercury"
+msgstr "Mercator"
+
+#. i18n: ectx: property (text), item, widget (QListWidget, m_solarSystemListWidget)
+#: src/plugins/render/stars/StarsConfigWidget.ui:108
+msgid "Venus"
 msgstr ""
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, spinBox)
-#: src/plugins/render/stars/StarsConfigWidget.ui:145
-msgid " mag"
+#. i18n: ectx: property (text), item, widget (QListWidget, m_solarSystemListWidget)
+#: src/plugins/render/stars/StarsConfigWidget.ui:119
+#, fuzzy
+#| msgid "&Earth"
+msgid "Earth"
+msgstr "&Eer"
+
+#. i18n: ectx: property (text), item, widget (QListWidget, m_solarSystemListWidget)
+#: src/plugins/render/stars/StarsConfigWidget.ui:130
+msgid "Mars"
 msgstr ""
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: src/plugins/render/stars/StarsConfigWidget.ui:161
+#. i18n: ectx: property (text), item, widget (QListWidget, m_solarSystemListWidget)
+#: src/plugins/render/stars/StarsConfigWidget.ui:141
+msgid "Jupiter"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QListWidget, m_solarSystemListWidget)
+#: src/plugins/render/stars/StarsConfigWidget.ui:152
+msgid "Saturn"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QListWidget, m_solarSystemListWidget)
+#: src/plugins/render/stars/StarsConfigWidget.ui:163
+msgid "Uranus"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QListWidget, m_solarSystemListWidget)
+#: src/plugins/render/stars/StarsConfigWidget.ui:174
+msgid "Neptune"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_viewSolarSystemLabelCheckbox)
+#: src/plugins/render/stars/StarsConfigWidget.ui:188
+#, fuzzy
+#| msgid "&Text Labels"
+msgid "Use name labels"
+msgstr "&Textfeld"
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_zoomSunMoonCheckbox)
+#: src/plugins/render/stars/StarsConfigWidget.ui:198
+msgid "Magnify Sun and Moon"
+msgstr ""
+
+#. i18n: file ./data/maps/moon/clementine/clementine.dgml line 155
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/plugins/render/stars/StarsConfigWidget.ui:211
+msgid "Other"
+msgstr "Anner"
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_viewDsoLabelCheckbox)
+#: src/plugins/render/stars/StarsConfigWidget.ui:262
+msgid "Deep Sky Object Labels"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_viewDsosCheckbox)
+#: src/plugins/render/stars/StarsConfigWidget.ui:272
+msgid "Deep Sky Objects"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: src/plugins/render/stars/StarsConfigWidget.ui:299
 #, fuzzy
 #| msgid "During &animations:"
 msgid "Lines and Orientation"
 msgstr "Wielt &Animatschonen:"
 
-#. i18n: ectx: property (text), widget (QCheckBox, m_viewConstellationLinesCheckbox)
-#: src/plugins/render/stars/StarsConfigWidget.ui:167
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/plugins/render/stars/StarsConfigWidget.ui:305
 #, fuzzy
 #| msgid "International"
-msgid "Constellation Lines"
+msgid "Constellations"
 msgstr "Internatschonaal"
-
-#. i18n: ectx: property (text), widget (QCheckBox, m_viewConstellationLabelsCheckbox)
-#: src/plugins/render/stars/StarsConfigWidget.ui:209
-#, fuzzy
-#| msgid "International"
-msgid "Constellation Labels"
-msgstr "Internatschonaal"
-
-#. i18n: ectx: property (text), widget (QCheckBox, m_viewCelestialEquatorCheckbox)
-#: src/plugins/render/stars/StarsConfigWidget.ui:251
-#, fuzzy
-#| msgid "&Celestial Body"
-msgid "Celestial Equator"
-msgstr "&Hevenkörper"
-
-#. i18n: ectx: property (text), widget (QCheckBox, m_viewCelestialPoleCheckbox)
-#: src/plugins/render/stars/StarsConfigWidget.ui:293
-#, fuzzy
-#| msgid "&Celestial Body"
-msgid "Celestial Poles"
-msgstr "&Hevenkörper"
-
-#. i18n: ectx: property (text), widget (QCheckBox, m_viewEclipticCheckbox)
-#: src/plugins/render/stars/StarsConfigWidget.ui:335
-msgid "Ecliptic"
-msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: src/plugins/render/stars/StarsConfigWidget.ui:382
+#: src/plugins/render/stars/StarsConfigWidget.ui:311
 #, fuzzy
-#| msgid "International"
-msgid "Constellation Names"
-msgstr "Internatschonaal"
+#| msgid "&Name"
+msgid "Names"
+msgstr "&Naam"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, constellationNamesComboBox)
-#: src/plugins/render/stars/StarsConfigWidget.ui:393
+#: src/plugins/render/stars/StarsConfigWidget.ui:351
 #, fuzzy
 #| msgid "Map Name:"
 msgid "Latin Name"
 msgstr "Naam vun de Koort:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, constellationNamesComboBox)
-#: src/plugins/render/stars/StarsConfigWidget.ui:398
+#: src/plugins/render/stars/StarsConfigWidget.ui:356
 #, fuzzy
 #| msgid "Transportation"
 msgid "Native Translation"
 msgstr "Verkehr"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, constellationNamesComboBox)
-#: src/plugins/render/stars/StarsConfigWidget.ui:403
+#: src/plugins/render/stars/StarsConfigWidget.ui:361
 #, fuzzy
 #| msgid "Elevation"
 msgid "Abbreviation"
 msgstr "Hööchd"
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_viewConstellationLinesCheckbox)
+#: src/plugins/render/stars/StarsConfigWidget.ui:427
+msgid "Lines"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_viewCelestialEquatorCheckbox)
+#: src/plugins/render/stars/StarsConfigWidget.ui:462
+#, fuzzy
+#| msgid "&Celestial Body"
+msgid "Celestial Equator"
+msgstr "&Hevenkörper"
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_viewCelestialPoleCheckbox)
+#: src/plugins/render/stars/StarsConfigWidget.ui:504
+#, fuzzy
+#| msgid "&Celestial Body"
+msgid "Celestial Poles"
+msgstr "&Hevenkörper"
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_viewEclipticCheckbox)
+#: src/plugins/render/stars/StarsConfigWidget.ui:546
+msgid "Ecliptic"
+msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, WeatherConfigWidget)
 #: src/plugins/render/weather/WeatherConfigWidget.ui:14
@@ -6349,6 +6430,16 @@ msgstr "Gauest"
 #: src/plugins/runner/routino/RoutinoConfigWidget.ui:57
 msgid "Shortest"
 msgstr "Körtst"
+
+#, fuzzy
+#~| msgid "International"
+#~ msgid "Constellation Labels"
+#~ msgstr "Internatschonaal"
+
+#, fuzzy
+#~| msgid "International"
+#~ msgid "Constellation Names"
+#~ msgstr "Internatschonaal"
 
 #, fuzzy
 #~| msgid "OpenGL"
@@ -7227,9 +7318,6 @@ msgstr "Körtst"
 #~ msgstr ""
 #~ "<br />(c) 2007, 2008, dat Marble-Projekt<br /><br /><a href=\"http://edu."
 #~ "kde.org/marble\">http://edu.kde.org/marble</a>"
-
-#~ msgid "&Earth"
-#~ msgstr "&Eer"
 
 #~ msgid "0 N 0 W"
 #~ msgstr "0 N 0 W"
