@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: palapeli\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-30 01:33+0000\n"
+"POT-Creation-Date: 2014-01-02 01:29+0000\n"
 "PO-Revision-Date: 2011-06-16 15:29+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -302,6 +302,23 @@ msgctxt "Description (used like a name) for a mouse interaction method"
 msgid "Toggle lock state of the puzzle table area"
 msgstr "Pusselrebeet af- oder opsluten"
 
+#: src/engine/puzzlepreview.cpp:40
+msgctxt "Window title"
+msgid "Preview of completed puzzle"
+msgstr ""
+
+#: src/engine/puzzlepreview.cpp:47
+msgctxt "text in preview window"
+msgid "Image is not available."
+msgstr ""
+
+#: src/engine/puzzlepreview.cpp:75
+#, fuzzy, kde-format
+#| msgctxt "For usage as window title"
+#| msgid "%1 - Palapeli"
+msgid "%1 - Preview"
+msgstr "%1 - Palapeli"
+
 #: src/engine/scene.cpp:299
 msgid ""
 "You have finished the puzzle the last time. Do you want to restart it now?"
@@ -457,11 +474,19 @@ msgstr "Copyright 2009, 2010: Stefan Majewsky"
 msgid "Stefan Majewsky"
 msgstr "Stefan Majewsky"
 
-#: src/main.cpp:36
+#: src/main.cpp:33
+msgid "Johannes Loehnert"
+msgstr ""
+
+#: src/main.cpp:34
+msgid "The option to preview the completed puzzle"
+msgstr ""
+
+#: src/main.cpp:39
 msgid "Path to puzzle file (will be opened if -i is not given)"
 msgstr "Padd na Pusseldatei (warrt opmaakt, wenn nich -i angeven is.)"
 
-#: src/main.cpp:37
+#: src/main.cpp:40
 msgid ""
 "Import the given puzzle file into the local collection (does nothing if no "
 "puzzle file is given)"
@@ -469,7 +494,7 @@ msgstr ""
 "De angeven Pusselspeel-Datei na de lokaal Sammeln importeren (Deit nix, wenn "
 "keen Pusselspeel-Datei angeven wöör.)"
 
-#: src/main.cpp:38
+#: src/main.cpp:41
 msgid ""
 "If the -i/--import option is specified, the main window will not be shown "
 "after importing the given puzzle."
@@ -528,8 +553,18 @@ msgstr ""
 "Gifft an, wat de Pusseldeeltjes mit afschraadt Kanten dorstellt warrt. "
 "Maakst Du dit ut, kann dat de Dorstellenleisten verbetern."
 
+#. i18n: ectx: label, entry (PuzzlePreviewVisible), group (PuzzlePreview)
+#: src/palapeli.kcfg:34
+msgid "Whether the preview window was switched on last time Palapeli was run."
+msgstr ""
+
+#. i18n: ectx: label, entry (PuzzlePreviewGeometry), group (PuzzlePreview)
+#: src/palapeli.kcfg:38
+msgid "Last position and size of puzzle preview."
+msgstr ""
+
 #. i18n: ectx: ToolBar (mainToolBar)
-#: src/palapeliui.rc:21
+#: src/palapeliui.rc:24
 msgid "Main toolbar"
 msgstr "Hööft-Warktüüchbalken"
 
@@ -593,63 +628,81 @@ msgctxt "@item:inrange description for the \"snapping precision\" setting"
 msgid "Unprecise (easier)"
 msgstr "Nich nau (eenfacher)"
 
-#: src/window/mainwindow.cpp:79
+#: src/window/mainwindow.cpp:86
 msgid "Show statusbar of puzzle table"
 msgstr "Pusselspeelrebeet-Statusbalken wiesen"
 
-#: src/window/mainwindow.cpp:81
+#: src/window/mainwindow.cpp:88
 msgid "Back to &collection"
 msgstr "Torüch na de &Sammeln"
 
-#: src/window/mainwindow.cpp:82
+#: src/window/mainwindow.cpp:89
 msgid "Go back to the collection to choose another puzzle"
 msgstr "Torüch na de Sammeln gahn un en anner Pussel utsöken"
 
-#: src/window/mainwindow.cpp:87
+#: src/window/mainwindow.cpp:94
 msgid "Create &new puzzle..."
 msgstr "En &nieg Pusselspeel opstellen..."
 
-#: src/window/mainwindow.cpp:89
+#: src/window/mainwindow.cpp:96
 msgid "Create a new puzzle using an image file from your disk"
 msgstr "Ut en Bilddatei vun de Fastplaat en nieg Pusselspeel opstellen"
 
-#: src/window/mainwindow.cpp:93
+#: src/window/mainwindow.cpp:100
 msgid "&Delete"
 msgstr "&Wegdoon"
 
-#: src/window/mainwindow.cpp:95
+#: src/window/mainwindow.cpp:102
 msgid "Delete the selected puzzle from your collection"
 msgstr "Utsöcht Pusselspeel ut de Sammeln wegdoon"
 
-#: src/window/mainwindow.cpp:100
+#: src/window/mainwindow.cpp:107
 msgid "&Import from file..."
 msgstr "Ut Datei &importeren..."
 
-#: src/window/mainwindow.cpp:101
+#: src/window/mainwindow.cpp:108
 msgid "Import a new puzzle from a file into your collection"
 msgstr "En nieg Pusselspeel ut en Datei na Dien Sammeln importeren"
 
-#: src/window/mainwindow.cpp:105
+#: src/window/mainwindow.cpp:112
 msgid "&Export to file..."
 msgstr "As Datei &exporteren..."
 
-#: src/window/mainwindow.cpp:107
+#: src/window/mainwindow.cpp:114
 msgid "Export the selected puzzle from your collection into a file"
 msgstr "Utsöcht Pusselspeel ut de Sammeln na en Datei exporteren"
 
-#: src/window/mainwindow.cpp:112
+#: src/window/mainwindow.cpp:119
 msgid "&Restart puzzle..."
 msgstr "Pusselspeel &nieg starten..."
 
-#: src/window/mainwindow.cpp:113
+#: src/window/mainwindow.cpp:120
 msgid "Delete the saved progress"
 msgstr "Sekert Vörankamen wegdoon"
 
-#: src/window/mainwindow.cpp:173
+#: src/window/mainwindow.cpp:126
+#, fuzzy
+#| msgid "Overview"
+msgctxt "Preview is a noun here"
+msgid "&Preview"
+msgstr "Översicht"
+
+#: src/window/mainwindow.cpp:128
+#, fuzzy
+#| msgid "Overview"
+msgctxt "Preview is a noun here"
+msgid "Preview"
+msgstr "Översicht"
+
+#: src/window/mainwindow.cpp:129
+msgid "Shows or hides the image of the completed puzzle"
+msgstr ""
+
+#: src/window/mainwindow.cpp:221
 msgid "The following puzzles will be deleted. This action cannot be undone."
 msgstr "Disse Pussels warrt wegdaan. Dat lett sik nich torüchnehmen."
 
-#: src/window/mainwindow.cpp:184 src/window/mainwindow.cpp:207
+#: src/window/mainwindow.cpp:232 src/window/mainwindow.cpp:255
 msgctxt "Filter for a file dialog"
 msgid "*.puzzle|Palapeli puzzles (*.puzzle)"
 msgstr "*.puzzle|Palapeli-Pusselspeelen (*.puzzle)"
@@ -798,10 +851,6 @@ msgstr "%1% fardigmaakt"
 #~ msgid "Adjust the gameplay of Palapeli"
 #~ msgstr "Den Speelafloop vun Palapeli topassen"
 
-#~ msgctxt "For usage as window title"
-#~ msgid "%1 - Palapeli"
-#~ msgstr "%1 - Palapeli"
-
 #~ msgid "Minimap"
 #~ msgstr "Minikoort"
 
@@ -810,6 +859,3 @@ msgstr "%1% fardigmaakt"
 
 #~ msgid "Show overview"
 #~ msgstr "Översicht wiesen"
-
-#~ msgid "Overview"
-#~ msgstr "Översicht"
