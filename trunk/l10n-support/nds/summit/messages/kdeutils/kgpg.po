@@ -6,14 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kgpg\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-05-03 10:16+0200\n"
+"POT-Creation-Date: 2013-12-09 08:59+0100\n"
 "PO-Revision-Date: 2012-03-17 07:01+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nds\n"
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
@@ -35,8 +35,9 @@ msgstr "Naam (tominnst 5 Tekens):"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
+#. i18n: ectx: property (text), widget (QLabel, label_EmailSorting)
 #. +> trunk stable
-#: adduid.ui:29 newkey.ui:67
+#: adduid.ui:29 conf_ui2.ui:242 newkey.ui:67
 msgid "Email:"
 msgstr "Nettpost:"
 
@@ -47,20 +48,23 @@ msgid "Comment (optional):"
 msgstr "Kommentar (wahlwies):"
 
 #. +> trunk stable
-#: caff.cpp:258
+#: caff.cpp:254
 msgctxt "Email template placeholder for key id"
 msgid "KEYID"
 msgstr "Slötel-ID"
 
 #. +> trunk stable
-#: caff.cpp:259
+#: caff.cpp:255
 msgctxt "Email template placeholder for key id"
 msgid "UIDNAME"
 msgstr "Brukerkennen-Naam"
 
 #. +> trunk stable
-#: caff.cpp:287
-msgid "your key "
+#: caff.cpp:288
+#, fuzzy, kde-format
+#| msgid "your key "
+msgctxt "%1 is 64 bit key id (in hex), text is used as email subject"
+msgid "Your key %1"
 msgstr "Dien Slötel "
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_4_2)
@@ -83,9 +87,10 @@ msgstr ""
 msgid "Custom decryption command:"
 msgstr "Egen Opslötel-Befehl:"
 
+#. i18n: ectx: property (text), widget (QCheckBox, capEncrypt)
 #. i18n: ectx: property (windowTitle), widget (QWidget, Encryption)
 #. +> trunk stable
-#: conf_encryption.ui:15 kgpgoptions.cpp:97
+#: conf_encryption.ui:15 kgpgkeygenerate.ui:172 kgpgoptions.cpp:101
 msgid "Encryption"
 msgstr "Verslöteln"
 
@@ -472,7 +477,7 @@ msgstr "Ünnerschriev-Deenstmenü:"
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SignMenu)
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DecryptMenu)
 #. +> trunk stable
-#: conf_misc.ui:139 conf_misc.ui:178 keysmanager.cpp:298
+#: conf_misc.ui:139 conf_misc.ui:178 keysmanager.cpp:310
 msgid "Disable"
 msgstr "Utmaken"
 
@@ -552,7 +557,7 @@ msgstr "Slötelpleger"
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_LeftClick)
 #. i18n: ectx: attribute (title), widget (QWidget, tabEditor)
 #. +> trunk stable
-#: conf_misc.ui:245 conf_misc.ui:272 editor/kgpgeditor.cpp:502
+#: conf_misc.ui:245 conf_misc.ui:272 editor/kgpgeditor.cpp:504
 msgid "Editor"
 msgstr "Editor"
 
@@ -637,25 +642,25 @@ msgstr "HTTP-Proxy bruken, wenn mööglich"
 
 #. i18n: ectx: property (text), widget (KPushButton, server_default)
 #. +> trunk stable
-#: conf_servers.ui:50
+#: conf_servers.ui:53
 msgid "&Set as Default"
 msgstr "As Standard &fastleggen"
 
 #. i18n: ectx: property (text), widget (KPushButton, server_add)
 #. +> trunk stable
-#: conf_servers.ui:57
+#: conf_servers.ui:60
 msgid "&Add..."
 msgstr "&Tofögen..."
 
 #. i18n: ectx: property (text), widget (KPushButton, server_del)
 #. +> trunk stable
-#: conf_servers.ui:67
+#: conf_servers.ui:70
 msgid "&Delete"
 msgstr "&Wegdoon"
 
 #. i18n: ectx: property (text), widget (KPushButton, server_edit)
 #. +> trunk stable
-#: conf_servers.ui:74
+#: conf_servers.ui:77
 msgid "&Edit..."
 msgstr "&Bewerken..."
 
@@ -713,134 +718,208 @@ msgstr "Utmaakt Slötels:"
 msgid "Editor Font"
 msgstr "Editor-Schriftoort"
 
+#. i18n: ectx: attribute (title), widget (QWidget, tabKeyList)
 #. +> trunk stable
-#: core/convert.cpp:37
+#: conf_ui2.ui:230
+#, fuzzy
+#| msgid "Private Key List"
+msgid "Key List"
+msgstr "List vun Privaatslötels"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBoxSorting)
+#. +> trunk stable
+#: conf_ui2.ui:236
+msgid "Sort Order"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
+#. +> trunk stable
+#: conf_ui2.ui:253 kgpgoptions.cpp:93
+msgid "Left to right, account first"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
+#. +> trunk stable
+#: conf_ui2.ui:258 kgpgoptions.cpp:94
+msgid "Right to left, TLD first"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
+#. +> trunk stable
+#: conf_ui2.ui:263 kgpgoptions.cpp:95
+msgid "Right to left, domain first"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
+#. +> trunk stable
+#: conf_ui2.ui:268 kgpgoptions.cpp:96
+msgid "Right to left, FQDN first"
+msgstr ""
+
+#. +> trunk stable
+#: core/convert.cpp:41
 msgctxt "Encryption algorithm"
 msgid "RSA"
 msgstr "RSA"
 
 #. +> trunk stable
-#: core/convert.cpp:38
+#: core/convert.cpp:42
 msgctxt "Encryption algorithm"
 msgid "DSA"
 msgstr "DSA"
 
 #. +> trunk stable
-#: core/convert.cpp:39
+#: core/convert.cpp:43
 msgctxt "Encryption algorithm"
 msgid "ElGamal"
 msgstr "ElGamal"
 
 #. +> trunk stable
-#: core/convert.cpp:40
+#: core/convert.cpp:44
 msgctxt "Encryption algorithm"
 msgid "DSA & ElGamal"
 msgstr "DSA un ElGamal"
 
 #. +> trunk stable
-#: core/convert.cpp:41
+#: core/convert.cpp:45
 msgctxt "Encryption algorithm RSA, Signing algorithm RSA"
 msgid "RSA & RSA"
 msgstr "RSA un RSA"
 
 #. +> trunk stable
-#: core/convert.cpp:43
+#: core/convert.cpp:47
 msgctxt "Unknown algorithm"
 msgid "Unknown"
 msgstr "Nich begäng"
 
 #. +> trunk stable
-#: core/convert.cpp:51
+#: core/convert.cpp:55
 msgid "Do not Know"
 msgstr "Weet ik nich"
 
 #. +> trunk stable
-#: core/convert.cpp:52
+#: core/convert.cpp:56
 msgid "Do NOT Trust"
 msgstr "NICH troen"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
 #. +> trunk stable
-#: core/convert.cpp:53 kgpgKeyInfo.ui:193
+#: core/convert.cpp:57 kgpgKeyInfo.ui:196
 msgid "Marginally"
 msgstr "Deelwies"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
 #. +> trunk stable
-#: core/convert.cpp:54 kgpgKeyInfo.ui:198
+#: core/convert.cpp:58 kgpgKeyInfo.ui:201
 msgid "Fully"
 msgstr "Vull"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
 #. +> trunk stable
-#: core/convert.cpp:55 kgpgKeyInfo.ui:203
+#: core/convert.cpp:59 kgpgKeyInfo.ui:206
 msgid "Ultimately"
 msgstr "Büterst"
 
 #. +> trunk stable
-#: core/convert.cpp:57
+#: core/convert.cpp:61
 msgctxt "Unknown trust in key owner"
 msgid "Unknown"
 msgstr "Nich begäng"
 
 #. +> trunk stable
-#: core/convert.cpp:65
+#: core/convert.cpp:69
 msgctxt "Invalid key"
 msgid "Invalid"
 msgstr "Leeg"
 
 #. +> trunk stable
-#: core/convert.cpp:66
+#: core/convert.cpp:70
 msgctxt "Disabled key"
 msgid "Disabled"
 msgstr "Utmaakt"
 
 #. +> trunk stable
-#: core/convert.cpp:67
+#: core/convert.cpp:71
 msgid "Revoked"
 msgstr "Torüchropen"
 
 #. +> trunk stable
-#: core/convert.cpp:68
+#: core/convert.cpp:72
 msgctxt "Expired key"
 msgid "Expired"
 msgstr "Aflopen"
 
 #. +> trunk stable
-#: core/convert.cpp:69
+#: core/convert.cpp:73
 msgctxt "Undefined key trust"
 msgid "Undefined"
 msgstr "Nich fastleggt"
 
 #. +> trunk stable
-#: core/convert.cpp:70
+#: core/convert.cpp:74
 msgctxt "No trust in key"
 msgid "None"
 msgstr "Keen"
 
 #. +> trunk stable
-#: core/convert.cpp:71
+#: core/convert.cpp:75
 msgctxt "Marginal trust in key"
 msgid "Marginal"
 msgstr "Deelwies"
 
 #. +> trunk stable
-#: core/convert.cpp:72
+#: core/convert.cpp:76
 msgctxt "Full trust in key"
 msgid "Full"
 msgstr "Vull"
 
 #. +> trunk stable
-#: core/convert.cpp:73
+#: core/convert.cpp:77
 msgctxt "Ultimate trust in key"
 msgid "Ultimate"
 msgstr "Büterst"
 
 #. +> trunk stable
-#: core/convert.cpp:75
+#: core/convert.cpp:79
 msgctxt "Unknown trust in key"
 msgid "Unknown"
 msgstr "Nich begäng"
+
+#. +> trunk stable
+#: core/convert.cpp:93
+#, fuzzy
+#| msgid "Signature"
+msgctxt "key capability"
+msgid "Signature"
+msgstr "Ünnerschrift"
+
+#. +> trunk stable
+#: core/convert.cpp:95
+#, fuzzy
+#| msgid "Encryption"
+msgctxt "key capability"
+msgid "Encryption"
+msgstr "Verslöteln"
+
+#. +> trunk stable
+#: core/convert.cpp:97
+msgctxt "key capability"
+msgid "Authentication"
+msgstr ""
+
+#. +> trunk stable
+#: core/convert.cpp:99
+#, fuzzy
+#| msgid "Creation"
+msgctxt "key capability"
+msgid "Certification"
+msgstr "Opstellt"
+
+#. +> trunk stable
+#: core/convert.cpp:101
+msgctxt "used to join a list of key types, e.g. 'encryption, signature'"
+msgid ", "
+msgstr ""
 
 #. +> trunk stable
 #: core/KGpgGroupNode.cpp:164
@@ -873,12 +952,12 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #. +> trunk stable
-#: core/KGpgRefNode.cpp:128 transactions/kgpgtransaction.cpp:481
+#: core/KGpgRefNode.cpp:128 transactions/kgpgtransaction.cpp:634
 msgid "[No user id found]"
 msgstr "[Keen Bruker-ID funnen]"
 
 #. +> trunk stable
-#: core/KGpgSignNode.cpp:86
+#: core/KGpgSignNode.cpp:88
 #, kde-format
 msgid "%1 [local signature]"
 msgstr "%1 [lokaal Ünnerschrift]"
@@ -900,63 +979,63 @@ msgid "Info"
 msgstr "Info"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:90 editor/kgpgeditor.cpp:240
-#: editor/kgpgeditor.cpp:747 editor/kgpgeditor.cpp:776
+#: editor/kgpgeditor.cpp:91 editor/kgpgeditor.cpp:241
+#: editor/kgpgeditor.cpp:749 editor/kgpgeditor.cpp:778
 msgid "Untitled"
 msgstr "Ahn Titel"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:186
+#: editor/kgpgeditor.cpp:187
 msgid "&Encrypt File..."
 msgstr "Datei &verslöteln..."
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:190
+#: editor/kgpgeditor.cpp:191
 msgid "&Decrypt File..."
 msgstr "Datei &opslöteln..."
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:194
+#: editor/kgpgeditor.cpp:195
 msgid "&Open Key Manager"
 msgstr "Slötelpleger &opmaken"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:197
+#: editor/kgpgeditor.cpp:198
 msgid "&Generate Signature..."
 msgstr "Ünnerschrift opste&llen..."
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:201
+#: editor/kgpgeditor.cpp:202
 msgid "&Verify Signature..."
 msgstr "Ünnerschrift &pröven..."
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:204
+#: editor/kgpgeditor.cpp:205
 msgid "&Check MD5 Sum..."
 msgstr "MD&5-Summ pröven..."
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:207
+#: editor/kgpgeditor.cpp:208
 msgid "&Unicode (utf-8) Encoding"
 msgstr "&Unicode (UTF-8)-Koderen"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:213
+#: editor/kgpgeditor.cpp:214
 msgid "En&crypt"
 msgstr "&Verslöteln"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:217
+#: editor/kgpgeditor.cpp:218
 msgid "&Decrypt"
 msgstr "&Opslöteln"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:221
+#: editor/kgpgeditor.cpp:222
 msgid "S&ign/Verify"
 msgstr "Ünnerschr&ieven/Pröven"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:244
+#: editor/kgpgeditor.cpp:245
 #, kde-format
 msgid ""
 "The document \"%1\" has changed.\n"
@@ -966,76 +1045,76 @@ msgstr ""
 "Wullt Du dat sekern?"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:245
+#: editor/kgpgeditor.cpp:246
 msgid "Close the document"
 msgstr "Dokment tomaken"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:291
+#: editor/kgpgeditor.cpp:292
 msgid "The document could not been saved, as the selected codec is not supported."
 msgstr "Dat Dokment lett sik nich sekern - de utsöcht Kodek warrt nich ünnerstütt."
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:297
+#: editor/kgpgeditor.cpp:298
 msgid "The document could not been saved, as the selected encoding cannot encode every unicode character in it."
 msgstr "Dat Dokment lett sik nich sekern - de utsöchte Koderen bargt nich all Unicode-Tekens ut dat Dokment."
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:306 editor/kgpgeditor.cpp:325
+#: editor/kgpgeditor.cpp:307 editor/kgpgeditor.cpp:326
 msgid "The document could not be saved, please check your permissions and disk space."
 msgstr "Dat Dokment lett sik nich sekern, prööv bitte Dien Verlöven un den Platz op de Fastplaat."
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:351 editor/kgpgeditor.cpp:358 keyexport.cpp:41
+#: editor/kgpgeditor.cpp:352 editor/kgpgeditor.cpp:359 keyexport.cpp:42
 #, kde-format
 msgid "Overwrite existing file %1?"
 msgstr "Vörhannen Datei \"%1\" överschrieven?"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:469 editor/kgpgeditor.cpp:477
-#: editor/kgpgeditor.cpp:612 editor/kgpgeditor.cpp:650
-#: editor/kgpgeditor.cpp:688
+#: editor/kgpgeditor.cpp:470 editor/kgpgeditor.cpp:479
+#: editor/kgpgeditor.cpp:614 editor/kgpgeditor.cpp:652
+#: editor/kgpgeditor.cpp:690
 msgid "*|All Files"
 msgstr "*|All Dateien"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:469
+#: editor/kgpgeditor.cpp:470
 msgid "Open File to Encode"
 msgstr "Datei för't Verslöteln opmaken"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:477
+#: editor/kgpgeditor.cpp:479
 msgid "Open File to Decode"
 msgstr "Datei för't Opslöteln opmaken"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:491
+#: editor/kgpgeditor.cpp:493
 msgid "Decrypt File To"
 msgstr "Datei opslöteln na"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:500 keyexport.cpp:28
+#: editor/kgpgeditor.cpp:502 keyexport.cpp:28
 msgid "Save File"
 msgstr "Datei sekern"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:521 kgpgexternalactions.cpp:206
-#: kgpgexternalactions.cpp:361 transactions/kgpgencrypt.cpp:123
+#: editor/kgpgeditor.cpp:523 kgpgexternalactions.cpp:208
+#: kgpgexternalactions.cpp:371 transactions/kgpgtransaction.cpp:189
 msgid "File Already Exists"
 msgstr "Gifft Datei al"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:612
+#: editor/kgpgeditor.cpp:614
 msgid "Open File to Sign"
 msgstr "Datei för't Ünnerschrieven opmaken"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:650 editor/kgpgeditor.cpp:688
+#: editor/kgpgeditor.cpp:652 editor/kgpgeditor.cpp:690
 msgid "Open File to Verify"
 msgstr "Datei för't Pröven opmaken"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:701 editor/kgpgtextedit.cpp:333
+#: editor/kgpgeditor.cpp:703 editor/kgpgtextedit.cpp:333
 #, kde-format
 msgid ""
 "<qt><b>Missing signature:</b><br />"
@@ -1050,30 +1129,30 @@ msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_import)
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:702 keyserver.ui:32 keytreeview.cpp:167
+#: editor/kgpgeditor.cpp:704 keyserver.ui:32 keytreeview.cpp:167
 msgid "Import"
 msgstr "Importeren"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:702 keytreeview.cpp:168
+#: editor/kgpgeditor.cpp:704 keytreeview.cpp:168
 msgid "Do Not Import"
 msgstr "Nich importeren"
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:728 transactions/kgpgverify.cpp:149
+#: editor/kgpgeditor.cpp:730 transactions/kgpgverify.cpp:149
 msgid "No signature found."
 msgstr "Keen Ünnerschrift funnen."
 
 #. +> trunk stable
-#: editor/kgpgeditor.cpp:733 editor/kgpgtextedit.cpp:320
-#: kgpgexternalactions.cpp:283
+#: editor/kgpgeditor.cpp:735 editor/kgpgtextedit.cpp:320
+#: kgpgexternalactions.cpp:288
 msgctxt "Caption of message box"
 msgid "Verification Finished"
 msgstr "Prööv afslaten"
 
 #. i18n: ectx: Menu (view)
 #. +> trunk stable
-#: editor/kgpgeditor.rc:13 keysmanager.rc:24
+#: editor/kgpgeditor.rc:13 keysmanager.rc:25
 msgid "&View"
 msgstr "&Ansicht"
 
@@ -1157,18 +1236,18 @@ msgid "Key file dropped on Editor"
 msgstr "Slöteldatei na Editor utschutert"
 
 #. +> trunk stable
-#: editor/kgpgtextedit.cpp:257 kgpgexternalactions.cpp:397
+#: editor/kgpgtextedit.cpp:257 kgpgexternalactions.cpp:408
 msgid "Decryption failed."
 msgstr "Opslöteln fehlslaan."
 
 #. +> trunk stable
-#: editor/kgpgtextedit.cpp:272 foldercompressjob.cpp:139
+#: editor/kgpgtextedit.cpp:272 foldercompressjob.cpp:140
 #, kde-format
 msgid "The encryption failed with error code %1"
 msgstr "Verslöteln mit Fehlerkode \"%1\" fehlslaan"
 
 #. +> trunk stable
-#: editor/kgpgtextedit.cpp:273 foldercompressjob.cpp:140
+#: editor/kgpgtextedit.cpp:273 foldercompressjob.cpp:141
 msgid "Encryption failed."
 msgstr "Verslöteln fehlslaan."
 
@@ -1179,7 +1258,7 @@ msgstr "Ünnerschrieven nich mööglich, wiel de Slötelsatz leeg is oder en Sl�
 
 #. i18n: ectx: property (text), widget (QPushButton, Buttonimport)
 #. +> trunk stable
-#: editor/kgpgtextedit.cpp:326 keyserver.ui:144 keyservers.cpp:211
+#: editor/kgpgtextedit.cpp:326 keyserver.ui:144 keyservers.cpp:213
 msgid "&Import"
 msgstr "&Importeren"
 
@@ -1209,8 +1288,8 @@ msgid "Processing folder compression and encryption"
 msgstr "Orner warrt komprimeert un verslötelt"
 
 #. +> trunk stable
-#: foldercompressjob.cpp:71 foldercompressjob.cpp:121
-#: foldercompressjob.cpp:140 foldercompressjob.cpp:142
+#: foldercompressjob.cpp:71 foldercompressjob.cpp:122
+#: foldercompressjob.cpp:141 foldercompressjob.cpp:143
 #: transactions/kgpgtransactionjob.cpp:65
 msgctxt "State of operation as in status"
 msgid "State"
@@ -1223,83 +1302,83 @@ msgid "Startup"
 msgstr "Bi't Starten"
 
 #. +> trunk stable
-#: foldercompressjob.cpp:103
+#: foldercompressjob.cpp:104
 msgid "Unable to create temporary file"
 msgstr "Temporeerdatei lett sik nich opstellen"
 
 #. +> trunk stable
-#: foldercompressjob.cpp:122 transactions/kgpgencrypt.cpp:115
+#: foldercompressjob.cpp:123 transactions/kgpgencrypt.cpp:106
 #, kde-format
 msgctxt "Status message 'Encrypting <filename>' (operation starts)"
 msgid "Encrypting %1"
 msgstr "\"%1\" warrt verslötelt"
 
 #. +> trunk stable
-#: foldercompressjob.cpp:143 transactions/kgpgencrypt.cpp:118
+#: foldercompressjob.cpp:144 transactions/kgpgencrypt.cpp:109
 #, kde-format
 msgctxt "Status message 'Encrypted <filename>' (operation was completed)"
 msgid "Encrypted %1"
 msgstr "\"%1\" wöör verslötelt"
 
 #. +> trunk stable
-#: foldercompressjob.cpp:174
+#: foldercompressjob.cpp:175
 msgid "Zip"
 msgstr "Zip"
 
-#. +> trunk
-#: foldercompressjob.cpp:175
+#. +> trunk stable
+#: foldercompressjob.cpp:176
 #, fuzzy
 #| msgid "Gzip"
 msgid "Tar/Gzip"
 msgstr "GZip"
 
-#. +> trunk
-#: foldercompressjob.cpp:176
+#. +> trunk stable
+#: foldercompressjob.cpp:177
 #, fuzzy
 #| msgid "Bzip2"
 msgid "Tar/Bzip2"
 msgstr "BZip2"
 
 #. +> trunk stable
-#: foldercompressjob.cpp:177
+#: foldercompressjob.cpp:178
 msgid "Tar"
 msgstr "Tar"
 
 #. +> trunk stable
-#: foldercompressjob.cpp:178
+#: foldercompressjob.cpp:179
 msgid "Tar/XZ"
 msgstr "Tar/XZ"
 
 #. +> trunk stable
-#: groupedit.cpp:36
+#: groupedit.cpp:39
 msgid "Available Keys"
 msgstr "Verföögbor Slötels"
 
 #. +> trunk stable
-#: groupedit.cpp:39
+#: groupedit.cpp:42
 msgid "Available Trusted Keys"
 msgstr "Verföögbore troot Slötels"
 
-#. i18n: ectx: property (text), widget (QLabel)
 #. i18n: ectx: property (text), widget (QLabel, filterEditLabel)
+#. i18n: ectx: property (text), widget (QLabel)
 #. +> trunk stable
-#: groupedit.ui:38 keysmanager.cpp:414 searchres.ui:28
+#: groupedit.ui:38 keysmanager.cpp:431 searchres.ui:28
 msgid "Search:"
 msgstr "Söken:"
 
 #. i18n: ectx: property (text), widget (QTableView, availableKeys)
 #. i18n: ectx: property (text), widget (QTableView, groupKeys)
 #. +> trunk stable
-#: groupedit.ui:74 groupedit.ui:158 model/kgpgitemmodel.cpp:329
-#: model/kgpgsearchresultmodel.cpp:332
+#: groupedit.ui:74 groupedit.ui:158 model/kgpgitemmodel.cpp:372
+#: model/kgpgsearchresultmodel.cpp:334
 msgid "Name"
 msgstr "Naam"
 
 #. i18n: ectx: property (text), widget (QTableView, availableKeys)
 #. i18n: ectx: property (text), widget (QTableView, groupKeys)
 #. +> trunk stable
-#: groupedit.ui:79 groupedit.ui:163 model/kgpgitemmodel.cpp:330
-#: model/kgpgsearchresultmodel.cpp:334
+#: groupedit.ui:79 groupedit.ui:163 model/kgpgitemmodel.cpp:373
+#: model/kgpgsearchresultmodel.cpp:336
 msgctxt "@title:column Title of a column of emails"
 msgid "Email"
 msgstr "Nettpost"
@@ -1335,41 +1414,47 @@ msgstr "Nettbreef"
 msgid "Clipboard"
 msgstr "Twischenaflaag"
 
+#. i18n: ectx: property (toolTip), widget (QRadioButton, checkServer)
+#. +> trunk stable
+#: keyexport.ui:55
+msgid "You must define at least one keyserver in settings before you can export to one."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, checkServer)
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#. i18n: ectx: property (text), widget (QRadioButton, checkServer)
 #. +> trunk stable
-#: keyexport.ui:55 keyserver.ui:41 keyserver.ui:176
+#: keyexport.ui:58 keyserver.ui:41 keyserver.ui:176
 msgid "Key server:"
 msgstr "Slötelserver:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, checkFile)
 #. +> trunk stable
-#: keyexport.ui:69 sourceselect.ui:43
+#: keyexport.ui:72 sourceselect.ui:43
 msgid "File:"
 msgstr "Datei:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup3)
 #. +> trunk stable
-#: keyexport.ui:89
+#: keyexport.ui:92
 msgid "Export Settings"
 msgstr "Export-Instellen"
 
 #. i18n: ectx: property (text), widget (QRadioButton, checkAttrAll)
 #. +> trunk stable
-#: keyexport.ui:95
+#: keyexport.ui:98
 msgid "Export everything"
 msgstr "Allens exporteren"
 
 #. i18n: ectx: property (text), widget (QRadioButton, checkAttrPhoto)
 #. +> trunk stable
-#: keyexport.ui:105
+#: keyexport.ui:108
 msgid "Do not export attributes (photo ids)"
 msgstr "Attributen (Foto-IDs) nich exporteren"
 
 #. i18n: ectx: property (text), widget (QRadioButton, checkAttrClean)
 #. +> trunk stable
-#: keyexport.ui:112
+#: keyexport.ui:115
 msgctxt "@option:radio Exports the smallest key possible. Maps to export-minimal option of gpg"
 msgid "Clean key"
 msgstr "Slötel reenmaken"
@@ -1395,64 +1480,55 @@ msgid "none"
 msgstr "keen"
 
 #. +> trunk stable
-#: keyinfodialog.cpp:196
+#: keyinfodialog.cpp:205
 msgid "<qt>The left part is the algorithm used by the <b>signature</b> key. The right part is the algorithm used by the <b>encryption</b> key.</qt>"
 msgstr "<qt>De linke Deel is de Algoritmus, den de <b>Ünnerschrift</b>-Slötel bruukt. De rechte Deel is de Algoritmus, den de <b>Verslötel</b>-Slötel bruukt.</qt>"
 
 #. +> trunk stable
-#: keyinfodialog.cpp:199
+#: keyinfodialog.cpp:208
 msgctxt "Unlimited key lifetime"
 msgid "Unlimited"
 msgstr "Keen Grenz"
 
 #. +> trunk stable
-#: keyinfodialog.cpp:205
+#: keyinfodialog.cpp:214
 msgid "<qt>The left part is the size of the <b>signature</b> key. The right part is the size of the <b>encryption</b> key.</qt>"
 msgstr "<qt>De linke Deel is den <b>Ünnerschrift</b>-Slötel sien Grött, de rechte Deel de Grött vun den <b>Verslötel</b>-Slötel.</qt>"
 
 #. +> trunk stable
-#: keyinfodialog.cpp:210
+#: keyinfodialog.cpp:219
 msgctxt "no key comment"
-msgid "none"
-msgstr "keen"
+msgid "<em>none</em>"
+msgstr ""
 
 #. +> trunk stable
-#: keyinfodialog.cpp:305
+#: keyinfodialog.cpp:316
 msgid "Passphrase for the key was changed"
 msgstr "Slötelsatz för den Slötel wöör ännert"
 
 #. +> trunk stable
-#: keyinfodialog.cpp:308
+#: keyinfodialog.cpp:319
 msgid "Bad old passphrase, the passphrase for the key was not changed"
 msgstr "Leeg oolt Slötelsatz. De Slötelsatz för den Slötel wöör nich ännert."
 
 #. +> trunk stable
-#: keyinfodialog.cpp:308
+#: keyinfodialog.cpp:319
 msgid "Could not change passphrase"
 msgstr "Slötelsatz lett sik nich ännern"
 
-#. +> trunk
-#: keyinfodialog.cpp:313
+#. +> trunk stable
+#: keyinfodialog.cpp:324
 msgid "KGpg was unable to change the passphrase."
 msgstr "KGpg kann den Slötelsatz nich ännern."
 
-#. +> stable
-#: keyinfodialog.cpp:311
-msgid ""
-"KGpg was unable to change the passphrase.<br />"
-"Please see the detailed log for more information."
-msgstr ""
-"KGpg kann den Slötelsatz nich ännern.<br />"
-"Mehr Informatschonen gifft dat binnen dat Logbook."
-
 #. +> trunk stable
-#: keyinfodialog.cpp:349
+#: keyinfodialog.cpp:360
 msgid "Changing key properties failed."
 msgstr "Ännern vun Slötelegenschappen fehlslaan"
 
 #. i18n: ectx: property (title), widget (QGroupBox, gr_properties)
 #. +> trunk stable
-#: keyinfodialog.cpp:349 kgpgKeyInfo.ui:37
+#: keyinfodialog.cpp:360 kgpgKeyInfo.ui:37
 msgid "Key properties"
 msgstr "Slötel-Egenschappen"
 
@@ -1568,55 +1644,55 @@ msgid "&Export"
 msgstr "&Exporteren"
 
 #. +> trunk stable
-#: keyservers.cpp:45
+#: keyservers.cpp:47
 msgid "Key Server"
 msgstr "Slötelserver"
 
 #. +> trunk stable
-#: keyservers.cpp:101 keyservers.cpp:191
+#: keyservers.cpp:103 keyservers.cpp:193
 msgid "You must enter a search string."
 msgstr "Du muttst en Sööktext ingeven."
 
 #. +> trunk stable
-#: keyservers.cpp:113
+#: keyservers.cpp:115
 msgid "You need to configure keyservers before trying to download keys."
 msgstr "Du muttst toeerst Slötelservers fastleggen, ehr Du Slötels daalladen kannst."
 
 #. +> trunk stable
-#: keyservers.cpp:114
+#: keyservers.cpp:116
 msgid "No keyservers defined"
 msgstr "Keen Slötelserver angeven"
 
 #. +> trunk stable
-#: keyservers.cpp:151
+#: keyservers.cpp:153
 msgctxt "Caption of message box"
 msgid "Key Import Finished"
 msgstr "Slötel-Import afslaten"
 
 #. +> trunk stable
-#: keyservers.cpp:179
+#: keyservers.cpp:181
 msgid "Upload to keyserver finished without errors"
 msgstr "Hoochladen na Slötelserver ahn Fehlers afslaten"
 
 #. +> trunk stable
-#: keyservers.cpp:181
+#: keyservers.cpp:183
 msgid "Upload to keyserver failed"
 msgstr "Hoochladen na Slötelserver fehlslaan"
 
 #. +> trunk stable
-#: keyservers.cpp:206 keysmanager.cpp:1178
+#: keyservers.cpp:208 keysmanager.cpp:1238
 msgid "Import Key From Keyserver"
 msgid_plural "Import Keys From Keyserver"
 msgstr[0] "Slötel vun Slötelserver importeren"
 msgstr[1] "Slötels vun Slötelserver importeren"
 
 #. +> trunk stable
-#: keyservers.cpp:216
+#: keyservers.cpp:218
 msgid "Connecting to the server..."
 msgstr "An't Tokoppeln na den Server..."
 
 #. +> trunk stable
-#: keyservers.cpp:268
+#: keyservers.cpp:269
 #, kde-format
 msgid "Found 1 matching key"
 msgid_plural "Found %1 matching keys"
@@ -1624,247 +1700,261 @@ msgstr[0] "1 passen Slötel funnen"
 msgstr[1] "%1 passen Slötels funnen"
 
 #. +> trunk stable
-#: keyservers.cpp:272
+#: keyservers.cpp:273
 msgid "No matching keys found"
 msgstr "Keen passen Slötels funnen"
 
 #. +> trunk stable
-#: keyservers.cpp:320
+#: keyservers.cpp:321
 msgid "You must choose a key."
 msgstr "Du muttst en Slötel kören."
 
 #. +> trunk stable
-#: keysmanager.cpp:128
+#: keysmanager.cpp:132
 msgid "Key Management"
 msgstr "Slötelpleeg"
 
 #. +> trunk stable
-#: keysmanager.cpp:135
+#: keysmanager.cpp:139
 msgid "&Open Editor"
 msgstr "Editor o&pmaken"
 
 #. +> trunk stable
-#: keysmanager.cpp:138
+#: keysmanager.cpp:142
 msgid "&Key Server Dialog"
 msgstr "&Slötelserver-Dialoog"
 
 #. +> trunk stable
-#: keysmanager.cpp:143 selectpublickeydialog.cpp:138
+#: keysmanager.cpp:147 selectpublickeydialog.cpp:138
 msgid "&Go to Default Key"
 msgstr "&Na Standardslötel gahn"
 
 #. +> trunk stable
-#: keysmanager.cpp:160
+#: keysmanager.cpp:164
 msgid "Tip of the &Day"
 msgstr "Tipp för Vun&daag"
 
 #. +> trunk stable
-#: keysmanager.cpp:163
+#: keysmanager.cpp:167
 msgid "View GnuPG Manual"
 msgstr "GnuPG-Handbook ankieken"
 
 #. +> trunk stable
-#: keysmanager.cpp:168
+#: keysmanager.cpp:172
 msgid "&Refresh List"
 msgstr "List &opfrischen"
 
 #. +> trunk stable
-#: keysmanager.cpp:172
+#: keysmanager.cpp:176
 msgid "Show &Long Key Id"
 msgstr "&Lang Slötel-ID wiesen"
 
 #. +> trunk stable
-#: keysmanager.cpp:177
+#: keysmanager.cpp:181
 msgid "K&ey Properties"
 msgstr "Slötel-&Egenschappen"
 
 #. +> trunk stable
-#: keysmanager.cpp:181
+#: keysmanager.cpp:185
+#, fuzzy
+#| msgid "&Open Key Manager"
+msgid "&Open Key URL"
+msgstr "Slötelpleger &opmaken"
+
+#. +> trunk stable
+#: keysmanager.cpp:189
 msgid "Edit Key in &Terminal"
 msgstr "Slötel op &Konsool bewerken"
 
 #. +> trunk stable
-#: keysmanager.cpp:186
+#: keysmanager.cpp:194
 msgid "&Generate Key Pair..."
 msgstr "Slötelpoor &opstellen..."
 
 #. +> trunk stable
-#: keysmanager.cpp:195
+#: keysmanager.cpp:203
 msgid "&Import Key..."
 msgstr "Slötel &importeren..."
 
 #. +> trunk stable
-#: keysmanager.cpp:200
+#: keysmanager.cpp:208
+#, fuzzy
+#| msgid "Send with every Email"
+msgid "Send Ema&il"
+msgstr "Mit elk Nettbreef loosstüern"
+
+#. +> trunk stable
+#: keysmanager.cpp:212
 msgid "&Create New Contact in Address Book"
 msgstr "Nieg Kontakt in't Adressbook o&pstellen"
 
 #. +> trunk stable
-#: keysmanager.cpp:206
+#: keysmanager.cpp:218
 msgid "&Edit Group..."
 msgstr "Koppel &bewerken..."
 
 #. +> trunk stable
-#: keysmanager.cpp:209
+#: keysmanager.cpp:221
 msgid "&Delete Group"
 msgstr "Koppel weg&doon"
 
 #. +> trunk stable
-#: keysmanager.cpp:213
+#: keysmanager.cpp:225
 msgid "&Rename Group"
 msgstr "Koppel ü&mnömen"
 
 #. +> trunk stable
-#: keysmanager.cpp:222
+#: keysmanager.cpp:234
 msgid "Set as De&fault Key"
 msgstr "As Standarslötel &fastleggen"
 
 #. +> trunk stable
-#: keysmanager.cpp:225
+#: keysmanager.cpp:237
 msgid "&Add Photo..."
 msgstr "Foto &tofögen..."
 
 #. +> trunk stable
-#: keysmanager.cpp:228
+#: keysmanager.cpp:240
 msgid "&Add User Id..."
 msgstr "Bruker-ID &tofögen..."
 
 #. +> trunk stable
-#: keysmanager.cpp:231
+#: keysmanager.cpp:243
 msgid "Export Secret Key..."
 msgstr "Privaatslötel exporteren..."
 
 #. +> trunk stable
-#: keysmanager.cpp:234
+#: keysmanager.cpp:246
 msgid "Delete Key Pair"
 msgstr "Slötelpoor wegdoon"
 
 #. +> trunk stable
-#: keysmanager.cpp:238
+#: keysmanager.cpp:250
 msgid "Revoke Key..."
 msgstr "Slötel torüchropen..."
 
 #. +> trunk stable
-#: keysmanager.cpp:241
+#: keysmanager.cpp:253
 msgid "&Regenerate Public Key"
 msgstr "Apen Slötel &nieg opstellen"
 
 #. +> trunk stable
-#: keysmanager.cpp:247
+#: keysmanager.cpp:259
 msgid "Set User Id as &Primary"
 msgstr "Bruker-ID as &Hööft-ID fastleggen"
 
 #. +> trunk stable
-#: keysmanager.cpp:251
+#: keysmanager.cpp:263
 msgid "&Open Photo"
 msgstr "Foto &opmaken"
 
 #. +> trunk stable
-#: keysmanager.cpp:255
+#: keysmanager.cpp:267
 msgid "&Delete Photo"
 msgstr "Foto weg&doon"
 
 #. +> trunk stable
-#: keysmanager.cpp:263
+#: keysmanager.cpp:275
 msgid "Import &Missing Signatures From Keyserver"
 msgstr "Fe&hlen Ünnerschriften vun Slötelserver importeren"
 
 #. +> trunk stable
-#: keysmanager.cpp:281 model/kgpgitemmodel.cpp:331
+#: keysmanager.cpp:293 model/kgpgitemmodel.cpp:374
 msgid "Trust"
 msgstr "Vertroen"
 
 #. +> trunk stable
-#: keysmanager.cpp:284 model/kgpgitemmodel.cpp:332
+#: keysmanager.cpp:296 model/kgpgitemmodel.cpp:375
 msgid "Size"
 msgstr "Grött"
 
 #. +> trunk stable
-#: keysmanager.cpp:287 model/kgpgitemmodel.cpp:334
+#: keysmanager.cpp:299 model/kgpgitemmodel.cpp:377
 msgid "Creation"
 msgstr "Opstellt"
 
 #. +> trunk stable
-#: keysmanager.cpp:290 model/kgpgitemmodel.cpp:333
+#: keysmanager.cpp:302 model/kgpgitemmodel.cpp:376
 msgid "Expiration"
 msgstr "Löppt af"
 
 #. +> trunk stable
-#: keysmanager.cpp:294
+#: keysmanager.cpp:306
 msgid "&Photo ID's"
 msgstr "&Foto-IDs"
 
 #. +> trunk stable
-#: keysmanager.cpp:299
+#: keysmanager.cpp:311
 msgctxt "small picture"
 msgid "Small"
 msgstr "Lütt"
 
 #. +> trunk stable
-#: keysmanager.cpp:300
+#: keysmanager.cpp:312
 msgctxt "medium picture"
 msgid "Medium"
 msgstr "Middel"
 
 #. +> trunk stable
-#: keysmanager.cpp:301
+#: keysmanager.cpp:313
 msgctxt "large picture"
 msgid "Large"
 msgstr "Groot"
 
 #. +> trunk stable
-#: keysmanager.cpp:305
+#: keysmanager.cpp:317
 msgid "Minimum &Trust"
 msgstr "Lüttst &Totroen"
 
 #. +> trunk stable
-#: keysmanager.cpp:308
+#: keysmanager.cpp:320
 msgctxt "no filter: show all keys"
 msgid "&None"
 msgstr "&Keen"
 
 #. +> trunk stable
-#: keysmanager.cpp:309
+#: keysmanager.cpp:321
 msgctxt "show only active keys"
 msgid "&Active"
 msgstr "&Anmaakt"
 
 #. +> trunk stable
-#: keysmanager.cpp:310
+#: keysmanager.cpp:322
 msgctxt "show only keys with at least marginal trust"
 msgid "&Marginal"
 msgstr "&Deelwies"
 
 #. +> trunk stable
-#: keysmanager.cpp:311
+#: keysmanager.cpp:323
 msgctxt "show only keys with at least full trust"
 msgid "&Full"
 msgstr "&Vull"
 
 #. +> trunk stable
-#: keysmanager.cpp:312
+#: keysmanager.cpp:324
 msgctxt "show only ultimately trusted keys"
 msgid "&Ultimate"
 msgstr "&Büterst"
 
 #. +> trunk stable
-#: keysmanager.cpp:335
+#: keysmanager.cpp:348
 msgid "&Show Only Secret Keys"
 msgstr "Bloots Privaatslötels &wiesen"
 
 #. +> trunk stable
-#: keysmanager.cpp:425
+#: keysmanager.cpp:443
 msgctxt "Name of the action that is a search line, shown for example in the toolbar configuration dialog"
 msgid "Search Line"
 msgstr "Söökreeg"
 
 #. +> trunk stable
-#: keysmanager.cpp:430
+#: keysmanager.cpp:448
 msgctxt "Name of the action that gives the focus to the search line"
 msgid "Focus Search Line"
 msgstr "Fokus op Söökreeg"
 
 #. +> trunk stable
-#: keysmanager.cpp:479
+#: keysmanager.cpp:497
 msgid ""
 "Another key generation operation is still in progress.\n"
 "Please wait a moment until this operation is complete."
@@ -1873,64 +1963,64 @@ msgstr ""
 "Tööv bitte en Momang, bet dat afslaten is."
 
 #. +> trunk stable
-#: keysmanager.cpp:480 keysmanager.cpp:506 keysmanager.cpp:555
+#: keysmanager.cpp:498 keysmanager.cpp:528 keysmanager.cpp:576
 msgid "Generating new key pair"
 msgstr "Nieg Slötelpoor warrt opstellt"
 
 #. +> trunk stable
-#: keysmanager.cpp:507
+#: keysmanager.cpp:529
 msgid "Can not start \"konsole\" application for expert mode."
 msgstr "Programm \"konsole\" för den Fachlüüdbedrief lett sik nich opropen."
 
 #. +> trunk stable
-#: keysmanager.cpp:547 keysmanager.cpp:2460 keysmanager.cpp:2462
+#: keysmanager.cpp:568 keysmanager.cpp:2620 keysmanager.cpp:2622
 msgctxt "Application ready for user input"
 msgid "Ready"
 msgstr "Praat"
 
 #. +> trunk stable
-#: keysmanager.cpp:559 transactions/kgpggeneratekey.cpp:176
+#: keysmanager.cpp:580 transactions/kgpggeneratekey.cpp:205
 msgid "Bad passphrase. Cannot generate a new key pair."
 msgstr "Leeg Slötelsatz. Slötelpoor lett sik nich opstellen."
 
 #. +> trunk stable
-#: keysmanager.cpp:562 transactions/kgpggeneratekey.cpp:179
+#: keysmanager.cpp:583 transactions/kgpggeneratekey.cpp:208
 msgid "Aborted by the user. Cannot generate a new key pair."
 msgstr "Vun Bruker afbraken. Slötelpoor lett sik nich opstellen."
 
 #. +> trunk stable
-#: keysmanager.cpp:565 transactions/kgpggeneratekey.cpp:182
+#: keysmanager.cpp:586 transactions/kgpggeneratekey.cpp:211
 msgid "The email address is not valid. Cannot generate a new key pair."
 msgstr "De Nettpostadress is leeg. Slötelpoor lett sik nich opstellen."
 
 #. +> trunk stable
-#: keysmanager.cpp:568 transactions/kgpggeneratekey.cpp:185
+#: keysmanager.cpp:589 transactions/kgpggeneratekey.cpp:214
 msgid "The name is not accepted by gpg. Cannot generate a new key pair."
 msgstr "\"gpg\" lett den Naam nich to. Slötelpoor lett sik nich opstellen."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, newKey)
 #. +> trunk stable
-#: keysmanager.cpp:574 newkey.ui:13
+#: keysmanager.cpp:595 newkey.ui:13
 msgid "New Key Pair Created"
 msgstr "Nieg Slötelpoor opstellt"
 
 #. +> trunk stable
-#: keysmanager.cpp:619
+#: keysmanager.cpp:642
 msgid "backup copy"
 msgstr "Sekerheitkopie"
 
 #. +> trunk stable
-#: keysmanager.cpp:631 transactions/kgpggeneratekey.cpp:201
+#: keysmanager.cpp:656 transactions/kgpggeneratekey.cpp:230
 msgid "gpg process did not finish. Cannot generate a new key pair."
 msgstr "De Perzess \"gpg\" holl nich op. Slötelpoor lett sik nich opstellen."
 
 #. +> trunk stable
-#: keysmanager.cpp:734
+#: keysmanager.cpp:760
 msgid "You can only refresh primary keys. Please check your selection."
 msgstr "Du kannst bloots Hööftslötels opfrischen. Prööv bitte Dien Köör."
 
 #. +> trunk stable
-#: keysmanager.cpp:848
+#: keysmanager.cpp:884
 msgid ""
 "Another operation is still in progress.\n"
 "Please wait a moment until this operation is complete."
@@ -1939,17 +2029,17 @@ msgstr ""
 "Tööv bitte en Momang, bet se afslaten is."
 
 #. +> trunk stable
-#: keysmanager.cpp:848 keysmanager.cpp:853
+#: keysmanager.cpp:885 keysmanager.cpp:890
 msgid "Add New User Id"
 msgstr "Niege Bruker-ID tofögen"
 
 #. +> trunk stable
-#: keysmanager.cpp:888
+#: keysmanager.cpp:926
 msgid "The image must be a JPEG file. Remember that the image is stored within your public key, so if you use a very large picture, your key will become very large as well. The size should not exceed 6 KiB. An image size of around 240x288 is a good size to use."
 msgstr "Dat Bild mutt en JPEG-Datei wesen. Beacht bitte, dat Bild warrt binnen Dien apen Slötel wohrt. Wenn Du en groot Bild bruukst, warrt ok de Slötel groot. Dat schall man nich grötter as 6 KiB wesen. En Grött vun üm un bi 240x288 Pixels is en goot Weert."
 
 #. +> trunk stable
-#: keysmanager.cpp:920
+#: keysmanager.cpp:958
 #, kde-format
 msgid ""
 "<qt>Are you sure you want to delete Photo id <b>%1</b><br/>"
@@ -1960,130 +2050,126 @@ msgstr ""
 "wegdoon wullt?</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:976
-msgid "Unable to contact the address book. Please check your installation."
-msgstr "Dat Adressbook lett sik nich faatkriegen. Prööv bitte Dien Installatschoon."
-
-#. +> trunk stable
-#: keysmanager.cpp:1036
+#: keysmanager.cpp:1096
 msgid "Public Key"
 msgstr "Apen Slötel"
 
 #. +> trunk stable
-#: keysmanager.cpp:1039
+#: keysmanager.cpp:1099
 msgid "Sub Key"
 msgstr "Ünnerslötel"
 
 #. +> trunk stable
-#: keysmanager.cpp:1042
+#: keysmanager.cpp:1102
 msgid "Secret Key Pair"
 msgstr "Privaat Slötelpoor"
 
 #. +> trunk stable
-#: keysmanager.cpp:1045
+#: keysmanager.cpp:1105
 msgid "Key Group"
 msgstr "Slötelkoppel"
 
+#. i18n: ectx: property (text), widget (QCheckBox, capSign)
 #. +> trunk stable
-#: keysmanager.cpp:1048
+#: keysmanager.cpp:1108 kgpgkeygenerate.ui:152
 msgid "Signature"
 msgstr "Ünnerschrift"
 
 #. +> trunk stable
-#: keysmanager.cpp:1051
+#: keysmanager.cpp:1111
 msgid "User ID"
 msgstr "Bruker-ID"
 
 #. +> trunk stable
-#: keysmanager.cpp:1054
+#: keysmanager.cpp:1114
 msgid "Revocation Signature"
 msgstr "Torüchroop-Ünnerschrift"
 
 #. +> trunk stable
-#: keysmanager.cpp:1057
+#: keysmanager.cpp:1117
 msgid "Photo ID"
 msgstr "Foto-ID"
 
 #. +> trunk stable
-#: keysmanager.cpp:1060
+#: keysmanager.cpp:1120
 msgid "Orphaned Secret Key"
 msgstr "Alleenlaten Privaatslötel"
 
 #. +> trunk stable
-#: keysmanager.cpp:1065
+#: keysmanager.cpp:1125
 msgid "Group member"
 msgstr "Koppelmaat"
 
 #. +> trunk stable
-#: keysmanager.cpp:1170
+#: keysmanager.cpp:1230
 msgid "&Sign User ID ..."
 msgid_plural "&Sign User IDs ..."
 msgstr[0] "Bruker-ID ünner&schrieven..."
 msgstr[1] "Bruker-IDs ünner&schrieven..."
 
 #. +> trunk stable
-#: keysmanager.cpp:1171
+#: keysmanager.cpp:1231
 msgid "Sign and &Mail User ID ..."
 msgid_plural "Sign and &Mail User IDs ..."
 msgstr[0] "Brukerkennen ünnerschrieven un &loosstüern..."
 msgstr[1] "Brukerkennen ünnerschrieven un &loosstüern..."
 
 #. +> trunk stable
-#: keysmanager.cpp:1172
+#: keysmanager.cpp:1232
 msgid "E&xport Public Key..."
 msgid_plural "E&xport Public Keys..."
 msgstr[0] "Apen Slötel e&xporteren..."
 msgstr[1] "Apen Slötels e&xporteren..."
 
 #. +> trunk stable
-#: keysmanager.cpp:1173
+#: keysmanager.cpp:1233
 msgid "&Refresh Key From Keyserver"
 msgid_plural "&Refresh Keys From Keyserver"
 msgstr[0] "Slötel vun Slötelserver opf&rischen"
 msgstr[1] "Slötels vun Slötelserver opf&rischen"
 
 #. +> trunk stable
-#: keysmanager.cpp:1174
+#: keysmanager.cpp:1234
 msgid "&Create Group with Selected Key..."
 msgid_plural "&Create Group with Selected Keys..."
 msgstr[0] "&Koppel mit utsöcht Slötel opstellen..."
 msgstr[1] "&Koppel mit utsöchte Slötels opstellen..."
 
 #. +> trunk stable
-#: keysmanager.cpp:1175
+#: keysmanager.cpp:1235
 msgid "&Sign Key..."
 msgid_plural "&Sign Keys..."
 msgstr[0] "Slötel ünner&schrieven..."
 msgstr[1] "Slötels ünner&schrieven..."
 
 #. +> trunk stable
-#: keysmanager.cpp:1176
+#: keysmanager.cpp:1236
 msgid "&Delete User ID"
 msgid_plural "&Delete User IDs"
 msgstr[0] "Bruker-ID weg&doon"
 msgstr[1] "Bruker-IDs weg&doon"
 
 #. +> trunk stable
-#: keysmanager.cpp:1177
+#: keysmanager.cpp:1237
 msgid "Delete Sign&ature"
 msgid_plural "Delete Sign&atures"
 msgstr[0] "Ünnerschrift &wegdoon"
 msgstr[1] "Ünnerschriften &wegdoon"
 
 #. +> trunk stable
-#: keysmanager.cpp:1179
+#: keysmanager.cpp:1239
 msgid "&Delete Key"
 msgid_plural "&Delete Keys"
 msgstr[0] "Slötel &wegdoon"
 msgstr[1] "Slötels &wegdoon"
 
 #. +> trunk stable
-#: keysmanager.cpp:1298
+#: keysmanager.cpp:1362
 msgid "Creation of the revocation certificate failed..."
 msgstr "Opstellen vun dat Torüchroop-Zertifikaat fehlslaan..."
 
 #. +> trunk stable
-#: keysmanager.cpp:1313
+#: keysmanager.cpp:1377
 msgid ""
 "<qt>Secret keys <b>should not</b> be saved in an unsafe place.<br/>"
 "If someone else can access this file, encryption with this key will be compromised.<br/>"
@@ -2094,17 +2180,17 @@ msgstr ""
 "Slötel liekers exporteren?</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:1325
+#: keysmanager.cpp:1389
 msgid "*.asc|*.asc Files"
 msgstr "*.asc|*.asc-Dateien"
 
 #. +> trunk stable
-#: keysmanager.cpp:1325
+#: keysmanager.cpp:1389
 msgid "Export PRIVATE KEY As"
 msgstr "PRIVAATSLÖTEL exporteren as"
 
 #. +> trunk stable
-#: keysmanager.cpp:1343
+#: keysmanager.cpp:1407
 #, kde-format
 msgid ""
 "<qt>Your <b>private</b> key \"%1\" was successfully exported to<br/>"
@@ -2116,7 +2202,7 @@ msgstr ""
 "Wohr em <b>nich</b> an en Steed, de nich seker is.</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:1346
+#: keysmanager.cpp:1410
 msgid ""
 "Your secret key could not be exported.\n"
 "Check the key."
@@ -2125,7 +2211,7 @@ msgstr ""
 "Prööv bitte den Slötel."
 
 #. +> trunk stable
-#: keysmanager.cpp:1449
+#: keysmanager.cpp:1513
 #, kde-format
 msgid ""
 "<qt>The public key was successfully exported to<br/>"
@@ -2141,7 +2227,7 @@ msgstr[1] ""
 "%2</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:1453 keysmanager.cpp:1468 keysmanager.cpp:1482
+#: keysmanager.cpp:1517 keysmanager.cpp:1532 keysmanager.cpp:1546
 msgid ""
 "Your public key could not be exported\n"
 "Check the key."
@@ -2150,7 +2236,7 @@ msgstr ""
 "Prööv bitte den Slötel."
 
 #. +> trunk stable
-#: keysmanager.cpp:1502
+#: keysmanager.cpp:1566
 msgid ""
 "<qt>A viewer for JPEG images is not specified.<br/>"
 "Please check your installation.</qt>"
@@ -2159,12 +2245,12 @@ msgstr ""
 "Prööv bitte Dien Installatschoon.</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:1502
+#: keysmanager.cpp:1567
 msgid "Show photo"
 msgstr "Foto wiesen"
 
 #. +> trunk stable
-#: keysmanager.cpp:1590
+#: keysmanager.cpp:1664
 msgid ""
 "<p>This key is an orphaned secret key (secret key without public key.) It is currently not usable.</p>"
 "<p>Would you like to regenerate the public key?</p>"
@@ -2173,72 +2259,72 @@ msgstr ""
 "<p>Wullt Du den apen Slötel nieg opstellen?</p>"
 
 #. +> trunk stable
-#: keysmanager.cpp:1591
+#: keysmanager.cpp:1666
 msgid "Generate"
 msgstr "Opstellen"
 
 #. +> trunk stable
-#: keysmanager.cpp:1591
+#: keysmanager.cpp:1666
 msgid "Do Not Generate"
 msgstr "Nich opstellen"
 
 #. +> trunk stable
-#: keysmanager.cpp:1621
+#: keysmanager.cpp:1696
 #, kde-format
 msgid "<qt>Are you sure you want to delete group <b>%1</b> ?</qt>"
 msgstr "<qt>Büst Du seker, wat Du den Koppel <b>%1</b> wegdoon wullt?</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:1621 keysmanager.cpp:2260
+#: keysmanager.cpp:1697 keysmanager.cpp:2369
 msgid "Delete"
 msgstr "Wegdoon"
 
 #. +> trunk stable
-#: keysmanager.cpp:1651
+#: keysmanager.cpp:1727
 msgid "<qt>You cannot create a group containing signatures, subkeys or other groups.</qt>"
 msgstr "<qt>Du kannst keen Koppel mit Ünnerschriften, Ünnerslötels oder anner Koppeln dor binnen opstellen.</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:1666 kgpgrevokewidget.cpp:46
+#: keysmanager.cpp:1742 kgpgrevokewidget.cpp:46
 #, kde-format
 msgctxt "<Name> (<Email>) ID: <KeyId>"
 msgid "%1 (%2) ID: %3"
 msgstr "%1 (%2) ID: %3"
 
 #. +> trunk stable
-#: keysmanager.cpp:1671
+#: keysmanager.cpp:1747
 msgid "Create New Group"
 msgstr "Nieg Koppel opstellen"
 
 #. +> trunk stable
-#: keysmanager.cpp:1672
+#: keysmanager.cpp:1748
 msgctxt "Enter the name of the group you are creating now"
 msgid "Enter new group name:"
 msgstr "Naam för den niegen Koppel:"
 
 #. +> trunk stable
-#: keysmanager.cpp:1678
+#: keysmanager.cpp:1754
 msgid "Following keys are not valid or not trusted and will not be added to the group:"
 msgstr "De nakamen Slötels sünd leeg oder se warrt nich troot; se warrt den Koppel nich toföögt:"
 
 #. +> trunk stable
-#: keysmanager.cpp:1684
+#: keysmanager.cpp:1760
 #, kde-format
 msgid "<qt>No valid or trusted key was selected. The group <b>%1</b> will not be created.</qt>"
 msgstr "<qt>Keen gellen Slötel utsöcht, un ok keen, den troot warrt. De Koppel <b>%1</b> warrt nich opstellt.</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:1696
+#: keysmanager.cpp:1772
 msgid "Group Properties"
 msgstr "Koppel-Egenschappen"
 
 #. +> trunk stable
-#: keysmanager.cpp:1728
+#: keysmanager.cpp:1803
 msgid "You can only sign primary keys. Please check your selection."
 msgstr "Du kannst bloots Hööftslötels ünnerschrieven. Prööv bitte Dien Köör."
 
 #. +> trunk stable
-#: keysmanager.cpp:1737
+#: keysmanager.cpp:1812
 #, kde-format
 msgid ""
 "<qt>You are about to sign key:<br />"
@@ -2260,7 +2346,7 @@ msgstr ""
 "Du schullst den Fingerafdruck vun den Slötel pröven. Dor kannst Du den Slötel-Eegner a.B. för anropen oder persöönlich drepen, so dat keeneen Jümehr Kommunikatschoon affangen kann.</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:1741
+#: keysmanager.cpp:1817
 #, kde-format
 msgid ""
 "<qt>You are about to sign key:<br />"
@@ -2282,22 +2368,22 @@ msgstr ""
 "Du schullst den Fingerafdruck vun den Slötel pröven. Dor kannst Du den Slötel-Eegner a.B. för anropen oder persöönlich drepen, so dat keeneen Jümehr Kommunikatschoon affangen kann.</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:1755 keysmanager.cpp:1837 kgpgfirstassistant.cpp:284
-#: model/keylistproxymodel.cpp:101
+#: keysmanager.cpp:1832 keysmanager.cpp:1916 kgpgfirstassistant.cpp:284
+#: model/keylistproxymodel.cpp:196
 #, kde-format
 msgctxt "Name: ID"
 msgid "%1: %2"
 msgstr "%1: %2"
 
 #. +> trunk stable
-#: keysmanager.cpp:1757 keysmanager.cpp:1840 kgpgfirstassistant.cpp:286
+#: keysmanager.cpp:1834 keysmanager.cpp:1919 kgpgfirstassistant.cpp:286
 #, kde-format
 msgctxt "Name (Email): ID"
 msgid "%1 (%2): %3"
 msgstr "%1 (%2): %3"
 
 #. +> trunk stable
-#: keysmanager.cpp:1763
+#: keysmanager.cpp:1840
 msgid ""
 "<qt>You are about to sign the following keys in one pass.<br/>"
 "<b>If you have not carefully checked all fingerprints, the security of your communications may be compromised.</b></qt>"
@@ -2306,12 +2392,12 @@ msgstr ""
 "<b>Wenn Du nich all Fingerafdrück nipp un nau pröövt hest, mag dat wesen, dat Dien Kommunikatschoon nich seker is.</b></qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:1803 keysmanager.cpp:1949
+#: keysmanager.cpp:1882 keysmanager.cpp:2030
 msgid "You can only sign user ids and photo ids. Please check your selection."
 msgstr "Du kannst bloots Bruker-ID's un Foto-ID's ünnerschrieven. Prööv bitte Dien Köör."
 
 #. +> trunk stable
-#: keysmanager.cpp:1817
+#: keysmanager.cpp:1896
 #, kde-format
 msgid ""
 "<qt>You are about to sign user id:<br />"
@@ -2333,7 +2419,7 @@ msgstr ""
 "Du schullst den Fingerafdruck vun den Slötel pröven. Dor kannst Du den Slötel-Eegner a.B. för anropen oder persöönlich drepen, so dat keeneen Jümehr Kommunikatschoon affangen kann.</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:1821
+#: keysmanager.cpp:1900
 #, kde-format
 msgid ""
 "<qt>You are about to sign user id:<br />"
@@ -2355,7 +2441,7 @@ msgstr ""
 "Du schullst den l pröven. Dor kannst Du den Slötel-Eegner a.B. för anropen oder persöönlich drepen, so dat keeneen Jümehr Kommunikatschoon affangen kann.</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:1846
+#: keysmanager.cpp:1926
 msgid ""
 "<qt>You are about to sign the following user ids in one pass.<br/>"
 "<b>If you have not carefully checked all fingerprints, the security of your communications may be compromised.</b></qt>"
@@ -2364,19 +2450,19 @@ msgstr ""
 "<b>Wenn Du nich all Fingerafdrück nipp un nau pröövt hest, mag dat wesen, dat Dien Kommunikatschoon nich seker is.</b></qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:1916
+#: keysmanager.cpp:1997
 #, kde-format
 msgid "<qt>Bad passphrase, key <b>%1 (%2)</b> not signed.</qt>"
 msgstr "<qt>Leeg Slötelsatz, Slötel <b>%1 (%2)</b> wöör nich ünnerschreven.</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:1920
+#: keysmanager.cpp:2001
 #, kde-format
 msgid "<qt>The key <b>%1 (%2)</b> is already signed.</qt>"
 msgstr "<qt>De Slötel <b>%1 (%2)</b> is al ünnerschreven.</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:1925
+#: keysmanager.cpp:2006
 #, kde-format
 msgid ""
 "<qt>Signing key <b>%1</b> with key <b>%2</b> failed.<br />"
@@ -2386,19 +2472,19 @@ msgstr ""
 "Wullt Du versöken, dat Du den Slötel op de Konsool ünnerschriffst?</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:2038
+#: keysmanager.cpp:2123
 msgid "All signatures for this key are already in your keyring"
 msgid_plural "All signatures for this keys are already in your keyring"
 msgstr[0] "All Ünnerschriften för dissen Slötel sünd al binnen Dien Slötelbund"
 msgstr[1] "All Ünnerschriften för disse Slötels sünd al binnen Dien Slötelbund"
 
 #. +> trunk stable
-#: keysmanager.cpp:2133
+#: keysmanager.cpp:2218
 msgid "Edit key manually to delete a self-signature."
 msgstr "Slötel per Hand bewerken un en Egen-Ünnerschrift wegdoon"
 
 #. +> trunk stable
-#: keysmanager.cpp:2137
+#: keysmanager.cpp:2222
 #, kde-format
 msgid ""
 "<qt>Are you sure you want to delete signature<br />"
@@ -2413,26 +2499,26 @@ msgstr ""
 "redig wegmaken wullt?</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:2158
+#: keysmanager.cpp:2244
 msgid "Requested operation was unsuccessful, please edit the key manually."
 msgstr "Disse Akschoon lett sik nich utföhren, bewerk den Slötel bitte per Hand."
 
 #. +> trunk stable
-#: keysmanager.cpp:2218
+#: keysmanager.cpp:2326
 msgid "<qt>The key you are deleting is a member of the following key group. Do you want to remove it from this group?</qt>"
 msgid_plural "<qt>The key you are deleting is a member of the following key groups. Do you want to remove it from these groups?</qt>"
 msgstr[0] "<qt>De Slötel, den Du wegdoon wullt, höört een vun de nakamen Slötelkoppeln to. Wullt Du em ut dissen Koppel wegdoon?</qt>"
 msgstr[1] "<qt>De Slötel, den Du wegdoon wullt, höört een vun de nakamen Slötelkoppeln to. Wullt Du em ut disse Koppeln wegdoon?</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:2222 keysmanager.cpp:2235 keysmanager.cpp:2267
-#: keysmanager.cpp:2282 keysmanager.cpp:2285 keysmanager.cpp:2294
-#: keysmanager.cpp:2306 keysmanager.cpp:2316
+#: keysmanager.cpp:2330 keysmanager.cpp:2343 keysmanager.cpp:2378
+#: keysmanager.cpp:2393 keysmanager.cpp:2396 keysmanager.cpp:2407
+#: keysmanager.cpp:2421 keysmanager.cpp:2469
 msgid "Delete key"
 msgstr "Slötel wegdoon"
 
-#. +> trunk
-#: keysmanager.cpp:2234
+#. +> trunk stable
+#: keysmanager.cpp:2342
 #, kde-format
 msgid ""
 "You are removing the last key from key group %1.<br/>"
@@ -2440,7 +2526,7 @@ msgid ""
 msgstr ""
 
 #. +> trunk stable
-#: keysmanager.cpp:2258
+#: keysmanager.cpp:2366
 #, kde-format
 msgid ""
 "<p>Delete <b>secret</b> key pair <b>%1</b>?</p>"
@@ -2450,7 +2536,7 @@ msgstr ""
 "Wenn Du dit Slötelpoor wegdeist, kannst Du Dateien, de mit dissen Slötel verslötet wöörn, nienich wedder opslöteln."
 
 #. +> trunk stable
-#: keysmanager.cpp:2267 keysmanager.cpp:2294
+#: keysmanager.cpp:2377 keysmanager.cpp:2406
 msgid ""
 "Another key delete operation is still in progress.\n"
 "Please wait a moment until this operation is complete."
@@ -2459,30 +2545,30 @@ msgstr ""
 "Tööv bitte en Momang, bet dat afslaten is."
 
 #. +> trunk stable
-#: keysmanager.cpp:2282
+#: keysmanager.cpp:2393
 #, kde-format
 msgid "Key <b>%1</b> deleted."
 msgstr "Slötel <b>%1</b> wegdaan."
 
 #. +> trunk stable
-#: keysmanager.cpp:2285
+#: keysmanager.cpp:2396
 #, kde-format
 msgid "Deleting key <b>%1</b> failed."
 msgstr "Slötel <b>%1</b> lett sik nich wegdoon."
 
 #. +> trunk stable
-#: keysmanager.cpp:2306
+#: keysmanager.cpp:2420
 #, kde-format
 msgid "Can not delete key <b>%1</b> while it is edited in terminal."
 msgstr "De Slötel <b>%1</b> lett sik nich wegdoon, bides Du em op de Konsool bewerken deist."
 
 #. +> trunk stable
-#: keysmanager.cpp:2316
+#: keysmanager.cpp:2468
 msgid "You have selected items that are not keys. They can not be deleted with this menu entry."
 msgstr "Du hest Indrääg utsöcht, de keen Slötels sünd. Se laat sik mit dissen Menü-Indrag nich wegdoon."
 
 #. +> trunk stable
-#: keysmanager.cpp:2339
+#: keysmanager.cpp:2493
 #, kde-format
 msgid ""
 "<qt>The following are secret key pairs:<br/>"
@@ -2494,7 +2580,7 @@ msgstr ""
 "Se warrt nich wegdaan.</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:2347
+#: keysmanager.cpp:2503
 #, kde-format
 msgid "<qt><b>Delete the following public key?</b></qt>"
 msgid_plural "<qt><b>Delete the following %1 public keys?</b></qt>"
@@ -2502,17 +2588,17 @@ msgstr[0] "<qt><b>Dissen apen Slötel wegdoon?</b></qt>"
 msgstr[1] "<qt><b>Disse %1 apen Slötels wegdoon?</b></qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:2375 keysmanager.cpp:2445 keysmanager.cpp:2456
+#: keysmanager.cpp:2534 keysmanager.cpp:2605 keysmanager.cpp:2616
 msgid "Key Import"
 msgstr "Slötel importeren"
 
 #. +> trunk stable
-#: keysmanager.cpp:2382
+#: keysmanager.cpp:2541
 msgid "Open File"
 msgstr "Datei opmaken"
 
 #. +> trunk stable
-#: keysmanager.cpp:2411
+#: keysmanager.cpp:2570
 msgid ""
 "<qt>The text in the clipboard does not look like a key, but like encrypted text.<br />"
 "Do you want to decrypt it first and then try importing it?</qt>"
@@ -2521,52 +2607,52 @@ msgstr ""
 "Wullt Du em toeerst opslöteln un achteran importeren?</qt>"
 
 #. +> trunk stable
-#: keysmanager.cpp:2412
+#: keysmanager.cpp:2572
 msgid "Import from Clipboard"
 msgstr "Ut Twischenaflaag importeren"
 
 #. +> trunk stable
-#: keysmanager.cpp:2432
+#: keysmanager.cpp:2592
 msgid "Importing..."
 msgstr "An't importeren..."
 
 #. +> trunk stable
-#: keysmanager.cpp:2444
+#: keysmanager.cpp:2604
 msgid "Key importing failed. Please see the detailed log for more information."
 msgstr "Slötel importeren fehlslaan. Mehr Informatschonen gifft dat binnen dat Logbook."
 
 #. +> trunk stable
-#: keysmanager.cpp:2509
+#: keysmanager.cpp:2669
 msgid "KGpg - encryption tool"
 msgstr "KGpg - Verslötelwarktüüch"
 
 #. +> trunk stable
-#: keysmanager.cpp:2530
+#: keysmanager.cpp:2690
 msgid "Ke&y Manager"
 msgstr "Slötel&pleger"
 
 #. +> trunk stable
-#: keysmanager.cpp:2533
+#: keysmanager.cpp:2693
 msgid "&Encrypt Clipboard"
 msgstr "Twischenaflaag &verslöteln"
 
 #. +> trunk stable
-#: keysmanager.cpp:2536
+#: keysmanager.cpp:2696
 msgid "&Decrypt Clipboard"
 msgstr "Twischenaflaag &opslöteln"
 
 #. +> trunk stable
-#: keysmanager.cpp:2539
+#: keysmanager.cpp:2699
 msgid "&Sign/Verify Clipboard"
 msgstr "Twischenaflaag ünner&schrieven/pröven"
 
 #. +> trunk stable
-#: keysmanager.cpp:2576 keysmanager.cpp:2631 keysmanager.cpp:2649
+#: keysmanager.cpp:2736 keysmanager.cpp:2831 keysmanager.cpp:2849
 msgid "Clipboard is empty."
 msgstr "Twischenaflaag is leddig."
 
 #. +> trunk stable
-#: keysmanager.cpp:2621
+#: keysmanager.cpp:2781
 msgid "Text successfully encrypted."
 msgstr "Text mit Spood verslötelt."
 
@@ -2578,13 +2664,13 @@ msgstr "&Slötels"
 
 #. i18n: ectx: Menu (show_details)
 #. +> trunk stable
-#: keysmanager.rc:29
+#: keysmanager.rc:30
 msgid "&Show Details"
 msgstr "&Enkelheiten wiesen"
 
 #. i18n: ectx: Menu (groups)
 #. +> trunk stable
-#: keysmanager.rc:41
+#: keysmanager.rc:42
 msgid "&Groups"
 msgstr "&Koppeln"
 
@@ -2595,7 +2681,7 @@ msgid "<p>Do you want to import file <b>%1</b> into your key ring?</p>"
 msgstr "<p>Wullt Du de Datei <b>%1</b> na Dien Slötelbund importeren?</p>"
 
 #. +> trunk stable
-#: kgpg.cpp:78
+#: kgpg.cpp:76
 msgid ""
 "GnuPG failed to start.<br />"
 "You must fix the GnuPG error first before running KGpg."
@@ -2604,12 +2690,12 @@ msgstr ""
 "Ehr KGpg opropen warrt mutt de GnuPG-Fehler richt wesen."
 
 #. +> trunk stable
-#: kgpg.cpp:78
+#: kgpg.cpp:76
 msgid "GnuPG error"
 msgstr "GnuPG-Fehler"
 
 #. +> trunk stable
-#: kgpg.cpp:95
+#: kgpg.cpp:90
 #, kde-format
 msgid ""
 "<qt>The use of <b>GnuPG Agent</b> is enabled in GnuPG's configuration file (%1).<br />"
@@ -2621,22 +2707,27 @@ msgstr ""
 "Maak den GnuPG-Hölper binnen de Instellen ut, oder kiek, wat Du em an't Lopen kriggst.</qt>"
 
 #. +> trunk stable
-#: kgpg.cpp:136
+#: kgpg.cpp:122 kgpg.cpp:129 kgpg.cpp:136 kgpg.cpp:143
+msgid "No files given."
+msgstr ""
+
+#. +> trunk stable
+#: kgpg.cpp:133
 msgid "Cannot decrypt and show folder."
 msgstr "Orner lett sik nich opslöteln un wiesen."
 
 #. +> trunk stable
-#: kgpg.cpp:141
+#: kgpg.cpp:140
 msgid "Cannot sign folder."
 msgstr "Orner lett sik nich ünnerschrieven."
 
 #. +> trunk stable
-#: kgpg.cpp:146
+#: kgpg.cpp:147
 msgid "Cannot verify folder."
 msgstr "Orner lett sik nich pröven."
 
 #. +> trunk stable
-#: kgpg.cpp:149
+#: kgpg.cpp:150
 msgid ""
 "Unable to perform requested operation.\n"
 "Please select only one folder, or several files, but do not mix files and folders."
@@ -2752,12 +2843,6 @@ msgstr "De Padd na de GnuPG-Instellendatei"
 #: kgpg.kcfg:63
 msgid "The path of the gpg binary used by KGpg."
 msgstr "De Padd na't Programm \"gpg\", dat KGpg bruukt"
-
-#. i18n: ectx: label, entry (Groups), group (GPG Settings)
-#. +> stable
-#: kgpg.kcfg:67
-msgid "GPG groups"
-msgstr "GnuPG-Koppeln"
 
 #. i18n: ectx: label, entry (FirstRun), group (General Options)
 #. +> trunk stable
@@ -2929,44 +3014,42 @@ msgstr "Schriftoort"
 
 #. i18n: ectx: label, entry (KeyServers), group (Servers)
 #. +> trunk stable
-#: kgpg.kcfg:236
+#: kgpg.kcfg:248
 msgid "Key servers used by KGpg. The first server in the list is the default server."
+msgstr "Vun KGpg bruukt Slötelservers. De eerste Server op de List is de Standardserver."
+
+#. i18n: ectx: label, entry (InfoServers), group (Servers)
+#. +> trunk stable
+#: kgpg.kcfg:252
+#, fuzzy
+#| msgid "Key servers used by KGpg. The first server in the list is the default server."
+msgid "List of URLs that show details and analysis of the given key. The first server in the list is the default server."
 msgstr "Vun KGpg bruukt Slötelservers. De eerste Server op de List is de Standardserver."
 
 #. i18n: ectx: label, entry (UseProxy), group (Key Servers)
 #. +> trunk stable
-#: kgpg.kcfg:243
+#: kgpg.kcfg:259
 msgid "Use HTTP proxy when available."
 msgstr "HTTP-Proxy bruken, wenn mööglich"
 
 #. i18n: ectx: label, entry (EmailTemplate), group (Key Signing)
 #. +> trunk stable
-#: kgpg.kcfg:250
+#: kgpg.kcfg:266
 msgid "This is the text of the email sent by the \"Sign and Mail User ID\" action."
 msgstr "Dit is de Nettbreeftext, de \"Brukerkennen ünnerschrieven un loosstüern...\" opstellt."
 
-#. +> stable
-#: kgpgexternalactions.cpp:99
-msgid "Gzip"
-msgstr "GZip"
-
-#. +> stable
-#: kgpgexternalactions.cpp:100
-msgid "Bzip2"
-msgstr "BZip2"
-
-#. +> trunk
-#: kgpgexternalactions.cpp:126
+#. +> trunk stable
+#: kgpgexternalactions.cpp:134
 msgid "Cannot create temporary file for folder compression."
 msgstr ""
 
 #. +> trunk stable
-#: kgpgexternalactions.cpp:126 kgpgexternalactions.cpp:132
+#: kgpgexternalactions.cpp:134 kgpgexternalactions.cpp:141
 msgid "Temporary File Creation"
 msgstr "Opstellen vun Temporeerdatei"
 
 #. +> trunk stable
-#: kgpgexternalactions.cpp:131
+#: kgpgexternalactions.cpp:139
 #, kde-format
 msgid ""
 "<qt>KGpg will now create a temporary archive file:<br />"
@@ -2976,19 +3059,19 @@ msgstr ""
 "<b>%1</b> op. Na't Verslöteln warrt de Datei wedder wegdaan.</qt>"
 
 #. +> trunk stable
-#: kgpgexternalactions.cpp:144
+#: kgpgexternalactions.cpp:153
 msgid "Compression method for archive:"
 msgstr "Komprimeermetood för't Archiv:"
 
 #. +> trunk stable
-#: kgpgexternalactions.cpp:395
+#: kgpgexternalactions.cpp:406
 msgid "Decryption of this file failed:"
 msgid_plural "Decryption of these files failed:"
 msgstr[0] "Opslöteln vun disse Datei is fehlslaan:"
 msgstr[1] "Opslöteln vun disse Dateien is fehlslaan:"
 
 #. +> trunk stable
-#: kgpgexternalactions.cpp:422
+#: kgpgexternalactions.cpp:434
 msgid ""
 "<qt>You have not set a path to your GnuPG config file.<br />"
 "This may cause some surprising results in KGpg's execution.<br />"
@@ -2999,12 +3082,12 @@ msgstr ""
 "Wullt Du dit Problem mit den KGpg-Hölper lösen?</qt>"
 
 #. +> trunk stable
-#: kgpgexternalactions.cpp:423
+#: kgpgexternalactions.cpp:436
 msgid "Start Assistant"
 msgstr "Hölper opropen"
 
 #. +> trunk stable
-#: kgpgexternalactions.cpp:423
+#: kgpgexternalactions.cpp:436
 msgid "Do Not Start"
 msgstr "Nich starten"
 
@@ -3127,138 +3210,195 @@ msgstr ""
 "Kompatibiliteet mit öller Verschonen as V. 1.4.0 warrt nich mehr tosekert."
 
 #. +> trunk stable
-#: kgpginterface.cpp:294
+#: kgpginterface.cpp:273
 msgid "An error occurred while scanning your keyring"
 msgstr "Bi't Dörkieken vun Dien Slötelbund hett dat en Fehler geven"
 
 #. +> trunk stable
-#: kgpgkeygenerate.cpp:42
-msgid "Key Generation"
-msgstr "Slötelopstellen"
-
-#. +> trunk stable
-#: kgpgkeygenerate.cpp:45
+#: kgpgkeygenerate.cpp:43
 msgid "&Expert Mode"
 msgstr "&Fachlüüd-Bedrief"
 
 #. +> trunk stable
-#: kgpgkeygenerate.cpp:46
+#: kgpgkeygenerate.cpp:44
 msgid "Go to Expert Mode"
 msgstr "Na Fachlüüd-Bedrief wesseln"
 
 #. +> trunk stable
-#: kgpgkeygenerate.cpp:47
+#: kgpgkeygenerate.cpp:45
 msgid "If you go to expert mode, you will use the command line to create your key."
 msgstr "In'n Fachlüüd-Bedrief muttst Du Dien Slötel op de Konsool opstellen."
 
 #. +> trunk stable
-#: kgpgkeygenerate.cpp:50
-msgid "Generate Key Pair"
-msgstr "Slötelpoor opstellen"
-
-#. +> trunk stable
-#: kgpgkeygenerate.cpp:52
-msgctxt "Name of key owner"
-msgid "&Name:"
-msgstr "&Naam:"
-
-#. +> trunk stable
-#: kgpgkeygenerate.cpp:58
-msgctxt "Email address of key owner"
-msgid "E&mail:"
-msgstr "&Nettpost:"
-
-#. +> trunk stable
-#: kgpgkeygenerate.cpp:62
-msgid "Commen&t (optional):"
-msgstr "&Kommentar (wahlwies):"
-
-#. i18n: ectx: property (text), widget (QLabel, tl_expiration)
-#. +> trunk stable
-#: kgpgkeygenerate.cpp:66 kgpgKeyInfo.ui:136
-msgid "Expiration:"
-msgstr "Löppt af:"
-
-#. +> trunk stable
-#: kgpgkeygenerate.cpp:79
+#: kgpgkeygenerate.cpp:61
 msgctxt "Key will not expire"
 msgid "Never"
 msgstr "Nienich"
 
 #. +> trunk stable
-#: kgpgkeygenerate.cpp:80
+#: kgpgkeygenerate.cpp:62
 msgid "Days"
 msgstr "Daag"
 
 #. +> trunk stable
-#: kgpgkeygenerate.cpp:81
+#: kgpgkeygenerate.cpp:63
 msgid "Weeks"
 msgstr "Weken"
 
 #. +> trunk stable
-#: kgpgkeygenerate.cpp:82
+#: kgpgkeygenerate.cpp:64
 msgid "Months"
 msgstr "Maanden"
 
 #. +> trunk stable
-#: kgpgkeygenerate.cpp:83
+#: kgpgkeygenerate.cpp:65
 msgid "Years"
 msgstr "Johren"
 
 #. +> trunk stable
-#: kgpgkeygenerate.cpp:87
-msgid "&Key size:"
-msgstr "&Slötelgrött:"
-
-#. +> trunk stable
-#: kgpgkeygenerate.cpp:89
-msgid "768"
-msgstr "768"
-
-#. +> trunk stable
-#: kgpgkeygenerate.cpp:90
+#: kgpgkeygenerate.cpp:71
 msgid "1024"
 msgstr "1024"
 
 #. +> trunk stable
-#: kgpgkeygenerate.cpp:91
+#: kgpgkeygenerate.cpp:72
 msgid "2048"
 msgstr "2048"
 
 #. +> trunk stable
-#: kgpgkeygenerate.cpp:92
+#: kgpgkeygenerate.cpp:73
 msgid "4096"
 msgstr "4096"
 
 #. +> trunk stable
-#: kgpgkeygenerate.cpp:97
-msgid "&Algorithm:"
-msgstr "&Algoritmus:"
-
-#. +> trunk stable
-#: kgpgkeygenerate.cpp:147
+#: kgpgkeygenerate.cpp:111
 msgid "You must give a name."
 msgstr "Du muttst en Naam angeven."
 
 #. +> trunk stable
-#: kgpgkeygenerate.cpp:153
+#: kgpgkeygenerate.cpp:117
 msgid "The name must have at least 5 characters"
 msgstr "De Naam mutt tominnst 5 Tekens hebben"
 
 #. +> trunk stable
-#: kgpgkeygenerate.cpp:159
+#: kgpgkeygenerate.cpp:123
 msgid "The name must not start with a digit"
 msgstr "De Naam mutt nich mit en Tall anfangen"
 
 #. +> trunk stable
-#: kgpgkeygenerate.cpp:166
+#: kgpgkeygenerate.cpp:130
 msgid "You are about to create a key with no email address"
 msgstr "Du büst jüst bi un stellst en Slötel ahn Nettpostadress op"
 
 #. +> trunk stable
-#: kgpgkeygenerate.cpp:173
+#: kgpgkeygenerate.cpp:137
 msgid "Email address not valid"
 msgstr "Nettpostadress is leeg"
+
+#. i18n: ectx: property (windowTitle), widget (KDialog, kgpgKeyGenerate)
+#. +> trunk stable
+#: kgpgkeygenerate.ui:14
+msgid "Key Generation"
+msgstr "Slötelopstellen"
+
+#. i18n: ectx: property (title), widget (QGroupBox, vgroup)
+#. +> trunk stable
+#: kgpgkeygenerate.ui:26
+msgid "Generate Key Pair"
+msgstr "Slötelpoor opstellen"
+
+#. i18n: Name of key owner
+#. i18n: ectx: property (text), widget (QLabel, nameLabel)
+#. +> trunk stable
+#: kgpgkeygenerate.ui:32
+#, fuzzy
+#| msgctxt "Name of key owner"
+#| msgid "&Name:"
+msgid "&Name:"
+msgstr "&Naam:"
+
+#. i18n: ectx: property (toolTip), widget (KLineEdit, m_kname)
+#. +> trunk stable
+#: kgpgkeygenerate.ui:42
+#, fuzzy
+#| msgid "The name must have at least 5 characters"
+msgid "The name must have a length of at least 5 characters and must not begin with a digit."
+msgstr "De Naam mutt tominnst 5 Tekens hebben"
+
+#. i18n: ectx: property (placeholderText), widget (KLineEdit, m_kname)
+#. +> trunk stable
+#: kgpgkeygenerate.ui:45
+#, fuzzy
+#| msgid "The name must have at least 5 characters"
+msgid "Real name, at least 5 characters, no leading digits"
+msgstr "De Naam mutt tominnst 5 Tekens hebben"
+
+#. i18n: Email address of key owner
+#. i18n: ectx: property (text), widget (QLabel, emailLabel)
+#. +> trunk stable
+#: kgpgkeygenerate.ui:52
+#, fuzzy
+#| msgid "Comment (optional):"
+msgid "E&mail (optional):"
+msgstr "Kommentar (wahlwies):"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. +> trunk stable
+#: kgpgkeygenerate.ui:65
+msgid "Commen&t (optional):"
+msgstr "&Kommentar (wahlwies):"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: ectx: property (text), widget (QLabel, tl_expiration)
+#. +> trunk stable
+#: kgpgkeygenerate.ui:78 kgpgKeyInfo.ui:139
+msgid "Expiration:"
+msgstr "Löppt af:"
+
+#. i18n: ectx: property (text), widget (KLineEdit, m_days)
+#. +> trunk stable
+#: kgpgkeygenerate.ui:88
+msgid "0"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#. +> trunk stable
+#: kgpgkeygenerate.ui:95
+msgid "&Key size:"
+msgstr "&Slötelgrött:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#. +> trunk stable
+#: kgpgkeygenerate.ui:108
+msgid "&Algorithm:"
+msgstr "&Algoritmus:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, capabilities)
+#. i18n: ectx: property (text), widget (QLabel, tl_caps)
+#. +> trunk stable
+#: kgpgkeygenerate.ui:127 kgpgKeyInfo.ui:248
+msgid "Capabilities"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, capCert)
+#. +> trunk stable
+#: kgpgkeygenerate.ui:139
+msgid "Certification is automatically enabled for all keys"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, capCert)
+#. +> trunk stable
+#: kgpgkeygenerate.ui:142
+#, fuzzy
+#| msgid "Creation"
+msgid "Certification"
+msgstr "Opstellt"
+
+#. i18n: ectx: property (text), widget (QCheckBox, capAuth)
+#. +> trunk stable
+#: kgpgkeygenerate.ui:162
+msgid "Authentication"
+msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (KDialog, kgpgKeyInfo)
 #. +> trunk stable
@@ -3266,8 +3406,8 @@ msgstr "Nettpostadress is leeg"
 msgid "Kgpg"
 msgstr "Kgpg"
 
-#. i18n: ectx: property (text), widget (QLabel, tl_id)
 #. i18n: ectx: property (text), widget (QLabel, textLabel5)
+#. i18n: ectx: property (text), widget (QLabel, tl_id)
 #. +> trunk stable
 #: kgpgKeyInfo.ui:85 newkey.ui:91
 msgid "Key ID:"
@@ -3281,55 +3421,55 @@ msgstr "Kommentar:"
 
 #. i18n: ectx: property (text), widget (QLabel, tl_creation)
 #. +> trunk stable
-#: kgpgKeyInfo.ui:119
+#: kgpgKeyInfo.ui:122
 msgid "Creation:"
 msgstr "Opstellt:"
 
 #. i18n: ectx: property (text), widget (QLabel, tl_trust)
 #. +> trunk stable
-#: kgpgKeyInfo.ui:153
+#: kgpgKeyInfo.ui:156
 msgid "Trust:"
 msgstr "Vertroen:"
 
 #. i18n: ectx: property (text), widget (QLabel, tl_owtrust)
 #. +> trunk stable
-#: kgpgKeyInfo.ui:160
+#: kgpgKeyInfo.ui:163
 msgid "Owner trust:"
 msgstr "Eegner-Vertroen:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
 #. +> trunk stable
-#: kgpgKeyInfo.ui:183
+#: kgpgKeyInfo.ui:186
 msgid "I do not know"
 msgstr "Dat weet ik nich"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
 #. +> trunk stable
-#: kgpgKeyInfo.ui:188
+#: kgpgKeyInfo.ui:191
 msgid "I do NOT trust"
 msgstr "Ik troo NICH"
 
 #. i18n: ectx: property (text), widget (QLabel, tl_algorithm)
 #. +> trunk stable
-#: kgpgKeyInfo.ui:211
+#: kgpgKeyInfo.ui:214
 msgid "Algorithm:"
 msgstr "Algoritmus:"
 
 #. i18n: ectx: property (text), widget (QLabel, tl_length)
 #. +> trunk stable
-#: kgpgKeyInfo.ui:228
+#: kgpgKeyInfo.ui:231
 msgid "Length:"
 msgstr "Längde:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, gr_photo)
 #. +> trunk stable
-#: kgpgKeyInfo.ui:277
+#: kgpgKeyInfo.ui:309
 msgid "Photo"
 msgstr "Foto"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, m_photo)
 #. +> trunk stable
-#: kgpgKeyInfo.ui:297
+#: kgpgKeyInfo.ui:329
 msgid ""
 "<qt><b>Photo:</b>"
 "<p>A photo can be included with a public key for extra security. The photo can be used as an additional method of authenticating the key. However, it should not be relied upon as the only form of authentication.</p>"
@@ -3341,66 +3481,66 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, m_photo)
 #. +> trunk stable
-#: kgpgKeyInfo.ui:306
+#: kgpgKeyInfo.ui:338
 msgid "No Photo"
 msgstr "Keen Foto"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_disable)
 #. +> trunk stable
-#: kgpgKeyInfo.ui:343
+#: kgpgKeyInfo.ui:375
 msgid "Disable key"
 msgstr "Slötel utmaken"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_expirationbtn)
 #. +> trunk stable
-#: kgpgKeyInfo.ui:350
+#: kgpgKeyInfo.ui:382
 msgid "Change Expiration"
 msgstr "Afloopdatum ännern"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_password)
 #. +> trunk stable
-#: kgpgKeyInfo.ui:357
+#: kgpgKeyInfo.ui:389
 msgid "Change Passphrase"
 msgstr "Slötelsatz ännern"
 
 #. i18n: ectx: property (title), widget (QGroupBox, gr_fingerprint)
 #. +> trunk stable
-#: kgpgKeyInfo.ui:383
+#: kgpgKeyInfo.ui:415
 msgid "Fingerprint"
 msgstr "Fingerafdruck"
 
 #. +> trunk stable
-#: kgpgoptions.cpp:98
+#: kgpgoptions.cpp:102
 msgid "Decryption"
 msgstr "Opslöteln"
 
 #. +> trunk stable
-#: kgpgoptions.cpp:99
+#: kgpgoptions.cpp:103
 msgid "Appearance"
 msgstr "Utsehn"
 
 #. +> trunk stable
-#: kgpgoptions.cpp:100
+#: kgpgoptions.cpp:104
 msgid "GnuPG Settings"
 msgstr "GnuPG-Instellen"
 
 #. +> trunk stable
-#: kgpgoptions.cpp:101
+#: kgpgoptions.cpp:105
 msgid "Key Servers"
 msgstr "Slötelservers"
 
 #. +> trunk stable
-#: kgpgoptions.cpp:102
+#: kgpgoptions.cpp:106
 msgid "Misc"
 msgstr "Anner Saken"
 
 #. +> trunk stable
-#: kgpgoptions.cpp:137
+#: kgpgoptions.cpp:141
 msgid "New GnuPG Home Location"
 msgstr "Nieg Oort vun de GnuPG-Installatschoon"
 
 #. +> trunk stable
-#: kgpgoptions.cpp:150
+#: kgpgoptions.cpp:154
 msgid ""
 "No configuration file was found in the selected location.\n"
 "Do you want to create it now?\n"
@@ -3413,82 +3553,82 @@ msgstr ""
 "Ahn Instellendatei funkscheneert KGpg un GnuPG nich richtig."
 
 #. +> trunk stable
-#: kgpgoptions.cpp:151
+#: kgpgoptions.cpp:155
 msgid "No Configuration File Found"
 msgstr "Keen Instellendatei funnen"
 
 #. +> trunk stable
-#: kgpgoptions.cpp:152
+#: kgpgoptions.cpp:156
 msgid "Create"
 msgstr "Opstellen"
 
 #. +> trunk stable
-#: kgpgoptions.cpp:153
+#: kgpgoptions.cpp:157
 msgid "Ignore"
 msgstr "Övergahn"
 
 #. +> trunk stable
-#: kgpgoptions.cpp:167
+#: kgpgoptions.cpp:171
 msgid "Cannot create configuration file. Please check if destination media is mounted and if you have write access."
 msgstr "Instellendatei lett sik nich opstellen. Prööv bitte, wat dat Teelmedium inhangt is un Du dor ok Schriefverlööf för hest."
 
 #. +> trunk stable
-#: kgpgoptions.cpp:190
+#: kgpgoptions.cpp:194
 msgid "Key server URLs may not contain whitespace."
 msgstr "Binnen de Slötelserver-Adress muttst Du keen Freetekens bruken."
 
 #. +> trunk stable
-#: kgpgoptions.cpp:195
+#: kgpgoptions.cpp:199
 msgid "Key server already in the list."
 msgstr "Slötelserver is al op de List."
 
 #. +> trunk stable
-#: kgpgoptions.cpp:204
+#: kgpgoptions.cpp:208
 msgid "Add New Key Server"
 msgstr "Nieg Slötelserver tofögen"
 
 #. +> trunk stable
-#: kgpgoptions.cpp:204 kgpgoptions.cpp:259
+#: kgpgoptions.cpp:208 kgpgoptions.cpp:260
 msgid "Server URL:"
 msgstr "Server-URL:"
 
 #. +> trunk stable
-#: kgpgoptions.cpp:259
+#: kgpgoptions.cpp:260
 msgid "Edit Key Server"
 msgstr "Slötelserver bewerken"
 
 #. +> trunk stable
-#: kgpgoptions.cpp:263 kgpgoptions.cpp:284 kgpgoptions.cpp:353
-#: kgpgoptions.cpp:371
+#: kgpgoptions.cpp:264 kgpgoptions.cpp:285 kgpgoptions.cpp:360
+#: kgpgoptions.cpp:378
 #, kde-format
 msgctxt "Mark default keyserver in GUI"
 msgid "%1 (Default)"
 msgstr "%1 (Standard)"
 
 #. +> trunk stable
-#: kgpgoptions.cpp:280
+#: kgpgoptions.cpp:281
 msgctxt "Mark default keyserver in GUI"
 msgid "(Default)"
 msgstr "(Standard)"
 
 #. +> trunk stable
-#: kgpgoptions.cpp:497 kgpgoptions.cpp:499
+#: kgpgoptions.cpp:509 kgpgoptions.cpp:511
 msgctxt "no key available"
 msgid "none"
 msgstr "keen"
 
 #. +> trunk stable
-#: kgpgoptions.cpp:519
+#: kgpgoptions.cpp:531
 msgid "Decrypt File"
 msgstr "Datei opslöteln"
 
 #. +> trunk stable
-#: kgpgoptions.cpp:536 main.cpp:42
+#: kgpgoptions.cpp:548 main.cpp:42
 msgid "Sign File"
 msgstr "Datei ünnerschrieven"
 
 #. +> trunk stable
-#: kgpgoptions.cpp:581 kgpgoptions.cpp:620
+#: kgpgoptions.cpp:593 kgpgoptions.cpp:635
 msgctxt "Remove default marker from GUI if it is there"
 msgid "(Default)"
 msgstr "(Standard)"
@@ -3645,28 +3785,28 @@ msgid "File to open"
 msgstr "Datei, de opmaakt warrn schall"
 
 #. +> trunk stable
-#: model/keylistproxymodel.cpp:96 transactions/kgpgimport.cpp:193
+#: model/keylistproxymodel.cpp:191 transactions/kgpgimport.cpp:193
 #, kde-format
 msgctxt "ID: Name"
 msgid "%1: %2"
 msgstr "%1: %2"
 
 #. +> trunk stable
-#: model/keylistproxymodel.cpp:98 transactions/kgpgimport.cpp:195
+#: model/keylistproxymodel.cpp:193 transactions/kgpgimport.cpp:195
 #, kde-format
 msgctxt "ID: Name <Email>"
 msgid "%1: %2 &lt;%3&gt;"
 msgstr "%1: %2 &lt;%3&gt;"
 
 #. +> trunk stable
-#: model/keylistproxymodel.cpp:103
+#: model/keylistproxymodel.cpp:198
 #, kde-format
 msgctxt "Name <Email>: ID"
 msgid "%1 &lt;%2&gt;: %3"
 msgstr "%1 &lt;%2&gt;: %3"
 
 #. +> trunk stable
-#: model/kgpgitemmodel.cpp:228 model/kgpgitemmodel.cpp:231
+#: model/kgpgitemmodel.cpp:270 model/kgpgitemmodel.cpp:273
 #, kde-format
 msgid "1 Key"
 msgid_plural "%1 Keys"
@@ -3674,7 +3814,7 @@ msgstr[0] "Een Slötel"
 msgstr[1] "%1 Slötels"
 
 #. +> trunk stable
-#: model/kgpgitemmodel.cpp:232
+#: model/kgpgitemmodel.cpp:274
 #, kde-format
 msgid "1 Group"
 msgid_plural "%1 Groups"
@@ -3682,33 +3822,33 @@ msgstr[0] "Een Koppel"
 msgstr[1] "%1 Koppeln"
 
 #. +> trunk stable
-#: model/kgpgitemmodel.cpp:234
+#: model/kgpgitemmodel.cpp:276
 #, kde-format
 msgctxt "%1 = something like 7 keys, %2 = something like 2 groups"
 msgid "%1, %2"
 msgstr "%1, %2"
 
 #. +> trunk stable
-#: model/kgpgitemmodel.cpp:335
+#: model/kgpgitemmodel.cpp:378
 msgid "ID"
 msgstr "ID"
 
 #. +> trunk stable
-#: model/kgpgsearchresultmodel.cpp:124
+#: model/kgpgsearchresultmodel.cpp:126
 #, kde-format
 msgctxt "example: ID abc123xy, 1024-bit RSA key, created Jan 12 2009, revoked"
 msgid "ID %1, %2-bit %3 key, created %4, revoked"
 msgstr "ID %1, %2-Bit %3-Slötel, opstellt den %4, torüchropen"
 
 #. +> trunk stable
-#: model/kgpgsearchresultmodel.cpp:129
+#: model/kgpgsearchresultmodel.cpp:131
 #, kde-format
 msgctxt "example: ID abc123xy, 1024-bit RSA key, created Jan 12 2009"
 msgid "ID %1, %2-bit %3 key, created %4"
 msgstr "ID %1, %2-Bit %3-Slötel, opstellt den %4"
 
 #. +> trunk stable
-#: model/kgpgsearchresultmodel.cpp:218
+#: model/kgpgsearchresultmodel.cpp:220
 #, kde-format
 msgid "One Photo ID"
 msgid_plural "%1 Photo IDs"
@@ -3974,13 +4114,22 @@ msgstr ""
 #. i18n: ectx: @info:tipoftheday
 #. +> trunk stable
 #: tips:18
+#, fuzzy
+#| msgid ""
+#| "<p><strong>You do not know anything about encryption?</strong><br>"
+#| "\n"
+#| "No problem, simply create yourself a key pair in the key management window. Then, export your public key and mail it to your friends.<br>"
+#| "\n"
+#| "Ask them to do the same and import their public keys. Finally, to send an encrypted message, type it in the KGpg editor, then click &quot;encrypt&quot;. Choose\n"
+#| "your friend key and click &quot;encrypt&quot; again. The message will be encrypted, ready to be sent by email.</p>"
+#| "\n"
 msgid ""
-"<p><strong>You do not know anything about encryption?</strong><br>"
+"<p><strong>You do not have to be an expert in encryption to use this tool?</strong><br>"
 "\n"
-"No problem, simply create yourself a key pair in the key management window. Then, export your public key and mail it to your friends.<br>"
+"Simply create yourself a key pair in the key management window. Then, export your public key and mail it to your friends.<br>"
 "\n"
 "Ask them to do the same and import their public keys. Finally, to send an encrypted message, type it in the KGpg editor, then click &quot;encrypt&quot;. Choose\n"
-"your friend key and click &quot;encrypt&quot; again. The message will be encrypted, ready to be sent by email.</p>"
+"your friend's key and click &quot;encrypt&quot; again. The message will be encrypted, ready to be sent by email.</p>"
 "\n"
 msgstr ""
 "<p><strong>Du weetst nix af vun't Verslöteln?</strong><br/>"
@@ -4091,13 +4240,13 @@ msgid "Do Not Use"
 msgstr "Nich bruken"
 
 #. +> trunk stable
-#: transactions/kgpgchangepass.cpp:75
+#: transactions/kgpgchangepass.cpp:69
 #, kde-format
 msgid "Enter old passphrase for <b>%1</b>"
 msgstr "Bitte oolt Slötelsatz för <b>%1</b> ingeven"
 
 #. +> trunk stable
-#: transactions/kgpgchangepass.cpp:79
+#: transactions/kgpgchangepass.cpp:71
 #, kde-format
 msgid ""
 "<qt>Enter new passphrase for <b>%1</b><br />"
@@ -4121,13 +4270,13 @@ msgid "Decrypted %1"
 msgstr "\"%1\" wöör opslötelt"
 
 #. +> trunk stable
-#: transactions/kgpggeneratekey.cpp:61
+#: transactions/kgpggeneratekey.cpp:64
 #, kde-format
 msgid "Generating New Key for %1"
 msgstr "Nieg Slötel för %1 warrt opstellt."
 
 #. +> trunk stable
-#: transactions/kgpggeneratekey.cpp:111
+#: transactions/kgpggeneratekey.cpp:137
 #, kde-format
 msgid ""
 "<p><b>Enter passphrase for %1 &lt;%2&gt;</b>:<br />"
@@ -4137,7 +4286,7 @@ msgstr ""
 "De Slötelsatz schull nich-alfabeetsch Tekens un Tofall-Afsnitten bargen.</p>"
 
 #. +> trunk stable
-#: transactions/kgpggeneratekey.cpp:113
+#: transactions/kgpggeneratekey.cpp:140
 #, kde-format
 msgid ""
 "<p><b>Enter passphrase for %1</b>:<br />"
@@ -4147,37 +4296,37 @@ msgstr ""
 "De Slötelsatz schull nich-alfabeetsch Tekens un Tofall-Afsnitten bargen.</p>"
 
 #. +> trunk stable
-#: transactions/kgpggeneratekey.cpp:123
+#: transactions/kgpggeneratekey.cpp:151
 msgid "Generating Key"
 msgstr "Slötel warrt opstellt."
 
 #. +> trunk stable
-#: transactions/kgpggeneratekey.cpp:135
+#: transactions/kgpggeneratekey.cpp:164
 msgid "Generating prime numbers"
 msgstr "Primtallen warrt opstellt"
 
 #. +> trunk stable
-#: transactions/kgpggeneratekey.cpp:137
+#: transactions/kgpggeneratekey.cpp:166
 msgid "Generating DSA key"
 msgstr "DSA-Slötel warrt opstellt"
 
 #. +> trunk stable
-#: transactions/kgpggeneratekey.cpp:139
+#: transactions/kgpggeneratekey.cpp:168
 msgid "Generating ElGamal key"
 msgstr "ElGamal-Slötel warrt opstellt"
 
 #. +> trunk stable
-#: transactions/kgpggeneratekey.cpp:141
+#: transactions/kgpggeneratekey.cpp:170
 msgid "Waiting for entropy"
 msgstr "An't Töven op Entropie (tofällig Daten)"
 
 #. +> trunk stable
-#: transactions/kgpggeneratekey.cpp:146
+#: transactions/kgpggeneratekey.cpp:175
 msgid "The entropy pool ran empty. The key generation process is stalled until enough entropy is present. You can generate entropy e.g. by moving the mouse or typing at the keyboard. The easiest way is by using another application until the key generation continues."
 msgstr "De Bestand vun tofällig Daten is verbruukt. Bet wedder noog tofällig Daten verföögbor sünd, warrt dat Slötelopstellen anhollen. Du kannst tofällig Daten opstellen, wenn Du a.B. de Muus bewegen deist oder Tastatuuringaven maaks.  Der Vorrat an Zufallsdaten ist aufgebraucht. Die Erstellung des Schlüssels wird so lange angehalten bis wieder ausreichend Zufallsdaten zur Verfügung stehen. Sie können diese z.&nbsp;B. erzeugen, indem Sie die Maus bewegen oder auf der Tastatur tippen. Der einfachste Weg ist, so lange ein anderes Programm zu benutzen bis wieder genug Daten zur Verfügung stehen."
 
 #. +> trunk stable
-#: transactions/kgpggeneratekey.cpp:188
+#: transactions/kgpggeneratekey.cpp:217
 #, kde-format
 msgid "Key %1 generated"
 msgstr "Slötel »%1« opstellt"
@@ -4473,17 +4622,30 @@ msgid "<b>Connecting to the server...</b>"
 msgstr "<b>An't Tokoppeln na den Server...</b>"
 
 #. +> trunk stable
-#: transactions/kgpgtransaction.cpp:302 transactions/kgpgtransaction.cpp:495
+#: transactions/kgpgtransaction.cpp:163
+#, fuzzy
+#| msgid "Enter passphrase"
+msgid "Got Passphrase"
+msgstr "Bitte Slötelsatz ingeven"
+
+#. +> trunk stable
+#: transactions/kgpgtransaction.cpp:430 transactions/kgpgtransaction.cpp:625
 msgid "Requesting Passphrase"
 msgstr "Slötelsatz warrt anfraagt"
 
 #. +> trunk stable
-#: transactions/kgpgtransaction.cpp:402
+#: transactions/kgpgtransaction.cpp:552
 msgid " or "
 msgstr " oder "
 
 #. +> trunk stable
-#: transactions/kgpgtransaction.cpp:486
+#: transactions/kgpgtransaction.cpp:638
+#, kde-format
+msgid "Enter passphrase for <b>%1</b>"
+msgstr "Bitte Slötelsatz för <b>%1</b> ingeven"
+
+#. +> trunk stable
+#: transactions/kgpgtransaction.cpp:652
 #, kde-format
 msgid "<p><b>Bad passphrase</b>. You have 1 try left.</p>"
 msgid_plural "<p><b>Bad passphrase</b>. You have %1 tries left.</p>"
@@ -4491,12 +4653,6 @@ msgstr[0] "<p><b>Leeg Slötelsatz</b>. Du hest noch 1 Versöök.</p>"
 msgstr[1] "<p><b>Leeg Slötelsatz</b>. Du hest noch %1 Versöök.</p>"
 
 #. +> trunk stable
-#: transactions/kgpgtransaction.cpp:488
-#, kde-format
-msgid "Enter passphrase for <b>%1</b>"
-msgstr "Bitte Slötelsatz för <b>%1</b> ingeven"
-
-#. +> trunk
 #: transactions/kgpgverify.cpp:96
 #, kde-format
 msgctxt "first argument is formatted date, second argument is formatted time"
@@ -4517,7 +4673,7 @@ msgstr ""
 "Slötel-ID: %2<br />"
 "</qt>"
 
-#. +> trunk
+#. +> trunk stable
 #: transactions/kgpgverify.cpp:136 transactions/kgpgverify.cpp:170
 #, kde-format
 msgctxt "Good signature from: NAME <EMAIL>, Key ID: HEXID"
@@ -4568,46 +4724,60 @@ msgstr ""
 "<qt>De Ünnerschrift gellt, un den Slötel warrt büterst troot.<br />"
 "</qt>"
 
-#. +> stable
-#: kgpglibrary.cpp:90
-msgid "You have not chosen an encryption key."
-msgstr "Du hest keen Verslötel-Slötel utsöcht."
+#~ msgctxt "no key comment"
+#~ msgid "none"
+#~ msgstr "keen"
 
-#. +> stable
-#: kgpglibrary.cpp:116
-#, kde-format
-msgid "<p><b>Encrypting </b>%2</p>"
-msgid_plural ""
-"<p><b>%1 Files left.</b><br />"
-"<b>Encrypting </b>%2</p>"
-msgstr[0] "<p>%2 warrt <b>verslötelt</b></p>"
-msgstr[1] ""
-"<p><b>%1 Dateien över.</b><br />"
-"%2 warrt <b>verslötelt</b></p>"
+#~ msgid ""
+#~ "KGpg was unable to change the passphrase.<br />"
+#~ "Please see the detailed log for more information."
+#~ msgstr ""
+#~ "KGpg kann den Slötelsatz nich ännern.<br />"
+#~ "Mehr Informatschonen gifft dat binnen dat Logbook."
 
-#. +> stable
-#: kgpglibrary.cpp:146
-msgid ""
-"<p><b>Process halted</b>.<br />"
-"Not all files were encrypted.</p>"
-msgstr ""
-"<p><b>Perzess hett stoppt</b>.<br />"
-"Nich all Dateien wöörn verslötelt.</p>"
+#~ msgid "Unable to contact the address book. Please check your installation."
+#~ msgstr "Dat Adressbook lett sik nich faatkriegen. Prööv bitte Dien Installatschoon."
 
-#. +> stable
-#: kgpgtextinterface.cpp:93
-msgid "Enter passphrase (symmetrical encryption)"
-msgstr "Bitte Slötelsatz ingeven (symmetersch Verslöteln)"
+#~ msgid "GPG groups"
+#~ msgstr "GnuPG-Koppeln"
 
-#. +> stable
-#: kgpgtextinterface.cpp:113
-msgid "<p><b>No user id found</b>. Trying all secret keys.</p>"
-msgstr "<p><b>Keen Bruker-ID funnen</b>. All Privaatslötels warrt utprobeert.</p>"
+#~ msgid "Gzip"
+#~ msgstr "GZip"
 
-#. +> stable
-#: kgpgtextinterface.cpp:118
-msgid "Enter passphrase"
-msgstr "Bitte Slötelsatz ingeven"
+#~ msgid "Bzip2"
+#~ msgstr "BZip2"
+
+#~ msgctxt "Email address of key owner"
+#~ msgid "E&mail:"
+#~ msgstr "&Nettpost:"
+
+#~ msgid "768"
+#~ msgstr "768"
+
+#~ msgid "You have not chosen an encryption key."
+#~ msgstr "Du hest keen Verslötel-Slötel utsöcht."
+
+#~ msgid "<p><b>Encrypting </b>%2</p>"
+#~ msgid_plural ""
+#~ "<p><b>%1 Files left.</b><br />"
+#~ "<b>Encrypting </b>%2</p>"
+#~ msgstr[0] "<p>%2 warrt <b>verslötelt</b></p>"
+#~ msgstr[1] ""
+#~ "<p><b>%1 Dateien över.</b><br />"
+#~ "%2 warrt <b>verslötelt</b></p>"
+
+#~ msgid ""
+#~ "<p><b>Process halted</b>.<br />"
+#~ "Not all files were encrypted.</p>"
+#~ msgstr ""
+#~ "<p><b>Perzess hett stoppt</b>.<br />"
+#~ "Nich all Dateien wöörn verslötelt.</p>"
+
+#~ msgid "Enter passphrase (symmetrical encryption)"
+#~ msgstr "Bitte Slötelsatz ingeven (symmetersch Verslöteln)"
+
+#~ msgid "<p><b>No user id found</b>. Trying all secret keys.</p>"
+#~ msgstr "<p><b>Keen Bruker-ID funnen</b>. All Privaatslötels warrt utprobeert.</p>"
 
 #~ msgid "Rename Group"
 #~ msgstr "Koppel ümnömen"

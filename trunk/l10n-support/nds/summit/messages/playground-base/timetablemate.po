@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timetablemate\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-11-04 11:09+0100\n"
+"POT-Creation-Date: 2013-01-17 08:51+0100\n"
 "PO-Revision-Date: 2011-06-16 17:44+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nds\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.0\n"
 
@@ -29,373 +29,241 @@ msgid "Your emails"
 msgstr "m.j.wiese@web.de"
 
 #. +> trunk
-#: changelogwidget.cpp:70
+#: changelogwidget.cpp:76
 msgctxt "@info Label for the author of a changelog entry (short author name)"
 msgid "Author, Version:"
 msgstr "Schriever, Verschoon:"
 
 #. +> trunk
-#: changelogwidget.cpp:77
+#: changelogwidget.cpp:79
 msgctxt "@info Label for the description of a changelog entry"
 msgid "Description:"
 msgstr "Beschrieven:"
 
 #. +> trunk
-#: changelogwidget.cpp:151
+#: changelogwidget.cpp:153
 msgctxt "@action:button"
 msgid "&Add Changelog Entry"
 msgstr "Ännernlist-Indrag &tofögen"
 
 #. +> trunk
-#: changelogwidget.cpp:154
+#: changelogwidget.cpp:156
 msgctxt "@action:inmenu"
 msgid "Add &Empty Changelog Entry"
 msgstr ""
 
 #. +> trunk
-#: changelogwidget.cpp:156
+#: changelogwidget.cpp:158
 msgctxt "@action:inmenu"
 msgid "Add &Same Version Changelog Entry"
 msgstr ""
 
 #. +> trunk
-#: changelogwidget.cpp:158
+#: changelogwidget.cpp:160
 msgctxt "@action:inmenu"
 msgid "Add &New Minor Version Changelog Entry"
 msgstr ""
 
 #. +> trunk
-#: changelogwidget.cpp:160
+#: changelogwidget.cpp:162
 msgctxt "@action:inmenu"
 msgid "Add New &Major Version Changelog Entry"
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:160
+#: javascriptcompletionmodel.cpp:67
+#, kde-format
+msgctxt "@info/plain"
+msgid "Show Documentation for %1"
+msgstr ""
+
+#. +> trunk
+#: javascriptcompletionmodel.cpp:174
 msgctxt "@info The description for the 'helper' object"
 msgid "The <emphasis>helper</emphasis> object contains some useful functions."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:165
-msgctxt "@info The description for the 'timetableData' object"
-msgid ""
-"The <emphasis>timetableData</emphasis> object is used to put parsed timetable data into it.<nl/>"
-"<note>Once all data is stored inside <emphasis>timetableData</emphasis> you can call <emphasis>result.addData()</emphasis>.</note>"
+#: javascriptcompletionmodel.cpp:179
+msgctxt "@info The description for the 'network' object"
+msgid "The <emphasis>network</emphasis> object is used request documents from the internet.<nl/>"
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:173
+#: javascriptcompletionmodel.cpp:184
+msgctxt "@info The description for the 'storage' object"
+msgid "The <emphasis>storage</emphasis> object can be used to store some script specific values in memory or on disk.<nl/>"
+msgstr ""
+
+#. +> trunk
+#: javascriptcompletionmodel.cpp:189
 msgctxt "@info The description for the 'result' object"
-msgid "The result object is used to store all parsed departure/arrival/journey items. Call <emphasis>result.addData( timetableData )</emphasis> to add the current item to the result set."
+msgid "The result object is used to store all parsed departure/arrival/journey items. Call <emphasis>result.addData({Target: 'Sample', DepartureDateTime: new Date()})</emphasis> to add new data."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:223
-msgctxt "@info The description for the 'usedTimetableInformations' function"
+#: javascriptcompletionmodel.cpp:251
+msgctxt "@info The description for the 'features' function"
 msgid ""
 "Should be implemented to tell which features the script supports.<nl/>"
 "This function is called by the data engine."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:241
-msgctxt "@info The description for the 'parseTimetable' function"
+#: javascriptcompletionmodel.cpp:269
+msgctxt "@info The description for the 'getTimetable' function"
 msgid ""
-"Parses departure/arrival documents.<nl/>"
-"This function is called by the data engine. The parameter contains the contents of the document body. Found departures/arrivals can be handed over to the data engine like this:<nl/>"
-"<icode>  // First clear the old data</icode><nl/>"
-"<icode>  timetableData.clear();</icode><nl/>"
-"<icode>  // Then set all read values</icode><nl/>"
-"<icode>  timetableData.set( 'TransportLine', '603' );</icode><nl/>"
-"<icode>  timetableData.set( 'TypeOfVehicle', 'bus' );</icode><nl/>"
-"<icode>  timetableData.set( 'Target', 'Samplestreet' );</icode><nl/>"
-"<icode>  timetableData.set( 'DepartureHour', 10 );</icode><nl/>"
-"<icode>  timetableData.set( 'DepartureMinute', 23 );</icode><nl/>"
-"<icode>  timetableData.set( 'Delay', 4 );</icode><nl/>"
+"Requests and parses departure/arrival documents. The argument has the following properties: stop, dateTime (Date object), count, dataType ('departures' or 'arrivals'), city.<nl/>"
+"This function is called by the data engine. Found departures/arrivals can be handed over to the data engine like this:<nl/>"
 "<icode>  // Add timetable data to the result set</icode><nl/>"
-"<icode>  result.addData( timetableData );</icode><nl/>"
+"<icode>  result.addData( {TransportLine: '603',</icode><nl/>"
+"<icode>                   TypeOfVehicle: 'bus',</icode><nl/>"
+"<icode>                   Target: 'Samplestreet',</icode><nl/>"
+"<icode>                   DepartureDateTime: new Date(),</icode><nl/>"
+"<icode>                   Delay: 4} );</icode><nl/>"
 "<nl/>"
 "<note>You <emphasis>can</emphasis> return a string array with keywords that affect all departures/arrivals. Currently only one such keyword is supported: <emphasis>'no delays'</emphasis>, used to indicate that there is no delay information for the given stop. The data engine can then use a higher timeout for the next data update. When delay information is available updates are done more often, because delays may change.</note>"
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:300
-msgctxt "@info The description for the 'parseJourneys' function"
+#: javascriptcompletionmodel.cpp:321
+msgctxt "@info The description for the 'getJourneys' function"
 msgid ""
-"Parses journey documents.<nl/>"
-"This function is called by the data engine. The parameter contains the contents of the document body. Found journeys can be handed over to the data engine like this:<nl/>"
-"<icode>  // First clear the old data</icode><nl/>"
-"<icode>  timetableData.clear();</icode><nl/>"
-"<icode>  // Then set all read values</icode><nl/>"
-"<icode>  timetableData.set( 'StartStopName', 'A' );</icode><nl/>"
-"<icode>  timetableData.set( 'TargetStopName', 'B' );</icode><nl/>"
-"<icode>  timetableData.set( 'DepartureHour', 10 );</icode><nl/>"
-"<icode>  timetableData.set( 'DepartureMinute', 23 );</icode><nl/>"
-"<icode>  timetableData.set( 'ArrivalHour', 11 );</icode><nl/>"
-"<icode>  timetableData.set( 'ArrivalMinute', 05 );</icode><nl/>"
-"<icode>  timetableData.set( 'Changes', 3 );</icode><nl/>"
-"<icode>  timetableData.set( 'Pricing', '2,30 €' );</icode><nl/>"
+"Requests and parses journey documents. The argument has the following properties: originStop, targetStop, dateTime (Date object), count, dataType, city.<nl/>"
+"This function is called by the data engine. Found journeys can be handed over to the data engine like this:<nl/>"
 "<icode>  // Add timetable data to the result set</icode><nl/>"
-"<icode>  result.addData( timetableData );</icode>"
+"<icode>  result.addData( {StartStopName: 'A',</icode><nl/>"
+"<icode>                   TargetStopName: 'B',</icode><nl/>"
+"<icode>                   Target: 'Samplestreet',</icode><nl/>"
+"<icode>                   DepartureDateTime: new Date(),</icode><nl/>"
+"<icode>                   ArrivalDateTime: new Date(),</icode><nl/>"
+"<icode>                   Changes: 3,</icode><nl/>"
+"<icode>                   Pricing: '2,30 €'} );</icode><nl/>"
+"<nl/>"
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:329
-msgctxt "@info The description for the 'parsePossibleStops' function"
+#: javascriptcompletionmodel.cpp:346
+msgctxt "@info The description for the 'getStopSuggestions' function"
 msgid ""
-"Parses stop suggestion documents.<nl/>"
+"Requests and parses stop suggestion documents. The argument has the following properties: stop, count, city.<nl/>"
 "This function is called by the data engine. The parameter contains the contents of the document body. Found stop data can be handed over to the data engine like this:<nl/>"
-"<icode>  // First clear the old data</icode><nl/>"
-"<icode>  timetableData.clear();</icode><nl/>"
-"<icode>  // Then set all read values</icode><nl/>"
-"<icode>  timetableData.set( 'StopName', 'Bremen Hbf' );</icode><nl/>"
 "<icode>  // Add timetable data to the result set</icode><nl/>"
-"<icode>  result.addData( timetableData );</icode>"
+"<icode>  result.addData( {StopName: 'TestName', StopID: 100} );</icode>"
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:351
-msgctxt "@info The description for the 'getUrlForLaterJourneyResults' function"
-msgid ""
-"Parses a journey document for a link to a journey document containing later journeys.<nl/>"
-"This function is called by the data engine. The parameter contains the contents of the document body. The found link can be simply returned. If no link could be found, return null."
+#: javascriptcompletionmodel.cpp:365
+msgctxt "@info The description for the 'DepartureDateTime' info"
+msgid "The date and time of the departure. Can be a ECMAScript Date object. Use this information instead of DepartureDate and DepartureTime if possible."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:367
-msgctxt "@info The description for the 'getUrlForDetailedJourneyResults' function"
-msgid ""
-"Parses a journey document for a link to another journey document containing more details about journeys.<nl/>"
-"This function is called by the data engine. The parameter contains the contents of the document body. The found link can be simply returned. If no link could be found, return null."
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:385
-msgctxt "@info The description for the 'extractBlock' function"
-msgid "Extracts the first block in the given string, that begins with <placeholder>begin</placeholder> and ends with <placeholder>end</placeholder>. Returns the found block or an empty string if the block could not be found."
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:392
-msgctxt "@info The description for the 'stripTags' function"
-msgid "Strips all tags from a given string and returns the result."
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:396
-msgctxt "@info The description for the 'trim' function"
-msgid "Trims a string and returns the result."
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:401
-msgctxt "@info The description for the 'matchTime' function"
-msgid "Searches for a time with the given <emphasis>format</emphasis> in the given <emphasis>time</emphasis> string. Returns an integer array with two integers: The first one is the hour part, the second one the minute part."
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:409
-msgctxt "@info The description for the 'matchDate' function"
-msgid "Searches for a date with the given <emphasis>format</emphasis> in the given <emphasis>date</emphasis> string. Returns an integer array with three integers: The first one is the year part, the second one the month part and the third one the day part."
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:417
-msgctxt "@info The description for the 'formatTime' function"
-msgid "Formats a time given by it's <emphasis>hour</emphasis> and <emphasis>minute</emphasis> using the given <emphasis>format</emphasis>."
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:423
-msgctxt "@info The description for the 'duration' function"
-msgid "Computes the duration in minutes between the two times, given as strings. The time strings are parsed using the given <emphasis>format</emphasis>."
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:429
-msgctxt "@info The description for the 'addMinsToTime' function"
-msgid "Adds <emphasis>minsToAdd</emphasis> minutes to the <emphasis>time</emphasis> given as a string. The time string is parsed using the given <emphasis>format</emphasis>. Returns a time string formatted using the given <emphasis>format</emphasis>"
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:437
-msgctxt "@info The description for the 'addDaysToDate' function"
-msgid "Adds <emphasis>daysToAdd</emphasis> days to the <emphasis>date</emphasis> given as an integer array (with three integers: year, month, day). Returns an integer array with the new values"
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:444
-msgctxt "@info The description for the 'splitSkipEmptyParts' function"
-msgid "Splits the given <emphasis>string</emphasis> using the given <emphasis>separator</emphasis>. Returns an array of strings."
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:450
-msgctxt "@info The description for the 'error' function"
-msgid "Logs the error message with the given data string, eg. the HTML code where parsing failed. The message gets also send to stdout with a short version of the data."
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:458
-msgctxt "@info The description for the 'DepartureHour' info"
-msgid "The hour of the departure time."
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:460 javascriptcompletionmodel.cpp:465
+#: javascriptcompletionmodel.cpp:368
 msgctxt "@info/plain"
 msgid "Needed for Departures/Journeys"
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:463
-msgctxt "@info The description for the 'DepartureMinute' info"
-msgid "The minute of the departure time."
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:468
+#: javascriptcompletionmodel.cpp:371
 msgctxt "@info The description for the 'DepartureDate' info"
 msgid "The date of the departure."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:472
+#: javascriptcompletionmodel.cpp:375
 msgctxt "@info The description for the 'DepartureTime' info"
-msgid "The time of the departure. Can be used instead of DepartureHour and DepartureMinute, can include seconds for more precision."
+msgid "The time of the departure."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:476
+#: javascriptcompletionmodel.cpp:378
 msgctxt "@info The description for the 'TypeOfVehicle' info"
 msgid "The type of vehicle."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:479
+#: javascriptcompletionmodel.cpp:381
 msgctxt "@info The description for the 'TransportLine' info"
 msgid "The name of the public transport line, e.g. '4', '6S', 'S 5', 'RB 24122.'"
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:482 javascriptcompletionmodel.cpp:491
+#: javascriptcompletionmodel.cpp:384 javascriptcompletionmodel.cpp:393
 msgctxt "@info/plain"
 msgid "Needed for Departures"
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:485
+#: javascriptcompletionmodel.cpp:387
 msgctxt "@info The description for the 'FlightNumber' info"
 msgid "Same as TransportLine, used for flights."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:489
+#: javascriptcompletionmodel.cpp:391
 msgctxt "@info The description for the 'Target' info"
 msgid "The target of a journey / of a public transport line."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:494
+#: javascriptcompletionmodel.cpp:396
 msgctxt "@info The description for the 'Platform' info"
 msgid "The platform at which the vehicle departs/arrives."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:498
+#: javascriptcompletionmodel.cpp:400
 msgctxt "@info The description for the 'Delay' info"
 msgid "The delay of a departure/arrival in minutes."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:502
+#: javascriptcompletionmodel.cpp:404
 msgctxt "@info The description for the 'DelayReason' info"
 msgid "The reason of a delay."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:506
+#: javascriptcompletionmodel.cpp:408
 msgctxt "@info The description for the 'JourneyNews' info"
 msgid "Can contain delay / delay reason / other news."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:510
+#: javascriptcompletionmodel.cpp:412
 msgctxt "@info The description for the 'JourneyNewsOther' info"
 msgid "Other news (not delay / delay reason)."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:514
+#: javascriptcompletionmodel.cpp:416
 msgctxt "@info The description for the 'JourneyNewsLink' info"
 msgid ""
 "A link to an html page with journey news.<nl/>"
-"<note>The url of the accessor is prepended, if a relative path has been matched (starting with '/').</note>"
+"<note>The url of the service provider is prepended, if a relative path has been matched (starting with '/').</note>"
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:521
-msgctxt "@info The description for the 'DepartureHourPrognosis' info"
-msgid "The prognosis for the departure hour, which is the departure hour plus the delay."
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:527
-msgctxt "@info The description for the 'DepartureMinutePrognosis' info"
-msgid "The prognosis for the departure minute, which is the departure minute plus the delay."
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:532
+#: javascriptcompletionmodel.cpp:422
 msgctxt "@info The description for the 'Operator' info"
 msgid "The company that is responsible for the journey."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:535
-msgctxt "@info The description for the 'DepartureAMorPM' info"
-msgid ""
-"'am' or 'pm' for the departure time.<nl/>"
-"<note>If not set, 24 hour format is assumed.</note>"
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:542
-msgctxt "@info The description for the 'DepartureAMorPMPrognosis' info"
-msgid ""
-"'am' or 'pm' for the prognosis departure time.<nl/>"
-"<note>If not set, 24 hour format is assumed.</note>"
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:547
-msgctxt "@info The description for the 'ArrivalAMorPM' info"
-msgid ""
-"'am' or 'pm' for the arrival time.<nl/>"
-"<note>If not set, 24 hour format is assumed.</note>"
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:551
+#: javascriptcompletionmodel.cpp:425
 msgctxt "@info The description for the 'Status' info"
 msgid "The current status of the departure / arrival. Currently only used for planes."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:555
-msgctxt "@info The description for the 'DepartureYear' info"
-msgid "The year of the departure, to be used when the year is separated from the date."
-msgstr ""
-
-#. +> trunk
-#: javascriptcompletionmodel.cpp:559
+#: javascriptcompletionmodel.cpp:429
 msgctxt "@info The description for the 'IsNightLine' info"
 msgid "A boolean indicating if the transport line is a nightline or not."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:564
+#: javascriptcompletionmodel.cpp:434
 msgctxt "@info The description for the 'RouteStops' info"
 msgid ""
 "A list of stops of the departure/arrival to it's destination stop or a list of stops of the journey from it's start to it's destination stop.<nl/>"
@@ -404,7 +272,7 @@ msgid ""
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:576
+#: javascriptcompletionmodel.cpp:446
 msgctxt "@info The description for the 'RouteTimes' info"
 msgid ""
 "A list of times of the departure/arrival to it's destination stop.<nl/>"
@@ -412,7 +280,7 @@ msgid ""
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:587
+#: javascriptcompletionmodel.cpp:457
 msgctxt "@info The description for the 'RouteTimesDeparture' info"
 msgid ""
 "A list of departure times of the journey.<nl/>"
@@ -420,7 +288,7 @@ msgid ""
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:596
+#: javascriptcompletionmodel.cpp:466
 msgctxt "@info The description for the 'RouteTimesArrival' info"
 msgid ""
 "A list of arrival times of the journey.<nl/>"
@@ -428,7 +296,7 @@ msgid ""
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:604
+#: javascriptcompletionmodel.cpp:474
 msgctxt "@info The description for the 'RouteExactStops' info"
 msgid ""
 "The number of exact route stops.<nl/>"
@@ -436,19 +304,19 @@ msgid ""
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:610
+#: javascriptcompletionmodel.cpp:480
 msgctxt "@info The description for the 'RouteTypesOfVehicles' info"
 msgid "The types of vehicles used for each 'sub-journey' of a journey."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:615
+#: javascriptcompletionmodel.cpp:485
 msgctxt "@info The description for the 'RouteTransportLines' info"
 msgid "The transport lines used for each 'sub-journey' of a journey."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:620
+#: javascriptcompletionmodel.cpp:490
 msgctxt "@info The description for the 'RoutePlatformsDeparture' info"
 msgid ""
 "The platforms of departures used for each 'sub-journey' of a journey.<nl/>"
@@ -456,7 +324,7 @@ msgid ""
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:630
+#: javascriptcompletionmodel.cpp:500
 msgctxt "@info The description for the 'RoutePlatformsArrival' info"
 msgid ""
 "The platforms of arrivals used for each 'sub-journey' of a journey.<nl/>"
@@ -464,7 +332,7 @@ msgid ""
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:640
+#: javascriptcompletionmodel.cpp:510
 msgctxt "@info The description for the 'RouteTimesDepartureDelay' info"
 msgid ""
 "A list of delays in minutes for each departure time of a route (see <emphasis>RouteTimesDeparture</emphasis>).<nl/>"
@@ -472,7 +340,7 @@ msgid ""
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:647
+#: javascriptcompletionmodel.cpp:517
 msgctxt "@info The description for the 'RouteTimesArrivalDelay' info"
 msgid ""
 "A list of delays in minutes for each arrival time of a route (see <emphasis>RouteTimesArrival</emphasis>).<nl/>"
@@ -480,135 +348,194 @@ msgid ""
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:653
+#: javascriptcompletionmodel.cpp:523
 msgctxt "@info The description for the 'Duration' info"
 msgid "The duration of a journey in minutes."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:657
+#: javascriptcompletionmodel.cpp:527
 msgctxt "@info The description for the 'StartStopName' info"
 msgid "The name of the starting stop of a journey."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:659 javascriptcompletionmodel.cpp:667
-#: javascriptcompletionmodel.cpp:679 javascriptcompletionmodel.cpp:683
+#: javascriptcompletionmodel.cpp:529 javascriptcompletionmodel.cpp:537
 msgctxt "@info/plain"
 msgid "Needed for Journeys"
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:662
+#: javascriptcompletionmodel.cpp:532
 msgctxt "@info The description for the 'StartStopID' info"
 msgid "The ID of the starting stop of a journey."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:666
+#: javascriptcompletionmodel.cpp:536
 msgctxt "@info The description for the 'TargetStopName' info"
 msgid "The name of the target stop of a journey."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:670
+#: javascriptcompletionmodel.cpp:540
 msgctxt "@info The description for the 'TargetStopID' info"
 msgid "The ID of the target stop of a journey."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:674
+#: javascriptcompletionmodel.cpp:544
+msgctxt "@info The description for the 'ArrivalDateTime' info"
+msgid "The date and time of the arrival. Can be a ECMAScript Date object. Use this information instead of ArrivalDate and ArrivalTime if possible."
+msgstr ""
+
+#. +> trunk
+#: javascriptcompletionmodel.cpp:549
 msgctxt "@info The description for the 'ArrivalDate' info"
 msgid "The date of the arrival."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:678
-msgctxt "@info The description for the 'ArrivalHour' info"
-msgid "The hour of the arrival time."
+#: javascriptcompletionmodel.cpp:553
+msgctxt "@info The description for the 'ArrivalTime' info"
+msgid "The time of the arrival time."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:682
-msgctxt "@info The description for the 'ArrivalMinute' info"
-msgid "The minute of the arrival time."
+#: javascriptcompletionmodel.cpp:555
+msgctxt "@info/plain"
+msgid "This or ArrivalDateTime is needed for journeys"
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:686
+#: javascriptcompletionmodel.cpp:558
 msgctxt "@info The description for the 'Changes' info"
 msgid "The number of changes between different vehicles in a journey."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:691
+#: javascriptcompletionmodel.cpp:563
 msgctxt "@info The description for the 'TypesOfVehicleInJourney' info"
 msgid "A list of vehicle types used in a journey."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:695
+#: javascriptcompletionmodel.cpp:567
 msgctxt "@info The description for the 'Pricing' info"
 msgid "Information about the pricing of a journey."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:701
+#: javascriptcompletionmodel.cpp:573
 msgctxt "@info The description for the 'StopName' info"
 msgid "The name of a stop/station."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:702
+#: javascriptcompletionmodel.cpp:574
 msgctxt "@info/plain"
 msgid "Needed for Stop Suggestions"
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:705
+#: javascriptcompletionmodel.cpp:577
 msgctxt "@info The description for the 'StopID' info"
 msgid "The ID of a stop/station."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:709
+#: javascriptcompletionmodel.cpp:581
 msgctxt "@info The description for the 'StopWeight' info"
 msgid "The weight of a stop suggestion."
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:718
-msgctxt "@info The description for the 'timetableData.set' function"
-msgid "Saves the given <placeholder>value</placeholder> under the given <placeholder>infoName</placeholder>."
+#: javascriptmodel.cpp:44
+msgctxt "info"
+msgid "Unknown code element"
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:724
-msgctxt "@info The description for the 'timetableData.clear' function"
-msgid ""
-"Clears the current values of the <emphasis>timetableData</emphasis> object.<nl/>"
-"<note>You should call this method before setting values for the next item.</note>"
+#: javascriptmodel.cpp:46
+msgctxt "info"
+msgid "Code block"
 msgstr ""
 
 #. +> trunk
-#: javascriptcompletionmodel.cpp:733
-msgctxt "@info The description for the 'result.addData' function"
-msgid "Adds the current <emphasis>timetableData</emphasis> object to the result set."
+#: javascriptmodel.cpp:48
+#, fuzzy
+#| msgid "Function: "
+msgctxt "info"
+msgid "Function"
+msgstr "Funkschoon: "
+
+#. +> trunk
+#: javascriptmodel.cpp:50
+msgctxt "info"
+msgid "Argument"
 msgstr ""
 
 #. +> trunk
-#: javascriptmodel.cpp:57
+#: javascriptmodel.cpp:52
+msgctxt "info"
+msgid "Statement"
+msgstr ""
+
+#. +> trunk
+#: javascriptmodel.cpp:54
+msgctxt "info"
+msgid "Comment"
+msgstr ""
+
+#. +> trunk
+#: javascriptmodel.cpp:56
+msgctxt "info"
+msgid "String"
+msgstr ""
+
+#. +> trunk
+#: javascriptmodel.cpp:58
+#, fuzzy
+#| msgid "Function: "
+msgctxt "info"
+msgid "Function call"
+msgstr "Funkschoon: "
+
+#. +> trunk
+#: javascriptmodel.cpp:60
+msgctxt "info"
+msgid "Bracketed region"
+msgstr ""
+
+#. +> trunk
+#: javascriptmodel.cpp:89
+#, kde-format
+msgctxt "@info"
+msgid "Parent %1 (line %2): "
+msgstr ""
+
+#. +> trunk
+#: javascriptmodel.cpp:98
+#, kde-format
+msgctxt "@info"
+msgid "%1 child element"
+msgid_plural "%1 child elements"
+msgstr[0] ""
+msgstr[1] ""
+
+#. +> trunk
+#: javascriptmodel.cpp:111
 msgid "Function: "
 msgstr "Funkschoon: "
 
 #. +> trunk
-#: javascriptmodel.cpp:264
+#: javascriptmodel.cpp:476
 msgctxt "@info/plain"
 msgid "(no functions)"
 msgstr "(keen Funkschonen)"
 
 #. +> trunk
-#: javascriptmodel.cpp:266
+#: javascriptmodel.cpp:478
 #, kde-format
 msgctxt "@info/plain"
 msgid "%1 function:"
@@ -617,94 +544,48 @@ msgstr[0] "%1 Funkschoon:"
 msgstr[1] "%1 Funkschonen:"
 
 #. +> trunk
-#: javascriptparser.cpp:106 javascriptparser.cpp:298 javascriptparser.cpp:461
-#: javascriptparser.cpp:473
+#: javascriptparser.cpp:123 javascriptparser.cpp:323 javascriptparser.cpp:476
+#: javascriptparser.cpp:489 javascriptparser.cpp:492 javascriptparser.cpp:495
 msgctxt "@info/plain"
 msgid "Unexpected end of file."
 msgstr "Nich verwacht Dateienn"
 
 #. +> trunk
-#: javascriptparser.cpp:151
+#: javascriptparser.cpp:170
 msgctxt "@info/plain"
 msgid "Unclosed multiline comment"
 msgstr ""
 
 #. +> trunk
-#: javascriptparser.cpp:212 javascriptparser.cpp:236
+#: javascriptparser.cpp:235 javascriptparser.cpp:260
 #, kde-format
 msgctxt "@info/plain"
 msgid "Unclosed bracket, expected '%1'."
 msgstr ""
 
 #. +> trunk
-#: javascriptparser.cpp:283
+#: javascriptparser.cpp:308
 #, kde-format
 msgctxt "@info/plain"
 msgid "Unclosed regular expression, missing %1 at end."
 msgstr ""
 
 #. +> trunk
-#: javascriptparser.cpp:287
+#: javascriptparser.cpp:312
 #, kde-format
 msgctxt "@info/plain"
 msgid "Unclosed string, missing %1 at end."
 msgstr ""
 
 #. +> trunk
-#: javascriptparser.cpp:308 javascriptparser.cpp:356 javascriptparser.cpp:376
+#: javascriptparser.cpp:355
 #, kde-format
 msgctxt "@info/plain"
-msgid "The object '%1' has no function '%2'."
+msgid "The object '%1' has no method '%2' (available methods: %3)."
 msgstr ""
 
 #. +> trunk
-#: javascriptparser.cpp:312
-#, kde-format
-msgctxt "@info/plain"
-msgid "The function '%1.%2()' accepts no arguments."
-msgstr ""
-
-#. +> trunk
-#: javascriptparser.cpp:318
-msgctxt "@info/plain"
-msgid "The function timetableData.set() expects two arguments."
-msgstr ""
-
-#. +> trunk
-#: javascriptparser.cpp:326
-msgctxt "@info/plain"
-msgid "The first argument of timetableData.set() must be a string."
-msgstr ""
-
-#. +> trunk
-#: javascriptparser.cpp:348
-#, kde-format
-msgctxt "@info/plain"
-msgid "'%1' is not a valid info name."
-msgstr ""
-
-#. +> trunk
-#: javascriptparser.cpp:359
-#, kde-format
-msgctxt "@info/plain"
-msgid "The function %1.%2() expects one argument."
-msgstr ""
-
-#. +> trunk
-#: javascriptparser.cpp:365
-#, kde-format
-msgctxt "@info/plain"
-msgid "The argument of the function %1.%2() must be 'timetableData'."
-msgstr ""
-
-#. +> trunk
-#: javascriptparser.cpp:406
-msgctxt "@info/plain"
-msgid "Missing ';' at the end of the statement."
-msgstr ""
-
-#. +> trunk
-#: javascriptparser.cpp:516 javascriptparser.cpp:536
+#: javascriptparser.cpp:581 javascriptparser.cpp:603
 #, fuzzy
 #| msgctxt "@info/plain"
 #| msgid "Excepted ',' or ')'."
@@ -713,7 +594,7 @@ msgid "Expected argument or ')'."
 msgstr "\",\" oder \")\" verwacht."
 
 #. +> trunk
-#: javascriptparser.cpp:524
+#: javascriptparser.cpp:590
 #, fuzzy
 #| msgctxt "@info/plain"
 #| msgid "Excepted ',' or ')'."
@@ -722,1091 +603,2095 @@ msgid "Expected ',' or ')'."
 msgstr "\",\" oder \")\" verwacht."
 
 #. +> trunk
-#: javascriptparser.cpp:546
+#: javascriptparser.cpp:614
 msgctxt "@info/plain"
 msgid "Function definition is missing."
 msgstr ""
 
 #. +> trunk
-#: javascriptparser.cpp:553
+#: javascriptparser.cpp:621
 msgctxt "@info/plain"
 msgid "Expected '('."
 msgstr "\"(\" verwacht."
 
 #. +> trunk
-#: javascriptparser.cpp:594
+#: javascriptparser.cpp:658 javascriptparser.cpp:738
+msgctxt "@info/plain"
+msgid "Internal JavaScript parser error"
+msgstr ""
+
+#. +> trunk
+#: javascriptparser.cpp:673
 #, kde-format
 msgctxt "@info/plain"
 msgid "Unclosed block, missing '}'. Block started at line %1."
 msgstr ""
 
 #. +> trunk
-#: javascriptparser.cpp:677
+#: javascriptparser.cpp:764
 #, kde-format
 msgctxt "@info/plain"
 msgid "Multiple definitions of function '%1', previously defined at line %2"
 msgstr ""
 
 #. +> trunk
-#: javascriptparser.cpp:808
+#: javascriptparser.cpp:892
 msgctxt "@info/plain Display name for anonymous JavaScript functions"
 msgid "[anonymous]"
 msgstr ""
 
+#. i18n: ectx: Menu (file)
 #. +> trunk
-#: main.cpp:27
-msgid "A helper application to add support for new service providers to the plasma data engine 'PublicTransport'"
+#: katepartui.rc:4
+msgid "&File"
+msgstr ""
+
+#. i18n: ectx: Menu (edit)
+#. +> trunk
+#: katepartui.rc:13
+msgid "&Edit"
+msgstr ""
+
+#. i18n: ectx: Menu (edit_advanced)
+#. +> trunk
+#: katepartui.rc:23
+msgid "&Advanced"
+msgstr ""
+
+#. i18n: ectx: Menu (view)
+#. +> trunk
+#: katepartui.rc:43
+msgid "&View"
+msgstr ""
+
+#. i18n: ectx: Menu (codefolding)
+#. +> trunk
+#: katepartui.rc:57
+msgid "&Code Folding"
+msgstr ""
+
+#. i18n: ectx: Menu (tools)
+#. +> trunk
+#: katepartui.rc:70
+msgid "&Tools"
+msgstr ""
+
+#. i18n: ectx: Menu (wordcompletion)
+#. +> trunk
+#: katepartui.rc:81
+msgid "Word Completion"
+msgstr ""
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#. +> trunk
+#: katepartui.rc:127 timetablemateui.rc:103
+msgid "Main Toolbar"
 msgstr ""
 
 #. +> trunk
-#: main.cpp:34
+#: linkchecker.cpp:45
+msgctxt "@info"
+msgid "The URL is invalid"
+msgstr ""
+
+#. +> trunk
+#: linkchecker.cpp:67
+msgctxt "@info/plain"
+msgid "Seems to be ok, could not get only the header values for the URL"
+msgstr ""
+
+#. +> trunk
+#: linkchecker.cpp:106
+msgctxt "@info/plain"
+msgid "Empty reply"
+msgstr ""
+
+#. +> trunk
+#: main.cpp:29
+msgid "A little IDE for adding support for new service providers to the plasma data engine 'PublicTransport'."
+msgstr ""
+
+#. +> trunk
+#: main.cpp:36
 msgid "TimetableMate"
 msgstr ""
 
 #. +> trunk
-#: main.cpp:35
-msgid "(C) 2010 Friedrich Pülz"
+#: main.cpp:37
+#, fuzzy
+#| msgid "(C) 2010 Friedrich Pülz"
+msgid "© 2010-2012 Friedrich Pülz"
 msgstr "© 2010: Friedrich Pülz"
 
 #. +> trunk
-#: main.cpp:37
+#: main.cpp:39
 msgid "Friedrich Pülz"
 msgstr "Friedrich Pülz"
 
 #. +> trunk
-#: main.cpp:41
-msgid "Document to open"
+#: main.cpp:39
+msgid "Main Developer"
+msgstr ""
+
+#. +> trunk
+#: main.cpp:44
+#, fuzzy
+#| msgid "Document to open"
+msgid "Project to open"
 msgstr "Dokment, dat Du opmaken wullt"
 
 #. +> trunk
-#: publictransportpreview.cpp:48
-msgctxt "@action:button"
-msgid "Show &Plasma Preview"
+#: networkmonitormodel.cpp:165
+msgctxt "@title:column"
+msgid "Type"
 msgstr ""
 
 #. +> trunk
-#: publictransportpreview.cpp:74
-msgctxt "@info"
-msgid "The plasma desktop containment could not be added. Ensure that you have plasma installed."
+#: networkmonitormodel.cpp:167
+msgctxt "@title:column"
+msgid "Content"
 msgstr ""
 
 #. +> trunk
-#: publictransportpreview.cpp:88
-msgctxt "@info"
-msgid "The PublicTransport applet could not be added. Ensure that you have it installed."
+#: networkmonitormodel.cpp:169
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Time:"
+msgctxt "@title:column"
+msgid "Time"
+msgstr "Tiet:"
+
+#. +> trunk
+#: networkmonitormodel.cpp:171
+msgctxt "@title:column"
+msgid "URL"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:98
-msgctxt "@info:whatsthis"
-msgid ""
-"<subtitle>Plasma Preview</subtitle>"
-"<para>This is a preview of the PublicTransport applet in a plasma desktop. The applet's settings are changed so that it always uses the currently opened timetable accessor.</para>"
-"<para><note>You have to install the accessor to use it in this preview. Use <interface>File -&gt; Install</interface> to install the accessor locally or <interface>File -&gt; Install Globally</interface> to install the accessor globally, ie. for all users.</note></para>"
+#: networkmonitormodel.cpp:173
+msgctxt "@title:column"
+msgid "Data"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:115
-msgctxt "@info:whatsthis"
-msgid ""
-"<subtitle>Web View</subtitle>"
-"<para>This is the web view. You can use it to check the URLs you have defined in the <interface>Accessor</interface> settings or to get information about the structure of the documents that get parsed by the script.</para>"
-"<para><note>You can select a web element in the <emphasis>inspector</emphasis> using the context menu.</note></para>"
+#: networkmonitormodel.cpp:459
+msgctxt "@info/plain"
+msgid "Request (GET)"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:197
-msgctxt "@info:whatsthis"
-msgid ""
-"<subtitle>Accessor Source</subtitle>"
-"<para>This shows the XML source of the accessor settings. Normally you will not need this, because you can setup everything in the <interface>Accessor</interface> settings.</para>"
-"<para><note>Changes to <interface>Accessor</interface> and <interface>Accessor Source</interface> are synchronized automatically. Comments and unknown content in the source is removed when synchronizing.</note></para>"
+#: networkmonitormodel.cpp:461
+msgctxt "@info/plain"
+msgid "Request (POST)"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:206
-msgctxt "@info:whatsthis"
-msgid ""
-"<subtitle>Script File</subtitle>"
-"<para>This shows the script source code. Syntax completion is available for all functions and strings used by the data engine.</para>"
-"<para>To try out the script functions just click one of the <interface>Run '<placeholder>function</placeholder>'</interface> buttons.</para>"
+#: networkmonitormodel.cpp:463
+msgctxt "@info/plain"
+msgid "Reply"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:296
-msgctxt "@title:tab"
-msgid "&Accessor"
-msgstr "&Togrieper"
-
-#. +> trunk
-#: timetablemate.cpp:298
-msgctxt "@title:tab"
-msgid "A&ccessor Source"
+#: networkmonitormodel.cpp:474
+msgctxt "@info/plain"
+msgid "HTML"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:300
-msgctxt "@title:tab"
-msgid "&Script"
+#: networkmonitormodel.cpp:476
+msgctxt "@info/plain"
+msgid "XML"
+msgstr ""
+
+#. +> trunk
+#: networkmonitormodel.cpp:478
+msgctxt "@info/plain"
+msgid "Image"
+msgstr ""
+
+#. +> trunk
+#: networkmonitormodel.cpp:480
+msgctxt "@info/plain"
+msgid "CSS"
+msgstr ""
+
+#. +> trunk
+#: networkmonitormodel.cpp:482
+#, fuzzy
+#| msgctxt "@title:tab"
+#| msgid "&Script"
+msgctxt "@info/plain"
+msgid "Script"
 msgstr "&Skript"
 
 #. +> trunk
-#: timetablemate.cpp:301
-msgctxt "@title:tab"
-msgid "&Preview"
-msgstr "&Vöransicht"
-
-#. +> trunk
-#: timetablemate.cpp:303
-msgctxt "@title:tab"
-msgid "&Web View"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:329
-#, kde-format
+#: networkmonitormodel.cpp:484
 msgctxt "@info/plain"
-msgid ""
-"The accessor <resource>%1</resource> has been changed.<nl/>"
-"Do you want to save or discard the changes?"
+msgid "Text"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:332 timetablemate.cpp:339
-msgctxt "@title:window"
-msgid "Close Document"
-msgstr "Dokment tomaken"
-
-#. +> trunk
-#: timetablemate.cpp:336
-#, kde-format
+#: networkmonitormodel.cpp:486
 msgctxt "@info/plain"
-msgid ""
-"The accessor <resource>%1</resource> in <filename>%2</filename> has been changed.<nl/>"
-"Do you want to save or discard the changes?"
+msgid "(wait)"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:507
-#, kde-format
-msgctxt "@info:status"
-msgid "Syntax error in line %1, column %2: <message>%3</message>"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:512
-msgctxt "@info:status"
-msgid "No syntax errors found."
-msgstr "Keen Syntaxfehlers opdeckt."
-
-#. +> trunk
-#: timetablemate.cpp:690
-msgctxt "@action"
-msgid "Open I&nstalled..."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:694
-msgctxt "@action"
-msgid "&Install"
-msgstr "&Installeren"
-
-#. +> trunk
-#: timetablemate.cpp:699
-msgctxt "@action"
-msgid "Install &Globally"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:721
-msgctxt "@action"
-msgid "Open &Provider Home Page"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:723
-msgctxt "@info:tooltip"
-msgid "Opens the <emphasis>home page</emphasis> of the service provider."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:729
-msgctxt "@action"
-msgid "Open &Departures Page"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:731
-msgctxt "@info:tooltip"
-msgid "Opens the <emphasis>departures</emphasis> web page."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:737
-msgctxt "@action"
-msgid "Open &Stop Suggestions Page"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:739
-msgctxt "@info:tooltip"
-msgid "Opens the <emphasis>stop suggestions</emphasis> web page."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:745
-msgctxt "@action"
-msgid "Open &Journeys Page"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:747
-msgctxt "@info:tooltip"
-msgid "Opens the <emphasis>journeys</emphasis> web page."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:753
-msgctxt "@action"
-msgid "Open &Page"
-msgstr "&Siet opmaken"
-
-#. +> trunk
-#: timetablemate.cpp:755
-msgctxt "@info:tooltip"
-msgid "Opens a web page defined in the <interface>Accessor</interface> tab."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:765
-msgctxt "@action"
-msgid "Run 'parse&Timetable'"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:767
-msgctxt "@info:tooltip"
-msgid "Runs the <emphasis>parseTimetable()</emphasis> function of the script."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:772
-msgctxt "@action"
-msgid "Run 'parse&StopSuggestions'"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:774
-msgctxt "@info:tooltip"
-msgid "Runs the <emphasis>parseStopSuggestions()</emphasis> function of the script."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:781
-msgctxt "@action"
-msgid "Run 'parse&Journeys'"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:783
-msgctxt "@info:tooltip"
-msgid "Runs the <emphasis>parseJourneys()</emphasis> function of the script."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:788
-msgctxt "@action"
-msgid "&Run Script"
-msgstr "Skript &utföhren"
-
-#. +> trunk
-#: timetablemate.cpp:789
-msgctxt "@info:tooltip"
-msgid "Runs a function of the script."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:796
-msgctxt "@action"
-msgid "&Check"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:797
-msgctxt "@info:tooltip"
-msgid "Checks the accessor for error/features."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:802
-msgctxt "@action"
-msgid "&Previous Function"
-msgstr "&Verleden Funkschoon"
-
-#. +> trunk
-#: timetablemate.cpp:803
-msgctxt "@info:tooltip"
-msgid "Selects the previous function."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:812
-msgctxt "@action"
-msgid "&Next Function"
-msgstr "&Nakamen Funkschoon"
-
-#. +> trunk
-#: timetablemate.cpp:813
-msgctxt "@info:tooltip"
-msgid "Selects the next function."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:847
-#, kde-format
-msgctxt "@info:status"
-msgid "Line: %1 Col: %2"
-msgstr "Reeg: %1 Str: %2"
-
-#. +> trunk
-#: timetablemate.cpp:882
-msgctxt "@title:window"
-msgid "Open Accessor"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:894
+#: networkmonitormodel.cpp:489
 msgctxt "@info/plain"
-msgid "There are no installed timetable accessors. You need to install the PublicTransport data engine."
+msgid "Unknown"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:910
-#, kde-format
-msgctxt "@info/plain This string is displayed instead of the full path for globally installed timetable accessor xmls."
-msgid "Global: %1"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:919
-msgctxt "@title:window"
-msgid "Open Installed Accessor"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:919
-msgctxt "@info"
-msgid "Installed timetable accessor"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:942
-msgctxt "@title:window"
-msgid "Save Accessor"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:957
+#: project.cpp:585
 #, kde-format
 msgctxt "@info"
-msgid "Could not write the script file to <filename>%1</filename>."
+msgid "The project file <filename>%1</filename> could not be found."
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:980
-msgctxt "@info:status"
-msgid "Accessor successfully installed locally"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:982
+#: project.cpp:624
 #, kde-format
 msgctxt "@info"
-msgid ""
-"Accessor could not be installed locally. Tried to save these files:<nl/>"
-"  %1<nl/>"
-"  %2"
+msgid "Could not open project source document <filename>%1</filename>."
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1013
-#, kde-format
-msgctxt "@info"
-msgid "Accessor could nt be installed globally: %1 <message>%2</message>"
+#: project.cpp:710
+msgctxt "@info/plain"
+msgid "New Project"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1026
-msgctxt "@info"
-msgid "Could not find the authentication action. If you just installed TimetableMate, you might need to restart D-Bus."
+#: project.cpp:794
+msgctxt "@info:tooltip"
+msgid "also installed globally"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1032
-msgctxt "@info"
-msgid "The action is currently being performed. Please try again later."
+#: project.cpp:799
+msgctxt "@info:tooltip"
+msgid "also installed locally"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1037
-#, kde-format
-msgctxt "@info"
-msgid "Unable to authenticate the action: %1 <message>%2</message>"
+#: project.cpp:805
+msgctxt "@info:tooltip"
+msgid "installed locally and globally"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1045
-msgctxt "@info:status"
-msgid "Accessor successfully installed globally"
+#: project.cpp:807
+msgctxt "@info:tooltip"
+msgid "installed locally"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1081 timetablemate.cpp:1135
-#, kde-format
-msgctxt "@info"
-msgid "The XML file <filename>%1</filename> could not be read: <message>%2</message>"
+#: project.cpp:809
+msgctxt "@info:tooltip"
+msgid "installed globally"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1121
-#, kde-format
-msgctxt "@info"
-msgid "The XML file <filename>%1</filename> could not be found."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:1202
+#: project.cpp:945
 #, kde-format
 msgctxt "@info"
 msgid "The script file <filename>%1</filename> could not be found."
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1245
-msgid "General"
-msgstr "Allgemeen"
-
-#. +> trunk
-#: timetablemate.cpp:1270
-msgctxt "@info"
-msgid "<emphasis>You need to specify a name for your accessor.</emphasis> Applets show this name in a service provider selector widget."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:1274
-msgctxt "@info"
-msgid "<emphasis>You should give a description for your accessor.</emphasis> Describe what cities/countries/vehicles are supported and what limitations there possibly are when using your accessor."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:1279
-msgctxt "@info"
-msgid "<emphasis>You should specify a version of your accessor.</emphasis> This helps to distinguish between different versions and makes it possible to say for example: \"You need at least version 1.3 of that accessor for that feature to work\"."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:1285
-msgctxt "@info"
-msgid "<emphasis>The PublicTransport data engine currently only supports version '1.0'.</emphasis>"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:1289
-msgctxt "@info"
-msgid "<emphasis>You should give your name.</emphasis> Applets may want to show the name as display text for email-links, the result would be that nothing is shown."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:1294
-msgctxt "@info"
-msgid "<emphasis>You should give your email address.</emphasis> You may create a new address if you do not want to use your private one. Without an email address, no one can contact you if something is wrong with your accessor."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:1300
-msgctxt "@info"
-msgid "<emphasis>You should give the URL to the home page of the service provider.</emphasis> Since the service providers are running servers for the timetable service they will want to get some credit. Applets (should) show a link to the home page."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:1307
-msgctxt "@info"
-msgid "<emphasis>You should give a short version of the URL to the home page of the service provider.</emphasis> Applets may want to show the short URL as display text for the home page link, to save space. The result would be that nothing is shown."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:1320
+#: project.cpp:972
 #, kde-format
 msgctxt "@info"
-msgid "<emphasis>Error in script (line %2):</emphasis> <message>%1</message>"
+msgid "Syntax error at line %1: <message>%2</message>"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1338 timetablemate.cpp:2091 timetablemateview.cpp:456
+#: project.cpp:1004
+#, kde-format
+msgctxt "@info"
+msgid "Could not open project source document <filename>%1</filename> could not be found."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1328
+msgctxt "@info"
+msgid ""
+"Test results cannot be seen for non-active projects.<nl />"
+"Do you want to make this project active now?"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1333
+msgctxt "@info"
+msgid ""
+"Docks like <interface>Variables</interface>, <interface>Backtrace</interface> or <interface>Output</interface> only show data for the active project. Toolbar/menu actions only control the active project, but the project context menu can be used to eg. control the debugger of an inactive project.<nl />"
+"Do you want to make this project active now?"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1347
 msgctxt "@title:window"
-msgid "Choose Script Type"
+msgid "Activate Project?"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1339 timetablemate.cpp:2092
+#: project.cpp:1441
 msgctxt "@info"
-msgid "Script type unknown, please choose one of these:"
+msgid "Test started"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1355
+#: project.cpp:1469
 #, kde-format
 msgctxt "@info"
-msgid "<emphasis>Error in script:</emphasis> <message>%1</message>"
+msgid "Test of %1 finished successfully"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1360
+#: project.cpp:1475
+#, kde-format
 msgctxt "@info"
-msgid "<emphasis>No script file specified in the <interface>Accessor</interface> tab.</emphasis>"
+msgid "Test of %1 finished with errors"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1365
+#: project.cpp:1480
+#, kde-format
 msgctxt "@info"
-msgid "<emphasis>You should implement the 'usedTimetableInformations' script function.</emphasis> This is used to get the features supported by the accessor."
+msgid "Test of %1 finished with warnings"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1370
+#: project.cpp:1485
+#, kde-format
 msgctxt "@info"
-msgid "<emphasis>You need to specify both a raw departure URL and a 'parseTimetable' script function.</emphasis> <note>Accessors that only support journeys are currently not accepted by the data engine, but that may change</note>."
+msgid "Test of %1 could not be started"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1376
+#: project.cpp:1490
+#, kde-format
 msgctxt "@info"
-msgid "<emphasis>The script has a 'parsePossibleStops' function, but there's no raw URL for stop suggestions.</emphasis>"
+msgid "Test of %1 was aborted"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1380
+#: project.cpp:1494
+#, kde-format
 msgctxt "@info"
-msgid "<emphasis>The script has a 'parseJourney' function, but there's no raw URL for journeys.</emphasis>"
+msgid "Test of %1 case not finished"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1388
-msgctxt "@info"
-msgid "Stop suggestions should work."
+#: project.cpp:1535
+msgctxt "@info/plain"
+msgid "Test was aborted"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1390
-msgctxt "@info"
-msgid "Journeys should work."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:1394
+#: project.cpp:1536
 msgctxt "@info"
 msgid ""
-"<para><emphasis>No errors found.</emphasis></para>"
-"<para>To ensure that your accessor is working correctly do these steps:"
-"<list>"
-"<item>Check the home page link, eg. using <interface>View -> Open Page -> Open Home Page</interface></item>"
-"<item>Run each script function you have implemented using <interface>Tools -> Run Script</interface></item>"
-"<item>Try your accessor using the PublicTransport applet, eg. in the <interface>Preview</interface> tab.</item>"
-"<item>Try different stops, eg. with/without delay information.</item>"
-"</list>"
-"</para>"
+"<title>Test was aborted</title>"
+" "
+"<para>The test was aborted while it was running, no results available.</para>"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1405
-#, kde-format
+#: project.cpp:1554
+msgctxt "@info/plain"
+msgid "Missing sample coordinates"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1555
 msgctxt "@info"
 msgid ""
-"<para><emphasis>%1 errors found, but nothing severe.</emphasis> You should try to fix these: "
-"<list>%2</list>"
-"</para>"
-"<para>To ensure that your accessor is working correctly do these steps:"
-"<list>"
-"<item>Check the home page link, eg. using <interface>View -> Open Page -> Open Home Page</interface></item>"
-"<item>Run each script function you have implemented using <interface>Tools -> Run Script</interface></item>"
-"<item>Try your accessor using the PublicTransport applet, eg. in the <interface>Preview</interface> tab.</item>"
-"<item>Try different stops, eg. with/without delay information.</item>"
-"</list>"
-"</para>"
+"<title>Missing sample stop coordinates</title>"
+" "
+"<para>Cannot run script execution tests for stops by geo position. Open the project settings and add one or more <interface>Sample Stop Coordinates</interface></para>"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1418
-#, kde-format
+#: project.cpp:1578
+msgctxt "@info/plain"
+msgid "Missing sample stop name"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1579
 msgctxt "@info"
 msgid ""
-"<para><warning>%1 severe errors found.</warning> You should try to fix these: "
-"<list>%2</list>"
-"</para>"
+"<title>Missing sample stop name</title>"
+" "
+"<para>Cannot run the test without sample data. Open the project settings and add one or more <interface>Sample Stop Names</interface></para>"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1422
-#, kde-format
+#: project.cpp:1589
+msgctxt "@info/plain"
+msgid "Missing sample city"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1590
 msgctxt "@info"
 msgid ""
-"<para><warning>%1 errors found, %2 of them are severe.</warning> You need to fix these: "
-"<list>%3</list>"
-"<nl/>"
-"You should also try to fix these: "
-"<list>%4</list>"
-"</para>"
+"<title>Missing sample city</title>"
+" "
+"<para>Cannot run the test without sample data. Open the project settings and add a <interface>Sample City</interface></para>"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1430
-msgctxt "@title:window"
-msgid "Error Report"
-msgstr "Fehlerbericht"
-
-#. +> trunk
-#: timetablemate.cpp:1644 timetablemate.cpp:1758 timetablemate.cpp:1980
-#, kde-format
-msgctxt "@info"
-msgid "'%1' with value '%2'"
-msgstr "\"%1\" mit Weert \"%2\""
-
-#. +> trunk
-#: timetablemate.cpp:1648
-#, kde-format
-msgctxt "@info"
-msgid "Got %1 departures/arrivals."
+#: project.cpp:1609
+msgctxt "@info/plain"
+msgid "To test journeys at least two sample stop names are needed"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1650
-#, kde-format
-msgctxt "@info"
-msgid "<warning>%1 departure/arrival is invalid</warning>"
-msgid_plural "<warning>%1 departures/arrivals are invalid</warning>"
-msgstr[0] ""
-msgstr[1] ""
-
-#. +> trunk
-#: timetablemate.cpp:1655
-msgctxt "@info"
-msgid "Got the information from the script that there is no delay information available for the given stop."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:1659 timetablemate.cpp:1768 timetablemate.cpp:1989
-msgctxt "@info"
-msgid "No syntax errors."
-msgstr "Keen Syntaxfehlers"
-
-#. +> trunk
-#: timetablemate.cpp:1663
-#, kde-format
+#: project.cpp:1610
 msgctxt "@info"
 msgid ""
-"<para>Departures:"
-"<list>%1</list>"
-"</para>"
-msgstr ""
-"<para>Affohrten:"
-"<list>%1</list>"
-"</para>"
-
-#. +> trunk
-#: timetablemate.cpp:1669 timetablemate.cpp:1774 timetablemate.cpp:1995
-msgctxt "@info"
-msgid "<para>No messages from the script (helper.error)</para>"
+"<title>To test journeys at least two sample stop names are needed</title>"
+" "
+"<para>Cannot run journey test. Open the project settings and add another stop name to the <interface>Sample Stop Names</interface></para>"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:1677 timetablemate.cpp:1782 timetablemate.cpp:2003
-#, kde-format
-msgctxt "@info"
-msgid ""
-"<para>Messages from the script (helper.error):"
-"<list>%1</list>"
-"</para>"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:1682 timetablemate.cpp:1787 timetablemate.cpp:2008
-#, kde-format
-msgctxt "@info"
-msgid ""
-"<para>There were unknown strings used for <icode>timetableData.set( '<placeholder>unknown string</placeholder>', <placeholder>value</placeholder> );</icode>"
-"<list>%1</list>"
-"</para>"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:1688 timetablemate.cpp:1793 timetablemate.cpp:2014
-msgctxt "@title:window"
-msgid "Result"
-msgstr "Resultaat"
-
-#. +> trunk
-#: timetablemate.cpp:1762
-#, kde-format
-msgctxt "@info"
-msgid "Got %1 stop suggestions."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:1764
-#, kde-format
-msgctxt "@info"
-msgid "<warning>%1 stop suggestion is invalid</warning>"
-msgid_plural "<warning>%1 stop suggestions are invalid</warning>"
-msgstr[0] ""
-msgstr[1] ""
-
-#. +> trunk
-#: timetablemate.cpp:1769
-#, kde-format
-msgctxt "@info"
-msgid ""
-"<para>Stop suggestions:"
-"<list>%1</list>"
-"</para>"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:1984
-#, kde-format
-msgctxt "@info"
-msgid "Got %1 journeys."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:1986
-#, kde-format
-msgctxt "@info"
-msgid "<warning>%1 journey is invalid</warning>"
-msgid_plural "<warning>%1 journeys are invalid</warning>"
-msgstr[0] ""
-msgstr[1] ""
-
-#. +> trunk
-#: timetablemate.cpp:1990
-#, kde-format
-msgctxt "@info"
-msgid ""
-"<para>Journeys:"
-"<list>%1</list>"
-"</para>"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:2020
-msgctxt "@info"
-msgid ""
-"The <interface>Home Page URL</interface> is empty.<nl/>"
-"Please set it in the <interface>Accessor</interface> tab first."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:2030
-msgctxt "@info"
-msgid ""
-"The <interface>Raw Departure URL</interface> is empty.<nl/>"
-"Please set it in the <interface>Accessor</interface> tab first."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:2040
-msgctxt "@info"
-msgid ""
-"The <interface>Raw StopSuggestions URL</interface> is empty.<nl/>"
-"Please set it in the <interface>Accessor</interface> tab first."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:2050
-msgctxt "@info"
-msgid ""
-"The <interface>Raw Journey URL</interface> is empty.<nl/>"
-"Please set it in the <interface>Accessor</interface> tab first."
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:2107
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Error in script:<nl/>"
-"<message>%1</message>"
-msgstr ""
-
-#. +> trunk
-#: timetablemate.cpp:2114
+#: project.cpp:1650
 #, kde-format
 msgctxt "@info/plain"
-msgid "The script does not implement <emphasis>%1</emphasis>."
+msgid "Waiting for required test \"%1\""
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:2145
+#: project.cpp:1669
 #, kde-format
 msgctxt "@info/plain"
-msgid "Could not download from URL <emphasis>%1</emphasis>."
+msgid "Required test \"%1\" was not successful"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:2173
+#: project.cpp:1671
 #, kde-format
 msgctxt "@info"
 msgid ""
-"An error occurred in the script:<nl/>"
-"<message>%1</message>"
+"<title>Dependency not met</title>"
+" "
+"<para>This test depends on the \"%1\" test, but it was not successful.</para>"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:2239
+#: project.cpp:1700 project.cpp:1743
+#, kde-format
+msgctxt "@info/plain"
+msgid "You need to implement a '%1' script function"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1701
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<title>You need to implement a '%1' script function</title>"
+" "
+"<para>Service provider plugins that only support journeys are currently not accepted by the data engine, but that may change.</para>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1716
+msgctxt "@info/plain"
+msgid "No results in departure test"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1723
+#, kde-format
+msgctxt "@info/plain"
+msgid "'%1' script function not implemented"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1724
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<title>You can implement a '%1' script function</title>"
+" "
+"<para>This can be used to load additional data for single departures or arrivals.</para>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1744
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<title>You need to implement a '%1' script function</title>"
+" "
+"<para>Without stop suggestions it can be very hard for users to find a valid stop name. Therefore this function is needed.</para>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1751
+#, kde-format
+msgctxt "@info/plain"
+msgid "For journeys, you need to implement a '%1' script function"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1752
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<title>For journeys, you need to implement a '%1' script function</title>"
+" "
+"<para>If you do not implement the function, journeys will not work with the plugin.</para>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1758
+#, kde-format
+msgctxt "@info/plain"
+msgid "You should implement a '%1' script function"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1759
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<title>You should implement a '%1' script function</title>"
+" "
+"<para>This function is used to know what information the plugin parses from documents. Without adding the appropriate TimetableInformation names to the return value of this function, the associated data will be unused or associated features will be disabled.</para>"
+"<para>If, for example, the script can parse Arrivals, 'Arrivals' should be added to the return value. If the script parses route stops or stop IDs, add 'RouteStops' or 'StopID' to the return value, etc.</para>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1823
+msgctxt "@info/plain"
+msgid "Script successfully loaded"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1961
+msgctxt "@info/plain"
+msgid "No GTFS feed URL given"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1968
+msgctxt "@info/plain"
+msgid "Not used"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1988
+#, kde-format
+msgctxt "@info/plain"
+msgid "Redirected to: <link>%1</link>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1992
+#, kde-format
+msgctxt "@info/plain"
+msgid "Size: %1"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:1996
+#, kde-format
+msgctxt "@info/plain"
+msgid "Modified: %1"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2111
+#, kde-format
+msgctxt "@info"
+msgid "Could not write the script file to <filename>%1</filename>: <message>%2</message>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2169
+msgctxt "@title:window"
+msgid "Save Project"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2195
+msgctxt "@info"
+msgid "Project successfully installed locally"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2201
+#, kde-format
+msgctxt "@info"
+msgid "Project could not be installed locally as <filename>%1</filename>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2211 project.cpp:2217
+#, kde-format
+msgctxt "@info"
+msgid "Project could not be uninstalled locally, file <filename>%1</filename>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2223
+msgctxt "@info"
+msgid "Project successfully uninstalled locally"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2234
+msgctxt "@info"
+msgid "Project is not installed locally"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2275
+#, kde-format
+msgctxt "@info"
+msgid "Service provider plugin could not be installed globally in <filename>%1</filename>: %2 <message>%3</message>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2278
+#, kde-format
+msgctxt "@info"
+msgid "Service provider plugin could not be uninstalled globally from <filename>%1</filename>: %2 <message>%3</message>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2289
+msgctxt "@info"
+msgid "Could not find the authentication action. If you just installed TimetableMate, you might need to restart D-Bus."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2295
+msgctxt "@info"
+msgid "The action is currently being performed. Please try again later."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2300
+#, kde-format
+msgctxt "@info"
+msgid "Unable to authenticate the action: %1 <message>%2</message>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2308
+msgctxt "@info"
+msgid "Service provider plugin successfully installed globally"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2314
+msgctxt "@info"
+msgid "Service provider plugin successfully uninstalled globally"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2372
+msgctxt "@info/plain"
+msgid "Feature function needed"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2373
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<title>Feature function needed</title>"
+" "
+"<para>The <icode>features()</icode> function is needed to indicate support for this test. It should return at least these features for this test to run: %1.</para>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2398
+#, kde-format
+msgctxt "@info/plain"
+msgid "Feature \"%1\" not supported"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2399
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<title>Feature \"%1\" not supported</title>"
+" "
+"<para>The <icode>features()</icode> function did not return <icode>PublicTransport.%1</icode>.</para>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2679
+#, kde-format
+msgctxt "@info %2 is the script file name"
+msgid "<emphasis strong='1'>Line %1 (%2):</emphasis> <message>%3</message>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2684
+#, kde-format
+msgctxt "@info"
+msgid "<emphasis strong='1'>Line %1:</emphasis> <message>%2</message>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2701
+msgctxt "@info/plain"
+msgid "Warning"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2705
+msgctxt "@info/plain"
+msgid "Error"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2709
+msgctxt "@info/plain"
+msgid "Information"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2719
+#, kde-format
+msgctxt "@info %1 is the translation of 'Error'/'Warning'/'Information', %3 is the script file name"
+msgid "<emphasis strong='1'>%1 in line %2 (%3):</emphasis> <message>%4</message>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:2724
+#, kde-format
+msgctxt "@info %1 is the translation of 'Error'/'Warning'/'Information'"
+msgid "<emphasis strong='1'>%1 in line %2:</emphasis> <message>%3</message>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3106
+msgctxt "@action"
+msgid "Run"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3131
+msgctxt "@action"
+msgid "GTFS"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3149
+msgctxt "@action"
+msgid "Test"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3175
+msgctxt "@action"
+msgid "Project"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3471
+msgctxt "@action"
+msgid "Save Project"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3473
+msgctxt "@action"
+msgid "Save Project As..."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3475
+msgctxt "@action"
+msgid "&Install"
+msgstr "&Installeren"
+
+#. +> trunk
+#: project.cpp:3477
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "&Install"
+msgctxt "@action"
+msgid "&Uninstall"
+msgstr "&Installeren"
+
+#. +> trunk
+#: project.cpp:3479
+msgctxt "@action"
+msgid "Install &Globally"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3481
+msgctxt "@action"
+msgid "Uninstall &Globally"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3483
+msgctxt "@action"
+msgid "&Publish..."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3485
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Close Document"
+msgctxt "@action"
+msgid "Close Project"
+msgstr "Dokment tomaken"
+
+#. +> trunk
+#: project.cpp:3487
+msgctxt "@action"
+msgid "Project Settings..."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3489
+msgctxt "@action"
+msgid "Show &Dashboard"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3491
+msgctxt "@action"
+msgid "Show &Web Page"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3494
+#, fuzzy
+#| msgctxt "@title:tab"
+#| msgid "&Script"
+msgctxt "@action"
+msgid "Open &Script"
+msgstr "&Skript"
+
+#. +> trunk
+#: project.cpp:3497
+msgctxt "@action"
+msgid "Open External Script..."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3498
+#, kde-format
+msgctxt "@action"
+msgid "Open External Script <filename>%1</filename>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3504
+msgctxt "@action"
+msgid "Open GTFS &Database"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3506
+msgctxt "@action"
+msgid "&Import GTFS Feed"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3508
+msgctxt "@action"
+msgid "&Update GTFS Database"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3510
+msgctxt "@action"
+msgid "&Delete GTFS Database"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3513
+msgctxt "@action"
+msgid "Open Project &Source"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3515
+msgctxt "@action"
+msgid "Show &Plasma Preview"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3518
+msgctxt "@action"
+msgid "&Run All Tests"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3520
+msgctxt "@action"
+msgid "&Abort Running Tests"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3522
+msgctxt "@action"
+msgid "&Clear All Test Results"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3529
+#, kde-format
+msgctxt "@action"
+msgid "Run %1"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3532
+msgctxt "@action"
+msgid "&Run Complete Test Case"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3544
+msgctxt "@action"
+msgid "Set as Active Project"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3548
+msgctxt "@action"
+msgid "Step &Into"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3550
+msgctxt "@action"
+msgid "Step &Over"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3552
+msgctxt "@action"
+msgid "Step Ou&t"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3554
+msgctxt "@action"
+msgid "&Interrupt"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3556
+msgctxt "@action"
+msgid "Run to &Cursor"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3558
+msgctxt "@action"
+msgid "&Continue"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3560
+msgctxt "@action"
+msgid "&Abort Debugger"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3562
+msgctxt "@action"
+msgid "Toggle &Breakpoint"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3564
+msgctxt "@action"
+msgid "&Remove all Breakpoints"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3567
+msgctxt "@action"
+msgid "&Run"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3569
+msgctxt "@action"
+msgid "Run get&Timetable()"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3571
+msgctxt "@action"
+msgid "Run get&StopSuggestions()"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3573
+msgctxt "@action"
+msgid "Run get&StopSuggestions(), Geo Position"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3575
+msgctxt "@action"
+msgid "Run get&Journeys()"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3578
+msgctxt "@action"
+msgid "&Debug"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3580
+msgctxt "@action"
+msgid "Debug get&Timetable()"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3582
+msgctxt "@action"
+msgid "Debug get&StopSuggestions()"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3584
+msgctxt "@action"
+msgid "Debug get&StopSuggestions(), Geo Position"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3586
+msgctxt "@action"
+msgid "Debug get&Journeys()"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3603
+msgctxt "@info:tooltip"
+msgid "Save changes in the project"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3609
+msgctxt "@info:tooltip"
+msgid "Save changes in the project under a new file name"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3613
+msgctxt "@info:tooltip"
+msgid "Install the project locally"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3618
+msgctxt "@info:tooltip"
+msgid "Uninstall a locally installed version of the project"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3622
+msgctxt "@info:tooltip"
+msgid "Install the project globally"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3627
+msgctxt "@info:tooltip"
+msgid "Uninstall a globally installed version of the project"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3632
+msgctxt "@info:tooltip"
+msgid "Publish the plugin project at openDesktop.org"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3636
+msgctxt "@info:tooltip"
+msgid "Close this project"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3641
+msgctxt "@info:tooltip"
+msgid "Opens a dialog to modify the projects settings"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3645
+msgctxt "@info:tooltip"
+msgid "Shows the dashboard tab of the project."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3650
+msgctxt "@info:tooltip"
+msgid "Opens the <emphasis>home page</emphasis> of the service provider in a tab."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3655
+msgctxt "@info:tooltip"
+msgid "Opens the main <emphasis>script</emphasis> in a tab."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3659
+msgctxt "@info:tooltip"
+msgid "Opens an external <emphasis>script</emphasis> in a tab."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3665
+msgctxt "@info:tooltip"
+msgid "Opens the <emphasis>GTFS database</emphasis> in a tab."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3669
+msgctxt "@info:tooltip"
+msgid "Downloads the GTFS feed and imports it into the GTFS database."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3673
+msgctxt "@info:tooltip"
+msgid "Updates the GTFS database by downloading and importing a new version of the GTFS feed."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3678
+msgctxt "@info:tooltip"
+msgid "Deletes the GTFS database."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3683
+msgctxt "@info:tooltip"
+msgid "Opens the <emphasis>project source</emphasis> document in a tab."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3688
+msgctxt "@info:tooltip"
+msgid "Opens the project in a PublicTransport applet in a <emphasis>Plasma preview</emphasis> tab."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3695
+msgctxt "@info:tooltip"
+msgid "Runs all tests for the active project, eg. syntax errors, correct results."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3699
+msgctxt "@info:tooltip"
+msgid "Aborts all currently running tests."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3703
+msgctxt "@info:tooltip"
+msgid "Clears all results of a previous test run."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3711
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Run %1"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3722
+msgctxt "@action:inmenu"
+msgid "&Run Complete Test Case"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3750
+msgctxt "@info:tooltip"
+msgid "Use this project as the active project"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3759
+msgctxt "@info:tooltip"
+msgid "Continue script execution until the next statement"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3766
+msgctxt "@info:tooltip"
+msgid "Continue script execution until the next statement in the same context."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3773
+msgctxt "@info:tooltip"
+msgid "Continue script execution until the current function gets left."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3779
+msgctxt "@info:tooltip"
+msgid "Interrupt script execution."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3787
+msgctxt "@info:tooltip"
+msgid "Continue script execution until the current cursor position is reached"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3794
+msgctxt "@info:tooltip"
+msgid "Continue script execution, only interrupt on breakpoints or uncaught exceptions."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3800
+msgctxt "@info:tooltip"
+msgid "Abort script execution"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3806
+msgctxt "@info:tooltip"
+msgid "Toggle breakpoint for the current line"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3811
+msgctxt "@info:tooltip"
+msgid "Removes all breakpoints"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3817
+msgctxt "@info:tooltip"
+msgid "Runs a function of the script."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3827
+msgctxt "@info:tooltip"
+msgid "Runs the script function 'getTimetable()'"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3832
+msgctxt "@info:tooltip"
+msgid "Runs the script function 'getStopSuggestions()'"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3837
+msgctxt "@info:tooltip"
+msgid "Runs the script function 'getStopSuggestions()' with a geo position as argument"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3843
+msgctxt "@info:tooltip"
+msgid "Runs the script function 'getJourneys()'"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3849
+msgctxt "@info:tooltip"
+msgid "Runs a function of the script in a debugger."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3859
+msgctxt "@info:tooltip"
+msgid "Runs the script function 'getTimetable()' in a debugger"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3865
+msgctxt "@info:tooltip"
+msgid "Runs the script function 'getStopSuggestions()' in a debugger"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3871
+msgctxt "@info:tooltip"
+msgid "Runs the script function 'getStopSuggestions()' in a debugger with a geo position as argument"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:3877
+msgctxt "@info:tooltip"
+msgid "Runs the script function 'getJourneys()' in a debugger"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:4316
+msgctxt "@ịnfo"
+msgid "The provider must be installed before the GTFS feed can be imported."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:4384
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<title>Delete GTFS database</title>"
+"<para>Do you really want to delete the GTFS database? You will need to import the GTFS feed again to use this service provider again.</para>"
+"<para>By deleting the database %1 disk space get freed.</para>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:4650
+#, kde-format
+msgctxt "@info"
+msgid "Test \"%1\" was aborted for %2."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:4655
+#, kde-format
+msgctxt "@info"
+msgid "Test \"%1\" finished with warnings for %2."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:4659
+#, kde-format
+msgctxt "@info"
+msgid "Test \"%1\" was successful for %2."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:4664
+#, kde-format
+msgctxt "@info"
+msgid "Test \"%1\" failed for %2."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:4685
+#, kde-format
+msgctxt "@info"
+msgid "<para><emphasis>Begin child job:</emphasis> %1 (%2)</para>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:4689
+#, kde-format
+msgctxt "@info"
+msgid "<para><emphasis strong='1'>Begin:</emphasis> %1 (%2)</para>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:4720
+#, kde-format
+msgctxt "@info"
+msgid "<para><emphasis>End child job:</emphasis> %1, result: %2 (%3)</para>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:4724
+#, kde-format
+msgctxt "@info"
+msgid "<para><emphasis strong='1'>End:</emphasis> %1, result: %2 (%3)</para>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:4733
+#, kde-format
+msgctxt "@info"
+msgid "Error: <message>%1</message>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:4735
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Error: <message>%1</message><nl />"
+"Backtrace: <message>%2</message>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:4759
+#, kde-format
+msgctxt "@info"
+msgid "Script execution has finished without results and returned <icode>%1</icode>."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:4763
+msgctxt "@info"
+msgid "Script execution has finished without results."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:4768
+#, kde-format
+msgctxt "@info"
+msgid "Script execution has finished with %1 result and returned <icode>%2</icode>."
+msgid_plural "Script execution has finished with %1 results and returned <icode>%2</icode>."
+msgstr[0] ""
+msgstr[1] ""
+
+#. +> trunk
+#: project.cpp:4774
+#, kde-format
+msgctxt "@info"
+msgid "Script execution has finished with %1 result."
+msgid_plural "Script execution has finished with %1 results."
+msgstr[0] ""
+msgstr[1] ""
+
+#. +> trunk
+#: project.cpp:4902
 msgctxt "@info/plain"
 msgid "Departures"
 msgstr "Affohrten"
 
 #. +> trunk
-#: timetablemate.cpp:2240
+#: project.cpp:4903
 msgctxt "@info/plain"
 msgid "Arrivals"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:2243 timetablemate.cpp:2271 timetablemate.cpp:2301
+#: project.cpp:4906 project.cpp:4953 project.cpp:5035
 msgctxt "@info"
 msgid "City:"
 msgstr "Oort:"
 
 #. +> trunk
-#: timetablemate.cpp:2245
+#: project.cpp:4908
 msgctxt "@info"
 msgid "Stop Name:"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:2246
+#: project.cpp:4909
 msgctxt "@info"
 msgid "Data Type:"
 msgstr "Datentyp:"
 
 #. +> trunk
-#: timetablemate.cpp:2247 timetablemate.cpp:2305
+#: project.cpp:4910 project.cpp:5039
 msgctxt "@info"
 msgid "Time:"
 msgstr "Tiet:"
 
 #. +> trunk
-#: timetablemate.cpp:2273
+#: project.cpp:4955
 msgctxt "@info"
 msgid "Partial Stop Name:"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:2297
+#: project.cpp:4990
+msgctxt "@info"
+msgid "Longitude:"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:4991
+msgctxt "@info"
+msgid "Latitude:"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:4992
+msgctxt "@info"
+msgid "Distance:"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5011
+msgctxt "@info"
+msgid "Cannot use Marble widgets for latitude/longitude input."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5031
 msgctxt "@info/plain"
 msgid "Departing at Given Time"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:2298
+#: project.cpp:5032
 msgctxt "@info/plain"
 msgid "Arriving at Given Time"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:2303
+#: project.cpp:5037
 msgctxt "@info"
 msgid "Start Stop Name:"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:2304
+#: project.cpp:5038
 msgctxt "@info"
 msgid "Target Stop Name:"
 msgstr ""
 
 #. +> trunk
-#: timetablemate.cpp:2306
+#: project.cpp:5040
 msgctxt "@info"
 msgid "Meaning of Time:"
 msgstr ""
 
-#. i18n: ectx: Menu (file)
 #. +> trunk
-#: timetablemateui.rc:4
-msgid "&File"
-msgstr ""
-
-#. i18n: ectx: Menu (edit)
-#. +> trunk
-#: timetablemateui.rc:20
-msgid "&Edit"
-msgstr ""
-
-#. i18n: ectx: Menu (view)
-#. +> trunk
-#: timetablemateui.rc:25
-msgid "&View"
-msgstr ""
-
-#. i18n: ectx: Menu (tools)
-#. +> trunk
-#: timetablemateui.rc:34
-msgid "&Tools"
+#: project.cpp:5170
+msgctxt "@info Shown in project output, %1: Current time"
+msgid "<emphasis>Statistics:</emphasis>"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:66
+#: project.cpp:5173
+#, kde-format
+msgctxt "@info %1 is a formatted duration string"
+msgid "- %1 spent for script execution"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5178
+#, kde-format
+msgctxt "@info %1 is a formatted duration string"
+msgid "- %1 interrupted"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5184
+#, kde-format
+msgctxt "@info %1 is a formatted duration string"
+msgid "- %1 spent waiting for signals (eg. asynchronous network requests)"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5190
+#, kde-format
+msgctxt "@info %1 is a formatted duration string"
+msgid "- %1 spent for synchronous downloads"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5199
+#, kde-format
+msgctxt "@info %1 is a formatted byte size string"
+msgid "- %1 downloaded in asynchronous requests"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5203
+#, kde-format
+msgctxt "@info %1 is a formatted byte size string"
+msgid "- %1 downloaded in synchronous requests"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5209
+#, kde-format
+msgctxt "@info %1 is a formatted byte size string"
+msgid "%1 in asynchronous requests"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5217
+#, kde-format
+msgctxt "@info 1 is a formatted byte size string"
+msgid "%1 in synchronous requests"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5222
+#, kde-format
+msgctxt "@info %1 is a formatted byte size string, %2 a translated details string (how much was downloaded in synchronous/asynchronous requests)"
+msgid "- %1 downloaded (%2)"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5239
+msgctxt "@info"
+msgid "(Debugger aborted)"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5245
+#, kde-format
+msgctxt "@info"
+msgid "Waiting for a signal (%1)"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5251
+#, kde-format
+msgctxt "@info"
+msgid "Signal received, waiting time: %1 (%2)"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5262
+#, kde-format
+msgctxt "@info For the script output dock"
+msgid "<emphasis strong='1'>Uncaught exception at %1:</emphasis> <message>%2</message>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5268
+#, kde-format
+msgctxt "@info For the script output dock"
+msgid "<emphasis strong='1'>Uncaught exception in script <filename>%1</filename> at %2:</emphasis> <message>%3</message>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5486
+msgctxt "@info"
+msgid "Cannot create Plasma preview"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5510
+msgctxt "@info"
+msgid "Cannot create web widget"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5531
+msgctxt "@info"
+msgid "Cannot create dashboard widget"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5553 project.cpp:5632 project.cpp:5680
+msgctxt "@info"
+msgid "Service katepart.desktop not found"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5597
+msgctxt "@info"
+msgid "Could not create GTFS database tab"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5684
+#, kde-format
+msgctxt "@info"
+msgid "The external script file <filename>%1</filename> could not be found."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5690
+#, kde-format
+msgctxt "@info"
+msgid "The external script file <filename>%1</filename> could not be opened."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5997
+msgctxt "@info/plain"
+msgid "JavaScript Template"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5998
+msgctxt "@info/plain"
+msgid "JavaScript HAFAS Template"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:5999
+msgctxt "@info/plain"
+msgid "Simple Ruby Template"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:6000
+msgctxt "@info/plain"
+msgid "Simple Python Template"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:6002
+msgctxt "@title:window"
+msgid "Script Template"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:6003
+msgctxt "@info"
+msgid "Choose a template for the new script"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:6107
+msgctxt "@info"
+msgid "Rendering Provider Preview..."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:6171
+msgctxt "@ịnfo"
+msgid "The provider must be installed before publishing it."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:6177
+msgctxt "@ịnfo"
+msgid "Cannot publish while tests are running"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:6187
+msgctxt "@ịnfo"
+msgid "An updated version of the GTFS feed is available. Please import the new version into the database before publishing your plugin."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:6194
+#, kde-format
+msgctxt "@ịnfo"
+msgid "Wait for the GTFS feed import to finish before publishing your plugin (%1%)."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:6200
+#, kde-format
+msgctxt "@ịnfo"
+msgid "There was an error importing the GTFS feed: <message>%1</message>. Fix this before publishing your plugin."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:6207
+msgctxt "@ịnfo"
+msgid "Please import the GTFS feed before publishing your plugin."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:6231
+#, kde-format
+msgctxt "@ịnfo"
+msgid "The %1 test case did not finish successfully. Please fix it using the <interface>Project Settings</interface> dialog before publishing your plugin."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:6244
+msgctxt "@ịnfo"
+msgid "A sample stop is needed to generate a preview image of the provider being used in the PublicTransport applet. Please add at least one sample stop using the <interface>Project Settings</interface> dialog before publishing your plugin."
+msgstr ""
+
+#. +> trunk
+#: project.cpp:6269
+msgctxt "@info"
+msgid ""
+"<title>Publish Your Provider Plugin</title>"
+"<para>Please make sure your plugin is working and run all tests with it before publishing your plugin.</para>"
+"<para>The first preview image should be a map showing supported regions. The second preview should have been generated automatically and show the PublicTransport applet using this provider plugin. <warning>You need to install the provider and make it ready (eg. import the GTFS feed) for the preview image to be generated correctly.</warning></para>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:6299 project.cpp:6320
+#, kde-format
+msgctxt "@info"
+msgid "Could not create upload file <filename>%1</filename>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:6442
+msgctxt "@info:tooltip"
+msgid "Project not saved"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:6448
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Project is opened from local installation directory at <filename>%1</filename>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:6451
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Project is opened from global installation directory at <filename>%1</filename>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:6455
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Project saved at <filename>%1</filename>"
+msgstr ""
+
+#. +> trunk
+#: project.cpp:6485
+#, fuzzy
+#| msgctxt "@info:status"
+#| msgid "No syntax errors found."
+msgctxt "@info"
+msgid "Syntax errors resolved"
+msgstr "Keen Syntaxfehlers opdeckt."
+
+#. +> trunk
+#: projectmodel.cpp:152
+msgctxt "@info/plain"
+msgid "Dashboard"
+msgstr ""
+
+#. +> trunk
+#: projectmodel.cpp:156
+#, fuzzy
+#| msgctxt "@title:tab"
+#| msgid "&Script"
+msgctxt "@info/plain"
+msgid "Script File"
+msgstr "&Skript"
+
+#. +> trunk
+#: projectmodel.cpp:165
+msgctxt "@info/plain"
+msgid "GTFS database"
+msgstr ""
+
+#. +> trunk
+#: projectmodel.cpp:169
+msgctxt "@info/plain"
+msgid "Project Source XML File (experts)"
+msgstr ""
+
+#. +> trunk
+#: projectmodel.cpp:170
+#, kde-format
+msgctxt "@info/plain"
+msgid "%1 (experts)"
+msgstr ""
+
+#. +> trunk
+#: projectmodel.cpp:176
+#, fuzzy
+#| msgctxt "@title:tab"
+#| msgid "&Preview"
+msgctxt "@info/plain"
+msgid "Plasma Preview"
+msgstr "&Vöransicht"
+
+#. +> trunk
+#: projectmodel.cpp:178
+msgctxt "@info/plain"
+msgid "Service Provider Home Page"
+msgstr ""
+
+#. +> trunk
+#: projectmodel.cpp:220
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "The dashboard of the project %1."
+msgstr ""
+
+#. +> trunk
+#: projectmodel.cpp:224
+msgctxt "@info:tooltip"
+msgid "Create/edit the projects script."
+msgstr ""
+
+#. +> trunk
+#: projectmodel.cpp:226
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "View/edit included script <filename>%1</filename>."
+msgstr ""
+
+#. +> trunk
+#: projectmodel.cpp:235
+msgctxt "@info:tooltip"
+msgid "Shows the GTFS database and allows to start its import from the GTFS feed."
+msgstr ""
+
+#. +> trunk
+#: projectmodel.cpp:242
+msgctxt "@info:tooltip"
+msgid "Edit project settings directly in the XML source document. Intended for experts, normally the settings dialog should be used instead."
+msgstr ""
+
+#. +> trunk
+#: projectmodel.cpp:246
+msgctxt "@info:tooltip"
+msgid "Test the project in a PublicTransport applet in a Plasma preview"
+msgstr ""
+
+#. +> trunk
+#: projectmodel.cpp:250
+msgctxt "@info:tooltip"
+msgid "Show the service providers home page."
+msgstr ""
+
+#. +> trunk
+#: projectsettingsdialog.cpp:85
+msgctxt "@title:window"
+msgid "Project Settings"
+msgstr ""
+
+#. +> trunk
+#: projectsettingsdialog.cpp:88
+msgctxt "@info/plain"
+msgid "Check"
+msgstr ""
+
+#. +> trunk
+#: projectsettingsdialog.cpp:156
 msgctxt "@info"
 msgid "Replace with:"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:125 timetablemateview.cpp:167
-msgid "Add &Stop Name Placeholder"
-msgstr ""
-
-#. +> trunk
-#: timetablemateview.cpp:129
-msgid "Add &City Name Placeholder"
-msgstr ""
-
-#. +> trunk
-#: timetablemateview.cpp:133
-msgid "Add &Departure Date Placeholder"
-msgstr ""
-
-#. +> trunk
-#: timetablemateview.cpp:137 timetablemateview.cpp:158
-msgid "Add &Departure Time Placeholder"
-msgstr ""
-
-#. +> trunk
-#: timetablemateview.cpp:141
-msgid "Add Departure/&Arrival Placeholder"
-msgstr ""
-
-#. +> trunk
-#: timetablemateview.cpp:150
-msgid "Add &Start Stop Name Placeholder"
-msgstr ""
-
-#. +> trunk
-#: timetablemateview.cpp:154
-msgid "Add &Target Stop Name Placeholder"
-msgstr ""
-
-#. +> trunk
-#: timetablemateview.cpp:192
+#: projectsettingsdialog.cpp:223
 msgctxt "@item:listbox"
 msgid "Unknown"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:194
+#: projectsettingsdialog.cpp:225
 msgctxt "@item:listbox"
 msgid "Tram"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:196
+#: projectsettingsdialog.cpp:227
 msgctxt "@item:listbox"
 msgid "Bus"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:198
+#: projectsettingsdialog.cpp:229
 msgctxt "@item:listbox"
 msgid "Subway"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:201
+#: projectsettingsdialog.cpp:231
 msgctxt "@item:listbox"
 msgid "Interurban Train"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:203
+#: projectsettingsdialog.cpp:233
 msgctxt "@item:listbox"
 msgid "Metro"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:206
+#: projectsettingsdialog.cpp:235
 msgctxt "@item:listbox"
 msgid "Trolley Bus"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:209
+#: projectsettingsdialog.cpp:237
 msgctxt "@item:listbox"
 msgid "Regional Train"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:212
+#: projectsettingsdialog.cpp:239
 msgctxt "@item:listbox"
 msgid "Regional Express Train"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:215
+#: projectsettingsdialog.cpp:242
 msgctxt "@item:listbox"
 msgid "Interregional Train"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:218
+#: projectsettingsdialog.cpp:245
 msgctxt "@item:listbox"
 msgid "Intercity/Eurocity Train"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:221
+#: projectsettingsdialog.cpp:248
 msgctxt "@item:listbox"
 msgid "Intercity Express Train"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:223
+#: projectsettingsdialog.cpp:251
 msgctxt "@item:listbox"
 msgid "Ferry"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:225
+#: projectsettingsdialog.cpp:253
 msgctxt "@item:listbox"
 msgid "Ship"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:227
+#: projectsettingsdialog.cpp:255
 msgctxt "@item:listbox"
 msgid "Plane"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:294
+#: projectsettingsdialog.cpp:262
 msgctxt "@info"
-msgid "The PublicTransport data engine currently only supports version '1.0'."
+msgid "Sample &Longitude:"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:448 timetablemateview.cpp:505
+#: projectsettingsdialog.cpp:263
+msgctxt "@info"
+msgid "Sample &Latitude:"
+msgstr ""
+
+#. +> trunk
+#: projectsettingsdialog.cpp:382
+msgctxt "@info"
+msgid "All settings are valid"
+msgstr ""
+
+#. +> trunk
+#: projectsettingsdialog.cpp:630
+#, kde-format
+msgctxt "@info"
+msgid "The new changelog entry references a newer version than the current project version. Do you want to update the project version to %1?"
+msgstr ""
+
+#. +> trunk
+#: projectsettingsdialog.cpp:647
+msgctxt "@info/plain Default changelog entry for the first version"
+msgid "Initial version"
+msgstr ""
+
+#. +> trunk
+#: projectsettingsdialog.cpp:747 projectsettingsdialog.cpp:812
 msgctxt "@info/plain"
 msgid "Please save the XML file first. The script file needs to be in the same folder."
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:456
-msgctxt "@info"
-msgid "Script Type"
-msgstr ""
-
-#. +> trunk
-#: timetablemateview.cpp:474
+#: projectsettingsdialog.cpp:763
 #, kde-format
 msgctxt "@info/plain"
 msgid ""
@@ -1815,31 +2700,1170 @@ msgid ""
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:476
+#: projectsettingsdialog.cpp:765
 msgctxt "@title:window"
 msgid "File Already Exists"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:488
+#: projectsettingsdialog.cpp:777
 #, kde-format
 msgctxt "@info/plain"
 msgid "A new script file with the name <filename>%1</filename> could not be created."
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:531
+#: projectsettingsdialog.cpp:785
+msgctxt "@title:window"
+msgid "Choose Script Type"
+msgstr ""
+
+#. +> trunk
+#: projectsettingsdialog.cpp:785
+msgctxt "@info"
+msgid "Script Type"
+msgstr ""
+
+#. +> trunk
+#: projectsettingsdialog.cpp:839
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:532
+#: projectsettingsdialog.cpp:840
 msgctxt "@info"
 msgid "Script File for Parsing Documents"
 msgstr ""
 
 #. +> trunk
-#: timetablemateview.cpp:651
+#: projectsettingsdialog.cpp:876
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<title>Invalid Provider Plugin Format Version</title>"
+"<para>The provider plugin format version has been set to <emphasize strong='1'>1.1</emphasize>, because the specified version <emphasize strong='1'>%1</emphasize> is not supported.</para>"
+"<para>Please make sure that the plugin complies with that version and update it if necessary.</para>"
+"<para><note>You can cancel the settings dialog to not change anything.</note></para>"
+msgstr ""
+
+#. +> trunk
+#: projectsettingsdialog.cpp:975
 msgid "Settings changed"
 msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:137
+msgctxt "@info/plain"
+msgid "You need to specify a name for your project"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:141
+msgctxt "@info"
+msgid ""
+"<title>You need to specify a name for your project in the project settings</title>"
+" "
+"<para>Applets show this name in a service provider selector widget.</para>"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:159
+msgctxt "@info/plain"
+msgid "You should specify a version of your project"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:162
+msgctxt "@info"
+msgid ""
+"<title>Project Version Missing</title>"
+"<para>This helps to distinguish between different versions and makes it possible to say for example: \"You need at least version 1.3 of that service provider plugin for that feature to work\". Open the project settings to add a <interface>Version</interface>.</para>"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:177 serviceproviderdatatester.cpp:216
+msgctxt "@info/plain"
+msgid "The version string is invalid"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:180 serviceproviderdatatester.cpp:219
+msgctxt "@info"
+msgid "<title>The version string is invalid</title>"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:199
+msgctxt "@info/plain"
+msgid "Only provider plugin format version 1.1 is currently supported."
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:203
+msgctxt "@info"
+msgid ""
+"<title>Unsupported Plugin Format Version</title>"
+"<para>The only currently supported provider plugin format version is 1.1.</para>"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:236
+msgctxt "@info/plain"
+msgid "You should provide your email address as author of the project"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:241
+msgctxt "@info"
+msgid ""
+"<title>You should provide your email address as author of the project</title>"
+" "
+"<para>You may create a new address if you do not want to use your private one. Without an email address, no one can contact you if something is wrong with your project. Open the project settings and specify your <interface>E-Mail</interface> address.</para>"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:257
+msgctxt "@info/plain"
+msgid "The email address is invalid"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:260
+msgctxt "@info"
+msgid "<title>The email address is invalid</title>"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:277
+msgctxt "@info/plain"
+msgid "You should provide your name as author of the project"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:282
+msgctxt "@info"
+msgid ""
+"<title>You should provide your name as author of the project</title>"
+" "
+"<para>Open the project settings and specify an <interface>Author</interface>.</para>"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:301
+msgctxt "@info/plain"
+msgid "You should provide a short version of your name as author of the project"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:306
+msgctxt "@info"
+msgid ""
+"<title>You should provide a short version of your name as author of the project</title>"
+" "
+"<para>Open the project settings and specify a <interface>Short Author Name</interface>.</para>"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:324
+msgctxt "@info/plain"
+msgid "You should provide the URL to the home page of the service provider"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:329
+msgctxt "@info"
+msgid ""
+"<title>You should provide the URL to the home page of the service provider</title>"
+" "
+"<para>Since the service providers are running servers for the timetable service they will want to get some credit. Applets should show a link to the home page. Open the project settings and add a <interface>Home Page URL</interface>.</para>"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:348
+msgctxt "@info/plain"
+msgid "You should provide a short version of the URL to the home page of the service provider"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:353
+msgctxt "@info"
+msgid ""
+"<title>You should provide a short version of the URL to the home page of the service provider</title>"
+" "
+"<para>Applets may want to show the short URL as display text for the home page link, to save space. The result would be that nothing is shown. Open the project settings to add a <interface>Short URL</interface>.</para>"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:373
+msgctxt "@info/plain"
+msgid "You should give a description for your project"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:377
+msgctxt "@info/plain"
+msgid ""
+"<title>You should give a description for your project</title>"
+" "
+"<para>Describe what cities/countries/vehicles are supported and what limitations there possibly are when using the service provider. Open the project settings to add a <interface>Description</interface>.</para>"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:395
+msgctxt "@info/plain"
+msgid "No script file created for the project"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:399
+msgctxt "@info/plain"
+msgid ""
+"<title>No script file created for the project</title>"
+" "
+"<para>The script does the actual work of the project, ie. it requests and parses documents from the service provider. Open the script tab to create a new script from a template, implement the functions and save it.</para>"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:410
+#, kde-format
+msgctxt "@info/plain"
+msgid "Script file does not exist: <filename>%1</filename>"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:427
+msgctxt "@info/plain"
+msgid "No GTFS feed URL set for the project"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:435
+msgctxt "@info/plain"
+msgid "GTFS feed URL is invalid"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:457
+msgctxt "@info/plain"
+msgid "GTFS-realtime URL is invalid"
+msgstr ""
+
+#. +> trunk
+#: serviceproviderdatatester.cpp:477
+#, kde-format
+msgctxt "@info/plain"
+msgid "No such time zone found: %1"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:342
+msgctxt "@info/plain"
+msgid "Not Started"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:344
+msgctxt "@info/plain"
+msgid "Not Finished"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:346
+msgctxt "@info/plain"
+msgid "Delegated"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:348
+msgctxt "@info/plain"
+msgid "Disabled"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:350
+msgctxt "@info/plain"
+msgid "Not Applicable"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:352
+msgctxt "@info/plain"
+msgid "Running"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:354
+#, fuzzy
+#| msgctxt "@title:tab"
+#| msgid "&Accessor"
+msgctxt "@info/plain"
+msgid "Success"
+msgstr "&Togrieper"
+
+#. +> trunk
+#: testmodel.cpp:356
+msgctxt "@info/plain"
+msgid "Warnings"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:358
+msgctxt "@info/plain"
+msgid "Aborted"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:361
+msgctxt "@info/plain"
+msgid "Failed"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:475
+msgctxt "@info/plain"
+msgid "Outdated"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:598
+#, kde-format
+msgctxt "@info/plain Always plural"
+msgid "%1 times: %2"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:780
+msgctxt "@title:column"
+msgid "Name"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:782
+msgctxt "@title:column"
+msgid "State"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:784
+msgctxt "@title:column"
+msgid "Explanation"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:919
+msgctxt "@info/plain"
+msgid "Only for scripted providers"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:922
+msgctxt "@info"
+msgid ""
+"<title>Test not Applicable</title>"
+" "
+"<para>This test is only applicable for scripted provider plugins.</para>"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:937
+msgctxt "@info/plain"
+msgid "Only for GTFS providers"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:940
+msgctxt "@info"
+msgid ""
+"<title>Test not Applicable</title>"
+" "
+"<para>This test is only applicable for GTFS provider plugins.</para>"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1089
+msgctxt "@info/plain"
+msgid "Project Settings Test Case"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1091
+msgctxt "@info/plain"
+msgid "Script Execution Test Case"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1093
+msgctxt "@info/plain"
+msgid "GTFS Test Case"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1104
+msgctxt "@info/plain"
+msgid "Name Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1106
+msgctxt "@info/plain"
+msgid "Version Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1108
+msgctxt "@info/plain"
+msgid "File Version Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1110
+msgctxt "@info/plain"
+msgid "Author Name Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1112
+msgctxt "@info/plain"
+msgid "Short Author Name Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1114
+msgctxt "@info/plain"
+msgid "Email Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1116
+msgctxt "@info/plain"
+msgid "URL Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1118
+msgctxt "@info/plain"
+msgid "Short URL Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1120
+msgctxt "@info/plain"
+msgid "Time Zone Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1122
+#, fuzzy
+#| msgctxt "@info Label for the description of a changelog entry"
+#| msgid "Description:"
+msgctxt "@info/plain"
+msgid "Description Test"
+msgstr "Beschrieven:"
+
+#. +> trunk
+#: testmodel.cpp:1124
+msgctxt "@info/plain"
+msgid "Script File Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1126
+msgctxt "@info/plain"
+msgid "GTFS Feed URL Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1128
+msgctxt "@info/plain"
+msgid "GTFS-realtime Updates URL Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1130
+msgctxt "@info/plain"
+msgid "GTFS-realtime Alerts URL Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1133
+msgctxt "@info/plain"
+msgid "Load Script Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1135
+#, fuzzy
+#| msgctxt "@info/plain"
+#| msgid "Departures"
+msgctxt "@info/plain"
+msgid "Departure Test"
+msgstr "Affohrten"
+
+#. +> trunk
+#: testmodel.cpp:1137
+msgctxt "@info/plain"
+msgid "Arrival Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1139
+msgctxt "@info/plain"
+msgid "Additional Data Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1141
+msgctxt "@info/plain"
+msgid "Stop Suggestion Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1143
+msgctxt "@info/plain"
+msgid "Stops by Geo Position Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1145
+msgctxt "@info/plain"
+msgid "Journey Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1147
+#, fuzzy
+#| msgctxt "@info/plain"
+#| msgid "Departures"
+msgctxt "@info/plain"
+msgid "Features Test"
+msgstr "Affohrten"
+
+#. +> trunk
+#: testmodel.cpp:1150
+msgctxt "@info/plain"
+msgid "GTFS Feed Exists Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1152
+msgctxt "@info/plain"
+msgid "GTFS-realtime Updates Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1154
+msgctxt "@info/plain"
+msgid "GTFS-realtime Alerts Test"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1166
+msgctxt "@info/plain"
+msgid "Tests project settings for validity"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1168
+msgctxt "@info/plain"
+msgid "Runs script functions and tests collected data"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1170
+msgctxt "@info/plain"
+msgid "Test GTFS feeds"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1181
+msgctxt "@info/plain"
+msgid "Tests for a valid name"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1183
+msgctxt "@info/plain"
+msgid "Tests for a valid version string"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1185
+msgctxt "@info/plain"
+msgid "Tests for a valid engine plugin format version string"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1187
+msgctxt "@info/plain"
+msgid "Tests for a valid author name"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1189
+msgctxt "@info/plain"
+msgid "Tests for a valid short author name string"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1191
+msgctxt "@info/plain"
+msgid "Tests for a valid email address"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1193
+msgctxt "@info/plain"
+msgid "Tests for a valid URL to the homepage of the service provider"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1195
+msgctxt "@info/plain"
+msgid "Tests for a valid short version of URL"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1197
+msgctxt "@info/plain"
+msgid "Tests for a valid description"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1199
+msgctxt "@info/plain"
+msgid "Tests for a valid or empty time zone"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1201
+msgctxt "@info/plain"
+msgid "Tests for a valid script file"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1203
+msgctxt "@info/plain"
+msgid "Tests for a valid GTFS feed URL"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1205
+msgctxt "@info/plain"
+msgid "Tests for a valid GTFS-realtime updates URL"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1207
+msgctxt "@info/plain"
+msgid "Tests for a valid GTFS-realtime alerts URL"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1211
+msgctxt "@info/plain"
+msgid "Tries to load the script, fails on syntax errors"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1213
+#, kde-format
+msgctxt "@info/plain"
+msgid "Runs the %1() script function and tests collected departure data"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1216
+#, kde-format
+msgctxt "@info/plain"
+msgid "Runs the %1() script function and tests collected arrival data"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1219
+#, kde-format
+msgctxt "@info/plain"
+msgid "Runs the %1() script function and tests collected additional data"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1222
+#, kde-format
+msgctxt "@info/plain"
+msgid "Runs the %1() script function with a stop name part as argument and tests collected stop suggestions"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1226
+#, kde-format
+msgctxt "@info/plain"
+msgid "Runs the %1() script function with a geo position as argument and tests collected stop suggestions"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1230
+#, kde-format
+msgctxt "@info/plain"
+msgid "Runs the %1() script function and tests collected journey data"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1233
+#, kde-format
+msgctxt "@info/plain"
+msgid "Runs the %1() script function and tests the returned list of strings, which should name TimetableInformation enumerables"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1249
+msgctxt "@info/plain"
+msgid "Checks if the feed at the given URL exists"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1251
+msgctxt "@info/plain"
+msgid "Tests GTFS-realtime updates, if used"
+msgstr ""
+
+#. +> trunk
+#: testmodel.cpp:1253
+msgctxt "@info/plain"
+msgid "Tests GTFS-realtime alerts, if used"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:226
+msgctxt "@info"
+msgid ""
+"<title>Initialization Error</title>"
+"<para>There seems to be a problem with your installation. The UI will not be complete and there may be errors if you continue now.</para>"
+"<para><emphasis strong='1'>Possible Solution:</emphasis> Please reinstall TimetableMate and try again.</para>"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:231
+msgctxt "@title:window"
+msgid "Error"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:457
+msgctxt "@info"
+msgid "The following projects could not be opened"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:458
+msgctxt "@title:window"
+msgid "Failed to Open"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:500
+msgctxt "@info"
+msgid ""
+"<title>Last Session Crashed - Sorry</title>"
+"<para><warning>Restoring previously opened projects and tabs might result in another crash.</warning></para>"
+"<para>Do you want to nevertheless restore projects?</para>"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:504
+msgctxt "@title:window"
+msgid "Crash Protection"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:505
+msgctxt "@info/plain"
+msgid "&Restore Projects"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:506
+msgctxt "@info/plain"
+msgid "Do &not Restore Projects"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:725
+msgctxt "@title:menu In-menu title"
+msgid "Left Dock Area"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:730
+msgctxt "@action:inmenu"
+msgid "&Hide Left Dock"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:741
+msgctxt "@title:menu In-menu title"
+msgid "Bottom Dock Area"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:746
+msgctxt "@action:inmenu"
+msgid "&Hide Bottom Dock"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:757
+msgctxt "@title:menu In-menu title"
+msgid "Right Dock Area"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:762
+msgctxt "@action:inmenu"
+msgid "&Hide Right Dock"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:774
+msgctxt "@action"
+msgid "&Docks Shown"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:896 timetablemate.cpp:1607
+msgctxt "@action"
+msgid "&Active Project"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:955
+msgctxt "@info/plain"
+msgid "External Script File"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:974
+msgctxt "@info/plain"
+msgid "Testing"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:982
+#, kde-format
+msgctxt "@info/plain"
+msgid "Debugging (Exception in Line %1)"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:985
+#, kde-format
+msgctxt "@info/plain"
+msgid "Debugger Interrupted at Line %1"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:987
+msgctxt "@info/plain"
+msgid "Debugger Running"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1041
+#, kde-format
+msgctxt "@info"
+msgid "The project '%1' was modified. Do you want to save it now?"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1082
+msgctxt "@info"
+msgid "The following projects were modified. Do you want to save them now?"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1085
+msgctxt "@title:window"
+msgid "Modified Projects"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1143
+msgctxt "@info"
+msgid "The document was modified. Do you want to save it now?"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1144
+msgctxt "@info"
+msgid "Tab contents were modified. Do you want to save it now?"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1234
+msgctxt "@info"
+msgid "The following documents were modified. Do you want to save them now?"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1236
+msgctxt "@info/plain"
+msgid "Save All"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1237
+msgctxt "@info/plain"
+msgid "Do not Save"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1238
+msgctxt "@info/plain"
+msgid "Do not Close"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1301 timetablemate.cpp:2207
+#, kde-format
+msgctxt "@info/plain This string is displayed instead of the full path for globally installed service provider plugins."
+msgid "Global: %1"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1576
+msgctxt "@action"
+msgid "New Project"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1579
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Open &Page"
+msgctxt "@action"
+msgid "Open Project"
+msgstr "&Siet opmaken"
+
+#. +> trunk
+#: timetablemate.cpp:1587
+msgctxt "@action"
+msgid "Save All"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1597
+msgctxt "@action"
+msgid "Open I&nstalled..."
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1602
+msgctxt "@action"
+msgid "&Fetch Project..."
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1638
+msgctxt "@action"
+msgid "Go to &Next Tab"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1643
+msgctxt "@action"
+msgid "Go to &Previous Tab"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1648
+msgctxt "@action"
+msgid "&Close Tab"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1654
+msgctxt "@action"
+msgid "Test all &Projects"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1707
+#, kde-format
+msgctxt "@info/plain"
+msgid "Reached breakpoint at %1"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1719
+#, kde-format
+msgctxt "@info"
+msgid "Uncaught exception in <filename>%1</filename> at %2: <message>%3</message>"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1783
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Create New Provider Plugin</title>"
+"<para>To create a new provider plugin first choose the type of the plugin. Currently <emphasize>Scripted</emphasize> and <emphasize>GTFS</emphasize> (since version 0.11) types are available. Your version of TimetableMate may be compiled without support for one of these types.</para>"
+"<para>The <emphasize>Scripted</emphasize> type can be used for a variety of providers publishing their timetable data in web sites. Helper functions are provided to easily parse HTML sites for timetable data in the script (QtScript, ie. JavaScript, by using the Kross script extension Python and Ruby are also available). The script extension \"qt.xml\" helps parsing XML data sources. For providers using the HAFAS API there is a base script available, use <icode>include( \"base_hafas.js\" );</icode></para>"
+"<para>If a <emphasize>GTFS</emphasize> feed is available a provider plugin can be created much easier, ie. without writing a script. Only the URL to the GTFS feed is needed. <emphasize>GTFS-realtime</emphasize> TripUpdates and Alerts URLs can also be specified.</para>"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1805
+msgctxt "@info/plain"
+msgid "Choose Provider Plugin Type"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:1806
+msgctxt "@info/plain"
+msgid "Create Provider Plugin"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:2173
+msgctxt "@title:window"
+msgid "Open Service Provider Plugin"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:2190
+msgctxt "@info/plain"
+msgid "There are no installed service provider plugins. You need to install the PublicTransport data engine."
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:2216
+msgctxt "@title:window"
+msgid "Open Installed Service Provider Plugin"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:2217
+msgctxt "@info"
+msgid "Installed service provider plugin"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:2277
+msgctxt "@info"
+msgid "The following provider plugins have been fetched. Do you want to open them now?"
+msgstr ""
+
+#. +> trunk
+#: timetablemate.cpp:2289
+#, kde-format
+msgctxt "@info"
+msgid "%1 provider plugin has been fetched to %2"
+msgid_plural "%1 provider plugins have been fetched to %2"
+msgstr[0] ""
+msgstr[1] ""
+
+#. +> trunk
+#: timetablemate.cpp:2313
+msgid "General"
+msgstr "Allgemeen"
+
+#. +> trunk
+#: timetablemate.cpp:2332
+msgctxt "@info"
+msgid ""
+"The <interface>Home Page URL</interface> is empty.<nl/>"
+"Please set it in the project settings dialog first."
+msgstr ""
+
+#. +> trunk
+#: timetablematehelper.cpp:48
+msgctxt "@info/plain"
+msgid "Not installed"
+msgstr ""
+
+#. +> trunk
+#: timetablematehelper.cpp:82
+msgctxt "@info/plain"
+msgid "Script not installed"
+msgstr ""
+
+#. i18n: ectx: Menu (project)
+#. +> trunk
+#: timetablemateui.rc:11
+msgctxt "@title:menu"
+msgid "&Project"
+msgstr ""
+
+#. i18n: ectx: Menu (run)
+#. +> trunk
+#: timetablemateui.rc:37
+msgctxt "@title:menu"
+msgid "&Run"
+msgstr ""
+
+#. i18n: ectx: Menu (test)
+#. +> trunk
+#: timetablemateui.rc:57
+msgctxt "@title:menu"
+msgid "&Test"
+msgstr ""
+
+#. i18n: ectx: Menu (file)
+#. +> trunk
+#: timetablemateui.rc:74
+msgctxt "@title:menu"
+msgid "&File"
+msgstr ""
+
+#. i18n: ectx: Menu (settings)
+#. +> trunk
+#: timetablemateui.rc:87
+msgctxt "@title:menu"
+msgid "&Settings"
+msgstr ""
+
+#. i18n: ectx: ToolBar (runToolBar)
+#. +> trunk
+#: timetablemateui.rc:118
+msgid "Debugger"
+msgstr ""
+
+#~ msgctxt "@action"
+#~ msgid "&Run Script"
+#~ msgstr "Skript &utföhren"
+
+#~ msgctxt "@action"
+#~ msgid "&Previous Function"
+#~ msgstr "&Verleden Funkschoon"
+
+#~ msgctxt "@action"
+#~ msgid "&Next Function"
+#~ msgstr "&Nakamen Funkschoon"
+
+#~ msgctxt "@info:status"
+#~ msgid "Line: %1 Col: %2"
+#~ msgstr "Reeg: %1 Str: %2"
+
+#~ msgctxt "@title:window"
+#~ msgid "Error Report"
+#~ msgstr "Fehlerbericht"
+
+#~ msgctxt "@info"
+#~ msgid "'%1' with value '%2'"
+#~ msgstr "\"%1\" mit Weert \"%2\""
+
+#~ msgctxt "@info"
+#~ msgid "No syntax errors."
+#~ msgstr "Keen Syntaxfehlers"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>Departures:"
+#~ "<list>%1</list>"
+#~ "</para>"
+#~ msgstr ""
+#~ "<para>Affohrten:"
+#~ "<list>%1</list>"
+#~ "</para>"
+
+#~ msgctxt "@title:window"
+#~ msgid "Result"
+#~ msgstr "Resultaat"

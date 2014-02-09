@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevcppdebugger\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-04-18 08:39+0200\n"
+"POT-Creation-Date: 2014-01-17 08:54+0100\n"
 "PO-Revision-Date: 2012-01-25 22:29+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nds\n"
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
@@ -31,17 +31,7 @@ msgid "Your emails"
 msgstr "s_dibbern@web.de, m.j.wiese@web.de"
 
 #. +> trunk stable
-#: _watchitem.cpp:41
-msgid "Watches"
-msgstr "Beluert"
-
-#. +> trunk stable
-#: _watchitem.cpp:59
-msgid "Recent"
-msgstr "Tolest bruukt"
-
-#. +> trunk stable
-#: breakpointcontroller.cpp:494
+#: breakpointcontroller.cpp:539
 #, kde-format
 msgid ""
 "<br>"
@@ -51,7 +41,7 @@ msgstr ""
 "Oolt Weert: %1"
 
 #. +> trunk stable
-#: breakpointcontroller.cpp:497
+#: breakpointcontroller.cpp:542
 #, kde-format
 msgid ""
 "<br>"
@@ -66,64 +56,100 @@ msgstr ""
 msgid "Debugger Configuration"
 msgstr "Fehlersöker instellen"
 
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#. +> trunk stable
+#: debuggerconfigwidget.ui:26 debuggerplugin.cpp:416
+msgid "Debugger"
+msgstr "Fehlersöker"
+
+#. i18n: ectx: property (text), widget (QLabel, debuggingShell_label)
+#. +> stable
+#: debuggerconfigwidget.ui:83
+msgid "Debugging &shell:"
+msgstr "Fehlersöök-&Konsool:"
+
 #. i18n: ectx: property (text), widget (QLabel, gdbPath_label)
 #. +> trunk stable
-#: debuggerconfigwidget.ui:32
+#: debuggerconfigwidget.ui:38
 msgid "Debugger executable:"
 msgstr "Fehlersöök-Programm:"
 
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_debuggingShell)
+#. i18n: ectx: property (toolTip), widget (QLabel, debuggingShell_label)
+#. +> stable
+#: debuggerconfigwidget.ui:42 debuggerconfigwidget.ui:77
+msgid "Run gdb in a special shell (mainly for automake projects)"
+msgstr "\"gdb\" binnen en besünner Konsool utföhren (normalerwies för Automake-Projekten)"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_debuggingShell)
+#. +> stable
+#: debuggerconfigwidget.ui:45
+msgid "If you want gdb to be executed by a special shell or tool insert it here. The main use-case is for Automake based projects where the application is actually only a script and <b>libtool</b> is needed to get it to run inside gdb."
+msgstr "Wenn en besünner Konsool oder Warktüüch \"gdb\" utföhren schall, denn giff dat hier in. In de Hööftsaak is dat goot för Automake-Projekten, wenn dat Programm bloots en Skript is, dat ahn <b>libtool</b> nich binnen \"gdb\" löppt."
+
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_gdbPath)
 #. +> trunk stable
-#: debuggerconfigwidget.ui:45
+#: debuggerconfigwidget.ui:51
 msgid "Gdb executable"
 msgstr "Programm \"gdb\""
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_gdbPath)
 #. +> trunk stable
-#: debuggerconfigwidget.ui:48
+#: debuggerconfigwidget.ui:54
 msgid "To run \"gdb\" binary from $PATH, leave this field empty. To run custom gdb, for example, for a different architecture, enter the executable name here. You can either run gdb from $PATH, but with a different name (say, \"arm-gdb\"), by typing the name here, or specify full path to the gdb executable."
 msgstr "Wenn sik \"gdb\" över Dien PATH-Variabel finnen lett, bruukst Du hier nix ingeven. Wenn Du en besünner \"gdb\" bruken wullt, a.B för en anner Ünnerbuu, giff hier bitte den Naam vun dat Programm in. Du kannst dit \"gdb\" över de PATH-Variabel opropen, man mit en anner Naam (a.B \"arm-gdb\"), wenn Du den Naam hier ingiffst, oder Du giffst den helen Padd na't \"gdb\"-Programm in."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, debuggingShell_label)
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_debuggingShell)
-#. +> trunk stable
-#: debuggerconfigwidget.ui:61 debuggerconfigwidget.ui:80
-msgid "Run gdb in a special shell (mainly for automake projects)"
-msgstr "\"gdb\" binnen en besünner Konsool utföhren (normalerwies för Automake-Projekten)"
+#. +> trunk
+#: debuggerconfigwidget.ui:67 debuggerconfigwidget.ui:86
+msgid ""
+"<html><head/><body>"
+"<p>If you want gdb to be executed by a special shell script, which for example properly sets the library path, insert it here e.g.: /path/to/script.sh --scriptArguments</p>"
+"<p>Note: your script'll be invoked like this: /path/to/script.sh --scriptArguments debbuger --debuggerArguments. So script.sh <span style=\" font-weight:600;\">must</span> invoke \"debugger\" executable manually.</p>"
+"</body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, debuggingShell_label)
+#. +> trunk
+#: debuggerconfigwidget.ui:73
+#, fuzzy
+#| msgctxt "Shell script to be executed at run time"
+#| msgid "R&un shell script:"
+msgid "&Shell script:"
+msgstr "&Utföhr-Konsoolskript:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, debuggingShell_label)
-#. +> trunk stable
-#: debuggerconfigwidget.ui:64
+#. +> stable
+#: debuggerconfigwidget.ui:80
 msgid "If you want gdb to be executed by a special shell or tool insert it here. The main use-case is for Automake based projects where the application is actually only a script and libtool is needed to get it to run inside gdb."
 msgstr "Wenn en besünner Konsool oder Warktüüch \"gdb\" utföhren schall, denn giff dat hier in. In de Hööftsaak is dat goot för Automake-Projekten, wenn dat Programm bloots en Skript is, dat ahn \"libtool\" nich binnen \"gdb\" löppt."
 
-#. i18n: ectx: property (text), widget (QLabel, debuggingShell_label)
-#. +> trunk stable
-#: debuggerconfigwidget.ui:67
-msgid "Debugging &shell:"
-msgstr "Fehlersöök-&Konsool:"
-
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_debuggingShell)
-#. +> trunk stable
-#: debuggerconfigwidget.ui:83
-msgid "If you want gdb to be executed by a special shell or tool insert it here. The main use-case is for Automake based projects where the application is actually only a script and <b>libtool</b> is needed to get it to run inside gdb."
-msgstr "Wenn en besünner Konsool oder Warktüüch \"gdb\" utföhren schall, denn giff dat hier in. In de Hööftsaak is dat goot för Automake-Projekten, wenn dat Programm bloots en Skript is, dat ahn <b>libtool</b> nich binnen \"gdb\" löppt."
+#. +> trunk
+#: debuggerconfigwidget.ui:89
+msgid ""
+"<html><head/><body>"
+"<p><br/>"
+"</p>"
+"</body></html>"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. +> trunk stable
-#: debuggerconfigwidget.ui:92
+#: debuggerconfigwidget.ui:99
 msgid "Options"
 msgstr "Optschonen"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. +> trunk stable
-#: debuggerconfigwidget.ui:101
+#: debuggerconfigwidget.ui:108
 msgid "Display static &members:"
 msgstr "Faste &Maten wiesen:"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_displayStaticMembers)
 #. +> trunk stable
-#: debuggerconfigwidget.ui:116
+#: debuggerconfigwidget.ui:123
 msgid ""
 "Displaying static members makes GDB slower in\n"
 "producing data within KDE and Qt.\n"
@@ -141,13 +167,13 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. +> trunk stable
-#: debuggerconfigwidget.ui:126
+#: debuggerconfigwidget.ui:133
 msgid "Display &demangled names:"
 msgstr "&Torüchwannelt Naams wiesen:"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_asmDemangle)
 #. +> trunk stable
-#: debuggerconfigwidget.ui:138
+#: debuggerconfigwidget.ui:145
 msgid ""
 "When displaying the disassembled code you\n"
 "can select to see the methods' mangled names.\n"
@@ -160,31 +186,31 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. +> trunk stable
-#: debuggerconfigwidget.ui:148
+#: debuggerconfigwidget.ui:155
 msgid "Start Debugger with:"
 msgstr "Fehlersöker opropen mit:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startWith)
 #. +> trunk stable
-#: debuggerconfigwidget.ui:159
+#: debuggerconfigwidget.ui:166
 msgid "Application Output"
 msgstr "Programm-Utgaav"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startWith)
 #. +> trunk stable
-#: debuggerconfigwidget.ui:164
+#: debuggerconfigwidget.ui:171
 msgid "GDB Console"
 msgstr "GDB-Konsool"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startWith)
 #. +> trunk stable
-#: debuggerconfigwidget.ui:169
+#: debuggerconfigwidget.ui:176
 msgid "Frame Stack"
 msgstr "Rahmenstapel"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox)
 #. +> trunk stable
-#: debuggerconfigwidget.ui:185
+#: debuggerconfigwidget.ui:190
 msgid ""
 "This script is intended for the actual commands needed to connect to a remotely running executable.\n"
 "\tshell sleep 5\twait for remote program to start\n"
@@ -198,44 +224,58 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. +> trunk stable
-#: debuggerconfigwidget.ui:188
+#: debuggerconfigwidget.ui:193
 msgid "Remote Debugging"
 msgstr "Feern-Fehlersöök"
 
-#. i18n: ectx: property (text), widget (QLabel, configGdbScript_label)
-#. +> trunk stable
-#: debuggerconfigwidget.ui:194
-msgid "&Config gdb script:"
-msgstr "&Instellskript för \"gdb\":"
-
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_configGdbScript)
-#. +> trunk stable
-#: debuggerconfigwidget.ui:207
-msgid "Gdb configure script"
-msgstr "Instellenskript för \"gdb\""
-
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_configGdbScript)
-#. +> trunk stable
-#: debuggerconfigwidget.ui:210
-msgid "This script is sourced by gdb when the debugging starts."
-msgstr "Dit Skript warrt vun \"gdb\" inleest un utföhrt, wenn de Fehlersöök anfangt."
+#. i18n: ectx: property (toolTip), widget (QLabel, runShellScript_label)
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_runShellScript)
+#. +> trunk
+#: debuggerconfigwidget.ui:199 debuggerconfigwidget.ui:215
+#, fuzzy
+#| msgid ""
+#| "This shell script is run after the Config gdb script has been sourced by gdb.\n"
+#| "When debugging remotely this script is intended to actually start the remote process.\n"
+#| "[It is expected that the debug executable can be reached on the target, maybe by downloading it as a final build step]\n"
+#| "1) Find a way to execute a command remotely - rsh, ssh, telnet, ...\n"
+#| "2a) Execute \"gdbserver ... application\" on target.\n"
+#| "or if your executable contains the gdb stub\n"
+#| "2b) Execute \"application\" on target."
+msgid ""
+"<html><head/><body>"
+"<p>Script to start remote application</p>"
+"<p></p>"
+"<p>This shell script is run after the Gdb Config script has been sourced by gdb.</p>"
+"<p>It's purpose is to actually start the remote process.</p>"
+"<p>1) Find a way to execute a command remotely - rsh, ssh, telnet, ...</p>"
+"<p>2a) Execute \"gdbserver ... application\" on target.</p>"
+"<p>or if your executable contains the gdb stub:</p>"
+"<p>2b) Execute \"application\" on target.</p>"
+"</body></html>"
+msgstr ""
+"Dit Konsoolskript warrt utföhrt, na dat \"gdb\" sien Instellskript inleest hett.\n"
+"Dit Skript schall bi de Fehlersöök op en anner Reekner den feernen Perzess redig starten.\n"
+"[Verwacht warrt, dat sik dat Fehlersöökprogramm op den feern Reekner faatkriegen lett, a.B. wenn Een dat as lesten Buu-Schritt daallaadt.]\n"
+"1) Kiek en Metood för't Utföhren vun en Befehl op den feern Reekner ut, a.B. mit rsh, ssh, telnet, ...\n"
+"2a) Föhr \"gdbserver ... Programm\" op den Teelreekner ut.\n"
+"2b) Oder föhr \"Programm\" op den Teelreekner ut, wenn dat den \"gdb-stub\" bargt."
 
 #. i18n: ectx: property (text), widget (QLabel, runShellScript_label)
 #. +> trunk stable
-#: debuggerconfigwidget.ui:220
+#: debuggerconfigwidget.ui:202
 msgctxt "Shell script to be executed at run time"
 msgid "R&un shell script:"
 msgstr "&Utföhr-Konsoolskript:"
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_runShellScript)
-#. +> trunk stable
-#: debuggerconfigwidget.ui:233
+#. +> stable
+#: debuggerconfigwidget.ui:215
 msgid "Script to start remote application"
 msgstr "Skript för't Utföhren vun't feerne Programm"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_runShellScript)
-#. +> trunk stable
-#: debuggerconfigwidget.ui:242
+#. +> stable
+#: debuggerconfigwidget.ui:224
 msgid ""
 "This shell script is run after the Config gdb script has been sourced by gdb.\n"
 "When debugging remotely this script is intended to actually start the remote process.\n"
@@ -252,22 +292,77 @@ msgstr ""
 "2a) Föhr \"gdbserver ... Programm\" op den Teelreekner ut.\n"
 "2b) Oder föhr \"Programm\" op den Teelreekner ut, wenn dat den \"gdb-stub\" bargt."
 
-#. i18n: ectx: property (text), widget (QLabel, runGdbScript_label)
-#. +> trunk stable
-#: debuggerconfigwidget.ui:249
-msgctxt "Gdb script to be executed at run time."
-msgid "Run &gdb script:"
-msgstr "Utföhrskript för \"&gdb\":"
+#. i18n: ectx: property (toolTip), widget (QLabel, configGdbScript_label)
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_configGdbScript)
+#. +> trunk
+#: debuggerconfigwidget.ui:225 debuggerconfigwidget.ui:267
+#, fuzzy
+#| msgid "This script is sourced by gdb when the debugging starts."
+msgid ""
+"<html><head/><body>"
+"<p>This script is sourced by gdb when the debugging starts.</p>"
+"</body></html>"
+msgstr "Dit Skript warrt vun \"gdb\" inleest un utföhrt, wenn de Fehlersöök anfangt."
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_configGdbScript)
+#. +> stable
+#: debuggerconfigwidget.ui:274
+msgid "This script is sourced by gdb when the debugging starts."
+msgstr "Dit Skript warrt vun \"gdb\" inleest un utföhrt, wenn de Fehlersöök anfangt."
+
+#. i18n: ectx: property (text), widget (QLabel, configGdbScript_label)
+#. +> trunk
+#: debuggerconfigwidget.ui:228
+#, fuzzy
+#| msgid "Gdb configure script"
+msgid "Gdb &config script:"
+msgstr "Instellenskript för \"gdb\""
+
+#. i18n: ectx: property (text), widget (QLabel, configGdbScript_label)
+#. +> stable
+#: debuggerconfigwidget.ui:231
+msgid "&Config gdb script:"
+msgstr "&Instellskript för \"gdb\":"
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_configGdbScript)
+#. +> stable
+#: debuggerconfigwidget.ui:271
+msgid "Gdb configure script"
+msgstr "Instellenskript för \"gdb\""
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_runGdbScript)
-#. +> trunk stable
-#: debuggerconfigwidget.ui:262
+#. i18n: ectx: property (toolTip), widget (QLabel, runGdbScript_label)
+#. +> trunk
+#: debuggerconfigwidget.ui:241 debuggerconfigwidget.ui:251
+#, fuzzy
+#| msgid ""
+#| "This script is intended for the actual commands needed to connect to a remotely running executable.\n"
+#| "\tshell sleep 5\twait for remote program to start\n"
+#| "\ttarget remote ...\tconnect to the remote debugger\n"
+#| "\tcontinue\t[optional] run debugging to the first breakpoint"
+msgid ""
+"<html><head/><body>"
+"<p>Script to connect with remote application</p>"
+"<p>For example:</p>"
+"<p>\tshell sleep 5\t #wait for remote program to start</p>"
+"<p>\ttarget remote ...\t#connect to the remote debugger</p>"
+"<p>\tcontinue\t#[optional] run debugging to the first breakpoint.</p>"
+"</body></html>"
+msgstr ""
+"Dit Skript is för de Befehlen dacht, de nödig sünd för't Verbinnen na en Programm, dat op en anner Reekner löppt.\n"
+"\tshell sleep 5\ttöven, bet feern Programm start\n"
+"\ttarget remote ...\ttokoppeln na feern Fehlersöker\n"
+"\tcontinue\t[köörwies] Fehlersöök bet eerst Hollpunkt"
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_runGdbScript)
+#. +> stable
+#: debuggerconfigwidget.ui:244
 msgid "Script to connect with remote application"
 msgstr "Skript för't Tokoppeln na't feerne Programm"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_runGdbScript)
-#. +> trunk stable
-#: debuggerconfigwidget.ui:269
+#. +> stable
+#: debuggerconfigwidget.ui:251
 msgid ""
 "This script is sourced by gdb after the two preceding scripts have been executed.\n"
 "This script is intended for the actual commands needed to connect to a remotely running executable.\n"
@@ -281,6 +376,13 @@ msgstr ""
 "\ttarget remote ...\ttokoppeln na feern Fehlersöker\n"
 "\tcontinue\t[köörwies] Fehlersöök bet eerst Hollpunkt."
 
+#. i18n: ectx: property (text), widget (QLabel, runGdbScript_label)
+#. +> trunk stable
+#: debuggerconfigwidget.ui:254
+msgctxt "Gdb script to be executed at run time."
+msgid "Run &gdb script:"
+msgstr "Utföhrskript för \"&gdb\":"
+
 #. +> trunk stable
 #: debuggerplugin.cpp:93
 msgid "GDB Support"
@@ -288,31 +390,40 @@ msgstr "GDB-Ünnerstütten"
 
 #. +> trunk stable
 #: debuggerplugin.cpp:93
-msgid "Support for running apps in GDB"
-msgstr "Ünnerstütten för't Utföhren vun Programmen mit GDB"
+msgid "This plugin provides a frontend for GDB, a source-level debugger for C, C++ and more."
+msgstr ""
 
 #. +> trunk stable
 #: debuggerplugin.cpp:155
-msgid "Disassemble"
-msgstr "Disassembleren"
+#, fuzzy
+#| msgid "Disassemble View"
+msgid "Disassemble/Registers"
+msgstr "Disassembleert"
 
 #. +> trunk stable
-#: debuggerplugin.cpp:159 gdblaunchconfig.cpp:134
+#: debuggerplugin.cpp:159 gdblaunchconfig.cpp:137
 msgid "GDB"
 msgstr "GDB"
 
 #. +> trunk stable
-#: debuggerplugin.cpp:213
+#: debuggerplugin.cpp:165
+#, fuzzy
+#| msgid "Memory view"
+msgid "Memory"
+msgstr "Spiekeransicht"
+
+#. +> trunk stable
+#: debuggerplugin.cpp:200
 msgid "Examine Core File..."
 msgstr "Karndatei bekieken..."
 
 #. +> trunk stable
-#: debuggerplugin.cpp:214
+#: debuggerplugin.cpp:201
 msgid "Examine core file"
 msgstr "Karndatei bekieken"
 
 #. +> trunk stable
-#: debuggerplugin.cpp:215
+#: debuggerplugin.cpp:202
 msgid ""
 "<b>Examine core file</b>"
 "<p>This loads a core file, which is typically created after the application has crashed, e.g. with a segmentation fault. The core file contains an image of the program memory at the time it crashed, allowing you to do a post-mortem analysis.</p>"
@@ -321,17 +432,17 @@ msgstr ""
 "<p>Disse Funkschoon laadt en Karndatei, de normalerwies opstellt warrt, wenn dat Programm afstört is, a.B. mit en Spiekertogriep-Fehler. De Karndatei bargt en Afbild vun den Programmspieker, as he bi den Afstört weer, so dat Du em later noch bekieken kannst.</p>"
 
 #. +> trunk stable
-#: debuggerplugin.cpp:225
+#: debuggerplugin.cpp:212
 msgid "Attach to Process"
 msgstr "Perzess griepen"
 
 #. +> trunk stable
-#: debuggerplugin.cpp:226
+#: debuggerplugin.cpp:213
 msgid "Attach to process..."
 msgstr "Perzess griepen..."
 
 #. +> trunk stable
-#: debuggerplugin.cpp:227
+#: debuggerplugin.cpp:214
 msgid ""
 "<b>Attach to process</b>"
 "<p>Attaches the debugger to a running process.</p>"
@@ -340,18 +451,18 @@ msgstr ""
 "<p>Lett den Fehlersöker en lopen Perzess griepen.</p>"
 
 #. +> trunk stable
-#: debuggerplugin.cpp:259
+#: debuggerplugin.cpp:246
 msgid "KDevelop"
 msgstr "KDevelop"
 
 #. +> trunk stable
-#: debuggerplugin.cpp:332
+#: debuggerplugin.cpp:319
 #, kde-format
 msgid "Evaluate: %1"
 msgstr "%1 utweerten"
 
 #. +> trunk stable
-#: debuggerplugin.cpp:334
+#: debuggerplugin.cpp:321
 msgid ""
 "<b>Evaluate expression</b>"
 "<p>Shows the value of the expression under the cursor.</p>"
@@ -360,13 +471,13 @@ msgstr ""
 "<p>Wiest den Weert vun den Utdruck ünner den Blinker.</p>"
 
 #. +> trunk stable
-#: debuggerplugin.cpp:337
+#: debuggerplugin.cpp:324
 #, kde-format
 msgid "Watch: %1"
 msgstr "%1 beluern"
 
 #. +> trunk stable
-#: debuggerplugin.cpp:339
+#: debuggerplugin.cpp:326
 msgid ""
 "<b>Watch expression</b>"
 "<p>Adds an expression under the cursor to the Variables/Watch list.</p>"
@@ -375,48 +486,43 @@ msgstr ""
 "<p>Föögt den Utdruck ünner den Blinker na't Variabelnfinster ünner \"Beluern\" to.</p>"
 
 #. +> trunk stable
-#: debuggerplugin.cpp:369
+#: debuggerplugin.cpp:356
 msgid "Choose a core file to examine..."
 msgstr "Karndatei för't Bekieken utsöken..."
 
 #. +> trunk stable
-#: debuggerplugin.cpp:376
+#: debuggerplugin.cpp:363
 #, kde-format
 msgid "Examining core file %1"
 msgstr "Karndatei \"%1\" warrt bekeken"
 
 #. +> trunk stable
-#: debuggerplugin.cpp:382
+#: debuggerplugin.cpp:369
 msgid "Debug core file"
 msgstr "Fehlersöök binnen Karndatei"
 
 #. +> trunk stable
-#: debuggerplugin.cpp:390
+#: debuggerplugin.cpp:377
 msgid "Choose a process to attach to..."
 msgstr "Perzess för't Griepen utsöken..."
 
 #. +> trunk stable
-#: debuggerplugin.cpp:399
+#: debuggerplugin.cpp:386
 #, kde-format
 msgid "Not attaching to process %1: cannot attach the debugger to itself."
 msgstr "Perzess %1 lett sik nich griepen: de Fehlersöker kann sik nich sülven griepen."
 
 #. +> trunk stable
-#: debuggerplugin.cpp:407
+#: debuggerplugin.cpp:394
 #, kde-format
 msgid "Attaching to process %1"
 msgstr "Perzess \"%1\" warrt grepen"
 
 #. +> trunk stable
-#: debuggerplugin.cpp:413
+#: debuggerplugin.cpp:400
 #, kde-format
 msgid "Debug process %1"
 msgstr "Fehlersöök in Perzess \"%1\""
-
-#. +> trunk stable
-#: debuggerplugin.cpp:429
-msgid "Debugger"
-msgstr "Fehlersöker"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, DebuggerTracingDialog)
 #. +> trunk stable
@@ -442,7 +548,7 @@ msgstr "Weertbeluern anmaken"
 
 #. i18n: ectx: property (text), widget (QPushButton, cancelButton)
 #. +> trunk stable
-#: debuggertracingdialog.ui:30 memviewdlg.cpp:120
+#: debuggertracingdialog.ui:30 memviewdlg.cpp:101
 msgid "Cancel"
 msgstr "Afbreken"
 
@@ -454,7 +560,7 @@ msgstr "Egen Formaat"
 
 #. i18n: ectx: property (text), widget (QPushButton, okButton)
 #. +> trunk stable
-#: debuggertracingdialog.ui:47 memviewdlg.cpp:117
+#: debuggertracingdialog.ui:47 memviewdlg.cpp:98
 msgid "OK"
 msgstr "OK"
 
@@ -482,7 +588,7 @@ msgid "Expressions to print:"
 msgstr "Utdrück, de Du utgeven wullt:"
 
 #. +> trunk stable
-#: debugjob.cpp:70
+#: debugjob.cpp:80
 #, kde-format
 msgid "No environment group specified, looks like a broken configuration, please check run configuration '%1'. Using default environment group."
 msgstr "Keen Ümgevenkoppel angeven, lett as en schaadhaftig Instellen. Prööv bitte de Utföhr-Instellen \"%1\". De Standard-Ümgevenkoppel warrt ansteed bruukt."
@@ -513,7 +619,7 @@ msgid "Application is paused"
 msgstr "Programm wöör ophollen"
 
 #. +> trunk stable
-#: debugsession.cpp:417
+#: debugsession.cpp:416
 msgid ""
 "<b>GDB exited abnormally</b>"
 "<p>This is likely a bug in GDB. Examine the gdb output window and then stop the debugger"
@@ -522,12 +628,12 @@ msgstr ""
 "<p>Dit is wohrschienlich en Programmfehler binnen \"gdb\". Överprööv dat \"gdb\"-Utgaavfinster un holl denn den Fehlersöker an"
 
 #. +> trunk stable
-#: debugsession.cpp:420
+#: debugsession.cpp:419
 msgid "GDB exited abnormally"
 msgstr "\"gdb\" wöör nich normaal beendt"
 
 #. +> trunk stable
-#: debugsession.cpp:549
+#: debugsession.cpp:548
 #, kde-format
 msgid ""
 "<b>Gdb command sent when debugger is not running</b><br>"
@@ -539,12 +645,12 @@ msgstr ""
 " %1"
 
 #. +> trunk stable
-#: debugsession.cpp:551
+#: debugsession.cpp:550
 msgid "Internal error"
 msgstr "Intern Fehler"
 
 #. +> trunk stable
-#: debugsession.cpp:633
+#: debugsession.cpp:647
 #, kde-format
 msgid ""
 "<b>Invalid debugger command</b><br>"
@@ -554,56 +660,45 @@ msgstr ""
 "%1"
 
 #. +> trunk stable
-#: debugsession.cpp:634
+#: debugsession.cpp:648
 msgid "Invalid debugger command"
 msgstr "Leeg Fehlersöök-Befehl"
 
 #. +> trunk stable
-#: debugsession.cpp:662
+#: debugsession.cpp:676
 #, kde-format
 msgid "Exited with return code: %1"
 msgstr "Mit Utstiegkode %1 afslaten"
 
 #. +> trunk stable
-#: debugsession.cpp:664
+#: debugsession.cpp:678
 msgid "Exited normally"
 msgstr "Normaal beendt"
 
 #. +> trunk stable
-#: debugsession.cpp:673
+#: debugsession.cpp:686
 #, kde-format
 msgid "Exited on signal %1"
 msgstr "Na Signaal %1 verlaten"
 
 #. +> trunk stable
-#: debugsession.cpp:728
+#: debugsession.cpp:745
 #, kde-format
 msgid "Program received signal %1 (%2)"
 msgstr "Programm hett Signaal %1 (%2) kregen"
 
 #. +> trunk stable
-#: debugsession.cpp:937
+#: debugsession.cpp:951
 msgid "Running program"
 msgstr "Programm warrt utföhrt"
 
 #. +> trunk stable
-#: debugsession.cpp:1002
-msgid ""
-"GDB cannot use the tty* or pty* devices.\n"
-"Check the settings on /dev/tty* and /dev/pty*\n"
-"As root you may need to \"chmod ug+rw\" tty* and pty* devices and/or add the user to the tty group using \"usermod -G tty username\"."
-msgstr ""
-"\"gdb\" kann de Reedschappen \"tty*\" un \"pty*\" nich bruken.\n"
-"Prööv de Instellen för \"/dev/tty*\" un \"/dev/pty*\"\n"
-"Villicht muttst Du as Systeempleger för de \"tty*\"- un \"pty*\"-Reedschappen \"chmod ug+rw\" utföhren un / oder den Bruker mit \"usermod -G tty brukernaam\" na den \"tty\"-Koppel tofögen."
-
-#. +> trunk stable
-#: debugsession.cpp:1006
+#: debugsession.cpp:1009
 msgid "Warning"
 msgstr "Wohrschoen"
 
 #. +> trunk stable
-#: debugsession.cpp:1194
+#: debugsession.cpp:1214
 #, kde-format
 msgid ""
 "<b>Debugger error</b>"
@@ -615,12 +710,12 @@ msgstr ""
 "<p><tt>%1"
 
 #. +> trunk stable
-#: debugsession.cpp:1197
+#: debugsession.cpp:1217
 msgid "Debugger error"
 msgstr "Fehlersöök-Fehler"
 
 #. +> trunk stable
-#: debugsession.cpp:1296
+#: debugsession.cpp:1316
 #, kde-format
 msgid "1 command in queue\n"
 msgid_plural "%1 commands in queue\n"
@@ -628,7 +723,7 @@ msgstr[0] "1 Befehl in de Reeg\n"
 msgstr[1] "%1 Befehlen in de Reeg\n"
 
 #. +> trunk stable
-#: debugsession.cpp:1297
+#: debugsession.cpp:1317
 #, kde-format
 msgctxt "Only the 0 and 1 cases need to be translated"
 msgid "1 command being processed by gdb\n"
@@ -637,13 +732,13 @@ msgstr[0] "1 Befehl warrt vun \"gdb\" afarbeidt\n"
 msgstr[1] "%1 Befehlen warrt vun \"gdb\" afarbeidt\n"
 
 #. +> trunk stable
-#: debugsession.cpp:1298
+#: debugsession.cpp:1318
 #, kde-format
 msgid "Debugger state: %1\n"
 msgstr "Fehlersöker-Status: %1\n"
 
 #. +> trunk stable
-#: debugsession.cpp:1302
+#: debugsession.cpp:1322
 #, kde-format
 msgid ""
 "Current command class: '%1'\n"
@@ -655,12 +750,12 @@ msgstr ""
 "Aktuell Befehl-Orginaaltext: \"%3\"\n"
 
 #. +> trunk stable
-#: debugsession.cpp:1313
+#: debugsession.cpp:1333
 msgid "Debugger status"
 msgstr "Fehlersöker-Status"
 
 #. +> trunk stable
-#: debugsession.cpp:1422
+#: debugsession.cpp:1442
 #, kde-format
 msgid ""
 "<b>You need gdb 7.0.0 or higher.</b><br />"
@@ -670,50 +765,73 @@ msgstr ""
 "Du bruukst opstunns: %1"
 
 #. +> trunk stable
-#: debugsession.cpp:1424
+#: debugsession.cpp:1444
 msgid "gdb error"
 msgstr "\"gdb\"-Fehler"
 
 #. +> trunk stable
-#: debugsession.cpp:1435
+#: debugsession.cpp:1455
 msgid "<b>Could not start debugger:</b><br />"
 msgstr "<b>Fehlersöker lett sik nich opropen:</b><br />"
 
 #. +> trunk stable
-#: debugsession.cpp:1437 debugsession.cpp:1449
+#: debugsession.cpp:1457 debugsession.cpp:1469
 msgid "Startup error"
 msgstr "Fehler bi Programmstart"
 
 #. +> trunk stable
-#: debugsession.cpp:1447
+#: debugsession.cpp:1467
 msgid "<b>Could not attach debugger:</b><br />"
 msgstr "<b>Fehlersöker lett sik nich griepen:</b><br />"
 
 #. +> trunk stable
-#: disassemblewidget.cpp:60
+#: disassemblewidget.cpp:66
 msgid "Address Selector"
 msgstr "Adressköör"
 
 #. +> trunk stable
-#: disassemblewidget.cpp:111
-msgid "Start address:"
-msgstr "Startadress:"
+#: disassemblewidget.cpp:106
+msgid "Change &address"
+msgstr "&Adress ännern"
 
 #. +> trunk stable
-#: disassemblewidget.cpp:112
-msgid "End Address:"
-msgstr "Ennadress:"
-
-#. +> trunk stable
-#: disassemblewidget.cpp:126
+#: disassemblewidget.cpp:110
 #, fuzzy
-#| msgid "Display"
-msgctxt "@action:button"
-msgid "Display"
-msgstr "Dorstellen"
+#| msgid "Jump to cursor"
+msgid "&Jump to Cursor"
+msgstr "Na Blinker jumpen"
 
 #. +> trunk stable
-#: disassemblewidget.cpp:149
+#: disassemblewidget.cpp:111
+#, fuzzy
+#| msgid ""
+#| "<b>Set Execution Position </b>"
+#| "<p>Set the execution pointer to the current cursor position."
+msgid "Sets the execution pointer to the current cursor position."
+msgstr ""
+"<b>Utföhrpositschoon setten</b>"
+"<p>Sett den Utföhr-Wieser op de aktuelle Blinkerpositschoon."
+
+#. +> trunk stable
+#: disassemblewidget.cpp:114
+#, fuzzy
+#| msgid "Run to &Cursor"
+msgid "&Run to Cursor"
+msgstr "Bet &Blinker utföhren"
+
+#. +> trunk stable
+#: disassemblewidget.cpp:115
+#, fuzzy
+#| msgid ""
+#| "<b>Run to cursor</b>"
+#| "<p>Continues execution until the cursor position is reached."
+msgid "Continues execution until the cursor position is reached."
+msgstr ""
+"<b>Bet Blinker utföhren</b>"
+"<p>Maakt mit dat Utföhren bet na de Blinkerpositschoon wieder."
+
+#. +> trunk stable
+#: disassemblewidget.cpp:155
 msgid ""
 "<b>Machine code display</b>"
 "<p>A machine code view into your running executable with the current instruction highlighted. You can step instruction by instruction using the debuggers toolbar buttons of \"step over\" instruction and \"step into\" instruction."
@@ -722,34 +840,26 @@ msgstr ""
 "<p>De Maschienkode vun Dien lopen Programm, de aktuelle Anwiesen is markeert. Du kannst de Anwiesen een för een mit de Knööp \"Anwiesen utföhren\" un \"Na Anwiesen ringahn\" op den Fehlersöök-Warktüüchbalken afarbeiden."
 
 #. +> trunk stable
-#: disassemblewidget.cpp:162
+#: disassemblewidget.cpp:169
 msgid "Address"
 msgstr "Adress"
 
 #. +> trunk stable
-#: disassemblewidget.cpp:162
+#: disassemblewidget.cpp:169
 msgid "Function"
 msgstr "Funkschoon"
 
 #. +> trunk stable
-#: disassemblewidget.cpp:163
-msgid "Offset"
-msgstr "Verscheel"
-
-#. +> trunk stable
-#: disassemblewidget.cpp:163
+#: disassemblewidget.cpp:169
 msgid "Instruction"
 msgstr "Anwiesen"
 
 #. +> trunk stable
-#: disassemblewidget.cpp:173
-msgid "Disassemble View"
+#: disassemblewidget.cpp:188
+#, fuzzy
+#| msgid "Disassemble View"
+msgid "Disassemble/Registers View"
 msgstr "Disassembleert"
-
-#. +> trunk stable
-#: disassemblewidget.cpp:185
-msgid "Change &address"
-msgstr "&Adress ännern"
 
 #. +> trunk stable
 #: gdb.cpp:104
@@ -763,13 +873,13 @@ msgid "Debugging Shell Not Found"
 msgstr "Fehlersöök-Konsool lett sik nich finnen"
 
 #. +> trunk stable
-#: gdb.cpp:330
+#: gdb.cpp:331
 msgctxt "<b>Internal debugger error</b>"
 msgid "<p>The debugger component encountered internal error while processing reply from gdb. Please submit a bug report."
 msgstr "<p>Binnen de Fehlersöker-Komponent hett dat en Fehler geven, bides se en Antwoort vun \"gdb\" afarbeidt hett. Bericht dissen Fehler bitte."
 
 #. +> trunk stable
-#: gdb.cpp:332
+#: gdb.cpp:333
 #, kde-format
 msgid ""
 "The exception is: %1\n"
@@ -779,12 +889,12 @@ msgstr ""
 "De MI-Antwoort is: %2"
 
 #. +> trunk stable
-#: gdb.cpp:335
+#: gdb.cpp:336
 msgid "Internal debugger error"
 msgstr "Intern Fehlersöök-Fehler"
 
 #. +> trunk stable
-#: gdb.cpp:387
+#: gdb.cpp:388
 #, kde-format
 msgid ""
 "<b>Could not start debugger.</b>"
@@ -794,12 +904,12 @@ msgstr ""
 "<p>\"%1\" lett sik nich starten. Kiek, wat de Paddnaam richtig angeven is."
 
 #. +> trunk stable
-#: gdb.cpp:391
+#: gdb.cpp:392
 msgid "Could not start debugger"
 msgstr "Fehlersöker lett sik nich opropen"
 
 #. +> trunk stable
-#: gdb.cpp:408
+#: gdb.cpp:409
 msgid ""
 "<b>Gdb crashed.</b>"
 "<p>Because of that the debug session has to be ended.<br>"
@@ -807,17 +917,17 @@ msgid ""
 msgstr ""
 
 #. +> trunk stable
-#: gdb.cpp:411
+#: gdb.cpp:412
 msgid "Gdb crashed"
 msgstr "\"gdb\" is afstört"
 
 #. +> trunk stable
-#: gdblaunchconfig.cpp:113
+#: gdblaunchconfig.cpp:114
 msgid "GDB Configuration"
 msgstr "GDB instellen"
 
 #. +> trunk stable
-#: gdblaunchconfig.cpp:168
+#: gdblaunchconfig.cpp:171
 msgid "Executes a Native application in GDB"
 msgstr "Föhrt en normaal Programm binnen GDB ut"
 
@@ -878,22 +988,22 @@ msgid "Debugger Toolbar"
 msgstr "Fehlersöök-Warktüüchbalken"
 
 #. +> trunk stable
-#: memviewdlg.cpp:99
+#: memviewdlg.cpp:80
 msgid "Start"
 msgstr "Start"
 
 #. +> trunk stable
-#: memviewdlg.cpp:105
+#: memviewdlg.cpp:86
 msgid "Amount"
 msgstr "Mengde"
 
 #. +> trunk stable
-#: memviewdlg.cpp:146
+#: memviewdlg.cpp:125
 msgid "Memory view"
 msgstr "Spiekeransicht"
 
 #. +> trunk stable
-#: memviewdlg.cpp:308
+#: memviewdlg.cpp:268
 #, kde-format
 msgid "%2 (1 byte)"
 msgid_plural "%2 (%1 bytes)"
@@ -901,29 +1011,206 @@ msgstr[0] "%2 (1 Byte)"
 msgstr[1] "%2 (%1 Bytes)"
 
 #. +> trunk stable
-#: memviewdlg.cpp:373
+#: memviewdlg.cpp:315
+#, fuzzy
+#| msgid "Reload"
+msgid "&Reload"
+msgstr "Nieg laden"
+
+#. +> trunk stable
+#: memviewdlg.cpp:324
+#, fuzzy
+#| msgid "Format"
+msgid "&Format"
+msgstr "Formaat"
+
+#. +> trunk stable
+#: memviewdlg.cpp:327
+#, fuzzy
+#| msgid "Binary"
+msgid "&Binary"
+msgstr "Bineer"
+
+#. +> trunk stable
+#: memviewdlg.cpp:332
+msgid "&Octal"
+msgstr ""
+
+#. +> trunk stable
+#: memviewdlg.cpp:337
+#, fuzzy
+#| msgid "Decimal"
+msgid "&Decimal"
+msgstr "Dezimaal"
+
+#. +> trunk stable
+#: memviewdlg.cpp:342
+#, fuzzy
+#| msgid "Hexadecimal"
+msgid "&Hexadecimal"
+msgstr "Hexadezimaal"
+
+#. +> trunk stable
+#: memviewdlg.cpp:358
+msgid "&Grouping"
+msgstr ""
+
+#. +> trunk stable
+#: memviewdlg.cpp:361
+msgid "&0"
+msgstr ""
+
+#. +> trunk stable
+#: memviewdlg.cpp:366
+msgid "&1"
+msgstr ""
+
+#. +> trunk stable
+#: memviewdlg.cpp:371
+msgid "&2"
+msgstr ""
+
+#. +> trunk stable
+#: memviewdlg.cpp:376
+msgid "&4"
+msgstr ""
+
+#. +> trunk stable
+#: memviewdlg.cpp:381
+msgid "&8"
+msgstr ""
+
+#. +> trunk stable
+#: memviewdlg.cpp:386
+msgid "1&6"
+msgstr ""
+
+#. +> trunk stable
+#: memviewdlg.cpp:401
+msgid "Write changes"
+msgstr ""
+
+#. +> trunk stable
+#: memviewdlg.cpp:405
 msgid "Change memory range"
 msgstr "Spiekerrebeet ännern"
 
 #. +> trunk stable
-#: memviewdlg.cpp:378
-msgid "Reload"
-msgstr "Nieg laden"
-
-#. +> trunk stable
-#: memviewdlg.cpp:383
+#: memviewdlg.cpp:409
 msgid "Close this view"
 msgstr "Disse Ansicht tomaken"
 
 #. +> trunk stable
-#: memviewdlg.cpp:443
-msgid "Special debugger views"
-msgstr "Besünner Fehlersöök-Ansichten"
+#: memviewdlg.cpp:478
+#, fuzzy
+#| msgid "Memory view"
+msgid "Memory viewer"
+msgstr "Spiekeransicht"
+
+#. +> trunk stable
+#: memviewdlg.cpp:482
+#, fuzzy
+#| msgid "Memory view"
+msgid "New memory viewer"
+msgstr "Spiekeransicht"
+
+#. +> trunk stable
+#: memviewdlg.cpp:483
+msgctxt "@info:tooltip"
+msgid "Open a new memory viewer."
+msgstr ""
 
 #. +> trunk stable
 #: processselection.cpp:38
 msgid "Attach to a process"
 msgstr "Perzess griepen"
+
+#. +> trunk stable
+#: registers/converters.cpp:31
+msgid "Binary"
+msgstr "Bineer"
+
+#. +> trunk stable
+#: registers/converters.cpp:31
+msgid "Octal"
+msgstr ""
+
+#. +> trunk stable
+#: registers/converters.cpp:31
+msgid "Decimal"
+msgstr "Dezimaal"
+
+#. +> trunk stable
+#: registers/converters.cpp:31
+msgid "Hexadecimal"
+msgstr "Hexadezimaal"
+
+#. +> trunk stable
+#: registers/converters.cpp:31
+msgid "Raw"
+msgstr ""
+
+#. +> trunk stable
+#: registers/converters.cpp:31
+msgid "Unsigned"
+msgstr ""
+
+#. +> trunk stable
+#: registers/registercontroller_arm.cpp:107
+#: registers/registercontroller_x86.cpp:107
+msgid "General"
+msgstr ""
+
+#. +> trunk stable
+#: registers/registercontroller_arm.cpp:107
+#: registers/registercontroller_x86.cpp:107
+msgid "Flags"
+msgstr ""
+
+#. +> trunk stable
+#: registers/registercontroller_arm.cpp:107
+msgid "VFP single-word"
+msgstr ""
+
+#. +> trunk stable
+#: registers/registercontroller_arm.cpp:107
+msgid "VFP double-word"
+msgstr ""
+
+#. +> trunk stable
+#: registers/registercontroller_arm.cpp:107
+msgid "VFP quad-word"
+msgstr ""
+
+#. +> trunk stable
+#: registers/registercontroller_x86.cpp:107
+msgid "FPU"
+msgstr ""
+
+#. +> trunk stable
+#: registers/registercontroller_x86.cpp:107
+msgid "XMM"
+msgstr ""
+
+#. +> trunk stable
+#: registers/registercontroller_x86.cpp:107
+msgid "Segment"
+msgstr ""
+
+#. +> trunk stable
+#: registers/registersview.cpp:68
+msgid "Format"
+msgstr "Formaat"
+
+#. +> trunk stable
+#: registers/registersview.cpp:77
+msgid "Mode"
+msgstr ""
+
+#. +> trunk stable
+#: registers/registersview.cpp:213
+msgid "Update"
+msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, SelectAddress)
 #. +> trunk stable
@@ -961,9 +1248,76 @@ msgid "Select Core File"
 msgstr "Karndatei utsöken"
 
 #. +> trunk stable
+#: stty.cpp:242
+#, fuzzy
+#| msgid ""
+#| "GDB cannot use the tty* or pty* devices.\n"
+#| "Check the settings on /dev/tty* and /dev/pty*\n"
+#| "As root you may need to \"chmod ug+rw\" tty* and pty* devices and/or add the user to the tty group using \"usermod -G tty username\"."
+msgid ""
+"Cannot use the tty* or pty* devices.\n"
+"Check the settings on /dev/tty* and /dev/pty*\n"
+"As root you may need to \"chmod ug+rw\" tty* and pty* devices and/or add the user to the tty group using \"usermod -aG tty username\"."
+msgstr ""
+"\"gdb\" kann de Reedschappen \"tty*\" un \"pty*\" nich bruken.\n"
+"Prööv de Instellen för \"/dev/tty*\" un \"/dev/pty*\"\n"
+"Villicht muttst Du as Systeempleger för de \"tty*\"- un \"pty*\"-Reedschappen \"chmod ug+rw\" utföhren un / oder den Bruker mit \"usermod -G tty brukernaam\" na den \"tty\"-Koppel tofögen."
+
+#. +> trunk stable
+#: stty.cpp:291
+#, kde-format
+msgid "%1 is incorrect terminal name"
+msgstr ""
+
+#. +> trunk stable
+#: stty.cpp:297
+msgid "Can't create a temporary file"
+msgstr ""
+
+#. +> trunk
+#: stty.cpp:336
+#, kde-format
+msgid "Can't receive %1 tty/pty. Check that %1 is actually a terminal and that it accepts these arguments: -e sh -c \"tty> %2 ;exec<&-;exec>&-;while :;do sleep 3600;done\""
+msgstr ""
+
+#. +> stable
 #: stty.cpp:333
-msgid "kdevelop: Debug application console"
-msgstr "KDevelop: Konsool för Programm-Fehlersöök"
+#, kde-format
+msgid "Can't get %1 tty/pty. Check that %1 is actually a terminal and that it accepts these arguments: -e sh -c \"tty> %2 ;exec<&-;exec>&-;while :;do sleep 3600;done\""
+msgstr ""
+
+#~ msgid "Watches"
+#~ msgstr "Beluert"
+
+#~ msgid "Recent"
+#~ msgstr "Tolest bruukt"
+
+#~ msgid "Support for running apps in GDB"
+#~ msgstr "Ünnerstütten för't Utföhren vun Programmen mit GDB"
+
+#~ msgid "Disassemble"
+#~ msgstr "Disassembleren"
+
+#~ msgid "Start address:"
+#~ msgstr "Startadress:"
+
+#~ msgid "End Address:"
+#~ msgstr "Ennadress:"
+
+#, fuzzy
+#~| msgid "Display"
+#~ msgctxt "@action:button"
+#~ msgid "Display"
+#~ msgstr "Dorstellen"
+
+#~ msgid "Offset"
+#~ msgstr "Verscheel"
+
+#~ msgid "Special debugger views"
+#~ msgstr "Besünner Fehlersöök-Ansichten"
+
+#~ msgid "kdevelop: Debug application console"
+#~ msgstr "KDevelop: Konsool för Programm-Fehlersöök"
 
 #~ msgid "Display static &members"
 #~ msgstr "Faste &Maten wiesen"
@@ -1193,31 +1547,11 @@ msgstr "KDevelop: Konsool för Programm-Fehlersöök"
 #~ "<b>Programm ünnerbreken</b>"
 #~ "<p>Ünnerbrickt den ünnersöchten Perzess oder den aktuellen gdb-Befehl."
 
-#~ msgid "Run to &Cursor"
-#~ msgstr "Bet &Blinker utföhren"
-
 #~ msgid "Run to cursor"
 #~ msgstr "Bet Blinker utföhren"
 
-#~ msgid ""
-#~ "<b>Run to cursor</b>"
-#~ "<p>Continues execution until the cursor position is reached."
-#~ msgstr ""
-#~ "<b>Bet Blinker utföhren</b>"
-#~ "<p>Maakt mit dat Utföhren bet na de Blinkerpositschoon wieder."
-
 #~ msgid "Set E&xecution Position to Cursor"
 #~ msgstr "&Utföhr-Positschoon na Blinker setten"
-
-#~ msgid "Jump to cursor"
-#~ msgstr "Na Blinker jumpen"
-
-#~ msgid ""
-#~ "<b>Set Execution Position </b>"
-#~ "<p>Set the execution pointer to the current cursor position."
-#~ msgstr ""
-#~ "<b>Utföhrpositschoon setten</b>"
-#~ "<p>Sett den Utföhr-Wieser op de aktuelle Blinkerpositschoon."
 
 #~ msgid "Step &Over"
 #~ msgstr "&Utföhren"
@@ -1643,23 +1977,11 @@ msgstr "KDevelop: Konsool för Programm-Fehlersöök"
 #~ msgid "Re-evaluate All"
 #~ msgstr "All nieg utweerten"
 
-#~ msgid "Format"
-#~ msgstr "Formaat"
-
 #~ msgid "Natural"
 #~ msgstr "Normaal"
 
-#~ msgid "Hexadecimal"
-#~ msgstr "Hexadezimaal"
-
-#~ msgid "Decimal"
-#~ msgstr "Dezimaal"
-
 #~ msgid "Character"
 #~ msgstr "Teken"
-
-#~ msgid "Binary"
-#~ msgstr "Bineer"
 
 #~ msgid "Remember Value"
 #~ msgstr "Weert wohren"
@@ -1842,12 +2164,6 @@ msgstr "KDevelop: Konsool för Programm-Fehlersöök"
 #~ msgctxt "process heading"
 #~ msgid "TTY"
 #~ msgstr "TTY"
-
-#, fuzzy
-#~| msgid "Memory view"
-#~ msgctxt "process heading"
-#~ msgid "Memory"
-#~ msgstr "Spiekeransicht"
 
 #, fuzzy
 #~| msgid "Command"
