@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-17 01:45+0000\n"
+"POT-Creation-Date: 2014-04-02 01:49+0000\n"
 "PO-Revision-Date: 2014-03-26 01:27+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -727,6 +727,12 @@ msgstr ""
 "*.siv|Sieve-Dateien (*.siv)\n"
 "*|All Dateien (*)"
 
+#: filter/filterconverter/filterconverttosieveresultdialog.cpp:65
+#, fuzzy
+#| msgid "Convert to sieve script"
+msgid "Convert to Script Sieve"
+msgstr "Na Sieve-Skript ümwanneln"
+
 #: filter/filterimporterexporter.cpp:143 filter/kmfilterdialog.cpp:1208
 msgid ""
 "The following filters have not been saved because they were invalid (e.g. "
@@ -1108,7 +1114,7 @@ msgctxt "@info"
 msgid "Unable to apply a filter since there are no filters currently selected."
 msgstr "Dor lett sik keen Filter bruken, opstunns is keen utsöcht."
 
-#: filter/kmfilterdialog.cpp:690
+#: filter/kmfilterdialog.cpp:690 filter/kmfilterdialog.cpp:1738
 msgid "No filters selected."
 msgstr "Keen Filter utsöcht"
 
@@ -1200,9 +1206,14 @@ msgid "Filters which were imported:"
 msgstr "Disse Filtern wöörn importeert:"
 
 #: filter/kmfilterdialog.cpp:1722
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "Some filters were changed and not saved yet. You must save your filters "
+#| "before they can be exported."
 msgctxt "@info"
 msgid ""
-"Some filters were changed and not saved yet. You must save your filters "
+"Some filters were changed and not saved yet.<br>You must save your filters "
 "before they can be exported."
 msgstr ""
 "En Reeg Filtern wöörn ännert, man nich sekert. Du muttst de Filtern sekern, "
@@ -1214,7 +1225,7 @@ msgstr ""
 "Nich all KMail-Filtern laat sik na Sieve-Skripten ümwanneln, man wi köönt "
 "dat liekers versöken :)"
 
-#: filter/kmfilterdialog.cpp:1727
+#: filter/kmfilterdialog.cpp:1727 filter/kmfilterdialog.cpp:1738
 msgid "Convert KMail filters to sieve scripts"
 msgstr "KMail-Filtern na Sieve-Skripten ümwanneln"
 
@@ -1781,9 +1792,15 @@ msgid " kB"
 msgstr " kB"
 
 #: search/numericrulewidgethandler.cpp:188
+#, fuzzy
+#| msgctxt "Expire messages after %1"
+#| msgid " day"
+#| msgid_plural " days"
 msgctxt "Unit suffix where units are days."
-msgid " days"
-msgstr " Daag"
+msgid " day"
+msgid_plural " days"
+msgstr[0] " Dag"
+msgstr[1] " Daag"
 
 #: search/searchpattern.cpp:232
 msgid "equal"
@@ -2244,32 +2261,6 @@ msgstr "Tast&kombinatschoon:"
 msgid "Enable &toolbar button"
 msgstr "Knoop op &Warktüüchbalken"
 
-#: util/mailutil.cpp:275
-#, kde-format
-msgid ""
-"From: %1\n"
-"To: %2\n"
-"Subject: %3"
-msgstr ""
-"Vun: %1\n"
-"Na: %2\n"
-"Bedreep: %3"
-
-#: util/mailutil.cpp:331
-msgid "Removing attachments from an email might invalidate its signature."
-msgstr ""
-"Dat Wegdoon vun en Nettbreef sien Bilagen mag sien Ünnerschrift leeg maken."
-
-#: util/mailutil.cpp:332
-msgid "Remove Attachments"
-msgstr "Bilagen wegmaken"
-
-#: util/mailutil.cpp:367 util/mailutil.cpp:380 util/mailutil.cpp:405
-#: util/mailutil.cpp:415
-#, kde-format
-msgid "Mail: %1"
-msgstr "Nettpost: %1"
-
 #: util/mailutil_p.h:49
 msgid "Create Todo/Reminder"
 msgstr "Opgaav/Vöranstoot opstellen"
@@ -2310,19 +2301,23 @@ msgstr "Lüttbildansicht"
 msgid "Drop your favorite folders here..."
 msgstr "Dien vörtrocken Ornern hierhen trecken..."
 
-#: widgets/redirectdialog.cpp:127
-msgid "Redirect Message"
-msgstr "Naricht ümledden"
+#: widgets/redirectdialog.cpp:74
+msgid "Resend-To:"
+msgstr ""
 
-#: widgets/redirectdialog.cpp:133
-msgid "Select the recipient &addresses to redirect to:"
-msgstr "Söök de &Adressaten ut, na de Du ümledden wullt:"
+#: widgets/redirectdialog.cpp:77
+msgid "Resend-Cc:"
+msgstr ""
 
-#: widgets/redirectdialog.cpp:147
+#: widgets/redirectdialog.cpp:80
+msgid "Resend-Bcc:"
+msgstr ""
+
+#: widgets/redirectdialog.cpp:95
 msgid "Use the Address-Selection Dialog"
 msgstr "Adress-Köördialoog bruken"
 
-#: widgets/redirectdialog.cpp:148
+#: widgets/redirectdialog.cpp:96
 msgid ""
 "This button opens a separate dialog where you can select recipients out of "
 "all available addresses."
@@ -2330,33 +2325,67 @@ msgstr ""
 "Disse Knoop maakt en niegen Dialoog op, binnen den Du Adressaten ut all "
 "verföögbore Adressen utsöken kannst."
 
-#: widgets/redirectdialog.cpp:159
+#: widgets/redirectdialog.cpp:190
+msgid "Redirect Message"
+msgstr "Naricht ümledden"
+
+#: widgets/redirectdialog.cpp:199
+#, fuzzy
+#| msgid "Select the recipient &addresses to redirect to:"
+msgid "Select the recipient addresses to redirect:"
+msgstr "Söök de &Adressaten ut, na de Du ümledden wullt:"
+
+#: widgets/redirectdialog.cpp:215
 msgid "Identity:"
 msgstr "Identiteet:"
 
-#: widgets/redirectdialog.cpp:164
+#: widgets/redirectdialog.cpp:223
 msgid "Transport:"
 msgstr "Överdregen:"
 
-#: widgets/redirectdialog.cpp:168
+#: widgets/redirectdialog.cpp:229
 msgid "&Send Now"
 msgstr "&Nu loosstüern"
 
-#: widgets/redirectdialog.cpp:169
+#: widgets/redirectdialog.cpp:230
 msgid "Send &Later"
 msgstr "&Later loosstüern"
 
-#: widgets/redirectdialog.cpp:207
+#: widgets/redirectdialog.cpp:278
 msgid "You cannot redirect the message without an address."
 msgstr "Du kannst De Naricht nich ahn en Adress ümledden."
 
-#: widgets/redirectdialog.cpp:208
+#: widgets/redirectdialog.cpp:279
 msgid "Empty Redirection Address"
 msgstr "Leddig Ümleddadress"
 
 #: widgets/regexplineedit.cpp:81
 msgid "Edit..."
 msgstr "Bewerken..."
+
+#~ msgctxt "Unit suffix where units are days."
+#~ msgid " days"
+#~ msgstr " Daag"
+
+#~ msgid ""
+#~ "From: %1\n"
+#~ "To: %2\n"
+#~ "Subject: %3"
+#~ msgstr ""
+#~ "Vun: %1\n"
+#~ "Na: %2\n"
+#~ "Bedreep: %3"
+
+#~ msgid "Removing attachments from an email might invalidate its signature."
+#~ msgstr ""
+#~ "Dat Wegdoon vun en Nettbreef sien Bilagen mag sien Ünnerschrift leeg "
+#~ "maken."
+
+#~ msgid "Remove Attachments"
+#~ msgstr "Bilagen wegmaken"
+
+#~ msgid "Mail: %1"
+#~ msgstr "Nettpost: %1"
 
 #, fuzzy
 #~| msgctxt ""
