@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-04-09 09:12+0200\n"
+"POT-Creation-Date: 2014-04-13 12:13+0200\n"
 "PO-Revision-Date: 2014-02-17 01:14+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -147,7 +147,7 @@ msgid "The crash report will also be saved to your home directory."
 msgstr ""
 
 #. +> trunk stable
-#: gemini/desktopviewproxy.cpp:116
+#: gemini/desktopviewproxy.cpp:118
 #, fuzzy
 #| msgid "Open in New Document"
 msgid "Open Document"
@@ -254,7 +254,7 @@ msgid "Brushes and Stuff"
 msgstr "Pinsel un mehr"
 
 #. +> trunk stable
-#: gemini/main.cpp:70 gemini/MainWindow.cpp:235 gemini/MainWindow.cpp:274
+#: gemini/main.cpp:70 gemini/MainWindow.cpp:236 gemini/MainWindow.cpp:279
 #, fuzzy
 #| msgid "Krita %1"
 msgid "Krita Gemini"
@@ -297,14 +297,15 @@ msgid "Don't use the virtual keyboard"
 msgstr ""
 
 #. +> trunk stable
-#: gemini/MainWindow.cpp:559
+#: gemini/MainWindow.cpp:278 gemini/MainWindow.cpp:564
+#: sketch/MainWindow.cpp:150
 #, fuzzy
 #| msgid "untitled-1"
 msgid "Untitled"
 msgstr "AhnNaam-1"
 
 #. +> trunk stable
-#: gemini/MainWindow.cpp:562
+#: gemini/MainWindow.cpp:567
 #, kde-format
 msgid ""
 "<p>The document <b>'%1'</b> has been modified.</p>"
@@ -3091,7 +3092,7 @@ msgid "Convert Projection Color Space"
 msgstr "Projizerenklörenruum ümwanneln"
 
 #. +> trunk stable
-#: image/kis_image.cc:918 ui/kis_layer_manager.cc:716
+#: image/kis_image.cc:918 ui/kis_layer_manager.cc:710
 msgid "Flatten Image"
 msgstr "Bild glattmaken"
 
@@ -3419,7 +3420,7 @@ msgstr "Opmaken..."
 msgid "Ellipse assistant"
 msgstr "Ellipsenhölper"
 
-#. +> trunk
+#. +> trunk stable
 #: plugins/assistants/RulerAssistant/kis_ruler_assistant_tool.cc:443
 #, fuzzy
 #| msgid "Spline assistant"
@@ -4630,7 +4631,7 @@ msgstr "Deckstärk utsöken"
 
 #. +> trunk stable
 #: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:459
-#: ui/kis_layer_manager.cc:285
+#: ui/kis_layer_manager.cc:284
 msgid "&Merge with Layer Below"
 msgstr "Mit nerrn Laag &tosamenföhren"
 
@@ -6569,22 +6570,12 @@ msgstr "Köör ümrannen..."
 msgid "Feather Selection..."
 msgstr "Köör afswachen"
 
-#. +> trunk
+#. +> trunk stable
 #: plugins/extensions/modify_selection/modify_selection.cc:78
 #, fuzzy
 #| msgctxt "smooth out the painting strokes the filter creates"
 #| msgid "Smooth"
 msgctxt "Verb for a selection modification action"
-msgid "Smooth"
-msgstr "Week"
-
-#. i18n: ectx: property (text), widget (QCheckBox, smoothCHBox)
-#. +> stable
-#: plugins/extensions/modify_selection/modify_selection.cc:78
-#: plugins/paintops/experiment/wdgexperimentoptions.ui:70
-#, fuzzy
-#| msgctxt "smooth out the painting strokes the filter creates"
-#| msgid "Smooth"
 msgid "Smooth"
 msgstr "Week"
 
@@ -7226,7 +7217,7 @@ msgid "&Desaturate"
 msgstr "&Bleken"
 
 #. +> trunk stable
-#: plugins/filters/colorsfilters/kis_desaturate_filter.h:47
+#: plugins/filters/colorsfilters/kis_desaturate_filter.h:46
 msgid "Desaturate"
 msgstr "Bleken"
 
@@ -7333,14 +7324,6 @@ msgstr "Gröön"
 msgid "Yellow"
 msgstr "Geeltöön"
 
-#. i18n: ectx: property (text), widget (QLabel, label_14)
-#. +> stable
-#: plugins/filters/colorsfilters/wdg_color_balance.ui:268
-#, fuzzy
-#| msgid "Yellows"
-msgid "    Yellow"
-msgstr "Geeltöön"
-
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_22)
 #. +> trunk stable
@@ -7362,12 +7345,6 @@ msgstr "Blaag"
 #| msgid "Cyans"
 msgid "Cyan"
 msgstr "Zyantöön"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#. +> stable
-#: plugins/filters/colorsfilters/wdg_color_balance.ui:251
-msgid "     Cyan"
-msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, pushResetMidtones)
 #. +> trunk stable
@@ -8161,39 +8138,37 @@ msgid "Vertical Wave"
 msgstr "Pielrecht Bülg"
 
 #. +> trunk
-#: plugins/formats/exr/exr_converter.cc:267
+#: plugins/formats/exr/exr_converter.cc:284
 #, kde-format
 msgctxt "@info"
 msgid ""
-"The image contains pixels with small Alpha value.<nl/>"
-"<nl/>"
-"Due to technical reasons, when saving this image back to EXR, the alpha channel of these pixels will be reset to zero (the color channels will stay untouched).<nl/>"
+"The image contains pixels with zero alpha channel and non-zero color channels. Krita will have to modify those pixels to have at least some alpha. The initial values will <emphasis>not</emphasis> be reverted on saving the image back.<nl/>"
 "<nl/>"
 "This will hardly make any visual difference just keep it in mind.<nl/>"
 "<nl/>"
-"<note>Range from <numid>%1</numid> to <numid>%2</numid></note>"
+"<note>Modified alpha will have a range from <numid>%1</numid> to <numid>%2</numid></note>"
 msgstr ""
 
 #. +> trunk
-#: plugins/formats/exr/exr_converter.cc:278
+#: plugins/formats/exr/exr_converter.cc:294
 msgctxt "@title:window"
 msgid "EXR image will be modified"
 msgstr ""
 
 #. +> trunk stable
-#: plugins/formats/exr/exr_converter.cc:440
+#: plugins/formats/exr/exr_converter.cc:506
 msgid "HDR Layer"
 msgstr "HDR-Laag"
 
 #. +> trunk
-#: plugins/formats/exr/exr_converter.cc:999
+#: plugins/formats/exr/exr_converter.cc:1071
 #, kde-format
 msgctxt "@item:unsupported-node-message"
 msgid "%1 (type: \"%2\")"
 msgstr ""
 
 #. +> trunk
-#: plugins/formats/exr/exr_converter.cc:1004
+#: plugins/formats/exr/exr_converter.cc:1076
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -8205,7 +8180,7 @@ msgid ""
 msgstr ""
 
 #. +> trunk
-#: plugins/formats/exr/exr_converter.cc:1009
+#: plugins/formats/exr/exr_converter.cc:1081
 msgctxt "@title:window"
 msgid "Layers will be lost"
 msgstr ""
@@ -8700,15 +8675,9 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkSRGB)
-#. +> trunk
+#. +> trunk stable
 #: plugins/formats/png/kis_wdg_options_png.ui:207
 msgid "Embed sRGB profile"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, chkSRGB)
-#. +> stable
-#: plugins/formats/png/kis_wdg_options_png.ui:216
-msgid "save sRGB profile"
 msgstr ""
 
 #. +> trunk stable
@@ -9433,7 +9402,7 @@ msgid "Speed"
 msgstr "Gauigkeit"
 
 #. i18n: ectx: property (text), widget (QCheckBox, smoothCHBox)
-#. +> trunk
+#. +> trunk stable
 #: plugins/paintops/experiment/wdgexperimentoptions.ui:70
 #, fuzzy
 #| msgctxt "smooth out the painting strokes the filter creates"
@@ -13098,7 +13067,7 @@ msgid "Work Recursively"
 msgstr ""
 
 #. +> trunk stable
-#: sketch/main.cpp:57 sketch/MainWindow.cpp:83 sketch/MainWindow.cpp:146
+#: sketch/main.cpp:57 sketch/MainWindow.cpp:84 sketch/MainWindow.cpp:151
 #, fuzzy
 #| msgid "Pencil Sketch"
 msgid "Krita Sketch"
@@ -13179,39 +13148,66 @@ msgid "Grid"
 msgstr "Gadder"
 
 #. +> trunk stable
-#: ui/canvas/kis_grid_manager.cpp:69
+#: ui/canvas/kis_grid_manager.cpp:70
 msgid "Snap To Grid"
 msgstr "Backig Gadder"
 
 #. +> trunk stable
-#: ui/canvas/kis_grid_manager.cpp:74
+#: ui/canvas/kis_grid_manager.cpp:76
 msgid "1x1"
 msgstr "1x1"
 
 #. +> trunk stable
-#: ui/canvas/kis_grid_manager.cpp:78
+#: ui/canvas/kis_grid_manager.cpp:80
 msgid "2x2"
 msgstr "2x2"
 
+#. +> trunk
+#: ui/canvas/kis_grid_manager.cpp:84
+#, fuzzy
+#| msgid "4"
+msgid "4x4"
+msgstr "4"
+
 #. +> trunk stable
-#: ui/canvas/kis_grid_manager.cpp:82
+#: ui/canvas/kis_grid_manager.cpp:88
 msgid "5x5"
 msgstr "5x5"
 
+#. +> trunk
+#: ui/canvas/kis_grid_manager.cpp:92
+msgid "8x8"
+msgstr ""
+
 #. +> trunk stable
-#: ui/canvas/kis_grid_manager.cpp:86
+#: ui/canvas/kis_grid_manager.cpp:96
 msgid "10x10"
 msgstr "10x10"
 
+#. +> trunk
+#: ui/canvas/kis_grid_manager.cpp:100
+msgid "16x16"
+msgstr ""
+
 #. +> trunk stable
-#: ui/canvas/kis_grid_manager.cpp:90
+#: ui/canvas/kis_grid_manager.cpp:104
 msgid "20x20"
 msgstr "20x20"
 
+#. +> trunk
+#: ui/canvas/kis_grid_manager.cpp:108
+msgid "32x32"
+msgstr ""
+
 #. +> trunk stable
-#: ui/canvas/kis_grid_manager.cpp:94
+#: ui/canvas/kis_grid_manager.cpp:112
 msgid "40x40"
 msgstr "40x40"
+
+#. +> trunk
+#: ui/canvas/kis_grid_manager.cpp:116
+msgid "64x64"
+msgstr ""
 
 #. +> trunk stable
 #: ui/canvas/kis_infinity_manager.cpp:38
@@ -15924,98 +15920,98 @@ msgid "Import Image"
 msgstr "Bild importeren"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:280
+#: ui/kis_layer_manager.cc:279
 msgid "&Flatten image"
 msgstr "Bild &glattmaken"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:290
+#: ui/kis_layer_manager.cc:289
 msgid "&Flatten Layer"
 msgstr "Laag &glattmaken"
 
 #. +> trunk
-#: ui/kis_layer_manager.cc:294
+#: ui/kis_layer_manager.cc:293
 #, fuzzy
 #| msgid "Duplicate current Layer"
 msgid "Rename current layer"
 msgstr "Aktuell Laag verdubbeln"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:300 ui/kis_layer_manager.cc:785
+#: ui/kis_layer_manager.cc:299 ui/kis_layer_manager.cc:779
 msgid "Rasterize Layer"
 msgstr "Laag rastern"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:306
+#: ui/kis_layer_manager.cc:305
 #, fuzzy
 #| msgid "&Group Layer"
 msgid "Save Group Layers..."
 msgstr "&Koppel-Laag"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:310
+#: ui/kis_layer_manager.cc:309
 msgid "Size Canvas to Size of Current Layer"
 msgstr "Lienwandgrött na aktuell Laaggrött ännern"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:365
+#: ui/kis_layer_manager.cc:359
 msgid "Filter Layer Properties"
 msgstr "Filterlaag-Egenschappen"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:410
+#: ui/kis_layer_manager.cc:404
 msgid "Generator Layer Properties"
 msgstr "Makerlaag-Egenschappen"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:491
+#: ui/kis_layer_manager.cc:485
 #, fuzzy
 #| msgid "Convert Current Layer From"
 msgid "Convert to a Paint Layer"
 msgstr "Aktuell Laag ümwanneln ut"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:570
+#: ui/kis_layer_manager.cc:564
 msgid "New Filter Layer"
 msgstr "Nieg Filterlaag"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:629
+#: ui/kis_layer_manager.cc:623
 msgid "Could not add layer to image."
 msgstr "Laag lett sik nich dat Bild tofögen."
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:629
+#: ui/kis_layer_manager.cc:623
 msgid "Layer Error"
 msgstr "Laag-Fehler"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:715
+#: ui/kis_layer_manager.cc:709
 msgid "The image contains hidden layers that will be lost."
 msgstr "Dat Bild bargt versteken Lagen, de verloren geiht."
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:717
+#: ui/kis_layer_manager.cc:711
 msgid "&Flatten Image"
 msgstr "Bild &glattmaken"
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:821
+#: ui/kis_layer_manager.cc:815
 msgid "Convert Invisible Groups"
 msgstr ""
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:824
+#: ui/kis_layer_manager.cc:818
 msgid "Export Only Toplevel Groups"
 msgstr ""
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:882
+#: ui/kis_layer_manager.cc:876
 msgid "No file name specified."
 msgstr ""
 
 #. +> trunk stable
-#: ui/kis_layer_manager.cc:882
+#: ui/kis_layer_manager.cc:876
 msgid "No file specified"
 msgstr ""
 
@@ -16668,12 +16664,12 @@ msgid "Replace Current Document"
 msgstr ""
 
 #. +> trunk stable
-#: ui/kis_view2.cpp:945
+#: ui/kis_view2.cpp:953
 msgid "Cleanup removed files..."
 msgstr ""
 
 #. +> trunk stable
-#: ui/kis_view2.cpp:1511
+#: ui/kis_view2.cpp:1519
 #, kde-format
 msgid ""
 "Going into Canvas-Only mode.\n"
@@ -17197,6 +17193,17 @@ msgstr "Klöörtopassen"
 #| msgid "Color Adjustment"
 msgid "DodgeShadows Adjustment"
 msgstr "Klöörtopassen"
+
+#, fuzzy
+#~| msgctxt "smooth out the painting strokes the filter creates"
+#~| msgid "Smooth"
+#~ msgid "Smooth"
+#~ msgstr "Week"
+
+#, fuzzy
+#~| msgid "Yellows"
+#~ msgid "    Yellow"
+#~ msgstr "Geeltöön"
 
 #~ msgid "&Convert Image Type..."
 #~ msgstr "Bild-Typ ü&mwanneln..."
@@ -19468,11 +19475,6 @@ msgstr "Klöörtopassen"
 #~| msgid "2x2"
 #~ msgid "x2"
 #~ msgstr "2x2"
-
-#, fuzzy
-#~| msgid "4"
-#~ msgid "x4"
-#~ msgstr "4"
 
 #, fuzzy
 #~| msgid "Scale Selection"
