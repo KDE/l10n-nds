@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-05-29 01:43+0000\n"
+"POT-Creation-Date: 2014-06-01 01:48+0000\n"
 "PO-Revision-Date: 2014-03-19 20:12+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -41,6 +41,7 @@ msgstr "Statistik"
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:36
 #: src/kdefrontend/ui/dockwidgets/xycurvedockgeneraltab.ui:23
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:17
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:17
 msgid "Name"
 msgstr "Naam"
 
@@ -242,7 +243,7 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, gbExport)
 #: src/backend/core/AbstractPart.cpp:118 src/backend/core/AbstractPart.cpp:122
-#: src/kdefrontend/MainWin.cpp:249
+#: src/kdefrontend/MainWin.cpp:250
 #: src/kdefrontend/ui/worksheet/exportworksheetwidget.ui:17
 #: src/kdefrontend/worksheet/ExportWorksheetDialog.cpp:125
 msgid "Export"
@@ -358,6 +359,7 @@ msgstr ""
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:68
 #: src/kdefrontend/ui/dockwidgets/xycurvedockgeneraltab.ui:49
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:43
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:40
 msgid "Comment"
 msgstr ""
 
@@ -666,10 +668,11 @@ msgstr ""
 #: src/backend/datasources/FileDataSource.cpp:373
 #: src/backend/datasources/filters/AsciiFilter.cpp:555
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:1842
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:1582
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:1603
 #: src/backend/worksheet/plots/cartesian/CartesianPlotLegend.cpp:921
 #: src/backend/worksheet/plots/cartesian/XYCurve.cpp:1589
 #: src/backend/worksheet/plots/cartesian/XYEquationCurve.cpp:213
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:152
 #: src/backend/worksheet/plots/PlotArea.cpp:473
 #: src/backend/worksheet/TextLabel.cpp:673
 #: src/backend/worksheet/Worksheet.cpp:732
@@ -837,6 +840,7 @@ msgstr ""
 #: src/backend/matrix/Matrix.cpp:537
 #: src/commonfrontend/spreadsheet/spreadsheetview_kactions.h:13
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:343
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:193
 msgid "Recalculate"
 msgstr ""
 
@@ -1196,7 +1200,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, chkVisible)
 #. i18n: ectx: property (text), widget (QCheckBox, chbVisible)
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:166
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:403
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:406
 #: src/backend/worksheet/plots/cartesian/CartesianPlotLegend.cpp:139
 #: src/backend/worksheet/plots/cartesian/XYCurve.cpp:152
 #: src/backend/worksheet/TextLabel.cpp:127
@@ -1205,6 +1209,7 @@ msgstr ""
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:278
 #: src/kdefrontend/ui/dockwidgets/xycurvedockgeneraltab.ui:89
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:366
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:216
 #: src/kdefrontend/ui/labelwidget.ui:395
 msgid "visible"
 msgstr ""
@@ -1506,156 +1511,160 @@ msgstr ""
 msgid "adjust to page size"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:347
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:348
 msgid "Select and edit"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:351
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:352
 msgid "Select region and zoom in"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:354
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:355
 msgid "Select x-region and zoom in"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:357
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:358
 msgid "Select y-region and zoom in"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:362
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:363
 msgid "xy-curve"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:363
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:364
 msgid "xy-curve from a mathematical equation"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:364
-msgid "legend"
-msgstr ""
-
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:365
-msgid "horizontal axis"
+msgid "xy-curve from a fit to data"
 msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:366
-msgid "vertical axis"
+msgid "legend"
+msgstr ""
+
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:367
+msgid "horizontal axis"
 msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:368
-msgid "auto scale"
-msgstr ""
-
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:369
-msgid "auto scale X"
+msgid "vertical axis"
 msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:370
-msgid "auto scale Y"
+msgid "auto scale"
 msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:371
-msgid "zoom in"
+msgid "auto scale X"
 msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:372
-msgid "zoom out"
+msgid "auto scale Y"
 msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:373
-msgid "zoom in X"
+msgid "zoom in"
 msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:374
-msgid "zoom out X"
+msgid "zoom out"
 msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:375
-msgid "zoom in Y"
+msgid "zoom in X"
 msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:376
-msgid "zoom out Y"
+msgid "zoom out X"
 msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:377
-msgid "shift left X"
+msgid "zoom in Y"
 msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:378
-msgid "shift right X"
+msgid "zoom out Y"
 msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:379
-msgid "shift up Y"
+msgid "shift left X"
 msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:380
+msgid "shift right X"
+msgstr ""
+
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:381
+msgid "shift up Y"
+msgstr ""
+
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:382
 msgid "shift down Y"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:409
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:412
 #: src/commonfrontend/worksheet/WorksheetView.cpp:236
-#: src/kdefrontend/MainWin.cpp:345
+#: src/kdefrontend/MainWin.cpp:346
 msgid "Add new"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:417
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:421
 #: src/commonfrontend/worksheet/WorksheetView.cpp:163
 #: src/commonfrontend/worksheet/WorksheetView.cpp:238
 msgid "Zoom"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:542
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:547
 #, kde-format
 msgid "%1: set geometry rect"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:561
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:566
 #, kde-format
 msgid "%1: set min x"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:568
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:573
 #, kde-format
 msgid "%1: set max x"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:575
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:580
 #, kde-format
 msgid "%1: set x scale"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:582
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:587
 #, kde-format
 msgid "%1: set x-scale breakings"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:602
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:607
 #, kde-format
 msgid "%1: set min y"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:609
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:614
 #, kde-format
 msgid "%1: set max y"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:616
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:621
 #, kde-format
 msgid "%1: set y scale"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:623
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:628
 #, kde-format
 msgid "%1: set y-scale breakings"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:1575
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:1596
 msgid "no cartesianPlot element found"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:1740
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:1761
 #, kde-format
 msgid "unknown cartesianPlot element '%1'"
 msgstr ""
@@ -1977,6 +1986,10 @@ msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/XYEquationCurve.cpp:209
 msgid "no xy equation curve element found"
+msgstr ""
+
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:148
+msgid "no xy fit curve element found"
 msgstr ""
 
 #: src/backend/worksheet/plots/PlotArea.cpp:160
@@ -2477,8 +2490,8 @@ msgstr ""
 
 #. i18n: ectx: ToolBar (spreadsheet_toolbar)
 #: src/kdefrontend/datasources/ImportFileDialog.cpp:95
-#: src/kdefrontend/LabPlot2ui.rc:24 src/kdefrontend/MainWin.cpp:211
-#: src/kdefrontend/MainWin.cpp:855
+#: src/kdefrontend/LabPlot2ui.rc:24 src/kdefrontend/MainWin.cpp:212
+#: src/kdefrontend/MainWin.cpp:856
 msgid "Spreadsheet"
 msgstr ""
 
@@ -2554,6 +2567,7 @@ msgstr ""
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:193
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:307
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:312
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:79
 msgid "linear"
 msgstr ""
 
@@ -3304,92 +3318,96 @@ msgstr ""
 msgid "%1 xy-curves: template \"%2\" loaded"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:72
+#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:79
 msgid "cartesian"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:73
+#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:80
 msgid "polar"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:74
+#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:81
 msgid "parametric"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:75
+#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:82
 msgid "implicit"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:179
+#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:186
 msgid "x, min"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:180
+#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:187
 msgid "x, max"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:191
+#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:198
 msgid "φ, min"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:192
+#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:199
 msgid "φ, max"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lMin)
-#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:204
+#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:211
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:249
 msgid "t, min"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lMax)
-#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:205
+#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:212
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:276
 msgid "t, max"
 msgstr ""
 
-#: src/kdefrontend/GuiObserver.cpp:92 src/kdefrontend/GuiObserver.cpp:107
-#: src/kdefrontend/GuiObserver.cpp:283 src/kdefrontend/MainWin.cpp:559
+#: src/kdefrontend/GuiObserver.cpp:93 src/kdefrontend/GuiObserver.cpp:108
+#: src/kdefrontend/GuiObserver.cpp:304 src/kdefrontend/MainWin.cpp:560
 msgid "Properties"
 msgstr ""
 
-#: src/kdefrontend/GuiObserver.cpp:118
+#: src/kdefrontend/GuiObserver.cpp:119
 msgid "Spreadsheet properties"
 msgstr ""
 
-#: src/kdefrontend/GuiObserver.cpp:134
+#: src/kdefrontend/GuiObserver.cpp:135
 msgid "Column properties"
 msgstr ""
 
-#: src/kdefrontend/GuiObserver.cpp:150
+#: src/kdefrontend/GuiObserver.cpp:151
 msgid "Worksheet properties"
 msgstr ""
 
-#: src/kdefrontend/GuiObserver.cpp:166
+#: src/kdefrontend/GuiObserver.cpp:167
 msgid "Cartesian plot properties"
 msgstr ""
 
-#: src/kdefrontend/GuiObserver.cpp:182
+#: src/kdefrontend/GuiObserver.cpp:183
 msgid "Cartesian plot legend properties"
 msgstr ""
 
-#: src/kdefrontend/GuiObserver.cpp:198
+#: src/kdefrontend/GuiObserver.cpp:199
 msgid "Axis properties"
 msgstr ""
 
-#: src/kdefrontend/GuiObserver.cpp:217
+#: src/kdefrontend/GuiObserver.cpp:218
 msgid "xy-curve properties"
 msgstr ""
 
-#: src/kdefrontend/GuiObserver.cpp:237
+#: src/kdefrontend/GuiObserver.cpp:238
 msgid "xy-equation-curve properties"
 msgstr ""
 
-#: src/kdefrontend/GuiObserver.cpp:257
+#: src/kdefrontend/GuiObserver.cpp:258
+msgid "xy-fit-curve properties"
+msgstr ""
+
+#: src/kdefrontend/GuiObserver.cpp:278
 msgid "Text label properties"
 msgstr ""
 
-#: src/kdefrontend/GuiObserver.cpp:272
+#: src/kdefrontend/GuiObserver.cpp:293
 msgid "Project properties"
 msgstr ""
 
@@ -3583,7 +3601,7 @@ msgid ""
 "Select an item in the list to navigate to the corresponding step."
 msgstr ""
 
-#: src/kdefrontend/HistoryDialog.cpp:52 src/kdefrontend/MainWin.cpp:263
+#: src/kdefrontend/HistoryDialog.cpp:52 src/kdefrontend/MainWin.cpp:264
 msgid "Undo/Redo History"
 msgstr ""
 
@@ -3663,8 +3681,8 @@ msgid "Main"
 msgstr ""
 
 #. i18n: ectx: ToolBar (worksheet_toolbar)
-#: src/kdefrontend/LabPlot2ui.rc:20 src/kdefrontend/MainWin.cpp:221
-#: src/kdefrontend/MainWin.cpp:883
+#: src/kdefrontend/LabPlot2ui.rc:20 src/kdefrontend/MainWin.cpp:222
+#: src/kdefrontend/MainWin.cpp:884
 msgid "Worksheet"
 msgstr ""
 
@@ -3919,212 +3937,212 @@ msgstr ""
 msgid "Not yet implemented."
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:137
+#: src/kdefrontend/MainWin.cpp:138
 #, kde-format
 msgctxt "%1 is the LabPlot version"
 msgid "Welcome to LabPlot %1"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:230
+#: src/kdefrontend/MainWin.cpp:231
 msgid "Folder"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:235
+#: src/kdefrontend/MainWin.cpp:236
 msgid "File Data Source"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:244
+#: src/kdefrontend/MainWin.cpp:245
 msgid "Import"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:255
+#: src/kdefrontend/MainWin.cpp:256
 msgid "Undo"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:259
+#: src/kdefrontend/MainWin.cpp:260
 msgid "Redo"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:273
+#: src/kdefrontend/MainWin.cpp:274
 msgid "Cl&ose"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:274
+#: src/kdefrontend/MainWin.cpp:275
 msgid "Ctrl+F4"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:275
+#: src/kdefrontend/MainWin.cpp:276
 msgid "Close the active window"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:279
+#: src/kdefrontend/MainWin.cpp:280
 msgid "Close &All"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:280
+#: src/kdefrontend/MainWin.cpp:281
 msgid "Close all the windows"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:284
+#: src/kdefrontend/MainWin.cpp:285
 msgid "&Tile"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:285
+#: src/kdefrontend/MainWin.cpp:286
 msgid "Tile the windows"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:289
+#: src/kdefrontend/MainWin.cpp:290
 msgid "&Cascade"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:290
+#: src/kdefrontend/MainWin.cpp:291
 msgid "Cascade the windows"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:294
+#: src/kdefrontend/MainWin.cpp:295
 msgid "Ne&xt"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:295
+#: src/kdefrontend/MainWin.cpp:296
 msgid "Move the focus to the next window"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:299
+#: src/kdefrontend/MainWin.cpp:300
 msgid "Pre&vious"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:300
+#: src/kdefrontend/MainWin.cpp:301
 msgid "Move the focus to the previous window"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:312
+#: src/kdefrontend/MainWin.cpp:313
 msgid "Current &Folder Only"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:316
+#: src/kdefrontend/MainWin.cpp:317
 msgid "Current Folder and &Subfolders"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:320
+#: src/kdefrontend/MainWin.cpp:321
 msgid "&All"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:330
+#: src/kdefrontend/MainWin.cpp:331
 msgid "Project explorer"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:335
+#: src/kdefrontend/MainWin.cpp:336
 msgid "Properties explorer"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:355
+#: src/kdefrontend/MainWin.cpp:356
 msgid "Window visibility policy"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:369
+#: src/kdefrontend/MainWin.cpp:370
 #, kde-format
 msgid "The current project %1 has been modified. Do you want to save it?"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:370
+#: src/kdefrontend/MainWin.cpp:371
 msgid "Save Project"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:547
+#: src/kdefrontend/MainWin.cpp:548
 msgid "Project Explorer"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:588
+#: src/kdefrontend/MainWin.cpp:589
 #, kde-format
 msgid "Project %1 created"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:597 src/kdefrontend/MainWin.cpp:615
+#: src/kdefrontend/MainWin.cpp:598 src/kdefrontend/MainWin.cpp:616
 msgid "Open project"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:598 src/kdefrontend/MainWin.cpp:731
+#: src/kdefrontend/MainWin.cpp:599 src/kdefrontend/MainWin.cpp:732
 msgid "LabPlot Projects (*.lml *.lml.gz *.lml.bz2 *.LML *.LML.GZ *.LML.BZ2)"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:615
+#: src/kdefrontend/MainWin.cpp:616
 #, kde-format
 msgid "The project file %1 is already opened."
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:624
+#: src/kdefrontend/MainWin.cpp:625
 msgid "Sorry. Could not open file for reading."
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:643
+#: src/kdefrontend/MainWin.cpp:644
 #, kde-format
 msgid "Project %1 opened"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:651
+#: src/kdefrontend/MainWin.cpp:652
 msgid "Project successfully opened."
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:668
+#: src/kdefrontend/MainWin.cpp:669
 msgid "Error opening project"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:673
+#: src/kdefrontend/MainWin.cpp:674
 msgid "The following problems occurred when loading the project:\n"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:677
+#: src/kdefrontend/MainWin.cpp:678
 msgid "Project loading partly failed"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:690
+#: src/kdefrontend/MainWin.cpp:691
 #, kde-format
 msgid "The current project %1 will be closed. Do you want to continue?"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:691
+#: src/kdefrontend/MainWin.cpp:692
 msgid "Close Project"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:730
+#: src/kdefrontend/MainWin.cpp:731
 msgid "Save project as"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:762
+#: src/kdefrontend/MainWin.cpp:763
 msgid "Project saved"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:777
+#: src/kdefrontend/MainWin.cpp:778
 msgid "Sorry. Could not open file for writing."
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:810
+#: src/kdefrontend/MainWin.cpp:811
 msgid "Print worksheet"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:816
+#: src/kdefrontend/MainWin.cpp:817
 msgid "Worksheet printed"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:821
+#: src/kdefrontend/MainWin.cpp:822
 msgid "Print spreadsheet"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:828
+#: src/kdefrontend/MainWin.cpp:829
 msgid "Spreadsheet printed"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:920
+#: src/kdefrontend/MainWin.cpp:921
 #, kde-format
 msgid "%1    [Changed]"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:1043
+#: src/kdefrontend/MainWin.cpp:1044
 #, kde-format
 msgid "Folder %1"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:1270
+#: src/kdefrontend/MainWin.cpp:1271
 #, kde-format
 msgid "File data source%1"
 msgstr ""
@@ -5146,14 +5164,18 @@ msgstr ""
 msgid "Comment:"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QLabel, lXColumn)
 #. i18n: ectx: property (text), widget (QLabel, lPositionX)
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:203
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:76
 #: src/kdefrontend/ui/labelwidget.ui:229
 msgid "x"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QLabel, lYColumn)
 #. i18n: ectx: property (text), widget (QLabel, lPositionY)
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:239
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:83
 #: src/kdefrontend/ui/labelwidget.ui:280
 msgid "y"
 msgstr ""
@@ -5421,17 +5443,21 @@ msgstr ""
 msgid "x=f(t)"
 msgstr ""
 
+#. i18n: ectx: property (toolTip), widget (QToolButton, tbFunctions)
 #. i18n: ectx: property (toolTip), widget (QToolButton, tbFunctions1)
 #. i18n: ectx: property (toolTip), widget (QToolButton, tbFunctions2)
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:137
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:210
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:260
 msgid "Functions"
 msgstr ""
 
+#. i18n: ectx: property (toolTip), widget (QToolButton, tbConstants)
 #. i18n: ectx: property (toolTip), widget (QToolButton, tbConstants1)
 #. i18n: ectx: property (toolTip), widget (QToolButton, tbConstants2)
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:147
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:220
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:270
 msgid "Constants"
 msgstr ""
 
@@ -5443,6 +5469,41 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, lNumber)
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:306
 msgid "Number of points"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, lName_2)
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:69
+msgid "Data:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, lWeightsColumn)
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:90
+msgid "weights"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, lName_3)
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:119
+msgid "Fit options:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, lModel)
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:126
+msgid "Model"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, lEquation1)
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:153
+msgid "f(x)"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, lName_4)
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:166
+msgid "Advanced fit options:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, lNumber)
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:289
+msgid "Parameters"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, tbTexUsed)
