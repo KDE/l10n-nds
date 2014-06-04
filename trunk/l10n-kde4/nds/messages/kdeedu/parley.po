@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: parley\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-05-22 01:48+0000\n"
+"POT-Creation-Date: 2014-06-04 01:40+0000\n"
 "PO-Revision-Date: 2014-05-13 18:38+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -81,7 +81,7 @@ msgstr[1] " Sekunnen"
 msgid "*.kvtml|Vocabulary Collections"
 msgstr "*.kvtml|Vokavelsett-Sammeln"
 
-#: plugins/example.py:14 src/vocabulary/lessonview.cpp:37
+#: plugins/example.py:14
 msgid "New Lesson"
 msgstr "Nieg Lex"
 
@@ -848,10 +848,15 @@ msgid "Lessons"
 msgstr "Lexen"
 
 #: src/editor/editor.cpp:164
+#, fuzzy
+#| msgid ""
+#| "Right click to add, delete, or rename lessons. \n"
+#| "With the checkboxes you can select which lessons you want to practice. \n"
+#| "Only checked lessons [x] will be asked in the tests!"
 msgid ""
-"Right click to add, delete, or rename lessons. \n"
-"With the checkboxes you can select which lessons you want to practice. \n"
-"Only checked lessons [x] will be asked in the tests!"
+"Right click to add, delete, or rename units. \n"
+"With the checkboxes you can select which units you want to practice. \n"
+"Only checked units [x] will be asked in the practice!"
 msgstr ""
 "Mit en Rechtsklick kannst Du Lexen tofögen, wegdoon oder ümnömen.\n"
 "Mit de Krüüzfeller kannst Du de Lexen utsöken, de Du öven wullt.\n"
@@ -927,8 +932,8 @@ msgstr "&Ansicht"
 
 #. i18n: ectx: Menu (lesson)
 #: src/editor/editorui.rc:49
-msgid "&Lesson"
-msgstr "&Lex"
+msgid "&Unit"
+msgstr ""
 
 #. i18n: ectx: Menu (learning)
 #: src/editor/editorui.rc:62 src/practice/practicesummaryui.rc:12
@@ -947,8 +952,9 @@ msgid "Editor Toolbar"
 msgstr "Editor-Warktüüchbalken"
 
 #: src/editor/FromToEntryPage.cpp:160
-#, kde-format
-msgid "Grades from %1 to %2"
+#, fuzzy, kde-format
+#| msgid "Grades from %1 to %2"
+msgid "Confidence Levels from %1 to %2"
 msgstr "Stopen twischen %1 un %2"
 
 #. i18n: ectx: property (title), widget (QGroupBox, direc_label)
@@ -958,8 +964,8 @@ msgstr "Egenschappen, wenn na de Översetten fraagt is"
 
 #. i18n: ectx: property (text), widget (QLabel, grade_label)
 #: src/editor/FromToEntryPageForm.ui:72
-msgid "&Grade:"
-msgstr "&Stoop:"
+msgid "&Confidence Level:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, fauxami_label)
 #: src/editor/FromToEntryPageForm.ui:95
@@ -1013,8 +1019,8 @@ msgstr "dd.MM.jjjj"
 
 #. i18n: ectx: property (text), widget (QPushButton, resetGradesButton)
 #: src/editor/FromToEntryPageForm.ui:260
-msgid "&Reset Grades"
-msgstr "St&open torüchsetten"
+msgid "&Reset Confidence Levels"
+msgstr ""
 
 #: src/editor/inflectionwidget.cpp:36 src/parleydocument.cpp:326
 #: src/vocabulary/wordtypeview.cpp:123
@@ -1072,7 +1078,7 @@ msgid "Language"
 msgstr "Spraak"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: src/editor/summarywordwidget.ui:32 src/vocabulary/containermodel.cpp:170
+#: src/editor/summarywordwidget.ui:32
 msgid "Lesson"
 msgstr "Lex"
 
@@ -1402,20 +1408,26 @@ msgstr ""
 "De Spraken fastleggen, de binnen de Sammeln sünd, un ehr Grammatik-"
 "Egenschappen bewerken"
 
-#: src/parleyactions.cpp:121
-msgid "Remove Grades"
-msgstr "Stopen wegmaken"
+#: src/parleyactions.cpp:121 src/vocabulary/lessonview.cpp:69
+msgid "Remove Confidence Levels"
+msgstr ""
 
 #: src/parleyactions.cpp:122
-msgid "Remove all grades from the current document"
+#, fuzzy
+#| msgid "Remove all grades from the current document"
+msgid "Remove all confidence levels from the current document"
 msgstr "All Stopen ut de dat aktuelle Dokment wegmaken"
 
 #: src/parleyactions.cpp:129
-msgid "Show Entries from Child Lessons"
+#, fuzzy
+#| msgid "Show Entries from Child Lessons"
+msgid "Show Entries from Child Units"
 msgstr "Indrääg ut Ünnerlexen wiesen"
 
 #: src/parleyactions.cpp:130
-msgid "Enable to also see the entries of child lessons in each lesson."
+#, fuzzy
+#| msgid "Enable to also see the entries of child lessons in each lesson."
+msgid "Enable to also see the entries of child units in each unit."
 msgstr "Ok de Indrääg vun Ünnerlexen binnen de Lexen wiesen"
 
 #: src/parleyactions.cpp:136
@@ -1424,7 +1436,9 @@ msgstr "Automaatsch översetten"
 
 #. i18n: ectx: label, entry (AutomaticTranslation), group (General)
 #: src/parleyactions.cpp:137 src/settings/parley.kcfg:50
-msgid "Enable automatic translation of the lesson entries."
+#, fuzzy
+#| msgid "Enable automatic translation of the lesson entries."
+msgid "Enable automatic translation of the unit entries."
 msgstr "Dat automaatsche Översetten vun Lexindrääg anmaken"
 
 #: src/parleyactions.cpp:143
@@ -1776,10 +1790,11 @@ msgid "%1 is neuter"
 msgstr "%1 is neutraal"
 
 #: src/practice/guifrontend.cpp:129
-#, kde-format
-msgctxt "Display of the current lesson during practice"
-msgid "Lesson: %1"
-msgstr "Lex: %1"
+#, fuzzy, kde-format
+#| msgid "Comment: %1"
+msgctxt "Display of the current unit during practice"
+msgid "Unit: %1"
+msgstr "Kommentar: %1"
 
 #: src/practice/guifrontend.cpp:136
 msgid "New word"
@@ -2755,7 +2770,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (EntriesPerLesson), group (General)
 #: src/settings/parley.kcfg:27
-msgid "The number of entries per lesson"
+#, fuzzy
+#| msgid "The number of entries per lesson"
+msgid "The number of entries per unit"
 msgstr "De Tall vun Indrääg per Lex"
 
 #. i18n: ectx: label, entry (AutoOpenLast), group (General)
@@ -2812,9 +2829,13 @@ msgstr "En anner Lehrmetood bruken"
 
 #. i18n: ectx: label, entry (TestOrderLesson), group (PracticeOptions)
 #: src/settings/parley.kcfg:77
+#, fuzzy
+#| msgid ""
+#| "Append new vocabulary in a test in order of their lessons. Note that this "
+#| "will not be a hard transition, but a slow mix from one lesson to the next."
 msgid ""
-"Append new vocabulary in a test in order of their lessons. Note that this "
-"will not be a hard transition, but a slow mix from one lesson to the next."
+"Append new vocabulary in a collection in order of their units. Note that "
+"this will not be a hard transition, but a slow mix from one unit to the next."
 msgstr ""
 "Binnen Pröven nieg Vokavelsetten in ehr Reeg anhangen. Dat is keen basch "
 "Övergang, de niege Lex warrt langsam inmengeleert."
@@ -2976,12 +2997,16 @@ msgstr "Den Söökbalken wiesen oder versteken"
 
 #. i18n: ectx: label, entry (ShowSublessonentries), group (Appearance)
 #: src/settings/parley.kcfg:198
-msgid "When enabled a lesson also shows entries from its sublessons."
+#, fuzzy
+#| msgid "When enabled a lesson also shows entries from its sublessons."
+msgid "When enabled a unit also shows entries from its subunits."
 msgstr "Wenn anmaakt, wiest en Lex ok Indrääg ut sien Ünnerlexen"
 
 #. i18n: ectx: label, entry (TableLessonColumnVisible), group (Appearance)
 #: src/settings/parley.kcfg:203
-msgid "Show/hide the lesson column."
+#, fuzzy
+#| msgid "Show/hide the lesson column."
+msgid "Show/hide the unit column."
 msgstr "Lexen-Striep wiesen oder versteken"
 
 #. i18n: ectx: label, entry (TableActiveColumnVisible), group (Appearance)
@@ -2991,7 +3016,9 @@ msgstr "Anmaakt-Striep wiesen oder versteken"
 
 #. i18n: ectx: label, entry (LessonEditingSelection), group (Appearance)
 #: src/settings/parley.kcfg:213
-msgid "Select which lessons are displayed for editing"
+#, fuzzy
+#| msgid "Select which lessons are displayed for editing"
+msgid "Select which units are displayed for editing"
 msgstr "De Lexen utsöken, de för't Bewerken wiest warrt"
 
 #. i18n: ectx: label, entry (MainWindowSplitter), group (Appearance)
@@ -3020,9 +3047,10 @@ msgid "Currently selected row"
 msgstr "Opstunns utsöcht Reeg"
 
 #. i18n: ectx: label, entry (GradeColor), group (Appearance)
-#. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_GradeColor)
-#: src/settings/parley.kcfg:243 src/settings/viewoptionsbase.ui:102
-msgid "Color used to display the grades"
+#: src/settings/parley.kcfg:243
+#, fuzzy
+#| msgid "Color used to display the grades"
+msgid "Color used to display the confidence levels"
 msgstr "Klören för de Stopen"
 
 #. i18n: ectx: label, entry (PracticeMinimumTimesAsked), group (Thresholds)
@@ -3063,17 +3091,26 @@ msgstr ""
 
 #. i18n: ectx: label, entry (PracticeMinimumGrade), group (Thresholds)
 #: src/settings/parley.kcfg:269
+#, fuzzy
+#| msgid ""
+#| "The entry must have at least this grade to be included in the practice "
+#| "(0..7)."
 msgid ""
-"The entry must have at least this grade to be included in the practice "
-"(0..7)."
+"The entry must have at least this confidence level to be included in the "
+"practice (0..7)."
 msgstr ""
 "Schall en Indrag na de Öven inslaten warrn, mutt he tominnst disse Stoop "
 "hebben (0-7)"
 
 #. i18n: ectx: label, entry (PracticeMaximumGrade), group (Thresholds)
 #: src/settings/parley.kcfg:273
+#, fuzzy
+#| msgid ""
+#| "The entry must have at most this grade to be included in the practice "
+#| "(0..7)."
 msgid ""
-"The entry must have at most this grade to be included in the practice (0..7)."
+"The entry must have at most this confidence level to be included in the "
+"practice (0..7)."
 msgstr ""
 "Schall en Indrag na de Öven inslaten warrn, dörv he tohööchat disse Stoop "
 "hebben (0-7)"
@@ -3127,12 +3164,16 @@ msgstr "De opstunns utsöchte Öövtyp"
 
 #. i18n: ectx: label, entry (BlockItem$(Grade)), group (PracticeManager)
 #: src/settings/parley.kcfg:338
-msgid "Amount of time different grades should be blocked"
+#, fuzzy
+#| msgid "Amount of time different grades should be blocked"
+msgid "Amount of time different confidence levels should be blocked"
 msgstr "De Tiet, wo lang verscheden Stopen blockeert warrt"
 
 #. i18n: ectx: label, entry (ExpireItem$(Grade)), group (PracticeManager)
 #: src/settings/parley.kcfg:349
-msgid "Amount of time after which different grades should expire"
+#, fuzzy
+#| msgid "Amount of time after which different grades should expire"
+msgid "Amount of time after which different confidence levels should expire"
 msgstr "De Tiet, na de verscheden Stopen afloopt"
 
 #. i18n: ectx: label, entry (ProvidersUrl), group (KNewStuff)
@@ -3191,6 +3232,11 @@ msgstr "Schriftoort för &Utspraak-Symbolen:"
 msgid "Base color for displaying grades:"
 msgstr "Grundklöör för de Stopen:"
 
+#. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_GradeColor)
+#: src/settings/viewoptionsbase.ui:102
+msgid "Color used to display the grades"
+msgstr "Klören för de Stopen"
+
 #. i18n: ectx: property (whatsThis), widget (KColorButton, kcfg_GradeColor)
 #: src/settings/viewoptionsbase.ui:105
 msgid "Click here to change the color used to display the grades."
@@ -3217,19 +3263,22 @@ msgid "Not practiced"
 msgstr "Nich öövt"
 
 #: src/statistics/lessonstatistics.cpp:182
-msgid "Remove &Grades from this lesson"
-msgstr "&Stopen ut den Lex wegmaken"
-
 #: src/statistics/lessonstatistics.cpp:184
-msgid "Remove grades from this lesson"
+#, fuzzy
+#| msgid "Remove grades from this lesson"
+msgid "Remove confidence levels from this unit"
 msgstr "Stopen ut den Lex wegmaken"
 
 #: src/statistics/lessonstatistics.cpp:192
-msgid "Remove &Grades from this lesson and all sub-lessons"
-msgstr "&Stopen ut den Lex un all Ünnerlexen wegmaken"
+#, fuzzy
+#| msgid "Remove grades from this lesson and all sub-lessons"
+msgid "Remove confidence levels from this unit and all sub-units"
+msgstr "Stopen ut den Lex un all Ünnerlexen wegmaken"
 
 #: src/statistics/lessonstatistics.cpp:194
-msgid "Remove grades from this lesson and all sub-lessons"
+#, fuzzy
+#| msgid "Remove grades from this lesson and all sub-lessons"
+msgid "Remove confidence level from this unit and all sub-units"
 msgstr "Stopen ut den Lex un all Ünnerlexen wegmaken"
 
 #: src/statistics/statisticsmainwindow.cpp:196
@@ -3300,28 +3349,41 @@ msgid "Practice Direction"
 msgstr "Ööv-Richt"
 
 #: src/statistics/statisticsmodel.cpp:31
-#, kde-format
-msgctxt "Grade in language, table header"
-msgid "Grade (%1)"
-msgstr "Stoop (%1)"
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Display of the current confidence level during practice, 1st param is "
+#| "either initial or long term"
+#| msgid "%1, confidence %2"
+msgctxt "Confidence level in language, table header"
+msgid "Confidence (%1)"
+msgstr "%1, totroen %2"
 
 #: src/vocabulary/basiccontainermodel.cpp:145
 msgid "None"
 msgstr "Keen"
 
+#: src/vocabulary/containermodel.cpp:170
+msgid "Unit"
+msgstr ""
+
 #: src/vocabulary/containermodel.cpp:178
 msgid "Number of entries in this lesson."
 msgstr "Tall vun Indrääg binnen dissen Lex"
 
-#: src/vocabulary/leitnerview.cpp:117 src/vocabulary/lessonview.cpp:194
-msgid "The root lesson cannot be deleted."
+#: src/vocabulary/leitnerview.cpp:117
+#, fuzzy
+#| msgid "The root lesson cannot be deleted."
+msgid "The root unit cannot be deleted."
 msgstr "De Grundlex lett sik nich wegdoon"
 
 #: src/vocabulary/leitnerview.cpp:126 src/vocabulary/lessonview.cpp:203
-#, kde-format
-msgid "There is %1 word left in this lesson. Do you want to delete it?"
+#, fuzzy, kde-format
+#| msgid "There is %1 word left in this lesson. Do you want to delete it?"
+#| msgid_plural ""
+#| "There are %1 words left in this lesson. Do you want to delete them?"
+msgid "There is %1 word left in this unit. Do you want to delete it?"
 msgid_plural ""
-"There are %1 words left in this lesson. Do you want to delete them?"
+"There are %1 words left in this unit. Do you want to delete them?"
 msgstr[0] "Binnen dissen Lex is %1 Woort na. Wullt Du dat wegdoon?"
 msgstr[1] "Binnen dissen Lex sünd noch %1 Wöör na. Wullt Du disse wegdoon?"
 
@@ -3331,70 +3393,108 @@ msgctxt "display of the name of the vocabulary collection"
 msgid "Collection: %1"
 msgstr "Sammeln: %1"
 
+#: src/vocabulary/lessonview.cpp:37
+#, fuzzy
+#| msgid "New type"
+msgid "New Unit"
+msgstr "Nieg Typ"
+
 #: src/vocabulary/lessonview.cpp:39
-msgid "Add a new lesson to your document"
+#, fuzzy
+#| msgid "Add a new lesson to your document"
+msgid "Add a new unit to your document"
 msgstr "Dien Dokment en nieg Lex tofögen"
 
 #: src/vocabulary/lessonview.cpp:45
-msgid "Rename Lesson"
-msgstr "Lex ümnömen"
+#, fuzzy
+#| msgid "Rename"
+msgid "Rename Unit"
+msgstr "Ümnömen"
 
 #: src/vocabulary/lessonview.cpp:53
-msgid "Delete Lesson"
-msgstr "Lex wegdoon"
+#, fuzzy
+#| msgid "&Delete Entry"
+msgid "Delete Unit"
+msgstr "Indrag &wegdoon"
 
 #: src/vocabulary/lessonview.cpp:55
-msgid "Delete the selected lesson."
+#, fuzzy
+#| msgid "Delete the selected lesson."
+msgid "Delete the selected unit."
 msgstr "Den utsöchten Lex wegdoon"
 
 #: src/vocabulary/lessonview.cpp:61
-msgid "Split Lesson into Smaller Lessons"
+#, fuzzy
+#| msgid "Split Lesson into Smaller Lessons"
+msgid "Split Unit into Smaller Units"
 msgstr "Lex op lütter Lexen opdelen"
 
 #: src/vocabulary/lessonview.cpp:63
-msgid "Make multiple smaller lessons out of one big lesson."
+#, fuzzy
+#| msgid "Make multiple smaller lessons out of one big lesson."
+msgid "Make multiple smaller units out of one big unit."
 msgstr "Mehr lütte Lexen ut een groot Lex opstellen"
 
-#: src/vocabulary/lessonview.cpp:69
-msgid "Remove Grades from this Lesson"
-msgstr "Stopen ut den Lex wegmaken"
-
 #: src/vocabulary/lessonview.cpp:71
-msgid "Remove grades from this lesson."
+#, fuzzy
+#| msgid "Remove grades from this lesson."
+msgid "Remove confidence levels from this unit."
 msgstr "Stopen ut den Lex wegmaken."
 
 #: src/vocabulary/lessonview.cpp:77
-msgid "Remove Grades from this Lesson and all Sub-Lessons"
+#, fuzzy
+#| msgid "Remove Grades from this Lesson and all Sub-Lessons"
+msgid "Remove Confidence Levels From This Unit And All Subunits"
 msgstr "Stopen ut den Lex un all Ünnerlexen wegmaken"
 
 #: src/vocabulary/lessonview.cpp:79
-msgid "Remove grades from this lesson and all sub-lessons."
+#, fuzzy
+#| msgid "Remove grades from this lesson and all sub-lessons."
+msgid "Remove confidence levels from this unit and all subunits."
 msgstr "Stopen ut den Lex un all Ünnerlexen wegmaken."
 
 #: src/vocabulary/lessonview.cpp:85
-msgid "Expand all lessons and sub-lessons"
+#, fuzzy
+#| msgid "Expand all lessons and sub-lessons"
+msgid "Expand Units and Subunits"
 msgstr "All Lexen un Ünnerlexen utfoolden"
 
 #: src/vocabulary/lessonview.cpp:87
-msgid "Expand all lessons and sub-lessons."
+#, fuzzy
+#| msgid "Expand all lessons and sub-lessons."
+msgid "Expand all units and subunits."
 msgstr "All Lexen un Ünnerlexen utfoolden."
 
 #: src/vocabulary/lessonview.cpp:93
-msgid "Collapse all lessons and sub-lessons"
+#, fuzzy
+#| msgid "Collapse all lessons and sub-lessons"
+msgid "Collapse All Units And Subunits"
 msgstr "All Lexen un Ünnerlexen infoolden"
 
 #: src/vocabulary/lessonview.cpp:95
-msgid "Collapse all lessons and sub-lessons."
+#, fuzzy
+#| msgid "Collapse all lessons and sub-lessons."
+msgid "Collapse all units and subunits."
 msgstr "All Lexen un Ünnerlexen infoolden."
 
+#: src/vocabulary/lessonview.cpp:194
+msgid "The root lesson cannot be deleted."
+msgstr "De Grundlex lett sik nich wegdoon"
+
 #: src/vocabulary/lessonview.cpp:217
-msgid "Entries per Lesson"
+#, fuzzy
+#| msgid "Entries per Lesson"
+msgid "Entries per Unit"
 msgstr "Indrääg per Lex"
 
 #: src/vocabulary/lessonview.cpp:217
+#, fuzzy
+#| msgid ""
+#| "The lesson will be split into smaller lessons. How many entries in each "
+#| "lesson do you want?"
 msgid ""
-"The lesson will be split into smaller lessons. How many entries in each "
-"lesson do you want?"
+"The unit will be split into smaller unit. How many entries in each unit do "
+"you want?"
 msgstr ""
 "De Lex warrt op lütter Lexen opdeelt. Wo vele Indrääg wullt Du per Lex "
 "hebben?"
@@ -3446,11 +3546,15 @@ msgid "No Languages Defined"
 msgstr "Keen Spraken fastleggt"
 
 #: src/vocabulary/vocabularymodel.cpp:328
-msgid "Select a lesson before adding vocabulary."
+#, fuzzy
+#| msgid "Select a lesson before adding vocabulary."
+msgid "Select a unit before adding vocabulary."
 msgstr "Söök bitte eerst en Lex ut, ehr Du Vokaveln inföögst"
 
 #: src/vocabulary/vocabularymodel.cpp:328
-msgid "No Lesson Selected"
+#, fuzzy
+#| msgid "No Lesson Selected"
+msgid "No Unit Selected"
 msgstr "Keen Lex utsöcht"
 
 #: src/vocabulary/vocabularyview.cpp:87
@@ -3795,6 +3899,41 @@ msgstr ""
 "Nettsiet besöken, dor gifft dat veleVokavelsetten:\n"
 "<a href=\"http://edu.kde.org/contrib/kvtml2.php\">http://edu.kde.org/contrib/"
 "kvtml2.php</a></p>\n"
+
+#~ msgid "&Lesson"
+#~ msgstr "&Lex"
+
+#~ msgid "&Grade:"
+#~ msgstr "&Stoop:"
+
+#~ msgid "&Reset Grades"
+#~ msgstr "St&open torüchsetten"
+
+#~ msgid "Remove Grades"
+#~ msgstr "Stopen wegmaken"
+
+#~ msgctxt "Display of the current lesson during practice"
+#~ msgid "Lesson: %1"
+#~ msgstr "Lex: %1"
+
+#~ msgid "Remove &Grades from this lesson"
+#~ msgstr "&Stopen ut den Lex wegmaken"
+
+#~ msgid "Remove &Grades from this lesson and all sub-lessons"
+#~ msgstr "&Stopen ut den Lex un all Ünnerlexen wegmaken"
+
+#~ msgctxt "Grade in language, table header"
+#~ msgid "Grade (%1)"
+#~ msgstr "Stoop (%1)"
+
+#~ msgid "Rename Lesson"
+#~ msgstr "Lex ümnömen"
+
+#~ msgid "Delete Lesson"
+#~ msgstr "Lex wegdoon"
+
+#~ msgid "Remove Grades from this Lesson"
+#~ msgstr "Stopen ut den Lex wegmaken"
 
 #~ msgctxt "caption for an overview of the grades for a document"
 #~ msgid "Statistics for \"%1\""
@@ -5244,9 +5383,6 @@ msgstr ""
 #~ msgid "Type Descriptions"
 #~ msgstr "Woortoort-Beschrieven"
 
-#~ msgid "New type"
-#~ msgstr "Nieg Typ"
-
 #~ msgid "New subtype"
 #~ msgstr "Nieg Ünnertyp"
 
@@ -5284,9 +5420,6 @@ msgstr ""
 
 #~ msgid "Remove Duplicates"
 #~ msgstr "Dubbels wegmaken"
-
-#~ msgid "Comment: %1"
-#~ msgstr "Kommentar: %1"
 
 #~ msgid "Pronunciation: %1"
 #~ msgstr "Utspraak: %1"
