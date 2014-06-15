@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-06-04 01:45+0000\n"
+"POT-Creation-Date: 2014-06-15 01:56+0000\n"
 "PO-Revision-Date: 2014-03-19 20:12+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -42,6 +42,7 @@ msgstr "Statistik"
 #: src/kdefrontend/ui/dockwidgets/xycurvedockgeneraltab.ui:23
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:17
 #: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:17
+#: src/kdefrontend/widgets/FitParametersWidget.cpp:45
 msgid "Name"
 msgstr "Naam"
 
@@ -359,7 +360,7 @@ msgstr ""
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:68
 #: src/kdefrontend/ui/dockwidgets/xycurvedockgeneraltab.ui:49
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:43
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:40
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:43
 msgid "Comment"
 msgstr ""
 
@@ -672,7 +673,7 @@ msgstr ""
 #: src/backend/worksheet/plots/cartesian/CartesianPlotLegend.cpp:921
 #: src/backend/worksheet/plots/cartesian/XYCurve.cpp:1589
 #: src/backend/worksheet/plots/cartesian/XYEquationCurve.cpp:213
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:152
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:317
 #: src/backend/worksheet/plots/PlotArea.cpp:473
 #: src/backend/worksheet/TextLabel.cpp:673
 #: src/backend/worksheet/Worksheet.cpp:732
@@ -840,7 +841,7 @@ msgstr ""
 #: src/backend/matrix/Matrix.cpp:537
 #: src/commonfrontend/spreadsheet/spreadsheetview_kactions.h:13
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:343
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:193
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:246
 msgid "Recalculate"
 msgstr ""
 
@@ -1209,7 +1210,7 @@ msgstr ""
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:278
 #: src/kdefrontend/ui/dockwidgets/xycurvedockgeneraltab.ui:89
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:366
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:216
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:269
 #: src/kdefrontend/ui/labelwidget.ui:395
 msgid "visible"
 msgstr ""
@@ -1988,7 +1989,22 @@ msgstr ""
 msgid "no xy equation curve element found"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:148
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:117
+#, kde-format
+msgid "%1: assign x-data"
+msgstr ""
+
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:124
+#, kde-format
+msgid "%1: assign y-data"
+msgstr ""
+
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:131
+#, kde-format
+msgid "%1: assign weights"
+msgstr ""
+
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:313
 msgid "no xy fit curve element found"
 msgstr ""
 
@@ -2091,9 +2107,11 @@ msgid "Search/Filter text"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, gbOptions)
+#. i18n: ectx: property (text), widget (QPushButton, pbOptions)
 #: src/commonfrontend/ProjectExplorer.cpp:91
 #: src/kdefrontend/spreadsheet/SortDialog.cpp:54
 #: src/kdefrontend/ui/datasources/importfilewidget.ui:221
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:197
 #: src/kdefrontend/ui/worksheet/exportworksheetwidget.ui:69
 msgid "Options"
 msgstr ""
@@ -2561,13 +2579,13 @@ msgstr ""
 
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:304
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:288
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:88
 msgid "Custom"
 msgstr ""
 
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:193
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:307
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:312
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:79
 msgid "linear"
 msgstr ""
 
@@ -2762,7 +2780,7 @@ msgstr ""
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:908
 #: src/kdefrontend/dockwidgets/SpreadsheetDock.cpp:191
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:862
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1767
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1765
 #, kde-format
 msgid "%1: template \"%2\" loaded"
 msgstr ""
@@ -3299,21 +3317,21 @@ msgstr ""
 msgid "Automatic (E)"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1269
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1338
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1267
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1336
 msgid "Data, +-"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lXErrorDataPlus)
 #. i18n: ectx: property (text), widget (QLabel, lYErrorDataPlus)
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1276
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1345
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1274
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1343
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1028
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1081
 msgid "Data, +"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1765
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1763
 #, kde-format
 msgid "%1 xy-curves: template \"%2\" loaded"
 msgstr ""
@@ -3360,6 +3378,34 @@ msgstr ""
 #: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:212
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:276
 msgid "t, max"
+msgstr ""
+
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:81
+msgid "Polynomial"
+msgstr ""
+
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:82
+msgid "Power"
+msgstr ""
+
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:83
+msgid "Exponential"
+msgstr ""
+
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:84
+msgid "Fourier"
+msgstr ""
+
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:85
+msgid "Gaussian"
+msgstr ""
+
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:86
+msgid "Lorentz"
+msgstr ""
+
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:87
+msgid "Maxwell-Boltzmann"
 msgstr ""
 
 #: src/kdefrontend/GuiObserver.cpp:93 src/kdefrontend/GuiObserver.cpp:108
@@ -4309,7 +4355,11 @@ msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ConstantsWidget)
 #. i18n: ectx: property (windowTitle), widget (QWidget, FunctionsWidget)
+#. i18n: ectx: property (windowTitle), widget (QWidget, FitParametersWidget)
+#. i18n: ectx: property (windowTitle), widget (QWidget, FitOptionsWidget)
 #: src/kdefrontend/ui/constantswidget.ui:14
+#: src/kdefrontend/ui/fitoptionswidget.ui:14
+#: src/kdefrontend/ui/fitparameterswidget.ui:14
 #: src/kdefrontend/ui/functionswidget.ui:14
 msgid "Form"
 msgstr ""
@@ -5156,18 +5206,14 @@ msgstr ""
 msgid "Comment:"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, lXColumn)
 #. i18n: ectx: property (text), widget (QLabel, lPositionX)
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:203
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:76
 #: src/kdefrontend/ui/labelwidget.ui:229
 msgid "x"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, lYColumn)
 #. i18n: ectx: property (text), widget (QLabel, lPositionY)
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:239
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:83
 #: src/kdefrontend/ui/labelwidget.ui:280
 msgid "y"
 msgstr ""
@@ -5417,11 +5463,13 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lXColumn)
 #: src/kdefrontend/ui/dockwidgets/xycurvedockgeneraltab.ui:59
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:312
 msgid "x-data"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lYColumn)
 #: src/kdefrontend/ui/dockwidgets/xycurvedockgeneraltab.ui:66
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:319
 msgid "y-data"
 msgstr ""
 
@@ -5440,7 +5488,7 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (QToolButton, tbFunctions2)
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:137
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:210
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:260
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:129
 msgid "Functions"
 msgstr ""
 
@@ -5449,7 +5497,7 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (QToolButton, tbConstants2)
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:147
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:220
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:270
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:139
 msgid "Constants"
 msgstr ""
 
@@ -5463,39 +5511,70 @@ msgstr ""
 msgid "Number of points"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QLabel, lNumberOfTerms)
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:85
+msgid "Number of terms"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, pbParameters)
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:184
+msgid "Specify parameters and their start values"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, pbParameters)
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:187
+msgid "Parameters"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, pbOptions)
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:194
+msgid "Advanced fit options"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QLabel, lName_2)
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:69
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:305
 msgid "Data:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lWeightsColumn)
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:90
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:326
 msgid "weights"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, lName_3)
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:119
-msgid "Fit options:"
-msgstr ""
-
 #. i18n: ectx: property (text), widget (QLabel, lModel)
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:126
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:333
 msgid "Model"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, lEquation1)
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:153
+#. i18n: ectx: property (text), widget (QLabel, lEquation)
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:340
 msgid "f(x)"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lName_4)
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:166
-msgid "Advanced fit options:"
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:353
+msgid "Results:"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, lNumber)
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:289
-msgid "Parameters"
+#. i18n: ectx: property (text), widget (QLabel, lName_3)
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:369
+msgid "Fit:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, lMaxIterations)
+#: src/kdefrontend/ui/fitoptionswidget.ui:26
+msgid "Max. iterations"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, lEps)
+#: src/kdefrontend/ui/fitoptionswidget.ui:36
+msgid "Tolerance"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, pbApply)
+#: src/kdefrontend/ui/fitoptionswidget.ui:62
+#: src/kdefrontend/ui/fitparameterswidget.ui:36
+msgid "Apply"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, tbTexUsed)
@@ -5674,6 +5753,10 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, lExportBackground)
 #: src/kdefrontend/ui/worksheet/exportworksheetwidget.ui:95
 msgid "Export background"
+msgstr ""
+
+#: src/kdefrontend/widgets/FitParametersWidget.cpp:49
+msgid "Start value"
 msgstr ""
 
 #: src/kdefrontend/widgets/LabelWidget.cpp:429
