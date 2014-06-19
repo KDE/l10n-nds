@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-06-18 01:36+0000\n"
+"POT-Creation-Date: 2014-06-19 01:30+0000\n"
 "PO-Revision-Date: 2014-02-17 01:14+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -25,16 +25,6 @@ msgstr "Manfred Wiese, Sönke Dibbern"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "m.j.wiese@web.de, s_dibbern@web.de"
-
-#: benchmarks/kis_floodfill_benchmark.cpp:86
-#: plugins/tools/defaulttools/kis_tool_fill.cc:128
-#: ui/actions/kis_selection_action_factories.cpp:171
-msgid "Flood Fill"
-msgstr "Vullmaken"
-
-#: benchmarks/kis_gradient_benchmark.cpp:69
-msgid "Gradient Fill"
-msgstr "Mit Klöörövergang vullmaken"
 
 #: crashreporter/main.cpp:53
 msgid "Krita Crash Reporter"
@@ -204,22 +194,22 @@ msgid "&Select"
 msgstr "&Utsöken"
 
 #. i18n: ectx: Menu (Filter)
-#: gemini/kritagemini.rc:139 krita.rc:139 sketch/kritasketch.rc:139
+#: gemini/kritagemini.rc:139 krita.rc:140 sketch/kritasketch.rc:139
 msgid "Filte&r"
 msgstr "Filte&r"
 
 #. i18n: ectx: Menu (Tools)
-#: gemini/kritagemini.rc:156 krita.rc:156 sketch/kritasketch.rc:156
+#: gemini/kritagemini.rc:156 krita.rc:157 sketch/kritasketch.rc:156
 msgid "&Tools"
 msgstr "&Warktüüch"
 
 #. i18n: ectx: Menu (settings)
-#: gemini/kritagemini.rc:159 krita.rc:159 sketch/kritasketch.rc:159
+#: gemini/kritagemini.rc:159 krita.rc:160 sketch/kritasketch.rc:159
 msgid "Settings"
 msgstr "Instellen"
 
 #. i18n: ectx: ToolBar (BrushesAndStuff)
-#: gemini/kritagemini.rc:172 krita.rc:172 sketch/kritasketch.rc:172
+#: gemini/kritagemini.rc:172 krita.rc:173 sketch/kritasketch.rc:172
 msgid "Brushes and Stuff"
 msgstr "Pinsel un mehr"
 
@@ -1486,21 +1476,25 @@ msgid "Property Changes"
 msgstr "Egenschappen-Ännern"
 
 #: image/commands/kis_node_compositeop_command.cpp:28
+#, fuzzy
+#| msgid "Composite Mode"
 msgctxt "(qtundo-format)"
-msgid "Node Composite Mode"
-msgstr "Knütt-Tosamensettenbedrief"
+msgid "Composition Mode Change"
+msgstr "Tosamensetten-Bedrief"
 
 #: image/commands/kis_node_opacity_command.cpp:26
+#, fuzzy
+#| msgid "Opacity Curve"
 msgctxt "(qtundo-format)"
-msgid "Node Opacity"
-msgstr "Knütt-Deckstärk"
+msgid "Opacity Change"
+msgstr "Deckstärk-Bagen"
 
 #: image/commands/kis_reselect_global_selection_command.cpp:30
 msgctxt "(qtundo-format)"
 msgid "Reselect"
 msgstr "Nieg Köör"
 
-#: image/commands_new/kis_image_resize_command.cpp:28
+#: image/commands_new/kis_image_resize_command.cpp:28 image/kis_image.cc:421
 msgctxt "(qtundo-format)"
 msgid "Resize Image"
 msgstr "Bildgrött ännern"
@@ -1511,13 +1505,12 @@ msgid "Set Image Resolution"
 msgstr "Bildoplösen fastleggen"
 
 #: image/commands_new/kis_move_command_common.h:40
+#: plugins/tools/defaulttools/strokes/move_stroke_strategy.cpp:31
 msgctxt "(qtundo-format)"
 msgid "Move"
 msgstr "Verschuven"
 
-#. i18n: ectx: property (text), widget (QPushButton, bnZoomAdjust)
 #: image/filter/kis_filter.cc:35
-#: plugins/extensions/dockers/imagedocker/forms/wdgImageViewPopup.ui:35
 msgid "Adjust"
 msgstr "Topassen"
 
@@ -1599,13 +1592,13 @@ msgstr "Week"
 msgid "Gaussian"
 msgstr "Gauß'sch"
 
-#: image/kis_base_node.cpp:141 ui/kis_node_model.cpp:425
+#: image/kis_base_node.cpp:141 ui/kis_node_model.cpp:442
 msgid "Visible"
 msgstr "Sichtbor"
 
 #: image/kis_base_node.cpp:142
 #: plugins/extensions/dockers/channeldocker/channelmodel.cpp:68
-#: ui/kis_node_model.cpp:426
+#: ui/kis_node_model.cpp:443
 msgid "Locked"
 msgstr "Afslaten"
 
@@ -1679,73 +1672,123 @@ msgstr "Achtergrund"
 msgid "Layer %1"
 msgstr "Laag %1"
 
-#: image/kis_image.cc:419
+#: image/kis_image.cc:420
+#, fuzzy
+#| msgid "Crop Image"
+msgctxt "(qtundo-format)"
 msgid "Crop Image"
 msgstr "Bild tosnieden"
 
-#: image/kis_image.cc:419
-msgid "Resize Image"
-msgstr "Bildgrött ännern"
+#: image/kis_image.cc:456
+#, fuzzy
+#| msgid "&Group Layer"
+msgctxt "(qtundo-format)"
+msgid "Crop Layer"
+msgstr "&Koppel-Laag"
 
-#: image/kis_image.cc:452
-msgid "Crop Node"
-msgstr "Knütt tosnieden"
+#: image/kis_image.cc:457
+#, fuzzy
+#| msgid "Unsharp Mask"
+msgctxt "(qtundo-format)"
+msgid "Crop Mask"
+msgstr "Weekteek-Mask"
 
-#: image/kis_image.cc:479
+#: image/kis_image.cc:485
+#, fuzzy
+#| msgid "Scale Image"
+msgctxt "(qtundo-format)"
 msgid "Scale Image"
 msgstr "Bild topassen"
 
-#: image/kis_image.cc:479
+#: image/kis_image.cc:486
 #, fuzzy
 #| msgctxt "(qtundo-format)"
 #| msgid "Set Image Resolution"
+msgctxt "(qtundo-format)"
 msgid "Change Image Resolution"
 msgstr "Bildoplösen fastleggen"
 
-#: image/kis_image.cc:526
+#: image/kis_image.cc:533
+#, fuzzy
+#| msgid "Scale Layer"
+msgctxt "(qtundo-format)"
 msgid "Scale Layer"
 msgstr "Laag topassen"
 
-#: image/kis_image.cc:620 plugins/extensions/rotateimage/rotateimage.cc:155
+#: image/kis_image.cc:621
+#, fuzzy
+#| msgid "Rotate Image"
+msgctxt "(qtundo-format)"
+msgid "Rotate Image"
+msgstr "Bild dreihen"
+
+#: image/kis_image.cc:626
+#, fuzzy
+#| msgid "Rotate Layer"
+msgctxt "(qtundo-format)"
 msgid "Rotate Layer"
 msgstr "Laag dreihen"
 
-#: image/kis_image.cc:687
+#: image/kis_image.cc:693
+#, fuzzy
+#| msgid "Shear layer"
+msgctxt "(qtundo-format)"
 msgid "Shear layer"
 msgstr "Laag scheren"
 
-#. i18n: ectx: property (windowTitle), widget (QWidget, WdgShearImage)
-#: image/kis_image.cc:693 plugins/extensions/shearimage/dlg_shearimage.cc:32
-#: plugins/extensions/shearimage/shearimage.cc:64
-#: plugins/extensions/shearimage/wdg_shearimage.ui:14
+#: image/kis_image.cc:699
+#, fuzzy
+#| msgid "Shear Image"
+msgctxt "(qtundo-format)"
 msgid "Shear Image"
 msgstr "Bild scheren"
 
-#: image/kis_image.cc:706
+#: image/kis_image.cc:712
+#, fuzzy
+#| msgid "Convert Image Color Space"
+msgctxt "(qtundo-format)"
 msgid "Convert Image Color Space"
 msgstr "Bildklörenruum ümwanneln"
 
-#: image/kis_image.cc:739
+#: image/kis_image.cc:745
+#, fuzzy
+#| msgid "Convert Projection Color Space"
+msgctxt "(qtundo-format)"
 msgid "Convert Projection Color Space"
 msgstr "Projizerenklörenruum ümwanneln"
 
-#: image/kis_image.cc:918 ui/kis_layer_manager.cc:709
+#: image/kis_image.cc:924
+#, fuzzy
+#| msgid "Flatten Image"
+msgctxt "(qtundo-format)"
 msgid "Flatten Image"
 msgstr "Bild glattmaken"
 
-#: image/kis_image.cc:1018
+#: image/kis_image.cc:1024
+#, fuzzy
+#| msgid "Merge with Layer Below"
+msgctxt "(qtundo-format)"
 msgid "Merge with Layer Below"
 msgstr "Mit nerrn Laag tosamenföhren"
 
-#: image/kis_image.cc:1064
+#: image/kis_image.cc:1070
+#, fuzzy
+#| msgid "Flatten Layer"
+msgctxt "(qtundo-format)"
 msgid "Flatten Layer"
 msgstr "Laag glattmaken"
 
-#: image/kis_image.cc:1650
+#: image/kis_image.cc:1656
 #, fuzzy
 #| msgid "Grow Selection"
+msgctxt "(qtundo-format)"
 msgid "Crop Selections"
 msgstr "Köör utdehnen"
+
+#: image/kis_layer.cc:174
+#, kde-format
+msgid "%1%"
+msgstr "%1%"
 
 #. i18n: ectx: property (text), widget (QCheckBox, opacityCBox)
 #: image/kis_layer.cc:174 plugins/paintops/hairy/wdghairyeoptions.ui:297
@@ -1755,17 +1798,12 @@ msgstr "Köör utdehnen"
 msgid "Opacity"
 msgstr "Deckstärk"
 
-#: image/kis_layer.cc:174
-#, kde-format
-msgid "%1%"
-msgstr "%1%"
-
 #: image/kis_layer.cc:176
 msgid "Composite Mode"
 msgstr "Tosamensetten-Bedrief"
 
 #: image/kis_paint_layer.cc:151 image/kis_paint_layer.cc:160
-#: ui/kis_node_model.cpp:434
+#: ui/kis_node_model.cpp:451
 msgid "Alpha Locked"
 msgstr "Alpha afslaten"
 
@@ -1780,45 +1818,65 @@ msgid "Processing"
 msgstr "Nabewerken"
 
 #: image/kis_selection_filters.cpp:120
+#, fuzzy
+#| msgid "Erode Selection"
+msgctxt "(qtundo-format)"
 msgid "Erode Selection"
 msgstr "Köör utwaschen"
 
 #: image/kis_selection_filters.cpp:184
+#, fuzzy
+#| msgid "Dilate Selection"
+msgctxt "(qtundo-format)"
 msgid "Dilate Selection"
 msgstr "Köör verwiedern"
 
 #: image/kis_selection_filters.cpp:254
-#: plugins/extensions/modify_selection/dlg_border_selection.cc:31
+#, fuzzy
+#| msgid "Border Selection"
+msgctxt "(qtundo-format)"
 msgid "Border Selection"
 msgstr "Köör ümrannen"
 
 #: image/kis_selection_filters.cpp:473
-#: plugins/extensions/modify_selection/dlg_feather_selection.cc:31
+#, fuzzy
+#| msgid "Feather Selection"
+msgctxt "(qtundo-format)"
 msgid "Feather Selection"
 msgstr "Köör afswachen"
 
 #: image/kis_selection_filters.cpp:520
-#: plugins/extensions/modify_selection/dlg_grow_selection.cc:31
+#, fuzzy
+#| msgid "Grow Selection"
+msgctxt "(qtundo-format)"
 msgid "Grow Selection"
 msgstr "Köör utdehnen"
 
 #: image/kis_selection_filters.cpp:647
-#: plugins/extensions/modify_selection/dlg_shrink_selection.cc:31
+#, fuzzy
+#| msgid "Shrink Selection"
+msgctxt "(qtundo-format)"
 msgid "Shrink Selection"
 msgstr "Köör schrimpen"
 
 #: image/kis_selection_filters.cpp:790
+#, fuzzy
+#| msgid "Smooth Selection"
+msgctxt "(qtundo-format)"
 msgid "Smooth Selection"
 msgstr "Köör week topassen"
 
 #: image/kis_selection_filters.cpp:851
+#, fuzzy
+#| msgid "Invert Selection"
+msgctxt "(qtundo-format)"
 msgid "Invert Selection"
 msgstr "Köör ümdreihen"
 
 #. i18n: ectx: property (text), widget (QLabel, label_17)
 #: image/kis_selection_mask.cpp:106
 #: plugins/paintops/resourcemanager/wdgdlgbundlemanager.ui:225
-#: ui/kis_node_model.cpp:427
+#: ui/kis_node_model.cpp:444
 msgid "Active"
 msgstr "Aktiv"
 
@@ -1887,21 +1945,21 @@ msgstr ""
 msgid "Invalid value."
 msgstr "Leeg Weert."
 
-#. i18n: ectx: property (windowTitle), widget (QWidget, WdgToolCrop)
-#: image/processing/kis_crop_processing_visitor.cpp:54
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:14
-msgid "Crop"
-msgstr "Tosnieden"
-
 #: image/processing/kis_transform_processing_visitor.cpp:160
-msgid "Transform Node"
+#, fuzzy
+#| msgid "Transform Node"
+msgctxt "(qtundo-format)"
+msgid "Transform Layer"
 msgstr "Knütt wanneln"
 
-#: image/recorder/kis_macro_player.cc:75
+#: image/recorder/kis_macro_player.cc:77
+#, fuzzy
+#| msgid "Play macro"
+msgctxt "(qtundo-format)"
 msgid "Play macro"
 msgstr "Makro afspelen"
 
-#: image/recorder/kis_macro_player.cc:81
+#: image/recorder/kis_macro_player.cc:83
 #: plugins/extensions/bigbrother/bigbrother.cc:124
 #, fuzzy
 #| msgid "Play macro"
@@ -1912,13 +1970,18 @@ msgstr "Makro afspelen"
 msgid "Fill"
 msgstr "Füllen"
 
+#: image/recorder/kis_recorded_filter_action.cpp:103
+#, fuzzy, kde-format
+#| msgid "Filter:"
+msgctxt "(qtundo-format)"
+msgid "Filter: \"%1\""
+msgstr "Filter:"
+
 #: image/recorder/kis_recorded_node_action.cc:54
 msgid "Applying action to all selected nodes"
 msgstr ""
 
 #: image/recorder/kis_recorded_path_paint_action.cpp:61
-#: plugins/tools/defaulttools/kis_tool_path.cc:75
-#: plugins/tools/defaulttools/kis_tool_pencil.cc:61
 msgid "Path"
 msgstr "Bahn"
 
@@ -1930,7 +1993,6 @@ msgstr "Bahn"
 #: plugins/paintops/gridbrush/wdgshapeoptions.ui:36
 #: plugins/paintops/libpaintop/forms/wdgBrushSizeOptions.ui:343
 #: plugins/paintops/spray/wdgshapeoptions.ui:60
-#: plugins/tools/defaulttools/kis_tool_ellipse.cc:64
 msgid "Ellipse"
 msgstr "Ellips"
 
@@ -1943,7 +2005,6 @@ msgstr "Ellips"
 #: plugins/paintops/gridbrush/wdgshapeoptions.ui:41
 #: plugins/paintops/libpaintop/forms/wdgBrushSizeOptions.ui:348
 #: plugins/paintops/spray/wdgshapeoptions.ui:65
-#: plugins/tools/defaulttools/kis_tool_rectangle.cc:67
 msgid "Rectangle"
 msgstr "Rechteck"
 
@@ -2029,7 +2090,7 @@ msgid "Perspective assistant"
 msgstr "Kiekwinkelhölper"
 
 #: plugins/assistants/RulerAssistant/PerspectiveAssistant.cc:339
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:52
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:60
 msgid "Perspective"
 msgstr "Kiekwinkel"
 
@@ -2187,7 +2248,7 @@ msgstr "Koperen vun"
 #: plugins/extensions/clonesarray/wdg_clonesarray.ui:14
 #: plugins/extensions/offsetimage/wdg_offsetimage.ui:14
 #: plugins/extensions/rotateimage/dlg_rotateimage.cc:31
-#: plugins/extensions/rotateimage/rotateimage.cc:108
+#: plugins/extensions/rotateimage/rotateimage.cc:109
 #: plugins/extensions/rotateimage/wdg_rotateimage.ui:16
 msgid "Rotate Image"
 msgstr "Bild dreihen"
@@ -2295,7 +2356,13 @@ msgid "Select from Color Range..."
 msgstr "Ut Klöör-Rebeet utsöken..."
 
 #: plugins/extensions/colorrange/colorrange.cc:55
+msgid "Select Opaque"
+msgstr "Deckstärk utsöken"
+
 #: plugins/extensions/colorrange/colorrange.cc:83
+#, fuzzy
+#| msgid "Select Opaque"
+msgctxt "(qtundo-format)"
 msgid "Select Opaque"
 msgstr "Deckstärk utsöken"
 
@@ -2314,6 +2381,7 @@ msgstr "Klöör-Rebeet"
 #: plugins/extensions/colorrange/dlg_colorrange.cc:318
 #, fuzzy
 #| msgid "Color Selector"
+msgctxt "(qtundo-format)"
 msgid "Color Range Selection"
 msgstr "Klöörköör"
 
@@ -2421,6 +2489,9 @@ msgid "Convert Current Layer From"
 msgstr "Aktuell Laag ümwanneln ut"
 
 #: plugins/extensions/colorspaceconversion/colorspaceconversion.cc:122
+#, fuzzy
+#| msgid "Convert Layer Type"
+msgctxt "(qtundo-format)"
 msgid "Convert Layer Type"
 msgstr "Laag-Typ wanneln"
 
@@ -2606,6 +2677,7 @@ msgstr "Verschuven: "
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:24
 #: ui/dialogs/kis_dlg_preferences.cc:602 ui/dialogs/kis_dlg_preferences.cc:603
+#: ui/kis_paintop_option.cpp:26
 msgid "General"
 msgstr "Allgemeen"
 
@@ -2793,8 +2865,10 @@ msgstr "Wiesen"
 #. i18n: ectx: property (text), widget (QLabel, label_14)
 #. i18n: ectx: property (text), widget (QLabel, label_12)
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#. i18n: ectx: property (text), widget (QLabel, label_3)
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:476
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:693
+#: plugins/formats/heightmap/kis_wdg_options_heightmap.ui:30
 #: plugins/formats/pdf/pdfimportwidgetbase.ui:214
 #: plugins/paintops/libpaintop/kis_brush_chooser.cpp:97
 #: ui/forms/wdgdisplaysettings.ui:77 ui/kis_paintop_box.cc:152
@@ -3036,60 +3110,73 @@ msgstr "Naam:"
 msgid "Composition"
 msgstr "Tosamensetten-Bedrief"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:120
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:122
 msgid "Layers"
 msgstr "Lagen"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:146
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:148
 msgid "Minimal View"
 msgstr "Minimaalansicht"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:148
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:150
 msgid "Detailed View"
 msgstr "Enkelheitenansicht"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:150
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:152
 msgid "Thumbnail View"
 msgstr "Vöransicht"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:162
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:164
 msgid "View mode"
 msgstr "Ansicht"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:189
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:191
 msgid "&Remove Layer"
 msgstr "Laag &wegdoon"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:197
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:199
 #, fuzzy
 #| msgctxt "(qtundo-format)"
 #| msgid "Move Layer"
 msgid "Move Layer Left"
 msgstr "Laag verschuven"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:205
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:207
 #, fuzzy
 #| msgctxt "(qtundo-format)"
 #| msgid "Move Layer"
 msgid "Move Layer Right"
 msgstr "Laag verschuven"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:212
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:214
 msgid "&Properties..."
 msgstr "&Egenschappen..."
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:230
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:232
 #, fuzzy
 #| msgid "Select Opaque"
 msgid "&Select Opaque"
 msgstr "Deckstärk utsöken"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:475
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:256
+#, fuzzy
+#| msgid "Selection Mask..."
+msgid "&Show Global Selection Mask"
+msgstr "Köörmask..."
+
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:258
+msgctxt "@info:tooltip"
+msgid ""
+"Shows global selection as a usual selection mask in <interface>Layers</"
+"interface> docker"
+msgstr ""
+
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:487
 #: ui/kis_layer_manager.cc:283
 msgid "&Merge with Layer Below"
 msgstr "Mit nerrn Laag &tosamenföhren"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:479
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:491
 #, fuzzy
 #| msgid "&Invert"
 msgid "&Convert"
@@ -3376,6 +3463,14 @@ msgstr "Nak."
 msgid "Fit"
 msgstr "Filter"
 
+#. i18n: ectx: property (text), widget (QPushButton, bnZoomAdjust)
+#: plugins/extensions/dockers/imagedocker/forms/wdgImageViewPopup.ui:35
+#, fuzzy
+#| msgid "Adjust"
+msgctxt "Zoom mode to fit by only one dimension - width or height"
+msgid "Adjust"
+msgstr "Topassen"
+
 #. i18n: ectx: property (text), widget (QPushButton, bnZoom100)
 #: plugins/extensions/dockers/imagedocker/forms/wdgImageViewPopup.ui:48
 #: plugins/paintops/curvebrush/kis_curves_opacity_option.cpp:26
@@ -3533,7 +3628,7 @@ msgid "LUT file:"
 msgstr "Laagprofil:"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_bnClearLut)
-#: plugins/extensions/dockers/lut/wdglut.ui:186 ui/tool/kis_tool.cc:545
+#: plugins/extensions/dockers/lut/wdglut.ui:186
 msgid "Clear"
 msgstr "Leddig maken"
 
@@ -3698,6 +3793,9 @@ msgid "Layer Effects"
 msgstr "Laag-Effekten"
 
 #: plugins/extensions/dropshadow/kis_dropshadow.cc:126
+#, fuzzy
+#| msgid "Add Drop Shadow"
+msgctxt "(qtundo-format)"
 msgid "Add Drop Shadow"
 msgstr "Schadden tofögen"
 
@@ -3776,7 +3874,7 @@ msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgSplash)
 #: plugins/extensions/gmic/kis_gmic_plugin.cpp:158
-#: plugins/extensions/gmic/kis_gmic_plugin.cpp:167 ui/kis_aboutdata.h:44
+#: plugins/extensions/gmic/kis_gmic_plugin.cpp:166 ui/kis_aboutdata.h:44
 #: wdgsplash.ui:300
 msgid "Krita"
 msgstr "Krita"
@@ -3785,13 +3883,14 @@ msgstr "Krita"
 msgid "Sorry, this filter is crashing Krita and is turned off."
 msgstr ""
 
-#: plugins/extensions/gmic/kis_gmic_plugin.cpp:167
+#: plugins/extensions/gmic/kis_gmic_plugin.cpp:166
 msgid "Sorry, this input mode is not implemented"
 msgstr ""
 
-#: plugins/extensions/gmic/kis_gmic_plugin.cpp:172
+#: plugins/extensions/gmic/kis_gmic_plugin.cpp:170
 #, fuzzy
 #| msgid "direction filter"
+msgctxt "(qtundo-format)"
 msgid "Gmic filter"
 msgstr "Richtfilter"
 
@@ -4013,7 +4112,6 @@ msgstr "Afmeten&grenzen"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: ectx: property (title), widget (QGroupBox, grpAngle)
 #: plugins/extensions/imagesize/wdg_canvassize.ui:158
-#: plugins/extensions/offsetimage/kis_offset_processing_visitor.cpp:109
 #: plugins/extensions/offsetimage/wdg_offsetimage.ui:20
 msgid "Offset"
 msgstr "Verscheel"
@@ -4643,8 +4741,6 @@ msgstr "Wittbalangs:"
 #. i18n: ectx: property (text), item, widget (QComboBox, editWhiteBalance)
 #. i18n: ectx: property (text), widget (QRadioButton, customRadioButton)
 #: plugins/extensions/metadataeditor/editors/exif.ui:924
-#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:64
-#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:66
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:1037
 msgid "Custom"
 msgstr "Egen"
@@ -4801,6 +4897,22 @@ msgstr "Weert"
 msgid "&Edit metadata..."
 msgstr "Metadaten &bewerken..."
 
+#: plugins/extensions/modify_selection/dlg_border_selection.cc:31
+msgid "Border Selection"
+msgstr "Köör ümrannen"
+
+#: plugins/extensions/modify_selection/dlg_feather_selection.cc:31
+msgid "Feather Selection"
+msgstr "Köör afswachen"
+
+#: plugins/extensions/modify_selection/dlg_grow_selection.cc:31
+msgid "Grow Selection"
+msgstr "Köör utdehnen"
+
+#: plugins/extensions/modify_selection/dlg_shrink_selection.cc:31
+msgid "Shrink Selection"
+msgstr "Köör schrimpen"
+
 #: plugins/extensions/modify_selection/modify_selection.cc:42
 msgid "Grow Selection..."
 msgstr "Köör utdehnen..."
@@ -4858,13 +4970,6 @@ msgstr "Schrimpen"
 msgid "Shrink from image border"
 msgstr "Vun'n Bildrand schrimpen"
 
-#: plugins/extensions/offsetimage/dlg_offsetimage.cpp:28
-#: plugins/extensions/offsetimage/offsetimage.cpp:73
-#, fuzzy
-#| msgid "Offset scale"
-msgid "Offset Image"
-msgstr "Versetten topassen:"
-
 #: plugins/extensions/offsetimage/offsetimage.cpp:48
 #, fuzzy
 #| msgid "&Shear Image..."
@@ -4877,9 +4982,31 @@ msgstr "Bild &scheren..."
 msgid "&Offset Layer..."
 msgstr "Laag &scheren..."
 
+#: plugins/extensions/offsetimage/offsetimage.cpp:73
+#, fuzzy
+#| msgid "Offset scale"
+msgctxt "(qtundo-format)"
+msgid "Offset Image"
+msgstr "Versetten topassen:"
+
+#: plugins/extensions/offsetimage/offsetimage.cpp:74
+#, fuzzy
+#| msgid "Offset scale"
+msgctxt "@title:window"
+msgid "Offset Image"
+msgstr "Versetten topassen:"
+
 #: plugins/extensions/offsetimage/offsetimage.cpp:97
 #, fuzzy
 #| msgid "Offset scale"
+msgctxt "(qtundo-format)"
+msgid "Offset Layer"
+msgstr "Versetten topassen:"
+
+#: plugins/extensions/offsetimage/offsetimage.cpp:98
+#, fuzzy
+#| msgid "Offset scale"
+msgctxt "@title:window"
 msgid "Offset Layer"
 msgstr "Versetten topassen:"
 
@@ -4888,11 +5015,11 @@ msgstr "Versetten topassen:"
 msgid "Offset by x/2, y/2"
 msgstr ""
 
-#: plugins/extensions/rotateimage/rotateimage.cc:46
+#: plugins/extensions/rotateimage/rotateimage.cc:47
 msgid "&Rotate Image..."
 msgstr "Bild &dreihen..."
 
-#: plugins/extensions/rotateimage/rotateimage.cc:50
+#: plugins/extensions/rotateimage/rotateimage.cc:51
 #, fuzzy
 #| msgctxt "rotate image 90 degrees to the right"
 #| msgid "Rotate Image of 90° to the Right"
@@ -4900,7 +5027,7 @@ msgctxt "rotate image 90 degrees to the right"
 msgid "Rotate Image 90° to the Right"
 msgstr "Bild 90° na rechts dreihen"
 
-#: plugins/extensions/rotateimage/rotateimage.cc:54
+#: plugins/extensions/rotateimage/rotateimage.cc:55
 #, fuzzy
 #| msgctxt "rotate image 180 degrees to the right"
 #| msgid "Rotate Image of 180°"
@@ -4908,7 +5035,7 @@ msgctxt "rotate image 180 degrees to the right"
 msgid "Rotate Image 180°"
 msgstr "Bild 180° na rechts dreihen"
 
-#: plugins/extensions/rotateimage/rotateimage.cc:58
+#: plugins/extensions/rotateimage/rotateimage.cc:59
 #, fuzzy
 #| msgctxt "rotate image 90 degrees to the left"
 #| msgid "Rotate Image of 90° to the Left"
@@ -4916,25 +5043,23 @@ msgctxt "rotate image 90 degrees to the left"
 msgid "Rotate Image 90° to the Left"
 msgstr "Bild 90° na links dreihen"
 
-#: plugins/extensions/rotateimage/rotateimage.cc:62
-#: plugins/extensions/rotateimage/rotateimage.cc:143
+#: plugins/extensions/rotateimage/rotateimage.cc:63
 #, fuzzy
 #| msgid "Mirror Horizontally"
 msgid "Mirror Image Horizontally"
 msgstr "Kimmrecht spegeln"
 
-#: plugins/extensions/rotateimage/rotateimage.cc:66
-#: plugins/extensions/rotateimage/rotateimage.cc:136
+#: plugins/extensions/rotateimage/rotateimage.cc:67
 #, fuzzy
 #| msgid "Mirror Vertically"
 msgid "Mirror Image Vertically"
 msgstr "Pielrecht spegeln"
 
-#: plugins/extensions/rotateimage/rotateimage.cc:70
+#: plugins/extensions/rotateimage/rotateimage.cc:71
 msgid "&Rotate Layer..."
 msgstr "Laag &dreihen..."
 
-#: plugins/extensions/rotateimage/rotateimage.cc:76
+#: plugins/extensions/rotateimage/rotateimage.cc:77
 #, fuzzy
 #| msgctxt "rotate the layer 180 degrees"
 #| msgid "Rotate Layer of 180°"
@@ -4942,7 +5067,7 @@ msgctxt "rotate the layer 180 degrees"
 msgid "Rotate Layer 180°"
 msgstr "Laag 180° dreihen"
 
-#: plugins/extensions/rotateimage/rotateimage.cc:82
+#: plugins/extensions/rotateimage/rotateimage.cc:83
 #, fuzzy
 #| msgctxt "rotate the layer 90 degrees to the right"
 #| msgid "Rotate Layer of 90° to the Right"
@@ -4950,13 +5075,31 @@ msgctxt "rotate the layer 90 degrees to the right"
 msgid "Rotate Layer 90° to the Right"
 msgstr "Laag 90° na rechts dreihen"
 
-#: plugins/extensions/rotateimage/rotateimage.cc:88
+#: plugins/extensions/rotateimage/rotateimage.cc:89
 #, fuzzy
 #| msgctxt "rotate the layer 90 degrees to the left"
 #| msgid "Rotate Layer of 90° to the Left"
 msgctxt "rotate the layer 90 degrees to the left"
 msgid "Rotate Layer 90° to the Left"
 msgstr "Laag 90° na links dreihen"
+
+#: plugins/extensions/rotateimage/rotateimage.cc:137
+#, fuzzy
+#| msgid "Mirror Vertically"
+msgctxt "(qtundo-format)"
+msgid "Mirror Image Vertically"
+msgstr "Pielrecht spegeln"
+
+#: plugins/extensions/rotateimage/rotateimage.cc:144
+#, fuzzy
+#| msgid "Mirror Horizontally"
+msgctxt "(qtundo-format)"
+msgid "Mirror Image Horizontally"
+msgstr "Kimmrecht spegeln"
+
+#: plugins/extensions/rotateimage/rotateimage.cc:156
+msgid "Rotate Layer"
+msgstr "Laag dreihen"
 
 #. i18n: ectx: Menu (Rotate)
 #: plugins/extensions/rotateimage/rotateimage.rc:5
@@ -5000,9 +5143,15 @@ msgid "&Custom:"
 msgstr "&Egen:"
 
 #: plugins/extensions/separate_channels/dlg_separate.cc:40
-#: plugins/extensions/separate_channels/kis_channel_separator.cc:214
 #: plugins/extensions/separate_channels/kis_separate_channels_plugin.cc:76
 #: plugins/extensions/separate_channels/kis_separate_channels_plugin.cc:87
+msgid "Separate Image"
+msgstr "Bild aftrennen"
+
+#: plugins/extensions/separate_channels/kis_channel_separator.cc:214
+#, fuzzy
+#| msgid "Separate Image"
+msgctxt "(qtundo-format)"
 msgid "Separate Image"
 msgstr "Bild aftrennen"
 
@@ -5079,6 +5228,13 @@ msgstr "Ehr't Aftrennen na 8 Bit daalreken"
 #: plugins/extensions/separate_channels/wdg_separations.ui:138
 msgid "Output to color, not grayscale"
 msgstr "Klörenutgaav, keen Griestöön"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, WdgShearImage)
+#: plugins/extensions/shearimage/dlg_shearimage.cc:32
+#: plugins/extensions/shearimage/shearimage.cc:64
+#: plugins/extensions/shearimage/wdg_shearimage.ui:14
+msgid "Shear Image"
+msgstr "Bild scheren"
 
 #: plugins/extensions/shearimage/shearimage.cc:40
 msgid "&Shear Image..."
@@ -5198,7 +5354,7 @@ msgstr "Iris"
 #: plugins/paintops/experiment/wdgshapeoptions.ui:46
 #: plugins/paintops/libpaintop/forms/wdgBrushSizeOptions.ui:326
 #: plugins/paintops/spray/wdgshapeoptions.ui:46
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:214
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:215
 msgid "Shape:"
 msgstr "Form:"
 
@@ -5764,6 +5920,11 @@ msgid "&Index Colors..."
 msgstr "&Enkelklöör..."
 
 #: plugins/filters/indexcolors/indexcolors.cpp:82
+msgctxt "Color palette shade"
+msgid "Base"
+msgstr ""
+
+#: plugins/filters/indexcolors/indexcolors.cpp:82
 #, fuzzy
 #| msgid "Brightness"
 msgctxt "Color palette shade"
@@ -5776,11 +5937,6 @@ msgstr "Helligkeit"
 msgctxt "Color palette shade"
 msgid "Light"
 msgstr "Licht:"
-
-#: plugins/filters/indexcolors/indexcolors.cpp:82
-msgctxt "Color palette shade"
-msgid "Base"
-msgstr ""
 
 #: plugins/filters/indexcolors/indexcolors.cpp:82
 #, fuzzy
@@ -6168,7 +6324,7 @@ msgstr "&Ecken afrunnen..."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: plugins/filters/roundcorners/kis_round_corners_filter.cpp:130
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:284
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:285
 #: plugins/tools/selectiontools/kis_tool_select_magnetic_option_widget.ui:103
 msgid "Radius"
 msgstr "Halfmaat"
@@ -6301,13 +6457,13 @@ msgstr ""
 msgid "HDR Layer"
 msgstr "HDR-Laag"
 
-#: plugins/formats/exr/exr_converter.cc:1071
+#: plugins/formats/exr/exr_converter.cc:1070
 #, kde-format
 msgctxt "@item:unsupported-node-message"
 msgid "%1 (type: \"%2\")"
 msgstr ""
 
-#: plugins/formats/exr/exr_converter.cc:1076
+#: plugins/formats/exr/exr_converter.cc:1075
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -6316,7 +6472,7 @@ msgid ""
 "saved to the final EXR file</warning></para>"
 msgstr ""
 
-#: plugins/formats/exr/exr_converter.cc:1081
+#: plugins/formats/exr/exr_converter.cc:1080
 msgctxt "@title:window"
 msgid "Layers will be lost"
 msgstr ""
@@ -6393,8 +6549,83 @@ msgstr ""
 msgid "Krita could not create a new image."
 msgstr "Laag lett sik nich dat Bild tofögen."
 
-#: plugins/formats/jp2/jp2_converter.cc:345
-#: plugins/formats/jp2/jp2_converter.cc:356
+#: plugins/formats/heightmap/kis_heightmap_export.cpp:79
+msgid "Cannot export this image to a heightmap: it is not square"
+msgstr ""
+
+#: plugins/formats/heightmap/kis_heightmap_export.cpp:84
+msgid "Cannot export this image to a heightmap: it is not grayscale"
+msgstr ""
+
+#: plugins/formats/heightmap/kis_heightmap_export.cpp:89
+#, fuzzy
+#| msgid "PPM Export Options"
+msgid "HeightMap Export Options"
+msgstr "Export-Optschonen för PPM-Dateien"
+
+#: plugins/formats/heightmap/kis_heightmap_export.cpp:139
+#, fuzzy
+#| msgid "Scale Image"
+msgid "Downscale Image"
+msgstr "Bild topassen"
+
+#: plugins/formats/heightmap/kis_heightmap_export.cpp:140
+msgid ""
+"You specified the .r8 extension for a 16 bit/channel image. Do you want to "
+"save as 8 bit? Your image data will not be changed."
+msgstr ""
+
+#: plugins/formats/heightmap/kis_heightmap_import.cpp:83
+msgid "The file is not 8 or 16 bits raw"
+msgstr ""
+
+#: plugins/formats/heightmap/kis_heightmap_import.cpp:112
+#, fuzzy
+#| msgid "PDF Import Options"
+msgid "R16 HeightMap Import Options"
+msgstr "Import-Optschonen för PDF-Dateien"
+
+#: plugins/formats/heightmap/kis_heightmap_import.cpp:132
+msgid "File does not exist."
+msgstr ""
+
+#: plugins/formats/heightmap/kis_heightmap_import.cpp:158
+msgid "Source file is not the right size for the specified width and height."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: plugins/formats/heightmap/kis_wdg_options_heightmap.ui:40
+#, fuzzy
+#| msgid "Randomness:"
+msgid "Endianness:"
+msgstr "Tofälligkeit:"
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, radioMac)
+#: plugins/formats/heightmap/kis_wdg_options_heightmap.ui:58
+msgid "Big Endian"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioMac)
+#: plugins/formats/heightmap/kis_wdg_options_heightmap.ui:61
+#, fuzzy
+#| msgid "Macro"
+msgid "Mac"
+msgstr "Makro"
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, radioPC)
+#: plugins/formats/heightmap/kis_wdg_options_heightmap.ui:68
+msgid "Little Endian"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioPC)
+#: plugins/formats/heightmap/kis_wdg_options_heightmap.ui:71
+#, fuzzy
+#| msgid "IPTC"
+msgid "PC"
+msgstr "IPTC"
+
+#: plugins/formats/jp2/jp2_converter.cc:344
+#: plugins/formats/jp2/jp2_converter.cc:355
 #: plugins/formats/tiff/kis_tiff_writer_visitor.cpp:67
 #, kde-format
 msgid "Cannot export images in %1.\n"
@@ -6556,7 +6787,7 @@ msgstr "Laag scheren"
 
 #: plugins/formats/ora/ora_export.cc:100
 msgid ""
-"This image contains vector, clone or generated layers..\n"
+"This image contains vector, clone or fill layers..\n"
 "These layers will be saved as raster layers."
 msgstr ""
 
@@ -7086,27 +7317,27 @@ msgstr "Verwischen-Pinsel"
 
 #: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:52
 #, fuzzy
-#| msgid "smudge length"
-msgid "Smudge Length"
-msgstr "Verwischenduer"
-
-#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:52
-#, fuzzy
 #| msgid "Length:"
 msgid "Length: "
 msgstr "Duer:"
 
-#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:53
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:52
 #, fuzzy
-#| msgid "smudge radius"
-msgid "Smudge Radius"
-msgstr "Verwischen-Halfmaat"
+#| msgid "smudge length"
+msgid "Smudge Length"
+msgstr "Verwischenduer"
 
 #: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:53
 #, fuzzy
 #| msgid "Radius:"
 msgid "Radius: "
 msgstr "Halfmaat:"
+
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:53
+#, fuzzy
+#| msgid "smudge radius"
+msgid "Smudge Radius"
+msgstr "Verwischen-Halfmaat"
 
 #: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:54
 #, fuzzy
@@ -7428,7 +7659,6 @@ msgstr "Regentall"
 
 #. i18n: ectx: property (text), widget (QRadioButton, polygonRBox)
 #: plugins/paintops/dynadraw/wdgdynaoptions.ui:227
-#: plugins/tools/tool_polygon/kis_tool_polygon.cc:63
 msgid "Polygon"
 msgstr "Veeleck"
 
@@ -7571,8 +7801,7 @@ msgid "Texture:"
 msgstr "Textuur"
 
 #: plugins/paintops/gridbrush/grid_paintop_plugin.cpp:41
-#: ui/canvas/kis_grid_manager.cpp:47 ui/dialogs/kis_dlg_preferences.cc:636
-#: ui/dialogs/kis_dlg_preferences.cc:637
+#: ui/dialogs/kis_dlg_preferences.cc:636 ui/dialogs/kis_dlg_preferences.cc:637
 msgid "Grid"
 msgstr "Gadder"
 
@@ -8309,6 +8538,11 @@ msgstr "Pinselspitz"
 msgid "Predefined"
 msgstr "Vörinstellt Pinsels"
 
+#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:64
+#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:66
+msgid "Stamp"
+msgstr ""
+
 #. i18n: ectx: property (title), widget (QGroupBox, grpClipboard)
 #: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:68
 #: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:70
@@ -8394,8 +8628,6 @@ msgstr "Eenfach Klöör"
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbStyle)
 #: plugins/paintops/libpaintop/kis_color_source_option.cpp:56
 #: plugins/paintops/libpaintop/kis_pressure_gradient_option.cpp:26
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:151
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:165
 #: plugins/tools/tool_text/wdgtextoptions.ui:53
 msgid "Gradient"
 msgstr "Övergang"
@@ -8444,15 +8676,19 @@ msgstr "X-Negen"
 msgid "Y-Tilt"
 msgstr "Y-Negen"
 
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:50
-msgid "Ascension"
-msgstr "Opstieg"
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:57
+#, fuzzy
+#| msgid "Direction:"
+msgid "Tilt direction"
+msgstr "Richt:"
 
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:51
-msgid "Declination"
-msgstr "Negen"
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:58
+#, fuzzy
+#| msgid "Dilate Selection"
+msgid "Tilt elevation"
+msgstr "Köör verwiedern"
 
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:53
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:61
 #, fuzzy
 #| msgid "Z- Test pressure"
 msgid "Tangential pressure"
@@ -8518,7 +8754,7 @@ msgid "Lower value "
 msgstr "Klöörweert"
 
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option.cpp:30
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:242
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:243
 #: ui/kis_paintop_box.cc:252
 msgid "Mirror"
 msgstr "Spegeln"
@@ -8532,12 +8768,12 @@ msgid "Mirrored"
 msgstr "Spegelt"
 
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:35
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:262
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:263
 msgid "Horizontally"
 msgstr "Kimmrecht"
 
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:37
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:264
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:265
 msgid "Vertically"
 msgstr "Pielrecht"
 
@@ -8658,14 +8894,14 @@ msgid "Texturing Mode:"
 msgstr "Meetmetood:"
 
 #: plugins/paintops/libpaintop/kis_texture_option.cpp:105
-msgid "Cut Off Disabled"
-msgstr ""
-
-#: plugins/paintops/libpaintop/kis_texture_option.cpp:105
 #, fuzzy
 #| msgid "Custom Brush"
 msgid "Cut Off Brush"
 msgstr "Egen Pinsel"
+
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:105
+msgid "Cut Off Disabled"
+msgstr ""
 
 #: plugins/paintops/libpaintop/kis_texture_option.cpp:105
 #, fuzzy
@@ -8693,9 +8929,9 @@ msgstr "Grenzweert"
 
 #: plugins/paintops/libpaintop/kis_texture_option.cpp:119
 #, fuzzy
-#| msgid "Texture"
-msgid "Invert Texture:"
-msgstr "Textuur"
+#| msgid "Saturation"
+msgid "Invert Pattern:"
+msgstr "Sattheit"
 
 #: plugins/paintops/libpaintop/sensors/kis_dynamic_sensor_distance.cc:29
 msgid "0 px"
@@ -8867,10 +9103,6 @@ msgstr ""
 "Ingaav« a, wenn Du mehr Enkelheiten weten wullt."
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:156
-msgid "opaque"
-msgstr "Decken"
-
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:156
 msgid ""
 "0 means brush is transparent, 1 fully visible\n"
 "(also known as alpha or opacity)"
@@ -8878,9 +9110,9 @@ msgstr ""
 "»0« bedüüdt, de Pinsel is dörsichtig, un »1«, he is heel sichtbor\n"
 "(ok as Alpha oder Deckstärk begäng)."
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:157
-msgid "opaque multiply"
-msgstr "Decken maalnehmen"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:156
+msgid "opaque"
+msgstr "Decken"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:157
 msgid ""
@@ -8890,9 +9122,9 @@ msgstr ""
 "Dit warrt mit de Deckstärk maalnahmen. Warrt för druckafhangen Decken (oder "
 "anner Ingaven) bruukt."
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:158
-msgid "opaque linearize"
-msgstr "Decken lineariseren"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:157
+msgid "opaque multiply"
+msgstr "Decken maalnehmen"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:158
 msgid ""
@@ -8915,6 +9147,10 @@ msgstr ""
 "1.0 - de Deckweert baven is för den lesten Pinselstreek. Annahmen warrt, dat "
 "elk Pixel in'n Dörsnitt (dabs_per_radius*2) Pinselplackens per Streek kriggt."
 
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:158
+msgid "opaque linearize"
+msgstr "Decken lineariseren"
+
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:159
 msgid ""
 "basic brush radius (logarithmic)\n"
@@ -8926,12 +9162,12 @@ msgstr ""
 " 3.0 bedüüdt 20 Pixels"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:160
-msgid "hardness"
-msgstr "Scharpde"
-
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:160
 msgid "hard brush-circle borders (setting to zero will draw nothing)"
 msgstr "Scharp afsett Pinselkrinkgrenzen (Instellen »0« teekt Nix)"
+
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:160
+msgid "hardness"
+msgstr "Scharpde"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:161
 msgid "dabs per basic radius"
@@ -8968,10 +9204,6 @@ msgstr ""
 "treckt warrt."
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:164
-msgid "radius by random"
-msgstr "Tofällig Halfmaat"
-
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:164
 msgid ""
 "Alter the radius randomly each dab. You can also do this with the by_random "
 "input on the radius setting. If you do it here, there are two differences:\n"
@@ -8986,9 +9218,9 @@ msgstr ""
 "dörsichtiger is.\n"
 "2.) Dat bi »dabs_per_actual_radius« sehn redig Halfmaat warrt nich ännert."
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:165
-msgid "speed1 filter"
-msgstr "Gauheitfilter 1"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:164
+msgid "radius by random"
+msgstr "Tofällig Halfmaat"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:165
 msgid ""
@@ -8999,17 +9231,17 @@ msgstr ""
 "0,0 ännert direktemang, so as sik Dien Gauheit ännert (nich anraadt, man "
 "versöök dat maal)."
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:166
-msgid "speed2 filter"
-msgstr "Gauheitfilter 2"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:165
+msgid "speed1 filter"
+msgstr "Gauheitfilter 1"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:166
 msgid "same as 'speed1 slowness' but note that the range is different"
 msgstr "Dat sülve as »Gauheitfilter 1«, man mit en anner Rebeet"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:167
-msgid "speed1 gamma"
-msgstr "Gamma för Gauheit 1"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:166
+msgid "speed2 filter"
+msgstr "Gauheitfilter 2"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:167
 msgid ""
@@ -9026,17 +9258,17 @@ msgstr ""
 "+8.0 - bannig gau, maakt »Gauheit 1« bannig grötter\n"
 "Bi bannig siete Gauheit is dat annersrüm."
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:168
-msgid "speed2 gamma"
-msgstr "Gamma för Gauheit 2"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:167
+msgid "speed1 gamma"
+msgstr "Gamma för Gauheit 1"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:168
 msgid "same as 'speed1 gamma' for speed2"
 msgstr "Dat sülve as »Gauheit 1«, man för »Gauheit 2«"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:169
-msgid "jitter"
-msgstr "Jiddeln"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:168
+msgid "speed2 gamma"
+msgstr "Gamma för Gauheit 2"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:169
 msgid ""
@@ -9050,9 +9282,9 @@ msgstr ""
 " 1.0 - Standardverscheel is een Grundhalfmaat wiet weg\n"
 "<0.0 - negativ Weerten lööst keen Jiddeln ut"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:170
-msgid "offset by speed"
-msgstr "Versatz na Gauheit"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:169
+msgid "jitter"
+msgstr "Jiddeln"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:170
 msgid ""
@@ -9066,17 +9298,17 @@ msgstr ""
 "> 0 - dorhen malen, wo de Muuswieser hengeiht\n"
 "< 0 - dorhen malen, wo de Muuswieser herkummt"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:171
-msgid "offset by speed filter"
-msgstr "Versatz na Gauheit-Filter"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:170
+msgid "offset by speed"
+msgstr "Versatz na Gauheit"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:171
 msgid "how slow the offset goes back to zero when the cursor stops moving"
 msgstr "Wo langsam de Versatz ahn Wieserbewegen wedder op Null torüchgeiht"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:172
-msgid "slow position tracking"
-msgstr "Muuspositschoon langsam nagahn"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:171
+msgid "offset by speed filter"
+msgstr "Versatz na Gauheit-Filter"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:172
 msgid ""
@@ -9086,9 +9318,9 @@ msgstr ""
 "De Wiesertreck-Gauheit minnern. »0« maakt dit ut, höger Weerten deit mehr "
 "Jiddeln ut de Wieserbewegen weg. Dat is goot för week, comic-lieke Ümreten."
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:173
-msgid "slow tracking per dab"
-msgstr "Plackens langsam nagahn"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:172
+msgid "slow position tracking"
+msgstr "Muuspositschoon langsam nagahn"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:173
 msgid ""
@@ -9098,9 +9330,9 @@ msgstr ""
 "Dat sülve as baven, man för Pinselplackens (egaal, woveel Tiet vörbi is, "
 "wenn Pinselplackens nich vun de Tiet afhangt.)"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:174
-msgid "tracking noise"
-msgstr "Treckrusen"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:173
+msgid "slow tracking per dab"
+msgstr "Plackens langsam nagahn"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:174
 msgid ""
@@ -9110,6 +9342,10 @@ msgstr ""
 "Föögt den Muuswieser »Tofälligkeit« to. Dit stellt normalerwies vele lütte "
 "Streken na tofällige Richten op. Versöök dit villicht tohoop mit »Langsam "
 "nagahn«."
+
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:174
+msgid "tracking noise"
+msgstr "Treckrusen"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:176
 msgid "color hue"
@@ -9128,10 +9364,6 @@ msgid "color value (brightness, intensity)"
 msgstr "Klöörweert (Helligkeit, Stärk)"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:179
-msgid "change color hue"
-msgstr "Klöörtoon ännern"
-
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:179
 msgid ""
 "Change color hue.\n"
 "-0.1 small clockwise color hue shift\n"
@@ -9143,9 +9375,9 @@ msgstr ""
 " 0.0 - ut\n"
 " 0.5 - Klöörtoonverschuven üm 180 Graad gegen de Klockricht"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:180
-msgid "change color lightness (HSL)"
-msgstr "Klöörhelligkeit ännern (TSH)"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:179
+msgid "change color hue"
+msgstr "Klöörtoon ännern"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:180
 msgid ""
@@ -9159,9 +9391,9 @@ msgstr ""
 " 0.0 - ut\n"
 " 1.0 - witter"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:181
-msgid "change color satur. (HSL)"
-msgstr "Klöörsattheit ännern (TSH)"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:180
+msgid "change color lightness (HSL)"
+msgstr "Klöörhelligkeit ännern (TSH)"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:181
 msgid ""
@@ -9175,9 +9407,9 @@ msgstr ""
 " 0.0 - ut\n"
 " 1.0 - satter"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:182
-msgid "change color value (HSV)"
-msgstr "Klöörweert ännern (TSW)"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:181
+msgid "change color satur. (HSL)"
+msgstr "Klöörsattheit ännern (TSH)"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:182
 msgid ""
@@ -9193,9 +9425,9 @@ msgstr ""
 " 0.0 - ut\n"
 " 1.0 - heller"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:183
-msgid "change color satur. (HSV)"
-msgstr "Klöörsattheit ännern (TSW)"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:182
+msgid "change color value (HSV)"
+msgstr "Klöörweert ännern (TSW)"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:183
 msgid ""
@@ -9211,9 +9443,9 @@ msgstr ""
 " 0.0 - ut\n"
 " 1.0 - satter"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:184
-msgid "smudge"
-msgstr "Verwischen"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:183
+msgid "change color satur. (HSV)"
+msgstr "Klöörsattheit ännern (TSW)"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:184
 msgid ""
@@ -9229,9 +9461,9 @@ msgstr ""
 " 0.5 - Verwischen-Klöör un Maalklöör mischen\n"
 " 1.0 - bloots de Verwischen-Klöör bruken"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:185
-msgid "smudge length"
-msgstr "Verwischenduer"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:184
+msgid "smudge"
+msgstr "Verwischen"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:185
 msgid ""
@@ -9245,9 +9477,9 @@ msgstr ""
 "0.0 - Verwischenklöör direktemang ännern\n"
 "1.0 - Verwischenklöör nienich ännern"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:186
-msgid "smudge radius"
-msgstr "Verwischen-Halfmaat"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:185
+msgid "smudge length"
+msgstr "Verwischenduer"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:186
 msgid ""
@@ -9258,6 +9490,10 @@ msgid ""
 "+0.7 twice the brush radius\n"
 "+1.6 five times the brush radius (slow)"
 msgstr ""
+
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:186
+msgid "smudge radius"
+msgstr "Verwischen-Halfmaat"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:187
 msgid "eraser"
@@ -9276,10 +9512,6 @@ msgstr ""
 " 0.5 - Pixels warrt so wat 50% dörsichtiger"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:189
-msgid "stroke threshold"
-msgstr "Streeksüll"
-
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:189
 msgid ""
 "How much pressure is needed to start a stroke. This affects the stroke input "
 "only. Mypaint does not need a minimal pressure to start drawing."
@@ -9287,9 +9519,9 @@ msgstr ""
 "Wo fast Een för en Streek drücken mutt. Dit gellt bloots för de "
 "Streekingaav. »Mypaint« bruukt keen Minndruck för't Malen."
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:190
-msgid "stroke duration"
-msgstr "Streekduer"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:189
+msgid "stroke threshold"
+msgstr "Streeksüll"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:190
 msgid ""
@@ -9299,9 +9531,9 @@ msgstr ""
 "Wo wiet Een trecken mutt, bet de Streekingaav bi 1,0 anlangt. Disse Weert is "
 "logaritmisch (negativ Weerten dreiht den Perzess nich üm)."
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:191
-msgid "stroke hold time"
-msgstr "Streek-Holltiet"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:190
+msgid "stroke duration"
+msgstr "Streekduer"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:191
 msgid ""
@@ -9316,9 +9548,9 @@ msgstr ""
 "2.0 bedüüdt dubbelt so lang as dat vun 0.0 bet 1.0 duert.\n"
 "9.9 un mehr bedüüdt »ahn Enn«."
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:192
-msgid "custom input"
-msgstr "Egen Ingaav"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:191
+msgid "stroke hold time"
+msgstr "Streek-Holltiet"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:192
 msgid ""
@@ -9338,9 +9570,9 @@ msgstr ""
 "Is instellt, dat sik de Ingaav »tofällig« ännert, denn warrt se suutje "
 "(week) un tofällig."
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:193
-msgid "custom input filter"
-msgstr "Egen Ingaavfilter"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:192
+msgid "custom input"
+msgstr "Egen Ingaav"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:193
 msgid ""
@@ -9354,9 +9586,9 @@ msgstr ""
 "is, wenn Pinselplackens nich vun de Tiet afhangt).\n"
 "0,0 - keen Gauheit-Minnern (Ännern warrt direktemang övernahmen)."
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:195
-msgid "elliptical dab: ratio"
-msgstr "Elliptsch Placken: Proportschoon"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:193
+msgid "custom input filter"
+msgstr "Egen Ingaavfilter"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:195
 msgid ""
@@ -9365,6 +9597,10 @@ msgid ""
 msgstr ""
 "Proportschonen för de Plackens; mutt >= 1.0 wesen. 1.0 is en akraat rund "
 "Placken. TO DOON: Lineariseren? Villicht bi 0.0 starten, oder loggen?"
+
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:195
+msgid "elliptical dab: ratio"
+msgstr "Elliptsch Placken: Proportschoon"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:196
 msgid "elliptical dab: angle"
@@ -9382,16 +9618,16 @@ msgstr ""
 " 45,0 - 45 Graad, in Klockricht dreihen 180,0 - wedder kimmrecht"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:197
-msgid "direction filter"
-msgstr "Richtfilter"
-
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:197
 msgid ""
 "a low value will make the direction input adapt more quickly, a high value "
 "will make it smoother"
 msgstr ""
 "En siet Weert maakt de Topassen för de Richtingaav gauer, höger Weerten "
 "maakt ehr weeker."
+
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:197
+msgid "direction filter"
+msgstr "Richtfilter"
 
 #: plugins/paintops/particle/particle_paintop_plugin.cpp:42
 #, fuzzy
@@ -10004,9 +10240,11 @@ msgid "Gaussian distribution"
 msgstr "Gauß'sch Verdelen"
 
 #: plugins/tools/defaulttools/kis_tool_brush.cc:39
+#, fuzzy
+#| msgid "Freehand tool"
 msgctxt "(qtundo-format)"
-msgid "Brush"
-msgstr "Pinsel"
+msgid "Freehand Brush Stroke"
+msgstr "Freehannig"
 
 #: plugins/tools/defaulttools/kis_tool_brush.cc:167
 #, fuzzy
@@ -10071,8 +10309,10 @@ msgid "Assistant Magnetism"
 msgstr "Den Hölper sien Magnetismus"
 
 #: plugins/tools/defaulttools/kis_tool_brush.h:96
-msgid "Paint with brushes"
-msgstr "Mit Pinsels malen"
+#, fuzzy
+#| msgid "Freehand tool"
+msgid "Freehand Brush Tool"
+msgstr "Freehannig"
 
 #: plugins/tools/defaulttools/kis_tool_colorpicker.cc:248
 msgid "Cannot pick a color as no layer is active."
@@ -10093,9 +10333,25 @@ msgstr ""
 msgid "Select a color from the image or current layer"
 msgstr "En Klöör ut dat Bild oder de aktuelle Laag utsöken"
 
-#: plugins/tools/defaulttools/kis_tool_ellipse.h:56
-msgid "Draw an ellipse"
+#: plugins/tools/defaulttools/kis_tool_ellipse.cc:64
+#, fuzzy
+#| msgid "Draw an ellipse"
+msgctxt "(qtundo-format)"
+msgid "Draw Ellipse"
 msgstr "En Ellips teken"
+
+#: plugins/tools/defaulttools/kis_tool_ellipse.h:56
+#, fuzzy
+#| msgid "Ellipse"
+msgid "Ellipse Tool"
+msgstr "Ellips"
+
+#: plugins/tools/defaulttools/kis_tool_fill.cc:128
+#, fuzzy
+#| msgid "Flood Fill"
+msgctxt "(qtundo-format)"
+msgid "Flood Fill"
+msgstr "Vullmaken"
 
 #: plugins/tools/defaulttools/kis_tool_fill.cc:158
 #, fuzzy
@@ -10164,61 +10420,75 @@ msgstr ""
 msgid "Fill a contiguous area of color with a color, or fill a selection."
 msgstr "En tosamenhangen Klöörrebeet oder en Köör infarven"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:215
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:150
+#, fuzzy
+#| msgid "Gradient"
+msgctxt "(qtundo-format)"
+msgid "Gradient"
+msgstr "Övergang"
+
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:166
+#, fuzzy
+#| msgid "Gradient"
+msgctxt "@info:progress"
+msgid "Gradient..."
+msgstr "Övergang"
+
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:216
 msgid "Repeat:"
 msgstr "Wedderhalen:"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:217
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:218
 msgctxt "the gradient will be drawn with the color order reversed"
 msgid "Reverse"
 msgstr "Ümdreiht"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:224
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:225
 msgctxt "the gradient will be drawn linearly"
 msgid "Linear"
 msgstr "Lineaar"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:225
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:226
 msgctxt "the gradient will be drawn bilinearly"
 msgid "Bi-Linear"
 msgstr "Bilineaar"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:226
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:227
 msgctxt "the gradient will be drawn radially"
 msgid "Radial"
 msgstr "Rund"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:227
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:228
 msgctxt "the gradient will be drawn in a square around a centre"
 msgid "Square"
 msgstr "Quadraat"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:228
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:229
 msgctxt "the gradient will be drawn as an assymmetric cone"
 msgid "Conical"
 msgstr "Kegelig"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:229
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:230
 msgctxt "the gradient will be drawn as a symmetric cone"
 msgid "Conical Symmetric"
 msgstr "Kegelig symmetersch"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:234
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:235
 msgctxt "The gradient will not repeat"
 msgid "None"
 msgstr "Keen"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:235
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:236
 msgctxt "The gradient will repeat forwards"
 msgid "Forwards"
 msgstr "Vörut"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:236
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:237
 msgctxt "The gradient will repeat alternatingly"
 msgid "Alternating"
 msgstr "Wesseln"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:244
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:245
 msgid "Anti-alias threshold:"
 msgstr "Kantstreken-Grenzweert:"
 
@@ -10243,9 +10513,11 @@ msgid "Varying End-Points"
 msgstr "Pünkt leddig maken"
 
 #: plugins/tools/defaulttools/kis_tool_line.cc:186
-msgctxt "a straight drawn line"
-msgid "Line"
-msgstr "Lien"
+#, fuzzy
+#| msgid "Dashed Lines"
+msgctxt "(qtundo-format)"
+msgid "Draw Line"
+msgstr "Streeklienen"
 
 #: plugins/tools/defaulttools/kis_tool_line.cc:259
 msgid ""
@@ -10256,8 +10528,10 @@ msgstr ""
 "Trecken mit drückt Ümschalt-Tast verdwingt graad Lienen"
 
 #: plugins/tools/defaulttools/kis_tool_line.h:85
-msgid "Draw a straight line with the current brush"
-msgstr "En graad Lien mit den aktuellen Pinsel teken"
+#, fuzzy
+#| msgid "&Painter's Tools"
+msgid "Line Tool"
+msgstr "Den &Maler sien Warktüüchkist"
 
 #: plugins/tools/defaulttools/kis_tool_measure.cc:51
 msgid "Distance: "
@@ -10275,78 +10549,105 @@ msgstr "Den Afstand twischen twee Pünkt meten"
 msgid "Move a layer"
 msgstr "En Laag verschuven"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:223
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:59
+#, fuzzy
+#| msgid "Brush"
+msgctxt "(qtundo-format)"
+msgid "Multibrush Stroke"
+msgstr "Pinsel"
+
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:224
 #, fuzzy
 #| msgid "Show Grid"
 msgid "Show Axes"
 msgstr "Gadder wiesen"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:227
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:228
 #, fuzzy
 #| msgid "Axis point"
 msgid "Axes point"
 msgstr "Assenpunkt"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:233
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:234
 msgid "Set axes angle (degrees)"
 msgstr ""
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:238
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:239
 #, fuzzy
 #| msgid "Angle:"
 msgid "Axes Angle:"
 msgstr "Winkel:"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:241
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:242
 msgid "Symmetry"
 msgstr "Symmetrie"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:243
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:244
 #, fuzzy
 #| msgid "Triangle"
 msgid "Translate"
 msgstr "Dre'eck"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:249
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:250
 msgid "Brush count"
 msgstr "Tall vun Pinsels"
 
 #: plugins/tools/defaulttools/kis_tool_multihand.h:99
-msgid "Paint with multibrushes"
-msgstr "Mit mehr Pinsels malen"
+#, fuzzy
+#| msgid "Brush"
+msgid "Multibrush Tool"
+msgstr "Pinsel"
 
 #: plugins/tools/defaulttools/kis_tool_pan.h:76
 msgid "Move and rotate your canvas"
 msgstr "Dien Lienwand verschuven un dreihen"
 
+#: plugins/tools/defaulttools/kis_tool_path.cc:75
+#, fuzzy
+#| msgid "Bezier Curve"
+msgctxt "(qtundo-format)"
+msgid "Draw Bezier Curve"
+msgstr "Bézier-Bagen"
+
 #: plugins/tools/defaulttools/kis_tool_path.h:76
 #, fuzzy
-#| msgid "Draw a polygon. Shift-mouseclick ends the polygon."
-msgid "Draw a path. Shift-mouseclick ends the path."
+#| msgid "Draw a polyline. Shift-mouseclick ends the polyline."
+msgid "Bezier Curve Tool. Shift-mouseclick ends the curve."
 msgstr ""
-"En Veeleck teken. En Muusklick bi daalhollen Ümschalttast slutt dat af."
+"En Lienenkeed teken. En Muusklick bi daalhollen Ümschalttast slutt ehr af."
+
+#: plugins/tools/defaulttools/kis_tool_pencil.cc:61
+#, fuzzy
+#| msgid "Draw a path."
+msgctxt "(qtundo-format)"
+msgid "Draw Freehand Path"
+msgstr "En Bahn teken"
 
 #: plugins/tools/defaulttools/kis_tool_pencil.h:67
 #, fuzzy
-#| msgid "Draw a path."
-msgid "Draw a freehand path."
-msgstr "En Bahn teken"
+#| msgid "Freehand tool"
+msgid "Freehand Path Tool"
+msgstr "Freehannig"
+
+#: plugins/tools/defaulttools/kis_tool_rectangle.cc:67
+#, fuzzy
+#| msgid "Draw a rectangle"
+msgctxt "(qtundo-format)"
+msgid "Draw Rectangle"
+msgstr "En Rechteck teken"
 
 #: plugins/tools/defaulttools/kis_tool_rectangle.h:61
-msgid "Draw a rectangle"
-msgstr "En Rechteck teken"
+#, fuzzy
+#| msgid "Rectangle"
+msgid "Rectangle Tool"
+msgstr "Rechteck"
 
 #: plugins/tools/defaulttools/strokes/move_selection_stroke_strategy.cpp:35
 #, fuzzy
-#| msgid "Selection Mode"
-msgid "Move Selection Stroke"
-msgstr "Köörbedrief"
-
-#: plugins/tools/defaulttools/strokes/move_stroke_strategy.cpp:31
-#, fuzzy
-#| msgid "Stroke"
-msgid "Move Stroke"
-msgstr "Streek"
+#| msgid "No Selection"
+msgctxt "(qtundo-format)"
+msgid "Move Selection"
+msgstr "Keen Köör"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ColorPickerOptionsWidget)
 #: plugins/tools/defaulttools/wdgcolorpicker.ui:14
@@ -10442,7 +10743,6 @@ msgid "Move the whole group"
 msgstr "Heel Koppel verschuven"
 
 #: plugins/tools/selectiontools/kis_tool_select_brush.cc:53
-#: plugins/tools/selectiontools/kis_tool_select_brush.cc:176
 msgid "Brush Selection"
 msgstr "Pinselköör"
 
@@ -10450,13 +10750,28 @@ msgstr "Pinselköör"
 msgid "Brush size:"
 msgstr "Pinselgrött:"
 
-#: plugins/tools/selectiontools/kis_tool_select_brush.h:76
-msgid "Select by brush"
+#: plugins/tools/selectiontools/kis_tool_select_brush.cc:176
+#, fuzzy
+#| msgid "Select by brush"
+msgctxt "(qtundo-format)"
+msgid "Select by Brush"
 msgstr "Köör na Pinsel"
 
+#: plugins/tools/selectiontools/kis_tool_select_brush.h:76
+#, fuzzy
+#| msgid "Brush Selection"
+msgid "Brush Selection Tool"
+msgstr "Pinselköör"
+
 #: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:55
-#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:106
 msgid "Contiguous Area Selection"
+msgstr "Tosamenhangen Rebeet utsöken"
+
+#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:106
+#, fuzzy
+#| msgid "Select Contiguous Area"
+msgctxt "(qtundo-format)"
+msgid "Select Contiguous Area"
 msgstr "Tosamenhangen Rebeet utsöken"
 
 #: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:148
@@ -10475,24 +10790,33 @@ msgid "Limit to current layer"
 msgstr "Bloots aktuell Laag"
 
 #: plugins/tools/selectiontools/kis_tool_select_contiguous.h:67
-msgid "Select a contiguous area of colors"
-msgstr "En tosamenhangen Rebeet vun Klören utsöken"
+#, fuzzy
+#| msgid "Contiguous Area Selection"
+msgid "Contiguous Selection Tool"
+msgstr "Tosamenhangen Rebeet utsöken"
 
 #: plugins/tools/selectiontools/kis_tool_select_elliptical.cc:39
-#: plugins/tools/selectiontools/kis_tool_select_elliptical.cc:71
 msgid "Elliptical Selection"
 msgstr "Elliptsch Köör"
 
+#: plugins/tools/selectiontools/kis_tool_select_elliptical.cc:71
+#, fuzzy
+#| msgid "Select All"
+msgctxt "(qtundo-format)"
+msgid "Select Ellipse"
+msgstr "All kören"
+
 #: plugins/tools/selectiontools/kis_tool_select_elliptical.h:53
-msgid "Select an elliptical area"
-msgstr "En elliptsch Rebeet utsöken"
+#, fuzzy
+#| msgid "Elliptical Selection"
+msgid "Elliptical Selection Tool"
+msgstr "Elliptsch Köör"
 
 #: plugins/tools/selectiontools/kis_tool_select_magnetic.cc:91
 msgid "Magnetic Selection"
 msgstr "Magneetsch Köör"
 
 #: plugins/tools/selectiontools/kis_tool_select_magnetic.cc:477
-#: plugins/tools/selectiontools/kis_tool_select_path.cc:97
 #: plugins/tools/selectiontools/kis_tool_select_path.h:53
 msgid "Path Selection"
 msgstr "Bagenbahn-Köör"
@@ -10532,48 +10856,96 @@ msgid "Red"
 msgstr "Root"
 
 #: plugins/tools/selectiontools/kis_tool_select_outline.cc:58
-#: plugins/tools/selectiontools/kis_tool_select_outline.cc:105
 msgid "Outline Selection"
 msgstr "Ümreetköör"
 
-#: plugins/tools/selectiontools/kis_tool_select_outline.h:66
-msgid "Select an area by its outline"
+#: plugins/tools/selectiontools/kis_tool_select_outline.cc:105
+#, fuzzy
+#| msgid "Select an area by its outline"
+msgctxt "(qtundo-format)"
+msgid "Select by Outline"
 msgstr "En Rebeet na sien Ümreet utsöken"
 
+#: plugins/tools/selectiontools/kis_tool_select_outline.h:66
+#, fuzzy
+#| msgid "Outline Selection"
+msgid "Outline Selection Tool"
+msgstr "Ümreetköör"
+
+#: plugins/tools/selectiontools/kis_tool_select_path.cc:97
+#, fuzzy
+#| msgid "Bezier Curve"
+msgctxt "(qtundo-format)"
+msgid "Select by Bezier Curve"
+msgstr "Bézier-Bagen"
+
 #: plugins/tools/selectiontools/kis_tool_select_path.h:82
-msgid "Select an area of the image with path."
-msgstr "En Bildrebeet  mit en Bahn kören."
+#, fuzzy
+#| msgid "Bezier Selection Tool"
+msgid "Bezier Curve Selection Tool"
+msgstr "Warktüüch \"Bézier-Köör\""
 
 #: plugins/tools/selectiontools/kis_tool_select_polygonal.cc:42
-#: plugins/tools/selectiontools/kis_tool_select_polygonal.cc:89
 msgid "Polygonal Selection"
 msgstr "Veeleck-Köör"
 
+#: plugins/tools/selectiontools/kis_tool_select_polygonal.cc:89
+#, fuzzy
+#| msgid "Selection"
+msgctxt "(qtundo-format)"
+msgid "Select Polygon"
+msgstr "Köör"
+
 #: plugins/tools/selectiontools/kis_tool_select_polygonal.h:62
-msgid "Select a polygonal region"
-msgstr "En Veeleck-Rebeet utsöken"
+#, fuzzy
+#| msgid "Polygonal Selection"
+msgid "Polygonal Selection Tool"
+msgstr "Veeleck-Köör"
 
 #: plugins/tools/selectiontools/kis_tool_select_rectangular.cc:42
-#: plugins/tools/selectiontools/kis_tool_select_rectangular.cc:88
 msgid "Rectangular Selection"
 msgstr "Rechteck-Köör"
 
-#: plugins/tools/selectiontools/kis_tool_select_rectangular.h:62
-msgid "Select a rectangular area"
+#: plugins/tools/selectiontools/kis_tool_select_rectangular.cc:88
+#, fuzzy
+#| msgid "Select a rectangular area"
+msgctxt "(qtundo-format)"
+msgid "Select Rectangle"
 msgstr "En rechteckig Rebeet utsöken"
 
+#: plugins/tools/selectiontools/kis_tool_select_rectangular.h:62
+#, fuzzy
+#| msgid "Rectangular Selection"
+msgid "Rectangular Selection Tool"
+msgstr "Rechteck-Köör"
+
 #: plugins/tools/selectiontools/kis_tool_select_similar.cc:79
-#: plugins/tools/selectiontools/kis_tool_select_similar.cc:120
-msgid "Similar Selection"
+#, fuzzy
+#| msgid "Similar Selection"
+msgid "Similar Color Selection"
 msgstr "Liekheit-Köör"
 
-#: plugins/tools/selectiontools/kis_tool_select_similar.h:47
-msgid "Select similar colors"
+#: plugins/tools/selectiontools/kis_tool_select_similar.cc:120
+#, fuzzy
+#| msgid "Select similar colors"
+msgctxt "(qtundo-format)"
+msgid "Select Similar Color"
 msgstr "Lieke Klören utsöken"
+
+#: plugins/tools/selectiontools/kis_tool_select_similar.h:47
+#, fuzzy
+#| msgid "Similar Selection"
+msgid "Similar Color Selection Tool"
+msgstr "Liekheit-Köör"
 
 #: plugins/tools/tool_crop/kis_tool_crop.h:201
 msgid "Crop the image to an area"
 msgstr "Dat Bild op en Rebeet tosnieden"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, WdgToolCrop)
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:14
+msgid "Crop"
+msgstr "Tosnieden"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_horizPos)
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, intX)
@@ -10675,17 +11047,21 @@ msgid "Crosshair"
 msgstr "Teelkrüüz"
 
 #: plugins/tools/tool_dyna/kis_tool_dyna.cpp:46
+#, fuzzy
+#| msgid "A - 2 Dynamic Brush"
 msgctxt "(qtundo-format)"
-msgid "Dyna"
-msgstr "Dünaamsch"
+msgid "Dynamic Brush Stroke"
+msgstr "A - 2 Dünaamsch Pinsel"
 
 #: plugins/tools/tool_dyna/kis_tool_dyna.cpp:288
 msgid "Fixed angle:"
 msgstr "Fast Winkel:"
 
 #: plugins/tools/tool_dyna/kis_tool_dyna.h:155
-msgid "Paint with brushes using dynamic movements"
-msgstr "Dünaamsch Verschuven bi't Malen mit Pinsels bruken"
+#, fuzzy
+#| msgid "A - 2 Dynamic Brush"
+msgid "Dynamic Brush Tool"
+msgstr "A - 2 Dünaamsch Pinsel"
 
 #: plugins/tools/tool_grid/kis_tool_grid.h:71
 msgid "Edit the grid"
@@ -10695,17 +11071,31 @@ msgstr "Dat Gadder bewerken"
 msgid "Edit the perspective grid"
 msgstr "Dat Kiekwinkel-Gadder bewerken"
 
+#: plugins/tools/tool_polygon/kis_tool_polygon.cc:63
+#, fuzzy
+#| msgid "Polygon"
+msgctxt "(qtundo-format)"
+msgid "Draw Polygon"
+msgstr "Veeleck"
+
 #: plugins/tools/tool_polygon/kis_tool_polygon.h:51
-msgid "Draw a polygon. Shift-mouseclick ends the polygon."
+#, fuzzy
+#| msgid "Draw a polygon. Shift-mouseclick ends the polygon."
+msgid "Polygon Tool. Shift-mouseclick ends the polygon."
 msgstr ""
 "En Veeleck teken. En Muusklick bi daalhollen Ümschalttast slutt dat af."
 
 #: plugins/tools/tool_polyline/kis_tool_polyline.cc:67
-msgid "Polyline"
+#, fuzzy
+#| msgid "Polyline"
+msgctxt "(qtundo-format)"
+msgid "Draw Polyline"
 msgstr "Lienenkeed"
 
 #: plugins/tools/tool_polyline/kis_tool_polyline.h:51
-msgid "Draw a polyline. Shift-mouseclick ends the polyline."
+#, fuzzy
+#| msgid "Draw a polyline. Shift-mouseclick ends the polyline."
+msgid "Polyline Tool. Shift-mouseclick ends the polyline."
 msgstr ""
 "En Lienenkeed teken. En Muusklick bi daalhollen Ümschalttast slutt ehr af."
 
@@ -10764,10 +11154,9 @@ msgid "Unlock Points"
 msgstr "Pünkt opsluten"
 
 #: plugins/tools/tool_transform2/strokes/transform_stroke_strategy.cpp:39
-#, fuzzy
-#| msgid "Transform Node"
-msgid "Transform Stroke"
-msgstr "Knütt wanneln"
+msgctxt "(qtundo-format)"
+msgid "Transform"
+msgstr "Wanneln"
 
 #. i18n: ectx: property (text), widget (QToolButton, freeTransformButton)
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:83
@@ -10920,47 +11309,54 @@ msgid "Open sketch in a window, otherwise defaults to full-screen"
 msgstr ""
 
 #: ui/actions/kis_selection_action_factories.cpp:102
+#, fuzzy
+#| msgid "Select All"
+msgctxt "(qtundo-format)"
 msgid "Select All"
 msgstr "All kören"
 
-#: ui/actions/kis_selection_action_factories.cpp:261
+#: ui/actions/kis_selection_action_factories.cpp:171
+#, fuzzy
+#| msgid "Flood Fill"
+msgctxt "(qtundo-format)"
+msgid "Flood Fill Layer"
+msgstr "Vullmaken"
+
+#: ui/actions/kis_selection_action_factories.cpp:262
+#, fuzzy
+#| msgid "Cut"
+msgctxt "(qtundo-format)"
 msgid "Cut"
 msgstr "Knippen"
 
-#: ui/actions/kis_selection_action_factories.cpp:261
+#: ui/actions/kis_selection_action_factories.cpp:263
 #, fuzzy
 #| msgid "Copy From"
+msgctxt "(qtundo-format)"
 msgid "Copy"
 msgstr "Koperen vun"
 
-#: ui/actions/kis_selection_action_factories.cpp:285
+#: ui/actions/kis_selection_action_factories.cpp:287
 #, fuzzy
 #| msgid "Copy merged"
+msgctxt "(qtundo-format)"
 msgid "Copy Merged"
 msgstr "Tosamenföhrt koperen"
 
-#: ui/actions/kis_selection_action_factories.cpp:295
+#: ui/actions/kis_selection_action_factories.cpp:297
 msgid "(pasted)"
 msgstr "(inföögt)"
 
-#: ui/actions/kis_selection_action_factories.cpp:326
+#: ui/actions/kis_selection_action_factories.cpp:328
 msgid "Pasted"
 msgstr "Inföögt"
 
-#: ui/actions/kis_selection_action_factories.cpp:373
-#: ui/kis_selection_manager.cc:225
+#: ui/actions/kis_selection_action_factories.cpp:375
 #, fuzzy
 #| msgid "Vector Selection"
+msgctxt "(qtundo-format)"
 msgid "Convert to Vector Selection"
 msgstr "Vektorköör"
-
-#: ui/canvas/kis_canvas_controller.cpp:164
-msgid "ON"
-msgstr ""
-
-#: ui/canvas/kis_canvas_controller.cpp:164
-msgid "OFF"
-msgstr ""
 
 #: ui/canvas/kis_canvas_controller.cpp:164
 #, fuzzy, kde-format
@@ -10968,6 +11364,14 @@ msgstr ""
 msgctxt "floating message about mirroring"
 msgid "Horizontal mirroring: %1 "
 msgstr "Kimmrecht Afstand:"
+
+#: ui/canvas/kis_canvas_controller.cpp:164
+msgid "OFF"
+msgstr ""
+
+#: ui/canvas/kis_canvas_controller.cpp:164
+msgid "ON"
+msgstr ""
 
 #: ui/canvas/kis_canvas_controller.cpp:183
 #, fuzzy, kde-format
@@ -11031,16 +11435,6 @@ msgstr "40x40"
 #: ui/canvas/kis_grid_manager.cpp:116
 msgid "64x64"
 msgstr ""
-
-#: ui/canvas/kis_infinity_manager.cpp:38
-#, fuzzy
-#| msgid "Vanishing Point Decoration"
-msgid "Expand into Infinity Decoration"
-msgstr "Fluchtpunktdekoratschoon"
-
-#: ui/canvas/kis_perspective_grid_manager.cpp:140
-msgid "Perspective grid"
-msgstr "Kiekwinkel-Gadder"
 
 #: ui/canvas/kis_perspective_grid_manager.cpp:162
 msgid "Show Perspective Grid"
@@ -12513,15 +12907,15 @@ msgid "Copy of %1"
 msgstr "Koperen vun"
 
 #: ui/input/config/kis_edit_profiles_dialog.cpp:95
-msgid ""
-"You will lose all changes to any input profiles. Do you wish to continue?"
-msgstr ""
-
-#: ui/input/config/kis_edit_profiles_dialog.cpp:95
 #, fuzzy
 #| msgid "Apply Profile"
 msgid "Reset All Profiles"
 msgstr "Profil anwennen"
+
+#: ui/input/config/kis_edit_profiles_dialog.cpp:95
+msgid ""
+"You will lose all changes to any input profiles. Do you wish to continue?"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (KPushButton, renameButton)
 #: ui/input/config/kis_edit_profiles_dialog.ui:17
@@ -12664,22 +13058,26 @@ msgstr ""
 #: ui/input/kis_alternate_invocation_action.cpp:43
 #, fuzzy
 #| msgid "Rotate Node"
-msgid "Toggle Primary Mode"
+msgid "Primary Mode"
 msgstr "Knütt dreihen"
 
 #: ui/input/kis_alternate_invocation_action.cpp:44
 #, fuzzy
 #| msgid "Rotate Node"
-msgid "Toggle Secondary Mode"
+msgid "Secondary Mode"
 msgstr "Knütt dreihen"
 
 #: ui/input/kis_alternate_invocation_action.cpp:46
-msgid "Pick Foreground Color from Current Node"
-msgstr ""
+#, fuzzy
+#| msgid "Fill Palette from Current Layer"
+msgid "Pick Foreground Color from Current Layer"
+msgstr "Klörensett ut aktuell Laag vullmaken"
 
 #: ui/input/kis_alternate_invocation_action.cpp:47
-msgid "Pick Background Color from Current Node"
-msgstr ""
+#, fuzzy
+#| msgid "Fill Palette from Current Layer"
+msgid "Pick Background Color from Current Layer"
+msgstr "Klörensett ut aktuell Laag vullmaken"
 
 #: ui/input/kis_alternate_invocation_action.cpp:49
 msgid "Pick Foreground Color from Merged Image"
@@ -12780,8 +13178,10 @@ msgid "The <i>Pan Canvas</i> action pans the canvas."
 msgstr ""
 
 #: ui/input/kis_pan_action.cpp:54
-msgid "Toggle Pan Mode"
-msgstr ""
+#, fuzzy
+#| msgid "Painting Mode"
+msgid "Pan Mode"
+msgstr "Maalbedrief"
 
 #: ui/input/kis_pan_action.cpp:55
 #, fuzzy
@@ -12816,13 +13216,13 @@ msgstr ""
 #: ui/input/kis_rotate_canvas_action.cpp:47
 #, fuzzy
 #| msgid "Rotate Node"
-msgid "Toggle Rotate Mode"
+msgid "Rotate Mode"
 msgstr "Knütt dreihen"
 
 #: ui/input/kis_rotate_canvas_action.cpp:48
 #, fuzzy
 #| msgid "Rotate Node"
-msgid "Toggle Discrete Rotate Mode"
+msgid "Discrete Rotate Mode"
 msgstr "Knütt dreihen"
 
 #: ui/input/kis_rotate_canvas_action.cpp:49
@@ -12856,7 +13256,7 @@ msgstr ""
 #: ui/input/kis_select_layer_action.cpp:50
 #, fuzzy
 #| msgid "Rotate Node"
-msgid "Toggle Select Layer Mode"
+msgid "Select Layer Mode"
 msgstr "Knütt dreihen"
 
 #: ui/input/kis_shortcut_configuration.cpp:234
@@ -13034,13 +13434,15 @@ msgid "The <i>Zoom Canvas</i> action zooms the canvas."
 msgstr ""
 
 #: ui/input/kis_zoom_action.cpp:116
-msgid "Toggle Zoom Mode"
-msgstr ""
+#, fuzzy
+#| msgid "Deform Mode"
+msgid "Zoom Mode"
+msgstr "Verformen-Metood"
 
 #: ui/input/kis_zoom_action.cpp:117
 #, fuzzy
 #| msgid "Rotate Node"
-msgid "Toggle Discrete Zoom Mode"
+msgid "Discrete Zoom Mode"
 msgstr "Knütt dreihen"
 
 #: ui/input/kis_zoom_action.cpp:120
@@ -13082,12 +13484,12 @@ msgid "Bart Coppens"
 msgstr "Bart Coppens"
 
 #: ui/kis_aboutdata.h:58
-msgid "David Revoy"
-msgstr "David Revoy"
-
-#: ui/kis_aboutdata.h:58
 msgid "Brush and palette set"
 msgstr "Pinsel- un Klörensett"
+
+#: ui/kis_aboutdata.h:58
+msgid "David Revoy"
+msgstr "David Revoy"
 
 #: ui/kis_aboutdata.h:59
 msgid "Carsten Pfeiffer"
@@ -13200,12 +13602,12 @@ msgid "Michael Thaler"
 msgstr "Michael Thaler"
 
 #: ui/kis_aboutdata.h:84
-msgid "Øyvind Kolås"
-msgstr "Øyvind Kolås"
-
-#: ui/kis_aboutdata.h:84
 msgid "Wiseguy"
 msgstr "Klookschieter"
+
+#: ui/kis_aboutdata.h:84
+msgid "Øyvind Kolås"
+msgstr "Øyvind Kolås"
 
 #: ui/kis_aboutdata.h:85
 msgid "Patrick Julien"
@@ -13220,11 +13622,11 @@ msgid "Vision master"
 msgstr "Grappen-Baas"
 
 #: ui/kis_aboutdata.h:87
-msgid "Ramon Miranda"
+msgid "Artist, Muses author, brush and preset creator"
 msgstr ""
 
 #: ui/kis_aboutdata.h:87
-msgid "Artist, Muses author, brush and preset creator"
+msgid "Ramon Miranda"
 msgstr ""
 
 #: ui/kis_aboutdata.h:88
@@ -13244,14 +13646,14 @@ msgid "Sven Langkamp"
 msgstr "Sven Langkamp"
 
 #: ui/kis_aboutdata.h:92
-msgid "Timothée Giet"
-msgstr "Timothée Giet"
-
-#: ui/kis_aboutdata.h:92
 #, fuzzy
 #| msgid "BD Artist and template developer"
 msgid "BD Artist, brush presets and templates"
 msgstr "BD-Künstler un Vörlagenschriever "
+
+#: ui/kis_aboutdata.h:92
+msgid "Timothée Giet"
+msgstr "Timothée Giet"
 
 #: ui/kis_aboutdata.h:93
 msgid "Toshitaka Fujioka"
@@ -13313,6 +13715,14 @@ msgid "Decrease opacity"
 msgstr "Deckstärk-Vöransicht:"
 
 #: ui/kis_clipboard.cc:257
+msgid "As &Web"
+msgstr "As &Nettdorstellen"
+
+#: ui/kis_clipboard.cc:257
+msgid "As on &Monitor"
+msgstr "As &Schirmdorstellen"
+
+#: ui/kis_clipboard.cc:257
 msgid "Pasting data from simple source"
 msgstr "Daten ut eenfach Born tofögen"
 
@@ -13337,14 +13747,6 @@ msgstr ""
 "lett.\n"
 "\n"
 "Wodennig wullt Du disse Daten behanneln?"
-
-#: ui/kis_clipboard.cc:257
-msgid "As &Web"
-msgstr "As &Nettdorstellen"
-
-#: ui/kis_clipboard.cc:257
-msgid "As on &Monitor"
-msgstr "As &Schirmdorstellen"
 
 #: ui/kis_control_frame.cpp:80 ui/kis_control_frame.cpp:81
 msgid "Fill Patterns"
@@ -13468,7 +13870,7 @@ msgstr "Laag &glattmaken"
 msgid "Rename current layer"
 msgstr "Aktuell Laag verdubbeln"
 
-#: ui/kis_layer_manager.cc:298 ui/kis_layer_manager.cc:778
+#: ui/kis_layer_manager.cc:298
 msgid "Rasterize Layer"
 msgstr "Laag rastern"
 
@@ -13487,12 +13889,15 @@ msgid "Filter Layer Properties"
 msgstr "Filterlaag-Egenschappen"
 
 #: ui/kis_layer_manager.cc:403
-msgid "Generator Layer Properties"
-msgstr "Makerlaag-Egenschappen"
+#, fuzzy
+#| msgid "Filter Layer Properties"
+msgid "Fill Layer Properties"
+msgstr "Filterlaag-Egenschappen"
 
 #: ui/kis_layer_manager.cc:484
 #, fuzzy
 #| msgid "Convert Current Layer From"
+msgctxt "(qtundo-format)"
 msgid "Convert to a Paint Layer"
 msgstr "Aktuell Laag ümwanneln ut"
 
@@ -13512,9 +13917,20 @@ msgstr "Laag-Fehler"
 msgid "The image contains hidden layers that will be lost."
 msgstr "Dat Bild bargt versteken Lagen, de verloren geiht."
 
+#: ui/kis_layer_manager.cc:709
+msgid "Flatten Image"
+msgstr "Bild glattmaken"
+
 #: ui/kis_layer_manager.cc:710
 msgid "&Flatten Image"
 msgstr "Bild &glattmaken"
+
+#: ui/kis_layer_manager.cc:778
+#, fuzzy
+#| msgid "Rasterize Layer"
+msgctxt "(qtundo-format)"
+msgid "Rasterize Layer"
+msgstr "Laag rastern"
 
 #: ui/kis_layer_manager.cc:814
 msgid "Convert Invisible Groups"
@@ -13535,6 +13951,7 @@ msgstr ""
 #: ui/kis_mask_manager.cc:177
 #, fuzzy
 #| msgid "Selection Mask..."
+msgctxt "(qtundo-format)"
 msgid "Add Selection Mask"
 msgstr "Köörmask..."
 
@@ -13545,6 +13962,7 @@ msgstr "Köör"
 #: ui/kis_mask_manager.cc:184
 #, fuzzy
 #| msgid "Transparency Mask"
+msgctxt "(qtundo-format)"
 msgid "Add Transparency Mask"
 msgstr "Transparenzmask"
 
@@ -13555,6 +13973,7 @@ msgstr "Transparenzmask"
 #: ui/kis_mask_manager.cc:190
 #, fuzzy
 #| msgid "New Filter Mask"
+msgctxt "(qtundo-format)"
 msgid "Add Filter Mask"
 msgstr "Nieg Filtermask"
 
@@ -13577,12 +13996,6 @@ msgstr "Kopie vun "
 #| msgid "Filter Layer Properties"
 msgid "Filter Mask Properties"
 msgstr "Filterlaag-Egenschappen"
-
-#: ui/kis_mirror_axis.cpp:91
-#, fuzzy
-#| msgid "Mirror: "
-msgid "Mirror Axis"
-msgstr "Spegeln: "
 
 #: ui/kis_node_manager.cpp:194
 #, fuzzy
@@ -13641,13 +14054,15 @@ msgid "&Filter Layer..."
 msgstr "&Filterlaag..."
 
 #: ui/kis_node_manager.cpp:246
-msgid "&Generated Layer..."
-msgstr "&Opstellt Laag..."
+#, fuzzy
+#| msgid "&Filter Layer..."
+msgid "&Fill Layer..."
+msgstr "&Filterlaag..."
 
 #: ui/kis_node_manager.cpp:249
 #, fuzzy
 #| msgid "&Filter Layer..."
-msgid "&File Layer"
+msgid "&File Layer..."
 msgstr "&Filterlaag..."
 
 #: ui/kis_node_manager.cpp:252
@@ -13677,7 +14092,7 @@ msgstr "Köörmask..."
 #: ui/kis_node_manager.cpp:270
 #, fuzzy
 #| msgid "&Filter Mask..."
-msgid "to &Filter Mask"
+msgid "to &Filter Mask..."
 msgstr "&Filtermask..."
 
 #: ui/kis_node_manager.cpp:273
@@ -13695,6 +14110,7 @@ msgstr "Laag &glattmaken"
 #: ui/kis_node_manager.cpp:464
 #, fuzzy
 #| msgid "Invert Selection"
+msgctxt "(qtundo-format)"
 msgid "Convert to a Selection Mask"
 msgstr "Köör ümdreihen"
 
@@ -13702,36 +14118,43 @@ msgstr "Köör ümdreihen"
 #, fuzzy
 #| msgctxt "(qtundo-format)"
 #| msgid "Remove Layer"
+msgctxt "(qtundo-format)"
 msgid "Remove Last Layer"
 msgstr "Laag wegdoon"
 
 #: ui/kis_node_manager.cpp:683
+#, fuzzy
+#| msgid "Mirror Layer X"
+msgctxt "(qtundo-format)"
 msgid "Mirror Layer X"
 msgstr "Laag X spegeln"
 
 #: ui/kis_node_manager.cpp:685
+#, fuzzy
+#| msgid "Mirror Mask X"
+msgctxt "(qtundo-format)"
 msgid "Mirror Mask X"
 msgstr "Mask X spegeln"
 
 #: ui/kis_node_manager.cpp:696
+#, fuzzy
+#| msgid "Mirror Layer Y"
+msgctxt "(qtundo-format)"
 msgid "Mirror Layer Y"
 msgstr "Laag Y spegeln"
 
 #: ui/kis_node_manager.cpp:698
 #, fuzzy
 #| msgid "Mirror Mask X"
+msgctxt "(qtundo-format)"
 msgid "Mirror Mask Y"
 msgstr "Mask X spegeln"
 
 #: ui/kis_node_manager.cpp:819
-#, fuzzy
-#| msgid "Exposure mode:"
-msgid "Export Node"
-msgstr "Belichtenbedrief:"
-
-#: ui/kis_painting_assistants_decoration.cpp:41
-msgid "Painting assistants"
-msgstr "Maalhölpers"
+#, fuzzy, kde-format
+#| msgid "Export"
+msgid "Export \"%1\""
+msgstr "Exporteren"
 
 #: ui/kis_painting_assistants_decoration.cpp:107
 msgid "Show Painting Assistants"
@@ -13829,12 +14252,6 @@ msgstr ""
 msgid "Select Favorite Presets..."
 msgstr "Tomehrst bruukt Profilen"
 
-#: ui/kis_paintop_option.cpp:26
-#, fuzzy
-#| msgid "Common Colors"
-msgid "Common"
-msgstr "Allgemeen Klören"
-
 #: ui/kis_paintop_option.cpp:36
 msgid "Texture"
 msgstr "Textuur"
@@ -13892,10 +14309,6 @@ msgstr "Bookdreihen-Andocker"
 msgid "Installation error"
 msgstr "Schaadhaftig Installatschoon"
 
-#: ui/kis_selection_decoration.cc:45
-msgid "Selection decoration"
-msgstr "Köördekoratschoon"
-
 #: ui/kis_selection_manager.cc:137
 msgid "Paste into &New Image"
 msgstr "Na &nieg Bild infögen"
@@ -13948,15 +14361,22 @@ msgstr "Köör wiesen"
 msgid "Size Canvas to Size of Selection"
 msgstr "Lienwand na Köörgrött ännern"
 
+#: ui/kis_selection_manager.cc:225
+#, fuzzy
+#| msgid "Vector Selection"
+msgid "Convert to Vector Selection"
+msgstr "Vektorköör"
+
 #: ui/kis_selection_manager.cc:500
 #, fuzzy
 #| msgid "Flake shapes"
 msgid "Stroked Shapes"
 msgstr "Flake-Formen"
 
-#: ui/kis_selection_manager.cc:502 ui/kis_selection_manager.cc:505
+#: ui/kis_selection_manager.cc:502
 #, fuzzy
 #| msgid "Flake shapes"
+msgctxt "(qtundo-format)"
 msgid "Stroke Shapes"
 msgstr "Flake-Formen"
 
@@ -14349,6 +14769,13 @@ msgstr "Vör- un Achtergrundklöör tuschen"
 msgid "Reset Foreground and Background Color"
 msgstr "Vör- un Achtergrundklöör torüchsetten"
 
+#: ui/tool/kis_tool.cc:545
+#, fuzzy
+#| msgid "Clear"
+msgctxt "(qtundo-format)"
+msgid "Clear"
+msgstr "Leddig maken"
+
 #: ui/tool/kis_tool.cc:574
 msgid "No options"
 msgstr "Keen Optschonen"
@@ -14377,12 +14804,6 @@ msgstr ""
 msgid "Local selection is locked."
 msgstr "Keen Akschoon utsöcht."
 
-#: ui/tool/kis_tool_freehand_helper.cpp:209
-#, fuzzy
-#| msgid "Freehand tool"
-msgid "Freehand Stroke"
-msgstr "Freehannig"
-
 #: ui/tool/kis_tool_paint.cc:105
 msgid "Increase Brush Size"
 msgstr "Pinsel grötter maken"
@@ -14390,6 +14811,13 @@ msgstr "Pinsel grötter maken"
 #: ui/tool/kis_tool_paint.cc:111
 msgid "Decrease Brush Size"
 msgstr "Pinsel lütter maken"
+
+#: ui/tool/strokes/kis_filter_stroke_strategy.cpp:44
+#, fuzzy, kde-format
+#| msgid "Filter:"
+msgctxt "(qtundo-format)"
+msgid "Filter \"%1\""
+msgstr "Filter:"
 
 #: ui/widgets/kis_channelflags_widget.cpp:39
 msgid ""
@@ -14671,6 +15099,141 @@ msgstr ""
 msgid "&Close"
 msgstr "Tomaken"
 
+#~ msgid "Gradient Fill"
+#~ msgstr "Mit Klöörövergang vullmaken"
+
+#~ msgctxt "(qtundo-format)"
+#~ msgid "Node Composite Mode"
+#~ msgstr "Knütt-Tosamensettenbedrief"
+
+#~ msgctxt "(qtundo-format)"
+#~ msgid "Node Opacity"
+#~ msgstr "Knütt-Deckstärk"
+
+#~ msgid "Resize Image"
+#~ msgstr "Bildgrött ännern"
+
+#~ msgid "Crop Node"
+#~ msgstr "Knütt tosnieden"
+
+#~ msgid "Ascension"
+#~ msgstr "Opstieg"
+
+#~ msgid "Declination"
+#~ msgstr "Negen"
+
+#, fuzzy
+#~| msgid "Texture"
+#~ msgid "Invert Texture:"
+#~ msgstr "Textuur"
+
+#~ msgctxt "(qtundo-format)"
+#~ msgid "Brush"
+#~ msgstr "Pinsel"
+
+#~ msgid "Paint with brushes"
+#~ msgstr "Mit Pinsels malen"
+
+#~ msgctxt "a straight drawn line"
+#~ msgid "Line"
+#~ msgstr "Lien"
+
+#~ msgid "Draw a straight line with the current brush"
+#~ msgstr "En graad Lien mit den aktuellen Pinsel teken"
+
+#~ msgid "Paint with multibrushes"
+#~ msgstr "Mit mehr Pinsels malen"
+
+#, fuzzy
+#~| msgid "Draw a polygon. Shift-mouseclick ends the polygon."
+#~ msgid "Draw a path. Shift-mouseclick ends the path."
+#~ msgstr ""
+#~ "En Veeleck teken. En Muusklick bi daalhollen Ümschalttast slutt dat af."
+
+#, fuzzy
+#~| msgid "Selection Mode"
+#~ msgid "Move Selection Stroke"
+#~ msgstr "Köörbedrief"
+
+#, fuzzy
+#~| msgid "Stroke"
+#~ msgid "Move Stroke"
+#~ msgstr "Streek"
+
+#~ msgid "Select a contiguous area of colors"
+#~ msgstr "En tosamenhangen Rebeet vun Klören utsöken"
+
+#~ msgid "Select an elliptical area"
+#~ msgstr "En elliptsch Rebeet utsöken"
+
+#~ msgid "Select an area of the image with path."
+#~ msgstr "En Bildrebeet  mit en Bahn kören."
+
+#~ msgid "Select a polygonal region"
+#~ msgstr "En Veeleck-Rebeet utsöken"
+
+#~ msgctxt "(qtundo-format)"
+#~ msgid "Dyna"
+#~ msgstr "Dünaamsch"
+
+#~ msgid "Paint with brushes using dynamic movements"
+#~ msgstr "Dünaamsch Verschuven bi't Malen mit Pinsels bruken"
+
+#, fuzzy
+#~| msgid "Transform Node"
+#~ msgid "Transform Stroke"
+#~ msgstr "Knütt wanneln"
+
+#, fuzzy
+#~| msgid "Vanishing Point Decoration"
+#~ msgid "Expand into Infinity Decoration"
+#~ msgstr "Fluchtpunktdekoratschoon"
+
+#~ msgid "Perspective grid"
+#~ msgstr "Kiekwinkel-Gadder"
+
+#, fuzzy
+#~| msgid "Rotate Node"
+#~ msgid "Toggle Rotate Mode"
+#~ msgstr "Knütt dreihen"
+
+#~ msgid "Generator Layer Properties"
+#~ msgstr "Makerlaag-Egenschappen"
+
+#, fuzzy
+#~| msgid "Mirror: "
+#~ msgid "Mirror Axis"
+#~ msgstr "Spegeln: "
+
+#~ msgid "&Generated Layer..."
+#~ msgstr "&Opstellt Laag..."
+
+#, fuzzy
+#~| msgid "&Filter Layer..."
+#~ msgid "&File Layer"
+#~ msgstr "&Filterlaag..."
+
+#, fuzzy
+#~| msgid "&Filter Mask..."
+#~ msgid "to &Filter Mask"
+#~ msgstr "&Filtermask..."
+
+#, fuzzy
+#~| msgid "Exposure mode:"
+#~ msgid "Export Node"
+#~ msgstr "Belichtenbedrief:"
+
+#~ msgid "Painting assistants"
+#~ msgstr "Maalhölpers"
+
+#, fuzzy
+#~| msgid "Common Colors"
+#~ msgid "Common"
+#~ msgstr "Allgemeen Klören"
+
+#~ msgid "Selection decoration"
+#~ msgstr "Köördekoratschoon"
+
 #~ msgid "Form"
 #~ msgstr "Form"
 
@@ -14948,9 +15511,6 @@ msgstr "Tomaken"
 #~ msgid "Add to Palette"
 #~ msgstr "Na Klörensett tofögen"
 
-#~ msgid "Rotate Node"
-#~ msgstr "Knütt dreihen"
-
 #~ msgid "File size:"
 #~ msgstr "Dateigrött:"
 
@@ -14978,11 +15538,6 @@ msgstr "Tomaken"
 
 #~ msgid "Size: 100KB"
 #~ msgstr "Grött: 100KB"
-
-#, fuzzy
-#~| msgid "Freehand tool"
-#~ msgid "Freehand path"
-#~ msgstr "Freehannig"
 
 #~ msgid "Border selection by"
 #~ msgstr "Köör ümrannen"
@@ -15422,10 +15977,6 @@ msgstr "Tomaken"
 #~ msgid "Apply transformation"
 #~ msgstr "Ümwanneln bruken"
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Transform"
-#~ msgstr "Wanneln"
-
 #~ msgid "Selection "
 #~ msgstr "Köör "
 
@@ -15754,9 +16305,6 @@ msgstr "Tomaken"
 #~ msgid "Use custom curve"
 #~ msgstr "Egen Bagen bruken"
 
-#~ msgid "Opacity Curve"
-#~ msgstr "Deckstärk-Bagen"
-
 #~ msgid "Darken Curve"
 #~ msgstr "Afdüüstern-Bagen"
 
@@ -16043,9 +16591,6 @@ msgstr "Tomaken"
 #~ msgid "Mixing Brush"
 #~ msgstr "Mischpinsel"
 
-#~ msgid "Bezier Curve"
-#~ msgstr "Bézier-Bagen"
-
 #~ msgid "Bezier Painting Tool"
 #~ msgstr "Bézier-Maalwarktüüch"
 
@@ -16055,9 +16600,6 @@ msgstr "Tomaken"
 #~ msgstr ""
 #~ "Kubsch Bézierbagens teken. Optschonen mit daaldrückt Alt, Strg oder "
 #~ "Ümschalt. Beennen mit de Ingaav-Tast oder en Dubbelklick."
-
-#~ msgid "Bezier Selection Tool"
-#~ msgstr "Warktüüch \"Bézier-Köör\""
 
 #~ msgid "&Bezier Path"
 #~ msgstr "&Bézierbagen"
@@ -16536,11 +17078,6 @@ msgstr "Tomaken"
 
 #~ msgid "Wood"
 #~ msgstr "Holt"
-
-#, fuzzy
-#~| msgid "Brush"
-#~ msgid "MultiBrush"
-#~ msgstr "Pinsel"
 
 #~ msgid "Resize Image to Size of Current Layer"
 #~ msgstr "Bildgrött na aktuell Laaggrött ännern"
@@ -17530,9 +18067,6 @@ msgstr "Tomaken"
 
 #~ msgid "Sample merged"
 #~ msgstr "All Lagen affragen"
-
-#~ msgid "Select Contiguous Area"
-#~ msgstr "Tosamenhangen Rebeet utsöken"
 
 #~ msgid "GRAY/Alpha16 Histogram"
 #~ msgstr "GRIES/Alpha16-Histogramm"
