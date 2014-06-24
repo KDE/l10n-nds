@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: parley\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-06-19 01:39+0000\n"
+"POT-Creation-Date: 2014-06-24 01:41+0000\n"
 "PO-Revision-Date: 2014-06-20 01:37+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -667,12 +667,12 @@ msgstr "Böverform:"
 
 #. i18n: ectx: property (text), widget (QPushButton, makeAdjectiveButton)
 #: src/editor/comparisonwidget.ui:116 src/editor/inflectionwidget.cpp:46
-#: src/parleydocument.cpp:330 src/vocabulary/wordtypeview.cpp:106
+#: src/parleydocument.cpp:500 src/vocabulary/wordtypeview.cpp:106
 msgid "Adjective"
 msgstr "Egenschapwoort"
 
 #. i18n: ectx: property (text), widget (QPushButton, makeAdverbButton)
-#: src/editor/comparisonwidget.ui:123 src/parleydocument.cpp:334
+#: src/editor/comparisonwidget.ui:123 src/parleydocument.cpp:504
 #: src/vocabulary/wordtypeview.cpp:114
 msgid "Adverb"
 msgstr "Ümstandwoort"
@@ -775,19 +775,19 @@ msgstr "Mehrtall"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: src/editor/declensionwidget.cpp:167 src/editor/declensionwidget.ui:185
-#: src/editor/inflectionwidget.cpp:121 src/parleydocument.cpp:316
+#: src/editor/inflectionwidget.cpp:121 src/parleydocument.cpp:486
 msgid "Masculine"
 msgstr "Maskuliensch"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: src/editor/declensionwidget.cpp:168 src/editor/declensionwidget.ui:271
-#: src/editor/inflectionwidget.cpp:123 src/parleydocument.cpp:319
+#: src/editor/inflectionwidget.cpp:123 src/parleydocument.cpp:489
 msgid "Feminine"
 msgstr "Feminiensch"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: src/editor/declensionwidget.cpp:169 src/editor/declensionwidget.ui:357
-#: src/editor/inflectionwidget.cpp:122 src/parleydocument.cpp:322
+#: src/editor/inflectionwidget.cpp:122 src/parleydocument.cpp:492
 msgid "Neuter"
 msgstr "Neutraal"
 
@@ -1016,12 +1016,12 @@ msgstr "dd.MM.jjjj"
 msgid "&Reset Confidence Levels"
 msgstr "Stopen to&rüchsetten"
 
-#: src/editor/inflectionwidget.cpp:36 src/parleydocument.cpp:326
+#: src/editor/inflectionwidget.cpp:36 src/parleydocument.cpp:496
 #: src/vocabulary/wordtypeview.cpp:123
 msgid "Verb"
 msgstr "Tietwoort"
 
-#: src/editor/inflectionwidget.cpp:41 src/parleydocument.cpp:312
+#: src/editor/inflectionwidget.cpp:41 src/parleydocument.cpp:482
 #: src/vocabulary/wordtypeview.cpp:74
 msgid "Noun"
 msgstr "Naamwoort"
@@ -1174,8 +1174,8 @@ msgstr "HTML-Dokment"
 msgid "Could not write to file \"%1\""
 msgstr "Datei \"%1\" lett sik nich schrieven."
 
-#: src/export/exportdialog.cpp:110 src/parleydocument.cpp:238
-#: src/parleymainwindow.cpp:138
+#: src/export/exportdialog.cpp:110 src/parleydocument.cpp:106
+#: src/parleydocument.cpp:323 src/parleymainwindow.cpp:138
 msgid "Untitled"
 msgstr "Ahn Naam"
 
@@ -1491,49 +1491,82 @@ msgstr "Vokavelsett-Dokment &hoochladen"
 msgid "Share the current vocabulary collection with other users"
 msgstr "Aktuell Vokavelsett-Sammeln för anner Brukers freegeven"
 
-#: src/parleydocument.cpp:126 src/parleydocument.cpp:415
+#: src/parleydocument.cpp:140 src/parleydocument.cpp:585
 #, kde-format
 msgctxt "@title:window document properties"
 msgid "Properties for %1"
 msgstr "Egenschappen vun %1"
 
-#: src/parleydocument.cpp:160
+#: src/parleydocument.cpp:174
 msgid "Open in practice &mode"
 msgstr "In Ööv&bedrief opmaken"
 
-#: src/parleydocument.cpp:163
+#: src/parleydocument.cpp:177
 msgid "Open Vocabulary Collection"
 msgstr "Vokavelsett-Sammeln opmaken"
 
-#: src/parleydocument.cpp:195
-#, kde-format
-msgid "Could not read collection from \"%1\""
-msgstr "Sammeln lett sik nich vun „%1“ lesen"
+#: src/parleydocument.cpp:218
+msgid ""
+"The vocabulary collection is locked by another process.  You can open the "
+"file if you take over the lock, but you will lose any changes from the other "
+"process.\n"
+"\n"
+"Do you want to take over the lock?\n"
+msgstr ""
 
-#: src/parleydocument.cpp:195
+#: src/parleydocument.cpp:218
+msgid "Take Over Lock"
+msgstr ""
+
+#: src/parleydocument.cpp:248
+#, fuzzy, kde-format
+#| msgid "Writing file \"%1\" resulted in an error: %2"
+msgid "Opening collection \"%1\" resulted in an error: %2"
+msgstr "Bi't Schrieven vun de Datei \"%1\" hett dat en Fehler geven: %2"
+
+#: src/parleydocument.cpp:249
 msgctxt "@title:window"
 msgid "Open Collection"
 msgstr "Sammeln opmaken"
 
-#: src/parleydocument.cpp:229
+#: src/parleydocument.cpp:281
+msgid ""
+"Vocabulary is modified.\n"
+"\n"
+"Save file before exit?\n"
+msgstr ""
+"Vokavelsett wöör ännert.\n"
+"\n"
+"Datei ehr't Utmaken sekern?\n"
+
+#: src/parleydocument.cpp:314
 msgid "Open Downloaded Vocabulary Collection"
 msgstr "Daallaadt Vokavelsett-Sammeln opmaken"
 
-#: src/parleydocument.cpp:254 src/parleydocument.cpp:304
+#: src/parleydocument.cpp:353 src/parleydocument.cpp:436
+#, kde-format
+msgid ""
+"File \"%1\" is locked by another process.  You can save to the file if you "
+"take over the lock, but you will lose any changes from the other process.\n"
+"\n"
+"Do you want to take over the lock?\n"
+msgstr ""
+
+#: src/parleydocument.cpp:382 src/parleydocument.cpp:471
 #, kde-format
 msgid "Writing file \"%1\" resulted in an error: %2"
 msgstr "Bi't Schrieven vun de Datei \"%1\" hett dat en Fehler geven: %2"
 
-#: src/parleydocument.cpp:255 src/parleydocument.cpp:305
+#: src/parleydocument.cpp:383 src/parleydocument.cpp:472
 msgctxt "@title:window"
 msgid "Save File"
 msgstr "Datei sekern"
 
-#: src/parleydocument.cpp:273
+#: src/parleydocument.cpp:401
 msgid "Save Vocabulary As"
 msgstr "Vokavelsett sekern as"
 
-#: src/parleydocument.cpp:282
+#: src/parleydocument.cpp:410
 #, kde-format
 msgid ""
 "<qt>The file<p><b>%1</b></p>already exists. Do you want to overwrite it?</qt>"
@@ -1542,39 +1575,45 @@ msgstr ""
 "överschrieven?</qt>"
 
 # unreviewed-context
-#: src/parleydocument.cpp:288
+#: src/parleydocument.cpp:416
 #, kde-format
 msgctxt "@info:status saving a file"
 msgid "Saving %1"
 msgstr "„%1“ warrt sekert"
 
-#: src/parleydocument.cpp:338 src/vocabulary/wordtypeview.cpp:131
+#: src/parleydocument.cpp:508 src/vocabulary/wordtypeview.cpp:131
 msgid "Conjunction"
 msgstr "Binnwoort"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, licenseComboBox)
-#: src/parleydocument.cpp:351 src/settings/documentproperties.ui:221
+#: src/parleydocument.cpp:521 src/settings/documentproperties.ui:221
 msgid "Public Domain"
 msgstr "Meenfree"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, categoryComboBox)
 #. i18n: ectx: property (title), widget (QGroupBox, languageGroupBox)
-#: src/parleydocument.cpp:352 src/settings/documentproperties.ui:167
+#: src/parleydocument.cpp:522 src/settings/documentproperties.ui:167
 #: src/settings/documentproperties.ui:237
 msgid "Languages"
 msgstr "Spraken"
 
-#: src/parleydocument.cpp:360
+#: src/parleydocument.cpp:530
 msgid "A Second Language"
 msgstr "En tweet Spraak"
 
-#: src/parleydocument.cpp:363
+#: src/parleydocument.cpp:533
 msgid "Lesson 1"
 msgstr "Lex 1"
 
-#: src/parleydocument.cpp:402
+#: src/parleydocument.cpp:572 src/parleydocument.cpp:612
 #, kde-format
 msgid "Could not open vocabulary collection \"%1\""
+msgstr "Vokavelsett-Sammeln \"%1\" lett sik nich opmaken."
+
+#: src/parleydocument.cpp:606 src/parleydocument.cpp:619
+#, fuzzy, kde-format
+#| msgid "Could not open vocabulary collection \"%1\""
+msgid "Could not save vocabulary collection \"%1\""
 msgstr "Vokavelsett-Sammeln \"%1\" lett sik nich opmaken."
 
 #: src/parleymainwindow.cpp:176
@@ -1588,16 +1627,6 @@ msgstr ""
 #: src/parleymainwindow.cpp:177
 msgid "Select languages"
 msgstr "Spraken utsöken"
-
-#: src/parleymainwindow.cpp:199
-msgid ""
-"Vocabulary is modified.\n"
-"\n"
-"Save file before exit?\n"
-msgstr ""
-"Vokavelsett wöör ännert.\n"
-"\n"
-"Datei ehr't Utmaken sekern?\n"
 
 #. i18n: ectx: Menu (help)
 #: src/parleyui.rc:19
@@ -3214,26 +3243,26 @@ msgstr "&Grundklöör"
 msgid "Alt+0"
 msgstr "Alt+0"
 
-#: src/statistics/lessonstatistics.cpp:141
+#: src/statistics/lessonstatistics.cpp:159
 msgctxt "adjective, The word has been properly and fully learned by the user"
 msgid "Fully learned"
 msgstr "Lehrt"
 
-#: src/statistics/lessonstatistics.cpp:142
+#: src/statistics/lessonstatistics.cpp:160
 msgctxt "adjective, The word has not even been practiced once by the user"
 msgid "Not practiced"
 msgstr "Nich öövt"
 
-#: src/statistics/lessonstatistics.cpp:182
-#: src/statistics/lessonstatistics.cpp:184
+#: src/statistics/lessonstatistics.cpp:200
+#: src/statistics/lessonstatistics.cpp:202
 msgid "Remove confidence levels from this unit"
 msgstr "Stopen ut dissen Lex wegmaken"
 
-#: src/statistics/lessonstatistics.cpp:192
+#: src/statistics/lessonstatistics.cpp:210
 msgid "Remove confidence levels from this unit and all sub-units"
 msgstr "Stopen ut dissen Lex un all Ünnerlexen wegmaken"
 
-#: src/statistics/lessonstatistics.cpp:194
+#: src/statistics/lessonstatistics.cpp:212
 msgid "Remove confidence level from this unit and all sub-units"
 msgstr "Stopen ut dissen Lex un all Ünnerlexen wegmaken"
 
@@ -3808,6 +3837,9 @@ msgstr ""
 "Nettsiet besöken, dor gifft dat veleVokavelsetten:\n"
 "<a href=\"http://edu.kde.org/contrib/kvtml2.php\">http://edu.kde.org/contrib/"
 "kvtml2.php</a></p>\n"
+
+#~ msgid "Could not read collection from \"%1\""
+#~ msgstr "Sammeln lett sik nich vun „%1“ lesen"
 
 #~ msgid "Practice Again"
 #~ msgstr "Nochmaal öven"
