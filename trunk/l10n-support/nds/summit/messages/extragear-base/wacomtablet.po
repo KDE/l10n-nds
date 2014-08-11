@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tablet\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-07-03 10:00+0200\n"
+"POT-Creation-Date: 2014-08-11 09:46+0200\n"
 "PO-Revision-Date: 2014-07-06 21:38+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -142,14 +142,14 @@ msgstr "Ümschalt"
 #. i18n: Select an action which will be assigned to a tablet button.
 #. i18n: ectx: property (placeholderText), widget (Wacom::ButtonActionDisplayWidget, actionNameLineEdit)
 #. +> trunk stable
-#: src/kcmodule/buttonactionselectionwidget.ui:164
+#: src/kcmodule/buttonactionselectionwidget.ui:159
 msgid "Please select an action."
 msgstr "Bitte en Akschoon utsöken"
 
 #. i18n: Click to assign an action (shortcut) to a tablet button.
 #. i18n: ectx: property (placeholderText), widget (Wacom::ButtonActionDisplayWidget, actionNameDisplayWidget)
 #. +> trunk stable
-#: src/kcmodule/buttonactionselectorwidget.ui:56
+#: src/kcmodule/buttonactionselectorwidget.ui:51
 msgid "Click to assign an action."
 msgstr "Klick, wenn Du en Akschoon towiesen wullt"
 
@@ -162,7 +162,7 @@ msgstr "Röhrfeldknööp"
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroupBox)
 #. +> trunk stable
 #: src/kcmodule/buttonpagewidget.ui:29
-#: src/kcmodule/kcmwacomtabletwidget.cpp:330
+#: src/kcmodule/kcmwacomtabletwidget.cpp:425
 msgid "Express Buttons"
 msgstr "Fixknööp"
 
@@ -310,45 +310,73 @@ msgid "No Tablet Found"
 msgstr "Keen Tablett funnen"
 
 #. +> trunk stable
-#: src/kcmodule/generalpagewidget.cpp:81 src/kded/tabletdaemon.cpp:143
+#: src/kcmodule/generalpagewidget.cpp:86 src/kded/tabletdaemon.cpp:143
 msgctxt "@action"
 msgid "Enable/Disable the Touch Tool"
 msgstr "Anröögwarktüüch an- oder utmaken"
 
 #. +> trunk stable
-#: src/kcmodule/generalpagewidget.cpp:86 src/kded/tabletdaemon.cpp:148
+#: src/kcmodule/generalpagewidget.cpp:91 src/kded/tabletdaemon.cpp:148
 msgctxt "@action"
 msgid "Toggle the Stylus Tool Relative/Absolute"
 msgstr "Stiftwarktüüch \"Relatiev/Afsoluut\" wesseln"
 
 #. +> trunk stable
-#: src/kcmodule/generalpagewidget.cpp:91 src/kded/tabletdaemon.cpp:153
+#: src/kcmodule/generalpagewidget.cpp:96 src/kded/tabletdaemon.cpp:153
 msgctxt "@action"
 msgid "Toggle between all screens"
 msgstr "Twischen all Schirmen wesseln"
 
 #. +> trunk stable
-#: src/kcmodule/generalpagewidget.cpp:96
+#: src/kcmodule/generalpagewidget.cpp:101
 msgctxt "@action Maps the area of the tablet to all available screen space (space depends on connected monitors)"
 msgid "Map to fullscreen"
 msgstr "Heel Schirm toornen"
 
 #. +> trunk stable
-#: src/kcmodule/generalpagewidget.cpp:101 src/kded/tabletdaemon.cpp:163
+#: src/kcmodule/generalpagewidget.cpp:106 src/kded/tabletdaemon.cpp:163
 msgctxt "@action"
 msgid "Map to screen 1"
 msgstr "Na Schirm 1 toornen"
 
 #. +> trunk stable
-#: src/kcmodule/generalpagewidget.cpp:106 src/kded/tabletdaemon.cpp:168
+#: src/kcmodule/generalpagewidget.cpp:111 src/kded/tabletdaemon.cpp:168
 msgctxt "@action"
 msgid "Map to screen 2"
 msgstr "Na Schirm 2 toornen"
 
+#. +> trunk
+#: src/kcmodule/generalpagewidget.cpp:116 src/kded/tabletdaemon.cpp:173
+#, fuzzy
+#| msgid "Add new profile"
+msgctxt "@action Switch to the next profile in the rotation"
+msgid "Next profile"
+msgstr "Nieg Profil tofögen"
+
+#. +> trunk
+#: src/kcmodule/generalpagewidget.cpp:121 src/kded/tabletdaemon.cpp:178
+msgctxt "@action Switch to the previous profile in the rotation"
+msgid "Previous Profile"
+msgstr ""
+
 #. +> trunk stable
-#: src/kcmodule/generalpagewidget.cpp:111
+#: src/kcmodule/generalpagewidget.cpp:126
 msgid "Wacom Tablet Settings"
 msgstr "Wacom-Tablett instellen"
+
+#. +> trunk
+#: src/kcmodule/generalpagewidget.cpp:228
+#, fuzzy
+#| msgid "Profile name:"
+msgid "Profile List"
+msgstr "Profilnaam:"
+
+#. +> trunk
+#: src/kcmodule/generalpagewidget.cpp:229
+#, fuzzy
+#| msgid "Select Profile:"
+msgid "Select the Profile you want to add:"
+msgstr "Profil utsöken:"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, GeneralPageWidget)
 #. +> trunk stable
@@ -357,57 +385,95 @@ msgid "General Hardware Overview"
 msgstr "Allmeen Reedschap-Översicht"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#. +> trunk stable
+#. +> stable
 #: src/kcmodule/generalpagewidget.ui:23
 msgid "Tablet Details"
 msgstr "Tablett-Enkelheiten"
 
+#. i18n: ectx: property (title), widget (QGroupBox, profileRotationBox)
+#. +> trunk
+#: src/kcmodule/generalpagewidget.ui:29
+#, fuzzy
+#| msgid "Orientation"
+msgid "ProfileRotation"
+msgstr "Utrichten"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbUp)
+#. +> trunk
+#: src/kcmodule/generalpagewidget.ui:65
+#, fuzzy
+#| msgctxt "Action when the Wheel is used upwards"
+#| msgid "Up:"
+msgid "Up"
+msgstr "Na baven:"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbAddToRotationList)
+#. +> trunk
+#: src/kcmodule/generalpagewidget.ui:78
+msgid "Add"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, pbDown)
+#. +> trunk
+#: src/kcmodule/generalpagewidget.ui:91
+#, fuzzy
+#| msgctxt "Action when the Wheel is used downwards"
+#| msgid "Down:"
+msgid "Down"
+msgstr "Na nerrn:"
+
 #. i18n: ectx: property (text), widget (QLabel, CompanyLabel)
-#. +> trunk stable
+#. +> stable
 #: src/kcmodule/generalpagewidget.ui:93
 msgid "Company:"
 msgstr "Maker:"
 
+#. i18n: ectx: property (text), widget (QPushButton, pbRemoveFromRotationList)
+#. +> trunk
+#: src/kcmodule/generalpagewidget.ui:104
+msgid "Remove"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QLabel, tabletLabel)
-#. +> trunk stable
+#. +> stable
 #: src/kcmodule/generalpagewidget.ui:113
 msgid "Tablet:"
 msgstr "Tablett:"
 
-#. i18n: ectx: property (text), widget (QLabel, devicesLabel)
+#. i18n: ectx: property (title), widget (QGroupBox, shortcutGroupBox)
 #. +> trunk stable
+#: src/kcmodule/generalpagewidget.ui:128
+msgid "Shortcuts"
+msgstr "Tastkombinatschonen"
+
+#. i18n: ectx: property (text), widget (QLabel, devicesLabel)
+#. +> stable
 #: src/kcmodule/generalpagewidget.ui:133
 msgid "Input Devices:"
 msgstr "Ingaav-Reedschappen:"
 
-#. i18n: ectx: property (title), widget (QGroupBox, shortcutGroupBox)
 #. +> trunk stable
-#: src/kcmodule/generalpagewidget.ui:154
-msgid "Shortcuts"
-msgstr "Tastkombinatschonen"
-
-#. +> trunk stable
-#: src/kcmodule/kcmwacomtablet.cpp:73
+#: src/kcmodule/kcmwacomtablet.cpp:74
 msgid "Graphic Tablet Configuration"
 msgstr "Grafiktablett instellen"
 
 #. +> trunk stable
-#: src/kcmodule/kcmwacomtablet.cpp:74
+#: src/kcmodule/kcmwacomtablet.cpp:75
 msgid "A configurator for graphic tablets"
 msgstr "En Instellprogramm för Grafiktabletts"
 
 #. +> trunk stable
-#: src/kcmodule/kcmwacomtablet.cpp:75
+#: src/kcmodule/kcmwacomtablet.cpp:76
 msgid "In this module you can configure your Wacom tablet profiles"
 msgstr "Mit dit Moduul kannst Du Profilen för Dien Wacom-Tablett instellen"
 
 #. +> trunk stable
-#: src/kcmodule/kcmwacomtabletwidget.cpp:132
+#: src/kcmodule/kcmwacomtabletwidget.cpp:157
 msgid "KDE tablet service not found"
 msgstr "KDE-Tablettdeenst nich funnen"
 
 #. +> trunk stable
-#: src/kcmodule/kcmwacomtabletwidget.cpp:133
+#: src/kcmodule/kcmwacomtabletwidget.cpp:158
 msgid ""
 "Please start the KDE wacom tablet service to use this configuration dialog.\n"
 "The service is required for tablet detection and profile support."
@@ -416,12 +482,12 @@ msgstr ""
 "De Deenst deckt Tabletts op un ünnerstütt Profilen."
 
 #. +> trunk stable
-#: src/kcmodule/kcmwacomtabletwidget.cpp:138
+#: src/kcmodule/kcmwacomtabletwidget.cpp:163
 msgid "No tablet device detected"
 msgstr "Keen Tablettreedschap funnen."
 
 #. +> trunk stable
-#: src/kcmodule/kcmwacomtabletwidget.cpp:139
+#: src/kcmodule/kcmwacomtabletwidget.cpp:164
 msgid ""
 "Please connect a tablet device to continue.\n"
 "If your device is already connected it is currently unsupported."
@@ -430,30 +496,36 @@ msgstr ""
 "Hest Du Dien Reedschap al tokoppelt, warrt dat opstunns nich ünnerstütt."
 
 #. +> trunk stable
-#: src/kcmodule/kcmwacomtabletwidget.cpp:152
+#: src/kcmodule/kcmwacomtabletwidget.cpp:216
 msgid "Add new profile"
 msgstr "Nieg Profil tofögen"
 
 #. +> trunk stable
-#: src/kcmodule/kcmwacomtabletwidget.cpp:153
+#: src/kcmodule/kcmwacomtabletwidget.cpp:217
 msgid "Profile name:"
 msgstr "Profilnaam:"
 
+#. +> trunk
+#: src/kcmodule/kcmwacomtabletwidget.cpp:409
+msgctxt "Name of the default profile that will be created if none exist."
+msgid "Default"
+msgstr ""
+
 #. +> trunk stable
-#: src/kcmodule/kcmwacomtabletwidget.cpp:324
+#: src/kcmodule/kcmwacomtabletwidget.cpp:418
 msgctxt "Basic overview page for the tablet hardware"
 msgid "General"
 msgstr "Allmeen"
 
 #. +> trunk stable
-#: src/kcmodule/kcmwacomtabletwidget.cpp:325
+#: src/kcmodule/kcmwacomtabletwidget.cpp:419
 msgid "Stylus"
 msgstr "Ingaavstift"
 
 #. i18n: ectx: property (title), widget (QGroupBox, tabletGroupBox)
 #. i18n: ectx: property (title), widget (QGroupBox, generalGroupBox)
 #. +> trunk stable
-#: src/kcmodule/kcmwacomtabletwidget.cpp:333
+#: src/kcmodule/kcmwacomtabletwidget.cpp:428
 #: src/kcmodule/tabletareaselectionview.ui:150
 #: src/kcmodule/tabletpagewidget.ui:17
 msgid "Tablet"
@@ -461,7 +533,7 @@ msgstr "Tablett"
 
 #. i18n: ectx: property (title), widget (QGroupBox, touchGroupBox)
 #. +> trunk stable
-#: src/kcmodule/kcmwacomtabletwidget.cpp:339 src/kcmodule/touchpagewidget.ui:17
+#: src/kcmodule/kcmwacomtabletwidget.cpp:434 src/kcmodule/touchpagewidget.ui:17
 msgid "Touch"
 msgstr "Anrögen"
 
@@ -471,33 +543,41 @@ msgstr "Anrögen"
 msgid "Graphic Tablet Settings"
 msgstr "Grafiktablett instellen"
 
+#. i18n: ectx: property (text), widget (QLabel, tabletListLabel)
+#. +> trunk
+#: src/kcmodule/kcmwacomtabletwidget.ui:28
+#, fuzzy
+#| msgid "Select Profile:"
+msgid "Select Tablet:"
+msgstr "Profil utsöken:"
+
 #. i18n: ectx: property (text), widget (QLabel, profileLabel)
 #. +> trunk stable
-#: src/kcmodule/kcmwacomtabletwidget.ui:28
+#: src/kcmodule/kcmwacomtabletwidget.ui:52
 msgid "Select Profile:"
 msgstr "Profil utsöken:"
 
 #. i18n: ectx: property (toolTip), widget (KAnimatedButton, addProfileButton)
 #. +> trunk stable
-#: src/kcmodule/kcmwacomtabletwidget.ui:48
+#: src/kcmodule/kcmwacomtabletwidget.ui:72
 msgid "Creates a new default profile"
 msgstr "Stellt en nieg Standardprofil op."
 
 #. i18n: ectx: property (icons), widget (KAnimatedButton, addProfileButton)
 #. +> trunk stable
-#: src/kcmodule/kcmwacomtabletwidget.ui:57
+#: src/kcmodule/kcmwacomtabletwidget.ui:81
 msgid "document-new"
 msgstr "Nieg Dokment"
 
 #. i18n: ectx: property (toolTip), widget (KAnimatedButton, delProfileButton)
 #. +> trunk stable
-#: src/kcmodule/kcmwacomtabletwidget.ui:64
+#: src/kcmodule/kcmwacomtabletwidget.ui:88
 msgid "Deletes the current profile"
 msgstr "Deit dat aktuelle Profil weg."
 
 #. i18n: ectx: property (icons), widget (KAnimatedButton, delProfileButton)
 #. +> trunk stable
-#: src/kcmodule/kcmwacomtabletwidget.ui:67
+#: src/kcmodule/kcmwacomtabletwidget.ui:91
 msgid "edit-delete-page"
 msgstr "Siet bewerken oder wegmaken"
 
@@ -655,44 +735,44 @@ msgstr "Antippen"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBoxRawSample)
 #. i18n: ectx: property (toolTip), widget (QSlider, horizontalSliderRawSample)
-#. +> stable
+#. +> trunk stable
 #: src/kcmodule/styluspagewidget.ui:393 src/kcmodule/styluspagewidget.ui:402
 msgid "Number of raw data used to filter the points (default is 4)"
 msgstr "Tall vun Rohdaten, de för't Filtern vun de Pünkt bruukt warrt (standardwies 4)"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBoxRawSample)
-#. +> stable
+#. +> trunk stable
 #: src/kcmodule/styluspagewidget.ui:396
 msgid "Raw Sample Rate"
 msgstr "Roh-Aftastwedderhalen"
 
 #. i18n: ectx: property (text), widget (QLabel, labelMinRawSample)
-#. +> stable
+#. +> trunk stable
 #: src/kcmodule/styluspagewidget.ui:432
 msgid "1"
 msgstr "1"
 
 #. i18n: ectx: property (text), widget (QLabel, labelMaxRawSample)
 #. i18n: ectx: property (text), widget (QLabel, labelMaxSuppress)
-#. +> stable
+#. +> trunk stable
 #: src/kcmodule/styluspagewidget.ui:452 src/kcmodule/styluspagewidget.ui:526
 msgid "20"
 msgstr "20"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBoxSupress)
-#. +> stable
+#. +> trunk stable
 #: src/kcmodule/styluspagewidget.ui:470
 msgid "Number of points trimmed (default is 2)"
 msgstr "Tall vun afsneden Pünkt (standardwies 2)"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBoxSupress)
-#. +> stable
+#. +> trunk stable
 #: src/kcmodule/styluspagewidget.ui:473
 msgid "Suppress Rate"
 msgstr "Afsniedrate"
 
 #. i18n: ectx: property (text), widget (QLabel, labelMinSuppress)
-#. +> stable
+#. +> trunk stable
 #: src/kcmodule/styluspagewidget.ui:506
 msgid "0"
 msgstr "0"
@@ -782,25 +862,25 @@ msgid "This mapping can only be applied in absolute tracking mode."
 msgstr "Disse Toornen lett sik bloots in Afsoluutbedrief bruken."
 
 #. +> trunk stable
-#: src/kcmodule/tabletpagewidget.cpp:446
+#: src/kcmodule/tabletpagewidget.cpp:453
 msgctxt "Either no orientation or the current screen orientation is applied to the tablet."
 msgid "Default Orientation"
 msgstr "Standardutrichten"
 
 #. +> trunk stable
-#: src/kcmodule/tabletpagewidget.cpp:447
+#: src/kcmodule/tabletpagewidget.cpp:454
 msgctxt "The tablet will be rotated clockwise."
 msgid "Rotate Tablet Clockwise"
 msgstr "Tablett na rechts dreihen"
 
 #. +> trunk stable
-#: src/kcmodule/tabletpagewidget.cpp:448
+#: src/kcmodule/tabletpagewidget.cpp:455
 msgctxt "The tablet will be rotated counterclockwise."
 msgid "Rotate Tablet Counterclockwise"
 msgstr "Tablett na links dreihen"
 
 #. +> trunk stable
-#: src/kcmodule/tabletpagewidget.cpp:449
+#: src/kcmodule/tabletpagewidget.cpp:456
 msgctxt "The tablet will be rotated up side down."
 msgid "Rotate Tablet Upside-Down"
 msgstr "Tablett överkopp dreihen"
@@ -850,43 +930,43 @@ msgstr "Tablettrebeet na Schirm towiesen"
 
 #. i18n: ectx: property (text), widget (QLabel, trackingWarningLabel)
 #. +> trunk stable
-#: src/kcmodule/tabletpagewidget.ui:142 src/kcmodule/touchpagewidget.ui:158
+#: src/kcmodule/tabletpagewidget.ui:137 src/kcmodule/touchpagewidget.ui:153
 msgid "Your currently selected mapping can not be applied in relative tracking mode."
 msgstr "De opstunns utsöchte Towiesen lett sik in Relatievbedrief nich bruken."
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, rotationGroupBox)
 #. +> trunk stable
-#: src/kcmodule/tabletpagewidget.ui:183
+#: src/kcmodule/tabletpagewidget.ui:178
 msgid "Changes the orientation of the tablet."
 msgstr "Ännert de Utrichten vun't Tablett"
 
 #. i18n: ectx: property (title), widget (QGroupBox, rotationGroupBox)
 #. +> trunk stable
-#: src/kcmodule/tabletpagewidget.ui:186
+#: src/kcmodule/tabletpagewidget.ui:181
 msgid "Orientation"
 msgstr "Utrichten"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, rotateWithScreenCheckBox)
 #. +> trunk stable
-#: src/kcmodule/tabletpagewidget.ui:195
+#: src/kcmodule/tabletpagewidget.ui:190
 msgid "If enabled, the tablet rotates together with the screen."
 msgstr "Wenn anmaakt, warrt dat Tablett tosamen mit den Schirm dreiht."
 
 #. i18n: ectx: property (text), widget (QCheckBox, rotateWithScreenCheckBox)
 #. +> trunk stable
-#: src/kcmodule/tabletpagewidget.ui:198
+#: src/kcmodule/tabletpagewidget.ui:193
 msgid "Auto-Rotate with Screen"
 msgstr "Mit Schirm dreihen"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, rotateWithScreenInvertCheckBox)
 #. +> trunk stable
-#: src/kcmodule/tabletpagewidget.ui:208
+#: src/kcmodule/tabletpagewidget.ui:203
 msgid "If enabled the automatic tablet rotation for clockwise and counterclockwise rotations will be inverted."
 msgstr "Wenn anmaakt warrt dat automaatsche Dreihen för Dreihen na links un na rechts ümdreiht."
 
 #. i18n: ectx: property (text), widget (QCheckBox, rotateWithScreenInvertCheckBox)
 #. +> trunk stable
-#: src/kcmodule/tabletpagewidget.ui:211
+#: src/kcmodule/tabletpagewidget.ui:206
 msgid "Invert Auto-Rotation"
 msgstr "Automaatsch annersrüm dreihen"
 
@@ -922,85 +1002,85 @@ msgstr "Anröögrebeet na Schirm towiesen"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, gesturesCheckBox)
 #. +> trunk stable
-#: src/kcmodule/touchpagewidget.ui:194
+#: src/kcmodule/touchpagewidget.ui:189
 msgid "If enabled the touch events can recognize gestures."
 msgstr "Wenn anmaakt, laat sik de Anröögbegeefnissen as Röhrtekens bruken."
 
 #. i18n: ectx: property (text), widget (QCheckBox, gesturesCheckBox)
 #. +> trunk stable
-#: src/kcmodule/touchpagewidget.ui:197
+#: src/kcmodule/touchpagewidget.ui:192
 msgid "Enable Gestures"
 msgstr "Röhrtekens anmaken"
 
 #. i18n: ectx: property (title), widget (QGroupBox, gesturesGroupBox)
 #. +> trunk stable
-#: src/kcmodule/touchpagewidget.ui:215
+#: src/kcmodule/touchpagewidget.ui:210
 msgid "Gestures"
 msgstr "Röhrtekens"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, scrollDistanceLabel)
 #. +> trunk stable
-#: src/kcmodule/touchpagewidget.ui:227
+#: src/kcmodule/touchpagewidget.ui:222
 msgid "Minimum motion before sending a scroll gesture."
 msgstr "Lüttst Bewegen, ehr en Rullteken loosstüert warrt"
 
 #. i18n: ectx: property (text), widget (QLabel, scrollDistanceLabel)
 #. +> trunk stable
-#: src/kcmodule/touchpagewidget.ui:230
+#: src/kcmodule/touchpagewidget.ui:225
 msgid "Scroll Distance"
 msgstr "Rullstreek"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, scrollDistanceSpinBox)
 #. +> trunk stable
-#: src/kcmodule/touchpagewidget.ui:246
+#: src/kcmodule/touchpagewidget.ui:241
 msgid "The minimum motion in tablet units before sending a scroll event."
 msgstr "De lüttste Bewegen in Tabletteenheiten, ehr en Rullbegeefnis loosstüert warrt."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, zoomDistanceLabel)
 #. +> trunk stable
-#: src/kcmodule/touchpagewidget.ui:265
+#: src/kcmodule/touchpagewidget.ui:260
 msgid "Minimum distance for a zoom gesture is recognized."
 msgstr "Lüttst Streek för en Ansichtgrött-Teken"
 
 #. i18n: ectx: property (text), widget (QLabel, zoomDistanceLabel)
 #. +> trunk stable
-#: src/kcmodule/touchpagewidget.ui:268
+#: src/kcmodule/touchpagewidget.ui:263
 msgid "Zoom Distance"
 msgstr "Ansichtgrött-Streek"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, zoomDistanceSpinBox)
 #. +> trunk stable
-#: src/kcmodule/touchpagewidget.ui:284
+#: src/kcmodule/touchpagewidget.ui:279
 msgid "The minimum distance in tablet units for a zoom gesture to be recognized."
 msgstr "De lüttste Streek in Tabletteenheiten, ehr dat as en Ansichtgrött-Teken bruukt warrt."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, tapTimeLabel)
 #. +> trunk stable
-#: src/kcmodule/touchpagewidget.ui:303
+#: src/kcmodule/touchpagewidget.ui:298
 msgid "Minimum time between taps for a right click."
 msgstr "Lüttst Tiet twischen Rechtsklick-Dubbelantippen"
 
 #. i18n: ectx: property (text), widget (QLabel, tapTimeLabel)
 #. +> trunk stable
-#: src/kcmodule/touchpagewidget.ui:306
+#: src/kcmodule/touchpagewidget.ui:301
 msgid "Tap Time"
 msgstr "Tipp-Töövtiet"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, tapTimeSpinBox)
 #. +> trunk stable
-#: src/kcmodule/touchpagewidget.ui:316
+#: src/kcmodule/touchpagewidget.ui:311
 msgid "The minimum time in milliseconds between taps to trigger a right click."
 msgstr "De lüttste Tiet in Millisekunnen twischen twee Antippen, de en Rechtsklick utlösen schöölt"
 
 #. i18n: ectx: property (text), widget (QLabel, scrollInversionLabel)
 #. +> trunk stable
-#: src/kcmodule/touchpagewidget.ui:329
+#: src/kcmodule/touchpagewidget.ui:324
 msgid "Invert Scroll Direction"
 msgstr "Ümdreiht Rullricht"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, scrollInversionCheckBox)
 #. +> trunk stable
-#: src/kcmodule/touchpagewidget.ui:336
+#: src/kcmodule/touchpagewidget.ui:331
 msgid "If selected, the scroll direction for the scroll gesture is inverted."
 msgstr "Wenn anmaakt warrt de Richt för Rulltekens ümdreiht"
 
@@ -1011,43 +1091,56 @@ msgid "Map to all fullscreen"
 msgstr "Na heel Schirmen toornen"
 
 #. +> trunk stable
-#: src/kded/tabletdaemon.cpp:182
+#: src/kded/tabletdaemon.cpp:192
 msgid "Graphic Tablet Configuration daemon"
 msgstr "Grafiktablett-Instelldämoon"
 
 #. +> trunk stable
-#: src/kded/tabletdaemon.cpp:183
+#: src/kded/tabletdaemon.cpp:193
 msgid "A Wacom tablet control daemon"
 msgstr "En Stüerdämoon för Wacom-Tabletts"
 
 #. +> trunk stable
-#: src/kded/tablethandler.cpp:137
+#: src/kded/tablethandler.cpp:142
 msgid "Tablet Connected"
 msgstr "Tablett tokoppelt"
 
 #. +> trunk stable
-#: src/kded/tablethandler.cpp:138
+#: src/kded/tablethandler.cpp:143
 #, kde-format
 msgid "New tablet '%1' connected."
 msgstr "Nieg Tablett \"%1\" tokoppelt"
 
 #. +> trunk stable
-#: src/kded/tablethandler.cpp:156
+#: src/kded/tablethandler.cpp:164
 msgid "Tablet removed"
 msgstr "Tablett wegdaan"
 
 #. +> trunk stable
-#: src/kded/tablethandler.cpp:157
+#: src/kded/tablethandler.cpp:165
 #, kde-format
 msgid "Tablet %1 removed"
 msgstr "Tablett %1 wegdaan"
 
+#. +> trunk
+#: src/kded/tablethandler.cpp:407
+msgctxt "Name of the default profile that will be created if none exists."
+msgid "Default"
+msgstr ""
+
 #. +> trunk stable
-#: src/kded/tablethandler.cpp:323
+#: src/kded/tablethandler.cpp:419
 msgid "Graphic Tablet error"
 msgstr "Grafiktablettfehler"
 
-#. +> trunk stable
+#. +> trunk
+#: src/kded/tablethandler.cpp:420
+#, fuzzy, kde-format
+#| msgid "Profile <b>%1</b> does not exist"
+msgid "Profile <b>%1</b> does not exist. Apply <b>%2</b> instead"
+msgstr "Profil <b>%1</b> gifft dat nich."
+
+#. +> stable
 #: src/kded/tablethandler.cpp:324
 #, kde-format
 msgid "Profile <b>%1</b> does not exist"
@@ -1143,14 +1236,6 @@ msgstr "Profil <b>%1</b> gifft dat nich."
 
 #~ msgid "Set the action for Button 10"
 #~ msgstr "Akschoon för Knoop Nr. 10 fastleggen"
-
-#~ msgctxt "Action when the Wheel is used upwards"
-#~ msgid "Up:"
-#~ msgstr "Na baven:"
-
-#~ msgctxt "Action when the Wheel is used downwards"
-#~ msgid "Down:"
-#~ msgstr "Na nerrn:"
 
 #~ msgctxt "no pad rotation"
 #~ msgid "none"
@@ -1363,11 +1448,6 @@ msgstr "Profil <b>%1</b> gifft dat nich."
 #~| msgid "Working Area:"
 #~ msgid "Adjust Working Area"
 #~ msgstr "Arbeitrebeet:"
-
-#, fuzzy
-#~| msgid "Select Profile:"
-#~ msgid "Select Tool:"
-#~ msgstr "Profil utsöken:"
 
 #, fuzzy
 #~ msgid "Stylus/Eraser"
