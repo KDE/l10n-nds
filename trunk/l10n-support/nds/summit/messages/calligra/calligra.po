@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: koffice\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-08-07 10:04+0200\n"
+"POT-Creation-Date: 2014-09-16 10:07+0200\n"
 "PO-Revision-Date: 2014-07-02 23:21+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -72,7 +72,7 @@ msgstr "Winkelbedingen"
 #. +> trunk stable
 #: basicflakes/tools/KoCreatePathTool.cpp:446
 #: basicflakes/tools/KoPencilTool.cpp:340
-#: koreport/wrtembed/KoReportDesigner.cpp:1185
+#: koreport/wrtembed/KoReportDesigner.cpp:1204
 msgid "Line"
 msgstr "Lien"
 
@@ -172,7 +172,14 @@ msgstr ""
 msgid "The database \"%1\" does not exist."
 msgstr "De Datei \"%1\" gifft dat nich."
 
-#. +> trunk stable
+#. +> trunk
+#: db/connection.cpp:487
+#, fuzzy, kde-format
+#| msgid "The file %1 does not exist."
+msgid "The database file \"%1\" does not exist."
+msgstr "De Datei \"%1\" gifft dat nich."
+
+#. +> stable
 #: db/connection.cpp:487
 #, fuzzy, kde-format
 #| msgid "The file %1 does not exist."
@@ -246,13 +253,13 @@ msgid "Error during starting temporary connection using \"%1\" database name."
 msgstr ""
 
 #. +> trunk stable
-#: db/connection.cpp:798
-msgid "Cannot drop database - name not specified."
+#: db/connection.cpp:798 db/connection.cpp:815
+msgid "Cannot delete database - name not specified."
 msgstr ""
 
-#. +> trunk stable
-#: db/connection.cpp:815
-msgid "Cannot delete database - name not specified."
+#. +> stable
+#: db/connection.cpp:798
+msgid "Cannot drop database - name not specified."
 msgstr ""
 
 #. +> trunk stable
@@ -306,17 +313,18 @@ msgid "Table \"%1\" already exists."
 msgstr ""
 
 #. +> trunk stable
+#: db/connection.cpp:1804 db/connection.cpp:1831 db/connection.cpp:1938
+#: db/parser/parser_p.cpp:433
+#, fuzzy, kde-format
+#| msgid "The file %1 does not exist."
+msgid "Table \"%1\" does not exist."
+msgstr "De Datei \"%1\" gifft dat nich."
+
+#. +> stable
 #: db/connection.cpp:1804
 #, fuzzy, kde-format
 #| msgid "The file %1 does not exist."
 msgid "Table \"%1\" does not exist in the database."
-msgstr "De Datei \"%1\" gifft dat nich."
-
-#. +> trunk stable
-#: db/connection.cpp:1831 db/connection.cpp:1938
-#, fuzzy, kde-format
-#| msgid "The file %1 does not exist."
-msgid "Table \"%1\" does not exist."
 msgstr "De Datei \"%1\" gifft dat nich."
 
 #. +> trunk stable
@@ -341,20 +349,32 @@ msgstr ""
 msgid "Unexpected name or identifier."
 msgstr ""
 
-#. +> trunk stable
+#. +> trunk
 #: db/connection.cpp:1953
 #, fuzzy, kde-format
 #| msgid "Could not uninstall the script package \"%1\" since the script is not installed."
-msgid "Could not alter table \"%1\" using the same table."
+msgid "Could not alter table \"%1\" using the same table as destination."
 msgstr "Dat Skriptpaket  \"%1\" lett sik nich deinstalleren, wiel dat nich installeert is."
 
-#. +> trunk stable
+#. +> trunk
+#: db/connection.cpp:1975 db/expression.cpp:794
+#, kde-format
+msgid "Unknown table \"%1\"."
+msgstr ""
+
+#. +> stable
 #: db/connection.cpp:1975 db/expression.cpp:789
 #, kde-format
 msgid "Unknown table \"%1\""
 msgstr ""
 
-#. +> trunk stable
+#. +> trunk
+#: db/connection.cpp:1979
+#, kde-format
+msgid "Invalid table name \"%1\"."
+msgstr ""
+
+#. +> stable
 #: db/connection.cpp:1979
 #, kde-format
 msgid "Invalid table name \"%1\""
@@ -366,6 +386,13 @@ msgstr ""
 #| msgid "Could not read the beginning of the file."
 msgid "Could not rename table \"%1\" using the same name."
 msgstr "Dateianfang lett sik nich lesen."
+
+#. +> stable
+#: db/connection.cpp:1953
+#, fuzzy, kde-format
+#| msgid "Could not uninstall the script package \"%1\" since the script is not installed."
+msgid "Could not alter table \"%1\" using the same table."
+msgstr "Dat Skriptpaket  \"%1\" lett sik nich deinstalleren, wiel dat nich installeert is."
 
 #. +> trunk stable
 #: db/connection.cpp:1997
@@ -386,7 +413,14 @@ msgstr "De Datei \"%1\" gifft dat nich."
 msgid "Transactions are not supported for \"%1\" driver."
 msgstr ""
 
-#. +> trunk stable
+#. +> trunk
+#: db/connection.cpp:2191
+#, fuzzy
+#| msgid "Angle Constraints"
+msgid "Begin transaction failed."
+msgstr "Winkelbedingen"
+
+#. +> stable
 #: db/connection.cpp:2191
 msgid "Begin transaction failed"
 msgstr ""
@@ -403,41 +437,91 @@ msgstr "Disse Naam warrt al bruukt."
 msgid "Transaction not started."
 msgstr ""
 
-#. +> trunk stable
+#. +> trunk
+#: db/connection.cpp:2262
+msgid "Error on commit transaction."
+msgstr ""
+
+#. +> stable
 #: db/connection.cpp:2262
 msgid "Error on commit transaction"
 msgstr ""
 
-#. +> trunk stable
+#. +> trunk
+#: db/connection.cpp:2297
+msgid "Error on rollback transaction."
+msgstr ""
+
+#. +> stable
 #: db/connection.cpp:2297
 msgid "Error on rollback transaction"
 msgstr ""
 
-#. +> trunk stable
-#: db/connection.cpp:2461 db/connection.cpp:2980
+#. +> trunk
+#: db/connection.cpp:2461 db/connection.cpp:2982
+#, kde-format
+msgid "Invalid object name \"%1\"."
+msgstr ""
+
+#. +> stable
+#: db/connection.cpp:2461 db/connection.cpp:2978
 #, kde-format
 msgid "Invalid object name \"%1\""
 msgstr ""
 
-#. +> trunk stable
+#. +> trunk
 #: db/connection.cpp:2583
+#, fuzzy, kde-format
+#| msgid "The file %1 does not exist."
+msgid "Column <resource>%1</resource> does not exist in the query."
+msgstr "De Datei \"%1\" gifft dat nich."
+
+#. +> stable
+#: db/connection.cpp:2582
 #, fuzzy, kde-format
 #| msgid "The file %1 does not exist."
 msgid "Column %1 does not exist for the query."
 msgstr "De Datei \"%1\" gifft dat nich."
 
-#. +> trunk stable
+#. +> trunk
 #: db/connection.cpp:2844 db/connection.cpp:2847 db/connection.cpp:2850
+#, fuzzy
+#| msgid "Error while saving embedded documents"
+msgctxt "Extended schema for a table: loading error"
+msgid "Error while loading extended table schema."
+msgstr "Fehler bi't Sekern vun inbett Dokmenten"
+
+#. +> stable
+#: db/connection.cpp:2842 db/connection.cpp:2845 db/connection.cpp:2848
 msgid "Error while loading extended table schema information."
 msgstr ""
 
-#. +> trunk stable
+#. +> trunk
 #: db/connection.cpp:2851
+#, kde-format
+msgid "Invalid XML data: %1"
+msgstr ""
+
+#. +> stable
+#: db/connection.cpp:2849
 msgid "Invalid XML data: "
 msgstr ""
 
-#. +> trunk stable
+#. +> trunk
 #: db/connection.cpp:2881
+#, fuzzy, kde-format
+#| msgid ""
+#| "Parsing error in %1 at line %2, column %3\n"
+#| "Error message: %4"
+msgid ""
+"Error in XML data: \"%1\" in line %2, column %3.\n"
+"XML data: %4"
+msgstr ""
+"Inleesfehler in %1 in Reeg %2, Striep %3\n"
+"Fehlermellen: %4"
+
+#. +> stable
+#: db/connection.cpp:2879
 #, fuzzy, kde-format
 #| msgid ""
 #| "Parsing error in %1 at line %2, column %3\n"
@@ -450,18 +534,28 @@ msgstr ""
 "Fehlermellen: %4"
 
 #. +> trunk stable
-#: db/connection.cpp:3019
+#: db/connection.cpp:3021
 msgid "Table has no fields defined."
 msgstr ""
 
 #. +> trunk stable
-#: db/connection.cpp:3168
+#: db/connection.cpp:3170
 #, kde-format
 msgid "Could not find definition for query \"%1\". Removing this query is recommended."
 msgstr ""
 
-#. +> trunk stable
-#: db/connection.cpp:3177
+#. +> trunk
+#: db/connection.cpp:3180
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Could not load definition for query \"%1\". SQL statement for this query is invalid: <message>%2</message></para>"
+"\n"
+"<para>You can open this query in Text View and correct it.</para>"
+msgstr ""
+
+#. +> stable
+#: db/connection.cpp:3175
 #, kde-format
 msgid ""
 "<p>Could not load definition for query \"%1\". SQL statement for this query is invalid:<br>"
@@ -471,74 +565,124 @@ msgid ""
 msgstr ""
 
 #. +> trunk stable
-#: db/connection.cpp:3384
+#: db/connection.cpp:3389
 msgid "Could not update record because there is no master table defined."
 msgstr ""
 
 #. +> trunk stable
-#: db/connection.cpp:3391
+#: db/connection.cpp:3396
 msgid "Could not update record because master table has no primary key defined."
 msgstr ""
 
-#. +> trunk stable
-#: db/connection.cpp:3420
-msgid "Could not update record because it does not contain entire master table's primary key."
+#. +> trunk
+#: db/connection.cpp:3425
+msgid "Could not update record because it does not contain entire primary key of master table."
 msgstr ""
 
 #. +> trunk stable
-#: db/connection.cpp:3431 db/connection.cpp:3671
+#: db/connection.cpp:3436 db/connection.cpp:3676
 #, kde-format
 msgid "Primary key's field \"%1\" cannot be empty."
 msgstr ""
 
 #. +> trunk stable
-#: db/connection.cpp:3458
+#: db/connection.cpp:3463
 msgid "Record updating on the server failed."
 msgstr ""
 
-#. +> trunk stable
-#: db/connection.cpp:3481
+#. +> trunk
+#: db/connection.cpp:3486
+#, fuzzy
+#| msgid "Could not read the package \"%1\"."
+msgid "Could not insert record because there is no master table specified."
+msgstr "Paket \"%1\" lett sik nich lesen."
+
+#. +> stable
+#: db/connection.cpp:3480
 msgid "Could not insert record because there is no master table defined."
 msgstr ""
 
-#. +> trunk stable
-#: db/connection.cpp:3518
+#. +> trunk
+#: db/connection.cpp:3523
+msgid "Could not insert record because master table has no primary key specified."
+msgstr ""
+
+#. +> stable
+#: db/connection.cpp:3517
 msgid "Could not insert record because master table has no primary key defined."
 msgstr ""
 
 #. +> trunk stable
-#: db/connection.cpp:3527
+#: db/connection.cpp:3532
 msgid "Could not insert record because it does not contain entire master table's primary key."
 msgstr ""
 
 #. +> trunk stable
-#: db/connection.cpp:3574
+#: db/connection.cpp:3579
 msgid "Record inserting on the server failed."
 msgstr ""
 
-#. +> trunk stable
-#: db/connection.cpp:3638
+#. +> trunk
+#: db/connection.cpp:3643
+#, fuzzy
+#| msgid "Could not read the package \"%1\"."
+msgid "Could not delete record because there is no master table specified."
+msgstr "Paket \"%1\" lett sik nich lesen."
+
+#. +> stable
+#: db/connection.cpp:3637
 msgid "Could not delete record because there is no master table defined."
 msgstr ""
 
-#. +> trunk stable
-#: db/connection.cpp:3647
+#. +> trunk
+#: db/connection.cpp:3652
+msgid "Could not delete record because there is no primary key for master table specified."
+msgstr ""
+
+#. +> stable
+#: db/connection.cpp:3646
 msgid "Could not delete record because there is no primary key for master table defined."
 msgstr ""
 
 #. +> trunk stable
-#: db/connection.cpp:3662
+#: db/connection.cpp:3667
 msgid "Could not delete record because it does not contain entire master table's primary key."
 msgstr ""
 
-#. +> trunk stable
-#: db/connection.cpp:3688 db/connection.cpp:3711
-msgid "Record deletion on the server failed."
+#. +> stable
+#: db/connection.cpp:3419
+msgid "Could not update record because it does not contain entire master table's primary key."
 msgstr ""
 
 #. +> trunk stable
+#: db/connection.cpp:3693 db/connection.cpp:3716
+msgid "Record deletion on the server failed."
+msgstr ""
+
+#. +> trunk
+#: db/connection.cpp:3803
+#, fuzzy
+#| msgid "Unknown error"
+msgid "Unknown error."
+msgstr "Nich begäng Fehler"
+
+#. +> stable
 #: db/connectiondata.cpp:97
 msgid "file"
+msgstr ""
+
+#. +> trunk
+#: db/connectiondata.cpp:98
+#, fuzzy, kde-format
+#| msgid "Date: %1"
+msgctxt "@info"
+msgid "file: %1"
+msgstr "Datum: %1"
+
+#. +> trunk
+#: db/connectiondata.cpp:105
+msgctxt "@info"
+msgid "&lt;file&gt;"
 msgstr ""
 
 #. +> trunk stable
@@ -559,6 +703,11 @@ msgstr ""
 #. +> trunk stable
 #: db/cursor.cpp:407 db/cursor.cpp:430
 msgid "Cannot fetch next record."
+msgstr ""
+
+#. +> trunk
+#: db/cursor.cpp:559
+msgid "No connection for cursor open operation specified."
 msgstr ""
 
 #. +> trunk stable
@@ -632,24 +781,7 @@ msgstr ""
 msgid "File-based database's MIME type"
 msgstr ""
 
-#. +> trunk stable
-#: db/driver_p.cpp:55
-#, fuzzy
-#| msgid "Angle Constraints"
-msgid "Single transactions"
-msgstr "Winkelbedingen"
-
-#. +> trunk stable
-#: db/driver_p.cpp:57
-msgid "Multiple transactions"
-msgstr ""
-
-#. +> trunk stable
-#: db/driver_p.cpp:59
-msgid "Nested transactions"
-msgstr ""
-
-#. +> trunk stable
+#. +> stable
 #: db/driver_p.cpp:61
 #, fuzzy
 #| msgctxt "Size Policy"
@@ -657,27 +789,36 @@ msgstr ""
 msgid "Ignored"
 msgstr "Övergahn"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, m_comboQuote)
-#. +> trunk stable
-#: db/driver_p.cpp:63 widgets/KoCsvImportDialog.cpp:223
-#: widgets/KoCsvImportDialog.cpp:587 widgets/KoCsvImportDialog.cpp:694
-#: widgets/KoCsvImportDialog.ui:265
-msgid "None"
-msgstr "Keen"
-
 #. +> trunk stable
 #: db/driver_p.cpp:68
 msgid "Single transactions support"
 msgstr ""
+
+#. +> stable
+#: db/driver_p.cpp:55
+#, fuzzy
+#| msgid "Angle Constraints"
+msgid "Single transactions"
+msgstr "Winkelbedingen"
 
 #. +> trunk stable
 #: db/driver_p.cpp:70
 msgid "Multiple transactions support"
 msgstr ""
 
+#. +> stable
+#: db/driver_p.cpp:57
+msgid "Multiple transactions"
+msgstr ""
+
 #. +> trunk stable
 #: db/driver_p.cpp:72
 msgid "Nested transactions support"
+msgstr ""
+
+#. +> stable
+#: db/driver_p.cpp:59
+msgid "Nested transactions"
 msgstr ""
 
 #. +> trunk stable
@@ -710,149 +851,125 @@ msgstr ""
 msgid "Could not load database driver \"%1\"."
 msgstr "Paket \"%1\" lett sik nich lesen."
 
-#. +> trunk stable
+#. +> stable
 #: db/drivermanager.cpp:360
 #, kde-format
 msgid "No such driver service: \"%1\"."
 msgstr ""
 
-#. +> trunk stable
-#: db/drivers/sqlite/sqliteadmin.cpp:42
-#, fuzzy, kde-format
-#| msgid "Could not read the package \"%1\"."
-msgid "Could not compact database \"%1\"."
-msgstr "Paket \"%1\" lett sik nich lesen."
-
-#. +> trunk stable
-#: db/drivers/sqlite/sqliteconnection.cpp:243
-#, fuzzy, kde-format
-#| msgid "Do you want to save the password?"
-msgid "Do you want to open file \"%1\" as read-only?"
-msgstr "Wullt Du dat Passwoort sekern?"
-
-#. +> trunk stable
-#: db/drivers/sqlite/sqliteconnection.cpp:246
-msgid "The file is probably already open on this or another computer."
-msgstr ""
-
-#. +> trunk stable
-#: db/drivers/sqlite/sqliteconnection.cpp:247
-#, fuzzy
-#| msgid "Could not read the beginning of the file."
-msgid "Could not gain exclusive access for writing the file."
-msgstr "Dateianfang lett sik nich lesen."
-
-#. +> trunk stable
-#: db/drivers/sqlite/sqliteconnection.cpp:249
-msgid "Open As Read-Only"
-msgstr ""
-
-#. +> trunk stable
-#: db/drivers/sqlite/sqliteconnection.cpp:288
-#, fuzzy
-#| msgid "Could not load picture."
-msgid "Could not close busy database."
-msgstr "Bild lett sik nich laden."
-
-#. +> trunk stable
-#: db/drivers/sqlite/sqliteconnection.cpp:310
-#, fuzzy, kde-format
-#| msgid "Could not export file."
-msgid "Could not remove file \"%1\"."
-msgstr "Datei lett sik nich exporteren."
-
-#. +> trunk stable
-#: db/drivers/sqlite/sqliteconnection.cpp:312
-msgid "Check the file's permissions and whether it is already opened and locked by another application."
-msgstr ""
-
-#. +> trunk stable
-#: db/drivers/sqlite/sqlitevacuum.cpp:129
-msgid "Compacting database"
-msgstr ""
-
-#. +> trunk stable
-#: db/drivers/sqlite/sqlitevacuum.cpp:130
+#. +> trunk
+#: db/drivermanager.cpp:361
 #, kde-format
-msgid "Compacting database \"%1\"..."
+msgid "Could not find service <resource>%1</resource>."
 msgstr ""
 
 #. +> trunk stable
-#: db/drivers/sqlite/sqlitevacuum.cpp:208
-#, kde-format
-msgid "The database has been compacted. Current size decreased by %1% to %2."
-msgstr ""
-
-#. +> trunk stable
-#: db/expression.cpp:731 db/parser/parser_p.cpp:285
+#: db/expression.cpp:731
 msgid "Ambiguous field name"
 msgstr ""
 
-#. +> trunk stable
+#. +> stable
 #: db/expression.cpp:732 db/parser/parser_p.cpp:286
 #, kde-format
 msgid "Both table \"%1\" and \"%2\" have defined \"%3\" field. Use \"<tableName>.%4\" notation to specify table name."
 msgstr ""
 
+#. +> trunk
+#: db/expression.cpp:733
+#, kde-format
+msgctxt "@info"
+msgid "Both table <resource>%1</resource> and <resource>%2</resource> have defined <resource>%3</resource> field. Use <resource><placeholder>tableName</placeholder>.%4</resource> notation to specify table name."
+msgstr ""
+
 #. +> trunk stable
-#: db/expression.cpp:741 db/expression.cpp:814 db/parser/parser_p.cpp:295
-#: db/parser/parser_p.cpp:377
+#: db/expression.cpp:743 db/expression.cpp:819
 #, fuzzy
 #| msgid "File not found"
 msgid "Field not found"
 msgstr "Datei lett sik nich finnen"
 
-#. +> trunk stable
+#. +> trunk
+#: db/expression.cpp:744
+#, kde-format
+msgid "Table containing \"%1\" field not found."
+msgstr ""
+
+#. +> stable
 #: db/expression.cpp:742 db/parser/parser_p.cpp:296
 #, kde-format
 msgid "Table containing \"%1\" field not found"
 msgstr ""
 
 #. +> trunk stable
-#: db/expression.cpp:768 db/parser/parser_p.cpp:320
+#: db/expression.cpp:770
 #, fuzzy
 #| msgid "Could not create the file for saving"
 msgid "Could not access the table directly using its name"
 msgstr "Datei för't Sekern lett sik nich opstellen"
 
-#. +> trunk stable
+#. +> trunk
+#: db/expression.cpp:771
+#, kde-format
+msgid "Table name <resource>%1</resource> is covered by aliases. Instead of <resource>%2</resource>, you can write <resource>%3</resource>."
+msgstr ""
+
+#. +> stable
 #: db/expression.cpp:769 db/parser/parser_p.cpp:321
 #, kde-format
 msgid "Table \"%1\" is covered by aliases. Instead of \"%2\", you can write \"%3\""
 msgstr ""
 
 #. +> trunk stable
-#: db/expression.cpp:788
+#: db/expression.cpp:793
 #, fuzzy
 #| msgid "File not found"
 msgid "Table not found"
 msgstr "Datei lett sik nich finnen"
 
 #. +> trunk stable
-#: db/expression.cpp:802 db/parser/parser_p.cpp:351
+#: db/expression.cpp:807
 #, kde-format
 msgid "Ambiguous \"%1.*\" expression"
 msgstr ""
 
-#. +> trunk stable
+#. +> trunk
+#: db/expression.cpp:808
+#, kde-format
+msgid "More than one \"%1\" table or alias defined."
+msgstr ""
+
+#. +> stable
 #: db/expression.cpp:803 db/parser/parser_p.cpp:352
 #, kde-format
 msgid "More than one \"%1\" table or alias defined"
 msgstr ""
 
-#. +> trunk stable
+#. +> trunk
+#: db/expression.cpp:820
+#, fuzzy, kde-format
+#| msgid "The file %1 does not exist."
+msgid "Table \"%1\" has no \"%2\" field."
+msgstr "De Datei \"%1\" gifft dat nich."
+
+#. +> stable
 #: db/expression.cpp:815 db/parser/parser_p.cpp:377
 #, kde-format
 msgid "Table \"%1\" has no \"%2\" field"
 msgstr ""
 
 #. +> trunk stable
-#: db/expression.cpp:822 db/parser/parser_p.cpp:368
+#: db/expression.cpp:827
 #, kde-format
 msgid "Ambiguous \"%1.%2\" expression"
 msgstr ""
 
-#. +> trunk stable
+#. +> trunk
+#: db/expression.cpp:828
+#, kde-format
+msgid "More than one \"%1\" table or alias defined containing \"%2\" field."
+msgstr ""
+
+#. +> stable
 #: db/expression.cpp:823 db/parser/parser_p.cpp:369
 #, kde-format
 msgid "More than one \"%1\" table or alias defined containing \"%2\" field"
@@ -1000,13 +1117,26 @@ msgstr ""
 msgid "Syntax Error"
 msgstr "Intern Fehler"
 
-#. +> trunk stable
+#. +> trunk
+#: db/parser/parser_p.cpp:145
+#, kde-format
+msgid "\"%1\" is a reserved keyword."
+msgstr ""
+
+#. +> stable
 #: db/parser/parser_p.cpp:145
 #, kde-format
 msgid "\"%1\" is a reserved keyword"
 msgstr ""
 
-#. +> trunk stable
+#. +> trunk
+#: db/parser/parser_p.cpp:149
+#, fuzzy, kde-format
+#| msgid "Internal error"
+msgid "Syntax Error near \"%1\"."
+msgstr "Intern Fehler"
+
+#. +> stable
 #: db/parser/parser_p.cpp:149
 #, kde-format
 msgid "Syntax Error near \"%1\""
@@ -1019,49 +1149,89 @@ msgstr ""
 msgid "Error"
 msgstr "Fehler!"
 
-#. +> trunk stable
+#. +> trunk
+#: db/parser/parser_p.cpp:179
+msgid "No query statement specified."
+msgstr ""
+
+#. +> stable
 #: db/parser/parser_p.cpp:179
 msgid "No query specified"
 msgstr ""
 
-#. +> trunk stable
+#. +> trunk
+#: db/parser/parser_p.cpp:243
+msgid "\"*\" could not be used if no tables are specified."
+msgstr ""
+
+#. +> stable
 #: db/parser/parser_p.cpp:243
 msgid "\"*\" could not be used if no tables are specified"
 msgstr ""
 
 #. i18n("Field List Error"),
-#. +> trunk stable
+#. +> stable
 #: db/parser/parser_p.cpp:433
 #, fuzzy, kde-format
 #| msgid "The file %1 does not exist."
 msgid "Table \"%1\" does not exist"
 msgstr "De Datei \"%1\" gifft dat nich."
 
-#. +> trunk stable
+#. +> trunk
+#: db/parser/parser_p.cpp:489
+#, kde-format
+msgid "Invalid alias definition for column \"%1\"."
+msgstr ""
+
+#. +> stable
 #: db/parser/parser_p.cpp:490
 #, kde-format
 msgid "Invalid alias definition for column \"%1\""
 msgstr ""
 
-#. +> trunk stable
+#. +> trunk
+#: db/parser/parser_p.cpp:516
+#, kde-format
+msgid "Invalid \"%1\" column definition."
+msgstr ""
+
+#. +> stable
 #: db/parser/parser_p.cpp:517
 #, kde-format
 msgid "Invalid \"%1\" column definition"
 msgstr ""
 
-#. +> trunk stable
+#. +> trunk
+#: db/parser/parser_p.cpp:583
+#, kde-format
+msgid "Could not define sorting - no column at position %1."
+msgstr ""
+
+#. +> stable
 #: db/parser/parser_p.cpp:584
 #, kde-format
 msgid "Could not define sorting - no column at position %1"
 msgstr ""
 
-#. +> trunk stable
+#. +> trunk
+#: db/parser/parser_p.cpp:591
+#, kde-format
+msgid "Could not define sorting - column name or alias \"%1\" does not exist."
+msgstr ""
+
+#. +> stable
 #: db/parser/parser_p.cpp:592
 #, kde-format
 msgid "Could not define sorting - column name or alias \"%1\" does not exist"
 msgstr ""
 
-#. +> trunk stable
+#. +> trunk
+#: db/queryschema.cpp:267
+msgctxt "short for 'expression' word, e.g. 'expr' (only latin letters, please, no '.')"
+msgid "expr"
+msgstr ""
+
+#. +> stable
 #: db/queryschema.cpp:267
 msgctxt "short for 'expression' word, e.g. 'expr' (only latin letters, please)"
 msgid "expr"
@@ -1077,7 +1247,12 @@ msgstr ""
 msgid "Database user name"
 msgstr ""
 
-#. +> trunk stable
+#. +> trunk
+#: db/simplecommandlineapp.cpp:85
+msgid "Prompts for password"
+msgstr ""
+
+#. +> stable
 #: db/simplecommandlineapp.cpp:85
 msgid "Prompt for password"
 msgstr ""
@@ -1160,10 +1335,10 @@ msgstr ""
 msgid "Test Connection"
 msgstr "Verbinnen ännern"
 
-#. +> trunk stable
+#. +> trunk
 #: db/utils.cpp:407
 #, kde-format
-msgid "<qt>Testing connection to <b>%1</b> database server...</qt>"
+msgid "Testing connection to <resource>%1</resource> database server..."
 msgstr ""
 
 #. +> trunk stable
@@ -1176,6 +1351,12 @@ msgstr ""
 #: db/utils.cpp:472
 #, kde-format
 msgid "<qt>Test connection to <b>%1</b> database server established successfully.</qt>"
+msgstr ""
+
+#. +> stable
+#: db/utils.cpp:407
+#, kde-format
+msgid "<qt>Testing connection to <b>%1</b> database server...</qt>"
 msgstr ""
 
 #. +> trunk stable
@@ -1741,8 +1922,8 @@ msgid "Path editing tool"
 msgstr "Lienenkeden-Bewerkwarktüüch"
 
 #. +> trunk stable
-#: flake/tools/KoZoomToolFactory.cpp:30 widgets/KoZoomAction.cpp:315
-#: widgets/KoZoomController_p.h:42
+#: flake/tools/KoZoomToolFactory.cpp:30 widgets/KoZoomController_p.h:42
+#: widgets/KoZoomWidget.cpp:64
 msgid "Zoom"
 msgstr "Ansichtgrött"
 
@@ -2200,7 +2381,7 @@ msgid "C&ancel"
 msgstr "&Afbreken"
 
 #. +> trunk stable
-#: kopageapp/KoPADocumentStructureDocker.cpp:95 main/KoMainWindow.cpp:1712
+#: kopageapp/KoPADocumentStructureDocker.cpp:95 main/KoMainWindow.cpp:1722
 msgid "Document"
 msgstr "Dokment"
 
@@ -2354,7 +2535,7 @@ msgid "D&elete"
 msgstr "&Wegdoon"
 
 #. +> trunk stable
-#: kopageapp/KoPAView.cpp:372
+#: kopageapp/KoPAView.cpp:372 koreport/wrtembed/KoReportDesigner.cpp:640
 msgid "Snap to Grid"
 msgstr "Backig Gadder"
 
@@ -2435,7 +2616,7 @@ msgid "Import Slideshow"
 msgstr "Diaschau importeren"
 
 #. +> trunk stable
-#: kopageapp/KoPAView.cpp:508 main/KoMainWindow.cpp:1319
+#: kopageapp/KoPAView.cpp:508 main/KoMainWindow.cpp:1329
 msgid "Import Document"
 msgstr "Dokment importeren"
 
@@ -2624,7 +2805,14 @@ msgstr "Achtergrundklöör"
 msgid "Size"
 msgstr "Grött"
 
-#. +> trunk stable
+#. +> trunk
+#: koreport/items/check/KoReportCheckPlugin.cpp:36
+#, fuzzy
+#| msgid "Check"
+msgid "Check Box"
+msgstr "Pröven"
+
+#. +> stable
 #: koreport/items/check/KoReportCheckPlugin.cpp:36
 msgid "Check"
 msgstr "Pröven"
@@ -2729,13 +2917,14 @@ msgstr "Pielrecht Utrichten"
 msgid "Font"
 msgstr "Schriftoort"
 
-#. +> trunk stable
+#. +> trunk
 #: koreport/items/field/KoReportItemField.cpp:102
 #: koreport/items/label/KoReportItemLabel.cpp:104
 #: koreport/items/text/KoReportItemText.cpp:129
-#: widgets/KoColorPopupAction.cpp:94 widgets/KoUniColorChooser.cpp:418
-msgid "Opacity"
-msgstr "Deckstärk"
+#, fuzzy
+#| msgid "Background tool"
+msgid "Background Opacity"
+msgstr "Achtergrundwarktüüch"
 
 #. +> trunk stable
 #: koreport/items/field/KoReportItemField.cpp:111
@@ -2748,22 +2937,22 @@ msgstr "Regen ümbreken"
 msgid "Can Grow"
 msgstr "Utwiedern"
 
-#. +> trunk stable
+#. +> stable
 #: koreport/items/field/KoReportItemField.cpp:116
 msgid "Track Total"
 msgstr "Ennmengde nagahn"
 
-#. +> trunk stable
+#. +> stable
 #: koreport/items/field/KoReportItemField.cpp:117
 msgid "Track Builtin Format"
 msgstr "Inbuut Formaat för't Nagahn"
 
-#. +> trunk stable
+#. +> stable
 #: koreport/items/field/KoReportItemField.cpp:118
 msgid "Use Sub Total"
 msgstr "Deelmengde bruken"
 
-#. +> trunk stable
+#. +> stable
 #: koreport/items/field/KoReportItemField.cpp:119
 msgid "Track Total Format"
 msgstr "Formaat för't Nagahn vun de Ennmengde"
@@ -2783,7 +2972,15 @@ msgstr "Utwiedern"
 msgid "Resize Mode"
 msgstr "Grött ännern"
 
-#. +> trunk stable
+#. +> trunk
+#: koreport/items/image/KoReportItemImage.cpp:122
+#, fuzzy
+#| msgid "Static Image"
+msgctxt "Static Image"
+msgid "Static"
+msgstr "Fast Bild"
+
+#. +> stable
 #: koreport/items/image/KoReportItemImage.cpp:122
 msgid "Static Image"
 msgstr "Fast Bild"
@@ -2842,144 +3039,144 @@ msgid "Insert page break after group footer:"
 msgstr "Na disse Footreeg Sietümbrook infögen"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:495
+#: koreport/wrtembed/KoReportDesigner.cpp:499
 msgid "Page Header (Any)"
 msgstr "Siet-Koppreeg (all)"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:499
+#: koreport/wrtembed/KoReportDesigner.cpp:503
 msgid "Page Header (Even)"
 msgstr "Siet-Koppreeg (even)"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:503
+#: koreport/wrtembed/KoReportDesigner.cpp:507
 msgid "Page Header (Odd)"
 msgstr "Siet-Koppreeg (uneven)"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:507
+#: koreport/wrtembed/KoReportDesigner.cpp:511
 msgid "Page Header (First)"
 msgstr "Siet-Koppreeg (eerst)"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:511
+#: koreport/wrtembed/KoReportDesigner.cpp:515
 msgid "Page Header (Last)"
 msgstr "Siet-Koppreeg (lest)"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:515
+#: koreport/wrtembed/KoReportDesigner.cpp:519
 msgid "Page Footer (Any)"
 msgstr "Siet-Footreeg (all)"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:519
+#: koreport/wrtembed/KoReportDesigner.cpp:523
 msgid "Page Footer (Even)"
 msgstr "Siet-Footreeg (even)"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:523
+#: koreport/wrtembed/KoReportDesigner.cpp:527
 msgid "Page Footer (Odd)"
 msgstr "Siet-Footreeg (uneven)"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:527
+#: koreport/wrtembed/KoReportDesigner.cpp:531
 msgid "Page Footer (First)"
 msgstr "Siet-Footreeg (eerst)"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:531
+#: koreport/wrtembed/KoReportDesigner.cpp:535
 msgid "Page Footer (Last)"
 msgstr "Siet-Footreeg (lest)"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:535
+#: koreport/wrtembed/KoReportDesigner.cpp:539
 msgid "Report Header"
 msgstr "Bericht-Koppreeg"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:539
+#: koreport/wrtembed/KoReportDesigner.cpp:543
 msgid "Report Footer"
 msgstr "Bericht-Footreeg"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:611
+#: koreport/wrtembed/KoReportDesigner.cpp:615
 msgid "Report Title"
 msgstr "Bericht-Titel"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:611
+#: koreport/wrtembed/KoReportDesigner.cpp:615
 msgid "Title"
 msgstr "Titel"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:617
+#: koreport/wrtembed/KoReportDesigner.cpp:621
 msgid "Page Size"
 msgstr "Papeergrött"
 
 #. i18n: ectx: property (text), widget (QRadioButton, landscape)
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:621 widgets/KoPageLayoutWidget.ui:136
+#: koreport/wrtembed/KoReportDesigner.cpp:625 widgets/KoPageLayoutWidget.ui:136
 msgid "Landscape"
 msgstr "Dwars"
 
 #. i18n: ectx: property (text), widget (QRadioButton, portrait)
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:621 widgets/KoPageLayoutWidget.ui:129
+#: koreport/wrtembed/KoReportDesigner.cpp:625 widgets/KoPageLayoutWidget.ui:129
 msgid "Portrait"
 msgstr "Hoochkant"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:622
+#: koreport/wrtembed/KoReportDesigner.cpp:626
 msgid "Page Orientation"
 msgstr "Siet-Utrichten"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:633
+#: koreport/wrtembed/KoReportDesigner.cpp:637
 msgid "Page Unit"
 msgstr "Siet-Eenheit"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:635 main/KoGridData.cpp:223
+#: koreport/wrtembed/KoReportDesigner.cpp:639 main/KoGridData.cpp:223
 msgid "Show Grid"
 msgstr "Gadder wiesen"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:636
-msgid "Grid Snap"
-msgstr "Backig Gadder"
-
-#. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:637
+#: koreport/wrtembed/KoReportDesigner.cpp:641
 msgid "Grid Divisions"
 msgstr "Gadder-Ünnerdelen"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:640
+#: koreport/wrtembed/KoReportDesigner.cpp:644
 msgid "Left Margin"
 msgstr "Rand links"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:642
+#: koreport/wrtembed/KoReportDesigner.cpp:646
 msgid "Right Margin"
 msgstr "Rand rechts"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:644
+#: koreport/wrtembed/KoReportDesigner.cpp:648
 msgid "Top Margin"
 msgstr "Rand baven"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:646
+#: koreport/wrtembed/KoReportDesigner.cpp:650
 msgid "Bottom Margin"
 msgstr "Rand nerrn"
 
+#. +> stable
+#: koreport/wrtembed/KoReportDesigner.cpp:654
+msgid "Grid Snap"
+msgstr "Backig Gadder"
+
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:653
+#: koreport/wrtembed/KoReportDesigner.cpp:657
 msgid "Script Interpreter"
 msgstr "Skript-Interpreter"
 
 #. +> trunk stable
-#: koreport/wrtembed/KoReportDesigner.cpp:655
+#: koreport/wrtembed/KoReportDesigner.cpp:659
 msgid "Object Script"
 msgstr "Objektskript"
 
@@ -3684,13 +3881,13 @@ msgid "Redo %1"
 msgstr "%1 wedderhalen"
 
 #. +> trunk stable
-#: kundo2/kundo2stack.cpp:1073 main/KoMainWindow.cpp:1539
+#: kundo2/kundo2stack.cpp:1073 main/KoMainWindow.cpp:1549
 #: main/KoUndoStackAction.cpp:46
 msgid "Redo"
 msgstr "Wedderhalen"
 
 #. +> trunk stable
-#: kundo2/kundo2stack.cpp:1092 main/KoMainWindow.cpp:1538
+#: kundo2/kundo2stack.cpp:1092 main/KoMainWindow.cpp:1548
 #: main/KoUndoStackAction.cpp:38
 msgid "Undo"
 msgstr "Torüchnehmen"
@@ -4045,17 +4242,17 @@ msgid "Always use this template"
 msgstr "Jümmers disse Vörlaag bruken"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:567
+#: main/KoDocument.cpp:569
 msgid "Making backup..."
 msgstr "Sekerheitkopie warrt opstellt..."
 
 #. +> trunk stable
-#: main/KoDocument.cpp:582
+#: main/KoDocument.cpp:584
 msgid "Saving..."
 msgstr "An't Sekern..."
 
 #. +> trunk stable
-#: main/KoDocument.cpp:610
+#: main/KoDocument.cpp:612
 #, kde-format
 msgid ""
 "Could not save\n"
@@ -4065,7 +4262,7 @@ msgstr ""
 "lett sik nich sekern"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:612
+#: main/KoDocument.cpp:614
 #, kde-format
 msgid ""
 "Could not save %1\n"
@@ -4075,51 +4272,51 @@ msgstr ""
 "Oorsaak: %2"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:641
+#: main/KoDocument.cpp:643
 #, kde-format
 msgid "Document <i>%1</i> saved"
 msgstr "Dokment <i>%1</i> sekert"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:729
+#: main/KoDocument.cpp:731
 msgid "The password of this encrypted document is not known. Autosave aborted! Please save your work manually."
 msgstr "Dat Passwoort för dit verslötelt Dokment is nich begäng. Automaatsch Sekern afbraken! Bitte seker Dien Arbeit vun Hand."
 
 #. +> trunk stable
-#: main/KoDocument.cpp:732
+#: main/KoDocument.cpp:734
 msgid "Autosaving..."
 msgstr "Automaatsch Sekern löppt..."
 
 #. +> trunk stable
-#: main/KoDocument.cpp:744
+#: main/KoDocument.cpp:746
 msgid "Error during autosave! Partition full?"
 msgstr "Fehler bi't automaatsch Sekern! Partitschoon full?"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:838
+#: main/KoDocument.cpp:839
 msgid "Could not create the file for saving"
 msgstr "Datei för't Sekern lett sik nich opstellen"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:882 main/KoDocument.cpp:904 main/KoDocument.cpp:935
-#: main/KoDocument.cpp:969
+#: main/KoDocument.cpp:883 main/KoDocument.cpp:905 main/KoDocument.cpp:936
+#: main/KoDocument.cpp:970
 #, kde-format
 msgid "Not able to write '%1'. Partition full?"
 msgstr "\"%1\" lett sik nich schrieven. Partitschoon full?"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:889
+#: main/KoDocument.cpp:890
 msgid "Not able to write RDF metadata. Partition full?"
 msgstr "RDF-Metadaten laat sik nich schrieven. Partitschoon full?"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:897 main/KoDocument.cpp:944 main/KoDocument.cpp:2012
+#: main/KoDocument.cpp:898 main/KoDocument.cpp:945 main/KoDocument.cpp:2018
 #, kde-format
 msgid "Error while trying to write '%1'. Partition full?"
 msgstr "Fehler bi't Schrieven vun \"%1\". Partitschoon full?"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1222
+#: main/KoDocument.cpp:1228
 #, kde-format
 msgid ""
 "Malformed URL\n"
@@ -4129,7 +4326,7 @@ msgstr ""
 "%1"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1238
+#: main/KoDocument.cpp:1244
 msgid ""
 "An autosaved file exists for this document.\n"
 "Do you want to open it instead?"
@@ -4138,109 +4335,109 @@ msgstr ""
 "Wullt Du ehr ansteed opmaken?"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1355 main/KoDocument.cpp:1700 main/KoMainWindow.cpp:747
+#: main/KoDocument.cpp:1361 main/KoDocument.cpp:1706 main/KoMainWindow.cpp:747
 #, kde-format
 msgid "The file %1 does not exist."
 msgstr "De Datei \"%1\" gifft dat nich."
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1479
+#: main/KoDocument.cpp:1485
 #, fuzzy
 #| msgid "Open Document"
 msgid "Opening Document"
 msgstr "Dokment opmaken"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1494
+#: main/KoDocument.cpp:1500
 #, fuzzy
 #| msgid "Could not create the file for saving"
 msgid "Could not create the filter plugin"
 msgstr "Datei för't Sekern lett sik nich opstellen"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1497
+#: main/KoDocument.cpp:1503
 #, fuzzy
 #| msgid "Could not create the file for saving"
 msgid "Could not create the output document"
 msgstr "Datei för't Sekern lett sik nich opstellen"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1500
+#: main/KoDocument.cpp:1506
 msgid "File not found"
 msgstr "Datei lett sik nich finnen"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1503
+#: main/KoDocument.cpp:1509
 msgid "Cannot create storage"
 msgstr "Spieker lett sik nich opstellen"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1506
+#: main/KoDocument.cpp:1512
 msgid "Bad MIME type"
 msgstr "Leeg MIME-Typ"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1509
+#: main/KoDocument.cpp:1515
 msgid "Error in embedded document"
 msgstr "Fehler in'n inbett Dokment"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1512
+#: main/KoDocument.cpp:1518
 msgid "Format not recognized"
 msgstr "Formaat nich begäng"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1515
+#: main/KoDocument.cpp:1521
 msgid "Not implemented"
 msgstr "Nich inbuut"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1518
+#: main/KoDocument.cpp:1524
 msgid "Parsing error"
 msgstr "Inleesfehler"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1521
+#: main/KoDocument.cpp:1527
 msgid "Document is password protected"
 msgstr "Dokment is passwoortschuult"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1524
+#: main/KoDocument.cpp:1530
 msgid "Invalid file format"
 msgstr "Leeg Dateiformaat"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1531
+#: main/KoDocument.cpp:1537
 msgid "Internal error"
 msgstr "Intern Fehler"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1534
+#: main/KoDocument.cpp:1540
 msgid "Out of memory"
 msgstr "Nich noog Spieker"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1537
+#: main/KoDocument.cpp:1543
 msgid "Empty Filter Plugin"
 msgstr ""
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1540
+#: main/KoDocument.cpp:1546
 msgid "Trying to load into the wrong kind of document"
 msgstr ""
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1543
+#: main/KoDocument.cpp:1549
 msgid "Failed to download remote file"
 msgstr ""
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1550
+#: main/KoDocument.cpp:1556
 msgid "Unknown error"
 msgstr "Nich begäng Fehler"
 
 #. +> trunk
-#: main/KoDocument.cpp:1554
+#: main/KoDocument.cpp:1560
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not open\n"
@@ -4277,19 +4474,19 @@ msgid ""
 msgstr ""
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1611
+#: main/KoDocument.cpp:1617
 #, kde-format
 msgid "Document <i>%1</i> loaded"
 msgstr "Dokment <i>%1</i> laadt"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1673 odf/KoOdfReadStore.cpp:111
+#: main/KoDocument.cpp:1679 odf/KoOdfReadStore.cpp:111
 #, kde-format
 msgid "Could not find %1"
 msgstr "\"%1\" lett sik nich finnen"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1685
+#: main/KoDocument.cpp:1691
 #, kde-format
 msgid ""
 "Parsing error in %1 at line %2, column %3\n"
@@ -4299,23 +4496,23 @@ msgstr ""
 "Fehlermellen: %4"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1707
+#: main/KoDocument.cpp:1713
 #, kde-format
 msgid "%1 is not a file."
 msgstr "%1 is keen Datei."
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1722
+#: main/KoDocument.cpp:1728
 msgid "Could not open the file for reading (check read permissions)."
 msgstr "Datei lett sik nich för't Lesen opmaken (Leesverlöven pröven)."
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1733
+#: main/KoDocument.cpp:1739
 msgid "Could not read the beginning of the file."
 msgstr "Dateianfang lett sik nich lesen."
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1763
+#: main/KoDocument.cpp:1769
 #, kde-format
 msgid ""
 "parsing error in the main document at line %1, column %2\n"
@@ -4325,31 +4522,31 @@ msgstr ""
 "Fehlermellen: %3"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1784
+#: main/KoDocument.cpp:1790
 #, kde-format
 msgid "Not a valid Calligra file: %1"
 msgstr "%1 is keen gellen Calligra-Datei"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1869
+#: main/KoDocument.cpp:1875
 msgid "Invalid document: no file 'maindoc.xml'."
 msgstr "Leeg Dokment: Keen \"maindoc.xml\"-Datei."
 
 #. +> trunk stable
-#: main/KoDocument.cpp:1893
+#: main/KoDocument.cpp:1899
 #, kde-format
 msgid "Document <i>%1</i> contains several versions. Go to File->Versions to open an old version."
 msgstr "Dokment <i>%1</i> bargt verscheden Verschonen. Gah na \"Datei\" -> \"Verschonen\", wenn Du en ole Verschoon opmaken wullt."
 
 #. +> trunk stable
-#: main/KoDocument.cpp:2092 main/KoDocument.cpp:2577
-#: main/KoMainWindow.cpp:1241 pigment/resources/KoColorSet.cpp:342
+#: main/KoDocument.cpp:2098 main/KoDocument.cpp:2580
+#: main/KoMainWindow.cpp:1251 pigment/resources/KoColorSet.cpp:342
 #: pigment/resources/KoColorSet.cpp:440
 msgid "Untitled"
 msgstr "Ahn Titel"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:2095 main/KoMainWindow.cpp:1244
+#: main/KoDocument.cpp:2101 main/KoMainWindow.cpp:1254
 #, kde-format
 msgid ""
 "<p>The document <b>'%1'</b> has been modified.</p>"
@@ -4359,12 +4556,12 @@ msgstr ""
 "<p>Wullt Du dat sekern?</p>"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:2178
+#: main/KoDocument.cpp:2184
 msgid "Internal error: saveXML not implemented"
 msgstr "Intern Fehler: Funkschoon \"saveXML\" nich inbuut"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:2215
+#: main/KoDocument.cpp:2221
 #, kde-format
 msgid ""
 "Could not open\n"
@@ -4374,7 +4571,7 @@ msgstr ""
 "lett sik nich opmaken"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:2218
+#: main/KoDocument.cpp:2224
 #, kde-format
 msgid ""
 "Could not open %1\n"
@@ -4384,32 +4581,32 @@ msgstr ""
 "Oorsaak: %2"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:2287
+#: main/KoDocument.cpp:2293
 msgid "a word processing"
 msgstr "Textverarbeiden"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:2288
+#: main/KoDocument.cpp:2294
 msgid "a spreadsheet"
 msgstr "Tabellenutreken"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:2289
+#: main/KoDocument.cpp:2295
 msgid "a presentation"
 msgstr "Presentatschoon"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:2290
+#: main/KoDocument.cpp:2296
 msgid "a chart"
 msgstr "Diagramm"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:2291
+#: main/KoDocument.cpp:2297
 msgid "a drawing"
 msgstr "Teken"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:2581
+#: main/KoDocument.cpp:2584
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p>The document <b>'%1'</b> has been modified.</p>"
@@ -4422,7 +4619,7 @@ msgstr ""
 "<p>Wullt Du dat sekern?</p>"
 
 #. +> trunk stable
-#: main/KoDocument.cpp:2583
+#: main/KoDocument.cpp:2586
 #, fuzzy
 #| msgid "Custom Document"
 msgid "Close Document"
@@ -4955,30 +5152,30 @@ msgid "untitled"
 msgstr "Ahn Titel"
 
 #. +> trunk stable
-#: main/KoMainWindow.cpp:1310
+#: main/KoMainWindow.cpp:1320
 msgid "Open Document"
 msgstr "Dokment opmaken"
 
 #. +> trunk stable
-#: main/KoMainWindow.cpp:1482
+#: main/KoMainWindow.cpp:1492
 #, fuzzy
 #| msgid "Export as PDF..."
 msgid "Export as PDF"
 msgstr "As PDF exporteren..."
 
 #. +> trunk stable
-#: main/KoMainWindow.cpp:1519
+#: main/KoMainWindow.cpp:1529
 msgid "Cannot export to the specified file"
 msgstr ""
 
 #. +> trunk stable
-#: main/KoMainWindow.cpp:1720
+#: main/KoMainWindow.cpp:1730
 #, kde-format
 msgid "Document - %1"
 msgstr "Dokment - %1"
 
 #. +> trunk stable
-#: main/KoMainWindow.cpp:1750
+#: main/KoMainWindow.cpp:1760
 msgid ""
 "You will lose all changes made since your last save\n"
 "Do you want to continue?"
@@ -4987,18 +5184,18 @@ msgstr ""
 "Wullt Du wiedermaken?"
 
 #. +> trunk stable
-#: main/KoMainWindow.cpp:1752
+#: main/KoMainWindow.cpp:1762
 msgid "Warning"
 msgstr "Wohrschoen"
 
 #. +> trunk stable
-#: main/KoMainWindow.cpp:2089
+#: main/KoMainWindow.cpp:2099
 #, kde-format
 msgid "Show %1 Toolbar"
 msgstr "Warktüüchbalken %1 wiesen"
 
 #. +> trunk stable
-#: main/KoMainWindow.cpp:2091
+#: main/KoMainWindow.cpp:2101
 #, kde-format
 msgid "Hide %1 Toolbar"
 msgstr "Warktüüchbalken %1 versteken"
@@ -6955,6 +7152,11 @@ msgid "ArabicAlphabet"
 msgstr "Araabsch Alfabeet"
 
 #. +> trunk stable
+#: widgets/KoColorPopupAction.cpp:94 widgets/KoUniColorChooser.cpp:418
+msgid "Opacity"
+msgstr "Deckstärk"
+
+#. +> trunk stable
 #: widgets/KoColorSetWidget.cpp:163
 msgid "Recent:"
 msgstr "Tolest bruukt:"
@@ -7000,6 +7202,13 @@ msgstr "Allgemeen"
 #: widgets/KoCsvImportDialog.cpp:221 widgets/KoCsvImportDialog.cpp:585
 msgid "Currency"
 msgstr "Geldsort"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, m_comboQuote)
+#. +> trunk stable
+#: widgets/KoCsvImportDialog.cpp:223 widgets/KoCsvImportDialog.cpp:587
+#: widgets/KoCsvImportDialog.cpp:694 widgets/KoCsvImportDialog.ui:265
+msgid "None"
+msgstr "Keen"
 
 #. +> trunk stable
 #: widgets/KoCsvImportDialog.cpp:721
@@ -7583,7 +7792,7 @@ msgid "Bottom:"
 msgstr "Nerrn:"
 
 #. +> trunk stable
-#: widgets/KoResourceItemChooser.cpp:129
+#: widgets/KoResourceItemChooser.cpp:131
 #, fuzzy
 #| msgid "Import Resource"
 msgctxt "@info:tooltip"
@@ -7591,7 +7800,7 @@ msgid "Import resource"
 msgstr "Ressource importeren"
 
 #. +> trunk stable
-#: widgets/KoResourceItemChooser.cpp:136
+#: widgets/KoResourceItemChooser.cpp:138
 #, fuzzy
 #| msgid "Delete Resource"
 msgctxt "@info:tooltip"
@@ -7599,7 +7808,7 @@ msgid "Delete resource"
 msgstr "Ressource wegdoon"
 
 #. +> trunk stable
-#: widgets/KoResourceItemChooser.cpp:143
+#: widgets/KoResourceItemChooser.cpp:145
 #, fuzzy
 #| msgid "Download Resource"
 msgctxt "@info:tooltip"
@@ -7607,7 +7816,7 @@ msgid "Download resource"
 msgstr "Ressource daalladen"
 
 #. +> trunk stable
-#: widgets/KoResourceItemChooser.cpp:151
+#: widgets/KoResourceItemChooser.cpp:153
 #, fuzzy
 #| msgid "Share Resource"
 msgctxt "@info:tooltip"
@@ -7615,7 +7824,7 @@ msgid "Share Resource"
 msgstr "Ressource freegeven"
 
 #. +> trunk stable
-#: widgets/KoResourceItemChooser.cpp:201
+#: widgets/KoResourceItemChooser.cpp:202
 #, fuzzy
 #| msgid "Choose File to Add"
 msgctxt "@title:window"
@@ -7881,27 +8090,12 @@ msgid "select item"
 msgstr "Indrag afkören"
 
 #. +> trunk stable
-#: widgets/KoZoomAction.cpp:223 widgets/KoZoomAction.cpp:225
-#: widgets/KoZoomAction.cpp:237 widgets/KoZoomAction.cpp:239
+#: widgets/KoZoomAction.cpp:200 widgets/KoZoomAction.cpp:202
+#: widgets/KoZoomAction.cpp:213 widgets/KoZoomAction.cpp:215
 #: widgets/KoZoomMode.cpp:26
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
-
-#. +> trunk stable
-#: widgets/KoZoomAction.cpp:333
-msgid "Use same aspect as pixels"
-msgstr "Sülve Proportschoon as Pixels bruken"
-
-#. +> trunk stable
-#: widgets/KoZoomAction.cpp:342
-msgid "Zoom to Selection"
-msgstr "Ansichtgrött op Köör"
-
-#. +> trunk stable
-#: widgets/KoZoomAction.cpp:351
-msgid "Zoom to All"
-msgstr "Ansichtgrött op all"
 
 #. +> trunk stable
 #: widgets/KoZoomMode.cpp:27
@@ -7926,12 +8120,94 @@ msgid "Fit Text Width"
 msgstr "Op Breed topassen"
 
 #. +> trunk stable
+#: widgets/KoZoomWidget.cpp:81
+msgid "Use same aspect as pixels"
+msgstr "Sülve Proportschoon as Pixels bruken"
+
+#. +> trunk stable
+#: widgets/KoZoomWidget.cpp:90
+msgid "Zoom to Selection"
+msgstr "Ansichtgrött op Köör"
+
+#. +> trunk stable
+#: widgets/KoZoomWidget.cpp:99
+msgid "Zoom to All"
+msgstr "Ansichtgrött op all"
+
+#. +> trunk stable
 #: widgetutils/KoGroupButton.cpp:142
 #, fuzzy, kde-format
 #| msgid "%1%"
 msgctxt "@info:tooltip of custom triple button"
 msgid "%1"
 msgstr "%1%"
+
+#. +> stable
+#: db/drivers/sqlite/sqliteadmin.cpp:42
+#, fuzzy, kde-format
+#| msgid "Could not read the package \"%1\"."
+msgid "Could not compact database \"%1\"."
+msgstr "Paket \"%1\" lett sik nich lesen."
+
+#. +> stable
+#: db/drivers/sqlite/sqliteconnection.cpp:243
+#, fuzzy, kde-format
+#| msgid "Do you want to save the password?"
+msgid "Do you want to open file \"%1\" as read-only?"
+msgstr "Wullt Du dat Passwoort sekern?"
+
+#. +> stable
+#: db/drivers/sqlite/sqliteconnection.cpp:246
+msgid "The file is probably already open on this or another computer."
+msgstr ""
+
+#. +> stable
+#: db/drivers/sqlite/sqliteconnection.cpp:247
+#, fuzzy
+#| msgid "Could not read the beginning of the file."
+msgid "Could not gain exclusive access for writing the file."
+msgstr "Dateianfang lett sik nich lesen."
+
+#. +> stable
+#: db/drivers/sqlite/sqliteconnection.cpp:249
+msgid "Open As Read-Only"
+msgstr ""
+
+#. +> stable
+#: db/drivers/sqlite/sqliteconnection.cpp:288
+#, fuzzy
+#| msgid "Could not load picture."
+msgid "Could not close busy database."
+msgstr "Bild lett sik nich laden."
+
+#. +> stable
+#: db/drivers/sqlite/sqliteconnection.cpp:310
+#, fuzzy, kde-format
+#| msgid "Could not export file."
+msgid "Could not remove file \"%1\"."
+msgstr "Datei lett sik nich exporteren."
+
+#. +> stable
+#: db/drivers/sqlite/sqliteconnection.cpp:312
+msgid "Check the file's permissions and whether it is already opened and locked by another application."
+msgstr ""
+
+#. +> stable
+#: db/drivers/sqlite/sqlitevacuum.cpp:129
+msgid "Compacting database"
+msgstr ""
+
+#. +> stable
+#: db/drivers/sqlite/sqlitevacuum.cpp:130
+#, kde-format
+msgid "Compacting database \"%1\"..."
+msgstr ""
+
+#. +> stable
+#: db/drivers/sqlite/sqlitevacuum.cpp:208
+#, kde-format
+msgid "The database has been compacted. Current size decreased by %1% to %2."
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, m_openExistingButton)
 #. +> stable
@@ -8924,9 +9200,6 @@ msgstr ""
 #~ msgid "Paste Slides"
 #~ msgstr "Dias infögen"
 
-#~ msgid "Background tool"
-#~ msgstr "Achtergrundwarktüüch"
-
 #~ msgid "This document contains several versions. Go to File->Versions to open an old version."
 #~ msgstr "Dit Dokment bargt verscheden Verschonen. Gah na \"Datei\" -> \"Verschonen\", wenn Du en ole Verschoon opmaken wullt."
 
@@ -8968,9 +9241,6 @@ msgstr ""
 
 #~ msgid "No template found for: %1 "
 #~ msgstr "Vörlaag för \"%1\" lett sik nich finnen "
-
-#~ msgid "Error while saving embedded documents"
-#~ msgstr "Fehler bi't Sekern vun inbett Dokmenten"
 
 #~ msgid "Alphadarken"
 #~ msgstr "Alpha-Afdüüstern"
