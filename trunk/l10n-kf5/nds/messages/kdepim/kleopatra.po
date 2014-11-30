@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-11-13 07:49+0000\n"
+"POT-Creation-Date: 2014-11-30 07:50+0000\n"
 "PO-Revision-Date: 2014-09-18 17:03+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -147,6 +147,16 @@ msgstr "raadt"
 msgid "Gpg4win"
 msgstr "Gpg4win"
 
+#: commands/adduseridcommand.cpp:248
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while trying to add the user-id: <message>%1</"
+"message></para>"
+msgstr ""
+"<para>Dat geev en Fehler bi't Tofögen vun de Bruker-ID: <message>%1</"
+"message></para>"
+
 #: commands/adduseridcommand.cpp:251
 msgctxt "@title:window"
 msgid "Add User-ID Error"
@@ -161,6 +171,17 @@ msgstr "Bruker-ID mit Spood toföögt."
 msgctxt "@title:window"
 msgid "Add User-ID Succeeded"
 msgstr "Bruker-ID mit Spood toföögt"
+
+#: commands/certifycertificatecommand.cpp:204
+msgctxt "@info"
+msgid ""
+"To certify other certificates, you first need to create an OpenPGP "
+"certificate for yourself. Choose <interface>File->New Certificate...</"
+"interface> to create one."
+msgstr ""
+"Wullt Du anner Zertifikaten beglöven, muttst Du eerst en OpenPGP-Zertifikaat "
+"för Di sülven opstellen, wat Du bi <interface>Datei -> Nieg Zertifikaat...</"
+"interface> doon kannst."
 
 #: commands/certifycertificatecommand.cpp:205
 msgid "Certification Not Possible"
@@ -543,11 +564,45 @@ msgstr "Zertifikaatexport fehlslaan"
 msgid "Could not write to file %1."
 msgstr "Datei \"%1\" lett sik nich schrieven."
 
+#: commands/exportopenpgpcertstoservercommand.cpp:88
+msgctxt "@info"
+msgid ""
+"<para>No OpenPGP directory services have been configured.</para><para>Since "
+"none is configured, <application>Kleopatra</application> will use "
+"<resource>keys.gnupg.net</resource> as the server to export to.</"
+"para><para>You can configure OpenPGP directory servers in "
+"<application>Kleopatra</application>'s configuration dialog.</para><para>Do "
+"you want to continue with <resource>keys.gnupg.net</resource> as the server "
+"to export to?</para>"
+msgstr ""
+"<para>Du hest keen OpenPGP-Vertekendeensten instellt.</para><para>Dorüm "
+"bruukt <application>Kleopatra</application> <resource>keys.gnupg.net</"
+"resource> as Standard-Exportserver.</para><para>Du kannst OpenPGP-"
+"Vertekenservers binnen Kleopatra sien Instellendialoog fastleggen.</"
+"para><para>Wullt Du mit <resource>keys.gnupg.net</resource> as Standard-"
+"Exportserver wiedermaken?</para>"
+
 #: commands/exportopenpgpcertstoservercommand.cpp:95
 #: commands/exportopenpgpcertstoservercommand.cpp:108
 msgctxt "@title:window"
 msgid "OpenPGP Certificate Export"
 msgstr "OpenPGP-Zertifikaten exporteren"
+
+#: commands/exportopenpgpcertstoservercommand.cpp:103
+msgctxt "@info"
+msgid ""
+"<para>When OpenPGP certificates have been exported to a public directory "
+"server, it is nearly impossible to remove them again.</para><para>Before "
+"exporting your certificate to a public directory server, make sure that you "
+"have created a revocation certificate so you can revoke the certificate if "
+"needed later.</para><para>Are you sure you want to continue?</para>"
+msgstr ""
+"<para>Sünd OpenPGP-Zertifikaten eerst maal na en apen Vertekenserver "
+"exporteert, is dat meist nich mööglich, dat Een se wedder wegmaakt.</"
+"para><para>Ehr Du Dien Zertifikaat na en apen Vertekenserver exporteerst, "
+"beseker bitte, Du hest en Torüchroop-Zertifikaat opstellt - denn kannst Du "
+"dat Zertifikaat later torüchropen, wenn dat noot deit.</para><para>Wullt Du "
+"redig wiedermaken?</para>"
 
 #: commands/exportopenpgpcertstoservercommand.cpp:130
 msgctxt "@title:window"
@@ -558,6 +613,29 @@ msgstr "Fehler bi't Exporteren vun OpenPGP-Zertifikaten"
 msgctxt "@title:window"
 msgid "OpenPGP Certificate Export Finished"
 msgstr "Exporteren vun OpenPGP-Zertifikaten afslaten"
+
+#: commands/exportopenpgpcertstoservercommand.cpp:141
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>The GPG process that tried to export OpenPGP certificates ended "
+"prematurely because of an unexpected error.</para><para>Please check the "
+"output of <icode>%1</icode> for details.</para>"
+msgstr ""
+"<para>De Perzess GPG, de de OpenPGP-Zertifikaten exporteren schull, hett sik "
+"vör Tiet utmaakt, dat geev en nich verwacht Fehler.</para><para>Kiek bitte "
+"de Utgaav vun <icode>%1</icode> an, wenn Du de Enkelheiten weten wullt.</"
+"para>"
+
+#: commands/exportopenpgpcertstoservercommand.cpp:149
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while trying to export OpenPGP certificates.</para> "
+"<para>The output from <command>%1</command> was: <message>%2</message></para>"
+msgstr ""
+"<para>Dat geev en Fehler bi't Exporteren vun OpenPGP-Zertifikaten.</para> "
+"<para>De Utgaav vun <command>%1</command> weer: <message>%2</message></para>"
 
 #: commands/exportopenpgpcertstoservercommand.cpp:156
 msgctxt "@info"
@@ -573,6 +651,29 @@ msgstr "Fehler bi't Exporteren vun en Privaatslötel"
 msgctxt "@title:window"
 msgid "Secret Key Export Finished"
 msgstr "Privaatslötelexport afslaten"
+
+#: commands/exportsecretkeycommand.cpp:148
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>The GPG or GpgSM process that tried to export the secret key ended "
+"prematurely because of an unexpected error.</para><para>Please check the "
+"output of <icode>%1</icode> for details.</para>"
+msgstr ""
+"<para>De Perzess \"GPG\" oder \"GpgSM\", de den Privaatslötel exporteren "
+"schull, hett sik vör Tiet utmaakt, dat geev en nich verwacht Fehler.</"
+"para><para>Kiek Di bitte de Utgaav vun <icode>%1</icode> an, wenn Du de "
+"Enkelheiten weten wullt.</para>"
+
+#: commands/exportsecretkeycommand.cpp:156
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while trying to export the secret key.</para> "
+"<para>The output from <command>%1</command> was: <message>%2</message></para>"
+msgstr ""
+"<para>Dat geev en Fehler bi't Exporteren vun den Privaatslötel.</para> "
+"<para>De Utgaav vun <command>%1</command> weer: <message>%2</message></para>"
 
 #: commands/exportsecretkeycommand.cpp:163
 msgctxt "@info"
@@ -849,6 +950,19 @@ msgstr "Fehler bi't Inlesen vun de SmartKoort"
 msgid "Finished Learning SmartCard"
 msgstr "Inlesen vun de SmartKoort afslaten"
 
+#: commands/learncardkeyscommand.cpp:89
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>The GPG or GpgSM process that tried to learn the smart card ended "
+"prematurely because of an unexpected error.</para><para>Please check the "
+"output of <icode>%1</icode> for details.</para>"
+msgstr ""
+"<para>De Perzess \"GPG\" oder \"GpgSM\", de de SmartKoort inlesen schull, "
+"hett sik vör Tiet utmaakt, dat geev en nich verwacht Fehler.</"
+"para><para>Kiek Di bitte de Utgaav vun <icode>%1</icode> an, wenn Du de "
+"Enkelheiten weten wullt.</para>"
+
 #: commands/lookupcertificatescommand.cpp:259
 msgid ""
 "<p>You seem to be searching for a fingerPrint or a key-id.</p><p>Different "
@@ -894,21 +1008,86 @@ msgstr ""
 "Dat Söken op den Zertifikatenserver is fehlslaan. De torüchgeven Fehler is:\n"
 "%1"
 
+#: commands/lookupcertificatescommand.cpp:394
+msgctxt "@info"
+msgid ""
+"<para>The query result has been truncated.</para><para>Either the local or a "
+"remote limit on the maximum number of returned hits has been exceeded.</"
+"para><para>You can try to increase the local limit in the configuration "
+"dialog, but if one of the configured servers is the limiting factor, you "
+"have to refine your search.</para>"
+msgstr ""
+"<para>Dat Resultaat vun de Anfraag wöör afsneden.</para><para>De Tall vun "
+"Drepers weer grötter as Dien lokale oder en feern Grenz för de Drepertall.</"
+"para><para>Du kannst dat versöken un settst de lokale Grenz rop, man wenn "
+"een vun de instellten Servers dat Resultaat afsneden hett, muttst Du Dien "
+"Söök topassen. </para>"
+
 #: commands/lookupcertificatescommand.cpp:402
 msgctxt "@title"
 msgid "Result Truncated"
 msgstr "Resultaat afsneden"
+
+#: commands/lookupcertificatescommand.cpp:434
+msgctxt "@info"
+msgid ""
+"<para>You do not have any directory servers configured.</para><para>You need "
+"to configure at least one directory server to search on one.</para><para>You "
+"can configure directory servers here: <interface>Settings->Configure "
+"Kleopatra</interface>.</para>"
+msgstr ""
+"<para>Du hest nich een Vertekenservers inricht.</para><para>Du muttst "
+"tominnst een Vertekenserver inrichten, wenn Du op een söken wullt.</"
+"para><para>Du kannst Vertekenservers binnen <interface>Instellen -> "
+"Kleopatra instellen</interface> inrichten.</para>"
 
 #: commands/lookupcertificatescommand.cpp:439
 msgctxt "@title"
 msgid "No Directory Servers Configured"
 msgstr "Keen Vertekenservers inricht"
 
+#: commands/refreshopenpgpcertscommand.cpp:77
+msgctxt "@info"
+msgid ""
+"<para>No OpenPGP directory services have been configured.</para><para>If not "
+"all of the certificates carry the name of their preferred certificate server "
+"(few do), a fallback server is needed to fetch from.</para><para>Since none "
+"is configured, <application>Kleopatra</application> will use <resource>keys."
+"gnupg.net</resource> as the fallback.</para><para>You can configure OpenPGP "
+"directory servers in Kleopatra's configuration dialog.</para><para>Do you "
+"want to continue with <resource>keys.gnupg.net</resource> as fallback server?"
+"</para>"
+msgstr ""
+"<para>Du hest keen OpenPGP-Vertekendeensten instellt.</para><para>Bargt nich "
+"all Zertifikaten en vörtrocken Zertifikaatserver (dat doot bloots wenige), "
+"deit för't Halen en Standardserver noot.</para><para>Wiel Du keen fastleggt "
+"hest, bruukt <application>Kleopatra</application> <resource>keys.gnupg.net</"
+"resource> as Standardserver.</para><para>Du kannst OpenPGP-Vertekenservers "
+"binnen Kleopatra sien Instellendialoog fastleggen.</para><para>Wullt Du mit "
+"<resource>keys.gnupg.net</resource> as Standardserver wiedermaken?</para>"
+
 #: commands/refreshopenpgpcertscommand.cpp:86
 #: commands/refreshopenpgpcertscommand.cpp:100
 msgctxt "@title:window"
 msgid "OpenPGP Certificate Refresh"
 msgstr "OpenPGP-Zertifikaten opfrischen"
+
+#: commands/refreshopenpgpcertscommand.cpp:94
+msgctxt "@info"
+msgid ""
+"<para>Refreshing OpenPGP certificates implies downloading all certificates "
+"anew, to check if any of them have been revoked in the meantime.</"
+"para><para>This can put a severe strain on your own as well as other "
+"people's network connections, and can take up to an hour or more to "
+"complete, depending on your network connection, and the number of "
+"certificates to check.</para> <para>Are you sure you want to continue?</para>"
+msgstr ""
+"<para>Dat Opfrischen vun OpenPGP-Zertifikaten bedüüdt, se warrt all nochmaal "
+"daallaadt un denn ankeken, wat nich een in de Twischentiet torüchropen wöör."
+"</para><para>Dat kann Dien egen Nettwark-Verbinnen un de vun anner Lüüd ok "
+"heel un deel utlasten un mag en Stünn oder länger bruken, dat hangt vun Dien "
+"Nettwark-Verbinnen af, un vun de Tall vun Zertifikaten, de pröövt warrn mööt."
+"</para><para>Wullt Du redig wiedermaken?</para>"
 
 #: commands/refreshopenpgpcertscommand.cpp:119
 msgctxt "@title:window"
@@ -920,10 +1099,50 @@ msgctxt "@title:window"
 msgid "OpenPGP Certificate Refresh Finished"
 msgstr "OpenPGP-Zertifikaten opfrischt"
 
+#: commands/refreshopenpgpcertscommand.cpp:130
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>The GPG process that tried to refresh OpenPGP certificates ended "
+"prematurely because of an unexpected error.</para><para>Please check the "
+"output of <icode>%1</icode> for details.</para>"
+msgstr ""
+"<para>De Perzess GPG, de de OpenPGP-Zertifikaten opfrischen schull, hett sik "
+"vör Tiet beendt, dat geev en nich verwacht Fehler.</para><para>Kiek bitte de "
+"Utgaav vun <icode>%1</icode> an, wenn Du de Enkelheiten weten wullt.</para>"
+
+#: commands/refreshopenpgpcertscommand.cpp:138
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while trying to refresh OpenPGP certificates.</para> "
+"<para>The output from <command>%1</command> was: <message>%2</message></para>"
+msgstr ""
+"<para>Dat geev en Fehler bi't Opfrischen vun OpenPGP-Zertifikaten.</"
+"para><para>De Utgaav vun <command>%1</command> weer: <message>%2</message></"
+"para>"
+
 #: commands/refreshopenpgpcertscommand.cpp:145
 msgctxt "@info"
 msgid "OpenPGP certificates refreshed successfully."
 msgstr "OpenPGP-Zertifikaten mit Spood opfrischt."
+
+#: commands/refreshx509certscommand.cpp:63
+msgctxt "@info"
+msgid ""
+"<para>Refreshing X.509 certificates implies downloading CRLs for all "
+"certificates, even if they might otherwise still be valid.</para><para>This "
+"can put a severe strain on your own as well as other people's network "
+"connections, and can take up to an hour or more to complete, depending on "
+"your network connection, and the number of certificates to check.</para> "
+"<para>Are you sure you want to continue?</para>"
+msgstr ""
+"<para>Dat Opfrischen vun de X.509-Zertifikaten bedüüdt, Du muttst all ZTLs "
+"för all Zertifikaten daalladen, ok wenn se noch gellt.</para><para>Dat kann "
+"Dien egen Nettwark-Verbinnen un de vun anner Lüüd ok heel un deel utlasten "
+"un mag en Stünn oder länger bruken, dat hangt vun Dien Nettwark-Verbinnen "
+"af, un vun de Tall vun Zertifikaten, de pröövt warrn mööt.</para><para>Wullt "
+"Du redig wiedermaken?</para>"
 
 #: commands/refreshx509certscommand.cpp:69
 msgctxt "@title:window"
@@ -939,6 +1158,30 @@ msgstr "Fehler bi't Opfrischen vun X.509-Zertifikaten"
 msgctxt "@title:window"
 msgid "X.509 Certificate Refresh Finished"
 msgstr "Opfrischen vun de X.509-Zertifikaten afslaten"
+
+#: commands/refreshx509certscommand.cpp:93
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>The GpgSM process that tried to refresh X.509 certificates ended "
+"prematurely because of an unexpected error.</para><para>Please check the "
+"output of <icode>%1</icode> for details.</para>"
+msgstr ""
+"<para>De Perzess \"GpgSM\", de de X.509-Zertifikaten opfrischen schull, hett "
+"sik vör Tiet utmaakt, dat geev en nich verwacht Fehler.</para><para>Kiek Di "
+"bitte de Utgaav vun <icode>%1</icode> an, wenn Du de Enkelheiten weten wullt."
+"</para>"
+
+#: commands/refreshx509certscommand.cpp:101
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while trying to refresh X.509 certificates.</"
+"para><para>The output from <command>%1</command> was: <message>%2</message></"
+"para>"
+msgstr ""
+"<para>Dat geev en Fehler bi't Opfrischen vun de X.509-Zertifikaten.</"
+"para><para>De Utgaav vun <command>%1</command>: <message>%2</message></para>"
 
 #: commands/refreshx509certscommand.cpp:108
 msgctxt "@info"
@@ -2130,6 +2373,24 @@ msgctxt "base name of an archive file, e.g. archive.zip or archive.tar.gz"
 msgid "archive"
 msgstr "Archiev"
 
+#: crypto/gui/newsignencryptfileswizard.cpp:599
+msgctxt "@info"
+msgid ""
+"<para>Archiving in combination with sign-only currently requires what are "
+"known as opaque signatures - unlike detached ones, these embed the content "
+"in the signature.</para><para>This format is rather unusual. You might want "
+"to archive the files separately, and then sign the archive as one file with "
+"Kleopatra.</para><para>Future versions of Kleopatra are expected to also "
+"support detached signatures in this case.</para>"
+msgstr ""
+"<para>För't Archiveren tosamen mit \"bloots ünnerschrieven\" deit nu so "
+"nöömt \"decken Ünnerschriften\" noot, de, anners as aflööst Ünnerschriften, "
+"den Inholt binnen de Ünnerschrift inbett .</para><para>Dit Formaat warrt "
+"nich faken bruukt. Villicht wullt Du de Dateien enkelt archiveren, un dat "
+"Archiev denn mit \"Kleopatra\" as een Datei ünnerschrieven.</"
+"para><para>Tokamen Verschonen vun \"Kleopatra\" köönt denn wull ok aftrennt "
+"Ünnerschriften ünnerstütten.</para>"
+
 #: crypto/gui/newsignencryptfileswizard.cpp:604
 msgctxt "@title:window"
 msgid "Unusual Signature Warning"
@@ -2166,11 +2427,35 @@ msgctxt "@action"
 msgid "Encrypt"
 msgstr "Verslöteln"
 
+#: crypto/gui/newsignencryptfileswizard.cpp:813
+msgctxt "@info"
+msgid ""
+"<para>None of the recipients you are encrypting to seems to be your own.</"
+"para><para>This means that you will not be able to decrypt the data anymore, "
+"once encrypted.</para><para>Do you want to continue, or cancel to change the "
+"recipient selection?</para>"
+msgstr ""
+"<para>As't lett büst Du keen vun de Adressaten, för de Du verslöteln deist.</"
+"para><para>Dat heet, Du kannst de Daten na't Verslöteln nich mehr opslöteln."
+"</para><para>Wullt Du wiedermaken oder de Akschoon afbreken un de "
+"Adressatenlist ännern?</para>"
+
 #: crypto/gui/newsignencryptfileswizard.cpp:816
 #: crypto/gui/newsignencryptfileswizard.cpp:827
 msgctxt "@title:window"
 msgid "Encrypt-To-Self Warning"
 msgstr "Egen-Slötel-Wohrschoen"
+
+#: crypto/gui/newsignencryptfileswizard.cpp:825
+msgctxt "@info"
+msgid ""
+"<para>You have requested the unencrypted data to be removed after encryption."
+"</para><para>Are you really sure you do not need to access the data anymore "
+"in decrypted form?</para>"
+msgstr ""
+"<para>Du wullt de nich verslötelten Daten na't Verslöteln wegmaken.</"
+"para><para>Büst Du seker, Du bruukst nich mehr op de nich verslötelten Daten "
+"togriepen?</para>"
 
 #: crypto/gui/newsignencryptfileswizard.cpp:879
 msgid "Sign with OpenPGP"
@@ -2732,6 +3017,59 @@ msgstr "(nödig)"
 msgid "(optional)"
 msgstr "(köörwies)"
 
+#: dialogs/adduseriddialog.cpp:303
+#: newcertificatewizard/newcertificatewizard.cpp:1385
+#, kde-format
+msgctxt "@info"
+msgid "<interface>%1</interface> is required, but empty."
+msgstr "<interface>%1</interface> fehlt, man deit noot."
+
+#: dialogs/adduseriddialog.cpp:305
+#: newcertificatewizard/newcertificatewizard.cpp:1387
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<interface>%1</interface> is required, but empty.<nl/>Local Admin rule: "
+"<icode>%2</icode>"
+msgstr ""
+"<interface>%1</interface> fehlt, man deit noot.<nl/>Lokaal "
+"Systeemplegerregel: <icode>%2</icode>"
+
+#: dialogs/adduseriddialog.cpp:311
+#: newcertificatewizard/newcertificatewizard.cpp:1393
+#, kde-format
+msgctxt "@info"
+msgid "<interface>%1</interface> is incomplete."
+msgstr "<interface>%1</interface> is nich heel."
+
+#: dialogs/adduseriddialog.cpp:313
+#: newcertificatewizard/newcertificatewizard.cpp:1395
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<interface>%1</interface> is incomplete.<nl/>Local Admin rule: <icode>%2</"
+"icode>"
+msgstr ""
+"<interface>%1</interface> is nich heel.<nl/>Lokaal Systeemplegerregel: "
+"<icode>%2</icode>"
+
+#: dialogs/adduseriddialog.cpp:318
+#: newcertificatewizard/newcertificatewizard.cpp:1400
+#, kde-format
+msgctxt "@info"
+msgid "<interface>%1</interface> is invalid."
+msgstr "<interface>%1</interface> is leeg."
+
+#: dialogs/adduseriddialog.cpp:320
+#: newcertificatewizard/newcertificatewizard.cpp:1402
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<interface>%1</interface> is invalid.<nl/>Local Admin rule: <icode>%2</icode>"
+msgstr ""
+"<interface>%1</interface> is leeg.<nl/>Lokaal Systeemplegerregel: <icode>%2</"
+"icode>"
+
 #. i18n: ectx: property (windowTitle), widget (QDialog, AddUserIDDialog)
 #: dialogs/adduseriddialog.ui:5
 msgid "Add New User-ID"
@@ -2741,6 +3079,16 @@ msgstr "Nieg Bruker-ID tofögen"
 #: dialogs/adduseriddialog.ui:48
 msgid "This is how the new User-ID will be stored in the certificate:"
 msgstr "Sodennig warrt de niege Bruker-ID binnen dat Zertifikaat wohrt:"
+
+#: dialogs/certificatedetailsdialog.cpp:295
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while loading the certifications: <message>%1</"
+"message></para>"
+msgstr ""
+"<para>Dat geev en Fehler bi't Laden vun de Beglöven: <message>%1</message></"
+"para>"
 
 #: dialogs/certificatedetailsdialog.cpp:298
 msgctxt "@title"
@@ -3058,6 +3406,34 @@ msgstr "Zertifikaat beglöven: %1"
 #: dialogs/deletecertificatesdialog.cpp:115
 msgid "These are the certificates you have selected for deletion:"
 msgstr "Dit sünd de Zertifikaten, de Du wegdoon wullt:"
+
+#: dialogs/deletecertificatesdialog.cpp:117
+msgid ""
+"These certificates will be deleted even though you did <emphasis>not</"
+"emphasis><nl/> explicitly select them (<a href=\"whatsthis://\">Why?</a>):"
+msgstr ""
+"Disse Zertifikaten warrt wegdaan, liekers Du se dor <emphasis>nich</"
+"emphasis><nl/> to utsöcht hest (<a href=\"whatsthis://\">Worüm?</a>):"
+
+#: dialogs/deletecertificatesdialog.cpp:138
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Why do you want to delete more certificates than I selected?</"
+"title><para>When you delete CA certificates (both root CAs and intermediate "
+"CAs), the certificates issued by them will also be deleted.</para><para>This "
+"can be nicely seen in <application>Kleopatra</application>'s hierarchical "
+"view mode: In this mode, if you delete a certificate that has children, "
+"those children will also be deleted. Think of CA certificates as folders "
+"containing other certificates: When you delete the folder, you delete its "
+"contents, too.</para>"
+msgstr ""
+"<title>Worüm schöölt mehr Zertifikaten wegdaan warrn, as wat Du utsöcht hest?"
+"</title><para>Deist Du ZA-Zertifikaten weg (vun Wörtel- un normaal ZAen), "
+"warrt ok de Zertifikaten wegdaan, de se rutgeven hebbt.</para><para>Dit lett "
+"sik schöön binnen <application>Kleopatra</application> ehr Struktuuransicht "
+"bekieken: Deist Du en Zertifikaat weg, dat Ünnerzertifikaten hett, warrt de "
+"ok wegdaan. Du kannst Di de ZAen as Ornern vörstellen, de anner Zertifikaten "
+"bargt: Deist Du den Orner weg, deist Du ok sien Inholt weg.</para>"
 
 #: dialogs/deletecertificatesdialog.cpp:150
 msgctxt "@action:button"
@@ -3512,10 +3888,25 @@ msgstr "Do dat"
 msgid "Run these tests at startup"
 msgstr "Disse Tests bi't Starten utföhren"
 
+#: dialogs/setinitialpindialog.cpp:92
+msgctxt "@info"
+msgid ""
+"No NullPin found. <warning>If this PIN was not set by you personally, the "
+"card might have been tampered with.</warning>"
+msgstr ""
+"Keen \"NullPIN\" funnen. <warning>Hest Du disse PIN nich sülven fastleggt, "
+"mag dat wesen, Een hett an de Koort rümspeelt.</warning>"
+
 #: dialogs/setinitialpindialog.cpp:99
 msgctxt "@info"
 msgid "Canceled setting PIN."
 msgstr "Fastleggen vun de PIN afbraken"
+
+#: dialogs/setinitialpindialog.cpp:103
+#, kde-format
+msgctxt "@info"
+msgid "There was an error setting the PIN: <message>%1</message>."
+msgstr "Dat geev en Fehler bi't Fastleggen vun de PIN: <message>%1</message>"
 
 #: dialogs/setinitialpindialog.cpp:106
 msgctxt "@info"
@@ -3991,37 +4382,52 @@ msgstr "Steed vun den Socket, an den de Böversietserver luustert"
 msgid "File(s) to process"
 msgstr "Afarbeidt Dateien"
 
-#: main.cpp:155
+#: main.cpp:154
 msgid "Performing Self-Check..."
 msgstr "Sülvsttest warrt utföhrt..."
 
-#: main.cpp:172
+#: main.cpp:171
 msgctxt "did not pass"
 msgid "Self-Check Failed"
 msgstr "Sülvsttest fehlslaan"
 
-#: main.cpp:177
+#: main.cpp:176
 msgid "Self-Check Passed"
 msgstr "Sülvsttest OK"
 
-#: main.cpp:195
+#: main.cpp:194
 msgid "Loading certificate cache..."
 msgstr "Zertifikaat-Twischenspieker warrt laadt..."
 
-#: main.cpp:202
+#: main.cpp:201
 msgid "Certificate cache loaded."
 msgstr "Zertifikaat-Twischenspieker laadt."
 
-#: main.cpp:252
+#: main.cpp:247
+msgctxt "@info"
+msgid ""
+"<para>The version of the <application>GpgME</application> library you are "
+"running against is older than the one that the <application>GpgME++</"
+"application> library was built against.</para><para><application>Kleopatra</"
+"application> will not function in this setting.</para><para>Please ask your "
+"administrator for help in resolving this issue.</para>"
+msgstr ""
+"<para>De Verschoon vun de <application>GpgME</application>-Bibliotheek, de "
+"Du bruukst, is öller as de, mit de de <application>GpgME++</application>-"
+"Bibliotheek opstellt wöör.</para><para><application>Kleopatra</application> "
+"funkscheneert so nich.</para><para>Snack dor bitte Dien Systeempleger op an, "
+"he schall Di dor bi hölpen.</para>"
+
+#: main.cpp:251
 msgctxt "@title"
 msgid "GpgME Too Old"
 msgstr "GpgME to oolt"
 
-#: main.cpp:348
+#: main.cpp:347
 msgid "GPG UI Server Error"
 msgstr "GPG-Böversietserver-Fehler"
 
-#: main.cpp:349
+#: main.cpp:348
 #, kde-format
 msgid ""
 "<qt>The Kleopatra GPG UI Server Module could not be initialized.<br/>The "
@@ -4485,10 +4891,30 @@ msgstr "Anfraag sekern"
 msgid "PKCS#10 Requests (*.p10)"
 msgstr "PKCS-Nr.10-Anfragen (*.p10)"
 
+#: newcertificatewizard/newcertificatewizard.cpp:848
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Could not copy temporary file <filename>%1</filename> to file <filename>%2</"
+"filename>: <message>%3</message>"
+msgstr ""
+"Temporeerdatei <filename>%1</filename> lett sik nich na <filename>%2</"
+"filename> koperen: <message>%3</message>"
+
 #: newcertificatewizard/newcertificatewizard.cpp:851
 msgctxt "@title"
 msgid "Error Saving Request"
 msgstr "Fehler bi't Sekern vun de Anfraag"
+
+#: newcertificatewizard/newcertificatewizard.cpp:855
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Successfully wrote request to <filename>%1</filename>.</para><para>You "
+"should now send the request to the Certification Authority (CA).</para>"
+msgstr ""
+"<para>Anfraag mit Spood as <filename>%1</filename> sekert.</para><para>Stüer "
+"nu man dat Zertifikaat de Zertifikaatautoriteet (ZA) to.</para>"
 
 #: newcertificatewizard/newcertificatewizard.cpp:858
 msgctxt "@title"
@@ -4520,6 +4946,25 @@ msgid "Please find attached my new OpenPGP certificate."
 msgstr ""
 "Bilagen:\n"
 "Mien nieg OpenPGP-Zertifikaat"
+
+#: newcertificatewizard/newcertificatewizard.cpp:933
+msgctxt "@info"
+msgid ""
+"<para><application>Kleopatra</application> tried to send a mail via your "
+"default mail client.</para><para>Some mail clients are known not to support "
+"attachments when invoked this way.</para><para>If your mail client does not "
+"have an attachment, then drag the <application>Kleopatra</application> icon "
+"and drop it on the message compose window of your mail client.</"
+"para><para>If that does not work, either, save the request to a file, and "
+"then attach that.</para>"
+msgstr ""
+"<para><application>Kleopatra</application> wull en Nettbreef mit Dien "
+"Standard-Nettpostprogramm loosstüern.</para><para>En Reeg Nettpostprogrammen "
+"ünnerstütt keen Bilagen, wenn se so opropen warrt.</para><para>Hett Dien "
+"Nettbreef keen Bilaag, treck dat <application>Kleopatra</application>-"
+"Lüttbild na Dien Nettpostprogramm sien Narichteneditor-Finster.</"
+"para><para>Funkscheneert dat ok nich, seker de Anfraag as en Datei un legg "
+"de bi.</para>"
 
 #: newcertificatewizard/newcertificatewizard.cpp:937
 msgctxt "@title"
@@ -4769,21 +5214,124 @@ msgctxt "@title"
 msgid "GpgConf (Configuration) installation"
 msgstr "GpgConf-Installatschoon (Instellen)"
 
+#: selftest/enginecheck.cpp:104
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>A problem was detected with the <application>%1</application> backend."
+"</para>"
+msgstr ""
+"<para>Dat gifft en Problem mit dat <application>%1</application>-"
+"Hülpprogramm.</para>"
+
 #: selftest/enginecheck.cpp:109
 msgid "not supported"
 msgstr "nich ünnerstütt"
+
+#: selftest/enginecheck.cpp:111
+msgctxt "@info"
+msgid ""
+"<para>It seems that the <icode>gpgme</icode> library was compiled without "
+"support for this backend.</para>"
+msgstr ""
+"<para>As't lett hett de <icode>gpgme</icode>-Bibliotheek keen Ünnerstütten "
+"för dit Hülpprogramm inkompileert.</para>"
+
+#: selftest/enginecheck.cpp:114
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Replace the <icode>gpgme</icode> library with a version compiled with "
+"<application>%1</application> support.</para>"
+msgstr ""
+"<para>Wessel de <icode>gpgme</icode>-Bibliotheek mit en Verschoon ut, de "
+"Ünnerstütten för <application>%1</application> inkompileert hett.</para>"
 
 #: selftest/enginecheck.cpp:118
 msgid "not properly installed"
 msgstr "nich propper installeert"
 
+#: selftest/enginecheck.cpp:120
+#, kde-format
+msgctxt "@info"
+msgid "<para>Backend <command>%1</command> is not installed properly.</para>"
+msgstr ""
+"<para>Dat Hülpprogramm <command>%1</command> is nich propper installeert.</"
+"para>"
+
+#: selftest/enginecheck.cpp:122
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Please check the output of <command>%1 --version</command> manually.</"
+"para>"
+msgstr ""
+"<para>Prööv bitte de Utgaav vun <command>%1 --version</command> vun Hand.</"
+"para>"
+
 #: selftest/enginecheck.cpp:125
 msgid "too old"
 msgstr "to oolt"
 
+#: selftest/enginecheck.cpp:127
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Backend <command>%1</command> is installed in version %2, but at least "
+"version %3 is required.</para>"
+msgstr ""
+"<para>Dat Hülpprogramm <command>%1</command> is in Verschoon %2 installeert, "
+"man tominnst Verschoon %3 deit noot.</para>"
+
+#: selftest/enginecheck.cpp:133 selftest/enginecheck.cpp:218
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Install <application>%1</application> version %2 or higher.</para>"
+msgstr ""
+"<para>Installeer <application>%1</application> in de Verschoon %2 oder "
+"nieger.</para>"
+
 #: selftest/enginecheck.cpp:136
 msgid "unknown problem"
 msgstr "nich begäng Problem"
+
+#: selftest/enginecheck.cpp:138
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Make sure <application>%1</application> is installed and in "
+"<envar>PATH</envar>.</para>"
+msgstr ""
+"<para>Beseker, dat <application>%1</application> installeert is un sik över "
+"de <envar>PATH</envar>-Variabel finnen lett.</para>"
+
+#: selftest/enginecheck.cpp:215
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para><application>%1</application> v%2.%3.%4 is required for this test, but "
+"only %5 is installed.</para>"
+msgstr ""
+"<para><application>%1</application> in de Verschoon %2.%3.%4 deit för dissen "
+"Test noot, man installeert is %5.</para>"
+
+#: selftest/enginecheck.cpp:223
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para><application>%1</application> is required for this test, but does not "
+"seem available.</para><para>See tests further up for more information.</para>"
+msgstr ""
+"<para><application>%1</application> deit för dissen Test noot, man is as't "
+"lett nich verföögbor.</para><para>Kiek Di de Tests baven an, wenn Du mehr "
+"weten wullt.</para>"
+
+#: selftest/enginecheck.cpp:227
+#, kde-format
+msgctxt "@info %1: test name"
+msgid "<para>See \"%1\" above.</para>"
+msgstr "<para>Kiek bi \"%1\" baven.</para>"
 
 #: selftest/gpgagentcheck.cpp:65
 msgctxt "@title"
@@ -4804,17 +5352,68 @@ msgstr ""
 "en öller GpgME opstellt, dat dat Verbinnen na \"gpg-agent\" nich "
 "ünnerstütten deit."
 
+#: selftest/gpgagentcheck.cpp:82
+msgctxt "@info"
+msgid ""
+"Upgrade to <application>gpgme</application> 1.2.0 or higher, and ensure that "
+"gpgme++ was compiled against it."
+msgstr ""
+"Installeer bitte <application>gpgme</application> 1.2.0 oder nieger un "
+"beseker, gpgme++ wöör dor mit opstellt."
+
 #: selftest/gpgagentcheck.cpp:89
 msgid "GpgME does not support gpg-agent"
 msgstr "GpgME deit gpg-agent nich ünnerstütten"
+
+#: selftest/gpgagentcheck.cpp:91
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>The <application>GpgME</application> library is new enough to support "
+"<application>gpg-agent</application>, but does not seem to do so in this "
+"installation.</para><para>The error returned was: <message>%1</message>.</"
+"para>"
+msgstr ""
+"<para>De <application>GpgME</application>-Bibliotheek is nieg noog, se deit "
+"<application>gpg-agent</application> ünnerstütten, man deit nich, as't lett."
+"</para><para>De torüchgeven Fehler is: <message>%1</message></para>"
 
 #: selftest/gpgagentcheck.cpp:104 selftest/uiservercheck.cpp:82
 msgid "not reachable"
 msgstr "lett sik nich faatkriegen"
 
+#: selftest/gpgagentcheck.cpp:106
+#, kde-format
+msgctxt "@info"
+msgid "Could not connect to GpgAgent: <message>%1</message>"
+msgstr "Gpg-Hölper lett sik nich faatkriegen: <message>%1</message>"
+
+#: selftest/gpgagentcheck.cpp:109
+msgctxt "@info"
+msgid ""
+"<para>Check that gpg-agent is running and that the "
+"<environment>GPG_AGENT_INFO</environment> variable is set and up-to-date.</"
+"para>"
+msgstr ""
+"<para>Beseker bitte, <application>gpg-agent</application> löppt un de "
+"Ümegevnvariabel <environment>GPG_AGENT_INFO</environment> is fastleggt un op "
+"den aktuellen Stand."
+
 #: selftest/gpgagentcheck.cpp:113
 msgid "unexpected error"
 msgstr "Nich verwacht Fehler"
+
+#: selftest/gpgagentcheck.cpp:115
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Unexpected error while asking <application>gpg-agent</application> for "
+"its version.</para><para>The error returned was: <message>%1</message>.</"
+"para>"
+msgstr ""
+"<para>Dat geev en nich verwacht Fehler bi't Fragen vun <application>gpg-"
+"agent</application> na sien Verschoon.</para> <para>De torüchgeven Fehler "
+"is: <message>%1</message></para>"
 
 #: selftest/gpgconfcheck.cpp:64
 #, kde-format
@@ -4884,6 +5483,16 @@ msgstr "Instellendatei \"libkleopatrarc\""
 msgid "Errors found"
 msgstr "Fehlers opdeckt"
 
+#: selftest/libkleopatrarccheck.cpp:80
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Kleopatra detected the following errors in the libkleopatrarc "
+"configuration:</para>%1"
+msgstr ""
+"<para>Kleopatra hett disse Fehlers in de Instellen vun \"libkleopatrarc\" "
+"opdeckt:</para>%1"
+
 #: selftest/registrycheck.cpp:62
 msgctxt "@title"
 msgid "Windows Registry"
@@ -4892,6 +5501,34 @@ msgstr "Windows-Registry"
 #: selftest/registrycheck.cpp:76
 msgid "Obsolete registry entries found"
 msgstr "Överhaalt Registry-Indrääg funnen"
+
+#: selftest/registrycheck.cpp:80
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Kleopatra detected an obsolete registry key (<resource>%1\\%2</"
+"resource>), added by either a previous <application>Gpg4win</application> "
+"version or applications such as <application>WinPT</application> or "
+"<application>EnigMail</application>.</para><para>Keeping the entry might "
+"lead to an old GnuPG backend being used.</para>"
+msgstr ""
+"<para>Kleopatra hett en överhaalt Registry-Slötel funnen (<resource>%1\\%2</"
+"resource>). Den hett en verleden <application>Gpg4Win</application>-"
+"Verschoon oder en Programm as <application>WinPT</application> oder "
+"<application>EnigMail</application> toföögt.</para> <para>Lettst Du den "
+"Slötel dor, warrt villicht en överhaalt GnuPG-Hülpprogramm bruukt.</para>"
+
+#: selftest/registrycheck.cpp:86
+#, kde-format
+msgctxt "@info"
+msgid "<para>Delete registry key <resource>%1\\%2</resource>.</para>"
+msgstr "<para>Slötel <resource>%1\\%2</resource> wegdoon</para>"
+
+#: selftest/registrycheck.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid "Could not delete the registry key <resource>%1\\%2</resource>"
+msgstr "De Registry-Slötel <resource>%1\\%2</resource> lett sik nich wegdoon"
 
 #: selftest/registrycheck.cpp:113
 msgctxt "@title"
@@ -4903,9 +5540,43 @@ msgctxt "@title"
 msgid "UiServer Connectivity"
 msgstr "Böversiet-Server faatkriegen"
 
+#: selftest/uiservercheck.cpp:84
+#, kde-format
+msgctxt "@info"
+msgid "Could not connect to UiServer: <message>%1</message>"
+msgstr "Böversietserver lett sik nich faatkriegen: <message>%1</message>"
+
+#: selftest/uiservercheck.cpp:87
+msgctxt "@info"
+msgid ""
+"<para>Check that your firewall is not set to block local connections (allow "
+"connections to <resource>localhost</resource> or <resource>127.0.0.1</"
+"resource>).</para>"
+msgstr ""
+"<para>Kiek, wat Dien Nettdiek keen lokaal Verbinnen blockeert (Verbinnen na "
+"<resource> localhost</resource> oder <resource>127.0.0.1</resource> "
+"verlöven).</para>"
+
 #: selftest/uiservercheck.cpp:91
 msgid "multiple instances"
 msgstr "mehr as een Utgaav"
+
+#: selftest/uiservercheck.cpp:93
+#, kde-format
+msgctxt "@info"
+msgid ""
+"It seems another <application>Kleopatra</application> is running (with "
+"process-id %1)"
+msgstr ""
+"As't lett löppt al en anner <application>Kleopatra</application> (mit "
+"Perzess-ID %1)"
+
+#: selftest/uiservercheck.cpp:96
+msgctxt "@info"
+msgid ""
+"Quit any other running instances of <application>Kleopatra</application>."
+msgstr ""
+"All anner lopen Utgaven vun <application>Kleopatra</application> utmaken"
 
 #: systrayicon.cpp:158
 msgid "&Open Certificate Manager..."
@@ -6290,595 +6961,6 @@ msgstr "Nieg Paneeltitel:"
 
 #~ msgid "KWatchGnuPG Log Viewer"
 #~ msgstr "KWatchGnuPG-Logbookkieker"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>An error occurred while trying to add the user-id: <message>%1</"
-#~ "message></para>"
-#~ msgstr ""
-#~ "<para>Dat geev en Fehler bi't Tofögen vun de Bruker-ID: <message>%1</"
-#~ "message></para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "To certify other certificates, you first need to create an OpenPGP "
-#~ "certificate for yourself. Choose <interface>File->New Certificate...</"
-#~ "interface> to create one."
-#~ msgstr ""
-#~ "Wullt Du anner Zertifikaten beglöven, muttst Du eerst en OpenPGP-"
-#~ "Zertifikaat för Di sülven opstellen, wat Du bi <interface>Datei -> Nieg "
-#~ "Zertifikaat...</interface> doon kannst."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>No OpenPGP directory services have been configured.</"
-#~ "para><para>Since none is configured, <application>Kleopatra</application> "
-#~ "will use <resource>keys.gnupg.net</resource> as the server to export to.</"
-#~ "para><para>You can configure OpenPGP directory servers in "
-#~ "<application>Kleopatra</application>'s configuration dialog.</"
-#~ "para><para>Do you want to continue with <resource>keys.gnupg.net</"
-#~ "resource> as the server to export to?</para>"
-#~ msgstr ""
-#~ "<para>Du hest keen OpenPGP-Vertekendeensten instellt.</para><para>Dorüm "
-#~ "bruukt <application>Kleopatra</application> <resource>keys.gnupg.net</"
-#~ "resource> as Standard-Exportserver.</para><para>Du kannst OpenPGP-"
-#~ "Vertekenservers binnen Kleopatra sien Instellendialoog fastleggen.</"
-#~ "para><para>Wullt Du mit <resource>keys.gnupg.net</resource> as Standard-"
-#~ "Exportserver wiedermaken?</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>When OpenPGP certificates have been exported to a public directory "
-#~ "server, it is nearly impossible to remove them again.</para><para>Before "
-#~ "exporting your certificate to a public directory server, make sure that "
-#~ "you have created a revocation certificate so you can revoke the "
-#~ "certificate if needed later.</para><para>Are you sure you want to "
-#~ "continue?</para>"
-#~ msgstr ""
-#~ "<para>Sünd OpenPGP-Zertifikaten eerst maal na en apen Vertekenserver "
-#~ "exporteert, is dat meist nich mööglich, dat Een se wedder wegmaakt.</"
-#~ "para><para>Ehr Du Dien Zertifikaat na en apen Vertekenserver exporteerst, "
-#~ "beseker bitte, Du hest en Torüchroop-Zertifikaat opstellt - denn kannst "
-#~ "Du dat Zertifikaat later torüchropen, wenn dat noot deit.</"
-#~ "para><para>Wullt Du redig wiedermaken?</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>The GPG process that tried to export OpenPGP certificates ended "
-#~ "prematurely because of an unexpected error.</para><para>Please check the "
-#~ "output of <icode>%1</icode> for details.</para>"
-#~ msgstr ""
-#~ "<para>De Perzess GPG, de de OpenPGP-Zertifikaten exporteren schull, hett "
-#~ "sik vör Tiet utmaakt, dat geev en nich verwacht Fehler.</para><para>Kiek "
-#~ "bitte de Utgaav vun <icode>%1</icode> an, wenn Du de Enkelheiten weten "
-#~ "wullt.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>An error occurred while trying to export OpenPGP certificates.</"
-#~ "para> <para>The output from <command>%1</command> was: <message>%2</"
-#~ "message></para>"
-#~ msgstr ""
-#~ "<para>Dat geev en Fehler bi't Exporteren vun OpenPGP-Zertifikaten.</para> "
-#~ "<para>De Utgaav vun <command>%1</command> weer: <message>%2</message></"
-#~ "para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>The GPG or GpgSM process that tried to export the secret key ended "
-#~ "prematurely because of an unexpected error.</para><para>Please check the "
-#~ "output of <icode>%1</icode> for details.</para>"
-#~ msgstr ""
-#~ "<para>De Perzess \"GPG\" oder \"GpgSM\", de den Privaatslötel exporteren "
-#~ "schull, hett sik vör Tiet utmaakt, dat geev en nich verwacht Fehler.</"
-#~ "para><para>Kiek Di bitte de Utgaav vun <icode>%1</icode> an, wenn Du de "
-#~ "Enkelheiten weten wullt.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>An error occurred while trying to export the secret key.</para> "
-#~ "<para>The output from <command>%1</command> was: <message>%2</message></"
-#~ "para>"
-#~ msgstr ""
-#~ "<para>Dat geev en Fehler bi't Exporteren vun den Privaatslötel.</para> "
-#~ "<para>De Utgaav vun <command>%1</command> weer: <message>%2</message></"
-#~ "para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>The GPG or GpgSM process that tried to learn the smart card ended "
-#~ "prematurely because of an unexpected error.</para><para>Please check the "
-#~ "output of <icode>%1</icode> for details.</para>"
-#~ msgstr ""
-#~ "<para>De Perzess \"GPG\" oder \"GpgSM\", de de SmartKoort inlesen schull, "
-#~ "hett sik vör Tiet utmaakt, dat geev en nich verwacht Fehler.</"
-#~ "para><para>Kiek Di bitte de Utgaav vun <icode>%1</icode> an, wenn Du de "
-#~ "Enkelheiten weten wullt.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>The query result has been truncated.</para><para>Either the local "
-#~ "or a remote limit on the maximum number of returned hits has been "
-#~ "exceeded.</para><para>You can try to increase the local limit in the "
-#~ "configuration dialog, but if one of the configured servers is the "
-#~ "limiting factor, you have to refine your search.</para>"
-#~ msgstr ""
-#~ "<para>Dat Resultaat vun de Anfraag wöör afsneden.</para><para>De Tall vun "
-#~ "Drepers weer grötter as Dien lokale oder en feern Grenz för de Drepertall."
-#~ "</para><para>Du kannst dat versöken un settst de lokale Grenz rop, man "
-#~ "wenn een vun de instellten Servers dat Resultaat afsneden hett, muttst Du "
-#~ "Dien Söök topassen. </para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>You do not have any directory servers configured.</para><para>You "
-#~ "need to configure at least one directory server to search on one.</"
-#~ "para><para>You can configure directory servers here: <interface>Settings-"
-#~ ">Configure Kleopatra</interface>.</para>"
-#~ msgstr ""
-#~ "<para>Du hest nich een Vertekenservers inricht.</para><para>Du muttst "
-#~ "tominnst een Vertekenserver inrichten, wenn Du op een söken wullt.</"
-#~ "para><para>Du kannst Vertekenservers binnen <interface>Instellen -> "
-#~ "Kleopatra instellen</interface> inrichten.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>No OpenPGP directory services have been configured.</para><para>If "
-#~ "not all of the certificates carry the name of their preferred certificate "
-#~ "server (few do), a fallback server is needed to fetch from.</"
-#~ "para><para>Since none is configured, <application>Kleopatra</application> "
-#~ "will use <resource>keys.gnupg.net</resource> as the fallback.</"
-#~ "para><para>You can configure OpenPGP directory servers in Kleopatra's "
-#~ "configuration dialog.</para><para>Do you want to continue with "
-#~ "<resource>keys.gnupg.net</resource> as fallback server?</para>"
-#~ msgstr ""
-#~ "<para>Du hest keen OpenPGP-Vertekendeensten instellt.</para><para>Bargt "
-#~ "nich all Zertifikaten en vörtrocken Zertifikaatserver (dat doot bloots "
-#~ "wenige), deit för't Halen en Standardserver noot.</para><para>Wiel Du "
-#~ "keen fastleggt hest, bruukt <application>Kleopatra</application> "
-#~ "<resource>keys.gnupg.net</resource> as Standardserver.</para><para>Du "
-#~ "kannst OpenPGP-Vertekenservers binnen Kleopatra sien Instellendialoog "
-#~ "fastleggen.</para><para>Wullt Du mit <resource>keys.gnupg.net</resource> "
-#~ "as Standardserver wiedermaken?</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Refreshing OpenPGP certificates implies downloading all "
-#~ "certificates anew, to check if any of them have been revoked in the "
-#~ "meantime.</para><para>This can put a severe strain on your own as well as "
-#~ "other people's network connections, and can take up to an hour or more to "
-#~ "complete, depending on your network connection, and the number of "
-#~ "certificates to check.</para> <para>Are you sure you want to continue?</"
-#~ "para>"
-#~ msgstr ""
-#~ "<para>Dat Opfrischen vun OpenPGP-Zertifikaten bedüüdt, se warrt all "
-#~ "nochmaal daallaadt un denn ankeken, wat nich een in de Twischentiet "
-#~ "torüchropen wöör.</para><para>Dat kann Dien egen Nettwark-Verbinnen un de "
-#~ "vun anner Lüüd ok heel un deel utlasten un mag en Stünn oder länger "
-#~ "bruken, dat hangt vun Dien Nettwark-Verbinnen af, un vun de Tall vun "
-#~ "Zertifikaten, de pröövt warrn mööt.</para><para>Wullt Du redig "
-#~ "wiedermaken?</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>The GPG process that tried to refresh OpenPGP certificates ended "
-#~ "prematurely because of an unexpected error.</para><para>Please check the "
-#~ "output of <icode>%1</icode> for details.</para>"
-#~ msgstr ""
-#~ "<para>De Perzess GPG, de de OpenPGP-Zertifikaten opfrischen schull, hett "
-#~ "sik vör Tiet beendt, dat geev en nich verwacht Fehler.</para><para>Kiek "
-#~ "bitte de Utgaav vun <icode>%1</icode> an, wenn Du de Enkelheiten weten "
-#~ "wullt.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>An error occurred while trying to refresh OpenPGP certificates.</"
-#~ "para> <para>The output from <command>%1</command> was: <message>%2</"
-#~ "message></para>"
-#~ msgstr ""
-#~ "<para>Dat geev en Fehler bi't Opfrischen vun OpenPGP-Zertifikaten.</"
-#~ "para><para>De Utgaav vun <command>%1</command> weer: <message>%2</"
-#~ "message></para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Refreshing X.509 certificates implies downloading CRLs for all "
-#~ "certificates, even if they might otherwise still be valid.</"
-#~ "para><para>This can put a severe strain on your own as well as other "
-#~ "people's network connections, and can take up to an hour or more to "
-#~ "complete, depending on your network connection, and the number of "
-#~ "certificates to check.</para> <para>Are you sure you want to continue?</"
-#~ "para>"
-#~ msgstr ""
-#~ "<para>Dat Opfrischen vun de X.509-Zertifikaten bedüüdt, Du muttst all "
-#~ "ZTLs för all Zertifikaten daalladen, ok wenn se noch gellt.</"
-#~ "para><para>Dat kann Dien egen Nettwark-Verbinnen un de vun anner Lüüd ok "
-#~ "heel un deel utlasten un mag en Stünn oder länger bruken, dat hangt vun "
-#~ "Dien Nettwark-Verbinnen af, un vun de Tall vun Zertifikaten, de pröövt "
-#~ "warrn mööt.</para><para>Wullt Du redig wiedermaken?</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>The GpgSM process that tried to refresh X.509 certificates ended "
-#~ "prematurely because of an unexpected error.</para><para>Please check the "
-#~ "output of <icode>%1</icode> for details.</para>"
-#~ msgstr ""
-#~ "<para>De Perzess \"GpgSM\", de de X.509-Zertifikaten opfrischen schull, "
-#~ "hett sik vör Tiet utmaakt, dat geev en nich verwacht Fehler.</"
-#~ "para><para>Kiek Di bitte de Utgaav vun <icode>%1</icode> an, wenn Du de "
-#~ "Enkelheiten weten wullt.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>An error occurred while trying to refresh X.509 certificates.</"
-#~ "para><para>The output from <command>%1</command> was: <message>%2</"
-#~ "message></para>"
-#~ msgstr ""
-#~ "<para>Dat geev en Fehler bi't Opfrischen vun de X.509-Zertifikaten.</"
-#~ "para><para>De Utgaav vun <command>%1</command>: <message>%2</message></"
-#~ "para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Archiving in combination with sign-only currently requires what are "
-#~ "known as opaque signatures - unlike detached ones, these embed the "
-#~ "content in the signature.</para><para>This format is rather unusual. You "
-#~ "might want to archive the files separately, and then sign the archive as "
-#~ "one file with Kleopatra.</para><para>Future versions of Kleopatra are "
-#~ "expected to also support detached signatures in this case.</para>"
-#~ msgstr ""
-#~ "<para>För't Archiveren tosamen mit \"bloots ünnerschrieven\" deit nu so "
-#~ "nöömt \"decken Ünnerschriften\" noot, de, anners as aflööst "
-#~ "Ünnerschriften, den Inholt binnen de Ünnerschrift inbett .</"
-#~ "para><para>Dit Formaat warrt nich faken bruukt. Villicht wullt Du de "
-#~ "Dateien enkelt archiveren, un dat Archiev denn mit \"Kleopatra\" as een "
-#~ "Datei ünnerschrieven.</para><para>Tokamen Verschonen vun \"Kleopatra\" "
-#~ "köönt denn wull ok aftrennt Ünnerschriften ünnerstütten.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>None of the recipients you are encrypting to seems to be your own.</"
-#~ "para><para>This means that you will not be able to decrypt the data "
-#~ "anymore, once encrypted.</para><para>Do you want to continue, or cancel "
-#~ "to change the recipient selection?</para>"
-#~ msgstr ""
-#~ "<para>As't lett büst Du keen vun de Adressaten, för de Du verslöteln "
-#~ "deist.</para><para>Dat heet, Du kannst de Daten na't Verslöteln nich mehr "
-#~ "opslöteln.</para><para>Wullt Du wiedermaken oder de Akschoon afbreken un "
-#~ "de Adressatenlist ännern?</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>You have requested the unencrypted data to be removed after "
-#~ "encryption.</para><para>Are you really sure you do not need to access the "
-#~ "data anymore in decrypted form?</para>"
-#~ msgstr ""
-#~ "<para>Du wullt de nich verslötelten Daten na't Verslöteln wegmaken.</"
-#~ "para><para>Büst Du seker, Du bruukst nich mehr op de nich verslötelten "
-#~ "Daten togriepen?</para>"
-
-#~ msgctxt "@info"
-#~ msgid "<interface>%1</interface> is required, but empty."
-#~ msgstr "<interface>%1</interface> fehlt, man deit noot."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<interface>%1</interface> is required, but empty.<nl/>Local Admin rule: "
-#~ "<icode>%2</icode>"
-#~ msgstr ""
-#~ "<interface>%1</interface> fehlt, man deit noot.<nl/>Lokaal "
-#~ "Systeemplegerregel: <icode>%2</icode>"
-
-#~ msgctxt "@info"
-#~ msgid "<interface>%1</interface> is incomplete."
-#~ msgstr "<interface>%1</interface> is nich heel."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<interface>%1</interface> is incomplete.<nl/>Local Admin rule: <icode>%2</"
-#~ "icode>"
-#~ msgstr ""
-#~ "<interface>%1</interface> is nich heel.<nl/>Lokaal Systeemplegerregel: "
-#~ "<icode>%2</icode>"
-
-#~ msgctxt "@info"
-#~ msgid "<interface>%1</interface> is invalid."
-#~ msgstr "<interface>%1</interface> is leeg."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<interface>%1</interface> is invalid.<nl/>Local Admin rule: <icode>%2</"
-#~ "icode>"
-#~ msgstr ""
-#~ "<interface>%1</interface> is leeg.<nl/>Lokaal Systeemplegerregel: <icode>"
-#~ "%2</icode>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>An error occurred while loading the certifications: <message>%1</"
-#~ "message></para>"
-#~ msgstr ""
-#~ "<para>Dat geev en Fehler bi't Laden vun de Beglöven: <message>%1</"
-#~ "message></para>"
-
-#~ msgid ""
-#~ "These certificates will be deleted even though you did <emphasis>not</"
-#~ "emphasis><nl/> explicitly select them (<a href=\"whatsthis://\">Why?</a>):"
-#~ msgstr ""
-#~ "Disse Zertifikaten warrt wegdaan, liekers Du se dor <emphasis>nich</"
-#~ "emphasis><nl/> to utsöcht hest (<a href=\"whatsthis://\">Worüm?</a>):"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid ""
-#~ "<title>Why do you want to delete more certificates than I selected?</"
-#~ "title><para>When you delete CA certificates (both root CAs and "
-#~ "intermediate CAs), the certificates issued by them will also be deleted.</"
-#~ "para><para>This can be nicely seen in <application>Kleopatra</"
-#~ "application>'s hierarchical view mode: In this mode, if you delete a "
-#~ "certificate that has children, those children will also be deleted. Think "
-#~ "of CA certificates as folders containing other certificates: When you "
-#~ "delete the folder, you delete its contents, too.</para>"
-#~ msgstr ""
-#~ "<title>Worüm schöölt mehr Zertifikaten wegdaan warrn, as wat Du utsöcht "
-#~ "hest?</title><para>Deist Du ZA-Zertifikaten weg (vun Wörtel- un normaal "
-#~ "ZAen), warrt ok de Zertifikaten wegdaan, de se rutgeven hebbt.</"
-#~ "para><para>Dit lett sik schöön binnen <application>Kleopatra</"
-#~ "application> ehr Struktuuransicht bekieken: Deist Du en Zertifikaat weg, "
-#~ "dat Ünnerzertifikaten hett, warrt de ok wegdaan. Du kannst Di de ZAen as "
-#~ "Ornern vörstellen, de anner Zertifikaten bargt: Deist Du den Orner weg, "
-#~ "deist Du ok sien Inholt weg.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "No NullPin found. <warning>If this PIN was not set by you personally, the "
-#~ "card might have been tampered with.</warning>"
-#~ msgstr ""
-#~ "Keen \"NullPIN\" funnen. <warning>Hest Du disse PIN nich sülven "
-#~ "fastleggt, mag dat wesen, Een hett an de Koort rümspeelt.</warning>"
-
-#~ msgctxt "@info"
-#~ msgid "There was an error setting the PIN: <message>%1</message>."
-#~ msgstr ""
-#~ "Dat geev en Fehler bi't Fastleggen vun de PIN: <message>%1</message>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>The version of the <application>GpgME</application> library you are "
-#~ "running against is older than the one that the <application>GpgME++</"
-#~ "application> library was built against.</"
-#~ "para><para><application>Kleopatra</application> will not function in this "
-#~ "setting.</para><para>Please ask your administrator for help in resolving "
-#~ "this issue.</para>"
-#~ msgstr ""
-#~ "<para>De Verschoon vun de <application>GpgME</application>-Bibliotheek, "
-#~ "de Du bruukst, is öller as de, mit de de <application>GpgME++</"
-#~ "application>-Bibliotheek opstellt wöör.</"
-#~ "para><para><application>Kleopatra</application> funkscheneert so nich.</"
-#~ "para><para>Snack dor bitte Dien Systeempleger op an, he schall Di dor bi "
-#~ "hölpen.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Could not copy temporary file <filename>%1</filename> to file <filename>"
-#~ "%2</filename>: <message>%3</message>"
-#~ msgstr ""
-#~ "Temporeerdatei <filename>%1</filename> lett sik nich na <filename>%2</"
-#~ "filename> koperen: <message>%3</message>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Successfully wrote request to <filename>%1</filename>.</"
-#~ "para><para>You should now send the request to the Certification Authority "
-#~ "(CA).</para>"
-#~ msgstr ""
-#~ "<para>Anfraag mit Spood as <filename>%1</filename> sekert.</"
-#~ "para><para>Stüer nu man dat Zertifikaat de Zertifikaatautoriteet (ZA) to."
-#~ "</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para><application>Kleopatra</application> tried to send a mail via your "
-#~ "default mail client.</para><para>Some mail clients are known not to "
-#~ "support attachments when invoked this way.</para><para>If your mail "
-#~ "client does not have an attachment, then drag the <application>Kleopatra</"
-#~ "application> icon and drop it on the message compose window of your mail "
-#~ "client.</para><para>If that does not work, either, save the request to a "
-#~ "file, and then attach that.</para>"
-#~ msgstr ""
-#~ "<para><application>Kleopatra</application> wull en Nettbreef mit Dien "
-#~ "Standard-Nettpostprogramm loosstüern.</para><para>En Reeg "
-#~ "Nettpostprogrammen ünnerstütt keen Bilagen, wenn se so opropen warrt.</"
-#~ "para><para>Hett Dien Nettbreef keen Bilaag, treck dat "
-#~ "<application>Kleopatra</application>-Lüttbild na Dien Nettpostprogramm "
-#~ "sien Narichteneditor-Finster.</para><para>Funkscheneert dat ok nich, "
-#~ "seker de Anfraag as en Datei un legg de bi.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>A problem was detected with the <application>%1</application> "
-#~ "backend.</para>"
-#~ msgstr ""
-#~ "<para>Dat gifft en Problem mit dat <application>%1</application>-"
-#~ "Hülpprogramm.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>It seems that the <icode>gpgme</icode> library was compiled without "
-#~ "support for this backend.</para>"
-#~ msgstr ""
-#~ "<para>As't lett hett de <icode>gpgme</icode>-Bibliotheek keen "
-#~ "Ünnerstütten för dit Hülpprogramm inkompileert.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Replace the <icode>gpgme</icode> library with a version compiled "
-#~ "with <application>%1</application> support.</para>"
-#~ msgstr ""
-#~ "<para>Wessel de <icode>gpgme</icode>-Bibliotheek mit en Verschoon ut, de "
-#~ "Ünnerstütten för <application>%1</application> inkompileert hett.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Backend <command>%1</command> is not installed properly.</para>"
-#~ msgstr ""
-#~ "<para>Dat Hülpprogramm <command>%1</command> is nich propper installeert."
-#~ "</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Please check the output of <command>%1 --version</command> manually."
-#~ "</para>"
-#~ msgstr ""
-#~ "<para>Prööv bitte de Utgaav vun <command>%1 --version</command> vun Hand."
-#~ "</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Backend <command>%1</command> is installed in version %2, but at "
-#~ "least version %3 is required.</para>"
-#~ msgstr ""
-#~ "<para>Dat Hülpprogramm <command>%1</command> is in Verschoon %2 "
-#~ "installeert, man tominnst Verschoon %3 deit noot.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Install <application>%1</application> version %2 or higher.</para>"
-#~ msgstr ""
-#~ "<para>Installeer <application>%1</application> in de Verschoon %2 oder "
-#~ "nieger.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Make sure <application>%1</application> is installed and in "
-#~ "<envar>PATH</envar>.</para>"
-#~ msgstr ""
-#~ "<para>Beseker, dat <application>%1</application> installeert is un sik "
-#~ "över de <envar>PATH</envar>-Variabel finnen lett.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para><application>%1</application> v%2.%3.%4 is required for this test, "
-#~ "but only %5 is installed.</para>"
-#~ msgstr ""
-#~ "<para><application>%1</application> in de Verschoon %2.%3.%4 deit för "
-#~ "dissen Test noot, man installeert is %5.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para><application>%1</application> is required for this test, but does "
-#~ "not seem available.</para><para>See tests further up for more information."
-#~ "</para>"
-#~ msgstr ""
-#~ "<para><application>%1</application> deit för dissen Test noot, man is "
-#~ "as't lett nich verföögbor.</para><para>Kiek Di de Tests baven an, wenn Du "
-#~ "mehr weten wullt.</para>"
-
-#~ msgctxt "@info %1: test name"
-#~ msgid "<para>See \"%1\" above.</para>"
-#~ msgstr "<para>Kiek bi \"%1\" baven.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Upgrade to <application>gpgme</application> 1.2.0 or higher, and ensure "
-#~ "that gpgme++ was compiled against it."
-#~ msgstr ""
-#~ "Installeer bitte <application>gpgme</application> 1.2.0 oder nieger un "
-#~ "beseker, gpgme++ wöör dor mit opstellt."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>The <application>GpgME</application> library is new enough to "
-#~ "support <application>gpg-agent</application>, but does not seem to do so "
-#~ "in this installation.</para><para>The error returned was: <message>%1</"
-#~ "message>.</para>"
-#~ msgstr ""
-#~ "<para>De <application>GpgME</application>-Bibliotheek is nieg noog, se "
-#~ "deit <application>gpg-agent</application> ünnerstütten, man deit nich, "
-#~ "as't lett.</para><para>De torüchgeven Fehler is: <message>%1</message></"
-#~ "para>"
-
-#~ msgctxt "@info"
-#~ msgid "Could not connect to GpgAgent: <message>%1</message>"
-#~ msgstr "Gpg-Hölper lett sik nich faatkriegen: <message>%1</message>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Check that gpg-agent is running and that the "
-#~ "<environment>GPG_AGENT_INFO</environment> variable is set and up-to-date."
-#~ "</para>"
-#~ msgstr ""
-#~ "<para>Beseker bitte, <application>gpg-agent</application> löppt un de "
-#~ "Ümegevnvariabel <environment>GPG_AGENT_INFO</environment> is fastleggt un "
-#~ "op den aktuellen Stand."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Unexpected error while asking <application>gpg-agent</application> "
-#~ "for its version.</para><para>The error returned was: <message>%1</"
-#~ "message>.</para>"
-#~ msgstr ""
-#~ "<para>Dat geev en nich verwacht Fehler bi't Fragen vun <application>gpg-"
-#~ "agent</application> na sien Verschoon.</para> <para>De torüchgeven Fehler "
-#~ "is: <message>%1</message></para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Kleopatra detected the following errors in the libkleopatrarc "
-#~ "configuration:</para>%1"
-#~ msgstr ""
-#~ "<para>Kleopatra hett disse Fehlers in de Instellen vun \"libkleopatrarc\" "
-#~ "opdeckt:</para>%1"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Kleopatra detected an obsolete registry key (<resource>%1\\%2</"
-#~ "resource>), added by either a previous <application>Gpg4win</application> "
-#~ "version or applications such as <application>WinPT</application> or "
-#~ "<application>EnigMail</application>.</para><para>Keeping the entry might "
-#~ "lead to an old GnuPG backend being used.</para>"
-#~ msgstr ""
-#~ "<para>Kleopatra hett en överhaalt Registry-Slötel funnen (<resource>%1\\"
-#~ "%2</resource>). Den hett en verleden <application>Gpg4Win</application>-"
-#~ "Verschoon oder en Programm as <application>WinPT</application> oder "
-#~ "<application>EnigMail</application> toföögt.</para> <para>Lettst Du den "
-#~ "Slötel dor, warrt villicht en överhaalt GnuPG-Hülpprogramm bruukt.</para>"
-
-#~ msgctxt "@info"
-#~ msgid "<para>Delete registry key <resource>%1\\%2</resource>.</para>"
-#~ msgstr "<para>Slötel <resource>%1\\%2</resource> wegdoon</para>"
-
-#~ msgctxt "@info"
-#~ msgid "Could not delete the registry key <resource>%1\\%2</resource>"
-#~ msgstr ""
-#~ "De Registry-Slötel <resource>%1\\%2</resource> lett sik nich wegdoon"
-
-#~ msgctxt "@info"
-#~ msgid "Could not connect to UiServer: <message>%1</message>"
-#~ msgstr "Böversietserver lett sik nich faatkriegen: <message>%1</message>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Check that your firewall is not set to block local connections "
-#~ "(allow connections to <resource>localhost</resource> or "
-#~ "<resource>127.0.0.1</resource>).</para>"
-#~ msgstr ""
-#~ "<para>Kiek, wat Dien Nettdiek keen lokaal Verbinnen blockeert (Verbinnen "
-#~ "na <resource> localhost</resource> oder <resource>127.0.0.1</resource> "
-#~ "verlöven).</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "It seems another <application>Kleopatra</application> is running (with "
-#~ "process-id %1)"
-#~ msgstr ""
-#~ "As't lett löppt al en anner <application>Kleopatra</application> (mit "
-#~ "Perzess-ID %1)"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Quit any other running instances of <application>Kleopatra</application>."
-#~ msgstr ""
-#~ "All anner lopen Utgaven vun <application>Kleopatra</application> utmaken"
 
 #~ msgid "&Find:"
 #~ msgstr "&Söken:"
