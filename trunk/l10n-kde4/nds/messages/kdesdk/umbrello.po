@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: umbrello\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-12-22 01:56+0000\n"
+"POT-Creation-Date: 2014-12-23 01:57+0000\n"
 "PO-Revision-Date: 2011-12-15 07:28+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -78,7 +78,7 @@ msgstr "Tosamenstellen"
 msgid "Dependency"
 msgstr "Afhängigkeit"
 
-#: basictypes.cpp:335 worktoolbar.cpp:316
+#: basictypes.cpp:335 widgets/widgetbase.cpp:1013 worktoolbar.cpp:316
 msgid "Association"
 msgstr "Towiesen"
 
@@ -134,7 +134,8 @@ msgstr "Anker"
 msgid "State Transition"
 msgstr "Tostand-Övergang"
 
-#: basictypes.cpp:361 dialogs/activitydialog.cpp:137 worktoolbar.cpp:358
+#: basictypes.cpp:361 dialogs/activitydialog.cpp:137
+#: widgets/widgetbase.cpp:1004 worktoolbar.cpp:358
 msgid "Activity"
 msgstr "Aktiviteet"
 
@@ -703,9 +704,9 @@ msgstr "Disse Klassen binnen den opstellten Kode bruken:"
 #: dialogs/pages/associationgeneralpage.cpp:82
 #: dialogs/pages/associationrolepage.cpp:91
 #: dialogs/pages/associationrolepage.cpp:92
-#: dialogs/pages/classgeneralpage.cpp:186
+#: dialogs/pages/classgeneralpage.cpp:141
+#: dialogs/pages/classgeneralpage.cpp:203
 #: dialogs/pages/classgeneralpage.cpp:248
-#: dialogs/pages/classgeneralpage.cpp:301
 #: dialogs/pages/classifierlistpage.cpp:218
 #: dialogs/pages/diagrampropertiespage.ui:257
 #: dialogs/pages/umlrolepropertiesbase.ui:140
@@ -1234,6 +1235,7 @@ msgstr "Status"
 
 #. i18n: ectx: property (text), widget (QTableWidget, ui_tableWidgetStatus)
 #: codegenwizard/codegenstatuspage.ui:40 codeimpwizard/codeimpstatuspage.ui:54
+#: widgets/widgetbase.cpp:1028
 msgid "Class"
 msgstr "Klass"
 
@@ -2177,114 +2179,50 @@ msgstr ""
 msgid "Show export layout in diagram context menu"
 msgstr ""
 
-#: dialogs/pages/classgeneralpage.cpp:74
-msgid "Class &name:"
-msgstr "Klass&naam:"
-
-#: dialogs/pages/classgeneralpage.cpp:77
-msgid "Actor &name:"
-msgstr "Aktöör&naam:"
-
-#: dialogs/pages/classgeneralpage.cpp:80
-msgid "Package &name:"
-msgstr "Paket&naam:"
-
-#: dialogs/pages/classgeneralpage.cpp:83
-msgid "Use case &name:"
-msgstr "Bruukbispill&naam:"
-
-#: dialogs/pages/classgeneralpage.cpp:86
-msgid "Interface &name:"
-msgstr "Koppelsteed&naam:"
-
-#: dialogs/pages/classgeneralpage.cpp:89
-msgid "Component &name:"
-msgstr "Komponent&naam:"
-
-#: dialogs/pages/classgeneralpage.cpp:92
-#, fuzzy
-#| msgid "Actor &name:"
-msgid "Port &name:"
-msgstr "Aktöör&naam:"
-
-#: dialogs/pages/classgeneralpage.cpp:95
-msgid "Node &name:"
-msgstr "&Knüttnaam:"
-
-#: dialogs/pages/classgeneralpage.cpp:98
-msgid "Artifact &name:"
-msgstr "Artefakt&naam:"
-
-#: dialogs/pages/classgeneralpage.cpp:101
-msgid "Enum &name:"
-msgstr "Optell&naam:"
-
-#: dialogs/pages/classgeneralpage.cpp:104
-msgid "Datatype &name:"
-msgstr "Datentyp&naaam:"
-
-#: dialogs/pages/classgeneralpage.cpp:107
-msgid "Entity &name:"
-msgstr "Eenheit&naam:"
-
-#: dialogs/pages/classgeneralpage.cpp:110
-#, fuzzy
-#| msgid "Stereotype name:"
-msgid "Stereotype &name:"
-msgstr "Stereotypnaam:"
-
-#: dialogs/pages/classgeneralpage.cpp:138
+#: dialogs/pages/classgeneralpage.cpp:93
 #, fuzzy
 #| msgctxt "column header referenced"
 #| msgid "Referenced"
 msgid "Reference:"
 msgstr "Bitrocken"
 
-#: dialogs/pages/classgeneralpage.cpp:154
+#: dialogs/pages/classgeneralpage.cpp:109
 msgid "A&bstract class"
 msgstr "A&fstrakt Klass"
 
-#: dialogs/pages/classgeneralpage.cpp:156
+#: dialogs/pages/classgeneralpage.cpp:111
 msgid "A&bstract use case"
 msgstr "A&fstrakt Bruukbispill"
 
-#: dialogs/pages/classgeneralpage.cpp:165
+#: dialogs/pages/classgeneralpage.cpp:120
 msgctxt "component is executable"
 msgid "&Executable"
 msgstr "&Utföhrbor"
 
-#: dialogs/pages/classgeneralpage.cpp:221
+#: dialogs/pages/classgeneralpage.cpp:176
 msgid "Class name:"
 msgstr "Klassnaam:"
 
-#: dialogs/pages/classgeneralpage.cpp:224
-#: dialogs/pages/classgeneralpage.cpp:293
+#: dialogs/pages/classgeneralpage.cpp:179
+#: dialogs/pages/classgeneralpage.cpp:240
 msgid "Instance name:"
 msgstr "Utgaavnaam:"
 
-#: dialogs/pages/classgeneralpage.cpp:229
+#: dialogs/pages/classgeneralpage.cpp:184
 msgid "Draw as actor"
 msgstr "As Aktöör teken"
 
-#: dialogs/pages/classgeneralpage.cpp:234
+#: dialogs/pages/classgeneralpage.cpp:189
 msgid "Multiple instance"
 msgstr "Mehr Utgaven"
 
-#: dialogs/pages/classgeneralpage.cpp:240
+#: dialogs/pages/classgeneralpage.cpp:195
 msgid "Show destruction"
 msgstr "Destrukschoon wiesen"
 
-#: dialogs/pages/classgeneralpage.cpp:280
-msgid "Component name:"
-msgstr "Komponentnaam:"
-
-#: dialogs/pages/classgeneralpage.cpp:282
-msgid "Node name:"
-msgstr "Knüttnaam:"
-
-#: dialogs/pages/classgeneralpage.cpp:339
-#: dialogs/pages/classgeneralpage.cpp:372
-#: dialogs/pages/classgeneralpage.cpp:385
+#: dialogs/pages/classgeneralpage.cpp:286
+#: dialogs/pages/classgeneralpage.cpp:319
+#: dialogs/pages/classgeneralpage.cpp:332
 msgid ""
 "The name you have chosen\n"
 "is already being used.\n"
@@ -2294,9 +2232,9 @@ msgstr ""
 "hest, warrt al bruukt.\n"
 "De Naam wöör torüchsett."
 
-#: dialogs/pages/classgeneralpage.cpp:340
-#: dialogs/pages/classgeneralpage.cpp:373
-#: dialogs/pages/classgeneralpage.cpp:386
+#: dialogs/pages/classgeneralpage.cpp:287
+#: dialogs/pages/classgeneralpage.cpp:320
+#: dialogs/pages/classgeneralpage.cpp:333
 msgid "Name is Not Unique"
 msgstr "Naam is nich eensoortet"
 
@@ -3731,19 +3669,19 @@ msgstr "As Bild exporteren..."
 msgid "Subsystem"
 msgstr "Ünnersysteem"
 
-#: listpopupmenu.cpp:758 worktoolbar.cpp:340
+#: listpopupmenu.cpp:758 widgets/widgetbase.cpp:1025 worktoolbar.cpp:340
 msgid "Component"
 msgstr "Komponent"
 
-#: listpopupmenu.cpp:761
+#: listpopupmenu.cpp:761 widgets/widgetbase.cpp:1070
 msgid "Port"
 msgstr ""
 
-#: listpopupmenu.cpp:764 worktoolbar.cpp:342
+#: listpopupmenu.cpp:764 widgets/widgetbase.cpp:1010 worktoolbar.cpp:342
 msgid "Artifact"
 msgstr "Artefakt"
 
-#: listpopupmenu.cpp:775 worktoolbar.cpp:341
+#: listpopupmenu.cpp:775 widgets/widgetbase.cpp:1052 worktoolbar.cpp:341
 msgid "Node"
 msgstr "Knütt"
 
@@ -3751,15 +3689,15 @@ msgstr "Knütt"
 msgid "Folder"
 msgstr "Orner"
 
-#: listpopupmenu.cpp:791 worktoolbar.cpp:346
+#: listpopupmenu.cpp:791 widgets/widgetbase.cpp:1034 worktoolbar.cpp:346
 msgid "Entity"
 msgstr "Eenheit"
 
-#: listpopupmenu.cpp:801 worktoolbar.cpp:369
+#: listpopupmenu.cpp:801 widgets/widgetbase.cpp:1019 worktoolbar.cpp:369
 msgid "Category"
 msgstr "Kategorie"
 
-#: listpopupmenu.cpp:804 worktoolbar.cpp:322
+#: listpopupmenu.cpp:804 widgets/widgetbase.cpp:1007 worktoolbar.cpp:322
 msgid "Actor"
 msgstr "Aktöör"
 
@@ -3781,19 +3719,20 @@ msgctxt "new class menu item"
 msgid "Class"
 msgstr "Klass"
 
-#: listpopupmenu.cpp:926 worktoolbar.cpp:343
+#: listpopupmenu.cpp:926 widgets/widgetbase.cpp:1046 worktoolbar.cpp:343
 msgid "Interface"
 msgstr "Koppelsteed"
 
-#: listpopupmenu.cpp:927 worktoolbar.cpp:344
+#: listpopupmenu.cpp:927 widgets/widgetbase.cpp:1031 worktoolbar.cpp:344
 msgid "Datatype"
 msgstr "Datentyp"
 
-#: listpopupmenu.cpp:928 worktoolbar.cpp:345
+#: listpopupmenu.cpp:928 widgets/widgetbase.cpp:1037 worktoolbar.cpp:345
 msgid "Enum"
 msgstr "Optellen"
 
-#: listpopupmenu.cpp:929 listpopupmenu.cpp:1138 worktoolbar.cpp:339
+#: listpopupmenu.cpp:929 listpopupmenu.cpp:1138 widgets/widgetbase.cpp:1064
+#: worktoolbar.cpp:339
 msgid "Package"
 msgstr "Paket"
 
@@ -6001,6 +5940,68 @@ msgstr ""
 msgid "Name Not Valid"
 msgstr "Leeg Naam"
 
+#: umlobject.cpp:1092
+msgid "Actor &name:"
+msgstr "Aktöör&naam:"
+
+#: umlobject.cpp:1095
+msgid "Artifact &name:"
+msgstr "Artefakt&naam:"
+
+#: umlobject.cpp:1098
+msgid "Class &name:"
+msgstr "Klass&naam:"
+
+#: umlobject.cpp:1101
+msgid "Component &name:"
+msgstr "Komponent&naam:"
+
+#: umlobject.cpp:1104
+msgid "Datatype &name:"
+msgstr "Datentyp&naaam:"
+
+#: umlobject.cpp:1107
+msgid "Entity &name:"
+msgstr "Eenheit&naam:"
+
+#: umlobject.cpp:1110
+msgid "Enum &name:"
+msgstr "Optell&naam:"
+
+#: umlobject.cpp:1113
+#, fuzzy
+#| msgid "Node &name:"
+msgid "Folder &name:"
+msgstr "&Knüttnaam:"
+
+#: umlobject.cpp:1116
+msgid "Interface &name:"
+msgstr "Koppelsteed&naam:"
+
+#: umlobject.cpp:1119
+msgid "Node &name:"
+msgstr "&Knüttnaam:"
+
+#: umlobject.cpp:1122
+msgid "Package &name:"
+msgstr "Paket&naam:"
+
+#: umlobject.cpp:1125
+#, fuzzy
+#| msgid "Actor &name:"
+msgid "Port &name:"
+msgstr "Aktöör&naam:"
+
+#: umlobject.cpp:1128
+#, fuzzy
+#| msgid "Stereotype name:"
+msgid "Stereotype &name:"
+msgstr "Stereotypnaam:"
+
+#: umlobject.cpp:1131
+msgid "Use case &name:"
+msgstr "Bruukbispill&naam:"
+
 #: umlscene.cpp:525
 #, kde-format
 msgid "Diagram: %2 Page %1"
@@ -6227,7 +6228,7 @@ msgstr "Naam"
 msgid "Enter operation name:"
 msgstr "Akschoonnaam ingeven:"
 
-#: widgets/notewidget.cpp:183 worktoolbar.cpp:315
+#: widgets/notewidget.cpp:183 widgets/widgetbase.cpp:1073 worktoolbar.cpp:315
 msgid "Precondition"
 msgstr "Bedingen"
 
@@ -6401,14 +6402,79 @@ msgstr ""
 "daalhollen Ümschalt+Strg-Tasten langs de de Y-Ass verschuven. Mit en "
 "Rechtsklick lett sik dat Ännern vun de Grött afbreken."
 
+#: widgets/widgetbase.cpp:1016 worktoolbar.cpp:321
+msgid "Box"
+msgstr "Rahmen"
+
+#: widgets/widgetbase.cpp:1022
+#, fuzzy
+#| msgid "Combined Fragment"
+msgid "CombinedFragment"
+msgstr "Tosamensett Brookstück"
+
+#: widgets/widgetbase.cpp:1040
+msgid "FloatingDashLine"
+msgstr ""
+
+#: widgets/widgetbase.cpp:1043
+#, fuzzy
+#| msgid "Fork/Join"
+msgid "ForkJoin"
+msgstr "Gaveln/Tosamenfögen"
+
+#: widgets/widgetbase.cpp:1049
+msgid "Message"
+msgstr "Naricht"
+
+#: widgets/widgetbase.cpp:1055 worktoolbar.cpp:320
+msgid "Note"
+msgstr "Anmarken"
+
+#: widgets/widgetbase.cpp:1058 worktoolbar.cpp:309
+msgid "Object"
+msgstr "Objekt"
+
+#: widgets/widgetbase.cpp:1061
+#, fuzzy
+#| msgid "Object Node"
+msgid "ObjectNode"
+msgstr "Objektknütt"
+
+#: widgets/widgetbase.cpp:1067 worktoolbar.cpp:362
+msgid "Pin"
+msgstr "Pin"
+
+#: widgets/widgetbase.cpp:1076 worktoolbar.cpp:332
+msgid "Region"
+msgstr "Regioon"
+
+#: widgets/widgetbase.cpp:1079
+#, fuzzy
+#| msgid "new Signal"
+msgid "Signal"
+msgstr "Nieg Signaal"
+
+#: widgets/widgetbase.cpp:1082
+#, fuzzy
+#| msgctxt "state in statechart"
+#| msgid "State"
+msgid "State"
+msgstr "Tostand"
+
+#: widgets/widgetbase.cpp:1085
+msgid "Text"
+msgstr ""
+
+#: widgets/widgetbase.cpp:1088
+#, fuzzy
+#| msgid "Use Case"
+msgid "UseCase"
+msgstr "Bruukbispill"
+
 #: worktoolbar.cpp:308
 msgctxt "selection arrow"
 msgid "Select"
 msgstr "Kören"
-
-#: worktoolbar.cpp:309
-msgid "Object"
-msgstr "Objekt"
 
 #: worktoolbar.cpp:310 worktoolbar.cpp:364
 msgid "Synchronous Message"
@@ -6434,14 +6500,6 @@ msgstr "Tosamensett Brookstück"
 msgid "Label"
 msgstr "Beteken"
 
-#: worktoolbar.cpp:320
-msgid "Note"
-msgstr "Anmarken"
-
-#: worktoolbar.cpp:321
-msgid "Box"
-msgstr "Rahmen"
-
 #: worktoolbar.cpp:326
 msgid "Directional Association"
 msgstr "Richt Towiesen"
@@ -6454,10 +6512,6 @@ msgstr "Sett üm"
 msgctxt "UML class"
 msgid "Class"
 msgstr "Klass"
-
-#: worktoolbar.cpp:332
-msgid "Region"
-msgstr "Regioon"
 
 #: worktoolbar.cpp:335
 msgid "Send signal"
@@ -6502,10 +6556,6 @@ msgstr "Tostand"
 msgid "Final Activity"
 msgstr "Ennaktiviteet"
 
-#: worktoolbar.cpp:362
-msgid "Pin"
-msgstr "Pin"
-
 #: worktoolbar.cpp:367
 msgid "Object Node"
 msgstr "Objektknütt"
@@ -6513,6 +6563,12 @@ msgstr "Objektknütt"
 #: worktoolbar.cpp:368
 msgid "Pre/Post condition"
 msgstr "Vör-/Nabeding"
+
+#~ msgid "Component name:"
+#~ msgstr "Komponentnaam:"
+
+#~ msgid "Node name:"
+#~ msgstr "Knüttnaam:"
 
 #, fuzzy
 #~| msgid "Font"
@@ -6564,9 +6620,6 @@ msgstr "Vör-/Nabeding"
 
 #~ msgid "Note Documentation"
 #~ msgstr "Notizdokmentatschoon"
-
-#~ msgid "Message"
-#~ msgstr "Naricht"
 
 #, fuzzy
 #~| msgctxt "new container menu"
