@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-01-07 07:53+0000\n"
+"POT-Creation-Date: 2015-01-08 07:49+0000\n"
 "PO-Revision-Date: 2014-06-12 16:56+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -552,7 +552,8 @@ msgid "Image"
 msgstr "Bild"
 
 #. i18n: ectx: property (text), widget (QRadioButton, InfoRadio)
-#: dialogs/addlinkdialog.ui:41
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: dialogs/addlinkdialog.ui:41 ekos/mount.ui:19
 msgid "Information"
 msgstr "Informatschonen"
 
@@ -2577,8 +2578,8 @@ msgid_plural "Solver aborted after %1 seconds"
 msgstr[0] "Löser hett na %1 Sekunn afbraken."
 msgstr[1] "Löser hett na %1 Sekunnen afbraken"
 
-#: ekos/align.cpp:709 ekos/capture.cpp:1128 ekos/ekosmanager.cpp:1353
-#: ekos/focus.cpp:1454 ekos/guide.cpp:449
+#: ekos/align.cpp:709 ekos/capture.cpp:1128 ekos/ekosmanager.cpp:1393
+#: ekos/focus.cpp:1454 ekos/guide.cpp:449 ekos/mount.cpp:149
 #, kde-format
 msgctxt "log entry; %1 is the date, %2 is the text"
 msgid "%1 %2"
@@ -2688,15 +2689,15 @@ msgstr "Hööchdentopass-Fehler warrt utreekt..."
 
 #: ekos/align.cpp:1101 ekos/align.cpp:1139
 #, fuzzy, kde-format
-#| msgid "%1° too far west"
-msgid "%1 too far west"
-msgstr "%1° to wiet West"
-
-#: ekos/align.cpp:1103 ekos/align.cpp:1137
-#, fuzzy, kde-format
 #| msgid "%1° too far east"
 msgid "%1 too far east"
 msgstr "%1° to wiet Oost"
+
+#: ekos/align.cpp:1103 ekos/align.cpp:1137
+#, fuzzy, kde-format
+#| msgid "%1° too far west"
+msgid "%1 too far west"
+msgstr "%1° to wiet West"
 
 #: ekos/align.cpp:1112 ekos/align.cpp:1123 ekos/align.cpp:1150
 #: ekos/align.cpp:1156
@@ -2728,7 +2729,9 @@ msgstr "Bildadressen warrt laadt"
 #. i18n: ectx: property (title), widget (QGroupBox, controlBox)
 #. i18n: ectx: property (title), widget (QGroupBox, controlGroup)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_Control)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
 #: ekos/align.ui:21 ekos/focus.ui:176 ekos/guide/guider.ui:597
+#: ekos/mount.ui:220
 msgid "Control"
 msgstr "Stüern"
 
@@ -2803,15 +2806,15 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_15)
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QLabel, label_12)
+#. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #. i18n: ectx: property (text), widget (QCheckBox, raCheckBatch)
-#. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: ectx: property (text), widget (QCheckBox, RACheckBatch)
-#: ekos/align.ui:253 ekos/align.ui:536 ekos/align.ui:609 tools/altvstime.ui:97
-#: tools/argsetradec.ui:37 tools/argsettargetcoordindi.ui:38
-#: tools/modcalcgalcoord.ui:288 tools/modcalcplanets.ui:202
-#: tools/modcalcvlsr.ui:508
+#: ekos/align.ui:253 ekos/align.ui:536 ekos/align.ui:609 ekos/mount.ui:80
+#: tools/altvstime.ui:97 tools/argsetradec.ui:37
+#: tools/argsettargetcoordindi.ui:38 tools/modcalcgalcoord.ui:288
+#: tools/modcalcplanets.ui:202 tools/modcalcvlsr.ui:508
 msgid "RA:"
 msgstr "Rek:"
 
@@ -2934,7 +2937,8 @@ msgstr "SF:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (text), widget (QLabel, label_13)
-#: ekos/align.ui:529 ekos/align.ui:623
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: ekos/align.ui:529 ekos/align.ui:623 ekos/mount.ui:94
 msgid "DEC:"
 msgstr "Dek:"
 
@@ -3257,7 +3261,7 @@ msgstr "Link bewerken..."
 #. i18n: ectx: property (title), widget (QGroupBox, ccdGroup)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_PlayCCDAlarm)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: ekos/capture.ui:39 ekos/ekosmanager.cpp:1383 ekos/focus.ui:21
+#: ekos/capture.ui:39 ekos/ekosmanager.cpp:1426 ekos/focus.ui:21
 #: ekos/opsekos.ui:156 ekos/opsekos.ui:235
 msgid "CCD"
 msgstr "CCD"
@@ -3632,53 +3636,53 @@ msgstr "vun"
 msgid "completed"
 msgstr "fardig"
 
-#: ekos/ekosmanager.cpp:142
+#: ekos/ekosmanager.cpp:144
 msgid "Cannot switch modes while INDI services are running."
 msgstr ""
 
-#: ekos/ekosmanager.cpp:142
+#: ekos/ekosmanager.cpp:144
 #, fuzzy
 #| msgid "Focus Mode"
 msgid "Ekos Mode"
 msgstr "Scharpstellbedrief"
 
 #. i18n: ectx: property (text), widget (QPushButton, processINDIB)
-#: ekos/ekosmanager.cpp:325 ekos/ekosmanager.cpp:789 ekos/ekosmanager.ui:237
+#: ekos/ekosmanager.cpp:328 ekos/ekosmanager.cpp:804 ekos/ekosmanager.ui:237
 msgid "Start INDI"
 msgstr "INDI starten"
 
-#: ekos/ekosmanager.cpp:531
+#: ekos/ekosmanager.cpp:534
 msgid "Ekos requires at least one CCD or Guider to operate."
 msgstr ""
 "Ekos bruukt tominnst een CCD- oder Naföhrkamera, wenn dat funkscheneren "
 "schall."
 
-#: ekos/ekosmanager.cpp:595
+#: ekos/ekosmanager.cpp:598
 msgid ""
 "Ekos detected an instance of INDI server running. Do you wish to shut down "
 "the existing instance before starting a new one?"
 msgstr ""
 
-#: ekos/ekosmanager.cpp:596
+#: ekos/ekosmanager.cpp:599
 #, fuzzy
 #| msgid "INDI Server:"
 msgid "INDI Server"
 msgstr "INDI-Server:"
 
-#: ekos/ekosmanager.cpp:611
+#: ekos/ekosmanager.cpp:614
 msgid "INDI services started. Please connect devices."
 msgstr "INDI-Deensten opropen, bitte Reedschappen tokoppeln."
 
-#: ekos/ekosmanager.cpp:624
+#: ekos/ekosmanager.cpp:627
 #, kde-format
 msgid "INDI services started. Connection to %1 at %2 is successful."
 msgstr "INDI-Deensten opropen,  %1 över %2 mit Spood tokoppelt."
 
-#: ekos/ekosmanager.cpp:634
+#: ekos/ekosmanager.cpp:637
 msgid "Stop INDI"
 msgstr "INDI anhollen"
 
-#: ekos/ekosmanager.cpp:647
+#: ekos/ekosmanager.cpp:650
 #, fuzzy, kde-format
 #| msgid "Unable to completely establish remote devices. %1 device remaining."
 #| msgid_plural ""
@@ -3694,61 +3698,67 @@ msgstr[0] ""
 msgstr[1] ""
 "De feern Reedschappen laat sik nich heel inrichten. %1 Reedschappen sünd na."
 
-#: ekos/ekosmanager.cpp:703
+#: ekos/ekosmanager.cpp:711
 msgid "Connecting INDI devices..."
 msgstr "INDI-Reedschappen warrt tokoppelt..."
 
-#: ekos/ekosmanager.cpp:756
+#: ekos/ekosmanager.cpp:771
 msgid "Disconnecting INDI devices..."
 msgstr "INDI-Reedschappen warrt afkoppelt..."
 
-#: ekos/ekosmanager.cpp:795
+#: ekos/ekosmanager.cpp:810
 msgid "INDI services stopped."
 msgstr "INDI-Deensten anhollen."
 
-#: ekos/ekosmanager.cpp:932
+#: ekos/ekosmanager.cpp:947
 msgid "Remote devices established. Please connect devices."
 msgstr "Feern Reedschappen inricht. Koppel bitte de Reedschappen to."
 
-#: ekos/ekosmanager.cpp:1022 ekos/ekosmanager.cpp:1063
-#: ekos/ekosmanager.cpp:1082 indi/indistd.cpp:409
+#: ekos/ekosmanager.cpp:1037 ekos/ekosmanager.cpp:1082
+#: ekos/ekosmanager.cpp:1101 indi/indistd.cpp:409
 #, kde-format
 msgid "%1 is online."
 msgstr "%1 is tokoppelt."
 
-#: ekos/ekosmanager.cpp:1109
+#: ekos/ekosmanager.cpp:1128
 #, fuzzy, kde-format
 #| msgid "%1 is online."
 msgid "%1 filter is online."
 msgstr "%1 is tokoppelt."
 
-#: ekos/ekosmanager.cpp:1131
+#: ekos/ekosmanager.cpp:1150
 #, fuzzy, kde-format
 #| msgid "%1 is online."
 msgid "%1 focuser is online."
 msgstr "%1 is tokoppelt."
 
-#: ekos/ekosmanager.cpp:1151
+#: ekos/ekosmanager.cpp:1170
 #, kde-format
 msgid "%1 is offline."
 msgstr "%1 is afkoppelt."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_PlayAlignmentAlarm)
-#: ekos/ekosmanager.cpp:1403 ekos/opsekos.ui:195
+#: ekos/ekosmanager.cpp:1446 ekos/opsekos.ui:195
 msgid "Alignment"
 msgstr "Utrichten"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_PlayFocusAlarm)
-#: ekos/ekosmanager.cpp:1414 ekos/opsekos.ui:169 fitsviewer/fitsviewer.cpp:242
+#: ekos/ekosmanager.cpp:1457 ekos/opsekos.ui:169 fitsviewer/fitsviewer.cpp:242
 msgid "Focus"
 msgstr "Fokus"
 
+#: ekos/ekosmanager.cpp:1481
+#, fuzzy
+#| msgid "Count"
+msgid "Mount"
+msgstr "Tall"
+
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_PlayGuideAlarm)
-#: ekos/ekosmanager.cpp:1443 ekos/opsekos.ui:182 fitsviewer/fitsviewer.cpp:246
+#: ekos/ekosmanager.cpp:1496 ekos/opsekos.ui:182 fitsviewer/fitsviewer.cpp:246
 msgid "Guide"
 msgstr "Naföhren"
 
-#: ekos/ekosmanager.cpp:1482
+#: ekos/ekosmanager.cpp:1535
 #, kde-format
 msgid "Guider port from %1 is ready."
 msgstr "Naföhrport vun %1 steiht praat."
@@ -3857,14 +3867,14 @@ msgid "Disconnect"
 msgstr "Afkoppeln"
 
 #. i18n: ectx: property (text), widget (QCheckBox, enableLoggingCheck)
-#: ekos/ekosmanager.ui:327
+#: ekos/ekosmanager.ui:340
 msgid "Enable logging"
 msgstr "Logbook bruken"
 
 #. i18n: ectx: property (text), widget (QPushButton, clearB)
 #. i18n: ectx: property (text), widget (QPushButton, ClearButton)
 #. i18n: ectx: property (text), widget (QPushButton, Clear)
-#: ekos/ekosmanager.ui:350 indi/guimanager.cpp:68 indi/indimenu.cpp:72
+#: ekos/ekosmanager.ui:363 indi/guimanager.cpp:68 indi/indimenu.cpp:72
 #: tools/conjunctions.ui:211 tools/modcalcgeod.ui:160
 msgid "Clear"
 msgstr "Leddig maken"
@@ -4676,6 +4686,73 @@ msgstr ""
 #| msgid "Auto Scale"
 msgid "Auto mode"
 msgstr "Automaatsche Skala"
+
+#: ekos/mount.cpp:108
+#, kde-format
+msgid "%1 guide scope"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, primaryScopeGroup)
+#: ekos/mount.ui:25
+#, fuzzy
+#| msgid "Save Telescope"
+msgid "Primary Telescope"
+msgstr "Teleskoop sekern"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ekos/mount.ui:36 ekos/mount.ui:150
+#, fuzzy
+#| msgid "Aperture:"
+msgid "Aperture (mm):"
+msgstr "Blenn:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ekos/mount.ui:56 ekos/mount.ui:170
+#, fuzzy
+#| msgid "Focal Length:"
+msgid "Focal Length (mm)"
+msgstr "Brennwiet:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: ekos/mount.ui:111 tools/argsetaltaz.ui:30 tools/modcalcplanets.ui:245
+msgid "Az:"
+msgstr "Az:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: ekos/mount.ui:125 tools/argsetaltaz.ui:37 tools/modcalcplanets.ui:238
+msgid "Alt:"
+msgstr "Hööchd:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, guideScopeGroup)
+#: ekos/mount.ui:144
+#, fuzzy
+#| msgid "Save Telescope"
+msgid "Guide Telescope"
+msgstr "Teleskoop sekern"
+
+#. i18n: ectx: property (text), widget (QPushButton, saveB)
+#. i18n: ectx: property (text), widget (QPushButton, SaveImage)
+#: ekos/mount.ui:195 imageviewer.cpp:133 tools/observinglist.ui:580
+msgid "Save"
+msgstr "Sekern"
+
+#. i18n: ectx: property (toolTip), widget (QDial, mountSpeedDial)
+#: ekos/mount.ui:351
+#, fuzzy
+#| msgid "Adjust time step"
+msgid "Adjust slew speed"
+msgstr "Tietschritt topassen"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: ekos/mount.ui:360 tools/argsetfocusspeedindi.ui:30
+msgid "Speed:"
+msgstr "Gauheit:"
 
 #: ekos/offlineastrometryparser.cpp:63
 msgid ""
@@ -5489,11 +5566,6 @@ msgid ""
 "Reverse colors of the image. This is useful to enhance contrast at times. "
 "This affects only the display and not the saving."
 msgstr ""
-
-#. i18n: ectx: property (text), widget (QPushButton, SaveImage)
-#: imageviewer.cpp:133 tools/observinglist.ui:580
-msgid "Save"
-msgstr "Sekern"
 
 #: imageviewer.cpp:134
 msgid "Save the image to disk"
@@ -23811,18 +23883,6 @@ msgstr "Steernkoort-Klören bruken"
 msgid "Action:"
 msgstr "Akschoon:"
 
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: tools/argsetaltaz.ui:30 tools/modcalcplanets.ui:245
-msgid "Az:"
-msgstr "Az:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: tools/argsetaltaz.ui:37 tools/modcalcplanets.ui:238
-msgid "Alt:"
-msgstr "Hööchd:"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: tools/argsetccdtempindi.ui:30
 msgid "Temp:"
@@ -23837,11 +23897,6 @@ msgstr "Klöörnaam:"
 #: tools/argsetcolor.ui:37
 msgid "Color value:"
 msgstr "Klöörweert:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: tools/argsetfocusspeedindi.ui:30
-msgid "Speed:"
-msgstr "Gauheit:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: tools/argsetfocustimeoutindi.ui:30
