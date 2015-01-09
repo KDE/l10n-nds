@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-01-07 07:49+0000\n"
+"POT-Creation-Date: 2015-01-09 08:21+0000\n"
 "PO-Revision-Date: 2012-02-02 07:34+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -55,6 +55,13 @@ msgstr "Utstahn"
 msgctxt "@info:tooltip"
 msgid "Clean"
 msgstr "Goot"
+
+#: debugger/breakpoint/breakpoint.cpp:198
+#, fuzzy, kde-format
+#| msgid "<b>%1</b> (%2)"
+msgctxt "location (address)"
+msgid "%1 (%2)"
+msgstr "<b>%1</b> (%2)"
 
 #: debugger/breakpoint/breakpointdetails.cpp:56
 #: debugger/breakpoint/breakpointdetails.cpp:133
@@ -285,6 +292,20 @@ msgstr ""
 #: debugger/framestack/framestackwidget.cpp:97
 msgid "Threads:"
 msgstr "Utföhrsträng:"
+
+#: debugger/framestack/framestackwidget.cpp:218
+#, fuzzy, kde-format
+#| msgctxt "#thread-id at function-name or address"
+#| msgid "#%1 at %2"
+msgctxt "#frame function() at file"
+msgid "#%1 %2() at %3\n"
+msgstr "Nr. %1 bi %2"
+
+#: debugger/framestack/framestackwidget.cpp:220
+#, kde-format
+msgctxt "#frame function() at file:line"
+msgid "#%1 %2() at %3:%4\n"
+msgstr ""
 
 #: debugger/interfaces/ibreakpointcontroller.cpp:86
 #, kde-format
@@ -556,13 +577,13 @@ msgstr ""
 msgid "Rename file from \"%1\" to \"%2\"."
 msgstr ""
 
-#: language/backgroundparser/backgroundparser.cpp:207
+#: language/backgroundparser/backgroundparser.cpp:206
 #, fuzzy, kde-format
 #| msgid "Kind: %1 "
 msgid "Parsing: %1"
 msgstr "Oort: %1 "
 
-#: language/backgroundparser/backgroundparser.cpp:498
+#: language/backgroundparser/backgroundparser.cpp:494
 #: shell/settings/bgpreferences.cpp:81
 msgid "Background Parser"
 msgstr "Achtergrund-Inleser"
@@ -602,6 +623,12 @@ msgid "Process 1 file in %2"
 msgid_plural "Process %1 files in %2"
 msgstr[0] "1 Datei binnen %2 afarbeiden"
 msgstr[1] "%1 Dateien binnen %2 afarbeiden"
+
+#: language/codecompletion/codecompletionitem.cpp:122
+#, fuzzy
+#| msgid "create implementation"
+msgid "not implemented"
+msgstr "Ümsetten opstellen"
 
 #: language/codegen/basicrefactoring.cpp:107
 #, fuzzy, kde-format
@@ -689,6 +716,12 @@ msgstr "Afbreken"
 msgid "Could not find an open document"
 msgstr "Keen opmaakt Dokment funnen"
 
+#: language/codegen/codegenerator.cpp:154
+#, fuzzy, kde-format
+#| msgid "Could not find an open document"
+msgid "Could not find the chain for the selected document: %1"
+msgstr "Keen opmaakt Dokment funnen"
+
 #: language/codegen/codegenerator.cpp:174
 msgid "Error finding context for selection range"
 msgstr "Kontext för Köörrebeet lett sik nich finnen."
@@ -714,6 +747,39 @@ msgstr "Fehler bi't Opstellen vun Kode: %1"
 msgid "Could not rename '%1' to '%2'"
 msgstr "Datei \"%1\" lett sik nich opmaken."
 
+#: language/codegen/documentchangeset.cpp:319
+#, kde-format
+msgid ""
+"Inconsistent change in %1 at %2:%3 -> %4:%5 = %6(encountered \"%7\") -> "
+"\"%8\""
+msgstr ""
+
+#: language/codegen/documentchangeset.cpp:342
+#, fuzzy, kde-format
+#| msgid "Could not create the directory: %1"
+msgid "Could not replace text in the document: %1"
+msgstr "Orner \"%1\" lett sik nich opstellen."
+
+#: language/codegen/documentchangeset.cpp:444
+#, kde-format
+msgid ""
+"Inconsistent change in %1 at %2:%3 -> %4:%5 = \"%6\"(encountered \"%7\") -> "
+"\"%8\""
+msgstr ""
+
+#: language/codegen/documentchangeset.cpp:480
+#, kde-format
+msgctxt "text range line:column->line:column"
+msgid "%1:%2->%3:%4"
+msgstr ""
+
+#: language/codegen/documentchangeset.cpp:523
+#, kde-format
+msgid ""
+"Inconsistent change-request at %1; intersecting changes: \"%2\"->\"%3\"@%4 & "
+"\"%5\"->\"%6\"@%7 "
+msgstr ""
+
 #. i18n: ectx: property (windowTitle), widget (QDialog, RefactoringDialog)
 #: language/codegen/progressdialogs/refactoringdialog.ui:14
 #, fuzzy
@@ -726,10 +792,46 @@ msgstr "Ümfaktoreren"
 msgid "&Abort"
 msgstr ""
 
+#: language/duchain/aliasdeclaration.cpp:58
+#, fuzzy, kde-format
+#| msgctxt "#thread-id at function-name or address"
+#| msgid "#%1 at %2"
+msgid "Alias %1 as %2"
+msgstr "Nr. %1 bi %2"
+
+#: language/duchain/aliasdeclaration.cpp:60
+#, kde-format
+msgid "Lost alias %1"
+msgstr ""
+
+#: language/duchain/classfunctiondeclaration.cpp:98
+#, kde-format
+msgid "invalid member-function %1 type %2"
+msgstr ""
+
+#: language/duchain/declarationid.cpp:206
+msgid "(unknown direct declaration)"
+msgstr ""
+
+#: language/duchain/declarationid.cpp:209
+msgid "(missing)"
+msgstr ""
+
 #: language/duchain/forwarddeclaration.cpp:61
 #, kde-format
 msgid "context-free forward-declaration %1"
 msgstr "kontextfree Vörut-Deklaratschoon %1"
+
+#: language/duchain/namespacealiasdeclaration.cpp:107
+#, kde-format
+msgid "Import %1 as %2"
+msgstr ""
+
+#: language/duchain/namespacealiasdeclaration.cpp:109
+#, fuzzy, kde-format
+#| msgid "Import"
+msgid "Import %1"
+msgstr "Importeren"
 
 #: language/duchain/navigation/abstractdeclarationnavigationcontext.cpp:74
 msgid "<br /> lost declaration <br />"
@@ -1113,6 +1215,16 @@ msgstr ""
 msgid "Unknown"
 msgstr "Nich begäng"
 
+#: language/duchain/problem.cpp:215
+#, kde-format
+msgctxt "problem description"
+msgid "%1: %2 in %3:[(%4,%5),(%6,%7)]: %8 (found by %9)"
+msgstr ""
+
+#: language/duchain/problem.cpp:223
+msgid "<no explanation>"
+msgstr ""
+
 #: language/duchain/types/containertypes.cpp:87
 #, kde-format
 msgid "%1 of %2"
@@ -1150,93 +1262,93 @@ msgstr "opstellt Tekenstroom drucken"
 msgid "code to parse"
 msgstr "Kode, den Du inlesen wullt"
 
-#: outputview/outputexecutejob.cpp:175
+#: outputview/outputexecutejob.cpp:176
 msgid "No build directory specified for a builder job."
 msgstr ""
 
-#: outputview/outputexecutejob.cpp:177
+#: outputview/outputexecutejob.cpp:178
 msgid "No working directory specified for a process."
 msgstr ""
 
-#: outputview/outputexecutejob.cpp:188
+#: outputview/outputexecutejob.cpp:189
 #, kde-format
 msgid "Invalid build directory '%1'"
 msgstr ""
 
-#: outputview/outputexecutejob.cpp:190
+#: outputview/outputexecutejob.cpp:191
 #, fuzzy, kde-format
 #| msgid "Working Directory"
 msgid "Invalid working directory '%1'"
 msgstr "Arbeitorner"
 
-#: outputview/outputexecutejob.cpp:196
+#: outputview/outputexecutejob.cpp:197
 #, kde-format
 msgid "Build directory '%1' is not a local path"
 msgstr ""
 
-#: outputview/outputexecutejob.cpp:198
+#: outputview/outputexecutejob.cpp:199
 #, fuzzy, kde-format
 #| msgid "Working Directory is not absolute: %1"
 msgid "Working directory '%1' is not a local path"
 msgstr "Arbeitorner \"%1\" is nich afsoluut."
 
-#: outputview/outputexecutejob.cpp:216
+#: outputview/outputexecutejob.cpp:217
 #, kde-format
 msgid "Build directory '%1' does not exist or is not a directory"
 msgstr ""
 
-#: outputview/outputexecutejob.cpp:218
+#: outputview/outputexecutejob.cpp:219
 #, fuzzy, kde-format
 #| msgid "Working Directory does not exist: %1"
 msgid "Working directory '%1' does not exist or is not a directory"
 msgstr "Den Arbeitorner \"%1\" gifft dat nich."
 
-#: outputview/outputexecutejob.cpp:285
+#: outputview/outputexecutejob.cpp:286
 msgid "*** Aborted ***"
 msgstr ""
 
-#: outputview/outputexecutejob.cpp:288
+#: outputview/outputexecutejob.cpp:289
 msgid "*** Warning: could not kill the process ***"
 msgstr ""
 
-#: outputview/outputexecutejob.cpp:304
+#: outputview/outputexecutejob.cpp:305
 #, kde-format
 msgid "%1 has failed to start"
 msgstr ""
 
-#: outputview/outputexecutejob.cpp:308
+#: outputview/outputexecutejob.cpp:309
 #, fuzzy, kde-format
 #| msgid "Session crashed"
 msgid "%1 has crashed"
 msgstr "Törn afstört"
 
-#: outputview/outputexecutejob.cpp:312
+#: outputview/outputexecutejob.cpp:313
 #, fuzzy
 #| msgid "error"
 msgid "Read error"
 msgstr "Fehler"
 
-#: outputview/outputexecutejob.cpp:316
+#: outputview/outputexecutejob.cpp:317
 #, fuzzy
 #| msgid "error"
 msgid "Write error"
 msgstr "Fehler"
 
-#: outputview/outputexecutejob.cpp:320
+#: outputview/outputexecutejob.cpp:321
 msgid "Waiting for the process has timed out"
 msgstr ""
 
-#: outputview/outputexecutejob.cpp:325
+#: outputview/outputexecutejob.cpp:326
 #, kde-format
 msgid "Exit code %1"
 msgstr ""
 
-#: outputview/outputexecutejob.cpp:338
+#: outputview/outputexecutejob.cpp:339
 #, kde-format
 msgid "*** Failure: %1 ***"
 msgstr ""
 
-#: outputview/outputexecutejob.cpp:354
+#: outputview/outputexecutejob.cpp:355
 msgid "*** Finished ***"
 msgstr ""
 
@@ -4399,40 +4511,40 @@ msgstr ""
 msgid "Bottom Button Bar"
 msgstr ""
 
-#: util/duchainify/main.cpp:259
+#: util/duchainify/main.cpp:258
 msgid "duchainify"
 msgstr "Verklorenbruuk-Keed"
 
-#: util/duchainify/main.cpp:260
+#: util/duchainify/main.cpp:259
 #, fuzzy
 #| msgid "Duchain builder application"
 msgid "DUChain builder application"
 msgstr "Programm för't Opstellen vun de Verklorenbruuk-Keed"
 
-#: util/duchainify/main.cpp:261
+#: util/duchainify/main.cpp:260
 msgid "(c) 2009 David Nolden"
 msgstr "© 2009: David Nolden"
 
-#: util/duchainify/main.cpp:272
+#: util/duchainify/main.cpp:271
 #, fuzzy
 #| msgid "directory"
 msgid "file or directory"
 msgstr "Orner"
 
-#: util/duchainify/main.cpp:274
+#: util/duchainify/main.cpp:273
 msgid "Show warnings"
 msgstr "Wohrschoen wiesen"
 
-#: util/duchainify/main.cpp:275
+#: util/duchainify/main.cpp:274
 msgid "Show warnings and debug output"
 msgstr "Wohrschoen un Fehlersöökutgaav wiesen"
 
-#: util/duchainify/main.cpp:276
+#: util/duchainify/main.cpp:275
 msgid "Enforce an update of the top-contexts corresponding to the given files"
 msgstr ""
 "Opfrischen vun tohören böverst Kontext för de angeven Dateien verdwingen"
 
-#: util/duchainify/main.cpp:277
+#: util/duchainify/main.cpp:276
 msgid ""
 "Enforce an update of the top-contexts corresponding to the given files and "
 "all included files"
@@ -4440,11 +4552,11 @@ msgstr ""
 "Opfrischen vun tohören böverst Kontext för de angeven Dateien un all "
 "inslaten Dateien verdwingen"
 
-#: util/duchainify/main.cpp:278
+#: util/duchainify/main.cpp:277
 msgid "Number of threads to use"
 msgstr "Hööchsttall vun bruukt Utföhrsträng"
 
-#: util/duchainify/main.cpp:279
+#: util/duchainify/main.cpp:278
 msgid ""
 "Features to build. Options: empty, simplified-visible-declarations, visible-"
 "declarations (default), all-declarations, all-declarations-and-uses, all-"
@@ -4454,28 +4566,28 @@ msgstr ""
 "sichtbor Verkloren (Standard), all Verkloren, all Verkloren un Bruuk, all "
 "Verkloren un Bruuk un AST"
 
-#: util/duchainify/main.cpp:281
+#: util/duchainify/main.cpp:280
 msgid "Print complete Definition-Use Chain on successful parse"
 msgstr ""
 
-#: util/duchainify/main.cpp:282
+#: util/duchainify/main.cpp:281
 msgid "Print complete DUChain Definitions repository on successful parse"
 msgstr ""
 
-#: util/duchainify/main.cpp:283
+#: util/duchainify/main.cpp:282
 msgid ""
 "Print complete DUChain PersistentSymbolTable repository on successful parse"
 msgstr ""
 
-#: util/duchainify/main.cpp:284
+#: util/duchainify/main.cpp:283
 msgid "Number defining the maximum depth where declaration details are printed"
 msgstr ""
 
-#: util/duchainify/main.cpp:285
+#: util/duchainify/main.cpp:284
 msgid "Dump DUChain graph (in .dot format)"
 msgstr ""
 
-#: util/duchainify/main.cpp:286
+#: util/duchainify/main.cpp:285
 msgid "Print problems encountered during parsing"
 msgstr "Problemen bi't Inlesen wiesen"
 
@@ -5171,9 +5283,6 @@ msgstr "Logbook-Ansicht"
 
 #~ msgid "directory where to put the code output"
 #~ msgstr "Orner för de Kode-Utgaav"
-
-#~ msgid "create implementation"
-#~ msgstr "Ümsetten opstellen"
 
 #~ msgid "Verbose output"
 #~ msgstr "Snackhaftig Utgaav"
