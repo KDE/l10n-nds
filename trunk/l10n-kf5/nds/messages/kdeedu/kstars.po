@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-02-19 09:45+0000\n"
+"POT-Creation-Date: 2015-02-20 09:16+0000\n"
 "PO-Revision-Date: 2014-06-12 16:56+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1162,11 +1162,13 @@ msgid "Delete Confirmation"
 msgstr "Wegdoon beglöven"
 
 #: dialogs/detaildialog.cpp:1092 dialogs/detaildialog.cpp:1122
+#: tools/flagmanager.cpp:254 tools/flagmanager.cpp:283
 #: tools/observinglist.cpp:559 tools/observinglist.cpp:589
 msgid "KStars did not find any active telescopes."
 msgstr "KStars hett keen aktiv Teleskoop funnen."
 
-#: dialogs/detaildialog.cpp:1108 tools/observinglist.cpp:575
+#: dialogs/detaildialog.cpp:1108 tools/flagmanager.cpp:270
+#: tools/observinglist.cpp:575
 #, kde-format
 msgid "Telescope %1 is offline. Please connect and retry again."
 msgstr "Teleskoop \"%1\" is afkoppelt. Bitte tokoppeln un nochmaal versöken."
@@ -1243,12 +1245,12 @@ msgid "Add to Observing List"
 msgstr "Na de Kieklist tofögen"
 
 #. i18n: ectx: property (text), widget (QPushButton, CenterButton)
-#: dialogs/details_data.ui:377
+#: dialogs/details_data.ui:377 tools/flagmanager.ui:206
 msgid "Center in Map"
 msgstr "Na Koortmerrn"
 
 #. i18n: ectx: property (text), widget (QPushButton, ScopeButton)
-#: dialogs/details_data.ui:384
+#: dialogs/details_data.ui:384 tools/flagmanager.ui:216
 msgid "Center in Telescope"
 msgstr "Na Teleskoopmerrn"
 
@@ -1746,18 +1748,18 @@ msgstr "Typfilter:"
 msgid "Set Coordinates Manually"
 msgstr "Koordinaten vun Hand instellen"
 
-#: dialogs/focusdialog.cpp:97 ekos/align.cpp:435 tools/flagmanager.cpp:173
+#: dialogs/focusdialog.cpp:97 ekos/align.cpp:435 tools/flagmanager.cpp:182
 msgid "The Right Ascension value must be between 0.0 and 24.0."
 msgstr ""
 "De Weert för de Rektaszenschoon mutt twischen 0,0 un 24,0 Stünnen wesen."
 
-#: dialogs/focusdialog.cpp:99 ekos/align.cpp:437 tools/flagmanager.cpp:175
+#: dialogs/focusdialog.cpp:99 ekos/align.cpp:437 tools/flagmanager.cpp:184
 msgid "The Declination value must be between -90.0 and 90.0."
 msgstr ""
 "De Weert för de Deklinatschoon mutt twischen -90,0 un 90,0 Graad wesen."
 
 #: dialogs/focusdialog.cpp:101 dialogs/focusdialog.cpp:123 ekos/align.cpp:440
-#: tools/flagmanager.cpp:177
+#: tools/flagmanager.cpp:186
 msgid "Invalid Coordinate Data"
 msgstr "Leeg Koordinaten"
 
@@ -1776,7 +1778,7 @@ msgstr "Rek/Dek"
 
 #. i18n: ectx: property (text), widget (QLineEdit, epochBox)
 #. i18n: ectx: property (text), widget (QLabel, EpochTarget)
-#: dialogs/focusdialog.ui:70 tools/flagmanager.ui:79
+#: dialogs/focusdialog.ui:70 tools/flagmanager.ui:77
 #: tools/modcalcapcoord.ui:182
 msgid "2000.0"
 msgstr "2000,0"
@@ -1786,7 +1788,7 @@ msgstr "2000,0"
 #. i18n: ectx: property (text), widget (QLabel, EpochLabel2)
 #. i18n: ectx: property (text), widget (QCheckBox, epochCheckBatch)
 #. i18n: ectx: property (text), widget (QCheckBox, EpochCheckBatch)
-#: dialogs/focusdialog.ui:77 tools/flagmanager.ui:66
+#: dialogs/focusdialog.ui:77 tools/flagmanager.ui:64
 #: tools/modcalcapcoord.ui:88 tools/modcalcapcoord.ui:167
 #: tools/modcalcapcoord.ui:434 tools/modcalcgalcoord.ui:214
 #: tools/modcalcvlsr.ui:521
@@ -6360,7 +6362,7 @@ msgstr "Reekners"
 
 #. i18n: ectx: property (text), widget (QPushButton, addB)
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: indi/drivermanager.ui:297 tools/flagmanager.ui:135
+#: indi/drivermanager.ui:297 tools/flagmanager.ui:133
 msgid "Add"
 msgstr "Tofögen"
 
@@ -48264,7 +48266,7 @@ msgstr "Rektaszenschoon:"
 #. i18n: ectx: property (text), widget (QLabel, DecLabel)
 #. i18n: ectx: property (text), widget (QCheckBox, decCheckBatch)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: oal/execute.ui:248 tools/flagmanager.ui:49 tools/modcalcaltaz.ui:232
+#: oal/execute.ui:248 tools/flagmanager.ui:47 tools/modcalcaltaz.ui:232
 #: tools/modcalcangdist.ui:118 tools/modcalcangdist.ui:203
 #: tools/modcalcapcoord.ui:78 tools/modcalcapcoord.ui:293
 #: tools/modcalcapcoord.ui:424 tools/modcalceclipticcoords.ui:121
@@ -50573,11 +50575,11 @@ msgstr "NGC/IC-Objekten warrt laadt"
 msgid "Unnamed Object"
 msgstr "Objekt ahn Naam"
 
-#: skycomponents/flagcomponent.cpp:184
+#: skycomponents/flagcomponent.cpp:40
 msgid "No icon"
 msgstr "Keen Lüttbild"
 
-#: skycomponents/flagcomponent.cpp:186
+#: skycomponents/flagcomponent.cpp:42
 msgid "Default"
 msgstr "Standard"
 
@@ -53003,31 +53005,31 @@ msgstr "Fairview"
 msgid "Rotation: "
 msgstr "Dreihen:"
 
-#: tools/flagmanager.cpp:49
+#: tools/flagmanager.cpp:57
 msgid "Flag manager"
 msgstr "Markenpleger"
 
-#: tools/flagmanager.cpp:63 tools/observinglist.cpp:111
+#: tools/flagmanager.cpp:71 tools/observinglist.cpp:111
 #: tools/observinglist.cpp:117 widgets/infoboxwidget.cpp:134
 msgctxt "Right Ascension"
 msgid "RA"
 msgstr "Rek"
 
-#: tools/flagmanager.cpp:64 tools/observinglist.cpp:112
+#: tools/flagmanager.cpp:72 tools/observinglist.cpp:112
 #: tools/observinglist.cpp:118 widgets/infoboxwidget.cpp:135
 msgctxt "Declination"
 msgid "Dec"
 msgstr "Dek"
 
-#: tools/flagmanager.cpp:64
+#: tools/flagmanager.cpp:72
 msgid "Epoch"
 msgstr "Epoch"
 
-#: tools/flagmanager.cpp:65
+#: tools/flagmanager.cpp:73
 msgid "Icon"
 msgstr "Lüttbild"
 
-#: tools/flagmanager.cpp:65
+#: tools/flagmanager.cpp:73
 msgid "Label"
 msgstr "Beteker"
 
@@ -53038,7 +53040,7 @@ msgstr "Beteker"
 #. i18n: ectx: property (text), widget (QLabel, RALabel)
 #. i18n: ectx: property (text), widget (QCheckBox, raCheckBatch)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: tools/flagmanager.ui:32 tools/modcalcaltaz.ui:239
+#: tools/flagmanager.ui:30 tools/modcalcaltaz.ui:239
 #: tools/modcalcangdist.ui:125 tools/modcalcangdist.ui:210
 #: tools/modcalcapcoord.ui:105 tools/modcalcapcoord.ui:321
 #: tools/modcalcapcoord.ui:414 tools/modcalceclipticcoords.ui:114
@@ -53047,27 +53049,27 @@ msgid "Right ascension:"
 msgstr "Rektaszenschoon:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: tools/flagmanager.ui:86
+#: tools/flagmanager.ui:84
 msgid "Label:"
 msgstr "Beteker:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: tools/flagmanager.ui:103
+#: tools/flagmanager.ui:101
 msgid "Label color:"
 msgstr "Feldklöör:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: tools/flagmanager.ui:110
+#: tools/flagmanager.ui:108
 msgid "Icon:"
 msgstr "Lüttbild:"
 
 #. i18n: ectx: property (text), widget (QPushButton, saveButton)
-#: tools/flagmanager.ui:142
+#: tools/flagmanager.ui:140
 msgid "Save changes"
 msgstr "Ännern sekern"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: tools/flagmanager.ui:169
+#: tools/flagmanager.ui:167
 #, fuzzy
 #| msgid ""
 #| "To add custom icons, just add images in $HOME/.kde4/share/apps/kstars. "
@@ -53075,7 +53077,7 @@ msgstr "Ännern sekern"
 #| "\"_flagSmall_red_cross.gif\" will be shown as \"Small red cross\" in the "
 #| "combo box."
 msgid ""
-"To add custom icons, just add images in $HOME/.kde5/local/share/kstars. File "
+"To add custom icons, just add images in $HOME/.kde/share/apps/kstars. File "
 "names must begin with \"_flags\". For example, the file "
 "\"_flagSmall_red_cross.gif\" will be shown as \"Small red cross\" in the "
 "combo box."
@@ -53085,14 +53087,16 @@ msgstr ""
 "\"_flagsRoot_Huus.gif\" a.B. warrt binnen dat Utsöökfeld as \"Root Huus\" "
 "wiest."
 
-#. i18n: ectx: property (text), widget (QPushButton, CenterButton)
-#: tools/flagmanager.ui:208 tools/obslistpopupmenu.cpp:49
-msgid "Center"
-msgstr "Merrn"
+#. i18n: ectx: property (toolTip), widget (QPushButton, ScopeButton)
+#: tools/flagmanager.ui:213
+#, fuzzy
+#| msgid "Slew the telescope to the target coordinates"
+msgid "Slew to the flag coordinates"
+msgstr "Dat Teleskoop na de Teelkoordinaten swojen"
 
 #. i18n: ectx: property (text), widget (QPushButton, delButton)
 #. i18n: ectx: property (text), widget (QPushButton, DeleteImage)
-#: tools/flagmanager.ui:215 tools/observinglist.ui:594
+#: tools/flagmanager.ui:223 tools/observinglist.ui:594
 msgid "Delete"
 msgstr "Wegdoon"
 
@@ -54279,6 +54283,10 @@ msgstr "Na Törnplaan tofögen"
 #: tools/obslistpopupmenu.cpp:43
 msgid "Add objects visible tonight to session plan"
 msgstr "Vunnacht sichtbor Objekten na Törnplaan tofögen"
+
+#: tools/obslistpopupmenu.cpp:49
+msgid "Center"
+msgstr "Merrn"
 
 #: tools/obslistpopupmenu.cpp:52
 msgctxt "Show the selected object in the telescope"
