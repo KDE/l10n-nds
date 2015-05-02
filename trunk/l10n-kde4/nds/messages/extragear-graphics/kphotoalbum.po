@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kphotoalbum\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-04-13 01:51+0000\n"
+"POT-Creation-Date: 2015-05-02 02:01+0000\n"
 "PO-Revision-Date: 2014-03-19 18:59+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -5274,7 +5274,7 @@ msgid "Unable to copy '%1' to '%2'."
 msgstr "\"%1\" lett sik nich na \"%2\" koperen."
 
 #: Utilities/Util.cpp:352 Utilities/Util.cpp:366 Utilities/Util.cpp:384
-#: Utilities/Util.cpp:401 XMLDB/FileReader.cpp:493
+#: Utilities/Util.cpp:401 XMLDB/FileReader.cpp:539
 msgid "Error Running Demo"
 msgstr "Fehler bi't Utföhren vun de Dorstellen"
 
@@ -5907,37 +5907,33 @@ msgid "Unable to find 'Images' tag in configuration file %1."
 msgstr ""
 "Beteker \"Images\" lett sik nich binnen de Instellendatei \"%1\" finnen."
 
-#: XMLDB/FileReader.cpp:219
+#: XMLDB/FileReader.cpp:225
+#, kde-format
 msgid ""
-"<p>This version of KPhotoAlbum will fix some issues with category names. "
-"This is a database internal update which won't affect the displayed category "
+"<p>This version of KPhotoAlbum would normally fix some issues with category "
+"names. Some changes inside the database (<kbd>index.xml</kbd> file) and the "
+"configuration are necessary to do this. Additionally, some (internal) files "
+"inside your collection directory have to be moved.</p><p>You don't have "
+"write access to your collection (<kbd>%1</kbd>), so this update can't be "
+"done now. Please check your permissions and re-run KPhotoAlbum.</"
+"p><p><b>Probably, some features may be mising or broken until the update can "
+"be done!</b></p>"
+msgstr ""
+
+#: XMLDB/FileReader.cpp:339
+#, kde-format
+msgid ""
+"<p>This version of KPhotoAlbum fixes some issues with category names. This "
+"is a database internal update which won't affect the displayed category "
 "names or any tag data. Anyway, some files (category and tag thumbnails) have "
-"to be moved and the configuration file has to be fixed. If you want to know "
-"what exactly happens, read \"Differences to version 5\" in "
-"<kbd>documentation/database-layout.md</kbd>.</p><p><b>Press \"Continue\" to "
-"run the update. This is what you normally want to do now.</b></p><p>\"Cancel"
-"\" will skip the update. Only choose this if you don't want to or can't "
-"change any data now. You will be asked for the update on the next start "
-"again.</p>"
+"been moved and the configuration file and the database (<kbd>index.xml</"
+"kbd>) has been fixed. If you want to know what exactly happened, read "
+"\"Differences to version 5\" in <kbd>documentation/database-layout.md</kbd>."
+"</p><p>A backup of all (probably) changed files has been created in <kbd>%1</"
+"kbd>.</p>"
 msgstr ""
 
-#: XMLDB/FileReader.cpp:228 XMLDB/FileReader.cpp:234
-#, fuzzy
-#| msgid "Database backend"
-msgid "Database Update"
-msgstr "Datenbank"
-
-#: XMLDB/FileReader.cpp:235
-msgid ""
-"<p><b>You skipped the database update!</b></p><p>Probably, you will miss "
-"some features in the running session (missing category and tag thumbnails, "
-"broken \"untagged images\" feature, broken face recognition). <b>Don't save "
-"your database or this will become permanent!</b></p><p>To run the update "
-"later, close KPhotoAlbum without saving the database and don't use face "
-"recognition. You will be asked again for the update on the next start.</p>"
-msgstr ""
-
-#: XMLDB/FileReader.cpp:412
+#: XMLDB/FileReader.cpp:458
 #, fuzzy
 #| msgid ""
 #| "<p>Your images/videos are not sorted, which means that navigating using "
@@ -5970,7 +5966,7 @@ msgstr ""
 "Biller en Datum fastleggt is, kannst Du se mit <b>Biller -> Utsöchte na "
 "Datum un Tiet sorteren</b> binnen de Datenbank sorteren.</p>"
 
-#: XMLDB/FileReader.cpp:422
+#: XMLDB/FileReader.cpp:468
 msgid ""
 "<p>Your images/videos are not sorted, which means that navigating using the "
 "date bar will only work suboptimally.</p><p>You also do not have EXIF "
@@ -5986,11 +5982,11 @@ msgstr ""
 "<code>exiv2</code> nieg kompileerst. Wenn Du dit maakt hest, fraagt Di dat "
 "Programm, wodennig dat all fehlen Informatschonen richten schall.</p>"
 
-#: XMLDB/FileReader.cpp:429
+#: XMLDB/FileReader.cpp:475
 msgid "Images/Videos Are Not Sorted"
 msgstr "Biller/Videos sünd nich sorteert"
 
-#: XMLDB/FileReader.cpp:444
+#: XMLDB/FileReader.cpp:490
 #, fuzzy
 #| msgid ""
 #| "<p>Not all the images in the database have information about image sizes; "
@@ -6014,11 +6010,11 @@ msgstr ""
 "tt>.</p><p>Deist Du dat nich, hebbt de Vöransichtbiller en beten mehr mehr "
 "free Platz ümto - dat is allens. Dat is also nich so hild, dat to doon.</p>"
 
-#: XMLDB/FileReader.cpp:449
+#: XMLDB/FileReader.cpp:495
 msgid "Not All Images Have Size Information"
 msgstr "Nich all Biller hebbt Grött-Informatschonen"
 
-#: XMLDB/FileReader.cpp:472
+#: XMLDB/FileReader.cpp:518
 #, fuzzy
 #| msgid ""
 #| "<p>KPhotoAlbum was unable to load a default setup, which indicates an "
@@ -6052,32 +6048,32 @@ msgstr ""
 "den Padd an, as wenn Du de <b>PATH</b>-Variabel en nieg Padd tofögen deest.</"
 "p>"
 
-#: XMLDB/FileReader.cpp:479
+#: XMLDB/FileReader.cpp:525
 msgid "No default setup file found"
 msgstr "Standard-Instellendatei nich funnen"
 
-#: XMLDB/FileReader.cpp:493
+#: XMLDB/FileReader.cpp:539
 #, kde-format
 msgid "Unable to open '%1' for reading"
 msgstr "\"%1\" lett sik nich lesen"
 
-#: XMLDB/FileReader.cpp:506
+#: XMLDB/FileReader.cpp:552
 #, fuzzy, kde-format
 #| msgid "Error on line %1 column %2 in file %3: %4"
 msgid "line %1 column %2 in file %3: %4"
 msgstr "Fehler bi Reeg %1, Striep %2 binnen Datei \"%3\": %4"
 
-#: XMLDB/FileReader.cpp:508
+#: XMLDB/FileReader.cpp:554
 #, kde-format
 msgid "Failed to recover the backup: %1"
 msgstr ""
 
-#: XMLDB/FileReader.cpp:519
+#: XMLDB/FileReader.cpp:565
 #, kde-format
 msgid "Error in file %1: No elements found"
 msgstr "Fehler binnen Datei \"%1\": Keen Elementen funnen"
 
-#: XMLDB/FileReader.cpp:525
+#: XMLDB/FileReader.cpp:571
 #, kde-format
 msgid "Error in file %1: expected 'KPhotoAlbum' as top element but found '%2'"
 msgstr ""
@@ -6159,6 +6155,11 @@ msgstr ""
 #| msgid "Converting database"
 msgid "Error while reading database file"
 msgstr "Datenbank warrt ümwanneln"
+
+#, fuzzy
+#~| msgid "Database backend"
+#~ msgid "Database Update"
+#~ msgstr "Datenbank"
 
 #, fuzzy
 #~| msgid "Configure Current View"
