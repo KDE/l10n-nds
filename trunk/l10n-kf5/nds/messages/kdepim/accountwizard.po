@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: accountwizard\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-05-06 08:42+0000\n"
+"POT-Creation-Date: 2015-05-08 08:51+0000\n"
 "PO-Revision-Date: 2014-03-31 23:39+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -27,20 +27,29 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "m.j.wiese@web.de, s_dibbern@web.de"
 
-#: configfile.cpp:46
+#: configfile.cpp:48
 #, kde-format
 msgid "Writing config file for %1..."
 msgstr "Instellendatei för %1 warrt schreven..."
 
-#: configfile.cpp:58
+#: configfile.cpp:65
 #, kde-format
 msgid "Config file for %1 is writing."
 msgstr "Instellendatei för %1 warrt schreven."
 
-#: configfile.cpp:63
+#: configfile.cpp:70
 #, kde-format
 msgid "Config file for %1 was not changed."
 msgstr "Instellendatei för %1 wöör nich ännert."
+
+#: configfile.cpp:101
+msgid "No given name for the configuration"
+msgstr ""
+
+#: configfile.cpp:112
+#, kde-format
+msgid "Unknown configurationname '%1'"
+msgstr ""
 
 #: dialog.cpp:55
 msgid "Provide personal data"
@@ -79,15 +88,15 @@ msgstr "Ahn Naam"
 msgid "Identity removed."
 msgstr "Identiteet wöör wegdaan"
 
-#: ispdb/ispdb.cpp:69
+#: ispdb/ispdb.cpp:378
 msgid "Lookup configuration: Email provider"
 msgstr "Instellen naslaan: Nettpostdeenst-Anbeder"
 
-#: ispdb/ispdb.cpp:74
+#: ispdb/ispdb.cpp:382
 msgid "Lookup configuration: Trying common server name"
 msgstr "Instellen naslaan: Allmeen Servernaam warrt versöcht"
 
-#: ispdb/ispdb.cpp:79
+#: ispdb/ispdb.cpp:386
 msgid "Lookup configuration: Mozilla database"
 msgstr "Instellen naslaan: Mozilla-Datenbank"
 
@@ -115,17 +124,34 @@ msgstr "Tom Albers"
 msgid "Tries to fetch the settings for that email address"
 msgstr "Versöcht, de Instellen för disse Nettpostadress to halen"
 
-#: ldap.cpp:37
+#: ldap.cpp:55
 msgid "Setting up LDAP server..."
 msgstr "LDAP-Server warrt inricht..."
 
-#: ldap.cpp:89
+#: ldap.cpp:58
+#, kde-format
+msgid "Needed parameters are missing for ldap config server='%1'"
+msgstr ""
+
+#: ldap.cpp:142
 msgid "LDAP set up."
 msgstr "LDAP wöör inricht"
 
-#: ldap.cpp:94
+#: ldap.cpp:155
+msgid "Unknown security setting for LDAP server"
+msgstr ""
+
+#: ldap.cpp:162
 msgid "LDAP not configuring."
 msgstr "LDAP nich instellt."
+
+#: ldap.cpp:198
+msgid "Removed LDAP entry."
+msgstr ""
+
+#: ldap.cpp:205
+msgid "No config found to edit"
+msgstr ""
 
 #: loadpage.cpp:49
 #, kde-format
@@ -196,55 +222,55 @@ msgstr "POP3, %1"
 msgid "Fetching provider list..."
 msgstr "Anbederlist warrt haalt..."
 
-#: resource.cpp:83
+#: resource.cpp:84
 #, kde-format
 msgid "Resource type '%1' is not available."
 msgstr "Ressourcetyp \"%1\" is nich verföögbor."
 
-#: resource.cpp:93
+#: resource.cpp:97
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "Ressource \"%1\" is al in inricht."
 
-#: resource.cpp:99
+#: resource.cpp:103
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "Ressource för Utgaav \"%1\" warrt opstellt..."
 
-#: resource.cpp:108
+#: resource.cpp:112
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ressource-Utgaav lett sik nich opstellen: %1"
 
-#: resource.cpp:115
+#: resource.cpp:119
 msgid "Configuring resource instance..."
 msgstr "Ressource-Utgaav warrt inricht..."
 
-#: resource.cpp:118
+#: resource.cpp:122
 msgid "Unable to configure resource instance."
 msgstr "Ressource-Utgaav lett sik nich inrichten."
 
-#: resource.cpp:133
+#: resource.cpp:137
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr ""
 "Weert vun Instellen \"%1\" lett sik nich na vörtgeven Typ %2 ümwanneln."
 
-#: resource.cpp:139
+#: resource.cpp:143
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Instellen \"%1\" lett sik nich inrichten: %2"
 
-#: resource.cpp:146
+#: resource.cpp:153
 msgid "Resource setup completed."
 msgstr "Ressourceinstellen afslaten"
 
-#: resource.cpp:153
+#: resource.cpp:167
 #, kde-format
 msgid "Removed resource instance for '%1'."
 msgstr "Ressource-Utgaav för \"%1\" wegdaan."
 
-#: servertest.cpp:56
+#: servertest.cpp:61
 msgid ""
 "There seems to be a problem in reaching this server or choosing a safe way "
 "to sent the credentials to server. We advise you to check the settings of "
@@ -255,38 +281,60 @@ msgstr ""
 "finnen. Op't best warr dat wull wesen, Du kiekst Di nochmaal Dien "
 "Kontoinstellen nochmaal an, un deist se vun Hand richten, wenn dat noot deit."
 
-#: servertest.cpp:59
+#: servertest.cpp:64
 msgid "Autodetecting settings failed"
 msgstr "Instellen laat sik nich automaatsch opdecken."
 
+#: setupautoconfigkolabfreebusy.cpp:87 setupautoconfigkolabldap.cpp:86
+#: setupispdb.cpp:150
+msgid "Searching for autoconfiguration..."
+msgstr ""
+
+#: setupautoconfigkolabfreebusy.cpp:112 setupautoconfigkolabldap.cpp:111
+#: setupispdb.cpp:175
+msgid "Autoconfiguration found."
+msgstr ""
+
+#: setupautoconfigkolabfreebusy.cpp:114 setupautoconfigkolabldap.cpp:113
+#: setupispdb.cpp:177
+#, fuzzy
+#| msgid "Autodetecting settings failed"
+msgid "Autoconfiguration failed."
+msgstr "Instellen laat sik nich automaatsch opdecken."
+
 #. i18n: ectx: property (text), widget (QLabel, progressLabel)
-#: setupmanager.cpp:90 ui/setuppage.ui:37
+#: setupmanager.cpp:96 ui/setuppage.ui:37
 msgid "Setting up account..."
 msgstr "Konto warrt inricht..."
 
-#: setupmanager.cpp:136
+#: setupmanager.cpp:143
 msgid "Setup complete."
 msgstr "Inrichten afslaten."
 
-#: setupmanager.cpp:150
+#: setupmanager.cpp:158
 msgid "Failed to set up account, rolling back..."
 msgstr "Konto lett sik nich inrichten, warrt torüchdreiht."
 
-#: setupmanager.cpp:162
+#: setupmanager.cpp:170
 msgid "Failed to set up account."
 msgstr "Konto lett sik nich inrichten."
 
-#: transport.cpp:89
+#: transport.cpp:90
 msgid "Setting up mail transport account..."
 msgstr "Konto för Nettpost-Överdregen warrt inricht..."
 
-#: transport.cpp:110
+#: transport.cpp:114
 msgid "Mail transport account set up."
 msgstr "Konto för Nettpost-Överdregen wöör inricht."
 
-#: transport.cpp:116
+#: transport.cpp:120
 msgid "Mail transport account deleted."
 msgstr "Konto för Nettpost-Överdregen wöör wegdaan."
+
+#: transport.cpp:127
+#, kde-format
+msgid "Could not load config dialog for uid=%1"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, statusLabel)
 #: ui/loadpage.ui:30
