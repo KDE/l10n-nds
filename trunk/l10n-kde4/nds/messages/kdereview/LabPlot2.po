@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-05-10 02:02+0000\n"
+"POT-Creation-Date: 2015-05-11 02:12+0000\n"
 "PO-Revision-Date: 2014-03-19 20:12+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -33,7 +33,7 @@ msgstr "Statistik"
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: src/backend/analysis/StatisticsFilter.cpp:193
 #: src/backend/core/AspectTreeModel.cpp:147
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:88
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:93
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:42
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:30
 #: src/kdefrontend/ui/dockwidgets/columndock.ui:17
@@ -171,7 +171,7 @@ msgid "Invalid creation time for '%1'. Using current time."
 msgstr ""
 
 #: src/backend/core/AbstractColumn.cpp:154
-#: src/backend/spreadsheet/Spreadsheet.cpp:144
+#: src/backend/spreadsheet/Spreadsheet.cpp:133
 #, kde-format
 msgid "%1: insert 1 row"
 msgid_plural "%1: insert %2 rows"
@@ -179,7 +179,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: src/backend/core/AbstractColumn.cpp:173
-#: src/backend/spreadsheet/Spreadsheet.cpp:133
+#: src/backend/spreadsheet/Spreadsheet.cpp:122
 #, kde-format
 msgid "%1: remove 1 row"
 msgid_plural "%1: remove %2 rows"
@@ -260,7 +260,7 @@ msgstr ""
 #: src/backend/core/Project.cpp:268
 #: src/backend/datasources/FileDataSource.cpp:432
 #: src/backend/matrix/Matrix.cpp:1136
-#: src/backend/spreadsheet/Spreadsheet.cpp:726
+#: src/backend/spreadsheet/Spreadsheet.cpp:715
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:2147
 #: src/backend/worksheet/plots/PlotArea.cpp:556
 #: src/backend/worksheet/TextLabel.cpp:772
@@ -301,7 +301,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, lMinorTicksType)
 #. i18n: ectx: property (text), widget (QLabel, lType)
 #: src/backend/core/AspectTreeModel.cpp:148
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:88
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:93
 #: src/kdefrontend/ui/datasources/importfilewidget.ui:84
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:403
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:521
@@ -381,7 +381,7 @@ msgid "%1: change cell values"
 msgstr ""
 
 #: src/backend/core/column/columncommands.cpp:533
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1257
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1246
 #, kde-format
 msgid "%1: set plot designation"
 msgstr ""
@@ -546,6 +546,10 @@ msgstr ""
 msgid "BINARY matrix data"
 msgstr ""
 
+#: src/backend/datasources/FileDataSource.cpp:108
+msgid "Image"
+msgstr ""
+
 #: src/backend/datasources/FileDataSource.cpp:281
 #, kde-format
 msgid "<u><b>%1:</b></u>"
@@ -649,8 +653,9 @@ msgstr ""
 #: src/backend/datasources/FileDataSource.cpp:378
 #: src/backend/datasources/filters/AsciiFilter.cpp:571
 #: src/backend/datasources/filters/AsciiMatrixFilter.cpp:570
-#: src/backend/datasources/filters/BinaryFilter.cpp:465
-#: src/backend/datasources/filters/HDFFilter.cpp:386
+#: src/backend/datasources/filters/BinaryFilter.cpp:468
+#: src/backend/datasources/filters/HDFFilter.cpp:387
+#: src/backend/datasources/filters/ImageFilter.cpp:335
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:1878
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:1633
 #: src/backend/worksheet/plots/cartesian/CartesianPlotLegend.cpp:938
@@ -667,7 +672,8 @@ msgstr ""
 
 #: src/backend/datasources/filters/AsciiFilter.cpp:501
 #: src/backend/datasources/filters/AsciiMatrixFilter.cpp:500
-#: src/backend/datasources/filters/BinaryFilter.cpp:413
+#: src/backend/datasources/filters/BinaryFilter.cpp:416
+#: src/backend/datasources/filters/ImageFilter.cpp:291
 #, kde-format
 msgid "numerical data, %1 element"
 msgid_plural "numerical data, %1 elements"
@@ -679,7 +685,8 @@ msgstr[1] ""
 msgid "no ascii filter element found"
 msgstr ""
 
-#: src/backend/datasources/filters/BinaryFilter.cpp:461
+#: src/backend/datasources/filters/BinaryFilter.cpp:464
+#: src/backend/datasources/filters/ImageFilter.cpp:331
 msgid "no binary filter element found"
 msgstr ""
 
@@ -688,7 +695,7 @@ msgid "data type"
 msgstr ""
 
 #: src/backend/datasources/filters/HDFFilter.cpp:231
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:458
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:502
 msgid "data set"
 msgstr ""
 
@@ -704,12 +711,21 @@ msgstr ""
 msgid "group"
 msgstr ""
 
-#: src/backend/datasources/filters/HDFFilter.cpp:305
+#: src/backend/datasources/filters/HDFFilter.cpp:306
 msgid "unknown"
 msgstr ""
 
-#: src/backend/datasources/filters/HDFFilter.cpp:382
+#: src/backend/datasources/filters/HDFFilter.cpp:383
 msgid "no hdf filter element found"
+msgstr ""
+
+#: src/backend/datasources/filters/ImageFilter.cpp:57
+#: src/backend/matrix/Matrix.cpp:1397
+msgid "Matrix"
+msgstr ""
+
+#: src/backend/datasources/filters/ImageFilter.cpp:57
+msgid "XYZ"
 msgstr ""
 
 #: src/backend/lib/XmlStreamReader.cpp:65
@@ -779,7 +795,7 @@ msgid "%1: set matrix size to %2x%3"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:158 src/backend/matrix/matrixcommands.cpp:160
-#: src/backend/spreadsheet/Spreadsheet.cpp:265
+#: src/backend/spreadsheet/Spreadsheet.cpp:254
 #, kde-format
 msgid "%1: clear"
 msgstr ""
@@ -790,7 +806,7 @@ msgid "%1: cut selected cell(s)"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:225
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:864
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:853
 #, kde-format
 msgid "%1: paste from clipboard"
 msgstr ""
@@ -831,17 +847,17 @@ msgid "%1: clear selected cell(s)"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:505
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:160
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:153
 msgid "Cu&t"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:508
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:161
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:154
 msgid "&Copy"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:511
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:162
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:155
 msgid "Past&e"
 msgstr ""
 
@@ -851,13 +867,13 @@ msgid "Clea&r"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:525
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:166
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:161
 msgid "Assign &Formula"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, pbRecalculate)
 #: src/backend/matrix/Matrix.cpp:532
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:168
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:162
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:373
 #: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:250
 msgid "Recalculate"
@@ -872,7 +888,7 @@ msgid "Show/Hide Controls"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:547
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:178
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:159
 msgid "Select All"
 msgstr ""
 
@@ -881,7 +897,7 @@ msgid "Clear Matrix"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:561
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:183
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:176
 msgid "&Go to Cell"
 msgstr ""
 
@@ -925,42 +941,42 @@ msgid "Set Display &Format"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:594
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:186
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:179
 msgid "&Insert Empty Columns"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:601
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:187
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:180
 msgid "Remo&ve Columns"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:608
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:188
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:181
 msgid "Clea&r Columns"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:615
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:189
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:182
 msgid "&Add Columns"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:623
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:204
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:197
 msgid "&Insert Empty Rows"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:630
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:205
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:198
 msgid "Remo&ve Rows"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:637
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:206
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:199
 msgid "Clea&r Rows"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:644
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:207
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:200
 msgid "&Add Rows"
 msgstr ""
 
@@ -969,23 +985,23 @@ msgid "&Matrix"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:779 src/backend/matrix/Matrix.cpp:783
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1461
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1465
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1450
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1454
 msgid "Go to Cell"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:779
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1461
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1450
 msgid "Enter column"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:783
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1465
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1454
 msgid "Enter row"
 msgstr ""
 
 #: src/backend/matrix/Matrix.cpp:793
-#: src/backend/spreadsheet/Spreadsheet.cpp:307
+#: src/backend/spreadsheet/Spreadsheet.cpp:296
 #, kde-format
 msgid "%1: copy %2"
 msgstr ""
@@ -1089,10 +1105,6 @@ msgstr ""
 msgid "Show Controls"
 msgstr ""
 
-#: src/backend/matrix/Matrix.cpp:1397
-msgid "Matrix"
-msgstr ""
-
 #: src/backend/matrix/Matrix.cpp:1409
 msgid "SciDAVis - Import image..."
 msgstr ""
@@ -1143,36 +1155,36 @@ msgstr ""
 msgid "%1: mirror vertically"
 msgstr ""
 
-#: src/backend/spreadsheet/Spreadsheet.cpp:222
+#: src/backend/spreadsheet/Spreadsheet.cpp:211
 #, kde-format
 msgid "%1: remove 1 column"
 msgid_plural "%1: remove %2 columns"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/backend/spreadsheet/Spreadsheet.cpp:232
+#: src/backend/spreadsheet/Spreadsheet.cpp:221
 #, kde-format
 msgid "%1: insert 1 column"
 msgid_plural "%1: insert %2 columns"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/backend/spreadsheet/Spreadsheet.cpp:278
+#: src/backend/spreadsheet/Spreadsheet.cpp:267
 #, kde-format
 msgid "%1: clear all masks"
 msgstr ""
 
-#: src/backend/spreadsheet/Spreadsheet.cpp:298
+#: src/backend/spreadsheet/Spreadsheet.cpp:287
 #, kde-format
 msgid "%1: move column %2 from position %3 to %4."
 msgstr ""
 
-#: src/backend/spreadsheet/Spreadsheet.cpp:420
+#: src/backend/spreadsheet/Spreadsheet.cpp:409
 #, kde-format
 msgid "%1: sort columns"
 msgstr ""
 
-#: src/backend/spreadsheet/Spreadsheet.cpp:733
+#: src/backend/spreadsheet/Spreadsheet.cpp:722
 msgid "no spreadsheet element found"
 msgstr ""
 
@@ -2342,197 +2354,197 @@ msgstr ""
 msgid "show search/filter options"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:163
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:156
 msgid "&Mask Selection"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:164
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:157
 msgid "&Unmask Selection"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:167
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:158
 msgid "Clea&r Selection"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:169
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:163
 msgid "Row Numbers"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:170
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:164
 msgid "Uniform Random Values"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:171
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:165
 msgid "Random Values"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:172
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:166
 msgid "Equidistant Values"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:173
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:167
 msgid "Function Values"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:174
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:168
 msgid "Const Values"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:177
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:517
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:171
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:506
 msgid "Show Comments"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:179
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:172
 msgid "&Add Column"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:180
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:173
 msgid "Clear Spreadsheet"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:181
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:174
 msgid "Clear Masks"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:182
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:175
 msgid "&Sort Spreadsheet"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:196
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:189
 msgid "&Normalize Columns"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:197
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:190
 msgid "&Normalize Selection"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:198
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:191
 msgid "&Selected Columns"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:199
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:192
 msgid "&Ascending"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:200
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:193
 msgid "&Descending"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:201
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:194
 #, fuzzy
 #| msgid "Statistics"
 msgid "Column Statisti&cs"
 msgstr "Statistik"
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:208
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:201
 #, fuzzy
 #| msgid "Statistics"
 msgid "Row Statisti&cs"
 msgstr "Statistik"
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:213
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:206
 msgid "Selection"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:215
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:312
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:208
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:305
 msgid "Fi&ll Selection with"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:254
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:247
 msgid "Generate Data"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:272
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:265
 msgid "Sort"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:515
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:504
 msgid "Hide Comments"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:805
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:794
 #, kde-format
 msgid "%1: cut selected cells"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:948
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:937
 #, kde-format
 msgid "%1: mask selected cells"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:966
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:955
 #, kde-format
 msgid "%1: unmask selected cells"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:989
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:978
 #, kde-format
 msgid "%1: fill cells with row numbers"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1034
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1023
 #, kde-format
 msgid "%1: fill cells with random values"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1125
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1114
 #, kde-format
 msgid "%1: fill cells with const values"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1132
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1150
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1121
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1139
 msgid "Fill the selection with constant value"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1133
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1151
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1122
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1140
 msgid "Value"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1194
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1183
 #, kde-format
 msgid "%1: insert empty columns"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1220
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1209
 #, kde-format
 msgid "%1: remove selected columns"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1232
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1221
 #, kde-format
 msgid "%1: clear selected columns"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1293
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1282
 #, kde-format
 msgid "%1: normalize columns"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1313
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1302
 #, kde-format
 msgid "%1: normalize selection"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1364
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1353
 #, kde-format
 msgid "%1: insert empty rows"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1383
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1372
 #, kde-format
 msgid "%1: remove selected rows"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1395
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1384
 #, kde-format
 msgid "%1: clear selected rows"
 msgstr ""
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1428
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1417
 #, kde-format
 msgid "%1: clear selected cells"
 msgstr ""
@@ -2726,32 +2738,32 @@ msgstr ""
 msgid "File info"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:67
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:217
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:68
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:218
 msgid "Hide Options"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:69
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:219
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:70
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:220
 msgid "Show Options"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:75
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:76
 msgid "Import Data to Spreadsheet/Matrix"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:95
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:96
 msgid "Import To"
 msgstr ""
 
 #. i18n: ectx: ToolBar (spreadsheet_toolbar)
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:97
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:98
 #: src/kdefrontend/LabPlot2ui.rc:25 src/kdefrontend/MainWin.cpp:213
 #: src/kdefrontend/MainWin.cpp:898
 msgid "Spreadsheet"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:113
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:114
 msgid "Add new spreadsheet"
 msgstr ""
 
@@ -2761,7 +2773,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, lPosition)
 #. i18n: ectx: property (text), widget (QLabel, lArrowPosition)
 #. i18n: ectx: property (text), widget (QLabel, lLabelsPosition)
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:119
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:120
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:118
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:420
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:1065
@@ -2771,75 +2783,75 @@ msgstr ""
 msgid "Position"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:125
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:126
 msgid "Append"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:126
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:127
 msgid "Prepend"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:127
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:128
 msgid "Replace"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:174
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:175
 #, kde-format
 msgid "File data source created in %1 seconds."
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:205
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:206
 #, kde-format
 msgid "File %1 imported in %2 seconds."
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:246
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:247
 msgid "new Spreadsheet"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:254
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:255
 msgid "Add new Spreadsheet"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:254
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:255
 msgid "Spreadsheet name:"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:88
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:93
 #: src/kdefrontend/GuiObserver.cpp:88 src/kdefrontend/GuiObserver.cpp:103
 #: src/kdefrontend/GuiObserver.cpp:286 src/kdefrontend/MainWin.cpp:578
 msgid "Properties"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:88
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:93
 msgid "Link"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:88
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:93
 msgid "Attributes"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:295
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:332
 msgid "Select the File Data Source"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:400
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:444
 msgid "Save Filter Settings as"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:401
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:445
 msgid "Filter name:"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:401
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:445
 msgid "new filter"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:445
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:489
 msgid "Automatic"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:446
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:490
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:287
 #: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:91
 msgid "Custom"
@@ -4881,6 +4893,16 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (QTreeWidget, twContent)
 #: src/kdefrontend/ui/datasources/hdfoptionswidget.ui:35
 msgid "Shows the content of a HDF file"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, lImportFormat)
+#: src/kdefrontend/ui/datasources/imageoptionswidget.ui:30
+msgid "Import as: "
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, cbImportFormat)
+#: src/kdefrontend/ui/datasources/imageoptionswidget.ui:50
+msgid "Choose how to import the image"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
