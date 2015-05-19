@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: choqok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-05-17 08:48+0000\n"
+"POT-Creation-Date: 2015-05-19 12:09+0000\n"
 "PO-Revision-Date: 2014-06-25 01:02+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -797,6 +797,7 @@ msgid "Updating friends list for account %1..."
 msgstr "Mackerlist för Konto „%1“ warrt opfrischt…"
 
 #: helperlibs/twitterapihelper/twitterapimicroblog.cpp:757
+#: microblogs/laconica/laconicamicroblog.cpp:295
 #, kde-format
 msgid ""
 "Friends list for account %1 could not be updated:\n"
@@ -2019,11 +2020,6 @@ msgctxt "Thread of specified user"
 msgid "Choqok: %1's thread"
 msgstr "Choqok: %1 sien Klöönsnack"
 
-#. i18n: ectx: property (windowTitle), widget (QWidget, PumpIOShowThread)
-#: microblogs/pumpio/pumpioshowthread.ui:14
-msgid "Thread"
-msgstr "Klöönsnack"
-
 #: microblogs/twitter/twittereditaccount.cpp:146
 msgid "Enter the PIN received from Twitter:"
 msgstr "Giff de PIN-Nummer in, de Du vun Twitter kregen hest:"
@@ -2047,41 +2043,42 @@ msgstr ""
 msgid "&Authenticate with Twitter Service"
 msgstr "Bi den Twitter-Deenst &anmellen"
 
-#: microblogs/twitter/twitterlistdialog.cpp:49
-msgid "Add List"
-msgstr "List tofögen"
-
 #. i18n: ectx: property (toolTip), widget (QPushButton, btnAdd)
-#: microblogs/twitter/twitterlistdialog.cpp:72
+#: microblogs/twitter/twitterlistdialog.cpp:71
 #: plugins/filter/filterprefs.ui:81
 msgid "Add"
 msgstr "Tofögen"
 
-#: microblogs/twitter/twitterlistdialog.cpp:91
+#: microblogs/twitter/twitterlistdialog.cpp:90
 msgid "You should provide both list author username and list name."
 msgstr "Giff man den Brukernaam un den Listnaam an."
 
-#: microblogs/twitter/twitterlistdialog.cpp:113
+#: microblogs/twitter/twitterlistdialog.cpp:112
 msgid "No user."
 msgstr "Keen Bruker."
 
+#. i18n: ectx: property (windowTitle), widget (QWidget, TwitterListDialogBase)
+#: microblogs/twitter/twitterlistdialog_base.ui:14
+msgid "Add List"
+msgstr "List tofögen"
+
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: microblogs/twitter/twitterlistdialog_base.ui:23
+#: microblogs/twitter/twitterlistdialog_base.ui:26
 msgid "List name:"
 msgstr "Listnaam:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: microblogs/twitter/twitterlistdialog_base.ui:49
+#: microblogs/twitter/twitterlistdialog_base.ui:52
 msgid "User name:"
 msgstr "Brukernaam:"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, loadUserLists)
-#: microblogs/twitter/twitterlistdialog_base.ui:75
+#: microblogs/twitter/twitterlistdialog_base.ui:78
 msgid "Load user lists"
 msgstr "Brukerlisten laden"
 
 #. i18n: ectx: property (text), widget (QPushButton, loadUserLists)
-#: microblogs/twitter/twitterlistdialog_base.ui:78
+#: microblogs/twitter/twitterlistdialog_base.ui:81
 msgid "Load Lists"
 msgstr "Listen laden"
 
@@ -2268,36 +2265,39 @@ msgstr ""
 "ännern (an-/utmaken) muttst Du dat Moduul nieg laden, anners warkt de Ännern "
 "nich bruukt.</p></body></html>"
 
-#: plugins/filter/addeditfilter.cpp:52
-msgid "Define new filter rules"
-msgstr "Nieg Filterregel fastleggen"
-
-#: plugins/filter/addeditfilter.cpp:62
+#: plugins/filter/addeditfilter.cpp:60
 msgid "Modify filter rules"
 msgstr "Filterregeln ännern"
 
+#. i18n: ectx: property (windowTitle), widget (QWidget, AddEditFilterBase)
+#: plugins/filter/addeditfilter_base.ui:14
+msgid "Define new filter rules"
+msgstr "Nieg Filterregel fastleggen"
+
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: plugins/filter/addeditfilter_base.ui:20
-msgid "Filter &field:"
+#: plugins/filter/addeditfilter_base.ui:23
+#, fuzzy
+#| msgid "Filter &field:"
+msgid "Fi&lter field:"
 msgstr "Filter&feld:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: plugins/filter/addeditfilter_base.ui:33
+#: plugins/filter/addeditfilter_base.ui:36
 msgid "Filter &type:"
 msgstr "Filter&typ:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: plugins/filter/addeditfilter_base.ui:46
-msgid "&Text:"
-msgstr "&Text:"
+#: plugins/filter/addeditfilter_base.ui:49
+msgid "Te&xt:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: plugins/filter/addeditfilter_base.ui:59
+#: plugins/filter/addeditfilter_base.ui:62
 msgid "Filter action:"
 msgstr "Filterakschoon:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, dontHideReplies)
-#: plugins/filter/addeditfilter_base.ui:69
+#: plugins/filter/addeditfilter_base.ui:72
 msgid "Do not hide replies to me"
 msgstr "Antern op mi nich versteken"
 
@@ -3069,6 +3069,12 @@ msgstr "Twitter-Konto:"
 #: plugins/uploaders/twitgoo/twitgooprefs.ui:50
 msgid "Get direct link to file"
 msgstr "Direktlink na Datei halen"
+
+#~ msgid "Thread"
+#~ msgstr "Klöönsnack"
+
+#~ msgid "&Text:"
+#~ msgstr "&Text:"
 
 #~ msgid " Second"
 #~ msgid_plural " Seconds"
