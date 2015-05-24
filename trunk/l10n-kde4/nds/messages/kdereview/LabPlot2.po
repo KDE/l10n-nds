@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-05-23 02:04+0000\n"
+"POT-Creation-Date: 2015-05-24 02:09+0000\n"
 "PO-Revision-Date: 2014-03-19 20:12+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -37,7 +37,9 @@ msgstr "Statistik"
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:42
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:30
 #: src/kdefrontend/ui/dockwidgets/columndock.ui:17
+#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:17
 #: src/kdefrontend/ui/dockwidgets/projectdock.ui:113
+#: src/kdefrontend/ui/dockwidgets/spreadsheetdock.ui:17
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:36
 #: src/kdefrontend/ui/dockwidgets/xycurvedockgeneraltab.ui:23
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:17
@@ -48,6 +50,8 @@ msgstr "Naam"
 
 #. i18n: ectx: property (text), widget (QLabel, lRowCount)
 #: src/backend/analysis/StatisticsFilter.cpp:194
+#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:174
+#: src/kdefrontend/ui/dockwidgets/spreadsheetdock.ui:89
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:590
 msgid "Rows"
 msgstr "Regen"
@@ -77,6 +81,8 @@ msgstr ""
 #: src/backend/analysis/StatisticsFilter.cpp:200
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:255
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:328
+#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:160
+#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:224
 msgid "Max"
 msgstr ""
 
@@ -89,6 +95,8 @@ msgstr ""
 #: src/backend/analysis/StatisticsFilter.cpp:202
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:222
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:311
+#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:146
+#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:210
 msgid "Min"
 msgstr ""
 
@@ -259,7 +267,7 @@ msgstr ""
 #: src/backend/core/column/Column.cpp:624 src/backend/core/Folder.cpp:106
 #: src/backend/core/Project.cpp:268
 #: src/backend/datasources/FileDataSource.cpp:432
-#: src/backend/matrix/Matrix.cpp:690
+#: src/backend/matrix/Matrix.cpp:700
 #: src/backend/spreadsheet/Spreadsheet.cpp:712
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:2147
 #: src/backend/worksheet/plots/PlotArea.cpp:556
@@ -308,7 +316,7 @@ msgstr ""
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:706
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:728
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:337
-#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:139
+#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:89
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:206
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:48
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:223
@@ -330,6 +338,8 @@ msgstr ""
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:75
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:60
 #: src/kdefrontend/ui/dockwidgets/columndock.ui:27
+#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:43
+#: src/kdefrontend/ui/dockwidgets/spreadsheetdock.ui:43
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:68
 #: src/kdefrontend/ui/dockwidgets/xycurvedockgeneraltab.ui:49
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:43
@@ -365,8 +375,8 @@ msgstr ""
 msgid "no column element found"
 msgstr ""
 
-#: src/backend/core/column/Column.cpp:704 src/backend/matrix/Matrix.cpp:772
-#: src/backend/matrix/Matrix.cpp:816
+#: src/backend/core/column/Column.cpp:704 src/backend/matrix/Matrix.cpp:782
+#: src/backend/matrix/Matrix.cpp:826
 msgid "invalid or missing row index"
 msgstr ""
 
@@ -470,7 +480,7 @@ msgstr ""
 msgid "no folder element found"
 msgstr ""
 
-#: src/backend/core/Folder.cpp:180
+#: src/backend/core/Folder.cpp:172
 #, kde-format
 msgid "unknown element '%1' found"
 msgstr ""
@@ -532,12 +542,12 @@ msgstr ""
 msgid "BINARY vector data"
 msgstr ""
 
-#: src/backend/datasources/FileDataSource.cpp:107
-msgid "BINARY matrix data"
-msgstr ""
-
 #: src/backend/datasources/FileDataSource.cpp:108
 msgid "Image"
+msgstr ""
+
+#: src/backend/datasources/FileDataSource.cpp:110
+msgid "Hierarchical Data Format (HDF)"
 msgstr ""
 
 #: src/backend/datasources/FileDataSource.cpp:281
@@ -641,29 +651,29 @@ msgid "no fileDataSource element found"
 msgstr ""
 
 #: src/backend/datasources/FileDataSource.cpp:378
-#: src/backend/datasources/filters/AsciiFilter.cpp:534
+#: src/backend/datasources/filters/AsciiFilter.cpp:495
 #: src/backend/datasources/filters/AsciiMatrixFilter.cpp:528
-#: src/backend/datasources/filters/BinaryFilter.cpp:440
-#: src/backend/datasources/filters/HDFFilter.cpp:841
+#: src/backend/datasources/filters/BinaryFilter.cpp:451
+#: src/backend/datasources/filters/HDFFilter.cpp:887
 #: src/backend/datasources/filters/ImageFilter.cpp:278
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:1878
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:1633
 #: src/backend/worksheet/plots/cartesian/CartesianPlotLegend.cpp:938
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:2270
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:2269
 #: src/backend/worksheet/plots/cartesian/XYEquationCurve.cpp:213
 #: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:835
 #: src/backend/worksheet/plots/PlotArea.cpp:454
 #: src/backend/worksheet/TextLabel.cpp:672
 #: src/backend/worksheet/Worksheet.cpp:713
-#: src/commonfrontend/ProjectExplorer.cpp:578
+#: src/commonfrontend/ProjectExplorer.cpp:577
 #, kde-format
 msgid "Attribute '%1' missing or empty, default value is used"
 msgstr ""
 
-#: src/backend/datasources/filters/AsciiFilter.cpp:477
+#: src/backend/datasources/filters/AsciiFilter.cpp:438
 #: src/backend/datasources/filters/AsciiMatrixFilter.cpp:460
-#: src/backend/datasources/filters/BinaryFilter.cpp:387
-#: src/backend/datasources/filters/HDFFilter.cpp:771
+#: src/backend/datasources/filters/BinaryFilter.cpp:390
+#: src/backend/datasources/filters/HDFFilter.cpp:822
 #: src/backend/datasources/filters/ImageFilter.cpp:234
 #, kde-format
 msgid "numerical data, %1 element"
@@ -671,12 +681,20 @@ msgid_plural "numerical data, %1 elements"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/backend/datasources/filters/AsciiFilter.cpp:530
+#: src/backend/datasources/filters/AsciiFilter.cpp:491
 #: src/backend/datasources/filters/AsciiMatrixFilter.cpp:524
 msgid "no ascii filter element found"
 msgstr ""
 
-#: src/backend/datasources/filters/BinaryFilter.cpp:436
+#: src/backend/datasources/filters/BinaryFilter.cpp:228
+msgid "file does not exist"
+msgstr ""
+
+#: src/backend/datasources/filters/BinaryFilter.cpp:231
+msgid "could not open file for reading"
+msgstr ""
+
+#: src/backend/datasources/filters/BinaryFilter.cpp:447
 #: src/backend/datasources/filters/ImageFilter.cpp:274
 msgid "no binary filter element found"
 msgstr ""
@@ -686,7 +704,7 @@ msgid "data type"
 msgstr ""
 
 #: src/backend/datasources/filters/HDFFilter.cpp:458
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:514
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:526
 msgid "data set"
 msgstr ""
 
@@ -710,7 +728,7 @@ msgstr ""
 msgid "unknown"
 msgstr ""
 
-#: src/backend/datasources/filters/HDFFilter.cpp:837
+#: src/backend/datasources/filters/HDFFilter.cpp:883
 msgid "no hdf filter element found"
 msgstr ""
 
@@ -756,110 +774,110 @@ msgstr ""
 msgid "unexpected end of document"
 msgstr ""
 
-#: src/backend/matrix/Matrix.cpp:124 src/backend/matrix/matrixcommands.cpp:41
+#: src/backend/matrix/Matrix.cpp:140 src/backend/matrix/matrixcommands.cpp:41
 #, kde-format
 msgid "%1: insert %2 column"
 msgid_plural "%1: insert %2 columns"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/backend/matrix/Matrix.cpp:137 src/backend/matrix/matrixcommands.cpp:93
+#: src/backend/matrix/Matrix.cpp:153 src/backend/matrix/matrixcommands.cpp:93
 #, kde-format
 msgid "%1: remove %2 column"
 msgid_plural "%1: remove %2 columns"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/backend/matrix/Matrix.cpp:146 src/backend/matrix/matrixcommands.cpp:128
+#: src/backend/matrix/Matrix.cpp:162 src/backend/matrix/matrixcommands.cpp:128
 #, kde-format
 msgid "%1: remove %2 row"
 msgid_plural "%1: remove %2 rows"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/backend/matrix/Matrix.cpp:155 src/backend/matrix/matrixcommands.cpp:67
+#: src/backend/matrix/Matrix.cpp:171 src/backend/matrix/matrixcommands.cpp:67
 #, kde-format
 msgid "%1: insert %2 row"
 msgid_plural "%1: insert %2 rows"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/backend/matrix/Matrix.cpp:168
+#: src/backend/matrix/Matrix.cpp:184
 #, kde-format
 msgid "%1: set matrix size to %2x%3"
 msgstr ""
 
-#: src/backend/matrix/Matrix.cpp:198
+#: src/backend/matrix/Matrix.cpp:214
 #: src/backend/spreadsheet/Spreadsheet.cpp:293
 #, kde-format
 msgid "%1: copy %2"
 msgstr ""
 
-#: src/backend/matrix/Matrix.cpp:245
+#: src/backend/matrix/Matrix.cpp:261
 #, kde-format
 msgid "%1: add %2 rows"
 msgid_plural "%1: add %2 rows"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/backend/matrix/Matrix.cpp:255
+#: src/backend/matrix/Matrix.cpp:271
 #, kde-format
 msgid "%1: add %2 column"
 msgid_plural "%1: add %2 columns"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/backend/matrix/Matrix.cpp:409 src/backend/matrix/matrixcommands.cpp:163
+#: src/backend/matrix/Matrix.cpp:425 src/backend/matrix/matrixcommands.cpp:163
 #: src/backend/spreadsheet/Spreadsheet.cpp:251
 #, kde-format
 msgid "%1: clear"
 msgstr ""
 
-#: src/backend/matrix/Matrix.cpp:641
+#: src/backend/matrix/Matrix.cpp:651
 msgid "no matrix element found"
 msgstr ""
 
-#: src/backend/matrix/Matrix.cpp:660
+#: src/backend/matrix/Matrix.cpp:670
 msgid "invalid row or column count"
 msgstr ""
 
-#: src/backend/matrix/Matrix.cpp:707
+#: src/backend/matrix/Matrix.cpp:717
 msgid "invalid or missing numeric format"
 msgstr ""
 
-#: src/backend/matrix/Matrix.cpp:715
+#: src/backend/matrix/Matrix.cpp:725
 msgid "invalid or missing number of displayed digits"
 msgstr ""
 
-#: src/backend/matrix/Matrix.cpp:732
+#: src/backend/matrix/Matrix.cpp:742
 msgid "invalid x start value"
 msgstr ""
 
-#: src/backend/matrix/Matrix.cpp:739
+#: src/backend/matrix/Matrix.cpp:749
 msgid "invalid x end value"
 msgstr ""
 
-#: src/backend/matrix/Matrix.cpp:746
+#: src/backend/matrix/Matrix.cpp:756
 msgid "invalid y start value"
 msgstr ""
 
-#: src/backend/matrix/Matrix.cpp:753
+#: src/backend/matrix/Matrix.cpp:763
 msgid "invalid y end value"
 msgstr ""
 
-#: src/backend/matrix/Matrix.cpp:778
+#: src/backend/matrix/Matrix.cpp:788
 msgid "invalid row height"
 msgstr ""
 
-#: src/backend/matrix/Matrix.cpp:792 src/backend/matrix/Matrix.cpp:821
+#: src/backend/matrix/Matrix.cpp:802 src/backend/matrix/Matrix.cpp:831
 msgid "invalid or missing column index"
 msgstr ""
 
-#: src/backend/matrix/Matrix.cpp:798
+#: src/backend/matrix/Matrix.cpp:808
 msgid "invalid column width"
 msgstr ""
 
-#: src/backend/matrix/Matrix.cpp:828
+#: src/backend/matrix/Matrix.cpp:838
 msgid "invalid cell value"
 msgstr ""
 
@@ -960,7 +978,7 @@ msgstr ""
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:165
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:388
 #: src/backend/worksheet/plots/cartesian/CartesianPlotLegend.cpp:133
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:156
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:155
 #: src/backend/worksheet/TextLabel.cpp:125
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:231
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:375
@@ -1004,7 +1022,7 @@ msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:204
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:329
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:230
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:229
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:292
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:424
 msgid "color"
@@ -1017,7 +1035,7 @@ msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:388
 #: src/backend/worksheet/plots/cartesian/CartesianPlotLegend.cpp:163
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:183
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:182
 #: src/backend/worksheet/plots/PlotArea.cpp:96
 #: src/backend/worksheet/TextLabel.cpp:265
 #: src/backend/worksheet/WorksheetElementContainer.cpp:83
@@ -1029,7 +1047,7 @@ msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:388
 #: src/backend/worksheet/plots/cartesian/CartesianPlotLegend.cpp:163
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:183
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:182
 #: src/backend/worksheet/plots/PlotArea.cpp:96
 #: src/backend/worksheet/TextLabel.cpp:265
 #: src/backend/worksheet/WorksheetElementContainer.cpp:83
@@ -1085,13 +1103,13 @@ msgid "%1: set title offset"
 msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:478
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:335
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:334
 #, kde-format
 msgid "%1: set line style"
 msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:485
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:342
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:341
 #, kde-format
 msgid "%1: set line opacity"
 msgstr ""
@@ -1580,295 +1598,295 @@ msgstr ""
 msgid "no cartesian plot legend element found"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:273
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:272
 #, kde-format
 msgid "%1: assign x values"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:293
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:292
 #, kde-format
 msgid "%1: assign y values"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:314
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:313
 #, kde-format
 msgid "%1: line type changed"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:321
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:320
 #, kde-format
 msgid "%1: set skip line gaps"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:328
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:327
 #, kde-format
 msgid "%1: set the number of interpolation points"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:350
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:349
 #, kde-format
 msgid "%1: drop line type changed"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:357
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:356
 #, kde-format
 msgid "%1: set drop line style"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:364
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:363
 #, kde-format
 msgid "%1: set drop line opacity"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:372
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:371
 #, kde-format
 msgid "%1: set symbol style"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:379
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:378
 #, kde-format
 msgid "%1: set symbol size"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:386
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:385
 #, kde-format
 msgid "%1: rotate symbols"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:393
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:392
 #, kde-format
 msgid "%1: set symbol filling"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:400
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:399
 #, kde-format
 msgid "%1: set symbol outline style"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:407
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:406
 #, kde-format
 msgid "%1: set symbols opacity"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:415
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:414
 #, kde-format
 msgid "%1: set values type"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:422
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:421
 #, kde-format
 msgid "%1: set values column"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:435
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:434
 #, kde-format
 msgid "%1: set values position"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:442
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:441
 #, kde-format
 msgid "%1: set values distance"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:449
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:448
 #, kde-format
 msgid "%1: rotate values"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:456
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:455
 #, kde-format
 msgid "%1: set values opacity"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:465
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:464
 #, kde-format
 msgid "%1: set values prefix"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:472
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:471
 #, kde-format
 msgid "%1: set values suffix"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:479
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:478
 #, kde-format
 msgid "%1: set values font"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:486
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:485
 #, kde-format
 msgid "%1: set values color"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:494
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:493
 #, kde-format
 msgid "%1: filling position changed"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:501
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:500
 #, kde-format
 msgid "%1: filling type changed"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:508
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:507
 #, kde-format
 msgid "%1: filling color style changed"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:515
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:514
 #, kde-format
 msgid "%1: filling image style changed"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:522
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:521
 #, kde-format
 msgid "%1: filling brush style changed"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:529
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:528
 #, kde-format
 msgid "%1: set filling first color"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:536
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:535
 #, kde-format
 msgid "%1: set filling second color"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:543
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:542
 #, kde-format
 msgid "%1: set filling image"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:550
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:549
 #, kde-format
 msgid "%1: set filling opacity"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:558
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:557
 #, kde-format
 msgid "%1: x-error type changed"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:565
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:578
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:564
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:577
 #, kde-format
 msgid "%1: set x-error column"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:591
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:590
 #, kde-format
 msgid "%1: y-error type changed"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:598
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:611
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:597
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:610
 #, kde-format
 msgid "%1: set y-error column"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:624
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:623
 #, kde-format
 msgid "%1: set error bar cap size"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:631
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:630
 #, kde-format
 msgid "%1: error bar type changed"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:638
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:637
 #, kde-format
 msgid "%1: set error bar style"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:645
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:644
 #, kde-format
 msgid "%1: set error bar opacity"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:723
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:722
 msgid "circle"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:725
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:724
 msgid "square"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:727
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:726
 msgid "equilateral triangle"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:729
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:728
 msgid "right triangle"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:731
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:730
 msgid "bar"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:733
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:732
 msgid "peaked bar"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:735
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:734
 msgid "skewed bar"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:737
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:736
 msgid "diamond"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:739
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:738
 msgid "lozenge"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:741
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:740
 msgid "tie"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:743
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:742
 msgid "tiny tie"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:745
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:744
 msgid "plus"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:747
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:746
 msgid "boomerang"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:749
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:748
 msgid "small boomerang"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:751
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:750
 msgid "star4"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:753
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:752
 msgid "star5"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:755
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:754
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:237
 msgid "line"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:757
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:756
 msgid "cross"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:1125
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:1124
 msgid "Error: Akima spline interpolation requires a minimum of 5 points."
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:1127
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:1126
 msgid "Couldn't initialize spline function"
 msgstr ""
 
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:2263
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:2262
 msgid "no xy-curve element found"
 msgstr ""
 
@@ -2278,7 +2296,7 @@ msgid "collapse all"
 msgstr ""
 
 #: src/commonfrontend/ProjectExplorer.cpp:129
-#: src/commonfrontend/ProjectExplorer.cpp:375
+#: src/commonfrontend/ProjectExplorer.cpp:374
 msgid "hide search/filter options"
 msgstr ""
 
@@ -2297,11 +2315,13 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, lColumnCount)
 #: src/commonfrontend/ProjectExplorer.cpp:259
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:147
+#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:238
+#: src/kdefrontend/ui/dockwidgets/spreadsheetdock.ui:106
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:604
 msgid "Columns"
 msgstr ""
 
-#: src/commonfrontend/ProjectExplorer.cpp:372
+#: src/commonfrontend/ProjectExplorer.cpp:371
 msgid "show search/filter options"
 msgstr ""
 
@@ -2778,12 +2798,12 @@ msgid "Matrix name:"
 msgstr ""
 
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:64
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:501
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:513
 msgid "Automatic"
 msgstr ""
 
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:64
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:502
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:514
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:287
 #: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:91
 msgid "Custom"
@@ -2803,19 +2823,19 @@ msgstr ""
 msgid "Attributes"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:344
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:348
 msgid "Select the File Data Source"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:451
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:455
 msgid "Save Filter Settings as"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:452
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:456
 msgid "Filter name:"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:452
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:456
 msgid "new filter"
 msgstr ""
 
@@ -2884,7 +2904,7 @@ msgstr ""
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:293
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:508
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:511
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:251
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:250
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:411
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:420
 #: src/kdefrontend/widgets/LabelWidget.cpp:74
@@ -2895,7 +2915,7 @@ msgstr ""
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:294
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:509
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:510
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:253
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:252
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:412
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:421
 #: src/kdefrontend/widgets/LabelWidget.cpp:76
@@ -2991,7 +3011,7 @@ msgstr ""
 
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:497
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:499
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:255
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:254
 #: src/kdefrontend/widgets/LabelWidget.cpp:79
 #: src/kdefrontend/widgets/LabelWidget.cpp:88
 msgid "top"
@@ -2999,7 +3019,7 @@ msgstr ""
 
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:498
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:500
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:257
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:256
 #: src/kdefrontend/widgets/LabelWidget.cpp:81
 #: src/kdefrontend/widgets/LabelWidget.cpp:90
 msgid "bottom"
@@ -3030,15 +3050,15 @@ msgstr ""
 
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:519
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:343
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:244
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:243
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:308
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:440
 msgid "centered"
 msgstr ""
 
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:520
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:254
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:258
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:253
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:257
 #: src/kdefrontend/widgets/LabelWidget.cpp:77
 #: src/kdefrontend/widgets/LabelWidget.cpp:82
 msgid "custom"
@@ -3068,9 +3088,9 @@ msgstr ""
 
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:1715
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:1035
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:915
-#: src/kdefrontend/dockwidgets/MatrixDock.cpp:182
-#: src/kdefrontend/dockwidgets/SpreadsheetDock.cpp:189
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:914
+#: src/kdefrontend/dockwidgets/MatrixDock.cpp:203
+#: src/kdefrontend/dockwidgets/SpreadsheetDock.cpp:196
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:866
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:2077
 #, kde-format
@@ -3088,91 +3108,91 @@ msgid "sloped"
 msgstr ""
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:330
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:231
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:230
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:293
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:425
 msgid "image"
 msgstr ""
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:331
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:232
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:231
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:294
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:426
 msgid "pattern"
 msgstr ""
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:333
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:234
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:233
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:297
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:429
 msgid "single color"
 msgstr ""
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:334
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:235
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:234
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:298
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:430
 msgid "horizontal linear gradient"
 msgstr ""
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:335
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:236
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:235
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:299
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:431
 msgid "vertical linear gradient"
 msgstr ""
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:336
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:237
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:236
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:300
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:432
 msgid "diagonal linear gradient (start from top left)"
 msgstr ""
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:337
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:238
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:237
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:301
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:433
 msgid "diagonal linear gradient (start from bottom left)"
 msgstr ""
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:338
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:239
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:238
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:302
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:434
 msgid "radial gradient"
 msgstr ""
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:340
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:241
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:240
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:305
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:437
 msgid "scaled and cropped"
 msgstr ""
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:341
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:242
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:241
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:306
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:438
 msgid "scaled"
 msgstr ""
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:342
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:243
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:242
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:307
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:439
 msgid "scaled, keep proportions"
 msgstr ""
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:344
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:245
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:244
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:309
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:441
 msgid "tiled"
 msgstr ""
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:345
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:246
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:245
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:310
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:442
 msgid "center tiled"
@@ -3194,9 +3214,9 @@ msgstr ""
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:630
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:654
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:683
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:408
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:432
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:460
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:407
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:431
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:459
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:438
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:462
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:491
@@ -3225,8 +3245,8 @@ msgstr ""
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:634
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:687
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:412
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:464
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:411
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:463
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:442
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:495
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1362
@@ -3235,7 +3255,7 @@ msgid "First Color"
 msgstr ""
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:746
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:518
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:517
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:641
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1468
 msgid "Select the image file"
@@ -3246,16 +3266,16 @@ msgstr ""
 msgid "%1 cartesian plots: template \"%2\" loaded"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:248
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:247
 msgid "column major"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:249
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:248
 msgid "row major"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:252
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:256
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:251
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:255
 #: src/kdefrontend/widgets/LabelWidget.cpp:75
 #: src/kdefrontend/widgets/LabelWidget.cpp:80
 #: src/kdefrontend/widgets/LabelWidget.cpp:85
@@ -3263,7 +3283,7 @@ msgstr ""
 msgid "center"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:913
+#: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:912
 #, kde-format
 msgid "%1 cartesian plot legends: template \"%2\" loaded"
 msgstr ""
@@ -3371,12 +3391,12 @@ msgstr ""
 msgid "Y-error"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/MatrixDock.cpp:180
+#: src/kdefrontend/dockwidgets/MatrixDock.cpp:201
 #, kde-format
 msgid "%1 matrices: template \"%2\" loaded"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/SpreadsheetDock.cpp:187
+#: src/kdefrontend/dockwidgets/SpreadsheetDock.cpp:194
 #, kde-format
 msgid "%1 spreadsheets: template \"%2\" loaded"
 msgstr ""
@@ -5453,8 +5473,8 @@ msgstr ""
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:1048
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:107
 #: src/kdefrontend/ui/dockwidgets/columndock.ui:66
-#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:129
-#: src/kdefrontend/ui/dockwidgets/spreadsheetdock.ui:129
+#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:82
+#: src/kdefrontend/ui/dockwidgets/spreadsheetdock.ui:145
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:838
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1314
 msgid "Format:"
@@ -5465,7 +5485,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, lLabelsPrecision)
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:1058
 #: src/kdefrontend/ui/dockwidgets/columndock.ui:93
-#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:146
+#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:96
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:855
 msgid "Precision"
 msgstr ""
@@ -5564,7 +5584,9 @@ msgid "Height"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lXscale)
+#. i18n: ectx: property (text), widget (QLabel, lXRange)
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:208
+#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:139
 msgid "x-Range:"
 msgstr ""
 
@@ -5576,7 +5598,9 @@ msgid "Scaling"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lYscale)
+#. i18n: ectx: property (text), widget (QLabel, lYRange)
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:304
+#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:203
 msgid "y-Range:"
 msgstr ""
 
@@ -5709,15 +5733,11 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lName)
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:36
-#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:17
-#: src/kdefrontend/ui/dockwidgets/spreadsheetdock.ui:17
 msgid "Name:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lComment)
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:68
-#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:27
-#: src/kdefrontend/ui/dockwidgets/spreadsheetdock.ui:27
 msgid "Comment:"
 msgstr ""
 
@@ -5810,27 +5830,14 @@ msgstr ""
 msgid "Plot designation"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, lDimensions)
-#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:66
-#: src/kdefrontend/ui/dockwidgets/spreadsheetdock.ui:66
-msgid "Dimensions:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, lRowCount)
-#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:73
-#: src/kdefrontend/ui/dockwidgets/spreadsheetdock.ui:73
-msgid "Number of rows:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, lColumnCount)
-#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:90
-#: src/kdefrontend/ui/dockwidgets/spreadsheetdock.ui:90
-msgid "Number of columns:"
-msgstr ""
-
 #. i18n: ectx: property (text), widget (QLabel, lHeader)
-#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:160
+#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:103
 msgid "Header"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, pbResize)
+#: src/kdefrontend/ui/dockwidgets/matrixdock.ui:275
+msgid "Resize"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lVersion_2)
@@ -5853,8 +5860,13 @@ msgstr ""
 msgid "Notes"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QLabel, lDimensions)
+#: src/kdefrontend/ui/dockwidgets/spreadsheetdock.ui:82
+msgid "Dimensions:"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QLabel, lShowComments)
-#: src/kdefrontend/ui/dockwidgets/spreadsheetdock.ui:136
+#: src/kdefrontend/ui/dockwidgets/spreadsheetdock.ui:152
 msgid "Column comments"
 msgstr ""
 
