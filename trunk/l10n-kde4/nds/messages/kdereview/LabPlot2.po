@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-06-01 01:59+0000\n"
+"POT-Creation-Date: 2015-06-03 02:09+0000\n"
 "PO-Revision-Date: 2014-03-19 20:12+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -311,6 +311,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, lMinorTicksType)
 #: src/backend/core/AspectTreeModel.cpp:148
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:90
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:100
 #: src/kdefrontend/ui/datasources/importfilewidget.ui:84
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:403
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:521
@@ -653,9 +654,9 @@ msgstr ""
 #: src/backend/datasources/filters/AsciiFilter.cpp:519
 #: src/backend/datasources/filters/AsciiMatrixFilter.cpp:528
 #: src/backend/datasources/filters/BinaryFilter.cpp:439
-#: src/backend/datasources/filters/HDFFilter.cpp:1301
+#: src/backend/datasources/filters/HDFFilter.cpp:1300
 #: src/backend/datasources/filters/ImageFilter.cpp:297
-#: src/backend/datasources/filters/NetCDFFilter.cpp:495
+#: src/backend/datasources/filters/NetCDFFilter.cpp:634
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:1878
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:1633
 #: src/backend/worksheet/plots/cartesian/CartesianPlotLegend.cpp:938
@@ -678,8 +679,9 @@ msgstr ""
 #: src/backend/datasources/filters/AsciiFilter.cpp:453
 #: src/backend/datasources/filters/AsciiMatrixFilter.cpp:460
 #: src/backend/datasources/filters/BinaryFilter.cpp:379
-#: src/backend/datasources/filters/HDFFilter.cpp:1230
+#: src/backend/datasources/filters/HDFFilter.cpp:1229
 #: src/backend/datasources/filters/ImageFilter.cpp:250
+#: src/backend/datasources/filters/NetCDFFilter.cpp:567
 #, kde-format
 msgid "numerical data, %1 element"
 msgid_plural "numerical data, %1 elements"
@@ -701,7 +703,7 @@ msgid "data type"
 msgstr ""
 
 #: src/backend/datasources/filters/HDFFilter.cpp:835
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:557
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:561
 msgid "data set"
 msgstr ""
 
@@ -725,8 +727,8 @@ msgstr ""
 msgid "unknown"
 msgstr ""
 
-#: src/backend/datasources/filters/HDFFilter.cpp:1297
-#: src/backend/datasources/filters/NetCDFFilter.cpp:491
+#: src/backend/datasources/filters/HDFFilter.cpp:1296
+#: src/backend/datasources/filters/NetCDFFilter.cpp:630
 msgid "no hdf filter element found"
 msgstr ""
 
@@ -740,6 +742,19 @@ msgstr ""
 
 #: src/backend/datasources/filters/ImageFilter.cpp:57
 msgid "XYRGB"
+msgstr ""
+
+#: src/backend/datasources/filters/NetCDFFilter.cpp:332
+msgid "attribute"
+msgstr ""
+
+#: src/backend/datasources/filters/NetCDFFilter.cpp:355
+msgid "dimension"
+msgstr ""
+
+#: src/backend/datasources/filters/NetCDFFilter.cpp:387
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:576
+msgid "variable"
 msgstr ""
 
 #: src/backend/lib/XmlStreamReader.cpp:65
@@ -2809,12 +2824,12 @@ msgid "Matrix name:"
 msgstr ""
 
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:65
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:544
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:548
 msgid "Automatic"
 msgstr ""
 
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:65
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:545
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:549
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:287
 #: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:91
 msgid "Custom"
@@ -2841,19 +2856,19 @@ msgstr ""
 msgid "Values"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:359
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:363
 msgid "Select the File Data Source"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:487
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:491
 msgid "Save Filter Settings as"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:488
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:492
 msgid "Filter name:"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:488
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:492
 msgid "new filter"
 msgstr ""
 
@@ -4908,13 +4923,11 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lDataSet)
 #: src/kdefrontend/ui/datasources/hdfoptionswidget.ui:19
-#: src/kdefrontend/ui/datasources/netcdfoptionswidget.ui:19
 msgid "Data set:"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, leDataSet)
 #: src/kdefrontend/ui/datasources/hdfoptionswidget.ui:26
-#: src/kdefrontend/ui/datasources/netcdfoptionswidget.ui:26
 msgid "Selected data set"
 msgstr ""
 
@@ -5081,6 +5094,16 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (QSpinBox, sbEndColumn)
 #: src/kdefrontend/ui/datasources/importfilewidget.ui:444
 msgid "Specify the end column to import; -1 stands for the last column"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, lVariable)
+#: src/kdefrontend/ui/datasources/netcdfoptionswidget.ui:19
+msgid "Variable:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, leVarName)
+#: src/kdefrontend/ui/datasources/netcdfoptionswidget.ui:26
+msgid "Selected variable name"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QTreeWidget, twContent)
