@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-09-08 10:44+0000\n"
+"POT-Creation-Date: 2015-09-09 08:18+0000\n"
 "PO-Revision-Date: 2014-09-18 17:03+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1385,12 +1385,12 @@ msgid "Automatically add &new servers discovered in CRL distribution points"
 msgstr ""
 "Automaatsch &niege Servers tofögen, de op ZTL-Verdeelsteden funnen warrt"
 
-#: conf/dirservconfigpage.cpp:392
+#: conf/dirservconfigpage.cpp:381
 #, kde-format
 msgid "Backend error: gpgconf does not seem to know the entry for %1/%2/%3"
 msgstr "Hölper-Fehler: \"gpgconf\" kennt den Indrag för %1/%2/%3 wull nich"
 
-#: conf/dirservconfigpage.cpp:398
+#: conf/dirservconfigpage.cpp:387
 #, kde-format
 msgid "Backend error: gpgconf has wrong type for %1/%2/%3: %4 %5"
 msgstr "Hölper-Fehler: \"gpgconf\" hett en legen Typ för %1/%2/%3: %4 %5"
@@ -1750,7 +1750,7 @@ msgstr ""
 "Dateien, de ehr Pröövsummen Du utreken wullt, man keen Mengeleren vun disse "
 "twee."
 
-#: crypto/createchecksumscontroller.cpp:348 mainwindow_desktop.cpp:557
+#: crypto/createchecksumscontroller.cpp:348 mainwindow_desktop.cpp:546
 msgid "Cancel"
 msgstr "Afbreken"
 
@@ -4099,65 +4099,93 @@ msgstr "&Hülp"
 msgid "Main Toolbar"
 msgstr "Hööft-Warktüüchbalken"
 
-#: kleopatraapplication.cpp:94
-msgid "Run UI server only, hide main window"
-msgstr "Bloots Böversietserver utföhren, Hööftfinster versteken"
-
-#: kleopatraapplication.cpp:95
+#: kleopatra_options.h:45
 msgid "Use OpenPGP for the following operation"
 msgstr "OpenPGP för de nakamen Akschoon bruken"
 
-#: kleopatraapplication.cpp:96
+#: kleopatra_options.h:48
 msgid "Use CMS (X.509, S/MIME) for the following operation"
 msgstr "CMS (X.509, S/MIME) för de nakamen Akschoon bruken"
 
-#: kleopatraapplication.cpp:97
-msgid "Import certificate file(s)"
-msgstr "Zertifikaatdateien importeren"
-
-#: kleopatraapplication.cpp:98
-msgid "Encrypt file(s)"
-msgstr "Dateien verslöteln"
-
-#: kleopatraapplication.cpp:99
-msgid "Sign file(s)"
-msgstr "Dateien ünnerschrieven"
-
-#: kleopatraapplication.cpp:100
-msgid "Sign and/or encrypt file(s)"
-msgstr "Dateien ünnerschrieven un/oder verslöteln"
-
-#: kleopatraapplication.cpp:101
-msgid "Same as --sign-encrypt, do not use"
-msgstr "Dat Sülvige as \"--sign-encrypt\". - Bruuk dat man nich."
-
-#: kleopatraapplication.cpp:102
-msgid "Decrypt file(s)"
-msgstr "Dateien opslöteln"
-
-#: kleopatraapplication.cpp:103
-msgid "Verify file/signature"
-msgstr "Datei/Ünnerschrift pröven"
-
-#: kleopatraapplication.cpp:104
-msgid "Decrypt and/or verify file(s)"
-msgstr "Dateien opslöteln un/oder pröven"
-
-#: kleopatraapplication.cpp:105
-msgid "Search for Certificate by fingerprint"
-msgstr "Na Zertifikaat över Fingerafdruck söken"
-
-#: kleopatraapplication.cpp:106
-msgid "Parent Window Id for dialogs"
-msgstr "Böverfinster-ID för Dialogen"
-
-#: kleopatraapplication.cpp:114
+#: kleopatra_options.h:51
 msgid "Location of the socket the ui server is listening on"
 msgstr "Steed vun den Socket, an den de Böversietserver luustert"
 
-#: kleopatraapplication.cpp:122
+#: kleopatra_options.h:54
+msgid "Run UI server only, hide main window"
+msgstr "Bloots Böversietserver utföhren, Hööftfinster versteken"
+
+#: kleopatra_options.h:58
+msgid "Import certificate file(s)"
+msgstr "Zertifikaatdateien importeren"
+
+#: kleopatra_options.h:61
+msgid "Encrypt file(s)"
+msgstr "Dateien verslöteln"
+
+#: kleopatra_options.h:64
+msgid "Sign file(s)"
+msgstr "Dateien ünnerschrieven"
+
+#: kleopatra_options.h:67
+msgid "Sign and/or encrypt file(s)"
+msgstr "Dateien ünnerschrieven un/oder verslöteln"
+
+#: kleopatra_options.h:69
+msgid "Same as --sign-encrypt, do not use"
+msgstr "Dat Sülvige as \"--sign-encrypt\". - Bruuk dat man nich."
+
+#: kleopatra_options.h:72
+msgid "Decrypt file(s)"
+msgstr "Dateien opslöteln"
+
+#: kleopatra_options.h:75
+msgid "Verify file/signature"
+msgstr "Datei/Ünnerschrift pröven"
+
+#: kleopatra_options.h:78
+msgid "Decrypt and/or verify file(s)"
+msgstr "Dateien opslöteln un/oder pröven"
+
+#: kleopatra_options.h:81
+msgid "Search for Certificate by fingerprint"
+msgstr "Na Zertifikaat över Fingerafdruck söken"
+
+#: kleopatra_options.h:84
+msgid "Parent Window Id for dialogs"
+msgstr "Böverfinster-ID för Dialogen"
+
+#: kleopatra_options.h:92
 msgid "File(s) to process"
 msgstr "Afarbeidt Dateien"
+
+#: kleopatraapplication.cpp:237
+#, fuzzy
+#| msgid "Failed to execute %1: %2"
+msgid "Failed to execute command"
+msgstr "%1 lett sik nich utföhren: %2"
+
+#: kleopatraapplication.cpp:272
+msgid "Ambigious protocol: --openpgp and --cms"
+msgstr ""
+
+#: kleopatraapplication.cpp:281
+msgid "No fingerprint argument specified for --query"
+msgstr ""
+
+#: kleopatraapplication.cpp:333
+#, kde-format
+msgid "Ambiguous commands \"%1\" and \"%2\""
+msgstr ""
+
+#: kleopatraapplication.cpp:339
+#, kde-format
+msgid "No files specificed for \"%1\" command"
+msgstr ""
+
+#: kleopatraapplication.cpp:350
+msgid "No command provided but arguments present"
+msgstr ""
 
 #: libkleopatraclient/core/command.cpp:477
 #, kde-format
@@ -4230,28 +4258,28 @@ msgstr "Kleopatra-Fehler"
 msgid "There was an error while connecting to Kleopatra: %1"
 msgstr ""
 
-#: main.cpp:150
+#: main.cpp:154
 msgid "Performing Self-Check..."
 msgstr "Sülvsttest warrt utföhrt..."
 
-#: main.cpp:167
+#: main.cpp:171
 msgctxt "did not pass"
 msgid "Self-Check Failed"
 msgstr "Sülvsttest fehlslaan"
 
-#: main.cpp:172
+#: main.cpp:176
 msgid "Self-Check Passed"
 msgstr "Sülvsttest OK"
 
-#: main.cpp:190
+#: main.cpp:194
 msgid "Loading certificate cache..."
 msgstr "Zertifikaat-Twischenspieker warrt laadt..."
 
-#: main.cpp:197
+#: main.cpp:201
 msgid "Certificate cache loaded."
 msgstr "Zertifikaat-Twischenspieker laadt."
 
-#: main.cpp:237
+#: main.cpp:250
 msgctxt "@info"
 msgid ""
 "<para>The version of the <application>GpgME</application> library you are "
@@ -4266,16 +4294,22 @@ msgstr ""
 "funkscheneert so nich.</para><para>Snack dor bitte Dien Systeempleger op an, "
 "he schall Di dor bi hölpen.</para>"
 
-#: main.cpp:241
+#: main.cpp:254
 msgctxt "@title"
 msgid "GpgME Too Old"
 msgstr "GpgME to oolt"
 
-#: main.cpp:337
+#: main.cpp:334
+#, fuzzy, kde-format
+#| msgid "invalid mode: \"%1\""
+msgid "Invalid arguments: %1"
+msgstr "Leeg Bedriefoort: \"%1\""
+
+#: main.cpp:353
 msgid "GPG UI Server Error"
 msgstr "GPG-Böversietserver-Fehler"
 
-#: main.cpp:338
+#: main.cpp:354
 #, kde-format
 msgid ""
 "<qt>The Kleopatra GPG UI Server Module could not be initialized.<br/>The "
@@ -4288,17 +4322,17 @@ msgstr ""
 "bruken, man Verslötelmodulen, de en lopen GPG-Böversietserver bruukt, loopt "
 "sachs nich propper oder gor nich.</qt>"
 
-#: mainwindow_desktop.cpp:119
+#: mainwindow_desktop.cpp:108
 #, kde-format
 msgctxt "Quit [ApplicationName]"
 msgid "&Quit %1"
 msgstr "%1 &utmaken"
 
-#: mainwindow_desktop.cpp:126
+#: mainwindow_desktop.cpp:115
 msgid "Only &Close Window"
 msgstr "Bloots Finster &tomaken"
 
-#: mainwindow_desktop.cpp:166
+#: mainwindow_desktop.cpp:155
 #, kde-format
 msgid ""
 "%1 may be used by other applications as a service.\n"
@@ -4307,11 +4341,11 @@ msgstr ""
 "%1 lett sik vun anner Programmen as Deenst bruken.\n"
 "Maak man ansteed dat Finster to, man %1 nich ut."
 
-#: mainwindow_desktop.cpp:168
+#: mainwindow_desktop.cpp:157
 msgid "Really Quit?"
 msgstr "Redig utmaken?"
 
-#: mainwindow_desktop.cpp:210
+#: mainwindow_desktop.cpp:199
 msgid ""
 "Could not start the GnuPG Log Viewer (kwatchgnupg). Please check your "
 "installation."
@@ -4319,41 +4353,41 @@ msgstr ""
 "De Logbookkieker för GnuPG (kwatchgnupg) lett sik nich opropen. Prööv bitte "
 "Dien Installatschoon."
 
-#: mainwindow_desktop.cpp:212
+#: mainwindow_desktop.cpp:201
 msgid "Error Starting KWatchGnuPG"
 msgstr "Fehler bi't Starten vun KWatchGnuPG"
 
-#: mainwindow_desktop.cpp:335
+#: mainwindow_desktop.cpp:324
 msgid "GnuPG Log Viewer"
 msgstr "GnuPG-Logbookkieker"
 
-#: mainwindow_desktop.cpp:342
+#: mainwindow_desktop.cpp:331
 msgid "Configure GnuPG Backend..."
 msgstr "GnuPG-Hölperprogramm instellen..."
 
-#: mainwindow_desktop.cpp:348
+#: mainwindow_desktop.cpp:337
 msgid "Perform Self-Test"
 msgstr "Sülvsttest utföhren"
 
-#: mainwindow_desktop.cpp:354
+#: mainwindow_desktop.cpp:343
 msgid "About Gpg4win"
 msgstr "Över Gpg4win"
 
-#: mainwindow_desktop.cpp:373
+#: mainwindow_desktop.cpp:362
 msgid "Set Focus to Quick Search"
 msgstr "Blinker na Fixsöök setten"
 
-#: mainwindow_desktop.cpp:395
+#: mainwindow_desktop.cpp:384
 msgid "Could not configure the cryptography backend (gpgconf tool not found)"
 msgstr ""
 "Dat Verslötel-Hülpprogramm lett sik nich instellen (Programm \"gpgconf\" "
 "nich funnen)"
 
-#: mainwindow_desktop.cpp:395
+#: mainwindow_desktop.cpp:384
 msgid "Configuration Error"
 msgstr "Instellfehler"
 
-#: mainwindow_desktop.cpp:429
+#: mainwindow_desktop.cpp:418
 msgid ""
 "There are still some background operations ongoing. These will be terminated "
 "when closing the window. Proceed?"
@@ -4361,23 +4395,23 @@ msgstr ""
 "Do loop noch en Reeg Akschonen in den Achtergrund. De warrt afbraken, wenn "
 "Du dat Finster tomaakst. Wiedermaken?"
 
-#: mainwindow_desktop.cpp:432
+#: mainwindow_desktop.cpp:421
 msgid "Ongoing Background Tasks"
 msgstr "Lopen Achtergrund-Akschonen"
 
-#: mainwindow_desktop.cpp:541
+#: mainwindow_desktop.cpp:530
 msgid "Sign/Encrypt..."
 msgstr "Ünnerschrieven/verslöteln..."
 
-#: mainwindow_desktop.cpp:542 utils/clipboardmenu.cpp:50
+#: mainwindow_desktop.cpp:531 utils/clipboardmenu.cpp:50
 msgid "Decrypt/Verify..."
 msgstr "Opslöteln/pröven..."
 
-#: mainwindow_desktop.cpp:547
+#: mainwindow_desktop.cpp:536
 msgid "Import Certificates"
 msgstr "Zertifikaten importeren"
 
-#: mainwindow_desktop.cpp:548
+#: mainwindow_desktop.cpp:537
 msgid "Import CRLs"
 msgstr "ZTLs importeren..."
 
