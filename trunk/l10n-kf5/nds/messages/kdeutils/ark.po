@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ark\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-10-20 10:17+0000\n"
+"POT-Creation-Date: 2015-10-26 08:07+0000\n"
 "PO-Revision-Date: 2014-02-20 11:36+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -183,7 +183,14 @@ msgstr ""
 "Teelorner, na den Du Dateien ruttrecken wullt. Standardwies de aktuelle "
 "Padd, wenn nich angeven."
 
-#: app/main.cpp:140
+#. i18n: ectx: label, entry (openDestinationFolderAfterExtraction), group (Extraction)
+#: app/main.cpp:140 kerfuffle/ark.kcfg:9
+#, fuzzy
+#| msgid "Open destination folder after extraction"
+msgid "Open destination folder after extraction."
+msgstr "Teelorner na't Utpacken opmaken"
+
+#: app/main.cpp:143
 msgid ""
 "Query the user for an archive filename and add specified files to it. Quit "
 "when finished."
@@ -191,7 +198,7 @@ msgstr ""
 "Den Bruker na en Archievnaam fragen un dor angeven Dateien na tofögen. Na't "
 "Afsluten utmaken."
 
-#: app/main.cpp:143
+#: app/main.cpp:146
 msgid ""
 "Add the specified files to 'filename'. Create archive if it does not exist. "
 "Quit when finished."
@@ -199,7 +206,7 @@ msgstr ""
 "De angeven na \"filename\" tofögen. Archiev opstellen, wenn dat dat nich "
 "gifft. Na't Afsluten utmaken."
 
-#: app/main.cpp:147
+#: app/main.cpp:150
 msgid ""
 "Change the current dir to the first entry and add all other entries relative "
 "to this one."
@@ -207,7 +214,7 @@ msgstr ""
 "Aktuell Orner op eerst Indrag ännern un all anner Indrääg dor relatiev to "
 "tofögen"
 
-#: app/main.cpp:150
+#: app/main.cpp:153
 msgid ""
 "Automatically choose a filename, with the selected suffix (for example rar, "
 "tar.gz, zip or any other supported types)"
@@ -215,7 +222,7 @@ msgstr ""
 "Dateinaam automaatsch utsöken, mit de utsöchte Verwiedern (a.B. rar, tar.gz, "
 "zip oder en anner ünnerstütt Typ)"
 
-#: app/main.cpp:154
+#: app/main.cpp:157
 msgid ""
 "Use the batch interface instead of the usual dialog. This option is implied "
 "if more than one url is specified."
@@ -223,12 +230,12 @@ msgstr ""
 "De Stapelverarbeiden-Koppelsteed bruken un den normalen Dialoog nich wiesen. "
 "Disse Optschoon warrt jümmers bruukt, wenn mehr as een URL angeven is."
 
-#: app/main.cpp:157
+#: app/main.cpp:160
 msgid ""
 "The destination argument will be set to the path of the first file supplied."
 msgstr "As Teel warrt de Padd vun de eerste angeven Datei bruukt."
 
-#: app/main.cpp:160
+#: app/main.cpp:163
 msgid ""
 "Archive contents will be read, and if detected to not be a single folder "
 "archive, a subfolder with the name of the archive will be created."
@@ -303,13 +310,6 @@ msgstr "Nieg Archiv lett sik nich opstellen. Villicht nich noog Verlöven."
 #: kerfuffle/addtoarchive.cpp:186
 msgid "It is not possible to create archives of this type."
 msgstr "Archiven vun dissen Typ laat sik nich opstellen."
-
-#. i18n: ectx: label, entry (openDestinationFolderAfterExtraction), group (Extraction)
-#: kerfuffle/ark.kcfg:9
-#, fuzzy
-#| msgid "Open destination folder after extraction"
-msgid "Open destination folder after extraction."
-msgstr "Teelorner na't Utpacken opmaken"
 
 #. i18n: ectx: label, entry (closeAfterExtraction), group (Extraction)
 #: kerfuffle/ark.kcfg:13
@@ -996,7 +996,7 @@ msgctxt "@info"
 msgid "The archive <filename>%1</filename> was not found."
 msgstr "Dat Archiev <filename>%1</filename> lett sik nich finnen."
 
-#: part/part.cpp:439 part/part.cpp:495 part/part.cpp:557
+#: part/part.cpp:439 part/part.cpp:458 part/part.cpp:465 part/part.cpp:530
 msgctxt "@title:window"
 msgid "Error Opening Archive"
 msgstr "Fehler bi't Opmaken vun't Archiev"
@@ -1014,70 +1014,49 @@ msgid ""
 msgstr ""
 "Dat gifft dat Archiev <filename>%1</filename> al. Wullt Du dat opmaken?"
 
-#: part/part.cpp:477
-msgctxt "@title:window"
-msgid "Invalid Archive Type"
-msgstr "Leeg Archievtyp"
-
-#: part/part.cpp:478
-#, fuzzy
+#: part/part.cpp:455
+#, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
-#| "Ark cannot create archives of the type you have chosen.<nl/><nl/>Please "
-#| "choose another archive type below."
+#| "Ark was not able to open the archive <filename>%1</filename>. No plugin "
+#| "capable of handling the file was found."
 msgctxt "@info"
 msgid ""
-"Ark cannot create archives of the type you have chosen.<br />Please choose "
-"another archive type below."
-msgstr ""
-"Ark kann keen Archiven vun den angeven Typ opstellen.\n"
-"\n"
-"Söök bitte nerrn en annern Archievtyp ut."
-
-#: part/part.cpp:481
-msgctxt "@title:window"
-msgid "Unable to Determine Archive Type"
-msgstr "Archievtyp lett sik nich fastslaan"
-
-#: part/part.cpp:482
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "Ark was unable to determine the archive type of the filename.<nl/><nl/"
-#| ">Please choose the correct archive type below."
-msgctxt "@info"
-msgid ""
-"Ark was unable to determine the archive type of the filename.<br />Please "
-"choose the correct archive type below."
-msgstr ""
-"Ark kann den Archievtyp nich ut den Dateinaam rutfinnen.\n"
-"\n"
-"Söök bitte nerrn den richtigen Typ ut."
-
-#: part/part.cpp:495
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Ark was not able to open the archive <filename>%1</filename>. No plugin "
-"capable of handling the file was found."
+"Ark was not able to open <filename>%1</filename>. No suitable plugin found."
+"<nl/><nl/>Ark does not seem to support this file type."
 msgstr ""
 "Ark kann dat Archiev <filename>%1</filename> nich opmaken. Dat kann keen "
 "Moduul finnen, dat de Datei hanteren kann."
 
-#: part/part.cpp:538
+#: part/part.cpp:462
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Ark was not able to open the archive <filename>%1</filename>. No plugin "
+#| "capable of handling the file was found."
+msgctxt "@info"
+msgid ""
+"Ark was not able to open <filename>%1</filename>. Failed to load a suitable "
+"plugin.<nl/><nl/>Make sure any executables needed to handle the archive type "
+"are installed."
+msgstr ""
+"Ark kann dat Archiev <filename>%1</filename> nich opmaken. Dat kann keen "
+"Moduul finnen, dat de Datei hanteren kann."
+
+#: part/part.cpp:511
 #, fuzzy
 #| msgid "Extraction Dialog"
 msgid "Extraction settings"
 msgstr "Utpackdialoog"
 
-#: part/part.cpp:539
+#: part/part.cpp:512
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Preview as Text"
 msgid "Preview settings"
 msgstr "As Text ankieken"
 
-#: part/part.cpp:554
+#: part/part.cpp:527
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -1091,11 +1070,11 @@ msgstr ""
 "Dat Laden vun Archiev <filename>%1</filename> is mit dissen Fehler "
 "fehlslaan: <message>%2</message>"
 
-#: part/part.cpp:619
+#: part/part.cpp:592
 msgid "Ark cannot open symlinks."
 msgstr ""
 
-#: part/part.cpp:731
+#: part/part.cpp:704
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -1108,39 +1087,39 @@ msgstr ""
 "Dat gifft al en Orner mit den Naam <filename>%1</filename>. Wullt Du em "
 "redig hier ruttrecken?"
 
-#: part/part.cpp:733
+#: part/part.cpp:706
 msgid "File modified"
 msgstr ""
 
-#: part/part.cpp:992
+#: part/part.cpp:965
 msgctxt "@title:window"
 msgid "Add Files"
 msgstr "Dateien tofögen"
 
-#: part/part.cpp:999
+#: part/part.cpp:972
 msgctxt "@title:window"
 msgid "Add Folder"
 msgstr "Orner tofögen"
 
-#: part/part.cpp:1024
+#: part/part.cpp:997
 msgid "Deleting these files is not undoable. Are you sure you want to do this?"
 msgstr ""
 "Dat Wegdoon vun disse Dateien lett sik nich torüchnehmen. Wullt Du dat redig "
 "doon?"
 
-#: part/part.cpp:1025
+#: part/part.cpp:998
 msgctxt "@title:window"
 msgid "Delete files"
 msgstr "Dateien wegdoon"
 
-#: part/part.cpp:1057
+#: part/part.cpp:1030
 #, fuzzy
 #| msgid "Source archive"
 msgctxt "@title:window"
 msgid "Save Archive As"
 msgstr "Bornarchiev"
 
-#: part/part.cpp:1064
+#: part/part.cpp:1037
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1150,7 +1129,7 @@ msgstr ""
 "Dat gifft al en Archiev mit den Naam <filename>%1</filename>. Büst Du seker, "
 "Du wullt dat överschrieven?"
 
-#: part/part.cpp:1078
+#: part/part.cpp:1051
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1160,7 +1139,7 @@ msgstr ""
 "Dat Archiev <filename>%1</filename> lett sik nich na de angeven Steed "
 "koperen. Dat gifft dat Archiev nich mehr."
 
-#: part/part.cpp:1092
+#: part/part.cpp:1065
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1321,6 +1300,42 @@ msgid ""
 "There was an error while reading <filename>%1</filename> during extraction."
 msgstr ""
 "Dat geev bi't Ruttrecken en Fehler, bides <filename>%1</filename> leest wöör."
+
+#~ msgctxt "@title:window"
+#~ msgid "Invalid Archive Type"
+#~ msgstr "Leeg Archievtyp"
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid ""
+#~| "Ark cannot create archives of the type you have chosen.<nl/><nl/>Please "
+#~| "choose another archive type below."
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Ark cannot create archives of the type you have chosen.<br />Please "
+#~ "choose another archive type below."
+#~ msgstr ""
+#~ "Ark kann keen Archiven vun den angeven Typ opstellen.\n"
+#~ "\n"
+#~ "Söök bitte nerrn en annern Archievtyp ut."
+
+#~ msgctxt "@title:window"
+#~ msgid "Unable to Determine Archive Type"
+#~ msgstr "Archievtyp lett sik nich fastslaan"
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid ""
+#~| "Ark was unable to determine the archive type of the filename.<nl/><nl/"
+#~| ">Please choose the correct archive type below."
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Ark was unable to determine the archive type of the filename.<br />Please "
+#~ "choose the correct archive type below."
+#~ msgstr ""
+#~ "Ark kann den Archievtyp nich ut den Dateinaam rutfinnen.\n"
+#~ "\n"
+#~ "Söök bitte nerrn den richtigen Typ ut."
 
 #~ msgid ""
 #~ "Easter egg for the developers:\n"
