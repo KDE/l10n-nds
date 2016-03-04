@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdenlive\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-03-03 07:55+0000\n"
+"POT-Creation-Date: 2016-03-04 07:15+0000\n"
 "PO-Revision-Date: 2011-11-16 15:57+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -115,7 +115,7 @@ msgstr ""
 
 #: data/effects/automask.xml:7 data/effects/dynamictext.xml:7
 #: src/effectslist/initeffects.cpp:742 src/effectslist/initeffects.cpp:769
-#: src/effectslist/initeffects.cpp:787
+#: src/effectslist/initeffects.cpp:787 src/project/transitionsettings.cpp:117
 msgid "Geometry"
 msgstr ""
 
@@ -656,10 +656,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, clip_filesize_2)
 #. i18n: ectx: property (text), widget (QLabel, position_label)
-#. i18n: ectx: property (text), widget (QCheckBox, import_position)
 #: data/effects/frei0r_alphagrad.xml:9 src/effectstack/keyframeedit.cpp:56
-#: src/ui/clipdurationdialog_ui.ui:20 src/ui/importkeyframesdialog_ui.ui:80
-#: src/ui/keyframedialog_ui.ui:20 src/ui/markerdialog_ui.ui:20
+#: src/effectstack/widgets/keyframeimport.cpp:66
+#: src/ui/clipdurationdialog_ui.ui:20 src/ui/keyframedialog_ui.ui:20
+#: src/ui/markerdialog_ui.ui:20
 msgid "Position"
 msgstr "Positschoon"
 
@@ -1895,13 +1895,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#. i18n: ectx: property (text), widget (QCheckBox, import_size)
 #. i18n: ectx: property (text), widget (QLabel, label_20)
 #. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
 #: data/effects/frei0r_medians.xml:13 data/effects/frei0r_sharpness.xml:12
 #: src/effectstack/widgets/geometrywidget.cpp:211
-#: src/ui/configcapture_ui.ui:563 src/ui/importkeyframesdialog_ui.ui:73
-#: src/ui/managecaptures_ui.ui:40 src/ui/profiledialog_ui.ui:191
+#: src/effectstack/widgets/keyframeimport.cpp:67
+#: src/ui/configcapture_ui.ui:563 src/ui/managecaptures_ui.ui:40
+#: src/ui/profiledialog_ui.ui:191
 msgid "Size"
 msgstr ""
 
@@ -3381,7 +3381,8 @@ msgstr "Frequenz"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: data/effects/sox_band.xml:10 data/effects/sox_flanger.xml:16
-#: src/ui/geometryval_ui.ui:181 src/ui/titlewidget_ui.ui:307
+#: src/timeline/keyframeview.cpp:257 src/ui/geometryval_ui.ui:181
+#: src/ui/titlewidget_ui.ui:307
 msgid "Width"
 msgstr ""
 
@@ -3977,44 +3978,44 @@ msgid ""
 "Please set a default application to open audio files in the Settings dialog"
 msgstr ""
 
-#: src/bin/bin.cpp:2601
+#: src/bin/bin.cpp:2600
 msgid "No data returned from clip analysis"
 msgstr ""
 
-#: src/bin/bin.cpp:2615
+#: src/bin/bin.cpp:2614
 #, fuzzy
 #| msgid "Transcode"
 msgid "Processing data analysis"
 msgstr "Ümkoderen"
 
-#: src/bin/bin.cpp:2621
+#: src/bin/bin.cpp:2620
 #, fuzzy
 #| msgid "Edit profile"
 msgid "Auto Split Clip"
 msgstr "Profil bewerken"
 
-#: src/bin/bin.cpp:2639
+#: src/bin/bin.cpp:2638
 msgid "Add Markers"
 msgstr ""
 
-#: src/bin/bin.cpp:2682 src/mltcontroller/clippropertiescontroller.cpp:186
+#: src/bin/bin.cpp:2681 src/mltcontroller/clippropertiescontroller.cpp:186
 #: src/project/projectcommands.cpp:163
 msgid "Add marker"
 msgid_plural "Add markers"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/bin/bin.cpp:2693 src/bin/bin.cpp:2775 src/project/jobs/filterjob.cpp:96
+#: src/bin/bin.cpp:2692 src/bin/bin.cpp:2774 src/project/jobs/filterjob.cpp:96
 #: src/timeline/markerdialog.cpp:45
 #, kde-format
 msgid "Category %1"
 msgstr ""
 
-#: src/bin/bin.cpp:2698
+#: src/bin/bin.cpp:2697
 msgid "Load Clip Markers"
 msgstr ""
 
-#: src/bin/bin.cpp:2713 src/bin/bin.cpp:2810
+#: src/bin/bin.cpp:2712 src/bin/bin.cpp:2809
 #: src/dialogs/profilesdialog.cpp:272 src/dialogs/profilesdialog.cpp:565
 #, fuzzy, kde-format
 #| msgid "Opening file %1"
@@ -4022,68 +4023,68 @@ msgid "Cannot open file %1"
 msgstr "Datei \"%1\" warrt opmaakt"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, MarkerDialog_UI)
-#: src/bin/bin.cpp:2739 src/definitions.cpp:148 src/definitions.cpp:165
-#: src/doc/docclipbase.cpp:370 src/mainwindow.cpp:1931
+#: src/bin/bin.cpp:2738 src/definitions.cpp:148 src/definitions.cpp:165
+#: src/doc/docclipbase.cpp:370 src/mainwindow.cpp:1930
 #: src/mltcontroller/clippropertiescontroller.cpp:839
 #: src/ui/markerdialog_ui.ui:14
 msgid "Marker"
 msgstr ""
 
-#: src/bin/bin.cpp:2773
+#: src/bin/bin.cpp:2772
 #, fuzzy
 #| msgid "All Files"
 msgid "All categories"
 msgstr "All Dateien"
 
-#: src/bin/bin.cpp:2780
+#: src/bin/bin.cpp:2779
 #, fuzzy
 #| msgid "Source Color"
 msgid "Save Clip Markers"
 msgstr "Bornklöör"
 
-#: src/bin/bin.cpp:2823 src/mltcontroller/clippropertiescontroller.cpp:187
+#: src/bin/bin.cpp:2822 src/mltcontroller/clippropertiescontroller.cpp:187
 #: src/project/projectcommands.cpp:161
 msgid "Delete marker"
 msgstr ""
 
-#: src/bin/bin.cpp:2838
+#: src/bin/bin.cpp:2837
 #, fuzzy
 #| msgid "Source Color"
 msgid "Delete clip markers"
 msgstr "Bornklöör"
 
-#: src/bin/bin.cpp:2840
+#: src/bin/bin.cpp:2839
 msgid "Clip has no markers"
 msgstr ""
 
-#: src/bin/bin.cpp:2878
+#: src/bin/bin.cpp:2877
 #, kde-format
 msgid ""
 "You are editing an external title clip (%1). Do you want to save your "
 "changes to the title file or save the changes for this project only?"
 msgstr ""
 
-#: src/bin/bin.cpp:2878 src/titler/titlewidget.cpp:1765
+#: src/bin/bin.cpp:2877 src/titler/titlewidget.cpp:1765
 msgid "Save Title"
 msgstr ""
 
-#: src/bin/bin.cpp:2878
+#: src/bin/bin.cpp:2877
 msgid "Save to title file"
 msgstr ""
 
-#: src/bin/bin.cpp:2878
+#: src/bin/bin.cpp:2877
 msgid "Save in project only"
 msgstr ""
 
-#: src/bin/bin.cpp:2942
+#: src/bin/bin.cpp:2941
 msgid "Clip is invalid, will be removed from project."
 msgstr ""
 
-#: src/bin/bin.cpp:2946 src/timeline/customtrackview.cpp:4587
+#: src/bin/bin.cpp:2945 src/timeline/customtrackview.cpp:4587
 msgid "Invalid clip"
 msgstr ""
 
-#: src/bin/bin.cpp:3153 src/mainwindow.cpp:1087
+#: src/bin/bin.cpp:3152 src/mainwindow.cpp:1087
 msgid "Clean Project"
 msgstr ""
 
@@ -4124,14 +4125,14 @@ msgid "Edit clip"
 msgstr ""
 
 #: src/bin/generators/generators.cpp:157 src/mainwindow.cpp:1176
-#: src/mainwindow.cpp:3338
+#: src/mainwindow.cpp:3337
 #, fuzzy
 #| msgid "Source Color"
 msgid "Save clip"
 msgstr "Bornklöör"
 
-#: src/bin/generators/generators.cpp:157 src/mainwindow.cpp:3338
-#: src/renderer.cpp:600 src/timeline/customtrackview.cpp:7995
+#: src/bin/generators/generators.cpp:157 src/mainwindow.cpp:3337
+#: src/renderer.cpp:600 src/timeline/customtrackview.cpp:7983
 msgid "MLT playlist (*.mlt)"
 msgstr ""
 
@@ -4259,12 +4260,12 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: src/dialogs/clipcreationdialog.cpp:531 src/dvdwizard/dvdwizardvob.cpp:247
-#: src/effectstack/collapsibleeffect.cpp:206 src/mainwindow.cpp:2922
+#: src/effectstack/collapsibleeffect.cpp:207 src/mainwindow.cpp:2921
 msgid "All Supported Files"
 msgstr "All ünnerstütt Dateien"
 
 #: src/dialogs/clipcreationdialog.cpp:531 src/dvdwizard/dvdwizardvob.cpp:247
-#: src/effectstack/collapsibleeffect.cpp:206 src/mainwindow.cpp:2922
+#: src/effectstack/collapsibleeffect.cpp:207 src/mainwindow.cpp:2921
 msgid "All Files"
 msgstr "All Dateien"
 
@@ -4328,7 +4329,7 @@ msgstr ""
 
 #. i18n: ectx: Menu (timeline)
 #: src/dialogs/kdenlivesettingsdialog.cpp:84 src/kdenliveui.rc:96
-#: src/mainwindow.cpp:2875
+#: src/mainwindow.cpp:2874
 msgid "Timeline"
 msgstr ""
 
@@ -4524,7 +4525,7 @@ msgstr ""
 #: src/dialogs/renderwidget.cpp:2297 src/dialogs/renderwidget.cpp:2320
 #: src/doc/kdenlivedoc.cpp:664 src/doc/kdenlivedoc.cpp:670
 #: src/dvdwizard/dvdwizard.cpp:937 src/dvdwizard/dvdwizard.cpp:943
-#: src/mainwindow.cpp:3150 src/mainwindow.cpp:3155
+#: src/mainwindow.cpp:3149 src/mainwindow.cpp:3154
 #: src/project/dialogs/archivewidget.cpp:797
 #: src/project/dialogs/archivewidget.cpp:803 src/titler/titlewidget.cpp:1779
 #, kde-format
@@ -5569,7 +5570,7 @@ msgid "The clip %1 is invalid."
 msgstr ""
 
 #: src/dvdwizard/dvdwizardvob.cpp:674
-#: src/effectstack/collapsibleeffect.cpp:374
+#: src/effectstack/collapsibleeffect.cpp:375
 #: src/effectstack/collapsiblegroup.cpp:179 src/monitor/monitor.cpp:944
 #: src/project/clipstabilize.cpp:222 src/project/cliptranscode.cpp:141
 #: src/project/projectmanager.cpp:305
@@ -5611,7 +5612,7 @@ msgstr ""
 
 #: src/effectslist/effectslistview.cpp:85
 #: src/effectslist/effectslistview.cpp:231
-#: src/effectstack/collapsibleeffect.cpp:69
+#: src/effectstack/collapsibleeffect.cpp:70
 #: src/effectstack/collapsiblegroup.cpp:77
 msgid "Delete effect"
 msgstr ""
@@ -5832,54 +5833,54 @@ msgstr ""
 msgid "Reverse"
 msgstr ""
 
-#: src/effectstack/collapsibleeffect.cpp:65
+#: src/effectstack/collapsibleeffect.cpp:66
 #: src/effectstack/collapsiblegroup.cpp:72
 msgid "Move effect up"
 msgstr ""
 
-#: src/effectstack/collapsibleeffect.cpp:67
+#: src/effectstack/collapsibleeffect.cpp:68
 #: src/effectstack/collapsiblegroup.cpp:74
 msgid "Move effect down"
 msgstr ""
 
-#: src/effectstack/collapsibleeffect.cpp:89
+#: src/effectstack/collapsibleeffect.cpp:90
 #, fuzzy
 #| msgid "No Effect"
 msgid "Reset Effect"
 msgstr "Keen Effekt"
 
-#: src/effectstack/collapsibleeffect.cpp:90
-#: src/effectstack/collapsibleeffect.cpp:367
+#: src/effectstack/collapsibleeffect.cpp:91
+#: src/effectstack/collapsibleeffect.cpp:368
 msgid "Save Effect"
 msgstr ""
 
-#: src/effectstack/collapsibleeffect.cpp:98
+#: src/effectstack/collapsibleeffect.cpp:99
 #: src/effectstack/collapsiblegroup.cpp:89
 #, fuzzy
 #| msgid "No Effect"
 msgid "Disable Effect"
 msgstr "Keen Effekt"
 
-#: src/effectstack/collapsibleeffect.cpp:98
+#: src/effectstack/collapsibleeffect.cpp:99
 #: src/effectstack/collapsiblegroup.cpp:89
 #, fuzzy
 #| msgid "Enable Stretch"
 msgid "Enable Effect"
 msgstr "Utwiedern anmaken"
 
-#: src/effectstack/collapsibleeffect.cpp:103
+#: src/effectstack/collapsibleeffect.cpp:104
 #, fuzzy
 #| msgid "Create new profile"
 msgid "Create Group"
 msgstr "Nieg Profil opstellen"
 
-#: src/effectstack/collapsibleeffect.cpp:143
+#: src/effectstack/collapsibleeffect.cpp:144
 #, fuzzy
 #| msgid "Create new profile"
 msgid "Create Region"
 msgstr "Nieg Profil opstellen"
 
-#: src/effectstack/collapsibleeffect.cpp:367
+#: src/effectstack/collapsibleeffect.cpp:368
 msgid "Name for saved effect: "
 msgstr ""
 
@@ -5964,18 +5965,18 @@ msgstr ""
 msgid "Show %1 in timeline"
 msgstr ""
 
-#: src/effectstack/effectstackview2.cpp:171
+#: src/effectstack/effectstackview2.cpp:172
 #, kde-format
 msgid "Effects for %1"
 msgstr ""
 
-#: src/effectstack/effectstackview2.cpp:225
+#: src/effectstack/effectstackview2.cpp:226
 #, fuzzy, kde-format
 #| msgid "Enable Stretch"
 msgid "Bin effects for %1"
 msgstr "Utwiedern anmaken"
 
-#: src/effectstack/effectstackview2.cpp:264
+#: src/effectstack/effectstackview2.cpp:265
 #, kde-format
 msgid "Effects for track %1"
 msgstr ""
@@ -6034,11 +6035,11 @@ msgstr ""
 msgid "Align item to left"
 msgstr ""
 
-#: src/effectstack/parametercontainer.cpp:501
+#: src/effectstack/parametercontainer.cpp:502
 msgid "<select a keyword>"
 msgstr ""
 
-#: src/effectstack/parametercontainer.cpp:532
+#: src/effectstack/parametercontainer.cpp:533
 msgid "sync keyframes with clip start"
 msgstr ""
 
@@ -6244,6 +6245,16 @@ msgstr "Nerrn utrichten"
 msgid "%"
 msgstr "%"
 
+#: src/effectstack/widgets/keyframeimport.cpp:44
+#, fuzzy
+#| msgid "import"
+msgid "Data to import: "
+msgstr "Importeren"
+
+#: src/effectstack/widgets/keyframeimport.cpp:73
+msgid "Limit keyframe number"
+msgstr ""
+
 #: src/effectstack/widgets/lumaliftgain.cpp:61
 msgid "Lift"
 msgstr ""
@@ -6263,12 +6274,12 @@ msgid "Project"
 msgstr "Projekt"
 
 #. i18n: ectx: Menu (extract_audio)
-#: src/kdenliveui.rc:29 src/mainwindow.cpp:2842
+#: src/kdenliveui.rc:29 src/mainwindow.cpp:2841
 msgid "Extract Audio"
 msgstr ""
 
 #. i18n: ectx: Menu (clip_actions)
-#: src/kdenliveui.rc:32 src/mainwindow.cpp:2789
+#: src/kdenliveui.rc:32 src/mainwindow.cpp:2788
 #, fuzzy
 #| msgid "Align top"
 msgid "Clip Jobs"
@@ -7034,7 +7045,7 @@ msgstr ""
 msgid "Cut Clip"
 msgstr ""
 
-#: src/mainwindow.cpp:1190 src/mainwindow.cpp:1933
+#: src/mainwindow.cpp:1190 src/mainwindow.cpp:1932
 #: src/mltcontroller/clippropertiescontroller.cpp:841
 msgid "Add Marker"
 msgstr ""
@@ -7047,7 +7058,7 @@ msgstr ""
 msgid "Delete All Markers"
 msgstr ""
 
-#: src/mainwindow.cpp:1194 src/mainwindow.cpp:2024
+#: src/mainwindow.cpp:1194 src/mainwindow.cpp:2023
 #: src/mltcontroller/clippropertiescontroller.cpp:814
 msgid "Edit Marker"
 msgstr ""
@@ -7216,109 +7227,109 @@ msgstr ""
 msgid "Clean up project"
 msgstr "Projekt oprümen"
 
-#: src/mainwindow.cpp:1746
+#: src/mainwindow.cpp:1745
 msgctxt "general keyboard shortcuts"
 msgid "General"
 msgstr "Allmeen"
 
-#: src/mainwindow.cpp:1927 src/mainwindow.cpp:2048
+#: src/mainwindow.cpp:1926 src/mainwindow.cpp:2047
 msgid "Cannot find clip to add marker"
 msgstr ""
 
-#: src/mainwindow.cpp:1959 src/mainwindow.cpp:1989 src/mainwindow.cpp:2012
+#: src/mainwindow.cpp:1958 src/mainwindow.cpp:1988 src/mainwindow.cpp:2011
 msgid "Cannot find clip to remove marker"
 msgstr ""
 
-#: src/mainwindow.cpp:1969 src/mainwindow.cpp:2019
+#: src/mainwindow.cpp:1968 src/mainwindow.cpp:2018
 msgid "No marker found at cursor time"
 msgstr ""
 
-#: src/mainwindow.cpp:2297
+#: src/mainwindow.cpp:2296
 #, kde-format
 msgid "Cannot find effect %1 / %2"
 msgstr ""
 
-#: src/mainwindow.cpp:2355
+#: src/mainwindow.cpp:2354
 #, kde-format
 msgid "Zoom Level: %1/13"
 msgstr ""
 
-#: src/mainwindow.cpp:2472
+#: src/mainwindow.cpp:2471
 msgid "Ctrl + click to use spacer on current track only"
 msgstr ""
 
-#: src/mainwindow.cpp:2475
+#: src/mainwindow.cpp:2474
 msgid "Click on a clip to cut it, Shift + move to preview cut frame"
 msgstr ""
 
-#: src/mainwindow.cpp:2478
+#: src/mainwindow.cpp:2477
 msgid ""
 "Shift + click to create a selection rectangle, Ctrl + click to add an item "
 "to selection"
 msgstr ""
 
-#: src/mainwindow.cpp:2797
+#: src/mainwindow.cpp:2796
 msgid "Stabilize"
 msgstr ""
 
-#: src/mainwindow.cpp:2809
+#: src/mainwindow.cpp:2808
 #, fuzzy
 #| msgid "Automatic"
 msgid "Automatic scene split"
 msgstr "Automaatsch"
 
-#: src/mainwindow.cpp:2819 src/project/jobs/filterjob.cpp:83
+#: src/mainwindow.cpp:2818 src/project/jobs/filterjob.cpp:83
 #, fuzzy
 #| msgid "Source Color"
 msgid "Reverse clip"
 msgstr "Bornklöör"
 
-#: src/mainwindow.cpp:2826
+#: src/mainwindow.cpp:2825
 #, fuzzy
 #| msgid " frames"
 msgid "Analyse keyframes"
 msgstr " Biller"
 
-#: src/mainwindow.cpp:2841
+#: src/mainwindow.cpp:2840
 #, fuzzy
 #| msgid "Transcode"
 msgid "Transcoders"
 msgstr "Ümkoderen"
 
-#: src/mainwindow.cpp:2874
+#: src/mainwindow.cpp:2873
 msgid "Interface"
 msgstr ""
 
-#: src/mainwindow.cpp:2911
+#: src/mainwindow.cpp:2910
 msgid "No clip to transcode"
 msgstr ""
 
-#: src/mainwindow.cpp:2924
+#: src/mainwindow.cpp:2923
 msgid "Files to transcode"
 msgstr ""
 
-#: src/mainwindow.cpp:2962
+#: src/mainwindow.cpp:2961
 msgid "Create Render Script"
 msgstr ""
 
-#: src/mainwindow.cpp:2972
+#: src/mainwindow.cpp:2971
 msgid "Script file already exists. Do you want to overwrite it?"
 msgstr ""
 
-#: src/mainwindow.cpp:3018
+#: src/mainwindow.cpp:3017
 #, fuzzy
 #| msgid "Start at"
 msgctxt "the first in a list of chapters"
 msgid "Start"
 msgstr "Start bi"
 
-#: src/mainwindow.cpp:3306
+#: src/mainwindow.cpp:3305
 #, fuzzy
 #| msgid "Loading project"
 msgid "Archiving project"
 msgstr "Projekt warrt laadt"
 
-#: src/mainwindow.cpp:3335
+#: src/mainwindow.cpp:3334
 msgid "Select a clip to save"
 msgstr ""
 
@@ -8678,11 +8689,11 @@ msgid "Archived project (*.tar.gz)"
 msgstr "Projekt warrt laadt"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, scanning_list)
-#: src/project/transitionsettings.cpp:152 src/ui/renderwidget_ui.ui:505
+#: src/project/transitionsettings.cpp:138 src/ui/renderwidget_ui.ui:505
 msgid "Auto"
 msgstr ""
 
-#: src/project/transitionsettings.cpp:163
+#: src/project/transitionsettings.cpp:149
 #: src/scopes/colorscopes/vectorscope.cpp:54
 msgid "Black"
 msgstr ""
@@ -8705,7 +8716,7 @@ msgid ""
 "please fix it."
 msgstr ""
 
-#: src/renderer.cpp:600 src/timeline/customtrackview.cpp:7995
+#: src/renderer.cpp:600 src/timeline/customtrackview.cpp:7983
 #, fuzzy
 #| msgid "Save"
 msgid "Save Zone"
@@ -9641,6 +9652,21 @@ msgstr "Utwiedern anmaken"
 
 #: src/timeline/headertrack.cpp:91
 msgid "Opaque"
+msgstr ""
+
+#: src/timeline/keyframeview.cpp:245
+msgctxt "X as in x coordinate"
+msgid "X"
+msgstr ""
+
+#: src/timeline/keyframeview.cpp:251
+msgctxt "Y as in y coordinate"
+msgid "Y"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/timeline/keyframeview.cpp:263 src/ui/geometryval_ui.ui:198
+msgid "Height"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -11804,11 +11830,6 @@ msgstr ""
 msgid "Pos"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: src/ui/geometryval_ui.ui:198
-msgid "Height"
-msgstr ""
-
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: src/ui/geometryval_ui.ui:219
 #, fuzzy
@@ -11842,25 +11863,6 @@ msgstr ""
 #: src/ui/histogram_ui.ui:74
 msgid "Sum"
 msgstr ""
-
-#. i18n: ectx: property (windowTitle), widget (QDialog, ImportKeyframesDialog_UI)
-#: src/ui/importkeyframesdialog_ui.ui:14
-#, fuzzy
-#| msgid " frames"
-msgid "Import Keyframes"
-msgstr " Biller"
-
-#. i18n: ectx: property (text), widget (QCheckBox, limit_keyframes)
-#: src/ui/importkeyframesdialog_ui.ui:48
-msgid "Limit keyframes number"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: src/ui/importkeyframesdialog_ui.ui:90
-#, fuzzy
-#| msgid "import"
-msgid "Data to import"
-msgstr "Importeren"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, KeyFrameDialog_UI)
 #: src/ui/keyframedialog_ui.ui:14
@@ -12975,6 +12977,11 @@ msgid ""
 "Cannot start Colors Settings panel from KDE Control Center. Please check "
 "your system..."
 msgstr ""
+
+#, fuzzy
+#~| msgid " frames"
+#~ msgid "Import Keyframes"
+#~ msgstr " Biller"
 
 #, fuzzy
 #~| msgid "Curves"
