@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdenlive\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-03-04 07:15+0000\n"
+"POT-Creation-Date: 2016-03-05 07:55+0000\n"
 "PO-Revision-Date: 2011-11-16 15:57+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -115,7 +115,10 @@ msgstr ""
 
 #: data/effects/automask.xml:7 data/effects/dynamictext.xml:7
 #: src/effectslist/initeffects.cpp:742 src/effectslist/initeffects.cpp:769
-#: src/effectslist/initeffects.cpp:787 src/project/transitionsettings.cpp:117
+#: src/effectslist/initeffects.cpp:787
+#: src/effectstack/collapsibleeffect.cpp:625
+#: src/effectstack/widgets/keyframeimport.cpp:100
+#: src/project/transitionsettings.cpp:117
 msgid "Geometry"
 msgstr ""
 
@@ -446,6 +449,7 @@ msgstr ""
 
 #: data/effects/fade_from_black.xml:10
 #: src/effectstack/widgets/bezier/beziersplinewidget.cpp:52
+#: src/effectstack/widgets/keyframeimport.cpp:72
 msgid "In"
 msgstr ""
 
@@ -473,6 +477,7 @@ msgstr ""
 
 #: data/effects/fade_to_black.xml:10
 #: src/effectstack/widgets/bezier/beziersplinewidget.cpp:54
+#: src/effectstack/widgets/keyframeimport.cpp:75
 msgid "Out"
 msgstr ""
 
@@ -657,7 +662,6 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, clip_filesize_2)
 #. i18n: ectx: property (text), widget (QLabel, position_label)
 #: data/effects/frei0r_alphagrad.xml:9 src/effectstack/keyframeedit.cpp:56
-#: src/effectstack/widgets/keyframeimport.cpp:66
 #: src/ui/clipdurationdialog_ui.ui:20 src/ui/keyframedialog_ui.ui:20
 #: src/ui/markerdialog_ui.ui:20
 msgid "Position"
@@ -1899,7 +1903,6 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
 #: data/effects/frei0r_medians.xml:13 data/effects/frei0r_sharpness.xml:12
 #: src/effectstack/widgets/geometrywidget.cpp:211
-#: src/effectstack/widgets/keyframeimport.cpp:67
 #: src/ui/configcapture_ui.ui:563 src/ui/managecaptures_ui.ui:40
 #: src/ui/profiledialog_ui.ui:191
 msgid "Size"
@@ -1967,7 +1970,7 @@ msgstr ""
 #: data/effects/frei0r_pr0be.xml:13 data/effects/frei0r_pr0file.xml:8
 #: src/effectstack/widgets/bezier/beziersplinewidget.cpp:56
 #: src/effectstack/widgets/bezier/beziersplinewidget.cpp:60
-#: src/ui/geometryval_ui.ui:144
+#: src/effectstack/widgets/keyframeimport.cpp:105 src/ui/geometryval_ui.ui:144
 msgid "X"
 msgstr ""
 
@@ -1976,7 +1979,8 @@ msgstr ""
 #: data/effects/frei0r_pr0be.xml:17 data/effects/frei0r_pr0file.xml:12
 #: src/effectstack/widgets/bezier/beziersplinewidget.cpp:58
 #: src/effectstack/widgets/bezier/beziersplinewidget.cpp:62
-#: src/ui/geometryval_ui.ui:164 src/ui/histogram_ui.ui:23
+#: src/effectstack/widgets/keyframeimport.cpp:108 src/ui/geometryval_ui.ui:164
+#: src/ui/histogram_ui.ui:23
 msgid "Y"
 msgstr ""
 
@@ -3381,7 +3385,8 @@ msgstr "Frequenz"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: data/effects/sox_band.xml:10 data/effects/sox_flanger.xml:16
-#: src/timeline/keyframeview.cpp:257 src/ui/geometryval_ui.ui:181
+#: src/effectstack/widgets/keyframeimport.cpp:111
+#: src/timeline/keyframeview.cpp:262 src/ui/geometryval_ui.ui:181
 #: src/ui/titlewidget_ui.ui:307
 msgid "Width"
 msgstr ""
@@ -4132,7 +4137,7 @@ msgid "Save clip"
 msgstr "Bornklöör"
 
 #: src/bin/generators/generators.cpp:157 src/mainwindow.cpp:3337
-#: src/renderer.cpp:600 src/timeline/customtrackview.cpp:7983
+#: src/renderer.cpp:600 src/timeline/customtrackview.cpp:7915
 msgid "MLT playlist (*.mlt)"
 msgstr ""
 
@@ -5934,7 +5939,7 @@ msgstr ""
 #: src/effectstack/keyframeedit.cpp:48
 #: src/effectstack/widgets/animationwidget.cpp:95
 #: src/effectstack/widgets/geometrywidget.cpp:87
-#: src/effectstack/widgets/geometrywidget.cpp:442
+#: src/effectstack/widgets/geometrywidget.cpp:457
 #: src/simplekeyframes/simplekeyframewidget.cpp:42
 #: src/simplekeyframes/simplekeyframewidget.cpp:132
 msgid "Add keyframe"
@@ -5994,7 +5999,7 @@ msgid "Go to previous keyframe"
 msgstr ""
 
 #: src/effectstack/geometryval.cpp:83 src/effectstack/keyframeedit.cpp:50
-#: src/effectstack/widgets/geometrywidget.cpp:448
+#: src/effectstack/widgets/geometrywidget.cpp:463
 #: src/simplekeyframes/simplekeyframewidget.cpp:129
 msgid "Delete keyframe"
 msgstr ""
@@ -6035,11 +6040,11 @@ msgstr ""
 msgid "Align item to left"
 msgstr ""
 
-#: src/effectstack/parametercontainer.cpp:502
+#: src/effectstack/parametercontainer.cpp:506
 msgid "<select a keyword>"
 msgstr ""
 
-#: src/effectstack/parametercontainer.cpp:533
+#: src/effectstack/parametercontainer.cpp:537
 msgid "sync keyframes with clip start"
 msgstr ""
 
@@ -6245,14 +6250,64 @@ msgstr "Nerrn utrichten"
 msgid "%"
 msgstr "%"
 
-#: src/effectstack/widgets/keyframeimport.cpp:44
+#: src/effectstack/widgets/keyframeimport.cpp:49
 #, fuzzy
 #| msgid "import"
 msgid "Data to import: "
 msgstr "Importeren"
 
-#: src/effectstack/widgets/keyframeimport.cpp:73
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/effectstack/widgets/keyframeimport.cpp:114
+#: src/timeline/keyframeview.cpp:268 src/ui/geometryval_ui.ui:198
+msgid "Height"
+msgstr ""
+
+#: src/effectstack/widgets/keyframeimport.cpp:119
+msgid "Map "
+msgstr ""
+
+#: src/effectstack/widgets/keyframeimport.cpp:120
+msgid " to "
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_19)
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: src/effectstack/widgets/keyframeimport.cpp:148
+#: src/ui/configcapture_ui.ui:524 src/ui/titlewidget_ui.ui:951
+msgid "Offset"
+msgstr ""
+
+#: src/effectstack/widgets/keyframeimport.cpp:152
+#: src/effectstack/widgets/keyframeimport.cpp:231
+#: src/effectstack/widgets/keyframeimport.cpp:234
+#: src/effectstack/widgets/keyframeimport.cpp:237
+#: src/effectstack/widgets/keyframeimport.cpp:240
+#: src/effectstack/widgets/keyframeimport.cpp:251
+#: src/effectstack/widgets/keyframeimport.cpp:254
+#: src/effectstack/widgets/keyframeimport.cpp:257
+#: src/effectstack/widgets/keyframeimport.cpp:260
+#, kde-format
+msgid "Source range %1 to %2"
+msgstr ""
+
+#: src/effectstack/widgets/keyframeimport.cpp:160
+#, fuzzy
+#| msgid "Description"
+msgid "Destination range"
+msgstr "Beschrieven"
+
+#: src/effectstack/widgets/keyframeimport.cpp:168
+msgid "Actual range only"
+msgstr ""
+
+#: src/effectstack/widgets/keyframeimport.cpp:175
 msgid "Limit keyframe number"
+msgstr ""
+
+#: src/effectstack/widgets/keyframeimport.cpp:243
+#: src/effectstack/widgets/keyframeimport.cpp:263
+#, kde-format
+msgid "Source range: (%1-%2), (%3-%4)"
 msgstr ""
 
 #: src/effectstack/widgets/lumaliftgain.cpp:61
@@ -8716,7 +8771,7 @@ msgid ""
 "please fix it."
 msgstr ""
 
-#: src/renderer.cpp:600 src/timeline/customtrackview.cpp:7983
+#: src/renderer.cpp:600 src/timeline/customtrackview.cpp:7915
 #, fuzzy
 #| msgid "Save"
 msgid "Save Zone"
@@ -9610,15 +9665,15 @@ msgstr ""
 msgid "Cannot find clip for effect update %1."
 msgstr ""
 
-#: src/timeline/customtrackview.cpp:7792
+#: src/timeline/customtrackview.cpp:7793
 msgid "You need to select one clip and one transition"
 msgstr ""
 
-#: src/timeline/customtrackview.cpp:7810
+#: src/timeline/customtrackview.cpp:7812
 msgid "No clip found"
 msgstr ""
 
-#: src/timeline/customtrackview.cpp:7818
+#: src/timeline/customtrackview.cpp:7820
 msgid "No keyframe data found in clip"
 msgstr ""
 
@@ -9654,19 +9709,14 @@ msgstr "Utwiedern anmaken"
 msgid "Opaque"
 msgstr ""
 
-#: src/timeline/keyframeview.cpp:245
+#: src/timeline/keyframeview.cpp:250
 msgctxt "X as in x coordinate"
 msgid "X"
 msgstr ""
 
-#: src/timeline/keyframeview.cpp:251
+#: src/timeline/keyframeview.cpp:256
 msgctxt "Y as in y coordinate"
 msgid "Y"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: src/timeline/keyframeview.cpp:263 src/ui/geometryval_ui.ui:198
-msgid "Height"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -11069,12 +11119,6 @@ msgstr ""
 #| msgid " frames"
 msgid "Hide frame"
 msgstr " Biller"
-
-#. i18n: ectx: property (text), widget (QLabel, label_19)
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: src/ui/configcapture_ui.ui:524 src/ui/titlewidget_ui.ui:951
-msgid "Offset"
-msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_grab_hide_mouse)
 #: src/ui/configcapture_ui.ui:652
