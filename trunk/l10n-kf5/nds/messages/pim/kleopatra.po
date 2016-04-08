@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-04-06 07:43+0000\n"
+"POT-Creation-Date: 2016-04-08 07:41+0000\n"
 "PO-Revision-Date: 2014-09-18 17:03+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -324,7 +324,7 @@ msgstr "\"gpgconf --reload gpg-agent\" fehlslaan: %1"
 #: src/commands/encryptclipboardcommand.cpp:180
 #: src/commands/signclipboardcommand.cpp:169
 #: src/commands/signclipboardcommand.cpp:183
-#: src/commands/signencryptfilescommand.cpp:258
+#: src/commands/signencryptfilescommand.cpp:260
 #, kde-format
 msgid "An error occurred: %1"
 msgstr "Dat geev en Fehler: %1"
@@ -760,18 +760,18 @@ msgstr "Privaatslötel mit Spood exporteert."
 msgid "Subprocess Diagnostics"
 msgstr "Ünnerperzess-Diagnoos"
 
-#: src/commands/gnupgprocesscommand.cpp:276
+#: src/commands/gnupgprocesscommand.cpp:275
 #, kde-format
 msgid "Unable to start process %1. Please check your installation."
 msgstr ""
 "De Perzess \"%1\" lett sik nich starten. Prööv bitte Dien Installatschoon."
 
-#: src/commands/gnupgprocesscommand.cpp:282
+#: src/commands/gnupgprocesscommand.cpp:281
 #, kde-format
 msgid "Starting %1..."
 msgstr "%1 warrt start..."
 
-#: src/commands/gnupgprocesscommand.cpp:302
+#: src/commands/gnupgprocesscommand.cpp:301
 msgid "Process finished"
 msgstr "Perzess afslaten"
 
@@ -1290,11 +1290,11 @@ msgstr "Eerst PIN fastleggen"
 msgid "Sign Clipboard Error"
 msgstr "Fehler bi't Ünnerschrieven vun de Twischenaflaag"
 
-#: src/commands/signencryptfilescommand.cpp:260
+#: src/commands/signencryptfilescommand.cpp:262
 msgid "Sign/Encrypt Files Error"
 msgstr "Fehler bi't Ünnerschrieven/Verslöteln vun Dateien"
 
-#: src/commands/signencryptfilescommand.cpp:273
+#: src/commands/signencryptfilescommand.cpp:275
 msgid "Select One or More Files to Sign and/or Encrypt"
 msgstr "Een oder mehr Dateien för't Ünnerschrieven un/oder Verslöteln utsöken"
 
@@ -2433,11 +2433,13 @@ msgstr "Ünnerschrieven un verslöteln (bloots OpenPGP)"
 #: src/crypto/gui/newsignencryptfileswizard.cpp:398
 #: src/newcertificatewizard/newcertificatewizard.cpp:1574
 #: src/newcertificatewizard/newcertificatewizard.cpp:1603
+#: src/utils/formatting.cpp:748
 msgid "Encrypt"
 msgstr "Verslöteln"
 
 #: src/crypto/gui/newsignencryptfileswizard.cpp:399
 #: src/newcertificatewizard/newcertificatewizard.cpp:1570
+#: src/utils/formatting.cpp:745
 msgid "Sign"
 msgstr "Ünnerschrieven"
 
@@ -3304,12 +3306,12 @@ msgid "Certifications"
 msgstr "Beglöven"
 
 #. i18n: ectx: property (text), widget (QPushButton, expandAllCertificationsPB)
-#: src/dialogs/certificatedetailsdialog.ui:229 src/view/tabwidget.cpp:480
+#: src/dialogs/certificatedetailsdialog.ui:229 src/view/tabwidget.cpp:789
 msgid "Expand All"
 msgstr "All Utfoolden"
 
 #. i18n: ectx: property (text), widget (QPushButton, collapseAllCertificationsPB)
-#: src/dialogs/certificatedetailsdialog.ui:239 src/view/tabwidget.cpp:484
+#: src/dialogs/certificatedetailsdialog.ui:239 src/view/tabwidget.cpp:793
 msgid "Collapse All"
 msgstr "All Tosamenfoolden"
 
@@ -3432,6 +3434,7 @@ msgstr ""
 
 #: src/dialogs/certifycertificatedialog.cpp:202
 #: src/newcertificatewizard/newcertificatewizard.cpp:1578
+#: src/utils/formatting.cpp:742
 msgid "Certify"
 msgstr "Beglöven"
 
@@ -4563,6 +4566,12 @@ msgstr "Status"
 msgid "Strength"
 msgstr "Stärk"
 
+#: src/models/subkeylistmodel.cpp:176
+#, fuzzy
+#| msgid "Key Usage:"
+msgid "Usage"
+msgstr "Slötelbruuk:"
+
 #. i18n: ectx: property (windowTitle), widget (QDialog, Kleo::NewCertificateUi::AdvancedSettingsDialog)
 #: src/newcertificatewizard/advancedsettingsdialog.ui:14
 msgid "Advanced Settings"
@@ -4954,6 +4963,7 @@ msgid "Certificate Creation Wizard"
 msgstr "Beglöven-Opstellhölper"
 
 #: src/newcertificatewizard/newcertificatewizard.cpp:1581
+#: src/utils/formatting.cpp:751
 msgid "Authenticate"
 msgstr "Identiteet pröven"
 
@@ -6679,57 +6689,69 @@ msgstr "Söken..."
 msgid "Search...<%1>"
 msgstr "Söken...<%1>"
 
-#: src/view/tabwidget.cpp:448
-msgid "New Tab"
-msgstr "Nieg Paneel"
-
-#: src/view/tabwidget.cpp:448
-msgid "Open a new tab"
-msgstr "En nieg Paneel opmaken"
-
-#: src/view/tabwidget.cpp:456
-msgid "Rename Tab..."
-msgstr "Paneel ümnömen..."
-
-#: src/view/tabwidget.cpp:456
-msgid "Rename this tab"
-msgstr "Dit Paneel ümnömen"
-
-#: src/view/tabwidget.cpp:460
-msgid "Duplicate Tab"
-msgstr "Paneel verdubbeln"
-
-#: src/view/tabwidget.cpp:460
-msgid "Duplicate this tab"
-msgstr "Dit Paneel verdubbeln"
-
-#: src/view/tabwidget.cpp:464
-msgid "Close Tab"
-msgstr "Paneel tomaken"
-
-#: src/view/tabwidget.cpp:464
-msgid "Close this tab"
-msgstr "Dit Paneel tomaken"
-
-#: src/view/tabwidget.cpp:468
-msgid "Move Tab Left"
-msgstr "Paneel na links verschuven"
-
-#: src/view/tabwidget.cpp:472
-msgid "Move Tab Right"
-msgstr "Paneel na rechts verschuven"
-
-#: src/view/tabwidget.cpp:476
-msgid "Hierarchical Certificate List"
-msgstr "Hierarch'sche Zertifikatenlist"
-
-#: src/view/tabwidget.cpp:630
+#: src/view/tabwidget.cpp:572
 msgid "Rename Tab"
 msgstr "Paneel ümnömen"
 
-#: src/view/tabwidget.cpp:630
+#: src/view/tabwidget.cpp:572
 msgid "New tab title:"
 msgstr "Nieg Paneeltitel:"
+
+#: src/view/tabwidget.cpp:757
+msgid "New Tab"
+msgstr "Nieg Paneel"
+
+#: src/view/tabwidget.cpp:757
+msgid "Open a new tab"
+msgstr "En nieg Paneel opmaken"
+
+#: src/view/tabwidget.cpp:765
+msgid "Rename Tab..."
+msgstr "Paneel ümnömen..."
+
+#: src/view/tabwidget.cpp:765
+msgid "Rename this tab"
+msgstr "Dit Paneel ümnömen"
+
+#: src/view/tabwidget.cpp:769
+msgid "Duplicate Tab"
+msgstr "Paneel verdubbeln"
+
+#: src/view/tabwidget.cpp:769
+msgid "Duplicate this tab"
+msgstr "Dit Paneel verdubbeln"
+
+#: src/view/tabwidget.cpp:773
+msgid "Close Tab"
+msgstr "Paneel tomaken"
+
+#: src/view/tabwidget.cpp:773
+msgid "Close this tab"
+msgstr "Dit Paneel tomaken"
+
+#: src/view/tabwidget.cpp:777
+msgid "Move Tab Left"
+msgstr "Paneel na links verschuven"
+
+#: src/view/tabwidget.cpp:777
+#, fuzzy
+#| msgid "Move Tab Left"
+msgid "Move this tab left"
+msgstr "Paneel na links verschuven"
+
+#: src/view/tabwidget.cpp:781
+msgid "Move Tab Right"
+msgstr "Paneel na rechts verschuven"
+
+#: src/view/tabwidget.cpp:781
+#, fuzzy
+#| msgid "Move Tab Right"
+msgid "Move this tab right"
+msgstr "Paneel na rechts verschuven"
+
+#: src/view/tabwidget.cpp:785
+msgid "Hierarchical Certificate List"
+msgstr "Hierarch'sche Zertifikatenlist"
 
 #~ msgctxt "Version string is a guess"
 #~ msgid "guessed"
@@ -7302,9 +7324,6 @@ msgstr "Nieg Paneeltitel:"
 #~ msgstr ""
 #~ "<para>Dat geev en Fehler bi't Ännern vun den Slötelsatz.</para> <para>De "
 #~ "Utgaav vun <command>%1</command> weer: <message>%2</message></para>"
-
-#~ msgid "Key Usage:"
-#~ msgstr "Slötelbruuk:"
 
 #~ msgid "Real Name:"
 #~ msgstr "Rejell Naam:"
