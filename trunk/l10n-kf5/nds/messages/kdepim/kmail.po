@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-04-18 08:17+0000\n"
+"POT-Creation-Date: 2016-04-20 07:36+0000\n"
 "PO-Revision-Date: 2014-08-15 15:47+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -3587,6 +3587,7 @@ msgstr "&Warktüüch"
 #. i18n: ectx: Menu (settings)
 #: src/kmail_part.rc:200 src/kmcomposerui.rc:108 src/kmmainwin.rc:200
 #: src/kmreadermainwin.rc:72
+#: src/kontactplugin/summary/kontactsummary_part.rc:5
 msgid "&Settings"
 msgstr "&Instellen"
 
@@ -4796,34 +4797,36 @@ msgid_plural "%1 unread messages"
 msgstr[0] "Een nich leest Naricht"
 msgstr[1] "%1 nich leeste Narichten"
 
-#: src/kontactplugin/kcmkmailsummary.cpp:67
+#: src/kontactplugin/kmail/kcmkmailsummary.cpp:67
 msgid "kcmkmailsummary"
 msgstr ""
 
-#: src/kontactplugin/kcmkmailsummary.cpp:69
+#: src/kontactplugin/kmail/kcmkmailsummary.cpp:69
 msgid "Mail Summary Configuration Dialog"
 msgstr ""
 
-#: src/kontactplugin/kcmkmailsummary.cpp:71
+#: src/kontactplugin/kmail/kcmkmailsummary.cpp:71
 msgid "Copyright © 2004–2010 Tobias Koenig"
 msgstr ""
 
-#: src/kontactplugin/kcmkmailsummary.cpp:72
+#: src/kontactplugin/kmail/kcmkmailsummary.cpp:72
+#: src/kontactplugin/summary/kcmkontactsummary.cpp:119
+#: src/kontactplugin/summary/summaryview_plugin.cpp:121
 msgid "Tobias Koenig"
 msgstr ""
 
-#: src/kontactplugin/kcmkmailsummary.cpp:88
+#: src/kontactplugin/kmail/kcmkmailsummary.cpp:88
 #, fuzzy
 #| msgid "Shortcut for Folder %1"
 msgid "Show full path for folders"
 msgstr "Tastkombinatschoon för Orner \"%1\""
 
-#: src/kontactplugin/kcmkmailsummary.cpp:90
+#: src/kontactplugin/kmail/kcmkmailsummary.cpp:90
 msgctxt "@info:tooltip"
 msgid "Show full path for each folder"
 msgstr ""
 
-#: src/kontactplugin/kcmkmailsummary.cpp:93
+#: src/kontactplugin/kmail/kcmkmailsummary.cpp:93
 msgctxt "@info:whatsthis"
 msgid ""
 "Enable this option if you want to see the full path for each folder listed "
@@ -4831,61 +4834,156 @@ msgid ""
 "path will be shown."
 msgstr ""
 
-#: src/kontactplugin/kmail_plugin.cpp:59
+#: src/kontactplugin/kmail/kmail_plugin.cpp:59
 #, fuzzy
 #| msgid "&New Message..."
 msgctxt "@action:inmenu"
 msgid "New Message..."
 msgstr "&Nieg Naricht..."
 
-#: src/kontactplugin/kmail_plugin.cpp:66
+#: src/kontactplugin/kmail/kmail_plugin.cpp:66
 msgctxt "@info:whatsthis"
 msgid ""
 "You will be presented with a dialog where you can create and send a new "
 "email message."
 msgstr ""
 
-#: src/kontactplugin/kmail_plugin.cpp:73
+#: src/kontactplugin/kmail/kmail_plugin.cpp:73
 #, fuzzy
 #| msgid "&Send Mail"
 msgctxt "@action:inmenu"
 msgid "Sync Mail"
 msgstr "Nettbreef &loosstüern"
 
-#: src/kontactplugin/kmail_plugin.cpp:78
+#: src/kontactplugin/kmail/kmail_plugin.cpp:78
 msgctxt "@info:whatsthis"
 msgid "Choose this option to synchronize your groupware email."
 msgstr ""
 
-#: src/kontactplugin/summarywidget.cpp:63
+#: src/kontactplugin/kmail/summarywidget.cpp:63
 #, fuzzy
 #| msgid "New Message"
 msgid "New Messages"
 msgstr "Niege Naricht"
 
-#: src/kontactplugin/summarywidget.cpp:158
+#: src/kontactplugin/kmail/summarywidget.cpp:158
 #, fuzzy, kde-format
 #| msgid "<qt><b>%1</b><br/>Total: %2<br/>Unread: %3<br/>Size: %4</qt>"
 msgid "<qt><b>%1</b><br/>Total: %2<br/>Unread: %3</qt>"
 msgstr "<qt><b>%1</b><br/>Tosamen: %2<br/>Nich leest: %3<br/>Grött: %4</qt>"
 
-#: src/kontactplugin/summarywidget.cpp:170
+#: src/kontactplugin/kmail/summarywidget.cpp:170
 #, kde-format
 msgctxt "%1: number of unread messages %2: total number of messages"
 msgid "%1 / %2"
 msgstr ""
 
-#: src/kontactplugin/summarywidget.cpp:208
+#: src/kontactplugin/kmail/summarywidget.cpp:208
 #, fuzzy
 #| msgid "Send &messages in outbox folder:"
 msgid "No unread messages in your monitored folders"
 msgstr "N&arichten ut Postutgang loosstüern:"
 
-#: src/kontactplugin/summarywidget.cpp:226
+#: src/kontactplugin/kmail/summarywidget.cpp:226
 #, fuzzy, kde-format
 #| msgid "Destination folder: %1"
 msgid "Open Folder: \"%1\""
 msgstr "Teelorner: %1"
+
+#: src/kontactplugin/summary/kcmkontactsummary.cpp:85
+msgctxt "@title:column plugin name"
+msgid "Summary Plugin Name"
+msgstr ""
+
+#: src/kontactplugin/summary/kcmkontactsummary.cpp:101
+msgid "Select the plugin summaries to show on the summary page."
+msgstr ""
+
+#: src/kontactplugin/summary/kcmkontactsummary.cpp:114
+#, fuzzy
+#| msgctxt "type of folder content"
+#| msgid "Contacts"
+msgid "kontactsummary"
+msgstr "Kontakten"
+
+#: src/kontactplugin/summary/kcmkontactsummary.cpp:116
+msgid "KDE Kontact Summary"
+msgstr ""
+
+#: src/kontactplugin/summary/kcmkontactsummary.cpp:118
+msgid "(c), 2004 Tobias Koenig"
+msgstr ""
+
+#: src/kontactplugin/summary/summaryview_part.cpp:67
+#, fuzzy
+#| msgid "&Configure KMail..."
+msgid "&Configure Summary View..."
+msgstr "KMail &instellen..."
+
+#: src/kontactplugin/summary/summaryview_part.cpp:70
+msgid "Configure the summary view"
+msgstr ""
+
+#: src/kontactplugin/summary/summaryview_part.cpp:75
+msgctxt "@info:whatsthis"
+msgid ""
+"Choosing this will show a dialog where you can select which summaries you "
+"want to see and also allow you to configure the summaries to your liking."
+msgstr ""
+
+#: src/kontactplugin/summary/summaryview_part.cpp:123
+#, fuzzy, kde-format
+#| msgid "Smart for&mat (%1)"
+msgid "Summary for %1"
+msgstr "S&muck Formaat (%1)"
+
+#: src/kontactplugin/summary/summaryview_part.cpp:390
+msgid "What's next?"
+msgstr ""
+
+#: src/kontactplugin/summary/summaryview_plugin.cpp:42
+#, fuzzy
+#| msgid "&Send Mail"
+msgid "Sync All"
+msgstr "Nettbreef &loosstüern"
+
+#: src/kontactplugin/summary/summaryview_plugin.cpp:54
+#, fuzzy
+#| msgctxt "Permissions"
+#| msgid "All"
+msgctxt "@action:inmenu sync everything"
+msgid "All"
+msgstr "All"
+
+#: src/kontactplugin/summary/summaryview_plugin.cpp:68
+#, fuzzy
+#| msgctxt "Permissions"
+#| msgid "All"
+msgctxt "sync everything"
+msgid "All"
+msgstr "All"
+
+#: src/kontactplugin/summary/summaryview_plugin.cpp:111
+msgid "Kontact Summary"
+msgstr ""
+
+#: src/kontactplugin/summary/summaryview_plugin.cpp:113
+msgid "Kontact Summary View"
+msgstr ""
+
+#: src/kontactplugin/summary/summaryview_plugin.cpp:115
+#, fuzzy
+#| msgid "(c) 1997-2010, The KMail developers"
+msgid "(c) 2003-2016 The Kontact developers"
+msgstr "© 1997-2010, de Schrieverslüüd vun KMail"
+
+#: src/kontactplugin/summary/summaryview_plugin.cpp:117
+msgid "Sven Lueppken"
+msgstr ""
+
+#: src/kontactplugin/summary/summaryview_plugin.cpp:119
+msgid "Cornelius Schumacher"
+msgstr ""
 
 #: src/mailmerge/mailmergedialog.cpp:31
 msgid "Mail Merge"
@@ -8405,10 +8503,6 @@ msgstr[1] "Op Servers anmaakt Annerwarts-Bescheed"
 #~ msgstr "Kalenner"
 
 #~ msgctxt "type of folder content"
-#~ msgid "Contacts"
-#~ msgstr "Kontakten"
-
-#~ msgctxt "type of folder content"
 #~ msgid "Notes"
 #~ msgstr "Notizen"
 
@@ -8963,10 +9057,6 @@ msgstr[1] "Op Servers anmaakt Annerwarts-Bescheed"
 #~ msgctxt "Permissions"
 #~ msgid "Write"
 #~ msgstr "Schrieven"
-
-#~ msgctxt "Permissions"
-#~ msgid "All"
-#~ msgstr "All"
 
 #~ msgid "&User identifier:"
 #~ msgstr "Br&uker-Beteker:"
@@ -11758,9 +11848,6 @@ msgstr[1] "Op Servers anmaakt Annerwarts-Bescheed"
 
 #~ msgid "Message &property:"
 #~ msgstr "Narichten-Egenscha&p:"
-
-#~ msgid "(c) 1997-2010, The KMail developers"
-#~ msgstr "© 1997-2010, de Schrieverslüüd vun KMail"
 
 #~ msgid "What style of headers should be displayed"
 #~ msgstr "Gifft den Stil för de Koppreegdorstellen an"
