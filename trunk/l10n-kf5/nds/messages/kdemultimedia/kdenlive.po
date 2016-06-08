@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdenlive\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-06-07 08:41+0000\n"
+"POT-Creation-Date: 2016-06-08 07:24+0000\n"
 "PO-Revision-Date: 2011-11-16 15:57+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1917,8 +1917,8 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
 #: data/effects/frei0r_medians.xml:13 data/effects/frei0r_sharpness.xml:12
 #: src/effectstack/widgets/geometrywidget.cpp:204
-#: src/ui/configcapture_ui.ui:563 src/ui/managecaptures_ui.ui:40
-#: src/ui/profiledialog_ui.ui:191
+#: src/project/dialogs/temporarydata.cpp:430 src/ui/configcapture_ui.ui:563
+#: src/ui/managecaptures_ui.ui:40 src/ui/profiledialog_ui.ui:191
 msgid "Size"
 msgstr ""
 
@@ -3992,7 +3992,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: src/bin/bin.cpp:1029 src/bin/bin.cpp:1147 src/bin/bin.cpp:2437
-#: src/ui/slideshowclip_ui.ui:60
+#: src/project/dialogs/temporarydata.cpp:430 src/ui/slideshowclip_ui.ui:60
 msgid "Folder"
 msgstr "&Orner"
 
@@ -4288,6 +4288,7 @@ msgstr "Naam"
 
 #: src/bin/projectitemmodel.cpp:173
 #: src/project/dialogs/projectsettings.cpp:187
+#: src/project/dialogs/temporarydata.cpp:430
 msgid "Date"
 msgstr ""
 
@@ -5320,7 +5321,7 @@ msgid ""
 "Do you want to open a backup file?"
 msgstr ""
 
-#: src/doc/kdenlivedoc.cpp:182 src/project/projectmanager.cpp:409
+#: src/doc/kdenlivedoc.cpp:182 src/project/projectmanager.cpp:415
 msgid "Recover"
 msgstr "Wedderherstellen"
 
@@ -6456,7 +6457,7 @@ msgstr "Profil sekern"
 
 #. i18n: ectx: Menu (timeline_preview)
 #: src/kdenliveui.rc:106 src/mainwindow.cpp:465
-#: src/project/dialogs/temporarydata.cpp:107
+#: src/project/dialogs/temporarydata.cpp:110
 #, fuzzy
 #| msgid "Image File"
 msgid "Timeline Preview"
@@ -7550,6 +7551,10 @@ msgstr "Start bi"
 #| msgid "Loading project"
 msgid "Archiving project"
 msgstr "Projekt warrt laadt"
+
+#: src/mainwindow.cpp:3596
+msgid "Manage Cache Data"
+msgstr ""
 
 #: src/mltconnection.cpp:51
 msgid "Cannot find the melt program required for rendering (part of MLT)"
@@ -8654,76 +8659,97 @@ msgstr ""
 msgid "Zoom, low-pass"
 msgstr ""
 
-#: src/project/dialogs/temporarydata.cpp:124
+#: src/project/dialogs/temporarydata.cpp:127
 #, fuzzy
 #| msgid "Proxy"
 msgid "Proxy Clips"
 msgstr "Proxy"
 
-#: src/project/dialogs/temporarydata.cpp:141
+#: src/project/dialogs/temporarydata.cpp:144
 #, fuzzy
 #| msgid "Loading thumbnails"
 msgid "Audio Thumbnails"
 msgstr "Vöransichten warrt laadt"
 
-#: src/project/dialogs/temporarydata.cpp:158
+#: src/project/dialogs/temporarydata.cpp:161
 #, fuzzy
 #| msgid "Show thumbnails"
 msgid "Video Thumbnails"
 msgstr "Vöransichten wiesen"
 
-#: src/project/dialogs/temporarydata.cpp:172
+#: src/project/dialogs/temporarydata.cpp:175
 msgid "Project total cache data"
 msgstr ""
 
-#: src/project/dialogs/temporarydata.cpp:173
+#: src/project/dialogs/temporarydata.cpp:176
 msgid "Click to open cache folder"
 msgstr ""
 
-#: src/project/dialogs/temporarydata.cpp:190
+#: src/project/dialogs/temporarydata.cpp:195
 #, fuzzy
 #| msgid "Project"
 msgid "Current Project"
 msgstr "Projekt"
 
-#: src/project/dialogs/temporarydata.cpp:192
+#: src/project/dialogs/temporarydata.cpp:198
 #, fuzzy
 #| msgid "Project"
 msgid "All Projects"
 msgstr "Projekt"
 
-#: src/project/dialogs/temporarydata.cpp:328
+#: src/project/dialogs/temporarydata.cpp:331
 #, kde-format
 msgid ""
 "Delete all data in the cache folder:\n"
 "%1"
 msgstr ""
 
-#: src/project/dialogs/temporarydata.cpp:346
+#: src/project/dialogs/temporarydata.cpp:349
 #, kde-format
 msgid ""
 "Delete all data in the cache proxy folder:\n"
 "%1"
 msgstr ""
 
-#: src/project/dialogs/temporarydata.cpp:364
+#: src/project/dialogs/temporarydata.cpp:367
 #, kde-format
 msgid ""
 "Delete all data in the cache audio folder:\n"
 "%1"
 msgstr ""
 
-#: src/project/dialogs/temporarydata.cpp:381
+#: src/project/dialogs/temporarydata.cpp:384
 #, kde-format
 msgid ""
 "Delete all data in the cache thumbnail folder:\n"
 "%1"
 msgstr ""
 
-#: src/project/dialogs/temporarydata.cpp:398
+#: src/project/dialogs/temporarydata.cpp:401
 #, kde-format
 msgid ""
 "Delete all data in cache folder:\n"
+"%1"
+msgstr ""
+
+#: src/project/dialogs/temporarydata.cpp:446
+msgid "Total Cached Data"
+msgstr ""
+
+#: src/project/dialogs/temporarydata.cpp:458
+msgid "Selected Cached Data"
+msgstr ""
+
+#: src/project/dialogs/temporarydata.cpp:462
+#, fuzzy
+#| msgid "Delete profile"
+msgid "Delete selected cache"
+msgstr "Profil wegmaken"
+
+#: src/project/dialogs/temporarydata.cpp:565
+#, kde-format
+msgid ""
+"Delete the following cache folders from\n"
 "%1"
 msgstr ""
 
@@ -8960,59 +8986,59 @@ msgid ""
 "Do you want to save your changes?"
 msgstr ""
 
-#: src/project/projectmanager.cpp:407
+#: src/project/projectmanager.cpp:413
 msgid "Auto-saved files exist. Do you want to recover them now?"
 msgstr ""
 
-#: src/project/projectmanager.cpp:408
+#: src/project/projectmanager.cpp:414
 msgid "File Recovery"
 msgstr ""
 
-#: src/project/projectmanager.cpp:409
+#: src/project/projectmanager.cpp:415
 msgid "Don't recover"
 msgstr ""
 
-#: src/project/projectmanager.cpp:464
+#: src/project/projectmanager.cpp:470
 #, kde-format
 msgid "Opening file %1"
 msgstr "Datei \"%1\" warrt opmaakt"
 
-#: src/project/projectmanager.cpp:484
+#: src/project/projectmanager.cpp:490
 msgid "Loading project"
 msgstr "Projekt warrt laadt"
 
-#: src/project/projectmanager.cpp:486
+#: src/project/projectmanager.cpp:492
 #, fuzzy
 #| msgid "Loading thumbnails"
 msgid "Loading playlist"
 msgstr "Vöransichten warrt laadt"
 
-#: src/project/projectmanager.cpp:506
+#: src/project/projectmanager.cpp:512
 msgid "Loading clips"
 msgstr ""
 
-#: src/project/projectmanager.cpp:540
+#: src/project/projectmanager.cpp:546
 #, kde-format
 msgid ""
 "Cannot open file %1.\n"
 "Project is corrupted."
 msgstr ""
 
-#: src/project/projectmanager.cpp:560
+#: src/project/projectmanager.cpp:566
 msgid ""
 "This will delete all changes made since you last saved your project. Are you "
 "sure you want to continue?"
 msgstr ""
 
-#: src/project/projectmanager.cpp:560
+#: src/project/projectmanager.cpp:566
 msgid "Revert to last saved version"
 msgstr ""
 
-#: src/project/projectmanager.cpp:570
+#: src/project/projectmanager.cpp:576
 msgid "Kdenlive project (*.kdenlive)"
 msgstr ""
 
-#: src/project/projectmanager.cpp:571
+#: src/project/projectmanager.cpp:577
 #, fuzzy
 #| msgid "Loading project"
 msgid "Archived project (*.tar.gz)"
