@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-05-24 09:19+0000\n"
+"POT-Creation-Date: 2016-06-28 08:42+0000\n"
 "PO-Revision-Date: 2010-09-13 05:42+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -81,9 +81,9 @@ msgstr "Bibliotheek bargt dat Symbool \"Chiasmus\" nich."
 msgid "Scanning directory %1..."
 msgstr "Orner %1 warrt dörkeken..."
 
-#: backends/qgpgme/qgpgmebackend.cpp:93 ui/keyselectiondialog.cpp:270
-#: ui/keyselectiondialog.cpp:272 ui/keyselectiondialog.cpp:279
-#: ui/keyselectiondialog.cpp:281 ui/keyselectiondialog.cpp:282
+#: backends/qgpgme/qgpgmebackend.cpp:93 ui/keyselectiondialog.cpp:289
+#: ui/keyselectiondialog.cpp:291 ui/keyselectiondialog.cpp:300
+#: ui/keyselectiondialog.cpp:302
 msgid "unknown"
 msgstr "nich begäng"
 
@@ -144,7 +144,7 @@ msgstr "Fehler binnen \"gpgconf\" bi't Sekern vun de Instellen: %1"
 
 #: backends/qgpgme/qgpgmekeylistjob.cpp:163
 #: backends/qgpgme/qgpgmelistallkeysjob.cpp:165 ui/keyrequester.cpp:245
-#: ui/keyselectiondialog.cpp:638
+#: ui/keyselectiondialog.cpp:663
 #, kde-format
 msgid ""
 "<qt><p>An error occurred while fetching the keys from the backend:</p><p><b>"
@@ -832,12 +832,12 @@ msgstr "Leddig maken"
 msgid "Change..."
 msgstr "Ännern..."
 
-#: ui/keyrequester.cpp:231 ui/keyselectiondialog.cpp:240
+#: ui/keyrequester.cpp:231 ui/keyselectiondialog.cpp:256
 msgid "<placeholder>unknown</placeholder>"
 msgstr "<placeholder>nich begäng</placeholder>"
 
 #: ui/keyrequester.cpp:250 ui/keyrequester.cpp:282 ui/keyrequester.cpp:305
-#: ui/keyselectiondialog.cpp:611 ui/keyselectiondialog.cpp:643
+#: ui/keyselectiondialog.cpp:636 ui/keyselectiondialog.cpp:668
 msgid "Key Listing Failed"
 msgstr "Oplisten vun de Slötels fehlslaan"
 
@@ -879,59 +879,112 @@ msgstr "Slötel utsöken"
 msgid "Please select an (OpenPGP or S/MIME) key to use."
 msgstr "Söök bitte en (OpenPGP- oder S/MIME-) Slötel ut"
 
-#: ui/keyselectiondialog.cpp:214
+#: ui/keyselectiondialog.cpp:98
+msgid "The key is not valid."
+msgstr ""
+
+#: ui/keyselectiondialog.cpp:106
+msgid "The key is expired."
+msgstr ""
+
+#: ui/keyselectiondialog.cpp:110
+msgid "The key is revoked."
+msgstr ""
+
+#: ui/keyselectiondialog.cpp:114
+msgid "The key is disabled."
+msgstr ""
+
+#: ui/keyselectiondialog.cpp:122
+#, fuzzy
+#| msgid "The following keys will be used for encryption:"
+msgid "The key is not designated for encryption."
+msgstr "Mit disse Slötels warrt verslötelt:"
+
+#: ui/keyselectiondialog.cpp:128
+msgid "The key is not designated for signing."
+msgstr ""
+
+#: ui/keyselectiondialog.cpp:134
+msgid "The key is not designated for certifying."
+msgstr ""
+
+#: ui/keyselectiondialog.cpp:140
+msgid "The key is not designated for authentication."
+msgstr ""
+
+#: ui/keyselectiondialog.cpp:148
+msgid "The key is not secret."
+msgstr ""
+
+#: ui/keyselectiondialog.cpp:163
+msgid "The key is not trusted enough."
+msgstr ""
+
+#: ui/keyselectiondialog.cpp:169
+msgid "The key can be used."
+msgstr ""
+
+#: ui/keyselectiondialog.cpp:230
 msgid "Key ID"
 msgstr "Slötel-ID"
 
-#: ui/keyselectiondialog.cpp:215
+#: ui/keyselectiondialog.cpp:231
 msgid "User ID"
 msgstr "Bruker-ID"
 
-#: ui/keyselectiondialog.cpp:263
+#: ui/keyselectiondialog.cpp:279
 msgid "never"
 msgstr "nienich"
 
-#: ui/keyselectiondialog.cpp:266
+#: ui/keyselectiondialog.cpp:289
 #, kde-format
-msgid ""
-"OpenPGP key for %1\n"
-"Created: %2\n"
-"Expiry: %3\n"
-"Fingerprint: %4"
+msgid "OpenPGP key for <b>%1</b>"
 msgstr ""
-"OpenPGP-Slötel för %1\n"
-"Opstellt: %2\n"
-"Löppt af: %3\n"
-"Fingerafdruck: %4"
 
-#: ui/keyselectiondialog.cpp:274
+#: ui/keyselectiondialog.cpp:291
 #, kde-format
-msgid ""
-"S/MIME key for %1\n"
-"Created: %2\n"
-"Expiry: %3\n"
-"Fingerprint: %4\n"
-"Issuer: %5"
+msgid "S/MIME key for <b>%1</b>"
 msgstr ""
-"S/MIME-Slötel för %1\n"
-"Opstellt: %2\n"
-"Löppt af: %3\n"
-"Fingerafdruck: %4\n"
-"Rutgever: %5"
 
-#: ui/keyselectiondialog.cpp:431
+#: ui/keyselectiondialog.cpp:298
+msgctxt "Key creation date"
+msgid "Created"
+msgstr ""
+
+#: ui/keyselectiondialog.cpp:299
+msgctxt "Key Expiration date"
+msgid "Expiry"
+msgstr ""
+
+#: ui/keyselectiondialog.cpp:300
+msgctxt "Key fingerprint"
+msgid "Fingerprint"
+msgstr ""
+
+#: ui/keyselectiondialog.cpp:302
+msgctxt "Key issuer"
+msgid "Issuer"
+msgstr ""
+
+#: ui/keyselectiondialog.cpp:304
+msgctxt "Key status"
+msgid "Status"
+msgstr ""
+
+#: ui/keyselectiondialog.cpp:456
 msgid "Search for &External Certificates"
 msgstr "Na &extern Zertifikaten söken"
 
-#: ui/keyselectiondialog.cpp:446
+#: ui/keyselectiondialog.cpp:471
 msgid "&Search for:"
 msgstr "&Söken na:"
 
-#: ui/keyselectiondialog.cpp:470
+#: ui/keyselectiondialog.cpp:495
 msgid "&Remember choice"
 msgstr "Köör woh&ren"
 
-#: ui/keyselectiondialog.cpp:473
+#: ui/keyselectiondialog.cpp:498
 msgid ""
 "<qt><p>If you check this box your choice will be stored and you will not be "
 "asked again.</p></qt>"
@@ -939,38 +992,38 @@ msgstr ""
 "<qt><p>Wenn Du dit ankrüüzt, warrt Dien Köör wohrt un Du warrst nich "
 "nochmaal fraagt.</p></qt>"
 
-#: ui/keyselectiondialog.cpp:489
+#: ui/keyselectiondialog.cpp:514
 msgid "&Reread Keys"
 msgstr "Slötels nie&g lesen"
 
-#: ui/keyselectiondialog.cpp:490
+#: ui/keyselectiondialog.cpp:515
 msgid "&Start Certificate Manager"
 msgstr "&Zertifikaatpleger opropen"
 
-#: ui/keyselectiondialog.cpp:609
+#: ui/keyselectiondialog.cpp:634
 msgid "No backends found for listing keys. Check your installation."
 msgstr ""
 "Keen Hölp-Programmen för't Oplisten vun Slötels funnen. Prööv bitte Dien "
 "Installatschoon."
 
-#: ui/keyselectiondialog.cpp:625
+#: ui/keyselectiondialog.cpp:650
 msgid "Could not start certificate manager; please check your installation."
 msgstr ""
 "De Zertifikaatpleger lett sik nich starten, bitte prööv Dien Installatschoon."
 
-#: ui/keyselectiondialog.cpp:627
+#: ui/keyselectiondialog.cpp:652
 msgid "Certificate Manager Error"
 msgstr "Zertifikaatpleger-Fehler"
 
-#: ui/keyselectiondialog.cpp:684
+#: ui/keyselectiondialog.cpp:709
 msgid "Checking selected keys..."
 msgstr "Utsöcht Slötels warrt pröövt..."
 
-#: ui/keyselectiondialog.cpp:684
+#: ui/keyselectiondialog.cpp:709
 msgid "Fetching keys..."
 msgstr "Slötels warrt haalt..."
 
-#: ui/keyselectiondialog.cpp:715
+#: ui/keyselectiondialog.cpp:740
 #, kde-format
 msgid ""
 "<qt>One backend returned truncated output.<p>Not all available keys are "
@@ -985,11 +1038,11 @@ msgstr[1] ""
 "<qt>%1 Hülpprogrammen hebbt en afsneden Utgaav levert.<p>Nch all verföögbore "
 "Sltels warrt wiest.</p></qt>"
 
-#: ui/keyselectiondialog.cpp:720
+#: ui/keyselectiondialog.cpp:745
 msgid "Key List Result"
 msgstr "Resultaat vun't Slötel-Oplisten"
 
-#: ui/keyselectiondialog.cpp:840
+#: ui/keyselectiondialog.cpp:865
 msgid "Recheck Key"
 msgstr "Slötel nieg pröven"
 
@@ -1063,6 +1116,30 @@ msgstr "Pröövlogbook &wiesen"
 #, kde-format
 msgid "%1: %2"
 msgstr "%1: %2"
+
+#~ msgid ""
+#~ "OpenPGP key for %1\n"
+#~ "Created: %2\n"
+#~ "Expiry: %3\n"
+#~ "Fingerprint: %4"
+#~ msgstr ""
+#~ "OpenPGP-Slötel för %1\n"
+#~ "Opstellt: %2\n"
+#~ "Löppt af: %3\n"
+#~ "Fingerafdruck: %4"
+
+#~ msgid ""
+#~ "S/MIME key for %1\n"
+#~ "Created: %2\n"
+#~ "Expiry: %3\n"
+#~ "Fingerprint: %4\n"
+#~ "Issuer: %5"
+#~ msgstr ""
+#~ "S/MIME-Slötel för %1\n"
+#~ "Opstellt: %2\n"
+#~ "Löppt af: %3\n"
+#~ "Fingerafdruck: %4\n"
+#~ "Rutgever: %5"
 
 #~ msgid "Copy Audit Log to Clipboard"
 #~ msgstr "Pröövlogbook na Twischenaflaag koperen"
