@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-01-02 03:49+0100\n"
+"POT-Creation-Date: 2017-01-10 08:11+0100\n"
 "PO-Revision-Date: 2014-09-18 17:03+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -3516,31 +3516,32 @@ msgid "Verifying checksums (%2) in %1"
 msgstr "Prööv vun Pröövsummen (%2) in %1"
 
 #: src/dialogs/adduseriddialog.cpp:71
+#: src/dialogs/certificatedetailswidget.cpp:104
 #: src/newcertificatewizard/newcertificatewizard.cpp:1187
 #, kde-format
 msgid "Name"
 msgstr "Naam"
 
-#: src/dialogs/adduseriddialog.cpp:74
+#: src/dialogs/adduseriddialog.cpp:73
 #: src/newcertificatewizard/newcertificatewizard.cpp:1190
 #, kde-format
 msgid "Comment"
 msgstr "Kommentar"
 
-#: src/dialogs/adduseriddialog.cpp:77
+#: src/dialogs/adduseriddialog.cpp:75
 #: src/newcertificatewizard/newcertificatewizard.cpp:1193
 #, kde-format
 msgid "EMail"
 msgstr "Nettpost"
 
-#: src/dialogs/adduseriddialog.cpp:93
+#: src/dialogs/adduseriddialog.cpp:91
 #: src/newcertificatewizard/newcertificatewizard.cpp:1209
 #, kde-format
 msgctxt "Format string for the labels in the \"Your Personal Data\" page"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/dialogs/adduseriddialog.cpp:125
+#: src/dialogs/adduseriddialog.cpp:123
 #: src/newcertificatewizard/newcertificatewizard.cpp:1314
 #, kde-format
 msgctxt "interpunctation for labels"
@@ -3549,7 +3550,7 @@ msgstr "%1:"
 
 #. i18n: ectx: property (text), widget (QLabel, nameRequiredLB)
 #. i18n: ectx: property (text), widget (QLabel, emailRequiredLB)
-#: src/dialogs/adduseriddialog.cpp:127
+#: src/dialogs/adduseriddialog.cpp:125
 #: src/newcertificatewizard/enterdetailspage.ui:26
 #: src/newcertificatewizard/enterdetailspage.ui:43
 #: src/newcertificatewizard/newcertificatewizard.cpp:1316
@@ -3558,21 +3559,21 @@ msgid "(required)"
 msgstr "(nödig)"
 
 #. i18n: ectx: property (text), widget (QLabel, commentRequiredLB)
-#: src/dialogs/adduseriddialog.cpp:127
+#: src/dialogs/adduseriddialog.cpp:125
 #: src/newcertificatewizard/enterdetailspage.ui:60
 #: src/newcertificatewizard/newcertificatewizard.cpp:1316
 #, kde-format
 msgid "(optional)"
 msgstr "(köörwies)"
 
-#: src/dialogs/adduseriddialog.cpp:303
+#: src/dialogs/adduseriddialog.cpp:301
 #: src/newcertificatewizard/newcertificatewizard.cpp:1490
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<interface>%1</interface> is required, but empty."
 msgstr "<interface>%1</interface> fehlt, man deit noot."
 
-#: src/dialogs/adduseriddialog.cpp:305
+#: src/dialogs/adduseriddialog.cpp:303
 #: src/newcertificatewizard/newcertificatewizard.cpp:1492
 #, kde-kuit-format
 msgctxt "@info"
@@ -3583,14 +3584,14 @@ msgstr ""
 "<interface>%1</interface> fehlt, man deit noot.<nl/>Lokaal "
 "Systeemplegerregel: <icode>%2</icode>"
 
-#: src/dialogs/adduseriddialog.cpp:311
+#: src/dialogs/adduseriddialog.cpp:309
 #: src/newcertificatewizard/newcertificatewizard.cpp:1498
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<interface>%1</interface> is incomplete."
 msgstr "<interface>%1</interface> is nich heel."
 
-#: src/dialogs/adduseriddialog.cpp:313
+#: src/dialogs/adduseriddialog.cpp:311
 #: src/newcertificatewizard/newcertificatewizard.cpp:1500
 #, kde-kuit-format
 msgctxt "@info"
@@ -3601,14 +3602,14 @@ msgstr ""
 "<interface>%1</interface> is nich heel.<nl/>Lokaal Systeemplegerregel: "
 "<icode>%2</icode>"
 
-#: src/dialogs/adduseriddialog.cpp:318
+#: src/dialogs/adduseriddialog.cpp:316
 #: src/newcertificatewizard/newcertificatewizard.cpp:1505
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<interface>%1</interface> is invalid."
 msgstr "<interface>%1</interface> is leeg."
 
-#: src/dialogs/adduseriddialog.cpp:320
+#: src/dialogs/adduseriddialog.cpp:318
 #: src/newcertificatewizard/newcertificatewizard.cpp:1507
 #, kde-kuit-format
 msgctxt "@info"
@@ -3630,191 +3631,247 @@ msgstr "Nieg Bruker-ID tofögen"
 msgid "This is how the new User-ID will be stored in the certificate:"
 msgstr "Sodennig warrt de niege Bruker-ID binnen dat Zertifikaat wohrt:"
 
-#: src/dialogs/certificatedetailsdialog.cpp:288
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>An error occurred while loading the certifications: <message>%1</"
-"message></para>"
+#: src/dialogs/certificatedetailswidget.cpp:98
+#, fuzzy, kde-format
+#| msgid "Never"
+msgctxt "Expires"
+msgid "never"
+msgstr "Nienich"
+
+#: src/dialogs/certificatedetailswidget.cpp:104
+#, kde-format
+msgid "Email"
+msgstr "Nettpost"
+
+#: src/dialogs/certificatedetailswidget.cpp:106
+#, fuzzy, kde-format
+#| msgid "New trust level:"
+msgid "Trust Level"
+msgstr "Nieg Totroen-Stoop:"
+
+#: src/dialogs/certificatedetailswidget.cpp:152
+#, kde-format
+msgid "Revoke this User ID"
 msgstr ""
-"<para>Dat geev en Fehler bi't Laden vun de Beglöven: <message>%1</message></"
-"para>"
 
-#: src/dialogs/certificatedetailsdialog.cpp:291
+#: src/dialogs/certificatedetailswidget.cpp:235
+#, fuzzy, kde-format
+#| msgid "Certify..."
+msgid "Certify ..."
+msgstr "Beglöven..."
+
+#: src/dialogs/certificatedetailswidget.cpp:288
+#, fuzzy, kde-format
+#| msgid "Never"
+msgid "never"
+msgstr "Nienich"
+
+#. i18n: ectx: property (text), widget (QCheckBox, signingCB)
+#: src/dialogs/certificatedetailswidget.cpp:290
+#: src/newcertificatewizard/advancedsettingsdialog.ui:206
 #, kde-format
-msgctxt "@title"
-msgid "Certifications Loading Failed"
-msgstr "Laden vun Beglöven fehlslaan"
+msgid "Signing"
+msgstr "Ünnerschrieven"
 
-#: src/dialogs/certificatedetailsdialog.cpp:319
+#: src/dialogs/certificatedetailswidget.cpp:291
+#: src/dialogs/certificatedetailswidget.cpp:295
 #, kde-format
-msgid "Please wait while generating the dump..."
-msgstr "Tööv bitte, de Utgaav warrt torechtmaakt..."
+msgid "First message"
+msgstr ""
 
-#: src/dialogs/certificatedetailsdialog.cpp:425
+#: src/dialogs/certificatedetailswidget.cpp:292
+#: src/dialogs/certificatedetailswidget.cpp:296
 #, kde-format
-msgid "Issuer Certificate Not Found (%1)"
-msgstr "Rutgever-Zertifikaat nich funnen (%1)"
+msgid "Last message"
+msgstr ""
 
-#: src/dialogs/certificatedetailsdialog.cpp:480
+#: src/dialogs/certificatedetailswidget.cpp:293
+#: src/dialogs/certificatedetailswidget.cpp:297
+#, fuzzy, kde-format
+#| msgid "Message #%1"
+msgid "Message count"
+msgstr "Naricht Nr.%1"
+
+#. i18n: ectx: property (text), widget (QCheckBox, encryptionCB)
+#: src/dialogs/certificatedetailswidget.cpp:294
+#: src/newcertificatewizard/advancedsettingsdialog.ui:216
 #, kde-format
-msgctxt "@title"
-msgid "Subkeys"
-msgstr "Ünnerslötels"
+msgid "Encryption"
+msgstr "Verslöteln"
 
-#. i18n: ectx: property (windowTitle), widget (QWidget, CertificateDetailsDialog)
-#: src/dialogs/certificatedetailsdialog.ui:14
+#: src/dialogs/certificatedetailswidget.cpp:337
+#, kde-format
+msgctxt "<name> of <company>"
+msgid "%1 of %2"
+msgstr ""
+
+#: src/dialogs/certificatedetailswidget.cpp:372
+#, kde-format
+msgid "Common Name"
+msgstr "Allgemeen Naam"
+
+#: src/dialogs/certificatedetailswidget.cpp:373
+#, kde-format
+msgid "Organization"
+msgstr "Organisatschoon"
+
+#: src/dialogs/certificatedetailswidget.cpp:374
+#, fuzzy, kde-format
+#| msgid "Strength"
+msgid "Street"
+msgstr "Stärk"
+
+#: src/dialogs/certificatedetailswidget.cpp:375
+#, kde-format
+msgid "City"
+msgstr ""
+
+#: src/dialogs/certificatedetailswidget.cpp:376
+#, fuzzy, kde-format
+#| msgid "Status"
+msgid "State"
+msgstr "Status"
+
+#: src/dialogs/certificatedetailswidget.cpp:377
+#, kde-format
+msgid "Country"
+msgstr "Land"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, CertificateDetailsWidget)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/dialogs/certificatedetailswidget.cpp:437
+#: src/dialogs/certificatedetailswidget.ui:14
+#: src/dialogs/certificatedetailswidget.ui:46
 #: src/view/keylistcontroller.cpp:431
 #, kde-format
 msgid "Certificate Details"
 msgstr "Zertifikaatdetails"
 
-#. i18n: ectx: attribute (title), widget (QWidget, overviewTab)
-#: src/dialogs/certificatedetailsdialog.ui:33
-#, kde-format
-msgid "Overview"
-msgstr "Översicht"
+#. i18n: ectx: property (text), widget (QPushButton, addUserIDBtn)
+#: src/dialogs/certificatedetailswidget.ui:32
+#, fuzzy, kde-format
+#| msgid "Add. Email Address:"
+msgid "&Add email address"
+msgstr "Anner Nettpost-Adress:"
 
-#. i18n: ectx: property (title), widget (QGroupBox, overviewActionsGB)
-#: src/dialogs/certificatedetailsdialog.ui:39
+#. i18n: ectx: property (text), widget (QPushButton, trustChainDetailsBtn)
+#: src/dialogs/certificatedetailswidget.ui:39
 #, kde-format
-msgid "Actions"
-msgstr "Akschonen"
+msgid "Trust chain &details..."
+msgstr ""
 
-#. i18n: ectx: property (text), widget (QPushButton, changePassphrasePB)
-#: src/dialogs/certificatedetailsdialog.ui:45
-#: src/view/keylistcontroller.cpp:460
+#. i18n: ectx: property (text), widget (QLabel, expiresLbl)
+#: src/dialogs/certificatedetailswidget.ui:61
+#, fuzzy, kde-format
+#| msgid "expired"
+msgid "Expires:"
+msgstr "aflopen"
+
+#. i18n: ectx: property (text), widget (QLabel, smimeIssuer)
+#. i18n: ectx: property (text), widget (QLabel, type)
+#. i18n: ectx: property (text), widget (QLabel, fingerprint)
+#. i18n: ectx: property (text), widget (QLabel, smimeOwner)
+#. i18n: ectx: property (text), widget (QLabel, stored)
+#: src/dialogs/certificatedetailswidget.ui:68
+#: src/dialogs/certificatedetailswidget.ui:129
+#: src/dialogs/certificatedetailswidget.ui:190
+#: src/dialogs/certificatedetailswidget.ui:271 src/dialogs/subkeyswidget.ui:83
+#, fuzzy, kde-format
+#| msgctxt "unknown trust level"
+#| msgid "unknown"
+msgid "unknown"
+msgstr "nich begäng"
+
+#. i18n: ectx: property (text), widget (QPushButton, moreDetailsBtn)
+#: src/dialogs/certificatedetailswidget.ui:81
+#, fuzzy, kde-format
+#| msgid "Details..."
+msgid "&More details..."
+msgstr "Enkelheiten..."
+
+#. i18n: ectx: property (text), widget (QLabel, expires)
+#. i18n: ectx: property (text), widget (QLabel, validFrom)
+#: src/dialogs/certificatedetailswidget.ui:90
+#: src/dialogs/certificatedetailswidget.ui:146
 #, kde-format
-msgid "Change Passphrase..."
+msgid "00/00/00"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, changeExpirationBtn)
+#: src/dialogs/certificatedetailswidget.ui:100
+#, fuzzy, kde-format
+#| msgid "Change Passphrase..."
+msgid "Change"
 msgstr "Slötelsatz ännern..."
 
-#. i18n: ectx: property (text), widget (QPushButton, changeTrustLevelPB)
-#: src/dialogs/certificatedetailsdialog.ui:55
-#, kde-format
-msgid "Trust Certifications Made by This Certificate..."
-msgstr "Beglöven mit dit Zertifikaat vertroen..."
+#. i18n: ectx: property (text), widget (QLabel, validFromLbl)
+#: src/dialogs/certificatedetailswidget.ui:122
+#, fuzzy, kde-format
+#| msgid "Valid From"
+msgid "Valid from:"
+msgstr "Gellt vun"
 
-#. i18n: ectx: property (text), widget (QPushButton, changeExpiryDatePB)
-#: src/dialogs/certificatedetailsdialog.ui:65
-#: src/view/keylistcontroller.cpp:444
-#, kde-format
-msgid "Change Expiry Date..."
-msgstr "Afloopdatum ännern..."
+#. i18n: ectx: property (text), widget (QLabel, fingerprintLbl)
+#: src/dialogs/certificatedetailswidget.ui:139
+#, fuzzy, kde-format
+#| msgid "Fingerprint"
+msgid "Fingerprint:"
+msgstr "Fingerafdruck"
 
-#. i18n: ectx: property (text), widget (QPushButton, revokeCertificatePB)
-#: src/dialogs/certificatedetailsdialog.ui:75
-#, kde-format
-msgid "Revoke This Certificate..."
-msgstr "Dit Zertifikaat torüchropen..."
+#. i18n: ectx: property (text), widget (QLabel, smimeIssuerLbl)
+#: src/dialogs/certificatedetailswidget.ui:156
+#, fuzzy, kde-format
+#| msgid "Issuer"
+msgid "Issuer:"
+msgstr "Rutgever"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: src/dialogs/certificatedetailsdialog.ui:123
+#. i18n: ectx: property (text), widget (QLabel, publishingLbl)
+#: src/dialogs/certificatedetailswidget.ui:163
 #, kde-format
-msgid "Photo"
-msgstr "Foto"
-
-#. i18n: ectx: property (text), widget (QLabel, photoLB)
-#: src/dialogs/certificatedetailsdialog.ui:133
-#, kde-format
-msgid ""
-"<p>At the moment, Kleopatra does not support photos in certificates. It has "
-"no support for adding, nor for displaying them. This is for the following "
-"reasons:</p>\n"
-"<ul>\n"
-"<li>Photos give a false sense of security.</li>\n"
-"<li>Photos increase the size of certificates.</li>\n"
-"</ul>"
+msgid "Publishing:"
 msgstr ""
-"<p>Opstunns ünnerstütt Kleopatra Fotos binnen Zertifikaten nich. Kleopatra "
-"kann keen Fotos tofögen, un ok nich wiesen. Dat is so ut disse Grünn:</p>\n"
-"<ul>\n"
-"<li>Fotos geevt en leeg Geföhl vun Sekerheit.</li>\n"
-"<li>Fotos maakt de Zertifikaten grötter.</li>\n"
-"</ul>"
 
-#. i18n: ectx: attribute (title), widget (QWidget, certificationsTab)
-#: src/dialogs/certificatedetailsdialog.ui:150
+#. i18n: ectx: property (text), widget (QLabel, typeLbl)
+#: src/dialogs/certificatedetailswidget.ui:170
 #, kde-format
-msgid "User-IDs && Certifications"
-msgstr "Bruker-IDs un Beglöven"
+msgid "Type:"
+msgstr "Typ:"
 
-#. i18n: ectx: property (title), widget (QGroupBox, userIDsActionsGB)
-#: src/dialogs/certificatedetailsdialog.ui:170
-#, kde-format
-msgid "User-IDs"
-msgstr "Bruker-IDs"
+#. i18n: ectx: property (text), widget (QPushButton, publishing)
+#: src/dialogs/certificatedetailswidget.ui:200
+#, fuzzy, kde-format
+#| msgid "Dump Certificate"
+msgid "Publish Certificate"
+msgstr "Zertifikaat utgeven"
 
-#. i18n: ectx: property (text), widget (QPushButton, addUserIDPB)
-#: src/dialogs/certificatedetailsdialog.ui:176
-#, kde-format
-msgid "Add..."
-msgstr "Tofögen..."
-
-#. i18n: ectx: property (text), widget (QPushButton, revokeUserIDPB)
-#. i18n: ectx: property (text), widget (QPushButton, revokeCertificationPB)
-#: src/dialogs/certificatedetailsdialog.ui:186
-#: src/dialogs/certificatedetailsdialog.ui:215
-#, kde-format
-msgid "Revoke..."
-msgstr "Torüchropen..."
-
-#. i18n: ectx: property (text), widget (QPushButton, certifyUserIDPB)
-#: src/dialogs/certificatedetailsdialog.ui:196
-#, kde-format
-msgid "Certify..."
-msgstr "Beglöven..."
-
-#. i18n: ectx: property (title), widget (QGroupBox, certificationsActionGB)
-#: src/dialogs/certificatedetailsdialog.ui:209
-#, kde-format
-msgid "Certifications"
-msgstr "Beglöven"
-
-#. i18n: ectx: property (text), widget (QPushButton, expandAllCertificationsPB)
-#: src/dialogs/certificatedetailsdialog.ui:241 src/view/tabwidget.cpp:812
-#, kde-format
-msgid "Expand All"
-msgstr "All Utfoolden"
-
-#. i18n: ectx: property (text), widget (QPushButton, collapseAllCertificationsPB)
-#: src/dialogs/certificatedetailsdialog.ui:251 src/view/tabwidget.cpp:816
-#, kde-format
-msgid "Collapse All"
-msgstr "All Tosamenfoolden"
-
-#. i18n: ectx: attribute (title), widget (QWidget, detailsTab)
-#. i18n: ectx: attribute (title), widget (QWidget, technicalTab)
-#: src/dialogs/certificatedetailsdialog.ui:266
-#: src/newcertificatewizard/advancedsettingsdialog.ui:21
-#, kde-format
-msgid "Technical Details"
-msgstr "Technische Enkelheiten"
-
-#. i18n: ectx: attribute (title), widget (QWidget, chainTab)
-#: src/dialogs/certificatedetailsdialog.ui:299
-#, kde-format
-msgid "Chain"
-msgstr "Keed"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, chainTW)
-#: src/dialogs/certificatedetailsdialog.ui:312
-#, kde-format
-msgid "1"
-msgstr "1"
-
-#. i18n: ectx: attribute (title), widget (QWidget, dumpTab)
-#: src/dialogs/certificatedetailsdialog.ui:321
-#, kde-format
-msgid "Dump"
-msgstr "Utgaav"
+#. i18n: ectx: property (text), widget (QPushButton, changePassphraseBtn)
+#: src/dialogs/certificatedetailswidget.ui:234
+#, fuzzy, kde-format
+#| msgid "Change Passphrase..."
+msgid "Change &passphrase"
+msgstr "Slötelsatz ännern..."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: src/dialogs/certificatedetailsdialog.ui:327
+#: src/dialogs/certificatedetailswidget.ui:241
 #, kde-format
 msgid ""
-"This is a dump of all information the backend has about this certificate:"
+"You can use this certificate to secure communication with the following "
+"email addresses:"
 msgstr ""
-"Dit sünd all Informatschonen, de dat Hülpprogramm över dat Zertifikaat hett:"
+
+#. i18n: ectx: property (text), widget (QLabel, smimeOwnerLbl)
+#: src/dialogs/certificatedetailswidget.ui:251
+#, fuzzy, kde-format
+#| msgid "Ownertrust"
+msgid "Owner:"
+msgstr "Totroen"
+
+#. i18n: ectx: property (text), widget (QLabel, smimeRelatedAddresses)
+#: src/dialogs/certificatedetailswidget.ui:264
+#, fuzzy, kde-format
+#| msgid "EMail address:"
+msgid "Related addresses:"
+msgstr "Nettpost-Adress:"
 
 #: src/dialogs/certificateselectiondialog.cpp:112
 #, kde-format
@@ -4088,6 +4145,12 @@ msgstr[1] ""
 msgid "Secret Key Deletion"
 msgstr "Privaatslötel wegdoon"
 
+#: src/dialogs/expirydialog.cpp:148
+#, fuzzy, kde-format
+#| msgid "Change Expiry Date..."
+msgid "Change Expiry"
+msgstr "Afloopdatum ännern..."
+
 #. i18n: ectx: property (windowTitle), widget (QWidget, Kleo::Dialogs::ExpiryDialog)
 #: src/dialogs/expirydialog.ui:14
 #, kde-format
@@ -4095,51 +4158,52 @@ msgid "Change Certificate Date of Expiry"
 msgstr "Afloopdatum vun't Zertifikaat ännern"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: src/dialogs/expirydialog.ui:20
+#: src/dialogs/expirydialog.ui:32
 #, kde-format
 msgid "Please select when to expire this certificate:"
 msgstr "Legg bitte fast, wannehr dat Zertifikaat aflopen schall:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, neverRB)
-#: src/dialogs/expirydialog.ui:27
+#: src/dialogs/expirydialog.ui:39
 #, kde-format
-msgid "Never"
-msgstr "Nienich"
+msgid "Ne&ver"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, inRB)
-#: src/dialogs/expirydialog.ui:39
+#: src/dialogs/expirydialog.ui:51
 #, kde-format
 msgid "In"
 msgstr "In"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, inCB)
-#: src/dialogs/expirydialog.ui:63
+#: src/dialogs/expirydialog.ui:75
 #, kde-format
 msgid "Days"
 msgstr "Daag"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, inCB)
-#: src/dialogs/expirydialog.ui:68
+#: src/dialogs/expirydialog.ui:80
 #, kde-format
 msgid "Weeks"
 msgstr "Weken"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, inCB)
-#: src/dialogs/expirydialog.ui:73
+#: src/dialogs/expirydialog.ui:85
 #, kde-format
 msgid "Months"
 msgstr "Maanden"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, inCB)
-#: src/dialogs/expirydialog.ui:78
+#: src/dialogs/expirydialog.ui:90
 #, kde-format
 msgid "Years"
 msgstr "Johren"
 
 #. i18n: ectx: property (text), widget (QRadioButton, onRB)
-#: src/dialogs/expirydialog.ui:101
-#, kde-format
-msgid "On this day:"
+#: src/dialogs/expirydialog.ui:113
+#, fuzzy, kde-format
+#| msgid "On this day:"
+msgid "On this da&y:"
 msgstr "Op dissen Dag:"
 
 #: src/dialogs/exportcertificatesdialog.cpp:79
@@ -4635,6 +4699,101 @@ msgstr ""
 #, kde-format
 msgid "Set Initial PIN (SigG)"
 msgstr "Eerst-PIN setten (SigG)"
+
+#: src/dialogs/subkeyswidget.cpp:75
+#, kde-format
+msgctxt "stored..."
+msgid "on SmartCard with serial no. %1"
+msgstr "op Smartkoort mit de Reegnummer \"%1\"."
+
+#: src/dialogs/subkeyswidget.cpp:77
+#, kde-format
+msgctxt "stored..."
+msgid "on this computer"
+msgstr "op dissen Reekner"
+
+#: src/dialogs/subkeyswidget.cpp:92
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Subkeys"
+msgid "Subkeys details"
+msgstr "Ünnerslötels"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, TrustChainWidget)
+#. i18n: ectx: property (windowTitle), widget (QWidget, SubKeysWidget)
+#: src/dialogs/subkeyswidget.ui:14 src/dialogs/trustchainwidget.ui:14
+#, kde-format
+msgid "Form"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/dialogs/subkeyswidget.ui:32
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Subkeys"
+msgid "Subkeys:"
+msgstr "Ünnerslötels"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, subkeysTree)
+#: src/dialogs/subkeyswidget.ui:43
+#, kde-format
+msgid "ID"
+msgstr "ID"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, subkeysTree)
+#: src/dialogs/subkeyswidget.ui:48
+#, kde-format
+msgid "Type"
+msgstr "Typ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, subkeysTree)
+#: src/dialogs/subkeyswidget.ui:53
+#, kde-format
+msgid "Valid From"
+msgstr "Gellt vun"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, subkeysTree)
+#: src/dialogs/subkeyswidget.ui:58
+#, kde-format
+msgid "Valid Until"
+msgstr "Gellt bet"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, subkeysTree)
+#: src/dialogs/subkeyswidget.ui:63
+#, kde-format
+msgid "Status"
+msgstr "Status"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, subkeysTree)
+#: src/dialogs/subkeyswidget.ui:68
+#, kde-format
+msgid "Strength"
+msgstr "Stärk"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, subkeysTree)
+#: src/dialogs/subkeyswidget.ui:73
+#, fuzzy, kde-format
+#| msgid "Key Usage:"
+msgid "Usage"
+msgstr "Slötelbruuk:"
+
+#. i18n: ectx: property (text), widget (QLabel, storedLbl)
+#: src/dialogs/subkeyswidget.ui:90
+#, fuzzy, kde-format
+#| msgid "Stored"
+msgid "Stored:"
+msgstr "Sekert"
+
+#: src/dialogs/trustchainwidget.cpp:75
+#, kde-format
+msgid "Issuer Certificate Not Found (%1)"
+msgstr "Rutgever-Zertifikaat nich funnen (%1)"
+
+#: src/dialogs/trustchainwidget.cpp:98
+#, fuzzy, kde-format
+#| msgid "Chain"
+msgid "Trust Chain"
+msgstr "Keed"
 
 #. i18n: ectx: label, entry (QuickSignEMail), group (EMailOperations)
 #: src/kcfg/emailoperationspreferences.kcfg:10
@@ -5206,6 +5365,12 @@ msgstr "ZTLs importeren..."
 msgid "Advanced Settings"
 msgstr "Verwiedert Instellen"
 
+#. i18n: ectx: attribute (title), widget (QWidget, technicalTab)
+#: src/newcertificatewizard/advancedsettingsdialog.ui:21
+#, kde-format
+msgid "Technical Details"
+msgstr "Technische Enkelheiten"
+
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: src/newcertificatewizard/advancedsettingsdialog.ui:27
 #, kde-format
@@ -5265,18 +5430,6 @@ msgstr "Gellt bet:"
 #, kde-format
 msgid "Certification"
 msgstr "Beglöven"
-
-#. i18n: ectx: property (text), widget (QCheckBox, signingCB)
-#: src/newcertificatewizard/advancedsettingsdialog.ui:206
-#, kde-format
-msgid "Signing"
-msgstr "Ünnerschrieven"
-
-#. i18n: ectx: property (text), widget (QCheckBox, encryptionCB)
-#: src/newcertificatewizard/advancedsettingsdialog.ui:216
-#, kde-format
-msgid "Encryption"
-msgstr "Verslöteln"
 
 #. i18n: ectx: property (text), widget (QCheckBox, authenticationCB)
 #: src/newcertificatewizard/advancedsettingsdialog.ui:226
@@ -7174,6 +7327,11 @@ msgstr "Wegdoon"
 msgid "Certify Certificate..."
 msgstr "Zertifikaat beglöven..."
 
+#: src/view/keylistcontroller.cpp:444
+#, kde-format
+msgid "Change Expiry Date..."
+msgstr "Afloopdatum ännern..."
+
 #: src/view/keylistcontroller.cpp:448
 #, kde-format
 msgid "Change Owner Trust..."
@@ -7188,6 +7346,11 @@ msgstr "Wörtelzertifikaat vertroen"
 #, kde-format
 msgid "Distrust Root Certificate"
 msgstr "Wörtelzertifikaat nich vertroen"
+
+#: src/view/keylistcontroller.cpp:460
+#, kde-format
+msgid "Change Passphrase..."
+msgstr "Slötelsatz ännern..."
 
 #: src/view/keylistcontroller.cpp:464
 #, kde-format
@@ -7311,6 +7474,90 @@ msgstr "Paneel na rechts verschuven"
 msgid "Hierarchical Certificate List"
 msgstr "Hierarch'sche Zertifikatenlist"
 
+#: src/view/tabwidget.cpp:812
+#, kde-format
+msgid "Expand All"
+msgstr "All Utfoolden"
+
+#: src/view/tabwidget.cpp:816
+#, kde-format
+msgid "Collapse All"
+msgstr "All Tosamenfoolden"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>An error occurred while loading the certifications: <message>%1</"
+#~ "message></para>"
+#~ msgstr ""
+#~ "<para>Dat geev en Fehler bi't Laden vun de Beglöven: <message>%1</"
+#~ "message></para>"
+
+#~ msgctxt "@title"
+#~ msgid "Certifications Loading Failed"
+#~ msgstr "Laden vun Beglöven fehlslaan"
+
+#~ msgid "Please wait while generating the dump..."
+#~ msgstr "Tööv bitte, de Utgaav warrt torechtmaakt..."
+
+#~ msgid "Overview"
+#~ msgstr "Översicht"
+
+#~ msgid "Actions"
+#~ msgstr "Akschonen"
+
+#~ msgid "Trust Certifications Made by This Certificate..."
+#~ msgstr "Beglöven mit dit Zertifikaat vertroen..."
+
+#~ msgid "Revoke This Certificate..."
+#~ msgstr "Dit Zertifikaat torüchropen..."
+
+#~ msgid "Photo"
+#~ msgstr "Foto"
+
+#~ msgid ""
+#~ "<p>At the moment, Kleopatra does not support photos in certificates. It "
+#~ "has no support for adding, nor for displaying them. This is for the "
+#~ "following reasons:</p>\n"
+#~ "<ul>\n"
+#~ "<li>Photos give a false sense of security.</li>\n"
+#~ "<li>Photos increase the size of certificates.</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<p>Opstunns ünnerstütt Kleopatra Fotos binnen Zertifikaten nich. "
+#~ "Kleopatra kann keen Fotos tofögen, un ok nich wiesen. Dat is so ut disse "
+#~ "Grünn:</p>\n"
+#~ "<ul>\n"
+#~ "<li>Fotos geevt en leeg Geföhl vun Sekerheit.</li>\n"
+#~ "<li>Fotos maakt de Zertifikaten grötter.</li>\n"
+#~ "</ul>"
+
+#~ msgid "User-IDs && Certifications"
+#~ msgstr "Bruker-IDs un Beglöven"
+
+#~ msgid "User-IDs"
+#~ msgstr "Bruker-IDs"
+
+#~ msgid "Add..."
+#~ msgstr "Tofögen..."
+
+#~ msgid "Revoke..."
+#~ msgstr "Torüchropen..."
+
+#~ msgid "Certifications"
+#~ msgstr "Beglöven"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "Dump"
+#~ msgstr "Utgaav"
+
+#~ msgid ""
+#~ "This is a dump of all information the backend has about this certificate:"
+#~ msgstr ""
+#~ "Dit sünd all Informatschonen, de dat Hülpprogramm över dat Zertifikaat "
+#~ "hett:"
+
 #~ msgctxt "@info"
 #~ msgid "Could not connect to GpgAgent: <message>%1</message>"
 #~ msgstr "Gpg-Hölper lett sik nich faatkriegen: <message>%1</message>"
@@ -7401,31 +7648,8 @@ msgstr "Hierarch'sche Zertifikatenlist"
 #~ msgid "E-Mail"
 #~ msgstr "Nettpost"
 
-#~ msgid "Valid From"
-#~ msgstr "Gellt vun"
-
-#~ msgid "Valid Until"
-#~ msgstr "Gellt bet"
-
 #~ msgid "Key-ID"
 #~ msgstr "Slötel-ID"
-
-#~ msgid "ID"
-#~ msgstr "ID"
-
-#~ msgid "Type"
-#~ msgstr "Typ"
-
-#~ msgid "Status"
-#~ msgstr "Status"
-
-#~ msgid "Strength"
-#~ msgstr "Stärk"
-
-#, fuzzy
-#~| msgid "Key Usage:"
-#~ msgid "Usage"
-#~ msgstr "Slötelbruuk:"
 
 #~ msgid "<tr><th>%1:</th><td>%2</td></tr>"
 #~ msgstr "<tr><th>%1</th><td>%2</td></tr>"
@@ -7469,9 +7693,6 @@ msgstr "Hierarch'sche Zertifikatenlist"
 #~ msgid "Serial number"
 #~ msgstr "Reegnummer"
 
-#~ msgid "Issuer"
-#~ msgstr "Rutgever"
-
 #~ msgid "Subject"
 #~ msgstr "Bedröppt"
 
@@ -7496,12 +7717,6 @@ msgstr "Hierarch'sche Zertifikatenlist"
 #~ msgid "Certificate usage"
 #~ msgstr "Zertifikaatbruuk"
 
-#~ msgid "Fingerprint"
-#~ msgstr "Fingerafdruck"
-
-#~ msgid "Ownertrust"
-#~ msgstr "Totroen"
-
 #~ msgid "Trusted issuer?"
 #~ msgstr "Troot Rutgever?"
 
@@ -7511,27 +7726,12 @@ msgstr "Hierarch'sche Zertifikatenlist"
 #~ msgid "No"
 #~ msgstr "Nee"
 
-#~ msgid "Stored"
-#~ msgstr "Sekert"
-
-#~ msgctxt "stored..."
-#~ msgid "on SmartCard with serial no. %1"
-#~ msgstr "op Smartkoort mit de Reegnummer \"%1\"."
-
-#~ msgctxt "stored..."
-#~ msgid "on this computer"
-#~ msgstr "op dissen Reekner"
-
 #~ msgctxt "X.509/CMS encryption standard"
 #~ msgid "X.509"
 #~ msgstr "X.509"
 
 #~ msgctxt "Unknown encryption protocol"
 #~ msgid "Unknown"
-#~ msgstr "nich begäng"
-
-#~ msgctxt "unknown trust level"
-#~ msgid "unknown"
 #~ msgstr "nich begäng"
 
 #~ msgid "untrusted"
@@ -7555,9 +7755,6 @@ msgstr "Hierarch'sche Zertifikatenlist"
 
 #~ msgid "revoked"
 #~ msgstr "torüchropen"
-
-#~ msgid "expired"
-#~ msgstr "aflopen"
 
 #~ msgid "disabled"
 #~ msgstr "utmaakt"
@@ -7952,9 +8149,6 @@ msgstr "Hierarch'sche Zertifikatenlist"
 
 #~ msgid "Description:"
 #~ msgstr "Beschrieven:"
-
-#~ msgid "Type:"
-#~ msgstr "Typ:"
 
 #~ msgid "Reset user settings to built-in default"
 #~ msgstr "Brukerinstellen op Vörinstellen torüchsetten"
@@ -8926,23 +9120,11 @@ msgstr "Hierarch'sche Zertifikatenlist"
 #~ msgid "Serial Number"
 #~ msgstr "Seriennummer"
 
-#~ msgid "Country"
-#~ msgstr "Land"
-
 #~ msgid "Organizational Unit"
 #~ msgstr "Afdelen"
 
-#~ msgid "Organization"
-#~ msgstr "Organisatschoon"
-
 #~ msgid "Location"
 #~ msgstr "Oort"
-
-#~ msgid "Common Name"
-#~ msgstr "Allgemeen Naam"
-
-#~ msgid "Email"
-#~ msgstr "Nettpost"
 
 #~ msgid "A.k.a."
 #~ msgstr "Ok kennt as"
@@ -9111,9 +9293,6 @@ msgstr "Hierarch'sche Zertifikatenlist"
 #~ msgid "TODO: Display Certificate information and text about trust levels"
 #~ msgstr ""
 #~ "TO DOON: Zerifikaatinformatschonen un Text över Totroen-Stopen wiesen"
-
-#~ msgid "New trust level:"
-#~ msgstr "Nieg Totroen-Stoop:"
 
 #~ msgid "Sign Certificate"
 #~ msgstr "Zertifikaat ünnerschrieven"
