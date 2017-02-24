@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-02-21 08:43+0100\n"
+"POT-Creation-Date: 2017-02-24 03:55+0100\n"
 "PO-Revision-Date: 2012-02-02 07:34+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -410,7 +410,7 @@ msgstr "Naam"
 
 #: debugger/variable/variablecollection.cpp:422
 #: debugger/variable/variabletooltip.cpp:102
-#: shell/settings/environmentgroupmodel.cpp:98
+#: shell/settings/environmentprofilemodel.cpp:106
 #, kde-format
 msgid "Value"
 msgstr "Weert"
@@ -1216,7 +1216,7 @@ msgid "Class"
 msgstr "Klass"
 
 #: language/duchain/navigation/abstractnavigationcontext.cpp:403
-#: shell/settings/environmentgroupmodel.cpp:95
+#: shell/settings/environmentprofilemodel.cpp:104
 #, kde-format
 msgid "Variable"
 msgstr "Variabel"
@@ -3415,7 +3415,7 @@ msgid "Provide a name for the project"
 msgstr "En Naam för't Projekt ingeven"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: shell/projectinfopage.ui:30
+#: shell/projectinfopage.ui:30 shell/settings/environmentwidget.cpp:188
 #, kde-format
 msgid "Name:"
 msgstr "Naam:"
@@ -4063,73 +4063,78 @@ msgstr "Keen Bornformateren verföögbor"
 msgid "Preview"
 msgstr "Vöransicht"
 
-#: shell/settings/environmentpreferences.cpp:84
+#: shell/settings/environmentpreferences.cpp:86
 #, kde-format
 msgid "Environment"
 msgstr "Ümgeven"
 
-#: shell/settings/environmentpreferences.cpp:89
+#: shell/settings/environmentpreferences.cpp:91
 #, fuzzy, kde-format
 #| msgid "configure environment variables"
 msgid "Configure Environment Variables"
 msgstr "Ümgevenvariabeln instellen"
 
-#: shell/settings/environmentwidget.cpp:53
+#: shell/settings/environmentprofilelistmodel.cpp:61
+#, kde-format
+msgid "%1 (default profile)"
+msgstr ""
+
+#: shell/settings/environmentwidget.cpp:94
 #, fuzzy, kde-format
 #| msgid "Enter the target here..."
-msgid "Enter variable ..."
+msgid "Enter variable..."
 msgstr "Hier dat Teel ingeven..."
 
+#: shell/settings/environmentwidget.cpp:182
+#, fuzzy, kde-format
+#| msgid "New Environment Variable"
+msgid "Enter Name of New Environment Profile"
+msgstr "Nieg Ümgevenvariabel"
+
 #. i18n: ectx: property (toolTip), widget (QPushButton, batchModeEditButton)
-#: shell/settings/environmentwidget.cpp:154
-#: shell/settings/environmentwidget.ui:115
+#: shell/settings/environmentwidget.cpp:245
+#: shell/settings/environmentwidget.ui:130
 #, kde-format
 msgid "Batch Edit Mode"
 msgstr ""
-
-#: shell/settings/environmentwidget.cpp:202
-#, fuzzy, kde-format
-#| msgid "<b>%1</b> (%2)"
-msgctxt "a copy of the existing environment was created"
-msgid "%1 (Cloned %2)"
-msgstr "<b>%1</b> (%2)"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: shell/settings/environmentwidget.ui:22
 #, fuzzy, kde-format
 #| msgid "Environment Group"
-msgid "Environment group:"
+msgid "Environment profile:"
 msgstr "Ümgevenkoppel"
 
-#. i18n: ectx: property (text), widget (QPushButton, addgrpBtn)
-#: shell/settings/environmentwidget.ui:42
+#. i18n: ectx: property (toolTip), widget (QPushButton, addProfileButton)
+#: shell/settings/environmentwidget.ui:39
 #, fuzzy, kde-format
-#| msgid "Add group"
-msgid "Add Group"
-msgstr "Koppel tofögen"
+#| msgid "&Add Tool View..."
+msgid "Add profile..."
+msgstr "Warktüüchansicht &tofögen…"
 
-#. i18n: ectx: property (text), widget (QPushButton, clonegrpBtn)
+#. i18n: ectx: property (toolTip), widget (QPushButton, cloneProfileButton)
 #: shell/settings/environmentwidget.ui:49
 #, fuzzy, kde-format
-#| msgid "Remove group"
-msgid "Clone Group"
-msgstr "Koppel wegmaken"
+#| msgid "Close File"
+msgid "Clone profile..."
+msgstr "Datei tomaken"
 
-#. i18n: ectx: property (text), widget (QPushButton, removegrpBtn)
-#: shell/settings/environmentwidget.ui:56
+#. i18n: ectx: property (toolTip), widget (QPushButton, removeProfileButton)
+#: shell/settings/environmentwidget.ui:59
 #, fuzzy, kde-format
-#| msgid "Remove group"
-msgid "Remove Group"
-msgstr "Koppel wegmaken"
+#| msgid "Remove All"
+msgid "Remove profile"
+msgstr "All wegmaken"
 
-#. i18n: ectx: property (text), widget (QPushButton, setAsDefaultBtn)
-#: shell/settings/environmentwidget.ui:63
-#, kde-format
-msgid "Set As Default Group"
+#. i18n: ectx: property (toolTip), widget (QPushButton, setAsDefaultProfileButton)
+#: shell/settings/environmentwidget.ui:69
+#, fuzzy, kde-format
+#| msgid "Set As Default Group"
+msgid "Set as default"
 msgstr "As Standardkoppel bruken"
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, deleteButton)
-#: shell/settings/environmentwidget.ui:102
+#. i18n: ectx: property (toolTip), widget (QPushButton, removeVariableButton)
+#: shell/settings/environmentwidget.ui:114
 #, fuzzy, kde-format
 #| msgid "Remove Watch Variable"
 msgid "Remove variable"
@@ -5911,9 +5916,25 @@ msgid "Logview"
 msgstr "Logbook-Ansicht"
 
 #, fuzzy
-#~| msgid "&Add Tool View..."
-#~ msgid "Add New..."
-#~ msgstr "Warktüüchansicht &tofögen…"
+#~| msgid "<b>%1</b> (%2)"
+#~ msgctxt "a copy of the existing environment was created"
+#~ msgid "%1 (Cloned %2)"
+#~ msgstr "<b>%1</b> (%2)"
+
+#, fuzzy
+#~| msgid "Add group"
+#~ msgid "Add Group"
+#~ msgstr "Koppel tofögen"
+
+#, fuzzy
+#~| msgid "Remove group"
+#~ msgid "Clone Group"
+#~ msgstr "Koppel wegmaken"
+
+#, fuzzy
+#~| msgid "Remove group"
+#~ msgid "Remove Group"
+#~ msgstr "Koppel wegmaken"
 
 #, fuzzy
 #~| msgid "Save &Selected"
@@ -6368,9 +6389,6 @@ msgstr "Logbook-Ansicht"
 #~ msgid "&Remove all"
 #~ msgstr "All &wegmaken"
 
-#~ msgid "New Environment Variable"
-#~ msgstr "Nieg Ümgevenvariabel"
-
 #~ msgctxt "Name of an environment variable"
 #~ msgid "Variable Name:"
 #~ msgstr "Variabel-Naam:"
@@ -6461,12 +6479,6 @@ msgstr "Logbook-Ansicht"
 #~ msgctxt "@info"
 #~ msgid "The session lock-file is owned."
 #~ msgstr "De Törn is eenmaal afstört."
-
-#, fuzzy
-#~| msgid "Remove All"
-#~ msgctxt "@action:button"
-#~ msgid "Remove lock file"
-#~ msgstr "All wegmaken"
 
 #~ msgid "Do not obtain"
 #~ msgstr "Nich halen"
