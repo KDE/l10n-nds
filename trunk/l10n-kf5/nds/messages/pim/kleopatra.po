@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-03-02 04:06+0100\n"
+"POT-Creation-Date: 2017-03-03 04:05+0100\n"
 "PO-Revision-Date: 2014-09-18 17:03+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1174,6 +1174,97 @@ msgstr "Torüchrooplist-Datei importeert."
 #, kde-format
 msgid "Import CRL Finished"
 msgstr "ZTL-Import afslaten"
+
+#: src/commands/keytocardcommand.cpp:103
+#, fuzzy, kde-format
+#| msgid "Signature file"
+msgid "Signature"
+msgstr "Ünnerschriftdatei"
+
+#. i18n: ectx: property (text), widget (QCheckBox, encryptionCB)
+#: src/commands/keytocardcommand.cpp:106
+#: src/dialogs/certificatedetailswidget.cpp:308
+#: src/newcertificatewizard/advancedsettingsdialog.ui:216
+#, kde-format
+msgid "Encryption"
+msgstr "Verslöteln"
+
+#. i18n: ectx: property (text), widget (QCheckBox, authenticationCB)
+#: src/commands/keytocardcommand.cpp:109
+#: src/newcertificatewizard/advancedsettingsdialog.ui:226
+#, kde-format
+msgid "Authentication"
+msgstr "Identiteetprööv"
+
+#: src/commands/keytocardcommand.cpp:141 src/view/pgpcardwidget.cpp:310
+#, kde-format
+msgid ""
+"It will no longer be possible to decrypt past communication encrypted for "
+"the existing key."
+msgstr ""
+
+#: src/commands/keytocardcommand.cpp:153
+#, kde-format
+msgid "Failed to find the card with the serial number: %1"
+msgstr ""
+
+#: src/commands/keytocardcommand.cpp:159
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<p>This card already contains a key in this slot. Continuing will "
+"<b>overwrite</b> that key.</p><p>If there is no backup the existing key will "
+"be irrecoverably lost.</p>"
+msgstr ""
+
+#: src/commands/keytocardcommand.cpp:161
+#, fuzzy, kde-format
+#| msgid "I have verified the fingerprint"
+msgid "The existing key has the fingerprint:"
+msgstr "Ik heff den Fingerafdruck pröövt."
+
+#: src/commands/keytocardcommand.cpp:163
+#, fuzzy, kde-format
+#| msgid "Overwrite Existing File?"
+msgctxt "@title:window"
+msgid "Overwrite existing key"
+msgstr "Vörhannen Datei överschrieven?"
+
+#: src/commands/keytocardcommand.cpp:205
+#, kde-format
+msgctxt "@info"
+msgid "Moving the key to the card failed: %1"
+msgstr ""
+
+#: src/commands/keytocardcommand.cpp:206 src/commands/keytocardcommand.cpp:231
+#: src/view/pgpcardwidget.cpp:274 src/view/pgpcardwidget.cpp:289
+#: src/view/pgpcardwidget.cpp:342 src/view/pgpcardwidget.cpp:368
+#: src/view/pgpcardwidget.cpp:374 src/view/pgpcardwidget.cpp:380
+#: src/view/pgpcardwidget.cpp:399
+#, fuzzy, kde-format
+#| msgid "Error"
+msgctxt "@title"
+msgid "Error"
+msgstr "Fehler"
+
+#: src/commands/keytocardcommand.cpp:221
+#, kde-format
+msgid "Successfully copied the key to the card."
+msgstr ""
+
+#: src/commands/keytocardcommand.cpp:222 src/view/pgpcardwidget.cpp:297
+#: src/view/pgpcardwidget.cpp:348 src/view/pgpcardwidget.cpp:405
+#, kde-format
+msgctxt "@title"
+msgid "Success"
+msgstr ""
+
+#: src/commands/keytocardcommand.cpp:230
+#, fuzzy, kde-format
+#| msgid "Failed to execute %1: %2"
+msgctxt "@info"
+msgid "Failed to delete the key: %1"
+msgstr "%1 lett sik nich utföhren: %2"
 
 #: src/commands/learncardkeyscommand.cpp:78
 #, kde-format
@@ -3383,7 +3474,7 @@ msgstr "Wiesen"
 msgid "&Next"
 msgstr "&Nakamen"
 
-#: src/crypto/gui/wizard.cpp:136 src/view/smartcardwidget.cpp:87
+#: src/crypto/gui/wizard.cpp:136 src/view/smartcardwidget.cpp:89
 #, kde-format
 msgid "Back"
 msgstr "Torüch"
@@ -3715,13 +3806,6 @@ msgstr ""
 #| msgid "Message #%1"
 msgid "Message count"
 msgstr "Naricht Nr.%1"
-
-#. i18n: ectx: property (text), widget (QCheckBox, encryptionCB)
-#: src/dialogs/certificatedetailswidget.cpp:308
-#: src/newcertificatewizard/advancedsettingsdialog.ui:216
-#, kde-format
-msgid "Encryption"
-msgstr "Verslöteln"
 
 #: src/dialogs/certificatedetailswidget.cpp:351
 #, kde-format
@@ -4783,19 +4867,25 @@ msgstr ""
 msgid "Set Initial PIN (SigG)"
 msgstr "Eerst-PIN setten (SigG)"
 
-#: src/dialogs/subkeyswidget.cpp:75
+#: src/dialogs/subkeyswidget.cpp:86
+#, fuzzy, kde-format
+#| msgid "SmartCard"
+msgid "Transfer to smartcard"
+msgstr "SmartKoort"
+
+#: src/dialogs/subkeyswidget.cpp:128
 #, kde-format
 msgctxt "stored..."
 msgid "on SmartCard with serial no. %1"
 msgstr "op Smartkoort mit de Reegnummer \"%1\"."
 
-#: src/dialogs/subkeyswidget.cpp:77
+#: src/dialogs/subkeyswidget.cpp:130
 #, kde-format
 msgctxt "stored..."
 msgid "on this computer"
 msgstr "op dissen Reekner"
 
-#: src/dialogs/subkeyswidget.cpp:92
+#: src/dialogs/subkeyswidget.cpp:145
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Subkeys"
@@ -4884,13 +4974,13 @@ msgctxt "@title"
 msgid "Up to date"
 msgstr "&Opfrischen"
 
-#: src/dialogs/updatenotification.cpp:152
+#: src/dialogs/updatenotification.cpp:155
 #, kde-format
 msgctxt "%1 is the version number"
 msgid "Version %1 is available."
 msgstr ""
 
-#: src/dialogs/updatenotification.cpp:155
+#: src/dialogs/updatenotification.cpp:158
 #, kde-format
 msgctxt "Link to NEWS style changelog"
 msgid ""
@@ -4898,18 +4988,18 @@ msgid ""
 "features</a>."
 msgstr ""
 
-#: src/dialogs/updatenotification.cpp:159
+#: src/dialogs/updatenotification.cpp:162
 #, fuzzy, kde-format
 #| msgid "No Audit Log available"
 msgid "Update available!"
 msgstr "Keen Pröövlogbook verföögbor"
 
-#: src/dialogs/updatenotification.cpp:164
+#: src/dialogs/updatenotification.cpp:167
 #, kde-format
 msgid "Show this notification for future updates."
 msgstr ""
 
-#: src/dialogs/updatenotification.cpp:169
+#: src/dialogs/updatenotification.cpp:172
 #, fuzzy, kde-format
 #| msgid "&Update"
 msgid "&Get update"
@@ -5563,12 +5653,6 @@ msgstr "Gellt bet:"
 #, kde-format
 msgid "Certification"
 msgstr "Beglöven"
-
-#. i18n: ectx: property (text), widget (QCheckBox, authenticationCB)
-#: src/newcertificatewizard/advancedsettingsdialog.ui:226
-#, kde-format
-msgid "Authentication"
-msgstr "Identiteetprööv"
 
 #. i18n: ectx: attribute (title), widget (QWidget, personalTab)
 #: src/newcertificatewizard/advancedsettingsdialog.ui:250
@@ -7666,16 +7750,6 @@ msgctxt "@info"
 msgid "Failed to generate new key: %1"
 msgstr "%1 lett sik nich utföhren: %2"
 
-#: src/view/pgpcardwidget.cpp:274 src/view/pgpcardwidget.cpp:289
-#: src/view/pgpcardwidget.cpp:342 src/view/pgpcardwidget.cpp:368
-#: src/view/pgpcardwidget.cpp:374 src/view/pgpcardwidget.cpp:380
-#: src/view/pgpcardwidget.cpp:399
-#, fuzzy, kde-format
-#| msgid "Error"
-msgctxt "@title"
-msgid "Error"
-msgstr "Fehler"
-
 #: src/view/pgpcardwidget.cpp:283
 #, fuzzy, kde-format
 #| msgid "Can be used for encryption"
@@ -7694,25 +7768,11 @@ msgctxt "@info"
 msgid "Successfully generated a new key for this card."
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:297 src/view/pgpcardwidget.cpp:348
-#: src/view/pgpcardwidget.cpp:405
-#, kde-format
-msgctxt "@title"
-msgid "Success"
-msgstr ""
-
 #: src/view/pgpcardwidget.cpp:308
 #, kde-format
 msgid ""
 "The existing keys on this card will be <b>deleted</b> and replaced by new "
 "keys."
-msgstr ""
-
-#: src/view/pgpcardwidget.cpp:310
-#, kde-format
-msgid ""
-"It will no longer be possible to decrypt past communication encrypted for "
-"the existing keys."
 msgstr ""
 
 #: src/view/pgpcardwidget.cpp:341
@@ -7807,7 +7867,12 @@ msgstr "Bitte en Zertifikaat utsöken"
 msgid "Kleopatra currently supports the following card types:"
 msgstr ""
 
-#: src/view/smartcardwidget.cpp:90
+#: src/view/smartcardwidget.cpp:72
+#, kde-format
+msgid "Refresh the view (F5) to update the smartcard status."
+msgstr ""
+
+#: src/view/smartcardwidget.cpp:92
 #, kde-format
 msgid "Smartcard Management"
 msgstr ""
