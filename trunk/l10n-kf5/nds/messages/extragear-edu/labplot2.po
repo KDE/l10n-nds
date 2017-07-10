@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-07-09 03:03+0200\n"
+"POT-Creation-Date: 2017-07-10 02:58+0200\n"
 "PO-Revision-Date: 2014-03-19 20:12+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -163,8 +163,8 @@ msgstr ""
 #: src/backend/datapicker/DatapickerImage.cpp:554
 #: src/backend/datapicker/DatapickerPoint.cpp:476
 #: src/backend/datasources/FileDataSource.cpp:366
-#: src/backend/datasources/filters/AsciiFilter.cpp:635
-#: src/backend/datasources/filters/BinaryFilter.cpp:438
+#: src/backend/datasources/filters/AsciiFilter.cpp:636
+#: src/backend/datasources/filters/BinaryFilter.cpp:446
 #: src/backend/matrix/Matrix.cpp:746 src/backend/note/Note.cpp:151
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:1944
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:2126
@@ -1103,7 +1103,7 @@ msgstr ""
 msgid "C format"
 msgstr ""
 
-#: src/backend/datasources/filters/AsciiFilter.cpp:631
+#: src/backend/datasources/filters/AsciiFilter.cpp:632
 #, kde-format
 msgid "no ascii filter element found"
 msgstr ""
@@ -1118,8 +1118,8 @@ msgstr ""
 msgid "data selection empty"
 msgstr ""
 
-#: src/backend/datasources/filters/BinaryFilter.cpp:434
-#: src/backend/datasources/filters/ImageFilter.cpp:282
+#: src/backend/datasources/filters/BinaryFilter.cpp:442
+#: src/backend/datasources/filters/ImageFilter.cpp:287
 #, kde-format
 msgid "no binary filter element found"
 msgstr ""
@@ -1136,9 +1136,9 @@ msgstr ""
 
 #: src/backend/datasources/filters/FITSFilter.cpp:1009
 #: src/backend/datasources/filters/FITSFilter.cpp:1532
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:216
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:579
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:758
+#: src/kdefrontend/datasources/FITSOptionsWidget.cpp:55
+#: src/kdefrontend/datasources/FITSOptionsWidget.cpp:88
+#: src/kdefrontend/datasources/FITSOptionsWidget.cpp:159
 #, kde-format
 msgid "Primary header"
 msgstr ""
@@ -1179,7 +1179,7 @@ msgid "rank %1 not supported yet"
 msgstr ""
 
 #: src/backend/datasources/filters/HDFFilter.cpp:1072
-#: src/kdefrontend/datasources/HDFOptionsWidget.cpp:85
+#: src/kdefrontend/datasources/HDFOptionsWidget.cpp:86
 #, kde-format
 msgid "data set"
 msgstr ""
@@ -1276,7 +1276,7 @@ msgstr ""
 msgid "XYRGB"
 msgstr ""
 
-#: src/backend/datasources/filters/ImageFilter.cpp:240
+#: src/backend/datasources/filters/ImageFilter.cpp:245
 #: src/backend/spreadsheet/Spreadsheet.cpp:900
 #, kde-format
 msgid "numerical data, %1 element"
@@ -4037,7 +4037,7 @@ msgstr ""
 #: src/backend/nsl/nsl_fit.c:37
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:405
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:73
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:551
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:539
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:306
 #: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:511
 #: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:108
@@ -7461,16 +7461,69 @@ msgstr ""
 msgid "%1: Add curve to %2 plots"
 msgstr ""
 
-#: src/kdefrontend/datasources/AsciiOptionsWidget.cpp:55
+#: src/kdefrontend/datasources/AsciiOptionsWidget.cpp:54
 #, kde-format
 msgid ""
-"<b> Number format: </b><br>This option determines how the imported strings "
-"has to be converted to numbers. For 'C Format', a period is used for the "
-"decimal point character and comma is used for the thousands group separator. "
-"<br>Valid number representations are: <br><ul><li>1234.56</li><li>1,234.56</"
-"li><li>etc.</li></ul><br>When using 'System locale', the system settings "
-"will be used. E.g., for the German local the valid number representations "
-"are: <br><ul><li>1234,56</li><li>1.234,56</li><li>etc.</li></ul><br>"
+"This option determines how the imported strings have to be converted to "
+"numbers."
+msgstr ""
+
+#: src/kdefrontend/datasources/AsciiOptionsWidget.cpp:56
+#, kde-format
+msgid ""
+"For 'C Format', a period is used for the decimal point character and comma "
+"is used for the thousands group separator. Valid number representations are:"
+"<ul><li>1234.56</li><li>1,234.56</li><li>etc.</li></ul>When using 'System "
+"locale', the system settings will be used. E.g., for the German local the "
+"valid number representations are:<ul><li>1234,56</li><li>1.234,56</"
+"li><li>etc.</li></ul>"
+msgstr ""
+
+#: src/kdefrontend/datasources/AsciiOptionsWidget.cpp:77
+#, kde-format
+msgid ""
+"This option determines how the imported strings have to be converted to "
+"calendar date, i.e. year, month, and day numbers in the Gregorian calendar "
+"and to time."
+msgstr ""
+
+#: src/kdefrontend/datasources/AsciiOptionsWidget.cpp:79
+#, kde-format
+msgid ""
+"Expressions that may be used for the date part of format string:"
+"<table><tr><td>d</td><td>the day as number without a leading zero (1 to 31)."
+"</td></tr><tr><td>dd</td><td>the day as number with a leading zero (01 to "
+"31).</td></tr><tr><td>ddd</td><td>the abbreviated localized day name (e.g. "
+"'Mon' to 'Sun'). Uses the system locale to localize the name.</td></"
+"tr><tr><td>dddd</td><td>the long localized day name (e.g. 'Monday' to "
+"'Sunday'). Uses the system locale to localize the name.</td></tr><tr><td>M</"
+"td><td>the month as number without a leading zero (1 to 12).</td></"
+"tr><tr><td>MM</td><td>the month as number with a leading zero (01 to 12).</"
+"td></tr><tr><td>MMM</td><td>the abbreviated localized month name (e.g. 'Jan' "
+"to 'Dec'). Uses the system locale to localize the name.</td></"
+"tr><tr><td>MMMM</td><td>the long localized month name (e.g. 'January' to "
+"'December'). Uses the system locale to localize the name.</td></"
+"tr><tr><td>yy</td><td>the year as two digit number (00 to 99).</td></"
+"tr><tr><td>yyyy</td><td>the year as four digit number. If the year is "
+"negative, a minus sign is prepended in addition.</td></tr></"
+"table><br><br>Expressions that may be used for the time part of the format "
+"string:<table><tr><td>h</td><td>the hour without a leading zero (0 to 23 or "
+"1 to 12 if AM/PM display)</td></tr><tr><td>hh</td><td>the hour with a "
+"leading zero (00 to 23 or 01 to 12 if AM/PM display)</td></tr><tr><td>H</"
+"td><td>the hour without a leading zero (0 to 23, even with AM/PM display)</"
+"td></tr><tr><td>HH</td><td>the hour with a leading zero (00 to 23, even with "
+"AM/PM display)</td></tr><tr><td>m</td><td>the minute without a leading zero "
+"(0 to 59)</td></tr><tr><td>mm</td><td>the minute with a leading zero (00 to "
+"59)</td></tr><tr><td>s</td><td>the second without a leading zero (0 to 59)</"
+"td></tr><tr><td>ss</td><td>the second with a leading zero (00 to 59)</td></"
+"tr><tr><td>z</td><td>the milliseconds without leading zeroes (0 to 999)</"
+"td></tr><tr><td>zzz</td><td>the milliseconds with leading zeroes (000 to "
+"999)</td></tr><tr><td>AP or A</td><td>interpret as an AM/PM time. AP must be "
+"either 'AM' or 'PM'.</td></tr><tr><td>ap or a</td><td>Interpret as an AM/PM "
+"time. ap must be either 'am' or 'pm'.</td></tr></table><br><br>Examples are:"
+"<table><tr><td>dd.MM.yyyy</td><td>20.07.1969</td></tr><tr><td>ddd MMMM d yy</"
+"td><td>Sun July 20 69</td></tr><tr><td>'The day is' dddd</td><td>The day is "
+"Sunday</td></tr></table>"
 msgstr ""
 
 #: src/kdefrontend/datasources/DatabaseManagerDialog.cpp:48
@@ -7549,6 +7602,12 @@ msgstr ""
 #: src/kdefrontend/datasources/FileInfoDialog.cpp:62
 #, kde-format
 msgid "File info"
+msgstr ""
+
+#: src/kdefrontend/datasources/FITSOptionsWidget.cpp:37
+#: src/kdefrontend/widgets/FITSHeaderEditWidget.cpp:79
+#, kde-format
+msgid "Content"
 msgstr ""
 
 #: src/kdefrontend/datasources/HDFOptionsWidget.cpp:42
@@ -7665,39 +7724,33 @@ msgid "File %1 imported in %2 seconds."
 msgstr ""
 
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:73
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:550
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:538
 #, kde-format
 msgid "Automatic"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:99
-#: src/kdefrontend/widgets/FITSHeaderEditWidget.cpp:79
-#, kde-format
-msgid "Content"
-msgstr ""
-
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:349
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:339
 #, kde-format
 msgid "Select the File Data Source"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:472
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:460
 #, kde-format
 msgid "Save Filter Settings as"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:473
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:461
 #, kde-format
 msgid "Filter name:"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:473
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:461
 #, kde-format
 msgid "new filter"
 msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabDataFormat)
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:500
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:488
 #: src/kdefrontend/ui/datasources/importfilewidget.ui:234
 #, kde-format
 msgid "Data format"
@@ -7705,15 +7758,15 @@ msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #. i18n: ectx: attribute (title), widget (QWidget, tabDataPreview)
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:501
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:489
 #: src/kdefrontend/ui/datasources/importfilewidget.ui:247
 #: src/kdefrontend/ui/datasources/importsqldatabasewidget.ui:146
 #, kde-format
 msgid "Preview"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:524
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:537
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:512
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:525
 #, kde-format
 msgid "Data format && preview"
 msgstr ""
