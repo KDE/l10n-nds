@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: partitionmanager\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-10-10 03:18+0200\n"
+"POT-Creation-Date: 2017-10-31 03:05+0100\n"
 "PO-Revision-Date: 2014-03-12 23:25+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -2451,31 +2451,29 @@ msgctxt "@info:progress"
 msgid "Delete the partition <filename>%1</filename>"
 msgstr "De Partitschoon <filename>%1</filename> wegdoon"
 
-#: jobs/job.cpp:45
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info/plain"
-#| msgid ""
-#| "The sector size in the source and target for copying are not the same. "
-#| "This is currently unsupported."
-msgctxt "@info:progress"
-msgid ""
-"The logical sector sizes in the source and target for copying are not the "
-"same. This is currently unsupported."
+#: jobs/job.cpp:55
+#, kde-format
+msgctxt "direction: left"
+msgid "left"
 msgstr ""
-"De Sektorgrött vun Kopeerborn un -teel sünd nich liek. Opstunns warrt dat "
-"nich ünnerstütt."
 
-#: jobs/job.cpp:63
+#: jobs/job.cpp:55
+#, kde-format
+msgctxt "direction: right"
+msgid "right"
+msgstr ""
+
+#: jobs/job.cpp:55
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid "Copying %1 blocks (%2 sectors) from %3 to %4, direction: %5."
 msgctxt "@info:progress"
-msgid "Copying %1 blocks (%2 sectors) from %3 to %4, direction: %5."
+msgid "Copying %1 blocks (%2 bytes) from %3 to %4, direction: %5."
 msgstr ""
 "%1 Blöck (%2 Sektoren) warrt vun %3 na %4 kopeert, Richt: "
 "%5.                         %1"
 
-#: jobs/job.cpp:85
+#: jobs/job.cpp:76
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid "Copying %1 MiB/second, estimated time left: %2"
@@ -2483,7 +2481,7 @@ msgctxt "@info:progress"
 msgid "Copying %1 MiB/second, estimated time left: %2"
 msgstr "%1 MiB/s warrt kopeert, estemeert nablieven Tiet: %2"
 
-#: jobs/job.cpp:100
+#: jobs/job.cpp:90
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid "Copying remainder of block size %1 from  %2 to %3."
@@ -2491,14 +2489,14 @@ msgctxt "@info:progress"
 msgid "Copying remainder of block size %1 from %2 to %3."
 msgstr "Överblevels mit Blockgrött %1 warrt vun %2 na %3 kopeert."
 
-#: jobs/job.cpp:113
+#: jobs/job.cpp:102
 #, kde-format
-msgid "1 sector"
-msgid_plural "%1 sectors"
-msgstr[0] "1 Sektor"
-msgstr[1] "%1 Sektoren"
+msgid "1 byte"
+msgid_plural "%1 bytes"
+msgstr[0] ""
+msgstr[1] ""
 
-#: jobs/job.cpp:113
+#: jobs/job.cpp:102
 #, fuzzy, kde-kuit-format
 #| msgctxt ""
 #| "@info/plain argument 2 is a string such as 7 sectors (localized "
@@ -2506,14 +2504,13 @@ msgstr[1] "%1 Sektoren"
 #| msgid "Copying 1 block (%2) finished."
 #| msgid_plural "Copying %1 blocks (%2) finished."
 msgctxt ""
-"@info:progress argument 2 is a string such as 7 sectors (localized "
-"accordingly)"
+"@info:progress argument 2 is a string such as 7 bytes (localized accordingly)"
 msgid "Copying 1 block (%2) finished."
 msgid_plural "Copying %1 blocks (%2) finished."
 msgstr[0] "Koperen vun 1 Block (%2) afslaten."
 msgstr[1] "Koperen vun %1 Blöck (%2) afslaten."
 
-#: jobs/job.cpp:121
+#: jobs/job.cpp:110
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid ""
@@ -2522,23 +2519,23 @@ msgctxt "@info:progress"
 msgid "Source and target for copying do not overlap: Rollback is not required."
 msgstr "Kopeerborn un -teel överlappt nich, Torüchdreihen deit nich noot."
 
-#: jobs/job.cpp:145
+#: jobs/job.cpp:134
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid "Rollback from: First sector: %1, last sector: %2."
 msgctxt "@info:progress"
-msgid "Rollback from: First sector: %1, last sector: %2."
+msgid "Rollback from: First byte: %1, last byte: %2."
 msgstr "Torüchdreihen vun: Eerst Sekor: %1, lest Sektor: %2."
 
-#: jobs/job.cpp:146
+#: jobs/job.cpp:135
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid "Rollback to: First sector: %1, last sector: %2."
 msgctxt "@info:progress"
-msgid "Rollback to: First sector: %1, last sector: %2."
+msgid "Rollback to: First byte: %1, last byte: %2."
 msgstr "Torüchdreihen na: Eerst Sektor %1, lest Sektor: %2."
 
-#: jobs/job.cpp:150 jobs/job.cpp:156
+#: jobs/job.cpp:139 jobs/job.cpp:145
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid "Could not open device <filename>%1</filename> to rollback copying."
@@ -2547,7 +2544,7 @@ msgid "Could not open device <filename>%1</filename> to rollback copying."
 msgstr ""
 "Reedschap <filename>%1</filename> lett sik nich för't Torüchdreihen opmaken"
 
-#: jobs/job.cpp:162
+#: jobs/job.cpp:151
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid "Rollback failed: Source or target are not devices."
@@ -2555,7 +2552,7 @@ msgctxt "@info:progress"
 msgid "Rollback failed: Source or target are not devices."
 msgstr "Torüchdreihen is fehlslaan. Born oder Teel is keen Reedschap."
 
-#: jobs/job.cpp:177
+#: jobs/job.cpp:166
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid "Job: %1"
@@ -2563,7 +2560,7 @@ msgctxt "@info:progress"
 msgid "Job: %1"
 msgstr "Opgaav: %1"
 
-#: jobs/job.cpp:186
+#: jobs/job.cpp:175
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain job status (error, warning, ...)"
 #| msgid "%1: %2"
@@ -2571,25 +2568,25 @@ msgctxt "@info:progress job status (error, warning, ...)"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: jobs/job.cpp:210
+#: jobs/job.cpp:199
 #, kde-kuit-format
 msgctxt "@info:progress job"
 msgid "Pending"
 msgstr "Utstahn"
 
-#: jobs/job.cpp:211
+#: jobs/job.cpp:200
 #, kde-kuit-format
 msgctxt "@info:progress job"
 msgid "Success"
 msgstr "Spood"
 
-#: jobs/job.cpp:212
+#: jobs/job.cpp:201
 #, kde-kuit-format
 msgctxt "@info:progress job"
 msgid "Error"
 msgstr "Fehler"
 
-#: jobs/movefilesystemjob.cpp:62
+#: jobs/movefilesystemjob.cpp:63
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid ""
@@ -2602,7 +2599,7 @@ msgstr ""
 "Dat Dateisysteem op Partitschoon <filename>%1</filename> lett sik nich för't "
 "Verschuven opmaken."
 
-#: jobs/movefilesystemjob.cpp:64
+#: jobs/movefilesystemjob.cpp:65
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid ""
@@ -2616,7 +2613,7 @@ msgstr ""
 "Dat Teel för't Verschuven vun't Dateisysteem op Partitschoon <filename>%1</"
 "filename> lett sik nich opstellen."
 
-#: jobs/movefilesystemjob.cpp:73
+#: jobs/movefilesystemjob.cpp:74
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid ""
@@ -2627,7 +2624,7 @@ msgstr ""
 "Dat Torüchdreihen is för't Dateisysteem op Partitschoon <filename>%1</"
 "filename> fehlslaan."
 
-#: jobs/movefilesystemjob.cpp:75 jobs/restorefilesystemjob.cpp:100
+#: jobs/movefilesystemjob.cpp:76 jobs/restorefilesystemjob.cpp:100
 #: jobs/shredfilesystemjob.cpp:76
 #, fuzzy, kde-format, kde-kuit-format
 #| msgctxt "@info/plain"
@@ -2636,7 +2633,7 @@ msgctxt "@info:progress"
 msgid "Closing device. This may take a few seconds."
 msgstr "Reedschap warrt tomaakt. Dat mag en poor Sekunnen bruken."
 
-#: jobs/movefilesystemjob.cpp:89
+#: jobs/movefilesystemjob.cpp:90
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid ""
@@ -4074,6 +4071,24 @@ msgstr "KDE-Verschoon:"
 #, kde-format
 msgid "Machine:"
 msgstr "Reekner:"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid ""
+#~| "The sector size in the source and target for copying are not the same. "
+#~| "This is currently unsupported."
+#~ msgctxt "@info:progress"
+#~ msgid ""
+#~ "The logical sector sizes in the source and target for copying are not the "
+#~ "same. This is currently unsupported."
+#~ msgstr ""
+#~ "De Sektorgrött vun Kopeerborn un -teel sünd nich liek. Opstunns warrt dat "
+#~ "nich ünnerstütt."
+
+#~ msgid "1 sector"
+#~ msgid_plural "%1 sectors"
+#~ msgstr[0] "1 Sektor"
+#~ msgstr[1] "%1 Sektoren"
 
 #~ msgctxt "@title:menu"
 #~ msgid "Columns"
