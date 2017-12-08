@@ -74,7 +74,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-12-01 03:04+0100\n"
+"POT-Creation-Date: 2017-12-08 03:07+0100\n"
 "PO-Revision-Date: 2014-02-17 01:14+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -4883,15 +4883,18 @@ msgctxt "action"
 msgid "Transform a layer or a selection"
 msgstr "En Laag oder Köör ümwanneln"
 
-#. i18n: context: Action (KisRulerAssistantTool), Actions (tool-shortcuts), ActionCollection (Krita)
-#. i18n: context: Action (KisRulerAssistantTool), Actions (tool-shortcuts), ActionCollection (Krita)
-#. i18n: context: Action (KisRulerAssistantTool), Actions (tool-shortcuts), ActionCollection (Krita)
-#. i18n: context: Action (KisRulerAssistantTool), Actions (tool-shortcuts), ActionCollection (Krita)
+#. i18n: context: Action (KisAssistantTool), Actions (tool-shortcuts), ActionCollection (Krita)
+#. i18n: context: Action (KisAssistantTool), Actions (tool-shortcuts), ActionCollection (Krita)
+#. i18n: context: Actions (Assistant Tool), ActionCollection (Tools)
+#. i18n: context: Action (KisAssistantTool), Actions (tool-shortcuts), ActionCollection (Krita)
+#. i18n: context: Action (KisAssistantTool), Actions (tool-shortcuts), ActionCollection (Krita)
+#. i18n: context: Actions (Assistant Tool), ActionCollection (Tools)
 #: krita/krita.action:1627 krita/krita.action:1629
+#: plugins/assistants/Assistants/KisAssistantTool.action:4
 #, fuzzy, kde-format
 msgctxt "action"
-msgid "Ruler assistant editor tool"
-msgstr "Linealenhölper-Editorwarktüüch"
+msgid "Assistant Tool"
+msgstr "Hölper:"
 
 #. i18n: context: Action (KritaShape/KisToolText), Actions (tool-shortcuts), ActionCollection (Krita)
 #. i18n: context: Action (KritaShape/KisToolText), Actions (tool-shortcuts), ActionCollection (Krita)
@@ -10361,7 +10364,7 @@ msgstr "Bahn"
 #. i18n: ectx: property (text), item, widget (QComboBox, shapeCBox)
 #. i18n: ectx: property (text), item, widget (QComboBox, shapeBox)
 #: libs/image/recorder/kis_recorded_shape_paint_action.cpp:55
-#: plugins/assistants/RulerAssistant/EllipseAssistant.cc:148
+#: plugins/assistants/Assistants/EllipseAssistant.cc:163
 #: plugins/flake/pathshapes/ellipse/EllipseShapeFactory.cpp:35
 #: plugins/paintops/gridbrush/wdggridbrushshapeoptions.ui:37
 #: plugins/paintops/libpaintop/forms/wdgBrushSizeOptions.ui:232
@@ -12574,8 +12577,8 @@ msgstr "En Achtergrund utsöken"
 #: libs/ui/KisView.cpp:712 libs/ui/opengl/kis_opengl_canvas2.cpp:340
 #: libs/ui/opengl/kis_opengl_image_textures.cpp:652
 #: libs/ui/widgets/kis_custom_image_widget.cc:262
-#: plugins/assistants/RulerAssistant/kis_ruler_assistant_tool.cc:819
-#: plugins/assistants/RulerAssistant/kis_ruler_assistant_tool.cc:822
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:675
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:678
 #: plugins/extensions/animationrenderer/AnimationRenderer.cpp:158
 #: plugins/extensions/animationrenderer/DlgAnimationRenderer.cpp:441
 #: plugins/extensions/animationrenderer/DlgAnimationRenderer.cpp:445
@@ -13135,9 +13138,11 @@ msgstr "Afsnittklöör"
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_2)
 #: libs/ui/forms/wdgautogradient.ui:81 libs/ui/forms/wdgdisplaysettings.ui:253
 #: libs/ui/forms/wdgpaintactioneditor.ui:63 libs/ui/kis_paintop_box.cc:252
 #: libs/ui/kis_paintop_box.cc:257
+#: plugins/assistants/Assistants/AssistantsToolOptions.ui:70
 #: plugins/dockers/defaultdockers/wdglayerbox.ui:75
 #: plugins/filters/noisefilter/wdgnoiseoptions.ui:29
 #: plugins/filters/randompickfilter/wdgrandompickoptions.ui:65
@@ -18984,8 +18989,10 @@ msgstr "Füllen"
 #. i18n: ectx: property (text), widget (QLabel, colorLabel1)
 #. i18n: ectx: property (text), widget (QLabel, colorLabel3)
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#. i18n: ectx: property (text), widget (QLabel, label_3)
 #: libs/ui/layerstyles/WdgStroke.ui:159
 #: libs/ui/widgets/KoFillConfigWidget.ui:159
+#: plugins/assistants/Assistants/AssistantsToolOptions.ui:94
 #: plugins/filters/colors/wdgcolortoalphabase.ui:40
 #: plugins/filters/phongbumpmap/wdgphongbumpmap.ui:454
 #: plugins/filters/phongbumpmap/wdgphongbumpmap.ui:634
@@ -22763,104 +22770,103 @@ msgstr "&Instellen"
 msgid "Main Toolbar"
 msgstr "Grieper"
 
-#. i18n: ectx: property (text), widget (QPushButton, deleteButton)
-#: plugins/assistants/RulerAssistant/AssistantsToolOptions.ui:46
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: plugins/assistants/Assistants/AssistantsToolOptions.ui:25
 #, kde-format
-msgid "Delete all"
-msgstr "All wegdoon"
+msgid "Add:"
+msgstr ""
 
-#. i18n: ectx: property (text), widget (QPushButton, saveButton)
-#: plugins/assistants/RulerAssistant/AssistantsToolOptions.ui:53
-#, kde-format
-msgid "Save..."
-msgstr "Sekern..."
-
-#. i18n: ectx: property (text), widget (QPushButton, loadButton)
-#: plugins/assistants/RulerAssistant/AssistantsToolOptions.ui:60
+#. i18n: ectx: property (text), widget (QPushButton, loadAssistantButton)
+#: plugins/assistants/Assistants/AssistantsToolOptions.ui:39
 #, kde-format
 msgid "Open..."
 msgstr "Opmaken..."
 
-#: plugins/assistants/RulerAssistant/ConcentricEllipseAssistant.cc:33
+#. i18n: ectx: property (text), widget (QPushButton, saveAssistantButton)
+#: plugins/assistants/Assistants/AssistantsToolOptions.ui:46
+#, kde-format
+msgid "Save..."
+msgstr "Sekern..."
+
+#. i18n: ectx: property (text), widget (QPushButton, deleteAllAssistantsButton)
+#: plugins/assistants/Assistants/AssistantsToolOptions.ui:55
+#, kde-format
+msgid "Delete all"
+msgstr "All wegdoon"
+
+#: plugins/assistants/Assistants/ConcentricEllipseAssistant.cc:34
 #, fuzzy, kde-format
 msgid "Concentric Ellipse assistant"
 msgstr "Ellipsenhölper"
 
-#: plugins/assistants/RulerAssistant/ConcentricEllipseAssistant.cc:175
+#: plugins/assistants/Assistants/ConcentricEllipseAssistant.cc:189
 #, fuzzy, kde-format
 msgid "Concentric Ellipse"
 msgstr "All kören"
 
-#: plugins/assistants/RulerAssistant/EllipseAssistant.cc:33
+#: plugins/assistants/Assistants/EllipseAssistant.cc:34
 #, kde-format
 msgid "Ellipse assistant"
 msgstr "Ellipsenhölper"
 
-#: plugins/assistants/RulerAssistant/FisheyePointAssistant.cc:37
+#: plugins/assistants/Assistants/FisheyePointAssistant.cc:38
 #, fuzzy, kde-format
 msgid "Fish Eye Point assistant"
 msgstr "Maalhölpers"
 
-#: plugins/assistants/RulerAssistant/FisheyePointAssistant.cc:211
+#: plugins/assistants/Assistants/FisheyePointAssistant.cc:221
 #, fuzzy, kde-format
 msgid "Fish Eye Point"
 msgstr "Pünkt leddig maken"
 
-#: plugins/assistants/RulerAssistant/InfiniteRulerAssistant.cc:36
+#: plugins/assistants/Assistants/InfiniteRulerAssistant.cc:37
 #, fuzzy, kde-format
 msgid "Infinite Ruler assistant"
 msgstr "Linealenhölper"
 
-#: plugins/assistants/RulerAssistant/InfiniteRulerAssistant.cc:147
+#: plugins/assistants/Assistants/InfiniteRulerAssistant.cc:156
 #, fuzzy, kde-format
 msgid "Infinite Ruler"
 msgstr "Linealenhölper"
 
-#: plugins/assistants/RulerAssistant/kis_ruler_assistant_tool.cc:730
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:586
 #, fuzzy, kde-format
 msgid "Select an Assistant"
 msgstr "Spline-Hölper"
 
-#: plugins/assistants/RulerAssistant/kis_ruler_assistant_tool.cc:822
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:678
 #, kde-format
 msgid "Errors were encountered. Not all assistants were successfully loaded."
 msgstr "Dat geev Fehlers. Nich all Hölpers wöörn mit Spood laadt."
 
-#: plugins/assistants/RulerAssistant/kis_ruler_assistant_tool.cc:868
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:724
 #, fuzzy, kde-format
 msgid "Save Assistant"
 msgstr "Linealenhölper"
 
-#: plugins/assistants/RulerAssistant/kis_ruler_assistant_tool.h:111
+#: plugins/assistants/Assistants/kis_assistant_tool.h:154
 #, fuzzy, kde-format
 msgid "Assistant Tool"
 msgstr "Hölper:"
 
-#. i18n: context: Actions (Ruler Assistant Tool), ActionCollection (Tools)
-#: plugins/assistants/RulerAssistant/KisRulerAssistantTool.action:4
-#, fuzzy, kde-format
-msgctxt "action"
-msgid "Ruler Assistant Tool"
-msgstr "Hölper:"
-
-#: plugins/assistants/RulerAssistant/ParallelRulerAssistant.cc:36
+#: plugins/assistants/Assistants/ParallelRulerAssistant.cc:37
 #, fuzzy, kde-format
 msgid "Parallel Ruler assistant"
 msgstr "Linealenhölper"
 
-#: plugins/assistants/RulerAssistant/ParallelRulerAssistant.cc:155
+#: plugins/assistants/Assistants/ParallelRulerAssistant.cc:163
 #, fuzzy, kde-format
 msgid "Parallel Ruler"
 msgstr "Linealenhölper"
 
-#: plugins/assistants/RulerAssistant/PerspectiveAssistant.cc:37
+#: plugins/assistants/Assistants/PerspectiveAssistant.cc:38
 #, kde-format
 msgid "Perspective assistant"
 msgstr "Kiekwinkelhölper"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, perspectiveTransformButton)
 #. i18n: ectx: property (text), widget (QToolButton, perspectiveTransformButton)
-#: plugins/assistants/RulerAssistant/PerspectiveAssistant.cc:414
+#: plugins/assistants/Assistants/PerspectiveAssistant.cc:457
 #: plugins/paintops/libpaintop/kis_dynamic_sensor.h:62
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:127
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:130
@@ -22868,32 +22874,32 @@ msgstr "Kiekwinkelhölper"
 msgid "Perspective"
 msgstr "Kiekwinkel"
 
-#: plugins/assistants/RulerAssistant/RulerAssistant.cc:33
+#: plugins/assistants/Assistants/RulerAssistant.cc:34
 #, kde-format
 msgid "Ruler assistant"
 msgstr "Linealenhölper"
 
-#: plugins/assistants/RulerAssistant/RulerAssistant.cc:153
+#: plugins/assistants/Assistants/RulerAssistant.cc:160
 #, kde-format
 msgid "Ruler"
 msgstr "Lineal"
 
-#: plugins/assistants/RulerAssistant/SplineAssistant.cc:36
+#: plugins/assistants/Assistants/SplineAssistant.cc:37
 #, kde-format
 msgid "Spline assistant"
 msgstr "Spline-Hölper"
 
-#: plugins/assistants/RulerAssistant/SplineAssistant.cc:181
+#: plugins/assistants/Assistants/SplineAssistant.cc:218
 #, kde-format
 msgid "Spline"
 msgstr "Spline"
 
-#: plugins/assistants/RulerAssistant/VanishingPointAssistant.cc:36
+#: plugins/assistants/Assistants/VanishingPointAssistant.cc:37
 #, fuzzy, kde-format
 msgid "Vanishing Point assistant"
 msgstr "Maalhölpers"
 
-#: plugins/assistants/RulerAssistant/VanishingPointAssistant.cc:156
+#: plugins/assistants/Assistants/VanishingPointAssistant.cc:228
 #, fuzzy, kde-format
 msgid "Vanishing Point"
 msgstr "Pünkt leddig maken"
@@ -39625,6 +39631,16 @@ msgstr "Dekoratschonen wiesen"
 #, kde-format
 msgid "Work Recursively"
 msgstr ""
+
+#, fuzzy
+#~ msgctxt "action"
+#~ msgid "Ruler assistant editor tool"
+#~ msgstr "Linealenhölper-Editorwarktüüch"
+
+#, fuzzy
+#~ msgctxt "action"
+#~ msgid "Ruler Assistant Tool"
+#~ msgstr "Hölper:"
 
 #, fuzzy
 #~ msgid "Default Author Profile"
