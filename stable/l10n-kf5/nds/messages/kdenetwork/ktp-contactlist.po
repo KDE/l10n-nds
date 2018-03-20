@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: telepathy-contactslist-prototype\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-11-19 20:16+0100\n"
+"POT-Creation-Date: 2018-03-18 03:21+0100\n"
 "PO-Revision-Date: 2014-07-02 23:36+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -259,37 +259,54 @@ msgstr ""
 msgid "Remove Group"
 msgstr "Koppel wegmaken"
 
-#: dialogs/custom-presence-dialog.cpp:71
+#: dialogs/advanced-presence-dialog.cpp:152
+#, fuzzy, kde-format
+#| msgid "Add Presence"
+msgid "Advanced Presence Setting"
+msgstr "Anwesigkeit tofögen"
+
+#: dialogs/advanced-presence-dialog.cpp:160
+#, kde-format
+msgid "It appears that you do not have any accounts configured"
+msgstr ""
+
+#: dialogs/advanced-presence-dialog.cpp:184
+#, fuzzy, kde-format
+#| msgid "Set custom busy message..."
+msgid "Set a status message ..."
+msgstr "Egen To-Doon-Naricht fastleggen..."
+
+#: dialogs/custom-presence-dialog.cpp:72
 #, kde-format
 msgid "Edit Custom Presences"
 msgstr "Topasst Anwesigkeiten bewerken"
 
-#: dialogs/custom-presence-dialog.cpp:91
+#: dialogs/custom-presence-dialog.cpp:92
 #, kde-format
 msgid "Set custom available message..."
 msgstr "Egen Verföögbor-Naricht fastleggen..."
 
-#: dialogs/custom-presence-dialog.cpp:92
+#: dialogs/custom-presence-dialog.cpp:93
 #, kde-format
 msgid "Set custom busy message..."
 msgstr "Egen To-Doon-Naricht fastleggen..."
 
-#: dialogs/custom-presence-dialog.cpp:93
+#: dialogs/custom-presence-dialog.cpp:94
 #, kde-format
 msgid "Set custom away message..."
 msgstr "Egen Wegwesen-Naricht fastleggen..."
 
-#: dialogs/custom-presence-dialog.cpp:94
+#: dialogs/custom-presence-dialog.cpp:95
 #, kde-format
 msgid "Set custom extended away message..."
 msgstr "Egen Länger-Weg-Naricht fastleggen..."
 
-#: dialogs/custom-presence-dialog.cpp:104
+#: dialogs/custom-presence-dialog.cpp:106
 #, kde-format
 msgid "Add Presence"
 msgstr "Anwesigkeit tofögen"
 
-#: dialogs/custom-presence-dialog.cpp:105
+#: dialogs/custom-presence-dialog.cpp:107
 #, kde-format
 msgid "Remove Presence"
 msgstr "Anwesigkeit wegmaken"
@@ -341,42 +358,153 @@ msgctxt "@label:textbox"
 msgid "Filter:"
 msgstr "Filter:"
 
-#: global-presence-chooser.cpp:99
+#: global-presence-chooser.cpp:49
+#, kde-format
+msgid ""
+"<p>Tokens can be used wherever a status message can be set to create a "
+"dynamic status message.</p>"
+msgstr ""
+
+#: global-presence-chooser.cpp:50
+#, kde-format
+msgid ""
+"<p><strong>%tr+&lt;val&gt;</strong>: Countdown to 0 from <strong>&lt;val&gt;"
+"</strong> minutes. e.g. %tr+30</p>"
+msgstr ""
+
+#: global-presence-chooser.cpp:51
+#, kde-format
+msgid ""
+"<p><strong>%time+[&lt;val&gt;]</strong>: The current local time, or if a "
+"value is specified, the local time <strong>&lt;val&gt;</strong> minutes in "
+"the future. e.g. %time+10</p>"
+msgstr ""
+
+#: global-presence-chooser.cpp:52
+#, kde-format
+msgid ""
+"<p><strong>%utc+[&lt;val&gt;]</strong>: The current UTC time, or if a value "
+"is specified, the UTC time <strong>&lt;val&gt;</strong> minutes into the "
+"future. e.g. %utc</p>"
+msgstr ""
+
+#: global-presence-chooser.cpp:53
+#, kde-format
+msgid ""
+"<p><strong>%te+[&lt;val&gt;]</strong>: Time elapsed from message activation. "
+"Append an initial elapsed time &quot;&lt;val&gt;&quot; in minutes. e.g. %te"
+"+5</p>"
+msgstr ""
+
+#: global-presence-chooser.cpp:54
+#, kde-format
+msgid "<p><strong>%title</strong>: Now Playing track title.</p>"
+msgstr ""
+
+#: global-presence-chooser.cpp:55
+#, kde-format
+msgid "<p><strong>%artist</strong>: Now Playing track or album artist.</p>"
+msgstr ""
+
+#: global-presence-chooser.cpp:56
+#, kde-format
+msgid "<p><strong>%album</strong>: Now Playing album.</p>"
+msgstr ""
+
+#: global-presence-chooser.cpp:57
+#, kde-format
+msgid "<p><strong>%track</strong>: Now Playing track number.</p>"
+msgstr ""
+
+#: global-presence-chooser.cpp:58
+#, kde-format
+msgid ""
+"<p><strong>%um+[&lt;val&gt;]</strong>: When specified globally or in an "
+"account presence status message, overrides all automatic presence messages. "
+"When specified in an automatic presence status message, is substituted for "
+"the global or account presence status message (if specified). When "
+"<strong>val = g</strong> in an account presence status message or an "
+"automatic presence status message, overrides the account presence status "
+"message or automatic presence status message with the global presence status "
+"message. e.g. %um, %um+g</p>"
+msgstr ""
+
+#: global-presence-chooser.cpp:59
+#, kde-format
+msgid ""
+"<p><strong>%tu+&lt;val&gt;</strong>: Refresh the status message every "
+"<strong>&lt;val&gt;</strong> minutes. e.g. %tu+2</p>"
+msgstr ""
+
+#: global-presence-chooser.cpp:60
+#, kde-format
+msgid ""
+"<p><strong>%tx+&lt;val&gt;</strong>: Expire the status message after "
+"<strong>&lt;val&gt;</strong> minutes, or when the Now Playing active player "
+"stops (<strong>val = np</strong>). e.g. %tx+20, %tx+np</p>"
+msgstr ""
+
+#: global-presence-chooser.cpp:61
+#, kde-format
+msgid ""
+"<p><strong>%xm+&quot;&lt;val&gt;&quot;</strong>: Specify a message to follow "
+"%tr, %time, %utc, and %tx token expiry. e.g. %xm+&quot;Back %time. %tx+3 %xm"
+"+&quot;Running late&quot;&quot;</p>"
+msgstr ""
+
+#: global-presence-chooser.cpp:62
+#, kde-format
+msgid ""
+"<p><strong>%tf+&quot;&lt;val&gt;&quot;</strong>: Specify the format for "
+"local time using QDateTime::toString() expressions. e.g. %tf+&quot;h:mm AP "
+"t&quot;</p>"
+msgstr ""
+
+#: global-presence-chooser.cpp:63
+#, kde-format
+msgid ""
+"<p><strong>%uf+&quot;&lt;val&gt;&quot;</strong>: Specify the format for UTC "
+"time using QDateTime::toString() expressions. e.g. %uf+&quot;hh:mm t&quot;</"
+"p>"
+msgstr ""
+
+#: global-presence-chooser.cpp:64
+#, kde-format
+msgid ""
+"<p><strong>%sp+&quot;&lt;val&gt;&quot;</strong>: Change the separator for "
+"empty fields. e.g. %sp+&quot;-&quot;</p>"
+msgstr ""
+
+#: global-presence-chooser.cpp:65
+#, kde-format
+msgid ""
+"<p>Using tokens requires the Telepathy KDED module to be loaded. Tokens can "
+"be escaped by prepending a backslash character, e.g. &#92;%sp</p>"
+msgstr ""
+
+#: global-presence-chooser.cpp:118
 #, kde-format
 msgid "Configure Custom Presences..."
 msgstr "Topasst Anwesigkeiten instellen..."
 
-#: global-presence-chooser.cpp:106
-#, kde-format
-msgid "Now listening to..."
-msgstr "Ik höör jüst..."
+#: global-presence-chooser.cpp:125
+#, fuzzy, kde-format
+#| msgid "Add Presence"
+msgid "Advanced Presence Setting..."
+msgstr "Anwesigkeit tofögen"
 
-#: global-presence-chooser.cpp:191
+#: global-presence-chooser.cpp:208
 #, kde-format
 msgid "Click to change your presence message"
 msgstr "Klick hier, wenn Du Dien Anwesigkeit-Naricht ännern wullt"
 
-#: global-presence-chooser.cpp:231
+#: global-presence-chooser.cpp:245
 #, kde-format
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Bi to tokoppeln..."
 
-#: global-presence-chooser.cpp:332
-#, kde-format
-msgid ""
-"This plugin is currently disabled. Do you want to enable it and use as your "
-"presence?"
-msgstr ""
-"Dit Moduul is opstunns utmaakt. Wullt Du dat anmaken un för Dien "
-"Anwesigkeiten bruken?"
-
-#: global-presence-chooser.cpp:333
-#, kde-format
-msgid "Plugin disabled"
-msgstr "Moduul utmaakt"
-
-#: main-widget.cpp:176
+#: main-widget.cpp:177
 #, kde-format
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
@@ -386,12 +514,12 @@ msgstr ""
 "lett sik nich torechtmaken. Versöök dat maal un roop de Kontaktenlist nieg "
 "op."
 
-#: main-widget.cpp:178
+#: main-widget.cpp:179
 #, kde-format
 msgid "IM system failed to initialize"
 msgstr "KN-Systeem lett sik nich torechtmaken."
 
-#: main-widget.cpp:298
+#: main-widget.cpp:300
 #, kde-format
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
@@ -402,158 +530,158 @@ msgstr ""
 "Bispill).\n"
 "Wullt Du tokoppelt blieven oder Di afkoppeln?"
 
-#: main-widget.cpp:300
+#: main-widget.cpp:302
 #, kde-format
 msgid "No Other Presence Controls Found"
 msgstr "Keen anner Anwesigkeit-Kuntrullen funnen"
 
-#: main-widget.cpp:301
+#: main-widget.cpp:303
 #, kde-format
 msgid "Stay Online"
 msgstr "Tokoppelt blieven"
 
-#: main-widget.cpp:302
+#: main-widget.cpp:304
 #, kde-format
 msgid "Go Offline"
 msgstr "Afkoppeln"
 
-#: main-widget.cpp:392 tooltips/persontooltip.cpp:57
+#: main-widget.cpp:372 tooltips/persontooltip.cpp:58
 #, kde-format
 msgid "Contacts"
 msgstr "Kontakten"
 
-#: main-widget.cpp:408
+#: main-widget.cpp:388
 #, kde-format
 msgid "View"
 msgstr "Ansicht"
 
-#: main-widget.cpp:412 main-widget.cpp:455
+#: main-widget.cpp:392 main-widget.cpp:435
 #, kde-format
 msgid "Contact List Type"
 msgstr "Kontaktenlist-Typ"
 
-#: main-widget.cpp:415 main-widget.cpp:460
+#: main-widget.cpp:395 main-widget.cpp:440
 #, kde-format
 msgid "Shown Contacts"
 msgstr "Wiest Kontakten"
 
-#: main-widget.cpp:418 main-widget.cpp:465
+#: main-widget.cpp:398 main-widget.cpp:445
 #, kde-format
 msgid "Contact Grouping"
 msgstr "Kontaktenkoppeln"
 
-#: main-widget.cpp:543
+#: main-widget.cpp:523
 #, kde-format
 msgid "Instant Messaging Settings..."
 msgstr "Kortnarichten-Instellen..."
 
-#: main-widget.cpp:548
+#: main-widget.cpp:528
 #, kde-format
 msgid "Join Chat Room..."
 msgstr "Na Klöönruum ringahn..."
 
-#: main-widget.cpp:550
+#: main-widget.cpp:530
 #, kde-format
 msgid "Make a Call..."
 msgstr "En Anroop maken..."
 
-#: main-widget.cpp:551
+#: main-widget.cpp:531
 #, kde-format
 msgid "Merge Contacts..."
 msgstr "Kontakten tosamenföhren..."
 
-#: main-widget.cpp:552
+#: main-widget.cpp:532
 #, kde-format
 msgid "Add New Contacts..."
 msgstr "Nieg Kontakten tofögen..."
 
-#: main-widget.cpp:553
+#: main-widget.cpp:533
 #, kde-format
 msgid "Find Contact"
 msgstr "Kontakt söken"
 
-#: main-widget.cpp:556
+#: main-widget.cpp:536
 #, fuzzy, kde-format
 #| msgid "Start a chat..."
 msgid "Start a Chat..."
 msgstr "Klönen starten..."
 
-#: main-widget.cpp:559
+#: main-widget.cpp:539
 #, kde-format
 msgid "Split Selected Contacts"
 msgstr "Utsöcht Kontakten opspleten"
 
-#: main-widget.cpp:560
+#: main-widget.cpp:540
 #, kde-format
 msgid "Merge Selected Contacts"
 msgstr "Utsöcht Kontakten tohoopföhren"
 
-#: main-widget.cpp:570
+#: main-widget.cpp:550
 #, kde-format
 msgid "Show Contacts by Groups"
 msgstr "Kontakten na Koppeln wiesen"
 
-#: main-widget.cpp:574
+#: main-widget.cpp:554
 #, kde-format
 msgid "Do Not Group"
 msgstr "Nich tosamenkoppeln"
 
-#: main-widget.cpp:577
+#: main-widget.cpp:557
 #, kde-format
 msgid "Show Contacts by Accounts"
 msgstr "Kontakten na Kontos wiesen"
 
-#: main-widget.cpp:582
+#: main-widget.cpp:562
 #, kde-format
 msgid "Show Offline Contacts"
 msgstr "Nich tokoppelt Kontakten wiesen"
 
-#: main-widget.cpp:583
+#: main-widget.cpp:563
 #, kde-format
 msgid "Hide Offline Contacts"
 msgstr "Nich tokoppelt Kontakten versteken"
 
-#: main-widget.cpp:591
+#: main-widget.cpp:571
 #, kde-format
 msgid "Sort by Presence"
 msgstr "Na Anwesigkeit sorteren"
 
-#: main-widget.cpp:592
+#: main-widget.cpp:572
 #, kde-format
 msgid "Sort by Name"
 msgstr "Na Naam sorteren"
 
-#: main-widget.cpp:600
+#: main-widget.cpp:580
 #, kde-format
 msgid "Use Full List"
 msgstr "Heel List bruken"
 
-#: main-widget.cpp:602
+#: main-widget.cpp:582
 #, kde-format
 msgid "Use Normal List"
 msgstr "Normaal List bruken"
 
-#: main-widget.cpp:606
+#: main-widget.cpp:586
 #, kde-format
 msgid "Use Minimalistic List"
 msgstr "Mini-List bruken"
 
-#: main-widget.cpp:613
+#: main-widget.cpp:593
 #, kde-format
 msgid "Show All Contacts"
 msgstr "All Kontakten wiesen"
 
-#: main-widget.cpp:615
+#: main-widget.cpp:595
 #, kde-format
 msgid "Show Unblocked Contacts"
 msgstr "Nich-blockeert Kontakten wiesen"
 
-#: main-widget.cpp:617
+#: main-widget.cpp:597
 #, kde-format
 msgid "Show Blocked Contacts"
 msgstr "Blockeert Kontakten wiesen"
 
-#: main-widget.cpp:736
+#: main-widget.cpp:716
 #, kde-format
 msgid ""
 "Some data sources failed to initialize properly, your contact list might be "
@@ -594,13 +722,13 @@ msgstr "Programmschriever"
 msgid "Show Telepathy debugging information"
 msgstr "Telepathy-Fehlersöök-Informatschonen wiesen"
 
-#: tooltips/contacttooltip.cpp:63
+#: tooltips/contacttooltip.cpp:64
 #, kde-format
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "Anwesigkeit lett sik nich halen"
 
-#: tooltips/contacttooltip.cpp:81
+#: tooltips/contacttooltip.cpp:82
 #, kde-format
 msgid "Account: %1"
 msgstr "Konto: %1"
@@ -610,6 +738,19 @@ msgstr "Konto: %1"
 #, kde-format
 msgid "User is blocked"
 msgstr "Bruker is blockeert"
+
+#~ msgid "Now listening to..."
+#~ msgstr "Ik höör jüst..."
+
+#~ msgid ""
+#~ "This plugin is currently disabled. Do you want to enable it and use as "
+#~ "your presence?"
+#~ msgstr ""
+#~ "Dit Moduul is opstunns utmaakt. Wullt Du dat anmaken un för Dien "
+#~ "Anwesigkeiten bruken?"
+
+#~ msgid "Plugin disabled"
+#~ msgstr "Moduul utmaakt"
 
 #~ msgctxt "@action:inmenu This is an IM user status"
 #~ msgid "Available"
