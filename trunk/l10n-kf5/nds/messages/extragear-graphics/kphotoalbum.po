@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kphotoalbum\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-08-08 03:41+0200\n"
+"POT-Creation-Date: 2018-08-16 09:01+0200\n"
 "PO-Revision-Date: 2014-03-19 18:59+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -393,13 +393,13 @@ msgid "Copy tags from previous image"
 msgstr "Steekwöör vun verleden Bild koperen"
 
 #: AnnotationDialog/Dialog.cpp:1325 AnnotationDialog/ImagePreviewWidget.cpp:76
-#: MainWindow/Window.cpp:788
+#: MainWindow/Window.cpp:785
 #, kde-format
 msgid "Rotate counterclockwise"
 msgstr "Na links dreihen"
 
 #: AnnotationDialog/Dialog.cpp:1328 AnnotationDialog/ImagePreviewWidget.cpp:82
-#: MainWindow/Window.cpp:793
+#: MainWindow/Window.cpp:790
 #, kde-format
 msgid "Rotate clockwise"
 msgstr "Na rechts dreihen"
@@ -893,7 +893,7 @@ msgctxt "Breadcrumb denoting that we 'browsed' to a search result."
 msgid "search"
 msgstr "Söken"
 
-#: Browser/OverviewPage.cpp:339 MainWindow/Window.cpp:1811
+#: Browser/OverviewPage.cpp:339 MainWindow/Window.cpp:1808
 #, kde-format
 msgid ""
 "<p>You have not yet configured which tag to use for indicating untagged "
@@ -908,7 +908,7 @@ msgstr ""
 "li><li>klick dor op dat Lüttbild <b>Kategorien</b>,</li><li>un köör den "
 "Instellenafsnitt <b>Nich-markeerte Biller</b>.</li></ul></p>"
 
-#: Browser/OverviewPage.cpp:345 MainWindow/Window.cpp:1818
+#: Browser/OverviewPage.cpp:345 MainWindow/Window.cpp:1815
 #, fuzzy, kde-format
 #| msgid "Features has not been configured"
 msgid "Feature has not been configured"
@@ -1260,7 +1260,7 @@ msgstr ""
 msgid "Following files could not be read:"
 msgstr "Disse Dateien laat sik nich lesen:"
 
-#: Exif/Database.cpp:101
+#: Exif/Database.cpp:106
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p>There was an error while executing the SQL backend command. The error "
@@ -1269,7 +1269,7 @@ msgstr "Disse Dateien laat sik nich lesen:"
 #| "the command that was attempted to be executed was:<br/>%1</p><p>The error "
 #| "message obtained was:<br/>%2</p>"
 msgid ""
-"<p>There was an error while executing the SQL backend command. The error is "
+"<p>There was an error while accessing the Exif search database. The error is "
 "likely due to a broken database file.</p><p>To fix this problem run "
 "Maintenance->Recreate Exif Search database.</p><hr/><p>For debugging: the "
 "command that was attempted to be executed was:<br/>%1</p><p>The error "
@@ -1281,12 +1281,39 @@ msgstr ""
 "><p>För de Fehlersöök: Dit weer de Befehl:<br/>%1</p><p>Dit weer de "
 "Fehlermellen:<br/>%2</p>"
 
-#: Exif/Database.cpp:109
-#, kde-format
-msgid "Error Executing Exif Command"
-msgstr "Fehler bi't Utföhren vun den Befehl \"Exif\""
+#: Exif/Database.cpp:122
+#, fuzzy, kde-format
+#| msgid "Converting database"
+msgid "Error in Exif database"
+msgstr "Datenbank warrt ümwanneln"
 
-#: Exif/Database.cpp:606
+#: Exif/Database.cpp:146
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>There was an error while executing the SQL backend command. The error "
+#| "is likely due to a broken database file.</p><p>To fix this problem run "
+#| "Maintainance->Recreate Exif Search database.</p><hr/><p>For debugging: "
+#| "the command that was attempted to be executed was:<br/>%1</p><p>The error "
+#| "message obtained was:<br/>%2</p>"
+msgid ""
+"<p>There was an error while opening the Exif search database.</p> <p>To fix "
+"this problem run Maintenance->Recreate Exif Search database.</p><hr/><p>The "
+"error message obtained was:<br/>%1</p>"
+msgstr ""
+"<p>Dat geev en Fehler bi't Utföhren vun den SQL-Hülpprogrammbefehl, "
+"wohrschienlich dör en schaadhaftig Datenbankdatei.</p><p>För't Fehlerrichten "
+"probeer \"Pleeg\" -> \"EXIF-Söökdatenbank nieg opstellen\" ut.</p><hr/"
+"><p>För de Fehlersöök: Dit weer de Befehl:<br/>%1</p><p>Dit weer de "
+"Fehlermellen:<br/>%2</p>"
+
+#: Exif/Database.cpp:195
+#, kde-format
+msgid ""
+"<p>The Exif search database is corrupted and has no data.</p> <p>To fix this "
+"problem run Maintenance->Recreate Exif Search database.</p>"
+msgstr ""
+
+#: Exif/Database.cpp:653
 #, kde-format
 msgid "Rereading EXIF information from all images"
 msgstr "All EXIF-Bildinformatschonen warrt nieg leest"
@@ -2851,7 +2878,7 @@ msgstr "Dien Konsool"
 msgid "Invoke External Program"
 msgstr "Extern Programm opropen"
 
-#: MainWindow/FeatureDialog.cpp:42 MainWindow/Window.cpp:955
+#: MainWindow/FeatureDialog.cpp:42 MainWindow/Window.cpp:952
 #, kde-format
 msgid "KPhotoAlbum Feature Status"
 msgstr "KPhotoAlbum-Funkschoonstatus"
@@ -3489,16 +3516,7 @@ msgstr "Bi to kieken na nieg Biller un Videos"
 msgid "Loading Plug-ins"
 msgstr "Modulen warrt laadt"
 
-#: MainWindow/Window.cpp:280
-#, kde-format
-msgid ""
-"EXIF database cannot be opened. Check that the image root directory is "
-"writable."
-msgstr ""
-"De EXIF-Datenbank lett sik nich opmaken. Prööv bitte, wat de Wörtelorner för "
-"de Biller schriefbor is."
-
-#: MainWindow/Window.cpp:296
+#: MainWindow/Window.cpp:293
 #, kde-format
 msgid ""
 "<p><b>Delete Your Temporary Demo Database</b></p><p>I hope you enjoyed the "
@@ -3514,22 +3532,22 @@ msgstr ""
 "villicht ok liek so goot, dat ehr dat noch mit Dien Ännern ut dissen Törn "
 "gifft.</p>"
 
-#: MainWindow/Window.cpp:301
+#: MainWindow/Window.cpp:298
 #, kde-format
 msgid "Delete Demo Database"
 msgstr "Proov-Datenbank wegdoon"
 
-#: MainWindow/Window.cpp:316
+#: MainWindow/Window.cpp:313
 #, kde-format
 msgid "Do you want to save the changes?"
 msgstr "Wullt Du de Ännern sekern?"
 
-#: MainWindow/Window.cpp:317
+#: MainWindow/Window.cpp:314
 #, kde-format
 msgid "Save Changes?"
 msgstr "Ännern sekern?"
 
-#: MainWindow/Window.cpp:359
+#: MainWindow/Window.cpp:356
 #, kde-format
 msgid ""
 "Some of the selected images already belong to a stack. Do you want to remove "
@@ -3538,336 +3556,336 @@ msgstr ""
 "En Reeg vun de köört Biller höört al en Stapel to. Wullt Du disse ut ehr "
 "Stapels wegdoon un en heel niegen opstellen?"
 
-#: MainWindow/Window.cpp:361 MainWindow/Window.cpp:366
+#: MainWindow/Window.cpp:358 MainWindow/Window.cpp:363
 #, kde-format
 msgid "Stacking Error"
 msgstr "Stapelfehler"
 
-#: MainWindow/Window.cpp:365
+#: MainWindow/Window.cpp:362
 #, kde-format
 msgid "Unknown error, stack creation failed."
 msgstr "Nich begäng Fehler: Stapel lett sik nich opstellen."
 
-#: MainWindow/Window.cpp:443 MainWindow/Window.cpp:576
-#: MainWindow/Window.cpp:1339
+#: MainWindow/Window.cpp:440 MainWindow/Window.cpp:573
+#: MainWindow/Window.cpp:1336
 #, kde-format
 msgid "No item is selected."
 msgstr "Keen Indrag is utsöcht."
 
-#: MainWindow/Window.cpp:443 MainWindow/Window.cpp:576
-#: MainWindow/Window.cpp:1340
+#: MainWindow/Window.cpp:440 MainWindow/Window.cpp:573
+#: MainWindow/Window.cpp:1337
 #, kde-format
 msgid "No Selection"
 msgstr "Keen Köör"
 
-#: MainWindow/Window.cpp:491
+#: MainWindow/Window.cpp:488
 #, kde-format
 msgid "Saving..."
 msgstr "An't Sekern..."
 
-#: MainWindow/Window.cpp:496
+#: MainWindow/Window.cpp:493
 #, kde-format
 msgid "Saving... Done"
 msgstr "An't Sekern... afslaten."
 
-#: MainWindow/Window.cpp:644
+#: MainWindow/Window.cpp:641
 #, kde-format
 msgid "There are no images to be shown."
 msgstr "Dat gifft keen Biller, de sik wiesen laat."
 
-#: MainWindow/Window.cpp:723
+#: MainWindow/Window.cpp:720
 #, kde-format
 msgid "Generate HTML..."
 msgstr "HTML opstellen..."
 
-#: MainWindow/Window.cpp:727
+#: MainWindow/Window.cpp:724
 #, kde-format
 msgid "Import..."
 msgstr "Importeren..."
 
-#: MainWindow/Window.cpp:730
+#: MainWindow/Window.cpp:727
 #, kde-format
 msgid "Export/Copy Images..."
 msgstr "Biller exporteren/koperen..."
 
-#: MainWindow/Window.cpp:756
+#: MainWindow/Window.cpp:753
 #, fuzzy, kde-format
 #| msgid "Delete Selected"
 msgctxt "Delete selected images"
 msgid "Delete Selected"
 msgstr "Utsöchte wegdoon"
 
-#: MainWindow/Window.cpp:762
+#: MainWindow/Window.cpp:759
 #, fuzzy, kde-format
 #| msgid "Remove Tokens"
 msgid "Remove Tokens..."
 msgstr "Betekers wegmaken"
 
-#: MainWindow/Window.cpp:765
+#: MainWindow/Window.cpp:762
 #, kde-format
 msgid "Open List of Files..."
 msgstr "Dateilist opmaken..."
 
-#: MainWindow/Window.cpp:769
+#: MainWindow/Window.cpp:766
 #, kde-format
 msgid "Annotate Individual Items"
 msgstr "Kategorien na enkel Biller tofögen"
 
-#: MainWindow/Window.cpp:773
+#: MainWindow/Window.cpp:770
 #, kde-format
 msgid "Annotate Multiple Items at a Time"
 msgstr "Kategorien na mehr Biller op eenmaal tofögen"
 
-#: MainWindow/Window.cpp:777
+#: MainWindow/Window.cpp:774
 #, kde-format
 msgid "Merge Images into a Stack"
 msgstr "Biller na en Stapel tosamenföhren"
 
-#: MainWindow/Window.cpp:781
+#: MainWindow/Window.cpp:778
 #, kde-format
 msgid "Remove Images from Stack"
 msgstr "Biller ut den Stapel wegdoon"
 
-#: MainWindow/Window.cpp:784
+#: MainWindow/Window.cpp:781
 #, kde-format
 msgid "Set as First Image in Stack"
 msgstr "As eerst Bild in en Stapel fastleggen"
 
-#: MainWindow/Window.cpp:799
+#: MainWindow/Window.cpp:796
 #, kde-format
 msgid "View"
 msgstr "Ansicht"
 
-#: MainWindow/Window.cpp:803
+#: MainWindow/Window.cpp:800
 #, kde-format
 msgid "View (In New Window)"
 msgstr "Ankieken (in en nieg Finster)"
 
-#: MainWindow/Window.cpp:806
+#: MainWindow/Window.cpp:803
 #, kde-format
 msgid "Run Slide Show"
 msgstr "Diaschau starten"
 
-#: MainWindow/Window.cpp:811
+#: MainWindow/Window.cpp:808
 #, kde-format
 msgid "Run Randomized Slide Show"
 msgstr "Tofall-Diaschau starten"
 
-#: MainWindow/Window.cpp:817
+#: MainWindow/Window.cpp:814
 #, kde-format
 msgid "Collapse all stacks"
 msgstr "All Stapeln tosamenfoolden"
 
-#: MainWindow/Window.cpp:823
+#: MainWindow/Window.cpp:820
 #, kde-format
 msgid "Expand all stacks"
 msgstr "All Stapeln utfoolden"
 
-#: MainWindow/Window.cpp:828
+#: MainWindow/Window.cpp:825
 #, kde-format
 msgid "Show &Oldest First"
 msgstr "Ö&llst toeerst wiesen"
 
-#: MainWindow/Window.cpp:833
+#: MainWindow/Window.cpp:830
 #, kde-format
 msgid "Show &Newest First"
 msgstr "&Niegst toeerst wiesen"
 
-#: MainWindow/Window.cpp:838
+#: MainWindow/Window.cpp:835
 #, kde-format
 msgid "Sort Selected by Date && Time"
 msgstr "Utsöchte na Datum un Tiet sorteren"
 
-#: MainWindow/Window.cpp:841
+#: MainWindow/Window.cpp:838
 #, fuzzy, kde-format
 #| msgid "Limit View to Marked"
 msgid "Limit View to Selection"
 msgstr "Ansicht op markeerte ingrenzen"
 
-#: MainWindow/Window.cpp:844
+#: MainWindow/Window.cpp:841
 #, kde-format
 msgid "Jump to Context"
 msgstr "Na Kontext jumpen"
 
-#: MainWindow/Window.cpp:849
+#: MainWindow/Window.cpp:846
 #, kde-format
 msgid "Lock Images"
 msgstr "Biller afsluten"
 
-#: MainWindow/Window.cpp:852
+#: MainWindow/Window.cpp:849
 #, kde-format
 msgid "Unlock"
 msgstr "Opsluten"
 
-#: MainWindow/Window.cpp:855
+#: MainWindow/Window.cpp:852
 #, kde-format
 msgid "Change Password..."
 msgstr "Passwoort ännern..."
 
-#: MainWindow/Window.cpp:859
+#: MainWindow/Window.cpp:856
 #, kde-format
 msgid "Lock Away All Other Items"
 msgstr "All anner Indrääg utsluten"
 
-#: MainWindow/Window.cpp:862
+#: MainWindow/Window.cpp:859
 #, kde-format
 msgid "Lock Away Current Set of Items"
 msgstr "Aktuell Sett vun Indrääg utsluten"
 
-#: MainWindow/Window.cpp:866
+#: MainWindow/Window.cpp:863
 #, kde-format
 msgid "Display Images and Videos Not on Disk"
 msgstr "Biller un Videos wiesen, de nich op de Plaat sünd"
 
-#: MainWindow/Window.cpp:869
+#: MainWindow/Window.cpp:866
 #, kde-format
 msgid "Display Images and Videos with Incomplete Dates..."
 msgstr "Biller un Videos mit fehlen Tietangaven wiesen..."
 
-#: MainWindow/Window.cpp:873
+#: MainWindow/Window.cpp:870
 #, kde-format
 msgid "Display Images and Videos with Changed MD5 Sum"
 msgstr "Biller un Videos mit ännert MD5-Pröövsumm wiesen"
 
-#: MainWindow/Window.cpp:877
+#: MainWindow/Window.cpp:874
 #, fuzzy, kde-format
 #| msgid "Merge data"
 msgid "Merge duplicates"
 msgstr "Daten tosamenföhren"
 
-#: MainWindow/Window.cpp:879
+#: MainWindow/Window.cpp:876
 #, kde-format
 msgid "Recalculate Checksum"
 msgstr "Pröövsumm nieg utreken"
 
-#: MainWindow/Window.cpp:882
+#: MainWindow/Window.cpp:879
 #, kde-format
 msgid "Rescan for Images and Videos"
 msgstr "Op niege Biller/Videos dörkieken"
 
-#: MainWindow/Window.cpp:885
+#: MainWindow/Window.cpp:882
 #, kde-format
 msgid "Recreate Exif Search Database"
 msgstr "EXIF-Söökdatenbank nieg opstellen"
 
-#: MainWindow/Window.cpp:888
+#: MainWindow/Window.cpp:885
 #, kde-format
 msgid "Read EXIF Info From Files..."
 msgstr "EXIF-Infos ut Dateien lesen..."
 
-#: MainWindow/Window.cpp:891
+#: MainWindow/Window.cpp:888
 #, fuzzy, kde-format
 #| msgid "Sort Selected by Date && Time"
 msgid "Sort All by Date && Time"
 msgstr "Utsöchte na Datum un Tiet sorteren"
 
-#: MainWindow/Window.cpp:895
+#: MainWindow/Window.cpp:892
 #, kde-format
 msgid "Automatically Stack Selected Images..."
 msgstr "Utsöchte Biller automaatsch stapeln..."
 
-#: MainWindow/Window.cpp:898
+#: MainWindow/Window.cpp:895
 #, kde-format
 msgid "Build Thumbnails"
 msgstr "Vöransichten opstellen"
 
-#: MainWindow/Window.cpp:900
+#: MainWindow/Window.cpp:897
 #, fuzzy, kde-format
 #| msgid "Statistics"
 msgid "Statistics..."
 msgstr "Statistik"
 
-#: MainWindow/Window.cpp:904
+#: MainWindow/Window.cpp:901
 #, kde-format
 msgid "Mark As Untagged"
 msgstr ""
 
-#: MainWindow/Window.cpp:913
+#: MainWindow/Window.cpp:910
 #, kde-format
 msgid "Enable All Messages"
 msgstr "All Mellen anmaken"
 
-#: MainWindow/Window.cpp:916
+#: MainWindow/Window.cpp:913
 #, kde-format
 msgid "Configure Current View"
 msgstr "Aktuelle Ansicht instellen"
 
-#: MainWindow/Window.cpp:925
+#: MainWindow/Window.cpp:922
 #, kde-format
 msgid "Tree"
 msgstr "Boom"
 
-#: MainWindow/Window.cpp:930
+#: MainWindow/Window.cpp:927
 #, kde-format
 msgid "Tree with User Icons"
 msgstr "Boom mit Bruker-Lüttbiller"
 
-#: MainWindow/Window.cpp:935
+#: MainWindow/Window.cpp:932
 #, kde-format
 msgid "Icons"
 msgstr "Lüttbiller"
 
-#: MainWindow/Window.cpp:946
+#: MainWindow/Window.cpp:943
 #, kde-format
 msgid "Show Tooltips in Thumbnails Window"
 msgstr "Kortinformatschonen binnen Vöransichtfinster wiesen"
 
-#: MainWindow/Window.cpp:952
+#: MainWindow/Window.cpp:949
 #, kde-format
 msgid "Run KPhotoAlbum Demo"
 msgstr "KPhotoAlbum-Proov laden"
 
-#: MainWindow/Window.cpp:958
+#: MainWindow/Window.cpp:955
 #, kde-format
 msgid "Show Demo Videos"
 msgstr "Demo-Videos wiesen"
 
-#: MainWindow/Window.cpp:962
+#: MainWindow/Window.cpp:959
 #, kde-format
 msgid "Show Exif Info"
 msgstr "EXIF-Info wiesen"
 
-#: MainWindow/Window.cpp:965
+#: MainWindow/Window.cpp:962
 #, kde-format
 msgid "Recreate Selected Thumbnails"
 msgstr "Utsöchte Vöransichten nieg opstellen"
 
-#: MainWindow/Window.cpp:968
+#: MainWindow/Window.cpp:965
 #, fuzzy, kde-format
 #| msgid "Generate thumbnails"
 msgid "Use next video thumbnail"
 msgstr "Vöransichtbiller opstellen"
 
-#: MainWindow/Window.cpp:972
+#: MainWindow/Window.cpp:969
 #, kde-format
 msgid "Use previous video thumbnail"
 msgstr ""
 
-#: MainWindow/Window.cpp:998
+#: MainWindow/Window.cpp:995
 #, kde-format
 msgid "Auto saving...."
 msgstr "Automaatsch sekern..."
 
-#: MainWindow/Window.cpp:1001
+#: MainWindow/Window.cpp:998
 #, kde-format
 msgid "Auto saving.... Done"
 msgstr "Automaatsch sekern... afslaten."
 
-#: MainWindow/Window.cpp:1098
+#: MainWindow/Window.cpp:1095
 #, kde-format
 msgid ""
 "<p>Could not open given index.xml as provided directory does not exist.<br />"
 "%1</p>"
 msgstr ""
 
-#: MainWindow/Window.cpp:1106
+#: MainWindow/Window.cpp:1103
 #, kde-format
 msgid ""
 "<p>Given index file does not exist, do you want to create following?<br />%1/"
 "index.xml</p>"
 msgstr ""
 
-#: MainWindow/Window.cpp:1122
+#: MainWindow/Window.cpp:1119
 #, kde-format
 msgid ""
 "<p>You have configured a tag for untagged images, but either the tag itself "
@@ -3876,7 +3894,7 @@ msgid ""
 "Categories</interface></p>"
 msgstr ""
 
-#: MainWindow/Window.cpp:1207
+#: MainWindow/Window.cpp:1204
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p>The password protection is only a means of allowing your little sister "
@@ -3894,42 +3912,42 @@ msgstr ""
 "vun de verleden Höög vördag kaamt.</p><p>Anners seggt: Elkeen, de op de "
 "Datei \"index.xml\" togriepen kann, kann disse Schuul eenfach ümgahn.</b></p>"
 
-#: MainWindow/Window.cpp:1212
+#: MainWindow/Window.cpp:1209
 #, kde-format
 msgid "Password Protection"
 msgstr "Passwoortschuul"
 
-#: MainWindow/Window.cpp:1226
+#: MainWindow/Window.cpp:1223
 #, kde-format
 msgid "Type in Password to Unlock"
 msgstr "Bitte dat Passwoort för't Opsluten ingeven"
 
-#: MainWindow/Window.cpp:1235 MainWindow/Window.cpp:1270
+#: MainWindow/Window.cpp:1232 MainWindow/Window.cpp:1267
 #, kde-format
 msgid "Invalid password."
 msgstr "Leeg Passwoort."
 
-#: MainWindow/Window.cpp:1261
+#: MainWindow/Window.cpp:1258
 #, kde-format
 msgid "Type in Old Password"
 msgstr "Oolt Passwoort ingeven"
 
-#: MainWindow/Window.cpp:1273
+#: MainWindow/Window.cpp:1270
 #, kde-format
 msgid "Type in New Password"
 msgstr "Nieg Passwoort ingeven"
 
-#: MainWindow/Window.cpp:1284 Settings/SettingsDialog.cpp:70
+#: MainWindow/Window.cpp:1281 Settings/SettingsDialog.cpp:70
 #, kde-format
 msgid "General"
 msgstr "Allgemeen"
 
-#: MainWindow/Window.cpp:1285 Settings/SettingsDialog.cpp:76
+#: MainWindow/Window.cpp:1282 Settings/SettingsDialog.cpp:76
 #, kde-format
 msgid "Viewer"
 msgstr "Kieker"
 
-#: MainWindow/Window.cpp:1293
+#: MainWindow/Window.cpp:1290
 #, fuzzy, kde-format
 #| msgid "Plugins"
 msgctxt ""
@@ -3937,12 +3955,12 @@ msgctxt ""
 msgid "Plugin: %1"
 msgstr "Modulen"
 
-#: MainWindow/Window.cpp:1298
+#: MainWindow/Window.cpp:1295
 #, kde-format
 msgid "Annotation Dialog"
 msgstr "Dialoog för't Towiesen vun Kategorien"
 
-#: MainWindow/Window.cpp:1453
+#: MainWindow/Window.cpp:1450
 #, kde-format
 msgid ""
 "<p>Really enable all message boxes where you previously checked the do-not-"
@@ -3951,7 +3969,7 @@ msgstr ""
 "<p>Wullt Du redig all Mellen wedder anmaken, binnen de Du vördem dat "
 "Ankrüüzfeld \"Nienich wedder wiesen\" bruukt hest?</p>"
 
-#: MainWindow/Window.cpp:1464
+#: MainWindow/Window.cpp:1461
 #, kde-format
 msgid ""
 "<p>KPhotoAlbum hit an internal error (missing plug-in menu in MainWindow::"
@@ -3968,41 +3986,41 @@ msgstr ""
 "p><p>KPhotoAlbum löppt wieder, man normalerwies warrt dat ahn »make install« "
 "wull afstörten.</p>"
 
-#: MainWindow/Window.cpp:1464
+#: MainWindow/Window.cpp:1461
 #, kde-format
 msgid "Internal Error"
 msgstr "Intern Fehler"
 
-#: MainWindow/Window.cpp:1646
+#: MainWindow/Window.cpp:1643
 #, kde-format
 msgid "Open List of Files"
 msgstr "Dateilist opmaken"
 
-#: MainWindow/Window.cpp:1647
+#: MainWindow/Window.cpp:1644
 #, kde-format
 msgid ""
 "You can open a set of files from KPhotoAlbum's image root by listing the "
 "files here."
 msgstr ""
 
-#: MainWindow/Window.cpp:1664
+#: MainWindow/Window.cpp:1661
 #, kde-format
 msgid "No images matching your input were found."
 msgstr "Keen Biller funnen, op de Dien Ingaav passt."
 
-#: MainWindow/Window.cpp:1664
+#: MainWindow/Window.cpp:1661
 #, kde-format
 msgid "No Matches"
 msgstr "Keen Drepers"
 
-#: MainWindow/Window.cpp:1855
+#: MainWindow/Window.cpp:1852
 #, fuzzy, no-c-format, kde-format
 #| msgid "Thumbnail image size:"
 msgctxt "@info:status"
 msgid "Thumbnail width: %1px (storage size: %2px)"
 msgstr "Grött vun't Vöransichtbild:"
 
-#: MainWindow/Window.cpp:1899
+#: MainWindow/Window.cpp:1896
 #, kde-format
 msgid ""
 "<p>Unable to find ffmpeg or MPlayer on the system.</p><p>Without either of "
@@ -4010,13 +4028,13 @@ msgid ""
 "lengths. Please install the ffmpeg or MPlayer package</p>"
 msgstr ""
 
-#: MainWindow/Window.cpp:1902
+#: MainWindow/Window.cpp:1899
 #, fuzzy, kde-format
 #| msgid "File not available"
 msgid "Video thumbnails are not available"
 msgstr "Datei nich verföögbor"
 
-#: MainWindow/Window.cpp:1908
+#: MainWindow/Window.cpp:1905
 #, kde-format
 msgid ""
 "<p>You have MPlayer installed on your system, but it is unfortunately not "
@@ -4025,12 +4043,12 @@ msgid ""
 "extracting thumbnails from videos.</p>"
 msgstr ""
 
-#: MainWindow/Window.cpp:1911
+#: MainWindow/Window.cpp:1908
 #, kde-format
 msgid "MPlayer is too old"
 msgstr ""
 
-#: MainWindow/Window.cpp:1933
+#: MainWindow/Window.cpp:1930
 #, kde-format
 msgid ""
 "<p>Did you know that there is an Android client for KPhotoAlbum?<br/>With "
@@ -6861,6 +6879,16 @@ msgstr ""
 #| msgid "Converting database"
 msgid "Error while reading database file"
 msgstr "Datenbank warrt ümwanneln"
+
+#~ msgid "Error Executing Exif Command"
+#~ msgstr "Fehler bi't Utföhren vun den Befehl \"Exif\""
+
+#~ msgid ""
+#~ "EXIF database cannot be opened. Check that the image root directory is "
+#~ "writable."
+#~ msgstr ""
+#~ "De EXIF-Datenbank lett sik nich opmaken. Prööv bitte, wat de Wörtelorner "
+#~ "för de Biller schriefbor is."
 
 #~ msgid "&gt;="
 #~ msgstr "&gt;="
