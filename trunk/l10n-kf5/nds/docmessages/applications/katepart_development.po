@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate_advanced\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-08-17 02:18+0000\n"
+"POT-Creation-Date: 2018-08-21 01:59+0000\n"
 "PO-Revision-Date: 2011-10-12 20:33+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -3283,7 +3283,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1508 development.docbook:1846 development.docbook:1985
+#: development.docbook:1508 development.docbook:1865 development.docbook:2004
 #, no-c-format
 msgid "Since: &kde; 4.9"
 msgstr ""
@@ -3529,19 +3529,19 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1646
+#: development.docbook:1648
 #, no-c-format
 msgid "<function>Cursor view.cursorPosition()</function>"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1647
+#: development.docbook:1649
 #, no-c-format
 msgid "Returns the current cursor position in the view."
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1652
+#: development.docbook:1654
 #, no-c-format
 msgid ""
 "void view.setCursorPosition(<parameter>int <replaceable>line</replaceable></"
@@ -3551,7 +3551,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1653
+#: development.docbook:1655
 #, no-c-format
 msgid ""
 "Set the current cursor position to either (line, column) or to the given "
@@ -3559,13 +3559,13 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1660
+#: development.docbook:1662
 #, no-c-format
 msgid "Cursor view.virtualCursorPosition();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1661
+#: development.docbook:1663
 #, no-c-format
 msgid ""
 "Returns the virtual cursor position with each tab counting the corresponding "
@@ -3573,7 +3573,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1668
+#: development.docbook:1670
 #, no-c-format
 msgid ""
 "void view.setVirtualCursorPosition(<parameter>int <replaceable>line</"
@@ -3584,7 +3584,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1669
+#: development.docbook:1671
 #, no-c-format
 msgid ""
 "Set the current virtual cursor position to (line, column) or to the given "
@@ -3592,13 +3592,13 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1676
+#: development.docbook:1678
 #, no-c-format
 msgid "String view.selectedText();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1677
+#: development.docbook:1679
 #, no-c-format
 msgid ""
 "Returns the selected text. If no text is selected, the returned string is "
@@ -3606,13 +3606,13 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1684
+#: development.docbook:1686
 #, no-c-format
 msgid "bool view.hasSelection();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1685
+#: development.docbook:1687
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if the view has selected text, otherwise "
@@ -3620,13 +3620,13 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1692
+#: development.docbook:1694
 #, no-c-format
 msgid "Range view.selection();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1693
+#: development.docbook:1695
 #, no-c-format
 msgid ""
 "Returns the selected text range. The returned range is invalid if there is "
@@ -3634,7 +3634,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1701
+#: development.docbook:1703
 #, no-c-format
 msgid ""
 "void view.setSelection(<parameter>Range <replaceable>range</replaceable></"
@@ -3642,19 +3642,19 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1702
+#: development.docbook:1704
 #, no-c-format
 msgid "Set the selected text to the given range."
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1709
+#: development.docbook:1711
 #, no-c-format
 msgid "void view.removeSelectedText();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1710
+#: development.docbook:1712
 #, no-c-format
 msgid ""
 "Remove the selected text. If the view does not have any selected text, this "
@@ -3662,37 +3662,70 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1718
+#: development.docbook:1720
 #, no-c-format
 msgid "void view.selectAll();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1719
+#: development.docbook:1721
 #, no-c-format
 msgid "Selects the entire text in the document."
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1726
+#: development.docbook:1728
 #, no-c-format
 msgid "void view.clearSelection();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1727
+#: development.docbook:1729
 #, no-c-format
 msgid "Clears the text selection without removing the text."
 msgstr ""
 
-#. Tag: title
+#. Tag: synopsis
 #: development.docbook:1735
+#, no-c-format
+msgid ""
+"object view.executeCommand(<parameter>String <replaceable>command</"
+"replaceable></parameter>,\n"
+"                           <parameter>String <replaceable>args</"
+"replaceable></parameter>,\n"
+"                           <parameter>Range <replaceable>range</"
+"replaceable></parameter>);"
+msgstr ""
+
+#. Tag: para
+#: development.docbook:1736
+#, no-c-format
+msgid ""
+"Executes the <link linkend=\"advanced-editing-tools-commandline\">command "
+"line command</link> <replaceable>command</replaceable> with the optional "
+"arguments <replaceable>args</replaceable> and the optional "
+"<replaceable>range</replaceable>. The returned <replaceable>object</"
+"replaceable> has a boolean property <replaceable>object.ok</replaceable> "
+"that indicates whether execution of the <replaceable>command</replaceable> "
+"was successful. In case of an error, the string <replaceable>object.status</"
+"replaceable> contains an error message."
+msgstr ""
+
+#. Tag: para
+#: development.docbook:1743 development.docbook:2445 development.docbook:2455
+#: development.docbook:2465
+#, no-c-format
+msgid "Since: &kde-frameworks; 5.50"
+msgstr ""
+
+#. Tag: title
+#: development.docbook:1752
 #, no-c-format
 msgid "The Document API"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1736
+#: development.docbook:1753
 #, no-c-format
 msgid ""
 "Whenever a script is being executed, there is a global variable "
@@ -3701,39 +3734,39 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1742
+#: development.docbook:1761
 #, no-c-format
 msgid "String document.fileName();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1743
+#: development.docbook:1762
 #, no-c-format
 msgid ""
 "Returns the document's filename or an empty string for unsaved text buffers."
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1750
+#: development.docbook:1769
 #, no-c-format
 msgid "String document.url();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1751
+#: development.docbook:1770
 #, no-c-format
 msgid ""
 "Returns the document's full url or an empty string for unsaved text buffers."
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1758
+#: development.docbook:1777
 #, no-c-format
 msgid "String document.mimeType();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1759
+#: development.docbook:1778
 #, no-c-format
 msgid ""
 "Returns the document's mime type or the mime type <literal>application/octet-"
@@ -3741,31 +3774,31 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1767
+#: development.docbook:1786
 #, no-c-format
 msgid "String document.encoding();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1768
+#: development.docbook:1787
 #, no-c-format
 msgid "Returns the currently used encoding to save the file."
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1774
+#: development.docbook:1793
 #, no-c-format
 msgid "String document.highlightingMode();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1775
+#: development.docbook:1794
 #, no-c-format
 msgid "Returns the global highlighting mode used for the whole document."
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1781
+#: development.docbook:1800
 #, no-c-format
 msgid ""
 "String document.highlightingModeAt(<parameter>Cursor <replaceable>pos</"
@@ -3773,32 +3806,32 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1782
+#: development.docbook:1801
 #, no-c-format
 msgid ""
 "Returns the highlighting mode used at the given position in the document."
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1788
+#: development.docbook:1807
 #, no-c-format
 msgid "Array document.embeddedHighlightingModes();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1789
+#: development.docbook:1808
 #, no-c-format
 msgid "Returns an array of highlighting modes embedded in this document."
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1795
+#: development.docbook:1814
 #, no-c-format
 msgid "bool document.isModified();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1796
+#: development.docbook:1815
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if the document has unsaved changes "
@@ -3806,13 +3839,13 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1803
+#: development.docbook:1822
 #, no-c-format
 msgid "String document.text();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1804
+#: development.docbook:1823
 #, no-c-format
 msgid ""
 "Returns the entire content of the document in a single text string. Newlines "
@@ -3820,7 +3853,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1812
+#: development.docbook:1831
 #, no-c-format
 msgid ""
 "String document.text(<parameter>int <replaceable>fromLine</replaceable></"
@@ -3834,7 +3867,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1813
+#: development.docbook:1832
 #, no-c-format
 msgid ""
 "Returns the text in the given range. It is recommended to use the cursor and "
@@ -3842,7 +3875,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1821
+#: development.docbook:1840
 #, no-c-format
 msgid ""
 "String document.line(<parameter>int <replaceable>line</replaceable></"
@@ -3850,7 +3883,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1822
+#: development.docbook:1841
 #, no-c-format
 msgid ""
 "Returns the given text line as string. The string is empty if the requested "
@@ -3858,7 +3891,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1830
+#: development.docbook:1849
 #, no-c-format
 msgid ""
 "String document.wordAt(<parameter>int <replaceable>line</replaceable></"
@@ -3868,13 +3901,13 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1831
+#: development.docbook:1850
 #, no-c-format
 msgid "Returns the word at the given cursor position."
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1839
+#: development.docbook:1858
 #, no-c-format
 msgid ""
 "Range document.wordRangeAt(<parameter>int <replaceable>line</replaceable></"
@@ -3884,7 +3917,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1841
+#: development.docbook:1860
 #, no-c-format
 msgid ""
 "Return the range of the word at the given cursor position. The returned "
@@ -3894,7 +3927,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1854
+#: development.docbook:1873
 #, no-c-format
 msgid ""
 "String document.charAt(<parameter>int <replaceable>line</replaceable></"
@@ -3904,13 +3937,13 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1855
+#: development.docbook:1874
 #, no-c-format
 msgid "Returns the character at the given cursor position."
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1862
+#: development.docbook:1881
 #, no-c-format
 msgid ""
 "String document.firstChar(<parameter>int <replaceable>line</replaceable></"
@@ -3918,7 +3951,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1863
+#: development.docbook:1882
 #, no-c-format
 msgid ""
 "Returns the first character in the given <replaceable>line</replaceable> "
@@ -3927,7 +3960,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1873
+#: development.docbook:1892
 #, no-c-format
 msgid ""
 "String document.lastChar(<parameter>int <replaceable>line</replaceable></"
@@ -3935,7 +3968,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1874
+#: development.docbook:1893
 #, no-c-format
 msgid ""
 "Returns the last character in the given <replaceable>line</replaceable> that "
@@ -3944,7 +3977,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1883
+#: development.docbook:1902
 #, no-c-format
 msgid ""
 "bool document.isSpace(<parameter>int <replaceable>line</replaceable></"
@@ -3954,7 +3987,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1884
+#: development.docbook:1903
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if the character at the given cursor "
@@ -3962,7 +3995,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1892
+#: development.docbook:1911
 #, no-c-format
 msgid ""
 "bool document.matchesAt(<parameter>int <replaceable>line</replaceable></"
@@ -3973,7 +4006,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1893
+#: development.docbook:1912
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if the given <replaceable>text</"
@@ -3982,7 +4015,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1901
+#: development.docbook:1920
 #, no-c-format
 msgid ""
 "bool document.startsWith(<parameter>int <replaceable>line</replaceable></"
@@ -3991,7 +4024,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1902
+#: development.docbook:1921
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if the line starts with <replaceable>text</"
@@ -4001,7 +4034,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1910
+#: development.docbook:1929
 #, no-c-format
 msgid ""
 "bool document.endsWith(<parameter>int <replaceable>line</replaceable></"
@@ -4010,7 +4043,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1911
+#: development.docbook:1930
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if the line ends with <replaceable>text</"
@@ -4020,7 +4053,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1919
+#: development.docbook:1938
 #, no-c-format
 msgid ""
 "bool document.setText(<parameter>String <replaceable>text</replaceable></"
@@ -4028,25 +4061,25 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1920
+#: development.docbook:1939
 #, no-c-format
 msgid "Sets the entire document text."
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1927
+#: development.docbook:1946
 #, no-c-format
 msgid "bool document.clear();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1928
+#: development.docbook:1947
 #, no-c-format
 msgid "Removes the entire text in the document."
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1935
+#: development.docbook:1954
 #, no-c-format
 msgid ""
 "bool document.truncate(<parameter>int <replaceable>line</replaceable></"
@@ -4056,7 +4089,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1936
+#: development.docbook:1955
 #, no-c-format
 msgid ""
 "Truncate the given line at the given column or cursor position. Returns "
@@ -4065,7 +4098,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1944
+#: development.docbook:1963
 #, no-c-format
 msgid ""
 "bool document.insertText(<parameter>int <replaceable>line</replaceable></"
@@ -4077,7 +4110,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1945
+#: development.docbook:1964
 #, no-c-format
 msgid ""
 "Inserts the <replaceable>text</replaceable> at the given cursor position. "
@@ -4086,7 +4119,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1953
+#: development.docbook:1972
 #, no-c-format
 msgid ""
 "bool document.removeText(<parameter>int <replaceable>fromLine</replaceable></"
@@ -4100,7 +4133,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1954
+#: development.docbook:1973
 #, no-c-format
 msgid ""
 "Removes the text in the given range. Returns <literal>true</literal> on "
@@ -4108,7 +4141,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1962
+#: development.docbook:1981
 #, no-c-format
 msgid ""
 "bool document.insertLine(<parameter>int <replaceable>line</replaceable></"
@@ -4116,7 +4149,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1963
+#: development.docbook:1982
 #, no-c-format
 msgid ""
 "Inserts text in the given line. Returns <literal>true</literal> on success, "
@@ -4125,7 +4158,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1971
+#: development.docbook:1990
 #, no-c-format
 msgid ""
 "bool document.removeLine(<parameter>int <replaceable>line</replaceable></"
@@ -4133,7 +4166,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1972
+#: development.docbook:1991
 #, no-c-format
 msgid ""
 "Removes the given text line. Returns <literal>true</literal> on success, or "
@@ -4142,7 +4175,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1980
+#: development.docbook:1999
 #, no-c-format
 msgid ""
 "bool document.wrapLine(<parameter>int <replaceable>line</replaceable></"
@@ -4152,7 +4185,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1981
+#: development.docbook:2000
 #, no-c-format
 msgid ""
 "Wraps the line at the given cursor position. Returns <literal>true</literal> "
@@ -4160,7 +4193,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:1993
+#: development.docbook:2012
 #, no-c-format
 msgid ""
 "void document.joinLines(<parameter>int <replaceable>startLine</replaceable></"
@@ -4168,7 +4201,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:1994
+#: development.docbook:2013
 #, no-c-format
 msgid ""
 "Joins the lines from <replaceable>startLine</replaceable> to "
@@ -4177,19 +4210,19 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2002
+#: development.docbook:2021
 #, no-c-format
 msgid "int document.lines();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2003
+#: development.docbook:2022
 #, no-c-format
 msgid "Returns the number of lines in the document."
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2010
+#: development.docbook:2029
 #, no-c-format
 msgid ""
 "bool document.isLineModified(<parameter>int <replaceable>line</replaceable></"
@@ -4197,7 +4230,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2011
+#: development.docbook:2030
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if <replaceable>line</replaceable> "
@@ -4205,14 +4238,14 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2014 development.docbook:2026 development.docbook:2037
-#: development.docbook:2049 development.docbook:2223
+#: development.docbook:2033 development.docbook:2045 development.docbook:2056
+#: development.docbook:2068 development.docbook:2242
 #, no-c-format
 msgid "Since: &kde; 5.0"
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2021
+#: development.docbook:2040
 #, no-c-format
 msgid ""
 "bool document.isLineSaved(<parameter>int <replaceable>line</replaceable></"
@@ -4220,7 +4253,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2022
+#: development.docbook:2041
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if <replaceable>line</replaceable> was "
@@ -4229,7 +4262,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2033
+#: development.docbook:2052
 #, no-c-format
 msgid ""
 "bool document.isLineTouched(<parameter>int <replaceable>line</replaceable></"
@@ -4237,7 +4270,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2034
+#: development.docbook:2053
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if <replaceable>line</replaceable> "
@@ -4245,7 +4278,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2044
+#: development.docbook:2063
 #, no-c-format
 msgid ""
 "bool document.findTouchedLine(<parameter>int <replaceable>startLine</"
@@ -4254,7 +4287,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2045
+#: development.docbook:2064
 #, no-c-format
 msgid ""
 "Search for the next touched line starting at <replaceable>line</"
@@ -4263,19 +4296,19 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2056
+#: development.docbook:2075
 #, no-c-format
 msgid "int document.length();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2057
+#: development.docbook:2076
 #, no-c-format
 msgid "Returns the number of characters in the document."
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2064
+#: development.docbook:2083
 #, no-c-format
 msgid ""
 "int document.lineLength(<parameter>int <replaceable>line</replaceable></"
@@ -4283,19 +4316,19 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2065
+#: development.docbook:2084
 #, no-c-format
 msgid "Returns the <replaceable>line</replaceable>'s length."
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2072
+#: development.docbook:2091
 #, no-c-format
 msgid "void document.editBegin();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2073
+#: development.docbook:2092
 #, no-c-format
 msgid ""
 "Starts an edit group for undo/redo grouping. Make sure to always call "
@@ -4305,13 +4338,13 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2083
+#: development.docbook:2102
 #, no-c-format
 msgid "void document.editEnd();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2084
+#: development.docbook:2103
 #, no-c-format
 msgid ""
 "Ends an edit group. The last call of <function>editEnd()</function> (&ie; "
@@ -4320,7 +4353,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2093
+#: development.docbook:2112
 #, no-c-format
 msgid ""
 "int document.firstColumn(<parameter>int <replaceable>line</replaceable></"
@@ -4328,7 +4361,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2094
+#: development.docbook:2113
 #, no-c-format
 msgid ""
 "Returns the first non-whitespace column in the given <replaceable>line</"
@@ -4337,7 +4370,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2102
+#: development.docbook:2121
 #, no-c-format
 msgid ""
 "int document.lastColumn(<parameter>int <replaceable>line</replaceable></"
@@ -4345,7 +4378,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2103
+#: development.docbook:2122
 #, no-c-format
 msgid ""
 "Returns the last non-whitespace column in the given <replaceable>line</"
@@ -4354,7 +4387,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2111
+#: development.docbook:2130
 #, no-c-format
 msgid ""
 "int document.prevNonSpaceColumn(<parameter>int <replaceable>line</"
@@ -4365,7 +4398,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2112
+#: development.docbook:2131
 #, no-c-format
 msgid ""
 "Returns the column with a non-whitespace character starting at the given "
@@ -4373,7 +4406,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2120
+#: development.docbook:2139
 #, no-c-format
 msgid ""
 "int document.nextNonSpaceColumn(<parameter>int <replaceable>line</"
@@ -4384,7 +4417,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2121
+#: development.docbook:2140
 #, no-c-format
 msgid ""
 "Returns the column with a non-whitespace character starting at the given "
@@ -4392,7 +4425,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2129
+#: development.docbook:2148
 #, no-c-format
 msgid ""
 "int document.prevNonEmptyLine(<parameter>int <replaceable>line</"
@@ -4400,7 +4433,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2130
+#: development.docbook:2149
 #, no-c-format
 msgid ""
 "Returns the next non-empty line containing non-whitespace characters "
@@ -4408,7 +4441,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2138
+#: development.docbook:2157
 #, no-c-format
 msgid ""
 "int document.nextNonEmptyLine(<parameter>int <replaceable>line</"
@@ -4416,7 +4449,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2139
+#: development.docbook:2158
 #, no-c-format
 msgid ""
 "Returns the next non-empty line containing non-whitespace characters "
@@ -4424,7 +4457,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2147
+#: development.docbook:2166
 #, no-c-format
 msgid ""
 "bool document.isInWord(<parameter>String <replaceable>character</"
@@ -4433,7 +4466,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2148
+#: development.docbook:2167
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if the given <replaceable>character</"
@@ -4442,7 +4475,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2157
+#: development.docbook:2176
 #, no-c-format
 msgid ""
 "bool document.canBreakAt(<parameter>String <replaceable>character</"
@@ -4451,7 +4484,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2158
+#: development.docbook:2177
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if the given <replaceable>character</"
@@ -4460,7 +4493,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2167
+#: development.docbook:2186
 #, no-c-format
 msgid ""
 "bool document.canComment(<parameter>int <replaceable>startAttribute</"
@@ -4469,7 +4502,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2168
+#: development.docbook:2187
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if a range starting and ending with the "
@@ -4478,7 +4511,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2176
+#: development.docbook:2195
 #, no-c-format
 msgid ""
 "String document.commentMarker(<parameter>int <replaceable>attribute</"
@@ -4486,7 +4519,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2177
+#: development.docbook:2196
 #, no-c-format
 msgid ""
 "Returns the comment marker for single line comments for a given "
@@ -4494,7 +4527,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2184
+#: development.docbook:2203
 #, no-c-format
 msgid ""
 "String document.commentStart(<parameter>int <replaceable>attribute</"
@@ -4502,7 +4535,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2185
+#: development.docbook:2204
 #, no-c-format
 msgid ""
 "Returns the comment marker for the start of multi-line comments for a given "
@@ -4510,7 +4543,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2193
+#: development.docbook:2212
 #, no-c-format
 msgid ""
 "String document.commentEnd(<parameter>int <replaceable>attribute</"
@@ -4518,7 +4551,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2194
+#: development.docbook:2213
 #, no-c-format
 msgid ""
 "Returns the comment marker for the end of multi-line comments for a given "
@@ -4526,25 +4559,25 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2202
+#: development.docbook:2221
 #, no-c-format
 msgid "Range document.documentRange();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2203
+#: development.docbook:2222
 #, no-c-format
 msgid "Returns a range that encompasses the whole document."
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2210
+#: development.docbook:2229
 #, no-c-format
 msgid "Cursor documentEnd();"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2211
+#: development.docbook:2230
 #, no-c-format
 msgid ""
 "Returns a cursor positioned at the last column of the last line in the "
@@ -4552,7 +4585,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2218
+#: development.docbook:2237
 #, no-c-format
 msgid ""
 "bool isValidTextPosition(<parameter>int <replaceable>line</replaceable></"
@@ -4562,7 +4595,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2219
+#: development.docbook:2238
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if the given cursor position is positioned "
@@ -4572,7 +4605,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2230
+#: development.docbook:2249
 #, no-c-format
 msgid ""
 "int document.attribute(<parameter>int <replaceable>line</replaceable></"
@@ -4582,13 +4615,13 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2231
+#: development.docbook:2250
 #, no-c-format
 msgid "Returns the attribute at the given cursor position."
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2238
+#: development.docbook:2257
 #, no-c-format
 msgid ""
 "bool document.isAttribute(<parameter>int <replaceable>line</replaceable></"
@@ -4600,7 +4633,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2239
+#: development.docbook:2258
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if the attribute at the given cursor "
@@ -4609,7 +4642,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2247
+#: development.docbook:2266
 #, no-c-format
 msgid ""
 "String document.attributeName(<parameter>int <replaceable>line</"
@@ -4620,7 +4653,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2248
+#: development.docbook:2267
 #, no-c-format
 msgid ""
 "Returns the attribute name as human readable text. This is equal to the "
@@ -4628,7 +4661,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2256
+#: development.docbook:2275
 #, no-c-format
 msgid ""
 "bool document.isAttributeName(<parameter>int <replaceable>line</"
@@ -4640,7 +4673,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2257
+#: development.docbook:2276
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if the attribute name at a certain cursor "
@@ -4649,7 +4682,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2265
+#: development.docbook:2284
 #, no-c-format
 msgid ""
 "String document.variable(<parameter>String <replaceable>key</replaceable></"
@@ -4657,7 +4690,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2266
+#: development.docbook:2285
 #, no-c-format
 msgid ""
 "Returns the value of the requested document variable <replaceable>key</"
@@ -4666,7 +4699,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2274
+#: development.docbook:2293
 #, no-c-format
 msgid ""
 "void document.setVariable(<parameter>String <replaceable>key</replaceable></"
@@ -4674,7 +4707,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2275
+#: development.docbook:2294
 #, no-c-format
 msgid ""
 "Set the value of the requested document variable <replaceable>key</"
@@ -4682,20 +4715,20 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2278
+#: development.docbook:2297
 #, no-c-format
 msgid ""
 "See also: <link linkend=\"config-variables\">Kate document variables</link>"
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2281
+#: development.docbook:2300
 #, no-c-format
 msgid "Since: &kde; 4.8"
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2288
+#: development.docbook:2307
 #, no-c-format
 msgid ""
 "int document.firstVirtualColumn(<parameter>int <replaceable>line</"
@@ -4703,7 +4736,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2289
+#: development.docbook:2308
 #, no-c-format
 msgid ""
 "Returns the virtual column of the first non-whitespace character in the "
@@ -4712,7 +4745,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2297
+#: development.docbook:2316
 #, no-c-format
 msgid ""
 "int document.lastVirtualColumn(<parameter>int <replaceable>line</"
@@ -4720,7 +4753,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2298
+#: development.docbook:2317
 #, no-c-format
 msgid ""
 "Returns the virtual column of the last non-whitespace character in the given "
@@ -4729,7 +4762,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2306
+#: development.docbook:2325
 #, no-c-format
 msgid ""
 "int document.toVirtualColumn(<parameter>int <replaceable>line</replaceable></"
@@ -4741,7 +4774,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2307
+#: development.docbook:2326
 #, no-c-format
 msgid ""
 "Converts the given <quote>real</quote> cursor position to a virtual cursor "
@@ -4749,7 +4782,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2315
+#: development.docbook:2334
 #, no-c-format
 msgid ""
 "int document.fromVirtualColumn(<parameter>int <replaceable>line</"
@@ -4762,7 +4795,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2316
+#: development.docbook:2335
 #, no-c-format
 msgid ""
 "Converts the given virtual cursor position to a <quote>real</quote> cursor "
@@ -4770,7 +4803,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2324
+#: development.docbook:2343
 #, no-c-format
 msgid ""
 "Cursor document.anchor(<parameter>int <replaceable>line</replaceable></"
@@ -4782,7 +4815,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2325
+#: development.docbook:2344
 #, no-c-format
 msgid ""
 "Searches backward for the given character starting from the given cursor. As "
@@ -4792,7 +4825,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2335
+#: development.docbook:2354
 #, no-c-format
 msgid ""
 "Cursor document.rfind(<parameter>int <replaceable>line</replaceable></"
@@ -4805,7 +4838,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2336
+#: development.docbook:2355
 #, no-c-format
 msgid ""
 "Find searching backwards the given text with the appropriate "
@@ -4815,7 +4848,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2345
+#: development.docbook:2364
 #, no-c-format
 msgid ""
 "int document.defStyleNum(<parameter>int <replaceable>line</replaceable></"
@@ -4825,13 +4858,13 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2346
+#: development.docbook:2365
 #, no-c-format
 msgid "Returns the default style used at the given cursor position."
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2353
+#: development.docbook:2372
 #, no-c-format
 msgid ""
 "bool document.isCode(<parameter>int <replaceable>line</replaceable></"
@@ -4841,7 +4874,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2354
+#: development.docbook:2373
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if the attribute at the given cursor "
@@ -4851,7 +4884,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2365
+#: development.docbook:2384
 #, no-c-format
 msgid ""
 "bool document.isComment(<parameter>int <replaceable>line</replaceable></"
@@ -4861,7 +4894,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2366
+#: development.docbook:2385
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if the attribute of the character at the "
@@ -4870,7 +4903,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2374
+#: development.docbook:2393
 #, no-c-format
 msgid ""
 "bool document.isString(<parameter>int <replaceable>line</replaceable></"
@@ -4880,7 +4913,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2375
+#: development.docbook:2394
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if the attribute of the character at the "
@@ -4889,7 +4922,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2383
+#: development.docbook:2402
 #, no-c-format
 msgid ""
 "bool document.isRegionMarker(<parameter>int <replaceable>line</replaceable></"
@@ -4899,7 +4932,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2384
+#: development.docbook:2403
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if the attribute of the character at the "
@@ -4908,7 +4941,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2392
+#: development.docbook:2411
 #, no-c-format
 msgid ""
 "bool document.isChar(<parameter>int <replaceable>line</replaceable></"
@@ -4918,7 +4951,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2393
+#: development.docbook:2412
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if the attribute of the character at the "
@@ -4927,7 +4960,7 @@ msgid ""
 msgstr ""
 
 #. Tag: synopsis
-#: development.docbook:2401
+#: development.docbook:2420
 #, no-c-format
 msgid ""
 "bool document.isOthers(<parameter>int <replaceable>line</replaceable></"
@@ -4937,12 +4970,69 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: development.docbook:2402
+#: development.docbook:2421
 #, no-c-format
 msgid ""
 "Returns <literal>true</literal>, if the attribute of the character at the "
 "cursor position is <literal>dsOthers</literal>, otherwise <literal>false</"
 "literal>."
+msgstr ""
+
+#. Tag: title
+#: development.docbook:2433
+#, no-c-format
+msgid "The Editor API"
+msgstr ""
+
+#. Tag: para
+#: development.docbook:2434
+#, no-c-format
+msgid ""
+"In addition to the document and view API, there is a general editor API that "
+"provides functions for general editor scripting functionality."
+msgstr ""
+
+#. Tag: synopsis
+#: development.docbook:2441
+#, no-c-format
+msgid "String editor.clipboardText();"
+msgstr ""
+
+#. Tag: para
+#: development.docbook:2442
+#, no-c-format
+msgid "Returns the text that currently is in the global clipboard."
+msgstr ""
+
+#. Tag: synopsis
+#: development.docbook:2450
+#, no-c-format
+msgid "String editor.clipboardHistory();"
+msgstr ""
+
+#. Tag: para
+#: development.docbook:2451
+#, no-c-format
+msgid ""
+"The editor holds a clipboard history that contains up to 10 clipboard "
+"entries. This function returns all entries that currently are in the "
+"clipboard history."
+msgstr ""
+
+#. Tag: synopsis
+#: development.docbook:2460
+#, no-c-format
+msgid ""
+"void editor.setClipboardText(<parameter>String <replaceable>text</"
+"replaceable></parameter>);"
+msgstr ""
+
+#. Tag: para
+#: development.docbook:2461
+#, no-c-format
+msgid ""
+"Set the contents of the clipboard to <replaceable>text</replaceable>. The "
+"<replaceable>text</replaceable> will be added to the clipboard history."
 msgstr ""
 
 #~ msgid "&Anders.Lund; &Anders.Lund.mail;"
