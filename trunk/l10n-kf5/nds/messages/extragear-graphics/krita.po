@@ -74,7 +74,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-10-11 03:42+0200\n"
+"POT-Creation-Date: 2018-10-12 03:52+0200\n"
 "PO-Revision-Date: 2014-02-17 01:14+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -7260,12 +7260,6 @@ msgctxt "action"
 msgid "Workspaces"
 msgstr "Arbeitrebeden"
 
-#: krita/main.cc:390 libs/ui/KisApplication.cpp:364
-#, fuzzy, kde-format
-msgctxt "@title:window"
-msgid "Krita: Warning"
-msgstr "Worschoen!"
-
 #: krita/main.cc:391
 #, kde-format
 msgid ""
@@ -8277,6 +8271,7 @@ msgstr "Grött"
 #: plugins/paintops/libpaintop/forms/wdgbrushchooser.ui:128
 #: plugins/paintops/libpaintop/kis_auto_brush_widget.cpp:63
 #: plugins/paintops/libpaintop/kis_brush_chooser.cpp:118
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.cc:370
 #: plugins/paintops/libpaintop/kis_texture_chooser.cpp:43
 #: plugins/paintops/libpaintop/kis_texture_chooser.cpp:45
 #: plugins/paintops/libpaintop/sensors/kis_dynamic_sensor_fade.cpp:65
@@ -11509,7 +11504,7 @@ msgstr "En Achtergrund utsöken"
 #: plugins/assistants/Assistants/kis_assistant_tool.cc:822
 #: plugins/assistants/Assistants/kis_assistant_tool.cc:825
 #: plugins/dockers/gamutmask/gamutmask_dock.cpp:299
-#: plugins/extensions/animationrenderer/AnimationRenderer.cpp:159
+#: plugins/extensions/animationrenderer/AnimationRenderer.cpp:160
 #: plugins/extensions/animationrenderer/DlgAnimationRenderer.cpp:477
 #: plugins/extensions/animationrenderer/DlgAnimationRenderer.cpp:481
 #: plugins/extensions/animationrenderer/DlgAnimationRenderer.cpp:487
@@ -12803,7 +12798,11 @@ msgstr "Makro nu opnehmen"
 #: plugins/paintops/curvebrush/kis_curve_paintop_settings.cpp:142
 #: plugins/paintops/experiment/kis_experiment_paintop_settings.cpp:94
 #: plugins/paintops/experiment/kis_experiment_paintop_settings.cpp:169
+#: plugins/paintops/libpaintop/kis_curve_option.cpp:136
 #: plugins/paintops/libpaintop/kis_curve_option_widget.cpp:87
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.cc:366
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.cc:381
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:173
 #: plugins/paintops/spray/kis_spray_paintop_settings.cpp:179
 #: plugins/tools/defaulttool/connectionTool/ConnectionPointWidget.ui:116
 #, no-c-format, kde-format
@@ -23600,25 +23599,25 @@ msgctxt "@item:inmenu"
 msgid "Change audio (%1)..."
 msgstr "Sekern..."
 
-#: plugins/dockers/animation/timeline_frames_view.cpp:954
+#: plugins/dockers/animation/timeline_frames_view.cpp:957
 #, fuzzy, kde-format
 msgctxt "@item:inmenu"
 msgid "Keyframes"
 msgstr "Naam infögen"
 
-#: plugins/dockers/animation/timeline_frames_view.cpp:962
+#: plugins/dockers/animation/timeline_frames_view.cpp:965
 #, fuzzy, kde-format
 msgctxt "@item:inmenu"
 msgid "Hold Frames"
 msgstr "Koperen vun"
 
-#: plugins/dockers/animation/timeline_frames_view.cpp:1426
+#: plugins/dockers/animation/timeline_frames_view.cpp:1429
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Insert or Remove Hold Frames"
 msgstr "Naam infögen"
 
-#: plugins/dockers/animation/timeline_frames_view.cpp:1427
+#: plugins/dockers/animation/timeline_frames_view.cpp:1430
 #, fuzzy, kde-format
 #| msgid "Enter group name:"
 msgctxt "@label:spinbox"
@@ -24747,14 +24746,20 @@ msgstr "Andockers wiesen"
 msgid "Render Animation"
 msgstr "Utrichten"
 
-#: plugins/extensions/animationrenderer/AnimationRenderer.cpp:159
+#: plugins/extensions/animationrenderer/AnimationRenderer.cpp:151
+#, fuzzy, kde-format
+#| msgid "Could not create the file for saving"
+msgid "Could not open %1 for writing!"
+msgstr "Datei för't Sekern lett sik nich opstellen"
+
+#: plugins/extensions/animationrenderer/AnimationRenderer.cpp:160
 #, fuzzy, kde-format
 msgid ""
 "Could not render animation:\n"
 "%1"
 msgstr "Nieg Instellen %1"
 
-#: plugins/extensions/animationrenderer/AnimationRenderer.cpp:170
+#: plugins/extensions/animationrenderer/AnimationRenderer.cpp:171
 #, fuzzy, kde-format
 #| msgid "Failed to create an action."
 msgid "Failed to render animation frames!"
@@ -27345,6 +27350,9 @@ msgstr "Scheerwinkel X:"
 #: plugins/filters/phongbumpmap/wdgphongbumpmap.ui:1099
 #: plugins/flake/pathshapes/ellipse/EllipseShapeConfigWidget.ui:55
 #: plugins/flake/pathshapes/ellipse/EllipseShapeConfigWidget.ui:72
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.cc:379
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:171
+#: plugins/paintops/libpaintop/kis_pressure_rotation_option.cpp:85
 #: plugins/paintops/libpaintop/sensors/kis_dynamic_sensor_drawing_angle.cpp:93
 #: plugins/paintops/libpaintop/sensors/kis_dynamic_sensor_drawing_angle.cpp:102
 #, kde-format
@@ -31694,8 +31702,8 @@ msgid ""
 msgstr ""
 
 #: plugins/impex/libkra/kis_kra_load_visitor.cpp:155
-#: plugins/impex/libkra/kis_kra_loader.cpp:850
-#: plugins/impex/libkra/kis_kra_loader.cpp:1204
+#: plugins/impex/libkra/kis_kra_loader.cpp:853
+#: plugins/impex/libkra/kis_kra_loader.cpp:1207
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "File not found"
@@ -31826,7 +31834,7 @@ msgstr "Laag-Grött"
 msgid "Failure loading layer %1 of type: %2."
 msgstr ""
 
-#: plugins/impex/libkra/kis_kra_loader.cpp:845
+#: plugins/impex/libkra/kis_kra_loader.cpp:848
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -31838,7 +31846,7 @@ msgid ""
 "Do you want to locate it manually?"
 msgstr ""
 
-#: plugins/impex/libkra/kis_kra_loader.cpp:1199
+#: plugins/impex/libkra/kis_kra_loader.cpp:1202
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -33224,7 +33232,7 @@ msgstr ""
 msgid "Video Export Error"
 msgstr "Pielrecht Rand"
 
-#: plugins/impex/video/kis_video_export.cpp:92
+#: plugins/impex/video/kis_video_export.cpp:93
 #, kde-format
 msgid ""
 "FFMpeg failed to convert the image sequence. Check the logfile in your "
@@ -33470,13 +33478,18 @@ msgid ""
 "destination streams of the ffmpeg"
 msgstr ""
 
-#: plugins/impex/video/video_saver.cpp:281
+#: plugins/impex/video/video_saver.cpp:220
+#, fuzzy, kde-format
+msgid "ffmpeg could not be found at %1"
+msgstr "Laag lett sik nich dat Bild tofögen."
+
+#: plugins/impex/video/video_saver.cpp:282
 #, fuzzy, kde-format
 msgid "Fetching palette..."
 msgstr "Klörensett bewerken..."
 
-#: plugins/impex/video/video_saver.cpp:309
-#: plugins/impex/video/video_saver.cpp:352
+#: plugins/impex/video/video_saver.cpp:310
+#: plugins/impex/video/video_saver.cpp:353
 #, fuzzy, kde-format
 #| msgid "Export Layer"
 msgid "Encoding frames..."
@@ -34862,8 +34875,8 @@ msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label)
 #. i18n: ectx: property (toolTip), widget (QComboBox, curveMode)
-#: plugins/paintops/libpaintop/forms/wdgcurveoption.ui:407
-#: plugins/paintops/libpaintop/forms/wdgcurveoption.ui:423
+#: plugins/paintops/libpaintop/forms/wdgcurveoption.ui:490
+#: plugins/paintops/libpaintop/forms/wdgcurveoption.ui:506
 #, kde-format
 msgid ""
 "<html><head/><body>\n"
@@ -34880,41 +34893,41 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: plugins/paintops/libpaintop/forms/wdgcurveoption.ui:410
+#: plugins/paintops/libpaintop/forms/wdgcurveoption.ui:493
 #, fuzzy, kde-format
 #| msgid "Selection mode:"
 msgid "Curves calculation mode:"
 msgstr "Köörbedrief:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, curveMode)
-#: plugins/paintops/libpaintop/forms/wdgcurveoption.ui:430
+#: plugins/paintops/libpaintop/forms/wdgcurveoption.ui:513
 #, fuzzy, kde-format
 msgid "multiply"
 msgstr "Ümreet:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, curveMode)
-#: plugins/paintops/libpaintop/forms/wdgcurveoption.ui:435
+#: plugins/paintops/libpaintop/forms/wdgcurveoption.ui:518
 #, fuzzy, kde-format
 #| msgid "Addition"
 msgid "addition"
 msgstr "Totellen"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, curveMode)
-#: plugins/paintops/libpaintop/forms/wdgcurveoption.ui:440
+#: plugins/paintops/libpaintop/forms/wdgcurveoption.ui:523
 #, fuzzy, kde-format
 #| msgid "Maximum:"
 msgid "maximum"
 msgstr "Hööchst:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, curveMode)
-#: plugins/paintops/libpaintop/forms/wdgcurveoption.ui:445
+#: plugins/paintops/libpaintop/forms/wdgcurveoption.ui:528
 #, fuzzy, kde-format
 #| msgid "Minimum:"
 msgid "minimum"
 msgstr "Sietst:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, curveMode)
-#: plugins/paintops/libpaintop/forms/wdgcurveoption.ui:450
+#: plugins/paintops/libpaintop/forms/wdgcurveoption.ui:533
 #, fuzzy, kde-format
 #| msgid "Difference"
 msgid "difference"
@@ -35365,6 +35378,12 @@ msgstr "30°"
 #, kde-format
 msgid "Near"
 msgstr "Neeg"
+
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.cc:372
+#, fuzzy, kde-format
+#| msgid "0 s"
+msgid " ms"
+msgstr "0 s"
 
 #: plugins/paintops/libpaintop/kis_dynamic_sensor.h:40
 #, fuzzy, kde-format
@@ -41557,6 +41576,11 @@ msgstr "Dekoratschonen wiesen"
 #, kde-format
 msgid "Work Recursively"
 msgstr ""
+
+#, fuzzy
+#~ msgctxt "@title:window"
+#~ msgid "Krita: Warning"
+#~ msgstr "Worschoen!"
 
 #, fuzzy
 #~| msgid "Scrollbars"
