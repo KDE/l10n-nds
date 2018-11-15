@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-11-12 04:04+0100\n"
+"POT-Creation-Date: 2018-11-15 04:03+0100\n"
 "PO-Revision-Date: 2014-09-18 16:04+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -194,7 +194,7 @@ msgstr "IPv4"
 msgid "IPv6"
 msgstr "IPv6"
 
-#: editor/connectioneditorbase.cpp:450
+#: editor/connectioneditorbase.cpp:458
 #, kde-format
 msgid "Failed to get secrets for %1"
 msgstr "Anmelldaten för „%1“ laat sik nich halen"
@@ -307,7 +307,7 @@ msgstr "DUN (Inwählnettwark)"
 msgid "PAN (personal area network)"
 msgstr "PAN (Persoonrebeet-Nettwark)"
 
-#: editor/settings/connectionwidget.cpp:175
+#: editor/settings/connectionwidget.cpp:168
 #, kde-format
 msgctxt "@title:window advanced permissions editor"
 msgid "Advanced Permissions Editor"
@@ -658,9 +658,11 @@ msgstr "PEAP-&Verschoon:"
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, mtu)
 #. i18n: ectx: property (text), item, widget (KComboBox, method)
 #. i18n: ectx: property (text), item, widget (KComboBox, band)
+#. i18n: ectx: property (text), item, widget (KComboBox, metered)
 #. i18n: ectx: property (text), item, widget (KComboBox, peapVersion)
-#: editor/settings/ui/802-1x.ui:635 editor/settings/ui/infiniband.ui:80
-#: editor/settings/ui/ipv4.ui:49 editor/settings/ui/ipv6.ui:227
+#: editor/settings/ui/802-1x.ui:635 editor/settings/ui/connectionwidget.ui:160
+#: editor/settings/ui/infiniband.ui:80 editor/settings/ui/ipv4.ui:49
+#: editor/settings/ui/ipv6.ui:227
 #: editor/settings/ui/wificonnectionwidget.ui:141
 #: editor/settings/ui/wificonnectionwidget.ui:271
 #: editor/settings/ui/wiredconnectionwidget.ui:112
@@ -795,9 +797,8 @@ msgstr " s"
 msgid "Enable STP (Spanning Tree Protocol)"
 msgstr "STP („Spanning Tree Protocol“) anmaken"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: editor/settings/ui/bridge.ui:151 editor/settings/ui/connectionwidget.ui:132
+#: editor/settings/ui/bridge.ui:151
 #, kde-format
 msgid "Priority:"
 msgstr "Prioriteet:"
@@ -840,52 +841,13 @@ msgstr "Nummer:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, autoconnect)
 #: editor/settings/ui/connectionwidget.ui:17
-#, kde-format
-msgid "Automatically connect to this network when it is available"
-msgstr "Automaatsch na dit Nettwark tokoppeln, wenn dat verföögbor is"
-
-#. i18n: ectx: property (text), widget (QCheckBox, allUsers)
-#: editor/settings/ui/connectionwidget.ui:29
-#, kde-format
-msgid "All users may connect to this network"
-msgstr "All Brukers dörvt sik dit Nettwark tokoppeln"
-
-#. i18n: ectx: property (toolTip), widget (QPushButton, pushButtonPermissions)
-#: editor/settings/ui/connectionwidget.ui:45
-#, kde-format
-msgid "Edit advanced permissions for this connection"
-msgstr "Verwiedert Verlöven för disse Verbinnen bewerken"
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, pushButtonPermissions)
-#: editor/settings/ui/connectionwidget.ui:48
-#, kde-format
-msgid ""
-"Fine-grained permissions editor for this connection. It lets you choose "
-"which users can activate/modify/delete this connection."
-msgstr ""
-"Bannig nau Verlöven-Editor för disse Verbinnen. Hier kannst Du utsöken, "
-"welke Brukers disse Verbinnen anmaken, ännern oder wegmaken dörvt."
-
-#. i18n: ectx: property (text), widget (QPushButton, pushButtonPermissions)
-#: editor/settings/ui/connectionwidget.ui:51
-#, kde-format
-msgid "Advanced..."
-msgstr "Verwiedert..."
-
-#. i18n: ectx: property (text), widget (QCheckBox, autoconnectVpn)
-#: editor/settings/ui/connectionwidget.ui:83
-#, kde-format
-msgid "Automatically connect to VPN when using this connection"
-msgstr "Bi Bruuk vun disse Verbinnen jümmers na VPN tokoppeln"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: editor/settings/ui/connectionwidget.ui:119
-#, kde-format
-msgid "Firewall zone:"
-msgstr "Nettdiek-Rebeet:"
+#, fuzzy, kde-format
+#| msgid "Ignore automatically obtained routes"
+msgid "Connect automatically with priority"
+msgstr "Automaatsch haalt Nettweeg övergahn"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, prioritySpin)
-#: editor/settings/ui/connectionwidget.ui:164
+#: editor/settings/ui/connectionwidget.ui:38
 #, kde-format
 msgid ""
 "If the connection is set to autoconnect, connections with higher priority "
@@ -895,11 +857,75 @@ msgid ""
 "           "
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, nmVersionWarning)
-#: editor/settings/ui/connectionwidget.ui:190
+#. i18n: ectx: property (text), widget (QCheckBox, allUsers)
+#: editor/settings/ui/connectionwidget.ui:48
 #, kde-format
-msgid "(Priority property requires newer version of NetworkManager)"
+msgid "All users may connect to this network"
+msgstr "All Brukers dörvt sik dit Nettwark tokoppeln"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, pushButtonPermissions)
+#: editor/settings/ui/connectionwidget.ui:64
+#, kde-format
+msgid "Edit advanced permissions for this connection"
+msgstr "Verwiedert Verlöven för disse Verbinnen bewerken"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, pushButtonPermissions)
+#: editor/settings/ui/connectionwidget.ui:67
+#, kde-format
+msgid ""
+"Fine-grained permissions editor for this connection. It lets you choose "
+"which users can activate/modify/delete this connection."
 msgstr ""
+"Bannig nau Verlöven-Editor för disse Verbinnen. Hier kannst Du utsöken, "
+"welke Brukers disse Verbinnen anmaken, ännern oder wegmaken dörvt."
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButtonPermissions)
+#: editor/settings/ui/connectionwidget.ui:70
+#, kde-format
+msgid "Advanced..."
+msgstr "Verwiedert..."
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoconnectVpn)
+#: editor/settings/ui/connectionwidget.ui:81
+#, fuzzy, kde-format
+#| msgid "Automatically connect to VPN when using this connection"
+msgid "Automatically connect to VPN"
+msgstr "Bi Bruuk vun disse Verbinnen jümmers na VPN tokoppeln"
+
+#. i18n: ectx: property (text), widget (QLabel, firewallZoneLabel)
+#: editor/settings/ui/connectionwidget.ui:101
+#, kde-format
+msgid "Firewall zone:"
+msgstr "Nettdiek-Rebeet:"
+
+#. i18n: ectx: property (text), widget (QLabel, meteredLabel)
+#: editor/settings/ui/connectionwidget.ui:130
+#, kde-format
+msgid "Metered:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, metered)
+#: editor/settings/ui/connectionwidget.ui:150
+#, kde-format
+msgid ""
+"NetworkManager indicates to applications whether the connection is metered "
+"and therefore\n"
+"data usage should be restricted."
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, metered)
+#: editor/settings/ui/connectionwidget.ui:165
+#, kde-format
+msgid "Yes"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, metered)
+#: editor/settings/ui/connectionwidget.ui:170
+#, fuzzy, kde-format
+#| msgctxt "no security"
+#| msgid "None"
+msgid "No"
+msgstr "Keen"
 
 #. i18n: ectx: property (title), widget (QGroupBox, basicGroup)
 #: editor/settings/ui/gsm.ui:18
@@ -3056,6 +3082,9 @@ msgctxt ""
 "Label for last used time for a network connection that has never been used"
 msgid "Never used"
 msgstr "Nienich bruukt"
+
+#~ msgid "Automatically connect to this network when it is available"
+#~ msgstr "Automaatsch na dit Nettwark tokoppeln, wenn dat verföögbor is"
 
 #~ msgid "Network name:"
 #~ msgstr "Nettwarknaam:"
