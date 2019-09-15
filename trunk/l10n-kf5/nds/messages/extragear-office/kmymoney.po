@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmymoney\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-09-07 02:40+0200\n"
+"POT-Creation-Date: 2019-09-15 02:40+0200\n"
 "PO-Revision-Date: 2014-07-03 09:44+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -131,8 +131,8 @@ msgid "Error creating security record: %1"
 msgstr "Fehler bi't Opstellen vun Weertpapeer-Indrag: %1"
 
 #: kmymoney/converter/mymoneystatementreader.cpp:638
-#: kmymoney/plugins/kbanking/kbanking.cpp:590
-#: kmymoney/plugins/kbanking/kbanking.cpp:613
+#: kmymoney/plugins/kbanking/kbanking.cpp:555
+#: kmymoney/plugins/kbanking/kbanking.cpp:577
 #: kmymoney/plugins/views/onlinejoboutbox/onlinejobmessagesmodel.cpp:61
 #, kde-format
 msgid "Error"
@@ -736,7 +736,7 @@ msgstr "Kösten"
 #: kmymoney/dialogs/stdtransactioneditor.cpp:244
 #: kmymoney/models/accountsmodel.cpp:772
 #: kmymoney/plugins/csv/export/csvwriter.cpp:110
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:183
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:173
 #: kmymoney/plugins/qif/export/kexportdlgdecl.ui:247
 #: kmymoney/plugins/views/budget/kbudgetview.ui:207
 #: kmymoney/plugins/views/forecast/kforecastview_p.h:197
@@ -922,7 +922,7 @@ msgstr "Notiz"
 #: kmymoney/plugins/csv/export/csvwriter.cpp:110
 #: kmymoney/plugins/csv/export/csvwriter.cpp:115
 #: kmymoney/plugins/csv/import/securitiesdlg.ui:72
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:184
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:174
 #: kmymoney/views/newtransactioneditor.ui:189
 #: kmymoney/views/newtransactionform.ui:152
 #: kmymoney/widgets/investtransaction.cpp:372
@@ -11896,57 +11896,42 @@ msgstr "Eerst mööglich Datum"
 msgid "Pick &date"
 msgstr "Datum utsöken"
 
-#: kmymoney/plugins/kbanking/kbanking.cpp:296
+#: kmymoney/plugins/kbanking/kbanking.cpp:277
 #: kmymoney/plugins/ofx/import/ofximporter.cpp:777
 #, kde-format
 msgid "Online settings"
 msgstr "Internett-Instellen"
 
-#: kmymoney/plugins/kbanking/kbanking.cpp:302
+#: kmymoney/plugins/kbanking/kbanking.cpp:283
 #, kde-format
 msgid "KBanking module not correctly initialized"
 msgstr "KBanking-Moduul nich propper torechtmaakt"
 
-#: kmymoney/plugins/kbanking/kbanking.cpp:322
+#: kmymoney/plugins/kbanking/kbanking.cpp:303
 #, kde-format
 msgid "Configure Aq&Banking..."
 msgstr "Aq&Banking instellen..."
 
-#: kmymoney/plugins/kbanking/kbanking.cpp:326
+#: kmymoney/plugins/kbanking/kbanking.cpp:307
 #, kde-format
 msgid "AqBanking importer..."
 msgstr "AqBanking-Importeermoduul..."
 
-#: kmymoney/plugins/kbanking/kbanking.cpp:493
-#: kmymoney/plugins/kbanking/kbanking.cpp:759
+#: kmymoney/plugins/kbanking/kbanking.cpp:474
+#: kmymoney/plugins/kbanking/kbanking.cpp:722
 #, kde-format
 msgid ""
 "<qt>The given application account <b>%1</b> has not been mapped to an online "
 "account.</qt>"
 msgstr "<qt>Dat angeven Konto <b>%1</b> wöör keen Nettkonto towiest.</qt>"
 
-#: kmymoney/plugins/kbanking/kbanking.cpp:499
+#: kmymoney/plugins/kbanking/kbanking.cpp:480
 #, kde-format
 msgid "Account Not Mapped"
 msgstr "Konto nich towiest"
 
-#: kmymoney/plugins/kbanking/kbanking.cpp:509
-#, kde-format
-msgid ""
-"<qt>The update job is not supported by the bank/account/backend.\n"
-"</qt>"
-msgstr ""
-"<qt>Opgaav \"Opfrischen\" warrt vun Bank, Konto oder Hülpprogramm nich "
-"ünnerstütt.\n"
-"</qt>"
-
-#: kmymoney/plugins/kbanking/kbanking.cpp:513
-#, kde-format
-msgid "Job not Available"
-msgstr "Opgaav nich verföögbor"
-
-#: kmymoney/plugins/kbanking/kbanking.cpp:587
-#: kmymoney/plugins/kbanking/kbanking.cpp:610
+#: kmymoney/plugins/kbanking/kbanking.cpp:552
+#: kmymoney/plugins/kbanking/kbanking.cpp:574
 #, kde-format
 msgid ""
 "<qt>Could not enqueue the job.\n"
@@ -11955,12 +11940,12 @@ msgstr ""
 "<qt>De Opgaav lett sik nich inregen.\n"
 "</qt>"
 
-#: kmymoney/plugins/kbanking/kbanking.cpp:1554
+#: kmymoney/plugins/kbanking/kbanking.cpp:1496
 #, kde-format
 msgid "Error importing statement. Do you want to continue?"
 msgstr "Fehler bi't Importeren vun Kontouttog. Wullt Du wiedermaken?"
 
-#: kmymoney/plugins/kbanking/kbanking.cpp:1555
+#: kmymoney/plugins/kbanking/kbanking.cpp:1497
 #: kmymoney/plugins/views/reports/kreportsview.cpp:326
 #: kmymoney/plugins/views/reports/kreportsview.cpp:383
 #: kmymoney/plugins/views/reports/kreportsview.cpp:402
@@ -12148,132 +12133,141 @@ msgctxt "Header for AqBanking account list"
 msgid "Backend"
 msgstr "Hülpprogramm"
 
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:90
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:85
 #, kde-format
 msgid "Get Balance"
 msgstr "Saldo halen"
 
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:93
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:88
 #, kde-format
 msgid "Get Transactions"
 msgstr "Boken halen"
 
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:96
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:91
 #: kmymoney/plugins/views/reports/core/querytable.cpp:762
 #: kmymoney/plugins/views/reports/core/querytable.cpp:873
 #, kde-format
 msgid "Transfer"
 msgstr "Överwiesen"
 
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:99
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:94
 #, kde-format
 msgid "Debit Note"
 msgstr "Lastschrift-Notiz"
 
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:102
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:97
 #, kde-format
 msgctxt "Unknown job type"
 msgid "(unknown)"
 msgstr "(nich begäng)"
 
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:112
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:105
 #, kde-format
 msgctxt "Unknown bank code"
 msgid "(unknown)"
 msgstr "(nich begäng)"
 
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:120
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:111
 #, kde-format
 msgctxt "Unknown account number"
 msgid "(unknown)"
 msgstr "(nich begäng)"
 
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:126
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:118
 #, kde-format
 msgctxt "Status of the job"
 msgid "new"
 msgstr "nieg"
 
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:129
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:121
+#, fuzzy, kde-format
+#| msgctxt "Accept 'imported' and 'matched' transaction"
+#| msgid "Accept"
+msgctxt "Status of the job"
+msgid "accepted"
+msgstr "Annehmen"
+
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:124
 #, kde-format
 msgctxt "Status of the job"
-msgid "updated"
-msgstr "opfrischt"
+msgid "rejected"
+msgstr ""
 
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:132
-#, kde-format
-msgctxt "Status of the job"
-msgid "enqueued"
-msgstr "inreegt"
-
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:135
-#, kde-format
-msgctxt "Status of the job"
-msgid "sent"
-msgstr "loosstüert"
-
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:138
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:127
 #, kde-format
 msgctxt "Status of the job"
 msgid "pending"
 msgstr "utstahn"
 
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:141
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:130
+#, fuzzy, kde-format
+#| msgctxt "Status of the job"
+#| msgid "pending"
+msgctxt "Status of the job"
+msgid "sending"
+msgstr "utstahn"
+
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:133
+#, fuzzy, kde-format
+#| msgctxt "Reconciliation status 'Reconciled'"
+#| msgid "reconciled"
+msgctxt "Status of the job"
+msgid "reconciled (auto)"
+msgstr "utgleken"
+
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:136
+#, fuzzy, kde-format
+#| msgctxt "Reconciliation status 'Reconciled'"
+#| msgid "reconciled"
+msgctxt "Status of the job"
+msgid "reconciled (manual)"
+msgstr "utgleken"
+
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:139
 #, kde-format
 msgctxt "Status of the job"
-msgid "finished"
-msgstr "afslaten"
+msgid "revoked"
+msgstr ""
 
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:144
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:142
+#, fuzzy, kde-format
+#| msgid "Imported"
+msgctxt "Status of the job"
+msgid "aborted"
+msgstr "Importeert"
+
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:145
+#, kde-format
+msgctxt "Status of the job"
+msgid "enqueued"
+msgstr "inreegt"
+
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:148
 #, kde-format
 msgctxt "Status of the job"
 msgid "error"
 msgstr "Fehler"
 
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:147
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:151
 #, kde-format
 msgctxt "Status of the job"
 msgid "(unknown)"
 msgstr "(nich begäng)"
 
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:154
-#, kde-format
-msgctxt "Unknown account provider"
-msgid "(unknown)"
-msgstr "(nich begäng)"
-
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:161
-#, kde-format
-msgctxt "Unknown creator of the job"
-msgid "(unknown)"
-msgstr "(nich begäng)"
-
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:180
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:170
 #, kde-format
 msgid "Job Id"
 msgstr "Opgaven-ID"
 
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:181
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:171
 #, kde-format
 msgid "Job Type"
 msgstr "Opgaventyp"
 
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:182
+#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:172
 #, kde-format
 msgid "Institute"
 msgstr "Bank"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:185
-#: kmymoney/plugins/weboob/dialogs/accountsettings.ui:39
-#, kde-format
-msgid "Backend"
-msgstr "Hülpprogramm"
-
-#: kmymoney/plugins/kbanking/widgets/kbjoblist.cpp:186
-#, kde-format
-msgid "Application"
-msgstr "Programm"
 
 #: kmymoney/plugins/ofx/import/dialogs/kofxdirectconnectdlg.cpp:202
 #: kmymoney/plugins/ofx/import/ofxpartner.cpp:393
@@ -17285,6 +17279,12 @@ msgstr ""
 #| msgid "Get Transactions"
 msgid "Hide Transactions"
 msgstr "Boken halen"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kmymoney/plugins/weboob/dialogs/accountsettings.ui:39
+#, kde-format
+msgid "Backend"
+msgstr "Hülpprogramm"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kmymoney/plugins/weboob/dialogs/accountsettings.ui:46
@@ -24454,6 +24454,40 @@ msgstr ""
 "Söök de Datei (OFX oder QIF) eenfach ut dat Menü \"Datei -> Importeren\" ut."
 "</p>\n"
 "<p>Vun Jose Jorge praatstellt</p>\n"
+
+#~ msgid ""
+#~ "<qt>The update job is not supported by the bank/account/backend.\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>Opgaav \"Opfrischen\" warrt vun Bank, Konto oder Hülpprogramm nich "
+#~ "ünnerstütt.\n"
+#~ "</qt>"
+
+#~ msgid "Job not Available"
+#~ msgstr "Opgaav nich verföögbor"
+
+#~ msgctxt "Status of the job"
+#~ msgid "updated"
+#~ msgstr "opfrischt"
+
+#~ msgctxt "Status of the job"
+#~ msgid "sent"
+#~ msgstr "loosstüert"
+
+#~ msgctxt "Status of the job"
+#~ msgid "finished"
+#~ msgstr "afslaten"
+
+#~ msgctxt "Unknown account provider"
+#~ msgid "(unknown)"
+#~ msgstr "(nich begäng)"
+
+#~ msgctxt "Unknown creator of the job"
+#~ msgid "(unknown)"
+#~ msgstr "(nich begäng)"
+
+#~ msgid "Application"
+#~ msgstr "Programm"
 
 #, fuzzy
 #~| msgid "%1 deposit (%2)"
