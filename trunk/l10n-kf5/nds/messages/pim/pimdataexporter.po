@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-04-26 03:39+0200\n"
+"POT-Creation-Date: 2020-04-27 03:34+0200\n"
 "PO-Revision-Date: 2014-09-18 22:40+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -131,8 +131,8 @@ msgid "\"%1\" file cannot be added to backup file."
 msgstr "\"%1\" lett sik de Sekerheitkopie nich tofögen"
 
 #: core/abstractimportexportjob.cpp:440
-#: core/addressbook/importaddressbookjob.cpp:149
-#: core/mail/importmailjob.cpp:526
+#: core/addressbook/importaddressbookjobinterface.cpp:149
+#: core/mail/importmailjobinterface.cpp:526
 #, kde-format
 msgid "Resources restored."
 msgstr "Ressourcen wedderherstellt."
@@ -185,84 +185,96 @@ msgstr "Musterorner \"%1\" lett sik de Sekerheitkopie nich tofögen."
 msgid "Directory \"%1\" cannot be added to backup file."
 msgstr "Musterorner \"%1\" lett sik de Sekerheitkopie nich tofögen."
 
-#: core/addressbook/exportaddressbookjob.cpp:46
+#: core/addressbook/exportaddressbookjobinterface.cpp:43
 #, kde-format
 msgid "Start export KAddressBook settings..."
 msgstr "Export vun de KAddressbook-Instellen anfungen..."
 
-#: core/addressbook/exportaddressbookjob.cpp:47
+#: core/addressbook/exportaddressbookjobinterface.cpp:44
 #, fuzzy, kde-format
 #| msgid "Start export KAddressBook settings..."
 msgid "Export KAddressBook settings"
 msgstr "Export vun de KAddressbook-Instellen anfungen..."
 
-#: core/addressbook/exportaddressbookjob.cpp:59
-#: core/alarm/exportalarmjob.cpp:60 core/calendar/exportcalendarjob.cpp:62
-#: core/mail/exportmailjob.cpp:239 core/notes/exportnotesjobinterface.cpp:68
+#: core/addressbook/exportaddressbookjobinterface.cpp:56
+#: core/alarm/exportalarmjobinterface.cpp:60
+#: core/calendar/exportcalendarjobinterface.cpp:62
+#: core/mail/exportmailjobinterface.cpp:239
+#: core/notes/exportnotesjobinterface.cpp:68
 #, kde-format
 msgid "Backing up resources..."
 msgstr "Ressourcen warrt sekert..."
 
-#: core/addressbook/exportaddressbookjob.cpp:126
-#: core/alarm/exportalarmjob.cpp:127 core/calendar/exportcalendarjob.cpp:129
-#: core/mail/exportmailjob.cpp:264
+#: core/addressbook/exportaddressbookjobinterface.cpp:78
+#: core/akregator/exportakregatorjobinterface.cpp:55
+#: core/alarm/exportalarmjobinterface.cpp:134
+#: core/calendar/exportcalendarjobinterface.cpp:82
+#: core/mail/exportmailjobinterface.cpp:269
+#: core/notes/exportnotesjobinterface.cpp:89
+#, kde-format
+msgid "Backing up config..."
+msgstr "Instellen warrt sekert..."
+
+#: core/addressbook/exportaddressbookjobinterface.cpp:119
+#: core/akregator/exportakregatorjobinterface.cpp:62
+#: core/alarm/exportalarmjobinterface.cpp:161
+#: core/calendar/exportcalendarjobinterface.cpp:160
+#: core/mail/exportmailjobinterface.cpp:631
+#: core/notes/exportnotesjobinterface.cpp:122
+#, kde-format
+msgid "Config backup done."
+msgstr "Instellen-Sekerheitkopie afslaten."
+
+#: core/addressbook/exportaddressbookjobinterfaceimpl.cpp:99
+#: core/alarm/exportalarmjobinterface.cpp:127
+#: core/calendar/exportcalendarjobinterfaceimpl.cpp:101
+#: core/mail/exportmailjobinterface.cpp:264
 #: core/notes/exportnotesjobinterfaceimpl.cpp:90
 #, kde-format
 msgid "Resources backup done."
 msgstr "Ressourcen-Sekerheitkopie afslaten."
 
-#: core/addressbook/exportaddressbookjob.cpp:133
-#: core/akregator/exportakregatorjobinterface.cpp:55
-#: core/alarm/exportalarmjob.cpp:134 core/calendar/exportcalendarjob.cpp:136
-#: core/mail/exportmailjob.cpp:269 core/notes/exportnotesjobinterface.cpp:89
-#, kde-format
-msgid "Backing up config..."
-msgstr "Instellen warrt sekert..."
-
-#: core/addressbook/exportaddressbookjob.cpp:176
-#: core/akregator/exportakregatorjobinterface.cpp:62
-#: core/alarm/exportalarmjob.cpp:161 core/calendar/exportcalendarjob.cpp:214
-#: core/mail/exportmailjob.cpp:631 core/notes/exportnotesjobinterface.cpp:122
-#, kde-format
-msgid "Config backup done."
-msgstr "Instellen-Sekerheitkopie afslaten."
-
-#: core/addressbook/importaddressbookjob.cpp:55
+#: core/addressbook/importaddressbookjobinterface.cpp:55
 #, fuzzy, kde-format
 #| msgid "Start import KAddressBook settings..."
 msgid "Starting to import KAddressBook settings..."
 msgstr "Import vun de KAddressbook-Instellen anfangen..."
 
-#: core/addressbook/importaddressbookjob.cpp:57
+#: core/addressbook/importaddressbookjobinterface.cpp:57
 #, fuzzy, kde-format
 #| msgid "Start export KAddressBook settings..."
 msgid "Import KAddressBook settings"
 msgstr "Export vun de KAddressbook-Instellen anfungen..."
 
-#: core/addressbook/importaddressbookjob.cpp:80
-#: core/addressbook/importaddressbookjob.cpp:81
-#: core/alarm/importalarmjob.cpp:84 core/alarm/importalarmjob.cpp:85
-#: core/calendar/importcalendarjob.cpp:88
-#: core/calendar/importcalendarjob.cpp:89 core/mail/importmailjob.cpp:304
-#: core/mail/importmailjob.cpp:305
+#: core/addressbook/importaddressbookjobinterface.cpp:80
+#: core/addressbook/importaddressbookjobinterface.cpp:81
+#: core/alarm/importalarmjobinterface.cpp:84
+#: core/alarm/importalarmjobinterface.cpp:85
+#: core/calendar/importcalendarjobinterfaceimpl.cpp:60
+#: core/calendar/importcalendarjobinterfaceimpl.cpp:61
+#: core/mail/importmailjobinterface.cpp:304
+#: core/mail/importmailjobinterface.cpp:305
 #: core/notes/importnotesjobinterfaceimpl.cpp:57
 #: core/notes/importnotesjobinterfaceimpl.cpp:58
 #, kde-format
 msgid "Restore resources..."
 msgstr "Ressourcen wedderherstellen..."
 
-#: core/addressbook/importaddressbookjob.cpp:180
-#: core/akregator/importakregatorjob.cpp:73 core/alarm/importalarmjob.cpp:157
-#: core/calendar/importcalendarjob.cpp:179
+#: core/addressbook/importaddressbookjobinterface.cpp:180
+#: core/akregator/importakregatorjobinterface.cpp:73
+#: core/alarm/importalarmjobinterface.cpp:157
+#: core/calendar/importcalendarjobinterface.cpp:104
 #: core/notes/importnotesjobinterface.cpp:77
 #, fuzzy, kde-format
 #| msgid "Restore mails..."
 msgid "Restore configs..."
 msgstr "Nettpost wedderherstellen..."
 
-#: core/addressbook/importaddressbookjob.cpp:195
-#: core/akregator/importakregatorjob.cpp:79 core/alarm/importalarmjob.cpp:172
-#: core/calendar/importcalendarjob.cpp:289 core/mail/importmailjob.cpp:926
+#: core/addressbook/importaddressbookjobinterface.cpp:195
+#: core/akregator/importakregatorjobinterface.cpp:79
+#: core/alarm/importalarmjobinterface.cpp:172
+#: core/calendar/importcalendarjobinterface.cpp:214
+#: core/mail/importmailjobinterface.cpp:926
 #: core/notes/importnotesjobinterface.cpp:104
 #, kde-format
 msgid "Config restored."
@@ -295,49 +307,49 @@ msgstr "Orner \"%1\" lett sik de Sekerheitkopie nich tofögen."
 msgid "Data backup done."
 msgstr "Daten-Sekerheitkopie afslaten."
 
-#: core/akregator/importakregatorjob.cpp:44
+#: core/akregator/importakregatorjobinterface.cpp:44
 #, fuzzy, kde-format
 #| msgid "Start import Akregator settings..."
 msgid "Starting to import Akregator settings..."
 msgstr "Import vun de Akregator-Instellen anfangen..."
 
-#: core/akregator/importakregatorjob.cpp:47
+#: core/akregator/importakregatorjobinterface.cpp:47
 #, fuzzy, kde-format
 #| msgid "Start export Akregator settings..."
 msgid "Import Akregator settings"
 msgstr "Export vun de Akregator-Instellen anfangen..."
 
-#: core/akregator/importakregatorjob.cpp:86
+#: core/akregator/importakregatorjobinterface.cpp:86
 #: core/notes/importnotesjobinterface.cpp:111
 #, fuzzy, kde-format
 #| msgid "Restore Data..."
 msgid "Restore data..."
 msgstr "Daten wedderherstellen..."
 
-#: core/akregator/importakregatorjob.cpp:92
+#: core/akregator/importakregatorjobinterface.cpp:92
 #: core/notes/importnotesjobinterface.cpp:124
 #, kde-format
 msgid "Data restored."
 msgstr "Daten wedderherstellt."
 
-#: core/alarm/exportalarmjob.cpp:47
+#: core/alarm/exportalarmjobinterface.cpp:47
 #, kde-format
 msgid "Start export KAlarm settings..."
 msgstr "Export vun de KAlarm-Instellen anfangen..."
 
-#: core/alarm/exportalarmjob.cpp:48
+#: core/alarm/exportalarmjobinterface.cpp:48
 #, fuzzy, kde-format
 #| msgid "Start export KAlarm settings..."
 msgid "Export KAlarm settings"
 msgstr "Export vun de KAlarm-Instellen anfangen..."
 
-#: core/alarm/importalarmjob.cpp:56
+#: core/alarm/importalarmjobinterface.cpp:56
 #, fuzzy, kde-format
 #| msgid "Start import KAlarm settings..."
 msgid "Starting to import KAlarm settings..."
 msgstr "Import vun de KAlarm-Instellen anfangen..."
 
-#: core/alarm/importalarmjob.cpp:57
+#: core/alarm/importalarmjobinterface.cpp:57
 #, fuzzy, kde-format
 #| msgid "Start export KAlarm settings..."
 msgid "Import KAlarm settings"
@@ -354,161 +366,165 @@ msgstr "Archiev lett sik nich in Schriefbedrief opmaken."
 msgid "Archive cannot be opened in read mode."
 msgstr "Archiev lett sik nich in Leesbedrief opmaken."
 
-#: core/calendar/exportcalendarjob.cpp:49
+#: core/calendar/exportcalendarjobinterface.cpp:49
 #, kde-format
 msgid "Start export KOrganizer settings..."
 msgstr "Export vun de KOrganizer-Instellen anfangen..."
 
-#: core/calendar/exportcalendarjob.cpp:50
+#: core/calendar/exportcalendarjobinterface.cpp:50
 #, fuzzy, kde-format
 #| msgid "Start export KOrganizer settings..."
 msgid "Export KOrganizer settings"
 msgstr "Export vun de KOrganizer-Instellen anfangen..."
 
-#: core/calendar/importcalendarjob.cpp:60
+#: core/calendar/importcalendarjobinterface.cpp:52
 #, fuzzy, kde-format
 #| msgid "Start import KOrganizer settings..."
 msgid "Starting to import KOrganizer settings..."
 msgstr "Import vun de KOrganizer-Instellen anfangen..."
 
-#: core/calendar/importcalendarjob.cpp:62
+#: core/calendar/importcalendarjobinterface.cpp:54
 #, fuzzy, kde-format
 #| msgid "Start export KOrganizer settings..."
 msgid "Import KOrganizer settings"
 msgstr "Export vun de KOrganizer-Instellen anfangen..."
 
-#: core/mail/exportmailjob.cpp:66
+#: core/mail/exportmailjobinterface.cpp:66
 #, fuzzy, kde-format
 #| msgid "Start import KMail settings..."
 msgid "Start export KMail settings..."
 msgstr "Import vun de KMail-Instellen anfangen..."
 
-#: core/mail/exportmailjob.cpp:67
+#: core/mail/exportmailjobinterface.cpp:67
 #, fuzzy, kde-format
 #| msgid "Start import KMail settings..."
 msgid "Export KMail settings"
 msgstr "Import vun de KMail-Instellen anfangen..."
 
-#: core/mail/exportmailjob.cpp:126
+#: core/mail/exportmailjobinterface.cpp:126
 #, kde-format
 msgid "Backing up Mails..."
 msgstr "Nettpost warrt sekert..."
 
-#: core/mail/exportmailjob.cpp:200
+#: core/mail/exportmailjobinterface.cpp:200
 #, kde-format
 msgid "Backing up transports..."
 msgstr "Överdreegmetoden warrt sekert..."
 
-#: core/mail/exportmailjob.cpp:205 core/mail/exportmailjob.cpp:217
+#: core/mail/exportmailjobinterface.cpp:205
+#: core/mail/exportmailjobinterface.cpp:217
 #, kde-format
 msgid "Transports backup done."
 msgstr "Överdreegmetoden-Sekerheitkopie afslaten."
 
-#: core/mail/exportmailjob.cpp:219
+#: core/mail/exportmailjobinterface.cpp:219
 #, kde-format
 msgid "Transport file cannot be added to backup file."
 msgstr "Överdreegmetoden-Datei lett sik de Sekerheitkopie nich tofögen."
 
-#: core/mail/exportmailjob.cpp:281
+#: core/mail/exportmailjobinterface.cpp:281
 #, kde-format
 msgid "Filters backup done."
 msgstr "Filter-Sekerheitkopie afslaten."
 
-#: core/mail/exportmailjob.cpp:283
+#: core/mail/exportmailjobinterface.cpp:283
 #, kde-format
 msgid "Filters cannot be exported."
 msgstr "Filtern laat sik nich exporteren."
 
-#: core/mail/exportmailjob.cpp:636
+#: core/mail/exportmailjobinterface.cpp:636
 #, kde-format
 msgid "Backing up identity..."
 msgstr "Identiteet warrt sekert..."
 
-#: core/mail/exportmailjob.cpp:671
+#: core/mail/exportmailjobinterface.cpp:671
 #, kde-format
 msgid "vCard file \"%1\" cannot be saved."
 msgstr "VCard-Datei \"%1\" lett sik nich sekern."
 
-#: core/mail/exportmailjob.cpp:684
+#: core/mail/exportmailjobinterface.cpp:684
 #, kde-format
 msgid "Identity backup done."
 msgstr "Identiteet-Sekerheitkopie afslaten."
 
-#: core/mail/exportmailjob.cpp:686
+#: core/mail/exportmailjobinterface.cpp:686
 #, kde-format
 msgid "Identity file cannot be added to backup file."
 msgstr "Identiteet-Datei lett sik de Sekerheitkopie nich tofögen."
 
-#: core/mail/importmailjob.cpp:71
+#: core/mail/importmailjobinterface.cpp:71
 #, fuzzy, kde-format
 #| msgid "Start import KMail settings..."
 msgid "Starting to import KMail settings..."
 msgstr "Import vun de KMail-Instellen anfangen..."
 
-#: core/mail/importmailjob.cpp:72
+#: core/mail/importmailjobinterface.cpp:72
 #, fuzzy, kde-format
 #| msgid "Start import KMail settings..."
 msgid "Import KMail settings"
 msgstr "Import vun de KMail-Instellen anfangen..."
 
-#: core/mail/importmailjob.cpp:268 core/mail/importmailjob.cpp:274
+#: core/mail/importmailjobinterface.cpp:268
+#: core/mail/importmailjobinterface.cpp:274
 #, kde-format
 msgid "Restore transports..."
 msgstr "Överdreegmetoden wedderherstellen..."
 
-#: core/mail/importmailjob.cpp:272
+#: core/mail/importmailjobinterface.cpp:272
 #, kde-format
 msgid "mailtransports file could not be found in the archive."
 msgstr "Överdreegmetoden-Datei lett sik binnen dat Archiev nich finnen."
 
-#: core/mail/importmailjob.cpp:282
+#: core/mail/importmailjobinterface.cpp:282
 #, kde-format
 msgid "Transports restored."
 msgstr "Överdreegmetoden wedderherstellt."
 
-#: core/mail/importmailjob.cpp:284
+#: core/mail/importmailjobinterface.cpp:284
 #, kde-format
 msgid "Failed to restore transports file."
 msgstr "Överdreegmetoden laat sik nich wedderherstellen."
 
-#: core/mail/importmailjob.cpp:533 core/mail/importmailjob.cpp:535
+#: core/mail/importmailjobinterface.cpp:533
+#: core/mail/importmailjobinterface.cpp:535
 #, kde-format
 msgid "Restore mails..."
 msgstr "Nettpost wedderherstellen..."
 
-#: core/mail/importmailjob.cpp:649
+#: core/mail/importmailjobinterface.cpp:649
 #, kde-format
 msgid "Mails restored."
 msgstr "Nettpost wedderherstellt."
 
-#: core/mail/importmailjob.cpp:656
+#: core/mail/importmailjobinterface.cpp:656
 #, fuzzy, kde-format
 #| msgid "Restore mails..."
 msgid "Restore config..."
 msgstr "Nettpost wedderherstellen..."
 
-#: core/mail/importmailjob.cpp:659
+#: core/mail/importmailjobinterface.cpp:659
 #, kde-format
 msgid "filters file could not be found in the archive."
 msgstr "Filter-Datei lett sik binnen dat Archiev nich finnen."
 
-#: core/mail/importmailjob.cpp:970 core/mail/importmailjob.cpp:975
+#: core/mail/importmailjobinterface.cpp:970
+#: core/mail/importmailjobinterface.cpp:975
 #, fuzzy, kde-format
 #| msgid "Restore identities..."
 msgid "Restoring identities..."
 msgstr "Identiteten wedderherstellen..."
 
-#: core/mail/importmailjob.cpp:973
+#: core/mail/importmailjobinterface.cpp:973
 #, kde-format
 msgid "emailidentities file could not be found in the archive."
 msgstr "Identitetendatei lett sik binnen dat Archiev nich finnen."
 
-#: core/mail/importmailjob.cpp:1045
+#: core/mail/importmailjobinterface.cpp:1045
 #, kde-format
 msgid "Identities restored."
 msgstr "Identiteten wedderherstellt."
 
-#: core/mail/importmailjob.cpp:1047
+#: core/mail/importmailjobinterface.cpp:1047
 #, kde-format
 msgid "Failed to restore identity file."
 msgstr "Identiteten laat sik nich wedderherstellen."
