@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mathematik\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-06-21 01:55+0200\n"
+"POT-Creation-Date: 2020-06-27 01:57+0200\n"
 "PO-Revision-Date: 2014-05-13 11:57+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -530,7 +530,7 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: backends/kalgebra/settings.ui:20 backends/lua/settings.ui:34
-#: backends/maxima/settings.ui:72 backends/python/settings.ui:75
+#: backends/maxima/settings.ui:72 backends/python/settings.ui:114
 #: backends/qalculate/settings.ui:183 backends/R/settings.ui:61
 #: backends/sage/settings.ui:62 backends/scilab/settings.ui:44
 #, fuzzy, kde-format
@@ -670,7 +670,7 @@ msgstr ""
 "Maxima is tweemaal kort achterenanner afstört. Startversöök warrt anhollen."
 
 #: backends/maxima/maximasession.cpp:289 cantor_part.cpp:997
-#: lib/session.cpp:243 lib/session.cpp:245 worksheet.cpp:1000
+#: lib/session.cpp:300 lib/session.cpp:302 worksheet.cpp:1000
 #: worksheet.cpp:1028 worksheet.cpp:1043 worksheet.cpp:1060 worksheet.cpp:1104
 #: worksheet.cpp:1116
 #, kde-format
@@ -701,7 +701,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox)
-#: backends/maxima/settings.ui:69 backends/python/settings.ui:72
+#: backends/maxima/settings.ui:69 backends/python/settings.ui:111
 #: backends/R/settings.ui:58 backends/sage/settings.ui:59
 #: backends/scilab/settings.ui:41
 #, kde-format
@@ -760,8 +760,8 @@ msgstr ""
 #: backends/octave/octavesession.cpp:110 backends/sage/sagesession.cpp:249
 #: backends/sage/sagesession.cpp:282 backends/sage/sagesession.cpp:361
 #: backends/sage/sagesession.cpp:372 cantor.cpp:206 cantor.cpp:208
-#: cantor.cpp:325 cantor.cpp:332 main.cpp:77 main.cpp:141 markdownentry.cpp:726
-#: textentry.cpp:574 worksheet.cpp:1083
+#: cantor.cpp:325 cantor.cpp:332 lib/session.cpp:371 main.cpp:77 main.cpp:141
+#: markdownentry.cpp:726 textentry.cpp:574 worksheet.cpp:1083
 #, kde-format
 msgid "Cantor"
 msgstr "Cantor"
@@ -771,7 +771,7 @@ msgstr "Cantor"
 msgid "Syntax Error"
 msgstr "Syntaxfehler"
 
-#: backends/python/pythonbackend.cpp:85
+#: backends/python/pythonbackend.cpp:86
 #, fuzzy, kde-format
 #| msgctxt "the url to the documentation Python 2"
 #| msgid "http://docs.python.org/2/"
@@ -779,7 +779,7 @@ msgctxt "The url to the documentation Python"
 msgid "https://docs.python.org/3/"
 msgstr "http://docs.python.org/2/"
 
-#: backends/python/pythonbackend.cpp:90
+#: backends/python/pythonbackend.cpp:91
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p>Python is a remarkably powerful dynamic programming language that is "
@@ -809,26 +809,47 @@ msgstr "Padd na de utföhrbore Datei »Octave«"
 msgid "Url to the local Python documentation"
 msgstr ""
 
+#. i18n: ectx: label, entry (choosenGraphicPackage), group (PythonBackend)
+#: backends/python/pythonbackend.kcfg:33
+#, kde-format
+msgid "Graphical package, for which will be enable support for embedding plots"
+msgstr ""
+
 #: backends/python/pythonextensions.cpp:184
 #, fuzzy, kde-format
 #| msgid "*.py|Python script file"
 msgid "Python script file (*.py)"
 msgstr "*.py|Python-Skriptdatei"
 
-#: backends/python/pythonsession.cpp:267
+#: backends/python/pythonsession.cpp:298
 #, kde-format
 msgid "Cantor Python server stopped working."
 msgstr ""
 
-#: backends/python/pythonsession.cpp:271
+#: backends/python/pythonsession.cpp:302
 #, fuzzy, kde-format
 #| msgid "Failed to start Sage"
 msgid "Failed to start Cantor python server."
 msgstr "Sage lett sik nich starten."
 
-#: backends/python/pythonsession.cpp:275
+#: backends/python/pythonsession.cpp:306
 #, kde-format
 msgid "Communication with Cantor python server failed for unknown reasons."
+msgstr ""
+
+#: backends/python/pythonsession.cpp:362
+#, kde-format
+msgid ""
+"For using integrated graphics with Matplotlib package you need install "
+"\"matplotlib\" python package first."
+msgstr ""
+
+#: backends/python/pythonsession.cpp:368
+#, kde-format
+msgid ""
+"For using integrated graphic with Plot.ly you need install \"plotly\" python "
+"package and special Plot'ly compatible \"orca\" executable. See \"Static "
+"Image Export\" article in Plot.ly documentation for details."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label3)
@@ -837,6 +858,39 @@ msgstr ""
 #| msgid "Failed to start Sage"
 msgid "Path to Cantor Python Server:"
 msgstr "Sage lett sik nich starten."
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label)
+#: backends/python/settings.ui:74
+#, kde-format
+msgid ""
+"Graphic package, used for plotting. When integrated plots option is enable, "
+"then plots from the package will be integrated to worksheet"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: backends/python/settings.ui:77
+#, kde-format
+msgid "Used Graphic Package: "
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_choosenGraphicPackage)
+#: backends/python/settings.ui:91
+#, kde-format
+msgid "Matplotlib (with seaborn, ggplot support too)"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_choosenGraphicPackage)
+#: backends/python/settings.ui:96
+#, fuzzy, kde-format
+#| msgid "Plot"
+msgid "Plot.ly"
+msgstr "Diagramm"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_choosenGraphicPackage)
+#: backends/python/settings.ui:101
+#, kde-format
+msgid "All supported"
+msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, QalculatePlotAssistantBase)
 #: backends/qalculate/plotassistant/qalculateplotdialog.ui:14
@@ -2975,40 +3029,40 @@ msgstr "Bilddatei opmaken"
 msgid "Show LaTeX code"
 msgstr "LaTeX-Kode wiesen"
 
-#: lib/backend.cpp:187
+#: lib/backend.cpp:191
 #, kde-format
 msgid ""
 "No path for the %1 executable specified. Please provide the correct path in "
 "the application settings and try again."
 msgstr ""
 
-#: lib/backend.cpp:197
+#: lib/backend.cpp:201
 #, kde-format
 msgid ""
 "The specified file '%1' for the %2 executable doesn't exist. Please provide "
 "the correct path in the application settings and try again."
 msgstr ""
 
-#: lib/backend.cpp:206
+#: lib/backend.cpp:210
 #, kde-format
 msgid ""
 "The specified file '%1' doesn't point to an executable. Please provide the "
 "correct path in the application settings and try again."
 msgstr ""
 
-#: lib/backend.cpp:225
+#: lib/backend.cpp:229
 #, kde-format
 msgid ""
 "The program %1 didn't finish the execution after %2 milliseconds during the "
 "plot integration test."
 msgstr ""
 
-#: lib/backend.cpp:234
+#: lib/backend.cpp:238
 #, kde-format
 msgid "Failed to open the file %1 during the plot integration test."
 msgstr ""
 
-#: lib/backend.cpp:242
+#: lib/backend.cpp:246
 #, kde-format
 msgid "Failed to parse the result during the plot integration test."
 msgstr ""
@@ -3075,16 +3129,23 @@ msgstr "Diagrammtitel:"
 msgid "This is unsupported Jupyter content of types ('%1')"
 msgstr ""
 
-#: lib/session.cpp:243
+#: lib/session.cpp:300
 #, kde-format
 msgid "%1 process has died unexpectedly. All calculation results are lost."
 msgstr ""
 
-#: lib/session.cpp:245
+#: lib/session.cpp:302
 #, kde-format
 msgid ""
 "%1 process has died unexpectedly with message \"%2\". All calculation "
 "results are lost."
+msgstr ""
+
+#: lib/session.cpp:369
+#, kde-format
+msgid ""
+"You choose support for %1 graphic package, but the support can't be activate "
+"due missing requirements, so integration for this package will disabled. %2"
 msgstr ""
 
 #: main.cpp:39
