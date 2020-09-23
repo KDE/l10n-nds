@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-09-22 02:24+0200\n"
+"POT-Creation-Date: 2020-09-23 02:29+0200\n"
 "PO-Revision-Date: 2014-09-18 17:03+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -201,6 +201,7 @@ msgid ""
 msgstr ""
 
 #: src/commands/certificatetopivcardcommand.cpp:117
+#: src/commands/importcertificatefrompivcardcommand.cpp:76
 #: src/commands/keytocardcommand.cpp:285
 #, kde-format
 msgid "Failed to find the PIV card with the serial number: %1"
@@ -213,6 +214,7 @@ msgid "Sorry! No suitable certificate to write to this card slot was found."
 msgstr ""
 
 #: src/commands/certificatetopivcardcommand.cpp:129
+#: src/view/pivcardwidget.cpp:267
 #, kde-format
 msgctxt "X.509 certificate DN (validity, created: date)"
 msgid "%1 (%2, created: %3)"
@@ -1192,6 +1194,17 @@ msgstr "All Dateien"
 #, kde-format
 msgid "Select Certificate File"
 msgstr "Zertifikaatdatei utsöken"
+
+#: src/commands/importcertificatefrompivcardcommand.cpp:83
+#, kde-format
+msgid "Sorry! No certificate to import from this card slot was found."
+msgstr ""
+
+#: src/commands/importcertificatefrompivcardcommand.cpp:88
+#, fuzzy, kde-format
+#| msgid "&Reload Certificates"
+msgid "Card Certificate"
+msgstr "&Zertifikaten nieg laden"
 
 #: src/commands/importcertificatescommand.cpp:209
 #, kde-format
@@ -8469,7 +8482,7 @@ msgid "View Columns"
 msgstr ""
 
 #: src/view/netkeywidget.cpp:68 src/view/pgpcardwidget.cpp:128
-#: src/view/pivcardwidget.cpp:80
+#: src/view/pivcardwidget.cpp:126
 #, fuzzy, kde-format
 #| msgid "Serial number"
 msgid "Serial number:"
@@ -8663,7 +8676,7 @@ msgctxt ""
 msgid "Pubkey URL:"
 msgstr "Ünnerslötel-Bruuk:"
 
-#: src/view/pgpcardwidget.cpp:162 src/view/pivcardwidget.cpp:89
+#: src/view/pgpcardwidget.cpp:162 src/view/pivcardwidget.cpp:137
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Subkeys"
@@ -8886,38 +8899,38 @@ msgstr ""
 msgid "Public key not found."
 msgstr "Keen Ingaav funnen, de sik bruken lett"
 
-#: src/view/pivcardwidget.cpp:92
+#: src/view/pivcardwidget.cpp:141
 #, fuzzy, kde-format
 #| msgid "Authentication"
 msgid "PIV authentication:"
 msgstr "Identiteetprööv"
 
-#: src/view/pivcardwidget.cpp:100
+#: src/view/pivcardwidget.cpp:145
 #, fuzzy, kde-format
 #| msgid "Authentication"
 msgid "Card authentication:"
 msgstr "Identiteetprööv"
 
-#: src/view/pivcardwidget.cpp:108
+#: src/view/pivcardwidget.cpp:149
 #, fuzzy, kde-format
 #| msgid "Local signature"
 msgid "Digital signature:"
 msgstr "Lokaal Ünnerschrift"
 
-#: src/view/pivcardwidget.cpp:116
+#: src/view/pivcardwidget.cpp:153
 #, fuzzy, kde-format
 #| msgid "KDE Key Manager"
 msgid "Key management:"
 msgstr "KDE-Slötelpleger"
 
-#: src/view/pivcardwidget.cpp:131
+#: src/view/pivcardwidget.cpp:166
 #, fuzzy, kde-format
 #| msgid "Change Passphrase..."
 msgctxt "@action:button"
 msgid "Change PIN"
 msgstr "Slötelsatz ännern..."
 
-#: src/view/pivcardwidget.cpp:132
+#: src/view/pivcardwidget.cpp:167
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -8925,27 +8938,27 @@ msgid ""
 "private key operations using the stored keys."
 msgstr ""
 
-#: src/view/pivcardwidget.cpp:138
+#: src/view/pivcardwidget.cpp:173
 #, fuzzy, kde-format
 #| msgid "Change Passphrase..."
 msgctxt "@action:button"
 msgid "Change PUK"
 msgstr "Slötelsatz ännern..."
 
-#: src/view/pivcardwidget.cpp:139
+#: src/view/pivcardwidget.cpp:174
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change the PIN Unblocking Key that enables a reset of the PIN."
 msgstr ""
 
-#: src/view/pivcardwidget.cpp:144
+#: src/view/pivcardwidget.cpp:179
 #, fuzzy, kde-format
 #| msgid "Change Expiry Date..."
 msgctxt "@action:button"
 msgid "Change Admin Key"
 msgstr "Afloopdatum ännern..."
 
-#: src/view/pivcardwidget.cpp:145
+#: src/view/pivcardwidget.cpp:180
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -8955,21 +8968,21 @@ msgid ""
 "Application."
 msgstr ""
 
-#: src/view/pivcardwidget.cpp:164 src/view/pivcardwidget.cpp:208
+#: src/view/pivcardwidget.cpp:202 src/view/pivcardwidget.cpp:258
 #, fuzzy, kde-format
 #| msgid "General"
 msgctxt "@action:button"
 msgid "Generate"
 msgstr "Allgemeen"
 
-#: src/view/pivcardwidget.cpp:167
+#: src/view/pivcardwidget.cpp:206
 #, fuzzy, kde-format
 #| msgid "certificate"
 msgctxt "@action:button"
 msgid "Write Certificate"
 msgstr "Zertifikaat"
 
-#: src/view/pivcardwidget.cpp:168
+#: src/view/pivcardwidget.cpp:207
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Imported Certificates from %1"
@@ -8977,40 +8990,61 @@ msgctxt "@info:tooltip"
 msgid "Write the certificate corresponding to this key to the card"
 msgstr "Vun %1 importeert Zertifikaten"
 
-#: src/view/pivcardwidget.cpp:172
+#: src/view/pivcardwidget.cpp:211
+#, fuzzy, kde-format
+#| msgid "Import Certificates"
+msgctxt "@action:button"
+msgid "Import Certificate"
+msgstr "Zertifikaten importeren"
+
+#: src/view/pivcardwidget.cpp:212
+#, fuzzy, kde-format
+#| msgid "certificate"
+msgctxt "@info:tooltip"
+msgid "Import the certificate stored on the card"
+msgstr "Zertifikaat"
+
+#: src/view/pivcardwidget.cpp:217
 #, fuzzy, kde-format
 #| msgid "Export Secret Keys..."
 msgctxt "@action:button"
 msgid "Write Key"
 msgstr "Privaatslötels exporteren..."
 
-#: src/view/pivcardwidget.cpp:173
+#: src/view/pivcardwidget.cpp:218
 #, fuzzy, kde-format
 #| msgid "certificate"
 msgctxt "@info:tooltip"
 msgid "Write the key pair of a certificate to the card"
 msgstr "Zertifikaat"
 
-#: src/view/pivcardwidget.cpp:187
+#: src/view/pivcardwidget.cpp:234
 #, kde-format
 msgctxt "%1 version number"
 msgid "PIV v%1 card"
 msgstr ""
 
-#: src/view/pivcardwidget.cpp:206
+#: src/view/pivcardwidget.cpp:254
 #, kde-format
 msgctxt "@info"
-msgid "Slot empty"
+msgid "<em>slot empty</em>"
 msgstr ""
 
-#: src/view/pivcardwidget.cpp:210
+#: src/view/pivcardwidget.cpp:260
 #, fuzzy, kde-format
 #| msgid "General"
 msgctxt "@info:tooltip %1 display name of a key"
 msgid "Generate %1"
 msgstr "Allgemeen"
 
-#: src/view/pivcardwidget.cpp:214
+#: src/view/pivcardwidget.cpp:274
+#, fuzzy, kde-format
+#| msgid "(no matching certificates found)"
+msgctxt "@info"
+msgid "<em>no matching certificate</em>"
+msgstr "(Keen passen Zertifikaten funnen)"
+
+#: src/view/pivcardwidget.cpp:282
 #, fuzzy, kde-format
 #| msgctxt "unknown trust level"
 #| msgid "unknown"
@@ -9018,14 +9052,14 @@ msgctxt "@info unknown key algorithm"
 msgid "unknown"
 msgstr "nich begäng"
 
-#: src/view/pivcardwidget.cpp:215
+#: src/view/pivcardwidget.cpp:285
 #, fuzzy, kde-format
 #| msgid "Places"
 msgctxt "@action:button"
 msgid "Replace"
 msgstr "Steden"
 
-#: src/view/pivcardwidget.cpp:217
+#: src/view/pivcardwidget.cpp:287
 #, kde-format
 msgctxt "@info:tooltip %1 display name of a key"
 msgid "Replace %1 with new key"
