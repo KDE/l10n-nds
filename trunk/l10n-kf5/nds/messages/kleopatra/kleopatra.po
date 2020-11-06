@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-10-27 02:32+0100\n"
+"POT-Creation-Date: 2020-11-06 02:30+0100\n"
 "PO-Revision-Date: 2014-09-18 17:03+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -2049,6 +2049,36 @@ msgstr ""
 msgctxt "@info"
 msgid "X.509 certificates refreshed successfully."
 msgstr "X.509-Zertifikaten mit Spood opfrischt."
+
+#: src/commands/revokecertificationcommand.cpp:126
+#, fuzzy, kde-format
+#| msgid "Certification successful."
+msgid "Revocation successful."
+msgstr "Zertifikaat mit Spood beglöövt."
+
+#: src/commands/revokecertificationcommand.cpp:127
+#, fuzzy, kde-format
+#| msgid "Verification succeeded."
+msgid "Revocation Succeeded"
+msgstr "Mit Spood pröövt."
+
+#: src/commands/revokecertificationcommand.cpp:129
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>An error occurred while trying to change the expiry date for <b>%1</b>:"
+#| "</p><p>%2</p>"
+msgid ""
+"<p>An error occurred while trying to revoke the certification of<br/><br/><b>"
+"%1</b>:</p><p>\t%2</p>"
+msgstr ""
+"<p>Dat geev en Fehler bi't Ännern vun't Afloopdatum för <b>%1</b>:</p><p>%2</"
+"p>"
+
+#: src/commands/revokecertificationcommand.cpp:133
+#, fuzzy, kde-format
+#| msgid "Certificate Signing Error"
+msgid "Revocation Error"
+msgstr "Fehler bi't Ünnerschrieven vun Zertifikaat"
 
 #: src/commands/setinitialpincommand.cpp:54
 #, fuzzy, kde-format
@@ -4445,7 +4475,7 @@ msgid "Add New EMail"
 msgstr ""
 
 #: src/dialogs/adduseriddialog.cpp:47
-#: src/dialogs/certificatedetailswidget.cpp:130
+#: src/dialogs/certificatedetailswidget.cpp:131
 #: src/newcertificatewizard/newcertificatewizard.cpp:1251
 #, kde-format
 msgid "Name"
@@ -4551,125 +4581,133 @@ msgstr "Nieg Bruker-ID tofögen"
 msgid "This is how the new User-ID will be stored in the certificate:"
 msgstr "Sodennig warrt de niege Bruker-ID binnen dat Zertifikaat wohrt:"
 
-#: src/dialogs/certificatedetailswidget.cpp:118
+#: src/dialogs/certificatedetailswidget.cpp:119
 #, fuzzy, kde-format
 #| msgid "Never"
 msgctxt "Expires"
 msgid "never"
 msgstr "Nienich"
 
-#: src/dialogs/certificatedetailswidget.cpp:130
+#: src/dialogs/certificatedetailswidget.cpp:131
 #: src/dialogs/certifywidget.cpp:258
 #, kde-format
 msgid "Tags"
 msgstr ""
 
-#: src/dialogs/certificatedetailswidget.cpp:130
+#: src/dialogs/certificatedetailswidget.cpp:131
 #, kde-format
 msgid "Email"
 msgstr "Nettpost"
 
-#: src/dialogs/certificatedetailswidget.cpp:130
+#: src/dialogs/certificatedetailswidget.cpp:131
 #, fuzzy, kde-format
 #| msgid "New trust level:"
 msgid "Trust Level"
 msgstr "Nieg Totroen-Stoop:"
 
-#: src/dialogs/certificatedetailswidget.cpp:178
+#: src/dialogs/certificatedetailswidget.cpp:179
 #, fuzzy, kde-format
 #| msgid "Export"
 msgid "Updating..."
 msgstr "Exporteren"
 
-#: src/dialogs/certificatedetailswidget.cpp:217
+#: src/dialogs/certificatedetailswidget.cpp:218
 #, kde-format
 msgid "Revoke this User ID"
 msgstr ""
 
-#: src/dialogs/certificatedetailswidget.cpp:338
+#: src/dialogs/certificatedetailswidget.cpp:339
+#: src/dialogs/weboftrustwidget.cpp:94 src/view/keylistcontroller.cpp:416
 #, fuzzy, kde-format
 #| msgid "Certify..."
-msgid "Certify ..."
+msgid "Certify..."
 msgstr "Beglöven..."
 
-#: src/dialogs/certificatedetailswidget.cpp:396
+#: src/dialogs/certificatedetailswidget.cpp:353
+#: src/dialogs/weboftrustwidget.cpp:109 src/view/keylistcontroller.cpp:420
+#, fuzzy, kde-format
+#| msgid "Revoke This Certificate..."
+msgid "Revoke Certification..."
+msgstr "Dit Zertifikaat torüchropen..."
+
+#: src/dialogs/certificatedetailswidget.cpp:412
 #, fuzzy, kde-format
 #| msgid "Never"
 msgid "never"
 msgstr "Nienich"
 
 #. i18n: ectx: property (text), widget (QCheckBox, signingCB)
-#: src/dialogs/certificatedetailswidget.cpp:398
+#: src/dialogs/certificatedetailswidget.cpp:414
 #: src/newcertificatewizard/advancedsettingsdialog.ui:206
 #, kde-format
 msgid "Signing"
 msgstr "Ünnerschrieven"
 
-#: src/dialogs/certificatedetailswidget.cpp:399
-#: src/dialogs/certificatedetailswidget.cpp:403
+#: src/dialogs/certificatedetailswidget.cpp:415
+#: src/dialogs/certificatedetailswidget.cpp:419
 #, kde-format
 msgid "First message"
 msgstr ""
 
-#: src/dialogs/certificatedetailswidget.cpp:400
-#: src/dialogs/certificatedetailswidget.cpp:404
+#: src/dialogs/certificatedetailswidget.cpp:416
+#: src/dialogs/certificatedetailswidget.cpp:420
 #, kde-format
 msgid "Last message"
 msgstr ""
 
-#: src/dialogs/certificatedetailswidget.cpp:401
-#: src/dialogs/certificatedetailswidget.cpp:405
+#: src/dialogs/certificatedetailswidget.cpp:417
+#: src/dialogs/certificatedetailswidget.cpp:421
 #, fuzzy, kde-format
 #| msgid "Message #%1"
 msgid "Message count"
 msgstr "Naricht Nr.%1"
 
 #. i18n: ectx: property (text), widget (QCheckBox, encryptionCB)
-#: src/dialogs/certificatedetailswidget.cpp:402
+#: src/dialogs/certificatedetailswidget.cpp:418
 #: src/newcertificatewizard/advancedsettingsdialog.ui:216
 #, kde-format
 msgid "Encryption"
 msgstr "Verslöteln"
 
-#: src/dialogs/certificatedetailswidget.cpp:441
+#: src/dialogs/certificatedetailswidget.cpp:457
 #, kde-format
 msgid "Common Name"
 msgstr "Allgemeen Naam"
 
-#: src/dialogs/certificatedetailswidget.cpp:442
+#: src/dialogs/certificatedetailswidget.cpp:458
 #, kde-format
 msgid "Organization"
 msgstr "Organisatschoon"
 
-#: src/dialogs/certificatedetailswidget.cpp:443
+#: src/dialogs/certificatedetailswidget.cpp:459
 #, fuzzy, kde-format
 #| msgid "Strength"
 msgid "Street"
 msgstr "Stärk"
 
-#: src/dialogs/certificatedetailswidget.cpp:444
+#: src/dialogs/certificatedetailswidget.cpp:460
 #, kde-format
 msgid "City"
 msgstr ""
 
-#: src/dialogs/certificatedetailswidget.cpp:445
+#: src/dialogs/certificatedetailswidget.cpp:461
 #, fuzzy, kde-format
 #| msgid "Status"
 msgid "State"
 msgstr "Status"
 
-#: src/dialogs/certificatedetailswidget.cpp:446
+#: src/dialogs/certificatedetailswidget.cpp:462
 #, kde-format
 msgid "Country"
 msgstr "Land"
 
-#: src/dialogs/certificatedetailswidget.cpp:469
+#: src/dialogs/certificatedetailswidget.cpp:485
 #, kde-format
 msgctxt "<name> of <company>"
 msgid "%1 of %2"
 msgstr ""
 
-#: src/dialogs/certificatedetailswidget.cpp:599
+#: src/dialogs/certificatedetailswidget.cpp:615
 #, fuzzy, kde-format
 #| msgid "Certificate Details"
 msgctxt "@title:window"
@@ -4876,7 +4914,7 @@ msgid "Reload"
 msgstr "Nieg laden"
 
 #: src/dialogs/certificateselectiondialog.cpp:128
-#: src/view/keylistcontroller.cpp:373 src/view/welcomewidget.cpp:69
+#: src/view/keylistcontroller.cpp:374 src/view/welcomewidget.cpp:69
 #, fuzzy, kde-format
 #| msgid "Import"
 msgid "Import..."
@@ -4975,12 +5013,14 @@ msgid ""
 msgstr ""
 
 #: src/dialogs/certifywidget.cpp:351
+#: src/dialogs/revokecertificationwidget.cpp:220
 #, fuzzy, kde-format
 #| msgid "Fingerprint"
 msgid "Fingerprint: <b>%1</b>"
 msgstr "Fingerafdruck"
 
 #: src/dialogs/certifywidget.cpp:353
+#: src/dialogs/revokecertificationwidget.cpp:222
 #, kde-format
 msgid "<i>Only the fingerprint clearly identifies the key and its owner.</i>"
 msgstr ""
@@ -5417,6 +5457,37 @@ msgstr ""
 "topassen.<br>Zertifikaten gellt al mit bloots een Beglöven mit disse "
 "Totroenstoop. Totroen in disse Hööchde muttst Du sinnig bruken.</font>"
 
+#: src/dialogs/revokecertificationdialog.cpp:96
+#, fuzzy, kde-format
+#| msgid "Certification"
+msgid "Revoke Certification"
+msgstr "Beglöven"
+
+#: src/dialogs/revokecertificationdialog.cpp:116
+#, fuzzy, kde-format
+#| msgid "Certification"
+msgctxt "@title:window arg is name, email of certificate holder"
+msgid "Revoke Certification: %1"
+msgstr "Beglöven"
+
+#: src/dialogs/revokecertificationwidget.cpp:161
+#, fuzzy, kde-format
+#| msgid "Certification"
+msgid "Certification key:"
+msgstr "Beglöven"
+
+#: src/dialogs/revokecertificationwidget.cpp:162
+#, fuzzy, kde-format
+#| msgid "This certificate has been revoked."
+msgid "The key whose certifications shall be revoke"
+msgstr "Dit Zertifikaat wöör torüchropen."
+
+#: src/dialogs/revokecertificationwidget.cpp:179
+#, fuzzy, kde-format
+#| msgid "Lookup Certificates on Server..."
+msgid "Publish revocations on keyserver"
+msgstr "Zertifikaten op Server söken..."
+
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: src/dialogs/selectchecklevelwidget.ui:16
 #, kde-format
@@ -5537,7 +5608,7 @@ msgid "Show all test results"
 msgstr "All Prööv-Resultaten wiesen"
 
 #. i18n: ectx: property (title), widget (QGroupBox, detailsGB)
-#: src/dialogs/selftestdialog.ui:76 src/view/keylistcontroller.cpp:406
+#: src/dialogs/selftestdialog.ui:76 src/view/keylistcontroller.cpp:407
 #, kde-format
 msgid "Details"
 msgstr "Enkelheiten"
@@ -5645,7 +5716,7 @@ msgstr ""
 msgid "(optional) Set Initial PIN (SigG)"
 msgstr "Eerst-PIN setten (SigG)"
 
-#: src/dialogs/subkeyswidget.cpp:77 src/view/keylistcontroller.cpp:419
+#: src/dialogs/subkeyswidget.cpp:77 src/view/keylistcontroller.cpp:424
 #, kde-format
 msgid "Change Expiry Date..."
 msgstr "Afloopdatum ännern..."
@@ -5820,7 +5891,7 @@ msgctxt "@title:window"
 msgid "Certifications"
 msgstr "Beglöven"
 
-#: src/dialogs/weboftrustwidget.cpp:149
+#: src/dialogs/weboftrustwidget.cpp:213
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -5830,7 +5901,7 @@ msgstr ""
 "<para>Dat geev en Fehler bi't Laden vun de Beglöven: <message>%1</message></"
 "para>"
 
-#: src/dialogs/weboftrustwidget.cpp:152
+#: src/dialogs/weboftrustwidget.cpp:216
 #, kde-format
 msgctxt "@title"
 msgid "Certifications Loading Failed"
@@ -6007,37 +6078,37 @@ msgstr "&Ansicht"
 
 #. i18n: ectx: Menu (certMenu)
 #. i18n: ectx: Menu (listview_popup)
-#: src/kleopatra.rc:42 src/kleopatra.rc:108
+#: src/kleopatra.rc:42 src/kleopatra.rc:110
 #, kde-format
 msgid "&Certificates"
 msgstr "&Zertifikaten"
 
 #. i18n: ectx: Menu (tools)
-#: src/kleopatra.rc:55
+#: src/kleopatra.rc:57
 #, kde-format
 msgid "&Tools"
 msgstr "&Warktüüch"
 
 #. i18n: ectx: Menu (settings)
-#: src/kleopatra.rc:71
+#: src/kleopatra.rc:73
 #, kde-format
 msgid "&Settings"
 msgstr "&Instellen"
 
 #. i18n: ectx: Menu (window)
-#: src/kleopatra.rc:75
+#: src/kleopatra.rc:77
 #, kde-format
 msgid "&Window"
 msgstr "&Finster"
 
 #. i18n: ectx: Menu (help)
-#: src/kleopatra.rc:86
+#: src/kleopatra.rc:88
 #, kde-format
 msgid "&Help"
 msgstr "&Hülp"
 
 #. i18n: ectx: ToolBar (mainToolBar)
-#: src/kleopatra.rc:93 src/kwatchgnupg/kwatchgnupgui.rc:13
+#: src/kleopatra.rc:95 src/kwatchgnupg/kwatchgnupgui.rc:13
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Hööft-Warktüüchbalken"
@@ -6187,59 +6258,59 @@ msgstr ""
 msgid "Cannot read \"%1\""
 msgstr "Status \"%1\" lett sik nich loosstüern"
 
-#: src/libkleopatraclient/core/command.cpp:464
+#: src/libkleopatraclient/core/command.cpp:457
 #, kde-format
 msgid "Failed to start uiserver %1"
 msgstr ""
 
-#: src/libkleopatraclient/core/command.cpp:578
+#: src/libkleopatraclient/core/command.cpp:571
 #, kde-format
 msgid "Invalid socket name!"
 msgstr ""
 
-#: src/libkleopatraclient/core/command.cpp:589
+#: src/libkleopatraclient/core/command.cpp:582
 #, kde-format
 msgid ""
 "Could not allocate resources to connect to Kleopatra UI server at %1: %2"
 msgstr ""
 
-#: src/libkleopatraclient/core/command.cpp:620
+#: src/libkleopatraclient/core/command.cpp:609
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Could not connect to UiServer: <message>%1</message>"
 msgid "Could not connect to Kleopatra UI server at %1: %2"
 msgstr "Böversietserver lett sik nich faatkriegen: <message>%1</message>"
 
-#: src/libkleopatraclient/core/command.cpp:633
+#: src/libkleopatraclient/core/command.cpp:622
 #, kde-format
 msgid "Could not get the process-id of the Kleopatra UI server at %1: %2"
 msgstr ""
 
-#: src/libkleopatraclient/core/command.cpp:663
+#: src/libkleopatraclient/core/command.cpp:652
 #, fuzzy, kde-format
 #| msgid "Failed to execute %1: %2"
 msgid "Failed to send critical option %1: %2"
 msgstr "%1 lett sik nich utföhren: %2"
 
-#: src/libkleopatraclient/core/command.cpp:672
+#: src/libkleopatraclient/core/command.cpp:661
 #, fuzzy, kde-format
 #| msgid "Failed to execute %1: %2"
 msgid "Failed to send file path %1: %2"
 msgstr "%1 lett sik nich utföhren: %2"
 
-#: src/libkleopatraclient/core/command.cpp:678
+#: src/libkleopatraclient/core/command.cpp:667
 #, fuzzy, kde-format
 #| msgid "Failed to execute %1: %2"
 msgid "Failed to send sender %1: %2"
 msgstr "%1 lett sik nich utföhren: %2"
 
-#: src/libkleopatraclient/core/command.cpp:684
+#: src/libkleopatraclient/core/command.cpp:673
 #, fuzzy, kde-format
 #| msgid "Failed to execute %1: %2"
 msgid "Failed to send recipient %1: %2"
 msgstr "%1 lett sik nich utföhren: %2"
 
-#: src/libkleopatraclient/core/command.cpp:697
+#: src/libkleopatraclient/core/command.cpp:686
 #, kde-format
 msgid "Command (%1) failed: %2"
 msgstr ""
@@ -6447,13 +6518,13 @@ msgstr ""
 msgid "Ongoing Background Tasks"
 msgstr "Lopen Achtergrund-Akschonen"
 
-#: src/mainwindow.cpp:629 src/view/keylistcontroller.cpp:381
+#: src/mainwindow.cpp:629 src/view/keylistcontroller.cpp:382
 #, kde-format
 msgid "Sign/Encrypt..."
 msgstr "Ünnerschrieven/verslöteln..."
 
 #: src/mainwindow.cpp:630 src/utils/clipboardmenu.cpp:38
-#: src/view/keylistcontroller.cpp:377
+#: src/view/keylistcontroller.cpp:378
 #, kde-format
 msgid "Decrypt/Verify..."
 msgstr "Opslöteln/pröven..."
@@ -6476,7 +6547,7 @@ msgstr "Verwiedert Instellen"
 
 #. i18n: ectx: attribute (title), widget (QWidget, technicalTab)
 #: src/newcertificatewizard/advancedsettingsdialog.ui:21
-#: src/view/keylistcontroller.cpp:443
+#: src/view/keylistcontroller.cpp:448
 #, kde-format
 msgid "Technical Details"
 msgstr "Technische Enkelheiten"
@@ -8353,180 +8424,180 @@ msgstr "Datei \"%1\" lett sik nich wegdoon: %2"
 msgid "Loading certificate cache..."
 msgstr "Zertifikaat-Twischenspieker warrt laadt..."
 
-#: src/view/keylistcontroller.cpp:349 src/view/welcomewidget.cpp:65
+#: src/view/keylistcontroller.cpp:350 src/view/welcomewidget.cpp:65
 #, fuzzy, kde-format
 #| msgid "New Key Pair..."
 msgid "New Key Pair..."
 msgstr "Nieg Slötelpoor..."
 
-#: src/view/keylistcontroller.cpp:353
+#: src/view/keylistcontroller.cpp:354
 #, fuzzy, kde-format
 #| msgid "Export"
 msgid "Export..."
 msgstr "Exporteren"
 
-#: src/view/keylistcontroller.cpp:353
+#: src/view/keylistcontroller.cpp:354
 #, kde-format
 msgid "Export the selected certificate (public key) to a file"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:357
+#: src/view/keylistcontroller.cpp:358
 #, fuzzy, kde-format
 #| msgid "Lookup Certificates on Server..."
 msgid "Publish on Server..."
 msgstr "Zertifikaten op Server söken..."
 
-#: src/view/keylistcontroller.cpp:357
+#: src/view/keylistcontroller.cpp:358
 #, kde-format
 msgid "Publish the selected certificate (public key) on a public keyserver"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:361
+#: src/view/keylistcontroller.cpp:362
 #, fuzzy, kde-format
 #| msgid "Export Secret Keys..."
 msgid "Backup Secret Keys..."
 msgstr "Privaatslötels exporteren..."
 
-#: src/view/keylistcontroller.cpp:365
+#: src/view/keylistcontroller.cpp:366
 #, fuzzy, kde-format
 #| msgid "Export Secret Keys..."
 msgid "Print Secret Key..."
 msgstr "Privaatslötels exporteren..."
 
-#: src/view/keylistcontroller.cpp:369
+#: src/view/keylistcontroller.cpp:370
 #, fuzzy, kde-format
 #| msgid "Lookup Certificates on Server..."
 msgid "Lookup on Server..."
 msgstr "Zertifikaten op Server söken..."
 
-#: src/view/keylistcontroller.cpp:369
+#: src/view/keylistcontroller.cpp:370
 #, fuzzy, kde-format
 #| msgid "Search for Certificate by fingerprint"
 msgid "Search for certificates online using a public keyserver"
 msgstr "Na Zertifikaat över Fingerafdruck söken"
 
-#: src/view/keylistcontroller.cpp:373
+#: src/view/keylistcontroller.cpp:374
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Imported Certificates from %1"
 msgid "Import a certificate from a file"
 msgstr "Vun %1 importeert Zertifikaten"
 
-#: src/view/keylistcontroller.cpp:377
+#: src/view/keylistcontroller.cpp:378
 #, fuzzy, kde-format
 #| msgid "Decrypt and/or verify file(s)"
 msgid "Decrypt and/or verify files"
 msgstr "Dateien opslöteln un/oder pröven"
 
-#: src/view/keylistcontroller.cpp:381
+#: src/view/keylistcontroller.cpp:382
 #, fuzzy, kde-format
 #| msgid "Decrypt and/or verify file(s)"
 msgid "Encrypt and/or sign files"
 msgstr "Dateien opslöteln un/oder pröven"
 
-#: src/view/keylistcontroller.cpp:385
+#: src/view/keylistcontroller.cpp:386
 #, fuzzy, kde-format
 #| msgid "Sign/Encrypt Files..."
 msgid "Sign/Encrypt Folder..."
 msgstr "Dateien ünnerschrieven/verslöteln..."
 
-#: src/view/keylistcontroller.cpp:385
+#: src/view/keylistcontroller.cpp:386
 #, fuzzy, kde-format
 #| msgid "Decrypt and/or verify file(s)"
 msgid "Encrypt and/or sign folders"
 msgstr "Dateien opslöteln un/oder pröven"
 
-#: src/view/keylistcontroller.cpp:389
+#: src/view/keylistcontroller.cpp:390
 #, kde-format
 msgid "Create Checksum Files..."
 msgstr "Pröövsumm-Dateien opstellen..."
 
-#: src/view/keylistcontroller.cpp:393
+#: src/view/keylistcontroller.cpp:394
 #, kde-format
 msgid "Verify Checksum Files..."
 msgstr "Pröövsumm-Dateien pröven…"
 
-#: src/view/keylistcontroller.cpp:398
+#: src/view/keylistcontroller.cpp:399
 #, kde-format
 msgid "Redisplay"
 msgstr "Nieg wiesen"
 
-#: src/view/keylistcontroller.cpp:402
+#: src/view/keylistcontroller.cpp:403
 #, kde-format
 msgid "Stop Operation"
 msgstr "Akschoon afbreken"
 
-#: src/view/keylistcontroller.cpp:411
+#: src/view/keylistcontroller.cpp:412
 #, kde-format
 msgid "Delete"
 msgstr "Wegdoon"
 
-#: src/view/keylistcontroller.cpp:411
+#: src/view/keylistcontroller.cpp:412
 #, fuzzy, kde-format
 #| msgid "Please select a certificate"
 msgid "Delete selected certificates"
 msgstr "Bitte en Zertifikaat utsöken"
 
-#: src/view/keylistcontroller.cpp:415
-#, fuzzy, kde-format
-#| msgid "Certify..."
-msgid "Certify..."
-msgstr "Beglöven..."
-
-#: src/view/keylistcontroller.cpp:415
+#: src/view/keylistcontroller.cpp:416
 #, fuzzy, kde-format
 #| msgid "The validity of the signature cannot be verified."
 msgid "Certify the validity of the selected certificate"
 msgstr "Dat lett sik nich pröven, wat de Ünnerschrift gellt."
 
-#: src/view/keylistcontroller.cpp:423
+#: src/view/keylistcontroller.cpp:420
+#, fuzzy, kde-format
+#| msgid "The validity of the signature cannot be verified."
+msgid "Revoke the certification of the selected certificate"
+msgstr "Dat lett sik nich pröven, wat de Ünnerschrift gellt."
+
+#: src/view/keylistcontroller.cpp:428
 #, fuzzy, kde-format
 #| msgid "Change Owner Trust..."
 msgid "Change Certification Trust..."
 msgstr "Totroen to Eegner ännern..."
 
-#: src/view/keylistcontroller.cpp:427
+#: src/view/keylistcontroller.cpp:432
 #, kde-format
 msgid "Trust Root Certificate"
 msgstr "Wörtelzertifikaat vertroen"
 
-#: src/view/keylistcontroller.cpp:431
+#: src/view/keylistcontroller.cpp:436
 #, kde-format
 msgid "Distrust Root Certificate"
 msgstr "Wörtelzertifikaat nich vertroen"
 
-#: src/view/keylistcontroller.cpp:435
+#: src/view/keylistcontroller.cpp:440
 #, kde-format
 msgid "Change Passphrase..."
 msgstr "Slötelsatz ännern..."
 
-#: src/view/keylistcontroller.cpp:439
+#: src/view/keylistcontroller.cpp:444
 #, kde-format
 msgid "Add User-ID..."
 msgstr "Bruker-ID tofögen..."
 
-#: src/view/keylistcontroller.cpp:448
+#: src/view/keylistcontroller.cpp:453
 #, fuzzy, kde-format
 #| msgid "S/MIME Certificates"
 msgid "Refresh S/MIME Certificates"
 msgstr "S/MIME-Zertifikaten"
 
-#: src/view/keylistcontroller.cpp:452
+#: src/view/keylistcontroller.cpp:457
 #, kde-format
 msgid "Refresh OpenPGP Certificates"
 msgstr "OpenPGP-Zertifikaten opfrischen"
 
-#: src/view/keylistcontroller.cpp:456
+#: src/view/keylistcontroller.cpp:461
 #, kde-format
 msgid "Clear CRL Cache"
 msgstr "Wohrt Torüchrooplisten wegdoon"
 
-#: src/view/keylistcontroller.cpp:460
+#: src/view/keylistcontroller.cpp:465
 #, kde-format
 msgid "Dump CRL Cache"
 msgstr "Wohrt Torüchrooplisten utgeven"
 
-#: src/view/keylistcontroller.cpp:464
+#: src/view/keylistcontroller.cpp:469
 #, kde-format
 msgid "Import CRL From File..."
 msgstr "ZTL ut Datei importeren..."
@@ -9334,6 +9405,11 @@ msgid "To import from a public keyserver use \"Lookup on Server\" instead."
 msgstr ""
 
 #, fuzzy
+#~| msgid "Certify..."
+#~ msgid "Certify ..."
+#~ msgstr "Beglöven..."
+
+#, fuzzy
 #~| msgid "SmartCard"
 #~ msgid "Manage Smartcards"
 #~ msgstr "SmartKoort"
@@ -9781,9 +9857,6 @@ msgstr ""
 #~ msgid "Trust Certifications Made by This Certificate..."
 #~ msgstr "Beglöven mit dit Zertifikaat vertroen..."
 
-#~ msgid "Revoke This Certificate..."
-#~ msgstr "Dit Zertifikaat torüchropen..."
-
 #~ msgid "Photo"
 #~ msgstr "Foto"
 
@@ -9939,9 +10012,6 @@ msgstr ""
 
 #~ msgid "Authenticate against Servers"
 #~ msgstr "Identiteet de Servers künnig maken"
-
-#~ msgid "This certificate has been revoked."
-#~ msgstr "Dit Zertifikaat wöör torüchropen."
 
 #~ msgid "This certificate has expired."
 #~ msgstr "Dit Zertifikaat is aflopen."
