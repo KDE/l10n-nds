@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemlog\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-01-11 02:57+0100\n"
+"POT-Creation-Date: 2021-01-12 02:59+0100\n"
 "PO-Revision-Date: 2011-01-05 11:32+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -136,8 +136,9 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: src/detailDialogBase.ui:41 src/lib/logViewWidget.cpp:48
 #: src/loggerDialogBase.ui:33 src/modes/acpid/acpidAnalyzer.cpp:34
-#: src/modes/apache/apacheAnalyzer.cpp:35 src/modes/base/syslogAnalyzer.cpp:59
-#: src/modes/cups/cupsAnalyzer.cpp:39 src/modes/cups/cupsPdfAnalyzer.cpp:36
+#: src/modes/apache/apacheAnalyzer.cpp:35 src/modes/audit/auditAnalyzer.cpp:23
+#: src/modes/base/syslogAnalyzer.cpp:59 src/modes/cups/cupsAnalyzer.cpp:39
+#: src/modes/cups/cupsPdfAnalyzer.cpp:36
 #: src/modes/journald/journaldAnalyzer.cpp:38
 #: src/modes/kernel/kernelAnalyzer.cpp:35 src/modes/samba/sambaAnalyzer.cpp:38
 #: src/modes/xorg/xorgAnalyzer.cpp:42
@@ -432,22 +433,22 @@ msgid "Logs Toolbar"
 msgstr "Logbook-Warktüüchbalken"
 
 #. i18n: ectx: ToolBar (mainToolBar)
-#: src/ksystemlogui.rc:63
+#: src/ksystemlogui.rc:64
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Hööft-Warktüüchbalken"
 
-#: src/lib/fileAnalyzer.cpp:119
+#: src/lib/fileAnalyzer.cpp:119 src/modes/audit/auditAnalyzer.cpp:211
 #, kde-format
 msgid "Opening '%1'..."
 msgstr "\"%1\" warrt opmaakt..."
 
-#: src/lib/fileAnalyzer.cpp:128
+#: src/lib/fileAnalyzer.cpp:128 src/modes/audit/auditAnalyzer.cpp:220
 #, kde-format
 msgid "Log file '%1' loaded successfully."
 msgstr "Logbookdatei \"%1\" mit Spood laadt."
 
-#: src/lib/fileAnalyzer.cpp:140
+#: src/lib/fileAnalyzer.cpp:140 src/modes/audit/auditAnalyzer.cpp:232
 #, kde-format
 msgid "Log file '%1' has changed."
 msgstr "Logbookdatei \"%1\" wöör ännert."
@@ -594,6 +595,7 @@ msgstr "De URL \"%1\" is leeg, se warrt utlaten."
 #: src/modes/acpid/acpidItemBuilder.cpp:32
 #: src/modes/apache/apacheAccessItemBuilder.cpp:32
 #: src/modes/apache/apacheItemBuilder.cpp:32
+#: src/modes/audit/auditItemBuilder.cpp:14
 #: src/modes/cron/cronItemBuilder.cpp:32
 #: src/modes/cups/cupsAccessItemBuilder.cpp:32
 #: src/modes/cups/cupsItemBuilder.cpp:30
@@ -621,6 +623,7 @@ msgstr "Perzess:"
 #: src/modes/acpid/acpidItemBuilder.cpp:33
 #: src/modes/apache/apacheAccessItemBuilder.cpp:33
 #: src/modes/apache/apacheItemBuilder.cpp:33
+#: src/modes/audit/auditItemBuilder.cpp:15
 #: src/modes/cron/cronItemBuilder.cpp:36
 #: src/modes/cups/cupsAccessItemBuilder.cpp:33
 #: src/modes/cups/cupsItemBuilder.cpp:31
@@ -750,12 +753,12 @@ msgstr ""
 msgid "All"
 msgstr "All"
 
-#: src/lib/logViewSearchWidget.cpp:172
+#: src/lib/logViewSearchWidget.cpp:173
 #, kde-format
 msgid "Reached end of list."
 msgstr "Bi't Enn vun de List ankamen."
 
-#: src/lib/logViewSearchWidget.cpp:255
+#: src/lib/logViewSearchWidget.cpp:256
 #, kde-format
 msgid "Phrase not found."
 msgstr "Utdruck nich funnen."
@@ -783,10 +786,10 @@ msgstr "All &utsöken"
 #. lines in <b>bold</b> are the last added to the list.</p>"));
 #: src/lib/logViewWidget.cpp:48 src/modes/acpid/acpidAnalyzer.cpp:32
 #: src/modes/apache/apacheAccessAnalyzer.cpp:33
-#: src/modes/apache/apacheAnalyzer.cpp:33 src/modes/base/syslogAnalyzer.cpp:56
-#: src/modes/cron/cronAnalyzer.cpp:27 src/modes/cups/cupsAccessAnalyzer.cpp:35
-#: src/modes/cups/cupsAnalyzer.cpp:38 src/modes/cups/cupsPageAnalyzer.cpp:34
-#: src/modes/cups/cupsPdfAnalyzer.cpp:35
+#: src/modes/apache/apacheAnalyzer.cpp:33 src/modes/audit/auditAnalyzer.cpp:22
+#: src/modes/base/syslogAnalyzer.cpp:56 src/modes/cron/cronAnalyzer.cpp:27
+#: src/modes/cups/cupsAccessAnalyzer.cpp:35 src/modes/cups/cupsAnalyzer.cpp:38
+#: src/modes/cups/cupsPageAnalyzer.cpp:34 src/modes/cups/cupsPdfAnalyzer.cpp:35
 #: src/modes/journald/journaldAnalyzer.cpp:36
 #: src/modes/kernel/kernelAnalyzer.cpp:33 src/modes/samba/sambaAnalyzer.cpp:34
 #, kde-format
@@ -1682,6 +1685,38 @@ msgid ""
 msgstr ""
 "Wiest dat Apache-Logbook binnen dat aktuelle Paneel. \"Apache\" is de "
 "tomehrst bruukte Nettserver op de Eer."
+
+#: src/modes/audit/auditConfigurationWidget.cpp:14
+#: src/modes/audit/auditLogMode.cpp:18 src/modes/audit/auditLogMode.cpp:27
+#, fuzzy, kde-format
+#| msgid "Acpid Log"
+msgid "Audit Log"
+msgstr "Acpid-Logbook"
+
+#: src/modes/audit/auditConfigurationWidget.cpp:19
+#, fuzzy, kde-format
+#| msgid "<p>These files will be analyzed to show the <b>Acpid log</b>.</p>"
+msgid "<p>These files will be analyzed to show the <b>Audit logs</b>.</p>"
+msgstr ""
+"<p>Disse Dateien warrt för't Wiesen vun't <b>Acpid-Logbook</b> bekeken.</p>"
+
+#: src/modes/audit/auditLogMode.cpp:28
+#, fuzzy, kde-format
+#| msgid "Display the Cups log."
+msgid "Display the audit log."
+msgstr "CUPS sien Logbook wiesen"
+
+#: src/modes/audit/auditLogMode.cpp:30
+#, fuzzy, kde-format
+#| msgid ""
+#| "Displays the system log in the current tab. This log is generally used by "
+#| "non-specialized processes (like \"sudo\" or \"fsck\" commands)"
+msgid ""
+"Displays the audit log in the current tab. This log is generally used by non-"
+"specialized processes (like \"sudo\" or \"fsck\" commands)"
+msgstr ""
+"Wiest dat Systeem-Logbook binnen dat aktuelle Paneel. Dit Logbook warrt vun "
+"normaal Perzessen (as \"sudo\" oder \"fsck\") bruukt."
 
 #: src/modes/authentication/authenticationConfigurationWidget.cpp:25
 #: src/modes/authentication/authenticationConfigurationWidget.cpp:26
