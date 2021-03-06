@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kplatoui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-03-05 02:41+0100\n"
+"POT-Creation-Date: 2021-03-06 02:52+0100\n"
 "PO-Revision-Date: 2011-10-06 09:19+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -217,8 +217,8 @@ msgstr "Tietplaanfehler"
 #: models/kptnodeitemmodel.cpp:451 models/kptnodeitemmodel.cpp:664
 #: models/kptnodeitemmodel.cpp:681 models/kptnodeitemmodel.cpp:699
 #: models/kptnodeitemmodel.cpp:717 models/kptnodeitemmodel.cpp:752
-#: models/kptnodeitemmodel.cpp:769 models/kptresourceallocationmodel.cpp:739
-#: models/kptresourceallocationmodel.cpp:814 models/kptschedulemodel.cpp:618
+#: models/kptnodeitemmodel.cpp:769 models/kptresourceallocationmodel.cpp:889
+#: models/kptresourceallocationmodel.cpp:964 models/kptschedulemodel.cpp:618
 #: models/kpttreecombobox.cpp:123 models/ResourceModel.cpp:200
 #: models/ResourceModel.cpp:232 models/ResourceModel.cpp:353
 #: models/ResourceModel.cpp:357 models/ResourceModel.cpp:366
@@ -540,12 +540,12 @@ msgstr "Enn-Enn"
 msgid "Start-Start"
 msgstr "Start-Start"
 
-#: kernel/kptresourcerequest.cpp:889
+#: kernel/kptresourcerequest.cpp:898
 #, kde-format
 msgid "Could not match effort. Want: %1 got: %2"
 msgstr "Opwand lett sik nich topassen. Nafraagt: %1. Kregen: %2"
 
-#: kernel/kptresourcerequest.cpp:892
+#: kernel/kptresourcerequest.cpp:901
 #, kde-format
 msgid "Resource %1 available from %2 to %3"
 msgstr "Ressource %1 vun %2 bet %3 verföögbor"
@@ -1789,9 +1789,9 @@ msgstr "Towiesen"
 #: models/AllocatedResourceItemModel.cpp:165
 #: models/kptresourceallocationmodel.cpp:145
 #: models/kptresourceallocationmodel.cpp:158
-#: models/kptresourceallocationmodel.cpp:285
-#: models/kptresourceallocationmodel.cpp:316
-#: models/kptresourceallocationmodel.cpp:672
+#: models/kptresourceallocationmodel.cpp:414
+#: models/kptresourceallocationmodel.cpp:445
+#: models/kptresourceallocationmodel.cpp:801
 #, no-c-format, kde-format
 msgctxt "<value>%"
 msgid "%1%"
@@ -1799,8 +1799,8 @@ msgstr "%1 Perzent"
 
 #: models/AllocatedResourceItemModel.cpp:169
 #: models/kptresourceallocationmodel.cpp:155
-#: models/kptresourceallocationmodel.cpp:292
-#: models/kptresourceallocationmodel.cpp:678
+#: models/kptresourceallocationmodel.cpp:421
+#: models/kptresourceallocationmodel.cpp:807
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Not allocated"
@@ -1815,7 +1815,7 @@ msgstr[1] "Disse Koppel bargt %1 Ressourcen"
 
 #: models/GroupAllocationItemModel.cpp:184 models/kptaccountsmodel.cpp:125
 #: models/kptaccountsmodel.cpp:1068 models/kptdocumentmodel.cpp:200
-#: models/kptresourceallocationmodel.cpp:409
+#: models/kptresourceallocationmodel.cpp:538
 #: models/kptresourceappointmentsmodel.cpp:805
 #: models/kptresourceappointmentsmodel.cpp:820
 #: models/kptresourceappointmentsmodel.cpp:1317 models/kptschedulemodel.cpp:991
@@ -1829,7 +1829,7 @@ msgid "Name"
 msgstr "Naam"
 
 #: models/GroupAllocationItemModel.cpp:185 models/kptdocumentmodel.cpp:201
-#: models/kptrelationmodel.cpp:138 models/kptresourceallocationmodel.cpp:410
+#: models/kptrelationmodel.cpp:138 models/kptresourceallocationmodel.cpp:539
 #: models/kptresourceappointmentsmodel.cpp:1318
 #: models/ResourceGroupModel.cpp:205 models/ResourceModel.cpp:412
 #, kde-format
@@ -1837,20 +1837,20 @@ msgid "Type"
 msgstr "Typ"
 
 #: models/GroupAllocationItemModel.cpp:186
-#: models/kptresourceallocationmodel.cpp:411
+#: models/kptresourceallocationmodel.cpp:540
 #, kde-format
 msgid "Allocation"
 msgstr "Towiesen"
 
 #: models/GroupAllocationItemModel.cpp:187
-#: models/kptresourceallocationmodel.cpp:412
+#: models/kptresourceallocationmodel.cpp:541
 #, kde-kuit-format
 msgctxt "@title:column"
 msgid "Available"
 msgstr "Verföögbor"
 
 #: models/GroupAllocationItemModel.cpp:199
-#: models/kptresourceallocationmodel.cpp:426
+#: models/kptresourceallocationmodel.cpp:555
 #, kde-format
 msgid "Resource allocation"
 msgstr "Ressource-Towiesen"
@@ -4408,7 +4408,7 @@ msgctxt "(qtundo-format)"
 msgid "Insert %1"
 msgstr ""
 
-#: models/kptnodeitemmodel.cpp:4136 ui/kptrequestresourcespanel.cpp:102
+#: models/kptnodeitemmodel.cpp:4136 ui/kptrequestresourcespanel.cpp:114
 #: ui/ResourceAllocationView.cpp:154
 msgctxt "(qtundo-format)"
 msgid "Modify resource allocations"
@@ -4474,25 +4474,25 @@ msgid "Modify relation time lag"
 msgstr "Betog-Tietvertreck ännern"
 
 #: models/kptresourceallocationmodel.cpp:159
-#: models/kptresourceallocationmodel.cpp:680
+#: models/kptresourceallocationmodel.cpp:809
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "%1 allocated out of %2 available"
 msgstr "%1 vun %2 verföögbor towiest"
 
-#: models/kptresourceallocationmodel.cpp:295
+#: models/kptresourceallocationmodel.cpp:424
 #, no-c-format, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Allocated units: %1%"
 msgstr "Towiest Eenheiten: %1 Perzent"
 
-#: models/kptresourceallocationmodel.cpp:321
+#: models/kptresourceallocationmodel.cpp:450
 #, no-c-format, kde-format
 msgid "Maximum units available: %1%"
 msgstr "Tohööchst verföögbor Eenheiten: %1 Perzent"
 
-#: models/kptresourceallocationmodel.cpp:344
-#: models/kptresourceallocationmodel.cpp:439
+#: models/kptresourceallocationmodel.cpp:473
+#: models/kptresourceallocationmodel.cpp:568
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -4501,8 +4501,8 @@ msgid ""
 "that the working resource depends on in order to do the work.</para>"
 msgstr ""
 
-#: models/kptresourceallocationmodel.cpp:378
-#: models/kptresourceallocationmodel.cpp:435
+#: models/kptresourceallocationmodel.cpp:507
+#: models/kptresourceallocationmodel.cpp:564
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -4511,20 +4511,20 @@ msgid ""
 "then select the most appropriate resource to use.</para>"
 msgstr ""
 
-#: models/kptresourceallocationmodel.cpp:413
+#: models/kptresourceallocationmodel.cpp:542
 #, fuzzy, kde-kuit-format
 #| msgid "Tentative"
 msgctxt "@title:column"
 msgid "Alternative Resources"
 msgstr "Eerstmaal"
 
-#: models/kptresourceallocationmodel.cpp:414
+#: models/kptresourceallocationmodel.cpp:543
 #, kde-kuit-format
 msgctxt "@title:column"
 msgid "Required Resources"
 msgstr "Bruukt Ressourcen"
 
-#: models/kptresourceallocationmodel.cpp:427
+#: models/kptresourceallocationmodel.cpp:556
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:tootip"
 #| msgid "Available resources or resource units"
@@ -4532,7 +4532,7 @@ msgctxt "@info:tooltip"
 msgid "Available resources or resource units"
 msgstr "Verföögbor Ressource oder den Ressourceneenheiten"
 
-#: models/kptresourceallocationmodel.cpp:428
+#: models/kptresourceallocationmodel.cpp:557
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:tooltip"
 #| msgid "No resources has been allocated"
@@ -4540,14 +4540,14 @@ msgctxt "@info:tooltip"
 msgid "List of resources that can be used as an alternative"
 msgstr "Keen Ressource towiest"
 
-#: models/kptresourceallocationmodel.cpp:429
+#: models/kptresourceallocationmodel.cpp:558
 #, fuzzy, kde-kuit-format
 #| msgid "Required resources:"
 msgctxt "@info:tooltip"
 msgid "Required material resources"
 msgstr "Bruukt Ressourcen"
 
-#: models/kptresourceallocationmodel.cpp:748
+#: models/kptresourceallocationmodel.cpp:898
 #, fuzzy, kde-kuit-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Modify resource allocations"
@@ -4555,19 +4555,19 @@ msgctxt "@info:tooltip"
 msgid "No material resources available"
 msgstr "Ressource-Toornen ännern"
 
-#: models/kptresourceallocationmodel.cpp:757
+#: models/kptresourceallocationmodel.cpp:907
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "No required resources"
 msgstr "Keen Ressourcen bruukt"
 
-#: models/kptresourceallocationmodel.cpp:760
+#: models/kptresourceallocationmodel.cpp:910
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Material resources cannot have required resources"
 msgstr "Materiaalressourcen köönt keen bruukt Ressourcen hebben."
 
-#: models/kptresourceallocationmodel.cpp:762
+#: models/kptresourceallocationmodel.cpp:912
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Team resources cannot have required resources"
