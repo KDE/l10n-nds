@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcontrol_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-04-21 13:02+0000\n"
+"POT-Creation-Date: 2021-04-29 00:32+0000\n"
 "PO-Revision-Date: 2011-10-11 22:07+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -102,15 +102,25 @@ msgstr ""
 #: index.docbook:34
 #, no-c-format
 msgid ""
-"The program scans <filename>$HOME/.config/autostart/</filename>, <filename "
-"class=\"directory\">$HOME/.config/plasma-workspace/env</filename> and "
-"<filename class=\"directory\">$HOME/.config/plasma-workspace/shutdown</"
-"filename> folders to check what programs and scripts are already there and "
-"displays them. It allows you to manage them easily."
+"The program scans <filename>$HOME/.config/autostart/</filename> for "
+"applications and login scripts, <filename class=\"directory\">$HOME/.config/"
+"plasma-workspace/env</filename> for pre-startup scripts and <filename class="
+"\"directory\">$HOME/.config/plasma-workspace/shutdown</filename> for logout "
+"scripts to check what programs and scripts are already there and displays "
+"them. It allows you to manage them easily."
 msgstr ""
 
 #. Tag: para
-#: index.docbook:38
+#: index.docbook:37
+#, no-c-format
+msgid ""
+"Login scripts are <filename class=\"extension\">.desktop</filename> files "
+"with a <literal>X-KDE-AutostartScript=true</literal> key. Pre-startup "
+"scripts are run earlier and can be used to set environment variables."
+msgstr ""
+
+#. Tag: para
+#: index.docbook:40
 #, no-c-format
 msgid ""
 "Note that you can change the location of your <filename class=\"directory"
@@ -122,7 +132,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: index.docbook:43
+#: index.docbook:45
 #, no-c-format
 msgid ""
 "Please read also <ulink url=\"help:/kcontrol/kcmsmserver\">Desktop Session</"
@@ -132,7 +142,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: index.docbook:45
+#: index.docbook:47
 #, no-c-format
 msgid ""
 "Some &kde; applications handle the autostart behavior on their own, &eg; you "
@@ -144,19 +154,19 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: index.docbook:49
+#: index.docbook:51
 #, no-c-format
 msgid "Migration from &kde; Workspaces 4"
 msgstr ""
 
 #. Tag: para
-#: index.docbook:50
+#: index.docbook:52
 #, no-c-format
 msgid "To migrate your personal autostart setting from &kde; Workspaces 4:"
 msgstr ""
 
 #. Tag: member
-#: index.docbook:52
+#: index.docbook:54
 #, no-c-format
 msgid ""
 "Copy desktop files from <filename class=\"directory\">$HOME/.kde/Autostart</"
@@ -164,7 +174,7 @@ msgid ""
 msgstr ""
 
 #. Tag: member
-#: index.docbook:53
+#: index.docbook:55
 #, no-c-format
 msgid ""
 "Copy pre startup script files from <filename class=\"directory\">$HOME/.kde/"
@@ -173,7 +183,7 @@ msgid ""
 msgstr ""
 
 #. Tag: member
-#: index.docbook:54
+#: index.docbook:56
 #, no-c-format
 msgid ""
 "Copy shutdown script files from <filename class=\"directory\">$HOME/.kde/"
@@ -182,13 +192,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: index.docbook:59
+#: index.docbook:61
 #, no-c-format
 msgid "Disabling Autostart Files Provided by Your Distribution"
 msgstr ""
 
 #. Tag: para
-#: index.docbook:60
+#: index.docbook:62
 #, no-c-format
 msgid ""
 "The correct way to disable an autostart item, for example the printer-applet "
@@ -201,19 +211,19 @@ msgid ""
 msgstr ""
 
 #. Tag: programlisting
-#: index.docbook:61
+#: index.docbook:63
 #, no-c-format
 msgid "Hidden=true"
 msgstr ""
 
 #. Tag: title
-#: index.docbook:65
+#: index.docbook:67
 #, no-c-format
 msgid "Files display"
 msgstr ""
 
 #. Tag: para
-#: index.docbook:66
+#: index.docbook:68
 #, no-c-format
 msgid ""
 "The main part of the module displays the programs that are loaded when "
@@ -221,13 +231,13 @@ msgid ""
 msgstr ""
 
 #. Tag: guilabel
-#: index.docbook:69
+#: index.docbook:71
 #, no-c-format
 msgid "Icon"
 msgstr ""
 
 #. Tag: para
-#: index.docbook:71
+#: index.docbook:73
 #, no-c-format
 msgid ""
 "This column shows the icon of the program or script you want to start with "
@@ -236,13 +246,13 @@ msgid ""
 msgstr ""
 
 #. Tag: guilabel
-#: index.docbook:77
+#: index.docbook:79
 #, no-c-format
 msgid "Name"
 msgstr ""
 
 #. Tag: para
-#: index.docbook:79
+#: index.docbook:81
 #, no-c-format
 msgid ""
 "This column shows the name of the program or script you want to start with "
@@ -252,39 +262,41 @@ msgid ""
 msgstr ""
 
 #. Tag: guilabel
-#: index.docbook:85
+#: index.docbook:87
 #, no-c-format
 msgid "Properties"
 msgstr ""
 
 #. Tag: para
-#: index.docbook:87
+#: index.docbook:89
 #, no-c-format
 msgid ""
 "This button is only shown when you hover the item with the mouse pointer. "
-"The button (only enabled for programs &ie; <filename class=\"extension\">."
-"desktop</filename> files) allows you to change the properties of the program "
-"or script. You have general properties, permissions properties, a preview "
-"when applicable, and properties related to the application for programs. The "
-"default command is extracted from the <filename class=\"extension\">."
-"desktop</filename> file from the <literal>Exec</literal> key."
+"The button (only enabled for programs and login scripts &ie; <filename class="
+"\"extension\">.desktop</filename> files) allows you to change the properties "
+"of the program or script. You have general properties, permissions "
+"properties, a preview when applicable, and properties related to the "
+"application or login script. The default command is extracted from the "
+"<filename class=\"extension\">.desktop</filename> file from the "
+"<literal>Exec</literal> key."
 msgstr ""
 
 #. Tag: para
-#: index.docbook:90
+#: index.docbook:92
 #, no-c-format
 msgid ""
-"For a script, the command is the path to the script and can not be modified."
+"For a logout script, the command is the path to the script and can not be "
+"modified."
 msgstr ""
 
 #. Tag: guilabel
-#: index.docbook:96
+#: index.docbook:98
 #, no-c-format
 msgid "Remove"
 msgstr ""
 
 #. Tag: para
-#: index.docbook:98
+#: index.docbook:100
 #, no-c-format
 msgid ""
 "This button is only shown when you hover the item with the mouse pointer. "
@@ -294,13 +306,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: index.docbook:107
+#: index.docbook:109
 #, no-c-format
 msgid "Actions"
 msgstr ""
 
 #. Tag: para
-#: index.docbook:108
+#: index.docbook:110
 #, no-c-format
 msgid ""
 "On the bottom, you have the combined <guibutton>Add...</guibutton> button to "
@@ -309,13 +321,13 @@ msgid ""
 msgstr ""
 
 #. Tag: guimenuitem
-#: index.docbook:113
+#: index.docbook:115
 #, no-c-format
 msgid "Add Program"
 msgstr ""
 
 #. Tag: para
-#: index.docbook:115
+#: index.docbook:117
 #, no-c-format
 msgid ""
 "Clicking this item displays the standard &plasma; <guilabel>Choose "
@@ -325,7 +337,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: index.docbook:118
+#: index.docbook:120
 #, no-c-format
 msgid ""
 "This will copy the program <filename class=\"extension\">.desktop</filename> "
@@ -333,29 +345,30 @@ msgid ""
 msgstr ""
 
 #. Tag: guimenuitem
-#: index.docbook:124
+#: index.docbook:126
 #, no-c-format
 msgid "Add Login Script..."
 msgstr ""
 
 #. Tag: para
-#: index.docbook:126
+#: index.docbook:128
 #, no-c-format
 msgid ""
 "This item opens a dialog that asks you for the location of the script you "
-"want to add. Scripts set to run on login are copied or symlinked in "
-"<filename class=\"directory\">$HOME/.config/autostart</filename> and will be "
-"run during Plasma startup."
+"want to add. Scripts set to run on login will have a corresponding <filename "
+"class=\"extension\">.desktop</filename> file created in your <filename class="
+"\"directory\">Autostart</filename> folder and will be run during Plasma "
+"startup."
 msgstr ""
 
 #. Tag: guimenuitem
-#: index.docbook:131
+#: index.docbook:133
 #, no-c-format
 msgid "Add Logout Script..."
 msgstr ""
 
 #. Tag: para
-#: index.docbook:133
+#: index.docbook:135
 #, no-c-format
 msgid ""
 "This item opens a dialog that asks you for the location of the script you "
