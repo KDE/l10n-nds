@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-05-20 00:17+0000\n"
+"POT-Creation-Date: 2021-05-21 00:17+0000\n"
 "PO-Revision-Date: 2014-09-18 17:03+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -194,10 +194,10 @@ msgstr ""
 #: src/commands/pivgeneratecardkeycommand.cpp:216
 #: src/commands/setpivcardapplicationadministrationkeycommand.cpp:179
 #: src/commands/setpivcardapplicationadministrationkeycommand.cpp:209
-#: src/view/pgpcardwidget.cpp:344 src/view/pgpcardwidget.cpp:359
-#: src/view/pgpcardwidget.cpp:423 src/view/pgpcardwidget.cpp:429
-#: src/view/pgpcardwidget.cpp:435 src/view/pgpcardwidget.cpp:458
-#: src/view/pgpcardwidget.cpp:485 src/view/pgpcardwidget.cpp:505
+#: src/view/pgpcardwidget.cpp:315 src/view/pgpcardwidget.cpp:330
+#: src/view/pgpcardwidget.cpp:394 src/view/pgpcardwidget.cpp:400
+#: src/view/pgpcardwidget.cpp:406 src/view/pgpcardwidget.cpp:429
+#: src/view/pgpcardwidget.cpp:456 src/view/pgpcardwidget.cpp:476
 #, fuzzy, kde-format
 #| msgid "Error"
 msgctxt "@title"
@@ -274,8 +274,8 @@ msgstr "Vun %1 importeert Zertifikaten"
 #: src/commands/keytocardcommand.cpp:472 src/commands/keytocardcommand.cpp:496
 #: src/commands/pivgeneratecardkeycommand.cpp:218
 #: src/commands/setpivcardapplicationadministrationkeycommand.cpp:211
-#: src/view/pgpcardwidget.cpp:367 src/view/pgpcardwidget.cpp:464
-#: src/view/pgpcardwidget.cpp:511
+#: src/view/pgpcardwidget.cpp:338 src/view/pgpcardwidget.cpp:435
+#: src/view/pgpcardwidget.cpp:482
 #, kde-format
 msgctxt "@title"
 msgid "Success"
@@ -1869,8 +1869,8 @@ msgstr "All utsöken"
 msgid "Please select the card slot the key should be written to:"
 msgstr "Söök bitte een vun disse Zertifikaten ut:"
 
-#: src/commands/keytocardcommand.cpp:214 src/view/pgpcardwidget.cpp:445
-#: src/view/pgpcardwidget.cpp:492
+#: src/commands/keytocardcommand.cpp:214 src/view/pgpcardwidget.cpp:416
+#: src/view/pgpcardwidget.cpp:463
 #, kde-format
 msgid "Failed to find the OpenPGP card with the serial number: %1"
 msgstr ""
@@ -1882,7 +1882,7 @@ msgstr ""
 
 #: src/commands/keytocardcommand.cpp:242 src/commands/keytocardcommand.cpp:370
 #: src/commands/pivgeneratecardkeycommand.cpp:132
-#: src/view/pgpcardwidget.cpp:377
+#: src/view/pgpcardwidget.cpp:348
 #, kde-format
 msgid ""
 "It will no longer be possible to decrypt past communication encrypted for "
@@ -4935,8 +4935,8 @@ msgstr "Gellt vun"
 msgid "Expires:"
 msgstr "aflopen"
 
-#: src/dialogs/certificatedetailswidget.cpp:218 src/view/pgpcardwidget.cpp:156
-#: src/view/pgpcardwidget.cpp:171
+#: src/dialogs/certificatedetailswidget.cpp:218 src/view/pgpcardwidget.cpp:150
+#: src/view/pgpcardwidget.cpp:165
 #, fuzzy, kde-format
 #| msgid "Change Passphrase..."
 msgid "Change"
@@ -5391,7 +5391,7 @@ msgstr[1] ""
 "fröher al mit de Zertifikaten verslötelt hest. Dorüm do de man lever nich "
 "weg."
 
-#: src/dialogs/deletecertificatesdialog.cpp:221 src/view/pgpcardwidget.cpp:379
+#: src/dialogs/deletecertificatesdialog.cpp:221 src/view/pgpcardwidget.cpp:350
 #, kde-format
 msgid "Secret Key Deletion"
 msgstr "Privaatslötel wegdoon"
@@ -8869,8 +8869,8 @@ msgstr "ZTL ut Datei importeren..."
 msgid "View Columns"
 msgstr ""
 
-#: src/view/netkeywidget.cpp:80 src/view/p15cardwidget.cpp:71
-#: src/view/pgpcardwidget.cpp:143 src/view/pivcardwidget.cpp:110
+#: src/view/netkeywidget.cpp:80 src/view/p15cardwidget.cpp:75
+#: src/view/pgpcardwidget.cpp:137 src/view/pivcardwidget.cpp:110
 #, fuzzy, kde-format
 #| msgid "Serial number"
 msgid "Serial number:"
@@ -8895,7 +8895,7 @@ msgctxt "@action"
 msgid "Load Certificates"
 msgstr "&Zertifikaten nieg laden"
 
-#: src/view/netkeywidget.cpp:142 src/view/pgpcardwidget.cpp:195
+#: src/view/netkeywidget.cpp:142 src/view/pgpcardwidget.cpp:185
 #, fuzzy, kde-format
 #| msgid "Actions"
 msgid "Actions:"
@@ -8916,7 +8916,7 @@ msgctxt "@info:tooltip"
 msgid "Create an OpenPGP key for the keys stored on the card."
 msgstr "Vun %1 importeert Zertifikaten"
 
-#: src/view/netkeywidget.cpp:156 src/view/pgpcardwidget.cpp:253
+#: src/view/netkeywidget.cpp:156 src/view/openpgpkeycardwidget.cpp:56
 #: src/view/pivcardwidget.cpp:184
 #, fuzzy, kde-format
 #| msgctxt "@action"
@@ -9032,57 +9032,85 @@ msgstr ""
 msgid "Set initial PIN"
 msgstr "Eerst PIN fastleggen"
 
-#: src/view/p15cardwidget.cpp:83
+#: src/view/openpgpkeycardwidget.cpp:51
+#, fuzzy, kde-format
+#| msgid "Show Details"
+msgctxt "@action:button"
+msgid "Show Details"
+msgstr "Enkelheiten wiesen"
+
+#: src/view/openpgpkeycardwidget.cpp:52
+#, kde-format
+msgctxt "@action:tooltip"
+msgid "Show detailed information about this key"
+msgstr ""
+
+#: src/view/openpgpkeycardwidget.cpp:57 src/view/pivcardwidget.cpp:185
+#, fuzzy, kde-format
+#| msgid "Create a personal X.509 key pair and certification request "
+msgctxt "@info:tooltip"
+msgid "Create a certificate signing request for this key"
+msgstr "En persöönlich X.509-Slötelpoor un Beglöövanfraag opstellen"
+
+#: src/view/openpgpkeycardwidget.cpp:164
+#, kde-format
+msgctxt "@info"
+msgid "<em>No key</em>"
+msgstr ""
+
+#: src/view/openpgpkeycardwidget.cpp:175
+#, fuzzy, kde-format
+#| msgid "No usable inputs found"
+msgctxt "@info"
+msgid "<em>Public key not found locally</em>"
+msgstr "Keen Ingaav funnen, de sik bruken lett"
+
+#: src/view/openpgpkeycardwidget.cpp:200
+#, fuzzy, kde-format
+#| msgid "<b>Invalid signature.</b>"
+#| msgid_plural "<b>%1 invalid signatures.</b>"
+msgctxt "@info"
+msgid "<em>Invalid fingerprint</em>"
+msgstr "<b>Leeg Ünnerschrift.</b>"
+
+#: src/view/openpgpkeycardwidget.cpp:230
+#, kde-format
+msgctxt "@info"
+msgid "Sorry, I cannot find the key with fingerprint %1."
+msgstr ""
+
+#: src/view/p15cardwidget.cpp:90
 #, fuzzy, kde-format
 #| msgid "OpenPGP:"
 msgid "OpenPGP keys:"
 msgstr "OpenPGP:"
 
-#: src/view/p15cardwidget.cpp:107
+#: src/view/p15cardwidget.cpp:112
 #, fuzzy, kde-format
 #| msgid "Scanning directories..."
 msgid "Searching in directory service..."
 msgstr "Ornern warrt dörkeken..."
 
-#: src/view/p15cardwidget.cpp:122
+#: src/view/p15cardwidget.cpp:127
 #, kde-format
 msgid "Automatic import finished."
 msgstr ""
 
-#: src/view/p15cardwidget.cpp:127
+#: src/view/p15cardwidget.cpp:132
 #, kde-format
 msgid "Error multiple keys found on server."
 msgstr ""
 
-#: src/view/p15cardwidget.cpp:130
+#: src/view/p15cardwidget.cpp:135
 #, kde-format
 msgid "Key not found in directory service."
 msgstr ""
 
-#: src/view/p15cardwidget.cpp:141
-#, fuzzy, kde-format
-#| msgid "Signing"
-msgid "Signing key:"
-msgstr "Ünnerschrieven"
-
-#: src/view/p15cardwidget.cpp:149 src/view/p15cardwidget.cpp:203
-#: src/view/pgpcardwidget.cpp:558
-#, fuzzy, kde-format
-#| msgid "No usable inputs found"
-msgid "Public key not found."
-msgstr "Keen Ingaav funnen, de sik bruken lett"
-
-#: src/view/p15cardwidget.cpp:173
+#: src/view/p15cardwidget.cpp:144
 #, kde-format
 msgctxt "%1 is a smartcard manufacturer"
 msgid "%1 PKCS#15 card"
 msgstr ""
-
-#: src/view/p15cardwidget.cpp:197
-#, fuzzy, kde-format
-#| msgid "Encryption"
-msgid "Encryption key:"
-msgstr "Verslöteln"
 
 #: src/view/padwidget.cpp:76 src/view/padwidget.cpp:463
 #, fuzzy, kde-format
@@ -9145,13 +9173,13 @@ msgctxt ""
 msgid "%1 Notepad"
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:150
+#: src/view/pgpcardwidget.cpp:144
 #, kde-format
 msgctxt "The owner of a smartcard. GnuPG refers to this as cardholder."
 msgid "Cardholder:"
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:165
+#: src/view/pgpcardwidget.cpp:159
 #, fuzzy, kde-format
 #| msgid "Subkey Usage:"
 msgctxt ""
@@ -9160,190 +9188,183 @@ msgctxt ""
 msgid "Pubkey URL:"
 msgstr "Ünnerslötel-Bruuk:"
 
-#: src/view/pgpcardwidget.cpp:183 src/view/pivcardwidget.cpp:120
+#: src/view/pgpcardwidget.cpp:177 src/view/pivcardwidget.cpp:120
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Subkeys"
 msgid "Keys:"
 msgstr "Ünnerslötels"
 
-#: src/view/pgpcardwidget.cpp:200
+#: src/view/pgpcardwidget.cpp:190
 #, fuzzy, kde-format
 #| msgid "Generating key"
 msgid "Generate New Keys"
 msgstr "Slötel warrt opstellt"
 
-#: src/view/pgpcardwidget.cpp:201
+#: src/view/pgpcardwidget.cpp:191
 #, kde-format
 msgid "Create a new primary key and generate subkeys on the card."
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:206
+#: src/view/pgpcardwidget.cpp:196
 #, fuzzy, kde-format
 #| msgid "Change Passphrase..."
 msgid "Change PIN"
 msgstr "Slötelsatz ännern..."
 
-#: src/view/pgpcardwidget.cpp:207
+#: src/view/pgpcardwidget.cpp:197
 #, kde-format
 msgid "Change the PIN required for using the keys on the smartcard."
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:212
+#: src/view/pgpcardwidget.cpp:202
 #, fuzzy, kde-format
 #| msgid "Select All"
 msgid "Unblock Card"
 msgstr "All utsöken"
 
-#: src/view/pgpcardwidget.cpp:213
+#: src/view/pgpcardwidget.cpp:203
 #, kde-format
 msgid "Unblock the smartcard and set a new PIN."
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:218
+#: src/view/pgpcardwidget.cpp:208
 #, kde-format
 msgid "Change Admin PIN"
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:219
+#: src/view/pgpcardwidget.cpp:209
 #, kde-format
 msgid "Change the PIN required for administrative operations."
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:224
+#: src/view/pgpcardwidget.cpp:214
 #, kde-format
 msgid "Change Reset Code"
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:225
+#: src/view/pgpcardwidget.cpp:215
 #, kde-format
 msgid "Change the PIN required to unblock the smartcard and set a new PIN."
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:233
+#: src/view/pgpcardwidget.cpp:223
 #, fuzzy, kde-format
 #| msgid "Create a personal OpenPGP key pair"
 msgid "Create OpenPGP Key"
 msgstr "En persöönlich OpenPGP-Slötelpoor opstellen"
 
-#: src/view/pgpcardwidget.cpp:234
+#: src/view/pgpcardwidget.cpp:224
 #, kde-format
 msgid "Create an OpenPGP key for the keys stored on the card."
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:254 src/view/pivcardwidget.cpp:185
-#, fuzzy, kde-format
-#| msgid "Create a personal X.509 key pair and certification request "
-msgctxt "@info:tooltip"
-msgid "Create a certificate signing request for this key"
-msgstr "En persöönlich X.509-Slötelpoor un Beglöövanfraag opstellen"
-
-#: src/view/pgpcardwidget.cpp:271
+#: src/view/pgpcardwidget.cpp:243
 #, kde-format
 msgctxt "Placeholder is a version number"
 msgid "Unknown OpenPGP v%1 card"
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:273
+#: src/view/pgpcardwidget.cpp:245
 #, kde-format
 msgctxt ""
 "First placeholder is manufacturer, second placeholder is a version number"
 msgid "%1 OpenPGP v%2 card"
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:279 src/view/pgpcardwidget.cpp:281
+#: src/view/pgpcardwidget.cpp:251 src/view/pgpcardwidget.cpp:253
 #, fuzzy, kde-format
 #| msgid "Cannot send data"
 msgid "not set"
 msgstr "Daten laat sik nich loosstüern"
 
-#: src/view/pgpcardwidget.cpp:326
+#: src/view/pgpcardwidget.cpp:297
 #, fuzzy, kde-format
 #| msgid "Generating key"
 msgctxt "@title:window"
 msgid "Generating Keys"
 msgstr "Slötel warrt opstellt"
 
-#: src/view/pgpcardwidget.cpp:327
+#: src/view/pgpcardwidget.cpp:298
 #, kde-format
 msgid "This may take several minutes..."
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:343
+#: src/view/pgpcardwidget.cpp:314
 #, fuzzy, kde-format
 #| msgid "Failed to execute %1: %2"
 msgctxt "@info"
 msgid "Failed to generate new key: %1"
 msgstr "%1 lett sik nich utföhren: %2"
 
-#: src/view/pgpcardwidget.cpp:353
+#: src/view/pgpcardwidget.cpp:324
 #, fuzzy, kde-format
 #| msgid "Can be used for encryption"
 msgid "Save backup of encryption key"
 msgstr "För't Verslöteln to bruken"
 
-#: src/view/pgpcardwidget.cpp:355
+#: src/view/pgpcardwidget.cpp:326
 #, kde-format
 msgid "Backup Key"
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:358
+#: src/view/pgpcardwidget.cpp:329
 #, kde-format
 msgctxt "@info"
 msgid "Failed to move backup. The backup key is still stored under: %1"
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:366
+#: src/view/pgpcardwidget.cpp:337
 #, kde-format
 msgctxt "@info"
 msgid "Successfully generated a new key for this card."
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:375
+#: src/view/pgpcardwidget.cpp:346
 #, kde-format
 msgid ""
 "The existing keys on this card will be <b>deleted</b> and replaced by new "
 "keys."
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:412
+#: src/view/pgpcardwidget.cpp:383
 #, kde-format
 msgid "Change cardholder"
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:413
+#: src/view/pgpcardwidget.cpp:384
 #, fuzzy, kde-format
 #| msgid "Real name:"
 msgid "New name:"
 msgstr "Rejell Naam:"
 
-#: src/view/pgpcardwidget.cpp:422
+#: src/view/pgpcardwidget.cpp:393
 #, kde-format
 msgctxt "@info"
 msgid "The \"<\" character may not be used."
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:428
+#: src/view/pgpcardwidget.cpp:399
 #, fuzzy, kde-format
 #| msgid "Only absolute file paths are allowed"
 msgctxt "@info"
 msgid "Double spaces are not allowed"
 msgstr "Bloots afsoluut Dateipadden tolaten"
 
-#: src/view/pgpcardwidget.cpp:434
+#: src/view/pgpcardwidget.cpp:405
 #, kde-format
 msgctxt "@info"
 msgid "The size of the name may not exceed 38 characters."
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:457
+#: src/view/pgpcardwidget.cpp:428
 #, fuzzy, kde-format
 #| msgid "Verification failed: %1."
 msgctxt "@info"
 msgid "Name change failed: %1"
 msgstr "Pröven fehlslaan: %1"
 
-#: src/view/pgpcardwidget.cpp:463
+#: src/view/pgpcardwidget.cpp:434
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "User-ID successfully added."
@@ -9351,42 +9372,37 @@ msgctxt "@info"
 msgid "Name successfully changed."
 msgstr "Bruker-ID mit Spood toföögt."
 
-#: src/view/pgpcardwidget.cpp:474
+#: src/view/pgpcardwidget.cpp:445
 #, kde-format
 msgid "Change the URL where the pubkey can be found"
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:475
+#: src/view/pgpcardwidget.cpp:446
 #, fuzzy, kde-format
 #| msgid "New subkeys:"
 msgid "New pubkey URL:"
 msgstr "Nieg Ünnerslötels:"
 
-#: src/view/pgpcardwidget.cpp:484
+#: src/view/pgpcardwidget.cpp:455
 #, kde-format
 msgctxt "@info"
 msgid "The size of the URL may not exceed 254 characters."
 msgstr ""
 
-#: src/view/pgpcardwidget.cpp:504
+#: src/view/pgpcardwidget.cpp:475
 #, fuzzy, kde-format
 #| msgid "Signing failed: %1"
 msgctxt "@info"
 msgid "URL change failed: %1"
 msgstr "Ünnerschrieven fehlslaan: %1"
 
-#: src/view/pgpcardwidget.cpp:510
+#: src/view/pgpcardwidget.cpp:481
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "User-ID successfully added."
 msgctxt "@info"
 msgid "URL successfully changed."
 msgstr "Bruker-ID mit Spood toföögt."
-
-#: src/view/pgpcardwidget.cpp:544
-#, kde-format
-msgid "Slot empty"
-msgstr ""
 
 #: src/view/pivcardwidget.cpp:142
 #, fuzzy, kde-format
@@ -9772,6 +9788,16 @@ msgstr "Vun %1 importeert Zertifikaten"
 #, kde-format
 msgid "To import from a public keyserver use \"Lookup on Server\" instead."
 msgstr ""
+
+#, fuzzy
+#~| msgid "Signing"
+#~ msgid "Signing key:"
+#~ msgstr "Ünnerschrieven"
+
+#, fuzzy
+#~| msgid "Encryption"
+#~ msgid "Encryption key:"
+#~ msgstr "Verslöteln"
 
 #, fuzzy
 #~| msgctxt "@info:tooltip"
