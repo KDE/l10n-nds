@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kphotoalbum\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-07-16 00:16+0000\n"
+"POT-Creation-Date: 2021-07-29 00:15+0000\n"
 "PO-Revision-Date: 2014-03-19 18:59+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -2673,12 +2673,12 @@ msgstr ""
 msgid "Trust Time Stamps?"
 msgstr "Tietmarken övernehmen?"
 
-#: lib/kpabase/SettingsData.cpp:356 XMLDB/FileReader.cpp:503
+#: lib/kpabase/SettingsData.cpp:357 XMLDB/FileReader.cpp:503
 #, kde-format
 msgid "Events"
 msgstr "Begeefnissen"
 
-#: lib/kpabase/SettingsData.cpp:357 XMLDB/FileReader.cpp:504
+#: lib/kpabase/SettingsData.cpp:358 XMLDB/FileReader.cpp:504
 #, fuzzy, kde-format
 #| msgid "Untagged Images"
 msgid "untagged"
@@ -3219,9 +3219,8 @@ msgstr ""
 #| "href=\"http://userbase.kde.org/KPhotoAlbum#Video_Support\">KPhotoAlbum "
 #| "wiki article on video support</a>.</p>"
 msgid ""
-"<h1><a name=\"video\">Video support</a></h1><p>KPhotoAlbum relies on Qt's "
-"Phonon architecture for displaying videos; this in turn relies on GStreamer."
-"</p>"
+"<h1><a name=\"video\">Video support</a></h1><p>KPhotoAlbum relies on QtAv "
+"for displaying videos; this in turn relies on ffmpeg</p>"
 msgstr ""
 "<h1><a name=\"video\">Video-Ünnerstütten</a></h1><p>KPhotoAlbum bruukt de op "
 "GStreamer opbuut Phonon-Architektuur vun Qt för't Wiesen vun Videos. Wenn "
@@ -3229,26 +3228,7 @@ msgstr ""
 "\"http://userbase.kde.org/KPhotoAlbum#Video_Support\">Video-Ünnerstütten</a> "
 "in't Wiki vun KPhotoAlbum an.</p>"
 
-#: MainWindow/FeatureDialog.cpp:69
-#, kde-format
-msgid ""
-"<p>No video mime types found, which indicates that either Qt was compiled "
-"without phonon support, or there were missing codecs</p>"
-msgstr ""
-"<p>MIME-Typen för Videos laat sik nich finnen. Dat heet, dat Qt ahn Phonon-"
-"Ünnerstütten kompileert weer, oder dat de Kodeks fehlt.</p>"
-
-#: MainWindow/FeatureDialog.cpp:71
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>Phonon is capable of playing movies of these mime types:<ul><li>%1</"
-#| "ul></p>"
-msgid ""
-"<p>Phonon is capable of playing movies of these mime types:<ul><li>%1</li></"
-"ul></p>"
-msgstr "<p>Phonon kann Filme vun disse MIME-Typen afspelen:<ul><li>%1</ul></p>"
-
-#: MainWindow/FeatureDialog.cpp:73
+#: MainWindow/FeatureDialog.cpp:66
 #, kde-format
 msgid ""
 "<h1><a name=\"videoPreview\">Video thumbnail support</a></h1><p>KPhotoAlbum "
@@ -3256,7 +3236,7 @@ msgid ""
 "are used to preview videos in the thumbnail viewer.</p>"
 msgstr ""
 
-#: MainWindow/FeatureDialog.cpp:77
+#: MainWindow/FeatureDialog.cpp:70
 #, kde-format
 msgid ""
 "<h1><a name=\"videoInfo\">Video metadata support</a></h1><p>KPhotoAlbum can "
@@ -3265,47 +3245,42 @@ msgid ""
 "thumbnails.</p>"
 msgstr ""
 
-#: MainWindow/FeatureDialog.cpp:167
+#: MainWindow/FeatureDialog.cpp:160
 #, kde-format
 msgid "Plug-ins available"
 msgstr "Verföögbor Modulen"
 
-#: MainWindow/FeatureDialog.cpp:168
+#: MainWindow/FeatureDialog.cpp:161
 #, fuzzy, kde-format
 #| msgid "Sqlite Database Support (used for EXIF searches)"
 msgid "SQLite database support (used for Exif searches)"
 msgstr "Ünnerstütten för SQLite-Datenbank (bruukt för EXIF-Söök)"
 
-#: MainWindow/FeatureDialog.cpp:169
+#: MainWindow/FeatureDialog.cpp:162
 #, kde-format
 msgid "Map view for geotagged images."
 msgstr ""
 
-#: MainWindow/FeatureDialog.cpp:170
-#, kde-format
-msgid "Video support"
-msgstr "Video-Ünnerstütten"
-
-#: MainWindow/FeatureDialog.cpp:171
+#: MainWindow/FeatureDialog.cpp:163
 #, fuzzy, kde-format
 #| msgid "Video Thumbnail support"
 msgid "Video thumbnail support"
 msgstr "Ünnerstütten för Video-Vöransichten"
 
-#: MainWindow/FeatureDialog.cpp:172
+#: MainWindow/FeatureDialog.cpp:164
 #, fuzzy, kde-format
 #| msgid "Video support"
 msgid "Video metadata support"
 msgstr "Video-Ünnerstütten"
 
-#: MainWindow/FeatureDialog.cpp:176
+#: MainWindow/FeatureDialog.cpp:168
 #, fuzzy, kde-format
 #| msgid "Yes"
 msgctxt "Feature available"
 msgid "Yes"
 msgstr "Jo"
 
-#: MainWindow/FeatureDialog.cpp:177
+#: MainWindow/FeatureDialog.cpp:169
 #, fuzzy, kde-format
 #| msgid "No"
 msgctxt "Feature not available"
@@ -5569,57 +5544,106 @@ msgid ""
 "error about this tag being not present on the next start.</p>"
 msgstr ""
 
-#: Settings/ViewerPage.cpp:23
+#: Settings/VideoPlayerSelectorDialog.cpp:21
+#, kde-format
+msgid "<h1>Choose a Video Player</h1>"
+msgstr ""
+
+#: Settings/VideoPlayerSelectorDialog.cpp:24
+#, kde-format
+msgid ""
+"<html><p>There are unfortunately no video player which just works out of the "
+"box for everyone.</p><p>KPhotoAlbum therefore comes with three different "
+"back-ends, choose the one that works the best for you</p><p><b>VLC</b> seems "
+"to be the best supported video player back-end, meaning it can play most "
+"video formats. It has one drawback though, it requires X11. If you use "
+"Wayland, then you will find that the videos shows up in a window of their "
+"own, and in this case VLC is likely not a very good fit for you. If on the "
+"other hand you do use X11 then VLC is likely your best choice.</"
+"p><p>Traditionally KPhotoAlbum has been using <b>Phonon</b> as the video "
+"player back-end. We've unfortunately seen it crash on many different video "
+"formats - possibly because our system wasn't correctly configured. If this "
+"is the case for you (and you can't use VLC), then try the <b>QtAV</b> back-"
+"end, which seems to support a lot of formats (everything we threw at it). "
+"<b>QtAV</b> unfortunately also has a drawback - it seems to get slightly out "
+"of sync between video and audio.</p><p><b><font color=red>You can at any "
+"time change the backend from Settings -> Viewer</font></b></p></html>"
+msgstr ""
+
+#: Settings/VideoPlayerSelectorDialog.cpp:47
+#: Settings/VideoPlayerSelectorDialog.cpp:56
+#: Settings/VideoPlayerSelectorDialog.cpp:65
+#, kde-format
+msgid " (NOT AVILABLE)"
+msgstr ""
+
+#: Settings/VideoPlayerSelectorDialog.cpp:97
+#, kde-format
+msgid ""
+"<html><h1>Missing back-end</h1>The back-ends which are not available are due "
+"to the system configuration at compile time of KPhotoAlbum. If you compiled "
+"KPhotoAlbum yourself, then search for the developer packages of the back-"
+"ends. If you on the other hand got KPhotoAlbum from your system, then please "
+"talk to the maintainer of the package.</html>"
+msgstr ""
+
+#: Settings/ViewerPage.cpp:24
+#, fuzzy, kde-format
+#| msgid "Not defined"
+msgid "Not Configured"
+msgstr "Nich angeven"
+
+#: Settings/ViewerPage.cpp:40
 #, kde-format
 msgid "Running Slide Show From Thumbnail View"
 msgstr "Diaschau ut Vöransichtbild-Ansicht"
 
-#: Settings/ViewerPage.cpp:26
+#: Settings/ViewerPage.cpp:43
 #, kde-format
 msgid "Viewing Images and Videos From Thumbnail View"
 msgstr "Biller un Videos ut Vöransichtbild-Ansicht ankieken"
 
-#: Settings/ViewerPage.cpp:32
+#: Settings/ViewerPage.cpp:50
 #, kde-format
 msgid "Slideshow interval:"
 msgstr "Paus twischen de Dias:"
 
-#: Settings/ViewerPage.cpp:38
+#: Settings/ViewerPage.cpp:56
 #, kde-format
 msgid " sec"
 msgstr " s"
 
-#: Settings/ViewerPage.cpp:41
+#: Settings/ViewerPage.cpp:59
 #, kde-format
 msgid "Image cache:"
 msgstr "Bild-Twischenspieker:"
 
-#: Settings/ViewerPage.cpp:47
+#: Settings/ViewerPage.cpp:65
 #, kde-format
 msgid " Mbytes"
 msgstr " MB"
 
-#: Settings/ViewerPage.cpp:53
+#: Settings/ViewerPage.cpp:71
 #, kde-format
 msgid "Standard size in viewer:"
 msgstr "Standardgrött in den Kieker:"
 
-#: Settings/ViewerPage.cpp:55
+#: Settings/ViewerPage.cpp:73
 #, kde-format
 msgid "Full Viewer Size"
 msgstr "Heel Kiekergrött"
 
-#: Settings/ViewerPage.cpp:55
+#: Settings/ViewerPage.cpp:73
 #, kde-format
 msgid "Natural Image Size"
 msgstr "Orginaalgrött"
 
-#: Settings/ViewerPage.cpp:55
+#: Settings/ViewerPage.cpp:73
 #, kde-format
 msgid "Natural Image Size If Possible"
 msgstr "Orginaalgrött, wenn mööglich"
 
-#: Settings/ViewerPage.cpp:60
+#: Settings/ViewerPage.cpp:78
 #, kde-format
 msgid ""
 "<p>Set the standard size for images to be displayed in the viewer.</p> "
@@ -5637,23 +5661,23 @@ msgstr ""
 "bedüüdt, dat elk Pixel vun't Bild wiest warrt, wenn dat Bild na't "
 "Kiekerfinster rinpasst, anners warrt dat Bild topasst.</p>"
 
-#: Settings/ViewerPage.cpp:67
+#: Settings/ViewerPage.cpp:85
 #, fuzzy, kde-format
 #| msgid "Scaling Algorithm"
 msgid "Scaling algorithm:"
 msgstr "Topass-Algoritmus"
 
-#: Settings/ViewerPage.cpp:69
+#: Settings/ViewerPage.cpp:87
 #, kde-format
 msgid "Fastest"
 msgstr "Gauest"
 
-#: Settings/ViewerPage.cpp:69
+#: Settings/ViewerPage.cpp:87
 #, kde-format
 msgid "Best"
 msgstr "Best"
 
-#: Settings/ViewerPage.cpp:74
+#: Settings/ViewerPage.cpp:92
 #, kde-format
 msgid ""
 "<p>When displaying images, KPhotoAlbum normally performs smooth scaling of "
@@ -5662,6 +5686,12 @@ msgid ""
 msgstr ""
 "<p>KPhotoAlbum passt Biller för't Wiesen normalerwies week to. Is dit nich "
 "anmaakt, bruukt dat en gauer, man nich so week Metood bi't Topassen.</p>"
+
+#: Settings/ViewerPage.cpp:97
+#, fuzzy, kde-format
+#| msgid "Database backend"
+msgid "Video Backend:"
+msgstr "Datenbank"
 
 #: Settings/ViewerSizeConfig.cpp:19
 #, kde-format
@@ -6295,13 +6325,13 @@ msgctxt "@action:button As in 'Set the category image'"
 msgid "Set"
 msgstr "Fastleggen"
 
-#: Viewer/ImageDisplay.cpp:356 Viewer/ImageDisplay.cpp:380
-#: Viewer/ImageDisplay.cpp:441
+#: Viewer/ImageDisplay.cpp:355 Viewer/ImageDisplay.cpp:379
+#: Viewer/ImageDisplay.cpp:440
 #, kde-format
 msgid "Insufficient color depth for this filter"
 msgstr "Leeg Klöördeepde för dissen Filter"
 
-#: Viewer/ImageDisplay.cpp:500
+#: Viewer/ImageDisplay.cpp:499
 #, kde-format
 msgid "[ zoom x%1 ]"
 msgstr "[ Grött x%1 ]"
@@ -6309,6 +6339,26 @@ msgstr "[ Grött x%1 ]"
 #: Viewer/InfoBox.cpp:61
 #, kde-format
 msgid "Show the geographic position of this image on a map"
+msgstr ""
+
+#: Viewer/PhononDisplay.cpp:165
+#, kde-format
+msgid "Error playing media"
+msgstr "Fehler bi't Afspelen"
+
+#: Viewer/QtAVDisplay.cpp:26 Viewer/QtAVDisplay.cpp:41
+#, kde-format
+msgid "Failed to set up video playback"
+msgstr ""
+
+#: Viewer/QtAVDisplay.cpp:26
+#, kde-format
+msgid "Failed to set up video playback (renderer wasn't created)"
+msgstr ""
+
+#: Viewer/QtAVDisplay.cpp:41
+#, kde-format
+msgid "Failed to set up video playback (widget wasn't created)"
 msgstr ""
 
 #: Viewer/SpeedDisplay.cpp:33
@@ -6334,422 +6384,417 @@ msgctxt "OSD for slideshow"
 msgid "<p><center><font size=\"+4\">Ending Slideshow</font></center></p>"
 msgstr "<p><center><font size=\"+4\">Diaschau warrt beendt</font></center></p>"
 
-#: Viewer/VideoDisplay.cpp:180
-#, kde-format
-msgid "Error playing media"
-msgstr "Fehler bi't Afspelen"
-
-#: Viewer/ViewerWidget.cpp:144
+#: Viewer/ViewerWidget.cpp:161
 #, fuzzy, kde-format
 #| msgid "Annotate..."
 msgctxt "@action:inmenu"
 msgid "Annotate..."
 msgstr "Kategorie towiesen..."
 
-#: Viewer/ViewerWidget.cpp:149
+#: Viewer/ViewerWidget.cpp:166
 #, fuzzy, kde-format
 #| msgid "Set as First Image in Stack"
 msgctxt "@action:inmenu"
 msgid "Set as First Image in Stack"
 msgstr "As eerst Bild in en Stapel fastleggen"
 
-#: Viewer/ViewerWidget.cpp:154
+#: Viewer/ViewerWidget.cpp:171
 #, fuzzy, kde-format
 #| msgid "Show EXIF Viewer"
 msgctxt "@action:inmenu"
 msgid "Show Exif Viewer"
 msgstr "EXIF-Kieker wiesen"
 
-#: Viewer/ViewerWidget.cpp:160
+#: Viewer/ViewerWidget.cpp:177
 #, fuzzy, kde-format
 #| msgid "Export/Copy Images..."
 msgctxt "@action:inmenu"
 msgid "Copy image to ..."
 msgstr "Biller exporteren/koperen..."
 
-#: Viewer/ViewerWidget.cpp:165
+#: Viewer/ViewerWidget.cpp:182
 #, fuzzy, kde-format
 #| msgid "Export/Copy Images..."
 msgctxt "@action:inmenu"
 msgid "Link image to ..."
 msgstr "Biller exporteren/koperen..."
 
-#: Viewer/ViewerWidget.cpp:173
+#: Viewer/ViewerWidget.cpp:190
 #, fuzzy, kde-format
 #| msgid "Close"
 msgctxt "@action:inmenu"
 msgid "Close"
 msgstr "Tomaken"
 
-#: Viewer/ViewerWidget.cpp:229
+#: Viewer/ViewerWidget.cpp:246
 #, fuzzy, kde-format
 #| msgid "Rotate"
 msgctxt "@title:inmenu"
 msgid "Rotate"
 msgstr "Dreihen"
 
-#: Viewer/ViewerWidget.cpp:232
+#: Viewer/ViewerWidget.cpp:257
 #, fuzzy, kde-format
 #| msgid "Rotate clockwise"
 msgctxt "@action:inmenu"
 msgid "Rotate clockwise"
 msgstr "Na rechts dreihen"
 
-#: Viewer/ViewerWidget.cpp:238
+#: Viewer/ViewerWidget.cpp:258
 #, fuzzy, kde-format
 #| msgid "Flip Over"
 msgctxt "@action:inmenu"
 msgid "Flip Over"
 msgstr "Ümdreihen"
 
-#: Viewer/ViewerWidget.cpp:245
+#: Viewer/ViewerWidget.cpp:259
 #, fuzzy, kde-format
 #| msgid "Rotate counterclockwise"
 msgctxt "@action:inmenu"
 msgid "Rotate counterclockwise"
 msgstr "Na links dreihen"
 
-#: Viewer/ViewerWidget.cpp:256
+#: Viewer/ViewerWidget.cpp:266
 #, fuzzy, kde-format
 #| msgid "Skip"
 msgctxt "@title:inmenu As in 'skip 2 images'"
 msgid "Skip"
 msgstr "Övergahn"
 
-#: Viewer/ViewerWidget.cpp:259
+#: Viewer/ViewerWidget.cpp:269
 #, fuzzy, kde-format
 #| msgid "First"
 msgctxt "@action:inmenu Go to first image"
 msgid "First"
 msgstr "Eerst"
 
-#: Viewer/ViewerWidget.cpp:266
+#: Viewer/ViewerWidget.cpp:276
 #, fuzzy, kde-format
 #| msgid "Last"
 msgctxt "@action:inmenu Go to last image"
 msgid "Last"
 msgstr "Lest"
 
-#: Viewer/ViewerWidget.cpp:273
+#: Viewer/ViewerWidget.cpp:283
 #, fuzzy, kde-format
 #| msgid "Show Next"
 msgctxt "@action:inmenu"
 msgid "Show Next"
 msgstr "Nakamen wiesen"
 
-#: Viewer/ViewerWidget.cpp:279
+#: Viewer/ViewerWidget.cpp:289
 #, fuzzy, kde-format
 #| msgid "Skip 10 Forward"
 msgctxt "@action:inmenu"
 msgid "Skip 10 Forward"
 msgstr "10 vörut utlaten"
 
-#: Viewer/ViewerWidget.cpp:285
+#: Viewer/ViewerWidget.cpp:295
 #, fuzzy, kde-format
 #| msgid "Skip 100 Forward"
 msgctxt "@action:inmenu"
 msgid "Skip 100 Forward"
 msgstr "100 vörut utlaten"
 
-#: Viewer/ViewerWidget.cpp:291
+#: Viewer/ViewerWidget.cpp:301
 #, fuzzy, kde-format
 #| msgid "Skip 1000 Forward"
 msgctxt "@action:inmenu"
 msgid "Skip 1000 Forward"
 msgstr "1000 vörut utlaten"
 
-#: Viewer/ViewerWidget.cpp:297
+#: Viewer/ViewerWidget.cpp:307
 #, fuzzy, kde-format
 #| msgid "Show Previous"
 msgctxt "@action:inmenu"
 msgid "Show Previous"
 msgstr "Verleden wiesen"
 
-#: Viewer/ViewerWidget.cpp:303
+#: Viewer/ViewerWidget.cpp:313
 #, fuzzy, kde-format
 #| msgid "Skip 10 Backward"
 msgctxt "@action:inmenu"
 msgid "Skip 10 Backward"
 msgstr "10 torüchwarts övergahn"
 
-#: Viewer/ViewerWidget.cpp:309
+#: Viewer/ViewerWidget.cpp:319
 #, fuzzy, kde-format
 #| msgid "Skip 100 Backward"
 msgctxt "@action:inmenu"
 msgid "Skip 100 Backward"
 msgstr "100 torüchwarts övergahn"
 
-#: Viewer/ViewerWidget.cpp:315
+#: Viewer/ViewerWidget.cpp:325
 #, fuzzy, kde-format
 #| msgid "Skip 1000 Backward"
 msgctxt "@action:inmenu"
 msgid "Skip 1000 Backward"
 msgstr "1000 torüchwarts övergahn"
 
-#: Viewer/ViewerWidget.cpp:321
+#: Viewer/ViewerWidget.cpp:331
 #, fuzzy, kde-format
 #| msgid "Delete Image"
 msgctxt "@action:inmenu"
 msgid "Delete Image"
 msgstr "Bild wegdoon"
 
-#: Viewer/ViewerWidget.cpp:326
+#: Viewer/ViewerWidget.cpp:336
 #, fuzzy, kde-format
 #| msgid "Remove Image from Display List"
 msgctxt "@action:inmenu"
 msgid "Remove Image from Display List"
 msgstr "Bild ut de Wieslist wegdoon"
 
-#: Viewer/ViewerWidget.cpp:337
+#: Viewer/ViewerWidget.cpp:347
 #, fuzzy, kde-format
 #| msgid "Zoom"
 msgctxt "@action:inmenu"
 msgid "Zoom"
 msgstr "Ansichtgrött"
 
-#: Viewer/ViewerWidget.cpp:341
+#: Viewer/ViewerWidget.cpp:351
 #, fuzzy, kde-format
 #| msgid "Zoom In"
 msgctxt "@action:inmenu"
 msgid "Zoom In"
 msgstr "Grötter maken"
 
-#: Viewer/ViewerWidget.cpp:347
+#: Viewer/ViewerWidget.cpp:357
 #, fuzzy, kde-format
 #| msgid "Zoom Out"
 msgctxt "@action:inmenu"
 msgid "Zoom Out"
 msgstr "Lütter maken"
 
-#: Viewer/ViewerWidget.cpp:353
+#: Viewer/ViewerWidget.cpp:363
 #, fuzzy, kde-format
 #| msgid "Full View"
 msgctxt "@action:inmenu"
 msgid "Full View"
 msgstr "Vullansicht"
 
-#: Viewer/ViewerWidget.cpp:359
+#: Viewer/ViewerWidget.cpp:369
 #, fuzzy, kde-format
 #| msgid "Pixel for Pixel View"
 msgctxt "@action:inmenu"
 msgid "Pixel for Pixel View"
 msgstr "Pixel-Ansicht"
 
-#: Viewer/ViewerWidget.cpp:365
+#: Viewer/ViewerWidget.cpp:375
 #, fuzzy, kde-format
 #| msgid "Toggle Full Screen"
 msgctxt "@action:inmenu"
 msgid "Toggle Full Screen"
 msgstr "Heelschirm an-/utmaken"
 
-#: Viewer/ViewerWidget.cpp:375
+#: Viewer/ViewerWidget.cpp:385
 #, fuzzy, kde-format
 #| msgid "Slideshow"
 msgctxt "@title:inmenu"
 msgid "Slideshow"
 msgstr "Diaschau"
 
-#: Viewer/ViewerWidget.cpp:378 Viewer/ViewerWidget.cpp:789
+#: Viewer/ViewerWidget.cpp:388 Viewer/ViewerWidget.cpp:781
 #, fuzzy, kde-format
 #| msgid "Run Slideshow"
 msgctxt "@action:inmenu"
 msgid "Run Slideshow"
 msgstr "Diaschau starten"
 
-#: Viewer/ViewerWidget.cpp:383
+#: Viewer/ViewerWidget.cpp:393
 #, fuzzy, kde-format
 #| msgid "Run Faster"
 msgctxt "@action:inmenu"
 msgid "Run Faster"
 msgstr "Gauer utföhren"
 
-#: Viewer/ViewerWidget.cpp:388
+#: Viewer/ViewerWidget.cpp:398
 #, fuzzy, kde-format
 #| msgid "Run Slower"
 msgctxt "@action:inmenu"
 msgid "Run Slower"
 msgstr "Langsamer utföhren"
 
-#: Viewer/ViewerWidget.cpp:420
+#: Viewer/ViewerWidget.cpp:431
 #, kde-format
 msgid "File not available"
 msgstr "Datei nich verföögbor"
 
-#: Viewer/ViewerWidget.cpp:471
+#: Viewer/ViewerWidget.cpp:481
 #, fuzzy, kde-format
 #| msgid "%1 to %2  %3"
 msgctxt "@title:window %1 is the filename, %2 its detail info"
 msgid "%1 %2"
 msgstr "%1 to %2  %3"
 
-#: Viewer/ViewerWidget.cpp:487
+#: Viewer/ViewerWidget.cpp:497
 #, fuzzy, kde-format
 #| msgid "Play"
 msgctxt "@action:inmenu Start video playback"
 msgid "Play"
 msgstr "Afspelen"
 
-#: Viewer/ViewerWidget.cpp:489
+#: Viewer/ViewerWidget.cpp:499
 #, fuzzy, kde-format
 #| msgid "Pause"
 msgctxt "@action:inmenu Pause video playback"
 msgid "Pause"
 msgstr "Paus"
 
-#: Viewer/ViewerWidget.cpp:742
+#: Viewer/ViewerWidget.cpp:734
 #, fuzzy, kde-format
 #| msgid "<b>Sub Categories</b>"
 msgctxt "Basically 'enter a category name'"
 msgid "<b>Setting Category: </b>"
 msgstr "<b>Ünnerkategorien</b>"
 
-#: Viewer/ViewerWidget.cpp:747
+#: Viewer/ViewerWidget.cpp:739
 #, fuzzy, kde-format
 #| msgid "<b>Description: </b> "
 msgctxt "Basically 'enter a tag name'"
 msgid "<b>Assigning: </b>"
 msgstr "<b>Beschrieven: </b> "
 
-#: Viewer/ViewerWidget.cpp:795
+#: Viewer/ViewerWidget.cpp:787
 #, fuzzy, kde-format
 #| msgid "Stop Slideshow"
 msgctxt "@action:inmenu"
 msgid "Stop Slideshow"
 msgstr "Diaschau anhollen"
 
-#: Viewer/ViewerWidget.cpp:1207
+#: Viewer/ViewerWidget.cpp:1184
 #, fuzzy, kde-format
 #| msgid "Seek"
 msgctxt "@title:inmenu"
 msgid "Seek"
 msgstr "Söken"
 
-#: Viewer/ViewerWidget.cpp:1211
+#: Viewer/ViewerWidget.cpp:1205
 #, fuzzy, kde-format
 #| msgid "10 minutes backward"
 msgctxt "@action:inmenu"
 msgid "10 minutes backward"
 msgstr "10 Minuten torüch"
 
-#: Viewer/ViewerWidget.cpp:1212
+#: Viewer/ViewerWidget.cpp:1206
 #, fuzzy, kde-format
 #| msgid "1 minute backward"
 msgctxt "@action:inmenu"
 msgid "1 minute backward"
 msgstr "1 Minuut torüch"
 
-#: Viewer/ViewerWidget.cpp:1213
+#: Viewer/ViewerWidget.cpp:1207
 #, fuzzy, kde-format
 #| msgid "10 seconds backward"
 msgctxt "@action:inmenu"
 msgid "10 seconds backward"
 msgstr "10 Sekunnen torüch"
 
-#: Viewer/ViewerWidget.cpp:1214
+#: Viewer/ViewerWidget.cpp:1208
 #, fuzzy, kde-format
 #| msgid "1 seconds backward"
 msgctxt "@action:inmenu"
 msgid "1 seconds backward"
 msgstr "1 Sekunn torüch"
 
-#: Viewer/ViewerWidget.cpp:1215
+#: Viewer/ViewerWidget.cpp:1209
 #, fuzzy, kde-format
 #| msgid "100 milliseconds backward"
 msgctxt "@action:inmenu"
 msgid "100 milliseconds backward"
 msgstr "100 Millisekunnen torüch"
 
-#: Viewer/ViewerWidget.cpp:1216
+#: Viewer/ViewerWidget.cpp:1210
 #, fuzzy, kde-format
 #| msgid "100 milliseconds forward"
 msgctxt "@action:inmenu"
 msgid "100 milliseconds forward"
 msgstr "100 Millisekunnen vörut"
 
-#: Viewer/ViewerWidget.cpp:1217
+#: Viewer/ViewerWidget.cpp:1211
 #, fuzzy, kde-format
 #| msgid "1 seconds forward"
 msgctxt "@action:inmenu"
 msgid "1 seconds forward"
 msgstr "1 Sekunn vörut"
 
-#: Viewer/ViewerWidget.cpp:1218
+#: Viewer/ViewerWidget.cpp:1212
 #, fuzzy, kde-format
 #| msgid "10 seconds forward"
 msgctxt "@action:inmenu"
 msgid "10 seconds forward"
 msgstr "10 Sekunnen vörut"
 
-#: Viewer/ViewerWidget.cpp:1219
+#: Viewer/ViewerWidget.cpp:1213
 #, fuzzy, kde-format
 #| msgid "1 minute forward"
 msgctxt "@action:inmenu"
 msgid "1 minute forward"
 msgstr "1 Minuut vörut"
 
-#: Viewer/ViewerWidget.cpp:1220
+#: Viewer/ViewerWidget.cpp:1214
 #, fuzzy, kde-format
 #| msgid "10 minutes forward"
 msgctxt "@action:inmenu"
 msgid "10 minutes forward"
 msgstr "10 Minuten vörut"
 
-#: Viewer/ViewerWidget.cpp:1245
+#: Viewer/ViewerWidget.cpp:1222
 #, fuzzy, kde-format
 #| msgid "Stop"
 msgctxt "@action:inmenu Stop video playback"
 msgid "Stop"
 msgstr "Anhollen"
 
-#: Viewer/ViewerWidget.cpp:1258
+#: Viewer/ViewerWidget.cpp:1235
 #, fuzzy, kde-format
 #| msgid "Display categories in thumbnail view"
 msgctxt "@action:inmenu"
 msgid "Use current frame in thumbnail view"
 msgstr "Kategorien binnen Vöransichtbild-Ansicht wiesen"
 
-#: Viewer/ViewerWidget.cpp:1263
+#: Viewer/ViewerWidget.cpp:1241
 #, fuzzy, kde-format
 #| msgid "Restart"
 msgctxt "@action:inmenu Restart video playback."
 msgid "Restart"
 msgstr "Nieg starten"
 
-#: Viewer/ViewerWidget.cpp:1278
+#: Viewer/ViewerWidget.cpp:1256
 #, fuzzy, kde-format
 #| msgid "Filters"
 msgctxt "@title:inmenu"
 msgid "Filters"
 msgstr "Filtern"
 
-#: Viewer/ViewerWidget.cpp:1281
+#: Viewer/ViewerWidget.cpp:1259
 #, fuzzy, kde-format
 #| msgid "Remove All Filters"
 msgctxt "@action:inmenu"
 msgid "Remove All Filters"
 msgstr "All Filtern wegmaken"
 
-#: Viewer/ViewerWidget.cpp:1285
+#: Viewer/ViewerWidget.cpp:1263
 #, fuzzy, kde-format
 #| msgid "Apply Grayscale Filter"
 msgctxt "@action:inmenu"
 msgid "Apply Grayscale Filter"
 msgstr "Griestöön-Filter bruken"
 
-#: Viewer/ViewerWidget.cpp:1290
+#: Viewer/ViewerWidget.cpp:1268
 #, fuzzy, kde-format
 #| msgid "Apply Grayscale Filter"
 msgctxt "@action:inmenu"
 msgid "Apply Contrast Stretching Filter"
 msgstr "Griestöön-Filter bruken"
 
-#: Viewer/ViewerWidget.cpp:1295
+#: Viewer/ViewerWidget.cpp:1273
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Apply Histogram Equalization Filter"
 msgstr ""
 
-#: Viewer/ViewerWidget.cpp:1300
+#: Viewer/ViewerWidget.cpp:1278
 #, fuzzy, kde-format
 #| msgid "Apply Monochrome Filter"
 msgctxt "@action:inmenu"
@@ -7187,6 +7232,26 @@ msgstr ""
 #| msgid "Converting database"
 msgid "Error while reading database file"
 msgstr "Datenbank warrt ümwanneln"
+
+#~ msgid ""
+#~ "<p>No video mime types found, which indicates that either Qt was compiled "
+#~ "without phonon support, or there were missing codecs</p>"
+#~ msgstr ""
+#~ "<p>MIME-Typen för Videos laat sik nich finnen. Dat heet, dat Qt ahn "
+#~ "Phonon-Ünnerstütten kompileert weer, oder dat de Kodeks fehlt.</p>"
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>Phonon is capable of playing movies of these mime types:<ul><li>%1</"
+#~| "ul></p>"
+#~ msgid ""
+#~ "<p>Phonon is capable of playing movies of these mime types:<ul><li>%1</"
+#~ "li></ul></p>"
+#~ msgstr ""
+#~ "<p>Phonon kann Filme vun disse MIME-Typen afspelen:<ul><li>%1</ul></p>"
+
+#~ msgid "Video support"
+#~ msgstr "Video-Ünnerstütten"
 
 #, fuzzy
 #~| msgid "Export/Copy Images..."
@@ -7878,9 +7943,6 @@ msgstr "Datenbank warrt ümwanneln"
 
 #~ msgid "Old File Format read"
 #~ msgstr "Oolt Dateiformaat funnen"
-
-#~ msgid "Not defined"
-#~ msgstr "Nich angeven"
 
 #~ msgid "Manual"
 #~ msgstr "Vun Hand"
