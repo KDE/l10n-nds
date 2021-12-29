@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-28 00:40+0000\n"
+"POT-Creation-Date: 2021-12-29 00:44+0000\n"
 "PO-Revision-Date: 2014-03-19 20:12+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1002,6 +1002,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, lValuesText)
 #: src/backend/core/AbstractColumn.cpp:112
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:377
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:92
 #: src/commonfrontend/worksheet/WorksheetView.cpp:191
 #: src/commonfrontend/worksheet/WorksheetView.cpp:338
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:1248
@@ -1746,6 +1747,7 @@ msgstr ""
 
 #: src/backend/datasources/filters/AbstractFileFilter.cpp:207
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:378
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:105
 #: src/commonfrontend/matrix/MatrixView.cpp:134
 #: src/commonfrontend/worksheet/WorksheetView.cpp:192
 #: src/commonfrontend/worksheet/WorksheetView.cpp:339
@@ -7331,7 +7333,7 @@ msgstr ""
 #. i18n("Data Reduction"), cartesianPlotAddNewActionGroup);
 #. i18n: ectx: property (text), widget (QLabel, lDifferentiation)
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:360
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:146
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:170
 #: src/commonfrontend/worksheet/WorksheetView.cpp:322
 #: src/commonfrontend/worksheet/WorksheetView.cpp:348
 #: src/kdefrontend/ui/dockwidgets/xydifferentiationcurvedockgeneraltab.ui:285
@@ -7342,7 +7344,7 @@ msgstr ""
 #. i18n("Differentiation"), cartesianPlotAddNewActionGroup);
 #. i18n: ectx: property (text), widget (QLabel, lIntegration)
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:361
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:151
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:176
 #: src/commonfrontend/worksheet/WorksheetView.cpp:324
 #: src/commonfrontend/worksheet/WorksheetView.cpp:350
 #: src/kdefrontend/ui/dockwidgets/xyintegrationcurvedockgeneraltab.ui:285
@@ -7595,6 +7597,7 @@ msgid "Shift Down Y"
 msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:517
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:189
 #: src/commonfrontend/workbook/WorkbookView.cpp:137
 #: src/commonfrontend/worksheet/WorksheetView.cpp:434
 #: src/commonfrontend/worksheet/WorksheetView.cpp:501
@@ -8981,128 +8984,137 @@ msgid "Restart Backend"
 msgstr ""
 
 #: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:68
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:287
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:327
 #, kde-format
 msgid "Evaluate Notebook"
 msgstr ""
 
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:72
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:80
 #, kde-format
 msgid "Evaluate Entry"
 msgstr ""
 
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:76
-#, kde-format
-msgid "Insert Command Entry"
-msgstr ""
-
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:80
-#, kde-format
-msgid "Insert Text Entry"
-msgstr ""
-
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:85
-#, kde-format
-msgid "Insert Markdown Entry"
-msgstr ""
-
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:89
-#, kde-format
-msgid "Insert LaTeX Entry"
-msgstr ""
-
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:92
-#, kde-format
-msgid "Insert Page Break"
-msgstr ""
-
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:95
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:84
 #, kde-format
 msgid "Remove Current Entry"
 msgstr ""
 
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:99
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:88
+#, kde-format
+msgid "Command"
+msgstr ""
+
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:98
+#: src/kdefrontend/widgets/LabelWidget.cpp:138
+#, kde-format
+msgid "Markdown"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, lTex)
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:102
+#: src/kdefrontend/ui/settingsworksheetpage.ui:147
+#: src/kdefrontend/widgets/LabelWidget.cpp:136
+#, kde-format
+msgid "LaTeX"
+msgstr ""
+
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:108
+#, kde-format
+msgid "Page Break"
+msgstr ""
+
+#. i18n("Horizontal Line"), m_actionGroup);
+#. insertHorizLineAction->setData("insert_horizontal_line_entry");
+#. auto* insertHierarchyEntryAction = new QAction(QIcon::fromTheme(QLatin1String("view-list-tree")), i18n("Hierarchy"), m_actionGroup);
+#. insertHierarchyEntryAction->setData("insert_hierarchy_entry");
+#. notebook settings
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:118
 #, kde-format
 msgid "Line Numbers"
 msgstr ""
 
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:103
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:122
 #, kde-format
 msgid "Animate Worksheet"
 msgstr ""
 
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:107
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:126
 #, kde-format
 msgid "LaTeX Typesetting"
 msgstr ""
 
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:111
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:130
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr ""
 
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:115
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:134
 #, kde-format
 msgid "Syntax Completion"
 msgstr ""
 
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:120
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:139
 #, fuzzy, kde-format
 #| msgid "Statistics"
 msgid "Show Completion"
 msgstr "Statistik"
 
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:126
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:146
 #, kde-format
 msgid "Compute Eigenvectors"
 msgstr ""
 
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:131
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:152
 #, kde-format
 msgid "Create Matrix"
 msgstr ""
 
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:136
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:158
 #, kde-format
 msgid "Compute Eigenvalues"
 msgstr ""
 
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:141
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:164
 #, kde-format
 msgid "Invert Matrix"
 msgstr ""
 
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:156
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:182
 #, kde-format
 msgid "Solve Equations"
 msgstr ""
 
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:177
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:205
+#, kde-format
+msgid "Linear Algebra"
+msgstr ""
+
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:217
 #, kde-format
 msgid "Calculate"
 msgstr ""
 
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:186
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:227
 #, kde-format
 msgid "Settings"
 msgstr ""
 
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:234
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:270
 #, kde-format
 msgid "Assistants"
 msgstr ""
 
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:283
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:323
 #, kde-format
 msgid "Interrupt"
 msgstr ""
 
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:285
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:325
 #, kde-format
 msgid "Calculating..."
 msgstr ""
 
-#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:289
+#: src/commonfrontend/cantorWorksheet/CantorWorksheetView.cpp:329
 #, kde-format
 msgid "Ready"
 msgstr ""
@@ -19535,13 +19547,6 @@ msgstr ""
 msgid "Enable double buffering"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, lTex)
-#: src/kdefrontend/ui/settingsworksheetpage.ui:147
-#: src/kdefrontend/widgets/LabelWidget.cpp:136
-#, kde-format
-msgid "LaTeX"
-msgstr ""
-
 #. i18n: ectx: property (text), widget (QLabel, lTexEngine)
 #: src/kdefrontend/ui/settingsworksheetpage.ui:154
 #, kde-format
@@ -20229,11 +20234,6 @@ msgstr ""
 #: src/kdefrontend/widgets/LabelWidget.cpp:118
 #, kde-format
 msgid "Right Pointing rectangle"
-msgstr ""
-
-#: src/kdefrontend/widgets/LabelWidget.cpp:138
-#, kde-format
-msgid "Markdown"
 msgstr ""
 
 #: src/kdefrontend/widgets/LabelWidget.cpp:141
