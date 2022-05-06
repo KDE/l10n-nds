@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwin_effects\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-14 00:46+0000\n"
+"POT-Creation-Date: 2022-05-06 00:47+0000\n"
 "PO-Revision-Date: 2014-06-27 01:00+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -66,7 +66,8 @@ msgstr "Schriefdischgadder wiesen"
 #: presentwindows/presentwindows_config.cpp:50
 #: showpaint/showpaint_config.cpp:33
 #: thumbnailaside/thumbnailaside_config.cpp:56
-#: trackmouse/trackmouse_config.cpp:52 zoom/zoom_config.cpp:58
+#: trackmouse/trackmouse_config.cpp:52
+#: windowview/kcm/windowvieweffectkcm.cpp:35 zoom/zoom_config.cpp:58
 #, kde-format
 msgid "KWin"
 msgstr ""
@@ -291,16 +292,13 @@ msgstr "Finstern wiesen"
 
 #. i18n: ectx: property (text), widget (QLabel, label_Duration)
 #: glide/glide_config.ui:19 scale/package/contents/ui/config.ui:17
-#: slide/slide_config.ui:19
 #, fuzzy, kde-format
 #| msgid "Duration"
 msgid "Duration:"
 msgstr "Duer"
 
-#. i18n: Duration of the slide animation.
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, kcfg_Duration)
 #: glide/glide_config.ui:32 scale/package/contents/ui/config.ui:30
-#: slide/slide_config.ui:32
 #, fuzzy, kde-format
 #| msgctxt "Duration of rotation"
 #| msgid "Default"
@@ -309,7 +307,6 @@ msgstr "Standard"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_Duration)
 #: glide/glide_config.ui:35 scale/package/contents/ui/config.ui:33
-#: slide/slide_config.ui:35
 #, kde-format
 msgid " milliseconds"
 msgstr " Millisekunnen"
@@ -602,12 +599,14 @@ msgstr "Ümdreihen an-/utmaken"
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: overview/kcm/overvieweffectkcm.ui:22
 #: presentwindows/presentwindows_config.ui:393
+#: windowview/kcm/windowvieweffectkcm.ui:22
 #, kde-format
 msgid "Layout mode:"
 msgstr "Anorn-Metood:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_LayoutMode)
 #: overview/kcm/overvieweffectkcm.ui:30
+#: windowview/kcm/windowvieweffectkcm.ui:30
 #, kde-format
 msgid "Closest"
 msgstr ""
@@ -615,6 +614,7 @@ msgstr ""
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_LayoutMode)
 #: overview/kcm/overvieweffectkcm.ui:35
 #: presentwindows/presentwindows_config.ui:441
+#: windowview/kcm/windowvieweffectkcm.ui:35
 #, kde-format
 msgid "Natural"
 msgstr "Normaal"
@@ -643,20 +643,20 @@ msgstr "Schriefdisch"
 msgid "Search..."
 msgstr ""
 
-#: presentwindows/presentwindows.cpp:71
-#: presentwindows/presentwindows_config.cpp:61
-#, kde-format
-msgid "Toggle Present Windows (Current desktop)"
-msgstr "»Vörhannen Finstern« an- oder utmaken (aktuell Schriefdisch)"
-
-#: presentwindows/presentwindows.cpp:80
 #: presentwindows/presentwindows_config.cpp:55
+#: windowview/kcm/windowvieweffectkcm.cpp:48 windowview/windowvieweffect.cpp:71
 #, kde-format
 msgid "Toggle Present Windows (All desktops)"
 msgstr "»Vörhannen Finstern« an- oder utmaken (all Schriefdischen)"
 
-#: presentwindows/presentwindows.cpp:98
+#: presentwindows/presentwindows_config.cpp:61
+#: windowview/kcm/windowvieweffectkcm.cpp:41 windowview/windowvieweffect.cpp:56
+#, kde-format
+msgid "Toggle Present Windows (Current desktop)"
+msgstr "»Vörhannen Finstern« an- oder utmaken (aktuell Schriefdisch)"
+
 #: presentwindows/presentwindows_config.cpp:67
+#: windowview/kcm/windowvieweffectkcm.cpp:55 windowview/windowvieweffect.cpp:86
 #, kde-format
 msgid "Toggle Present Windows (Window class)"
 msgstr "»Vörhannen Finstern« an-/utmaken (Finsterklass)"
@@ -861,7 +861,7 @@ msgstr "Topassen Gadder"
 msgid "Provide buttons to close the windows"
 msgstr "Praatstellen vun Knööp för't Tomaken vun Finstern"
 
-#: private/qml/WindowHeap.qml:141
+#: private/qml/WindowHeap.qml:166
 #, kde-format
 msgid "Drag Down To Close"
 msgstr ""
@@ -1025,7 +1025,7 @@ msgid "Toggle Show Paint"
 msgstr "Klöör wiesen"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_Gaps)
-#: slide/slide_config.ui:50
+#: slide/slide_config.ui:17
 #, fuzzy, kde-format
 #| msgctxt "Comment describing the KWin Effect"
 #| msgid "Magnify the entire desktop"
@@ -1033,21 +1033,21 @@ msgid "Gap between desktops"
 msgstr "Den helen Schriefdisch grötter wiesen"
 
 #. i18n: ectx: property (text), widget (QLabel, label_HorizontalGap)
-#: slide/slide_config.ui:56
+#: slide/slide_config.ui:23
 #, fuzzy, kde-format
 #| msgid "Horizontal"
 msgid "Horizontal:"
 msgstr "Kimmrecht"
 
 #. i18n: ectx: property (text), widget (QLabel, label_VerticalGap)
-#: slide/slide_config.ui:79
+#: slide/slide_config.ui:46
 #, fuzzy, kde-format
 #| msgid "Vertical"
 msgid "Vertical:"
 msgstr "Pielrecht"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_SlideDocks)
-#: slide/slide_config.ui:105
+#: slide/slide_config.ui:72
 #, fuzzy, kde-format
 #| msgctxt "Name of a KWin Effect"
 #| msgid "Slide Back"
@@ -1055,7 +1055,7 @@ msgid "Slide docks"
 msgstr "Achterrut glitschen"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_SlideBackground)
-#: slide/slide_config.ui:112
+#: slide/slide_config.ui:79
 #, fuzzy, kde-format
 #| msgid "Slide when grouping"
 msgid "Slide desktop background"
@@ -1228,6 +1228,17 @@ msgstr "Opdukmenüs:"
 #, kde-format
 msgid "Torn-off menus:"
 msgstr "Aflööst Menüs:"
+
+#: windowview/qml/main.qml:130
+#, kde-format
+msgid "No Matches"
+msgstr ""
+
+#: windowview/qml/main.qml:130
+#, fuzzy, kde-format
+#| msgid "Windows"
+msgid "No Windows"
+msgstr "Finstern"
 
 #. i18n: ectx: property (title), widget (QGroupBox, advancedGroup)
 #: wobblywindows/wobblywindows_config.ui:20
