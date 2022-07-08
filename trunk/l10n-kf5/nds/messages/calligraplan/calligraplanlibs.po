@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kplatoui\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-06 00:46+0000\n"
+"POT-Creation-Date: 2022-07-08 00:47+0000\n"
 "PO-Revision-Date: 2011-10-06 09:19+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -38,7 +38,7 @@ msgstr "Ressourcenaams"
 msgid "Document loaded, URL=%1"
 msgstr "Dokment laadt, URL=%1"
 
-#: kernel/kptaccount.cpp:899 models/ResourceModel.cpp:408
+#: kernel/kptaccount.cpp:899 models/ResourceModel.cpp:429
 #, kde-format
 msgid "Account"
 msgstr "Konto"
@@ -256,9 +256,9 @@ msgstr "Tietplaanfehler"
 #: models/kptnodeitemmodel.cpp:725 models/kptnodeitemmodel.cpp:760
 #: models/kptnodeitemmodel.cpp:777 models/kptresourceallocationmodel.cpp:878
 #: models/kptresourceallocationmodel.cpp:954 models/kptschedulemodel.cpp:605
-#: models/kpttreecombobox.cpp:110 models/ResourceModel.cpp:187
-#: models/ResourceModel.cpp:219 models/ResourceModel.cpp:340
-#: models/ResourceModel.cpp:344 models/ResourceModel.cpp:353
+#: models/kpttreecombobox.cpp:110 models/ResourceModel.cpp:208
+#: models/ResourceModel.cpp:240 models/ResourceModel.cpp:361
+#: models/ResourceModel.cpp:365 models/ResourceModel.cpp:374
 #: ui/kptpertresult.cpp:130 ui/kptpertresult.cpp:547
 #: ui/kptresourcedialog.cpp:272 ui/kptresourcedialog.cpp:299
 #: ui/kpttaskcostpanel.cpp:36 ui/kpttaskgeneralpanel.cpp:59
@@ -821,28 +821,28 @@ msgctxt "@item:inlistbox resource type"
 msgid "Team"
 msgstr "Koppel"
 
-#: kernel/Resource.cpp:644
+#: kernel/Resource.cpp:651
 #, kde-format
 msgid "Make appointments: Invalid time"
 msgstr "Termin fastleggen: Leeg Tiet"
 
-#: kernel/Resource.cpp:649 kernel/Resource.cpp:710 kernel/Resource.cpp:960
-#: kernel/Resource.cpp:1035
+#: kernel/Resource.cpp:656 kernel/Resource.cpp:717 kernel/Resource.cpp:967
+#: kernel/Resource.cpp:1042
 #, kde-format
 msgid "Resource %1 has no calendar defined"
 msgstr "Ressource %1 hett keen Kalenner fastleggt"
 
-#: kernel/Resource.cpp:673
+#: kernel/Resource.cpp:680
 #, kde-format
 msgid "Make appointments: Node start time is not valid"
 msgstr "Terminen fastleggen: Knütt-Starttiet is leeg"
 
-#: kernel/Resource.cpp:677
+#: kernel/Resource.cpp:684
 #, kde-format
 msgid "Make appointments: Node end time is not valid"
 msgstr "Terminen fastleggen: Knütt-Enntiet is leeg"
 
-#: kernel/Resource.cpp:724 kernel/Resource.cpp:741
+#: kernel/Resource.cpp:731 kernel/Resource.cpp:748
 #, kde-format
 msgid "Resource %1 not available in interval: %2 to %3"
 msgstr "Ressource %1 vun %2 bet %3 nich verföögbor"
@@ -2030,7 +2030,7 @@ msgstr[1] "Disse Koppel bargt %1 Ressourcen"
 #: models/kptresourceappointmentsmodel.cpp:1167 models/kptschedulemodel.cpp:978
 #: models/kptschedulemodel.cpp:1301
 #: models/reportgenerator/ReportGeneratorOdt.cpp:179
-#: models/ResourceGroupModel.cpp:190 models/ResourceModel.cpp:397
+#: models/ResourceGroupModel.cpp:190 models/ResourceModel.cpp:418
 #: ui/projectview/ProjectView.cpp:40
 #: ui/reportsgenerator/ReportsGeneratorView.cpp:208
 #, kde-format
@@ -2040,7 +2040,7 @@ msgstr "Naam"
 #: models/GroupAllocationItemModel.cpp:172 models/kptdocumentmodel.cpp:188
 #: models/kptrelationmodel.cpp:125 models/kptresourceallocationmodel.cpp:527
 #: models/kptresourceappointmentsmodel.cpp:1168
-#: models/ResourceGroupModel.cpp:192 models/ResourceModel.cpp:399
+#: models/ResourceGroupModel.cpp:192 models/ResourceModel.cpp:420
 #, kde-format
 msgid "Type"
 msgstr "Typ"
@@ -5485,7 +5485,7 @@ msgid ""
 "this project"
 msgstr ""
 
-#: models/ResourceGroupModel.cpp:191 models/ResourceModel.cpp:398
+#: models/ResourceGroupModel.cpp:191 models/ResourceModel.cpp:419
 #, kde-format
 msgid "Origin"
 msgstr ""
@@ -5613,49 +5613,71 @@ msgid ""
 "project"
 msgstr ""
 
-#: models/ResourceModel.cpp:195 models/ResourceModel.cpp:221
+#: models/ResourceModel.cpp:140
+#, fuzzy, kde-format
+#| msgctxt "title:column"
+#| msgid "Select team members"
+msgctxt "@info:tooltip"
+msgid "Team: No team members"
+msgstr "Koppel-Liddmaten utsöken"
+
+#: models/ResourceModel.cpp:142
+#, fuzzy, kde-format
+#| msgid "Task: %1"
+msgctxt "@info:tooltip"
+msgid "Team: %1"
+msgstr "Opgaav: %1"
+
+#: models/ResourceModel.cpp:150
+#, fuzzy, kde-format
+#| msgid "Required"
+msgctxt "@info:tooltip"
+msgid "Required: %1"
+msgstr "Deit noot"
+
+#: models/ResourceModel.cpp:216 models/ResourceModel.cpp:242
 #, kde-format
 msgctxt "Default (calendar name)"
 msgid "Default (%1)"
 msgstr "Standard (%1)"
 
-#: models/ResourceModel.cpp:202
+#: models/ResourceModel.cpp:223
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "A team resource does not have a calendar"
 msgstr "En Koppel-Ressource hett keen Kalenner."
 
-#: models/ResourceModel.cpp:204
+#: models/ResourceModel.cpp:225
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "No calendar"
 msgstr "Keen Kalenner"
 
-#: models/ResourceModel.cpp:212
+#: models/ResourceModel.cpp:233
 #, kde-kuit-format
 msgctxt "@info:tooltip 1=calendar name"
 msgid "Using default calendar: %1"
 msgstr "Standardkalenner warrt bruukt: %1"
 
-#: models/ResourceModel.cpp:266
+#: models/ResourceModel.cpp:287
 #, kde-kuit-format
 msgctxt "infor:tooltip"
 msgid "Available from: %1"
 msgstr "Verföögbor vun: %1"
 
-#: models/ResourceModel.cpp:268
+#: models/ResourceModel.cpp:289
 #, kde-kuit-format
 msgctxt "infor:tooltip"
 msgid "Available from project target start time: %1"
 msgstr "Verföögbor vun Projektteel-Starttiet: %1"
 
-#: models/ResourceModel.cpp:288
+#: models/ResourceModel.cpp:309
 #, kde-kuit-format
 msgctxt "infor:tooltip"
 msgid "Available until: %1"
 msgstr "Verföögbor bet: %1"
 
-#: models/ResourceModel.cpp:290
+#: models/ResourceModel.cpp:311
 #, fuzzy, kde-kuit-format
 #| msgctxt "infor:tooltip"
 #| msgid "Available from project target finish time: %1"
@@ -5663,57 +5685,57 @@ msgctxt "infor:tooltip"
 msgid "Available until project target finish time: %1"
 msgstr "Verföögbor vun Projektteel-Enntiet: %1"
 
-#: models/ResourceModel.cpp:309
+#: models/ResourceModel.cpp:330
 #, kde-format
 msgid "Cost per hour, normal time: %1"
 msgstr "Kösten per Stünn, normaal Stünnen: %1"
 
-#: models/ResourceModel.cpp:327
+#: models/ResourceModel.cpp:348
 #, kde-format
 msgid "Cost per hour, overtime: %1"
 msgstr "Kösten per Stünn, Överstünnen: %1"
 
-#: models/ResourceModel.cpp:344
+#: models/ResourceModel.cpp:365
 #, kde-format
 msgid "Account: %1"
 msgstr "Konto: %1"
 
-#: models/ResourceModel.cpp:400
+#: models/ResourceModel.cpp:421
 #, kde-format
 msgid "Initials"
 msgstr "Anfangbookstaven"
 
-#: models/ResourceModel.cpp:401
+#: models/ResourceModel.cpp:422
 #, kde-format
 msgid "Email"
 msgstr "Nettpost"
 
-#: models/ResourceModel.cpp:402
+#: models/ResourceModel.cpp:423
 #, kde-format
 msgid "Calendar"
 msgstr "Kalenner"
 
-#: models/ResourceModel.cpp:403
+#: models/ResourceModel.cpp:424
 #, kde-format
 msgid "Limit (%)"
 msgstr "Grenz (%)"
 
-#: models/ResourceModel.cpp:404
+#: models/ResourceModel.cpp:425
 #, kde-format
 msgid "Available From"
 msgstr "Verföögbor vun"
 
-#: models/ResourceModel.cpp:405
+#: models/ResourceModel.cpp:426
 #, kde-format
 msgid "Available Until"
 msgstr "Verföögbor bet"
 
-#: models/ResourceModel.cpp:406
+#: models/ResourceModel.cpp:427
 #, kde-format
 msgid "Normal Rate"
 msgstr "Normaal Lohn"
 
-#: models/ResourceModel.cpp:407
+#: models/ResourceModel.cpp:428
 #, kde-format
 msgid "Overtime Rate"
 msgstr "Överstunnlohn"
@@ -11612,9 +11634,6 @@ msgstr ""
 
 #~ msgid "Project: %1"
 #~ msgstr "Projekt: %1"
-
-#~ msgid "Task: %1"
-#~ msgstr "Opgaav: %1"
 
 #~ msgid "Start: %1"
 #~ msgstr "Anfang: %1"
