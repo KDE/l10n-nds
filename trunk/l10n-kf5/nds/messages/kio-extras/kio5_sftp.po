@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_sftp\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-28 00:44+0000\n"
+"POT-Creation-Date: 2022-07-22 00:44+0000\n"
 "PO-Revision-Date: 2014-02-14 00:25+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -44,7 +44,7 @@ msgstr "Logbook-Brukerdaten laat sik nich fastsetten"
 msgid "Could not set log callback."
 msgstr "Logbook-Torüchroop lett sik nich towiesen."
 
-#: kio_sftp.cpp:335 kio_sftp.cpp:337 kio_sftp.cpp:849
+#: kio_sftp.cpp:335 kio_sftp.cpp:337 kio_sftp.cpp:854
 #, kde-format
 msgid "SFTP Login"
 msgstr "SFTP-Anmellen"
@@ -59,7 +59,7 @@ msgstr "Bruuk dat Brukernaam-Feld, wenn Du op disse Fraag antern wullt."
 msgid "Please enter your password."
 msgstr "Giff bitte Dien Passwoort in."
 
-#: kio_sftp.cpp:370 kio_sftp.cpp:852
+#: kio_sftp.cpp:370 kio_sftp.cpp:857
 #, kde-format
 msgid "Site:"
 msgstr "Server:"
@@ -159,8 +159,15 @@ msgstr ""
 "Snack dor bitte Dien Systeempleger op an.\n"
 "%1"
 
-#: kio_sftp.cpp:749
+#: kio_sftp.cpp:756
 #, fuzzy, kde-format
+#| msgid "Warning: Host's identity changed."
+msgctxt "@title:window"
+msgid "Host Identity Change"
+msgstr "Wohrscho: Identiteet vun den Reekner hett sik ännert."
+
+#: kio_sftp.cpp:757
+#, fuzzy, kde-kuit-format
 #| msgid ""
 #| "The host key for the server %1 has changed.\n"
 #| "This could either mean that DNS SPOOFING is happening or the IP address "
@@ -169,14 +176,13 @@ msgstr ""
 #| " %2\n"
 #| "Please contact your system administrator.\n"
 #| "%3"
+msgctxt "@info"
 msgid ""
-"The host key for the server %1 has changed.\n"
-"This could either mean that DNS SPOOFING is happening or the IP address for "
-"the host and its host key have changed at the same time.\n"
-"The fingerprint for the %2 key sent by the remote host is:\n"
-"  SHA256:%3\n"
-"Please contact your system administrator.\n"
-"%4"
+"<para>The host key for the server <emphasis>%1</emphasis> has changed.</"
+"para><para>This could either mean that DNS spoofing is happening or the IP "
+"address for the host and its host key have changed at the same time.</"
+"para><para>The %2 key fingerprint sent by the remote host is:<bcode>%3</"
+"bcode>Are you sure you want to continue connecting?</para>"
 msgstr ""
 "De Reeknerslötel för den Server \"%1\" wöör ännert.\n"
 "Dat mag angahn, Een drievt hier DNS-Dörstekeree, oder den Server sien IP-"
@@ -186,50 +192,58 @@ msgstr ""
 "Snack dor bitte Dien Systeempleger op an.\n"
 "%3"
 
-#: kio_sftp.cpp:763
+#: kio_sftp.cpp:767
 #, kde-format
-msgid "Warning: Cannot verify host's identity."
-msgstr "Wohrscho: Identiteet vun den Reekner lett sik nich överpröven."
+msgctxt "@title:window"
+msgid "Host Verification Failure"
+msgstr ""
 
-#: kio_sftp.cpp:765
-#, fuzzy, kde-format
+#: kio_sftp.cpp:768
+#, fuzzy, kde-kuit-format
 #| msgid ""
 #| "The authenticity of host %1 cannot be established.\n"
 #| "The key fingerprint is: %2\n"
 #| "Are you sure you want to continue connecting?"
+msgctxt "@info"
 msgid ""
-"The authenticity of host %1 cannot be established.\n"
-"The %2 key fingerprint is: %3\n"
-"Are you sure you want to continue connecting?"
+"<para>The authenticity of host <emphasis>%1</emphasis> cannot be established."
+"</para><para>The %2 key fingerprint is:<bcode>%3</bcode>Are you sure you "
+"want to continue connecting?</para>"
 msgstr ""
 "De Identiteet vun den Reekner \"%1\" lett sik nich pröven.\n"
 "De Fingerafdruck is: %2\n"
 "Wullt Du Di redig tokoppeln?"
 
-#: kio_sftp.cpp:795 kio_sftp.cpp:813 kio_sftp.cpp:828 kio_sftp.cpp:841
-#: kio_sftp.cpp:893 kio_sftp.cpp:903
+#: kio_sftp.cpp:777
+#, kde-format
+msgctxt "@action:button"
+msgid "Connect Anyway"
+msgstr ""
+
+#: kio_sftp.cpp:800 kio_sftp.cpp:818 kio_sftp.cpp:833 kio_sftp.cpp:846
+#: kio_sftp.cpp:898 kio_sftp.cpp:908
 #, kde-format
 msgid "Authentication failed."
 msgstr "Identiteetprööv fehlslaan."
 
-#: kio_sftp.cpp:801
+#: kio_sftp.cpp:806
 #, kde-format
 msgid ""
 "Authentication failed. The server didn't send any authentication methods"
 msgstr ""
 "Identiteetprööv fehlslaan. De Server hett keen Methoden dorför künnig maakt."
 
-#: kio_sftp.cpp:850
+#: kio_sftp.cpp:855
 #, kde-format
 msgid "Please enter your username and password."
 msgstr "Bitte giff Dien Brukernaam un Passwoort in."
 
-#: kio_sftp.cpp:861
+#: kio_sftp.cpp:866
 #, kde-format
 msgid "Incorrect username or password"
 msgstr "Brukernaam oder Passwoort gellt nich"
 
-#: kio_sftp.cpp:910
+#: kio_sftp.cpp:915
 #, kde-format
 msgid ""
 "Unable to request the SFTP subsystem. Make sure SFTP is enabled on the "
@@ -238,22 +252,22 @@ msgstr ""
 "Dat SFTP-Ünnersysteem lett sik nich ansnacken. Beseker bitte, SFTP is op den "
 "Server anmaakt."
 
-#: kio_sftp.cpp:915
+#: kio_sftp.cpp:920
 #, kde-format
 msgid "Could not initialize the SFTP session."
 msgstr "De SFTP-Törn lett sik nich torechtmaken."
 
-#: kio_sftp.cpp:919
+#: kio_sftp.cpp:924
 #, kde-format
 msgid "Successfully connected to %1"
 msgstr "Verbinnen na %1 opstellt"
 
-#: kio_sftp.cpp:971
+#: kio_sftp.cpp:976
 #, kde-format
 msgid "Invalid sftp context"
 msgstr ""
 
-#: kio_sftp.cpp:1539
+#: kio_sftp.cpp:1544
 #, kde-format
 msgid ""
 "Could not change permissions for\n"
@@ -261,6 +275,35 @@ msgid ""
 msgstr ""
 "Verlöven laat sik nich ännern för:\n"
 "%1"
+
+#, fuzzy
+#~| msgid ""
+#~| "The host key for the server %1 has changed.\n"
+#~| "This could either mean that DNS SPOOFING is happening or the IP address "
+#~| "for the host and its host key have changed at the same time.\n"
+#~| "The fingerprint for the key sent by the remote host is:\n"
+#~| " %2\n"
+#~| "Please contact your system administrator.\n"
+#~| "%3"
+#~ msgid ""
+#~ "The host key for the server %1 has changed.\n"
+#~ "This could either mean that DNS SPOOFING is happening or the IP address "
+#~ "for the host and its host key have changed at the same time.\n"
+#~ "The fingerprint for the %2 key sent by the remote host is:\n"
+#~ "  SHA256:%3\n"
+#~ "Please contact your system administrator.\n"
+#~ "%4"
+#~ msgstr ""
+#~ "De Reeknerslötel för den Server \"%1\" wöör ännert.\n"
+#~ "Dat mag angahn, Een drievt hier DNS-Dörstekeree, oder den Server sien IP-"
+#~ "Adress un Reeknerslötel hebbt sik beed op eenmaal ännert.\n"
+#~ "De Fingerafdruck för den Slötel, den de Server Di tostüert hett, is:\n"
+#~ " %2\n"
+#~ "Snack dor bitte Dien Systeempleger op an.\n"
+#~ "%3"
+
+#~ msgid "Warning: Cannot verify host's identity."
+#~ msgstr "Wohrscho: Identiteet vun den Reekner lett sik nich överpröven."
 
 #~ msgid ""
 #~ "The host key for this server was not found, but another type of key "
@@ -276,23 +319,6 @@ msgstr ""
 #~ "dat gifft den Slötel nich.\n"
 #~ "Snack dor bitte Dien Systeempleger op an.\n"
 #~ "%1"
-
-#~ msgid ""
-#~ "The host key for the server %1 has changed.\n"
-#~ "This could either mean that DNS SPOOFING is happening or the IP address "
-#~ "for the host and its host key have changed at the same time.\n"
-#~ "The fingerprint for the key sent by the remote host is:\n"
-#~ " %2\n"
-#~ "Please contact your system administrator.\n"
-#~ "%3"
-#~ msgstr ""
-#~ "De Reeknerslötel för den Server \"%1\" wöör ännert.\n"
-#~ "Dat mag angahn, Een drievt hier DNS-Dörstekeree, oder den Server sien IP-"
-#~ "Adress un Reeknerslötel hebbt sik beed op eenmaal ännert.\n"
-#~ "De Fingerafdruck för den Slötel, den de Server Di tostüert hett, is:\n"
-#~ " %2\n"
-#~ "Snack dor bitte Dien Systeempleger op an.\n"
-#~ "%3"
 
 #~ msgid ""
 #~ "The authenticity of host %1 cannot be established.\n"
@@ -311,9 +337,6 @@ msgstr ""
 
 #~ msgid "Please enter your username and key passphrase."
 #~ msgstr "Bitte giff Dien Brukernaam un Slötelsatz in."
-
-#~ msgid "Warning: Host's identity changed."
-#~ msgstr "Wohrscho: Identiteet vun den Reekner hett sik ännert."
 
 #~ msgid "Connection failed."
 #~ msgstr "Tokoppeln fehlslaan."
