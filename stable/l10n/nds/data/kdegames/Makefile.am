@@ -1,4 +1,0 @@
-
-TOPLEVEL_LANG = nds
-SUBDIRS = $(AUTODIRS)
-
